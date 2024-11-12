@@ -1,0 +1,32 @@
+/* Header */
+.header {
+    background-color: #333;
+    padding: 20px;
+  }
+  .header__logo {
+    font-size: 24px;
+    color: white;
+  }
+  .header__nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .header__nav-item {
+    color: white;
+  }
+  
+  /* Button */
+  .button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .button--primary {
+    background-color: blue;
+    color: white;
+  }
+  .button--secondary {
+    background-color: gray;
+    color: white;
+  }
+  
