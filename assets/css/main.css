@@ -2001,9 +2001,18 @@ input, select, textarea {
 	/* Apply hover effect only to h3 inside .features */
 	.features h3.toggle-list {
 		display: inline-block; /* Ensure the background is as long as the text */
-		padding: 5px 10px; /* Optional: Adjust padding to control spacing inside the background */
+		padding: 2px 5px; /* Optional: Adjust padding to control spacing inside the background */
 		border-radius: 5px; /* Rounded corners */
 		transition: background-color 0.3s ease; /* Smooth transition for background color */
+		cursor: pointer; /* Change the cursor to a pointer on hover */
+	}
+
+	.features .section-one h3.toggle-list, 
+	.features .section-two h3.toggle-list, 
+	.features .section-three h3.toggle-list, 
+	.features .section-four h3.toggle-list {
+		background-color: rgba(66, 118, 166, 0.35); /* style1 with 0.35 opacity */
+		color: white; /* Optional: Change text color on hover */
 	}
 	/* Hover effect for section one */
 	.features .section-one h3.toggle-list:hover {
@@ -2022,7 +2031,7 @@ input, select, textarea {
 	}
 		/* Hover effect for section four */
 	.features .section-four h3.toggle-list:hover {
-		background-color: #65dcb2; /* Example dark blue color */
+		background-color: #00569d; /* Example dark blue color */
 		color: white; /* Optional: Change text color on hover */
 	}
 
