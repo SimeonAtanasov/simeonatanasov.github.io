@@ -181,14 +181,44 @@
 				}
 			});
 
-	// Add click event listener to the h3
-	// Toggle the visibility of the <ul> when the <h3> is clicked
+	// // Add click event listener to the h3
+	// // Toggle the visibility of the <ul> when the <h3> is clicked
+	// $(document).ready(function () {
+	// 	$("h3.toggle-list").on("click", function () {
+	// 		// Find the next sibling <ul>, skipping the <h4>, and toggle its visibility
+	// 		$(this).next("h3").next("h4").next("ul").toggleClass("hidden");
+	// 	});
+	// });	
 	$(document).ready(function () {
 		$("h3.toggle-list").on("click", function () {
-			// Find the next sibling <ul>, skipping the <h4>, and toggle its visibility
-			$(this).next("h3").next("h4").next("ul").toggleClass("hidden");
+			// Get all sections inside the .features container
+			var allSections = $(".features section");
+			
+			// Find the <ul> inside the clicked section
+			var ul = $(this).next("h3").next("h4").next("ul");
+			
+			// Toggle visibility of the <ul>
+			ul.toggleClass("hidden");
+	
+			// Check if at least one <ul> is visible
+			var anyVisible = $(".features section ul:not(.hidden)").length > 0;
+			
+			// If any <ul> is visible, set all sections' width to 100%
+			if (anyVisible) {
+				allSections.css("width", "100%"); // Expand all sections to 100% width
+			} else {
+				allSections.css("width", "50%"); // Shrink all sections back to 50% width when all are hidden
+			}
+	        // Scroll to the section if it is being opened
+			if (!ul.hasClass("hidden")) {
+				$("html, body").animate({
+					scrollTop: $(this).offset().top - 12 // Adjust the offset for better alignment
+				}, 500); // Duration of the animation in milliseconds
+			}
 		});
-	});	
+	});
+	
+	
 
 
 
