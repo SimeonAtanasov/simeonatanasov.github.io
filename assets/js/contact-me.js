@@ -1,25 +1,31 @@
-// Wait for the document to be fully loaded before attaching the event
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM fully loaded and parsed');
-    emailjs.init('cC9ZXuKhIU28v9cc'); // Replace with your actual public key from EmailJS
+import emailjs from 'emailjs-com';
 
-    // Log EmailJS object to verify it's loaded
+// Wait for the document to be fully loaded before attaching the event
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM fully loaded and parsed');
+
+    // Initialize EmailJS with your public key
+    emailjs.init('cC9ZXuKhIU28v9cc'); // Replace with your actual public key
     console.log('EmailJS Object:', emailjs);
 
     // Get the form element
     const form = document.getElementById('contact-form');
+    if (!form) {
+        console.error('Form element not found!');
+        return;
+    }
     console.log('Form Element:', form);
 
     // Attach form submission handler
-    form.addEventListener('submit', function(event) {
-        console.log('Form submit event triggered'); // Check if this message appears in the console
+    form.addEventListener('submit', function (event) {
+        console.log('Form submit event triggered');
 
-        event.preventDefault(); // Prevent the default form submission (page reload)
+        event.preventDefault(); // Prevent the default form submission
 
         // Collect form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
 
         console.log('Form Data:', { name, email, message });
 
@@ -34,15 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
             name: name,
             email: email,
             message: message
-        }).then(function(response) {
+        }).then(function (response) {
             console.log('Success!', response);
             alert('Message sent successfully!');
             form.reset(); // Reset the form after successful submission
-        }, function(error) {
-            console.log('Failed...', error);
+        }).catch(function (error) {
+            console.error('Failed...', error);
             alert('Something went wrong. Please try again.');
         });
-
-        return false; // Explicitly prevent page reload
     });
 });
