@@ -221,23 +221,23 @@
 									</form>-->								
 									<form id="contact-form">
 										<div class="fields">
-										  <div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										  </div>
-										  <div class="field half">
-											<label for="email">Email</label>
-											<input type="email" name="email" id="email" />
-										  </div>
-										  <div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="5"></textarea>
-										  </div>
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" required />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="email" name="email" id="email" required />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea name="message" id="message" rows="5" required></textarea>
+											</div>
 										</div>
 										<ul class="actions">
-										  <li><button type="submit" class="button submit">Send Message</button></li>
+											<li><button type="submit" class="button submit">Send Message</button></li>
 										</ul>
-									  </form>
+									</form>									
 								</section>
 								<section>
 									<ul class="contact">
@@ -291,42 +291,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<!-- Your JavaScript to handle form submission -->
 			<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-			<script type="text/javascript">
-			  // Initialize EmailJS
-			  (function () {
-				emailjs.init('-cC9ZXuKhIU28v9cc'); // Replace with your actual public key from EmailJS
-			  })();
-			
-			  // Form submission
-			  document.getElementById('contact-form').addEventListener('submit', function(event) {
-				// Prevent the default form submission behavior
-				event.preventDefault();
-				console.log('Form submitted'); // Check if this message appears in the console
-			
-				// Collect form data
-				const name = document.getElementById('name').value;
-				const email = document.getElementById('email').value;
-				const message = document.getElementById('message').value;
-			
-				// Validate form data
-				if (!name || !email || !message) {
-				  alert('Please fill out all fields.');
-				  return;
-				}
-			
-				// Send the email using EmailJS
-				emailjs.send("service_8zv06ua", "template_pdg5xhr", {
-				  name: name,            // The "name" value from the form
-				  email: email,          // The "email" value from the form
-				  message: message      // The "message" value from the form
-				}).then(function(response) {
-				  console.log('Success!', response);
-				}, function(error) {
-				  console.log('Failed...', error);
-				});
-			  });
-			</script>			
+			<script src="assets/js/contact-me.js"></script>
 	</body>
 </html>
