@@ -1,5 +1,3 @@
-import emailjs from 'emailjs-com';
-
 // Wait for the document to be fully loaded before attaching the event
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded and parsed');
