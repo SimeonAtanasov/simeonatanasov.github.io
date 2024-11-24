@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded and parsed');
 
     // Initialize EmailJS with your public key
-    emailjs.init('cC9ZXuKhIU28v9cc'); // Replace with your actual public key
+    emailjs.init('S4_FpugIJ1eijhYxZ'); // Replace with your actual public key
     console.log('EmailJS Object:', emailjs);
 
     // Get the form element
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Form Data:', { name, email, message });
 
         // Validate form data
-        if (!name || !email || !message) {
-            alert('Please fill out all fields.');
+        if (!name.trim() || !email.trim() || !message.trim()) {
+            alert('All fields are required!');
             return;
         }
 
