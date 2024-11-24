@@ -1993,10 +1993,38 @@ input, select, textarea {
 
 		.features section {
 			padding: 3.5em 3em 1em 7em ;
-			width: 50%;
-			border-top: solid 1px rgba(255, 255, 255, 0.15);
+			width: 100%;
+			border: solid 1px rgba(255, 255, 255, 0.15);
 			position: relative;
 		}
+
+	/* Apply hover effect only to h3 inside .features */
+	.features h3.toggle-list {
+		display: inline-block; /* Ensure the background is as long as the text */
+		padding: 5px 10px; /* Optional: Adjust padding to control spacing inside the background */
+		border-radius: 5px; /* Rounded corners */
+		transition: background-color 0.3s ease; /* Smooth transition for background color */
+	}
+	/* Hover effect for section one */
+	.features .section-one h3.toggle-list:hover {
+		background-color: #E4002B; /* Coca-Cola red color */
+		color: white; /* Optional: Change text color on hover */
+	}
+	/* Hover effect for section two */
+	.features .section-two h3.toggle-list:hover {
+		background-color: #65dcb2; /* Example dark blue color */
+		color: white; /* Optional: Change text color on hover */
+	}
+		/* Hover effect for section three */
+	.features .section-three h3.toggle-list:hover {
+		background-color: #ea650d; /* Example dark blue color */
+		color: white; /* Optional: Change text color on hover */
+	}
+		/* Hover effect for section four */
+	.features .section-four h3.toggle-list:hover {
+		background-color: #65dcb2; /* Example dark blue color */
+		color: white; /* Optional: Change text color on hover */
+	}
 
 			.features section:nth-child(-n + 2) {
 				border-top-width: 0;
@@ -2664,6 +2692,12 @@ input, select, textarea {
 		list-style: disc;
 		margin: 0 0 2em 0;
 		padding-left: 1em;
+	}
+
+	/* ul additional CSS */
+
+	.hidden {
+	display: none;
 	}
 
 		ul li {

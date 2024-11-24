@@ -181,4 +181,15 @@
 				}
 			});
 
+	// Add click event listener to the h3
+	// Toggle the visibility of the <ul> when the <h3> is clicked
+	$(document).ready(function () {
+		$("h3.toggle-list").on("click", function () {
+			// Find the next sibling <ul>, skipping the <h4>, and toggle its visibility
+			$(this).next("h3").next("h4").next("ul").toggleClass("hidden");
+		});
+	});	
+
+
+
 })(jQuery);
