@@ -3530,8 +3530,10 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		/* background-color: #5e42a6; */
-		background-color: #4267a6; /* A vibrant blue replacing #5e42a6 */
+		position: sticky; /* Sticky positioning */
+		top: 0; /* Sticks to the top of the viewport */
+		z-index: 1000; /* Ensures it stays above other elements */
+		background-color: #4267a6; /* Vibrant blue replacing #5e42a6 */
 		cursor: default;
 		padding: 1.75em 2em;
 	}
