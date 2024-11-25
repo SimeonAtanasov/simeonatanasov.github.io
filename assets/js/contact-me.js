@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded and parsed');
 
     // Initialize EmailJS with your public key
-    emailjs.init('S4_FpugIJ1eijhYxZ'); // Replace with your actual public key
+    // emailjs.init('S4_FpugIJ1eijhYxZ'); // Replace with your actual public key
+    emailjs.init({
+        publicKey: "S4_FpugIJ1eijhYxZ",
+      });
     console.log('EmailJS Object:', emailjs);
 
     // Get the form element
