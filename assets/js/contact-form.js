@@ -1,16 +1,19 @@
-// Configure AWS SDK with your region and Cognito Identity Pool ID
-AWS.config.update({
-    region: 'eu-central-1', // Replace with your AWS region
-    credentials: new AWS.CognitoIdentityCredentials({
-        IdentityPoolId: 'eu-central-1_6ALIGKqOi',  // Corrected Cognito Identity Pool ID
-    })
-});
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialize AWS SDK
+    AWS.config.update({
+        region: 'eu-central-1', // Replace with your AWS region
+        credentials: new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: 'eu-central-1_6ALIGKqOi',  // Corrected Cognito Identity Pool ID
+        })
+    });
 
-// Get the form element
-const form = document.getElementById('contact-form');
-if (!form) {
-    console.error('Form element not found!');
-} else {
+    // Get the form element
+    const form = document.getElementById('contact-form');
+    if (!form) {
+        console.error('Form element not found!');
+        return;
+    }
+
     // Attach form submission handler
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
@@ -59,4 +62,4 @@ if (!form) {
             }
         });
     });
-}
+});
