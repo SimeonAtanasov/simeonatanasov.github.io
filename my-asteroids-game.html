@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Generic - Simeon Atanasov</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Simeon Atanasov</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html">Generic</a></li>
+						<li><a href="my-asteroids-game.html" class="active">My Asteroids Gane</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<header>
+								<!-- Other generic page content -->
+								<h1 class="major">Welcome to the Asteroids Game</h1>
+							</header>
+							<section>
+								<p>Embark on an intergalactic adventure in this classic asteroid game, where you control a spaceship, navigate through space, and blast away asteroids. With dynamic physics, intuitive controls, and a constant stream of new challenges, the game keeps you on your toes as you dodge, shoot, and survive. How long can you last in the vast expanse of space?
+								</p>
+							</section>
+							<!-- Game Section -->
+							<div id="game-container">
+								<canvas></canvas>
+								<button id="restartButton" style="display: none;">Restart Game</button>
+							</div>
+							<br />
+							<section>
+								<h2>Canvas Setup</h2>
+								<ul>
+									<li>The game takes up the entire browser window when opened separately (<code>canvas.width = window.innerWidth</code>), but here it is displayed within a <code>div</code> container with a specific size.</li>
+									<li>A 2D rendering context (<code>c</code>) is used for drawing.</li>
+								</ul>
+							</section>
+						
+							<section>
+								<h2>Game Elements</h2>
+								<ul>
+									<li><strong>Player:</strong> A triangular spaceship that can rotate and move forward with inertia. Its position and vertices are updated based on velocity and rotation.</li>
+									<li><strong>Projectile:</strong> Circular bullets that shoot from the player's ship in the direction of its nose.</li>
+									<li><strong>Asteroids:</strong> Circular shapes with random sizes, velocities, and spawn locations around the screen.</li>
+								</ul>
+							</section>
+						
+							<section>
+								<h2>Controls</h2>
+								<ul>
+									<li><strong>W:</strong> Thrust forward.</li>
+									<li><strong>A/D:</strong> Rotate left/right.</li>
+									<li><strong>Space:</strong> Shoot projectiles.</li>
+								</ul>
+							</section>
+						
+							<section>
+								<h2>Physics and Logic</h2>
+								<ul>
+									<li><strong>Friction:</strong> Gradually reduces velocity when not thrusting.</li>
+									<li>
+										<strong>Collision Detection:</strong>
+										<ul>
+											<li><code>circleTriangleCollision:</code> Detects collision between the player (triangle) and asteroids.</li>
+											<li><code>circleCollision:</code> Handles projectile-asteroid collision.</li>
+										</ul>
+									</li>
+									<li><strong>Game Loop:</strong> The <code>animate</code> function redraws the canvas and updates game elements every frame.</li>
+								</ul>
+							</section>
+						
+							<section>
+								<h2>Asteroid Spawning</h2>
+								<ul>
+									<li>New asteroids appear every 1.5 seconds (<code>setInterval</code>).</li>
+									<li>They spawn off-screen and move toward the screen with random velocities.</li>
+								</ul>
+							</section>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Simeon. All rights reserved.</li>
+					<li><a href="">Terms of use</a></li>
+					<li><a href="">Privacy notice</a></li>
+					<li><a href="">Cookie notice</a></li>						
+				</ul>
+			</div>
+		</footer>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="pages/my-asteroids-game/my-asteroids-game.js" defer></script>
+	</body>
+</html>
