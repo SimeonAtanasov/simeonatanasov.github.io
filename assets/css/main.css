@@ -1992,11 +1992,45 @@ input, select, textarea {
 	}
 
 		.features section {
-			padding: 3.5em 3em 1em 7em ;
+			padding: 2.5em 2em 1em 7em ;
 			width: 50%;
 			/* width: 50%; */
 			border: solid 1px rgba(255, 255, 255, 0.15);
 			position: relative;
+		}
+		/* 
+			Layout for Image and Text Alignment in .specific-section:
+		*/
+
+		.features .specific-section {
+			display: flex; /* Enables flexbox layout */
+			flex-direction: row; /* Aligns image and text horizontally */
+			align-items: center; /* Vertically center the text (h3, h4) next to the image */
+			gap: 15px; /* Space between the image and the text */
+			padding: 1em 1em; /* Reduced top padding to minimize empty space */
+			margin: 0; /* Remove any margin from the section */
+		}
+
+		.features .specific-section span {
+			display: flex; /* Enables flexbox for the span */
+			align-items: flex-start; /* Align image to the top */
+			justify-content: flex-start; /* Align the image to the left inside the span */
+		}
+
+		.features .specific-section span img {
+			display: block; /* Ensures predictable image behavior */
+			width: 100%; /* Makes the image responsive */
+			max-width: 250px; /* Increased max-width for a larger image */
+			height: auto; /* Maintain aspect ratio */
+			margin: 0; /* Remove any margin on the image */
+		}
+
+		.features .specific-section div {
+			display: flex; /* Enables flexbox for the text container */
+			flex-direction: column; /* Ensures h3 and h4 are stacked vertically */
+			gap: 0.5em; /* Add space between h3 and h4 */
+			align-items: flex-start; /* Align text to the left */
+			justify-content: center; /* Vertically center the text inside the div */
 		}
 
 			/* Apply hover effect only to h3 inside .features */
