@@ -280,6 +280,18 @@ function animate() {
   c.fillStyle = 'white'
   c.fillText('Score: ' + score, 20, 40)
 
+
+  // Draw the control guides
+  c.font = '20px Arial';
+  c.fillStyle = 'white';
+  c.fillText('Controls:', 20, canvas.height - 160);
+  c.fillText('W - Forward', 20, canvas.height - 130);
+  c.fillText('A - Rotate Left', 20, canvas.height - 100);
+  c.fillText('D - Rotate Right', 20, canvas.height - 70);
+  c.fillText('S - Decelerate', 20, canvas.height - 40);
+  c.fillText('Space - Shoot', 20, canvas.height - 10);
+  
+
   for (let j = projectiles.length - 1; j >= 0; j--) {
     const projectile = projectiles[j]
     projectile.update()
