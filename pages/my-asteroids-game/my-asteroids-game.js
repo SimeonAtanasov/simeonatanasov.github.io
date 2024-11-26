@@ -144,11 +144,15 @@ const keys = {
   d: {
     pressed: false,
   },
+  s: {
+    pressed: false, // Add this for the "S" key
+  }
 }
 
 const SPEED = 6
 const ROTATIONAL_SPEED = 0.05
 const FRICTION = 0.97
+const FRICTIONTWO = 0.93
 const PROJECTILE_SPEED = 5
 
 const projectiles = []
@@ -377,13 +381,19 @@ function isPointOnLineSegment(x, y, start, end) {
 }
 
 
-  if (keys.w.pressed) {
-    player.velocity.x = Math.cos(player.rotation) * SPEED
-    player.velocity.y = Math.sin(player.rotation) * SPEED
-  } else if (!keys.w.pressed) {
-    player.velocity.x *= FRICTION
-    player.velocity.y *= FRICTION
-  }
+if (keys.w.pressed) {
+  // Move forward if "W" is pressed
+  player.velocity.x = Math.cos(player.rotation) * SPEED
+  player.velocity.y = Math.sin(player.rotation) * SPEED
+} else if (keys.s.pressed) {
+  // Apply friction if "S" is pressed
+  player.velocity.x *= FRICTIONTWO 
+  player.velocity.y *= FRICTIONTWO
+} else {
+  // Apply friction if neither "W" nor "S" is pressed
+  player.velocity.x *= FRICTION
+  player.velocity.y *= FRICTION
+}
 
   if (keys.d.pressed) player.rotation += ROTATIONAL_SPEED
   else if (keys.a.pressed) player.rotation -= ROTATIONAL_SPEED
@@ -406,6 +416,9 @@ window.addEventListener('keydown', (event) => {
       break
     case 'KeyD':
       keys.d.pressed = true
+      break
+    case 'KeyS': // Add this case
+      keys.s.pressed = true
       break
     case 'Space':
       event.preventDefault(); // Prevent the page from scrolling
@@ -436,6 +449,9 @@ window.addEventListener('keyup', (event) => {
       break
     case 'KeyD':
       keys.d.pressed = false
+      break
+    case 'KeyS': // Add this case
+      keys.s.pressed = false
       break
   }
 })
