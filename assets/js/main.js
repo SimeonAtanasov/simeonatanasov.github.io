@@ -189,27 +189,74 @@
 	// 		$(this).next("h3").next("h4").next("ul").toggleClass("hidden");
 	// 	});
 	// });	
-	$(document).ready(function () {
-		$("h3.toggle-list").on("click", function () {
-			// Get all sections inside the .features container
-			var allSections = $(".features section");
+	// $(document).ready(function () {
+	// 	$("h3.toggle-list").on("click", function () {
+	// 		// Get all sections inside the .features container
+	// 		var allSections = $(".features section");
 			
-			// Find the <ul> inside the clicked section
-			var ul = $(this).next("h3").next("h4").next("ul");
+	// 		// Find the <ul> inside the clicked section
+	// 		var ul = $(this).next("h3").next("h4").next("ul");
 			
-			// Toggle visibility of the <ul>
-			ul.toggleClass("hidden");
+	// 		// Toggle visibility of the <ul>
+	// 		ul.toggleClass("hidden");
 	
-			// Check if at least one <ul> is visible
+	// 		// Check if at least one <ul> is visible
+	// 		var anyVisible = $(".features section ul:not(.hidden)").length > 0;
+			
+	// 		// If any <ul> is visible, set all sections' width to 100%
+	// 		if (anyVisible) {
+	// 			allSections.css("width", "100%"); // Expand all sections to 100% width
+	// 		} else {
+	// 			allSections.css("width", "50%"); // Shrink all sections back to 50% width when all are hidden
+	// 		}
+	//         // Scroll to the section if it is being opened
+	// 		if (!ul.hasClass("hidden")) {
+	// 			$("html, body").animate({
+	// 				scrollTop: $(this).offset().top - 12 // Adjust the offset for better alignment
+	// 			}, 500); // Duration of the animation in milliseconds
+	// 		}
+	// 	});
+	// });
+	
+	$(document).ready(function () {
+		// Function to update the section width based on window size and visibility of <ul> elements
+		function updateSectionWidth() {
+			var allSections = $(".features section");
 			var anyVisible = $(".features section ul:not(.hidden)").length > 0;
 			
 			// If any <ul> is visible, set all sections' width to 100%
 			if (anyVisible) {
 				allSections.css("width", "100%"); // Expand all sections to 100% width
 			} else {
-				allSections.css("width", "50%"); // Shrink all sections back to 50% width when all are hidden
+				// If no <ul> is visible, check window width
+				if ($(window).width() <= 980) {
+					allSections.css("width", "100%"); // Ensure sections are 100% width below 980px
+				} else {
+					allSections.css("width", "50%"); // Set sections back to 50% width above 980px
+				}
 			}
-	        // Scroll to the section if it is being opened
+		}
+	
+		// Initial update on page load
+		updateSectionWidth();
+	
+		// Event listener for resizing the window
+		$(window).resize(function () {
+			updateSectionWidth(); // Update section widths when window is resized
+		});
+	
+		// Toggle visibility of <ul> when clicking on a section header
+		$("h3.toggle-list").on("click", function () {
+			var allSections = $(".features section");
+			var ul = $(this).next("h3").next("h4").next("ul");
+			
+			// Toggle the 'hidden' class on the <ul>
+			ul.toggleClass("hidden");
+	
+			// Update the section width based on the visibility of <ul>
+			updateSectionWidth();
+	
+			// Scroll to the section if it is being opened
 			if (!ul.hasClass("hidden")) {
 				$("html, body").animate({
 					scrollTop: $(this).offset().top - 12 // Adjust the offset for better alignment
