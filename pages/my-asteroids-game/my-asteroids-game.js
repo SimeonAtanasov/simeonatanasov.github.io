@@ -4,6 +4,8 @@ const c = canvas.getContext('2d')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
+let score = 0;
+
 class Player {
   constructor({ position, velocity }) {
     this.position = position // {x, y}
@@ -144,10 +146,10 @@ const keys = {
   },
 }
 
-const SPEED = 3
+const SPEED = 6
 const ROTATIONAL_SPEED = 0.05
 const FRICTION = 0.97
-const PROJECTILE_SPEED = 3
+const PROJECTILE_SPEED = 5
 
 const projectiles = []
 const asteroids = []
@@ -199,7 +201,7 @@ const intervalId = window.setInterval(() => {
     })
   )
   // console.log(asteroids)
-}, 1500)// 3000 milliseconds
+}, 1000)// 3000 milliseconds
 
 function circleCollision(circle1, circle2) {
   const xDifference = circle2.position.x - circle1.position.x
@@ -269,6 +271,11 @@ function animate() {
 
   player.update()
 
+  // Display the score
+  c.font = '30px Arial'
+  c.fillStyle = 'white'
+  c.fillText('Score: ' + score, 20, 40)
+
   for (let j = projectiles.length - 1; j >= 0; j--) {
     const projectile = projectiles[j]
     projectile.update()
@@ -298,6 +305,8 @@ function animate() {
         // Show the restart button
       const restartButton = document.getElementById('restartButton');
       restartButton.style.display = 'block';
+
+      restartButton.textContent = 'Restart Game - Score: ' + score;
     }
 
     // garbage collection for asteroids
@@ -316,6 +325,7 @@ function animate() {
       if (circleCollision(asteroid, projectile)) {
         asteroids.splice(i, 1)
         projectiles.splice(j, 1)
+        score += 10 // Increment score when an asteroid is destroyedaw
       }
     }
   }
