@@ -82,13 +82,14 @@ class Projectile {
     this.position = position
     this.velocity = velocity
     this.radius = 5
+    this.color = ['red', 'green', 'blue'][Math.floor(Math.random() * 3)]
   }
 
   draw() {
     c.beginPath()
     c.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2, false)
     c.closePath()
-    c.fillStyle = 'white'
+    c.fillStyle = this.color  // Use the color property
     c.fill()
   }
 
