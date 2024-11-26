@@ -1992,7 +1992,7 @@ input, select, textarea {
 	}
 
 		.features section {
-			padding: 2.5em 2em 1em 7em ;
+			padding: 2.5em 2em 1em 6em ;
 			width: 50%;
 			/* width: 50%; */
 			border: solid 1px rgba(255, 255, 255, 0.15);
@@ -3535,7 +3535,7 @@ input, select, textarea {
 		z-index: 1000; /* Ensures it stays above other elements */
 		background-color: #4267a6; /* Vibrant blue replacing #5e42a6 */
 		cursor: default;
-		padding: 1.75em 2em;
+		padding: 1em 2em;
 	}
 
 		#header > .title {
@@ -4110,15 +4110,14 @@ height: 100%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	padding: 10px 20px;
+	padding: 3px 20px;
 	font-size: 20px;
 	color: white;
 	background-color: #007bff;
 	border: none;
-	border-radius: 5px;
+	border-radius: 10px;
 	cursor: pointer;
   }
   #restartButton:hover {
 	background-color: #0056b3;
   }
-  
