@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Interactive Risk Matrix - Simeon Atanasov</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="pages/risk-matrix-front-end/risk-matrix-original.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Simeon Atanasov</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="power-bi.html">Power BI</a></li>
+						<li><a href="my-asteroids-game.html">My Asteroids Game</a></li>
+						<li><a href="risk-matrix-original.html" class="active">Risk Matrix</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<header>
+								<!-- Other generic page content -->
+								<h1 class="major">Welcome to the Interactive Risk Matrix! 🚀
+								</h1>
+							</header>
+							<section>
+								<p>In the fast-paced world of business and technology, risks are inevitable. The <strong>Interactive Risk Matrix</strong> helps you visualize, assess, and prioritize risks based on their likelihood and impact, so you can make informed decisions with ease.</p>
+								<p>Best of all, you can <strong>add your own risks</strong> and assign mitigations in real time—no need for complex spreadsheets. It's simple, interactive, and designed to make your risk management smarter and more efficient.</p>
+								<p>Start exploring and turn uncertainty into opportunity!</p>
+							</section>
+							<!-- Risk Matrix -->
+							<div class="container">
+								<h1>Interactive Risk Matrix</h1>
+								
+								<table id="risk-matrix">
+								  <!-- Header row -->
+								  <thead>
+									<tr>
+									  <th></th>
+									  <th>Low</th>
+									  <th>Medium</th>
+									  <th>High</th>
+									  <th>Critical</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <th>Likely</th>
+									  <td class="high"></td>
+									  <td class="critical"></td>
+									  <td class="critical"></td>
+									  <td class="critical"></td>
+									</tr>
+									<tr>
+									  <th>Possible</th>
+									  <td class="medium"></td>
+									  <td class="high"></td>
+									  <td class="critical"></td>
+									  <td class="critical"></td>
+									</tr>
+									<tr>
+									  <th>Unlikely</th>
+									  <td class="low"></td>
+									  <td class="medium"></td>
+									  <td class="high"></td>
+									  <td class="critical"></td>
+									</tr>
+									<tr>
+									  <th>Rare</th>
+									  <td class="low"></td>
+									  <td class="low"></td>
+									  <td class="medium"></td>
+									  <td class="high"></td>
+									</tr>
+								  </tbody>
+								</table>
+								
+								<div class="add-risk-form">
+									<h2>Add Risk to Matrix</h2>
+									<input type="text" id="new-risk" placeholder="Enter risk...">
+									<input type="text" id="new-mitigation" placeholder="Mitigation" /> <!-- New Mitigation Input -->
+									
+									<!-- Add this container for Likelihood and Impact selects -->
+									<div class="selects-container">
+									  <select id="new-likelihood">
+										<option value="Likely" class="option-likely">Likely</option>
+										<option value="Possible" class="option-possible">Possible</option>
+										<option value="Unlikely" class="option-unlikely">Unlikely</option>
+										<option value="Rare" class="option-rare">Rare</option>
+									  </select>
+								  
+									  <select id="new-impact">
+										<option value="Low" class="option-low">Low</option>
+										<option value="Medium" class="option-medium">Medium</option>
+										<option value="High" class="option-high">High</option>
+										<option value="Critical" class="option-critical">Critical</option>
+									  </select>
+									</div>
+									
+									<button id="add-risk">Add to Matrix</button>
+								  </div>
+								  
+							
+								<div class="actions">
+								  <button id="save-data">Save Risks</button>
+								  <button id="load-data">Load Risks</button>
+								  <button id="clear-data">Clear Risks</button>
+								  <button id="export-excel">Export to Excel</button>
+								</div>
+								  
+								<div class="notes">
+								  <h2>Risk Notes</h2>
+								  <ul id="risk-notes">
+									<!-- Risk Notes will appear here -->
+								  </ul>
+								</div>
+							  </div>
+							<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Simeon. All rights reserved.</li>
+					<li><a href="">Terms of use</a></li>
+					<li><a href="">Privacy notice</a></li>
+					<li><a href="">Cookie notice</a></li>						
+				</ul>
+			</div>
+		</footer>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="pages/risk-matrix-front-end/risk-matrix-original.js"></script>
+	</body>
+</html>
