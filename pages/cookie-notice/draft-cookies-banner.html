@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Banner</title>
+    <style>
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .cookie-banner h2 {
+            margin-top: 0;
+        }
+        .cookie-banner .cookie-options {
+            display: flex;
+            flex-direction: column;
+        }
+        .cookie-banner .cookie-options label {
+            margin-bottom: 10px;
+        }
+        .cookie-banner .cookie-buttons {
+            margin-top: 20px;
+        }
+        .cookie-banner .cookie-buttons button {
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function acceptCookies() {
+            // Set cookies based on user preferences
+            var performance = document.getElementById('performance-cookies').checked;
+            var functional = document.getElementById('functional-cookies').checked;
+            var targeting = document.getElementById('targeting-cookies').checked;
+
+            // Example of setting cookies (you should replace this with actual cookie setting logic)
+            document.cookie = "performance_cookies=" + performance + "; path=/";
+            document.cookie = "functional_cookies=" + functional + "; path=/";
+            document.cookie = "targeting_cookies=" + targeting + "; path=/";
+
+            // Hide the cookie banner
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        function rejectCookies() {
+            // Set cookies to false (you should replace this with actual cookie setting logic)
+            document.cookie = "performance_cookies=false; path=/";
+            document.cookie = "functional_cookies=false; path=/";
+            document.cookie = "targeting_cookies=false; path=/";
+
+            // Hide the cookie banner
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+
+<div id="cookie-banner" class="cookie-banner">
+    <h2>We use cookies</h2>
+    <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Manage Preferences".</p>
+    <div class="cookie-options">
+        <label>
+            <input type="checkbox" id="performance-cookies" checked>
+            Performance Cookies
+        </label>
+        <label>
+            <input type="checkbox" id="functional-cookies" checked>
+            Functional Cookies
+        </label>
+        <label>
+            <input type="checkbox" id="targeting-cookies" checked>
+            Targeting Cookies
+        </label>
+        <label>
+            <input type="checkbox" checked disabled>
+            Strictly Necessary Cookies (Always On)
+        </label>
+    </div>
+    <div class="cookie-buttons">
+        <button onclick="acceptCookies()">Accept All</button>
+        <button onclick="rejectCookies()">Reject All</button>
+    </div>
+</div>
+
+</body>
+</html>

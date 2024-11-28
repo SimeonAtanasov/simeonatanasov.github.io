@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Management</title>
+    <style>
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .cookie-banner h2 {
+            margin-top: 0;
+        }
+        .cookie-banner .cookie-options {
+            display: flex;
+            flex-direction: column;
+        }
+        .cookie-banner .cookie-options label {
+            margin-bottom: 10px;
+        }
+        .cookie-banner .cookie-buttons {
+            margin-top: 20px;
+        }
+        .cookie-banner .cookie-buttons button {
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function acceptCookies() {
+            // Set cookies based on user preferences
+            var performance = document.getElementById('performance-cookies').checked;
+            var functional = document.getElementById('functional-cookies').checked;
+            var targeting = document.getElementById('targeting-cookies').checked;
+
+            // Example of setting cookies (you should replace this with actual cookie setting logic)
+            document.cookie = "performance_cookies=" + performance + "; path=/";
+            document.cookie = "functional_cookies=" + functional + "; path=/";
+            document.cookie = "targeting_cookies=" + targeting + "; path=/";
+
+            // Hide the cookie banner
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        function rejectCookies() {
+            // Set cookies to false (you should replace this with actual cookie setting logic)
+            document.cookie = "performance_cookies=false; path=/";
+            document.cookie = "functional_cookies=false; path=/";
+            document.cookie = "targeting_cookies=false; path=/";
+
+            // Hide the cookie banner
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+
+<h2>Cookie Details</h2>
+
+<div class="cookie-category" onclick="toggleVisibility('performance-cookies')">Performance Cookies</div>
+<div id="performance-cookies" class="cookie-list">
+    <p><strong>Host:</strong> bing.com<br>
+        <strong>Cookie Name:</strong> SRCHHPGUSR<br>
+        <strong>Description:</strong> Stores user preferences for search results and page layout to improve the search experience.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> No</p>
+    
+        <p><strong>Host:</strong> bing.com<br>
+        <strong>Cookie Name:</strong> _SS<br>
+        <strong>Description:</strong> Tracks session-related activities to optimize search functionality.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> No</p>
+    
+        <p><strong>Host:</strong> www.bing.com<br>
+        <strong>Cookie Name:</strong> MUIDB<br>
+        <strong>Description:</strong> Tracks performance-related metrics for analytics and debugging purposes.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> No<br>
+        <strong>Http Only:</strong> Yes</p>
+    
+        <p><strong>Host:</strong> bing.com<br>
+        <strong>Cookie Name:</strong> _EDGE_S<br>
+        <strong>Description:</strong> Stores session identifiers to optimize search functionality.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> No<br>
+        <strong>Http Only:</strong> Yes</p>
+    
+        <p><strong>Host:</strong> bing.com<br>
+        <strong>Cookie Name:</strong> _EDGE_V<br>
+        <strong>Description:</strong> Enhances search functionality by storing visitor identifiers.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> No<br>
+        <strong>Http Only:</strong> Yes</p>
+    
+        <p><strong>Host:</strong> bing.com<br>
+        <strong>Cookie Name:</strong> SRCHD<br>
+        <strong>Description:</strong> Supports search personalization and faster query responses.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> No</p>
+    
+        <p><strong>Host:</strong> bing.com<br>
+        <strong>Cookie Name:</strong> SRCHUSR<br>
+        <strong>Description:</strong> Tracks search interactions to personalize user experience.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> No</p>
+    
+        <p><strong>Host:</strong> bing.com<br>
+        <strong>Cookie Name:</strong> SRCHUID<br>
+        <strong>Description:</strong> Stores unique visitor IDs to improve search result relevancy.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> No</p>
+    </div>
+
+<div class="cookie-category" onclick="toggleVisibility('functional-cookies')">Functional Cookies</div>
+<div id="functional-cookies" class="cookie-list">
+    <p><strong>Host:</strong> app.powerbi.com<br>
+        <strong>Cookie Name:</strong> ARRAffinitySameSite<br>
+        <strong>Description:</strong> Ensures requests from the same user session are routed to the same server instance for reliability.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> Yes</p>
+    
+        <p><strong>Host:</strong> app.powerbi.com<br>
+        <strong>Cookie Name:</strong> ai_user<br>
+        <strong>Description:</strong> Tracks usage analytics for embedded tools like video players.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> No</p>
+    
+        <p><strong>Host:</strong> app.powerbi.com<br>
+        <strong>Cookie Name:</strong> ARRAffinity<br>
+        <strong>Description:</strong> Balances server requests to ensure consistent session connectivity.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> Yes</p>
+    
+        <p><strong>Host:</strong> app.powerbi.com<br>
+        <strong>Cookie Name:</strong> ai_session<br>
+        <strong>Description:</strong> Tracks session information for short-term analytics and monitoring.<br>
+        <strong>Expiry Duration:</strong> 0 Days<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> No</p>
+</div>
+
+<div class="cookie-category" onclick="toggleVisibility('targeting-cookies')">Targeting Cookies</div>
+<div id="targeting-cookies" class="cookie-list">
+    <p><strong>Host:</strong> bing.com<br>
+        <strong>Cookie Name:</strong> MUID<br>
+        <strong>Description:</strong> Tracks user activity across websites to deliver targeted advertisements.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> No</p>
+    </div>
+
+<div class="cookie-category" onclick="toggleVisibility('strictly-necessary-cookies')">Strictly Necessary Cookies</div>
+<div id="strictly-necessary-cookies" class="cookie-list">
+    <p><strong>Host:</strong> appsource.powerbi.com<br>
+        <strong>Cookie Name:</strong> ARRAffinitySameSite<br>
+        <strong>Description:</strong> Routes requests to the same server instance to maintain session stability.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> Yes</p>
+    
+        <p><strong>Host:</strong> api.accredible.com<br>
+        <strong>Cookie Name:</strong> _session_id<br>
+        <strong>Description:</strong> Maintains session state for logged-in users.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> Yes</p>
+    
+        <p><strong>Host:</strong> pbivisuals.powerbi.com<br>
+        <strong>Cookie Name:</strong> ARRAffinitySameSite<br>
+        <strong>Description:</strong> Ensures consistent routing to the correct server during user sessions.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> Yes</p>
+    
+        <p><strong>Host:</strong> appsource.powerbi.com<br>
+        <strong>Cookie Name:</strong> ARRAffinity<br>
+        <strong>Description:</strong> Manages server load for reliable site operation.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> Yes</p>
+    
+        <p><strong>Host:</strong> pbivisuals.powerbi.com<br>
+        <strong>Cookie Name:</strong> ARRAffinity<br>
+        <strong>Description:</strong> Ensures requests remain tied to the same server instance.<br>
+        <strong>Expiry Duration:</strong> 1 Year<br>
+        <strong>Secure:</strong> Yes<br>
+        <strong>Http Only:</strong> Yes</p>
+</div>
+
+<div id="cookie-banner" class="cookie-banner">
+    <h2>We use cookies</h2>
+    <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Manage Preferences".</p>
+    <div class="cookie-options">
+        <label>
+            <input type="checkbox" id="performance-cookies" checked>
+            Performance Cookies
+        </label>
+        <label>
+            <input type="checkbox" id="functional-cookies" checked>
+            Functional Cookies
+        </label>
+        <label>
+            <input type="checkbox" id="targeting-cookies" checked>
+            Targeting Cookies
+        </label>
+        <label>
+            <input type="checkbox" checked disabled>
+            Strictly Necessary Cookies (Always On)
+        </label>
+    </div>
+    <div class="cookie-buttons">
+        <button onclick="acceptCookies()">Accept All</button>
+        <button onclick="acceptSelected()">Accept Selected</button>
+        <button onclick="rejectCookies()">Reject All</button>
+    </div>
+</div>
+
+</body>
+</html>

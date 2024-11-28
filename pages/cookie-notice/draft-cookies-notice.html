@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie List</title>
+    <style>
+        .cookie-category {
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .cookie-list {
+            display: none;
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        function toggleVisibility(category) {
+            var list = document.getElementById(category);
+            if (list.style.display === "none") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h2>Cookie List</h2>
+
+<div class="cookie-category" onclick="toggleVisibility('performance-cookies')">Performance Cookies</div>
+<div id="performance-cookies" class="cookie-list">
+    <p><strong>Host:</strong> bing.com<br>
+    <strong>Cookie Name:</strong> SRCHHPGUSR<br>
+    <strong>Description:</strong> Stores user preferences for search results and page layout to improve the search experience.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> No</p>
+
+    <p><strong>Host:</strong> bing.com<br>
+    <strong>Cookie Name:</strong> _SS<br>
+    <strong>Description:</strong> Tracks session-related activities to optimize search functionality.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> No</p>
+
+    <p><strong>Host:</strong> www.bing.com<br>
+    <strong>Cookie Name:</strong> MUIDB<br>
+    <strong>Description:</strong> Tracks performance-related metrics for analytics and debugging purposes.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> No<br>
+    <strong>Http Only:</strong> Yes</p>
+
+    <p><strong>Host:</strong> bing.com<br>
+    <strong>Cookie Name:</strong> _EDGE_S<br>
+    <strong>Description:</strong> Stores session identifiers to optimize search functionality.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> No<br>
+    <strong>Http Only:</strong> Yes</p>
+
+    <p><strong>Host:</strong> bing.com<br>
+    <strong>Cookie Name:</strong> _EDGE_V<br>
+    <strong>Description:</strong> Enhances search functionality by storing visitor identifiers.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> No<br>
+    <strong>Http Only:</strong> Yes</p>
+
+    <p><strong>Host:</strong> bing.com<br>
+    <strong>Cookie Name:</strong> SRCHD<br>
+    <strong>Description:</strong> Supports search personalization and faster query responses.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> No</p>
+
+    <p><strong>Host:</strong> bing.com<br>
+    <strong>Cookie Name:</strong> SRCHUSR<br>
+    <strong>Description:</strong> Tracks search interactions to personalize user experience.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> No</p>
+
+    <p><strong>Host:</strong> bing.com<br>
+    <strong>Cookie Name:</strong> SRCHUID<br>
+    <strong>Description:</strong> Stores unique visitor IDs to improve search result relevancy.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> No</p>
+</div>
+
+<div class="cookie-category" onclick="toggleVisibility('functional-cookies')">Functional Cookies</div>
+<div id="functional-cookies" class="cookie-list">
+    <p><strong>Host:</strong> app.powerbi.com<br>
+    <strong>Cookie Name:</strong> ARRAffinitySameSite<br>
+    <strong>Description:</strong> Ensures requests from the same user session are routed to the same server instance for reliability.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> Yes</p>
+
+    <p><strong>Host:</strong> app.powerbi.com<br>
+    <strong>Cookie Name:</strong> ai_user<br>
+    <strong>Description:</strong> Tracks usage analytics for embedded tools like video players.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> No</p>
+
+    <p><strong>Host:</strong> app.powerbi.com<br>
+    <strong>Cookie Name:</strong> ARRAffinity<br>
+    <strong>Description:</strong> Balances server requests to ensure consistent session connectivity.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> Yes</p>
+
+    <p><strong>Host:</strong> app.powerbi.com<br>
+    <strong>Cookie Name:</strong> ai_session<br>
+    <strong>Description:</strong> Tracks session information for short-term analytics and monitoring.<br>
+    <strong>Expiry Duration:</strong> 0 Days<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> No</p>
+</div>
+
+<div class="cookie-category" onclick="toggleVisibility('targeting-cookies')">Targeting Cookies</div>
+<div id="targeting-cookies" class="cookie-list">
+    <p><strong>Host:</strong> bing.com<br>
+    <strong>Cookie Name:</strong> MUID<br>
+    <strong>Description:</strong> Tracks user activity across websites to deliver targeted advertisements.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> No</p>
+</div>
+
+<div class="cookie-category" onclick="toggleVisibility('strictly-necessary-cookies')">Strictly Necessary Cookies</div>
+<div id="strictly-necessary-cookies" class="cookie-list">
+    <p><strong>Host:</strong> appsource.powerbi.com<br>
+    <strong>Cookie Name:</strong> ARRAffinitySameSite<br>
+    <strong>Description:</strong> Routes requests to the same server instance to maintain session stability.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> Yes</p>
+
+    <p><strong>Host:</strong> api.accredible.com<br>
+    <strong>Cookie Name:</strong> _session_id<br>
+    <strong>Description:</strong> Maintains session state for logged-in users.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> Yes</p>
+
+    <p><strong>Host:</strong> pbivisuals.powerbi.com<br>
+    <strong>Cookie Name:</strong> ARRAffinitySameSite<br>
+    <strong>Description:</strong> Ensures consistent routing to the correct server during user sessions.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> Yes</p>
+
+    <p><strong>Host:</strong> appsource.powerbi.com<br>
+    <strong>Cookie Name:</strong> ARRAffinity<br>
+    <strong>Description:</strong> Manages server load for reliable site operation.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> Yes</p>
+
+    <p><strong>Host:</strong> pbivisuals.powerbi.com<br>
+    <strong>Cookie Name:</strong> ARRAffinity<br>
+    <strong>Description:</strong> Ensures requests remain tied to the same server instance.<br>
+    <strong>Expiry Duration:</strong> 1 Year<br>
+    <strong>Secure:</strong> Yes<br>
+    <strong>Http Only:</strong> Yes</p>
+</div>
+
+</body>
+</html>
