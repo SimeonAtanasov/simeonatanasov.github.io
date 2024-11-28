@@ -3995,6 +3995,12 @@ input, select, textarea {
 					line-height: inherit;
 				}
 
+				/* Hide the avatar image */
+				#sidebar img {
+					display: none;
+				}
+
+
 					#sidebar nav ul {
 						display: -moz-flex;
 						display: -webkit-flex;
