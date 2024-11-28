@@ -86,6 +86,20 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Responsive Design: Stack buttons below each other for screens smaller than 736px */
+@media screen and (max-width: 736px) {
+    .actions {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center the buttons */
+    }
+
+    button {
+        width: 100%; /* Make buttons take full width */
+        padding: 12px; /* Adjust padding for larger clickable area */
+        font-size: 16px; /* Increase font size for easier readability */
+    }
+}
+
 /* Notes section styling */
 .notes {
     margin-top: 20px;
@@ -96,6 +110,49 @@ button:hover {
     padding: 20px;
 }
 
+.notes .labels-notes {
+    display: flex; /* Aligns the labels horizontally */
+    justify-content: space-between; /* Evenly spaces out the labels */
+    margin-bottom: 10px; /* Space between labels and the risk notes */
+    padding: 0;
+    list-style: none;
+}
+
+.notes .labels-notes li {
+    display: flex; /* Enables flexbox for each label */
+    justify-content: center; /* Centers the label horizontally */
+    align-items: center; /* Centers the label vertically */
+    text-align: center; /* Ensures the text is centered */
+    padding: 10px; /* Padding inside each label */
+    background-color: rgba(66, 118, 166, 0.35); /* Matches background color of #risk-notes li */
+    color: white; /* Text color similar to risk notes */
+    border-radius: 4px; /* Rounded corners for labels */
+    margin-right: 10px; /* Space between the labels */
+    width: auto; /* Remove flex: 1 so the width adjusts based on content */
+}
+
+/* Optional: If you want to specify width for specific labels */
+.notes .labels-notes li:nth-child(1) {
+    width: 23%; /* For the first label, like Risk */
+}
+
+.notes .labels-notes li:nth-child(2) {
+    width: 20%; /* For the second label, like Mitigation */
+}
+
+.notes .labels-notes li:nth-child(3) {
+    width: 19%; /* For the third label, like Likelihood */
+}
+
+.notes .labels-notes li:nth-child(4) {
+    width: 19%; /* For the fourth label, like Impact */
+}
+
+.notes .labels-notes li:last-child {
+    width: 13%; /* For the fourth label, like Impact */
+}
+
+  
 #risk-notes {
     list-style: none;
     padding: 0;
@@ -165,19 +222,33 @@ button:hover {
 
 /* Responsive Design: Adjustments for mobile */
 @media screen and (max-width: 768px) {
+    .notes .labels-notes li {
+        font-size: 10px; /* Reduce font size */
+    }
     #risk-notes li {
-        padding: 12px;
-        font-size: 14px; /* Adjust font size for smaller screens */
+        display: block; /* Change layout to block for stacking */
+        width: 100%; /* Ensure it takes full width */
     }
 
     #risk-notes li textarea {
-            max-width: 100%; /* Allow full width on smaller screens */
-            height: 80px; /* Adjust height for mobile */
-        
+        max-width: 100%; /* Make text area full width */
+        margin: 0;
+    }
+
+    #risk-notes li .likelihood, 
+    #risk-notes li .impact {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        padding: 5px 8px; /* Adjust padding to make them smaller */
+    }
+
+    #risk-notes li span {
+        text-align: left; /* Keeps text left aligned */
     }
 
     #risk-notes li button {
-        padding: 6px 10px; /* Adjust button size */
+        width: 100%; /* Make button full width */
+        font-size: 10px; /* Adjust font size */
+        margin:0;
     }
 }
 
