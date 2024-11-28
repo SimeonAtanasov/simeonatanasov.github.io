@@ -359,10 +359,9 @@ button#add-risk:hover {
     border: 1px solid #ccc;
 }
 
-    
 /* Likelihood Colors */
 .option-likely {
-    background-color: #b6d7a8; /* Green - Low risk */
+    background-color: #f6b26b; /* Orange - High risk */
     color: black;
 }
 
@@ -372,12 +371,12 @@ button#add-risk:hover {
 }
 
 .option-unlikely {
-    background-color: #f6b26b; /* Orange - High risk */
+    background-color: #b6d7a8; /* Green - Low risk */
     color: black;
 }
 
 .option-rare {
-    background-color: #e06666; /* Red - Critical risk */
+    background-color: #b6d7a8; /* Green - Low risk */
     color: black;
 }
 
