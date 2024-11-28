@@ -333,6 +333,33 @@ button#add-risk:hover {
     background-color: #45a049;
 }
 
+/* Risk numbers styling */
+.risk-id {
+    display: inline-block;
+    white-space: nowrap; /* Prevent wrapping of individual elements */
+    margin-right: 5px;   /* Space between elements in the same row */
+    margin-bottom: 5px;  /* Space between elements in different rows */
+    text-align: center;  /* Align the text inside each risk ID */
+    color: #335782;
+}
+
+/* Cell container for the risks */
+.risk-cell {
+    display: flex;
+    flex-wrap: wrap;         /* Allow risk IDs to wrap when necessary */
+    justify-content: center; /* Center the risk IDs horizontally */
+    align-items: flex-start; /* Align the items at the start of the cell */
+    min-height: 50px;        /* Ensure the cell has a minimum height */
+    text-align: center;      /* Center the content of the cell */
+}
+
+/* Optional: add some padding to the cell for spacing */
+#risk-matrix td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+    
 /* Likelihood Colors */
 .option-likely {
     background-color: #b6d7a8; /* Green - Low risk */

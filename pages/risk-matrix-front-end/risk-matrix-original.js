@@ -215,7 +215,7 @@ function updateRiskInMatrix(risk) {
     row.querySelectorAll("td").forEach(cell => {
       const riskElement = cell.querySelector(`[data-risk-id="${risk.number}"]`);
       if (riskElement) {
-        riskElement.remove(); // Remove existing element
+        riskElement.remove(); // Remove existing element if present
       }
     });
   });
@@ -225,13 +225,25 @@ function updateRiskInMatrix(risk) {
   const cell = document.querySelector(`#risk-matrix tbody tr:nth-child(${rowIndex + 1}) td:nth-child(${colIndex + 2})`);
 
   if (cell) {
+    // Create a div to hold the risk numbers
     const riskElement = document.createElement("div");
     riskElement.classList.add("risk-id");
     riskElement.textContent = `#${risk.number}`;
     riskElement.dataset.riskId = risk.number;
-    cell.appendChild(riskElement);
+
+    // Wrap all risk numbers in a container with flex-wrap style
+    let riskContainer = cell.querySelector('.risk-cell');
+    if (!riskContainer) {
+      riskContainer = document.createElement("div");
+      riskContainer.classList.add("risk-cell");
+      cell.appendChild(riskContainer);
+    }
+
+    // Append the new risk element to the container
+    riskContainer.appendChild(riskElement);
   }
 }
+
 
 
   // Remove risk from the matrix
