@@ -5,9 +5,6 @@ canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
 let score = 0;
-let highestScore = localStorage.getItem('highestScore') 
-    ? parseInt(localStorage.getItem('highestScore')) 
-    : 0; // Initialize highest score from localStorage
 
 class Player {
   constructor({ position, velocity }) {
@@ -284,9 +281,6 @@ function animate() {
   c.fillStyle = 'white'
   c.fillText('Score: ' + score, 20, 40)
 
-  // Display the highest score
-  c.fillText('Highest Score: ' + highestScore, 20, 80);
-
 
   // Draw the control guides
   c.font = '20px Arial';
@@ -325,11 +319,6 @@ function animate() {
       window.cancelAnimationFrame(animationId)
       clearInterval(intervalId)
 
-      // Check and update the highest score
-      if (score > highestScore) {
-        highestScore = score;
-        localStorage.setItem('highestScore', highestScore); // Save to localStorage
-      }
         // Show the restart button
       const restartButton = document.getElementById('restartButton');
       restartButton.style.display = 'block';
