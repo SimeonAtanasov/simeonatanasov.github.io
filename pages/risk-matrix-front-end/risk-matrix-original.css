@@ -1,0 +1,305 @@
+/* Main container styling */
+.container {
+    text-align: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Risk matrix table styling */
+#risk-matrix {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px; /* Limit table width to 800px */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header and cell styling */
+#risk-matrix th, 
+#risk-matrix td {
+    border: 1px solid #ccc;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    position: relative;
+}
+
+
+/* Styling for text inputs and textareas within the matrix */
+#risk-matrix input,
+#risk-matrix textarea {
+    width: 100%;
+    height: auto;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 14px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 100px;
+    line-height: 1.5;
+    display: block;
+}
+
+/* Colors based on risk level */
+.low {
+    background-color: #b6d7a8; /* Green */
+}
+
+.medium {
+    background-color: #ffe599; /* Yellow */
+}
+
+.high {
+    background-color: #f6b26b; /* Orange */
+}
+
+.critical {
+    background-color: #e06666; /* Red */
+}
+
+/* Action buttons */
+.actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Notes section styling */
+.notes {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1400px; /* Ensures notes section doesn't stretch too wide */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+#risk-notes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#risk-notes li {
+    background: rgba(66, 118, 166, 0.35); /* Blue background color matching the footer */
+    color: white; /* Light text color for better contrast */
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px; /* Ensures consistency with other text sizes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+}
+/* Styling for text area in risk notes */
+#risk-notes li textarea {
+    width: 100%; /* Adjust width to fit the parent container */
+    max-width: 500px; /* Set a maximum width for the text area */
+    height: 80px; /* Set a fixed height for the text area */
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px; /* Adjust font size */
+    resize: none; /* Disable manual resizing */
+    margin-top: 10px; /* Add space between text area and other elements */
+    background-color: rgba(66, 118, 166, 0.35) /* White background */
+}
+
+/* Adjust the size of the likelihood and impact */
+#risk-notes li .likelihood, 
+#risk-notes li .impact {
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 10px; /* Adjust padding to make them smaller */
+    border-radius: 4px; /* Rounded corners */
+    margin-right: 10px; /* Space between elements */
+}
+
+#risk-notes li span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+#risk-notes li button {
+    cursor: pointer;
+    background-color: #e06666;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+#risk-notes li button:hover {
+    background-color: #e53935;
+}
+
+#risk-notes li button:focus {
+    outline: none; /* Removes outline on focus */
+}
+
+
+/* Responsive Design: Adjustments for mobile */
+@media screen and (max-width: 768px) {
+    #risk-notes li {
+        padding: 12px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    #risk-notes li textarea {
+            max-width: 100%; /* Allow full width on smaller screens */
+            height: 80px; /* Adjust height for mobile */
+        
+    }
+
+    #risk-notes li button {
+        padding: 6px 10px; /* Adjust button size */
+    }
+}
+
+
+/* Add risk form styling */
+.add-risk-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 15px;
+    width: 100%; /* Ensure it takes full width */
+    max-width: 800px; /* Ensures form doesn't stretch too wide */
+    align-items: center; /* Centers the form elements horizontally */
+    margin-left: auto; /* Align form to the center */
+    margin-right: auto; /* Align form to the center */
+}
+
+/* Align the likelihood and impact selects on the same row */
+.add-risk-form .selects-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    gap: 10px;
+    width: 100%; /* Full width */
+    max-width: 500px; /* Ensures selects are not too wide */
+}
+
+
+/* Style for select elements */
+#new-likelihood, #new-impact {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 48%; /* Make selects take up about half the row each */
+}
+
+/* Other form elements like input and button */
+#new-risk, #new-mitigation, #add-risk {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 400px; /* Ensure inputs are not too wide */
+}
+
+/* Styling for text inputs */
+input[type="text"] {
+    width: 100%; /* Full width */
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for select elements */
+select {
+    width: 48%; /* Ensure selects are equal width */
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styling */
+button#add-risk {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+}
+
+button#add-risk:hover {
+    background-color: #45a049;
+}
+
+/* Likelihood Colors */
+.option-likely {
+    background-color: #b6d7a8; /* Green - Low risk */
+    color: black;
+}
+
+.option-possible {
+    background-color: #ffe599; /* Yellow - Medium risk */
+    color: black;
+}
+
+.option-unlikely {
+    background-color: #f6b26b; /* Orange - High risk */
+    color: black;
+}
+
+.option-rare {
+    background-color: #e06666; /* Red - Critical risk */
+    color: black;
+}
+
+/* Impact Colors */
+.option-low {
+    background-color: #b6d7a8; /* Green - Low impact */
+    color: black;
+}
+
+.option-medium {
+    background-color: #ffe599; /* Yellow - Medium impact */
+    color: black;
+}
+
+.option-high {
+    background-color: #f6b26b; /* Orange - High impact */
+    color: black;
+}
+
+.option-critical {
+    background-color: #e06666; /* Red - Critical impact */
+    color: black;
+}
