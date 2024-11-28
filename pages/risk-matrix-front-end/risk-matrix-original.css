@@ -223,7 +223,7 @@ button:hover {
 /* Responsive Design: Adjustments for mobile */
 @media screen and (max-width: 768px) {
     .notes .labels-notes li {
-        font-size: 10px; /* Reduce font size */
+        font-size: 8px; /* Reduce font size */
     }
     #risk-notes li {
         display: block; /* Change layout to block for stacking */
