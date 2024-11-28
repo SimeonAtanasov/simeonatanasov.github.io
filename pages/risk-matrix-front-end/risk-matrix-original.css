@@ -298,7 +298,6 @@ button:hover {
 /* Styling for text inputs */
 input[type="text"] {
     width: 100%; /* Full width */
-    margin-right: 10px;
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -308,7 +307,6 @@ input[type="text"] {
 /* Styling for select elements */
 select {
     width: 48%; /* Ensure selects are equal width */
-    margin-right: 10px;
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
