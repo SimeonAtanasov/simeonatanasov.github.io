@@ -162,6 +162,46 @@ const PROJECTILE_SPEED = 5
 const projectiles = []
 const asteroids = []
 
+const stars = [];
+const numStars = 200; // Adjust the number of stars as needed
+
+class Star {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.radius = Math.random() * 2; // Small radius for stars
+    this.alpha = Math.random(); // Random brightness
+    this.velocityY = Math.random() * 0.1 + 0.02; // Extra slow falling effect
+  }
+
+  draw() {
+    c.save();
+    c.globalAlpha = this.alpha; // Set the transparency
+    c.beginPath();
+    c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+    c.fillStyle = 'white';
+    c.fill();
+    c.closePath();
+    c.restore();
+  }
+
+  update() {
+    this.y += this.velocityY; // Simulate falling
+    if (this.y > canvas.height) {
+      this.y = -this.radius; // Reset to the top
+      this.x = Math.random() * canvas.width;
+      this.alpha = Math.random(); // Randomize brightness again
+    }
+    this.draw();
+  }
+}
+
+
+for (let i = 0; i < numStars; i++) {
+  stars.push(new Star());
+}
+
+
 const intervalId = window.setInterval(() => {
   const index = Math.floor(Math.random() * 4)
   let x, y
@@ -278,6 +318,9 @@ function animate() {
   c.fillRect(0, 0, canvas.width, canvas.height)
 
   player.update()
+
+  // Draw stars
+  stars.forEach((star) => star.update());
 
   // Display the score
   c.font = '30px Arial'
