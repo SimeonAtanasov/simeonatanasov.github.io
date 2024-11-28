@@ -127,7 +127,6 @@ button:hover {
     background-color: rgba(66, 118, 166, 0.35); /* Matches background color of #risk-notes li */
     color: white; /* Text color similar to risk notes */
     border-radius: 4px; /* Rounded corners for labels */
-    margin-right: 10px; /* Space between the labels */
     width: auto; /* Remove flex: 1 so the width adjusts based on content */
 }
 
@@ -149,7 +148,7 @@ button:hover {
 }
 
 .notes .labels-notes li:last-child {
-    width: 13%; /* For the fourth label, like Impact */
+    width: 14%; /* For the fourth label, like Impact */
 }
 
   
