@@ -34,20 +34,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedData = JSON.parse(localStorage.getItem("riskMatrix"));
     if (savedData) {
       const { matrix, notes } = savedData;
-
+  
       // Restore matrix
       inputs.forEach((input, index) => {
         input.value = matrix[index] || "";
       });
-
+  
       // Clear and repopulate notes
       riskNotes.innerHTML = "";
-      notes.forEach(note => addRiskToNotes(note));
+      risksList.length = 0; // Clear the existing risks list
+  
+      // Load notes and set the riskCounter to the highest number + 1
+      if (notes.length > 0) {
+        notes.forEach(note => {
+          risksList.push(note);
+          addRiskToNotes(note);
+        });
+        riskCounter = Math.max(...notes.map(note => note.number)) + 1;
+      } else {
+        riskCounter = 1; // Reset to 1 if no notes
+      }
+  
       alert("Risks loaded!");
     } else {
       alert("No saved risks found.");
     }
   });
+  
 
 // Clear all data
 clearButton.addEventListener("click", () => {
