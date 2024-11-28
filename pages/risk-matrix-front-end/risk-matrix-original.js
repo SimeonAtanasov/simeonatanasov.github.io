@@ -146,10 +146,10 @@ function addRiskToNotes(risk) {
       <option value="Rare" ${risk.likelihood === "Rare" ? "selected" : ""}>Rare</option>
     </select>
     <select class="impact">
-      <option value="Low" ${risk.impact === "Low" ? "selected" : ""}>Low</option>
-      <option value="Medium" ${risk.impact === "Medium" ? "selected" : ""}>Medium</option>
-      <option value="High" ${risk.impact === "High" ? "selected" : ""}>High</option>
-      <option value="Critical" ${risk.impact === "Critical" ? "selected" : ""}>Critical</option>
+      <option value="Low" ${risk.impact === "Low" ? "selected" : ""}>Low Impact</option>
+      <option value="Medium" ${risk.impact === "Medium" ? "selected" : ""}>Medium Impact</option>
+      <option value="High" ${risk.impact === "High" ? "selected" : ""}>High Impact</option>
+      <option value="Critical" ${risk.impact === "Critical" ? "selected" : ""}>Critical Impact</option>
     </select>
     <button class="delete-risk">Delete</button>
   `;
