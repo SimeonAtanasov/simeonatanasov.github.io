@@ -4,6 +4,31 @@ const c = canvas.getContext('2d')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
+
+
+
+// Sound toggle flag
+let soundOn = false;
+
+// Select the sound toggle button
+const soundToggleButton = document.getElementById('soundToggle');
+
+// Add event listener for the sound toggle button
+soundToggleButton.addEventListener('click', () => {
+  soundOn = !soundOn; // Toggle the sound state
+  soundToggleButton.textContent = `Sound: ${soundOn ? 'On' : 'Off'}`;
+});
+
+function playSound(src) {
+  if (soundOn) {
+    const sound = new Audio(src);
+    sound.volume = 0.1; // Adjust volume if needed
+    sound.play();
+  }
+}
+
+
+
 let score = 0;
 let highestScore = localStorage.getItem('highestScore') 
     ? parseInt(localStorage.getItem('highestScore')) 
@@ -397,6 +422,11 @@ function animate() {
         asteroids.splice(i, 1)
         projectiles.splice(j, 1)
         score += 10 // Increment score when an asteroid is destroyedaw
+        playSound('pages/my-asteroids-game/sounds/meteorite_sfx-76195.mp3');
+        //   // Play explosion sound
+        // const explosionSound = new Audio('pages/my-asteroids-game/sounds/meteorite_sfx-76195.mp3');
+        // explosionSound.volume = 0.1; // Adjust volume as needed
+        // explosionSound.play();
       }
     }
   }
@@ -493,17 +523,10 @@ window.addEventListener('keydown', (event) => {
       // const shootSound = new Audio('pages/my-asteroids-game/sounds/blaster-103340.mp3');
       // shootSound.volume = 0.1;  // Reduce volume to 20%
       // shootSound.play(); // Play the sound
+      playSound('pages/my-asteroids-game/sounds/blaster-103340.mp3');
 
-      // // Check if the sound is loaded and ready to play
-      // shootSound.onload = function () {
-      //   console.log('Sound loaded successfully!');
-      //   shootSound.play();
-      // };
 
-      // // If there's an issue loading the sound
-      // shootSound.onerror = function (error) {
-      //   console.error('Error loading the sound:', error);
-      // };
+
       projectiles.push(
         new Projectile({
           position: {

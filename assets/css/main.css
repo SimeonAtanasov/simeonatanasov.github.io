@@ -4129,6 +4129,28 @@ height: 100%;
 	background-color: #0056b3;
   }
 
+
+  /* Style for screens smaller than 980px */
+  @media screen and (max-width: 980px) {
+	#restartButton, #soundToggle {
+	  font-size: 14px;
+	}
+  }
+  
+  /* Style for screens smaller than 736px */
+  @media screen and (max-width: 736px) {
+	#restartButton, #soundToggle {
+	  font-size: 12px;
+	}
+  }
+  
+  /* Style for screens smaller than 480px */
+  @media screen and (max-width: 480px) {
+	#restartButton, #soundToggle {
+	  font-size: 10px;
+	}
+  }
+  
   
 
   
