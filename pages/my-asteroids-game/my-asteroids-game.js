@@ -489,6 +489,21 @@ window.addEventListener('keydown', (event) => {
       break
     case 'Space':
       event.preventDefault(); // Prevent the page from scrolling
+      // // Play shoot sound effect
+      // const shootSound = new Audio('pages/my-asteroids-game/sounds/blaster-103340.mp3');
+      // shootSound.volume = 0.1;  // Reduce volume to 20%
+      // shootSound.play(); // Play the sound
+
+      // // Check if the sound is loaded and ready to play
+      // shootSound.onload = function () {
+      //   console.log('Sound loaded successfully!');
+      //   shootSound.play();
+      // };
+
+      // // If there's an issue loading the sound
+      // shootSound.onerror = function (error) {
+      //   console.error('Error loading the sound:', error);
+      // };
       projectiles.push(
         new Projectile({
           position: {
