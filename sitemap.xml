@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://simeonatanasov.com/</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://simeonatanasov.com/index.html</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://simeonatanasov.com/power-bi.html</loc>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://simeonatanasov.com/my-asteroids-game.html</loc>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://simeonatanasov.com/risk-matrix-original.html</loc>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://simeonatanasov.com/privacy-notice.html</loc>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://simeonatanasov.com/cookie-notice.html</loc>
+      <priority>0.6</priority>
+   </url>
+</urlset>
