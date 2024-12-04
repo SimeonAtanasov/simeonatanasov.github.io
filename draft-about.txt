@@ -1,0 +1,48 @@
+							<div id="about">
+								<h2 class="toggle-list"><strong>About</strong></h2>
+								<!-- Preview List -->
+								<ul class="preview no-bullets">
+									<li>I inspire organizations to simplify GDPR, AI challenges, IT risks, and other compliance complexities, transforming them into actionable solutions. Over the last decade, I’ve partnered with global brands like Coca-Cola Europacific Partners, Coface, NN Group, and KSB AG, delivering:</li>
+								</ul>
+								<!-- Rest of Content List (Initially hidden) -->
+								<ul class="hidden">
+									<li class="listmargin"><strong>Privacy Assessments & Risk Mitigation:</strong> Designed compliance frameworks that reduce compliance and IT risks while aligning with business goals.</li>
+									<li class="listmargin"><strong>Impactful Tools:</strong> Developed a Power BI GDPR fines dashboard, providing actionable insights for stakeholders, and created tools to assess AI governance and its ethical implications.</li>
+									<li class="listmargin"><strong>Expertise:</strong> Proficient in JavaScript, Power BI, and CSS to develop user-friendly privacy solutions.</li>
+								</ul>
+								<!-- Toggle Button -->
+								<a href="#" class="toggle-more">Show More</a>
+							</div>		
+
+
+
+.no-bullets {
+	list-style-type: none;
+	padding-left: 20px; /* Optional: add some margin for spacing */
+	margin-bottom: 20px;
+}
+
+.listmargin {
+	margin-bottom: 5px;
+	margin-left: 70px;
+}
+
+
+
+		$(".toggle-more").on("click", function (e) {
+			e.preventDefault();  // Prevent the default link behavior
+		
+			var hiddenContent = $(this).prev("ul");  // Select the full content <ul> that is immediately before the link
+			var isHidden = hiddenContent.hasClass("hidden");
+		
+			// Toggle the visibility of the hidden content
+			hiddenContent.toggleClass("hidden");
+		
+			// Update the link text
+			if (isHidden) {
+				$(this).text("Show Less");
+			} else {
+				$(this).text("Show More");
+			}
+		});		
+		
