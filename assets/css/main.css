@@ -2013,14 +2013,28 @@ input, select, textarea {
 
 		.features .specific-section span {
 			display: flex; /* Enables flexbox for the span */
-			align-items: flex-start; /* Align image to the top */
-			justify-content: flex-start; /* Align the image to the left inside the span */
+			align-items: center; /* Vertically center the image */
+			justify-content: center; /* Horizontally center the image */
+			max-width: 110px; /* Increased max-width for a larger image */
+
 		}
 
 		.features .specific-section span img {
 			display: block; /* Ensures predictable image behavior */
 			width: 100%; /* Makes the image responsive */
-			max-width: 200px; /* Increased max-width for a larger image */
+			height: auto; /* Maintain aspect ratio */
+			margin: 0; /* Remove any margin on the image */
+		}
+
+		#UC3dM {
+			display: block; /* Ensures predictable image behavior */
+			width: 90%; /* Reduces width to 80% */
+			height: auto; /* Maintain aspect ratio */
+			margin: 0; /* Remove any margin on the image */
+		}
+		#SoftAcademy {
+			display: block; /* Ensures predictable image behavior */
+			width: 90%; /* Reduces width to */
 			height: auto; /* Maintain aspect ratio */
 			margin: 0; /* Remove any margin on the image */
 		}
@@ -2260,7 +2274,10 @@ input, select, textarea {
 					.features section:first-child {
 						border-top-width: 0 !important;
 					}
-
+				.features .specific-section span img {
+					max-width: 80px;
+			}
+	
 		}
 
 		@media screen and (max-width: 736px) {
