@@ -2020,7 +2020,7 @@ input, select, textarea {
 		.features .specific-section span img {
 			display: block; /* Ensures predictable image behavior */
 			width: 100%; /* Makes the image responsive */
-			max-width: 250px; /* Increased max-width for a larger image */
+			max-width: 200px; /* Increased max-width for a larger image */
 			height: auto; /* Maintain aspect ratio */
 			margin: 0; /* Remove any margin on the image */
 		}
