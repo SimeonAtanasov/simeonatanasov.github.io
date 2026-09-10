@@ -193,6 +193,45 @@
 		"Other"
 	];
 
+	// Region shortcuts first (so ticking one covers a whole group without
+	// hunting down every member state), then the full country list
+	// alphabetically, then "Other" for anything not listed. Shared across
+	// modules so the Privacy Assessment's answer carries over to the DPIA
+	// intact rather than being retyped.
+	var COUNTRIES_REGIONS = [
+		"Global / worldwide (all countries)",
+		"Whole EU/EEA (all member states)",
+		"Whole European Union (EU) only",
+		"Whole EFTA (Iceland, Liechtenstein, Norway, Switzerland)",
+		"Whole United Kingdom",
+		"Whole North America (US & Canada)",
+		"Whole Latin America & the Caribbean",
+		"Whole Asia-Pacific (APAC)",
+		"Whole Middle East",
+		"Whole Africa",
+		"Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
+		"Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan",
+		"Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia",
+		"Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Republic of the)", "Congo (Democratic Republic of the)",
+		"Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador",
+		"Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France",
+		"Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau",
+		"Guyana", "Haiti", "Honduras", "Hong Kong SAR", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq",
+		"Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo",
+		"Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania",
+		"Luxembourg", "Macau SAR", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania",
+		"Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar",
+		"Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia",
+		"Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines",
+		"Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa",
+		"San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia",
+		"Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden",
+		"Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago",
+		"Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay",
+		"Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe",
+		"Other"
+	];
+
 	/* ---------------- PRIVACY ASSESSMENT ---------------- */
 	var PRIVACY_STEPS = [
 		{
@@ -209,7 +248,8 @@
 				] },
 				{ id: "changeType", type: "select", label: "Is this a new activity or a change to an existing one?", options: ["New activity", "Changed activity", "Not sure"] },
 				{ id: "goLiveDate", type: "date", label: "When will it become operational? (leave blank if already live or not set)" },
-				{ id: "countries", type: "text", label: "Which countries or regions does this process apply to?" },
+				{ id: "countries", type: "multiselect", label: "Which countries or regions does this process apply to?", options: COUNTRIES_REGIONS,
+					note: { label: "Specify the other country or countries", visibleIf: function (v) { return (v || []).indexOf("Other") !== -1; } } },
 				{ id: "area", type: "select", label: "Which business area does this belong to?", options: ["HR & People", "Marketing & Sales", "Customer Service", "Finance", "IT & Technology", "Supply Chain & Operations", "Legal & Compliance", "Other"],
 					note: { label: "Specify the business area", visibleIf: function (v) { return v === "Other"; } } },
 				{ id: "projectOwner", type: "text", label: "Who owns this project? (name or role of the business owner, and any other team contacts)" },
@@ -1447,7 +1487,8 @@
 				{ id: "description", type: "textarea", label: "Describe the processing: what it does, for whom, and why it is needed" },
 				{ id: "changeType", type: "select", label: "Is this a new activity or a change to an existing one?", options: ["New activity", "Changed activity", "Not sure"] },
 				{ id: "goLiveDate", type: "date", label: "Planned go-live date (leave blank if not set)" },
-				{ id: "countries", type: "text", label: "Which countries or regions does the processing cover?" },
+				{ id: "countries", type: "multiselect", label: "Which countries or regions does the processing cover?", options: COUNTRIES_REGIONS,
+					note: { label: "Specify the other country or countries", visibleIf: function (v) { return (v || []).indexOf("Other") !== -1; } } },
 				{ id: "controllerRole", type: "select", label: "What is your organization's role?", options: ["Controller", "Joint controller", "Processor", "Not sure"] },
 				{ id: "businessArea", type: "select", label: "Which business area owns this?", options: ["HR & People", "Marketing & Sales", "Customer Service", "Finance", "IT & Technology", "Supply Chain & Operations", "Legal & Compliance", "Other"],
 					note: { label: "Specify the business area", visibleIf: function (v) { return v === "Other"; } } }
@@ -2624,7 +2665,8 @@
 			description: a.description || "",
 			changeType: a.changeType || "",
 			goLiveDate: a.goLiveDate || "",
-			countries: a.countries || "",
+			countries: (a.countries || []).slice(),
+			countriesNote: a.countriesNote || "",
 			businessArea: a.area || "",
 			businessAreaNote: a.areaNote || "",
 			// The Privacy Assessment asks these in the same vocabulary, so they
@@ -2748,8 +2790,24 @@
 			// native checkbox invisible (0 opacity, no visible replacement).
 			// So we hide the native input (kept for accessibility/semantics)
 			// and draw our own checkbox glyph that reflects state on rebuild.
-			var list = el("div", { class: "paa-checklist" });
+			// A long option list (e.g. the country/region picker) gets a filter
+			// box and a scrollable, capped-height list so the page doesn't turn
+			// into one giant checklist - the filter only hides/shows labels,
+			// it never touches the answer array.
+			var isLong = q.options.length > 15;
+			var list = el("div", { class: "paa-checklist" + (isLong ? " paa-checklist-scroll" : "") });
 			var current = state.answers[q.id] || [];
+			if (isLong) {
+				var filter = el("input", { type: "text", class: "paa-checklist-filter", placeholder: "Filter " + q.options.length + " options…" });
+				filter.addEventListener("input", function () {
+					var term = filter.value.trim().toLowerCase();
+					list.querySelectorAll("label").forEach(function (lbl) {
+						var text = lbl.textContent.toLowerCase();
+						lbl.style.display = (!term || text.indexOf(term) !== -1) ? "" : "none";
+					});
+				});
+				wrap.appendChild(filter);
+			}
 			q.options.forEach(function (opt) {
 				var checked = current.indexOf(opt) !== -1;
 				var cb = el("input", { type: "checkbox", class: "paa-sr-checkbox" });
