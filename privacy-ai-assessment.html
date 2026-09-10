@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="pages/privacy-ai-assessment/assessment.css">
+		<link rel="stylesheet" href="pages/privacy-ai-assessment/practical-privacy.css">
 		<!-- OneTrust Cookies Consent Notice start for www.simeonatanasov.com -->
 		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="0196e235-6107-71c1-b858-dfe924328e45" ></script>
 		<script type="text/javascript">
@@ -39,11 +40,697 @@
 						<div class="inner">
 							<h1 class="major">Privacy &amp; AI Governance Self-Assessment</h1>
 							<section>
-								<p>Six practitioner-built assessments, modeled on the kind of tools used in real privacy, AI governance and third-party risk programs. The <strong>Privacy Assessment</strong> screens a process end to end - what data, whose, for what purposes, on what lawful basis, with what retention, who it is shared with and where it goes - and tells you whether a DPIA is needed; if it is, it hands over to the <strong>Full DPIA</strong> - necessity and proportionality, individual rights, transfers, and a risk assessment of the three feared events plotted on a severity &times; likelihood matrix. Where a process relies on legitimate interests, the <strong>Legitimate Interest Test</strong> works through the purpose, necessity and balancing tests and shows both sides of the balance. The <strong>AI Risk Assessment</strong> classifies an AI system against the EU AI Act, and the <strong>Incident &amp; Breach Severity Assessment</strong> records an incident and calculates its severity score using the published ENISA method, with an analysis of what drives the score and what would change it. The <strong>Third-Party Security Assessment</strong> is a detailed vendor security questionnaire - governance, people, assets, development, access, operations, cryptography, incident response, physical security, continuity, compliance, and an AI/ML supplement - scored as inherent risk tempered by control maturity, with a full list of gaps to close. Everything runs in your browser - nothing is submitted anywhere, and your saved assessments stay on your own device, exportable as JSON or CSV.</p>
+								<p>Six practitioner-built assessments, modeled on the kind of tools used in real privacy, AI governance and third-party risk programs. The <strong>Privacy Assessment</strong> screens a process end to end - what data, whose, for what purposes, on what lawful basis, with what retention, who it is shared with and where it goes - and tells you whether a DPIA is needed; if it is, it hands over to the <strong>Full DPIA</strong> - necessity and proportionality, individual rights, transfers, and a risk assessment of the three feared events plotted on a severity &times; likelihood matrix. Where a process relies on legitimate interests, the <strong>Legitimate Interest Test</strong> works through the purpose, necessity and balancing tests and shows both sides of the balance. The <strong>AI Risk Assessment</strong> classifies an AI system against the EU AI Act, and the <strong>Incident &amp; Breach Severity Assessment</strong> records an incident and calculates its severity score using the published ENISA method, with an analysis of what drives the score and what would change it. The <strong>Third-Party Security Assessment</strong> is a detailed vendor security questionnaire - governance, people, assets, development, access, operations, cryptography, incident response, physical security, continuity, compliance, and an AI/ML supplement - scored as inherent risk tempered by control maturity, with a full list of gaps to close. Everything runs in your browser - nothing is submitted anywhere, and your saved assessments stay on your own device, exportable as JSON or CSV. Looking for the underlying guidance rather than a scored assessment? Jump to <a href="#practical-privacy">Practical Privacy</a> below for an everyday playbook of genericized, practitioner-tested guidance.</p>
 							</section>
 
 							<div id="paa-app"></div>
 
+						</div>
+					</section>
+
+					<!-- Practical Privacy -->
+					<section id="practical-privacy-section" class="wrapper">
+						<div class="inner">
+						<section id="practical-privacy">
+							<h2>Practical Privacy</h2>
+							<div class="pp-intro">
+<p>Privacy programs live or die on the small, everyday decisions people make - whether to record a meeting, how long to keep a spreadsheet, who gets access to a shared mailbox. This reference distills practitioner-tested guidance on the situations that come up again and again inside a modern organization: surveillance and monitoring, offboarding, meetings, remote work, surveys, talent data, individual rights requests, sensitive data, consent, secondary use, external and regulatory requests, digital products, breach response, records management, and marketing.</p>
+<p>None of this is legal advice, and none of it describes any single company's internal program - it is a genericized synthesis of practices that recur across privacy programs, intended as a practical starting point you can adapt to your own organization's tools, policies and legal environment. Wherever it says "your organization," substitute your own employer's approved systems, escalation paths and legal counsel.</p>
+							</div>
+							<p class="pp-index-label">Jump to a topic:</p>
+							<ul class="pp-index">
+<li><a href="#pp-video-surveillance-photography-location-tracking">1. Video Surveillance, Photography &amp; Location Tracking</a></li>
+<li><a href="#pp-offboarding-protecting-data-when-someone-leaves">2. Offboarding: Protecting Data When Someone Leaves</a></li>
+<li><a href="#pp-accessing-another-person-s-mailbox">3. Accessing Another Person&#x27;s Mailbox</a></li>
+<li><a href="#pp-meetings-recording-transcripts-ai-notetaking">4. Meetings: Recording, Transcripts &amp; AI Notetaking</a></li>
+<li><a href="#pp-remote-hybrid-work-privacy-risks-outside-the-office">5. Remote &amp; Hybrid Work: Privacy Risks Outside the Office</a></li>
+<li><a href="#pp-surveys-polls-quizzes-competitions">6. Surveys, Polls, Quizzes &amp; Competitions</a></li>
+<li><a href="#pp-privacy-through-the-talent-lifecycle">7. Privacy Through the Talent Lifecycle</a></li>
+<li><a href="#pp-handling-requests-to-exercise-privacy-rights">8. Handling Requests to Exercise Privacy Rights</a></li>
+<li><a href="#pp-sensitive-special-category-personal-data-biometrics">9. Sensitive (Special-Category) Personal Data &amp; Biometrics</a></li>
+<li><a href="#pp-consent-when-it-s-the-right-tool-and-when-it-isn-t">10. Consent: When It&#x27;s the Right Tool (and When It Isn&#x27;t)</a></li>
+<li><a href="#pp-secondary-use-reusing-data-for-a-new-purpose">11. Secondary Use: Reusing Data for a New Purpose</a></li>
+<li><a href="#pp-responding-to-external-requests-for-data">12. Responding to External Requests for Data</a></li>
+<li><a href="#pp-ai-analytics-automated-decision-making-emerging-area">13. AI, Analytics &amp; Automated Decision-Making (Emerging Area)</a></li>
+<li><a href="#pp-engaging-with-data-protection-regulators">14. Engaging with Data Protection Regulators</a></li>
+<li><a href="#pp-website-digital-product-privacy-compliance">15. Website &amp; Digital Product Privacy Compliance</a></li>
+<li><a href="#pp-data-breach-response-incident-reporting">16. Data Breach Response &amp; Incident Reporting</a></li>
+<li><a href="#pp-records-management-retention-secure-sharing">17. Records Management, Retention &amp; Secure Sharing</a></li>
+<li><a href="#pp-marketing-direct-communications-compliance">18. Marketing &amp; Direct Communications Compliance</a></li>
+</ul>
+							<div class="pp-accordion">
+						<details class="pp-item" id="pp-video-surveillance-photography-location-tracking">
+							<summary><span class="pp-num">1</span> Video Surveillance, Photography &amp; Location Tracking</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Cameras, photos, GPS trackers, and workplace monitoring tools all capture personal information, often about people who never agreed to be filmed or tracked. Because these methods are inherently intrusive, they are only justified when there's a clear, lawful business need paired with real transparency and safeguards - not just because the technology is available.</p>
+<p><strong>Key actions</strong></p>
+<ul>
+<li>Treat any recording or tracking technology as a personal-data activity from day one - complete a privacy impact assessment before deployment.</li>
+<li>Understand and comply with local privacy and labor law before installing cameras, trackers, or monitoring software.</li>
+<li>Define narrowly what data is collected and why; get sign-off from your privacy and security functions where relevant.</li>
+<li>Notify people through signage, onboarding materials, or direct communication - a camera or tracker that nobody knows about is a red flag.</li>
+<li>Signage should name the controller, the purpose, the retention period, and how to exercise rights or get more information.</li>
+<li>Build in opt-out functionality wherever legally required, and apply firm retention and deletion schedules.</li>
+<li>For photos and event footage: explain the purpose and where images will be used, get general consent for group shots and explicit consent for anyone singled out as a focal subject, store only on approved platforms, and delete once the purpose is served.</li>
+<li>For location/GPS tracking: limit scope to work activity, disable tracking outside working hours where possible, and delete location data promptly.</li>
+</ul>
+<p><strong>Never</strong></p>
+<ul>
+<li>Install hidden cameras without an exceptional, documented approval.</li>
+<li>Point cameras at bathrooms, locker rooms, private spaces, public streets, neighboring properties, or individual workstations.</li>
+<li>Share footage externally without privacy review, copy it to personal devices, or use facial recognition without a completed assessment and formal sign-off.</li>
+<li>Enable location tracking secretly, use it as a backdoor for disciplinary monitoring without a proper legal basis, or turn it on by default without purpose and notice.</li>
+<li>Reuse photos or video for a purpose different from what people were told, or edit media in misleading ways.</li>
+</ul>
+<p><strong>Worked example - delivery fleet GPS</strong>
+A logistics team wants to add GPS tracking to delivery vehicles for route optimization and driver safety. Good practice: tracking is scoped to working hours and disabled outside them, data is retained only as long as needed for operational purposes, and drivers are told clearly what's tracked and why. A companion event app that offers optional location sharing makes it strictly opt-in, user-controlled, and deletes the data once the event ends.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-offboarding-protecting-data-when-someone-leaves">
+							<summary><span class="pp-num">2</span> Offboarding: Protecting Data When Someone Leaves</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> The moment someone leaves an organization is a high-risk moment for data - for the departing person's own privacy, and for the company's information. Good offboarding protects both: personal content gets removed from company equipment, business records stay findable in the right place, and access closes cleanly.</p>
+<p><strong>Key actions</strong></p>
+<ul>
+<li>Before your last day, delete personal photos, downloads, saved passwords, browser history, personal accounts, and any other personal files stored on company equipment - this protects your own privacy.</li>
+<li>Move business information into approved shared systems (document management, team collaboration, cloud storage) before access is removed, and complete handover with your manager and colleagues.</li>
+<li>Return laptops, phones, tablets, badges, and any role-specific equipment - this enables device sanitization and access closure.</li>
+<li>Leave business records where they are. Only personal content should be deleted; work records must remain available for legal, retention, and operational purposes. If you're unsure whether something is personal or business-related, ask your manager or IT.</li>
+<li>Once a device is returned and processed, expect a mandatory secure wipe - local data is then unrecoverable, while cloud-based information stays subject to normal retention and access rules.</li>
+</ul>
+<p><strong>Never</strong></p>
+<ul>
+<li>Copy company files to personal devices or personal cloud services, or forward work emails to a personal account.</li>
+<li>Retain company documents after employment ends, or attempt to access company systems after termination.</li>
+<li>Store business documents only locally during your notice period unless the role specifically requires it.</li>
+</ul>
+<p><strong>If you're unsure:</strong> ask your manager, IT support, or your organization's privacy team before you delete or move anything.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-accessing-another-person-s-mailbox">
+							<summary><span class="pp-num">3</span> Accessing Another Person&#x27;s Mailbox</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Reading someone else's mailbox is an exceptional measure, not a routine convenience. It should only happen when it's strictly necessary, no less-intrusive option exists, and proper governance is in place - because mailbox content is personal information and often contains far more than the business need requires.</p>
+<p><strong>When access may be appropriate</strong></p>
+<ul>
+<li>An employee is on extended or unexpected leave and business-critical information is trapped in their inbox.</li>
+<li>Someone is unresponsive in a way that threatens business continuity.</li>
+<li>A legal or regulatory investigation requires it.</li>
+<li>An employee has departed without properly handing over information.</li>
+</ul>
+<p>Every one of these situations still has to satisfy purpose limitation, fairness, and proportionality.</p>
+<p><strong>Key principles</strong></p>
+<ul>
+<li><strong>Least privilege:</strong> access only the minimum content needed - broad, unrestricted mailbox reviews are prohibited.</li>
+<li><strong>Authorized and logged:</strong> access should go through identity and access management controls, with a formal request, documented approval, periodic review, and immediate removal once no longer needed.</li>
+<li><strong>Logging and monitoring:</strong> every access should be logged (user, timestamp, IP address, read/update activity), and those logs must themselves be protected from tampering.</li>
+<li><strong>Privileged access is temporary:</strong> any elevated access must be justified, time-boxed, and removed the moment it's no longer required - avoid permanent elevation.</li>
+<li><strong>Documentation:</strong> keep records of the request, business justification, approvals, who accessed the mailbox, when, and what was reviewed or copied.</li>
+<li>Treat everything retrieved as sensitive company information: store only in approved systems, minimize duplication, and apply retention rules.</li>
+<li>People should normally be told their mailbox was accessed, unless notification would compromise an investigation, legal process, or create regulatory issues.</li>
+</ul>
+<p><strong>Never</strong></p>
+<ul>
+<li>Request or share someone's password, use shared or generic accounts, or otherwise circumvent privileged-access controls.</li>
+<li>Copy an entire mailbox without approval, or retain retrieved information beyond the business purpose.</li>
+<li>Treat mailbox access as routine - every instance needs its own justification and approval chain (people manager, HR, privacy/legal review, IT/security).</li>
+</ul>
+<p><strong>Worked example - urgent customer handoff</strong>
+An account manager becomes unexpectedly unavailable and a customer needs urgent information sitting in their inbox. Good practice: document the justification, get privacy sign-off, restrict access to the specific relevant emails, grant temporary time-bound delegated access rather than full mailbox access, and keep a complete access record.</p>
+<p><strong>Worked example - misconduct investigation</strong>
+An employee is placed on leave and evidence may exist in their mailbox. Good practice: legal and HR are engaged, privacy reviews the scope, access is granted only to authorized investigators, irrelevant personal communications are excluded, every approval and access event is logged, and access is removed the moment the investigation concludes.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-meetings-recording-transcripts-ai-notetaking">
+							<summary><span class="pp-num">4</span> Meetings: Recording, Transcripts &amp; AI Notetaking</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> A single meeting can generate recordings, transcripts, captions, attendance reports, chat logs, polls, and AI-generated summaries and action items - any of which may contain personal information, confidential business content, or legal advice. Whoever organizes the meeting is responsible for how all of that gets handled through its lifecycle.</p>
+<p><strong>Key actions</strong></p>
+<ul>
+<li>Ask, before enabling recording, transcription, or an AI notetaker: is this actually necessary? Would notes achieve the same goal? Who needs access to the output, and what risk does creating it introduce?</li>
+<li>Match the tool to the meeting: routine training, town halls, and workshops are usually fine to record; HR matters, investigations, and legal-advice discussions generally should not be, or need explicit privacy/legal/HR sign-off first.</li>
+<li>As the organizer, control the recording and sharing settings, review who has access, review retention, and review AI-generated outputs before they're relied upon.</li>
+<li>For sensitive meetings, prefer a standalone meeting invite over a channel-based one - channel meetings tend to inherit broader team permissions than the discussion warrants, so a standalone invite with a defined attendee list reduces exposure.</li>
+<li>Apply short, defined retention windows to recordings, transcripts, chat files, and AI-generated prompts and summaries rather than letting them accumulate indefinitely.</li>
+<li>Before the meeting, tell participants if recording, transcription, or AI summarization is enabled, why, who will see the output, and how long it will be kept.</li>
+<li>Set up the meeting deliberately: use a waiting room where appropriate, restrict who can present, review bypass settings, and keep external and internal discussions separate.</li>
+</ul>
+<p><strong>During the meeting</strong></p>
+<ul>
+<li>Share a single window or application rather than your whole screen, and pause sharing before opening email or messages.</li>
+<li>Avoid displaying or reading aloud personal information that isn't necessary for the discussion.</li>
+<li>Treat chat messages, polls, whiteboards, transcripts, and AI outputs as records, not throwaway ephemera.</li>
+<li>Verify unexpected attendees before continuing sensitive discussion.</li>
+</ul>
+<p><strong>Always / Never for AI-generated outputs</strong></p>
+<ul>
+<li>Always review AI-generated summaries and action items before treating them as accurate, validate decisions and actions, remove unnecessary personal data, and correct errors.</li>
+<li>Never assume an AI summary is complete, treat it as an official record without review, share it externally without approval, or paste meeting content into an unapproved AI tool. Only approved AI tools should touch company information.</li>
+</ul>
+<p><strong>For high-risk meetings</strong> (employee relations, grievances, investigations, incident response, health matters, legal advice, commercial negotiations): consider notes instead of a recording and minutes instead of a transcript, use a standalone meeting rather than a channel meeting, and enable a lobby/waiting room with restricted bypass.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-remote-hybrid-work-privacy-risks-outside-the-office">
+							<summary><span class="pp-num">5</span> Remote &amp; Hybrid Work: Privacy Risks Outside the Office</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Working from home, a café, or on the road moves personal data and sensitive business information into less controlled environments. The obligations don't change just because the location did - three lenses still apply: privacy principles (fairness, purpose limitation, minimization), security controls (device management, access, monitoring), and records hygiene (approved storage, retention, timely deletion).</p>
+<p><strong>Remote-working checklist</strong></p>
+<ul>
+<li>Connect through trusted networks and an approved VPN.</li>
+<li>Use a company-managed device with encryption, anti-malware, and current updates enabled.</li>
+<li>Lock your device whenever you step away.</li>
+<li>Share links rather than files where possible, and restrict access to people with a genuine business need.</li>
+<li>Store information in approved systems of record, and clean up duplicate local copies.</li>
+</ul>
+<p><strong>Major risk areas and controls</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Risk area</th>
+<th>Typical risk</th>
+<th>Core controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Networks</td>
+<td>Public Wi-Fi or insecure home networks</td>
+<td>Use an approved VPN and encrypted connections; avoid unknown VPNs or proxies</td>
+</tr>
+<tr>
+<td>Devices</td>
+<td>Loss, theft, or unpatched endpoints</td>
+<td>Managed devices only, encryption and anti-malware on, prompt updates, never share accounts, report loss immediately</td>
+</tr>
+<tr>
+<td>Information sharing</td>
+<td>Uncontrolled sharing, duplicate copies</td>
+<td>Follow classification rules, share links not files, avoid personal email/cloud storage/consumer messaging apps</td>
+</tr>
+<tr>
+<td>Meetings &amp; screen sharing</td>
+<td>Unintended disclosure</td>
+<td>Verify attendees, share application windows not full screens, disable pop-up notifications, record only with a legitimate reason</td>
+</tr>
+<tr>
+<td>Physical environment</td>
+<td>Screen and document visibility</td>
+<td>Use privacy screens, angle displays away from others, secure paper documents, keep devices under your control</td>
+</tr>
+<tr>
+<td>Printing &amp; disposal</td>
+<td>Paper bypasses retention controls</td>
+<td>Avoid printing where possible, file information in approved systems, destroy paper securely, respect legal holds</td>
+</tr>
+<tr>
+<td>Test/development data</td>
+<td>Live personal data used outside production</td>
+<td>Use anonymized or masked data, delete promptly after testing</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Working while mobile:</strong> use trusted connectivity or a secure hotspot plus VPN, confirm recipients actually need what you're sharing, share restricted links rather than attachments, apply the right classification label, avoid unnecessary downloads, and upload anything temporary to an approved system before deleting the local copy.</p>
+<p><strong>Never</strong></p>
+<ul>
+<li>Create personal workarounds when a requirement seems inconvenient - escalate and ask for a compliant solution instead. Formal exceptions need written justification, compensating controls, and appropriate governance approval.</li>
+<li>Keep information "just in case," or delete information subject to a legal or tax hold.</li>
+<li>Use personal email as a shortcut - it bypasses identity, access, and logging controls entirely.</li>
+</ul>
+<p><strong>Worked examples</strong></p>
+<ul>
+<li><em>Café deadline:</em> use a hotspot plus VPN, share a restricted link rather than a file, save the final version to an approved system, and delete the local copy.</li>
+<li><em>Home printout of an HR document:</em> print only if necessary, keep it secured, upload it to an approved system, and shred it after use.</li>
+<li><em>Lost laptop:</em> report immediately, begin containment, and expect a privacy risk assessment.</li>
+<li><em>Screen-share slip:</em> share application windows only, verify who's actually in the meeting, and only record when there's a real need.</li>
+</ul>
+<p><strong>Report immediately:</strong> lost or stolen devices, misdirected emails, suspicious logins, malware, or any unauthorized access - through your organization's incident-reporting channel or confidential reporting route.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-surveys-polls-quizzes-competitions">
+							<summary><span class="pp-num">6</span> Surveys, Polls, Quizzes &amp; Competitions</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Surveys, quizzes, and competitions feel informal, but they routinely collect names, contact details, opinions, and sometimes sensitive information - and the same privacy, security, and retention requirements apply whether the audience is internal employees or the public.</p>
+<p><strong>Key actions</strong></p>
+<ul>
+<li>Use only approved, vetted platforms and vendors - never a random consumer quiz app.</li>
+<li>Be transparent: tell participants why the activity is running, whether identities are collected, where data is stored, how long it's kept, who can access it, and whether participation is voluntary.</li>
+<li>Collect only what's genuinely needed - skip sensitive or unnecessary questions.</li>
+<li>Store responses securely and restrict access; avoid local storage, personal devices, or unapproved systems.</li>
+<li>Use the data only for the purpose participants were told, unless you get fresh notice/approval for anything new.</li>
+<li>Delete responses when the retention period ends, and make sure any vendor involved does the same.</li>
+</ul>
+<p><strong>Never</strong></p>
+<ul>
+<li>Use consumer-grade quiz or survey tools for anything work-related.</li>
+<li>Repurpose survey or quiz results for monitoring or performance management without telling people first.</li>
+<li>Try to re-identify participants in an "anonymous" survey.</li>
+<li>Collect sensitive categories of information (health, religion, politics, other protected characteristics) in a pulse-check or feedback tool.</li>
+</ul>
+<p><strong>Customer competitions and promotions carry more risk.</strong> Always: use approved vendors, publish a clear privacy statement covering purpose, data collected, retention, deletion, and any transfers; get consent where required; explain the rules and how winners are notified; delete entries on schedule; and keep marketing use of entrant data separate from - and dependent on - a distinct, freely given consent. Never: use unapproved vendors, collect more than necessary, use entrant data for profiling or marketing without consent, or share it with partners without approval. Larger promotional activities may need a formal privacy impact assessment - build that into the planning timeline.</p>
+<p><strong>Worked example - anonymous employee survey</strong>
+No names, IDs, or IP addresses collected; responses reported only in aggregate; purpose, storage location, access list, and retention period all explained up front; participation voluntary. This works because there's nothing to re-identify, and every transparency box is checked.</p>
+<p><strong>Worked example - mandatory training quiz</strong>
+Completion is mandatory and results are tied to an employee ID - but that's disclosed clearly, storage is limited to the learning platform, access is restricted to compliance/learning teams, a retention period is defined, and results are explicitly not used for performance management. Identity is necessary here, so the focus shifts to purpose limitation and access control rather than anonymity.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-privacy-through-the-talent-lifecycle">
+							<summary><span class="pp-num">7</span> Privacy Through the Talent Lifecycle</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> From attracting candidates through onboarding, performance management, and eventual offboarding, people-data touches every stage of the employment relationship - and each stage carries its own minimization, access, and retention expectations.</p>
+<p><strong>Recruitment &amp; candidates</strong></p>
+<ul>
+<li>Do: collect only what's needed to assess suitability, tell candidates when background checks are part of the process, use approved vendors and processes, store CVs and interview notes only in approved HR systems, and keep interview questions tied to skills and role requirements.</li>
+<li>Don't: download CVs into personal folders, ask irrelevant questions about age, family, or health, search social media without a formally approved check, or use personal email/messaging apps for recruitment activity.</li>
+</ul>
+<p><strong>Onboarding</strong></p>
+<ul>
+<li>Do: collect only what employment administration requires, store identity documents in approved systems, and restrict access to authorized administrators and HR.</li>
+<li>Don't: store passports, licenses, or bank details locally, or forward onboarding documents outside the organization.</li>
+</ul>
+<p><strong>Performance management</strong></p>
+<ul>
+<li>Do: keep feedback factual and role-related, store reviews and development plans only in the approved HR system, and restrict access to authorized participants.</li>
+<li>Don't: include personal assumptions, keep screenshots or duplicate copies, or share performance information outside the authorized process.</li>
+</ul>
+<p><strong>Learning &amp; development, talent reviews, succession planning</strong></p>
+<ul>
+<li>Do: use approved learning platforms, follow meeting-recording guidance for recorded sessions, keep talent-review discussions confidential, and stick to factual information in approved templates.</li>
+<li>Don't: export talent data into personal spreadsheets, discuss readiness or potential informally, or move talent information across borders without approval.</li>
+</ul>
+<p><strong>Employee relations &amp; sensitive cases</strong></p>
+<ul>
+<li>Do: store information securely, restrict access to authorized personnel, follow the approved case-management process, and involve HR, legal, or privacy for complex matters.</li>
+<li>Don't: record meetings without justification and notice, share case details outside the authorized group, or keep local copies after the case closes.</li>
+</ul>
+<p><strong>Digital collaboration</strong></p>
+<ul>
+<li>Do: use approved systems for storing and sharing people data, and think carefully about AI-generated meeting summaries before relying on them.</li>
+<li>Don't: upload employee information into external or unapproved AI tools, or reuse employee data for a new purpose without checking first.</li>
+</ul>
+<p><strong>Offboarding</strong></p>
+<ul>
+<li>Do: remove access promptly, retain only what law or policy requires, and transfer employee documentation to HR.</li>
+<li>Don't: keep personal copies of employee files, access a former employee's information without authorization, or disclose it unless legally required.</li>
+</ul>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-handling-requests-to-exercise-privacy-rights">
+							<summary><span class="pp-num">8</span> Handling Requests to Exercise Privacy Rights</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Anyone - an employee, former employee, candidate, customer, or supplier - can ask to access, correct, delete, or restrict their personal data, object to how it's used, or withdraw consent. These formal rights requests come with strict legal deadlines, so getting them to the right team fast matters more than trying to handle them yourself.</p>
+<p><strong>How to recognize one - it doesn't need legal language.</strong> Treat these as rights requests and escalate immediately:</p>
+<ul>
+<li>"Can I have a copy of my data?"</li>
+<li>"Delete my information."</li>
+<li>"Correct my information."</li>
+<li>"Stop using my information."</li>
+<li>"Who have you shared my information with?"</li>
+<li>"I withdraw my consent."</li>
+<li>"Please stop contacting me."</li>
+</ul>
+<p><strong>Usually NOT a rights request:</strong> updating a customer's account contact details, requesting a payslip, or changing a supplier's billing email - these are routine operational asks, even though they involve personal information.</p>
+<p><strong>What you should do</strong></p>
+<ul>
+<li>Escalate immediately to your organization's privacy team through the approved channel.</li>
+<li>Do not investigate it yourself, verify identity independently, release information, or respond substantively - even a well-intentioned reply can undermine the formal process. If in doubt, escalate anyway.</li>
+</ul>
+<p><strong>What the privacy team typically does:</strong> verifies identity, confirms scope and request type, identifies affected systems, coordinates data collection, reviews information before release, tracks the legal deadline, and communicates with the requester. You may be asked to help locate or clarify data relevant to the request.</p>
+<p><strong>Typical statutory response windows</strong> (these vary by law and country - confirm current requirements locally):</p>
+<ul>
+<li>EU/GDPR-style regimes: one month, extendable by up to two additional months for complex cases, with the requester told about any extension within the first month.</li>
+<li>Australia: around 30 calendar days, with reasonable identity verification and possible access fees.</li>
+<li>New Zealand: around 30 days, with a similar approach to identity verification and possible extensions.</li>
+</ul>
+<p><strong>Roles typically involved:</strong> the requester (submits the request, provides ID, clarifies scope); HR (logs internal requests, supports ID verification, gathers HR-held information); the privacy team (end-to-end coordination, ID verification, tracking, final response); legal (exemptions, redaction, complex cases); and a security/e-discovery function (search and secure extraction of records).</p>
+<p><strong>Common scenarios:</strong> a former employee requesting access to their HR file, a candidate asking for erasure, an employee asking for a correction, a data-portability export, or someone objecting to marketing. Each follows a version of the same pattern - verify identity, confirm scope and retention obligations, take the appropriate action, and record the outcome.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-sensitive-special-category-personal-data-biometrics">
+							<summary><span class="pp-num">9</span> Sensitive (Special-Category) Personal Data &amp; Biometrics</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Some categories of personal data create outsized harm if mishandled - racial or ethnic origin, political opinions, religious beliefs, trade union membership, genetic or biometric data, health information, and sex life or sexual orientation. Most privacy laws single these out for extra protection, and organizations should never collect them casually.</p>
+<p><strong>When it may be collected or used</strong> - one of these has to genuinely apply:</p>
+<ol>
+<li>There's a clear legal obligation (health and safety requirements, regulated workplace processes, specific reporting duties).</li>
+<li>The individual has given explicit, informed, documented consent, understanding exactly what's collected, why, how it's used, and who sees it.</li>
+<li>The purpose is necessary, defined, and proportionate - if the task can be done without this level of detail, don't collect it.</li>
+</ol>
+<p>If none of these apply, don't collect or use it. Talk to your privacy team first.</p>
+<p><strong>Valid scenarios:</strong> an employee shares medical information to request a workplace accommodation; a visitor provides biometric data for secure-site access where local law permits it and privacy has approved it; health information is collected to manage a workplace incident where required.</p>
+<p><strong>Not valid:</strong> asking candidates about health or family plans; keeping informal notes about someone's background or beliefs; storing medical certificates in personal email or local files; rolling out a biometric or health-data tool without an assessment.</p>
+<p><strong>Always</strong></p>
+<ul>
+<li>Loop in your privacy team before collecting or using sensitive data, and explain clearly why it's needed.</li>
+<li>Use only secure, approved systems, limit access as much as possible, and delete the information as soon as it's no longer needed.</li>
+</ul>
+<p><strong>Never</strong></p>
+<ul>
+<li>Collect sensitive data without a valid purpose, store it in spreadsheets or personal email, forward it to people who don't need it, or use unapproved tools that capture biometric or health data.</li>
+</ul>
+<p><strong>Biometrics deserve their own scrutiny.</strong> Biometric data means information about physical or behavioral features used to identify or classify someone - facial images and facial recognition, fingerprints, voice patterns, keystroke patterns, gait analysis. A project likely involves biometrics if it scans a face, voice, or behavior, compares physical features against a stored record, or uses those features to make decisions about identity, access, attendance, or classification.</p>
+<p>Some jurisdictions (New Zealand is a useful example) have dedicated biometrics codes and rules layered on top of general privacy law - for instance, requirements around necessity and proportionality, clear safeguards, advance transparency, restrictions on emotion-detection or inferring ethnicity/gender, extra care for children's data, and specific notification duties when biometric data is collected indirectly (from a source other than the individual). The specifics vary by jurisdiction, but the pattern is consistent: pause, assess, and get privacy sign-off before any biometric processing begins.</p>
+<p><strong>Before any biometric processing:</strong></p>
+<ol>
+<li>Stop and assess - pause the project until privacy confirms which rules apply.</li>
+<li>Complete a formal privacy impact assessment - this is not optional for biometrics.</li>
+<li>Be ready to show why biometrics are necessary and why nothing less intrusive would work, how people will be told, what safeguards apply, and how bias and accuracy risks are managed.</li>
+<li>Don't sign a vendor contract or activate a system before privacy review is complete.</li>
+</ol>
+<p><strong>Never</strong>, without privacy review: trial or test a biometric tool, upload images or recordings of employees, contractors, or customers into an AI or cloud-based biometric system, use tools that infer emotion or other sensitive characteristics, or roll out facial recognition for attendance or access.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-consent-when-it-s-the-right-tool-and-when-it-isn-t">
+							<summary><span class="pp-num">10</span> Consent: When It&#x27;s the Right Tool (and When It Isn&#x27;t)</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Consent is the most misunderstood legal basis in privacy. It's often reached for by default, but it only works when people have a real, free choice - and many everyday business activities (payroll, security checks, performance management, access control) don't offer that choice, so consent is the wrong tool for them.</p>
+<p><strong>When consent is not the right basis:</strong> for anything people can't realistically refuse without a negative work consequence - payroll, IT security, safety checks, performance management, access control, or mandatory compliance activities. These rely on other lawful bases (contract, legal obligation, legitimate business need) paired with clear notice, not a tick-box.</p>
+<p><strong>Valid consent must be:</strong></p>
+<ol>
+<li><strong>Informed</strong> - the person understands what's collected, why, for how long, and who it's shared with.</li>
+<li><strong>Voluntary</strong> - given freely, with no pressure or penalty for refusing.</li>
+<li><strong>Specific and current</strong> - tied to a clearly defined purpose, and not assumed to survive a change in context.</li>
+<li><strong>Given by someone with capacity</strong> - able to understand and communicate the decision (with extra care for minors, vulnerable individuals, or language/comprehension barriers).</li>
+</ol>
+<p><strong>Before adding a consent checkbox, ask:</strong> Is this actually optional? Can people say no without any negative impact? Is there a better basis (contract, legal obligation, safety, legitimate need)? Will people actually understand what they're agreeing to? Can withdrawal be tracked and honored? If the answer to any of these is no, consent probably isn't the right choice.</p>
+<p><strong>Do</strong></p>
+<ul>
+<li>Use express consent (a signature, a verbal recording, a ticked box) for sensitive data or higher-risk activities.</li>
+<li>Keep each purpose separate - never bundle unrelated processing into one all-or-nothing request.</li>
+<li>Make withdrawal as easy as giving consent in the first place, and honor it promptly.</li>
+<li>Keep records of consent and withdrawal in line with your retention rules.</li>
+</ul>
+<p><strong>Don't</strong></p>
+<ul>
+<li>Rely on silence, pre-ticked boxes, or inaction as consent.</li>
+<li>Use implied consent for sensitive data or high-risk uses - where there's any doubt, use express consent instead.</li>
+<li>Assume old consent still applies once the purpose, scope, or context has materially changed.</li>
+<li>Treat a privacy notice as consent - a notice informs; consent grants permission. They are not interchangeable.</li>
+</ul>
+<p><strong>Where consent works well:</strong> optional event photography, opt-in newsletters, voluntary wellbeing programs, and using someone's story or quote with their permission - situations where saying no genuinely carries no downside.</p>
+<p><strong>Marketing-specific note:</strong> consent (not implied browsing behavior) should back any optional communications, profiling, or non-essential cookie tracking; operational messages like safety notices or delivery confirmations generally rely on a different basis.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-secondary-use-reusing-data-for-a-new-purpose">
+							<summary><span class="pp-num">11</span> Secondary Use: Reusing Data for a New Purpose</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Data collected for one purpose can't just be reused for another because it happens to be available. Every proposed new use needs its own check for lawfulness, transparency, and proportionality - reusing CCTV footage for an unrelated investigation, or repurposing delivery data for marketing analysis, are both examples of "secondary use" that need fresh scrutiny.</p>
+<p><strong>Core principles</strong></p>
+<ol>
+<li><strong>Confirm the original purpose first.</strong> If a proposed new use doesn't clearly fit what people were originally told, treat it as secondary use - even a small shift in purpose counts.</li>
+<li><strong>Don't assume existing consent or notices cover a new purpose.</strong> A new use may need an updated notice, new consent, a new legal basis, a fresh privacy assessment, or added safeguards.</li>
+<li><strong>Be transparent when purpose, processing, or audience changes</strong> - update privacy notices, system descriptions, or communications as needed.</li>
+<li><strong>Never let a secondary use cause harm, create bias or discrimination, or happen just because the data exists.</strong></li>
+<li><strong>Document the decision:</strong> business justification, compatibility assessment, legal basis, consent status, privacy-review outcome, and final approval.</li>
+</ol>
+<p><strong>Escalate immediately when:</strong> the purpose differs materially, sensitive or children's data is involved, an automated decision could affect someone, a new vendor or third party is involved, data will cross borders, anonymization isn't possible, or data is being requested for a use that hasn't been assessed.</p>
+<p><strong>Common scenarios</strong></p>
+<ul>
+<li><em>Marketing/advertising:</em> using purchase history for targeted campaigns - assess compatibility, get consent where required, prefer pseudonymized data, and maintain suppression lists; never target sensitive categories or market to people who've opted out.</li>
+<li><em>Analytics &amp; AI:</em> training a model on internal data - prefer anonymized or pseudonymized datasets, complete a privacy assessment, test for bias, and maintain governance; never train on identifiable data without approval.</li>
+<li><em>Product development:</em> using customer insights for new products - use aggregated or anonymized data, assess compatibility, update notices, and limit retention; never combine datasets in a way that could re-identify people without assessment.</li>
+<li><em>New vendor processing:</em> bringing on a new analytics vendor - engage privacy, confirm the legal basis, put a data processing agreement in place, complete security due diligence, and confirm safeguards for any cross-border transfer.</li>
+</ul>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-responding-to-external-requests-for-data">
+							<summary><span class="pp-num">12</span> Responding to External Requests for Data</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Law enforcement, regulators, courts, insurers, and other outside parties occasionally ask for information - CCTV footage, personal data, access logs, visitor records, incident reports. These are different from individual rights requests, and the core rule is the same every time: never hand data over directly.</p>
+<p><strong>Core rule:</strong> if an external party asks for data, don't provide it and don't release it - escalate to your privacy and legal teams, who will determine whether disclosure is lawful, verify legal authority, minimize what's shared, confirm a secure transfer method, and maintain a full record of the disclosure.</p>
+<p><strong>Escalate for review whenever:</strong> personal data is involved (images, names, IDs, logs, audio, biometric data); the request is voluntary rather than backed by a court order or statutory notice; information would cross a border; the scope is broad or unclear ("all footage," "all logs"); or the request touches something especially sensitive (audio, staff facilities, high-risk areas).</p>
+<p><strong>What to gather before escalating:</strong> requester name, organization, and official contact details (badge/registration number for law enforcement); the type of request; the legal basis (court order, subpoena, warrant, regulatory notice); the precise scope (dates, times, location, camera or system identifiers); the data type requested; and any transfer requirements.</p>
+<p><strong>When disclosure may proceed:</strong> the request serves the same or a directly related purpose (a security or safety investigation), it's required or authorized by law, or the individual has actually consented. Minimize wherever possible - a specific camera, a specific timeframe, a specific incident, never a blanket handover.</p>
+<p><strong>Always</strong></p>
+<ul>
+<li>Use secure transfer methods, restrict recipients, apply password protection and link expiration, minimize what's shared, and document the disclosure.</li>
+<li>Get external recipients to agree to use the information only for the approved purpose, avoid forwarding it, store it securely, delete it after use, and confirm deletion.</li>
+</ul>
+<p><strong>Never</strong></p>
+<ul>
+<li>Send footage or data as an ordinary email attachment, share more than necessary, or release anything independently without review.</li>
+</ul>
+<p><strong>Emergency disclosures (rare):</strong> serious threat to life, medical emergency, missing person, natural disaster, or a court order can justify disclosure without consent - but even then, verify identity, share only what's necessary to manage the emergency, minimize (confirm presence or approximate location before anything broader), document everything (legal basis, requester, data disclosed, date, time, approver), and notify your privacy team immediately afterward. A request from a family member or friend, or from a third-party partner like a hotel or airline, should not lead to direct disclosure - refer it to emergency services or verified authorities instead.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-ai-analytics-automated-decision-making-emerging-area">
+							<summary><span class="pp-num">13</span> AI, Analytics &amp; Automated Decision-Making (Emerging Area)</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> AI-driven analytics and automated decision-making are moving fast, and formal guidance in this space tends to evolve quickly as tools and regulation mature. The underlying principles, though, are stable and worth applying even while detailed policy catches up.</p>
+<p><strong>Key actions</strong></p>
+<ul>
+<li>Keep a human in the loop for any decision that meaningfully affects a person - treat AI outputs as a draft or input, not a final answer.</li>
+<li>Verify AI-generated outputs for accuracy before relying on them, especially facts, numbers, and anything used in a decision about a person.</li>
+<li>Use only approved AI tools for company or personal data - never paste confidential, personal, or sensitive information into a public or unapproved AI tool.</li>
+<li>Assess new AI-driven personalization, profiling, or automated-decision features for fairness and bias before launch, the same way you would any new data use.</li>
+<li>When in doubt about whether a specific automated process needs a privacy assessment, ask early rather than after launch.</li>
+</ul>
+<p>Because this is an area where formal guidance shifts often, always check your organization's current AI/data-and-analytics policy for the latest specific requirements rather than relying solely on general principles.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-engaging-with-data-protection-regulators">
+							<summary><span class="pp-num">14</span> Engaging with Data Protection Regulators</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Regulators can investigate complaints, run inspections, and enforce privacy law - and how an organization responds in the first few minutes of contact matters. The core rule is simple: individuals should never engage with a regulator independently; every contact gets routed to the privacy and legal teams immediately.</p>
+<p><strong>Core rule - never engage independently.</strong> If a regulator calls, emails, writes, or shows up on-site, don't respond on your own. This applies just as much when a customer threatens to escalate to a regulator, or a supplier or partner signals regulator involvement.</p>
+<p><strong>Always involve your privacy team when:</strong> a regulator makes contact; inspectors arrive on-site; an authority requests information involving personal data; a complaint might escalate to a regulator; a privacy incident (or near miss) occurs; or a third party threatens regulatory action.</p>
+<p><strong>External communications discipline:</strong> don't send anything externally without approval - emails to regulators, government responses, incident reports, data extracts, screenshots, logs, or investigation notes all need review first.</p>
+<p><strong>If a regulator shows up unannounced:</strong></p>
+<ul>
+<li>Reception/first contact: stay calm and professional, notify local leadership immediately, avoid handing over documents or granting access before authorized staff arrive.</li>
+<li>Local leadership: attend promptly, contact the privacy team immediately, wait for guidance before any substantive engagement.</li>
+<li>Privacy team: guides the inspection, confirms what can be disclosed, coordinates with legal and security, and records everything requested and disclosed.</li>
+<li>Everyone else: refer the regulator to the right lead; avoid explaining internal processes or discussing data handling unless specifically instructed to.</li>
+</ul>
+<p><strong>Example scenario - unannounced inspection:</strong> representatives from a data protection authority arrive at an office unexpectedly. Reception notifies leadership; leadership engages politely and calls the privacy team immediately; privacy coordinates with legal and security; every request and disclosure gets documented; information is released only after appropriate review. The result: a consistent, legal, and transparent response instead of an improvised one.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-website-digital-product-privacy-compliance">
+							<summary><span class="pp-num">15</span> Website &amp; Digital Product Privacy Compliance</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Public-facing websites, microsites, portals, and mobile experiences all collect personal data - and just because something is technically possible on the web doesn't mean it's legally permitted. Privacy has to be considered before launch, not bolted on afterward.</p>
+<p><strong>When a formal review is required</strong> - raise it whenever you're:</p>
+<ul>
+<li>Launching something new (a website, microsite, portal, or campaign site).</li>
+<li>Adding new functionality (forms, cookies, pixels, tracking or analytics technologies).</li>
+<li>Changing the underlying technology (hosting provider, vendor, platform migration).</li>
+<li>Changing what's processed (new data categories, new markets, new AI capabilities, new automation).</li>
+<li>Using production/live personal data in testing, pilots, or pre-production environments.</li>
+</ul>
+<p>A digital asset shouldn't launch or be materially modified without that review being complete - it should cover privacy, legal, procurement, technology, and security sign-off.</p>
+<p><strong>What the review should confirm:</strong> the correct lawful basis and consent mechanism; accurate, accessible, current privacy notices; defined retention and rights-handling processes; appropriate vendor contracts (processor obligations, transfer mechanisms, audit rights, deletion obligations, subprocessor terms); and secure hosting, access controls, encryption, and logging.</p>
+<p><strong>Common red flags and fixes</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Red flag</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analytics or tracking pixels firing before consent</td>
+<td>Disable the tags, fix consent settings, retest</td>
+</tr>
+<tr>
+<td>Outdated privacy notice</td>
+<td>Update and republish</td>
+</tr>
+<tr>
+<td>Excessive form fields</td>
+<td>Remove unnecessary fields, update the notice</td>
+</tr>
+<tr>
+<td>Undisclosed scripts</td>
+<td>Remove, reassess, update the tracking inventory</td>
+</tr>
+<tr>
+<td>Unapproved hosting location</td>
+<td>Pause launch, assess cross-border transfer implications</td>
+</tr>
+<tr>
+<td>No deletion evidence from a vendor</td>
+<td>Get written confirmation</td>
+</tr>
+<tr>
+<td>Access left active for a former team member</td>
+<td>Remove access, review logs</td>
+</tr>
+<tr>
+<td>New behavioral tracking or AI introduced without review</td>
+<td>Route back through the review process</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Employee quick checklist</strong></p>
+<ul>
+<li>Must do: get the required review, use approved vendors, use the correct privacy and cookie notices, block non-essential cookies before consent, minimize data collection, use HTTPS and MFA, restrict access, and define deletion arrangements.</li>
+<li>Must not: add undeclared tracking pixels or scripts, relaunch an old site without review, reuse an outdated notice, or retain data indefinitely.</li>
+</ul>
+<p><strong>Worked example - seasonal marketing microsite</strong>
+A marketing team plans a standalone campaign site that collects emails and competition entries and uses tracking pixels for analytics. Required controls: privacy involvement from the start, a cookie-consent banner, a campaign-specific privacy notice, data minimization in the entry form, and a defined retention schedule for entries once the campaign ends.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-data-breach-response-incident-reporting">
+							<summary><span class="pp-num">16</span> Data Breach Response &amp; Incident Reporting</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> If you suspect a privacy or security incident - a misdirected email, unauthorized access, a lost device, malware, improper disposal of records - report it immediately. Speed matters more than certainty: many privacy laws impose strict regulator-notification windows (commonly measured in hours, not days) once an organization becomes aware of a reportable breach, and delay directly increases legal, financial, and reputational risk.</p>
+<p><strong>Key principle: you don't need to be certain.</strong> If something looks unusual or wrong, report it. Don't investigate alone, and don't wait until you have all the facts - early reporting is always preferred, and "when in doubt, report" is the operating rule.</p>
+<p><strong>How to report:</strong> through your organization's incident-reporting channel (portal, dedicated form, or direct email to your privacy/security team) - whichever your organization has published as the approved route.</p>
+<p><strong>Common incident types</strong></p>
+<ul>
+<li>Email errors: sent to the wrong recipient, a "reply all" disclosure, misdirected customer or payroll data.</li>
+<li>System access issues: unauthorized HR or finance access, shared credentials, a former employee's account still active.</li>
+<li>Physical security: unattended printed documents, lost laptops, phones, or USB devices.</li>
+<li>Cyber threats: phishing, malware, ransomware, suspicious links.</li>
+<li>Improper disposal: confidential documents in general waste, hardware disposed of without wiping.</li>
+</ul>
+<p><strong>Incident lifecycle</strong></p>
+<ol>
+<li><strong>Intake</strong> - the incident is reported (e.g., a spreadsheet sent to the wrong recipient); immediate reporting is required.</li>
+<li><strong>Investigation</strong> - what happened, what data and systems were involved, who was affected; containment (email recall, access removal, patching) can start immediately.</li>
+<li><strong>Assess &amp; decide</strong> - severity, harm, and whether regulatory or individual notification thresholds are met.</li>
+<li><strong>Notify</strong> - regulators and/or affected individuals are notified where required, and post-incident improvements are considered.</li>
+</ol>
+<p><strong>Always:</strong> be alert, report immediately through the approved channel, respond to follow-up questions, and preserve evidence. <strong>Never:</strong> delay reporting, try to handle an incident independently, or wait until every fact is confirmed before raising it.</p>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-records-management-retention-secure-sharing">
+							<summary><span class="pp-num">17</span> Records Management, Retention &amp; Secure Sharing</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Good record-keeping isn't just a compliance checkbox - it's how an organization protects its people and its business from information that's misused, lost, or seen by the wrong people. Every piece of information moves through a lifecycle (create, store, use, share, retain/archive, delete), and risk grows whenever data is overshared, kept too long, or stored in the wrong place.</p>
+<p><strong>A simple storage model</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Location type</th>
+<th>Purpose</th>
+<th>Appropriate use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personal working space</td>
+<td>Individual drafts, work in progress</td>
+<td>Not for long-term or team records</td>
+</tr>
+<tr>
+<td>Active collaboration space</td>
+<td>Live team projects, shared editing</td>
+<td>Keep access limited and review it regularly</td>
+</tr>
+<tr>
+<td>Structured organizational storage</td>
+<td>Final, managed, long-term records</td>
+<td>Records that must stay findable and retained</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Through the lifecycle</strong></p>
+<ul>
+<li><strong>Create:</strong> collect or record only what's genuinely required; avoid "just in case" data; use existing systems of record rather than spinning up new copies; name files clearly; remember informal notes and emails can become records.</li>
+<li><strong>Store:</strong> be intentional about which storage tier something belongs in; apply sensitivity labels to control access, and retention labels so records are kept and deleted correctly.</li>
+<li><strong>Use:</strong> access only what your role needs; move meaningful content out of ephemeral chat channels and into governed locations - chat history that auto-deletes is not a substitute for a proper record.</li>
+<li><strong>Share:</strong> share links instead of attachments; default to naming specific people rather than broad groups; check access before sending, especially for folders; explain security or retention expectations when sharing externally.</li>
+<li><strong>Retain &amp; archive:</strong> follow approved retention schedules; keep information only as long as legally or operationally required; move inactive records to designated archives; make sure backups don't quietly extend retention beyond the approved period; apply legal holds only when formally instructed.</li>
+<li><strong>Delete:</strong> delete records once retention requirements are met, through the proper deletion process; shred paper and securely erase electronic files; confirm no legal, tax, audit, or regulatory hold applies first.</li>
+</ul>
+<p><strong>Classification labels</strong> - a simple four-tier model works well for most organizations:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Meaning</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public</td>
+<td>Approved for public release</td>
+<td>Published marketing material, public reports</td>
+</tr>
+<tr>
+<td>Internal</td>
+<td>Routine internal material, no personal or confidential data</td>
+<td>Internal updates, templates without personal data</td>
+</tr>
+<tr>
+<td>Confidential</td>
+<td>Personal data or commercially sensitive information</td>
+<td>Names, emails, phone numbers, IDs, contracts, pricing</td>
+</tr>
+<tr>
+<td>Highly confidential</td>
+<td>Sensitive personal data or high-risk operational information</td>
+<td>Health data, payroll, identity documents, investigations</td>
+</tr>
+</tbody>
+</table></div>
+<p>When in doubt, choose the more restrictive label and ask.</p>
+<p><strong>Preventing accidental sharing of personal information</strong></p>
+<ul>
+<li><em>Check the file first:</em> look for hidden tabs, rows, or calculations; filters that hide rather than remove data; pivot caches with extra detail; comments, tracked changes, and old versions; embedded formulas, links, or objects. Use built-in document-inspection tools before sending anything out.</li>
+<li><em>Share the minimum necessary:</em> ask what outcome the recipient actually needs; prefer aggregated, masked, or anonymized data; replace names with roles or functions where individual-level detail isn't needed; avoid exporting complete datasets.</li>
+<li><em>Validate recipients:</em> confirm a genuine business need, confirm distribution-list ownership and current membership, and don't rely on autocomplete as your only recipient check.</li>
+<li><em>Use secure methods:</em> prefer links over attachments, apply the correct sensitivity label, respect data-loss-prevention warnings, use time-limited and view-only external links, and disable downloads when not required.</li>
+<li><em>Clean up afterward:</em> remove personal-level data from working copies once you're done with them, delete temporary files, and apply the correct retention label to the final record - but never purge anything that may be under a legal or audit hold.</li>
+<li><em>If something is shared by mistake:</em> contact recipients and ask them to delete all copies, pause further sharing, tell your manager, report it to your privacy team immediately, and record who received it, when, what fields were included, and what containment steps were taken. Don't create new copies or request unnecessary screenshots containing the personal data in the process.</li>
+</ul>
+<p><strong>Using AI assistants (e.g., Copilot-style tools) responsibly</strong></p>
+<ul>
+<li>Be clear about the task, tone, and output format you want, and work step by step.</li>
+<li>Review and verify outputs - especially facts, numbers, and assumptions - before relying on them.</li>
+<li>Never paste highly sensitive or restricted personal data into an AI assistant.</li>
+<li>Use only your organization's approved, sanctioned environment for it.</li>
+<li>Maintain human judgment and accountability throughout - don't use an AI assistant as a data repository, and clean up duplicate AI-generated content when retention rules allow.</li>
+</ul>
+<p><strong>Everyday security habits</strong></p>
+<ul>
+<li>Change passwords when prompted (and sooner if you suspect compromise); never reuse the same password across services; never store passwords in notebooks, screenshots, or email drafts.</li>
+<li>Approve multi-factor authentication prompts only when you triggered them yourself - decline and report anything unexpected.</li>
+<li>Keep devices and key applications updated; avoid unapproved browser extensions; periodically review who has access to your documents and team spaces, especially external guests.</li>
+<li>Don't link personal email, cloud storage, or messaging accounts to a work device, and don't send work files through personal channels.</li>
+<li>Lock your device whenever you step away; don't leave printed personal data unattended; shred paper containing personal data.</li>
+</ul>
+<p><strong>Manager checklist</strong></p>
+<ul>
+<li>Reinforce minimum-necessary sharing and avoid emailing large datasets; make sure staff can spot and remove hidden content in files.</li>
+<li>Review report recipients and distribution lists regularly, and prefer aggregated or pseudonymized data by default.</li>
+<li>Review team access, permissions, and file locations at least quarterly; remove departed team members and unnecessary access; prefer group-based over individual direct permissions.</li>
+<li>Make sure incidents and near-misses get reported immediately, and periodically review whether there's a safer way to handle recurring reporting needs.</li>
+</ul>
+							</div>
+						</details>
+						<details class="pp-item" id="pp-marketing-direct-communications-compliance">
+							<summary><span class="pp-num">18</span> Marketing &amp; Direct Communications Compliance</summary>
+							<div class="pp-body">
+<p><strong>Why it matters:</strong> Marketing uses personal information - emails, phone numbers, device and cookie identifiers, behavioral profiles - and is one of the most heavily regulated areas of data use. It carries meaningfully higher regulatory risk than routine operational customer communication, and regulators actively enforce against violations.</p>
+<p><strong>What counts as marketing:</strong> any communication whose primary purpose is to promote products or services, increase sales or engagement, or drive sign-ups - promotional emails, SMS campaigns, push notifications, newsletters, loyalty programs, competitions, product recommendations, cross-selling, event invitations, and behaviorally targeted advertising. It's still marketing even when sent to existing customers, and adding a promotional link to an otherwise operational message can convert the whole thing into marketing.</p>
+<p><strong>Core requirements</strong></p>
+<ul>
+<li><strong>Consent:</strong> valid opt-in consent before sending marketing, recorded with a timestamp, the exact wording shown, the channel, and the source - and consent should be channel-specific (email consent doesn't cover SMS).</li>
+<li><strong>Transparency:</strong> people should understand who's collecting their data, why, how it's used, and how to unsubscribe.</li>
+<li><strong>Unsubscribe:</strong> every marketing message needs a genuinely working, easy opt-out, processed promptly (some jurisdictions set a hard deadline - Australia, for example, requires processing within five business days).</li>
+<li><strong>Truthful classification:</strong> never mislabel marketing as a service communication, or hide promotional content inside an operational message - this is one of the most commonly enforced violations.</li>
+<li><strong>Data security:</strong> marketing data should be securely stored, appropriately protected, and only shared with approved vendors under proper transfer mechanisms.</li>
+</ul>
+<p><strong>Before launching any campaign, confirm:</strong> clear opt-in exists, the data source is lawful, the unsubscribe mechanism actually works, the vendor is approved, data collected is minimized, targeting isn't inappropriate, and any required privacy review is complete. If any of these isn't satisfied, don't launch.</p>
+<p><strong>Profiling and personalization:</strong> before using segmentation, behavioral analytics, audience modeling, or lookalike audiences, confirm the privacy notice actually covers it, apply data-minimization principles, and avoid any sensitive-category profiling (health- or ethnicity-based inferences, for example).</p>
+<p><strong>Marketing to children</strong> needs enhanced controls: never knowingly target, profile, or track children's behavior without review, and always involve privacy and legal before any campaign involving minors.</p>
+<p><strong>Using third-party/broker data:</strong> confirm it was lawfully collected and that individuals were informed (no scraping or deceptive collection); don't repurpose it for profiling or matching without review; make sure people are told when data comes from an indirect source; and put contractual controls in place (processing restrictions, security, audit rights, offshore-processing terms) before use.</p>
+<p><strong>What must never happen</strong></p>
+<ol>
+<li>Mixing promotional content (discounts, product links) into service communications like delivery notices or order confirmations.</li>
+<li>Sending marketing without a functional, free unsubscribe mechanism.</li>
+<li>Assuming a message isn't "marketing" just because it's automated, triggered, or framed as a renewal or alert - any promotional content makes it marketing.</li>
+<li>Assuming a vendor will handle compliance for you - the sending organization remains accountable for template review, governance, and approvals.</li>
+</ol>
+<p><strong>A real-world cautionary example:</strong> a regulator fined a well-known apparel retailer roughly AUD 700,000 for sending more than 370,000 emails without a working unsubscribe mechanism - the messages contained promotional content but were treated as service communications. The lesson holds everywhere: keep service and marketing communications completely, structurally separate.</p>
+<p><strong>Marketing golden rules:</strong> get valid consent first and keep evidence of it; use only approved vendors; always include a working unsubscribe; never hide marketing inside a service message; minimize personal data collected; protect customer information; involve privacy for profiling, children's data, broker data, or unusual campaigns; keep it transparent; and if you're not sure, ask your privacy team before launching.</p>
+							</div>
+						</details>
+							</div>
+						</section>
 						</div>
 					</section>
 
