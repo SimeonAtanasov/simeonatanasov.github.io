@@ -2566,6 +2566,34 @@
 		return e;
 	}
 
+	// Escape hatch shown at the top of every module's questions and results:
+	// a way back to the overview plus one-click links to every other tool,
+	// for whoever started the wrong assessment and wants a different one
+	// without losing their place entirely.
+	function renderModuleSwitchHeader(mod) {
+		var wrap = el("div", { class: "paa-module-switch" });
+
+		var back = el("button", { class: "button alt" }, ["← Back to overview"]);
+		back.addEventListener("click", renderLanding);
+		wrap.appendChild(el("div", { class: "paa-nav" }, [back]));
+
+		wrap.appendChild(el("h2", { class: "paa-module-title" }, [mod.label]));
+
+		var switchTools = el("div", { class: "paa-switch-tools" }, [
+			el("span", { class: "paa-switch-label" }, ["Picked the wrong one? Switch to:"])
+		]);
+		Object.keys(MODULES).forEach(function (id) {
+			if (id === mod.id) return;
+			var other = MODULES[id];
+			var btn = el("button", { class: "button" }, [other.label]);
+			btn.addEventListener("click", function () { startModule(id); });
+			switchTools.appendChild(btn);
+		});
+		wrap.appendChild(switchTools);
+
+		return wrap;
+	}
+
 	function visibleSteps(mod) {
 		return mod.steps.filter(function (s) { return !s.visibleIf || s.visibleIf(state.answers); });
 	}
@@ -2858,6 +2886,7 @@
 		var step = steps[state.stepIndex];
 
 		root.innerHTML = "";
+		root.appendChild(renderModuleSwitchHeader(mod));
 		root.appendChild(el("div", { class: "paa-progress" }, [
 			el("div", { class: "paa-progress-bar", style: "width:" + Math.round((state.stepIndex / steps.length) * 100) + "%" })
 		]));
@@ -3360,6 +3389,7 @@
 		var entry;
 
 		root.innerHTML = "";
+		root.appendChild(renderModuleSwitchHeader(mod));
 		root.appendChild(el("h3", {}, [mod.label + " - Results"]));
 		root.appendChild(el("p", {}, [el("strong", {}, [name])]));
 
@@ -3467,5 +3497,19 @@
 		root.appendChild(el("p", { class: "paa-help" }, ["Includes every question and answer you entered for this assessment, plus the note you can restore later from the overview page (\"Restore from file\") if you switch browsers or devices."]));
 	}
 
-	renderLanding();
+	// Deep-link support: a link like privacy-ai-assessment.html#tool-dpia jumps
+	// straight into that module's first question instead of the landing page,
+	// so a homepage button can send someone directly to the tool they want.
+	function startFromHash() {
+		var m = /^#tool-([a-z]+)$/.exec(window.location.hash || "");
+		if (m && MODULES[m[1]]) {
+			startModule(m[1]);
+			return true;
+		}
+		return false;
+	}
+
+	if (!startFromHash()) {
+		renderLanding();
+	}
 })();
