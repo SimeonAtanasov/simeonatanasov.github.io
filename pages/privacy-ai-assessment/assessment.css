@@ -157,6 +157,12 @@
 	flex-wrap: wrap;
 }
 
+.paa-download-answers {
+	margin-top: 0.75em;
+	padding-top: 0.75em;
+	border-top: solid 1px rgba(255,255,255,0.1);
+}
+
 /* Results */
 .paa-band {
 	display: flex;

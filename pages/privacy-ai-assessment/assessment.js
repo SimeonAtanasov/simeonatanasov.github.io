@@ -2437,9 +2437,25 @@
 		setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
 	}
 
+	// A short, filesystem-safe stub for filenames: lowercase, non-alphanumerics
+	// collapsed to a single hyphen, capped so a long project name doesn't
+	// produce an unwieldy filename.
+	function slugify(s) {
+		return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "assessment";
+	}
+
+	// Both the "download everything" buttons on the overview and the
+	// "download my answers" button at the end of a single assessment call
+	// through here - entries defaults to the full saved history, but a
+	// single just-finished assessment (not yet necessarily in localStorage
+	// history, e.g. if it couldn't be saved) can be passed directly so the
+	// download always reflects exactly what's on screen.
+	function downloadEntriesJSON(entries, filenameBase) {
+		triggerDownload(JSON.stringify(entries, null, 2), "application/json", filenameBase + "-" + new Date().toISOString().slice(0, 10) + ".json");
+	}
+
 	function downloadHistoryJSON() {
-		var data = history();
-		triggerDownload(JSON.stringify(data, null, 2), "application/json", "privacy-ai-assessments-" + new Date().toISOString().slice(0, 10) + ".json");
+		downloadEntriesJSON(history(), "privacy-ai-assessments");
 	}
 
 	// Per-module label for every question/note id. Privacy and AI each have
@@ -2470,8 +2486,7 @@
 		return v;
 	}
 
-	function downloadHistoryCSV() {
-		var hist = history();
+	function downloadEntriesCSV(hist, filenameBase) {
 		if (!hist.length) return;
 		var byModule = fieldLabelsByModule();
 
@@ -2528,7 +2543,11 @@
 		});
 
 		var csv = "﻿" + rows.map(function (r) { return r.map(csvCell).join(","); }).join("\r\n");
-		triggerDownload(csv, "text/csv;charset=utf-8;", "privacy-ai-assessments-" + new Date().toISOString().slice(0, 10) + ".csv");
+		triggerDownload(csv, "text/csv;charset=utf-8;", filenameBase + "-" + new Date().toISOString().slice(0, 10) + ".csv");
+	}
+
+	function downloadHistoryCSV() {
+		downloadEntriesCSV(history(), "privacy-ai-assessments");
 	}
 
 	var root = document.getElementById("paa-app");
@@ -3335,6 +3354,10 @@
 		var mod = MODULES[state.moduleId];
 		var result = mod.compute(state.answers);
 		var name = state.answers.name || "(untitled)";
+		// Captured by whichever branch below runs, then used both to save to
+		// history and to drive the "download my answers" buttons in the nav -
+		// so what you can download always matches exactly what got saved.
+		var entry;
 
 		root.innerHTML = "";
 		root.appendChild(el("h3", {}, [mod.label + " - Results"]));
@@ -3372,26 +3395,31 @@
 				handoff.appendChild(el("div", { class: "paa-callout-action" }, [toDpia]));
 				root.appendChild(handoff);
 			}
-			saveHistory({ moduleId: "privacy", name: name, date: new Date().toISOString(), resultLabel: result.level + " (DPIA " + result.dpia.toLowerCase() + ")", answers: state.answers, result: result });
+			entry = { moduleId: "privacy", name: name, date: new Date().toISOString(), resultLabel: result.level + " (DPIA " + result.dpia.toLowerCase() + ")", answers: state.answers, result: result };
+			saveHistory(entry);
 		} else if (state.moduleId === "lia") {
 			renderLiaResult(result);
-			saveHistory({ moduleId: "lia", name: name, date: new Date().toISOString(),
-				resultLabel: result.verdict, answers: state.answers, result: result });
+			entry = { moduleId: "lia", name: name, date: new Date().toISOString(),
+				resultLabel: result.verdict, answers: state.answers, result: result };
+			saveHistory(entry);
 		} else if (state.moduleId === "dpia") {
 			renderDpiaResult(result);
-			saveHistory({ moduleId: "dpia", name: name, date: new Date().toISOString(),
+			entry = { moduleId: "dpia", name: name, date: new Date().toISOString(),
 				resultLabel: (result.highest ? result.highest + " risk" : "Not scored") + " - DPIA " + result.dpiaStatus.toLowerCase(),
-				answers: state.answers, result: result });
+				answers: state.answers, result: result };
+			saveHistory(entry);
 		} else if (state.moduleId === "incident") {
 			renderIncidentResult(result);
-			saveHistory({ moduleId: "incident", name: name, date: new Date().toISOString(),
+			entry = { moduleId: "incident", name: name, date: new Date().toISOString(),
 				resultLabel: result.na ? "No breach - not scored" : ("SE " + fmt(result.se) + " - " + result.band.label),
-				answers: state.answers, result: result });
+				answers: state.answers, result: result };
+			saveHistory(entry);
 		} else if (state.moduleId === "tpsa") {
 			renderTpsaResult(result);
-			saveHistory({ moduleId: "tpsa", name: name, date: new Date().toISOString(),
+			entry = { moduleId: "tpsa", name: name, date: new Date().toISOString(),
 				resultLabel: "Residual: " + result.residual + (result.residualProvisional ? " (provisional)" : "") + " - maturity " + result.maturity.tier,
-				answers: state.answers, result: result });
+				answers: state.answers, result: result };
+			saveHistory(entry);
 		} else {
 			root.appendChild(el("div", { class: "paa-result-head" }, [
 				el("span", { class: "paa-badge " + badgeClass(result.regLevel) }, ["Regulatory: " + result.regLevel]),
@@ -3401,7 +3429,8 @@
 				el("h4", {}, ["Risk factors & recommendations"]),
 				renderFactors(result.factors)
 			]));
-			saveHistory({ moduleId: "ai", name: name, date: new Date().toISOString(), resultLabel: result.regLevel + " / " + result.bizLevel, answers: state.answers, result: result });
+			entry = { moduleId: "ai", name: name, date: new Date().toISOString(), resultLabel: result.regLevel + " / " + result.bizLevel, answers: state.answers, result: result };
+			saveHistory(entry);
 		}
 
 		var nav = el("div", { class: "paa-nav actions" });
@@ -3421,6 +3450,21 @@
 		printBtn.addEventListener("click", function () { window.print(); });
 		nav.appendChild(printBtn);
 		root.appendChild(nav);
+
+		// Every question, answer, and comment from this specific assessment -
+		// not just the result shown above - available the moment it finishes,
+		// without having to go back to the overview and download the whole
+		// saved history to get at just this one.
+		var downloadRow = el("div", { class: "paa-nav actions paa-download-answers" });
+		var filenameBase = "privacy-ai-assessment-" + slugify(mod.label) + "-" + slugify(name);
+		var dlJson = el("button", { class: "button alt paa-download-entry-json" }, ["Download my answers (JSON)"]);
+		dlJson.addEventListener("click", function () { downloadEntriesJSON([entry], filenameBase); });
+		downloadRow.appendChild(dlJson);
+		var dlCsv = el("button", { class: "button alt paa-download-entry-csv" }, ["Download my answers (CSV)"]);
+		dlCsv.addEventListener("click", function () { downloadEntriesCSV([entry], filenameBase); });
+		downloadRow.appendChild(dlCsv);
+		root.appendChild(downloadRow);
+		root.appendChild(el("p", { class: "paa-help" }, ["Includes every question and answer you entered for this assessment, plus the note you can restore later from the overview page (\"Restore from file\") if you switch browsers or devices."]));
 	}
 
 	renderLanding();
