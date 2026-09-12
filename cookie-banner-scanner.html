@@ -401,8 +401,12 @@
 						[entry.downloadUrl, entry.categorizedDownloadUrl].forEach((url, index) => {
 							const download = document.createElement('a');
 							download.className = 'button small';
-							download.href = `${apiBase}${url}`;
+							download.href = '#';
 							download.textContent = index === 0 ? 'Scan Excel' : 'Cookie Excel';
+							download.addEventListener('click', event => {
+								event.preventDefault();
+								openHistoryDownload(entry, url);
+							});
 							actions.appendChild(download);
 						});
 						tr.append(scannedAt, urls, rows, actions);
@@ -430,6 +434,29 @@
 					renderHistory();
 				}
 
+				function removeHistoryEntry(id) {
+					try {
+						const history = getHistory().filter(entry => entry.id !== id);
+						localStorage.setItem(historyStorageKey, JSON.stringify(history));
+					} catch (error) {
+						return;
+					}
+					renderHistory();
+				}
+
+				async function openHistoryDownload(entry, path) {
+					const downloadWindow = window.open('', '_blank');
+					try {
+						const job = await apiFetch(`/api/scans/${entry.id}`);
+						if (job.status !== 'complete') throw new Error('Scan not found.');
+						downloadWindow.location.href = `${apiBase}${path}`;
+					} catch (error) {
+						if (downloadWindow) downloadWindow.close();
+						removeHistoryEntry(entry.id);
+						status.textContent = 'This saved scan expired on the server and was removed from history.';
+					}
+				}
+
 				async function loadHistoryEntry(entry) {
 					try {
 						const job = await apiFetch(`/api/scans/${entry.id}`);
@@ -437,7 +464,8 @@
 						await loadResults(job);
 						status.textContent = 'Loaded saved scan.';
 					} catch (error) {
-						status.textContent = 'This saved scan has expired on the server.';
+						removeHistoryEntry(entry.id);
+						status.textContent = 'This saved scan expired on the server and was removed from history.';
 					}
 				}
 
