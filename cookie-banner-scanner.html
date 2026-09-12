@@ -54,6 +54,10 @@
 				min-width: 980px;
 			}
 
+			#categoryTable {
+				min-width: 620px;
+			}
+
 			#resultsTable td {
 				vertical-align: top;
 			}
@@ -125,6 +129,18 @@
 								</table>
 							</div>
 						</section>
+
+						<section id="categoryPanel" class="scanner-panel is-hidden" aria-live="polite">
+							<div class="results-meta">
+								<span id="categoryCount">Categorized cookies: 0</span>
+							</div>
+							<div class="table-wrapper">
+								<table id="categoryTable">
+									<thead></thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</section>
 					</div>
 				</div>
 			</section>
@@ -159,6 +175,9 @@
 				const jobStatus = document.getElementById('jobStatus');
 				const resultCount = document.getElementById('resultCount');
 				const table = document.getElementById('resultsTable');
+				const categoryPanel = document.getElementById('categoryPanel');
+				const categoryCount = document.getElementById('categoryCount');
+				const categoryTable = document.getElementById('categoryTable');
 				const queryApi = new URLSearchParams(window.location.search).get('api');
 				const localHosts = ['localhost', '127.0.0.1'];
 				const defaultApiBase = localHosts.includes(window.location.hostname)
@@ -166,6 +185,8 @@
 					: 'https://scanner.simeonatanasov.com';
 				const apiBase = (queryApi || defaultApiBase).replace(/\/$/, '');
 				const columns = [
+					'rowNumber',
+					'scannedAt',
 					'domain',
 					'finalUrl',
 					'result',
@@ -178,6 +199,7 @@
 					'TestScriptID',
 					'ProdScriptID'
 				];
+				const categoryColumns = ['rowNumber', 'domain', 'cookieName', 'category', 'riskLevel'];
 				let pollTimer = null;
 
 				function splitUrls(value) {
@@ -241,6 +263,41 @@
 
 					resultsPanel.classList.remove('is-hidden');
 					resultCount.textContent = `Rows: ${rows.length}`;
+					renderCategorizedCookies(rows);
+				}
+
+				function renderCategorizedCookies(rows) {
+					const head = categoryTable.querySelector('thead');
+					const body = categoryTable.querySelector('tbody');
+					head.replaceChildren();
+					body.replaceChildren();
+
+					const headerRow = document.createElement('tr');
+					categoryColumns.forEach(column => {
+						const th = document.createElement('th');
+						th.textContent = column;
+						headerRow.appendChild(th);
+					});
+					head.appendChild(headerRow);
+
+					const categoryRows = rows.flatMap(row => (row.categorizedCookies || []).map(cookie => ({
+						rowNumber: row.rowNumber,
+						domain: row.domain,
+						...cookie
+					})));
+
+					categoryRows.forEach(row => {
+						const tr = document.createElement('tr');
+						categoryColumns.forEach(column => {
+							const td = document.createElement('td');
+							td.textContent = sanitizeTableValue(row[column]);
+							tr.appendChild(td);
+						});
+						body.appendChild(tr);
+					});
+
+					categoryPanel.classList.remove('is-hidden');
+					categoryCount.textContent = `Categorized cookies: ${categoryRows.length}`;
 				}
 
 				async function apiFetch(path, options) {
@@ -299,6 +356,7 @@
 					setBusy(true);
 					setDownload(null);
 					resultsPanel.classList.add('is-hidden');
+					categoryPanel.classList.add('is-hidden');
 					status.textContent = 'Starting scan.';
 
 					try {
