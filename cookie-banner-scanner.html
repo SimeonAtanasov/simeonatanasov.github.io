@@ -629,13 +629,23 @@
 					URL.revokeObjectURL(link.href);
 				});
 
-				async function apiFetch(path, options) {
-					const response = await fetch(`${apiBase}${path}`, options);
-					const data = await response.json().catch(() => ({}));
-					if (!response.ok) {
-						throw new Error(data.error || `Request failed with ${response.status}`);
+				async function apiFetch(path, options, retries = 2) {
+					for (let attempt = 0; attempt <= retries; attempt++) {
+						try {
+							const response = await fetch(`${apiBase}${path}`, options);
+							const data = await response.json().catch(() => ({}));
+							if (!response.ok) {
+								throw new Error(data.error || `Request failed with ${response.status}`);
+							}
+							return data;
+						} catch (error) {
+							if (attempt === retries || error.message !== 'Failed to fetch') throw error;
+							status.textContent = `Connecting to scanner service (${attempt + 1}/${retries + 1}).`;
+							await new Promise(resolve => setTimeout(resolve, 5000));
+						}
 					}
-					return data;
+
+					throw new Error('Scanner service is unavailable. Please try again shortly.');
 				}
 
 				async function loadResults(job) {
