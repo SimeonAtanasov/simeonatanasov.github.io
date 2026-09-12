@@ -3548,6 +3548,7 @@ input, select, textarea {
 		display: -ms-flex;
 		display: flex;
 		box-sizing: border-box;
+		flex-wrap: wrap;
 		margin: 0;
 		position: sticky; /* Sticky positioning */
 		top: 0; /* Sticks to the top of the viewport */
@@ -3571,17 +3572,22 @@ input, select, textarea {
 			-webkit-flex: 1;
 			-ms-flex: 1;
 			flex: 1;
+			min-width: 0;
 			text-align: right;
 		}
 
 			#header > nav > ul {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-end;
+				gap: 0.5em 1.25em;
 				margin: 0;
 				padding: 0;
 			}
 
 				#header > nav > ul > li {
 					display: inline-block;
-					margin-left: 1.75em;
+					margin-left: 0;
 					padding: 0;
 					vertical-align: middle;
 				}

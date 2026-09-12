@@ -16,6 +16,7 @@
 			.scanner-panel {
 				border: solid 1px rgba(255, 255, 255, 0.18);
 				border-radius: 8px;
+				min-width: 0;
 				padding: 1.5em;
 				background: rgba(255, 255, 255, 0.04);
 			}
@@ -58,16 +59,22 @@
 				min-width: 620px;
 			}
 
+			.scanner-panel .table-wrapper {
+				max-width: 100%;
+				min-width: 0;
+			}
+
 			.risk-summary-grid {
 				display: grid;
 				gap: 0.75em;
-				grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+				grid-template-columns: repeat(4, minmax(0, 1fr));
 			}
 
 			.risk-block {
 				border-left: solid 4px var(--risk-color);
 				padding: 0.9em 1em;
 				background: rgba(255, 255, 255, 0.04);
+				min-width: 0;
 			}
 
 			.risk-block h3,
@@ -87,9 +94,26 @@
 			}
 
 			.risk-block .risk-domains {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5em;
 				font-size: 0.85em;
 				line-height: 1.5;
 				word-break: break-word;
+			}
+
+			.risk-block .risk-domain-link {
+				background: var(--risk-background);
+				border: solid 1px var(--risk-color);
+				border-radius: 4px;
+				color: #ffffff;
+				display: block;
+				padding: 0.35em 0.5em;
+				text-decoration: none;
+			}
+
+			.risk-block .risk-domain-link:hover {
+				background: var(--risk-color);
 			}
 
 			#categoryTable tr:target {
@@ -111,6 +135,10 @@
 			}
 
 			@media screen and (max-width: 736px) {
+				.risk-summary-grid {
+					grid-template-columns: 1fr;
+				}
+
 				.scanner-panel {
 					padding: 1em;
 				}
@@ -415,11 +443,11 @@
 					}
 
 					const levels = [
-						{ label: 'Very High', rank: 4, color: '#d64b4b' },
-						{ label: 'High', rank: 3, color: '#e47b32' },
-						{ label: 'Medium', rank: 2, color: '#f0b429' },
-						{ label: 'Low', rank: 1, color: '#4caf78' },
-						{ label: 'No cookies observed', rank: 0, color: '#8a98aa' }
+						{ label: 'Very High', rank: 4, color: '#d64b4b', background: 'rgba(214, 75, 75, 0.55)' },
+						{ label: 'High', rank: 3, color: '#e47b32', background: 'rgba(228, 123, 50, 0.55)' },
+						{ label: 'Medium', rank: 2, color: '#f0b429', background: 'rgba(240, 180, 41, 0.55)' },
+						{ label: 'Low', rank: 1, color: '#4caf78', background: 'rgba(76, 175, 120, 0.55)' },
+						{ label: 'No cookies observed', rank: 0, color: '#8a98aa', background: 'rgba(138, 152, 170, 0.55)' }
 					];
 					riskSummaryGrid.replaceChildren();
 					levels.forEach(level => {
@@ -427,19 +455,20 @@
 						const block = document.createElement('section');
 						block.className = 'risk-block';
 						block.style.setProperty('--risk-color', level.color);
+						block.style.setProperty('--risk-background', level.background);
 						const heading = document.createElement('h3');
 						heading.textContent = level.label;
 						const count = document.createElement('p');
 						count.className = 'risk-count';
 						count.textContent = domains.length;
-						const list = document.createElement('p');
+						const list = document.createElement('div');
 						list.className = 'risk-domains';
 						domains.forEach((domain, index) => {
 							const link = document.createElement('a');
 							link.href = domain.targetId ? `#${domain.targetId}` : '#categoryPanel';
+							link.className = 'risk-domain-link';
 							link.textContent = domain.domain;
 							list.appendChild(link);
-							if (index < domains.length - 1) list.append(document.createTextNode(', '));
 						});
 						block.append(heading, count, list);
 						riskSummaryGrid.appendChild(block);
