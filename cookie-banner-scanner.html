@@ -101,6 +101,8 @@
 			<section id="main" class="wrapper">
 				<div class="inner">
 					<h1 class="major">Cookie Banner Scanner</h1>
+						<p>Checks whether websites show a cookie banner before cookies are created. The scanner focuses on OneTrust detection, banner visibility, cookies observed, and the risk of cookies being dropped without a banner.</p>
+						<p><strong>Goals:</strong> Detect OneTrust as the primary consent banner, inspect cookies dropped during initial page load, highlight the highest-risk compliance scenario (no banner detected while cookies are dropped), and map observed cookies to category risk levels.</p>
 
 					<div class="scanner-shell">
 						<form id="scanForm" class="scanner-panel">
@@ -112,7 +114,8 @@
 							</div>
 							<div class="scanner-toolbar">
 								<button type="submit" id="runButton" class="primary">Run Scan</button>
-								<a id="downloadButton" class="button disabled is-hidden" href="#" aria-disabled="true">Download Excel</a>
+								<a id="downloadButton" class="button disabled is-hidden" href="#" aria-disabled="true">Download Scan Excel</a>
+								<a id="categorizedDownloadButton" class="button disabled is-hidden" href="#" aria-disabled="true">Download Categorized Excel</a>
 							</div>
 							<div id="status" class="status-line" role="status">Ready.</div>
 						</form>
@@ -170,6 +173,7 @@
 				const urlsInput = document.getElementById('urls');
 				const runButton = document.getElementById('runButton');
 				const downloadButton = document.getElementById('downloadButton');
+				const categorizedDownloadButton = document.getElementById('categorizedDownloadButton');
 				const status = document.getElementById('status');
 				const resultsPanel = document.getElementById('resultsPanel');
 				const jobStatus = document.getElementById('jobStatus');
@@ -190,6 +194,7 @@
 					'domain',
 					'finalUrl',
 					'result',
+					'cookieRisk',
 					'onetrust',
 					'cookiesDropped',
 					'bannerTrigger',
@@ -214,17 +219,22 @@
 					runButton.textContent = isBusy ? 'Running...' : 'Run Scan';
 				}
 
-				function setDownload(url) {
+				function setDownloadButton(button, url) {
 					if (!url) {
-						downloadButton.classList.add('is-hidden', 'disabled');
-						downloadButton.setAttribute('aria-disabled', 'true');
-						downloadButton.removeAttribute('href');
+						button.classList.add('is-hidden', 'disabled');
+						button.setAttribute('aria-disabled', 'true');
+						button.removeAttribute('href');
 						return;
 					}
 
-					downloadButton.href = `${apiBase}${url}`;
-					downloadButton.classList.remove('is-hidden', 'disabled');
-					downloadButton.removeAttribute('aria-disabled');
+					button.href = `${apiBase}${url}`;
+					button.classList.remove('is-hidden', 'disabled');
+					button.removeAttribute('aria-disabled');
+				}
+
+				function setDownloads(job) {
+					setDownloadButton(downloadButton, job.downloadUrl);
+					setDownloadButton(categorizedDownloadButton, job.categorizedDownloadUrl);
 				}
 
 				function sanitizeTableValue(value) {
@@ -234,6 +244,22 @@
 						.replace(/[\u0080-\uFFFF]/g, '')
 						.replace(/\s+/g, ' ')
 						.trim();
+				}
+
+				function createUrlLink(value) {
+					const url = sanitizeTableValue(value);
+					try {
+						const parsed = new URL(url);
+						if (!['http:', 'https:'].includes(parsed.protocol)) return null;
+						const link = document.createElement('a');
+						link.href = parsed.href;
+						link.target = '_blank';
+						link.rel = 'noopener noreferrer';
+						link.textContent = url;
+						return link;
+					} catch (error) {
+						return null;
+					}
 				}
 
 				function renderRows(rows) {
@@ -255,7 +281,12 @@
 						columns.forEach(column => {
 							const td = document.createElement('td');
 							if (column === 'result') td.className = 'result-cell';
-							td.textContent = sanitizeTableValue(row[column]);
+							const link = column === 'finalUrl' ? createUrlLink(row[column]) : null;
+							if (link) {
+								td.appendChild(link);
+							} else {
+								td.textContent = sanitizeTableValue(row[column]);
+							}
 							tr.appendChild(td);
 						});
 						body.appendChild(tr);
@@ -281,12 +312,13 @@
 					head.appendChild(headerRow);
 
 					const categoryRows = rows.flatMap(row => (row.categorizedCookies || []).map(cookie => ({
-						rowNumber: row.rowNumber,
+						rowNumber: 0,
 						domain: row.domain,
 						...cookie
 					})));
 
-					categoryRows.forEach(row => {
+					categoryRows.forEach((row, index) => {
+						row.rowNumber = index + 1;
 						const tr = document.createElement('tr');
 						categoryColumns.forEach(column => {
 							const td = document.createElement('td');
@@ -312,7 +344,7 @@
 				async function loadResults(job) {
 					const data = await apiFetch(job.resultsUrl);
 					renderRows(data.rows || []);
-					setDownload(job.downloadUrl);
+					setDownloads(job);
 				}
 
 				async function pollJob(id) {
@@ -354,7 +386,8 @@
 					clearInterval(pollTimer);
 					pollTimer = null;
 					setBusy(true);
-					setDownload(null);
+					setDownloadButton(downloadButton, null);
+					setDownloadButton(categorizedDownloadButton, null);
 					resultsPanel.classList.add('is-hidden');
 					categoryPanel.classList.add('is-hidden');
 					status.textContent = 'Starting scan.';
