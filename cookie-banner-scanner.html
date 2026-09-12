@@ -205,6 +205,15 @@
 					downloadButton.removeAttribute('aria-disabled');
 				}
 
+				function sanitizeTableValue(value) {
+					if (value === null || value === undefined) return '';
+					return String(value)
+						.replace(/\uFFFD/g, '')
+						.replace(/[\u0080-\uFFFF]/g, '')
+						.replace(/\s+/g, ' ')
+						.trim();
+				}
+
 				function renderRows(rows) {
 					const head = table.querySelector('thead');
 					const body = table.querySelector('tbody');
@@ -224,7 +233,7 @@
 						columns.forEach(column => {
 							const td = document.createElement('td');
 							if (column === 'result') td.className = 'result-cell';
-							td.textContent = row[column] == null ? '' : String(row[column]);
+							td.textContent = sanitizeTableValue(row[column]);
 							tr.appendChild(td);
 						});
 						body.appendChild(tr);
