@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Cookie Banner Scanner | Simeon Atanasov</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Run a cookie banner scan and export the results to Excel." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.scanner-shell {
+				display: grid;
+				gap: 1.5em;
+			}
+
+			.scanner-panel {
+				border: solid 1px rgba(255, 255, 255, 0.18);
+				border-radius: 8px;
+				padding: 1.5em;
+				background: rgba(255, 255, 255, 0.04);
+			}
+
+			.scanner-toolbar {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 0.75em;
+				margin-top: 1em;
+			}
+
+			.status-line {
+				min-height: 2em;
+				padding: 0.6em 0;
+				color: rgba(255, 255, 255, 0.75);
+			}
+
+			.results-meta {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75em;
+				margin-bottom: 1em;
+				color: rgba(255, 255, 255, 0.75);
+				font-size: 0.9em;
+			}
+
+			.results-meta span {
+				border: solid 1px rgba(255, 255, 255, 0.18);
+				border-radius: 8px;
+				padding: 0.4em 0.7em;
+				background: rgba(255, 255, 255, 0.04);
+			}
+
+			#resultsTable {
+				min-width: 980px;
+			}
+
+			#resultsTable td {
+				vertical-align: top;
+			}
+
+			#resultsTable .result-cell {
+				max-width: 26em;
+				white-space: normal;
+			}
+
+			.is-hidden {
+				display: none !important;
+			}
+
+			@media screen and (max-width: 736px) {
+				.scanner-panel {
+					padding: 1em;
+				}
+
+				.scanner-toolbar > * {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<header id="header">
+			<a href="index.html" class="title">Simeon Atanasov</a>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="power-bi.html">Power BI</a></li>
+					<li><a href="my-asteroids-game.html">My Asteroids Game</a></li>
+					<li><a href="risk-matrix-original.html">Risk Matrix</a></li>
+					<li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li>
+					<li><a href="cookie-banner-scanner.html" class="active">Cookie Scanner</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="wrapper">
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<h1 class="major">Cookie Banner Scanner</h1>
+
+					<div class="scanner-shell">
+						<form id="scanForm" class="scanner-panel">
+							<div class="fields">
+								<div class="field">
+									<label for="urls">URLs</label>
+									<textarea id="urls" name="urls" rows="8" placeholder="https://www.example.com&#10;example.org"></textarea>
+								</div>
+							</div>
+							<div class="scanner-toolbar">
+								<button type="submit" id="runButton" class="primary">Run Scan</button>
+								<a id="downloadButton" class="button disabled is-hidden" href="#" aria-disabled="true">Download Excel</a>
+							</div>
+							<div id="status" class="status-line" role="status">Ready.</div>
+						</form>
+
+						<section id="resultsPanel" class="scanner-panel is-hidden" aria-live="polite">
+							<div class="results-meta">
+								<span id="jobStatus">Status: ready</span>
+								<span id="resultCount">Rows: 0</span>
+							</div>
+							<div class="table-wrapper">
+								<table id="resultsTable">
+									<thead></thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Simeon. All rights reserved.</li>
+					<li><a href="terms.html">Terms of use</a></li>
+					<li><a href="privacy-notice.html">Privacy notice</a></li>
+					<li><a href="cookie-notice.html">Cookie notice</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			(function () {
+				const form = document.getElementById('scanForm');
+				const urlsInput = document.getElementById('urls');
+				const runButton = document.getElementById('runButton');
+				const downloadButton = document.getElementById('downloadButton');
+				const status = document.getElementById('status');
+				const resultsPanel = document.getElementById('resultsPanel');
+				const jobStatus = document.getElementById('jobStatus');
+				const resultCount = document.getElementById('resultCount');
+				const table = document.getElementById('resultsTable');
+				const queryApi = new URLSearchParams(window.location.search).get('api');
+				const localHosts = ['localhost', '127.0.0.1'];
+				const defaultApiBase = localHosts.includes(window.location.hostname)
+					? 'http://localhost:3000'
+					: 'https://scanner.simeonatanasov.com';
+				const apiBase = (queryApi || defaultApiBase).replace(/\/$/, '');
+				const columns = [
+					'domain',
+					'finalUrl',
+					'result',
+					'onetrust',
+					'cookiesDropped',
+					'bannerTrigger',
+					'foundKeywords',
+					'dnsResolved',
+					'dnsError',
+					'TestScriptID',
+					'ProdScriptID'
+				];
+				let pollTimer = null;
+
+				function splitUrls(value) {
+					return value
+						.split(/[\s,]+/)
+						.map(item => item.trim())
+						.filter(Boolean);
+				}
+
+				function setBusy(isBusy) {
+					runButton.disabled = isBusy;
+					runButton.textContent = isBusy ? 'Running...' : 'Run Scan';
+				}
+
+				function setDownload(url) {
+					if (!url) {
+						downloadButton.classList.add('is-hidden', 'disabled');
+						downloadButton.setAttribute('aria-disabled', 'true');
+						downloadButton.removeAttribute('href');
+						return;
+					}
+
+					downloadButton.href = `${apiBase}${url}`;
+					downloadButton.classList.remove('is-hidden', 'disabled');
+					downloadButton.removeAttribute('aria-disabled');
+				}
+
+				function renderRows(rows) {
+					const head = table.querySelector('thead');
+					const body = table.querySelector('tbody');
+					head.replaceChildren();
+					body.replaceChildren();
+
+					const headerRow = document.createElement('tr');
+					columns.forEach(column => {
+						const th = document.createElement('th');
+						th.textContent = column;
+						headerRow.appendChild(th);
+					});
+					head.appendChild(headerRow);
+
+					rows.forEach(row => {
+						const tr = document.createElement('tr');
+						columns.forEach(column => {
+							const td = document.createElement('td');
+							if (column === 'result') td.className = 'result-cell';
+							td.textContent = row[column] == null ? '' : String(row[column]);
+							tr.appendChild(td);
+						});
+						body.appendChild(tr);
+					});
+
+					resultsPanel.classList.remove('is-hidden');
+					resultCount.textContent = `Rows: ${rows.length}`;
+				}
+
+				async function apiFetch(path, options) {
+					const response = await fetch(`${apiBase}${path}`, options);
+					const data = await response.json().catch(() => ({}));
+					if (!response.ok) {
+						throw new Error(data.error || `Request failed with ${response.status}`);
+					}
+					return data;
+				}
+
+				async function loadResults(job) {
+					const data = await apiFetch(job.resultsUrl);
+					renderRows(data.rows || []);
+					setDownload(job.downloadUrl);
+				}
+
+				async function pollJob(id) {
+					const job = await apiFetch(`/api/scans/${id}`);
+					jobStatus.textContent = `Status: ${job.status}`;
+					resultCount.textContent = `Rows: ${job.resultCount || 0}`;
+
+					if (job.status === 'complete') {
+						clearInterval(pollTimer);
+						pollTimer = null;
+						status.textContent = 'Complete.';
+						setBusy(false);
+						await loadResults(job);
+						return;
+					}
+
+					if (job.status === 'failed') {
+						clearInterval(pollTimer);
+						pollTimer = null;
+						status.textContent = job.error || 'Scan failed.';
+						setBusy(false);
+						return;
+					}
+
+					status.textContent = job.status === 'queued'
+						? `Queued. Position ${job.queuedPosition || 1}.`
+						: 'Running scan.';
+				}
+
+				form.addEventListener('submit', async event => {
+					event.preventDefault();
+					const urls = splitUrls(urlsInput.value);
+
+					if (!urls.length) {
+						status.textContent = 'Enter at least one URL.';
+						return;
+					}
+
+					clearInterval(pollTimer);
+					pollTimer = null;
+					setBusy(true);
+					setDownload(null);
+					resultsPanel.classList.add('is-hidden');
+					status.textContent = 'Starting scan.';
+
+					try {
+						const job = await apiFetch('/api/scans', {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify({ urls })
+						});
+						jobStatus.textContent = `Status: ${job.status}`;
+						resultCount.textContent = 'Rows: 0';
+						resultsPanel.classList.remove('is-hidden');
+						await pollJob(job.id);
+						pollTimer = setInterval(() => {
+							pollJob(job.id).catch(error => {
+								clearInterval(pollTimer);
+								pollTimer = null;
+								status.textContent = error.message;
+								setBusy(false);
+							});
+						}, 3000);
+					} catch (error) {
+						status.textContent = error.message;
+						setBusy(false);
+					}
+				});
+			})();
+		</script>
+	</body>
+</html>
