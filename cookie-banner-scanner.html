@@ -58,6 +58,11 @@
 				min-width: 620px;
 			}
 
+			.risk-chart-wrap {
+				height: 28em;
+				max-width: 100%;
+			}
+
 			#resultsTable td {
 				vertical-align: top;
 			}
@@ -144,6 +149,18 @@
 								</table>
 							</div>
 						</section>
+
+						<section id="riskPanel" class="scanner-panel is-hidden" aria-live="polite">
+							<div class="results-meta">
+								<span id="riskSummary">Highest cookie risk by URL</span>
+							</div>
+							<div class="risk-chart-wrap">
+								<canvas id="riskChart"></canvas>
+							</div>
+							<div class="scanner-toolbar">
+								<button type="button" id="downloadRiskChart" disabled>Download Risk Chart</button>
+							</div>
+						</section>
 					</div>
 				</div>
 			</section>
@@ -167,6 +184,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 		<script>
 			(function () {
 				const form = document.getElementById('scanForm');
@@ -182,6 +200,10 @@
 				const categoryPanel = document.getElementById('categoryPanel');
 				const categoryCount = document.getElementById('categoryCount');
 				const categoryTable = document.getElementById('categoryTable');
+				const riskPanel = document.getElementById('riskPanel');
+				const riskSummary = document.getElementById('riskSummary');
+				const riskChartCanvas = document.getElementById('riskChart');
+				const downloadRiskChart = document.getElementById('downloadRiskChart');
 				const queryApi = new URLSearchParams(window.location.search).get('api');
 				const localHosts = ['localhost', '127.0.0.1'];
 				const defaultApiBase = localHosts.includes(window.location.hostname)
@@ -205,6 +227,7 @@
 				];
 				const categoryColumns = ['rowNumber', 'domain', 'cookieName', 'category', 'riskLevel'];
 				let pollTimer = null;
+				let riskChart = null;
 
 				function splitUrls(value) {
 					return value
@@ -294,6 +317,7 @@
 					resultsPanel.classList.remove('is-hidden');
 					resultCount.textContent = `Rows: ${rows.length}`;
 					renderCategorizedCookies(rows);
+					renderRiskChart(rows);
 				}
 
 				function renderCategorizedCookies(rows) {
@@ -330,6 +354,80 @@
 					categoryPanel.classList.remove('is-hidden');
 					categoryCount.textContent = `Categorized cookies: ${categoryRows.length}`;
 				}
+
+				function riskRank(riskLevel) {
+					const match = String(riskLevel || '').match(/^(\d)/);
+					return match ? Number(match[1]) : 0;
+				}
+
+				function renderRiskChart(rows) {
+					const chartRows = rows.map(row => {
+						const highestRisk = (row.categorizedCookies || []).reduce((highest, cookie) =>
+							riskRank(cookie.riskLevel) > riskRank(highest) ? cookie.riskLevel : highest, '');
+						return {
+							label: `#${row.rowNumber} ${sanitizeTableValue(row.domain)}`,
+							riskLevel: highestRisk || 'No cookies observed',
+							riskRank: riskRank(highestRisk)
+						};
+					});
+
+					if (riskChart) riskChart.destroy();
+					if (!chartRows.length || typeof Chart === 'undefined') {
+						riskPanel.classList.add('is-hidden');
+						downloadRiskChart.disabled = true;
+						return;
+					}
+
+					const colors = ['#8a98aa', '#4caf78', '#f0b429', '#e47b32', '#d64b4b'];
+					riskChart = new Chart(riskChartCanvas, {
+						type: 'bar',
+						data: {
+							labels: chartRows.map(row => row.label),
+							datasets: [{
+								label: 'Highest cookie risk',
+								data: chartRows.map(row => row.riskRank),
+								backgroundColor: chartRows.map(row => colors[row.riskRank]),
+								borderWidth: 0,
+								borderRadius: 3
+							}]
+						},
+						options: {
+							indexAxis: 'y',
+							maintainAspectRatio: false,
+							plugins: {
+								legend: { display: false },
+								tooltip: {
+									callbacks: {
+										label: context => chartRows[context.dataIndex].riskLevel
+									}
+								}
+							},
+							scales: {
+								x: {
+									min: 0,
+									max: 4,
+									ticks: {
+										stepSize: 1,
+										callback: value => ['', '1-Low', '2-Medium', '3-High', '4-Very High'][value]
+									}
+								},
+								y: { ticks: { color: '#ffffff' } }
+							}
+						}
+					});
+
+					riskPanel.classList.remove('is-hidden');
+					riskSummary.textContent = `URLs assessed: ${chartRows.length}`;
+					downloadRiskChart.disabled = false;
+				}
+
+				downloadRiskChart.addEventListener('click', () => {
+					if (!riskChart) return;
+					const link = document.createElement('a');
+					link.href = riskChart.toBase64Image();
+					link.download = 'highest-cookie-risk-by-url.png';
+					link.click();
+				});
 
 				async function apiFetch(path, options) {
 					const response = await fetch(`${apiBase}${path}`, options);
@@ -389,6 +487,8 @@
 					setDownloadButton(categorizedDownloadButton, null);
 					resultsPanel.classList.add('is-hidden');
 					categoryPanel.classList.add('is-hidden');
+					riskPanel.classList.add('is-hidden');
+					downloadRiskChart.disabled = true;
 					status.textContent = 'Starting scan.';
 
 					try {
