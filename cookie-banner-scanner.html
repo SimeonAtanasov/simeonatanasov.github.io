@@ -618,6 +618,13 @@
 					downloadRiskChart.dataset.riskSummary = '';
 				}
 
+				function readableScanError(error) {
+					if (error && error.message === 'Scan not found.') {
+						return 'Scanner service restarted before this scan finished. Please run the scan again.';
+					}
+					return error && error.message ? error.message : 'Scan failed.';
+				}
+
 				downloadRiskChart.addEventListener('click', () => {
 					const rows = JSON.parse(downloadRiskChart.dataset.riskSummary || '[]');
 					if (!rows.length) return;
@@ -715,12 +722,12 @@
 							pollJob(job.id, urls).catch(error => {
 								clearInterval(pollTimer);
 								pollTimer = null;
-								status.textContent = error.message;
+								status.textContent = readableScanError(error);
 								setBusy(false);
 							});
 						}, 3000);
 					} catch (error) {
-						status.textContent = error.message;
+						status.textContent = readableScanError(error);
 						setBusy(false);
 					}
 				});
