@@ -59,6 +59,10 @@
 				min-width: 620px;
 			}
 
+			#historyTable {
+				min-width: 760px;
+			}
+
 			.scanner-panel .table-wrapper {
 				max-width: 100%;
 				min-width: 0;
@@ -67,7 +71,7 @@
 			.risk-summary-grid {
 				display: grid;
 				gap: 0.75em;
-				grid-template-columns: repeat(4, minmax(0, 1fr));
+				grid-template-columns: 1fr;
 			}
 
 			.risk-block {
@@ -135,10 +139,6 @@
 			}
 
 			@media screen and (max-width: 736px) {
-				.risk-summary-grid {
-					grid-template-columns: 1fr;
-				}
-
 				.scanner-panel {
 					padding: 1em;
 				}
@@ -186,6 +186,21 @@
 							</div>
 							<div id="status" class="status-line" role="status">Ready.</div>
 						</form>
+
+						<section id="historyPanel" class="scanner-panel">
+							<div class="results-meta">
+								<span id="historyCount">Saved scans: 0</span>
+							</div>
+							<div class="table-wrapper">
+								<table id="historyTable">
+									<thead></thead>
+									<tbody></tbody>
+								</table>
+							</div>
+							<div class="scanner-toolbar">
+								<button type="button" id="clearHistoryButton">Clear History</button>
+							</div>
+						</section>
 
 						<section id="resultsPanel" class="scanner-panel is-hidden" aria-live="polite">
 							<div class="results-meta">
@@ -252,6 +267,9 @@
 				const downloadButton = document.getElementById('downloadButton');
 				const categorizedDownloadButton = document.getElementById('categorizedDownloadButton');
 				const status = document.getElementById('status');
+				const historyCount = document.getElementById('historyCount');
+				const historyTable = document.getElementById('historyTable');
+				const clearHistoryButton = document.getElementById('clearHistoryButton');
 				const resultsPanel = document.getElementById('resultsPanel');
 				const jobStatus = document.getElementById('jobStatus');
 				const resultCount = document.getElementById('resultCount');
@@ -285,6 +303,9 @@
 					'ProdScriptID'
 				];
 				const categoryColumns = ['rowNumber', 'domain', 'cookieName', 'category', 'riskLevel'];
+				const historyColumns = ['scannedAt', 'urls', 'rows', 'actions'];
+				const historyStorageKey = 'cookie-banner-scanner-history';
+				const maxHistoryEntries = 20;
 				let pollTimer = null;
 
 				function splitUrls(value) {
@@ -315,6 +336,86 @@
 				function setDownloads(job) {
 					setDownloadButton(downloadButton, job.downloadUrl);
 					setDownloadButton(categorizedDownloadButton, job.categorizedDownloadUrl);
+				}
+
+				function getHistory() {
+					try {
+						const history = JSON.parse(localStorage.getItem(historyStorageKey) || '[]');
+						return Array.isArray(history) ? history : [];
+					} catch (error) {
+						return [];
+					}
+				}
+
+				function renderHistory() {
+					const head = historyTable.querySelector('thead');
+					const body = historyTable.querySelector('tbody');
+					head.replaceChildren();
+					body.replaceChildren();
+					const headerRow = document.createElement('tr');
+					historyColumns.forEach(column => {
+						const th = document.createElement('th');
+						th.textContent = column;
+						headerRow.appendChild(th);
+					});
+					head.appendChild(headerRow);
+
+					const history = getHistory();
+					history.forEach(entry => {
+						const tr = document.createElement('tr');
+						const scannedAt = document.createElement('td');
+						scannedAt.textContent = new Date(entry.scannedAt).toLocaleString();
+						const urls = document.createElement('td');
+						urls.textContent = entry.urls.join(', ');
+						const rows = document.createElement('td');
+						rows.textContent = String(entry.resultCount);
+						const actions = document.createElement('td');
+						const view = document.createElement('button');
+						view.type = 'button';
+						view.textContent = 'View Results';
+						view.addEventListener('click', () => loadHistoryEntry(entry));
+						actions.appendChild(view);
+						[entry.downloadUrl, entry.categorizedDownloadUrl].forEach((url, index) => {
+							const download = document.createElement('a');
+							download.className = 'button small';
+							download.href = `${apiBase}${url}`;
+							download.textContent = index === 0 ? 'Scan Excel' : 'Cookie Excel';
+							actions.appendChild(download);
+						});
+						tr.append(scannedAt, urls, rows, actions);
+						body.appendChild(tr);
+					});
+					historyCount.textContent = `Saved scans: ${history.length}`;
+				}
+
+				function saveHistory(job, urls) {
+					const entry = {
+						id: job.id,
+						scannedAt: job.finishedAt || new Date().toISOString(),
+						urls,
+						resultCount: job.resultCount || 0,
+						downloadUrl: job.downloadUrl,
+						categorizedDownloadUrl: job.categorizedDownloadUrl
+					};
+					try {
+						const history = getHistory().filter(item => item.id !== entry.id);
+						history.unshift(entry);
+						localStorage.setItem(historyStorageKey, JSON.stringify(history.slice(0, maxHistoryEntries)));
+					} catch (error) {
+						status.textContent = 'Scan complete, but browser history could not be saved.';
+					}
+					renderHistory();
+				}
+
+				async function loadHistoryEntry(entry) {
+					try {
+						const job = await apiFetch(`/api/scans/${entry.id}`);
+						if (job.status !== 'complete') throw new Error('This saved scan is no longer available.');
+						await loadResults(job);
+						status.textContent = 'Loaded saved scan.';
+					} catch (error) {
+						status.textContent = 'This saved scan has expired on the server.';
+					}
 				}
 
 				function sanitizeTableValue(value) {
@@ -496,6 +597,19 @@
 					downloadRiskChart.dataset.riskSummary = JSON.stringify(highestRisks);
 				}
 
+				function clearResults() {
+					table.querySelector('thead').replaceChildren();
+					table.querySelector('tbody').replaceChildren();
+					categoryTable.querySelector('thead').replaceChildren();
+					categoryTable.querySelector('tbody').replaceChildren();
+					riskSummaryGrid.replaceChildren();
+					jobStatus.textContent = 'Status: ready';
+					resultCount.textContent = 'Rows: 0';
+					categoryCount.textContent = 'Categorized cookies: 0';
+					riskSummary.textContent = 'Highest cookie risk by URL';
+					downloadRiskChart.dataset.riskSummary = '';
+				}
+
 				downloadRiskChart.addEventListener('click', () => {
 					const rows = JSON.parse(downloadRiskChart.dataset.riskSummary || '[]');
 					if (!rows.length) return;
@@ -522,7 +636,7 @@
 					setDownloads(job);
 				}
 
-				async function pollJob(id) {
+				async function pollJob(id, urls) {
 					const job = await apiFetch(`/api/scans/${id}`);
 					jobStatus.textContent = `Status: ${job.status}`;
 					resultCount.textContent = `Rows: ${job.resultCount || 0}`;
@@ -533,6 +647,7 @@
 						status.textContent = 'Complete.';
 						setBusy(false);
 						await loadResults(job);
+						saveHistory(job, urls);
 						return;
 					}
 
@@ -563,6 +678,7 @@
 					setBusy(true);
 					setDownloadButton(downloadButton, null);
 					setDownloadButton(categorizedDownloadButton, null);
+					clearResults();
 					resultsPanel.classList.add('is-hidden');
 					categoryPanel.classList.add('is-hidden');
 					riskPanel.classList.add('is-hidden');
@@ -576,11 +692,9 @@
 							body: JSON.stringify({ urls })
 						});
 						jobStatus.textContent = `Status: ${job.status}`;
-						resultCount.textContent = 'Rows: 0';
-						resultsPanel.classList.remove('is-hidden');
-						await pollJob(job.id);
+						await pollJob(job.id, urls);
 						pollTimer = setInterval(() => {
-							pollJob(job.id).catch(error => {
+							pollJob(job.id, urls).catch(error => {
 								clearInterval(pollTimer);
 								pollTimer = null;
 								status.textContent = error.message;
@@ -592,6 +706,13 @@
 						setBusy(false);
 					}
 				});
+
+				clearHistoryButton.addEventListener('click', () => {
+					localStorage.removeItem(historyStorageKey);
+					renderHistory();
+				});
+
+				renderHistory();
 			})();
 		</script>
 	</body>
