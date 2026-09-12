@@ -63,6 +63,20 @@
 				min-width: 760px;
 			}
 
+			#historyTable .history-actions {
+				white-space: nowrap;
+			}
+
+			#historyTable .history-actions button,
+			#historyTable .history-actions .button {
+				font-size: 0.55em;
+				height: 2.7em;
+				line-height: 2.7em;
+				margin: 0 0.3em 0.3em 0;
+				min-width: 0;
+				padding: 0 1em;
+			}
+
 			.scanner-panel .table-wrapper {
 				max-width: 100%;
 				min-width: 0;
@@ -370,6 +384,7 @@
 						const rows = document.createElement('td');
 						rows.textContent = String(entry.resultCount);
 						const actions = document.createElement('td');
+						actions.className = 'history-actions';
 						const rescan = document.createElement('button');
 						rescan.type = 'button';
 						rescan.textContent = 'Rescan';
