@@ -370,6 +370,14 @@
 						const rows = document.createElement('td');
 						rows.textContent = String(entry.resultCount);
 						const actions = document.createElement('td');
+						const rescan = document.createElement('button');
+						rescan.type = 'button';
+						rescan.textContent = 'Rescan';
+						rescan.addEventListener('click', () => {
+							urlsInput.value = entry.urls.join('\n');
+							form.requestSubmit();
+						});
+						actions.appendChild(rescan);
 						const view = document.createElement('button');
 						view.type = 'button';
 						view.textContent = 'View Results';
