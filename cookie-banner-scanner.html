@@ -116,7 +116,7 @@
 				background: var(--risk-color);
 			}
 
-			#categoryTable tr:target {
+			#categoryTable tr.is-risk-target {
 				background: rgba(240, 180, 41, 0.2);
 				outline: solid 1px #f0b429;
 			}
@@ -420,6 +420,16 @@
 					return match ? Number(match[1]) : 0;
 				}
 
+				function focusCategoryRow(targetId) {
+					const target = document.getElementById(targetId);
+					if (!target) return;
+					document.querySelectorAll('#categoryTable tr.is-risk-target').forEach(row => {
+						row.classList.remove('is-risk-target');
+					});
+					target.classList.add('is-risk-target');
+					target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+				}
+
 				function renderRiskChart(rows) {
 					const highestRisks = rows.map(row => {
 						const highestCookie = (row.categorizedCookies || []).reduce((highest, cookie, cookieIndex) =>
@@ -463,11 +473,17 @@
 						count.textContent = domains.length;
 						const list = document.createElement('div');
 						list.className = 'risk-domains';
-						domains.forEach((domain, index) => {
+						domains.forEach(domain => {
 							const link = document.createElement('a');
-							link.href = domain.targetId ? `#${domain.targetId}` : '#categoryPanel';
+							link.href = '#categoryPanel';
 							link.className = 'risk-domain-link';
 							link.textContent = domain.domain;
+							if (domain.targetId) {
+								link.addEventListener('click', event => {
+									event.preventDefault();
+									focusCategoryRow(domain.targetId);
+								});
+							}
 							list.appendChild(link);
 						});
 						block.append(heading, count, list);
