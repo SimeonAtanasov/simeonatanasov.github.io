@@ -3547,8 +3547,11 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		box-sizing: border-box;
+		margin: 0;
 		position: sticky; /* Sticky positioning */
 		top: 0; /* Sticks to the top of the viewport */
+		width: 100%;
 		z-index: 1000; /* Ensures it stays above other elements */
 		background-color: #4267a6; /* Vibrant blue replacing #5e42a6 */
 		cursor: default;
@@ -3671,6 +3674,12 @@ input, select, textarea {
 	}
 
 /* Footer */
+
+	#footer {
+		box-sizing: border-box;
+		margin: 0;
+		width: 100%;
+	}
 
 	#sidebar + #wrapper + #footer {
 		margin-left: 18em;
