@@ -162,7 +162,7 @@
 				const queryApi = new URLSearchParams(window.location.search).get('api');
 				const localHosts = ['localhost', '127.0.0.1'];
 				const defaultApiBase = localHosts.includes(window.location.hostname)
-					? 'http://localhost:3000'
+					? 'http://localhost:3005'
 					: 'https://scanner.simeonatanasov.com';
 				const apiBase = (queryApi || defaultApiBase).replace(/\/$/, '');
 				const columns = [
