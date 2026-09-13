@@ -35,6 +35,40 @@
 				color: rgba(255, 255, 255, 0.75);
 			}
 
+			.scan-progress {
+				align-items: center;
+				display: flex;
+				gap: 0.75em;
+				margin: 0 0 0.75em 0;
+			}
+
+			.scan-progress.is-hidden {
+				display: none;
+			}
+
+			.scan-progress-track {
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 1em;
+				flex: 1 1 auto;
+				height: 0.6em;
+				overflow: hidden;
+			}
+
+			.scan-progress-bar {
+				background: linear-gradient(to right, #5e42a6, #b74e91);
+				border-radius: 1em;
+				height: 100%;
+				transition: width 0.3s ease;
+				width: 0;
+			}
+
+			.scan-progress-label {
+				color: rgba(255, 255, 255, 0.75);
+				flex: 0 0 auto;
+				font-size: 0.85em;
+				white-space: nowrap;
+			}
+
 			.results-meta {
 				display: flex;
 				flex-wrap: wrap;
@@ -239,6 +273,10 @@
 								<a id="categorizedDownloadButton" class="button disabled is-hidden" href="#" aria-disabled="true">Download Categorized Excel</a>
 							</div>
 							<div id="status" class="status-line" role="status">Ready.</div>
+							<div id="scanProgress" class="scan-progress is-hidden" role="progressbar" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0">
+								<div class="scan-progress-track"><div id="scanProgressBar" class="scan-progress-bar"></div></div>
+								<span id="scanProgressLabel" class="scan-progress-label"></span>
+							</div>
 						</form>
 
 						<section id="historyPanel" class="scanner-panel">
@@ -322,6 +360,9 @@
 				const downloadButton = document.getElementById('downloadButton');
 				const categorizedDownloadButton = document.getElementById('categorizedDownloadButton');
 				const status = document.getElementById('status');
+				const scanProgress = document.getElementById('scanProgress');
+				const scanProgressBar = document.getElementById('scanProgressBar');
+				const scanProgressLabel = document.getElementById('scanProgressLabel');
 				const historyCount = document.getElementById('historyCount');
 				const historyTable = document.getElementById('historyTable');
 				const clearHistoryButton = document.getElementById('clearHistoryButton');
@@ -392,6 +433,23 @@
 				function setBusy(isBusy) {
 					runButton.disabled = isBusy;
 					runButton.textContent = isBusy ? 'Running...' : 'Run Scan';
+				}
+
+				function updateScanProgress(current, total) {
+					const safeTotal = total > 0 ? total : 0;
+					const safeCurrent = Math.min(Math.max(current, 0), safeTotal || current);
+					scanProgress.classList.remove('is-hidden');
+					scanProgress.setAttribute('aria-valuemax', String(safeTotal || 1));
+					scanProgress.setAttribute('aria-valuenow', String(safeCurrent));
+					scanProgressBar.style.width = safeTotal ? `${Math.round((safeCurrent / safeTotal) * 100)}%` : '0%';
+					scanProgressLabel.textContent = safeTotal ? `${safeCurrent} of ${safeTotal}` : '';
+				}
+
+				function hideScanProgress() {
+					scanProgress.classList.add('is-hidden');
+					scanProgressBar.style.width = '0%';
+					scanProgressLabel.textContent = '';
+					scanProgress.setAttribute('aria-valuenow', '0');
 				}
 
 				function setDownloadButton(button, url) {
@@ -577,6 +635,7 @@
 				}
 
 				async function loadHistoryEntry(entry) {
+					hideScanProgress();
 					if (entry.status === 'changed' && Array.isArray(entry.snapshotRows)) {
 						renderRows(entry.snapshotRows);
 						setDownloads({ downloadUrl: entry.downloadUrl });
@@ -922,6 +981,7 @@
 						clearInterval(pollTimer);
 						pollTimer = null;
 						status.textContent = 'Complete.';
+						hideScanProgress();
 						setBusy(false);
 						await loadResults(job);
 						saveHistory(job, urls);
@@ -932,13 +992,21 @@
 						clearInterval(pollTimer);
 						pollTimer = null;
 						status.textContent = job.error || 'Scan failed.';
+						hideScanProgress();
 						setBusy(false);
 						return;
 					}
 
-					status.textContent = job.status === 'queued'
-						? `Queued. Position ${job.queuedPosition || 1}.`
-						: 'Running scan.';
+					if (job.status === 'queued') {
+						hideScanProgress();
+						status.textContent = `Queued. Position ${job.queuedPosition || 1}.`;
+						return;
+					}
+
+					const total = job.progressTotal || job.urlCount || urls.length;
+					const current = job.progressCurrent || 0;
+					status.textContent = total ? `Running scan (${current} of ${total}).` : 'Running scan.';
+					updateScanProgress(current, total);
 				}
 
 				form.addEventListener('submit', async event => {
@@ -961,6 +1029,7 @@
 					riskPanel.classList.add('is-hidden');
 					downloadRiskChart.disabled = true;
 					status.textContent = 'Starting scan.';
+					hideScanProgress();
 
 					try {
 						const job = await apiFetch('/api/scans', {
