@@ -12,28 +12,33 @@
 	position: relative;
 }
 
-#sidebar .portfolio-submenu {
+/* The submenu is moved out of #sidebar (see assets/js/portfolio-menu.js)
+   so it isn't clipped by the sidebar's own scroll container: a fixed
+   #sidebar with overflow-y:auto computes overflow-x as auto rather than
+   visible even when overflow-x:visible is forced, so anything positioned
+   outside the sidebar's box while still nested inside it gets clipped.
+   Once detached to <body>, plain position:fixed with JS-computed
+   coordinates floats it to the right of the sidebar without that
+   restriction. Hidden by default; JS toggles .is-active on desktop only. */
+.portfolio-submenu {
 	background: #25355f;
 	border: solid 1px rgba(255, 255, 255, 0.24);
 	border-radius: 6px;
 	box-shadow: 0 0.75em 2em rgba(7, 14, 35, 0.35);
-	height: auto;
-	left: 100%;
+	display: none;
 	list-style: none;
 	margin: 0;
 	min-width: 16em;
 	padding: 0.65em;
-	position: absolute;
-	top: -0.65em;
+	position: fixed;
 	z-index: 10001;
 }
 
-#sidebar .portfolio-menu:hover .portfolio-submenu,
-#sidebar .portfolio-menu:focus-within .portfolio-submenu {
+.portfolio-submenu.is-active {
 	display: block;
 }
 
-#sidebar .portfolio-submenu li {
+.portfolio-submenu li {
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -41,7 +46,7 @@
 	width: 100%;
 }
 
-#sidebar .portfolio-submenu a {
+.portfolio-submenu a {
 	border: 0;
 	color: rgba(255, 255, 255, 0.72);
 	display: block;
@@ -52,26 +57,24 @@
 	text-transform: none;
 }
 
-#sidebar .portfolio-submenu a:hover {
+.portfolio-submenu a:hover {
 	background: rgba(127, 178, 229, 0.24);
 	border-radius: 4px;
 	color: #ffffff;
 }
 
-@media screen and (min-width: 1281px) {
-	#sidebar#sidebar {
-		overflow-x: visible !important;
-	}
-}
-
+/* Belt-and-braces: the JS also gates showing the menu to >=1281px, but
+   force it hidden at narrower widths too, so the existing responsive
+   top-bar / mobile nav can never end up with a clipped or overlapping
+   hover menu. */
 @media screen and (max-width: 1280px) {
-	#sidebar .portfolio-submenu {
+	.portfolio-submenu {
 		display: none !important;
 	}
 }
 
 @media screen and (max-width: 736px) {
-	#sidebar .portfolio-submenu {
+	.portfolio-submenu {
 		display: none !important;
 	}
 }
