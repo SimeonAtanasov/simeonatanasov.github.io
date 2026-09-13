@@ -245,14 +245,6 @@ button:hover {
         margin: 5px 0;
     }
 
-    .selects-container.category-container {
-        flex-direction: column;
-    }
-
-    #new-category, #new-predefined-risk {
-        width: 100%;
-    }
-
     #risk-notes li span {
         text-align: left; /* Keeps text left aligned */
     }
@@ -368,6 +360,10 @@ button#add-risk:hover {
     background-color: #b4a7d6; /* Purple */
 }
 
+.cat-llm {
+    background-color: #f9cb9c; /* Peach - distinguishes LLM/GenAI from the broader AI category */
+}
+
 .cat-operational {
     background-color: #8fd3c8; /* Teal */
 }
@@ -442,4 +438,19 @@ button#add-risk:hover {
 .option-critical {
     background-color: #e06666; /* Red - Critical impact */
     color: black;
+}
+
+/* Category/predefined-risk row: stack full-width on mobile. Declared last on
+   purpose so it wins over the earlier #new-category, #new-predefined-risk
+   { width: 48% } rule at the same specificity - an equal-specificity rule
+   placed earlier in this file does not win just because a media query
+   happens to match. */
+@media screen and (max-width: 768px) {
+    .selects-container.category-container {
+        flex-direction: column;
+    }
+
+    #new-category, #new-predefined-risk {
+        width: 100%;
+    }
 }
