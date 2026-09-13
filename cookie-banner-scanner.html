@@ -673,7 +673,7 @@
 					const jobId = entry.sourceId || entry.id;
 					try {
 						const job = await apiFetch(`/api/scans/${jobId}`);
-						if (job.status !== 'complete') throw new Error('Scan not found.');
+						if (job.status !== 'complete' && job.status !== 'stopped') throw new Error('Scan not found.');
 						downloadWindow.location.href = `${apiBase}${path}`;
 					} catch (error) {
 						if (downloadWindow) downloadWindow.close();
@@ -695,7 +695,7 @@
 					const jobId = entry.sourceId || entry.id;
 					try {
 						const job = await apiFetch(`/api/scans/${jobId}`);
-						if (job.status !== 'complete') throw new Error('This saved scan is no longer available.');
+						if (job.status !== 'complete' && job.status !== 'stopped') throw new Error('This saved scan is no longer available.');
 						await loadResults(job);
 						activeEntry = { id: entry.id, sourceId: jobId, urls: entry.urls, downloadUrl: job.downloadUrl, categorizedDownloadUrl: job.categorizedDownloadUrl };
 						status.textContent = 'Loaded saved scan.';
