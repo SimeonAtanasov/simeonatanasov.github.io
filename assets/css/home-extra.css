@@ -7,6 +7,17 @@
 	position: relative;
 }
 
+#one.spotlights > section > .content .button {
+	background: rgba(152, 205, 245, 0.28);
+	border-color: rgba(214, 238, 255, 0.65);
+	color: #ffffff;
+}
+
+	#one.spotlights > section > .content .button:hover {
+		background: rgba(181, 222, 250, 0.46);
+		border-color: #ffffff;
+	}
+
 .spotlight-assessment .image-tools {
 	position: absolute;
 	top: 0;
