@@ -440,6 +440,102 @@ button#add-risk:hover {
     color: black;
 }
 
+/* Add-risk form: risk and mitigation are textareas (not single-line inputs) so
+   long predefined text wraps instead of scrolling out of sight. Declared after
+   the shared "#new-risk, #new-mitigation, #add-risk" rule above so the wider
+   max-width wins at equal specificity. overflow-y is hidden because the JS
+   auto-grows the height to fit the content. */
+#new-risk, #new-mitigation {
+    max-width: 500px;
+    min-height: 70px;
+    line-height: 1.4;
+    font-family: inherit;
+    resize: vertical;
+    overflow-y: hidden;
+}
+
+/* Match the button to the widened fields and the select rows above it. */
+button#add-risk {
+    max-width: 500px;
+    padding: 12px;
+}
+
+/* Risk Notes row (tablet and up): give the risk and mitigation textareas the
+   width they need. Scoped to min-width 769px so it can never collide with the
+   max-width 768px block further up, which stacks the whole row on phones. */
+@media screen and (min-width: 769px) {
+    #risk-notes li {
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    /* The base "#risk-notes li span" rule gives every span flex-grow: 1, which
+       let the number and category badge squeeze the textareas down to a few
+       words per line. Pin them to their content width instead. */
+    #risk-notes li span {
+        flex: 0 0 auto;
+    }
+
+    /* The row spaces itself with gap, so the badge's own side margins would
+       just be 20px of extra width tipping the row into wrapping. */
+    #risk-notes li .risk-category {
+        margin: 0;
+    }
+
+    #risk-notes li textarea {
+        /* Small basis, grow 1: on wide screens the pair still absorbs all the
+           leftover width, but the row only wraps once it genuinely can't fit
+           (roughly below 1000px) rather than dropping the delete button early. */
+        flex: 1 1 140px;
+        max-width: none;
+        height: auto;
+        min-height: 90px;
+        margin: 0;
+        resize: vertical;
+        line-height: 1.4;
+        font-family: inherit;
+    }
+
+    /* The generic "select { width: 48% }" rule sized these to nearly half the
+       row each, which pushed them onto their own lines. Fixed widths rather
+       than auto so the columns line up row to row instead of jumping around
+       as the selected option's text length changes. */
+    /* margin is zeroed because the row already uses gap: the inherited
+       margin-right on the selects plus the global button margin pushed the
+       row past its width and wrapped the delete button onto its own line. */
+    #risk-notes li .likelihood {
+        flex: 0 0 110px;
+        width: 110px;
+        margin: 0;
+        align-self: center;
+    }
+
+    #risk-notes li .impact {
+        flex: 0 0 140px;
+        width: 140px;
+        margin: 0;
+        align-self: center;
+    }
+
+    #risk-notes li .delete-risk {
+        flex: 0 0 100px;
+        width: 100px;
+        margin: 0;
+        align-self: center;
+        padding: 8px 14px;
+    }
+
+    /* Keep the legend above roughly over the columns it describes. The first
+       label also covers the risk number and category badge that sit to the
+       left of the risk textarea. */
+    .notes .labels-notes li:nth-child(1) { width: 35%; }
+    .notes .labels-notes li:nth-child(2) { width: 26%; }
+    .notes .labels-notes li:nth-child(3) { width: 12%; }
+    .notes .labels-notes li:nth-child(4) { width: 15%; }
+    .notes .labels-notes li:last-child   { width: 10%; }
+}
+
 /* Category/predefined-risk row: stack full-width on mobile. Declared last on
    purpose so it wins over the earlier #new-category, #new-predefined-risk
    { width: 48% } rule at the same specificity - an equal-specificity rule

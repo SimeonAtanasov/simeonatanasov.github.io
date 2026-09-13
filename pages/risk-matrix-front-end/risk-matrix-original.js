@@ -9,44 +9,44 @@
 // "Custom" skips this entirely.
 const RISK_CATALOG = {
   Privacy: [
-    { text: "Consent is collected through pre-ticked boxes, vague language, or bundled with an unrelated purpose or terms & conditions", mitigation: "Redesign consent flows so each purpose is opted into separately, remove pre-ticked boxes, and make withdrawing consent as easy as giving it.", likelihood: "Likely", impact: "Medium" },
-    { text: "A cookie or tracking banner allows non-essential cookies to load before consent, or doesn't give \"Reject All\" the same visual weight as \"Accept All\"", mitigation: "Block non-essential cookies by default until the user actively consents, and present \"Reject All\" on equal footing with \"Accept All\".", likelihood: "Likely", impact: "Medium" },
-    { text: "Personal data is kept past its retention period because no deletion trigger or schedule was ever applied", mitigation: "Apply a retention label or schedule to each data category at creation, with deletion triggered automatically once it expires.", likelihood: "Likely", impact: "High" },
-    { text: "Personal data collected for one purpose is reused for an unrelated purpose without a fresh legal basis or consent", mitigation: "Check the original purpose and legal basis before any new use; obtain fresh consent or document a compatibility assessment when the new purpose isn't compatible.", likelihood: "Possible", impact: "High" },
-    { text: "An obsolete or unused website or microsite is left active instead of being deactivated or secured", mitigation: "Maintain an inventory of live web properties and deactivate or secure any that are no longer in active use.", likelihood: "Unlikely", impact: "Medium" },
-    { text: "Employee monitoring or location-tracking tools are deployed without a proportionality check, notice, or consent", mitigation: "Assess proportionality before deploying monitoring or tracking tools, disable non-essential tracking by default, and notify those being monitored.", likelihood: "Possible", impact: "High" },
-    { text: "A third party is given access to personal data without a signed data processing agreement in place", mitigation: "Make an executed data processing agreement a condition of any third party gaining access to personal data.", likelihood: "Possible", impact: "High" }
+    { label: "Invalid or bundled consent", text: "Consent is collected through pre-ticked boxes, vague language, or bundled with an unrelated purpose or terms & conditions", mitigation: "Redesign consent flows so each purpose is opted into separately, remove pre-ticked boxes, and make withdrawing consent as easy as giving it.", likelihood: "Likely", impact: "Medium" },
+    { label: "Non-compliant cookie banner", text: "A cookie or tracking banner allows non-essential cookies to load before consent, or doesn't give \"Reject All\" the same visual weight as \"Accept All\"", mitigation: "Block non-essential cookies by default until the user actively consents, and present \"Reject All\" on equal footing with \"Accept All\".", likelihood: "Likely", impact: "Medium" },
+    { label: "Data kept past its retention period", text: "Personal data is kept past its retention period because no deletion trigger or schedule was ever applied", mitigation: "Apply a retention label or schedule to each data category at creation, with deletion triggered automatically once it expires.", likelihood: "Likely", impact: "High" },
+    { label: "Data reused for an unrelated purpose", text: "Personal data collected for one purpose is reused for an unrelated purpose without a fresh legal basis or consent", mitigation: "Check the original purpose and legal basis before any new use; obtain fresh consent or document a compatibility assessment when the new purpose isn't compatible.", likelihood: "Possible", impact: "High" },
+    { label: "Obsolete website left active", text: "An obsolete or unused website or microsite is left active instead of being deactivated or secured", mitigation: "Maintain an inventory of live web properties and deactivate or secure any that are no longer in active use.", likelihood: "Unlikely", impact: "Medium" },
+    { label: "Monitoring without a proportionality check", text: "Employee monitoring or location-tracking tools are deployed without a proportionality check, notice, or consent", mitigation: "Assess proportionality before deploying monitoring or tracking tools, disable non-essential tracking by default, and notify those being monitored.", likelihood: "Possible", impact: "High" },
+    { label: "Third-party access without a DPA", text: "A third party is given access to personal data without a signed data processing agreement in place", mitigation: "Make an executed data processing agreement a condition of any third party gaining access to personal data.", likelihood: "Possible", impact: "High" }
   ],
   AI: [
-    { text: "An AI or analytics tool is put into use without a privacy, ethics, and compliance review first", mitigation: "Require a privacy, ethics, and compliance review before any AI or analytics tool is implemented, not after.", likelihood: "Possible", impact: "Critical" },
-    { text: "Personal or confidential data is entered into an unapproved generative-AI tool", mitigation: "Restrict use to approved generative-AI tools and train staff not to paste personal or confidential data into any of them.", likelihood: "Likely", impact: "High" },
-    { text: "An automated or algorithmic decision that significantly affects individuals has no human-in-the-loop or override mechanism", mitigation: "Build a human-in-the-loop checkpoint and an opt-out/review path into any automated decision with a significant effect on people.", likelihood: "Possible", impact: "Critical" },
-    { text: "An AI or automated decision-making system's outputs aren't monitored for bias or discriminatory impact", mitigation: "Test model outputs for discriminatory impact across affected groups on a regular schedule, not just before launch.", likelihood: "Possible", impact: "High" },
-    { text: "An AI system's decision logic isn't explainable to the people it affects", mitigation: "Document and be able to explain, in plain language, the main factors behind each automated output.", likelihood: "Likely", impact: "Medium" },
-    { text: "Datasets are combined for analytics or AI without a lawful purpose, increasing re-identification risk", mitigation: "Confirm a lawful purpose and assess re-identification risk before combining datasets for analytics or AI.", likelihood: "Possible", impact: "High" },
-    { text: "AI-generated content is used or published without human review or verification", mitigation: "Verify and edit AI-generated content before it's relied on or published, especially for anything consequential.", likelihood: "Likely", impact: "Medium" }
+    { label: "AI tool deployed without prior review", text: "An AI or analytics tool is put into use without a privacy, ethics, and compliance review first", mitigation: "Require a privacy, ethics, and compliance review before any AI or analytics tool is implemented, not after.", likelihood: "Possible", impact: "Critical" },
+    { label: "Confidential data in an unapproved AI tool", text: "Personal or confidential data is entered into an unapproved generative-AI tool", mitigation: "Restrict use to approved generative-AI tools and train staff not to paste personal or confidential data into any of them.", likelihood: "Likely", impact: "High" },
+    { label: "Automated decision with no human oversight", text: "An automated or algorithmic decision that significantly affects individuals has no human-in-the-loop or override mechanism", mitigation: "Build a human-in-the-loop checkpoint and an opt-out/review path into any automated decision with a significant effect on people.", likelihood: "Possible", impact: "Critical" },
+    { label: "Outputs not monitored for bias", text: "An AI or automated decision-making system's outputs aren't monitored for bias or discriminatory impact", mitigation: "Test model outputs for discriminatory impact across affected groups on a regular schedule, not just before launch.", likelihood: "Possible", impact: "High" },
+    { label: "Decision logic not explainable", text: "An AI system's decision logic isn't explainable to the people it affects", mitigation: "Document and be able to explain, in plain language, the main factors behind each automated output.", likelihood: "Likely", impact: "Medium" },
+    { label: "Datasets combined without a lawful purpose", text: "Datasets are combined for analytics or AI without a lawful purpose, increasing re-identification risk", mitigation: "Confirm a lawful purpose and assess re-identification risk before combining datasets for analytics or AI.", likelihood: "Possible", impact: "High" },
+    { label: "AI content published without review", text: "AI-generated content is used or published without human review or verification", mitigation: "Verify and edit AI-generated content before it's relied on or published, especially for anything consequential.", likelihood: "Likely", impact: "Medium" }
   ],
   LLM: [
-    { text: "Sensitive user input, or the data used and produced during training and inference, isn't adequately protected (weak encryption, access control, or anonymization), creating a risk of unauthorized access or a data breach", mitigation: "Encrypt data in transit and at rest, enforce strong access control and authentication, apply anonymization or pseudonymization where feasible, and run regular security audits across the input, processing, and output stages.", likelihood: "Possible", impact: "High" },
-    { text: "Training data is treated as anonymous when it can still, directly or by means reasonably likely to be used, be linked back to identifiable individuals", mitigation: "Test the model against state-of-the-art re-identification, membership-inference, and model-inversion attacks before relying on an anonymization claim, and document the assessment.", likelihood: "Possible", impact: "High" },
-    { text: "Personal data is included in training datasets without a valid legal basis, adequate transparency, or (where relied on) valid consent", mitigation: "Document the legal basis for each training dataset, exclude unlawfully sourced or unnecessary personal data, and provide accessible information to data subjects about how their data may be used in training.", likelihood: "Possible", impact: "High" },
-    { text: "Special category data (health, criminal record, biometric, etc.) is present in training data without meeting a recognized exception for processing it", mitigation: "Screen and filter training sources for special category data before use, and rely only on a documented, narrow exception where such data can't be excluded entirely.", likelihood: "Unlikely", impact: "Critical" },
-    { text: "The model produces inaccurate, misleading, or biased output that is then treated as reliable, negatively affecting the people it concerns", mitigation: "Disclose the probabilistic, non-factual nature of outputs to users, monitor for bias and inaccuracy on an ongoing basis, and use diverse, representative training and fine-tuning data.", likelihood: "Likely", impact: "Medium" },
-    { text: "An LLM-driven process makes a decision with a legal or similarly significant effect on someone without meaningful human review or an escalation path", mitigation: "Require human review before any high-risk automated output is acted on, define clear escalation procedures, and inform people about the automated processing and their right to contest it.", likelihood: "Possible", impact: "Critical" },
-    { text: "A data subject's request to access, correct, delete, or object to the use of their data can't be fulfilled because it can't be located or removed from the model or its training data", mitigation: "Offer an opt-out before training data collection where feasible, evaluate machine-unlearning or targeted retraining for deletion requests, and provide a working process to handle rights requests tied to the model.", likelihood: "Possible", impact: "High" },
-    { text: "Personal data collected for one purpose (e.g. improving a specific feature) is reused for a broader or unrelated purpose (e.g. general model development) without checking compatibility", mitigation: "Define narrow, specific purposes for personal data use rather than broad catch-alls, and run a compatibility assessment or seek a fresh legal basis before reusing data for a new purpose.", likelihood: "Possible", impact: "Medium" },
-    { text: "Input and output data, including logged queries, is retained longer than necessary because no retention period or deletion mechanism is defined", mitigation: "Agree retention periods with the provider as part of the contract or DPA, and set up deletion rules or automated purging for any locally stored input/output data.", likelihood: "Likely", impact: "Medium" },
-    { text: "Input or training data is processed or stored in a country without an adequate level of protection, without appropriate safeguards in place", mitigation: "Verify where the provider actually processes data, put appropriate transfer safeguards in place, and run a transfer impact assessment where needed before selecting or using a vendor.", likelihood: "Possible", impact: "High" },
-    { text: "More personal data is collected or processed for training or fine-tuning than is strictly necessary for the model's purpose", mitigation: "Apply privacy by design from the start, exclude unnecessary personal data at collection, and evaluate whether synthetic or anonymized data could meet the same need with less exposure.", likelihood: "Possible", impact: "Medium" }
+    { label: "Inadequate protection of personal data", text: "Sensitive user input, or the data used and produced during training and inference, isn't adequately protected (weak encryption, access control, or anonymization), creating a risk of unauthorized access or a data breach", mitigation: "Encrypt data in transit and at rest, enforce strong access control and authentication, apply anonymization or pseudonymization where feasible, and run regular security audits across the input, processing, and output stages.", likelihood: "Possible", impact: "High" },
+    { label: "Training data wrongly treated as anonymous", text: "Training data is treated as anonymous when it can still, directly or by means reasonably likely to be used, be linked back to identifiable individuals", mitigation: "Test the model against state-of-the-art re-identification, membership-inference, and model-inversion attacks before relying on an anonymization claim, and document the assessment.", likelihood: "Possible", impact: "High" },
+    { label: "No legal basis for training data", text: "Personal data is included in training datasets without a valid legal basis, adequate transparency, or (where relied on) valid consent", mitigation: "Document the legal basis for each training dataset, exclude unlawfully sourced or unnecessary personal data, and provide accessible information to data subjects about how their data may be used in training.", likelihood: "Possible", impact: "High" },
+    { label: "Special category data in training data", text: "Special category data (health, criminal record, biometric, etc.) is present in training data without meeting a recognized exception for processing it", mitigation: "Screen and filter training sources for special category data before use, and rely only on a documented, narrow exception where such data can't be excluded entirely.", likelihood: "Unlikely", impact: "Critical" },
+    { label: "Inaccurate or biased model output", text: "The model produces inaccurate, misleading, or biased output that is then treated as reliable, negatively affecting the people it concerns", mitigation: "Disclose the probabilistic, non-factual nature of outputs to users, monitor for bias and inaccuracy on an ongoing basis, and use diverse, representative training and fine-tuning data.", likelihood: "Likely", impact: "Medium" },
+    { label: "No human intervention in significant decisions", text: "An LLM-driven process makes a decision with a legal or similarly significant effect on someone without meaningful human review or an escalation path", mitigation: "Require human review before any high-risk automated output is acted on, define clear escalation procedures, and inform people about the automated processing and their right to contest it.", likelihood: "Possible", impact: "Critical" },
+    { label: "Data subject rights can't be fulfilled", text: "A data subject's request to access, correct, delete, or object to the use of their data can't be fulfilled because it can't be located or removed from the model or its training data", mitigation: "Offer an opt-out before training data collection where feasible, evaluate machine-unlearning or targeted retraining for deletion requests, and provide a working process to handle rights requests tied to the model.", likelihood: "Possible", impact: "High" },
+    { label: "Unlawful repurposing of personal data", text: "Personal data collected for one purpose (e.g. improving a specific feature) is reused for a broader or unrelated purpose (e.g. general model development) without checking compatibility", mitigation: "Define narrow, specific purposes for personal data use rather than broad catch-alls, and run a compatibility assessment or seek a fresh legal basis before reusing data for a new purpose.", likelihood: "Possible", impact: "Medium" },
+    { label: "Unlimited retention of input and output data", text: "Input and output data, including logged queries, is retained longer than necessary because no retention period or deletion mechanism is defined", mitigation: "Agree retention periods with the provider as part of the contract or DPA, and set up deletion rules or automated purging for any locally stored input/output data.", likelihood: "Likely", impact: "Medium" },
+    { label: "Unlawful international data transfer", text: "Input or training data is processed or stored in a country without an adequate level of protection, without appropriate safeguards in place", mitigation: "Verify where the provider actually processes data, put appropriate transfer safeguards in place, and run a transfer impact assessment where needed before selecting or using a vendor.", likelihood: "Possible", impact: "High" },
+    { label: "Breach of data minimization", text: "More personal data is collected or processed for training or fine-tuning than is strictly necessary for the model's purpose", mitigation: "Apply privacy by design from the start, exclude unnecessary personal data at collection, and evaluate whether synthetic or anonymized data could meet the same need with less exposure.", likelihood: "Possible", impact: "Medium" }
   ],
   Operational: [
-    { text: "A suspected privacy or security incident isn't reported promptly because staff aren't sure it qualifies", mitigation: "Train staff to report anything unusual immediately without waiting to confirm it themselves, and make the reporting channel obvious.", likelihood: "Likely", impact: "High" },
-    { text: "A personal data breach misses its legal notification deadline because the severity assessment takes too long", mitigation: "Build the severity assessment and notification decision into a timed workflow so the legal deadline (e.g., 72 hours under GDPR) can't be missed silently.", likelihood: "Unlikely", impact: "Critical" },
-    { text: "Devices or documents containing personal data are disposed of without secure destruction", mitigation: "Use approved secure-destruction bins or certified disposal vendors for any document or device that held personal data.", likelihood: "Unlikely", impact: "High" },
-    { text: "A data subject rights request isn't logged or tracked centrally, so it misses its statutory response deadline", mitigation: "Log every rights request in a central tracker with its statutory deadline and automatic reminders.", likelihood: "Possible", impact: "High" },
-    { text: "A rights requester's identity isn't verified before personal data is disclosed, risking disclosure to the wrong person", mitigation: "Verify the requester's identity before any personal data is compiled or disclosed in response to a rights request.", likelihood: "Unlikely", impact: "Critical" },
-    { text: "A new system, tool, or process touching personal data goes live before its privacy review is completed", mitigation: "Gate the go-live decision on a completed privacy review; treat \"we'll assess it later\" as a blocker, not an option.", likelihood: "Possible", impact: "High" },
-    { text: "A project's scope changes after its privacy review, but the review is never revisited", mitigation: "Require sign-off that the privacy review still reflects reality whenever a project's scope, data, or technology changes.", likelihood: "Possible", impact: "Medium" }
+    { label: "Incident not reported promptly", text: "A suspected privacy or security incident isn't reported promptly because staff aren't sure it qualifies", mitigation: "Train staff to report anything unusual immediately without waiting to confirm it themselves, and make the reporting channel obvious.", likelihood: "Likely", impact: "High" },
+    { label: "Breach notification deadline missed", text: "A personal data breach misses its legal notification deadline because the severity assessment takes too long", mitigation: "Build the severity assessment and notification decision into a timed workflow so the legal deadline (e.g., 72 hours under GDPR) can't be missed silently.", likelihood: "Unlikely", impact: "Critical" },
+    { label: "Insecure disposal of data or devices", text: "Devices or documents containing personal data are disposed of without secure destruction", mitigation: "Use approved secure-destruction bins or certified disposal vendors for any document or device that held personal data.", likelihood: "Unlikely", impact: "High" },
+    { label: "Rights request not tracked centrally", text: "A data subject rights request isn't logged or tracked centrally, so it misses its statutory response deadline", mitigation: "Log every rights request in a central tracker with its statutory deadline and automatic reminders.", likelihood: "Possible", impact: "High" },
+    { label: "Requester identity not verified", text: "A rights requester's identity isn't verified before personal data is disclosed, risking disclosure to the wrong person", mitigation: "Verify the requester's identity before any personal data is compiled or disclosed in response to a rights request.", likelihood: "Unlikely", impact: "Critical" },
+    { label: "Go-live before privacy review completed", text: "A new system, tool, or process touching personal data goes live before its privacy review is completed", mitigation: "Gate the go-live decision on a completed privacy review; treat \"we'll assess it later\" as a blocker, not an option.", likelihood: "Possible", impact: "High" },
+    { label: "Scope change without a review refresh", text: "A project's scope changes after its privacy review, but the review is never revisited", mitigation: "Require sign-off that the privacy review still reflects reality whenever a project's scope, data, or technology changes.", likelihood: "Possible", impact: "Medium" }
   ]
 };
 
@@ -87,19 +87,57 @@ document.addEventListener("DOMContentLoaded", () => {
     customOption.textContent = category === "Custom" ? "Type your own risk below" : "Custom risk in this category...";
     newPredefinedRiskSelect.appendChild(customOption);
 
+    // Native <select> options can't wrap, so the dropdown shows a short label
+    // and the full wording goes into the risk textarea below (and a tooltip).
     (RISK_CATALOG[category] || []).forEach((risk, index) => {
       const option = document.createElement("option");
       option.value = index;
-      option.textContent = risk.text;
+      option.textContent = risk.label || risk.text;
+      option.title = risk.text;
       newPredefinedRiskSelect.appendChild(option);
     });
   }
+
+  // Grow a textarea to fit its content so long risk/mitigation text stays visible.
+  // scrollHeight excludes the border, so under box-sizing: border-box the border
+  // has to be added back or the last line ends up clipped by a couple of pixels.
+  function autoGrow(el) {
+    if (!el) return;
+    el.style.height = "auto";
+    const styles = window.getComputedStyle(el);
+    const border = styles.boxSizing === "border-box"
+      ? (parseFloat(styles.borderTopWidth) || 0) + (parseFloat(styles.borderBottomWidth) || 0)
+      : 0;
+    el.style.height = (el.scrollHeight + border) + "px";
+  }
+
+  const newMitigationInput = document.getElementById("new-mitigation");
+
+  // Keep both fields sized to their content as the user types.
+  [newRiskInput, newMitigationInput].forEach(field => {
+    if (field) field.addEventListener("input", () => autoGrow(field));
+  });
+
+  // A narrower column wraps the same text onto more lines, so heights worked out
+  // at one viewport width go stale at another. Re-fit every textarea on resize
+  // (and on phone rotation), debounced so it doesn't run on every resize event.
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      document
+        .querySelectorAll("#new-risk, #new-mitigation, #risk-notes textarea")
+        .forEach(autoGrow);
+    }, 100);
+  });
 
   newCategorySelect.addEventListener("change", () => {
     const category = newCategorySelect.value;
     populatePredefinedRisks(category);
     newRiskInput.value = "";
-    document.getElementById("new-mitigation").value = "";
+    newMitigationInput.value = "";
+    autoGrow(newRiskInput);
+    autoGrow(newMitigationInput);
     if (category === "Custom") {
       newRiskInput.focus();
     }
@@ -111,16 +149,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (index === "" || !RISK_CATALOG[category]) {
       newRiskInput.value = "";
-      document.getElementById("new-mitigation").value = "";
+      newMitigationInput.value = "";
+      autoGrow(newRiskInput);
+      autoGrow(newMitigationInput);
       newRiskInput.focus();
       return;
     }
 
     const predefined = RISK_CATALOG[category][index];
     newRiskInput.value = predefined.text;
-    document.getElementById("new-mitigation").value = predefined.mitigation;
+    newMitigationInput.value = predefined.mitigation;
     newLikelihoodSelect.value = predefined.likelihood;
     newImpactSelect.value = predefined.impact;
+    autoGrow(newRiskInput);
+    autoGrow(newMitigationInput);
   });
 
   populatePredefinedRisks("");
@@ -204,6 +246,8 @@ clearButton.addEventListener("click", () => {
     newLikelihoodSelect.value = "Likely"; // Reset likelihood dropdown to default value
     newImpactSelect.value = "Low"; // Reset impact dropdown to default value
     document.getElementById("new-mitigation").value = ""; // Clear the mitigation input field
+    autoGrow(newRiskInput); // Shrink the textareas back to their base height
+    autoGrow(document.getElementById("new-mitigation"));
     newCategorySelect.value = ""; // Reset category dropdown
     populatePredefinedRisks(""); // Reset and disable the predefined-risk dropdown
 
@@ -245,6 +289,8 @@ addRiskButton.addEventListener("click", () => {
     // Ready the form for the next risk, without forcing the category to be re-picked.
     newRiskInput.value = "";
     document.getElementById("new-mitigation").value = "";
+    autoGrow(newRiskInput);
+    autoGrow(document.getElementById("new-mitigation"));
     if (newPredefinedRiskSelect.options.length > 0) {
       newPredefinedRiskSelect.selectedIndex = 0;
     }
@@ -284,10 +330,12 @@ function addRiskToNotes(risk) {
   // Event listeners for updates and deletion
   riskListItem.querySelector(".risk-text").addEventListener("input", e => {
     risk.text = e.target.value;
+    autoGrow(e.target);
   });
 
   riskListItem.querySelector(".mitigation-text").addEventListener("input", e => {
     risk.mitigation = e.target.value;  // Update mitigation
+    autoGrow(e.target);
   });
 
   riskListItem.querySelector(".likelihood").addEventListener("change", e => {
@@ -306,6 +354,12 @@ function addRiskToNotes(risk) {
 
   // Append the updated risk item to the notes
   riskNotes.appendChild(riskListItem);
+
+  // Size both textareas to their content now that they're in the document
+  // (scrollHeight only reports correctly once the element is laid out).
+  autoGrow(riskListItem.querySelector(".risk-text"));
+  autoGrow(riskListItem.querySelector(".mitigation-text"));
+
   updateRiskInMatrix(risk);
 }
  
