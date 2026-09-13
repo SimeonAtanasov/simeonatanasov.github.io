@@ -234,10 +234,23 @@ button:hover {
         margin: 0;
     }
 
-    #risk-notes li .likelihood, 
+    #risk-notes li .likelihood,
     #risk-notes li .impact {
         font-size: 12px; /* Adjust font size for smaller screens */
         padding: 5px 8px; /* Adjust padding to make them smaller */
+    }
+
+    .risk-category {
+        font-size: 10px;
+        margin: 5px 0;
+    }
+
+    .selects-container.category-container {
+        flex-direction: column;
+    }
+
+    #new-category, #new-predefined-risk {
+        width: 100%;
     }
 
     #risk-notes li span {
@@ -276,12 +289,17 @@ button:hover {
 
 
 /* Style for select elements */
-#new-likelihood, #new-impact {
+#new-likelihood, #new-impact, #new-category, #new-predefined-risk {
     padding: 8px 12px;
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid #ccc;
     width: 48%; /* Make selects take up about half the row each */
+}
+
+#new-predefined-risk:disabled {
+    background-color: #f2f2f2;
+    color: #888;
 }
 
 /* Other form elements like input and button */
@@ -328,6 +346,34 @@ button#add-risk {
 
 button#add-risk:hover {
     background-color: #45a049;
+}
+
+/* Category badge shown on each risk note */
+.risk-category {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: black;
+    margin: 0 10px;
+}
+
+.cat-privacy {
+    background-color: #a4c2f4; /* Blue */
+}
+
+.cat-ai {
+    background-color: #b4a7d6; /* Purple */
+}
+
+.cat-operational {
+    background-color: #8fd3c8; /* Teal */
+}
+
+.cat-custom {
+    background-color: #d9d9d9; /* Grey */
 }
 
 /* Risk numbers styling */

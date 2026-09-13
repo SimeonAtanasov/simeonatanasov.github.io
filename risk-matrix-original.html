@@ -89,9 +89,24 @@
 								
 								<div class="add-risk-form">
 									<h2>Add Risk to Matrix</h2>
+
+									<!-- Pick a category, then optionally a predefined risk to prefill the fields below -->
+									<div class="selects-container category-container">
+										<select id="new-category">
+											<option value="">Select category...</option>
+											<option value="Privacy">Privacy</option>
+											<option value="AI">AI</option>
+											<option value="Operational">Operational</option>
+											<option value="Custom">Custom</option>
+										</select>
+										<select id="new-predefined-risk" disabled>
+											<option value="">Select a category first...</option>
+										</select>
+									</div>
+
 									<input type="text" id="new-risk" placeholder="Enter risk...">
 									<input type="text" id="new-mitigation" placeholder="Enter mitigation..." /> <!-- New Mitigation Input -->
-									
+
 									<!-- Add this container for Likelihood and Impact selects -->
 									<div class="selects-container">
 										<select id="new-likelihood">

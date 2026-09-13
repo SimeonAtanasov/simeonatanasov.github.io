@@ -1,3 +1,36 @@
+// Starter catalog of common Privacy, AI, and Operational risks. Picking one
+// prefills the risk/mitigation text and a suggested Likelihood/Impact below -
+// everything stays editable afterward, and "Custom" skips this entirely.
+const RISK_CATALOG = {
+  Privacy: [
+    { text: "Personal data is processed without a documented legal basis", mitigation: "Map each processing activity to a lawful basis (consent, contract, legitimate interest, etc.) and record it in the processing register.", likelihood: "Possible", impact: "Critical" },
+    { text: "Data retention periods are not defined or enforced", mitigation: "Define a retention period per data category and automate deletion or archival once it expires.", likelihood: "Likely", impact: "High" },
+    { text: "Personal data is transferred across borders without an appropriate safeguard", mitigation: "Confirm an adequacy decision, standard contractual clauses, or binding corporate rules are in place before any transfer.", likelihood: "Possible", impact: "Critical" },
+    { text: "Data subject rights requests are not tracked through to completion", mitigation: "Stand up an intake and tracking workflow that flags each request against its statutory deadline.", likelihood: "Possible", impact: "High" },
+    { text: "A third-party vendor processes personal data without a signed data processing agreement", mitigation: "Make an executed DPA and a completed security review a condition of vendor onboarding.", likelihood: "Possible", impact: "High" },
+    { text: "Non-essential cookies or trackers fire before consent is captured", mitigation: "Block non-essential tags until the consent platform records an explicit opt-in.", likelihood: "Likely", impact: "Medium" },
+    { text: "Special category (sensitive) data is collected without explicit consent", mitigation: "Add a dedicated, separate consent step and minimize collection to what's strictly necessary.", likelihood: "Unlikely", impact: "Critical" }
+  ],
+  AI: [
+    { text: "A model is trained on data without clear rights or consent to use it", mitigation: "Verify the provenance and licensing of training data before development starts.", likelihood: "Possible", impact: "Critical" },
+    { text: "High-stakes automated decisions are made with no human review", mitigation: "Add a meaningful human checkpoint for any decision with a legal or similarly significant effect.", likelihood: "Possible", impact: "Critical" },
+    { text: "Model outputs are not monitored for bias or disparate impact", mitigation: "Run periodic fairness testing across the groups the system affects and log the results.", likelihood: "Possible", impact: "High" },
+    { text: "Automated decisions shown to users come with no explanation of the logic behind them", mitigation: "Provide a plain-language summary of the main factors behind each output.", likelihood: "Likely", impact: "Medium" },
+    { text: "An AI system is reused for a purpose beyond its original scope without reassessment", mitigation: "Require a documented impact reassessment before repurposing a model.", likelihood: "Possible", impact: "High" },
+    { text: "There is no rollback or fallback plan if the AI system fails or misbehaves", mitigation: "Define a kill switch and a manual fallback process, and test both before go-live.", likelihood: "Unlikely", impact: "High" },
+    { text: "A third-party model provider's terms allow reuse of submitted data for their own training", mitigation: "Review vendor terms and disable any data retention or training opt-in by default.", likelihood: "Possible", impact: "High" }
+  ],
+  Operational: [
+    { text: "There is no documented incident response plan for a data breach", mitigation: "Maintain a written breach response and notification plan, and test it at least annually.", likelihood: "Unlikely", impact: "Critical" },
+    { text: "User access rights are not reviewed on a regular schedule", mitigation: "Run quarterly access recertification and revoke permissions that are no longer needed.", likelihood: "Likely", impact: "Medium" },
+    { text: "A key process depends on a single person with no documented backup", mitigation: "Cross-train a second owner and write a runbook for the process.", likelihood: "Possible", impact: "Medium" },
+    { text: "Changes are pushed to production without a tested rollback plan", mitigation: "Require a verified rollback step as part of every change approval.", likelihood: "Possible", impact: "High" },
+    { text: "A critical vendor or service has no contingency plan for an outage", mitigation: "Identify critical vendors and define a fallback or manual process for when they're unavailable.", likelihood: "Unlikely", impact: "High" },
+    { text: "Staff are not trained on data handling or security policy", mitigation: "Schedule mandatory annual training and track completion.", likelihood: "Likely", impact: "Medium" },
+    { text: "Backup restoration has never actually been tested", mitigation: "Run a scheduled restore drill and document what happened.", likelihood: "Unlikely", impact: "Critical" }
+  ]
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const inputs = document.querySelectorAll("#risk-matrix textarea");
   const saveButton = document.getElementById("save-data");
@@ -8,10 +41,70 @@ document.addEventListener("DOMContentLoaded", () => {
   const newRiskInput = document.getElementById("new-risk");
   const newLikelihoodSelect = document.getElementById("new-likelihood");
   const newImpactSelect = document.getElementById("new-impact");
+  const newCategorySelect = document.getElementById("new-category");
+  const newPredefinedRiskSelect = document.getElementById("new-predefined-risk");
   const riskNotes = document.getElementById("risk-notes");
 
   let riskCounter = 1;
   const risksList = [];
+
+  // Populate the predefined-risk dropdown for whichever category is chosen.
+  function populatePredefinedRisks(category) {
+    newPredefinedRiskSelect.innerHTML = "";
+
+    if (!category) {
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = "Select a category first...";
+      newPredefinedRiskSelect.appendChild(placeholder);
+      newPredefinedRiskSelect.disabled = true;
+      return;
+    }
+
+    newPredefinedRiskSelect.disabled = false;
+
+    const customOption = document.createElement("option");
+    customOption.value = "";
+    customOption.textContent = category === "Custom" ? "Type your own risk below" : "Custom risk in this category...";
+    newPredefinedRiskSelect.appendChild(customOption);
+
+    (RISK_CATALOG[category] || []).forEach((risk, index) => {
+      const option = document.createElement("option");
+      option.value = index;
+      option.textContent = risk.text;
+      newPredefinedRiskSelect.appendChild(option);
+    });
+  }
+
+  newCategorySelect.addEventListener("change", () => {
+    const category = newCategorySelect.value;
+    populatePredefinedRisks(category);
+    newRiskInput.value = "";
+    document.getElementById("new-mitigation").value = "";
+    if (category === "Custom") {
+      newRiskInput.focus();
+    }
+  });
+
+  newPredefinedRiskSelect.addEventListener("change", () => {
+    const category = newCategorySelect.value;
+    const index = newPredefinedRiskSelect.value;
+
+    if (index === "" || !RISK_CATALOG[category]) {
+      newRiskInput.value = "";
+      document.getElementById("new-mitigation").value = "";
+      newRiskInput.focus();
+      return;
+    }
+
+    const predefined = RISK_CATALOG[category][index];
+    newRiskInput.value = predefined.text;
+    document.getElementById("new-mitigation").value = predefined.mitigation;
+    newLikelihoodSelect.value = predefined.likelihood;
+    newImpactSelect.value = predefined.impact;
+  });
+
+  populatePredefinedRisks("");
 
   // Save data to localStorage
   saveButton.addEventListener("click", () => {
@@ -19,7 +112,9 @@ document.addEventListener("DOMContentLoaded", () => {
       number: risk.number,
       text: risk.text,
       likelihood: risk.likelihood,
-      impact: risk.impact
+      impact: risk.impact,
+      mitigation: risk.mitigation,
+      category: risk.category
     }));
     const matrixValues = Array.from(inputs).map(input => input.value);
     localStorage.setItem(
@@ -90,6 +185,8 @@ clearButton.addEventListener("click", () => {
     newLikelihoodSelect.value = "Likely"; // Reset likelihood dropdown to default value
     newImpactSelect.value = "Low"; // Reset impact dropdown to default value
     document.getElementById("new-mitigation").value = ""; // Clear the mitigation input field
+    newCategorySelect.value = ""; // Reset category dropdown
+    populatePredefinedRisks(""); // Reset and disable the predefined-risk dropdown
 
     alert("Risks and matrix cleared!");
   } else {
@@ -105,11 +202,12 @@ addRiskButton.addEventListener("click", () => {
   const likelihood = newLikelihoodSelect.value;
   const impact = newImpactSelect.value;
   const mitigation = document.getElementById("new-mitigation").value.trim(); // Get mitigation text
+  const category = newCategorySelect.value || "Custom";
 
   if (riskText) {
     // Get the last risk number from the existing risks list (notes)
     const lastRiskNumber = risksList.length > 0 ? risksList[risksList.length - 1].number : 0;
-    
+
     // Set the new risk number as the next available number
     const riskNumber = lastRiskNumber + 1;
 
@@ -118,11 +216,19 @@ addRiskButton.addEventListener("click", () => {
       text: riskText,
       likelihood,
       impact,
-      mitigation // Store mitigation with risk
+      mitigation, // Store mitigation with risk
+      category
     };
 
     risksList.push(risk);
     addRiskToNotes(risk);
+
+    // Ready the form for the next risk, without forcing the category to be re-picked.
+    newRiskInput.value = "";
+    document.getElementById("new-mitigation").value = "";
+    if (newPredefinedRiskSelect.options.length > 0) {
+      newPredefinedRiskSelect.selectedIndex = 0;
+    }
   } else {
     alert("Risk description cannot be empty.");
   }
@@ -135,8 +241,10 @@ function addRiskToNotes(risk) {
   riskListItem.dataset.riskId = risk.number;
 
   // Add the risk number and other fields
+  const category = risk.category || "Custom";
   riskListItem.innerHTML = `
     <span class="risk-number">#${risk.number}</span> <!-- Display the risk number -->
+    <span class="risk-category cat-${category.toLowerCase()}">${category}</span>
     <textarea class="risk-text">${risk.text}</textarea> <!-- Risk Textarea -->
     <textarea class="mitigation-text" placeholder="Mitigation">${risk.mitigation || ''}</textarea>  <!-- Mitigation Textarea -->
     <select class="likelihood">
@@ -308,12 +416,12 @@ function updateRiskInMatrix(risk) {
   // Export data to Excel
 exportButton.addEventListener("click", () => {
   const data = [];
-  const headers = ["Risk Number", "Risk Text", "Likelihood", "Impact"];
+  const headers = ["Risk Number", "Category", "Risk Text", "Likelihood", "Impact", "Mitigation"];
   data.push(headers);
 
   // Add risks to the risk list
   risksList.forEach(risk => {
-    data.push([`#${risk.number}`, risk.text, risk.likelihood, risk.impact]);
+    data.push([`#${risk.number}`, risk.category || "Custom", risk.text, risk.likelihood, risk.impact, risk.mitigation || ""]);
   });
 
   // Create a worksheet for the risk list
