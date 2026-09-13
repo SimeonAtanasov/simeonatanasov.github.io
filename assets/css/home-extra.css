@@ -8,7 +8,11 @@
 }
 
 #sidebar .portfolio-menu {
-	margin: 0;
+	/* Only pin down positioning here - don't zero the li's own margin.
+	   At the medium/tablet top-bar breakpoint, item spacing comes entirely
+	   from #sidebar nav > ul > li's left margin (main.css); overriding it
+	   to 0 for just this item collapsed the gap between "Intro" and
+	   "Portfolio" so they touched with no space between them. */
 	position: relative;
 }
 
