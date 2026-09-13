@@ -7,10 +7,6 @@
 	position: relative;
 }
 
-#sidebar#sidebar {
-	overflow-x: visible !important;
-}
-
 #sidebar .portfolio-menu {
 	margin: 0;
 	position: relative;
@@ -63,12 +59,15 @@
 	color: #ffffff;
 }
 
+@media screen and (min-width: 1281px) {
+	#sidebar#sidebar {
+		overflow-x: visible !important;
+	}
+}
+
 @media screen and (max-width: 1280px) {
 	#sidebar .portfolio-submenu {
-		left: 0;
-		right: auto;
-		top: 2.7em;
-		width: min(19em, calc(100vw - 2em));
+		display: none !important;
 	}
 }
 
