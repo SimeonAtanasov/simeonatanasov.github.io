@@ -226,6 +226,100 @@
 				background: var(--risk-color);
 			}
 
+			.risk-donut-wrap {
+				align-items: center;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.5em;
+				margin: 0 0 1.25em 0;
+			}
+
+			.risk-donut {
+				flex: 0 0 auto;
+				height: 150px;
+				width: 150px;
+			}
+
+			.risk-donut-segment {
+				cursor: pointer;
+				stroke: none;
+			}
+
+			.risk-donut-segment:focus-visible {
+				outline: solid 2px #ffffff;
+				outline-offset: 2px;
+			}
+
+			.risk-donut-total-count {
+				fill: #ffffff;
+				font-size: 22px;
+				font-weight: bold;
+			}
+
+			.risk-donut-total-label {
+				fill: rgba(255, 255, 255, 0.6);
+				font-size: 8px;
+				letter-spacing: 0.03em;
+				text-transform: uppercase;
+			}
+
+			.risk-donut-legend {
+				display: grid;
+				flex: 1 1 220px;
+				gap: 0.45em;
+				list-style: none;
+				margin: 0;
+				min-width: 0;
+				padding: 0;
+			}
+
+			.risk-donut-legend li {
+				align-items: baseline;
+				display: flex;
+				gap: 0.5em;
+			}
+
+			.risk-donut-legend .risk-donut-swatch {
+				background: var(--risk-color);
+				border-radius: 2px;
+				flex: 0 0 auto;
+				height: 0.85em;
+				width: 0.85em;
+				transform: translateY(0.1em);
+			}
+
+			.risk-donut-legend .risk-donut-legend-label {
+				color: rgba(255, 255, 255, 0.85);
+			}
+
+			.risk-donut-legend .risk-donut-legend-value {
+				color: rgba(255, 255, 255, 0.6);
+				font-size: 0.9em;
+				white-space: nowrap;
+			}
+
+			.risk-donut-tooltip {
+				background: #1c2748;
+				border: solid 1px rgba(255, 255, 255, 0.24);
+				border-radius: 6px;
+				box-shadow: 0 0.75em 2em rgba(7, 14, 35, 0.35);
+				color: #ffffff;
+				font-size: 0.85em;
+				padding: 0.5em 0.75em;
+				pointer-events: none;
+				position: fixed;
+				white-space: nowrap;
+				z-index: 10002;
+			}
+
+			.risk-donut-tooltip[hidden] {
+				display: none;
+			}
+
+			.risk-donut-tooltip strong {
+				font-variant-numeric: tabular-nums;
+			}
+
 			#categoryTable tr.is-risk-target {
 				background: rgba(240, 180, 41, 0.2);
 				outline: solid 1px #f0b429;
@@ -356,6 +450,10 @@
 						</section>
 
 						<section id="riskPanel" class="scanner-panel is-hidden" aria-live="polite">
+							<div id="riskDonutWrap" class="risk-donut-wrap">
+								<svg id="riskDonut" class="risk-donut" viewBox="0 0 120 120" role="group" aria-label="Risk level breakdown"></svg>
+								<ul id="riskDonutLegend" class="risk-donut-legend"></ul>
+							</div>
 							<div class="results-meta">
 								<span id="riskSummary">Highest cookie risk by URL</span>
 							</div>
@@ -364,6 +462,7 @@
 								<button type="button" id="downloadRiskChart" disabled>Download Risk Summary</button>
 							</div>
 						</section>
+						<div id="riskDonutTooltip" class="risk-donut-tooltip" role="tooltip" hidden></div>
 					</div>
 				</div>
 			</section>
@@ -414,6 +513,9 @@
 				const riskPanel = document.getElementById('riskPanel');
 				const riskSummary = document.getElementById('riskSummary');
 				const riskSummaryGrid = document.getElementById('riskSummaryGrid');
+				const riskDonut = document.getElementById('riskDonut');
+				const riskDonutLegend = document.getElementById('riskDonutLegend');
+				const riskDonutTooltip = document.getElementById('riskDonutTooltip');
 				const downloadRiskChart = document.getElementById('downloadRiskChart');
 				const queryApi = new URLSearchParams(window.location.search).get('api');
 				const localHosts = ['localhost', '127.0.0.1'];
@@ -871,6 +973,132 @@
 					categoryCount.textContent = `Categorized cookies: ${categoryRows.length}`;
 				}
 
+				const SVG_NS = 'http://www.w3.org/2000/svg';
+
+				function polarToCartesian(cx, cy, r, angleDeg) {
+					const rad = (angleDeg - 90) * Math.PI / 180;
+					return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+				}
+
+				// One annular (donut) sector, traced outer-edge-forward then
+				// inner-edge-backward so it fills correctly regardless of span.
+				function donutSegmentPath(cx, cy, rOuter, rInner, startAngle, endAngle) {
+					const largeArc = endAngle - startAngle > 180 ? 1 : 0;
+					const outerStart = polarToCartesian(cx, cy, rOuter, startAngle);
+					const outerEnd = polarToCartesian(cx, cy, rOuter, endAngle);
+					const innerStart = polarToCartesian(cx, cy, rInner, startAngle);
+					const innerEnd = polarToCartesian(cx, cy, rInner, endAngle);
+					return [
+						`M ${outerStart.x} ${outerStart.y}`,
+						`A ${rOuter} ${rOuter} 0 ${largeArc} 1 ${outerEnd.x} ${outerEnd.y}`,
+						`L ${innerEnd.x} ${innerEnd.y}`,
+						`A ${rInner} ${rInner} 0 ${largeArc} 0 ${innerStart.x} ${innerStart.y}`,
+						'Z'
+					].join(' ');
+				}
+
+				// Donut of the same risk levels/colors as the grid below it - a
+				// glanceable summary, with the grid remaining the detailed,
+				// text-first breakdown (every count and domain also reachable
+				// without the chart, so nothing is color-only or hover-only).
+				function renderRiskDonut(highestRisks, levels) {
+					const total = highestRisks.length;
+					const cx = 60;
+					const cy = 60;
+					const rOuter = 54;
+					const rInner = 34;
+					const counted = levels
+						.map(level => ({ ...level, count: highestRisks.filter(row => row.riskRank === level.rank).length }))
+						.filter(level => level.count > 0);
+
+					riskDonut.replaceChildren();
+					riskDonutLegend.replaceChildren();
+
+					const chartTitle = document.createElementNS(SVG_NS, 'title');
+					chartTitle.textContent = `Risk level breakdown for ${total} assessed URL${total === 1 ? '' : 's'}`;
+					riskDonut.appendChild(chartTitle);
+
+					// A visible gap between slices (the "surface" spacer) only makes
+					// sense once there's more than one slice to separate.
+					const gapDeg = counted.length > 1 ? 3 : 0;
+					let cursor = 0;
+					counted.forEach(level => {
+						const span = (level.count / total) * 360;
+						const rawStart = cursor;
+						const rawEnd = cursor + span;
+						cursor = rawEnd;
+						const hasRoomForGap = rawEnd - rawStart > gapDeg;
+						const start = hasRoomForGap ? rawStart + gapDeg / 2 : rawStart;
+						const end = hasRoomForGap ? rawEnd - gapDeg / 2 : rawEnd;
+						const percent = Math.round((level.count / total) * 100);
+						const description = `${level.label}: ${level.count} of ${total} URL${total === 1 ? '' : 's'} (${percent}%)`;
+
+						const path = document.createElementNS(SVG_NS, 'path');
+						path.setAttribute('d', donutSegmentPath(cx, cy, rOuter, rInner, start, end));
+						path.setAttribute('fill', level.color);
+						path.setAttribute('tabindex', '0');
+						path.setAttribute('role', 'img');
+						path.setAttribute('aria-label', description);
+						path.classList.add('risk-donut-segment');
+						const segmentTitle = document.createElementNS(SVG_NS, 'title');
+						segmentTitle.textContent = description;
+						path.appendChild(segmentTitle);
+
+						const showTooltip = event => {
+							riskDonutTooltip.textContent = '';
+							const strong = document.createElement('strong');
+							strong.textContent = `${level.count} of ${total}`;
+							riskDonutTooltip.append(`${level.label}: `, strong, ` (${percent}%)`);
+							riskDonutTooltip.hidden = false;
+							if (event.type === 'focus') {
+								const rect = path.getBoundingClientRect();
+								riskDonutTooltip.style.left = `${rect.left + rect.width / 2}px`;
+								riskDonutTooltip.style.top = `${rect.top}px`;
+							} else {
+								riskDonutTooltip.style.left = `${event.clientX + 14}px`;
+								riskDonutTooltip.style.top = `${event.clientY + 14}px`;
+							}
+						};
+						const hideTooltip = () => { riskDonutTooltip.hidden = true; };
+						path.addEventListener('pointerenter', showTooltip);
+						path.addEventListener('pointermove', showTooltip);
+						path.addEventListener('pointerleave', hideTooltip);
+						path.addEventListener('focus', showTooltip);
+						path.addEventListener('blur', hideTooltip);
+						riskDonut.appendChild(path);
+					});
+
+					const totalCount = document.createElementNS(SVG_NS, 'text');
+					totalCount.setAttribute('x', String(cx));
+					totalCount.setAttribute('y', String(cy - 2));
+					totalCount.setAttribute('text-anchor', 'middle');
+					totalCount.setAttribute('class', 'risk-donut-total-count');
+					totalCount.textContent = String(total);
+					const totalLabel = document.createElementNS(SVG_NS, 'text');
+					totalLabel.setAttribute('x', String(cx));
+					totalLabel.setAttribute('y', String(cy + 12));
+					totalLabel.setAttribute('text-anchor', 'middle');
+					totalLabel.setAttribute('class', 'risk-donut-total-label');
+					totalLabel.textContent = total === 1 ? 'URL' : 'URLs';
+					riskDonut.append(totalCount, totalLabel);
+
+					counted.forEach(level => {
+						const percent = Math.round((level.count / total) * 100);
+						const item = document.createElement('li');
+						const swatch = document.createElement('span');
+						swatch.className = 'risk-donut-swatch';
+						swatch.style.setProperty('--risk-color', level.color);
+						const label = document.createElement('span');
+						label.className = 'risk-donut-legend-label';
+						label.textContent = level.label;
+						const value = document.createElement('span');
+						value.className = 'risk-donut-legend-value';
+						value.textContent = `${level.count} (${percent}%)`;
+						item.append(swatch, label, value);
+						riskDonutLegend.appendChild(item);
+					});
+				}
+
 				function riskRank(riskLevel) {
 					const match = String(riskLevel || '').match(/^(\d)/);
 					return match ? Number(match[1]) : 0;
@@ -928,6 +1156,7 @@
 						{ label: 'Low', rank: 1, color: '#4caf78', background: 'rgba(76, 175, 120, 0.55)' },
 						{ label: 'No cookies observed', rank: 0, color: '#8a98aa', background: 'rgba(138, 152, 170, 0.55)' }
 					];
+					renderRiskDonut(highestRisks, levels);
 					riskSummaryGrid.replaceChildren();
 					levels.forEach(level => {
 						const domains = highestRisks.filter(row => row.riskRank === level.rank);
@@ -971,6 +1200,9 @@
 					categoryTable.querySelector('thead').replaceChildren();
 					categoryTable.querySelector('tbody').replaceChildren();
 					riskSummaryGrid.replaceChildren();
+					riskDonut.replaceChildren();
+					riskDonutLegend.replaceChildren();
+					riskDonutTooltip.hidden = true;
 					jobStatus.textContent = 'Status: ready';
 					resultCount.textContent = 'Rows: 0';
 					categoryCount.textContent = 'Categorized cookies: 0';
