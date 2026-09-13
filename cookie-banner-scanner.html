@@ -73,6 +73,12 @@
 				color: #ffffff;
 			}
 
+			.cookiepedia-link {
+				font-size: 0.75em;
+				margin-left: 0.65em;
+				white-space: nowrap;
+			}
+
 			#historyTable {
 				min-width: 760px;
 			}
@@ -593,7 +599,18 @@
 						tr.id = row.targetId;
 						categoryColumns.forEach(column => {
 							const td = document.createElement('td');
-							if (column === 'category') {
+							if (column === 'cookieName') {
+								td.textContent = sanitizeTableValue(row.cookieName);
+								if (row.category === 'Unknown') {
+									const cookiepediaLink = document.createElement('a');
+									cookiepediaLink.className = 'cookiepedia-link';
+									cookiepediaLink.href = `https://cookiepedia.co.uk/cookies/${encodeURIComponent(row.cookieName)}`;
+									cookiepediaLink.target = '_blank';
+									cookiepediaLink.rel = 'noopener noreferrer';
+									cookiepediaLink.textContent = 'Check Cookiepedia';
+									td.appendChild(cookiepediaLink);
+								}
+							} else if (column === 'category') {
 								const select = document.createElement('select');
 								categoryOptions.forEach(category => {
 									const option = document.createElement('option');
