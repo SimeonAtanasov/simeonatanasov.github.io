@@ -137,6 +137,7 @@
 				font-size: 0.75em;
 				font-weight: bold;
 				letter-spacing: 0.03em;
+				margin: 0 0.3em 0.3em 0;
 				padding: 0.3em 0.8em;
 				white-space: nowrap;
 			}
@@ -149,6 +150,11 @@
 			.history-status.is-changed {
 				background: rgba(240, 180, 41, 0.22);
 				color: #f0b429;
+			}
+
+			.history-status.is-stopped {
+				background: rgba(214, 75, 75, 0.18);
+				color: #e79a9a;
 			}
 
 			.scanner-panel .table-wrapper {
@@ -226,6 +232,22 @@
 				display: none !important;
 			}
 
+			#stopButton {
+				background: rgba(214, 75, 75, 0.16);
+				border-color: rgba(214, 75, 75, 0.55);
+				color: #f0a3a3;
+			}
+
+			#stopButton:hover:not(:disabled) {
+				background: rgba(214, 75, 75, 0.3);
+				border-color: #d64b4b;
+				color: #ffffff;
+			}
+
+			#stopButton:disabled {
+				opacity: 0.6;
+			}
+
 			@media screen and (max-width: 736px) {
 				.scanner-panel {
 					padding: 1em;
@@ -269,6 +291,7 @@
 							</div>
 							<div class="scanner-toolbar">
 								<button type="submit" id="runButton" class="primary">Run Scan</button>
+								<button type="button" id="stopButton" class="is-hidden">Stop Scan</button>
 								<a id="downloadButton" class="button disabled is-hidden" href="#" aria-disabled="true">Download Scan Excel</a>
 								<a id="categorizedDownloadButton" class="button disabled is-hidden" href="#" aria-disabled="true">Download Categorized Excel</a>
 							</div>
@@ -357,6 +380,7 @@
 				const form = document.getElementById('scanForm');
 				const urlsInput = document.getElementById('urls');
 				const runButton = document.getElementById('runButton');
+				const stopButton = document.getElementById('stopButton');
 				const downloadButton = document.getElementById('downloadButton');
 				const categorizedDownloadButton = document.getElementById('categorizedDownloadButton');
 				const status = document.getElementById('status');
@@ -422,6 +446,10 @@
 				// The scan currently loaded in the results panel, so edits (changing a
 				// cookie's category/risk level) know which history entry they belong to.
 				let activeEntry = null;
+				// The job (if any) the Stop button currently applies to.
+				let runningJobId = null;
+				let runningUrls = [];
+				let stopRequested = false;
 
 				function splitUrls(value) {
 					return value
@@ -433,6 +461,13 @@
 				function setBusy(isBusy) {
 					runButton.disabled = isBusy;
 					runButton.textContent = isBusy ? 'Running...' : 'Run Scan';
+					stopButton.classList.toggle('is-hidden', !isBusy);
+					stopButton.disabled = false;
+					stopButton.textContent = 'Stop Scan';
+					if (!isBusy) {
+						runningJobId = null;
+						stopRequested = false;
+					}
 				}
 
 				function updateScanProgress(current, total) {
@@ -502,13 +537,22 @@
 						const urls = document.createElement('td');
 						urls.textContent = entry.urls.join(', ');
 						const rows = document.createElement('td');
-						rows.textContent = String(entry.resultCount);
+						const wasStoppedEarly = entry.scanStatus === 'stopped';
+						rows.textContent = wasStoppedEarly && entry.urlCount
+							? `${entry.resultCount} of ${entry.urlCount}`
+							: String(entry.resultCount);
 						const statusCell = document.createElement('td');
 						const statusBadge = document.createElement('span');
 						const isChanged = entry.status === 'changed';
 						statusBadge.className = `history-status ${isChanged ? 'is-changed' : 'is-original'}`;
 						statusBadge.textContent = isChanged ? 'Changed' : 'Original';
 						statusCell.appendChild(statusBadge);
+						if (wasStoppedEarly) {
+							const stoppedBadge = document.createElement('span');
+							stoppedBadge.className = 'history-status is-stopped';
+							stoppedBadge.textContent = 'Stopped early';
+							statusCell.appendChild(stoppedBadge);
+						}
 						const actions = document.createElement('td');
 						actions.className = 'history-actions';
 						const rescan = document.createElement('button');
@@ -561,6 +605,10 @@
 						id: job.id,
 						sourceId: job.id,
 						status: 'original',
+						// 'stopped' when the Stop button cut the scan short, so History
+						// can flag it as partial rather than implying every URL was scanned.
+						scanStatus: job.status === 'stopped' ? 'stopped' : 'complete',
+						urlCount: job.urlCount || urls.length,
 						scannedAt: job.finishedAt || new Date().toISOString(),
 						urls,
 						resultCount: job.resultCount || 0,
@@ -988,6 +1036,22 @@
 						return;
 					}
 
+					if (job.status === 'stopped') {
+						clearInterval(pollTimer);
+						pollTimer = null;
+						const total = job.progressTotal || job.urlCount || urls.length;
+						status.textContent = job.resultCount
+							? `Stopped after ${job.resultCount} of ${total}.`
+							: 'Stopped before any URL finished.';
+						hideScanProgress();
+						setBusy(false);
+						if (job.resultCount > 0) {
+							await loadResults(job);
+							saveHistory(job, urls);
+						}
+						return;
+					}
+
 					if (job.status === 'failed') {
 						clearInterval(pollTimer);
 						pollTimer = null;
@@ -1005,7 +1069,13 @@
 
 					const total = job.progressTotal || job.urlCount || urls.length;
 					const current = job.progressCurrent || 0;
-					status.textContent = total ? `Running scan (${current} of ${total}).` : 'Running scan.';
+					if (stopRequested) {
+						status.textContent = total
+							? `Stopping - finishing URL ${current} of ${total}, then halting.`
+							: 'Stopping.';
+					} else {
+						status.textContent = total ? `Running scan (${current} of ${total}).` : 'Running scan.';
+					}
 					updateScanProgress(current, total);
 				}
 
@@ -1038,6 +1108,8 @@
 							body: JSON.stringify({ urls })
 						});
 						jobStatus.textContent = `Status: ${job.status}`;
+						runningJobId = job.id;
+						runningUrls = urls;
 						await pollJob(job.id, urls);
 						pollTimer = setInterval(() => {
 							pollJob(job.id, urls).catch(error => {
@@ -1050,6 +1122,24 @@
 					} catch (error) {
 						status.textContent = readableScanError(error);
 						setBusy(false);
+					}
+				});
+
+				stopButton.addEventListener('click', async () => {
+					if (!runningJobId) return;
+					stopRequested = true;
+					stopButton.disabled = true;
+					stopButton.textContent = 'Stopping...';
+					status.textContent = 'Stopping - finishing the current URL, then halting.';
+					try {
+						await apiFetch(`/api/scans/${runningJobId}/stop`, { method: 'POST' });
+						// Poll right away instead of waiting for the next 3s tick, so a
+						// queued job (stopped instantly) reflects the change without delay.
+						await pollJob(runningJobId, runningUrls);
+					} catch (error) {
+						status.textContent = readableScanError(error);
+						stopButton.disabled = false;
+						stopButton.textContent = 'Stop Scan';
 					}
 				});
 
