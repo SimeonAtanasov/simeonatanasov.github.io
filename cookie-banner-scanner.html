@@ -97,6 +97,26 @@
 				padding: 0 1em;
 			}
 
+			.history-status {
+				border-radius: 2em;
+				display: inline-block;
+				font-size: 0.75em;
+				font-weight: bold;
+				letter-spacing: 0.03em;
+				padding: 0.3em 0.8em;
+				white-space: nowrap;
+			}
+
+			.history-status.is-original {
+				background: rgba(255, 255, 255, 0.1);
+				color: rgba(255, 255, 255, 0.65);
+			}
+
+			.history-status.is-changed {
+				background: rgba(240, 180, 41, 0.22);
+				color: #f0b429;
+			}
+
 			.scanner-panel .table-wrapper {
 				max-width: 100%;
 				min-width: 0;
@@ -353,11 +373,14 @@
 					'YouTube Technologies',
 					'Unknown'
 				];
-				const historyColumns = ['scannedAt', 'urls', 'rows', 'actions'];
+				const historyColumns = ['scannedAt', 'urls', 'rows', 'status', 'actions'];
 				const historyStorageKey = 'cookie-banner-scanner-history';
 				const maxHistoryEntries = 20;
 				let pollTimer = null;
 				let currentRows = [];
+				// The scan currently loaded in the results panel, so edits (changing a
+				// cookie's category/risk level) know which history entry they belong to.
+				let activeEntry = null;
 
 				function splitUrls(value) {
 					return value
@@ -422,6 +445,12 @@
 						urls.textContent = entry.urls.join(', ');
 						const rows = document.createElement('td');
 						rows.textContent = String(entry.resultCount);
+						const statusCell = document.createElement('td');
+						const statusBadge = document.createElement('span');
+						const isChanged = entry.status === 'changed';
+						statusBadge.className = `history-status ${isChanged ? 'is-changed' : 'is-original'}`;
+						statusBadge.textContent = isChanged ? 'Changed' : 'Original';
+						statusCell.appendChild(statusBadge);
 						const actions = document.createElement('td');
 						actions.className = 'history-actions';
 						const rescan = document.createElement('button');
@@ -437,18 +466,33 @@
 						view.textContent = 'View Results';
 						view.addEventListener('click', () => loadHistoryEntry(entry));
 						actions.appendChild(view);
-						[entry.downloadUrl, entry.categorizedDownloadUrl].forEach((url, index) => {
+						const downloadActions = [{ label: 'Scan Excel', url: entry.downloadUrl, source: 'server' }];
+						if (isChanged) {
+							// The server's categorized export reflects the original
+							// categorization, not this entry's edited categories/risk
+							// levels, so build the Excel file client-side from the
+							// stored snapshot instead.
+							downloadActions.push({ label: 'Cookie Excel', source: 'snapshot' });
+						} else {
+							downloadActions.push({ label: 'Cookie Excel', url: entry.categorizedDownloadUrl, source: 'server' });
+						}
+						downloadActions.forEach(action => {
+							if (action.source === 'server' && !action.url) return;
 							const download = document.createElement('a');
 							download.className = 'button small';
 							download.href = '#';
-							download.textContent = index === 0 ? 'Scan Excel' : 'Cookie Excel';
+							download.textContent = action.label;
 							download.addEventListener('click', event => {
 								event.preventDefault();
-								openHistoryDownload(entry, url);
+								if (action.source === 'snapshot') {
+									downloadSnapshotExcel(entry);
+								} else {
+									openHistoryDownload(entry, action.url);
+								}
 							});
 							actions.appendChild(download);
 						});
-						tr.append(scannedAt, urls, rows, actions);
+						tr.append(scannedAt, urls, rows, statusCell, actions);
 						body.appendChild(tr);
 					});
 					historyCount.textContent = `Saved scans: ${history.length}`;
@@ -457,6 +501,8 @@
 				function saveHistory(job, urls) {
 					const entry = {
 						id: job.id,
+						sourceId: job.id,
+						status: 'original',
 						scannedAt: job.finishedAt || new Date().toISOString(),
 						urls,
 						resultCount: job.resultCount || 0,
@@ -469,6 +515,37 @@
 						localStorage.setItem(historyStorageKey, JSON.stringify(history.slice(0, maxHistoryEntries)));
 					} catch (error) {
 						status.textContent = 'Scan complete, but browser history could not be saved.';
+					}
+					activeEntry = entry;
+					renderHistory();
+				}
+
+				// Called whenever the user changes a cookie's category/risk level in
+				// the results view. Rather than losing that edit the next time History
+				// re-loads the original scan, it's kept as a companion "Changed" row
+				// (one per original scan - repeated edits update it in place) so both
+				// versions stay available side by side.
+				function recordCategoryChange() {
+					if (!activeEntry) return;
+					const sourceId = activeEntry.sourceId || activeEntry.id;
+					const changedId = `${sourceId}-changed`;
+					const entry = {
+						id: changedId,
+						sourceId,
+						status: 'changed',
+						scannedAt: new Date().toISOString(),
+						urls: activeEntry.urls,
+						resultCount: currentRows.length,
+						downloadUrl: activeEntry.downloadUrl,
+						categorizedDownloadUrl: null,
+						snapshotRows: JSON.parse(JSON.stringify(currentRows))
+					};
+					try {
+						const history = getHistory().filter(item => item.id !== changedId);
+						history.unshift(entry);
+						localStorage.setItem(historyStorageKey, JSON.stringify(history.slice(0, maxHistoryEntries)));
+					} catch (error) {
+						status.textContent = 'Changed, but the updated history entry could not be saved.';
 					}
 					renderHistory();
 				}
@@ -485,8 +562,11 @@
 
 				async function openHistoryDownload(entry, path) {
 					const downloadWindow = window.open('', '_blank');
+					// A "changed" entry's id isn't a real server job - check the scan it
+					// was derived from instead.
+					const jobId = entry.sourceId || entry.id;
 					try {
-						const job = await apiFetch(`/api/scans/${entry.id}`);
+						const job = await apiFetch(`/api/scans/${jobId}`);
 						if (job.status !== 'complete') throw new Error('Scan not found.');
 						downloadWindow.location.href = `${apiBase}${path}`;
 					} catch (error) {
@@ -497,10 +577,20 @@
 				}
 
 				async function loadHistoryEntry(entry) {
+					if (entry.status === 'changed' && Array.isArray(entry.snapshotRows)) {
+						renderRows(entry.snapshotRows);
+						setDownloads({ downloadUrl: entry.downloadUrl });
+						activeEntry = { id: entry.sourceId || entry.id, sourceId: entry.sourceId || entry.id, urls: entry.urls, downloadUrl: entry.downloadUrl };
+						status.textContent = 'Loaded saved scan (with your changes).';
+						return;
+					}
+
+					const jobId = entry.sourceId || entry.id;
 					try {
-						const job = await apiFetch(`/api/scans/${entry.id}`);
+						const job = await apiFetch(`/api/scans/${jobId}`);
 						if (job.status !== 'complete') throw new Error('This saved scan is no longer available.');
 						await loadResults(job);
+						activeEntry = { id: entry.id, sourceId: jobId, urls: entry.urls, downloadUrl: job.downloadUrl, categorizedDownloadUrl: job.categorizedDownloadUrl };
 						status.textContent = 'Loaded saved scan.';
 					} catch (error) {
 						removeHistoryEntry(entry.id);
@@ -625,6 +715,7 @@
 									cookie.riskLevel = categoryRiskLevel(select.value);
 									renderCategorizedCookies(currentRows);
 									renderRiskChart(currentRows);
+									recordCategoryChange();
 								});
 								td.appendChild(select);
 							} else {
@@ -746,15 +837,17 @@
 					downloadRiskChart.dataset.riskSummary = '';
 				}
 
-				function downloadUpdatedCategorizedExcel(event) {
-					event.preventDefault();
-					const rows = currentRows.flatMap(row => (row.categorizedCookies || []).map((cookie, index) => ({
+				function categorizedWorkbookRows(rows) {
+					return rows.flatMap(row => (row.categorizedCookies || []).map((cookie, index) => ({
 						rowNumber: index + 1,
 						domain: row.domain,
 						cookieName: cookie.cookieName,
 						category: cookie.category,
 						riskLevel: cookie.riskLevel
 					})));
+				}
+
+				function exportCategorizedWorkbook(rows, filename) {
 					if (!rows.length) return;
 
 					if (typeof XLSX === 'undefined') {
@@ -765,7 +858,16 @@
 					const worksheet = XLSX.utils.json_to_sheet(rows);
 					const workbook = XLSX.utils.book_new();
 					XLSX.utils.book_append_sheet(workbook, worksheet, 'Categorized Cookies');
-					XLSX.writeFile(workbook, 'categorized-cookies-updated.xlsx');
+					XLSX.writeFile(workbook, filename);
+				}
+
+				function downloadUpdatedCategorizedExcel(event) {
+					event.preventDefault();
+					exportCategorizedWorkbook(categorizedWorkbookRows(currentRows), 'categorized-cookies-updated.xlsx');
+				}
+
+				function downloadSnapshotExcel(entry) {
+					exportCategorizedWorkbook(categorizedWorkbookRows(entry.snapshotRows || []), 'categorized-cookies-changed.xlsx');
 				}
 
 				function readableScanError(error) {
