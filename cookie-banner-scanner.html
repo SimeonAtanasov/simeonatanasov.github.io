@@ -35,6 +35,12 @@
 				color: rgba(255, 255, 255, 0.75);
 			}
 
+			.retention-note {
+				color: rgba(255, 255, 255, 0.6);
+				font-size: 0.85em;
+				margin: 0 0 0.85em 0;
+			}
+
 			.scan-progress {
 				align-items: center;
 				display: flex;
@@ -155,6 +161,12 @@
 			.history-status.is-stopped {
 				background: rgba(214, 75, 75, 0.18);
 				color: #e79a9a;
+			}
+
+			.history-status.is-expired {
+				background: rgba(255, 255, 255, 0.08);
+				color: rgba(255, 255, 255, 0.45);
+				font-style: italic;
 			}
 
 			.scanner-panel .table-wrapper {
@@ -303,6 +315,7 @@
 						</form>
 
 						<section id="historyPanel" class="scanner-panel">
+							<p id="retentionNote" class="retention-note"></p>
 							<div class="results-meta">
 								<span id="historyCount">Saved scans: 0</span>
 							</div>
@@ -388,6 +401,7 @@
 				const scanProgressBar = document.getElementById('scanProgressBar');
 				const scanProgressLabel = document.getElementById('scanProgressLabel');
 				const historyCount = document.getElementById('historyCount');
+				const retentionNote = document.getElementById('retentionNote');
 				const historyTable = document.getElementById('historyTable');
 				const clearHistoryButton = document.getElementById('clearHistoryButton');
 				const resultsPanel = document.getElementById('resultsPanel');
@@ -441,6 +455,12 @@
 				const historyColumns = ['scannedAt', 'urls', 'rows', 'status', 'actions'];
 				const historyStorageKey = 'cookie-banner-scanner-history';
 				const maxHistoryEntries = 20;
+				// Must match the server's JOB_TTL_MS (in days) - used only to word the
+				// retention note and to flag rows that are likely stale before the user
+				// clicks them. This list itself never expires on its own; it just sits
+				// in this browser's storage until cleared, so a row can easily outlive
+				// the server-side result it points to.
+				const resultRetentionDays = 7;
 				let pollTimer = null;
 				let currentRows = [];
 				// The scan currently loaded in the results panel, so edits (changing a
@@ -552,6 +572,20 @@
 							stoppedBadge.className = 'history-status is-stopped';
 							stoppedBadge.textContent = 'Stopped early';
 							statusCell.appendChild(stoppedBadge);
+						}
+						// This list is stored in the browser and doesn't expire on its
+						// own, so a row can sit here well past the server's retention
+						// window. Flag it before the user clicks and gets a surprise
+						// "expired" error - this is a local-clock estimate only, so it
+						// can be off if resultRetentionDays doesn't match the server's
+						// actual JOB_TTL_MS. Skipped for 'changed' entries: those load
+						// from the local snapshot, not the server, so they don't expire.
+						const ageMs = Date.now() - new Date(entry.scannedAt).getTime();
+						if (!isChanged && Number.isFinite(ageMs) && ageMs > resultRetentionDays * 24 * 60 * 60 * 1000) {
+							const expiredBadge = document.createElement('span');
+							expiredBadge.className = 'history-status is-expired';
+							expiredBadge.textContent = 'Likely expired on server';
+							statusCell.appendChild(expiredBadge);
 						}
 						const actions = document.createElement('td');
 						actions.className = 'history-actions';
@@ -1150,6 +1184,7 @@
 
 				categorizedDownloadButton.addEventListener('click', downloadUpdatedCategorizedExcel);
 
+				retentionNote.textContent = `Scan results stay on the server for ${resultRetentionDays} days, then are deleted automatically. This list, though, lives only in this browser's storage and does not expire on its own - it stays until you clear this browser's cookies/site data (or use a different browser), even long after ${resultRetentionDays} days. So an older row can still show here after its result has already been deleted from the server; clicking it will say the scan expired and remove that row.`;
 				renderHistory();
 			})();
 		</script>
