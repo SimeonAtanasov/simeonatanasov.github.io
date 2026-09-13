@@ -7,9 +7,26 @@
 	position: relative;
 }
 
+#sidebar {
+	overflow-x: visible;
+}
+
 #sidebar .portfolio-menu {
 	margin: 0;
 	position: relative;
+}
+
+#sidebar .portfolio-menu-toggle {
+	background: transparent;
+	border: 0;
+	color: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.58em;
+	letter-spacing: 0.12em;
+	margin: 0.35em 0 0;
+	padding: 0;
+	text-transform: uppercase;
 }
 
 #sidebar .portfolio-submenu {
@@ -29,7 +46,8 @@
 }
 
 #sidebar .portfolio-menu:hover .portfolio-submenu,
-#sidebar .portfolio-menu:focus-within .portfolio-submenu {
+#sidebar .portfolio-menu:focus-within .portfolio-submenu,
+#sidebar .portfolio-menu.is-open .portfolio-submenu {
 	display: block;
 }
 
@@ -54,18 +72,12 @@
 	color: #ffffff;
 }
 
-@media screen and (min-width: 1281px) {
-	#sidebar {
-		overflow-x: visible;
-	}
-}
-
 @media screen and (max-width: 1280px) {
 	#sidebar .portfolio-submenu {
-		left: auto;
-		margin: 0.5em 0;
-		position: static;
-		width: 100%;
+		left: 0;
+		right: auto;
+		top: 2.7em;
+		width: min(19em, calc(100vw - 2em));
 	}
 }
 
