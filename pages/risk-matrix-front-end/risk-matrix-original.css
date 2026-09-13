@@ -458,10 +458,18 @@ button#add-risk:hover {
     overflow-y: hidden;
 }
 
-/* Match the button to the widened fields and the select rows above it. */
+/* Match the button to the widened fields and the select rows above it.
+   The template gives buttons line-height: 76px against a 78px height; adding
+   padding on top of that pushed the label below centre (42px of space above,
+   19px below). Centring with flex and neutralising the inherited line-height
+   puts the label in the middle of the button regardless of its height. */
 button#add-risk {
     max-width: 500px;
     padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 /* Risk Notes row (tablet and up): give the risk and mitigation textareas the

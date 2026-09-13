@@ -10,6 +10,26 @@
 // the catalog. Picking one prefills the risk/mitigation text and a suggested
 // Likelihood/Impact below - everything stays editable afterward, and
 // "Custom" skips this entirely.
+// The rating each Likelihood/Impact pair carries, mirroring the coloured cells
+// of the matrix in risk-matrix-original.html. Kept in sync with that table by
+// hand: if a cell's class changes there, change it here too, or the Excel
+// export will disagree with what the page shows.
+const MATRIX_RATING = {
+  Likely:   { Low: "high",   Medium: "critical", High: "critical", Critical: "critical" },
+  Possible: { Low: "medium", Medium: "high",     High: "critical", Critical: "critical" },
+  Unlikely: { Low: "low",    Medium: "medium",   High: "high",     Critical: "critical" },
+  Rare:     { Low: "low",    Medium: "low",      High: "medium",   Critical: "high" }
+};
+
+// Same hex values as the .low/.medium/.high/.critical rules in the stylesheet,
+// as AARRGGBB for Excel.
+const RATING_FILL = {
+  low:      "FFB6D7A8",
+  medium:   "FFFFE599",
+  high:     "FFF6B26B",
+  critical: "FFE06666"
+};
+
 const RISK_CATALOG = {
   Privacy: [
     { label: "Invalid or bundled consent", text: "Consent is collected through pre-ticked boxes, vague language, or bundled with an unrelated purpose or terms & conditions", mitigation: "Redesign consent flows so each purpose is opted into separately, remove pre-ticked boxes, and make withdrawing consent as easy as giving it.", likelihood: "Likely", impact: "Medium" },
@@ -620,6 +640,13 @@ function updateRiskInMatrix(risk) {
 
   // Export data to Excel
 exportButton.addEventListener("click", () => {
+  // The spreadsheet library is loaded from a CDN; say so plainly rather than
+  // failing with a console-only ReferenceError if it didn't arrive.
+  if (typeof XLSX === "undefined") {
+    alert("The spreadsheet library didn't load, so the export can't run. Check your connection and reload the page.");
+    return;
+  }
+
   const data = [];
   const headers = ["Risk Number", "Category", "Risk Text", "Likelihood", "Impact", "Mitigation"];
   data.push(headers);
@@ -630,13 +657,18 @@ exportButton.addEventListener("click", () => {
   });
 
   // Create a worksheet for the risk list
-  const ws = XLSX.utils.aoa_to_sheet(data); 
-  const wb = XLSX.utils.book_new(); 
+  const ws = XLSX.utils.aoa_to_sheet(data);
+  ws["!cols"] = [{ wch: 12 }, { wch: 14 }, { wch: 70 }, { wch: 12 }, { wch: 14 }, { wch: 70 }];
+  styleHeaderRow(ws, headers.length);
+
+  const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, "Risk List");
 
-  // Create risk matrix data based on likelihood and impact
+  // Create risk matrix data based on likelihood and impact, then colour every
+  // cell to match the matrix on the page.
   const riskMatrixData = generateRiskMatrixData();
-  const matrixWs = XLSX.utils.aoa_to_sheet(riskMatrixData); 
+  const matrixWs = XLSX.utils.aoa_to_sheet(riskMatrixData);
+  styleRiskGraph(matrixWs);
   XLSX.utils.book_append_sheet(wb, matrixWs, "Risk Graph");
 
   // Write and download the Excel file
@@ -686,7 +718,78 @@ function generateRiskMatrixData() {
     matrixData.push(rowData);
   });
 
+  // Legend, so the exported sheet explains its own colours.
+  matrixData.push([]);
+  matrixData.push(["Risk level"]);
+  ["Low", "Medium", "High", "Critical"].forEach(level => matrixData.push([level]));
+
   return matrixData;
+}
+
+// Bold white-on-slate header row, used for both sheets.
+function styleHeaderRow(sheet, columnCount) {
+  for (let c = 0; c < columnCount; c++) {
+    const ref = XLSX.utils.encode_cell({ r: 0, c });
+    if (!sheet[ref]) sheet[ref] = { t: "s", v: "" };
+    sheet[ref].s = {
+      font: { bold: true, color: { rgb: "FFFFFFFF" } },
+      fill: { patternType: "solid", fgColor: { rgb: "FF4276A6" } },
+      alignment: { horizontal: "center", vertical: "center" }
+    };
+  }
+}
+
+// Colour the exported matrix so it reads like the one on the page.
+function styleRiskGraph(sheet) {
+  const likelihoods = ["Likely", "Possible", "Unlikely", "Rare"];
+  const impacts = ["Low", "Medium", "High", "Critical"];
+  const border = {
+    top:    { style: "thin", color: { rgb: "FFAAAAAA" } },
+    bottom: { style: "thin", color: { rgb: "FFAAAAAA" } },
+    left:   { style: "thin", color: { rgb: "FFAAAAAA" } },
+    right:  { style: "thin", color: { rgb: "FFAAAAAA" } }
+  };
+
+  const setCell = (r, c, style) => {
+    const ref = XLSX.utils.encode_cell({ r, c });
+    if (!sheet[ref]) sheet[ref] = { t: "s", v: "" };
+    sheet[ref].s = style;
+  };
+
+  sheet["!cols"] = [{ wch: 18 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 16 }];
+
+  styleHeaderRow(sheet, likelihoods.length + 1);
+
+  impacts.forEach((impact, rowOffset) => {
+    const r = rowOffset + 1;
+
+    // Impact label down the left edge.
+    setCell(r, 0, {
+      font: { bold: true, color: { rgb: "FFFFFFFF" } },
+      fill: { patternType: "solid", fgColor: { rgb: "FF4276A6" } },
+      alignment: { horizontal: "center", vertical: "center" },
+      border
+    });
+
+    likelihoods.forEach((likelihood, colOffset) => {
+      setCell(r, colOffset + 1, {
+        fill: { patternType: "solid", fgColor: { rgb: RATING_FILL[MATRIX_RATING[likelihood][impact]] } },
+        alignment: { horizontal: "center", vertical: "center" },
+        font: { bold: true, color: { rgb: "FF335782" } },
+        border
+      });
+    });
+  });
+
+  // Legend block: a blank row, a heading, then one swatch per level.
+  setCell(6, 0, { font: { bold: true } });
+  ["low", "medium", "high", "critical"].forEach((level, i) => {
+    setCell(7 + i, 0, {
+      fill: { patternType: "solid", fgColor: { rgb: RATING_FILL[level] } },
+      alignment: { horizontal: "center" },
+      border
+    });
+  });
 }
 
 });

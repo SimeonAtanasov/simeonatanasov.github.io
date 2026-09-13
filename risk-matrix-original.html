@@ -8,7 +8,10 @@
 		<link rel="stylesheet" href="pages/risk-matrix-front-end/risk-matrix-original.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+		<!-- xlsx-js-style is a drop-in fork of SheetJS that also writes cell styling.
+		     The community SheetJS build silently discards fills, so the exported
+		     Risk Graph could not be colour-coded with it. Same global (XLSX). -->
+		<script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	</head>
 	<body class="is-preload">
