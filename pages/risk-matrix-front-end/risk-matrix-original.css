@@ -364,6 +364,10 @@ button#add-risk:hover {
     background-color: #f9cb9c; /* Peach - distinguishes LLM/GenAI from the broader AI category */
 }
 
+.cat-cyber {
+    background-color: #d5a6bd; /* Muted pink */
+}
+
 .cat-operational {
     background-color: #8fd3c8; /* Teal */
 }
