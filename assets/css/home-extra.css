@@ -12,12 +12,30 @@
 	position: relative;
 }
 
+#sidebar .portfolio-menu details {
+	position: relative;
+}
+
+#sidebar .portfolio-menu summary {
+	color: rgba(255, 255, 255, 0.35);
+	cursor: pointer;
+	font-size: 0.6em;
+	font-weight: bold;
+	letter-spacing: 0.25em;
+	list-style: none;
+	padding: 1.35em 0;
+	text-transform: uppercase;
+}
+
+#sidebar .portfolio-menu summary::-webkit-details-marker {
+	display: none;
+}
+
 #sidebar .portfolio-submenu {
 	background: #25355f;
 	border: solid 1px rgba(255, 255, 255, 0.24);
 	border-radius: 6px;
 	box-shadow: 0 0.75em 2em rgba(7, 14, 35, 0.35);
-	display: none;
 	height: auto;
 	left: 100%;
 	list-style: none;
@@ -29,8 +47,8 @@
 	z-index: 10001;
 }
 
-#sidebar .portfolio-menu:hover .portfolio-submenu,
-#sidebar .portfolio-menu:focus-within .portfolio-submenu {
+
+#sidebar .portfolio-menu details[open] .portfolio-submenu {
 	display: block;
 }
 
@@ -66,8 +84,35 @@
 }
 
 @media screen and (max-width: 1280px) {
+	#sidebar:has(.portfolio-menu details[open]) {
+		overflow: visible;
+	}
+
 	#sidebar .portfolio-submenu {
-		display: none !important;
+		left: 50%;
+		top: 100%;
+		transform: translateX(-50%);
+		width: min(19em, calc(100vw - 2em));
+	}
+
+	#sidebar .portfolio-menu summary {
+		font-size: 0.6em;
+		line-height: inherit;
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#sidebar {
+		display: block;
+		height: 3.5em;
+		line-height: 3.5em;
+		overflow: hidden;
+	}
+
+	#sidebar nav ul {
+		overflow-x: auto;
+		white-space: nowrap;
 	}
 }
 
