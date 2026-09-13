@@ -712,7 +712,7 @@
 					} catch (error) {
 						if (downloadWindow) downloadWindow.close();
 						removeHistoryEntry(entry.id);
-						status.textContent = 'This saved scan expired on the server and was removed from history.';
+						status.textContent = 'This saved scan is no longer on the server (it expired, or the server restarted) - removed from history.';
 					}
 				}
 
@@ -735,7 +735,7 @@
 						status.textContent = 'Loaded saved scan.';
 					} catch (error) {
 						removeHistoryEntry(entry.id);
-						status.textContent = 'This saved scan expired on the server and was removed from history.';
+						status.textContent = 'This saved scan is no longer on the server (it expired, or the server restarted) - removed from history.';
 					}
 				}
 
@@ -1184,7 +1184,7 @@
 
 				categorizedDownloadButton.addEventListener('click', downloadUpdatedCategorizedExcel);
 
-				retentionNote.textContent = `Scan results stay on the server for ${resultRetentionDays} days, then are deleted automatically. This list, though, lives only in this browser's storage and does not expire on its own - it stays until you clear this browser's cookies/site data (or use a different browser), even long after ${resultRetentionDays} days. So an older row can still show here after its result has already been deleted from the server; clicking it will say the scan expired and remove that row.`;
+				retentionNote.textContent = `Scan results normally stay on the server for up to ${resultRetentionDays} days, then are deleted automatically - though a server restart can clear them earlier too, so a very recent row can occasionally fail as well. This list, though, lives only in this browser's storage and does not expire on its own - it stays until you clear this browser's cookies/site data (or use a different browser), even long after ${resultRetentionDays} days. So a row can still show here after its result is already gone from the server; clicking it will say so and remove that row.`;
 				renderHistory();
 			})();
 		</script>
