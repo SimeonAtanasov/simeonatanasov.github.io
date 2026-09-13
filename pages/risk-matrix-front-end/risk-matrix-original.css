@@ -294,6 +294,24 @@ button:hover {
     color: #888;
 }
 
+/* The site template styles "select option" (white on #312450) but never styles
+   optgroup, so group headings inherited white text on the browser's default
+   white background and rendered as blank bands between the sections. Give the
+   heading its own darker ground and restate the option colours inside it. */
+#new-predefined-risk optgroup {
+    background-color: #241a3d;
+    color: #ffffff;
+    font-weight: bold;
+    font-style: normal;
+    padding: 4px 0;
+}
+
+#new-predefined-risk optgroup option {
+    background-color: #312450;
+    color: #ffffff;
+    font-weight: normal;
+}
+
 /* Other form elements like input and button */
 #new-risk, #new-mitigation, #add-risk {
     padding: 10px;
