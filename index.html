@@ -36,17 +36,15 @@
 							<a href="" class="image avatar" aria-label="Profile Photo"><img src="images/avatar.png" alt="Simeon Atanasov's professional headshot" loading="lazy" /></a>
 							<li><a href="#intro">Intro</a></li>
 							<li class="portfolio-menu">
-								<details>
-									<summary>Portfolio</summary>
-									<ul class="portfolio-submenu">
-										<li><a href="cookie-banner-scanner.html">Cookie Banner Scanner</a></li>
-										<li><a href="privacy-ai-assessment.html#practical-privacy">Practical Privacy &amp; AI Act Advice</a></li>
-										<li><a href="power-bi.html">GDPR Fines Dashboard</a></li>
-										<li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessments</a></li>
-										<li><a href="risk-matrix-original.html">Risk Matrix</a></li>
-										<li><a href="my-asteroids-game.html">Asteroids Game</a></li>
-									</ul>
-								</details>
+								<a href="#one">Portfolio</a>
+								<ul class="portfolio-submenu">
+									<li><a href="cookie-banner-scanner.html">Cookie Banner Scanner</a></li>
+									<li><a href="privacy-ai-assessment.html#practical-privacy">Practical Privacy &amp; AI Act Advice</a></li>
+									<li><a href="power-bi.html">GDPR Fines Dashboard</a></li>
+									<li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessments</a></li>
+									<li><a href="risk-matrix-original.html">Risk Matrix</a></li>
+									<li><a href="my-asteroids-game.html">Asteroids Game</a></li>
+								</ul>
 							</li>
 							<li><a href="#two">Career & Education</a></li>
 							<li><a href="#three">Get in touch</a></li>
@@ -434,16 +432,6 @@
 			<script src="assets/js/util.js" defer></script>
 			<script src="assets/js/main.js" defer></script>
 			<script src="assets/js/contact-me.js" defer></script>
-			<script>
-				const portfolioMenu = document.querySelector('.portfolio-menu details');
-				const desktopMenu = window.matchMedia('(min-width: 1281px)');
-				portfolioMenu.addEventListener('mouseenter', () => {
-					if (desktopMenu.matches) portfolioMenu.open = true;
-				});
-				portfolioMenu.addEventListener('mouseleave', () => {
-					if (desktopMenu.matches) portfolioMenu.open = false;
-				});
-			</script>
 </body>
 </html>
 
