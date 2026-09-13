@@ -59,6 +59,20 @@
 				min-width: 620px;
 			}
 
+			#categoryTable select {
+				background: rgba(255, 255, 255, 0.08);
+				border: solid 1px rgba(255, 255, 255, 0.25);
+				color: #ffffff;
+				font-size: 0.85em;
+				max-width: 20em;
+				padding: 0.25em 0.5em;
+			}
+
+			#categoryTable option {
+				background: #2a3860;
+				color: #ffffff;
+			}
+
 			#historyTable {
 				min-width: 760px;
 			}
@@ -273,6 +287,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 		<script>
 			(function () {
 				const form = document.getElementById('scanForm');
@@ -317,10 +332,26 @@
 					'ProdScriptID'
 				];
 				const categoryColumns = ['rowNumber', 'domain', 'cookieName', 'category', 'riskLevel'];
+				const categoryOptions = [
+					'Strictly Necessary Technologies',
+					'Functional Technologies',
+					'Chatbot Technologies',
+					'Google Maps Technologies',
+					'Bing Technologies',
+					'Analytics Technologies',
+					'Performance Technologies',
+					'Performance Technologies / Analytics Technologies',
+					'Google Ads Technologies',
+					'Marketing Technologies',
+					'Social Media Technologies',
+					'YouTube Technologies',
+					'Unknown'
+				];
 				const historyColumns = ['scannedAt', 'urls', 'rows', 'actions'];
 				const historyStorageKey = 'cookie-banner-scanner-history';
 				const maxHistoryEntries = 20;
 				let pollTimer = null;
+				let currentRows = [];
 
 				function splitUrls(value) {
 					return value
@@ -349,7 +380,9 @@
 
 				function setDownloads(job) {
 					setDownloadButton(downloadButton, job.downloadUrl);
-					setDownloadButton(categorizedDownloadButton, job.categorizedDownloadUrl);
+					categorizedDownloadButton.href = '#';
+					categorizedDownloadButton.classList.remove('is-hidden', 'disabled');
+					categorizedDownloadButton.removeAttribute('aria-disabled');
 				}
 
 				function getHistory() {
@@ -495,6 +528,7 @@
 				}
 
 				function renderRows(rows) {
+					currentRows = rows;
 					const head = table.querySelector('thead');
 					const body = table.querySelector('tbody');
 					head.replaceChildren();
@@ -544,9 +578,11 @@
 					});
 					head.appendChild(headerRow);
 
-					const categoryRows = rows.flatMap(row => (row.categorizedCookies || []).map((cookie, cookieIndex) => ({
+					const categoryRows = rows.flatMap((row, sourceRowIndex) => (row.categorizedCookies || []).map((cookie, cookieIndex) => ({
 						rowNumber: 0,
 						targetId: `cookie-${row.rowNumber}-${cookieIndex + 1}`,
+						sourceRowIndex,
+						cookieIndex,
 						domain: row.domain,
 						...cookie
 					})));
@@ -557,7 +593,26 @@
 						tr.id = row.targetId;
 						categoryColumns.forEach(column => {
 							const td = document.createElement('td');
-							td.textContent = sanitizeTableValue(row[column]);
+							if (column === 'category') {
+								const select = document.createElement('select');
+								categoryOptions.forEach(category => {
+									const option = document.createElement('option');
+									option.value = category;
+									option.textContent = category;
+									option.selected = category === row.category;
+									select.appendChild(option);
+								});
+								select.addEventListener('change', () => {
+									const cookie = currentRows[row.sourceRowIndex].categorizedCookies[row.cookieIndex];
+									cookie.category = select.value;
+									cookie.riskLevel = categoryRiskLevel(select.value);
+									renderCategorizedCookies(currentRows);
+									renderRiskChart(currentRows);
+								});
+								td.appendChild(select);
+							} else {
+								td.textContent = sanitizeTableValue(row[column]);
+							}
 							tr.appendChild(td);
 						});
 						body.appendChild(tr);
@@ -570,6 +625,19 @@
 				function riskRank(riskLevel) {
 					const match = String(riskLevel || '').match(/^(\d)/);
 					return match ? Number(match[1]) : 0;
+				}
+
+				function categoryRiskLevel(category) {
+					if (['Google Ads Technologies', 'Marketing Technologies', 'Social Media Technologies', 'YouTube Technologies', 'Unknown'].includes(category)) {
+						return '4-Very High';
+					}
+					if (['Analytics Technologies', 'Performance Technologies', 'Performance Technologies / Analytics Technologies'].includes(category)) {
+						return '3-High';
+					}
+					if (['Functional Technologies', 'Chatbot Technologies', 'Google Maps Technologies', 'Bing Technologies'].includes(category)) {
+						return '2-Medium';
+					}
+					return category === 'Strictly Necessary Technologies' ? '1-Low' : '';
 				}
 
 				function focusCategoryRow(targetId) {
@@ -659,6 +727,28 @@
 					categoryCount.textContent = 'Categorized cookies: 0';
 					riskSummary.textContent = 'Highest cookie risk by URL';
 					downloadRiskChart.dataset.riskSummary = '';
+				}
+
+				function downloadUpdatedCategorizedExcel(event) {
+					event.preventDefault();
+					const rows = currentRows.flatMap(row => (row.categorizedCookies || []).map((cookie, index) => ({
+						rowNumber: index + 1,
+						domain: row.domain,
+						cookieName: cookie.cookieName,
+						category: cookie.category,
+						riskLevel: cookie.riskLevel
+					})));
+					if (!rows.length) return;
+
+					if (typeof XLSX === 'undefined') {
+						status.textContent = 'Excel export library is unavailable. Please try again shortly.';
+						return;
+					}
+
+					const worksheet = XLSX.utils.json_to_sheet(rows);
+					const workbook = XLSX.utils.book_new();
+					XLSX.utils.book_append_sheet(workbook, worksheet, 'Categorized Cookies');
+					XLSX.writeFile(workbook, 'categorized-cookies-updated.xlsx');
 				}
 
 				function readableScanError(error) {
@@ -779,6 +869,8 @@
 					localStorage.removeItem(historyStorageKey);
 					renderHistory();
 				});
+
+				categorizedDownloadButton.addEventListener('click', downloadUpdatedCategorizedExcel);
 
 				renderHistory();
 			})();
