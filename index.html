@@ -37,7 +37,6 @@
 							<li><a href="#intro">Intro</a></li>
 							<li class="portfolio-menu">
 								<a href="#one">Portfolio</a>
-								<button type="button" class="portfolio-menu-toggle" aria-expanded="false" aria-controls="portfolio-submenu">Projects</button>
 								<ul id="portfolio-submenu" class="portfolio-submenu">
 									<li><a href="cookie-banner-scanner.html">Cookie Banner Scanner</a></li>
 									<li><a href="privacy-ai-assessment.html#practical-privacy">Practical Privacy &amp; AI Act Advice</a></li>
@@ -433,13 +432,6 @@
 			<script src="assets/js/util.js" defer></script>
 			<script src="assets/js/main.js" defer></script>
 			<script src="assets/js/contact-me.js" defer></script>
-			<script>
-				document.querySelector('.portfolio-menu-toggle').addEventListener('click', function () {
-					const menu = this.closest('.portfolio-menu');
-					const isOpen = menu.classList.toggle('is-open');
-					this.setAttribute('aria-expanded', String(isOpen));
-				});
-			</script>
 </body>
 </html>
 

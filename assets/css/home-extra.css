@@ -16,19 +16,6 @@
 	position: relative;
 }
 
-#sidebar .portfolio-menu-toggle {
-	background: transparent;
-	border: 0;
-	color: rgba(255, 255, 255, 0.6);
-	cursor: pointer;
-	font: inherit;
-	font-size: 0.58em;
-	letter-spacing: 0.12em;
-	margin: 0.35em 0 0;
-	padding: 0;
-	text-transform: uppercase;
-}
-
 #sidebar .portfolio-submenu {
 	background: #25355f;
 	border: solid 1px rgba(255, 255, 255, 0.24);
@@ -46,8 +33,7 @@
 }
 
 #sidebar .portfolio-menu:hover .portfolio-submenu,
-#sidebar .portfolio-menu:focus-within .portfolio-submenu,
-#sidebar .portfolio-menu.is-open .portfolio-submenu {
+#sidebar .portfolio-menu:focus-within .portfolio-submenu {
 	display: block;
 }
 
