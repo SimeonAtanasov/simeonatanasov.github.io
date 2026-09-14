@@ -330,3 +330,103 @@
 	});
 
 })();
+
+/*
+	Mobile navigation for the sidebar layout (the home page).
+
+	main.css hides #sidebar outright below 737px, so on a phone the home page
+	had no navigation at all: the Portfolio list, and every page it links to,
+	were unreachable from a menu. This builds a compact bar with a Menu button
+	out of the sidebar's own links, submenu included, and main.css shows it only
+	at the widths where the sidebar itself is hidden.
+
+	It reads the links before portfolio-menu.js moves the Portfolio submenu out
+	to <body> - main.js is loaded first in the page, so its DOMContentLoaded
+	listener runs first - and it does nothing on the pages that use #header,
+	which have their own collapsible nav.
+*/
+(function () {
+
+	document.addEventListener('DOMContentLoaded', function () {
+
+		var sidebar = document.getElementById('sidebar');
+		if (!sidebar || document.getElementById('header')) return;
+
+		var nav = sidebar.querySelector('nav');
+		var topList = nav ? nav.querySelector('ul') : null;
+		if (!topList) return;
+
+		// Flatten the sidebar's links, keeping submenu entries one level in.
+		var entries = [];
+		Array.prototype.forEach.call(topList.children, function (li) {
+			if (li.tagName !== 'LI') return;
+			var a = li.querySelector('a');
+			if (a) entries.push({ href: a.getAttribute('href'), text: a.textContent.trim(), sub: false });
+			li.querySelectorAll('.portfolio-submenu a').forEach(function (s) {
+				entries.push({ href: s.getAttribute('href'), text: s.textContent.trim(), sub: true });
+			});
+		});
+		if (!entries.length) return;
+
+		var bar = document.createElement('div');
+		bar.id = 'mobile-nav';
+
+		var heading = document.querySelector('#intro h1');
+		var title = document.createElement('a');
+		title.className = 'mobile-nav-title';
+		title.href = 'index.html';
+		title.textContent = heading ? heading.textContent.trim() : 'Menu';
+		bar.appendChild(title);
+
+		var toggle = document.createElement('button');
+		toggle.type = 'button';
+		toggle.className = 'nav-toggle';
+		toggle.textContent = 'Menu';
+		toggle.setAttribute('aria-expanded', 'false');
+		toggle.setAttribute('aria-label', 'Open navigation menu');
+		bar.appendChild(toggle);
+
+		var list = document.createElement('ul');
+		list.className = 'mobile-nav-list';
+		entries.forEach(function (e) {
+			var li = document.createElement('li');
+			if (e.sub) li.className = 'is-sub';
+			var a = document.createElement('a');
+			a.href = e.href;
+			a.textContent = e.text;
+			li.appendChild(a);
+			list.appendChild(li);
+		});
+		bar.appendChild(list);
+
+		document.body.insertBefore(bar, document.body.firstChild);
+
+		function close() {
+			if (!list.classList.contains('is-open')) return;
+			list.classList.remove('is-open');
+			toggle.setAttribute('aria-expanded', 'false');
+		}
+
+		toggle.addEventListener('click', function (event) {
+			event.stopPropagation();
+			var open = list.classList.toggle('is-open');
+			toggle.setAttribute('aria-expanded', String(open));
+		});
+
+		list.addEventListener('click', function (event) {
+			if (event.target && event.target.closest && event.target.closest('a')) close();
+		});
+
+		document.addEventListener('click', function (event) {
+			if (!bar.contains(event.target)) close();
+		});
+
+		document.addEventListener('keydown', function (event) {
+			if (event.key === 'Escape' || event.key === 'Esc') close();
+		});
+
+		window.addEventListener('resize', close);
+
+	});
+
+})();

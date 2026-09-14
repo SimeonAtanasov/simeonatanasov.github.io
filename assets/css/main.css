@@ -4418,3 +4418,139 @@ height: 100%;
 		}
 
 	}
+
+/* Mobile navigation for the sidebar layout (the home page) */
+
+	/* The rules above hide #sidebar outright below 737px, which left the home
+	   page with no navigation at all on a phone. This bar carries the same
+	   links, built by main.js, and appears only where the sidebar is hidden. */
+
+	#mobile-nav {
+		display: none;
+	}
+
+	@media screen and (max-width: 736px) {
+
+		#mobile-nav {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			align-items: center;
+			gap: 1em;
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			box-sizing: border-box;
+			width: 100%;
+			margin: 0;
+			padding: 0.9em 1.5em;
+			background-color: #4267a6;
+		}
+
+			#mobile-nav .mobile-nav-title {
+				-moz-flex: 1 1 auto;
+				-webkit-flex: 1 1 auto;
+				-ms-flex: 1 1 auto;
+				flex: 1 1 auto;
+				min-width: 0;
+				border: 0;
+				color: #ffffff;
+				font-size: 1.1em;
+				font-weight: bold;
+			}
+
+			#mobile-nav .nav-toggle {
+				-moz-flex: 0 0 auto;
+				-webkit-flex: 0 0 auto;
+				-ms-flex: 0 0 auto;
+				flex: 0 0 auto;
+				display: -webkit-flex;
+				display: flex;
+				align-items: center;
+				margin: 0;
+				padding: 0.75em 1.25em;
+				width: auto;
+				height: auto;
+				line-height: 1;
+				background-color: rgba(255, 255, 255, 0.14);
+				border-color: rgba(255, 255, 255, 0.35) !important;
+				border-radius: 4px;
+				box-shadow: none;
+				color: #ffffff !important;
+				font-size: 0.6em;
+				font-weight: bold;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				white-space: nowrap;
+				cursor: pointer;
+			}
+
+				#mobile-nav .nav-toggle:before,
+				#mobile-nav .nav-toggle:after {
+					display: none;
+					content: none;
+				}
+
+				#mobile-nav .nav-toggle:hover {
+					background-color: rgba(255, 255, 255, 0.26);
+				}
+
+			#mobile-nav .mobile-nav-list {
+				display: none;
+				position: absolute;
+				top: 100%;
+				right: 0;
+				left: 0;
+				z-index: 1001;
+				box-sizing: border-box;
+				max-height: calc(100vh - 5em);
+				overflow-y: auto;
+				margin: 0;
+				padding: 0 1.5em 1em 1.5em;
+				list-style: none;
+				background-color: #4267a6;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+			}
+
+				#mobile-nav .mobile-nav-list.is-open {
+					display: block;
+				}
+
+				#mobile-nav .mobile-nav-list li {
+					margin: 0;
+					padding: 0;
+					border-top: solid 1px rgba(255, 255, 255, 0.12);
+				}
+
+					#mobile-nav .mobile-nav-list li:first-child {
+						border-top: 0;
+					}
+
+					#mobile-nav .mobile-nav-list li.is-sub a {
+						padding-left: 1.5em;
+						opacity: 0.8;
+					}
+
+				#mobile-nav .mobile-nav-list a {
+					display: block;
+					padding: 0.95em 0;
+					border: 0;
+					color: rgba(255, 255, 255, 0.85);
+					font-size: 0.6em;
+					font-weight: bold;
+					letter-spacing: 0.25em;
+					line-height: 1.4;
+					text-transform: uppercase;
+				}
+
+					#mobile-nav .mobile-nav-list a:hover {
+						color: #ffffff;
+					}
+
+		/* An in-page anchor should not land underneath the bar. */
+		html {
+			scroll-padding-top: 5em;
+		}
+
+	}
