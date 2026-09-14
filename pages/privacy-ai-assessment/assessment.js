@@ -897,6 +897,11 @@
 	// 18 published example scenarios, each mapped by the EDPB itself to an
 	// outcome. Matching one is a sanity check against the EDPB's own
 	// published reasoning, not a scoring input.
+	// The EDPB's own landing page for Guidelines 01/2021, which carries the
+	// adopted final text in every EU language. Linked from the question step and
+	// from the result so the assessor can read the case in the EDPB's words.
+	var EDPB_SOURCE_URL = "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-012021-examples-regarding-personal-data-breach_en";
+
 	var EDPB_CASES = [
 		{ label: "Ransomware - properly backed up, no evidence of exfiltration (EDPB example, case 1)", outcome: "low" },
 		{ label: "Ransomware - no proper backup in place (EDPB example, case 2)", outcome: "medium" },
@@ -1138,6 +1143,7 @@
 			title: "Optional - cross-check against other published methods",
 			visibleIf: function (a) { return a.personalDataAffected === "Yes"; },
 			intro: "The ENISA score is this tool's primary result. These two are independent, separately published methods you can optionally line up against it - leave either blank to skip it.",
+			sources: [{ label: "EDPB Guidelines 01/2021, the 18 worked examples", url: EDPB_SOURCE_URL }],
 			questions: [
 				{ id: "impactOfDisclosure", type: "select", label: "AEPD method - if this data got out, what would the impact of disclosure be? (Combines with the records-affected and data-category answers already given, to score volume × type × impact per the Spanish supervisory authority's published guide.)", options: IMPACT_OPTIONS },
 				{ id: "edpbCase", type: "select", label: "EDPB method - does one of the EDPB's own published example breaches closely match this one? Pick the closest, if any.", options: EDPB_CASES.map(function (c) { return c.label; }) }
@@ -2898,6 +2904,20 @@
 		root.appendChild(el("h3", {}, [step.title]));
 		if (step.intro) root.appendChild(el("p", { class: "paa-step-intro" }, [step.intro]));
 
+		// Where a step leans on someone else's published method, link out to it
+		// so the assessor can read the source rather than take this tool's word
+		// for it. step.sources is [{ label, url }].
+		if (step.sources && step.sources.length) {
+			var srcP = el("p", { class: "paa-step-sources" }, ["Read the source: "]);
+			step.sources.forEach(function (s, i) {
+				if (i) srcP.appendChild(document.createTextNode(" | "));
+				srcP.appendChild(el("a", {
+					href: s.url, target: "_blank", rel: "noopener noreferrer"
+				}, [s.label]));
+			});
+			root.appendChild(srcP);
+		}
+
 		var qlist = el("div", { class: "paa-questions" });
 		function refreshQuestions() {
 			qlist.innerHTML = "";
@@ -3117,6 +3137,12 @@
 				]),
 				el("p", { class: "paa-callout sev-" + (e.outcome === "high" ? "high" : (e.outcome === "medium" ? "medium" : (e.outcome === "low" ? "low" : "medium"))) }, [
 					EDPB_OUTCOME_TEXT[e.outcome]
+				]),
+				el("p", { class: "paa-help" }, [
+					"That is the EDPB's conclusion on its own worked example, summarised here. ",
+					el("a", { href: EDPB_SOURCE_URL, target: "_blank", rel: "noopener noreferrer" },
+						["Read the case in full in Guidelines 01/2021"]),
+					", where each example sets out the facts, the risk assessment and the notification decision."
 				])
 			]));
 		}
