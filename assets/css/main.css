@@ -3626,8 +3626,8 @@ input, select, textarea {
 							display: none;
 							list-style: none;
 							margin: 0;
-							min-width: 18em;
-							padding: 0.65em;
+							min-width: 0;
+							padding: 0.45em;
 							position: absolute;
 							right: 0;
 							top: 100%;
@@ -3662,7 +3662,7 @@ input, select, textarea {
 							display: block;
 							font-size: 0.7em;
 							letter-spacing: 0.08em;
-							padding: 0.55em 0.7em;
+							padding: 0.45em 0.6em;
 							text-transform: none;
 						}
 
