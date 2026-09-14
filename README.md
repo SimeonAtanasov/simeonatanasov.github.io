@@ -26,6 +26,8 @@ The intended portfolio order is:
 
 The homepage sidebar includes a `Portfolio` item with a project submenu in `index.html`, styled in `assets/css/home-extra.css` and driven by `assets/js/portfolio-menu.js`.
 
+The regular page header also includes a `Privacy & AI Assessment` hover/focus dropdown. It provides direct links to the Privacy Assessment, Full DPIA, Legitimate Interest Test, AI Risk Assessment, Incident & Breach Severity, Third-Party Security, Practical Privacy, and AI Act Advice sections.
+
 ### Required Behavior
 
 - On wide desktop screens (`>=1281px`) where the left sidebar is visible, hovering over `Portfolio` must show a small floating context menu to the right of the sidebar.
