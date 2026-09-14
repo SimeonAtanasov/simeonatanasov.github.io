@@ -2932,6 +2932,40 @@
 		// otherwise the count jumps (e.g. "1 of 2" then "3 of 11").
 		var totalLabel = steps.length === mod.steps.length ? String(steps.length) : ("up to " + mod.steps.length);
 		root.appendChild(el("p", { class: "paa-step" }, ["Step " + (state.stepIndex + 1) + " of " + totalLabel + " - " + mod.label]));
+
+		/* A clickable step strip, so an assessor can jump straight to a step
+		 * instead of pressing Next or Back through everything in between. It is
+		 * built from visibleSteps, so a step an earlier answer has not opened up
+		 * yet never appears. Nothing has to be answered to move on, so every
+		 * visible step is reachable in either direction. The current chip carries
+		 * its title as well as its number, which is what makes it obvious that
+		 * the other numbers are steps you can click. */
+		if (steps.length > 1) {
+			var strip = el("nav", { class: "paa-steps", "aria-label": "Assessment steps" });
+			steps.forEach(function (s, i) {
+				var cls = "paa-stepchip";
+				if (i === state.stepIndex) cls += " is-current";
+				else if (i < state.stepIndex) cls += " is-done";
+				var chip = el("button", {
+					type: "button",
+					class: cls,
+					title: "Step " + (i + 1) + ": " + s.title,
+					"aria-label": "Step " + (i + 1) + ": " + s.title
+				}, [String(i + 1)]);
+				if (i === state.stepIndex) {
+					chip.setAttribute("aria-current", "step");
+					chip.appendChild(el("span", { class: "paa-stepchip-title" }, [s.title]));
+				} else {
+					chip.addEventListener("click", function () {
+						state.stepIndex = i;
+						renderStep();
+						scrollToTool();
+					});
+				}
+				strip.appendChild(chip);
+			});
+			root.appendChild(strip);
+		}
 		root.appendChild(el("h3", {}, [step.title]));
 		if (step.intro) root.appendChild(el("p", { class: "paa-step-intro" }, [step.intro]));
 
