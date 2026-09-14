@@ -3723,4 +3723,12 @@
 	if (!startFromHash()) {
 		renderLanding();
 	}
+
+	/* startFromHash only ran once, at load. Clicking a nav link for a tool while
+	   already on this page changes the hash without reloading, so nothing
+	   happened: the link looked broken from every page except the one you
+	   arrived from. Re-read the hash whenever it changes. */
+	window.addEventListener("hashchange", function () {
+		if (startFromHash()) scrollToTool();
+	});
 })();

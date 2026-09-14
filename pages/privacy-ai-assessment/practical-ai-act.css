@@ -1,18 +1,14 @@
 /* Practical AI Act Advice reference section - scoped styles, matches site's navy/blue palette */
 
+/* This is now a page of its own rather than a section bolted below the
+   assessment tool, so the rule that separated it from what came above is
+   gone and the column sits under the page heading instead of centred. */
 #practical-ai-act-advice {
 	max-width: 52em;
-	margin: 4em auto 0 auto;
-	padding-top: 3em;
-	border-top: solid 1px rgba(255,255,255,0.15);
-}
-
-#practical-ai-act-advice h2 {
-	margin-bottom: 0.75em;
+	margin: 0;
 }
 
 .aia-intro p {
-	color: rgba(255,255,255,0.55);
 	margin-bottom: 1em;
 }
 
