@@ -1,0 +1,365 @@
+/* GDPR Readiness Assessment styling.
+   Sits on the site's dark template, so colours are chosen to read against it.
+   The status and band colours deliberately match the Risk Matrix palette so the
+   two tools look like parts of one set. */
+
+.readiness {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.ra-block {
+    margin: 0 0 2.5em 0;
+}
+
+.ra-block h2 {
+    margin-bottom: 0.4em;
+}
+
+.ra-lead {
+    font-size: 0.95em;
+    opacity: 0.85;
+    margin-bottom: 1.2em;
+}
+
+/* ---------------------------------------------------------------- scope --- */
+
+.ra-scope-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: rgba(66, 118, 166, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+}
+
+.ra-scope-q {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 0.95em;
+    line-height: 1.45;
+}
+
+.ra-scope-answers {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 6px;
+}
+
+.ra-scope-note {
+    flex: 0 0 92px;
+    text-align: right;
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+.ra-toggle {
+    margin: 0;
+    padding: 6px 16px;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ra-toggle:hover { background: rgba(255, 255, 255, 0.12); }
+
+.ra-toggle.is-on {
+    background: #4276a6;
+    border-color: #ffffff;
+    font-weight: bold;
+}
+
+/* ----------------------------------------------------------- activities --- */
+
+.ra-cat { margin-bottom: 10px; }
+
+.ra-cat-head {
+    width: 100%;
+    margin: 0;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(66, 118, 166, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    /* The site template sets white-space: nowrap on every button. This is a
+       button with a long label, so without this it cannot wrap and pushes the
+       page wider than the screen on mobile. */
+    white-space: normal;
+}
+
+.ra-cat-head:hover { background: rgba(66, 118, 166, 0.65); }
+
+/* min-width: 0 is required. Flex items default to min-width: auto, which stops
+   them shrinking below their content width, so the longer category names would
+   push the whole row wider than the screen instead of wrapping. */
+.ra-cat-name { flex: 1 1 auto; min-width: 0; font-weight: bold; }
+
+.ra-cat-meta {
+    flex: 0 0 auto;
+    font-size: 0.82em;
+    opacity: 0.75;
+    font-weight: normal;
+}
+
+.ra-chevron {
+    flex: 0 0 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.ra-cat-body { padding: 10px 0 4px 0; }
+
+.ra-activity {
+    padding: 14px 16px;
+    margin: 0 0 8px 0;
+    background: rgba(66, 118, 166, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+.ra-activity.is-out { opacity: 0.45; }
+
+.ra-act-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.ra-act-title { flex: 1 1 auto; min-width: 0; font-weight: bold; font-size: 0.98em; }
+
+.ra-arts {
+    flex: 0 0 auto;
+    font-size: 0.78em;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.14);
+    white-space: nowrap;
+}
+
+.ra-questions p {
+    margin: 0 0 6px 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.ra-qlabel {
+    display: inline-block;
+    min-width: 118px;
+    margin-right: 10px;
+    padding: 1px 8px;
+    border-radius: 3px;
+    font-size: 0.82em;
+    font-weight: bold;
+    background: #a4c2f4;
+    color: #16233d;
+}
+
+.ra-qlabel-ou { background: #8fd3c8; }
+
+.ra-outnote {
+    margin: 0;
+    font-size: 0.86em;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.ra-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.ra-status-btn {
+    margin: 0;
+    padding: 6px 14px;
+    font-size: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ra-status-btn:hover { background: rgba(255, 255, 255, 0.12); }
+
+.ra-status-btn.is-on { color: #16233d; font-weight: bold; border-color: #ffffff; }
+
+.ra-s-implemented.is-on { background: #b6d7a8; }
+.ra-s-partial.is-on     { background: #ffe599; }
+.ra-s-none.is-on        { background: #f6b26b; }
+.ra-s-na.is-on          { background: #d9d9d9; }
+
+/* -------------------------------------------------------------- results --- */
+
+.ra-summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 26px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+    background: rgba(66, 118, 166, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+}
+
+.ra-score {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    color: #16233d;
+}
+
+.ra-score-num { font-size: 2.6em; font-weight: bold; line-height: 1; }
+.ra-score-label { font-size: 0.8em; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+.ra-score-detail { flex: 1 1 260px; }
+.ra-score-detail p { margin: 0 0 5px 0; font-size: 0.92em; }
+
+.ra-band-good { background-color: #b6d7a8; }
+.ra-band-fair { background-color: #ffe599; }
+.ra-band-weak { background-color: #f6b26b; }
+.ra-band-bad  { background-color: #e06666; }
+.ra-band-none { background-color: #d9d9d9; }
+
+.ra-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+
+.ra-tab {
+    margin: 0;
+    padding: 9px 20px;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ra-tab:hover { background: rgba(255, 255, 255, 0.12); }
+.ra-tab.is-active { background: #4276a6; border-color: #ffffff; font-weight: bold; }
+
+.ra-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.ra-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: rgba(66, 118, 166, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ra-table td {
+    padding: 9px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+}
+
+.ra-table tbody tr:nth-child(odd) { background: rgba(66, 118, 166, 0.18); }
+
+.ra-num { text-align: center; white-space: nowrap; }
+.ra-barcell { width: 170px; }
+
+.ra-bar {
+    display: block;
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+}
+
+.ra-bar-fill { display: block; height: 100%; border-radius: 6px; }
+
+.ra-empty { padding: 18px; text-align: center; opacity: 0.8; }
+
+.ra-caveat {
+    margin-top: 18px;
+    padding: 14px 16px;
+    font-size: 0.88em;
+    line-height: 1.55;
+    background: rgba(255, 255, 255, 0.07);
+    border-left: 3px solid #f6b26b;
+    border-radius: 4px;
+}
+
+/* -------------------------------------------------------------- actions --- */
+
+.ra-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0;
+}
+
+.ra-actions button {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ra-actions button:hover { background-color: #45a049; }
+
+.ra-actions button.ra-secondary { background-color: #4276a6; }
+.ra-actions button.ra-secondary:hover { background-color: #35618a; }
+
+/* --------------------------------------------------------------- mobile --- */
+
+@media screen and (max-width: 768px) {
+    .ra-scope-row { flex-direction: column; align-items: stretch; gap: 8px; }
+    .ra-scope-note { text-align: left; flex: 0 0 auto; }
+    .ra-scope-answers { justify-content: flex-start; }
+
+    .ra-cat-head { flex-wrap: wrap; gap: 6px 10px; }
+    .ra-cat-name { flex: 1 1 100%; order: 1; }
+    .ra-cat-meta { order: 2; }
+    .ra-chevron { order: 3; margin-left: auto; }
+
+    .ra-act-head { flex-direction: column; gap: 6px; }
+    .ra-arts { align-self: flex-start; }
+
+    .ra-qlabel { display: block; min-width: 0; margin: 0 0 3px 0; width: fit-content; }
+
+    .ra-status { flex-direction: column; }
+    .ra-status-btn { width: 100%; }
+
+    .ra-summary { flex-direction: column; align-items: stretch; gap: 14px; }
+    .ra-score { min-width: 0; }
+
+    .ra-actions { flex-direction: column; }
+    .ra-actions button { width: 100%; }
+
+    .ra-tabs .ra-tab { flex: 1 1 auto; }
+
+    /* Tables stay readable by scrolling rather than crushing the columns. */
+    #ra-view { overflow-x: auto; }
+    .ra-table { min-width: 520px; }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Simeon Atanasov | GDPR Readiness Assessment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="An accountability-based GDPR Readiness Assessment. Record which privacy management activities are in place and see which GDPR Articles they evidence, scored by Article, by category and overall.">
+		<link rel="stylesheet" href="pages/gdpr-readiness/readiness.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Simeon Atanasov</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="power-bi.html">Power BI</a></li>
+						<li><a href="my-asteroids-game.html">My Asteroids Game</a></li>
+						<li><a href="risk-matrix-original.html">Risk Matrix</a></li>
+						<li><a href="gdpr-readiness.html" class="active">GDPR Readiness</a></li>
+						<li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li>
+						<li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<header>
+								<h1 class="major">GDPR Readiness Assessment 📋</h1>
+							</header>
+							<section>
+								<p>Most compliance checklists ask whether you comply with an Article. This one works the other way round. You record which privacy management activities you actually perform, and the tool derives which GDPR Articles those activities evidence. Activities are finite and observable; legal requirements are not. That inversion is what makes the assessment repeatable.</p>
+							</section>
+
+							<div class="readiness">
+
+								<!-- Scope -->
+								<section class="ra-block" id="scope-block">
+									<h2>Step 1: Scope</h2>
+									<p class="ra-lead">Answer these first. A "no" removes the activities that depend on it from scoring entirely, rather than counting them against you.</p>
+									<div id="scope-questions"></div>
+								</section>
+
+								<!-- Assessment -->
+								<section class="ra-block">
+									<h2>Step 2: Assessment</h2>
+									<p class="ra-lead">For each activity, record its status. The Privacy Office question captures the programme view; the Operational Unit question is the one to put to a business area such as HR, Marketing or Sales.</p>
+									<div class="ra-actions">
+										<button id="ra-expand">Expand all</button>
+										<button id="ra-collapse">Collapse all</button>
+										<button id="ra-fill-implemented" class="ra-secondary">Mark all implemented</button>
+										<button id="ra-reset-status" class="ra-secondary">Reset statuses</button>
+									</div>
+									<div id="activity-list"></div>
+								</section>
+
+								<!-- Results -->
+								<section class="ra-block">
+									<h2>Step 3: Readiness</h2>
+									<div class="ra-summary" id="ra-summary"></div>
+
+									<div class="ra-tabs" role="tablist">
+										<button class="ra-tab is-active" data-view="category" role="tab">By category</button>
+										<button class="ra-tab" data-view="article" role="tab">By Article</button>
+										<button class="ra-tab" data-view="gaps" role="tab">Gap list</button>
+									</div>
+									<div id="ra-view"></div>
+
+									<p class="ra-caveat"><strong>What this score means.</strong> It measures demonstrable accountability, not blanket compliance. Only Articles that a management activity can evidence are scored, so scope, definitions and Member State provisions sit outside it. A high score means you could show a supervisory authority what you do; it is not a legal opinion.</p>
+								</section>
+
+								<div class="ra-actions">
+									<button id="ra-save">Save</button>
+									<button id="ra-load">Load</button>
+									<button id="ra-clear">Clear</button>
+									<button id="ra-export">Export to Excel</button>
+									<button id="ra-forget" class="ra-secondary">Forget saved copy</button>
+								</div>
+
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Simeon. All rights reserved.</li>
+					<li><a href="terms.html">Terms of use</a></li>
+					<li><a href="privacy-notice.html">Privacy notice</a></li>
+					<li><a href="cookie-notice.html">Cookie notice</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="pages/gdpr-readiness/readiness-data.js"></script>
+			<script src="pages/gdpr-readiness/readiness.js"></script>
+	</body>
+</html>
