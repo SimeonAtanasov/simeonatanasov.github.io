@@ -3630,8 +3630,18 @@ input, select, textarea {
 							padding: 0.65em;
 							position: absolute;
 							right: 0;
-							top: calc(100% + 0.5em);
+							top: 100%;
 							z-index: 10001;
+						}
+
+						#header .assessment-menu:hover::after,
+						#header .assessment-menu:focus-within::after {
+							bottom: -0.5em;
+							content: '';
+							height: 0.5em;
+							left: 0;
+							position: absolute;
+							width: 100%;
 						}
 
 						#header .assessment-menu:hover .assessment-submenu,
