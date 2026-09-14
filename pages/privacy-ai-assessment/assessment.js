@@ -1037,7 +1037,8 @@
 			key: "scope",
 			title: "Scope & context",
 			questions: [
-				{ id: "jurisdictions", type: "text", label: "Which countries or jurisdictions are affected?" },
+				{ id: "jurisdictions", type: "multiselect", label: "Which countries or jurisdictions are affected?", options: COUNTRIES_REGIONS,
+					note: { label: "Specify the other country or countries", visibleIf: function (v) { return (v || []).indexOf("Other") !== -1; } } },
 				{ id: "functionalArea", type: "select", label: "In which functional area did the incident happen?", options: ["HR & People", "Marketing & Sales", "Customer Service", "Finance", "IT & Technology", "Supply Chain & Operations", "Legal & Compliance", "Other"],
 					note: { label: "Specify the functional area", visibleIf: function (v) { return v === "Other"; } } },
 				{ id: "thirdPartyIncident", type: "yesno", label: "Is this a third-party or supplier incident?",
@@ -2822,7 +2823,7 @@
 	}
 
 	function fieldFor(q, onAnswerChange) {
-		var wrap = el("div", { class: "paa-field" });
+		var wrap = el("div", { class: "paa-field", "data-qid": q.id });
 		wrap.appendChild(el("p", {}, [q.label]));
 
 		if (q.type === "text") {
@@ -2902,6 +2903,9 @@
 					if (cb.checked) { if (arr.indexOf(opt) === -1) arr.push(opt); }
 					else { arr = arr.filter(function (x) { return x !== opt; }); }
 					state.answers[q.id] = arr;
+					box.className = "paa-check-box" + (cb.checked ? " is-selected" : "");
+					box.textContent = cb.checked ? "✓" : "";
+					label.className = cb.checked ? "is-selected" : "";
 					if (onAnswerChange) onAnswerChange();
 				});
 				var box = el("span", { class: "paa-check-box" + (checked ? " is-selected" : "") }, [checked ? "✓" : ""]);
@@ -3023,11 +3027,52 @@
 		}
 
 		var qlist = el("div", { class: "paa-questions" });
+		/* Rebuilding the list is what makes conditional questions and their note
+		 * boxes appear and disappear, but it also throws away the filter text and
+		 * scroll position of a long picker such as the country list. Carry those
+		 * across, keyed by question id, so ticking a country does not send the
+		 * reader back to the top of 200 options with the filter cleared. */
+		function pickerState() {
+			var keep = {};
+			qlist.querySelectorAll(".paa-field[data-qid]").forEach(function (f) {
+				var flt = f.querySelector(".paa-checklist-filter");
+				var lst = f.querySelector(".paa-checklist");
+				if (flt || lst) {
+					keep[f.getAttribute("data-qid")] = {
+						filter: flt ? flt.value : "",
+						scroll: lst ? lst.scrollTop : 0
+					};
+				}
+			});
+			return keep;
+		}
+
+		function restorePickerState(keep) {
+			qlist.querySelectorAll(".paa-field[data-qid]").forEach(function (f) {
+				var saved = keep[f.getAttribute("data-qid")];
+				if (!saved) return;
+
+				var flt = f.querySelector(".paa-checklist-filter");
+				if (flt && saved.filter) {
+					flt.value = saved.filter;
+					var term = saved.filter.trim().toLowerCase();
+					f.querySelectorAll(".paa-checklist label").forEach(function (lbl) {
+						lbl.style.display = (!term || lbl.textContent.toLowerCase().indexOf(term) !== -1) ? "" : "none";
+					});
+				}
+
+				var lst = f.querySelector(".paa-checklist");
+				if (lst) lst.scrollTop = saved.scroll;
+			});
+		}
+
 		function refreshQuestions() {
+			var keep = pickerState();
 			qlist.innerHTML = "";
 			visibleQuestions(step).forEach(function (q) {
 				qlist.appendChild(el("div", { class: "paa-question" }, [fieldFor(q, onAnswerChanged)]));
 			});
+			restorePickerState(keep);
 		}
 
 		/* An answer can open up later steps or close them down again, so the step
