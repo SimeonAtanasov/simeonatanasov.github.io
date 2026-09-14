@@ -2978,18 +2978,33 @@
 		 * costs almost no height on a phone. */
 		var layout = el("div", { class: "paa-layout" });
 		var main = el("div", { class: "paa-main" });
-		if (steps.length > 1) layout.appendChild(buildStepRail(steps));
+		var railEl = steps.length > 1 ? buildStepRail(steps) : null;
+		if (railEl) layout.appendChild(railEl);
 		layout.appendChild(main);
 		root.appendChild(layout);
 
-		main.appendChild(el("div", { class: "paa-progress" }, [
-			el("div", { class: "paa-progress-bar", style: "width:" + Math.round((state.stepIndex / steps.length) * 100) + "%" })
-		]));
+		var bar = el("div", { class: "paa-progress-bar" });
+		main.appendChild(el("div", { class: "paa-progress" }, [bar]));
 		// Some steps only appear once an earlier answer opens them up, so the
 		// total is "up to N" until every step in the module is in play -
 		// otherwise the count jumps (e.g. "1 of 2" then "3 of 11").
-		var totalLabel = steps.length === mod.steps.length ? String(steps.length) : ("up to " + mod.steps.length);
-		main.appendChild(el("p", { class: "paa-step" }, ["Step " + (state.stepIndex + 1) + " of " + totalLabel + " - " + mod.label]));
+		// Some steps only appear once an earlier answer opens them up, so the
+		// total is "up to N" until every step in the module is in play -
+		// otherwise the count jumps (e.g. "1 of 2" then "3 of 11").
+		function stepCountLabel() {
+			var total = steps.length === mod.steps.length ? String(steps.length) : ("up to " + mod.steps.length);
+			return "Step " + (state.stepIndex + 1) + " of " + total + " - " + mod.label;
+		}
+		function progressWidth() {
+			return Math.round((state.stepIndex / steps.length) * 100) + "%";
+		}
+		function nextLabel() {
+			return state.stepIndex === steps.length - 1 ? "See results" : "Next";
+		}
+
+		bar.style.width = progressWidth();
+		var stepLabel = el("p", { class: "paa-step" }, [stepCountLabel()]);
+		main.appendChild(stepLabel);
 		main.appendChild(el("h3", {}, [step.title]));
 		if (step.intro) main.appendChild(el("p", { class: "paa-step-intro" }, [step.intro]));
 
@@ -3011,9 +3026,44 @@
 		function refreshQuestions() {
 			qlist.innerHTML = "";
 			visibleQuestions(step).forEach(function (q) {
-				qlist.appendChild(el("div", { class: "paa-question" }, [fieldFor(q, refreshQuestions)]));
+				qlist.appendChild(el("div", { class: "paa-question" }, [fieldFor(q, onAnswerChanged)]));
 			});
 		}
+
+		/* An answer can open up later steps or close them down again, so the step
+		 * count, the progress bar, the rail and the Next button all have to be
+		 * recomputed when one changes. Without this, answering "yes" on a screening
+		 * step left the button reading "See results" even though that answer had
+		 * just added nine more steps, and the rail still listed only the two steps
+		 * that were in play before. */
+		function refreshChrome() {
+			steps = visibleSteps(mod);
+
+			var at = steps.indexOf(step);
+			if (at === -1) {
+				// This step is itself no longer in play, so there is nothing to
+				// patch up: rebuild from whatever now sits at this position.
+				if (state.stepIndex >= steps.length) state.stepIndex = Math.max(0, steps.length - 1);
+				renderStep();
+				return;
+			}
+			state.stepIndex = at;
+
+			bar.style.width = progressWidth();
+			stepLabel.textContent = stepCountLabel();
+			next.textContent = nextLabel();
+
+			var fresh = steps.length > 1 ? buildStepRail(steps) : null;
+			if (railEl && fresh) { layout.replaceChild(fresh, railEl); railEl = fresh; }
+			else if (railEl && !fresh) { layout.removeChild(railEl); railEl = null; }
+			else if (!railEl && fresh) { layout.insertBefore(fresh, main); railEl = fresh; }
+		}
+
+		function onAnswerChanged() {
+			refreshQuestions();
+			refreshChrome();
+		}
+
 		refreshQuestions();
 		main.appendChild(qlist);
 
@@ -3027,8 +3077,7 @@
 			cancel.addEventListener("click", goLanding);
 			nav.appendChild(cancel);
 		}
-		var isLast = state.stepIndex === steps.length - 1;
-		var next = el("button", { class: "button" }, [isLast ? "See results" : "Next"]);
+		var next = el("button", { class: "button" }, [nextLabel()]);
 		next.addEventListener("click", function () {
 			state.stepIndex++;
 			renderStep();
