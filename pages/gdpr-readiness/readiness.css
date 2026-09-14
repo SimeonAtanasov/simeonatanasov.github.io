@@ -461,6 +461,19 @@
     line-height: 1.25;
 }
 
+/* The category headers are buttons too, so they also inherit that fixed height
+   and line-height, plus the template's uppercase and 0.25em tracking. The wide
+   shouty text wrapped to two lines on a phone, the fixed height could not grow
+   with it, and the content spilled out over the card below. */
+
+.ra-cat-head {
+    height: auto;
+    min-height: 0;
+    line-height: 1.35;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
 /* --------------------------------------------------------------- mobile --- */
 
 @media screen and (max-width: 768px) {
@@ -487,6 +500,11 @@
 
     .ra-summary { flex-direction: column; align-items: stretch; gap: 14px; }
     .ra-score { min-width: 0; }
+
+    /* flex-basis applies to the height once the row becomes a column, so the
+       260px basis that sets the detail column's width on a desktop was forcing
+       a 260px tall block around three lines of text on a phone. */
+    .ra-score-detail { flex: 0 0 auto; }
 
     .ra-actions { flex-direction: column; }
     .ra-actions button { width: 100%; }
