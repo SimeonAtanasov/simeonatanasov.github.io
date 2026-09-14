@@ -4292,6 +4292,19 @@ height: 100%;
 		display: none;
 	}
 
+	/* The template's nav tracking (0.25em) and gap were chosen for four or five
+	   items. With nine they force a wrap on every laptop, which then collapses
+	   the whole nav behind a Menu button on screens with plenty of room for it.
+	   Tightening both keeps it on one row from roughly 1366px up. */
+
+	#header > nav > ul {
+		gap: 0.5em 0.9em;
+	}
+
+		#header > nav > ul > li a {
+			letter-spacing: 0.12em;
+		}
+
 
 	#header.is-collapsed {
 		display: -moz-flex;
@@ -4365,8 +4378,11 @@ height: 100%;
 				display: none;
 				position: absolute;
 				top: 100%;
-				right: 0;
-				left: 0;
+				right: 1.5em;
+				left: auto;
+				width: 22em;
+				max-width: calc(100% - 3em);
+				border-radius: 0 0 6px 6px;
 				z-index: 1001;
 				flex-direction: column;
 				align-items: stretch;
@@ -4399,7 +4415,7 @@ height: 100%;
 						display: block;
 						width: 100%;
 						height: auto;
-						padding: 1em 0;
+						padding: 0.85em 0;
 						line-height: 1.4;
 						font-size: 0.6em;
 					}
@@ -4435,6 +4451,16 @@ height: 100%;
 		#header.is-collapsed {
 			position: relative;
 			top: auto;
+		}
+
+		/* A floating card looks wrong on a phone, so it spans the full width
+		   there instead. */
+		#header.is-collapsed > nav > ul {
+			right: 0;
+			left: 0;
+			width: auto;
+			max-width: none;
+			border-radius: 0;
 		}
 
 	}
