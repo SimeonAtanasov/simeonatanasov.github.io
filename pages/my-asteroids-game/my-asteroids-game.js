@@ -84,7 +84,24 @@ class Player {
     this.draw()
     this.position.x += this.velocity.x
     this.position.y += this.velocity.y
+    this.wrap()
   }
+
+  /* Classic Asteroids wraps at the edges. Without this the ship just kept
+     flying and the game carried on with an empty screen and no way back. The
+     margin is the ship's own reach - its nose sits 30px ahead of the centre
+     point - so it leaves the screen completely before reappearing opposite,
+     rather than popping out of the edge it just left. */
+  wrap() {
+    const margin = 30
+
+    if (this.position.x < -margin) this.position.x = canvas.width + margin
+    else if (this.position.x > canvas.width + margin) this.position.x = -margin
+
+    if (this.position.y < -margin) this.position.y = canvas.height + margin
+    else if (this.position.y > canvas.height + margin) this.position.y = -margin
+  }
+
   getVertices() {
     const cos = Math.cos(this.rotation)
     const sin = Math.sin(this.rotation)
