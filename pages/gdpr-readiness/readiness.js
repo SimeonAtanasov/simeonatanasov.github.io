@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // clicking the active answer clears it back to unanswered
           state.scope[c.id] = (state.scope[c.id] === isYes) ? undefined : isYes;
           renderScope();
-          renderActivities();
+          rerenderActivities();
           renderResults();
         });
         group.appendChild(b);
@@ -126,11 +126,17 @@ document.addEventListener("DOMContentLoaded", () => {
       head.className = "ra-cat-head";
       head.setAttribute("aria-expanded", "false");
 
-      const done = live.filter(a => statusOf(a.id) !== "none" && statusOf(a.id) !== undefined).length;
+      /* "Answered" means the reader actually chose something. It cannot mean
+       * "not Not in place", because "none" is also the default, so a category
+       * deliberately marked Not in place throughout would have read 0 / 6. */
+      const answered = () => live.filter(x => state.status[x.id] !== undefined).length;
+
       head.innerHTML =
         '<span class="ra-cat-name">' + catName + '</span>' +
-        '<span class="ra-cat-meta">' + done + " / " + live.length + " answered</span>" +
+        '<span class="ra-cat-meta">' + answered() + " / " + live.length + " answered</span>" +
         '<span class="ra-chevron" aria-hidden="true">+</span>';
+
+      const metaEl = head.querySelector(".ra-cat-meta");
 
       const body = document.createElement("div");
       body.className = "ra-cat-body";
@@ -172,18 +178,24 @@ document.addEventListener("DOMContentLoaded", () => {
             b.className = "ra-status-btn ra-s-" + s.key;
             b.textContent = s.label;
             b.title = s.hint;
-            if (statusOf(a.id) === s.key) b.classList.add("is-on");
+            /* Highlight only a status the reader actually chose. statusOf()
+             * falls back to "none" for scoring, but showing Not in place as
+             * already selected on every untouched activity would contradict
+             * the "0 / 6 answered" counter and hide what is still to do.
+             * An unanswered activity still scores zero either way. */
+            if (state.status[a.id] === s.key) b.classList.add("is-on");
+            /* Update this one activity in place rather than rebuilding the
+             * whole list. The rebuild collapsed every open category, which
+             * changed the height of the page underneath the pointer and threw
+             * the reader somewhere else entirely. Nothing above or below this
+             * activity needs to change, so nothing above or below it moves. */
             b.addEventListener("click", () => {
               state.status[a.id] = s.key;
-              renderActivities();
+              opts.querySelectorAll(".ra-status-btn").forEach(other => {
+                other.classList.toggle("is-on", other === b);
+              });
+              metaEl.textContent = answered() + " / " + live.length + " answered";
               renderResults();
-              // keep this category open after the re-render
-              const reopened = listEl.querySelectorAll(".ra-cat")[catIndex];
-              if (reopened) {
-                reopened.querySelector(".ra-cat-body").hidden = false;
-                reopened.querySelector(".ra-cat-head").setAttribute("aria-expanded", "true");
-                reopened.querySelector(".ra-chevron").textContent = "−";
-              }
             });
             opts.appendChild(b);
           });
@@ -196,6 +208,31 @@ document.addEventListener("DOMContentLoaded", () => {
       section.append(head, body);
       listEl.appendChild(section);
     });
+  }
+
+  /* A full rebuild is still needed when the set of in-scope activities changes,
+   * or when every status is overwritten at once. Do it without losing the
+   * reader's place: remember which categories were open and where the page was
+   * scrolled to, then put both back. */
+  function rerenderActivities() {
+    const wasOpen = [];
+    listEl.querySelectorAll(".ra-cat").forEach((c, i) => {
+      if (!c.querySelector(".ra-cat-body").hidden) wasOpen.push(i);
+    });
+    const y = window.scrollY;
+
+    renderActivities();
+
+    const cats = listEl.querySelectorAll(".ra-cat");
+    wasOpen.forEach(i => {
+      const c = cats[i];
+      if (!c) return;
+      c.querySelector(".ra-cat-body").hidden = false;
+      c.querySelector(".ra-cat-head").setAttribute("aria-expanded", "true");
+      c.querySelector(".ra-chevron").textContent = "−";
+    });
+
+    window.scrollTo(0, y);
   }
 
   // -------------------------------------------------------------- scoring ---
@@ -342,14 +379,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("ra-fill-implemented").addEventListener("click", () => {
     if (!confirm("Mark every in-scope activity as implemented? This overwrites the statuses you have set.")) return;
     ACTIVITIES.filter(inScope).forEach(a => { state.status[a.id] = "implemented"; });
-    renderActivities();
+    rerenderActivities();
     renderResults();
   });
 
   document.getElementById("ra-reset-status").addEventListener("click", () => {
     if (!confirm("Reset every status back to Not in place?")) return;
     state.status = {};
-    renderActivities();
+    rerenderActivities();
     renderResults();
   });
 
@@ -371,7 +408,7 @@ document.addEventListener("DOMContentLoaded", () => {
     state.scope = saved.scope || {};
     state.status = saved.status || {};
     renderScope();
-    renderActivities();
+    rerenderActivities();
     renderResults();
     alert("Assessment loaded.");
   });
@@ -384,7 +421,7 @@ document.addEventListener("DOMContentLoaded", () => {
     state.scope = {};
     state.status = {};
     renderScope();
-    renderActivities();
+    rerenderActivities();
     renderResults();
   });
 

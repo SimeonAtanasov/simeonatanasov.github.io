@@ -2558,6 +2558,36 @@
 
 	var root = document.getElementById("paa-app");
 
+	/* Every view change rebuilds #paa-app from scratch. Without this the page
+	 * keeps whatever scroll offset it had, so stepping from a long question set
+	 * to a short one drops the reader below the tool entirely, down in the
+	 * advice sections at the foot of the page. Put them at the top of whatever
+	 * just rendered, clear of the sticky site header. */
+	function scrollToTool() {
+		if (!root) return;
+		var gap = 14;
+		var header = document.getElementById("header");
+		if (header && window.getComputedStyle(header).position === "sticky") {
+			gap += header.getBoundingClientRect().height;
+		}
+		var y = root.getBoundingClientRect().top + window.pageYOffset - gap;
+		if (y < 0) y = 0;
+		var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		try {
+			window.scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
+		} catch (e) {
+			window.scrollTo(0, y);
+		}
+	}
+
+	/* Returning to the landing page from inside a tool should also put the
+	 * reader at the top of it. The very first render on page load must not, or
+	 * arriving at the page would scroll past its introduction. */
+	function goLanding() {
+		renderLanding();
+		scrollToTool();
+	}
+
 	function el(tag, attrs, children) {
 		var e = document.createElement(tag);
 		attrs = attrs || {};
@@ -2580,7 +2610,7 @@
 		var wrap = el("div", { class: "paa-module-switch" });
 
 		var back = el("button", { class: "button alt" }, ["← Back to overview"]);
-		back.addEventListener("click", renderLanding);
+		back.addEventListener("click", goLanding);
 		wrap.appendChild(el("div", { class: "paa-nav" }, [back]));
 
 		wrap.appendChild(el("h2", { class: "paa-module-title" }, [mod.label]));
@@ -2675,7 +2705,7 @@
 				importStatus = error
 					? { ok: false, message: "Could not restore that file: " + error }
 					: { ok: true, message: "Restored " + count + " assessment" + (count === 1 ? "" : "s") + " from the file." };
-				renderLanding();
+				goLanding();
 			});
 		});
 	}
@@ -2685,6 +2715,7 @@
 		state.stepIndex = 0;
 		state.answers = seed || {};
 		renderStep();
+		scrollToTool();
 	}
 
 	/* Carries what the Privacy Assessment already established into the full DPIA, so
@@ -2931,11 +2962,11 @@
 		var nav = el("div", { class: "paa-nav actions" });
 		if (state.stepIndex > 0) {
 			var back = el("button", { class: "button alt" }, ["Back"]);
-			back.addEventListener("click", function () { state.stepIndex--; renderStep(); });
+			back.addEventListener("click", function () { state.stepIndex--; renderStep(); scrollToTool(); });
 			nav.appendChild(back);
 		} else {
 			var cancel = el("button", { class: "button alt" }, ["Cancel"]);
-			cancel.addEventListener("click", renderLanding);
+			cancel.addEventListener("click", goLanding);
 			nav.appendChild(cancel);
 		}
 		var isLast = state.stepIndex === steps.length - 1;
@@ -2943,6 +2974,7 @@
 		next.addEventListener("click", function () {
 			state.stepIndex++;
 			renderStep();
+			scrollToTool();
 		});
 		nav.appendChild(next);
 		root.appendChild(nav);
@@ -3500,7 +3532,7 @@
 			nav.appendChild(go);
 		});
 		var home = el("button", { class: "button alt" }, ["Back to overview"]);
-		home.addEventListener("click", renderLanding);
+		home.addEventListener("click", goLanding);
 		nav.appendChild(home);
 		var printBtn = el("button", { class: "button alt" }, ["Print / Save as PDF"]);
 		printBtn.addEventListener("click", function () { window.print(); });
