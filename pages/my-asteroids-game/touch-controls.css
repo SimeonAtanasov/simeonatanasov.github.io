@@ -1,0 +1,116 @@
+/* On-screen controls for the Asteroids game.
+
+   The pad is injected by my-asteroids-game.js and sits over the canvas. It only
+   shows where it is useful: a coarse pointer (phones, tablets), or the
+   .has-touch class the script sets for browsers that report touch points
+   without matching that media query. A mouse-only desktop never sees it and
+   keeps the keyboard legend drawn on the canvas.
+
+   touch-action: none on the buttons stops a press from scrolling or zooming the
+   page, which otherwise makes holding thrust impossible on a phone. */
+
+.touch-pad {
+	display: none;
+}
+
+@media (pointer: coarse) {
+	.touch-pad { display: flex; }
+}
+
+body.has-touch .touch-pad {
+	display: flex;
+}
+
+.touch-pad {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 20;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding: 0 14px 16px 14px;
+	pointer-events: none;                 /* only the buttons take input */
+}
+
+.touch-cluster {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	pointer-events: auto;
+}
+
+.touch-right {
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+.touch-row {
+	display: flex;
+	gap: 10px;
+}
+
+.touch-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 58px;
+	height: 58px;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: normal;
+	text-transform: none;
+	color: #ffffff !important;
+	background: rgba(255, 255, 255, 0.14);
+	border: solid 2px rgba(255, 255, 255, 0.45) !important;
+	border-radius: 50%;
+	box-shadow: none;
+	cursor: pointer;
+	touch-action: none;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.touch-btn:before,
+.touch-btn:after {
+	display: none;
+	content: none;
+}
+
+.touch-btn.is-down {
+	background: rgba(255, 255, 255, 0.4);
+	border-color: #ffffff !important;
+}
+
+.touch-thrust {
+	width: 66px;
+	height: 66px;
+	font-size: 24px;
+}
+
+.touch-fire {
+	width: 78px;
+	height: 78px;
+	font-size: 13px;
+	letter-spacing: 0.08em;
+	background: rgba(224, 102, 102, 0.55);
+	border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.touch-fire.is-down {
+	background: rgba(224, 102, 102, 0.95);
+}
+
+/* Narrow phones: shrink so both clusters still clear the middle of the screen. */
+@media screen and (max-width: 360px) {
+	.touch-pad { padding: 0 10px 12px 10px; }
+	.touch-btn { width: 50px; height: 50px; font-size: 18px; }
+	.touch-thrust { width: 56px; height: 56px; font-size: 20px; }
+	.touch-fire { width: 66px; height: 66px; font-size: 11px; }
+	.touch-row { gap: 8px; }
+}

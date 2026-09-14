@@ -178,6 +178,10 @@ const keys = {
   }
 }
 
+/* Set by the touch pad below once it is showing, so the draw loop can leave out
+   the keyboard legend. Declared here because animate() runs before that code. */
+var touchControlsActive = false
+
 const SPEED = 6
 const ROTATIONAL_SPEED = 0.05
 const FRICTION = 0.97
@@ -356,15 +360,18 @@ function animate() {
   c.fillText('Highest Score: ' + highestScore, 20, 80);
 
 
-  // Draw the control guides
-  c.font = '20px Arial';
-  c.fillStyle = 'white';
-  c.fillText('Controls:', 20, canvas.height - 160);
-  c.fillText('W - Forward', 20, canvas.height - 130);
-  c.fillText('A - Rotate Left', 20, canvas.height - 100);
-  c.fillText('D - Rotate Right', 20, canvas.height - 70);
-  c.fillText('S - Decelerate', 20, canvas.height - 40);
-  c.fillText('Space - Shoot', 20, canvas.height - 10);
+  // Draw the control guides. Skipped where the touch pad is showing: it sits in
+  // the same bottom-left corner, and naming keys is no help without a keyboard.
+  if (!touchControlsActive) {
+    c.font = '20px Arial';
+    c.fillStyle = 'white';
+    c.fillText('Controls:', 20, canvas.height - 160);
+    c.fillText('W - Forward', 20, canvas.height - 130);
+    c.fillText('A - Rotate Left', 20, canvas.height - 100);
+    c.fillText('D - Rotate Right', 20, canvas.height - 70);
+    c.fillText('S - Decelerate', 20, canvas.height - 40);
+    c.fillText('Space - Shoot', 20, canvas.height - 10);
+  }
   
 
   for (let j = projectiles.length - 1; j >= 0; j--) {
@@ -503,6 +510,25 @@ if (keys.w.pressed) {
 
 animate()
 
+/* Firing lives in one place so the keyboard and the on-screen touch pad do the
+   same thing rather than drifting apart. */
+function fire() {
+  playSound('pages/my-asteroids-game/sounds/blaster-103340.mp3');
+
+  projectiles.push(
+    new Projectile({
+      position: {
+        x: player.position.x + Math.cos(player.rotation) * 30,
+        y: player.position.y + Math.sin(player.rotation) * 30,
+      },
+      velocity: {
+        x: Math.cos(player.rotation) * PROJECTILE_SPEED,
+        y: Math.sin(player.rotation) * PROJECTILE_SPEED,
+      },
+    })
+  )
+}
+
 window.addEventListener('keydown', (event) => {
   switch (event.code) {
     case 'KeyW':
@@ -519,27 +545,7 @@ window.addEventListener('keydown', (event) => {
       break
     case 'Space':
       event.preventDefault(); // Prevent the page from scrolling
-      // // Play shoot sound effect
-      // const shootSound = new Audio('pages/my-asteroids-game/sounds/blaster-103340.mp3');
-      // shootSound.volume = 0.1;  // Reduce volume to 20%
-      // shootSound.play(); // Play the sound
-      playSound('pages/my-asteroids-game/sounds/blaster-103340.mp3');
-
-
-
-      projectiles.push(
-        new Projectile({
-          position: {
-            x: player.position.x + Math.cos(player.rotation) * 30,
-            y: player.position.y + Math.sin(player.rotation) * 30,
-          },
-          velocity: {
-            x: Math.cos(player.rotation) * PROJECTILE_SPEED,
-            y: Math.sin(player.rotation) * PROJECTILE_SPEED,
-          },
-        })
-      )
-      // console.log(projectiles)
+      fire()
       break
   }
 })
@@ -567,3 +573,114 @@ document.getElementById('restartButton').addEventListener('click', () => {
   // Reload the page (simple approach)
   location.reload();
 });
+
+
+/* ---------------------------------------------------------------------------
+   On-screen controls.
+
+   The game only ever read the keyboard, so on a phone it could be watched but
+   not played. This adds a thumb pad over the canvas that sets exactly the same
+   keys.*.pressed flags the key handlers set, and calls the same fire(), so
+   there is one set of game rules rather than two.
+
+   It is injected here rather than written into the page so the markup cannot
+   drift from the code that drives it. CSS decides when it is visible: a coarse
+   pointer, or the .has-touch class set below for browsers that report touch
+   points without matching that query.
+   --------------------------------------------------------------------------- */
+(function () {
+
+	var container = document.getElementById('game-container');
+	if (!container) return;
+
+	var isTouch = (navigator.maxTouchPoints || 0) > 0 ||
+		'ontouchstart' in window ||
+		(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+	if (isTouch) document.body.classList.add('has-touch');
+
+	var pad = document.createElement('div');
+	pad.className = 'touch-pad';
+	pad.innerHTML =
+		'<div class="touch-cluster touch-left">' +
+			'<button type="button" class="touch-btn" data-hold="s" aria-label="Slow down">&#9660;</button>' +
+			'<div class="touch-row">' +
+				'<button type="button" class="touch-btn" data-hold="a" aria-label="Rotate left">&#9664;</button>' +
+				'<button type="button" class="touch-btn" data-hold="d" aria-label="Rotate right">&#9654;</button>' +
+			'</div>' +
+		'</div>' +
+		'<div class="touch-cluster touch-right">' +
+			'<button type="button" class="touch-btn touch-thrust" data-hold="w" aria-label="Thrust">&#9650;</button>' +
+			'<button type="button" class="touch-btn touch-fire" data-fire="1" aria-label="Fire">FIRE</button>' +
+		'</div>';
+	container.appendChild(pad);
+
+	touchControlsActive = isTouch;
+
+	/* A held button has to keep its flag set until the finger lifts, and has to
+	   clear it if the finger slides off, the browser cancels the gesture, or the
+	   page is backgrounded - otherwise the ship thrusts forever. */
+	function hold(btn, key) {
+		function down(e) {
+			e.preventDefault();
+			keys[key].pressed = true;
+			btn.classList.add('is-down');
+			if (btn.setPointerCapture && e.pointerId !== undefined) {
+				try { btn.setPointerCapture(e.pointerId); } catch (err) {}
+			}
+		}
+		function up(e) {
+			if (e) e.preventDefault();
+			keys[key].pressed = false;
+			btn.classList.remove('is-down');
+		}
+		btn.addEventListener('pointerdown', down);
+		btn.addEventListener('pointerup', up);
+		btn.addEventListener('pointercancel', up);
+		btn.addEventListener('pointerleave', up);
+		btn.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+		return up;
+	}
+
+	var releases = [];
+	pad.querySelectorAll('[data-hold]').forEach(function (btn) {
+		releases.push(hold(btn, btn.getAttribute('data-hold')));
+	});
+
+	/* Holding Space on a keyboard repeats, so holding Fire does too, at a rate
+	   that is playable without flooding the screen with projectiles. */
+	var fireBtn = pad.querySelector('[data-fire]');
+	var fireTimer = null;
+
+	function stopFire(e) {
+		if (e) e.preventDefault();
+		clearInterval(fireTimer);
+		fireTimer = null;
+		fireBtn.classList.remove('is-down');
+	}
+
+	fireBtn.addEventListener('pointerdown', function (e) {
+		e.preventDefault();
+		fireBtn.classList.add('is-down');
+		fire();
+		clearInterval(fireTimer);
+		fireTimer = setInterval(fire, 180);
+		if (fireBtn.setPointerCapture && e.pointerId !== undefined) {
+			try { fireBtn.setPointerCapture(e.pointerId); } catch (err) {}
+		}
+	});
+	fireBtn.addEventListener('pointerup', stopFire);
+	fireBtn.addEventListener('pointercancel', stopFire);
+	fireBtn.addEventListener('pointerleave', stopFire);
+	fireBtn.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+
+	function releaseAll() {
+		releases.forEach(function (up) { up(); });
+		stopFire();
+	}
+
+	window.addEventListener('blur', releaseAll);
+	document.addEventListener('visibilitychange', function () {
+		if (document.hidden) releaseAll();
+	});
+
+})();
