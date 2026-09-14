@@ -311,8 +311,8 @@
 			toggle.setAttribute('aria-expanded', String(open));
 		});
 
-		// Following a link, clicking off the menu, Escape, or widening the
-		// window back past the breakpoint all put it away again.
+		// Following a link, clicking off the menu or pressing Escape all put it
+		// away again.
 		list.addEventListener('click', function (event) {
 			if (event.target && event.target.closest && event.target.closest('a')) close();
 		});
@@ -325,7 +325,35 @@
 			if (event.key === 'Escape' || event.key === 'Esc') close();
 		});
 
-		window.addEventListener('resize', close);
+		/* Whether the nav actually fits on one row is what decides whether it
+		   collapses, rather than a pixel breakpoint that goes stale every time a
+		   page is added to it. Measure with the collapsed state switched off,
+		   then put it back if the row wrapped. */
+		function fitsOnOneRow() {
+			var rows = 0;
+			var seen = {};
+			Array.prototype.forEach.call(list.children, function (li) {
+				var top = Math.round(li.getBoundingClientRect().top);
+				if (!(top in seen)) { seen[top] = true; rows++; }
+			});
+			return rows <= 1 && header.scrollWidth <= header.clientWidth + 1;
+		}
+
+		function fit() {
+			close();
+			header.classList.remove('is-collapsed');
+			if (!fitsOnOneRow()) header.classList.add('is-collapsed');
+		}
+
+		fit();
+		// Web fonts can change the widths after first paint, so measure again.
+		window.addEventListener('load', fit);
+
+		var fitTimer = null;
+		window.addEventListener('resize', function () {
+			clearTimeout(fitTimer);
+			fitTimer = setTimeout(fit, 120);
+		});
 
 	});
 

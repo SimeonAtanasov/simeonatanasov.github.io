@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Simeon Atanasov | Practical AI Act Advice</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="A working reference on the EU AI Act across thirteen topics: what applies to you, what you have to build, and what you have to check on other people&#39;s systems. Practical orientation, not legal advice.">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="pages/privacy-ai-assessment/practical-ai-act.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Simeon Atanasov</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="power-bi.html">Power BI</a></li>
+						<li><a href="my-asteroids-game.html">My Asteroids Game</a></li>
+						<li><a href="risk-matrix-original.html">Risk Matrix</a></li>
+						<li><a href="gdpr-readiness.html">GDPR Readiness</a></li>
+						<li class="assessment-menu"><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a><ul class="assessment-submenu"><li><a href="privacy-ai-assessment.html#tool-privacy">Privacy Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-dpia">Full DPIA</a></li><li><a href="privacy-ai-assessment.html#tool-lia">Legitimate Interest Test</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-incident">Incident &amp; Breach Severity</a></li><li><a href="privacy-ai-assessment.html#tool-tpsa">Third-Party Security</a></li></ul></li>
+						<li><a href="practical-privacy.html">Practical Privacy</a></li>
+						<li><a href="practical-ai-act-advice.html" class="active">AI Act Advice</a></li>
+						<li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+					<section id="practical-ai-act-section" class="wrapper">
+						<div class="inner">
+						<section id="practical-ai-act-advice">
+							<h2>Practical AI Act Advice</h2>
+							<div class="aia-intro">
+<p>This section distills the EU AI Act into the questions a working practitioner actually needs answered: what applies to me, what do I have to build, and what do I have to go check on other people's systems. It is written as practical orientation, not legal advice, and it is genericized - none of it describes any single organization's actual program. If a specific obligation could change the outcome of a real decision, get that decision checked by counsel who knows your facts.</p>
+							</div>
+							<p class="aia-index-label">Jump to a topic:</p>
+							<ul class="aia-index">
+<li><a href="#aia-scope-territorial-reach-key-definitions">1. Scope, Territorial Reach &amp; Key Definitions</a></li>
+<li><a href="#aia-prohibited-ai-practices">2. Prohibited AI Practices</a></li>
+<li><a href="#aia-high-risk-ai-systems-what-counts">3. High-Risk AI Systems: What Counts</a></li>
+<li><a href="#aia-obligations-for-ai-providers">4. Obligations for AI Providers</a></li>
+<li><a href="#aia-obligations-for-ai-deployers">5. Obligations for AI Deployers</a></li>
+<li><a href="#aia-general-purpose-ai-models-gpai">6. General-Purpose AI Models (GPAI)</a></li>
+<li><a href="#aia-compliance-conformity-assessment">7. Compliance &amp; Conformity Assessment</a></li>
+<li><a href="#aia-governance-enforcement">8. Governance &amp; Enforcement</a></li>
+<li><a href="#aia-building-an-enterprise-ai-governance-program-10-foundations">9. Building an Enterprise AI Governance Program: 10 Foundations</a></li>
+<li><a href="#aia-assessing-ai-risk-questions-worth-asking">10. Assessing AI Risk: Questions Worth Asking</a></li>
+<li><a href="#aia-vetting-ai-vendors-a-procurement-due-diligence-framework">11. Vetting AI Vendors: A Procurement Due-Diligence Framework</a></li>
+<li><a href="#aia-building-ai-literacy-across-an-organization">12. Building AI Literacy Across an Organization</a></li>
+<li><a href="#aia-copyright-generative-ai">13. Copyright &amp; Generative AI</a></li>
+</ul>
+							<div class="aia-accordion">
+						<details class="aia-item" id="aia-scope-territorial-reach-key-definitions">
+							<summary><span class="aia-num">1</span> Scope, Territorial Reach &amp; Key Definitions</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> The Act is a horizontal law - it does not sit inside one industry, it sits underneath all of them. That surprises two kinds of organizations: the ones who assume "AI regulation" means something for foundation-model labs and not for the internal tool their ops team built, and the ones outside the EU who assume a law with "EU" in the name can't reach them. Both assumptions are wrong often enough to be worth checking explicitly, up front, before any deeper compliance work.</p>
+<p><strong>What the law requires.</strong></p>
+<ul>
+<li><em>What counts as AI.</em> The Act's definition is broad on purpose: a system that operates with some degree of autonomy, can keep adapting its behavior after it's deployed, and turns the input it receives into outputs - predictions, generated content, recommendations, or decisions - that can affect the physical or digital world. It's built to track the OECD's definition, and it is intentionally technology-neutral rather than tied to a specific technique like machine learning.</li>
+<li><em>Who has obligations.</em> Four roles carry different duties: a <strong>provider</strong> builds an AI system or model (or has it built) and puts it into service or on the market under its own name; a <strong>deployer</strong> uses a system under its own authority (personal, non-professional use doesn't count); <strong>importers</strong> and <strong>distributors</strong> move other providers' systems into or through the EU market. Most of the Act's weight sits on providers, but that doesn't make the other three roles optional reading - and a deployer that substantially modifies a system, or rebrands it under its own name, can find itself reclassified as a provider with a provider's full obligation set.</li>
+<li><em>Territorial reach.</em> Three separate triggers each independently pull an organization into scope: being a provider placing a system or model on the EU market regardless of where you're headquartered; being a deployer established in the EU; or being a provider or deployer located anywhere else in the world whose AI output is used within the EU. That third trigger is the one non-EU organizations most often miss.</li>
+<li><em>What's carved out.</em> The Act does not reach AI used solely for military, defense, or national security purposes; AI developed and used purely for scientific research; research, testing, or development work done before a system is placed on the market or put into service; non-EU public authorities and international organizations using AI for law-enforcement or judicial cooperation with the EU; individuals using AI for purely personal, non-professional reasons; or open-source AI systems - but that last exemption stops the moment the system in question is prohibited, high-risk, subject to the transparency rules, or a general-purpose AI model with systemic risk.</li>
+<li><em>Terms worth actually knowing cold</em>, because they gate everything downstream: a <strong>serious incident</strong> is a malfunction or incident that leads (directly or indirectly) to death, serious harm to health, serious disruption of critical infrastructure, breach of an EU fundamental right, or serious harm to property or the environment; a <strong>deep fake</strong> is AI-generated or manipulated image, audio, or video content resembling a real person, object, place, entity, or event, in a way that would falsely read as authentic; a <strong>general-purpose AI model</strong> is a model trained on large amounts of data (often via large-scale self-supervision) that shows broad general competence across many distinct tasks and can be plugged into many different downstream systems - research/prototyping models not yet on the market are excluded; and <strong>biometric identification</strong> is automated recognition of physical, physiological, behavioral, or psychological traits used to establish who someone is by matching their biometric data against a stored database.</li>
+</ul>
+<p><strong>Practical steps.</strong></p>
+<ul>
+<li>Map every internal and customer-facing AI activity against the four roles - don't assume "we're just a user of someone else's tool" settles the question; check whether you modify, rebrand, or repurpose what you buy.</li>
+<li>Run the territorial test even with zero EU headcount: if your output lands in the EU, you may be in scope.</li>
+<li>Treat "it's open source" as a question, not an answer - check whether the specific use crosses into prohibited, high-risk, transparency-triggering, or systemic-risk territory.</li>
+<li>Keep a one-page scope memo per major AI initiative recording which role(s) apply and why; you'll need that reasoning again at every later compliance stage.</li>
+</ul>
+<p><strong>Worked example.</strong> A software company headquartered outside the EU embeds a generative chatbot into a SaaS product sold to EU-based customers. It has no EU office and no EU staff. It is still a provider under the Act, because its AI's output is used within the EU - the extraterritorial trigger applies regardless of where the company sits.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-prohibited-ai-practices">
+							<summary><span class="aia-num">2</span> Prohibited AI Practices</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> This is the one tier of the Act with no proportionality dial - no risk-based mitigation gets a prohibited practice back to "acceptable." It's also the tier with the harshest financial exposure (up to 7% of global annual turnover), which is the Act's way of signaling that these uses are considered incompatible with EU values outright, not merely risky. Every new AI use case should be screened against this list before any other compliance work starts, because nothing downstream fixes a practice that's banned at the root.</p>
+<p><strong>What the law requires.</strong> Eight categories of practice are prohibited:</p>
+<ol>
+<li><strong>Manipulation through subliminal or deceptive design</strong> - systems built to distort behavior below someone's conscious awareness or through deception, where that distortion causes or is likely to cause significant harm.</li>
+<li><strong>Exploiting vulnerability</strong> - targeting people because of age, disability, or socioeconomic situation to distort their behavior in a way that causes or is likely to cause significant harm.</li>
+<li><strong>Social scoring</strong> - evaluating or ranking people by social behavior or personal traits in a way that leads to detrimental treatment disconnected from, or disproportionate to, the context the data came from.</li>
+<li><strong>Individual predictive policing based purely on profiling</strong> - assessing or predicting someone's likelihood of committing a crime based solely on automated profiling of traits and characteristics, with no other basis.</li>
+<li><strong>Emotion inference in the workplace and in education</strong> - banned outright, with a narrow carve-out where the purpose is medical or safety-related.</li>
+<li><strong>Untargeted scraping to build facial recognition databases</strong> - harvesting facial images in bulk from the internet or CCTV footage to create or expand such a database.</li>
+<li><strong>Biometric categorization used to infer protected traits</strong> - using biometric data to sort people by race, political opinion, trade union membership, religious belief, sex life, or sexual orientation.</li>
+<li><strong>Real-time remote biometric identification in public by law enforcement</strong> - banned as a default rule, with narrow, pre-defined exceptions: searching for victims of specified serious crimes, or preventing an imminent threat to life such as a terrorist attack. Even within those exceptions, prior authorization from an independent judicial or administrative body is required, and law enforcement must apply appropriate safeguards.</li>
+</ol>
+<p><strong>Practical steps.</strong></p>
+<ul>
+<li>Build a short screening questionnaire into project intake: does this system score or rank people by behavior or characteristics? Does it use biometric data to infer something the person didn't choose to disclose? Does it read emotion in a workplace or classroom setting?</li>
+<li>Route anything touching biometrics, profiling, or emotion inference to legal sign-off before development starts, not after a prototype exists.</li>
+<li>For any real-time biometric use by or for law enforcement, confirm the authorization pathway exists and is documented before deployment, not retroactively.</li>
+<li>Don't rely on "we'd never do that on purpose" - the risk is usually a well-intentioned feature (engagement scoring, wellness monitoring) drifting into a banned category without anyone naming it that way.</li>
+</ul>
+<p><strong>Worked example.</strong> An employer wants to add webcam-based emotion analysis to video meetings to gauge team engagement. There's no medical or safety purpose behind it - it's a productivity feature. That puts it squarely inside the workplace emotion-recognition prohibition; no mitigation plan brings it back into bounds. The only fix is not building it.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-high-risk-ai-systems-what-counts">
+							<summary><span class="aia-num">3</span> High-Risk AI Systems: What Counts</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> "High-risk" is the tier that carries the Act's heaviest ongoing obligation set, so getting the classification right - including correctly concluding a system is <em>not</em> high-risk - is foundational. Two different routes get a system there, and they're evaluated independently.</p>
+<p><strong>What the law requires.</strong></p>
+<ul>
+<li><strong>Route one: the Annex III use-case list.</strong> A system is high-risk if it falls into one of the listed use-case categories:</li>
+</ul>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Representative uses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Biometrics</td>
+<td>Remote biometric identification; biometric categorization; emotion recognition</td>
+</tr>
+<tr>
+<td>Critical infrastructure</td>
+<td>Safety components managing road traffic, digital infrastructure, water, gas, heating, electricity</td>
+</tr>
+<tr>
+<td>Education &amp; vocational training</td>
+<td>Admissions/access decisions; evaluating learning outcomes; monitoring for prohibited behavior</td>
+</tr>
+<tr>
+<td>Employment &amp; worker management</td>
+<td>Recruitment, hiring, job advertising; promotion, termination, pay decisions; task allocation and performance monitoring</td>
+</tr>
+<tr>
+<td>Essential services &amp; benefits</td>
+<td>Public benefits eligibility; life and health insurance pricing; emergency-service dispatch; credit scoring</td>
+</tr>
+<tr>
+<td>Law enforcement</td>
+<td>Assessing victim risk; polygraph-type tools; evaluating reliability of evidence</td>
+</tr>
+<tr>
+<td>Migration, asylum &amp; border control</td>
+<td>Visa and asylum application processing; identity verification; security risk assessment; polygraph-type tools</td>
+</tr>
+<tr>
+<td>Judicial &amp; democratic processes</td>
+<td>Researching, interpreting, and applying the law; influencing the outcome of elections or referendums</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Route two: regulated products and safety components.</strong> A system is also high-risk if it is a product, or a safety component of a product, already governed by one of a specific set of EU product-safety laws - machinery (Directive 2006/42/EC), toys (Directive 2009/48/EC), medical devices (Regulation (EU) 2017/745 and 2017/746), motor vehicles (Regulation (EU) 2019/2144 and No 168/2013), aviation (Regulation (EU) 2018/1139 and (EC) 300/2008), marine equipment (Directive 2014/90/EU), rail (Directive (EU) 2016/797), gas-burning appliances (Regulation (EU) 2016/426), personal protective equipment (Regulation (EU) 2016/425), cableway installations (Regulation (EU) 2016/424), pressure equipment (Directive 2014/68/EU), lifts (Directive 2014/33/EU), and radio equipment (Directive 2014/53/EU).</li>
+<li><strong>The carve-out.</strong> A system that falls into an Annex III use case is not treated as high-risk if it doesn't pose a significant risk of harm to health, safety, or fundamental rights - for example, because it performs a narrow task that doesn't materially influence the outcome of a decision. The Act doesn't hand out a blanket pass here; it's a narrow, fact-specific exception, so don't lean on it without a documented rationale.</li>
+<li><strong>Registration.</strong> All systems classified as high-risk must be registered in the EU's public database before they go into use.</li>
+</ul>
+<p><strong>Practical steps.</strong></p>
+<ul>
+<li>Run every AI use case through both routes independently - a system can clear the product-safety route and still land in Annex III, or vice versa.</li>
+<li>When you conclude a system escapes high-risk status via the "no significant risk" carve-out, write down why, not just that it does - that record is what you'll need to defend the conclusion later.</li>
+<li>Build registration into your launch checklist for anything that does clear the high-risk bar, rather than treating it as a late-stage afterthought.</li>
+<li>Revisit classification when a system's use case changes - a tool built for one purpose that gets repurposed into, say, a hiring decision can cross the line without any code changing.</li>
+</ul>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-obligations-for-ai-providers">
+							<summary><span class="aia-num">4</span> Obligations for AI Providers</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> If you provide a high-risk AI system, the Act expects you to have engineered compliance into the system itself, not bolted it on afterward. The requirement set below is meant to be threaded through the whole development lifecycle - risk management and data governance start at design time, not at ship time.</p>
+<p><strong>What the law requires - provider checklist for high-risk systems.</strong></p>
+<ul>
+<li><strong>Risk management system.</strong> Identify, evaluate, mitigate, and monitor risks continuously and iteratively - this is a running process, not a one-time assessment filed away after launch.</li>
+<li><strong>Data and data governance.</strong> Training, validation, and test datasets must be relevant, representative, and of sufficient quality to keep bias risk down; be ready to explain your data sourcing and curation choices.</li>
+<li><strong>Technical documentation.</strong> Maintain a record covering the system's description, its performance metrics, test results, data lineage, and its conformity declaration - this is the file a regulator or auditor will ask to see first.</li>
+<li><strong>Automatic logging.</strong> The system must record its own logs - inputs, outputs, usage data - and those logs need to be retained, not just generated.</li>
+<li><strong>Instructions for use.</strong> Provide deployers with documentation that actually lets them operate the system safely - this is the artifact deployers are legally entitled to rely on.</li>
+<li><strong>Human oversight by design.</strong> Build the system so a human can meaningfully interpret and explain what it's doing, not just switch it off in an emergency.</li>
+<li><strong>Accuracy, robustness, and cybersecurity.</strong> Demonstrate - through testing and documentation, not assertion - that the system holds up to an appropriate standard on all three.</li>
+<li><strong>Quality management system.</strong> Document your organization's strategy for regulatory compliance, quality control, and risk management as a coherent whole, not scattered across teams.</li>
+<li><strong>Accessibility.</strong> High-risk systems must meet EU accessibility requirements under Directives 2016/2102 and 2019/882.</li>
+<li><strong>Conformity assessment.</strong> Complete the required conformity assessment and produce a Declaration of Conformity before the system goes to market.</li>
+<li><strong>Registration.</strong> Register the system in the European Commission's public database for high-risk AI.</li>
+<li><strong>Regulatory cooperation.</strong> Be prepared to share information about the system with regulatory authorities on request.</li>
+</ul>
+<p><strong>Practical steps.</strong> Turn the twelve items above into a stage-gated internal checklist - some belong at design (data governance, oversight design), some at pre-launch (conformity assessment, registration), and some are ongoing (logging, cooperation, risk monitoring). Assign an owner to each item rather than treating "compliance" as one team's job; documentation and quality-management obligations in particular tend to fall through cracks between engineering and legal.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-obligations-for-ai-deployers">
+							<summary><span class="aia-num">5</span> Obligations for AI Deployers</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> Most organizations touched by the Act are deployers, not providers - they're buying and using AI built by someone else, not building it themselves. That makes vendor selection a compliance decision, not just a procurement one: a deployer can be exposed by a provider's shortcomings even when the deployer did nothing wrong on its own systems. Choosing providers carefully, and doing real due diligence on them, is not optional risk hygiene here - it's load-bearing.</p>
+<p><strong>What the law requires - deployer obligations for high-risk systems.</strong></p>
+<ul>
+<li><strong>Follow the instructions for use.</strong> Obtain the provider's instructions and operate the system within them - deviating from documented use is where a deployer's own liability starts.</li>
+<li><strong>Human oversight.</strong> Assign oversight of the system to people who actually have the competence, training, and authority to exercise it - a formal sign-off from someone who doesn't understand the system doesn't satisfy this.</li>
+<li><strong>Input data quality, where you control it.</strong> If the deployer feeds the system its own input data, that data has to be relevant and sufficiently representative for the system's actual use.</li>
+<li><strong>Ongoing monitoring.</strong> Watch how the system operates in practice and report serious incidents, along with risks to health, safety, or fundamental rights, as they surface.</li>
+<li><strong>Record-keeping.</strong> Retain the logs the system generates - inputs, outputs, usage - for an appropriate period, aligned with GDPR retention principles.</li>
+<li><strong>Transparency to affected people.</strong> Inform workers' representatives and affected employees when a high-risk system is used in the workplace, and inform individuals when a system is making or materially assisting decisions about their lives.</li>
+<li><strong>Regulatory cooperation.</strong> Cooperate with authorities, including during investigations or enforcement actions.</li>
+<li><strong>Data protection impact assessment.</strong> Complete a DPIA where one applies, drawing on the documentation the provider supplied.</li>
+</ul>
+<p><strong>Fundamental rights impact assessment (FRIA).</strong> This is not a blanket requirement across all high-risk deployments - it applies to a specific subset: deployers governed by public law, deployers providing public services, and deployers using AI for credit or insurance assessment.</p>
+<p><strong>Importers and distributors.</strong> Their duty is narrower but non-negotiable: verify that the high-risk system is actually in conformity with the Act's requirements before passing it along, typically by checking the Declaration of Conformity and the CE marking rather than taking the provider's word for it.</p>
+<p><strong>Practical steps.</strong> Build a standing vendor-vetting process specifically for AI providers, distinct from general procurement due diligence - request the instructions for use and technical documentation before signing, not after. Pre-identify which of your deployments fall into the FRIA-triggering categories (public-law body, public service, credit/insurance) so the assessment isn't discovered as a last-minute gap during an audit.</p>
+<p><strong>Worked example.</strong> A bank deploys a third-party AI system to help price consumer credit. As deployer, the bank needs the provider's instructions for use, must assign competent human oversight of the pricing decisions, must complete a fundamental rights impact assessment (credit assessment is one of the triggering use cases), and must be ready to show its logs if a serious incident or a regulator's inquiry arises. None of that is satisfied by the vendor's own compliance work - it's the bank's obligation as deployer.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-general-purpose-ai-models-gpai">
+							<summary><span class="aia-num">6</span> General-Purpose AI Models (GPAI)</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> GPAI models are a separate regulatory lane from high-risk <em>systems</em> - a foundation model can sit underneath a high-risk system, a limited-risk system, or nothing classified as high-risk at all, and it has its own obligations regardless of where it ends up being used. If your organization builds or fine-tunes large general-purpose models, this lane applies to you even before you know exactly how customers will deploy them downstream.</p>
+<p><strong>What the law requires.</strong></p>
+<ul>
+<li><strong>Definition.</strong> A GPAI model is one trained on large amounts of data - often through large-scale self-supervision - that shows broad, general competence across many distinct tasks and can be integrated into a wide range of downstream systems. Models still in research, development, or prototyping, not yet placed on the market, don't count yet.</li>
+<li><strong>Baseline obligations for GPAI providers.</strong> Publish a detailed summary of the content and data used to train the model; maintain a policy for complying with EU copyright and intellectual-property law; keep technical documentation current; and produce documentation that lets downstream providers integrating the model understand its capabilities and limitations.</li>
+<li><strong>The open-source carve-out.</strong> These baseline obligations don't apply to providers of open-source GPAI models - unless that model is also classified as posing systemic risk, in which case the full obligation set (below) kicks back in regardless of license.</li>
+<li><strong>Systemic-risk classification.</strong> A model is treated as posing systemic risk if it has high-impact capabilities - measured primarily by the cumulative compute used to train it - or if the European Commission designates it as such by decision.</li>
+<li><strong>The 10^25 FLOPS threshold, in plain terms.</strong> FLOPS (floating-point operations) are just a way of measuring how much raw computation went into training a model. The Act uses cumulative training compute above 10^25 FLOPS as its main proxy for "this model is powerful enough that its capabilities could be hard to fully predict or control" - the underlying logic being that more training compute tends to track with more general capability, and more general capability is where systemic risk tends to concentrate. This is explicitly a moving target: the threshold is designed to be reviewed and adjusted as the technology develops, not fixed forever.</li>
+<li><strong>Extra obligations once a model crosses into systemic risk.</strong> On top of the baseline four: notify the European Commission; run model evaluation and adversarial testing; maintain adequate cybersecurity protections; report serious incidents; and actively assess and mitigate the model's key systemic risks.</li>
+<li><strong>Timing and compliance tools.</strong> GPAI obligations became applicable twelve months after the Act's entry into force (i.e., from roughly July/August 2025). Providers can point to Codes of Practice and standardized templates - issued by the AI Office - as a recognized way of demonstrating compliance, and are expected to cooperate with regulators and share relevant documentation on request.</li>
+</ul>
+<p><strong>Practical steps.</strong> If you train or substantially fine-tune large models, track your cumulative training compute against the 10^25 FLOPS marker proactively - don't wait for a Commission designation to find out you're already over it. Treat the training-data summary and copyright-compliance policy as standing deliverables that need to be kept current across model versions, not one-off documents. If you rely on the open-source carve-out, re-check that classification every time you retrain, since crossing into systemic risk cancels the exemption.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-compliance-conformity-assessment">
+							<summary><span class="aia-num">7</span> Compliance &amp; Conformity Assessment</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> The Act doesn't hand you one compliance checklist - it hands you several, layered at the level of the use case, the model, the system, and the organization, and which ones apply depends on your role and on which risk tiers are actually in play. Treating this as a single linear project ("get compliant, then done") misses that the requirement set shifts as your AI portfolio and your roles shift.</p>
+<p><strong>What the law requires - a working compliance sequence.</strong></p>
+<ol>
+<li><strong>Screen out prohibited practices first.</strong> Nothing else matters if a use case is banned outright - this has to be the first gate, not a later one.</li>
+<li><strong>Inventory and track high-risk AI.</strong> Identify every system you develop or use that clears either high-risk route (Annex III use case, or regulated product/safety component), and keep that inventory current as use cases evolve.</li>
+<li><strong>Run a gap analysis.</strong> For everything you've flagged as high-risk, measure current practice against the full requirement set and identify what needs to be built or fixed.</li>
+<li><strong>Register what needs registering.</strong> Get high-risk systems into the EU's public database - this is a discrete, trackable action item, not a vague aspiration.</li>
+<li><strong>Roll out AI literacy training.</strong> Employees actually working with or governing these systems need to understand them and their risks - this is itself a legal requirement (see Section 12), not just good practice.</li>
+</ol>
+<p><strong>Conformity assessment, in brief.</strong> High-risk systems must go through a conformity assessment before they're placed on the market or put into service - the process exists to test, demonstrate, and formally declare that the system meets the Act's requirements. Which specific assessment procedure applies varies by system type, so this isn't a single universal form.</p>
+<p><strong>Limited-risk transparency obligations.</strong> A separate, lighter tier applies to systems that interact with people or generate content, independent of whether they're also high-risk:</p>
+<ul>
+<li>Providers must design systems so people are told they're interacting with AI.</li>
+<li>Deployers using emotion-recognition systems must notify the people being assessed.</li>
+<li>Deployers must disclose when content is a deep fake and AI-generated.</li>
+</ul>
+<p><strong>The overlap point that trips people up.</strong> These categories are not mutually exclusive boxes - a system can be high-risk <em>and</em> separately subject to the limited-risk transparency rules (say, a high-risk hiring tool that also generates content and therefore has to disclose it's AI). A GPAI model can be embedded inside a high-risk system, exist as a standalone product, or sit inside a system that isn't high-risk at all - and, in principle, a GPAI model embedded in a high-risk system can also be used in a way that triggers the transparency rules on top. The practical consequence: never answer "what do we have to comply with" for an AI initiative in the abstract - the honest answer always depends on the specific combination of role, risk tier, and use case in front of you.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-governance-enforcement">
+							<summary><span class="aia-num">8</span> Governance &amp; Enforcement</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> Enforcement isn't centralized in one Brussels office - it's distributed across every member state plus two EU-level bodies, and different obligations came online on different dates rather than all at once. Knowing the actual calendar and the actual regulator map matters for anyone trying to sequence a compliance program realistically.</p>
+<p><strong>The regulatory landscape.</strong></p>
+<ul>
+<li><strong>Member state regulators.</strong> Each member state must appoint at least one market surveillance authority and at least one notifying authority (together, the "national competent authorities"), meaning multiple regulators typically operate within a single country, each responsible for a different slice of enforcement. One market surveillance authority is designated as the primary point of contact for the Act within that jurisdiction.</li>
+<li><strong>The European AI Office.</strong> Sits inside the European Commission and is responsible for enforcing the rules on general-purpose AI models specifically - developing Codes of Practice and guidance, and working to keep enforcement of the Act coherent and coordinated across the EU.</li>
+<li><strong>The European AI Board.</strong> Made up of one representative per member state, it works to harmonize how the Act is implemented across the bloc, issuing opinions and guidance, and is supported by an Advisory Forum and a Scientific Panel of experts.</li>
+</ul>
+<p><strong>Enforcement timeline.</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12 July 2024</td>
+<td>The Act is published in the Official Journal of the EU</td>
+</tr>
+<tr>
+<td>1 August 2024</td>
+<td>The Act enters into force</td>
+</tr>
+<tr>
+<td>2 February 2025</td>
+<td>Rules on prohibited AI practices become applicable</td>
+</tr>
+<tr>
+<td>2 August 2025</td>
+<td>Obligations for providers of general-purpose AI models become applicable</td>
+</tr>
+<tr>
+<td>2 August 2025</td>
+<td>Deadline for member states to appoint their regulatory authorities</td>
+</tr>
+<tr>
+<td>2 August 2026</td>
+<td>The majority of the Act's provisions become applicable</td>
+</tr>
+<tr>
+<td>2 August 2027</td>
+<td>Obligations for certain high-risk AI systems become applicable</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Penalty tiers.</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Breach</th>
+<th>Maximum penalty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Non-compliance with the prohibited-practices rules</td>
+<td>Up to 7% of global annual turnover, or €35m - whichever is higher</td>
+</tr>
+<tr>
+<td>Non-compliance with obligations for providers/deployers of high-risk systems</td>
+<td>Up to 3% of global annual turnover, or €15m - whichever is higher</td>
+</tr>
+<tr>
+<td>Supplying incorrect or misleading information to regulators</td>
+<td>Up to 1% of global annual turnover, or €7.5m - whichever is higher</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each member state sets up its own penalty regime within these EU-wide ceilings, and the Act calls for lower, more proportionate fines for SMEs and startups rather than applying the same scale uniformly regardless of company size.</p>
+<p><strong>Practical steps.</strong> Build your compliance roadmap against the actual dated timeline above rather than treating "the AI Act" as one deadline - prohibited-practice screening and GPAI provider obligations were live well before the 2026 date most people associate with the law. Identify which national competent authority is your primary point of contact in each member state where you operate, before you need to find that out under time pressure.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-building-an-enterprise-ai-governance-program-10-foundations">
+							<summary><span class="aia-num">9</span> Building an Enterprise AI Governance Program: 10 Foundations</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> Point compliance with the Act - one gap analysis, one registration, one training module - doesn't hold up over time as your AI portfolio grows. A governance program needs standing structure so that new use cases get evaluated the same way every time, without reinventing the process per project.</p>
+<p><strong>What a program actually needs - 10 foundations.</strong></p>
+<ol>
+<li><strong>A policy and standards framework.</strong> Written rules covering how AI gets developed, procured, deployed, and used - not a single AI policy document, but a coherent set that different teams can actually apply to their own decisions.</li>
+<li><strong>A risk management framework.</strong> A defined method for classifying and assessing AI risk, with clear ownership of each risk, oversight of the framework itself, and a reporting line that surfaces issues to people who can act on them.</li>
+<li><strong>A live AI inventory.</strong> Discover and catalogue every AI system, model, project, vendor relationship, and use case across the organization - you cannot govern what you haven't found, and shadow AI adoption is usually larger than leadership assumes.</li>
+<li><strong>A governance board with a real operating model.</strong> Defined roles and decision rights, not an advisory committee that meets quarterly with no authority to block a launch.</li>
+<li><strong>Third-party risk management specific to AI.</strong> Due diligence and ongoing risk assessment for every vendor and partner engagement that touches AI - general vendor security review isn't a substitute for this.</li>
+<li><strong>Regulatory horizon-scanning.</strong> Active monitoring of the regulatory landscape across every jurisdiction you operate in, feeding back into policy updates - the AI regulatory environment is moving faster than most compliance calendars are built for.</li>
+<li><strong>Metrics, assurance, and audit.</strong> A way to actually measure whether the governance program is working - not just whether it exists - and to periodically test that on the ground.</li>
+<li><strong>Education and training.</strong> Structured upskilling on AI ethics, governance, risk, and compliance across the workforce (see Section 12 for how to layer this).</li>
+<li><strong>Technical tooling and guardrails.</strong> Evaluate whether you need dedicated technology for testing, ongoing monitoring, and MLOps - governance that lives only in policy documents, with no technical enforcement, tends to erode under delivery pressure.</li>
+<li><strong>Alignment with existing digital governance functions.</strong> Privacy, cybersecurity, and data governance teams are already doing adjacent work - build AI governance to collaborate with them, not duplicate or compete with what already exists.</li>
+</ol>
+<p><strong>Practical steps.</strong> Stand up the inventory (foundation 3) early - most of the rest depends on knowing what you actually have. Resist building governance as a standalone silo; the fastest path to a workable program usually runs through extending structures (risk committees, vendor review, data governance) that already exist rather than creating parallel ones.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-assessing-ai-risk-questions-worth-asking">
+							<summary><span class="aia-num">10</span> Assessing AI Risk: Questions Worth Asking</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> Before a new AI initiative gets built or deployed, someone needs to ask a consistent set of questions - not as a bureaucratic gate, but because the answers are what determine which of the Act's obligations actually apply, and what the real-world blast radius looks like if the system gets something wrong.</p>
+<p><strong>A practical internal risk-assessment framework - ten questions to put in front of every new AI initiative:</strong></p>
+<ol>
+<li><strong>Purpose.</strong> What problem is this actually solving, and why does it need AI specifically rather than a simpler method?</li>
+<li><strong>Value.</strong> How much value does this generate, and how important is it to the business - worth understanding before you calibrate how much rigor the risk process gets.</li>
+<li><strong>Data rights.</strong> What data is used for development and for live input, and do you actually have the right to use it?</li>
+<li><strong>Geography.</strong> Which jurisdictions is the system being developed in, made available in, and used in?</li>
+<li><strong>Model choice.</strong> What type of model is being used, and why that type specifically, rather than a simpler or more explainable alternative?</li>
+<li><strong>Third-party dependencies.</strong> Does the system rely on any third-party models, tools, or services - and if so, whose obligations apply where?</li>
+<li><strong>Output.</strong> What does the system actually produce, and how is that output used downstream?</li>
+<li><strong>Human oversight.</strong> Is there human oversight, and - critically - can the person doing the overseeing actually verify and act on what the AI produced, or are they rubber-stamping it?</li>
+<li><strong>Impact of failure.</strong> What happens if the output is wrong, biased, or incomplete - who is affected, and how badly?</li>
+<li><strong>Ongoing monitoring.</strong> How will performance and usage be tracked over time, so that drift or failure gets caught rather than discovered after the fact?</li>
+</ol>
+<p><strong>Practical steps.</strong> Make this a standard intake form, not a one-off interview - the value is in asking every initiative the same ten questions, so risk levels are comparable across the portfolio rather than assessed inconsistently project by project. Route answers that reveal high-risk classification, prohibited-practice overlap, or weak human oversight to a mandatory second review before build work proceeds.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-vetting-ai-vendors-a-procurement-due-diligence-framework">
+							<summary><span class="aia-num">11</span> Vetting AI Vendors: A Procurement Due-Diligence Framework</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> As established in Section 5, deployers can inherit a provider's compliance failures - so the procurement conversation with an AI vendor needs to go well beyond price and functionality. Treat this as the point where most of your actual downstream risk gets decided.</p>
+<p><strong>A practical due-diligence framework - ask every AI vendor:</strong></p>
+<ol>
+<li><strong>Governance.</strong> What is your organization's own approach to AI governance and risk management - do they have one, or are they answering for the first time?</li>
+<li><strong>Training data.</strong> What data was used to train the system, and under what legal basis was it collected and used?</li>
+<li><strong>Use of your data.</strong> Will they use your organization's data to train, retrain, or otherwise improve their models and services - and did you actually agree to that?</li>
+<li><strong>Litigation exposure.</strong> Are they currently facing legal challenges or enforcement action related to the product?</li>
+<li><strong>IP indemnity.</strong> Will they provide copyright and intellectual-property indemnity protection if their system's output infringes someone else's rights?</li>
+<li><strong>Sub-dependencies.</strong> Are they themselves relying on third-party models, tools, or services to deliver this product - and do you know who those parties are?</li>
+<li><strong>Output ownership.</strong> What type of output does the system generate, and who actually owns it - you, or them?</li>
+<li><strong>Documentation.</strong> What guidance and instructions for use will they actually provide, in enough detail for you to meet your own deployer obligations?</li>
+<li><strong>Regulatory compliance.</strong> Can they demonstrate compliance with the AI Act and other applicable AI regulation - with evidence, not just assurance?</li>
+<li><strong>Support.</strong> What professional services and support will they provide for implementation and ongoing use?</li>
+</ol>
+<p><strong>Practical steps.</strong> Get answers to all ten in writing before contract signature, not as a post-signature follow-up - several of them (IP indemnity, data-use rights, output ownership) are things you want negotiated into the contract itself, not just disclosed informally. Treat a vendor who can't answer the compliance and documentation questions with specifics as a risk signal in itself, regardless of how good the product demo was.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-building-ai-literacy-across-an-organization">
+							<summary><span class="aia-num">12</span> Building AI Literacy Across an Organization</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> AI literacy isn't a nice-to-have training slide - Article 4 of the Act requires organizations to ensure a sufficient level of AI literacy among staff and others involved in operating or using AI systems, and this requirement has applied since 2 February 2025. It also underpins another obligation directly: human oversight of high-risk systems has to be assigned to people with the necessary competence and training, which is meaningless without a literacy program behind it.</p>
+<p><strong>A structure that actually differentiates by audience - four layers.</strong></p>
+<ul>
+<li><strong>Layer one: governance fundamentals for everyone.</strong> Mandatory, organization-wide, and deliberately simple - the goal is that every employee understands the basic pillars of responsible AI and the organization's own policies, not that they become experts.</li>
+<li><strong>Layer two: generative AI enablement.</strong> Aimed at building comfort and skill using AI tools day to day - this layer works best when it's inspirational and interactive rather than compliance-flavored, and incentives like internal accreditation can help drive voluntary uptake.</li>
+<li><strong>Layer three: role-based training.</strong> Tailored content for the specific people who build, buy, use, or govern AI as part of their actual job - governance staff, privacy staff, procurement staff, data scientists, IT partners - each needs different depth on different topics, and generic training tends to under-serve all of them at once.</li>
+<li><strong>Layer four: system-specific operational training.</strong> Mandatory for anyone actually operating a high-risk system, or otherwise responsible for it - bespoke instructions on exercising human oversight and other risk-mitigation duties for that specific system, precise enough that end users can actually interpret the system's outputs and recognize a serious incident when one happens.</li>
+</ul>
+<p><strong>Practical steps.</strong> Don't run one generic "AI training" module and call the literacy obligation satisfied - regulators and auditors will look for evidence that training actually differs by audience and by risk exposure, which a single one-size module can't demonstrate. Tie layer four specifically to your high-risk system inventory (Section 3) so operational training rolls out to exactly the people who need it, not organization-wide by default.</p>
+							</div>
+						</details>
+						<details class="aia-item" id="aia-copyright-generative-ai">
+							<summary><span class="aia-num">13</span> Copyright &amp; Generative AI</summary>
+							<div class="aia-body">
+<p><strong>Why it matters.</strong> Copyright protects original creative and intellectual work - books, articles, images, music, software - to encourage people to keep making it. Generative AI creates friction with that system at both ends: models are frequently trained on enormous amounts of copyrighted material, and they can reproduce or closely resemble that material in their outputs. There's a second, separate question sitting alongside the infringement risk: whether the organization's own AI-generated output is protectable by copyright at all. Both questions are live and contested enough that dozens of lawsuits are working through courts worldwide right now.</p>
+<p><strong>Where copyright exposure shows up across the AI lifecycle.</strong></p>
+<ul>
+<li><strong>Training.</strong> Base models are frequently trained on large datasets that incorporate copyrighted material, often without individualized permission from each rightsholder.</li>
+<li><strong>Fine-tuning.</strong> Adjusting a pre-trained model on a narrower dataset can just as easily draw on copyrighted material as the original training run did.</li>
+<li><strong>Retrieval-augmented generation.</strong> RAG systems pull from a retrieval corpus at query time - if that corpus contains copyrighted material, it can end up reproduced in the augmented output.</li>
+<li><strong>Prompts and inputs.</strong> Users routinely upload or paste copyrighted material - images, documents, text excerpts - directly into prompts, sometimes without thinking of it as a copyright-relevant act.</li>
+<li><strong>Inference and outputs.</strong> Generated content can reproduce, or come close enough to resemble, existing copyrighted work, creating potential infringement risk on the output side independent of anything that happened during training.</li>
+</ul>
+<p><strong>Whether AI output itself is copyrightable.</strong> Across most jurisdictions, some degree of human authorship is required for copyright to attach - content that is purely AI-generated, with no meaningful human creative input, generally isn't protectable, while "AI-assisted" work often is. The dividing line is the nature and degree of human creative contribution: in the US, for instance, simply typing a prompt isn't enough on its own, but the analysis changes once a human's own creative choices are perceptible in the resulting output.</p>
+<p><strong>A comparative regulatory snapshot</strong> - the applicable rules are generally determined by where the copying itself took place, and the landscape currently diverges sharply by jurisdiction:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Jurisdiction</th>
+<th>Current posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>United States</td>
+<td>No AI-specific copyright statute. Existing exclusive rights and existing exceptions - fair use chief among them - apply, and whether a given use of copyrighted material in AI training or operation qualifies as fair use is being worked out case-by-case in the courts.</td>
+</tr>
+<tr>
+<td>European Union</td>
+<td>The AI Act reinforces that existing EU copyright law already applies to AI systems and adds a new training-data transparency obligation. Separately, the EU's Copyright Directive contains two text-and-data-mining exceptions - one specific to scientific research, and a broader one that applies generally unless the rightsholder has opted out.</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td>Ran a public Copyright and AI consultation starting December 2024, floating a proposal that would move toward an EU-style data-mining exception framework - as of this writing, a settled position hadn't yet been finalized.</td>
+</tr>
+<tr>
+<td>Japan</td>
+<td>Takes a more permissive but conditional approach: AI training on copyrighted material is allowed in some circumstances, but this isn't a blanket exemption - it's limited where the use would unfairly prejudice rightsholders' interests.</td>
+</tr>
+<tr>
+<td>China</td>
+<td>Applies a comparatively strict framework, with no explicit exemption carved out for text-and-data-mining or AI training specifically.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Litigation and the fair-use test.</strong> Multiple public trackers are following the wave of AI-and-copyright litigation worldwide - one widely referenced count put the number of active cases somewhere in the high thirties. Real, publicly filed cases include <em>Getty Images v Stability AI</em> and <em>The New York Times v Microsoft and OpenAI</em>, both cited here simply as real, public examples of the kind of dispute working through the courts, not as case studies with any endorsed outcome. Most of this litigation is concentrated in the US, where courts assess fair use through four factors: the purpose and character of the use, the nature of the copyrighted work, the amount and substantiality of the portion used, and the effect on the market for the original work.</p>
+<p><strong>Practical steps to mitigate risk.</strong></p>
+<ul>
+<li><strong>License deliberately.</strong> Prefer data and content that's explicitly licensed for use in AI training or generation, rather than relying on ambiguous provenance.</li>
+<li><strong>Negotiate contractual protection.</strong> Push for IP indemnity clauses in vendor and licensing agreements rather than assuming the risk sits with the AI provider by default.</li>
+<li><strong>Track data lineage.</strong> Make copyright provenance a standing part of your AI risk assessments, not a one-time diligence exercise done at the start of a project.</li>
+<li><strong>Train employees on prompting and uploads.</strong> A large share of practical exposure comes from ordinary employees pasting copyrighted documents, images, or text into prompts without thinking about it - this is a literacy-program topic (see Section 12), not just a legal one.</li>
+<li><strong>Meet the GPAI training-data transparency obligation.</strong> If you provide general-purpose AI models, remember the training-data summary requirement from Section 6 directly overlaps with copyright risk management - it's both a legal obligation and a genuine risk-reduction step.</li>
+</ul>
+							</div>
+						</details>
+							</div>
+						</section>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Simeon. All rights reserved.</li>
+					<li><a href="terms.html">Terms of use</a></li>
+					<li><a href="privacy-notice.html">Privacy notice</a></li>
+					<li><a href="cookie-notice.html">Cookie notice</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
