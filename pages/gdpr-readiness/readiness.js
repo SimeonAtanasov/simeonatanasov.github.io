@@ -63,14 +63,51 @@ document.addEventListener("DOMContentLoaded", () => {
         group.appendChild(b);
       });
 
+      /* Spell out what the number is for. On its own, "2 activities" reads as
+       * a label with no verb and tells the reader nothing. */
       const gated = ACTIVITIES.filter(a => a.cond === c.id).length;
       const note = document.createElement("span");
       note.className = "ra-scope-note";
-      note.textContent = gated === 1 ? "1 activity" : gated + " activities";
+      note.textContent = '"No" removes ' + gated + (gated === 1 ? " activity" : " activities");
+      note.title = gated === 1
+        ? "One activity depends on this answer."
+        : gated + " activities depend on this answer.";
 
       row.append(q, group, note);
       scopeEl.appendChild(row);
     });
+  }
+
+  /* Status legend, built from STATUS so it can never drift from the buttons
+   * actually offered. The meanings used to live only in title tooltips, which
+   * do not exist on a touch device and are easy to miss on a desktop. */
+  function renderStatusLegend() {
+    const host = document.getElementById("status-legend");
+    if (!host) return;
+    host.className = "ra-legend";
+    host.innerHTML = "<h3>What the four statuses mean</h3>";
+
+    const list = document.createElement("dl");
+    list.className = "ra-legend-list";
+    STATUS.forEach(s => {
+      const dt = document.createElement("dt");
+      const chip = document.createElement("span");
+      chip.className = "ra-status-btn ra-s-" + s.key + " is-on";
+      chip.textContent = s.label;
+      dt.appendChild(chip);
+
+      const dd = document.createElement("dd");
+      dd.textContent = s.guide || s.hint;
+
+      const weight = document.createElement("span");
+      weight.className = "ra-legend-weight";
+      weight.textContent = s.score === null ? "excluded from the score"
+        : "counts as " + (s.score * 100) + "%";
+      dd.appendChild(weight);
+
+      list.append(dt, dd);
+    });
+    host.appendChild(list);
   }
 
   // ----------------------------------------------------------- activities ---
@@ -467,6 +504,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ----------------------------------------------------------------- init ---
+  renderStatusLegend();
   renderScope();
   renderActivities();
   renderResults();

@@ -191,9 +191,28 @@ const ACTIVITIES = [
   { id:"X2", cat:12, activity:"Track supervisory authority guidance and enforcement", articles:[24], po:"Is regulator guidance and enforcement activity monitored and reflected in internal practice?", ou:"Does your area receive relevant regulator guidance affecting its work?", cond:null }
 ];
 
+/* The four statuses, with the guidance shown in the on-page legend.
+ * score drives the maths: 1, 0.5, 0, and null for "not applicable", which is
+ * excluded from the denominator rather than counted as a failure. */
 const STATUS = [
-  { key: "implemented", label: "Implemented",  score: 1,    hint: "In place and evidenced" },
-  { key: "partial",     label: "In progress",  score: 0.5,  hint: "Started but not complete" },
-  { key: "none",        label: "Not in place", score: 0,    hint: "Not yet started" },
-  { key: "na",          label: "Not applicable", score: null, hint: "Excluded from scoring" }
+  {
+    key: "implemented", label: "Implemented", score: 1,
+    hint: "In place, operating, and you could evidence it today",
+    guide: "You actually do this, it is operating now, and you could put evidence in front of a regulator today. Having a policy that says you should do it is not the same as doing it."
+  },
+  {
+    key: "partial", label: "In progress", score: 0.5,
+    hint: "Started but not finished, or only in some areas",
+    guide: "Started but not finished. Approved and underway, partially rolled out, or working in some parts of the business but not others. Counts as half."
+  },
+  {
+    key: "none", label: "Not in place", score: 0,
+    hint: "Not happening, or nothing to evidence it",
+    guide: "Not happening, or happening informally with nothing to show for it. This is also the right answer when you do not know, because an activity nobody can confirm is not evidence of anything."
+  },
+  {
+    key: "na", label: "Not applicable", score: null,
+    hint: "Genuinely cannot apply here; removed from scoring",
+    guide: "Genuinely cannot apply to your organisation. This one is removed from the score rather than counted against you, so it is the only status that can flatter the result. Use it sparingly, and prefer Not in place if you are unsure. Most cases that truly do not apply are already handled by the scope questions above."
+  }
 ];

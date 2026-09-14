@@ -41,10 +41,23 @@
 
 							<div class="readiness">
 
+								<!-- How to fill it in -->
+								<section class="ra-block ra-howto">
+									<h2>How to fill this in</h2>
+									<ol class="ra-steps">
+										<li><strong>Set the scope.</strong> Thirteen yes or no questions about your organisation. Each one says how many activities depend on it: answering "no" takes those out of the assessment altogether, so you are not marked down for something that cannot apply to you. Leave one blank and its activities stay in.</li>
+										<li><strong>Work through the activities.</strong> Seventy-one of them, grouped into thirteen categories. Click a category to open it. Each activity carries two questions and one status.</li>
+										<li><strong>Answer honestly rather than aspirationally.</strong> The status you pick is a judgement about what happens today, not what is planned or what the policy says should happen. The score is only worth having if it is uncomfortable in the right places.</li>
+										<li><strong>Read the results three ways.</strong> By category shows where to put effort. By Article shows what you could evidence to a regulator. The gap list is an ordered to-do, worst first, with the higher-leverage activities ranked above the rest.</li>
+									</ol>
+									<p class="ra-note"><strong>The two questions.</strong> The Privacy Office question asks whether the mechanism exists and is built properly. The Operational Unit question is the one to put to a business area such as HR, Marketing or Sales, and asks whether it reflects what actually happens there. They can disagree, and where they do that is the finding: a register that exists but is out of date is the most common way accountability fails. A few activities show only the Privacy Office question, because nobody in a business unit appoints a DPO or notifies a regulator.</p>
+									<p class="ra-note"><strong>Your answers stay in this browser.</strong> Nothing is sent anywhere. Save keeps a copy locally, Clear empties the screen but keeps that copy, and Forget saved copy deletes it.</p>
+								</section>
+
 								<!-- Scope -->
 								<section class="ra-block" id="scope-block">
 									<h2>Step 1: Scope</h2>
-									<p class="ra-lead">Answer these first. A "no" removes the activities that depend on it from scoring entirely, rather than counting them against you.</p>
+									<p class="ra-lead">Answer these first. The count on the right of each row is how many activities depend on that answer. Answering "no" removes them from scoring entirely rather than counting them against you.</p>
 									<div id="scope-questions"></div>
 								</section>
 
@@ -52,6 +65,9 @@
 								<section class="ra-block">
 									<h2>Step 2: Assessment</h2>
 									<p class="ra-lead">For each activity, record its status. The Privacy Office question captures the programme view; the Operational Unit question is the one to put to a business area such as HR, Marketing or Sales.</p>
+
+									<div id="status-legend"></div>
+
 									<div class="ra-actions">
 										<button id="ra-expand">Expand all</button>
 										<button id="ra-collapse">Collapse all</button>

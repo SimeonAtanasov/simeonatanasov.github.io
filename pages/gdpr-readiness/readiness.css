@@ -23,6 +23,81 @@
     margin-bottom: 1.2em;
 }
 
+/* --------------------------------------------------------------- how-to --- */
+
+.ra-howto {
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 3px solid #8fd3c8;
+    border-radius: 6px;
+}
+
+.ra-howto h2 { margin-bottom: 0.6em; }
+
+.ra-steps {
+    margin: 0 0 1em 0;
+    padding-left: 1.25em;
+}
+
+.ra-steps li {
+    margin-bottom: 0.6em;
+    font-size: 0.93em;
+    line-height: 1.6;
+}
+
+.ra-note {
+    margin: 0 0 0.7em 0;
+    font-size: 0.9em;
+    line-height: 1.6;
+    opacity: 0.88;
+}
+
+.ra-note:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------- legend --- */
+
+.ra-legend {
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    background: rgba(66, 118, 166, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+}
+
+.ra-legend h3 {
+    margin: 0 0 0.7em 0;
+    font-size: 1em;
+}
+
+.ra-legend-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 16px;
+    margin: 0;
+}
+
+.ra-legend-list dt { margin: 0; }
+
+.ra-legend-list dd {
+    margin: 0;
+    font-size: 0.89em;
+    line-height: 1.55;
+    opacity: 0.9;
+}
+
+/* the chip in the legend is a label, not a control */
+.ra-legend-list .ra-status-btn {
+    cursor: default;
+    white-space: nowrap;
+}
+
+.ra-legend-weight {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.85em;
+    opacity: 0.6;
+}
+
 /* ---------------------------------------------------------------- scope --- */
 
 .ra-scope-row {
@@ -50,9 +125,10 @@
 }
 
 .ra-scope-note {
-    flex: 0 0 92px;
+    flex: 0 0 152px;
     text-align: right;
     font-size: 0.8em;
+    line-height: 1.35;
     opacity: 0.6;
 }
 
@@ -334,6 +410,10 @@
 /* --------------------------------------------------------------- mobile --- */
 
 @media screen and (max-width: 768px) {
+    .ra-legend-list { grid-template-columns: 1fr; gap: 4px 0; }
+    .ra-legend-list dd { margin-bottom: 10px; }
+    .ra-howto { padding: 16px 18px; }
+
     .ra-scope-row { flex-direction: column; align-items: stretch; gap: 8px; }
     .ra-scope-note { text-align: left; flex: 0 0 auto; }
     .ra-scope-answers { justify-content: flex-start; }
