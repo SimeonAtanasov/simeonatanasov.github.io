@@ -265,3 +265,68 @@
 		});
 	});
 })(jQuery);
+/*
+	Collapsible page navigation (#header pages).
+
+	#header is position: sticky, so anything in the strip underneath it gets no
+	clicks - the click lands on the header. With seven nav items the header
+	wrapped onto several rows on narrow desktops and grew to about half the
+	viewport on a phone, so a wide band of the page was unclickable. It showed
+	up after a Back navigation, because the browser restores the old scroll
+	position and puts whatever you were working on back under the header.
+
+	Below 1140px this collapses the nav behind a Menu button so the sticky
+	header stays one row (see main.css for the matching styles and for the
+	phone-width rule that stops it sticking at all). index.html uses #sidebar
+	instead of #header, so this is a no-op there.
+*/
+(function () {
+
+	document.addEventListener('DOMContentLoaded', function () {
+
+		var header = document.getElementById('header');
+		if (!header) return;
+
+		var nav = header.querySelector('nav');
+		var list = nav ? nav.querySelector('ul') : null;
+		if (!nav || !list) return;
+
+		var toggle = document.createElement('button');
+		toggle.type = 'button';
+		toggle.className = 'nav-toggle';
+		toggle.textContent = 'Menu';
+		toggle.setAttribute('aria-expanded', 'false');
+		toggle.setAttribute('aria-label', 'Open navigation menu');
+		header.insertBefore(toggle, nav);
+
+		function close() {
+			if (!list.classList.contains('is-open')) return;
+			list.classList.remove('is-open');
+			toggle.setAttribute('aria-expanded', 'false');
+		}
+
+		toggle.addEventListener('click', function (event) {
+			event.stopPropagation();
+			var open = list.classList.toggle('is-open');
+			toggle.setAttribute('aria-expanded', String(open));
+		});
+
+		// Following a link, clicking off the menu, Escape, or widening the
+		// window back past the breakpoint all put it away again.
+		list.addEventListener('click', function (event) {
+			if (event.target && event.target.closest && event.target.closest('a')) close();
+		});
+
+		document.addEventListener('click', function (event) {
+			if (!header.contains(event.target)) close();
+		});
+
+		document.addEventListener('keydown', function (event) {
+			if (event.key === 'Escape' || event.key === 'Esc') close();
+		});
+
+		window.addEventListener('resize', close);
+
+	});
+
+})();
