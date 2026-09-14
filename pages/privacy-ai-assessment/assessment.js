@@ -2639,6 +2639,7 @@
 
 	function renderLanding() {
 		root.innerHTML = "";
+		root.className = "";
 		var grid = el("div", { class: "paa-grid" });
 		Object.keys(MODULES).forEach(function (id) {
 			var mod = MODULES[id];
@@ -2916,6 +2917,48 @@
 		return wrap;
 	}
 
+	/* The step rail: every step of the current module listed by name, so an
+	 * assessor can jump straight to one instead of pressing Back or Next through
+	 * everything in between. Built from visibleSteps, so a step an earlier answer
+	 * has not opened up yet never appears. Nothing has to be answered to move on,
+	 * so every step listed is reachable in either direction. */
+	function buildStepRail(steps) {
+		var rail = el("nav", { class: "paa-rail", "aria-label": "Assessment steps" });
+		rail.appendChild(el("p", { class: "paa-rail-head" }, ["Steps"]));
+
+		var list = el("ol", { class: "paa-rail-list" });
+		steps.forEach(function (s, i) {
+			var cls = "paa-rail-item";
+			if (i === state.stepIndex) cls += " is-current";
+			else if (i < state.stepIndex) cls += " is-done";
+
+			var btn = el("button", {
+				type: "button",
+				class: cls,
+				title: "Step " + (i + 1) + ": " + s.title,
+				"aria-label": "Step " + (i + 1) + ": " + s.title
+			}, [
+				el("span", { class: "paa-rail-num" }, [String(i + 1)]),
+				el("span", { class: "paa-rail-title" }, [s.title])
+			]);
+
+			if (i === state.stepIndex) {
+				btn.setAttribute("aria-current", "step");
+			} else {
+				btn.addEventListener("click", function () {
+					state.stepIndex = i;
+					renderStep();
+					scrollToTool();
+				});
+			}
+
+			list.appendChild(el("li", {}, [btn]));
+		});
+
+		rail.appendChild(list);
+		return rail;
+	}
+
 	function renderStep() {
 		var mod = MODULES[state.moduleId];
 		var steps = visibleSteps(mod);
@@ -2923,64 +2966,45 @@
 		var step = steps[state.stepIndex];
 
 		root.innerHTML = "";
+		/* Widens the container so the rail sits beside the questions rather than
+		 * eating into their reading measure. Cleared again by the landing page
+		 * and the results, which have no rail and read better narrow. */
+		root.className = "paa-wide";
 		root.appendChild(renderModuleSwitchHeader(mod));
-		root.appendChild(el("div", { class: "paa-progress" }, [
+
+		/* Two columns on a wide screen: a rail down the left listing every step by
+		 * name, and the current step on the right. Below the layout breakpoint the
+		 * same rail turns into a compact numbered strip above the questions, so it
+		 * costs almost no height on a phone. */
+		var layout = el("div", { class: "paa-layout" });
+		var main = el("div", { class: "paa-main" });
+		if (steps.length > 1) layout.appendChild(buildStepRail(steps));
+		layout.appendChild(main);
+		root.appendChild(layout);
+
+		main.appendChild(el("div", { class: "paa-progress" }, [
 			el("div", { class: "paa-progress-bar", style: "width:" + Math.round((state.stepIndex / steps.length) * 100) + "%" })
 		]));
 		// Some steps only appear once an earlier answer opens them up, so the
 		// total is "up to N" until every step in the module is in play -
 		// otherwise the count jumps (e.g. "1 of 2" then "3 of 11").
 		var totalLabel = steps.length === mod.steps.length ? String(steps.length) : ("up to " + mod.steps.length);
-		root.appendChild(el("p", { class: "paa-step" }, ["Step " + (state.stepIndex + 1) + " of " + totalLabel + " - " + mod.label]));
-
-		/* A clickable step strip, so an assessor can jump straight to a step
-		 * instead of pressing Next or Back through everything in between. It is
-		 * built from visibleSteps, so a step an earlier answer has not opened up
-		 * yet never appears. Nothing has to be answered to move on, so every
-		 * visible step is reachable in either direction. The current chip carries
-		 * its title as well as its number, which is what makes it obvious that
-		 * the other numbers are steps you can click. */
-		if (steps.length > 1) {
-			var strip = el("nav", { class: "paa-steps", "aria-label": "Assessment steps" });
-			steps.forEach(function (s, i) {
-				var cls = "paa-stepchip";
-				if (i === state.stepIndex) cls += " is-current";
-				else if (i < state.stepIndex) cls += " is-done";
-				var chip = el("button", {
-					type: "button",
-					class: cls,
-					title: "Step " + (i + 1) + ": " + s.title,
-					"aria-label": "Step " + (i + 1) + ": " + s.title
-				}, [String(i + 1)]);
-				if (i === state.stepIndex) {
-					chip.setAttribute("aria-current", "step");
-					chip.appendChild(el("span", { class: "paa-stepchip-title" }, [s.title]));
-				} else {
-					chip.addEventListener("click", function () {
-						state.stepIndex = i;
-						renderStep();
-						scrollToTool();
-					});
-				}
-				strip.appendChild(chip);
-			});
-			root.appendChild(strip);
-		}
-		root.appendChild(el("h3", {}, [step.title]));
-		if (step.intro) root.appendChild(el("p", { class: "paa-step-intro" }, [step.intro]));
+		main.appendChild(el("p", { class: "paa-step" }, ["Step " + (state.stepIndex + 1) + " of " + totalLabel + " - " + mod.label]));
+		main.appendChild(el("h3", {}, [step.title]));
+		if (step.intro) main.appendChild(el("p", { class: "paa-step-intro" }, [step.intro]));
 
 		// Where a step leans on someone else's published method, link out to it
 		// so the assessor can read the source rather than take this tool's word
 		// for it. step.sources is [{ label, url }].
 		if (step.sources && step.sources.length) {
 			var srcP = el("p", { class: "paa-step-sources" }, ["Read the source: "]);
-			step.sources.forEach(function (s, i) {
+			step.sources.forEach(function (src, i) {
 				if (i) srcP.appendChild(document.createTextNode(" | "));
 				srcP.appendChild(el("a", {
-					href: s.url, target: "_blank", rel: "noopener noreferrer"
-				}, [s.label]));
+					href: src.url, target: "_blank", rel: "noopener noreferrer"
+				}, [src.label]));
 			});
-			root.appendChild(srcP);
+			main.appendChild(srcP);
 		}
 
 		var qlist = el("div", { class: "paa-questions" });
@@ -2991,7 +3015,7 @@
 			});
 		}
 		refreshQuestions();
-		root.appendChild(qlist);
+		main.appendChild(qlist);
 
 		var nav = el("div", { class: "paa-nav actions" });
 		if (state.stepIndex > 0) {
@@ -3011,7 +3035,7 @@
 			scrollToTool();
 		});
 		nav.appendChild(next);
-		root.appendChild(nav);
+		main.appendChild(nav);
 	}
 
 	function badgeClass(level) {
@@ -3481,6 +3505,7 @@
 		var entry;
 
 		root.innerHTML = "";
+		root.className = "";
 		root.appendChild(renderModuleSwitchHeader(mod));
 		root.appendChild(el("h3", {}, [mod.label + " - Results"]));
 		root.appendChild(el("p", {}, [el("strong", {}, [name])]));

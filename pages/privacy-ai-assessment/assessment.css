@@ -114,69 +114,183 @@
 	margin-bottom: 0.25em;
 }
 
-/* Clickable step strip. Jump straight to a step instead of pressing Next or
-   Back through everything in between. The site template styles every button
-   with a fixed 4.75em height, a matching line-height and a white :after
-   overlay, so those are all reset here; its !important colours need matching
-   !important to override. */
-.paa-steps {
+/* Step rail.
+
+   Two columns on a wide screen: every step of the module listed by name down
+   the left, the current step on the right. Click a name to jump straight to
+   that step instead of pressing Back or Next through everything in between.
+   Below 980px the same markup becomes a compact numbered strip above the
+   questions.
+
+   The site template styles every button with a fixed 4.75em height, a matching
+   line-height, uppercase text, nowrap and a white :after overlay, so those are
+   all reset here; its !important colours need matching !important to win. */
+
+.paa-layout {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 0.4em;
-	margin-bottom: 1.25em;
+	align-items: flex-start;
+	gap: 2em;
 }
 
-.paa-stepchip {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 2.6em;
-	height: auto;
-	margin: 0;
-	padding: 0.5em 0.75em;
+.paa-main {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.paa-rail {
+	flex: 0 0 15.5em;
+	position: sticky;
+	top: 6.5em;
+	max-height: calc(100vh - 9em);
+	overflow-y: auto;
+	padding: 1em 0.9em;
+	background: rgba(255,255,255,0.04);
+	border: solid 1px rgba(255,255,255,0.1);
+	border-radius: 0.4em;
+}
+
+.paa-rail-head {
+	margin: 0 0 0.6em 0.3em;
 	font-size: 0.7em;
-	line-height: 1;
-	letter-spacing: 0.1em;
-	border-radius: 0.3em;
-	border-color: rgba(255,255,255,0.2) !important;
-	background: transparent;
-	color: rgba(255,255,255,0.5) !important;
-	cursor: pointer;
-	transition: background 0.15s ease, border-color 0.15s ease;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.35);
 }
 
-.paa-stepchip:after {
+.paa-rail-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.paa-rail-list li {
+	margin: 0;
+	padding: 0;
+}
+
+.paa-rail-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.6em;
+	width: 100%;
+	height: auto;
+	margin: 0 0 2px 0;
+	padding: 0.55em 0.6em;
+	font-size: 0.75em;
+	line-height: 1.35;
+	letter-spacing: 0.02em;
+	text-align: left;
+	text-transform: none;
+	white-space: normal;
+	border-color: transparent !important;
+	border-radius: 0.3em;
+	background: transparent;
+	color: rgba(255,255,255,0.55) !important;
+	cursor: pointer;
+	transition: background 0.15s ease;
+}
+
+.paa-rail-item:after {
 	display: none;
 	content: none;
 }
 
-.paa-stepchip:hover {
+.paa-rail-item:hover {
 	background: rgba(255,255,255,0.1);
-	border-color: rgba(255,255,255,0.45) !important;
 	color: #ffffff !important;
 }
 
-.paa-stepchip.is-done {
-	border-color: rgba(78,145,183,0.75) !important;
-	color: rgba(255,255,255,0.8) !important;
-}
-
-.paa-stepchip.is-current {
+.paa-rail-item.is-current {
 	background: #4e91b7;
-	border-color: #4e91b7 !important;
 	color: #ffffff !important;
 	font-weight: bold;
 	cursor: default;
 }
 
-.paa-stepchip-title {
-	margin-left: 0.7em;
-	text-transform: none;
-	letter-spacing: 0.03em;
+.paa-rail-num {
+	flex: 0 0 1.8em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 1.8em;
+	border-radius: 50%;
+	background: rgba(255,255,255,0.12);
 }
 
-@media screen and (max-width: 640px) {
-	.paa-stepchip-title { display: none; }
+.paa-rail-item.is-done .paa-rail-num {
+	background: rgba(78,145,183,0.9);
+	color: #ffffff;
+}
+
+.paa-rail-item.is-current .paa-rail-num {
+	background: rgba(0,0,0,0.25);
+}
+
+.paa-rail-title {
+	flex: 1 1 auto;
+	min-width: 0;
+	padding-top: 0.25em;
+}
+
+/* With a rail alongside, the container widens by roughly the rail's width, so
+   the question column keeps the comfortable 52em measure it has everywhere
+   else rather than being squeezed by it. Only the step view carries the class;
+   the landing page and the results stay narrow. */
+@media screen and (min-width: 981px) {
+	#paa-app.paa-wide { max-width: 70em; }
+}
+
+/* Narrow: the rail folds up into a numbered strip above the questions, with
+   only the current step showing its name. */
+@media screen and (max-width: 980px) {
+	.paa-layout {
+		display: block;
+	}
+
+	.paa-rail {
+		position: static;
+		max-height: none;
+		overflow: visible;
+		margin-bottom: 1.25em;
+		padding: 0.7em;
+	}
+
+	.paa-rail-head { display: none; }
+
+	.paa-rail-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35em;
+	}
+
+	.paa-rail-item {
+		width: auto;
+		align-items: center;
+		gap: 0.5em;
+		margin: 0;
+		padding: 0.4em 0.6em;
+		border-color: rgba(255,255,255,0.2) !important;
+	}
+
+	.paa-rail-item.is-done {
+		border-color: rgba(78,145,183,0.75) !important;
+	}
+
+	.paa-rail-num {
+		flex: 0 0 auto;
+		height: auto;
+		min-width: 1.1em;
+		background: none;
+		border-radius: 0;
+	}
+
+	.paa-rail-item.is-done .paa-rail-num,
+	.paa-rail-item.is-current .paa-rail-num {
+		background: none;
+	}
+
+	.paa-rail-title { display: none; padding-top: 0; }
+	.paa-rail-item.is-current .paa-rail-title { display: inline; }
 }
 
 /* Questions */
