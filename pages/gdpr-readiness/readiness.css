@@ -98,6 +98,41 @@
     opacity: 0.6;
 }
 
+/* ------------------------------------------------------- two-answer rule --- */
+
+/* Sits directly under the legend: the legend says what each status means, this
+   says which status to record when the Privacy Office and the Operational Unit
+   give different answers. The chips reuse the real status classes so they read
+   as the same thing, but they are spans rather than buttons, so nothing in
+   here is clickable. */
+
+.ra-rulebox {
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    background: rgba(66, 118, 166, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+}
+
+.ra-rulebox h3 {
+    margin: 0 0 0.5em 0;
+    font-size: 1em;
+}
+
+.ra-rule-scroll { overflow-x: auto; }
+
+.ra-rule-table { margin-bottom: 12px; }
+
+.ra-rule-table td:first-child,
+.ra-rule-table td:nth-child(2) {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.ra-rule-table td:nth-child(3) { white-space: nowrap; }
+
+.ra-rulebox .ra-status-btn { cursor: default; }
+
 /* ---------------------------------------------------------------- scope --- */
 
 .ra-scope-row {
@@ -407,6 +442,25 @@
 .ra-actions button.ra-secondary { background-color: #4276a6; }
 .ra-actions button.ra-secondary:hover { background-color: #35618a; }
 
+/* -------------------------------------------------------- button centring --- */
+
+/* The site template gives every button height: calc(4.75em + 2px) and
+   line-height: 4.75em. At 13px that is a 61.75px line box inside a 64px
+   button, so any padding of ours pushes the label well below the middle.
+   Reset the height and let flex do the centring instead. */
+
+.ra-toggle,
+.ra-status-btn,
+.ra-tab,
+.ra-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 0;
+    line-height: 1.25;
+}
+
 /* --------------------------------------------------------------- mobile --- */
 
 @media screen and (max-width: 768px) {
@@ -442,4 +496,7 @@
     /* Tables stay readable by scrolling rather than crushing the columns. */
     #ra-view { overflow-x: auto; }
     .ra-table { min-width: 520px; }
+
+    .ra-rulebox { padding: 14px 16px; }
+    .ra-rule-table { min-width: 560px; }
 }
