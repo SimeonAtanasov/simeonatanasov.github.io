@@ -1,4 +1,30 @@
-/* On-screen controls for the Asteroids game.
+/* Asteroids game page styles: the playing area and the on-screen controls.
+
+   ---------------------------------------------------------------- the box ---
+
+   main.css gives #game-container and the canvas width: 100% and height: 100%.
+   With no height on the parent, a percentage height has nothing to resolve
+   against, so the box fell back to the canvas element's own width and height
+   attributes for its aspect ratio. Those are set once in JS at load, which made
+   the layout circular and meant the box never changed shape when the phone was
+   rotated: the game stayed portrait inside a landscape screen, squashed.
+
+   Giving the container a real height breaks that loop. The script then measures
+   this box and sets the canvas resolution to match, on load and on every resize
+   or rotation. */
+
+#game-container {
+	height: 80vh;
+	min-height: 240px;
+}
+
+canvas {
+	display: block;
+}
+
+/* ------------------------------------------------------------- the controls ---
+
+On-screen controls for the Asteroids game.
 
    The pad is injected by my-asteroids-game.js and sits over the canvas. It only
    shows where it is useful: a coarse pointer (phones, tablets), or the

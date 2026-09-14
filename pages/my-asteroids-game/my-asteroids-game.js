@@ -593,6 +593,58 @@ document.getElementById('restartButton').addEventListener('click', () => {
 
 
 /* ---------------------------------------------------------------------------
+   Canvas sizing.
+
+   The canvas resolution was set once at load from window.innerWidth/Height and
+   never touched again, so rotating a phone left the game in its old shape:
+   portrait artwork stretched across a landscape screen, with the playfield
+   still the wrong way round. This measures the element's real box and matches
+   the drawing surface to it, then rescales everything already in play so
+   nothing is stranded outside the new bounds.
+   --------------------------------------------------------------------------- */
+(function () {
+
+	function resizeCanvas() {
+		var rect = canvas.getBoundingClientRect();
+		var w = Math.round(rect.width);
+		var h = Math.round(rect.height);
+		if (!w || !h) return;
+		if (canvas.width === w && canvas.height === h) return;
+
+		var sx = canvas.width ? w / canvas.width : 1;
+		var sy = canvas.height ? h / canvas.height : 1;
+
+		canvas.width = w;
+		canvas.height = h;
+
+		// Everything holds absolute canvas coordinates, so move it all in
+		// proportion rather than leaving the ship or the asteroids off-screen.
+		player.position.x *= sx;
+		player.position.y *= sy;
+
+		projectiles.forEach(function (o) { o.position.x *= sx; o.position.y *= sy; });
+		asteroids.forEach(function (o) { o.position.x *= sx; o.position.y *= sy; });
+		stars.forEach(function (s) { s.x *= sx; s.y *= sy; });
+	}
+
+	resizeCanvas();
+
+	/* Rotation fires resize on every browser; orientationchange is kept for the
+	   older ones, and both are deferred a frame because the new box is not
+	   measurable until the browser has laid the page out again. */
+	var pending = null;
+	function schedule() {
+		clearTimeout(pending);
+		pending = setTimeout(resizeCanvas, 120);
+	}
+
+	window.addEventListener('resize', schedule);
+	window.addEventListener('orientationchange', schedule);
+
+})();
+
+
+/* ---------------------------------------------------------------------------
    On-screen controls.
 
    The game only ever read the keyboard, so on a phone it could be watched but
