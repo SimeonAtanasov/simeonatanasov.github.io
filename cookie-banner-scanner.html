@@ -364,6 +364,7 @@
 				}
 			}
 		</style>
+		<link rel="canonical" href="https://simeonatanasov.com/cookie-banner-scanner.html">
 	</head>
 	<body class="is-preload">
 		<header id="header">
@@ -647,9 +648,17 @@
 					head.replaceChildren();
 					body.replaceChildren();
 					const headerRow = document.createElement('tr');
+					// The column keys are field names; the table is read by people.
+					const historyHeadings = {
+						scannedAt: 'Scanned',
+						urls: 'Sites scanned',
+						rows: 'Cookies found',
+						status: 'Status',
+						actions: ''
+					};
 					historyColumns.forEach(column => {
 						const th = document.createElement('th');
-						th.textContent = column;
+						th.textContent = historyHeadings[column] !== undefined ? historyHeadings[column] : column;
 						headerRow.appendChild(th);
 					});
 					head.appendChild(headerRow);

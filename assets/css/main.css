@@ -4600,3 +4600,15 @@ height: 100%;
 		}
 
 	}
+
+/* Footer width under the sidebar layout */
+
+	/* #footer carries width: 100% and the sidebar layout then offsets it by
+	   18em, so it ran 312px past the right edge and put a horizontal scrollbar
+	   on the home page at every width above 1280px. Let it size to what is
+	   left instead. Below 1280px the offset is already removed, and auto is
+	   what a block element does anyway, so this is safe at every width. */
+
+	#sidebar + #wrapper + #footer {
+		width: auto;
+	}
