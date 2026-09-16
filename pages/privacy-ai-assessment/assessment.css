@@ -1071,3 +1071,52 @@
 .paa-balance-col h4 {
 	margin-bottom: 0.75em;
 }
+
+/* Narrow screens: fit the matrix to the column rather than scrolling it
+ * sideways inside its wrap, which hid the Maximum likelihood column behind
+ * a scrollbar. The wrap keeps overflow-x: auto as a fallback for very
+ * narrow viewports. */
+@media (max-width: 736px) {
+	.paa-matrix {
+		grid-template-columns: 4.75em repeat(4, minmax(0, 1fr));
+		min-width: 0;
+	}
+	.paa-matrix-collabel,
+	.paa-matrix-rowlabel {
+		font-size: 0.55em;
+		letter-spacing: 0;
+		padding: 0.2em;
+	}
+	.paa-matrix-cell { padding: 0.35em 0.15em; }
+	.paa-matrix-lvl {
+		font-size: 0.55em;
+		letter-spacing: 0;
+		white-space: normal;
+	}
+	.paa-matrix-dot { width: 1.5em; height: 1.5em; font-size: 0.7em; }
+}
+
+/* Long action labels such as "Try the Third-Party Security Assessment" do
+ * not fit on one line at phone width, and the template's nowrap pushed the
+ * whole page sideways. Let them wrap, which means resetting the template's
+ * fixed height and line-height too. */
+@media (max-width: 736px) {
+	.paa-nav .button {
+		white-space: normal;
+		height: auto;
+		min-height: calc(4.75em + 2px);
+		line-height: 1.5;
+		padding: 0.9em 1.5em;
+		max-width: 100%;
+		text-align: center;
+	}
+}
+
+/* Smallest phones: tighten the matrix labels again so "Significant" is not
+ * clipped in its column. */
+@media (max-width: 360px) {
+	.paa-matrix { grid-template-columns: 4em repeat(4, minmax(0, 1fr)); }
+	.paa-matrix-collabel,
+	.paa-matrix-rowlabel,
+	.paa-matrix-lvl { font-size: 0.48em; }
+}
