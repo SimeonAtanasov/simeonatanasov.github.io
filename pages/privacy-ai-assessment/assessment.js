@@ -56,9 +56,12 @@
 	];
 
 	var DPIA_CONTROLS = [
+		"Data minimisation (unnecessary fields removed)",
+		"Purpose limitation (processing scope restricted)",
 		"Access rights management and least privilege",
 		"Access logging and monitoring",
 		"Encryption in transit and at rest",
+		"Pseudonymisation",
 		"Pseudonymisation",
 		"Anonymisation or aggregation for secondary uses",
 		"Data masking in non-production environments",
@@ -69,6 +72,14 @@
 		"Legitimate interest balancing test completed",
 		"Processing recorded in the RoPA",
 		"Retention and deletion rules implemented in the system",
+		"Accuracy and data quality checks",
+		"Human review of automated or AI-supported outputs",
+		"Restrictions on profiling, monitoring or automated decisions",
+		"Privacy notice covering this processing",
+		"Consent or preference management",
+		"Mechanisms for individuals to exercise their rights",
+		"Supplier due diligence",
+		"Measures tailored to employees or other vulnerable individuals",
 		"Backup and tested restore procedure",
 		"Security testing or penetration testing",
 		"Training for staff handling this data",
@@ -79,6 +90,7 @@
 
 	var TRANSFER_SAFEGUARDS = [
 		"Adequacy decision",
+		"EU-US Data Privacy Framework (certified US recipient)",
 		"Standard contractual clauses (controller to processor)",
 		"Standard contractual clauses (controller to controller)",
 		"Binding corporate rules",
@@ -102,6 +114,22 @@
 		"The supplier processes or stores financial or payment information",
 		"The supplier or its subcontractors store data in a country without an adequacy decision"
 	];
+
+	// A transfer resting only on an adequacy decision or the EU-US Data
+	// Privacy Framework does not need a transfer impact assessment. Any other
+	// mechanism, or none recorded yet, does.
+	var NO_TIA_MECHANISMS = ["Adequacy decision", "EU-US Data Privacy Framework (certified US recipient)", "EU-US Data Privacy Framework"];
+	function tiaNeeded(transfers, mechanisms) {
+		if (transfers !== "Yes") return false;
+		mechanisms = mechanisms || [];
+		if (!mechanisms.length) return true;
+		return mechanisms.some(function (m) { return NO_TIA_MECHANISMS.indexOf(m) === -1; });
+	}
+
+	function hasEmployeeData(a) {
+		return (a.dataSubjects || []).indexOf("Employees and contractors") !== -1 ||
+			(a.vulnerableTypes || []).indexOf("Employees and other staff members") !== -1;
+	}
 
 	var DATA_SUBJECT_TYPES = [
 		"Customers",
@@ -277,6 +305,9 @@
 					note: { label: "Specify the other vulnerable group", visibleIf: function (v) { return (v || []).indexOf("Other") !== -1; } } },
 				{ id: "businessCriticalData", type: "select", label: "Apart from personal data, is any business-critical data processed - evidence of business decisions, contracts, activities or transactions that may be needed for audit or legal purposes?", options: ["Yes", "No", "Not sure"],
 					note: { label: "What business-critical data, and which retention rules apply to it?", visibleIf: function (v) { return v === "Yes"; } } },
+				{ id: "employeeLabourCheck", type: "select", label: "Employee data is involved. Have labour law requirements, and any works council or employee representative involvement, been checked?", options: ["Yes", "No", "Not yet", "Not required in the countries concerned"],
+					visibleIf: function (a) { return hasEmployeeData(a); },
+					note: { label: function (v) { return v === "Yes" ? "Who was consulted, and what was agreed?" : "Explain the basis for that answer"; }, visibleIf: function (v) { return v === "Yes" || v === "Not required in the countries concerned"; } } },
 				{ id: "recordVolume", type: "select", label: "Roughly how many individuals will be involved?", options: [
 					"Fewer than 100", "100 to 1,000", "1,000 to 10,000", "10,000 to 100,000", "More than 100,000", "Not yet known"
 				] }
@@ -340,8 +371,8 @@
 				{ id: "transferSafeguards", type: "multiselect", label: "Which safeguard will make that transfer lawful?", options: TRANSFER_SAFEGUARDS,
 					visibleIf: function (a) { return a.transfersOutside === "Yes"; },
 					note: { label: "Which countries is the data transferred to?", visibleIf: function () { return true; } } },
-				{ id: "tiaTriggers", type: "multiselect", label: "Do any of these apply to the supplier? Each one points to a transfer impact assessment.", options: TIA_TRIGGERS,
-					visibleIf: function (a) { return a.transfersOutside === "Yes"; } }
+				{ id: "tiaTriggers", type: "multiselect", label: "Do any of these apply to the supplier? Each one points to a transfer impact assessment. Not asked where the transfer rests only on an adequacy decision or the EU-US Data Privacy Framework.", options: TIA_TRIGGERS,
+					visibleIf: function (a) { return tiaNeeded(a.transfersOutside, a.transferSafeguards); } }
 			]
 		},
 		{
@@ -518,6 +549,10 @@
 			factors.push({ title: "Old application being decommissioned", detail: "Decommissioning is where personal data quietly survives - in exports taken \"just in case\", backups, and archived instances. Decide per data set whether it is migrated, archived under a retention rule, or securely destroyed, and record the disposal.", severity: "medium" });
 			level = escalate(level, "Medium");
 		}
+		if (hasEmployeeData(a) && a.employeeLabourCheck !== "Yes" && a.employeeLabourCheck !== "Not required in the countries concerned") {
+			factors.push({ title: "Employee data without a labour law check", detail: "In several countries, monitoring or analysing employee data needs works council agreement or employee representative consultation under labour law, separately from anything the GDPR requires. A missing agreement can stop the processing whatever this assessment says, so check it before go-live.", severity: "medium" });
+			level = escalate(level, "Medium");
+		}
 		if (a.businessCriticalData === "Yes") {
 			factors.push({ title: "Business-critical data alongside personal data", detail: "Records kept as evidence of decisions, contracts or transactions usually carry their own statutory retention periods, which can be longer than the privacy minimum. Reconcile the two so one rule does not silently override the other.", severity: "medium" });
 		}
@@ -535,7 +570,10 @@
 				factors.push({ title: "International transfer", detail: "Keep the transfer mechanism and its supporting documentation with this assessment, and re-check it if the destination or supplier changes.", severity: "medium" });
 				level = escalate(level, "Medium");
 			}
-			if ((a.tiaTriggers || []).length) {
+			if (safeguards.some(function (g) { return g.indexOf("EU-US Data Privacy Framework") === 0; })) {
+				factors.push({ title: "Transfer relies on the EU-US Data Privacy Framework", detail: "Confirm the recipient's certification is active and covers this data. HR data needs HR coverage specifically. Keep a fallback mechanism in view: two earlier EU-US frameworks were invalidated by the Court of Justice.", severity: "medium" });
+			}
+			if (tiaNeeded(a.transfersOutside, safeguards) && (a.tiaTriggers || []).length) {
 				factors.push({ title: "Transfer impact assessment needed", detail: (a.tiaTriggers || []).length + " supplier characteristic(s) you selected raise the risk of foreign authority access. Complete a transfer impact assessment and identify supplementary measures.", severity: "high" });
 				level = escalate(level, "High");
 			}
@@ -1469,6 +1507,44 @@
 	];
 
 
+	// Harms to individuals, for the Art. 35(7)(c) assessment of risks to
+	// rights and freedoms. Wider than security: most of these can happen with
+	// no breach at all.
+	var HARMS_TO_INDIVIDUALS = [
+		"Loss of confidentiality, or of control over personal data",
+		"Identity theft, fraud or financial loss",
+		"Discrimination, unfair treatment or exclusion",
+		"Decisions based on inaccurate or incomplete data",
+		"Loss of access to employment, services, opportunities or benefits",
+		"Excessive monitoring, profiling or surveillance",
+		"Manipulation, loss of autonomy or a chilling effect on behaviour",
+		"Reputational damage, embarrassment or distress",
+		"Physical harm or a threat to personal safety",
+		"Exposure of sensitive information",
+		"Inability to exercise data protection rights",
+		"Use of data beyond what individuals would reasonably expect",
+		"Re-identification of anonymised or pseudonymised data",
+		"Unauthorised access, disclosure, alteration, loss or destruction",
+		"Inappropriate automated decisions, or over-reliance on AI-generated outputs",
+		"Disproportionate effect on vulnerable individuals or particular groups",
+		"Other"
+	];
+
+	// Harms that point to a specific measure. If the harm is selected and the
+	// measure is neither implemented nor planned, the result says so.
+	var HARM_MEASURE_CHECKS = [
+		{ harm: "Inappropriate automated decisions, or over-reliance on AI-generated outputs", measures: ["Human review of automated or AI-supported outputs"],
+			title: "Automated or AI-driven harm without human review", detail: "You identified harm from automated decisions or over-reliance on AI outputs, but no human review of those outputs is implemented or planned. Meaningful review, by someone with the authority and information to override the output, is the measure regulators look for first." },
+		{ harm: "Disproportionate effect on vulnerable individuals or particular groups", measures: ["Measures tailored to employees or other vulnerable individuals"],
+			title: "Harm to vulnerable groups without tailored measures", detail: "Generic controls rarely address an effect that falls harder on one group. Record what is done specifically for them." },
+		{ harm: "Re-identification of anonymised or pseudonymised data", measures: ["Pseudonymisation", "Anonymisation or aggregation for secondary uses"],
+			title: "Re-identification risk without de-identification measures", detail: "Re-identification is listed as a harm, but no pseudonymisation, anonymisation or aggregation is recorded. Either the harm does not apply or the measure is missing." },
+		{ harm: "Excessive monitoring, profiling or surveillance", measures: ["Restrictions on profiling, monitoring or automated decisions", "Data minimisation (unnecessary fields removed)"],
+			title: "Monitoring or profiling harm without restrictions", detail: "Excessive monitoring is listed as a harm, but no restriction on profiling or monitoring and no data minimisation is recorded." },
+		{ harm: "Inability to exercise data protection rights", measures: ["Mechanisms for individuals to exercise their rights"],
+			title: "Rights harm without a rights mechanism", detail: "You identified that individuals may be unable to exercise their rights, but no mechanism for them to do so is implemented or planned." }
+	];
+
 	// Builds one feared-event step; the three events differ only in wording.
 	function fearedEventStep(key, title, eventName, intro, prefix) {
 		return {
@@ -1480,7 +1556,7 @@
 				{ id: prefix + "Threats", type: "multiselect", label: "Which threats are realistic for this processing?", options: THREATS },
 				{ id: prefix + "Impact", type: "textarea", label: "What would the impact on individuals be if this happened?" },
 				{ id: prefix + "Severity", type: "select", label: "Severity - how serious would the impact on individuals be?", options: SEVERITY_SCALE },
-				{ id: prefix + "Likelihood", type: "select", label: "Likelihood - how easily could this happen, given the controls you have?", options: LIKELIHOOD_SCALE }
+				{ id: prefix + "Likelihood", type: "select", label: "Likelihood: how easily could this happen with the controls already implemented? Do not count planned controls.", options: LIKELIHOOD_SCALE }
 			]
 		};
 	}
@@ -1507,7 +1583,8 @@
 			intro: "These are the Art. 35(3) criteria as expanded by the European guidance. Meeting two or more normally means a DPIA is required; one may still warrant it depending on the processing.",
 			questions: [
 				{ id: "dpiaTriggers", type: "multiselect", label: "Which criteria does this processing meet?", options: DPIA_TRIGGERS,
-					note: { label: "Any national blacklist/whitelist entry or sector-specific requirement that applies", visibleIf: function () { return true; } } }
+					note: { label: "Any national blacklist/whitelist entry or sector-specific requirement that applies", visibleIf: function () { return true; } } },
+				{ id: "triggerContext", type: "textarea", label: "Which specific aspect of the processing makes it high risk? Name the feature or combination of factors, who it affects, and why it could interfere with their rights or reasonable expectations. Do not repeat the full processing description." }
 			]
 		},
 		{
@@ -1545,7 +1622,9 @@
 				{ id: "rightsErasure", type: "yesno", label: "Can rectification and erasure requests be fulfilled?",
 					note: { label: "How, and what is the gap if not?", visibleIf: function (v) { return v === "No"; } } },
 				{ id: "rightsObject", type: "yesno", label: "Can restriction and objection requests be fulfilled?",
-					note: { label: "How, and what is the gap if not?", visibleIf: function (v) { return v === "No"; } } }
+					note: { label: "How, and what is the gap if not?", visibleIf: function (v) { return v === "No"; } } },
+				{ id: "viewsSought", type: "select", label: "Have the views of the individuals affected, or their representatives, been sought? (Art. 35(9))", options: ["Yes", "Not appropriate for this processing", "Not yet", "Not sure"],
+					note: { label: function (v) { return v === "Yes" ? "How were views gathered, and what changed as a result?" : "Record why"; }, visibleIf: function (v) { return v === "Yes" || v === "Not appropriate for this processing"; } } }
 			]
 		},
 		{
@@ -1559,13 +1638,27 @@
 				{ id: "transfersOutside", type: "select", label: "Is personal data transferred outside your home region?", options: ["No", "Yes", "Not sure"] },
 				{ id: "transferMechanism", type: "multiselect", label: "Which transfer mechanism applies?", visibleIf: function (a) { return a.transfersOutside === "Yes"; }, options: [
 					"Adequacy decision",
+					"EU-US Data Privacy Framework",
 					"Standard contractual clauses",
 					"Binding corporate rules",
 					"Derogation for a specific situation",
 					"None identified yet"
 				] },
-				{ id: "tiaDone", type: "yesno", label: "Has a transfer impact assessment been completed?", visibleIf: function (a) { return a.transfersOutside === "Yes"; },
+				{ id: "tiaDone", type: "yesno", label: "Has a transfer impact assessment been completed?", visibleIf: function (a) { return tiaNeeded(a.transfersOutside, a.transferMechanism); },
 					note: { label: "What supplementary measures were identified?", visibleIf: function (v) { return v === "Yes"; } } }
+			]
+		},
+		{
+			key: "harms",
+			title: "Risks to individuals",
+			intro: "Art. 35(7)(c) asks for the risks to the rights and freedoms of individuals, which is wider than security. Record the reasonably foreseeable consequences for the people whose data this is, then rate the worst credible case as if no safeguards were in place. The three security risks that follow are rated separately, against the controls already implemented.",
+			questions: [
+				{ id: "harms", type: "multiselect", label: "How could the processing adversely affect individuals?", options: HARMS_TO_INDIVIDUALS,
+					note: { label: "Specify the other harm", visibleIf: function (v) { return (v || []).indexOf("Other") !== -1; } } },
+				{ id: "harmsDetail", type: "textarea", label: "Describe how each selected harm could arise in this processing, and who it would fall on." },
+				{ id: "inherentSeverity", type: "select", label: "Inherent severity: how serious would the impact be before any mitigation? Consider sensitivity, permanence, reversibility, the number and vulnerability of people affected, and whether several minor effects combine.", options: SEVERITY_SCALE },
+				{ id: "inherentLikelihood", type: "select", label: "Inherent likelihood: how likely is it before any mitigation? Consider scale, frequency, third parties and transfers, reliance on manual steps, new technology, and how attractive the data is.", options: LIKELIHOOD_SCALE },
+				{ id: "inherentJustification", type: "textarea", label: "Justify both ratings from the evidence you have." }
 			]
 		},
 		fearedEventStep("risk-access", "Risk 1 of 3 - illegitimate access to data", "unauthorized people to see the data",
@@ -1575,11 +1668,25 @@
 		fearedEventStep("risk-disappearance", "Risk 3 of 3 - data disappearance", "the data to be lost or become unavailable",
 			"The third feared event: the data is deleted, lost or cannot be accessed when it is needed.", "disap"),
 		{
-			key: "controls",
-			title: "Controls & conclusion",
+			key: "mitigations",
+			title: "Mitigation measures",
+			intro: "Record implemented and planned measures separately. A planned measure does not lower the security ratings above. It can count towards the residual rating on the next step, but the result then flags that the rating depends on work not yet done.",
 			questions: [
-				{ id: "controlsInPlace", type: "multiselect", label: "Which controls are in place for this processing?", options: DPIA_CONTROLS,
-					note: { label: "Any other control worth recording", visibleIf: function () { return true; } } },
+				{ id: "controlsInPlace", type: "multiselect", label: "Which measures are already implemented and operating?", options: DPIA_CONTROLS,
+					note: { label: "Any other implemented measure worth recording", visibleIf: function () { return true; } } },
+				{ id: "controlsPlanned", type: "multiselect", label: "Which measures are planned but not yet implemented?", options: DPIA_CONTROLS,
+					note: { label: "For each planned measure, who owns it and when will it be in place?", visibleIf: function (v) { return (v || []).length > 0; } } }
+			]
+		},
+		{
+			key: "conclusion",
+			title: "Residual risk & conclusion",
+			intro: "Rate the risk again assuming every agreed measure is implemented and operating. Where a measure is incomplete, uncertain or untested, do not assume it works.",
+			questions: [
+				{ id: "residualSeverity", type: "select", label: "Residual severity: how serious would the impact be with every agreed measure in place?", options: SEVERITY_SCALE },
+				{ id: "residualLikelihood", type: "select", label: "Residual likelihood: how likely is it with every agreed measure in place?", options: LIKELIHOOD_SCALE },
+				{ id: "residualRemaining", type: "textarea", label: "What risk remains, why can it not reasonably be reduced further, and does it fall harder on particular individuals or groups?" },
+				{ id: "residualMonitoring", type: "textarea", label: "How will the continued effectiveness of the measures be monitored?" },
 				{ id: "residualAcceptable", type: "yesno", label: "After these controls, is the residual risk to individuals acceptable?",
 					note: { label: function (v) { return v === "Yes" ? "Briefly justify why the residual risk is acceptable" : "What remains unmitigated, and what would be needed to reduce it?"; }, visibleIf: function (v) { return !!v; } } },
 				{ id: "dpoConsulted", type: "yesno", label: "Has the DPO or privacy team been consulted on this DPIA? (Art. 35(2))" },
@@ -1632,23 +1739,40 @@
 		});
 		if (!scored.length) highest = null;
 
+		// Overall rights-and-freedoms rating, before and after mitigation.
+		// Plotted on the same matrix as the feared events.
+		function overall(prefix, short, name) {
+			var sevIdx = SEVERITY_SCALE.indexOf(a[prefix + "Severity"]);
+			var likIdx = LIKELIHOOD_SCALE.indexOf(a[prefix + "Likelihood"]);
+			return { key: prefix, short: short, name: name, sevIdx: sevIdx, likIdx: likIdx, level: riskLevelFor(sevIdx, likIdx) };
+		}
+		var inherent = overall("inherent", "I", "Inherent risk to individuals");
+		var residual = overall("residual", "R", "Residual risk to individuals");
+
+		// The residual rating drives the conclusion where it has been given.
+		// Without it, the worst feared event stands in.
+		var residualLevel = residual.level || highest;
+
 		var triggers = a.dpiaTriggers || [];
 		var dpiaStatus = triggers.length >= 2 ? "Required"
 			: (triggers.length === 1 ? "Likely required" : "Not indicated by these criteria");
 
 		// Art. 36: high residual risk the controller cannot mitigate means
 		// the supervisory authority must be consulted before processing.
-		var priorConsultation = (highest === "Very High" || highest === "High") && a.residualAcceptable === "No";
+		var priorConsultation = (residualLevel === "Very High" || residualLevel === "High") && a.residualAcceptable === "No";
 
 		var controls = a.controlsInPlace || [];
+		var planned = a.controlsPlanned || [];
 		return {
 			events: events, scored: scored, highest: highest,
+			inherent: inherent, residual: residual, residualLevel: residualLevel,
 			triggers: triggers, dpiaStatus: dpiaStatus,
 			priorConsultation: priorConsultation,
-			controls: controls,
+			controls: controls, planned: planned,
 			factors: dpiaFactors(a, {
 				events: events, scored: scored, highest: highest, triggers: triggers,
-				dpiaStatus: dpiaStatus, priorConsultation: priorConsultation, controls: controls
+				inherent: inherent, residual: residual, residualLevel: residualLevel,
+				dpiaStatus: dpiaStatus, priorConsultation: priorConsultation, controls: controls, planned: planned
 			})
 		};
 	}
@@ -1657,11 +1781,11 @@
 		var f = [];
 
 		if (r.priorConsultation) {
-			f.push({ title: "Prior consultation with the supervisory authority indicated", detail: "You have recorded " + r.highest.toLowerCase() + " residual risk that the controls do not bring down to an acceptable level. Under GDPR Art. 36 the supervisory authority must be consulted before the processing starts. Do not go live on the strength of this assessment alone.", severity: "high" });
-		} else if ((r.highest === "Very High" || r.highest === "High") && a.residualAcceptable === "Yes") {
-			f.push({ title: "High residual risk recorded as acceptable", detail: "The matrix puts at least one feared event at " + r.highest.toLowerCase() + " risk, but you have judged the residual risk acceptable. Make sure the justification for that judgement is written down - it is exactly what a supervisory authority would ask to see.", severity: "high" });
-		} else if (r.highest === "Very High" || r.highest === "High") {
-			f.push({ title: "High residual risk, but no acceptance decision recorded", detail: "The matrix puts at least one feared event at " + r.highest.toLowerCase() + " risk, and the question of whether the residual risk is acceptable has not been answered yet. Record that decision explicitly - and the reasoning behind it - before treating this DPIA as complete.", severity: "high" });
+			f.push({ title: "Prior consultation with the supervisory authority indicated", detail: "You have recorded " + r.residualLevel.toLowerCase() + " residual risk that the controls do not bring down to an acceptable level. Under GDPR Art. 36 the supervisory authority must be consulted before the processing starts. Do not go live on the strength of this assessment alone.", severity: "high" });
+		} else if ((r.residualLevel === "Very High" || r.residualLevel === "High") && a.residualAcceptable === "Yes") {
+			f.push({ title: "High residual risk recorded as acceptable", detail: "The residual risk sits at " + r.residualLevel.toLowerCase() + ", but you have judged the residual risk acceptable. Make sure the justification for that judgement is written down - it is exactly what a supervisory authority would ask to see.", severity: "high" });
+		} else if (r.residualLevel === "Very High" || r.residualLevel === "High") {
+			f.push({ title: "High residual risk, but no acceptance decision recorded", detail: "The residual risk sits at " + r.residualLevel.toLowerCase() + ", and the question of whether the residual risk is acceptable has not been answered yet. Record that decision explicitly - and the reasoning behind it - before treating this DPIA as complete.", severity: "high" });
 		}
 
 		if (r.dpiaStatus === "Required") {
@@ -1670,6 +1794,41 @@
 			f.push({ title: "One trigger criterion met", detail: "A single criterion does not automatically make a DPIA mandatory, but many supervisory authorities expect one where the processing is otherwise sensitive or large. Record your reasoning either way.", severity: "medium" });
 		} else {
 			f.push({ title: "No trigger criteria selected", detail: "On these answers a DPIA is not mandatory. Check your authority's own published list of processing that always requires one, and keep this screening as the record of the decision.", severity: "low" });
+		}
+
+		var harms = a.harms || [];
+		if (!harms.length) {
+			f.push({ title: "No harms to individuals identified", detail: "Art. 35(7)(c) requires an assessment of the risks to individuals' rights and freedoms, not only to the security of the data. Record the foreseeable consequences, even where you judge them unlikely.", severity: "high" });
+		}
+		if (r.inherent.level === null) {
+			f.push({ title: "Inherent risk not rated", detail: "Without a rating before mitigation there is nothing to show what the measures achieve. Rate severity and likelihood as if no safeguards were in place.", severity: "medium" });
+		}
+		if (r.residual.level === null) {
+			f.push({ title: "Residual risk not rated", detail: "The conclusion falls back on the worst feared event, which only covers security. Rate the residual risk to individuals after all agreed measures.", severity: "medium" });
+		}
+		if (r.inherent.level && r.residual.level) {
+			var ii = RISK_LEVELS.indexOf(r.inherent.level), ri = RISK_LEVELS.indexOf(r.residual.level);
+			if (ri > ii) {
+				f.push({ title: "Residual risk rated above inherent risk", detail: "Measures should not make the risk worse. Either one of the ratings is wrong, or a measure introduces a new risk that should be recorded as a harm in its own right.", severity: "medium" });
+			} else if (ri < ii && r.planned.length) {
+				f.push({ title: "Residual rating depends on measures not yet implemented", detail: r.planned.length + " planned measure(s) count towards a residual rating of " + r.residual.level.toLowerCase() + ". Until they are in place the effective risk is closer to " + r.inherent.level.toLowerCase() + ". Do not start processing on the strength of the residual rating alone.", severity: "high" });
+			} else if (ri < ii && !r.controls.length) {
+				f.push({ title: "Risk reduced with no measures recorded", detail: "The residual rating is lower than the inherent rating, but no implemented or planned measure is recorded to explain the difference.", severity: "medium" });
+			}
+		}
+		if (r.planned.length && !a.controlsPlannedNote) {
+			f.push({ title: "Planned measures without owners or dates", detail: "A planned measure with no owner and no date is an intention, not a mitigation. Record both.", severity: "medium" });
+		}
+		HARM_MEASURE_CHECKS.forEach(function (c) {
+			if (harms.indexOf(c.harm) === -1) return;
+			var covered = c.measures.some(function (m) { return r.controls.indexOf(m) !== -1 || r.planned.indexOf(m) !== -1; });
+			if (!covered) f.push({ title: c.title, detail: c.detail, severity: "medium" });
+		});
+		if (a.viewsSought === "Not yet" || a.viewsSought === "Not sure") {
+			f.push({ title: "Views of the individuals not sought", detail: "Art. 35(9) expects the controller to seek the views of the people affected, or their representatives, where appropriate. If it is not appropriate here, record why.", severity: a.viewsSought === "Not yet" ? "medium" : "low" });
+		}
+		if (r.triggers.length && !a.triggerContext) {
+			f.push({ title: "The high-risk element is not described", detail: "Ticking the criteria says that a DPIA is needed, not why. Describe the specific feature of the processing that creates the risk, so the rest of the assessment can be read against it.", severity: "low" });
 		}
 
 		if (r.scored.length < 3) {
@@ -1710,10 +1869,10 @@
 		if (a.transfersOutside === "Yes" && (a.transferMechanism || []).indexOf("None identified yet") !== -1) {
 			f.push({ title: "Transfer outside the home region with no mechanism identified", detail: "A transfer needs a valid mechanism (adequacy, SCCs, BCRs or a derogation) in place before it starts.", severity: "high" });
 		}
-		if (a.transfersOutside === "Yes" && a.tiaDone === "No") {
+		if (tiaNeeded(a.transfersOutside, a.transferMechanism) && a.tiaDone === "No") {
 			f.push({ title: "No transfer impact assessment", detail: "Where transfers rely on SCCs or BCRs, assess the destination country's laws and any supplementary measures needed, and record the outcome.", severity: "medium" });
 		}
-		if (a.processorsInvolved === "Yes" && r.controls.indexOf("Data processing agreement with the supplier") === -1) {
+		if (a.processorsInvolved === "Yes" && r.controls.indexOf("Data processing agreement with the supplier") === -1 && r.planned.indexOf("Data processing agreement with the supplier") === -1) {
 			f.push({ title: "Processor involved without a recorded data processing agreement", detail: "Art. 28 requires a written contract with every processor covering the mandated terms. Record it as a control here once it is in place.", severity: "high" });
 		}
 		if (r.controls.indexOf("Processing recorded in the RoPA") === -1) {
@@ -2362,9 +2521,9 @@
 	 * ================================================================= */
 	var MODULES = {
 		privacy: { id: "privacy", label: "Privacy Assessment", steps: PRIVACY_STEPS, compute: privacyResult,
-			intro: "Screen a process end to end: what data, whose, for what purposes, on what lawful basis, with what retention, who it is shared with and where it goes \u2014 then get a risk level and whether a full DPIA is needed. If it is, it hands straight over." },
+			intro: "Screen a process end to end: what data, whose, for what purposes, on what lawful basis, with what retention, who it is shared with and where it goes. It gives a risk level and says whether a full DPIA is needed. If it is, it hands straight over." },
 		dpia: { id: "dpia", label: "Full DPIA", steps: DPIA_STEPS, compute: dpiaResult,
-			intro: "The full assessment that follows when the Privacy Assessment says a DPIA is needed: necessity and proportionality, individual rights, transfers, and a risk assessment of the three feared events plotted on a severity × likelihood matrix." },
+			intro: "The full assessment that follows when the Privacy Assessment says a DPIA is needed: necessity and proportionality, individual rights, transfers, the harms the processing could cause individuals rated before and after mitigation, and the three feared security events, all plotted on one severity × likelihood matrix." },
 		lia: { id: "lia", label: "Legitimate Interest Test", steps: LIA_STEPS, compute: liaResult,
 			intro: "The three-part test for relying on legitimate interests: is the interest legitimate, is the processing necessary for it, and do the individual\u2019s interests override it? Weighs both sides and shows the reasoning." },
 		ai: { id: "ai", label: "AI Risk Assessment", steps: AI_STEPS, compute: aiResult,
@@ -2777,6 +2936,7 @@
 		// Map the Privacy Assessment's safeguard list onto the DPIA's shorter one.
 		var SAFEGUARD_MAP = {
 			"Adequacy decision": "Adequacy decision",
+			"EU-US Data Privacy Framework (certified US recipient)": "EU-US Data Privacy Framework",
 			"Standard contractual clauses (controller to processor)": "Standard contractual clauses",
 			"Standard contractual clauses (controller to controller)": "Standard contractual clauses",
 			"Binding corporate rules": "Binding corporate rules",
@@ -3443,8 +3603,8 @@
 	function renderDpiaResult(r) {
 		var statusKey = r.dpiaStatus === "Required" ? "high" : (r.dpiaStatus === "Likely required" ? "medium" : "low");
 		root.appendChild(el("div", { class: "paa-result-head" }, [
-			el("span", { class: "paa-badge " + (r.highest ? badgeClass(r.highest === "Very High" ? "Prohibited" : r.highest) : "paa-badge-na") },
-				[r.highest ? ("Highest risk: " + r.highest) : "Risk not scored"]),
+			el("span", { class: "paa-badge " + (r.residualLevel ? badgeClass(r.residualLevel === "Very High" ? "Prohibited" : r.residualLevel) : "paa-badge-na") },
+				[r.residual.level ? ("Residual risk: " + r.residual.level) : (r.highest ? ("Highest feared event: " + r.highest) : "Risk not scored")]),
 			el("span", { class: "paa-badge paa-badge-" + statusKey }, ["DPIA: " + r.dpiaStatus])
 		]));
 
@@ -3457,8 +3617,21 @@
 
 		root.appendChild(el("div", { class: "paa-result-item" }, [
 			el("h4", {}, ["Risk matrix"]),
-			renderRiskMatrix(r.events)
+			renderRiskMatrix([r.inherent, r.residual].filter(function (e) { return e.level; }).concat(r.events))
 		]));
+
+		if (r.inherent.level || r.residual.level) {
+			var otbl = el("table", { class: "paa-table" });
+			[r.inherent, r.residual].forEach(function (e) {
+				otbl.appendChild(el("tr", {}, [
+					el("td", {}, [e.name]),
+					el("td", {}, [e.level ? SEVERITY_SCALE[e.sevIdx].split(" - ")[0] + " severity" : "Not rated"]),
+					el("td", {}, [e.level ? LIKELIHOOD_SCALE[e.likIdx].split(" - ")[0] + " likelihood" : ""]),
+					el("td", {}, [e.level || ""])
+				]));
+			});
+			root.appendChild(el("div", { class: "paa-result-item" }, [el("h4", {}, ["Risk to individuals, before and after mitigation"]), otbl]));
+		}
 
 		if (r.scored.length) {
 			var tbl = el("table", { class: "paa-table" });
@@ -3486,7 +3659,7 @@
 			renderFactors(r.factors)
 		]));
 
-		root.appendChild(el("p", { class: "paa-help" }, ["Risk scoring uses the severity and likelihood scales from the CNIL privacy impact assessment method; the trigger criteria follow Art. 35(3) as expanded by the European Data Protection Board's guidance. This is decision support for a trained assessor, not legal advice - check your own supervisory authority's published lists and templates."]));
+		root.appendChild(el("p", { class: "paa-help" }, ["Risk scoring uses the severity and likelihood scales from the CNIL privacy impact assessment method; the trigger criteria follow Art. 35(3) as expanded by the European Data Protection Board's guidance. Inherent and residual ratings use the same scales and matrix, so the distance between I and R is what the measures achieve. This is decision support for a trained assessor, not legal advice. Check your own supervisory authority's published lists and templates."]));
 	}
 
 	var TPSA_BADGE_MAP = { Low: "Low", Medium: "Medium", High: "High", Critical: "Prohibited" };
@@ -3629,7 +3802,7 @@
 				var handoffAnswers = state.answers;
 				var handoff = el("div", { class: "paa-callout sev-" + (result.dpia === "Required" ? "high" : "medium") }, [
 					el("strong", {}, ["A DPIA is " + result.dpia.toLowerCase() + ". "]),
-					"The full assessment picks up from here - necessity and proportionality, individual rights, transfers, and a risk assessment of the three feared events. What you have already answered carries over."
+					"The full assessment picks up from here: necessity and proportionality, individual rights, transfers, risks to individuals before and after mitigation, and the three feared security events. What you have already answered carries over."
 				]);
 				var toDpia = el("button", { class: "button paa-to-dpia" }, ["Continue to the full DPIA"]);
 				toDpia.addEventListener("click", function () { startModule("dpia", seedDpiaFromPrivacyAssessment(handoffAnswers)); });
@@ -3646,7 +3819,7 @@
 		} else if (state.moduleId === "dpia") {
 			renderDpiaResult(result);
 			entry = { moduleId: "dpia", name: name, date: new Date().toISOString(),
-				resultLabel: (result.highest ? result.highest + " risk" : "Not scored") + " - DPIA " + result.dpiaStatus.toLowerCase(),
+				resultLabel: (result.residualLevel ? result.residualLevel + " risk" : "Not scored") + " - DPIA " + result.dpiaStatus.toLowerCase(),
 				answers: state.answers, result: result };
 			saveHistory(entry);
 		} else if (state.moduleId === "incident") {
