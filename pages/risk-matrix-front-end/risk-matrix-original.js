@@ -14,11 +14,15 @@
 // of the matrix in risk-matrix-original.html. Kept in sync with that table by
 // hand: if a cell's class changes there, change it here too, or the Excel
 // export will disagree with what the page shows.
+// Impact is weighted above likelihood, as in the level-of-risk table of NIST
+// SP 800-30 Rev. 1: a critical impact never rates below High, a low impact
+// never above Medium, and ratings only rise moving up or right. Three cells of
+// sixteen are Critical, so the top band still separates the worst risks.
 const MATRIX_RATING = {
-  Likely:   { Low: "high",   Medium: "critical", High: "critical", Critical: "critical" },
-  Possible: { Low: "medium", Medium: "high",     High: "critical", Critical: "critical" },
-  Unlikely: { Low: "low",    Medium: "medium",   High: "high",     Critical: "critical" },
-  Rare:     { Low: "low",    Medium: "low",      High: "medium",   Critical: "high" }
+  Likely:   { Low: "medium", Medium: "high",   High: "critical", Critical: "critical" },
+  Possible: { Low: "low",    Medium: "medium", High: "high",     Critical: "critical" },
+  Unlikely: { Low: "low",    Medium: "medium", High: "high",     Critical: "high" },
+  Rare:     { Low: "low",    Medium: "low",    High: "medium",   Critical: "high" }
 };
 
 // Same hex values as the .low/.medium/.high/.critical rules in the stylesheet,
@@ -907,8 +911,10 @@ function styleRiskGraph(sheet) {
  *
  * Scale definitions for likelihood and impact, plus a reference scale for
  * mitigation effectiveness, shown in a collapsible panel under the Likelihood
- * and Impact selects. Adapted from practitioner risk-rating scales and written
- * generically. The panel re-renders whenever the category, the predefined
+ * and Impact selects. Adapted from an enterprise risk-rating scale used in
+ * practice and written generically. Ratings are inherent: likelihood and
+ * impact are judged before mitigations, and the strength of existing controls
+ * is assessed separately. The panel re-renders whenever the category, the predefined
  * risk, either rating, or a Clear changes the form, so the levels currently
  * selected are always the ones highlighted.
  *
@@ -918,10 +924,10 @@ function styleRiskGraph(sheet) {
  * ------------------------------------------------------------------------- */
 (function () {
   const LIKELIHOOD_GUIDE = [
-    { level: "Likely", band: "More than 75%", text: "Expected to happen within one to two years without further action, or already happening somewhere comparable." },
-    { level: "Possible", band: "50% to 75%", text: "More likely than not to happen within one to two years without further action." },
-    { level: "Unlikely", band: "25% to 50%", text: "Could happen within one to two years, but less likely than not." },
-    { level: "Rare", band: "Less than 25%", text: "Not expected within one to two years, though it cannot be ruled out." }
+    { level: "Likely", band: "More than 75%", text: "Expected to happen within one to two years if no action is taken." },
+    { level: "Possible", band: "50% to 75%", text: "More likely than not to happen within one to two years if no action is taken." },
+    { level: "Unlikely", band: "25% to 50%", text: "Could happen within one to two years if no action is taken, but less likely than not." },
+    { level: "Rare", band: "Less than 25%", text: "Not expected within one to two years, even if no action is taken, though it cannot be ruled out." }
   ];
 
   const IMPACT_LEVELS = ["Low", "Medium", "High", "Critical"];
@@ -948,8 +954,8 @@ function styleRiskGraph(sheet) {
     operational: {
       title: "Operational",
       levels: {
-        Low: "Core operations or financial transactions disrupted for under a day. Critical systems down for under 5 hours at a single location. Other activities or systems disrupted for under 5 days.",
-        Medium: "Core operations disrupted for 1 to 2 days. Critical systems down for under 5 hours across several locations. Other activities or systems disrupted for 5 days to 2 weeks.",
+        Low: "Core operations or financial transactions disrupted for under a day. Critical systems down for under 5 hours at a single location. Other activities or systems disrupted for 5 days to 2 weeks.",
+        Medium: "Not defined separately: the Low thresholds apply to both levels. Use another dimension to decide between Low and Medium.",
         High: "Core operations disrupted for 2 to 5 days. Critical systems down for 5 to 24 hours. Other activities or systems disrupted for more than 2 weeks.",
         Critical: "Core operations disrupted for more than 5 days. Critical systems down for more than 24 hours."
       }
@@ -959,8 +965,8 @@ function styleRiskGraph(sheet) {
       levels: {
         Low: "Limited local or trade media coverage and social media mentions, isolated complaints, minimal stakeholder reaction, no regulator interest.",
         Medium: "Negative local or trade media coverage, some social media conversation, moderate levels of complaints, some attention from advocacy groups, regulator comments or questions.",
-        High: "Negative national media coverage, growing social media conversation, advocacy groups contacting the organisation or campaigning publicly, a regulator debating intervention, escalations from senior customers.",
-        Critical: "Extensive national and international coverage, a trending social media story, boycotts or public censure, protests or media on site, regulatory intervention, a parliamentary or police inquiry, customers cancelling orders."
+        High: "Negative national media coverage, growing social media conversation, advocacy groups contacting the organisation or discussing it in the media, a regulator debating intervention, escalations from senior customers.",
+        Critical: "Extensive national and international coverage, a trending social media story, boycotts or public censure, advocacy group campaigns, protests or media on site, regulatory intervention, a parliamentary or police inquiry, customers cancelling orders."
       }
     }
   };
@@ -1015,12 +1021,12 @@ function styleRiskGraph(sheet) {
       body.appendChild(now);
     }
 
-    body.appendChild(el("p", "rg-lead", "Rate the risk as it stands today. Count only controls that are already operating: planned measures belong in the mitigation text, but they do not lower the rating."));
+    body.appendChild(el("p", "rg-lead", "Rate the inherent risk: how likely it is and how bad it would be if no mitigations were in place. Judge the strength of the controls you already have separately, using the mitigation effectiveness scale below."));
 
     // Likelihood
     const lk = el("section", "rg-section");
     lk.appendChild(el("h3", "rg-heading", "Likelihood"));
-    lk.appendChild(el("p", "rg-help", "The probability that the risk materialises within one to two years if no further action is taken."));
+    lk.appendChild(el("p", "rg-help", "The probability that the risk materialises within one to two years if no action or mitigations are taken."));
     const lkList = el("ul", "rg-list");
     LIKELIHOOD_GUIDE.forEach(row => {
       const li = el("li", "rg-row" + (row.level === likelihood ? " is-current" : ""));
@@ -1061,7 +1067,7 @@ function styleRiskGraph(sheet) {
     // Mitigation effectiveness (reference only)
     const mt = el("section", "rg-section");
     mt.appendChild(el("h3", "rg-heading", "Mitigation effectiveness"));
-    mt.appendChild(el("p", "rg-help", "How strong the existing controls are, for example training, assessments, policies or agreements. Use it to sanity-check the likelihood: with limited or no controls, a Rare or Unlikely rating needs a reason other than the controls."));
+    mt.appendChild(el("p", "rg-help", "How strong the controls already in place are, for example training, assessments, policies or agreements. Count only controls that are operating today: planned measures can be described in the mitigation text but are not rated. It does not move the risk on the matrix, which shows inherent risk."));
     const mtList = el("ul", "rg-list");
     MITIGATION_GUIDE.forEach(row => {
       const li = el("li", "rg-row");
