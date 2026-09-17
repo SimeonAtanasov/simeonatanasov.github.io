@@ -918,9 +918,11 @@ function styleRiskGraph(sheet) {
  * risk, either rating, or a Clear changes the form, so the levels currently
  * selected are always the ones highlighted.
  *
- * Impact is rated on the most severe dimension that applies. All four
- * dimensions are always shown so no single lens biases the rating; the
- * category only decides which one is listed first.
+ * Impact is rated on the most severe dimension that applies. Each category
+ * names the one or two dimensions the assessor should rate against; the other
+ * dimensions sit in a closed "Also check if relevant" section, so they stay
+ * one click away without competing for attention. With no category, or
+ * Custom, all four are shown.
  * ------------------------------------------------------------------------- */
 (function () {
   const LIKELIHOOD_GUIDE = [
@@ -971,14 +973,15 @@ function styleRiskGraph(sheet) {
     }
   };
 
-  // Which dimension leads for each category. The rest follow in this order.
-  const DIMENSION_ORDER = {
-    Privacy: ["individuals", "compliance", "reputational", "operational"],
-    LLM: ["individuals", "compliance", "reputational", "operational"],
-    AI: ["compliance", "individuals", "reputational", "operational"],
-    Cyber: ["operational", "compliance", "individuals", "reputational"],
-    Operational: ["operational", "reputational", "compliance", "individuals"],
-    "": ["reputational", "operational", "compliance", "individuals"]
+  // The dimensions to rate against for each category ("primary"), with the
+  // reason shown to the assessor, and the rest to check only if relevant.
+  const ALL_DIMENSIONS = ["individuals", "compliance", "reputational", "operational"];
+  const DIMENSION_FOCUS = {
+    Privacy: { article: "a", primary: ["individuals", "compliance"], why: "the harm falls first on the people whose data it is, and on legal obligations." },
+    LLM: { article: "an", primary: ["individuals", "compliance"], why: "outputs and training data affect people directly, and use of personal data carries legal obligations." },
+    AI: { article: "an", primary: ["compliance", "individuals"], why: "AI risks are judged first against legal and regulatory requirements, then by their effect on people." },
+    Cyber: { article: "a", primary: ["operational", "compliance"], why: "an incident first disrupts systems and operations, then triggers notification and legal duties." },
+    Operational: { article: "an", primary: ["operational", "reputational"], why: "the impact shows first in disrupted operations and in how customers and the public react." }
   };
 
   const CATEGORY_NAMES = { Privacy: "Privacy", LLM: "LLM / GenAI", AI: "AI", Cyber: "Cyber", Operational: "Operational" };
@@ -1007,7 +1010,13 @@ function styleRiskGraph(sheet) {
     const category = (document.getElementById("new-category") || {}).value || "";
     const likelihood = (document.getElementById("new-likelihood") || {}).value || "";
     const impact = (document.getElementById("new-impact") || {}).value || "";
-    const order = DIMENSION_ORDER[category] || DIMENSION_ORDER[""];
+    const focus = DIMENSION_FOCUS[category] || null;
+    const primary = focus ? focus.primary : ALL_DIMENSIONS;
+    const others = ALL_DIMENSIONS.filter(key => primary.indexOf(key) === -1);
+
+    // Rebuilding the panel would close the "Also check" section on every
+    // change of a select, so remember whether the assessor had it open.
+    const moreWasOpen = !!body.querySelector(".rg-more[open]");
 
     body.innerHTML = "";
 
@@ -1041,16 +1050,12 @@ function styleRiskGraph(sheet) {
     // Impact
     const im = el("section", "rg-section");
     im.appendChild(el("h3", "rg-heading", "Impact"));
-    im.appendChild(el("p", "rg-help", "The worst credible consequence if the risk occurs. Check every dimension and rate on the most severe one that applies. Several dimensions are shown so that no single lens biases the rating, and no amount of financial loss is assumed."));
-    const grid = el("div", "rg-dimensions");
-    order.forEach((key, i) => {
+    im.appendChild(el("p", "rg-help", "The worst credible consequence if the risk occurs, rated on the most severe dimension that applies. No amount of financial loss is assumed."));
+
+    function dimensionCard(key) {
       const dim = IMPACT_DIMENSIONS[key];
-      const card = el("div", "rg-dimension" + (i === 0 && category && category !== "Custom" ? " is-lead" : ""));
-      const head = el("h4", "rg-dim-title", dim.title);
-      if (i === 0 && CATEGORY_NAMES[category]) {
-        head.appendChild(el("span", "rg-tag", "Leads for " + CATEGORY_NAMES[category] + " risks"));
-      }
-      card.appendChild(head);
+      const card = el("div", "rg-dimension");
+      card.appendChild(el("h4", "rg-dim-title", dim.title));
       const list = el("ul", "rg-list");
       IMPACT_LEVELS.forEach(level => {
         const li = el("li", "rg-row rg-row-stacked" + (level === impact ? " is-current" : ""));
@@ -1059,9 +1064,36 @@ function styleRiskGraph(sheet) {
         list.appendChild(li);
       });
       card.appendChild(list);
-      grid.appendChild(card);
-    });
+      return card;
+    }
+
+    const scaleNames = primary.map(key => IMPACT_DIMENSIONS[key].title.toLowerCase());
+    const instruction = el("p", "rg-instruction");
+    if (focus) {
+      instruction.appendChild(el("strong", "", "For " + focus.article + " " + CATEGORY_NAMES[category] + " risk, use the two scales below: " + scaleNames.join(" and ") + ". "));
+      instruction.appendChild(document.createTextNode("Rate on whichever is more severe, because " + focus.why));
+    } else if (category === "Custom") {
+      instruction.appendChild(el("strong", "", "For a custom risk, check all four dimensions and rate on the most severe."));
+    } else {
+      instruction.appendChild(el("strong", "", "Check all four dimensions and rate on the most severe. "));
+      instruction.appendChild(document.createTextNode("Pick a category above to narrow this to the dimensions that matter most for that kind of risk."));
+    }
+    im.appendChild(instruction);
+
+    const grid = el("div", "rg-dimensions");
+    primary.forEach(key => grid.appendChild(dimensionCard(key)));
     im.appendChild(grid);
+
+    if (others.length) {
+      const more = el("details", "rg-more");
+      if (moreWasOpen) more.open = true;
+      more.appendChild(el("summary", "", "Also check if relevant: " + others.map(key => IMPACT_DIMENSIONS[key].title).join(", ")));
+      more.appendChild(el("p", "rg-help", "Only if the risk clearly reaches them. If one of these is more severe than the dimensions above, rate on it instead."));
+      const moreGrid = el("div", "rg-dimensions");
+      others.forEach(key => moreGrid.appendChild(dimensionCard(key)));
+      more.appendChild(moreGrid);
+      im.appendChild(more);
+    }
     body.appendChild(im);
 
     // Mitigation effectiveness (reference only)

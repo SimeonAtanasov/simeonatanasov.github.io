@@ -897,3 +897,37 @@ button#add-risk {
         grid-template-columns: 5.5em minmax(0, 1fr);
     }
 }
+
+/* Which impact dimensions to rate against for the chosen category, and the
+   closed section holding the rest. */
+.rg-instruction {
+    margin: 0.5em 0 0.75em;
+    padding: 0.6em 0.8em;
+    border-left: 3px solid #fff;
+    border-radius: 0.25em;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.rg-instruction strong {
+    color: #fff;
+}
+
+.rg-more {
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.35em;
+}
+
+.rg-more summary {
+    cursor: pointer;
+    padding: 0.6em 0.8em;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.rg-more > .rg-help,
+.rg-more > .rg-dimensions {
+    margin: 0 0.6em 0.6em;
+}
