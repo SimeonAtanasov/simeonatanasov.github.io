@@ -580,3 +580,147 @@ button#add-risk {
         width: 100%;
     }
 }
+
+/* ---- Matrix design, matched to the DPIA risk matrix on the assessment page ----
+   Separated, rounded cells in translucent risk colours on the page background,
+   muted uppercase axis labels, the rating named in every cell so the grid never
+   relies on colour alone, and risk numbers as white badges. The table structure
+   is unchanged because the JS places risks by row and column position.
+   This file loads before main.css, so every rule is scoped to #risk-matrix to
+   outrank the template's element-level table styles. The Excel export keeps its
+   own opaque fills (RATING_FILL in the JS), which read better on a white sheet. */
+#risk-matrix {
+    border-collapse: separate;
+    border-spacing: 2px;
+    box-shadow: none;
+    table-layout: fixed;
+    margin-bottom: 0;
+}
+
+#risk-matrix thead,
+#risk-matrix tbody tr,
+#risk-matrix tbody tr:nth-child(2n + 1) {
+    background: transparent;
+    border: 0;
+}
+
+#risk-matrix th,
+#risk-matrix td {
+    border: 0;
+}
+
+#risk-matrix th {
+    width: auto;
+    height: auto;
+    padding: 0.3em;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#risk-matrix thead th {
+    text-align: center;
+    vertical-align: bottom;
+}
+
+#risk-matrix thead th:first-child {
+    width: 9.5em;
+    text-align: left;
+    letter-spacing: 0.08em;
+}
+
+#risk-matrix tbody th {
+    text-align: right;
+}
+
+#risk-matrix td {
+    height: 3.5em;
+    padding: 0.4em 0.3em;
+    border-radius: 0.25em;
+    vertical-align: middle;
+}
+
+#risk-matrix td.low      { background: rgba(78, 183, 120, 0.42); }
+#risk-matrix td.medium   { background: rgba(224, 178, 63, 0.42); }
+#risk-matrix td.high     { background: rgba(224, 110, 63, 0.48); }
+#risk-matrix td.critical { background: rgba(214, 69, 69, 0.55); }
+
+#risk-matrix td::before {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.65em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    text-align: center;
+}
+
+#risk-matrix td.low::before      { content: "Low"; }
+#risk-matrix td.medium::before   { content: "Medium"; }
+#risk-matrix td.high::before     { content: "High"; }
+#risk-matrix td.critical::before { content: "Critical"; }
+
+#risk-matrix .risk-cell {
+    min-height: 0;
+    margin-top: 0.3em;
+    gap: 0.3em;
+    align-items: center;
+}
+
+#risk-matrix .risk-id {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.7em;
+    height: 1.7em;
+    margin: 0;
+    padding: 0 0.45em;
+    border-radius: 0.85em;
+    background: #fff;
+    color: #1e2a4d;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#risk-matrix caption {
+    caption-side: bottom;
+    margin: 0.5em 0 0.75em 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center;
+}
+
+/* Phones: tighter labels and badges so the four columns keep their width,
+   and drop the container's side padding, which #main .inner already
+   provides, so the matrix gets the full column. */
+@media screen and (max-width: 736px) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #risk-matrix thead th:first-child {
+        width: 6.5em;
+        letter-spacing: 0;
+    }
+    #risk-matrix th {
+        font-size: 0.55em;
+        letter-spacing: 0;
+        padding: 0.2em;
+    }
+    #risk-matrix td { padding: 0.35em 0.15em; }
+    #risk-matrix td::before {
+        font-size: 0.55em;
+        letter-spacing: 0;
+    }
+    #risk-matrix .risk-cell { gap: 0.2em; }
+    #risk-matrix .risk-id {
+        min-width: 1.6em;
+        padding: 0 0.3em;
+        font-size: 0.7em;
+    }
+}
