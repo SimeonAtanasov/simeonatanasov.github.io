@@ -1,0 +1,54 @@
+{
+  "id": "/privacy-ai-assessment.html",
+  "name": "Privacy & AI Tools",
+  "short_name": "Privacy Tools",
+  "description": "Assessment tools for privacy and AI governance work: privacy assessments, DPIA, legitimate interest tests, AI risk, incident severity, third-party security, GDPR readiness and a cookie banner scanner.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/privacy-ai-assessment.html",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "any",
+  "theme_color": "#2a3860",
+  "background_color": "#2a3860",
+  "categories": ["productivity", "business", "utilities"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/favicon/maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "GDPR Readiness Assessment",
+      "short_name": "GDPR Readiness",
+      "url": "/gdpr-readiness.html"
+    },
+    {
+      "name": "Cookie Banner Scanner",
+      "short_name": "Scanner",
+      "url": "/cookie-banner-scanner.html"
+    },
+    {
+      "name": "Risk Matrix",
+      "short_name": "Risk Matrix",
+      "url": "/risk-matrix-original.html"
+    }
+  ]
+}
