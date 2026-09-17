@@ -901,3 +901,187 @@ function styleRiskGraph(sheet) {
 }
 
 });
+
+/* ---------------------------------------------------------------------------
+ * Rating guide: "How to rate this risk"
+ *
+ * Scale definitions for likelihood and impact, plus a reference scale for
+ * mitigation effectiveness, shown in a collapsible panel under the Likelihood
+ * and Impact selects. Adapted from practitioner risk-rating scales and written
+ * generically. The panel re-renders whenever the category, the predefined
+ * risk, either rating, or a Clear changes the form, so the levels currently
+ * selected are always the ones highlighted.
+ *
+ * Impact is rated on the most severe dimension that applies. All four
+ * dimensions are always shown so no single lens biases the rating; the
+ * category only decides which one is listed first.
+ * ------------------------------------------------------------------------- */
+(function () {
+  const LIKELIHOOD_GUIDE = [
+    { level: "Likely", band: "More than 75%", text: "Expected to happen within one to two years without further action, or already happening somewhere comparable." },
+    { level: "Possible", band: "50% to 75%", text: "More likely than not to happen within one to two years without further action." },
+    { level: "Unlikely", band: "25% to 50%", text: "Could happen within one to two years, but less likely than not." },
+    { level: "Rare", band: "Less than 25%", text: "Not expected within one to two years, though it cannot be ruled out." }
+  ];
+
+  const IMPACT_LEVELS = ["Low", "Medium", "High", "Critical"];
+
+  const IMPACT_DIMENSIONS = {
+    individuals: {
+      title: "Impact on individuals",
+      levels: {
+        Low: "Individuals are not affected, or meet a few inconveniences they will overcome without any problem.",
+        Medium: "Individuals meet significant inconveniences they can overcome despite a few difficulties.",
+        High: "Individuals face significant consequences they should overcome, but with real and serious difficulties.",
+        Critical: "Individuals face significant or even irreversible consequences they may not overcome."
+      }
+    },
+    compliance: {
+      title: "Compliance",
+      levels: {
+        Low: "A single breach with no legal impact, such as non-compliance with an internal policy. Any past audit finding rated low. No need to inform a regulator or other authority.",
+        Medium: "Repeated breaches of the same kind, still without legal impact. Any past audit finding rated low. Informal notification to a regulator or other authority may be needed.",
+        High: "A considerable breach, or repeated breaches with legal impact, that could bring more inspections, fines or other consequences. Past audit finding rated medium. The regulator or authority, and the individuals affected, must be notified.",
+        Critical: "A serious breakdown of the control environment, across several locations or with material losses, that could bring formal sanctions or material fines. Past audit finding rated high. Full disclosure to regulators, authorities and the individuals affected."
+      }
+    },
+    operational: {
+      title: "Operational",
+      levels: {
+        Low: "Core operations or financial transactions disrupted for under a day. Critical systems down for under 5 hours at a single location. Other activities or systems disrupted for under 5 days.",
+        Medium: "Core operations disrupted for 1 to 2 days. Critical systems down for under 5 hours across several locations. Other activities or systems disrupted for 5 days to 2 weeks.",
+        High: "Core operations disrupted for 2 to 5 days. Critical systems down for 5 to 24 hours. Other activities or systems disrupted for more than 2 weeks.",
+        Critical: "Core operations disrupted for more than 5 days. Critical systems down for more than 24 hours."
+      }
+    },
+    reputational: {
+      title: "Reputational",
+      levels: {
+        Low: "Limited local or trade media coverage and social media mentions, isolated complaints, minimal stakeholder reaction, no regulator interest.",
+        Medium: "Negative local or trade media coverage, some social media conversation, moderate levels of complaints, some attention from advocacy groups, regulator comments or questions.",
+        High: "Negative national media coverage, growing social media conversation, advocacy groups contacting the organisation or campaigning publicly, a regulator debating intervention, escalations from senior customers.",
+        Critical: "Extensive national and international coverage, a trending social media story, boycotts or public censure, protests or media on site, regulatory intervention, a parliamentary or police inquiry, customers cancelling orders."
+      }
+    }
+  };
+
+  // Which dimension leads for each category. The rest follow in this order.
+  const DIMENSION_ORDER = {
+    Privacy: ["individuals", "compliance", "reputational", "operational"],
+    LLM: ["individuals", "compliance", "reputational", "operational"],
+    AI: ["compliance", "individuals", "reputational", "operational"],
+    Cyber: ["operational", "compliance", "individuals", "reputational"],
+    Operational: ["operational", "reputational", "compliance", "individuals"],
+    "": ["reputational", "operational", "compliance", "individuals"]
+  };
+
+  const CATEGORY_NAMES = { Privacy: "Privacy", LLM: "LLM / GenAI", AI: "AI", Cyber: "Cyber", Operational: "Operational" };
+
+  const MITIGATION_GUIDE = [
+    { level: "Strong", text: "Controls in place effectively mitigate the risk most of the time." },
+    { level: "Reasonable", text: "Controls are in place, but not consistently effective." },
+    { level: "Limited", text: "Controls are in place, but ineffective." },
+    { level: "None", text: "No control in place." }
+  ];
+
+  function el(tag, cls, text) {
+    const node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+
+  function chip(level, label) {
+    return el("span", "rg-chip rg-" + level.toLowerCase(), label || level);
+  }
+
+  function render() {
+    const body = document.getElementById("rating-guide-body");
+    if (!body) return;
+    const category = (document.getElementById("new-category") || {}).value || "";
+    const likelihood = (document.getElementById("new-likelihood") || {}).value || "";
+    const impact = (document.getElementById("new-impact") || {}).value || "";
+    const order = DIMENSION_ORDER[category] || DIMENSION_ORDER[""];
+
+    body.innerHTML = "";
+
+    // Current rating, read from the same table that colours the matrix.
+    const rating = (typeof MATRIX_RATING !== "undefined" && MATRIX_RATING[likelihood]) ? MATRIX_RATING[likelihood][impact] : null;
+    if (rating) {
+      const now = el("p", "rg-current");
+      now.appendChild(document.createTextNode(likelihood + " likelihood and " + impact.toLowerCase() + " impact place this risk in a "));
+      now.appendChild(chip(rating, rating.charAt(0).toUpperCase() + rating.slice(1)));
+      now.appendChild(document.createTextNode(" cell of the matrix."));
+      body.appendChild(now);
+    }
+
+    body.appendChild(el("p", "rg-lead", "Rate the risk as it stands today. Count only controls that are already operating: planned measures belong in the mitigation text, but they do not lower the rating."));
+
+    // Likelihood
+    const lk = el("section", "rg-section");
+    lk.appendChild(el("h3", "rg-heading", "Likelihood"));
+    lk.appendChild(el("p", "rg-help", "The probability that the risk materialises within one to two years if no further action is taken."));
+    const lkList = el("ul", "rg-list");
+    LIKELIHOOD_GUIDE.forEach(row => {
+      const li = el("li", "rg-row" + (row.level === likelihood ? " is-current" : ""));
+      li.appendChild(el("span", "rg-level", row.level));
+      li.appendChild(el("span", "rg-band", row.band));
+      li.appendChild(el("span", "rg-text", row.text));
+      lkList.appendChild(li);
+    });
+    lk.appendChild(lkList);
+    body.appendChild(lk);
+
+    // Impact
+    const im = el("section", "rg-section");
+    im.appendChild(el("h3", "rg-heading", "Impact"));
+    im.appendChild(el("p", "rg-help", "The worst credible consequence if the risk occurs. Check every dimension and rate on the most severe one that applies. Several dimensions are shown so that no single lens biases the rating, and no amount of financial loss is assumed."));
+    const grid = el("div", "rg-dimensions");
+    order.forEach((key, i) => {
+      const dim = IMPACT_DIMENSIONS[key];
+      const card = el("div", "rg-dimension" + (i === 0 && category && category !== "Custom" ? " is-lead" : ""));
+      const head = el("h4", "rg-dim-title", dim.title);
+      if (i === 0 && CATEGORY_NAMES[category]) {
+        head.appendChild(el("span", "rg-tag", "Leads for " + CATEGORY_NAMES[category] + " risks"));
+      }
+      card.appendChild(head);
+      const list = el("ul", "rg-list");
+      IMPACT_LEVELS.forEach(level => {
+        const li = el("li", "rg-row rg-row-stacked" + (level === impact ? " is-current" : ""));
+        li.appendChild(chip(level));
+        li.appendChild(el("span", "rg-text", dim.levels[level]));
+        list.appendChild(li);
+      });
+      card.appendChild(list);
+      grid.appendChild(card);
+    });
+    im.appendChild(grid);
+    body.appendChild(im);
+
+    // Mitigation effectiveness (reference only)
+    const mt = el("section", "rg-section");
+    mt.appendChild(el("h3", "rg-heading", "Mitigation effectiveness"));
+    mt.appendChild(el("p", "rg-help", "How strong the existing controls are, for example training, assessments, policies or agreements. Use it to sanity-check the likelihood: with limited or no controls, a Rare or Unlikely rating needs a reason other than the controls."));
+    const mtList = el("ul", "rg-list");
+    MITIGATION_GUIDE.forEach(row => {
+      const li = el("li", "rg-row");
+      li.appendChild(el("span", "rg-level", row.level));
+      li.appendChild(el("span", "rg-text", row.text));
+      mtList.appendChild(li);
+    });
+    mt.appendChild(mtList);
+    body.appendChild(mt);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Registered after the page's own handlers, so a predefined risk has
+    // already written its suggested ratings into the selects when this runs.
+    ["new-category", "new-predefined-risk", "new-likelihood", "new-impact"].forEach(id => {
+      const node = document.getElementById(id);
+      if (node) node.addEventListener("change", render);
+    });
+    const clear = document.getElementById("clear-data");
+    if (clear) clear.addEventListener("click", render);
+    render();
+  });
+})();

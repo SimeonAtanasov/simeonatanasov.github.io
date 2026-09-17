@@ -724,3 +724,176 @@ button#add-risk {
         font-size: 0.7em;
     }
 }
+
+/* ---- Rating guide ("How to rate this risk") ----
+   Sits in the add-risk form under the Likelihood and Impact selects. Level
+   chips reuse the matrix colours so the guide and the grid read as one system.
+   The current selection is highlighted in every scale. */
+.rating-guide {
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.rating-guide summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-weight: bold;
+    color: #fff;
+    list-style-position: inside;
+}
+
+.rating-guide[open] summary {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rating-guide-body {
+    padding: 12px 16px 16px;
+    font-size: 0.9em;
+}
+
+.rating-guide-body p {
+    margin: 0 0 0.75em;
+}
+
+.rg-current {
+    color: #fff;
+}
+
+.rg-lead,
+.rg-help {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.rg-section {
+    margin-top: 1.25em;
+}
+
+.rg-heading {
+    margin: 0 0 0.35em;
+    font-size: 1em;
+    color: #fff;
+}
+
+.rg-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rg-row {
+    display: grid;
+    grid-template-columns: 7em 8em minmax(0, 1fr);
+    gap: 0.25em 0.75em;
+    align-items: baseline;
+    margin: 0 0 2px;
+    padding: 0.45em 0.6em;
+    border-left: 3px solid transparent;
+    border-radius: 0.25em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.rg-row .rg-level {
+    color: #fff;
+    font-weight: bold;
+}
+
+.rg-row .rg-band {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Mitigation rows have no band column. */
+.rg-row:not(:has(.rg-band)) {
+    grid-template-columns: 7em minmax(0, 1fr);
+}
+
+.rg-row-stacked {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.35em;
+}
+
+.rg-row.is-current {
+    background: rgba(255, 255, 255, 0.08);
+    border-left-color: #fff;
+    color: #fff;
+}
+
+.rg-dimensions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.rg-dimension {
+    padding: 0.6em;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.35em;
+}
+
+.rg-dimension.is-lead {
+    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.rg-dim-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4em 0.6em;
+    margin: 0 0 0.5em;
+    font-size: 0.95em;
+    color: #fff;
+}
+
+.rg-tag {
+    padding: 0.1em 0.55em;
+    border-radius: 1em;
+    background: #fff;
+    color: #1e2a4d;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.rg-chip {
+    justify-self: start;
+    display: inline-block;
+    padding: 0.1em 0.6em;
+    border-radius: 0.25em;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rg-chip.rg-low      { background: rgba(78, 183, 120, 0.42); }
+.rg-chip.rg-medium   { background: rgba(224, 178, 63, 0.42); }
+.rg-chip.rg-high     { background: rgba(224, 110, 63, 0.48); }
+.rg-chip.rg-critical { background: rgba(214, 69, 69, 0.55); }
+
+@media screen and (max-width: 736px) {
+    .rating-guide summary,
+    .rating-guide-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .rg-row,
+    .rg-row:not(:has(.rg-band)) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.15em;
+    }
+    .rg-dimensions {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Inside the narrower impact cards, a tighter chip column leaves the
+   description more room. Wide screens only: phones stack every row. */
+@media screen and (min-width: 737px) {
+    .rg-dimension .rg-row {
+        grid-template-columns: 5.5em minmax(0, 1fr);
+    }
+}
