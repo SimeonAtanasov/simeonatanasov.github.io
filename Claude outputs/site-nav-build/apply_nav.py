@@ -51,7 +51,7 @@ sec_close = s2.index("</section>", acc_start)
 head_inner = s2[intro_start:acc_start]
 accordion = s2[acc_start:sec_close]
 
-jump = jump_html(P, [("#%s-filters" % P, "Search"), ("#%s-index" % P, "All %s" % LABEL[1]), ("#%s-groups" % P, "The %s" % LABEL[1]), ("#%s-sources-note" % P, "Sources")])
+jump = jump_html(P, [("#%s-filters" % P, "Search"), ("#%s-index" % P, "All %s" % LABEL[1])])
 howto = [
     '<strong>Search</strong> matches any text in a %s: its title, the why-it-matters paragraph, the key actions, the never list and the worked example. Type a word such as "consent", "GPS" or "DPIA". Ctrl+K puts the cursor here from anywhere on the page.' % LABEL[0],
     'Matching %s stay in place, the rest hide, and the ones that match open so the text is visible. The count line says how many match; <em>Go to first result</em> scrolls to the first match and the list under it links the first ten. <em>Clear filters</em> shows everything again. Clicking a hidden %s in the side contents also clears the search.' % (LABEL[1], LABEL[0]),
