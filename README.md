@@ -52,10 +52,12 @@ advice pages carry their own. Short pages (home, dashboard, scanner, game, legal
 The three digests and the two advice pages share one navigation pattern: an on-this-page bar, a sticky side contents
 (grouped, with an all-documents view, scrollspy, copy-link and open-source actions, a drawer
 on small screens), a filters box with a first-result button, a list of the first ten matches
-and an explainer, a Top button, and a floating Expand all / Collapse all control at the
-bottom left that opens or closes every block of the side contents (added 20 September
-2026; shown for the grouped view only, and on small screens only while the drawer is
-open). The EDPB and cookie pages take it from `digest_nav.py` in their build folders; the
+and an explainer, a Top button, and two small floating buttons at the bottom left (double
+chevron plus EXP or COL) that open or close every block of the side contents (added 20
+September 2026; narrow enough to sit in the gutter beside the contents column; they
+appear once the contents has scrolled into the upper half of the screen, the way the Top
+button appears on the right; grouped view only; on small screens only while the drawer
+is open). The EDPB and cookie pages take it from `digest_nav.py` in their build folders; the
 AI Act page carries its own copy. All three
 digests are in the header nav, the home page Portfolio menu and `sitemap.xml`; they are
 not in the `sw.js` precache (deliberately, given their size).

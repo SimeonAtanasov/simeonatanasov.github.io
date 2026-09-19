@@ -8,9 +8,10 @@ Snapshot 19 September 2026.
   (label, range, title, optional sub-blocks, items with id, label and optional source
   URL); results_html() the count line with Go to first result and Clear filters, the
   first-ten list and the How the filters work explainer; jump_html() the on-this-page
-  bar; top_button() the Expand all / Collapse all control (bottom left, grouped view
-  only, inside the drawer on small screens), the Top button, the drawer backdrop and the
-  Contents button;
+  bar; top_button() the Expand all / Collapse all buttons (bottom left, double chevron
+  plus EXP or COL, shown once the contents has scrolled into the upper half of the screen,
+  grouped view only, inside the drawer on small screens), the Top button, the drawer
+  backdrop and the Contents button;
   nav_js(prefix, noun, title selector, extra scrollspy targets) the script; nav_css(prefix,
   section id) the styles. Every class is prefixed (ed-, ck-, pp-, aia-); the two-column
   wrapper is <prefix>-cols (not -body, which the advice pages already use).
@@ -25,12 +26,13 @@ Snapshot 19 September 2026.
   Usage: python3 apply_nav.py <src html> <src css> <pp|aia> <section id> <out html> <out css>.
   Run it on the version of the page WITHOUT navigation (the copy in the fix folder of the
   September 2026 verification, or strip the -head, -cols, -toc and script blocks first).
-- fold_patch.py: the script that added the Expand all / Collapse all control on 20 September
+- fold_patch.py: the script that added the Expand all / Collapse all buttons on 20 September
   2026 to the five shipped pages, the four copies of digest_nav.py and build_aia_page.py
-  by anchored string edits. Already applied everywhere (it refuses a file that carries the
-  control); kept as the record of what changed and as the pattern for the next such
-  addition. A rebuild of the EDPB page from the patched module reproduced the patched
-  shipped page byte for byte.
+  by anchored string edits (version 2 the same evening: small stacked buttons that appear
+  on scroll; the script upgrades a version 1 file in place and adds the control to a file
+  without it). Already applied everywhere; kept as the record of what changed and as the
+  pattern for the next such addition. A rebuild of the EDPB page from the patched module
+  reproduced the patched shipped page byte for byte.
 - The digest builders (edpb-digest-build, cookie-digest-build) import digest_nav.py from
   beside them (copies of this file; change it here and copy it over); the AI Act digest
   carries its own copy of the same mechanics.

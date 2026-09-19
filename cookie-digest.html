@@ -352,7 +352,7 @@
 </div>
 <p class="ck-sources-note" id="ck-sources-note">Sources: every entry links to the primary page it was written from, or to the secondary source where the entry is marked. The printable digest in the site's outputs folder lists all 259 with a numbered source. Snapshot 19 September 2026.</p>
 </div></div>
-<div class="ck-toc-fold" id="ck-toc-fold" role="group" aria-label="Contents blocks"><button type="button" class="ck-toc-fold-btn" id="ck-expand" title="Open every block in the contents"><i class="fas fa-angle-double-down"></i> Expand all</button><button type="button" class="ck-toc-fold-btn" id="ck-collapse" title="Close every block in the contents"><i class="fas fa-angle-double-up"></i> Collapse all</button></div><button type="button" class="ck-top" id="ck-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button><div class="ck-toc-backdrop" id="ck-toc-backdrop" hidden></div><button type="button" class="ck-toc-fab" id="ck-toc-open" aria-controls="ck-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>
+<div class="ck-toc-fold" id="ck-toc-fold" role="group" aria-label="Contents blocks" hidden><button type="button" class="ck-toc-fold-btn" id="ck-expand" title="Expand all blocks in the contents" aria-label="Expand all"><i class="fas fa-angle-double-down"></i><span>Exp</span></button><button type="button" class="ck-toc-fold-btn" id="ck-collapse" title="Collapse all blocks in the contents" aria-label="Collapse all"><i class="fas fa-angle-double-up"></i><span>Col</span></button></div><button type="button" class="ck-top" id="ck-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button><div class="ck-toc-backdrop" id="ck-toc-backdrop" hidden></div><button type="button" class="ck-toc-fab" id="ck-toc-open" aria-controls="ck-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>
 						</section>
 						</div>
 					</section>
@@ -426,9 +426,9 @@
 	/* side contents: flat view cloned from the grouped one */
 	Array.prototype.forEach.call(grouped.querySelectorAll('.' + P + '-toc-item'), function (it) { if (!it.querySelector('.' + P + '-toc-group')) flat.appendChild(it.cloneNode(true)); });
 	Array.prototype.forEach.call(flat.querySelectorAll('.' + P + '-toc-deep'), function (l) { l.classList.remove(P + '-toc-deep'); });
-	var fold = $('toc-fold');
+	var fold = $('toc-fold'), foldGrouped = true, foldMq = window.matchMedia('(max-width: 1100px)');
 	function setView(v) {
-		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat'; fold.hidden = v !== 'grouped';
+		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat'; foldGrouped = v === 'grouped'; syncFold();
 		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-view'), function (b) { var on = b.getAttribute('data-view') === v; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
 		try { localStorage.setItem(P + '-toc-view', v); } catch (err) {}
 	}
@@ -494,13 +494,18 @@
 	topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 	window.addEventListener('scroll', function () { topBtn.hidden = window.scrollY < 600; }, { passive: true });
 
-	/* expand or collapse every block in the contents (floating control, bottom left) */
+	/* expand or collapse every block in the contents: two small floating buttons at the bottom left,
+	   shown once the contents has scrolled into the upper half of the screen (in the drawer: whenever it is open) */
 	function setAll(open) {
 		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-ch, .' + P + '-toc-sec'), function (b) { setOpen(b, open); });
 		if (!open) toc.scrollTop = 0;
 	}
+	function syncFold() { fold.hidden = !foldGrouped || (!foldMq.matches && toc.getBoundingClientRect().top > window.innerHeight * 0.5); }
 	$('expand').addEventListener('click', function () { setAll(true); });
 	$('collapse').addEventListener('click', function () { setAll(false); });
+	window.addEventListener('scroll', syncFold, { passive: true });
+	window.addEventListener('resize', syncFold);
+	syncFold();
 
 	/* scrollspy */
 	var links = {};
