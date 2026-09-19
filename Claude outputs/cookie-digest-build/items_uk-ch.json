@@ -1,0 +1,382 @@
+[
+  {
+    "title": "PECR Regulation 6 (Privacy and Electronic Communications (EC Directive) Regulations 2003, SI 2003/2426), as amended by the Data (Use and Access) Act 2025",
+    "jurisdiction": "United Kingdom",
+    "type": "legislation",
+    "date": "5 February 2026",
+    "url": "https://www.legislation.gov.uk/uksi/2003/2426/regulation/6",
+    "status": "in force",
+    "takeaway": "Regulation 6(1) prohibits storing information, or gaining access to information stored, in a subscriber's or user's terminal equipment, subject to the exceptions in new Schedule A1; regulation 6(2) extends the prohibition to instigating storage or access and to collecting information automatically emitted by the device, which captures fingerprinting and pixels. It binds any person operating a website, app or connected service reaching UK users, not only controllers. Map every storage or access operation to one Schedule A1 exception (consent, transmission, strictly necessary, statistical, appearance, emergency) and document it. The substituted text applies from 5 February 2026 under SI 2026/82, regulation 2(w).",
+    "topics": [
+      "consent",
+      "strictly-necessary",
+      "analytics-exemption"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Data (Use and Access) Act 2025, section 112 and Schedule 12: new Schedule A1 to PECR (exceptions to the storage and access prohibition)",
+    "jurisdiction": "United Kingdom",
+    "type": "legislation",
+    "date": "5 February 2026",
+    "url": "https://www.legislation.gov.uk/ukpga/2025/18/schedule/12/enacted",
+    "status": "in force",
+    "takeaway": "Schedule 12 inserts Schedule A1 into PECR. Paragraph 2 permits storage or access where the user receives clear and comprehensive information and gives consent, which may be signified through browser or application settings; paragraphs 3 and 4 keep the transmission and strictly necessary exceptions; paragraph 5 covers collection solely for statistical purposes to improve the service; paragraph 6 covers adapting appearance or functionality to user preferences; paragraph 7 covers emergency geolocation. Paragraphs 5 and 6 require prior information, a simple free means of objecting, and no disclosure except to a party assisting with improvements. Rely on paragraph 5 only with processor-only analytics and a live objection control.",
+    "topics": [
+      "analytics-exemption",
+      "strictly-necessary",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Data (Use and Access) Act 2025, section 115 and Schedule 13: PECR enforcement aligned with the Data Protection Act 2018",
+    "jurisdiction": "United Kingdom",
+    "type": "legislation",
+    "date": "5 February 2026",
+    "url": "https://www.legislation.gov.uk/ukpga/2025/18/schedule/13",
+    "status": "in force",
+    "takeaway": "Schedule 13 substitutes Schedule 1 to PECR and applies the Data Protection Act 2018 enforcement toolkit to regulation 6 breaches: information, assessment, interview and enforcement notices, powers of entry and penalty notices under sections 155 to 157 as modified. The maximum penalty for a regulation 6 contravention becomes the UK GDPR higher ceiling of £17.5 million or 4 per cent of worldwide annual turnover, whichever is greater, replacing the previous £500,000 cap; the former threshold of serious contravention causing substantial damage or distress falls away. It binds every person subject to PECR. Treat tag deployment as a UK GDPR-scale liability. In force from 5 February 2026 under SI 2026/82.",
+    "topics": [
+      "enforcement",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Data (Use and Access) Act 2025 (Commencement No. 6 and Transitional and Saving Provisions) Regulations 2026, SI 2026/82",
+    "jurisdiction": "United Kingdom",
+    "type": "legislation",
+    "date": "5 February 2026",
+    "url": "https://www.legislation.gov.uk/uksi/2026/82/contents/made",
+    "status": "in force",
+    "takeaway": "Regulation 2 brings the PECR provisions of the 2025 Act into force on 5 February 2026, including section 112 and Schedule 12 (regulation 6 and Schedule A1 exceptions), section 115 and Schedule 13 (enforcement and penalties), and section 101 on penalty notices; regulation 3 commences further provisions on 19 June 2026. It applies to every organisation subject to PECR and the UK GDPR. Use 5 February 2026 as the date from which the statistical and appearance exceptions can be relied on and from which regulation 6 breaches attract UK GDPR-level fines; the transitional provisions govern investigations opened before that date.",
+    "topics": [
+      "analytics-exemption",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Data (Use and Access) Act 2025 (Commencement No. 9 and Transitional and Saving Provisions) Regulations 2026, SI 2026/1015: abolition of the Information Commissioner and transfer to the Information Commission",
+    "jurisdiction": "United Kingdom",
+    "type": "legislation",
+    "date": "30 September 2026",
+    "url": "https://www.legislation.gov.uk/uksi/2026/1015/contents/made",
+    "status": "applies from a future date",
+    "takeaway": "Made on 10 September 2026, regulation 2 commences sections 118 and 119 of the 2025 Act on 30 September 2026: the office of Information Commissioner is abolished and its functions transfer to the Information Commission, a body corporate with a board of seven non-executive members and an interim chief executive. The ICO confirms it will continue to be known as the ICO operationally and that existing regulatory functions, guidance and enforcement continue. Update references in privacy notices, DPIAs and contracts to the Information Commission after that date; no change to PECR obligations follows from the renaming.",
+    "topics": [
+      "enforcement",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "UK GDPR Article 4(11) and Article 7: definition and conditions for consent",
+    "jurisdiction": "United Kingdom",
+    "type": "legislation",
+    "date": "1 January 2026",
+    "url": "https://www.legislation.gov.uk/eur/2016/679/article/7",
+    "status": "in force",
+    "takeaway": "PECR consent means consent as defined in the UK GDPR: a freely given, specific, informed and unambiguous indication by statement or clear affirmative action (Article 4(11)). Article 7 requires the controller to demonstrate consent, to present the request clearly distinguishable from other matters in plain language, to allow withdrawal at any time with withdrawal as easy as giving consent, and to weigh whether access to a service is conditioned on unnecessary consent when judging whether it is freely given. It binds every controller relying on consent. Build banners so reject and withdraw match accept in effort, keep consent records, and never treat browsing or pre-ticked boxes as consent.",
+    "topics": [
+      "consent",
+      "reject-button",
+      "dark-patterns"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO Guidance on the use of storage and access technologies (final version)",
+    "jurisdiction": "United Kingdom",
+    "type": "regulator guidance",
+    "date": "29 April 2026",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/",
+    "status": "in force",
+    "takeaway": "The guidance explains how PECR regulation 6 and the UK GDPR apply to cookies, tracking pixels, link decoration, local storage, device fingerprinting, scripts and tags across websites, apps and connected TV, with chapters on the five exceptions, consent in practice, online advertising, cookie walls and consent or pay, and what a simple means of objecting requires. The statistical exception covers how a service is used, not who uses it; the appearance exception excludes adapting content to inferred interests; both need information and a free objection control, and legitimate interests is unavailable for non-exempt technologies. It replaces the 2024 and 2025 drafts and applies to every organisation subject to PECR.",
+    "topics": [
+      "consent",
+      "analytics-exemption",
+      "strictly-necessary"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO consultation on the draft updated guidance on storage and access technologies (draft that replaced the 2019 cookies guidance)",
+    "jurisdiction": "United Kingdom",
+    "type": "regulator guidance",
+    "date": "21 March 2025",
+    "url": "https://ico.org.uk/about-the-ico/ico-and-stakeholder-consultations/2024/12/ico-consultation-on-the-draft-updated-guidance-on-storage-and-access-technologies/",
+    "status": "superseded",
+    "takeaway": "The draft, previously known as the detailed cookies guidance, widened the ICO's cookie position to all storage and access technologies, confirmed that consent must meet the UK GDPR standard, that reject must be as easy as accept, that the strictly necessary exception is judged from the user's perspective and that pixels and fingerprinting are in scope. It was open for comment until 5 pm on 21 March 2025 and was directed at every organisation deploying such technologies for UK users. Use it only to trace how the ICO's thinking developed; it was superseded by the final guidance published on 29 April 2026.",
+    "topics": [
+      "consent",
+      "pixels-wiretap",
+      "strictly-necessary"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO consultation on a new chapter within the draft updated guidance on storage and access technologies (Data (Use and Access) Act exceptions)",
+    "jurisdiction": "United Kingdom",
+    "type": "regulator guidance",
+    "date": "26 September 2025",
+    "url": "https://ico.org.uk/about-the-ico/ico-and-stakeholder-consultations/2025/07/ico-consultation-on-a-new-chapter-within-the-draft-updated-guidance-on-storage-and-access-technologies/",
+    "status": "superseded",
+    "takeaway": "Opened on 7 July 2025 and closed on 26 September 2025, the consultation added a chapter explaining the statistical purposes and appearance exceptions introduced by the Data (Use and Access) Act 2025, including the information and objection conditions and the restriction on sharing statistical data beyond processors. It was addressed to website and app operators, analytics vendors and consent management platform providers serving UK users. Its content was folded into the final guidance of 29 April 2026, which supersedes it; cite the final text rather than the draft chapter.",
+    "topics": [
+      "analytics-exemption",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO Guidance on the use of cookies and similar technologies (2019 detailed cookies guidance)",
+    "jurisdiction": "United Kingdom",
+    "type": "regulator guidance",
+    "date": "3 July 2019",
+    "url": "https://ico.org.uk/media2/kz0doybw/guidance-on-the-use-of-cookies-and-similar-technologies-1-0.pdf",
+    "status": "superseded",
+    "takeaway": "Version 1.0 of 3 July 2019 set the ICO's post-GDPR cookie position: PECR consent means GDPR consent, continuing to browse is not consent, pre-ticked boxes and default-on sliders are invalid, analytics cookies are not strictly necessary and need consent, non-essential cookies must not be set before consent, third parties must be named, and cookie walls are acceptable only in limited circumstances. It applied to every operator of a website or app used from the UK and still appears in audit checklists and vendor documentation. It has been superseded by the Guidance on the use of storage and access technologies of 29 April 2026, which reflects the statistical exception for analytics.",
+    "topics": [
+      "consent",
+      "analytics-exemption",
+      "cookie-walls"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO Consent or pay guidance",
+    "jurisdiction": "United Kingdom",
+    "type": "regulator guidance",
+    "date": "23 January 2025",
+    "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/online-tracking/consent-or-pay/about-this-guidance/",
+    "status": "in force",
+    "takeaway": "The guidance states that consent or pay models, which offer a choice between consenting to personalised advertising, paying a fee, or leaving the service, can comply with UK data protection law where consent is freely given, assessed against four factors: power imbalance, equivalence of the core service, an appropriate fee, and privacy by design in how the choice is presented. It applies to any organisation operating or considering such a model for UK users, with additional expectations where services are likely to be accessed by children under 13. Document the four-factor assessment in a DPIA before launch and present both options with equal prominence.",
+    "topics": [
+      "consent-or-pay",
+      "consent",
+      "children"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO takes action to tackle cookie compliance across the UK's top 1,000 websites (2025 online tracking strategy)",
+    "jurisdiction": "United Kingdom",
+    "type": "enforcement",
+    "date": "23 January 2025",
+    "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/01/ico-takes-action-to-tackle-cookie-compliance-across-the-uk-s-top-1-000-websites/",
+    "status": "decided",
+    "takeaway": "The announcement launched the ICO's 2025 online tracking strategy with a commitment to bring the UK's top 1,000 websites into compliance, having already assessed the top 200 and written to 134 of them about advertising cookies placed before consent and unequal accept and reject options. It targets every operator of a high-traffic UK website and the ad tech vendors behind them. Audit banners against the three ICO tests: no non-essential advertising cookies before choice, reject as easy as accept, and no cookies set after refusal.",
+    "topics": [
+      "enforcement",
+      "reject-button",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO action secures increased cookie compliance across the UK's top 1,000 websites (campaign outcome)",
+    "jurisdiction": "United Kingdom",
+    "type": "enforcement",
+    "date": "4 December 2025",
+    "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/12/ico-action-secures-increased-cookie-compliance/",
+    "status": "decided",
+    "takeaway": "The ICO reports that 979 of the top 1,000 UK websites met its compliance checks at the most recent test, with 21 still failing; 415 passed without intervention and 564 improved after initially failing, following warning letters, investigations and 17 preliminary enforcement notices. The checks were whether advertising cookies were stored before the user could choose, whether rejecting was as easy as accepting, and whether cookies were placed despite refusal. The outcome covers sites reaching an estimated 80 per cent of UK internet users over 14. Expect periodic re-testing; keep the three checks in release testing so sites do not revert.",
+    "topics": [
+      "enforcement",
+      "reject-button",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO reprimand: Sky Betting and Gaming (Bonne Terre Limited) for advertising cookies without consent",
+    "jurisdiction": "United Kingdom",
+    "type": "enforcement",
+    "date": "17 September 2024",
+    "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/09/action-taken-against-sky-betting-and-gaming-for-using-cookies-without-consent/",
+    "status": "decided",
+    "takeaway": "The ICO found that between 10 January and 3 March 2023 Sky Betting and Gaming processed personal data through advertising cookies and shared it with ad tech companies before visitors could accept or reject them, in breach of PECR and the UK GDPR, and issued a reprimand; the company changed its banner in March 2023. The same announcement reported that 52 of 53 warned top-100 websites had made changes, leaving 99 of the top 100 offering a meaningful choice. It applies to any operator whose tags fire before consent. Verify tag sequencing on first page load and block ad tech calls until consent is recorded.",
+    "topics": [
+      "enforcement",
+      "consent",
+      "tcf"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO and CMA joint position paper: Harmful design in digital markets (online choice architecture and cookie choices)",
+    "jurisdiction": "United Kingdom",
+    "type": "regulator guidance",
+    "date": "9 August 2023",
+    "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2023/08/ico-and-cma-harmful-online-design-encourages-consumers-to-hand-over-personal-information/",
+    "status": "in force",
+    "takeaway": "The joint paper identifies design practices that breach data protection and consumer law, including failing to give an equal choice between accept all and reject all cookies, confusing privacy controls, persuasive language steering data sharing, bundled choices and defaults that limit control. It applies to every organisation designing online interfaces for UK consumers and records both regulators' warning that businesses which deliberately and persistently design unfairly risk enforcement. Use the paper as the UK benchmark for banner and preference-centre design and as the reference for the ICO's later reject-as-easy-as-accept enforcement tests.",
+    "topics": [
+      "dark-patterns",
+      "reject-button",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CMA acceptance of Google's Privacy Sandbox commitments (investigation into Google's Privacy Sandbox browser changes)",
+    "jurisdiction": "United Kingdom",
+    "type": "enforcement",
+    "date": "11 February 2022",
+    "url": "https://gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes",
+    "status": "superseded",
+    "takeaway": "On 11 February 2022 the CMA accepted binding commitments under which Google would design and test the Privacy Sandbox with the CMA and the ICO before any final decision to remove third-party cookies from Chrome, would not self-preference its own ad tech and would limit its use of data, with a monitoring trustee appointed in March 2022. The commitments bound Google but set the timeline for every publisher and vendor planning for cookie deprecation in the UK. Google announced in July 2024 that it would retain third-party cookies with a user choice and in April 2025 that no prompt would ship. The CMA released the commitments on 17 October 2025.",
+    "topics": [
+      "browser-signals",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CMA decision to release Google from the Privacy Sandbox commitments",
+    "jurisdiction": "United Kingdom",
+    "type": "enforcement",
+    "date": "17 October 2025",
+    "url": "https://gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes",
+    "status": "decided",
+    "takeaway": "Following a consultation opened in June 2025 after Google abandoned third-party cookie deprecation in Chrome, the CMA decided on 17 October 2025 that it had reasonable grounds to believe its competition concerns no longer arose and released Google from all the 2022 commitments, ending the CMA and ICO oversight of Privacy Sandbox design. The decision concerns Google but removes the regulatory driver behind UK cookie deprecation planning. Plan on third-party cookies persisting in Chrome for UK users, keep consent-based tagging as the compliance baseline, and treat Privacy Sandbox APIs as optional rather than a mandated replacement.",
+    "topics": [
+      "browser-signals",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ICO advice to government on potential changes to online advertising rules (PECR regulation 6 exception for low-risk advertising)",
+    "jurisdiction": "United Kingdom",
+    "type": "proposal",
+    "date": "18 May 2026",
+    "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/our-advice-to-government-on-potential-changes-to-online-advertising-rules/",
+    "status": "proposed",
+    "takeaway": "The ICO advised the Department for Science, Innovation and Technology that regulation 6 could be amended by secondary legislation, using the power in the Data (Use and Access) Act 2025, to allow certain low-risk forms of online advertising to operate without consent where advertising is based on the context of the content viewed rather than a person's past activity, while intrusive tracking and profiling over time and across services would continue to require consent. It is advice to government, not law, and the ICO states that the existing PECR rules still apply and organisations must continue to comply. Keep consent for behavioural advertising and monitor for draft regulations.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Federal Act on Data Protection (FADP, SR 235.1), revised text",
+    "jurisdiction": "Switzerland",
+    "type": "legislation",
+    "date": "1 September 2023",
+    "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en",
+    "status": "in force",
+    "takeaway": "The revised FADP entered into force on 1 September 2023 without a transition period. Article 6 requires that consent, where relied on, is voluntary and informed, and express for sensitive personal data and for high-risk profiling, which Article 5 defines as profiling entailing a high risk to personality or fundamental rights; Article 19 imposes a duty to inform at collection, including the countries of any disclosure abroad. Article 60 provides criminal fines of up to CHF 250,000 against the responsible individual for wilful breaches of the information duties. It binds private controllers and federal bodies; tracking needs consent only where it reaches sensitive data or high-risk profiling.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Telecommunications Act (TCA, SR 784.10), Article 45c: data on external equipment",
+    "jurisdiction": "Switzerland",
+    "type": "legislation",
+    "date": "1 April 2007",
+    "url": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/en",
+    "status": "in force",
+    "takeaway": "Article 45c permits the processing of data on external equipment by telecommunications transmission, which covers setting and reading cookies and similar identifiers, only where users are informed about the processing and its purpose and about the means to refuse it, or where the processing is necessary for the service. It binds every operator of a website or app reaching users in Switzerland; the FDPIC applies it cumulatively with the FADP, reads the refusal requirement as a mandatory opt-out control, and cites a fine of up to CHF 5,000 under Article 53 TCA. Provide the notice and a refusal control before any non-necessary cookie is set.",
+    "topics": [
+      "consent",
+      "strictly-necessary",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "FDPIC Guidelines on data processing using cookies and similar technologies, version 1.1",
+    "jurisdiction": "Switzerland",
+    "type": "regulator guidance",
+    "date": "6 October 2025",
+    "url": "https://www.edoeb.admin.ch/en/guidelines-on-data-processing-using-cookies",
+    "status": "in force",
+    "takeaway": "Version 1.1 of 6 October 2025 replaces version 1.0 of 22 January 2025 and sets out how the FDPIC supervises cookies, pixels and similar technologies under the FADP, the Data Protection Ordinance and Article 45c TCA: necessary cookies need information only; other non-essential cookies justified by overriding interests need information and a mandatory opt-out; express consent is required for sensitive data, high-risk profiling, any profiling by federal bodies and unexpected uses that seriously intrude, including paid access for multiple embedded advertising third parties and location profiling. Banners must not use pre-ticked boxes or dark patterns; cookie paywalls need a proportionate price. Penalties reach CHF 250,000 (FADP) and CHF 5,000 (TCA).",
+    "topics": [
+      "consent",
+      "dark-patterns",
+      "consent-or-pay"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "FDPIC Factsheet on the use of cookies and similar technologies (for internet users)",
+    "jurisdiction": "Switzerland",
+    "type": "regulator guidance",
+    "date": "31 March 2026",
+    "url": "https://www.edoeb.admin.ch/en/factsheet-cookies",
+    "status": "in force",
+    "takeaway": "The factsheet, published on 31 March 2026, is the FDPIC's awareness document for internet users and complements rather than replaces the operator-facing Guidelines of 6 October 2025. It explains what cookies do, encourages data-minimalist use, warns against blanket acceptance of all cookies and points users to opt-in and opt-out controls and their rights of control and choice. It creates no obligations for operators but signals the FDPIC's expectation that refusal and withdrawal controls are easy to find and use. Use it to anticipate the complaints the FDPIC will receive and to test that the refusal path on Swiss-facing sites works as the factsheet describes.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Norway: Electronic Communications Act (ekomloven) section 3-15 on cookies and similar technologies, with Nkom and Datatilsynet joint supervision",
+    "jurisdiction": "Norway",
+    "type": "legislation",
+    "date": "1 January 2025",
+    "url": "https://nkom.no/internett/informasjonskapsler-cookies",
+    "status": "in force",
+    "takeaway": "The new ekomloven, in force from 1 January 2025, provides in section 3-15 that use of cookies and similar technologies requires consent valid under the GDPR: voluntary, specific, informed, unambiguous, given by active action, documented and easily withdrawable, replacing the former section 2-7b under which browser default settings counted as consent. Supervision is shared by Nkom and Datatilsynet from the same date. It binds every operator of a website or app directed at users in Norway, whether or not established there. Retire any reliance on browser settings for Norwegian traffic and apply the same opt-in banner standard as under the EU cluster, with the Norwegian regulators as enforcement contacts.",
+    "topics": [
+      "consent",
+      "browser-signals",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Norway Datatilsynet guidance page on cookies and information capsules (informasjonskapsler)",
+    "jurisdiction": "Norway",
+    "type": "regulator guidance",
+    "date": "1 January 2025",
+    "url": "https://www.datatilsynet.no/personvern-pa-ulike-omrader/internett-og-apper/cookies/",
+    "status": "in force",
+    "takeaway": "Datatilsynet's cookie page states that consent to cookies must be GDPR-valid consent, so that browser settings alone do not suffice, and explains the interaction between the cookie rule in ekomloven and the personal data rules in personopplysningsloven and the GDPR, both of which apply at once. It is addressed to Norwegian website and app operators and to foreign operators serving Norwegian users. Read it together with Nkom's page on section 3-15, since the Datatilsynet page still cites the former section 2-7b and Nkom as sole supervisor; the operative rule since 1 January 2025 is section 3-15 with joint supervision.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Turkey: KVKK Guideline on Cookie Practices (Çerez Uygulamaları Hakkında Rehber)",
+    "jurisdiction": "Turkey",
+    "type": "regulator guidance",
+    "date": "20 June 2022",
+    "url": "https://www.kvkk.gov.tr/Icerik/7288/Cerez-Uygulamalari-Hakkinda-Rehber",
+    "status": "in force",
+    "takeaway": "The Personal Data Protection Board's guideline applies Law No. 6698 to cookies: strictly necessary cookies may be used without explicit consent, while cookies for advertising, profiling and non-essential analytics require explicit consent under Article 5 of the Law, with information duties under Article 10 met through a cookie policy and banner, and cross-border transfers through cookies subject to the Law's transfer rules. It applies to every data controller whose website or app processes data of users in Turkey. Provide a Turkish-language banner with granular explicit opt-in for non-essential cookies, no pre-ticked boxes, and a cookie policy listing each cookie, purpose and duration.",
+    "topics": [
+      "consent",
+      "strictly-necessary",
+      "transfers"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Turkey: Personal Data Protection Board decision on Amazon Turkey (cookies and marketing without explicit consent), decision no. 2020/173",
+    "jurisdiction": "Turkey",
+    "type": "enforcement",
+    "date": "27 February 2020",
+    "url": "https://www.kvkk.gov.tr/Icerik/6739/2020-173",
+    "status": "decided",
+    "takeaway": "The Board found that Amazon Turkey processed personal data through cookies and sent marketing communications without obtaining explicit consent and without adequate information, in breach of Articles 5, 10 and 12 of Law No. 6698, and imposed administrative fines totalling TRY 1,200,000: TRY 1,100,000 for failing to take the required technical and organisational measures and TRY 100,000 for processing without explicit consent. The decision binds the addressee and sets the Board's position for all controllers using cookies on Turkish users. It remains the reference enforcement precedent that the 2022 Guideline on Cookie Practices later codified; treat cookie consent in Turkey as an opt-in explicit consent regime.",
+    "topics": [
+      "enforcement",
+      "consent",
+      "email-marketing"
+    ],
+    "source": "primary"
+  }
+]

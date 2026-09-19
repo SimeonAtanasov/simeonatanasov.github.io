@@ -1,0 +1,482 @@
+[
+  {
+    "title": "IAB Europe Transparency and Consent Framework v2.2",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "16 May 2023",
+    "url": "https://iabeurope.eu/tcf-2-2-launches-all-you-need-to-know/",
+    "status": "superseded",
+    "takeaway": "TCF v2.2 launched on 16 May 2023 and removed legitimate interest as a legal basis for advertising and content personalisation purposes 3 to 6, replaced legal text with plain-language purpose descriptions, required vendors to declare data categories and retention periods, and obliged CMPs to show the total number of vendors on the first layer and to offer an easy route to withdrawal. It binds registered CMPs, vendors and publishers by contract, with switch-over required by 20 November 2023; it is an industry standard, not law, though the Belgian APD and the courts assessed its predecessor. TCF v2.3 of 19 June 2025 supersedes it by making the disclosed vendors segment mandatory.",
+    "topics": [
+      "tcf",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "IAB Europe TCF Policies (current version 2026-05-29.5.0.b)",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "29 May 2026",
+    "url": "https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/",
+    "status": "in force",
+    "takeaway": "The TCF Policies are the contractual rulebook behind the TC String, defining purposes, features and legal bases and setting CMP, vendor and publisher obligations. CMPs must generate consent signals only on a clear affirmative action, resolve conflicting signals before transmission, implement publisher restrictions and resurface the interface when IAB Europe notifies material policy changes; vendors must respect signals in real time and stop processing if a signal cannot be verified; publishers may use only compliant CMPs and vendors. The Policies bind registered participants by contract and are not law, although the Belgian APD and the Brussels Market Court examined earlier versions; check which version your CMP implements.",
+    "topics": [
+      "tcf",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "IAB Europe TCF v2.3 and the mandatory disclosed vendors segment",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "19 June 2025",
+    "url": "https://iabeurope.eu/all-you-need-to-know-about-the-transition-to-tcf-v2-3/",
+    "status": "in force",
+    "takeaway": "TCF v2.3, released on 19 June 2025, makes the disclosedVendors segment of the TC String mandatory so that a vendor can tell whether it was shown to the user or whether the user objected. CMPs had to update by 28 February 2026 without re-surfacing the interface; vendors must read and act on the segment from 1 March 2026, after which a new TC String without it is invalid. TC Strings created before the deadline remain valid until users refresh their choices. The change binds TCF-registered CMPs and vendors by contract, not law; confirm that your CMP's TC Strings carry the segment and that each vendor's ID bit is set.",
+    "topics": [
+      "tcf",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "IAB Tech Lab TCF v2 technical specifications and implementation guidelines",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "16 May 2023",
+    "url": "https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/TCF-Implementation-Guidelines.md",
+    "status": "in force",
+    "takeaway": "IAB Tech Lab maintains the TCF v2 technical specifications: the TC String format with its core, disclosed vendors and publisher TC segments, the CMP API through which vendors read signals, and the Global Vendor List (version 3 since v2.2). The implementation guidelines, last updated in May 2023, record the v2.2 changes (revised purpose names, retention periods, no legitimate interest for purposes 3 to 6, data categories, localised policy URLs) and the v2.3 mandatory disclosed vendor segment. They bind participants through the TCF Policies and are not law. Use them to test that your CMP exposes the API correctly and that TC Strings decode to the choices actually made.",
+    "topics": [
+      "tcf",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "IAB Europe TCF compliance programmes and CMP validation",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "15 May 2023",
+    "url": "https://iabeurope.eu/tcf-compliance-programmes/",
+    "status": "in force",
+    "takeaway": "IAB Europe validates every CMP before it receives a CMP ID and a place on the CMP List, covering the interface and technical operation on web, mobile and CTV, and vets vendors through a questionnaire before Global Vendor List listing. Live installations are monitored: TC String tampering brings immediate suspension of at least four weeks and permanent suspension on a fourth offence within twelve months, and other policy breaches allow 10 business days (5 to 20 for vendors) to remedy before suspension. The programme binds registered participants by contract, not law. Run the public CMP Validator browser extension, available since May 2023, against your own deployments before an audit does.",
+    "topics": [
+      "tcf",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Belgian APD Decision 21/2022 on IAB Europe and the TCF",
+    "jurisdiction": "Belgium",
+    "type": "enforcement",
+    "date": "2 February 2022",
+    "url": "https://www.autoriteprotectiondonnees.be/publications/decision-quant-au-fond-n-21-2022-en.pdf",
+    "status": "historical",
+    "takeaway": "Decision 21/2022 of the Litigation Chamber found that IAB Europe was a controller of the TC String and that TCF v2.0 breached the GDPR principles of lawfulness and transparency, data protection by design and default, and controller accountability (no processing register, DPO or impact assessment). It fined IAB Europe EUR 250,000 and ordered an action plan within two months, including a ban on legitimate interest for TCF advertising purposes. The Brussels Market Court annulled the decision on 14 May 2025 after the CJEU ruling in C-604/22, but the finding that TC Strings are personal data was confirmed by the courts.",
+    "topics": [
+      "tcf",
+      "enforcement",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CJEU judgment C-604/22, IAB Europe v Gegevensbeschermingsautoriteit",
+    "jurisdiction": "EU",
+    "type": "court decision",
+    "date": "7 March 2024",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A62022CJ0604",
+    "status": "decided",
+    "takeaway": "The Court of Justice held that the TC String is personal data under Article 4(1) GDPR where it can be linked to an identifier such as an IP address, and that a sectoral organisation which sets binding technical rules for a consent standard is a joint controller under Article 26 GDPR for the recording of preferences in the string. It is not automatically a controller for the subsequent processing by participants unless it influences the purposes and means of that processing. The judgment binds all EU courts and authorities. Treat TC Strings and CMP consent logs as personal data with a documented lawful basis and retention period.",
+    "topics": [
+      "tcf",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Brussels Market Court judgment of 14 May 2025 on IAB Europe and the TCF",
+    "jurisdiction": "Belgium",
+    "type": "court decision",
+    "date": "14 May 2025",
+    "url": "https://iabeurope.eu/belgian-market-court-confirms-limited-role-of-iab-europe-in-tcf/",
+    "status": "decided",
+    "takeaway": "The Market Court applied the CJEU ruling and annulled the APD decision of 2 February 2022, while confirming that TC Strings are personal data when combined with identifiers such as an IP address and that IAB Europe is a joint controller solely for the creation and use of TC Strings by publishers and vendors, not for the subsequent processing in OpenRTB. The judgment addressed TCF v1.0 and v2.0 only; TCF v2.2 was not assessed. It binds the parties and frames the APD's re-examination. Publishers and vendors remain independently accountable under the GDPR for their own processing within the TCF.",
+    "topics": [
+      "tcf",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Brussels Market Court judgment of 7 January 2026 annulling the TCF action plan validation",
+    "jurisdiction": "Belgium",
+    "type": "court decision",
+    "date": "7 January 2026",
+    "url": "https://iabeurope.eu/wp-content/uploads/20260108-FAQ_-APD-DECISION-ON-IAB-EUROPE-AND-TCF-Updated-January-2026.pdf",
+    "status": "decided",
+    "takeaway": "The Market Court annulled the APD decision of 11 January 2023 validating IAB Europe's TCF action plan, finding that the APD had built on a decision already found unlawful, had assumed a joint controllership extending to downstream OpenRTB processing that the May 2025 judgment rejected, and had not heard IAB Europe on the intervening CJEU developments. The APD must reassess the plan on the narrower TC String scope after giving IAB Europe the opportunity to take position. The action plan measures already built into TCF v2.2 (consent only for advertising purposes, clearer disclosures, vendor transparency) stay in place, and the 1 March 2026 TCF v2.3 deadline was unaffected.",
+    "topics": [
+      "tcf",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "IAB Tech Lab Global Privacy Platform (GPP) and the US National section",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "28 September 2022",
+    "url": "https://iabtechlab.com/gpp/",
+    "status": "in force",
+    "takeaway": "The Global Privacy Platform is IAB Tech Lab's container for consent and opt-out signals across jurisdictions: the GPP string (specification 1.0 of 28 September 2022, CMP API 1.1 of June 2023) carries sections for IAB Europe TCF, IAB Canada TCF, the US National string (section ID 7, defined by the MSPA US National Technical Specification, version 2.0 in October 2024) and individual US state strings, and records whether a Global Privacy Control signal was received. It is a technical standard adopted by contract and by ad exchanges, not law. Publishers selling programmatic inventory to US or Canadian audiences should emit GPP in place of the deprecated US Privacy String.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "IAB Multi-State Privacy Agreement (MSPA), Fifth Amended and Restated",
+    "jurisdiction": "United States (federal)",
+    "type": "standard",
+    "date": "4 June 2026",
+    "url": "https://www.iabprivacy.com/",
+    "status": "in force",
+    "takeaway": "The MSPA is a springing contract among signatories that governs personal information flows for selecting and delivering digital advertising under US state privacy laws; the Fifth Amended and Restated version took effect on 4 June 2026, after a March 2026 revision prompted by California's Healthline and Honda enforcement actions. First parties operate in either Opt-Out Option Mode or Service Provider Mode, and downstream participants must read and honour signals and verify that counterparties are signatories. The National Approach lets a signatory treat every user as a resident of all covered states. It is a private contract, not law; publishers using it work with the GPP US National string.",
+    "topics": [
+      "sale-sharing",
+      "opt-out-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "IAB CCPA Compliance Framework US Privacy String (deprecated)",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "31 August 2023",
+    "url": "https://iabtechlab.com/us-privacy-signal-deprecation-deadline-extended-to-january-31-2024/",
+    "status": "superseded",
+    "takeaway": "The US Privacy String of the IAB CCPA Compliance Framework encoded a single California do-not-sell choice for the advertising supply chain. IAB Tech Lab stopped maintaining it and set a deprecation date of 31 January 2024, extended from 30 September 2023, because only the Global Privacy Platform can carry the signals required by the Virginia, Colorado, Connecticut and Utah laws that took effect in 2023. It never had legal force. Superseded: replace any remaining usprivacy implementation with GPP section strings, and check that ad partners no longer read the old field as the source of truth.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "W3C Global Privacy Control (GPC) specification, Working Draft",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "17 September 2026",
+    "url": "https://www.w3.org/TR/gpc/",
+    "status": "proposed",
+    "takeaway": "The Global Privacy Control specification, a W3C Working Draft of 17 September 2026 from the Privacy Working Group (First Public Working Draft 21 November 2024), defines a Sec-GPC request header with the value 1, a navigator.globalPrivacyControl boolean, and an optional /.well-known/gpc.json resource by which a site declares that it honours the signal. The signal expresses a request not to sell or share personal data and has legal effect only where a law gives it one; the draft notes that at least four US states recognise it. A draft is not law; read the header and the DOM property and treat them as opt-out requests wherever a state law applies.",
+    "topics": [
+      "opt-out-signals",
+      "browser-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Global Privacy Control reference site and adoption record (globalprivacycontrol.org)",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "15 January 2025",
+    "url": "https://globalprivacycontrol.org/faq",
+    "status": "in force",
+    "takeaway": "The GPC reference site records the signal's origin and adoption: native support in Brave, DuckDuckGo and Firefox and in browser extensions, adoption as a W3C Privacy Working Group work item in November 2024, and, as of 15 January 2025, guidance from California, Colorado, Connecticut and New Jersey treating GPC as a binding opt-out, with eight further state laws permitting opt-outs through universal mechanisms. It cites the California CCPA regulations' requirement to honour user-enabled global privacy controls. The site is maintained by the signal's proponents and is not law. Use it to track which browsers send the signal and which states enforce it.",
+    "topics": [
+      "opt-out-signals",
+      "browser-signals"
+    ],
+    "source": "secondary"
+  },
+  {
+    "title": "Colorado Attorney General list of recognised universal opt-out mechanisms",
+    "jurisdiction": "Colorado",
+    "type": "regulator guidance",
+    "date": "1 July 2024",
+    "url": "https://coag.gov/opt-out/",
+    "status": "in force",
+    "takeaway": "Under C.R.S. 6-1-1306(1)(a)(IV) of the Colorado Privacy Act and Rule 5.07 of 4 CCR 904-3, controllers must honour universal opt-out mechanisms from 1 July 2024, and the Attorney General maintains the public list of recognised mechanisms. Global Privacy Control is the only mechanism on that list, after applications in late 2023 and public comment through December 2023. Rule 6.03(4)(e) requires privacy notices to explain how universal opt-out requests are processed, and the rules bind controllers subject to the Act. Configure consent tooling to read the GPC signal for Colorado visitors and to suppress sale and targeted advertising processing without a separate click.",
+    "topics": [
+      "opt-out-signals",
+      "browser-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Connecticut Attorney General advisory on opt-out preference signals",
+    "jurisdiction": "Connecticut",
+    "type": "regulator guidance",
+    "date": "30 December 2024",
+    "url": "https://portal.ct.gov/ag/press-releases/2024-press-releases/tong-advises-connecticut-consumers-and-businesses-of-opt-out-rights-and-requirements",
+    "status": "in force",
+    "takeaway": "The Connecticut Attorney General advised that from 1 January 2025 controllers under the Connecticut Data Privacy Act must treat browser-based opt-out preference signals, in practice Global Privacy Control, as binding opt-out requests for the sale of personal data and targeted advertising, including where the signal conflicts with an earlier choice or loyalty programme membership. Entities such as HIPAA-regulated healthcare providers are exempt. The advisory summarises statutory duties; the statute is what binds. Implement GPC recognition, document it in the privacy notice, and expect scrutiny: Connecticut, California and Colorado announced a joint investigative privacy sweep in 2025.",
+    "topics": [
+      "opt-out-signals",
+      "browser-signals",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California AB 566, the Opt Me Out Act (browser opt-out preference signal)",
+    "jurisdiction": "California",
+    "type": "legislation",
+    "date": "1 January 2027",
+    "url": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/california-enacts-first-in-nation-law-requiring-web-browser-opt-out-preference-signal",
+    "status": "applies from a future date",
+    "takeaway": "AB 566, signed on 8 October 2025, amends the CCPA to require a business that develops or maintains a web browser to include a setting that lets a consumer send an opt-out preference signal to every business, easy to use and configure, with an explanation of how the signal works and its intended effect. It operates from 1 January 2027, with a safe harbour for compliant browser makers when a website fails to honour the signal, and the California Privacy Protection Agency may adopt regulations. It binds browser developers; businesses already must honour such signals under the CCPA regulations, so expect more signals from 2027.",
+    "topics": [
+      "opt-out-signals",
+      "browser-signals"
+    ],
+    "source": "secondary"
+  },
+  {
+    "title": "Google consent mode v2 requirement for EEA traffic",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "1 March 2024",
+    "url": "https://support.google.com/analytics/answer/14275483?hl=en",
+    "status": "in force",
+    "takeaway": "Consent mode v2 adds the ad_user_data and ad_personalization parameters to ad_storage and analytics_storage, and Google requires the signals for EEA traffic under its EU user consent policy: from early March 2024 only end users outside the EEA are included in audiences shared with linked advertising products unless the signals are sent, and remarketing and personalisation features stop working for the affected traffic. Default states must be denied before the user acts and updated afterwards; basic mode holds tags until consent, advanced mode sends cookieless pings. It is a platform policy, not law; a CMP that maps its advertising category to all four parameters satisfies it.",
+    "topics": [
+      "consent-mode",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Google EU user consent policy",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "31 July 2024",
+    "url": "https://www.google.com/about/company/user-consent-policy/",
+    "status": "in force",
+    "takeaway": "Google's EU user consent policy requires anyone using Google advertising products with end users in the EEA, the UK and Switzerland (Switzerland added on 31 July 2024) to obtain legally valid consent for cookies or other local storage where legally required and for the use of personal data for ad personalisation, to identify every party receiving data, to keep consent records and to tell users how to revoke. Publishers must use a Google-certified CMP and advertisers with EEA traffic must send verified consent signals through TCF or consent mode. It is a contractual policy, not law, but it tracks the ePrivacy Directive and GDPR consent tests.",
+    "topics": [
+      "consent",
+      "consent-mode"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Google certified CMP requirement for ads in the EEA, UK and Switzerland",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "16 January 2024",
+    "url": "https://support.google.com/admanager/answer/13554116?hl=en",
+    "status": "in force",
+    "takeaway": "From 16 January 2024 publishers serving personalised ads through AdSense, Ad Manager or AdMob to users in the EEA and UK must use a Google-certified CMP integrated with IAB Europe's TCF; Switzerland followed on 31 July 2024 and CTV inventory had an extension to July 2025. Traffic without a certified CMP is eligible only for non-personalised or limited ads. Certified CMPs must support Google's Additional Consent specification for non-TCF vendors, recertify annually and, since 4 October 2024, pass a check on TC String storage and retention (TCF policy check 30). Google states that certification does not check full TCF or legal compliance, so it is not a compliance opinion.",
+    "topics": [
+      "tcf",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Google Privacy Sandbox: a new path for Privacy Sandbox on the web (third-party cookie reversal)",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "22 July 2024",
+    "url": "https://privacysandbox.google.com/blog/privacy-sandbox-update",
+    "status": "superseded",
+    "takeaway": "On 22 July 2024 Google abandoned its plan to deprecate third-party cookies in Chrome and said it would instead introduce a browser-level choice that users could adjust at any time, after consultation with the UK Competition and Markets Authority and the Information Commissioner's Office. It committed to keep investing in the Privacy Sandbox APIs and to add IP Protection to Incognito. The post is a vendor announcement with no legal force, but it ended the assumption that consent for third-party cookies would become moot. Superseded by the 22 April 2025 decision not to introduce a standalone prompt and the 17 October 2025 retirement of most Sandbox APIs.",
+    "topics": [
+      "browser-signals",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Google Privacy Sandbox: next steps for Privacy Sandbox and tracking protections in Chrome",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "22 April 2025",
+    "url": "https://privacysandbox.google.com/blog/privacy-sandbox-next-steps",
+    "status": "in force",
+    "takeaway": "On 22 April 2025 Google confirmed that Chrome will not roll out a new standalone prompt for third-party cookies; users keep the existing choice in Chrome's Privacy and Security settings, and Incognito continues to block third-party cookies by default. Google also committed to launch IP Protection in Incognito in the third quarter of 2025 and to publish an updated roadmap for the Sandbox APIs. It is a vendor decision, not law. Third-party cookies therefore remain readable in Chrome for most users, and the consent banner remains the operative control over them under the ePrivacy rules.",
+    "topics": [
+      "browser-signals",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Google Privacy Sandbox: update on plans for Privacy Sandbox technologies (API retirement)",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "17 October 2025",
+    "url": "https://privacysandbox.google.com/blog/update-on-plans-for-privacy-sandbox-technologies",
+    "status": "in force",
+    "takeaway": "On 17 October 2025 Google announced the retirement of thirteen Privacy Sandbox technologies, including the Topics API, Protected Audience, Attribution Reporting, Private Aggregation and Shared Storage, SelectURL, Related Website Sets, IP Protection, On-Device Personalization, Protected App Signals and the SDK Runtime, to be phased out through the normal Chrome and Android processes without fixed dates. CHIPS and FedCM continue, and Google will pursue an interoperable attribution standard at the W3C. Google keeps its current approach to third-party cookie choice in Chrome. It is a vendor announcement, not law; remove Sandbox-specific purposes from consent flows once the APIs stop shipping.",
+    "topics": [
+      "browser-signals",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Apple App Tracking Transparency requirement (iOS 14.5)",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "26 April 2021",
+    "url": "https://developer.apple.com/app-store/user-privacy-and-data-use/",
+    "status": "in force",
+    "takeaway": "Since 26 April 2021, with iOS 14.5, iPadOS 14.5 and tvOS 14.5, apps must ask permission through the AppTrackingTransparency framework before tracking users or reading the advertising identifier; without permission the IDFA is all zeros and tracking is prohibited. Tracking means linking app data with data from other companies' apps, websites or offline properties for targeted advertising or measurement, or sharing it with data brokers; on-device linking and fraud prevention are excluded. App Store Review Guideline 5.1.2(i) forbids gating functionality or offering incentives to obtain the permission. It is a platform rule, not law, and a separate consent under the ePrivacy rules may still be needed.",
+    "topics": [
+      "consent",
+      "browser-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Apple WebKit Intelligent Tracking Prevention and full third-party cookie blocking",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "24 March 2020",
+    "url": "https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/",
+    "status": "in force",
+    "takeaway": "Safari 13.1 and iOS and iPadOS 13.4 completed Intelligent Tracking Prevention by blocking all cross-site cookies by default, with the Storage Access API as the only exception, and by deleting all script-writable storage (cookies, IndexedDB, LocalStorage, service worker caches) after seven days without user interaction. WebKit's tracking prevention page adds that cookies set through CNAME or IP-address cloaking are capped at seven days and JavaScript cookies on landing pages reached through link decoration at 24 hours. These are engine defaults, not law. Measurement built on first-party cookies in Safari loses users after a week regardless of the consent state recorded.",
+    "topics": [
+      "browser-signals",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Mozilla Firefox Total Cookie Protection by default and Global Privacy Control setting",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "14 June 2022",
+    "url": "https://blog.mozilla.org/en/mozilla/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/",
+    "status": "in force",
+    "takeaway": "Firefox has shipped Total Cookie Protection to all desktop users by default since 14 June 2022, confining each site's cookies to a separate jar so that third-party cookies cannot follow users across sites, on top of the list-based Enhanced Tracking Protection introduced in 2018. Global Privacy Control has been available since Firefox 120 as an opt-in setting labelled 'Tell websites not to sell or share my data'; Mozilla notes that some websites may ignore it. These are browser defaults, not law. A banner cannot assume a Firefox third-party cookie is readable, and Firefox visitors sending GPC must be handled as opt-outs wherever a law recognises the signal.",
+    "topics": [
+      "browser-signals",
+      "opt-out-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Brave Shields default blocking and Global Privacy Control on by default",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "7 October 2020",
+    "url": "https://brave.com/web-standards-at-brave/4-global-privacy-control/",
+    "status": "in force",
+    "takeaway": "Brave Shields blocks third-party ads, trackers and cross-site cookies on every page by default, using EasyList, EasyPrivacy, uBlock Origin and Brave's own filter lists, and randomises the browser fingerprint. Brave has sent the Global Privacy Control signal by default since 7 October 2020, describing it as a way for users to assert legal privacy rights, with an option to turn it off in privacy settings. These are browser defaults, not law. A business that receives Sec-GPC: 1 from a Brave visitor in a state that recognises the signal must treat it as an opt-out of sale, sharing and targeted advertising.",
+    "topics": [
+      "browser-signals",
+      "opt-out-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "W3C Tracking Preference Expression (Do Not Track), Working Group Note",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "17 January 2019",
+    "url": "https://www.w3.org/TR/tracking-dnt/",
+    "status": "withdrawn",
+    "takeaway": "Tracking Preference Expression, published as a W3C Working Group Note on 17 January 2019, defined a DNT request header whose value 1 expressed a preference not to be tracked. The Tracking Protection Working Group closed because there had not been sufficient deployment to justify further advancement and no indication of planned support among user agents, third parties and the wider ecosystem. The header still exists in some browsers but has no defined legal effect and no cookie law requires sites to honour it. Withdrawn as a standard; Global Privacy Control (W3C Working Draft) is its successor for opt-out signalling, so do not build banner logic on DNT.",
+    "topics": [
+      "browser-signals",
+      "opt-out-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB Website Auditing Tool",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "29 January 2024",
+    "url": "https://www.edpb.europa.eu/documents/support-pool-of-experts/edpb-website-auditing-tool_en",
+    "status": "in force",
+    "takeaway": "The EDPB Website Auditing Tool, released on 29 January 2024 under the EUPL 1.2 licence through the Support Pool of Experts, lets a data protection authority, controller or processor record a visit to a website and analyse the cookies, storage and third-party requests it triggers, with full-page screenshots, import and export of analyses and searchable databases. It is free and open source and available in English, French, German, Italian and Spanish. It is a tool rather than guidance, and the EDPB states that it does not represent an official EDPB position. Run it against your own sites before and after consent to see what a regulator would see.",
+    "topics": [
+      "enforcement",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ISO/IEC 29184:2020 Online privacy notices and consent",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "2 June 2020",
+    "url": "https://www.iso.org/standard/70331.html",
+    "status": "in force",
+    "takeaway": "ISO/IEC 29184:2020, published on 2 June 2020 (edition 1, 25 pages, reviewed and confirmed in 2026), specifies controls for the content and structure of online privacy notices and for the process of obtaining, recording and withdrawing consent when personally identifiable information is collected. It is a voluntary standard: it binds no one unless adopted by contract or certification, and it does not replace the GDPR Article 7 conditions or national cookie rules. Use it as a checklist for layered notices and for the record a CMP should keep about each consent, including what the user was shown and when.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Einwilligungsverwaltungsverordnung (EinwV), German ordinance on consent management services",
+    "jurisdiction": "Germany",
+    "type": "legislation",
+    "date": "1 April 2025",
+    "url": "https://www.gesetze-im-internet.de/einwv/BJNR0200B0025.html",
+    "status": "in force",
+    "takeaway": "The ordinance of 6 January 2025 (BGBl. 2025 I Nr. 32), made under section 26 TDDDG and in force since 1 April 2025, sets the conditions for BfDI recognition of consent management services that store and transmit end-user decisions on terminal-equipment access as an alternative to per-site banners: general requirements (section 3), user-friendly procedures (section 4), switching between services (section 5), competition-neutral treatment of digital service providers (section 6), integration technology (section 7), recognition prerequisites and application (sections 10 to 12), a security concept and a public register (section 13). It binds services that seek recognition. The BfDI must evaluate the ordinance within two years.",
+    "topics": [
+      "consent",
+      "browser-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "BfDI recognition of consent management services under section 26 TDDDG",
+    "jurisdiction": "Germany",
+    "type": "regulator guidance",
+    "date": "17 October 2025",
+    "url": "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Telefon-Internet/Einwilligungsverwaltung/Einwilligungsverwaltung.html",
+    "status": "in force",
+    "takeaway": "The BfDI runs the recognition procedure under section 26 TDDDG and sections 10 to 13 EinwV: it reviews an application, sends a draft decision to the applicant and the Land supervisory authorities with four weeks for comments, requires a security concept and independence from companies with a financial interest in consent data, and keeps a public register. The first recognition, of the service Consenter operated by Law & Innovation Technology GmbH, was granted on 17 October 2025. Recognition means the service meets the ordinance, not that any consent it stores is valid for a given site; German publishers should decide how to treat its signals alongside their own banner.",
+    "topics": [
+      "consent",
+      "browser-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Microsoft Advertising consent mode requirement for UET",
+    "jurisdiction": "Standards",
+    "type": "standard",
+    "date": "5 May 2025",
+    "url": "https://about.ads.microsoft.com/en/blog/post/march-2025/providing-user-consent-signals-on-your-microsoft-campaigns-by-may-5-2025",
+    "status": "in force",
+    "takeaway": "Microsoft Advertising announced on 31 March 2025 that from 5 May 2025 advertisers must pass user consent signals for site visits from the EEA, the UK and Switzerland, through consent mode on the Universal Event Tracking tag or Microsoft pixels (an ad_storage parameter set to granted or denied), through the IAB TCF, or through a tag manager integration. Without a signal, advertising performance for those visitors is affected because the data is not used for optimisation. It is a platform requirement, not law; map the CMP's advertising category to ad_storage so that the tag fires only after consent.",
+    "topics": [
+      "consent-mode",
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "European Commission acceptance of Meta's DMA commitments on personalised advertising choice",
+    "jurisdiction": "EU",
+    "type": "enforcement",
+    "date": "8 December 2025",
+    "url": "https://digital-markets-act.ec.europa.eu/meta-commits-give-eu-users-choice-personalised-ads-under-digital-markets-act-2025-12-08_en",
+    "status": "in force",
+    "takeaway": "On 8 December 2025 the European Commission announced Meta's commitment under the Digital Markets Act to give EU users of Facebook and Instagram, from January 2026, a choice between sharing all their data for fully personalised advertising and sharing limited data for an experience with more limited personalised advertising, following the Commission's April 2025 non-compliance decision on the earlier consent-or-pay model. The commitment binds Meta and changes what signals its advertising systems hold for EU users. Advertisers running the Meta Pixel and Conversions API remain responsible for their own website consent under the ePrivacy rules and the GDPR, and should verify that pixel events fire only after that consent.",
+    "topics": [
+      "consent-or-pay",
+      "pixels-wiretap",
+      "enforcement"
+    ],
+    "source": "primary"
+  }
+]

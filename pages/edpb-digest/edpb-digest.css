@@ -1,0 +1,141 @@
+/* EDPB digest: scoped styles, matches the site's navy/blue palette and the
+   Practical Privacy accordion pattern. */
+
+#edpb-digest {
+	max-width: 52em;
+	margin: 0;
+}
+
+.ed-intro p { margin-bottom: 1em; }
+.ed-privacy { color: rgba(255,255,255,0.55); font-size: 0.9em; }
+
+/* Filter bar. The template styles inputs and selects already; only layout here. */
+.ed-filters {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+	gap: 0.75em 1em;
+	align-items: end;
+	margin: 1.5em 0 1em 0;
+	padding: 1em 1.25em;
+	border: solid 1px rgba(255,255,255,0.1);
+	border-radius: 0.5em;
+	background: rgba(255,255,255,0.02);
+}
+.ed-filters label {
+	display: block;
+	font-size: 0.8em;
+	color: rgba(255,255,255,0.55);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.ed-filters input, .ed-filters select { margin-top: 0.4em; }
+.ed-count {
+	grid-column: 1 / -1;
+	margin: 0;
+	font-size: 0.9em;
+	color: #7fb2e5;
+}
+
+.ed-index-label { color: rgba(255,255,255,0.55); font-size: 0.9em; margin: 1.5em 0 0.5em 0; }
+.ed-index {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+	gap: 0.4em 1.5em;
+	margin: 0 0 2em 0;
+	padding: 1em 1.25em;
+	border: solid 1px rgba(255,255,255,0.1);
+	border-radius: 0.5em;
+	background: rgba(255,255,255,0.02);
+	list-style: none;
+}
+.ed-index li { list-style: none; font-size: 0.9em; }
+.ed-index a { color: #7fb2e5; border-bottom: none; }
+.ed-index a:hover { color: #fff; }
+.ed-n { color: rgba(255,255,255,0.45); font-size: 0.85em; margin-left: 0.3em; }
+
+.ed-groups { display: flex; flex-direction: column; gap: 0.75em; }
+
+.ed-group {
+	border: solid 1px rgba(255,255,255,0.15);
+	border-radius: 0.5em;
+	background: rgba(255,255,255,0.03);
+	overflow: hidden;
+}
+.ed-group summary {
+	list-style: none;
+	cursor: pointer;
+	padding: 1em 1.25em;
+	font-weight: bold;
+	color: #fff;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 0.75em;
+	position: relative;
+	padding-right: 3em;
+}
+.ed-group summary::-webkit-details-marker { display: none; }
+.ed-group summary::after {
+	content: '\f107';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	position: absolute;
+	right: 1.25em;
+	top: 1.1em;
+	color: rgba(255,255,255,0.4);
+	transition: transform 0.2s ease;
+}
+.ed-group[open] summary::after { transform: rotate(180deg); }
+.ed-group summary:hover { background: rgba(255,255,255,0.04); }
+.ed-group-count { font-weight: normal; font-size: 0.8em; color: rgba(255,255,255,0.5); white-space: nowrap; }
+
+.ed-group-body { padding: 0 1.25em 0.5em 1.25em; }
+
+.ed-entry {
+	padding: 0.9em 0 1em 0;
+	border-top: solid 1px rgba(255,255,255,0.08);
+}
+.ed-entry[hidden] { display: none; }
+.ed-title {
+	font-size: 0.95em;
+	margin: 0 0 0.35em 0;
+	line-height: 1.4;
+	text-transform: none;
+	letter-spacing: 0;
+}
+.ed-title a { color: #fff; border-bottom: dotted 1px rgba(255,255,255,0.3); }
+.ed-title a:hover { color: #7fb2e5; border-bottom-color: #7fb2e5; }
+.ed-meta {
+	margin: 0 0 0.5em 0;
+	font-size: 0.8em;
+	color: rgba(255,255,255,0.5);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em 0.6em;
+	align-items: center;
+}
+.ed-chip {
+	display: inline-block;
+	padding: 0.1em 0.6em;
+	border-radius: 1em;
+	border: solid 1px rgba(255,255,255,0.15);
+	font-size: 0.85em;
+	line-height: 1.6;
+}
+.ed-chip-written { border-color: rgba(127,178,229,0.5); color: #7fb2e5; }
+.ed-chip-status { border-color: rgba(255,200,120,0.4); color: #f2c98a; }
+.ed-chip-topic { color: rgba(255,255,255,0.6); }
+.ed-take {
+	margin: 0;
+	font-size: 0.95em;
+	line-height: 1.6;
+	color: rgba(255,255,255,0.72);
+}
+.ed-tier-oneliner .ed-take { color: rgba(255,255,255,0.55); }
+
+@media (max-width: 736px) {
+	#edpb-digest { margin-top: 3em; padding-top: 2em; }
+	.ed-filters { grid-template-columns: 1fr; }
+	.ed-index { grid-template-columns: 1fr; }
+	.ed-group summary { flex-direction: column; align-items: flex-start; gap: 0.25em; }
+}

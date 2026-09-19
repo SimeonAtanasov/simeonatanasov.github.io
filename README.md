@@ -1,63 +1,115 @@
-# SimeonAtanasov.github.io
+# simeonatanasov.com: site map
 
-Personal portfolio website for Simeon Atanasov, published through GitHub Pages and available at `https://www.simeonatanasov.com`.
+Personal portfolio and privacy reference site, published through GitHub Pages at
+`https://www.simeonatanasov.com`. This file is the map: what each page is, where its
+code lives, what sits in `Claude outputs/`, and how to rebuild the generated pages.
+Last updated 19 September 2026.
 
-## Main Pages
+## Pages
 
-- `index.html`: Homepage and portfolio
-- `cookie-banner-scanner.html`: Cookie Banner Scanner frontend
-- `privacy-ai-assessment.html`: Privacy and AI assessment tools
-- `power-bi.html`: GDPR fines dashboard
-- `risk-matrix-original.html`: Interactive risk matrix
-- `my-asteroids-game.html`: Asteroids game
+Page HTML sits at the repo root. Each page's own CSS and JS live in `pages/<name>/`.
+Shared chrome is `assets/css/main.css` (html5up template plus custom blocks appended at
+the end) and `assets/js/main.js` (template code plus two appended IIFEs: the measured
+nav collapse and the assessment dropdown).
 
-## Homepage Portfolio Order
+### Tools (interactive, state stays in the browser)
 
-The intended portfolio order is:
+| Page | What it is | Code |
+|---|---|---|
+| `gdpr-readiness.html` | GDPR Readiness Assessment. Record which of 71 privacy management activities you perform (13 categories, 13 scope questions) and the tool derives which GDPR Articles they evidence. Scores by category, by Article and as a gap list; Save / Load / Clear / Forget; Excel export. | `pages/gdpr-readiness/` : `readiness.js`, `readiness-data.js` (the model), `readiness.css` |
+| `privacy-ai-assessment.html` | Six assessment tools behind one landing page: Privacy Assessment (DPIA screening), Full DPIA, Legitimate Interest Test, AI Risk Assessment, Incident & Breach Severity (ENISA method), Third-Party Security Assessment. 68 steps, 337 questions. | `pages/privacy-ai-assessment/` : `assessment.js` (all six tools and their scoring), `assessment.css` |
+| `risk-matrix-original.html` | Interactive risk matrix over a risk library. | `pages/risk-matrix-front-end/` |
+| `cookie-banner-scanner.html` | Front end for the cookie banner scanner. The backend is a separate project, `scan-banner-api`, deployed on Render. | inline; keeps a `localhost:3005` dev fallback on purpose |
+| `power-bi.html` | GDPR fines in Europe dashboard (embedded). | inline |
+| `my-asteroids-game.html` | Asteroids game, keyboard and touch. | `pages/my-asteroids-game/` |
 
-1. Cookie Banner Scanner
-2. Practical Privacy and AI Act Advice
-3. GDPR Fines in Europe Dashboard
-4. Privacy and AI Risk Assessments
-5. Interactive Risk Matrix
-6. Asteroids Game
+### Reference pages (written content, no state)
 
-## Portfolio Menu
+| Page | What it is | Code |
+|---|---|---|
+| `practical-privacy.html` | Practical Privacy: 18 recurring situations (surveillance, offboarding, mailbox access, meetings, remote work, surveys, talent data, rights requests, sensitive data, consent, secondary use, external requests, AI, regulators, digital products, breach response, records, marketing), each with key actions, never-do list and worked examples. | `pages/privacy-ai-assessment/practical-privacy.css` |
+| `practical-ai-act-advice.html` | Practical AI Act Advice: 13 sections from scope and prohibitions through provider and deployer duties, GPAI, conformity, governance, then program building, risk questions, vendor vetting, literacy and copyright. Needs the September 2026 updates listed in `Claude outputs/site-verification-report-2026-09-19.pdf`. | `pages/privacy-ai-assessment/practical-ai-act.css` |
+| `edpb-digest.html` | EDPB Digest: every document on the EDPB listing (532 as of 19 September 2026) with one takeaway each, 107 written from the document and 425 one-line descriptions; filters by type, year and relevance. | `pages/edpb-digest/edpb-digest.css`; generated from `Claude outputs/edpb-digest-build/` |
+| `cookie-digest.html` | Cookie Compliance Digest: 259 laws, regulator guidance documents, court decisions, enforcement actions and standards on cookies and tracking across 60 jurisdictions (EU, member states, UK, Switzerland, US federal and states, rest of world, standards), each with a practitioner takeaway; filters by jurisdiction, type and year. | `pages/cookie-digest/cookie-digest.css`; generated from `Claude outputs/cookie-digest-build/` |
 
-The homepage sidebar includes a `Portfolio` item with a project submenu in `index.html`, styled in `assets/css/home-extra.css` and driven by `assets/js/portfolio-menu.js`.
+The two digests are on disk but not yet linked from the other pages' header nav or from
+`sitemap.xml`. Their own nav carries both links.
 
-The regular page header also includes a `Privacy & AI Assessment` hover/focus dropdown. It provides direct links to the Privacy Assessment, Full DPIA, Legitimate Interest Test, AI Risk Assessment, Incident & Breach Severity, Third-Party Security, Practical Privacy, and AI Act Advice sections.
+### Home, legal and leftovers
 
-### Required Behavior
+| Page | Notes |
+|---|---|
+| `index.html` | Home and portfolio. The Career & Education section is maintained by hand and is off limits to any automated edit. Sidebar portfolio menu: `assets/css/home-extra.css` and `assets/js/portfolio-menu.js` (behaviour spec below). |
+| `cookie-notice.html`, `privacy-notice.html`, `terms.html` | Legal pages. |
+| `offline.html` | Offline fallback served by the service worker. |
+| `draft.html`, `elements.html`, `test-page.html` | Template leftovers, noindexed, kept rather than deleted. |
 
-- On wide desktop screens (`>=1281px`) where the left sidebar is visible, hovering over `Portfolio` must show a small floating context menu to the right of the sidebar.
-- On medium/tablet screens (`737px-1280px`), where the sidebar collapses into a horizontal top bar, hovering over `Portfolio` must show the same menu as a dropdown below the item instead.
-- The menu must show all six project links as visible stacked rows.
-- The menu must remain visible while the pointer moves from `Portfolio` into the floating menu.
-- Each item must navigate to its corresponding project page.
-- The menu must not overlap the homepage content, cover the intro section, change page spacing, or create horizontal page scrolling.
-- The Portfolio text must remain a plain menu item. Do not add an arrow, a `Projects` button, or an inline expanding list.
-- On mobile layouts (`<=736px`, where `#sidebar` is hidden entirely), preserve the existing responsive navigation. Do not show a clipped or overlapping hover menu.
-- Regardless of breakpoint, the spacing between `Portfolio` and the other sidebar/top-bar nav items must match the site's existing nav item spacing - no touching/zero-gap items.
+### PWA layer
 
-### Current State (resolved)
+`manifest.webmanifest`, `sw.js` and `.nojekyll` at the root, `assets/js/pwa.js` registering
+the worker, `images/favicon/maskable-512x512.png` as the Android adaptive icon. Every root
+page carries a PWA block before `</head>`. `.nojekyll` is what lets `.well-known/` be served;
+deleting it silently breaks the Android app's domain verification. `images/favicon/site.webmanifest`
+is stale and unreferenced; the live manifest is the root one.
 
-`#sidebar` is a fixed column with `overflow-y: auto`, which by spec forces `overflow-x` to compute as `auto` even when it's set to `visible` - so a submenu nested inside the sidebar could never truly escape its right edge; it was always clipped.
+## Claude outputs/
 
-The fix moves `.portfolio-submenu` out of the sidebar and appends it to `<body>` at load time (`assets/js/portfolio-menu.js`), then floats it with `position: fixed` using coordinates computed from the sidebar's and the `Portfolio` item's own bounding boxes. This sidesteps the clipping entirely instead of fighting it with `overflow` overrides. The behavior is gated in both JS and CSS to two ranges: `>=1281px` (wide desktop, flyout to the right of the sidebar) and `737px-1280px` (medium/tablet, dropdown below the item, matching the horizontal top-bar layout at that width). Below `736px` the sidebar is hidden entirely and the menu stays off, untouched. Verified with headless-browser tests across all of these widths: the menu shows all six links, stays open when the pointer moves from `Portfolio` into it, closes when the pointer leaves, links navigate correctly, and no horizontal scrolling is introduced.
+Non-site deliverables. Nothing in here is referenced by any page.
 
-A related bug was also fixed: `#sidebar .portfolio-menu` had a blanket `margin: 0` in `home-extra.css`, which collapsed the gap between `Intro` and `Portfolio` to 0px on the medium/tablet top-bar layout (they touched with no space between them). The `margin: 0` was removed, leaving only the `position: relative` that rule actually needed; spacing now comes from the site's normal nav-item margin at every breakpoint.
+| File or folder | What it is | Read it when |
+|---|---|---|
+| `privacy-ai-act-assessments-study-pack.pdf` | 138-page greyscale study pack: both reference pages in full with key-takeaway boxes, all six assessment tools with cheat sheets and full question banks, the readiness model with all 71 activities, 69 self-test questions with answers, a four-week study plan, a review card, numbered sources. | You want to learn or re-learn the site's content. |
+| `site-verification-report-2026-09-19.pdf` | 32-page check of the site's legal claims against GDPR, the AI Act as amended by Regulation (EU) 2026/1744, EDPB and Commission guidance, courts and national rules. Every change rated High / Medium / Low, open items, a sweep of all 47 EDPB consultations and all 532 EDPB documents, 90 sources. | Before editing any legal content. The High items are the AI Act dates, the two new prohibitions, the Article 4 wording and the copyright rewrite. |
+| `edpb-documents-inventory-2026-09-19.csv` | All 532 EDPB documents with type, date, relevance rating (R / B / N), where each lands on the site, and URL. Filterable. | You want to know whether an EDPB document matters to a page. |
+| `edpb-digest-2026-09-19.pdf` | Print version of the EDPB Digest page, 108 pages, one numbered source per document. | You want to read the digest on paper. |
+| `cookie-compliance-digest-2026-09-19.pdf` | Print version of the Cookie Compliance Digest, 71 pages, one numbered source per document. | Same, for cookies. |
+| `edpb-digest-build/` | Data and scripts that generate `edpb-digest.html`: the scraped inventory, the ratings script, the 107 written takeaways, the hand-written and templated one-liners, the page and PDF renderers. README inside. | You need to add EDPB documents or regenerate the page. |
+| `cookie-digest-build/` | Data and scripts that generate `cookie-digest.html`: six research briefs, six raw cluster outputs, the merged data set, the page and PDF renderers. README inside. | You need to add or correct a cookie entry (17 entries rest on secondary sources and are marked). |
+| `risk-matrix-desktop.png`, `risk-matrix-phone.png` | Screenshots from the risk matrix layout work. | Reference only. |
 
-## Local Preview
+## Working notes kept outside the repo
 
-Run a static server in this folder:
+The Claude project "Simeon" holds the carry-over documentation for whoever edits the site
+with Claude: `site-context.md` (rules, deploy procedure, technical traps, open items),
+`content-voice.md` (how the site is written), `assessment-tools-spec.md` and
+`gdpr-readiness-model.md` (the two large tools), `pwa-and-play-store.md`,
+`content-verification-2026-09.md` (the rated action list from the verification),
+`edpb-digest.md` and `cookie-digest.md` (what the digests are and how to rebuild them).
+
+## Rules that apply to every edit
+
+- No em dashes anywhere: page copy, code comments, commit text.
+- British spelling. Company-agnostic content: no employer, team or system names.
+- Sentence case headings, one `h1.major` per content page, titles `Simeon Atanasov | <Page>`.
+- `assets/css/main.css` is CRLF; edit it in binary mode or it silently converts to LF. Root
+  HTML files are LF.
+- The html5up template styles every `button` (tall, uppercase, nowrap); custom buttons must
+  reset height and line-height. It does not style `input[type="search"]`; use `type="text"`.
+- The header nav collapses by JS measurement in `main.js`, not by a pixel breakpoint.
+
+## Homepage portfolio menu: required behaviour
+
+- On wide desktop (`>=1281px`) with the sidebar visible, hovering `Portfolio` shows a floating
+  menu to the right of the sidebar. On medium screens (`737px-1280px`) the same menu drops
+  below the item. Below `736px` the sidebar is hidden and the menu stays off.
+- The menu shows all project links as stacked rows, stays open while the pointer moves into
+  it, navigates on click, and must not overlap content, change spacing or create horizontal
+  scroll. `Portfolio` stays a plain menu item, no arrow.
+- Implementation: `.portfolio-submenu` is moved out of the sidebar to `<body>` at load and
+  positioned `fixed` from the sidebar's and item's bounding boxes, because `overflow-y: auto`
+  on the sidebar forces `overflow-x` to `auto` and would clip it. Nav item spacing comes
+  from the site's normal margin; do not add `margin: 0` to `.portfolio-menu`.
+
+## Local preview
 
 ```powershell
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080`.
+Then open `http://localhost:8080`. The site's own domain is not reachable from Claude's
+sandbox, so live checks of headers and redirects are done in a browser.
 
 ## Deployment
 
-Commit and push this repository with GitHub Desktop or Git. GitHub Pages publishes frontend changes automatically. The cookie scanner backend is a separate project, `scan-banner-api`, deployed on Render.
+Commit and push with GitHub Desktop. GitHub Pages publishes automatically. The cookie
+scanner backend (`scan-banner-api`) deploys separately on Render.

@@ -1,0 +1,416 @@
+[
+  {
+    "title": "ePrivacy Directive 2002/58/EC as amended by Directive 2009/136/EC, Article 5(3) and Article 13",
+    "jurisdiction": "EU",
+    "type": "legislation",
+    "date": "19 December 2009",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002L0058-20091219",
+    "status": "in force",
+    "takeaway": "Article 5(3) permits the storing of information, or the gaining of access to information already stored, in a user's terminal equipment only with consent given after clear and comprehensive information, with exceptions for transmission of a communication and for storage or access strictly necessary for a service explicitly requested by the user. Article 13(1) requires prior consent for automated calls, fax and email marketing, and Article 13(2) sets the soft opt-in for email marketing of own similar products to existing customers. The rules bind anyone placing cookies, pixels or scripts on EU users' devices, whatever the sender's location. Map every tag against the two exemptions and keep the consent record.",
+    "topics": [
+      "consent",
+      "strictly-necessary",
+      "email-marketing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "General Data Protection Regulation (EU) 2016/679, Articles 4(11), 6, 7 and 25 and Recital 30",
+    "jurisdiction": "EU",
+    "type": "legislation",
+    "date": "25 May 2018",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "status": "in force",
+    "takeaway": "Article 4(11) defines consent as freely given, specific, informed and unambiguous, shown by a statement or clear affirmative action, and Article 7 adds the burden of proof, separability, and withdrawal as easy as giving consent. Recital 30 names cookie identifiers and IP addresses as identifiers that may make a person identifiable, so tracking data is personal data and Article 6 requires a legal basis for what follows collection. Article 25 requires privacy by design and by default, applied by regulators to default banner settings. Applies from 25 May 2018 to every controller processing EU residents' data; fines reach 20 million euro or 4 per cent of turnover.",
+    "topics": [
+      "consent",
+      "dark-patterns",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Digital Services Act, Regulation (EU) 2022/2065, Article 25 (dark patterns), Article 26 (advertising transparency) and Article 28 (minors)",
+    "jurisdiction": "EU",
+    "type": "legislation",
+    "date": "17 February 2024",
+    "url": "https://eur-lex.europa.eu/eli/reg/2022/2065/oj",
+    "status": "in force",
+    "takeaway": "Article 25(1) prohibits online platforms from designing or operating interfaces that deceive or manipulate users or materially distort their ability to make free and informed decisions, with Article 25(3) naming repeated choice prompts and prominence tricks as examples and Article 25(2) carving out practices covered by the GDPR or the Unfair Commercial Practices Directive. Article 26 requires each advertisement to show that it is an ad, who paid for it and the main targeting parameters, and bans ads profiled on special-category data. Article 28(2) bans profiling-based ads where the platform is reasonably certain the user is a minor. Applies from 17 February 2024; fines reach 6 per cent of turnover.",
+    "topics": [
+      "dark-patterns",
+      "children",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Digital Markets Act, Regulation (EU) 2022/1925, Article 5(2) (consent for combining and cross-using personal data)",
+    "jurisdiction": "EU",
+    "type": "legislation",
+    "date": "2 May 2023",
+    "url": "https://eur-lex.europa.eu/eli/reg/2022/1925/oj",
+    "status": "in force",
+    "takeaway": "Article 5(2) prohibits a gatekeeper from processing third-party data for advertising through its core platform services, combining personal data across its services or with third-party data, cross-using data between services, or signing users in to other services to combine data, unless the user has been presented with a specific choice and has given GDPR-standard consent. A refused or withdrawn consent may be asked for again at most once a year. The obligation binds designated gatekeepers from 6 March 2024, with fines up to 10 per cent of worldwide turnover. Publishers using gatekeeper advertising products should expect the gatekeeper to surface the consent moment and align their tag configuration with it.",
+    "topics": [
+      "consent",
+      "consent-or-pay",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB Guidelines 2/2023 on the technical scope of Article 5(3) of the ePrivacy Directive, version 2.0",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "7 October 2024",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-22023-technical-scope-art-53-eprivacy-directive_en",
+    "status": "in force",
+    "takeaway": "The guidelines set four criteria for Article 5(3): information, whether personal or not; terminal equipment of a user; a connection to a public communications network; and storage of, or gaining access to, that information. Paragraphs 47 to 63 apply them to URL and pixel tracking, local processing whose output is sent to a third party, tracking based on IP address alone, IoT reporting and unique identifiers, and find that each falls within Article 5(3) where the instruction to send information comes from code the entity distributed. Treat server-side tagging, link decoration, fingerprinting and pixel calls as consent events unless an exemption applies. Version 1.0 of 14 November 2023 is superseded.",
+    "topics": [
+      "pixels-wiretap",
+      "strictly-necessary",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB Guidelines 05/2020 on consent under Regulation 2016/679",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "4 May 2020",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en",
+    "status": "in force",
+    "takeaway": "The guidelines spell out the Article 4(11) and Article 7 conditions and add two positions that shape banners directly: access to a website cannot be conditioned on accepting cookies (a cookie wall does not produce freely given consent, paragraph 39), and scrolling or swiping through a page is not a clear affirmative action (paragraph 86). They also require granular purposes, a documented record, and withdrawal as easy as giving consent. They bind all controllers relying on consent, including for the GDPR processing that follows a cookie. Use them as the checklist for banner wording, button design and consent logs. They replace Article 29 Working Party Guidelines WP259 on consent.",
+    "topics": [
+      "consent",
+      "cookie-walls",
+      "reject-button"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB Guidelines 03/2022 on deceptive design patterns in social media platform interfaces, version 2.0",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "14 February 2023",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-032022-deceptive-design-patterns-social-media_en",
+    "status": "in force",
+    "takeaway": "The guidelines name six families of deceptive design pattern, overloading, skipping, stirring, obstructing, fickle and left in the dark, and assess each against Article 5(1)(a) fairness and transparency, Article 12 transparency, Article 25 data protection by design and default, and the Articles 4(11) and 7 consent conditions. They are written for social media providers but the assessment method transfers to any consent interface, and supervisory authorities cite them in cookie banner decisions. Use the pattern catalogue as an audit list for banner copy, colour contrast, click depth and withdrawal paths, and record the review under Article 5(2) accountability.",
+    "topics": [
+      "dark-patterns",
+      "consent",
+      "reject-button"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB Opinion 5/2019 on the interplay between the ePrivacy Directive and the GDPR",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "12 March 2019",
+    "url": "https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-52019-on-the-interplay-between-the-eprivacy-directive_en",
+    "status": "in force",
+    "takeaway": "The opinion holds that where the ePrivacy Directive particularises the GDPR the specific rule prevails, so where Article 5(3) requires consent for storing or accessing information on a device, no other Article 6 GDPR basis can replace it, and the later processing of the personal data collected still needs its own GDPR basis. It also confirms that the GDPR one-stop-shop and consistency mechanism do not extend to ePrivacy enforcement, which stays with the national authority each Member State designates. Binds supervisory authorities and, through them, every operator. Expect parallel national enforcement of cookie rules without a lead authority, and never justify a tracking cookie on legitimate interest.",
+    "topics": [
+      "consent",
+      "enforcement",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB Opinion 08/2024 on valid consent in the context of consent or pay models implemented by large online platforms",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "17 April 2024",
+    "url": "https://www.edpb.europa.eu/system/files/2024-04/edpb_opinion_202408_consentorpay_en.pdf",
+    "status": "in force",
+    "takeaway": "Requested by the Dutch, Norwegian and Hamburg authorities, the opinion finds that in most cases a large online platform offering only a choice between behavioural advertising and a fee will not obtain freely given consent, and that platforms should consider an equivalent alternative without a fee, in particular a free version with advertising that processes less or no personal data (paragraphs 73 to 77). Any fee must not inhibit free choice (paragraph 85), and imbalance of power, lock-in and network effects weigh against validity (paragraphs 99 to 112). Authorities apply its reasoning to publishers. Model any paid alternative against the free, less intrusive option; general EDPB guidelines are in preparation.",
+    "topics": [
+      "consent-or-pay",
+      "consent",
+      "cookie-walls"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB Report of the work undertaken by the Cookie Banner Taskforce",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "17 January 2023",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/other/report-work-undertaken-cookie-banner-taskforce_en",
+    "status": "in force",
+    "takeaway": "The report records the positions supervisory authorities share on the noyb banner complaints: a first layer with an accept button but no reject option is non-compliant (paragraphs 6 to 8); pre-ticked boxes do not create consent (paragraphs 9 to 10); a reject option hidden as a small link or outside the banner is insufficient (paragraphs 11 to 14); unreadable button contrast is manifestly misleading (paragraph 18); legitimate interest cannot ground a cookie under Article 5(3) (paragraphs 20 to 25); operators must prove and keep updated the list of essential cookies (paragraph 27); and withdrawal must be as easy as consent (paragraph 34). It sets the common enforcement baseline.",
+    "topics": [
+      "reject-button",
+      "dark-patterns",
+      "strictly-necessary"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB Guidelines 8/2020 on the targeting of social media users, version 2.0",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "13 April 2021",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-82020-targeting-social-media-users_en",
+    "status": "in force",
+    "takeaway": "The guidelines apply Wirtschaftsakademie and Fashion ID to advertising: a targeter that embeds a social media pixel or plug-in jointly determines the purpose of the collection and transmission with the platform and is a joint controller for those operations, though not for what the platform does afterwards. Where targeting relies on tracking across websites, Article 5(3) consent is the only available basis, legitimate interest is excluded, and the parties need an Article 26 arrangement. They bind social media providers and every advertiser or publisher that installs their tags. Tie every pixel to a consent purpose, document the joint controllership split, and cover the transmission in the privacy notice.",
+    "topics": [
+      "pixels-wiretap",
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB Recommendations 2/2025 on the legal basis for requiring the creation of user accounts on e-commerce websites",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "3 December 2025",
+    "url": "https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2025/recommendations-22025-legal-basis-requiring_en",
+    "status": "in force",
+    "takeaway": "Adopted on 3 December 2025 for a public consultation that closed on 12 February 2026, the recommendations find that a mandatory account for a one-off purchase is unlikely to pass the necessity test under Article 6(1)(b) (paragraph 23), that Article 6(1)(c) applies only exceptionally (paragraph 47), and that order tracking, loyalty, future purchases and fraud prevention do not meet the Article 6(1)(f) necessity and balancing tests (paragraphs 58 to 75). Consent is not available for a compulsory step, and a guest checkout beside voluntary registration is the most efficient lawful design (paragraph 89). They address e-commerce operators. Remove forced registration from checkout and keep account features opt-in.",
+    "topics": [
+      "consent",
+      "dark-patterns",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB-EDPS Joint Opinion 2/2026 on the Digital Omnibus proposal",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "10 February 2026",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/edpbedps-joint-opinion/edpb-edps-joint-opinion-22026-proposal_en",
+    "status": "in force",
+    "takeaway": "The joint opinion supports moving terminal equipment rules into the GDPR and a regulatory answer to consent fatigue, welcoming the six-month bar on repeat requests after a refusal in proposed Article 88a(4) and strongly supporting machine-readable preference signals in Article 88b. It asks that the Article 88a(3) exemptions be narrow: audience measurement limited to aggregated data not combined across services, and any contextual advertising exemption clearly delimited. It objects strongly to the proposed narrowing of the definition of personal data and to delegating that definition to Commission implementing acts. It binds no one, but it signals how supervisory authorities will read the amended rules if adopted.",
+    "topics": [
+      "browser-signals",
+      "analytics-exemption",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB letter on the Commission's draft principles for a voluntary cookie pledge",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "19 December 2023",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/letters/edpb-reply-commissions-initiative-voluntary-business-pledge_en",
+    "status": "historical",
+    "takeaway": "The letter gives the Board's feedback on the Commission's draft cookie pledge principles and records that a voluntary pledge cannot lower the consent standard of Article 5(3) ePrivacy and Articles 4(11) and 7 GDPR, and that principles on advertising business models and consent or pay had to be read with the Board's forthcoming opinion on that subject. It addressed the Commission, not operators. Practitioners meet it as the reason the pledge stalled and as an early statement of the positions later formalised in Opinion 08/2024. Treat it as background only; the operative EDPB positions are in Opinion 08/2024 and the Cookie Banner Taskforce report.",
+    "topics": [
+      "consent-or-pay",
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB and European Commission joint guidelines on the interplay between the Digital Markets Act and the GDPR (draft for consultation)",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "9 October 2025",
+    "url": "https://www.edpb.europa.eu/news/news/2025/dma-and-gdpr-edpb-and-european-commission-endorse-joint-guidelines-clarify-common_en",
+    "status": "proposed",
+    "takeaway": "The draft guidelines, endorsed by the EDPB and the Commission on 9 October 2025 and put to consultation until 4 December 2025, explain how a gatekeeper satisfies both the specific choice requirement of Article 5(2) DMA and the GDPR consent conditions when it combines or cross-uses personal data across core platform services, and cover data portability, app distribution and messaging interoperability. They address gatekeepers, with indirect effect on the advertisers and publishers that feed data into gatekeeper advertising systems. Use them to understand the consent flows that gatekeeper products will impose on your integrations. The final adopted version had not been located as of September 2026.",
+    "topics": [
+      "consent",
+      "consent-or-pay",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "EDPB work programme 2026-2027 (consent or pay guidelines in preparation)",
+    "jurisdiction": "EU",
+    "type": "regulator guidance",
+    "date": "12 February 2026",
+    "url": "https://www.edpb.europa.eu/news/edpb-work-programme-2026-2027-easing-compliance-and-strengthening-cooperation-across-the_en",
+    "status": "in force",
+    "takeaway": "The work programme adopted on 12 February 2026 lists guidelines on consent or pay among the guidance the Board will deliver in the 2026-2027 cycle, extending the reasoning of Opinion 08/2024 beyond large online platforms. It binds no one and contains no rule, but it tells publishers running paid ad-free tiers that a general EDPB position covering their model is coming. Keep any consent or pay implementation aligned with Opinion 08/2024 now, including a free alternative with less intrusive advertising where feasible, and plan for a review when the guidelines are published for consultation.",
+    "topics": [
+      "consent-or-pay",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CJEU, Case C-673/17, Bundesverband der Verbraucherzentralen v Planet49 GmbH",
+    "jurisdiction": "EU",
+    "type": "court decision",
+    "date": "1 October 2019",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A62017CJ0673",
+    "status": "decided",
+    "takeaway": "The Court held that consent under Article 5(3) ePrivacy, read with Article 2(h) of Directive 95/46 and Article 4(11) GDPR, is not validly given by a pre-ticked checkbox the user must deselect, and that this applies whether or not the information stored or accessed is personal data. It also held that the information the operator must give includes the duration of the cookies and whether third parties may have access to them. The ruling binds every operator setting cookies on EU users' devices and is the source of the active opt-in rule. Check that no toggle is preset to on and that the banner discloses lifetimes and third-party recipients.",
+    "topics": [
+      "consent",
+      "reject-button"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CJEU, Case C-61/19, Orange Romania SA v ANSPDCP",
+    "jurisdiction": "EU",
+    "type": "court decision",
+    "date": "11 November 2020",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A62019CJ0061",
+    "status": "decided",
+    "takeaway": "The Court held under Articles 4(11) and 6(1)(a) GDPR (and the equivalent Directive 95/46 provisions) that the controller must prove the data subject consented by active behaviour after receiving information in clear and plain language, and that a contract clause recording consent does not prove it where the controller pre-ticked the box, where the terms could mislead the customer about being able to contract without consenting, or where refusing required completing an extra form. The case concerned identity documents in a telecoms contract, but the reasoning applies to any consent flow. Keep the refusal path no longer than the acceptance path and retain evidence of the affirmative act.",
+    "topics": [
+      "consent",
+      "dark-patterns"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CJEU, Case C-40/17, Fashion ID GmbH & Co. KG v Verbraucherzentrale NRW eV",
+    "jurisdiction": "EU",
+    "type": "court decision",
+    "date": "29 July 2019",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A62017CJ0040",
+    "status": "decided",
+    "takeaway": "The Court held that a website operator embedding a third-party social plug-in that causes the visitor's browser to send personal data to the plug-in provider is a joint controller with that provider for the collection and disclosure by transmission, but not for the provider's subsequent processing. The operator must itself provide the information due at collection and, where consent is the basis, obtain it for the collection and transmission it controls. It binds every site that embeds a third-party pixel, plug-in or script that fires before consent. Gate every third-party tag behind consent, name the recipient in the notice, and agree the Article 26 allocation with the vendor.",
+    "topics": [
+      "pixels-wiretap",
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CJEU, Case C-252/21, Meta Platforms and Others v Bundeskartellamt",
+    "jurisdiction": "EU",
+    "type": "court decision",
+    "date": "4 July 2023",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A62021CJ0252",
+    "status": "decided",
+    "takeaway": "The Grand Chamber held that a competition authority may examine GDPR compliance when assessing abuse of dominance, that personalised advertising which finances a social network is not necessary for the contract under Article 6(1)(b) and cannot be justified as a legitimate interest under Article 6(1)(f) for the data at issue, and that a dominant position does not by itself invalidate consent but is an important factor in judging whether it was freely given, with the burden on the operator. Visiting a website revealing sensitive characteristics does not make that data manifestly public. Do not rely on contract or legitimate interest for off-site tracking data used in ad personalisation.",
+    "topics": [
+      "consent",
+      "consent-or-pay",
+      "health-data"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CJEU, Case C-604/22, IAB Europe v Gegevensbeschermingsautoriteit",
+    "jurisdiction": "EU",
+    "type": "court decision",
+    "date": "7 March 2024",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A62022CJ0604",
+    "status": "decided",
+    "takeaway": "The Court held that the TC String generated under the Transparency and Consent Framework is personal data within Article 4(1) GDPR, because combined with an identifier such as an IP address it allows the user to be identified, and that IAB Europe is a joint controller with its members for the recording of users' consent preferences in the TC String, though not for the later processing by participants unless it influences its purposes and means. It binds the framework operator and every publisher and vendor using the TCF. Treat consent strings as personal data in retention, security and rights handling, and run the current TCF version.",
+    "topics": [
+      "tcf",
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CJEU, Case C-654/23, Inteligo Media SA v ANSPDCP (soft opt-in and free accounts)",
+    "jurisdiction": "EU",
+    "type": "court decision",
+    "date": "13 November 2025",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A62023CJ0654",
+    "status": "decided",
+    "takeaway": "The Court held that an email address collected when a user opens a free account giving access to extra articles and a daily newsletter, on a site whose model steers users to paid subscriptions, is obtained in the context of the sale of a product or service within Article 13(2) ePrivacy, so the newsletter promoting the operator's own similar services may be sent under the soft opt-in provided an opt-out was offered at collection and in every message. Where Article 13(2) governs the communication, the Article 6(1) GDPR conditions do not apply in addition. The case arose from a 9,000 euro Romanian fine. Map freemium sign-ups to the soft opt-in.",
+    "topics": [
+      "email-marketing",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CJEU, Case C-582/14, Patrick Breyer v Bundesrepublik Deutschland (dynamic IP addresses)",
+    "jurisdiction": "EU",
+    "type": "court decision",
+    "date": "19 October 2016",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A62014CJ0582",
+    "status": "decided",
+    "takeaway": "The Court held that a dynamic IP address recorded by a website operator is personal data in relation to that operator where it has legal means to obtain from the access provider the additional information needed to identify the visitor, and that national law cannot limit the legitimate interest ground so as to exclude retention of that data to keep the site working and defend it against attacks. It binds every operator logging visitor IP addresses, and Recital 30 GDPR and EDPB Guidelines 2/2023 build on it. Treat IP-based analytics, fraud checks and server logs as personal data processing with a stated legal basis and retention period.",
+    "topics": [
+      "other",
+      "analytics-exemption"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Proposal for an ePrivacy Regulation, COM(2017) 10, 2017/0003(COD)",
+    "jurisdiction": "EU",
+    "type": "proposal",
+    "date": "11 February 2025",
+    "url": "https://www.europarl.europa.eu/legislative-train/theme-connected-digital-single-market/file-jd-e-privacy-reform",
+    "status": "withdrawn",
+    "takeaway": "Tabled on 10 January 2017 to replace Directive 2002/58/EC with a directly applicable regulation on cookies, browser settings and direct marketing, the proposal reached a Council mandate on 10 February 2021 but never a trilogue agreement. The Commission's 2025 work programme of 11 February 2025 announced its withdrawal as outdated and without foreseeable agreement, the College approved the withdrawal on 16 July 2025, and it was published in the Official Journal on 6 October 2025 as C/2025/5423. It never bound anyone. The ePrivacy Directive remains the operative text and the Digital Omnibus of 19 November 2025 is the successor reform vehicle for terminal equipment rules.",
+    "topics": [
+      "consent",
+      "browser-signals",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Digital Omnibus proposal, COM(2025) 837, 2025/0360(COD): new GDPR Articles 88a and 88b on terminal equipment and machine-readable consent signals",
+    "jurisdiction": "EU",
+    "type": "proposal",
+    "date": "19 November 2025",
+    "url": "https://data.consilium.europa.eu/doc/document/ST-15698-2025-INIT/en/pdf",
+    "status": "proposed",
+    "takeaway": "The proposal moves the rules on storing and accessing personal data on terminal equipment from Article 5(3) ePrivacy into a new GDPR Article 88a, which keeps consent as the default, exempts transmission, requested services, aggregated first-party audience measurement and security, and bars a fresh consent request for the same purpose for at least six months after a refusal. A new Article 88b obliges controllers to honour automated, machine-readable consent and refusal signals once standards exist, with a six-month grace period, and requires browser providers other than SMEs to offer the feature. As of September 2026 the file remains in committee with no Council general approach and no trilogue.",
+    "topics": [
+      "browser-signals",
+      "analytics-exemption",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Digital Fairness Act initiative (dark patterns, addictive design, consent fatigue)",
+    "jurisdiction": "EU",
+    "type": "proposal",
+    "date": "17 July 2025",
+    "url": "https://www.europarl.europa.eu/legislative-train/theme-protecting-our-democracy-upholding-our-values/file-digital-fairness-act",
+    "status": "proposed",
+    "takeaway": "The initiative follows the Commission's fitness check of EU consumer law and targets dark patterns, addictive design, unfair personalisation, influencer marketing and subscription cancellation, with decision fatigue from complex cookie and tracking choices cited as a pattern to address. A public consultation ran from 17 July to 24 October 2025, and the Commission work programme schedules the legislative proposal for the fourth quarter of 2026. As of September 2026 no proposal has been tabled and nothing binds anyone. Expect a consumer-law layer on top of Article 25 DSA and the GDPR for banner design, and audit interfaces now against the EDPB deceptive design categories.",
+    "topics": [
+      "dark-patterns",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "European Commission cookie pledge initiative (draft pledging principles)",
+    "jurisdiction": "EU",
+    "type": "proposal",
+    "date": "19 December 2023",
+    "url": "https://commission.europa.eu/live-work-travel-eu/consumer-rights-and-complaints/enforcement-consumer-protection/cookie-pledge_en",
+    "status": "historical",
+    "takeaway": "Announced on 28 March 2023 and developed through round tables and working groups, the pledge set out voluntary principles for signatories: no consent request for strictly necessary cookies, upfront disclosure that content is financed by advertising, clear presentation of the business model and the choices, a less intrusive advertising alternative, fewer repeat consent requests per tracker, no further consent requests after a business model choice, and a one-year non-solicitation period after a refusal. Draft principles were presented on 19 December 2023 with signature planned for April 2024, but the Commission published nothing further after January 2024 and the pledge never launched. Its ideas resurface in the Digital Omnibus six-month rule.",
+    "topics": [
+      "consent",
+      "consent-or-pay",
+      "strictly-necessary"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "European Commission non-compliance decision against Meta under Article 5(2) DMA (consent or pay model), fine of 200 million euro",
+    "jurisdiction": "EU",
+    "type": "enforcement",
+    "date": "23 April 2025",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1085",
+    "status": "decided",
+    "takeaway": "The Commission found that Meta's binary choice between consenting to the combination of personal data for personalised advertising and paying for an ad-free subscription, introduced in November 2023, did not give users the specific choice of a service using less personal data that Article 5(2) DMA requires, and fined Meta 200 million euro for the period from March 2024, when DMA obligations became binding, to November 2024, when a revised model was introduced. Apple was fined 500 million euro in the same package. It binds only Meta, but it is the first EU-level enforcement of consent or pay. Publishers copying the model should offer a less data-intensive free option.",
+    "topics": [
+      "consent-or-pay",
+      "enforcement",
+      "consent"
+    ],
+    "source": "primary"
+  }
+]

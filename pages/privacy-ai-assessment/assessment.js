@@ -164,7 +164,7 @@
 		"Lifestyle and preferences",
 		"Workplace safety and incident data",
 		"Background checks (employment, education, criminal record)",
-		"Special category data (health, biometric, genetic, racial or ethnic origin, religion, political opinion, trade union membership, sex life or orientation)",
+		"Special category data (health, genetic, biometric data used to uniquely identify a person, racial or ethnic origin, religious or philosophical beliefs, political opinion, trade union membership, sex life or orientation)",
 		"Criminal offence data",
 		"Other"
 	];
@@ -646,7 +646,7 @@
 			key: "regulatory",
 			title: "Regulatory screening",
 			questions: [
-				{ id: "prohibitedUse", type: "select", label: "Does the system fall into a prohibited-use category under the EU AI Act (e.g. social scoring, manipulative/subliminal techniques causing harm, exploiting vulnerabilities, untargeted facial-recognition scraping, workplace/education emotion inference, biometric categorization inferring protected attributes)?", options: ["No", "Yes", "Unsure"],
+				{ id: "prohibitedUse", type: "select", label: "Does the system fall into a prohibited-use category under the EU AI Act (e.g. social scoring, manipulative/subliminal techniques causing harm, exploiting vulnerabilities, untargeted facial-recognition scraping, workplace/education emotion inference, biometric categorization inferring protected attributes, or, from 2 December 2026, generating non-consensual intimate imagery or child sexual abuse material)?", options: ["No", "Yes", "Unsure"],
 					note: { label: "Briefly explain why / what triggered this concern", visibleIf: function (v) { return v === "Yes" || v === "Unsure"; } } },
 				{ id: "highRiskAnnexIII", type: "select", label: "Does it fall under an EU AI Act Annex III high-risk category (e.g. employment/HR decisions, access to essential services, credit scoring, biometric identification, law enforcement, migration/border control, education/exam scoring, critical infrastructure safety)?", options: ["No", "Yes", "Unsure"],
 					note: { label: "Which Annex III category applies (or is suspected)?", visibleIf: function (v) { return v === "Yes" || v === "Unsure"; } } },
@@ -719,7 +719,7 @@
 			}
 			if (a.highRiskAnnexIII === "Yes") {
 				regLevel = "High";
-				factors.push({ title: "Likely high-risk (Annex III)", detail: "High-risk systems carry conformity assessment, documentation, human oversight, and monitoring obligations under the EU AI Act.", severity: "high" });
+				factors.push({ title: "Likely high-risk (Annex III)", detail: "High-risk systems carry conformity assessment, documentation, human oversight, and monitoring obligations under the EU AI Act. For Annex III systems these apply from 2 December 2027 (Regulation (EU) 2026/1744), and registration in the EU database is due before putting into service once the database opens.", severity: "high" });
 			} else if (a.highRiskAnnexIII === "Unsure") {
 				regLevel = "Limited";
 				factors.push({ title: "High-risk classification unclear", detail: "Confirm Annex III applicability with legal/compliance - this drives which obligations apply.", severity: "medium" });
@@ -1002,7 +1002,7 @@
 		"Not yet known": 10
 	};
 	var AEPD_SENSITIVE_CATEGORIES = [
-		"Special category data (health, biometric, genetic, racial or ethnic origin, religion, political opinion, trade union membership, sex life or orientation)",
+		"Special category data (health, genetic, biometric data used to uniquely identify a person, racial or ethnic origin, religious or philosophical beliefs, political opinion, trade union membership, sex life or orientation)",
 		"Criminal offence data"
 	];
 	function aepdResult(a) {

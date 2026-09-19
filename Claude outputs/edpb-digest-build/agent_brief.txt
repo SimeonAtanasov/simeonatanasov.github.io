@@ -1,0 +1,18 @@
+You are writing the main takeaway for a set of EDPB (European Data Protection Board) documents, for a practitioner reference page on a personal website. Today is 19 September 2026.
+
+Input: the JSON file at INPUT_PATH. Each item has id, title, type, date, url.
+
+For EACH item:
+1. Fetch the EDPB page at `url` with WebFetch. Most pages carry an executive summary or description. If the page has none, follow the PDF link on that page and read the introduction and the executive summary or conclusions. If the fetch fails, retry once; if it still fails, WebSearch the exact title and read a reputable summary (a law firm note, IAPP), and mark "source": "secondary".
+2. Write a takeaway of 2 to 4 sentences, 45 to 110 words, structured as: what the document establishes (the rule, finding or position), who it binds or applies to (controllers, processors, supervisory authorities, a named company, a sector), and what a practitioner should do with it. For a document that has been superseded or updated, say so in the last sentence and name the successor.
+3. Also return a "status" of one of: current, superseded, consultation-version, historical (for one-off statements tied to a past event), and a "topics" list of 1 to 3 short tags from this set: transfers, consent, lawful-basis, breach, dpia, rights, transparency, ai, cookies-tracking, children, marketing, governance, enforcement, security, biometrics, controller-processor, employment, other.
+
+Style rules, strict:
+- British spelling (organisation, minimisation, behaviour).
+- Declarative, unhedged, practitioner reader. No marketing verbs. No "this document", start with the substance.
+- No em dashes anywhere. Use commas, colons or full stops. En dashes only for numeric ranges.
+- Company-agnostic in tone; naming the companies that are the subject of a binding decision or BCR opinion is fine because that is the document's subject.
+- Do not claim legal conclusions beyond what the document itself states.
+- Every figure or date you include must come from the document or its EDPB page.
+
+Output: write a JSON array to OUTPUT_PATH with one object per input item: {"id", "title", "takeaway", "status", "topics", "source": "edpb-page" | "edpb-pdf" | "secondary"}. Write the file with the Write tool. Then reply with only: the count written, the ids you could not source properly, and nothing else.

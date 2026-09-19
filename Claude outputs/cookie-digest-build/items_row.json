@@ -1,0 +1,775 @@
+[
+  {
+    "title": "Personal Information Protection and Electronic Documents Act (PIPEDA), s. 6.1 and Schedule 1 Principle 4.3",
+    "jurisdiction": "Canada",
+    "type": "legislation",
+    "date": "4 March 2025",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/P-8.6/",
+    "status": "in force",
+    "takeaway": "PIPEDA requires knowledge and consent for the collection, use and disclosure of personal information (Schedule 1, Principle 4.3), and s. 6.1 makes consent valid only where it is reasonable to expect the individual understands the nature, purpose and consequences of the processing. It binds organisations that collect personal information in the course of commercial activity, including foreign operators with a real and substantial connection to Canada. Treat identifiers set by cookies and tracking pixels as personal information, decide whether express or implied consent fits each purpose, and document that analysis; Bill C-36 would replace Part 1 of PIPEDA if enacted.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "OPC Guidelines on privacy and online behavioural advertising",
+    "jurisdiction": "Canada",
+    "type": "regulator guidance",
+    "date": "6 December 2011",
+    "url": "https://www.priv.gc.ca/en/privacy-topics/technology/online-privacy-tracking-cookies/tracking-and-ads/gl_ba_1112/",
+    "status": "in force",
+    "takeaway": "The Commissioner accepts opt-out consent for online behavioural advertising under PIPEDA only where the practice is explained clearly and outside the privacy policy, the opt-out is offered at or before collection, takes effect immediately and persists, no sensitive information is used, children and child-directed sites are not tracked, and data is destroyed or de-identified promptly. Tracking that a user cannot decline, such as zombie cookies or device fingerprinting, must not be used for advertising. It applies to any organisation tracking Canadian users across sites. Configure banners and ad-preference tools to meet each condition, and treat opt-in as required where a condition cannot be met.",
+    "topics": [
+      "consent",
+      "children",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "OPC, OIPC Alberta and OIPC British Columbia, Guidelines for obtaining meaningful consent",
+    "jurisdiction": "Canada",
+    "type": "regulator guidance",
+    "date": "24 May 2018",
+    "url": "https://www.priv.gc.ca/en/privacy-topics/collecting-personal-information/consent/gl_omc_201805/",
+    "status": "in force",
+    "takeaway": "The three commissioners set seven principles for consent that is meaningful under PIPEDA and the Alberta and British Columbia PIPAs: emphasise key elements, let individuals control the level of detail, offer clear yes or no options for non-essential collection, be innovative, consider the consumer perspective, make consent dynamic, and be accountable. Express consent is required for sensitive information, for uses outside reasonable expectations, and where a meaningful residual risk of significant harm remains. The guidelines have been applied by the offices since 1 January 2019. Build layered notices and just-in-time prompts into consent flows, and keep records that demonstrate the process meets each principle.",
+    "topics": [
+      "consent",
+      "dark-patterns"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Joint investigation into location tracking by the Tim Hortons app (PIPEDA Findings 2022-001)",
+    "jurisdiction": "Canada",
+    "type": "enforcement",
+    "date": "1 June 2022",
+    "url": "https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2022/pipeda-2022-001/",
+    "status": "decided",
+    "takeaway": "The federal, Quebec, Alberta and British Columbia commissioners found that the app collected granular location data every few minutes while closed, contrary to statements that collection occurred only when the app was open, and that the data was gathered for targeted advertising but never used for that purpose, so consent was invalid and the collection lacked an appropriate purpose. The finding binds the operator and signals the offices' approach to tracking statements generally. The company was told to delete the location data, build a privacy management programme with impact assessments, and report within nine months. Align every tracking statement in a banner or policy with what the code actually does.",
+    "topics": [
+      "consent",
+      "enforcement",
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Bill C-27, Digital Charter Implementation Act, 2022 (Consumer Privacy Protection Act)",
+    "jurisdiction": "Canada",
+    "type": "proposal",
+    "date": "16 June 2022",
+    "url": "https://www.parl.ca/legisinfo/en/bill/44-1/c-27",
+    "status": "historical",
+    "takeaway": "Bill C-27 would have replaced Part 1 of PIPEDA with the Consumer Privacy Protection Act, adding a statutory consent standard, a business-activities exception, rules for de-identified data, administrative penalties and a tribunal, together with the Artificial Intelligence and Data Act. It died on the Order Paper when Parliament was prorogued on 6 January 2025 after committee study but before third reading. Practitioners still meet references to the CPPA in vendor documentation and privacy programmes. Treat those references as historical and map obligations to PIPEDA as it stands and to Bill C-36, which the government tabled on 15 June 2026 as the successor.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Bill C-36, Protecting Privacy and Consumer Data Act",
+    "jurisdiction": "Canada",
+    "type": "proposal",
+    "date": "15 June 2026",
+    "url": "https://www.parl.ca/LegisInfo/en/bill/45-1/c-36",
+    "status": "proposed",
+    "takeaway": "Bill C-36 would enact the Protecting Privacy and Consumer Data Act to replace Part 1 of PIPEDA, keeping a meaningful consent standard in plain language with expanded exceptions for business activities, research and de-identification, confirming that de-identified information remains personal information, requiring particular attention to children's information, and creating administrative penalties of up to the greater of $10 million or 3 percent of global revenue, with offences up to the greater of $25 million or 5 percent. It received first reading in the House of Commons on 15 June 2026 and has not progressed further. Track the bill, but change nothing in consent flows until it passes.",
+    "topics": [
+      "consent",
+      "children",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Act respecting the protection of personal information in the private sector (Law 25 amendments), s. 8.1 and s. 9.1",
+    "jurisdiction": "Quebec",
+    "type": "legislation",
+    "date": "22 September 2023",
+    "url": "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1",
+    "status": "in force",
+    "takeaway": "Section 8.1, in force since 22 September 2023, requires an enterprise collecting personal information through technology that can identify, locate or profile a person to inform the person first of that technology and of the means available to activate those functions, which the Commission d'accès à l'information reads as requiring such functions to be off by default and switched on only by the individual. Section 9.1 requires the highest confidentiality settings by default but excludes cookies from that specific rule. The Act binds every enterprise handling Quebec residents' information. Configure analytics, advertising and geolocation trackers as opt-in for Quebec visitors and describe the activation controls in the banner.",
+    "topics": [
+      "consent",
+      "strictly-necessary",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Commission d'accès à l'information, Lignes directrices 2023-1 sur les critères de validité du consentement",
+    "jurisdiction": "Quebec",
+    "type": "regulator guidance",
+    "date": "31 October 2023",
+    "url": "https://www.cai.gouv.qc.ca/uploads/pdfs/CAI_Criteres_Validite_Consentement.pdf",
+    "status": "in force",
+    "takeaway": "The Commission's guidelines set eight criteria for valid consent under the public and private sector Acts: manifest, free, informed, given for specific purposes, granular, understandable, temporary, and presented separately from any other information when requested in writing. Consent is not free where refusal takes disproportionate effort compared with acceptance or where visual emphasis such as colour or font size steers the choice, and implied consent requires a genuine opportunity to refuse. The guidelines bind no one directly but state how the Commission will assess consent in investigations. Design banners with equal accept and refuse paths, one purpose per toggle, and a separate consent request for each tracker category.",
+    "topics": [
+      "consent",
+      "dark-patterns",
+      "reject-button"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Lei Geral de Proteção de Dados Pessoais (Law 13.709/2018), Articles 7, 8 and 52",
+    "jurisdiction": "Brazil",
+    "type": "legislation",
+    "date": "14 August 2018",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    "status": "in force",
+    "takeaway": "Article 7 lists ten legal bases, including consent (item I) and legitimate interest (item IX), and Article 8 requires consent in writing or by another means demonstrating the data subject's will, in a highlighted clause when written, with the burden of proof on the controller and revocation available at any time. Article 52 allows fines of up to 2 percent of revenue in Brazil, capped at R$50,000,000 per infraction, plus daily fines, publication and blocking. It binds any processing of data of individuals located in Brazil or carried out in Brazil. Pair each cookie category with a legal basis, record consent events, and keep refusal as easy as acceptance.",
+    "topics": [
+      "consent",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ANPD Guia orientativo: Cookies e proteção de dados pessoais",
+    "jurisdiction": "Brazil",
+    "type": "regulator guidance",
+    "date": "18 October 2022",
+    "url": "https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia-orientativo-cookies-e-protecao-de-dados-pessoais.pdf/@@display-file/file",
+    "status": "in force",
+    "takeaway": "The guide classifies cookies as necessary or non-necessary, first or third party, session or persistent, and pairs them with legal bases: consent for non-necessary cookies and legitimate interest for necessary ones, with legitimate interest unsuitable for behavioural profiling and advertising. A first-layer banner must offer a reject option as visible as the accept button and a link to the cookie policy, a second layer must give per-category choices with non-necessary cookies off by default, and pre-ticked boxes, hidden refuse buttons, missing revocation and cookie walls are listed as non-compliant. It is advisory but states how the authority reads the LGPD. Use it as the specification for Brazilian banners.",
+    "topics": [
+      "consent",
+      "reject-button",
+      "cookie-walls"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ANPD Guia orientativo: Hipóteses legais de tratamento de dados pessoais, legítimo interesse",
+    "jurisdiction": "Brazil",
+    "type": "regulator guidance",
+    "date": "2 February 2024",
+    "url": "https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_legitimo_interesse.pdf/@@display-file/file",
+    "status": "in force",
+    "takeaway": "The guide sets out how the ANPD expects controllers to rely on legitimate interest under Article 7, IX and Article 10 of the LGPD: a documented balancing test covering the legitimacy of the interest, the necessity of the processing, the impact on data subjects and their legitimate expectations, with a model assessment in the annex. Legitimate interest cannot be used for sensitive data and has restricted use in the public sector. It applies to any controller invoking the basis, including for analytics or necessary cookies. Complete and retain a balancing test before setting any cookie without consent, and provide transparency and an objection route for the processing.",
+    "topics": [
+      "analytics-exemption",
+      "strictly-necessary",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Resolução CD/ANPD nº 4/2023, Regulamento de dosimetria e aplicação de sanções administrativas",
+    "jurisdiction": "Brazil",
+    "type": "legislation",
+    "date": "24 February 2023",
+    "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-regulamento-de-dosimetria/Resolucaon4CDANPD24.02.2023.pdf",
+    "status": "in force",
+    "takeaway": "The regulation sets the method by which the ANPD calculates the sanctions in Article 52 of the LGPD, classifying infractions as light, medium or serious, applying a percentage of revenue within the 2 percent and R$50,000,000 ceilings, and listing aggravating and mitigating factors such as recurrence, good faith, cooperation and adoption of a compliance programme. It binds every processing agent subject to LGPD sanctions, which became applicable on 1 August 2021. Since the first fine in July 2023 the authority has applied it consistently. Keep evidence of consent design, records of processing and remediation steps to support the mitigating factors if a cookie complaint escalates.",
+    "topics": [
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Enunciado CD/ANPD nº 1/2023 on the processing of children's and adolescents' personal data",
+    "jurisdiction": "Brazil",
+    "type": "regulator guidance",
+    "date": "22 May 2023",
+    "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-divulga-enunciado-sobre-o-tratamento-de-dados-pessoais-de-criancas-e-adolescentes",
+    "status": "in force",
+    "takeaway": "The statement interprets Article 14 of the LGPD to allow children's and adolescents' data to be processed under any legal basis in Articles 7 and 11, not only specific parental consent, provided the best interest of the minor prevails and is assessed in each case. It binds the ANPD's own enforcement posture and applies to any controller handling minors' data, including operators of sites and apps used by children. Do not rely on it to run behavioural advertising cookies on child-directed services; document a best-interest assessment for any tracker on such services, and default to no tracking where the assessment is unclear.",
+    "topics": [
+      "children",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Privacy Act 1988 (Cth), Australian Privacy Principles 3, 5, 6, 7 and 8 (Compilation No. 103)",
+    "jurisdiction": "Australia",
+    "type": "legislation",
+    "date": "10 June 2025",
+    "url": "https://www.legislation.gov.au/C2004A03712/2025-06-10/2025-06-10/text/original/epub/OEBPS/document_1/document_1.html",
+    "status": "in force",
+    "takeaway": "The compilation in force from 10 June 2025 defines personal information as information about an identified or reasonably identifiable individual, defines consent as express or implied, requires consent to collect sensitive information (APP 3.3), notification at or before collection (APP 5), use and disclosure only for the primary purpose or with consent (APP 6), a simple means of opting out of direct marketing (APP 7) and reasonable steps for overseas disclosures (APP 8). It binds APP entities, broadly organisations with annual turnover above $3 million and all health service providers. Map every pixel and cookie to these principles and obtain express consent before any tracker can capture sensitive information.",
+    "topics": [
+      "consent",
+      "health-data",
+      "transfers"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Privacy and Other Legislation Amendment Act 2024 (No. 128, 2024)",
+    "jurisdiction": "Australia",
+    "type": "legislation",
+    "date": "10 December 2024",
+    "url": "https://www.legislation.gov.au/C2024A00128/asmade",
+    "status": "in force",
+    "takeaway": "The first tranche of Privacy Act reform received assent on 10 December 2024. It creates a statutory tort for serious invasions of privacy from 10 June 2025, requires the OAIC to register a Children's Online Privacy Code by 10 December 2026, requires privacy policies to disclose automated decision-making from 10 December 2026, gives the Commissioner infringement and compliance notice powers from 11 December 2024, and adds tiered civil penalties. It binds all APP entities. Update privacy policies for the automated decision-making disclosure before the deadline, and plan for the Children's Code where a service is likely to be accessed by children.",
+    "topics": [
+      "children",
+      "enforcement",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "OAIC guidance: Tracking pixels and privacy obligations",
+    "jurisdiction": "Australia",
+    "type": "regulator guidance",
+    "date": "4 November 2024",
+    "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/organisations/tracking-pixels-and-privacy-obligations",
+    "status": "in force",
+    "takeaway": "The Commissioner explains that a third-party pixel collects IP address, location, URLs and transaction data and sends it to an advertising platform, engaging APP 1, 3, 5, 6, 7, 8 and 11. Organisations must understand the pixel before deployment, review the provider's terms, run a privacy impact assessment, configure it to collect the minimum, avoid site-wide placement, prevent capture of sensitive information without express opt-in consent, notify users through banners or notices naming the recipients and any overseas transfer, and offer a simple opt-out from targeted advertising. It applies to every APP entity using pixels. Treat the list as a pre-deployment checklist and revisit it at each review cycle.",
+    "topics": [
+      "pixels-wiretap",
+      "health-data",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Commissioner-initiated investigations into Medmate Australia and Monash IVF (tracking pixels), [2026] AICmr 40 and 41",
+    "jurisdiction": "Australia",
+    "type": "enforcement",
+    "date": "11 June 2026",
+    "url": "https://www.oaic.gov.au/news/media-centre/privacy-commissioner-finds-privacy-breaches-in-third-party-tracking-pixel-investigation",
+    "status": "decided",
+    "takeaway": "The Privacy Commissioner determined on 11 June 2026 that a telehealth provider and a fertility provider breached APP 3.3 by collecting sensitive health information through third-party tracking pixels without consent, APP 5.1 by failing to notify, and APP 7.1 by using sensitive information for direct marketing without consent. Monash IVF ran seven pixels from 30 July 2012 to 9 December 2024 and Medmate from April 2021 to 9 December 2024; neither ran a privacy impact assessment, and the argument that data sent straight to a platform was not collected was rejected. The determinations bind the two entities. Remove or gate pixels on any page revealing a health topic.",
+    "topics": [
+      "pixels-wiretap",
+      "health-data",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "OAIC guidance: Direct marketing (APP 7)",
+    "jurisdiction": "Australia",
+    "type": "regulator guidance",
+    "date": "10 March 2023",
+    "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/organisations/direct-marketing",
+    "status": "in force",
+    "takeaway": "The guidance confirms that APP 7 covers targeted online marketing whenever personal information is used or disclosed to deliver it, alongside email and post, while communications covered by the Spam Act 2003 and the Do Not Call Register Act 2006 sit outside APP 7. Organisations must provide a simple means of opting out, draw attention to it in each communication where practicable, and stop using or disclosing the information within a reasonable period after a request. It applies to organisations covered by the Privacy Act. Link the advertising toggle in the banner to a working suppression mechanism so that an opt-out from targeted advertising is honoured across ad platforms.",
+    "topics": [
+      "email-marketing",
+      "opt-out-signals",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "OAIC exposure draft of the Children's Online Privacy Code",
+    "jurisdiction": "Australia",
+    "type": "proposal",
+    "date": "31 March 2026",
+    "url": "https://www.oaic.gov.au/news/media-centre/oaic-releases-exposure-draft-of-the-childrens-online-privacy-code",
+    "status": "proposed",
+    "takeaway": "The draft Code, released on 31 March 2026 for consultation to 5 June 2026, would apply to APP entities providing social media, relevant electronic services or designated internet services likely to be accessed by children, other than health services. It requires collection, use and disclosure to be consistent with the child's best interests, permits direct marketing to children only with consent, in the child's best interests and from information collected directly from the child, and requires age-appropriate notices and a deletion right. The Act requires registration by 10 December 2026. Inventory trackers on child-accessible services now and plan to disable advertising and profiling cookies for those audiences.",
+    "topics": [
+      "children",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Exposure draft, Privacy Amendment (Personal Data Protection) Bill 2026 (tranche 2 reforms)",
+    "jurisdiction": "Australia",
+    "type": "proposal",
+    "date": "31 August 2026",
+    "url": "https://consultations.ag.gov.au/rights-and-protections/privacy-reform/",
+    "status": "proposed",
+    "takeaway": "The Attorney-General's Department released the tranche 2 exposure draft on 31 August 2026 with consultation closing on 18 September 2026. It would define consent as voluntary, informed, current, specific and unambiguous, extend collection to information generated or inferred, confirm that IP addresses, device identifiers and cookie IDs are personal information where reasonably linkable, make precise geolocation tracking data sensitive, add a fair and reasonable test weighing the child's best interests, require consent before trading personal information, and require an opt-out from targeted online behavioural advertising with an ad-free alternative where a service relies on marketing revenue. It is not law. Model banner changes now against the proposed standard.",
+    "topics": [
+      "consent",
+      "consent-or-pay",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "ACCC Digital advertising services inquiry, final report",
+    "jurisdiction": "Australia",
+    "type": "regulator guidance",
+    "date": "28 September 2021",
+    "url": "https://www.accc.gov.au/about-us/publications/digital-advertising-services-inquiry-final-report",
+    "status": "decided",
+    "takeaway": "The competition regulator's final report, released on 28 September 2021, found competition in ad tech ineffective because of opacity across the supply chain and the data advantage of the largest intermediary, and made six recommendations, including that the leading provider explain publicly how it uses first-party data in ad tech, sector-specific rules allowing data separation or access remedies, and transparency standards backed by mandatory rules if voluntary measures fail. It binds no one but frames how the ACCC assesses consent and data flows in advertising, complementing its 2019 platforms inquiry call for opt-in consent. Expect Australian regulators to read consent strings and data-sharing settings as competition evidence too.",
+    "topics": [
+      "sale-sharing",
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Act on the Protection of Personal Information (APPI), Article 2(7) and Article 31 (personally referable information)",
+    "jurisdiction": "Japan",
+    "type": "legislation",
+    "date": "1 April 2023",
+    "url": "https://www.japaneselawtranslation.go.jp/en/laws/view/4241/en",
+    "status": "in force",
+    "takeaway": "Since the 2020 amendment took effect on 1 April 2022, Article 31 prohibits a business from providing personally referable information, such as cookie identifiers and browsing history that do not identify a person on their own, to a third party expected to link it to an identified individual, unless the business has confirmed that the recipient obtained the individual's consent and recorded that confirmation. The consolidated English text is current to 1 April 2023. It binds every business handling personal information, including foreign operators serving Japanese users. Where a pixel or SDK sends identifiers to an advertising platform that matches them to accounts, verify and record the platform's consent first.",
+    "topics": [
+      "consent",
+      "sale-sharing",
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "PPC Guidelines on the Act on the Protection of Personal Information (General Rules edition), section 2-8 on personally referable information",
+    "jurisdiction": "Japan",
+    "type": "regulator guidance",
+    "date": "14 June 2026",
+    "url": "https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/",
+    "status": "in force",
+    "takeaway": "The Commission's general guidelines, first issued in November 2016 and last partially revised in June 2026, define personally referable information as information that does not identify an individual by itself but can identify one when combined with other data, and explain the Article 31 confirmation and record-keeping duties when such information is provided to a third party that will treat it as personal data. They bind no one directly but state the standard the Commission applies in supervision. Use section 2-8 to decide, for each tag on the site, whether the recipient will link the identifier to a person and therefore whether the recipient's consent must be confirmed first.",
+    "topics": [
+      "consent",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "PPC Guidelines Q&A on the APPI (updated edition)",
+    "jurisdiction": "Japan",
+    "type": "regulator guidance",
+    "date": "1 July 2025",
+    "url": "https://www.ppc.go.jp/personalinfo/faq/APPI_QA/",
+    "status": "in force",
+    "takeaway": "The Commission's consolidated Q&A, last updated on 1 July 2025, answers practical questions under the guidelines, including how cookies and advertising identifiers are treated, when browsing data becomes personally referable information, what form the recipient's consent must take under Article 31, and how the providing business may confirm and record that consent. It binds no one but reflects the Commission's supervisory reading and is cited in inspections. Keep the Q&A numbers for cookies and Article 31 in the tag governance file, and use its examples to set the consent wording that advertising partners must show before matching identifiers to user accounts.",
+    "topics": [
+      "consent",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Telecommunications Business Act, Article 27-12 (external transmission rule) and MIC guidance",
+    "jurisdiction": "Japan",
+    "type": "legislation",
+    "date": "16 June 2023",
+    "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/d_syohi/gaibusoushin_kiritsu.html",
+    "status": "in force",
+    "takeaway": "The 2022 amendment to the Telecommunications Business Act, in force from 16 June 2023, requires operators of messaging services, social networks, search services and websites delivering news or information to inform users before a browser or app sends user information to an external party, by notice or easily accessible publication, by consent, or by an opt-out. The disclosure must state the information sent, the recipient and the purpose of use. Information necessary to deliver the service and identifiers sent to the operator itself are exempt; e-commerce sites and personal blogs are outside scope. Publish an external transmission page listing every third-party tag, recipient and purpose, linked from the banner.",
+    "topics": [
+      "consent",
+      "strictly-necessary",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Personal Information Protection Act (PIPA), as amended with effect from 15 September 2023",
+    "jurisdiction": "South Korea",
+    "type": "legislation",
+    "date": "15 September 2023",
+    "url": "https://www.pipc.go.kr/eng/user/lgp/law/lawsRegulations.do",
+    "status": "in force",
+    "takeaway": "The amended Act, in force from 15 September 2023, unifies the rules for online service providers and other controllers, requires consent to collect personal information unless another basis applies, requires separate consent for marketing and third-party provision, requires the privacy policy to describe the installation, operation and refusal of automatic collection devices such as cookies, adds a right to refuse automated decisions, and raises the penalty surcharge to up to 3 percent of total related sales. It binds domestic and foreign operators processing Korean residents' data. Provide granular opt-in consent for behavioural advertising cookies, keep the cookie section of the privacy policy current, and expect PIPC audits of consent screens.",
+    "topics": [
+      "consent",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "PIPC and KCC Guideline on personal information protection in online customised advertising (behavioural information)",
+    "jurisdiction": "South Korea",
+    "type": "regulator guidance",
+    "date": "7 February 2017",
+    "url": "https://www.pipc.go.kr/np/cop/bbs/selectBoardList.do?bbsId=BS217&mCode=D010030000",
+    "status": "in force",
+    "takeaway": "The guideline treats behavioural information collected through cookies and advertising identifiers as protected data, requires advertising businesses and website operators to disclose the items collected, the collection method, the purpose, the retention period and how users can control the processing, prohibits collection of sensitive behavioural information without consent, requires separate treatment of children under 14, and calls for an accessible opt-out. It is guidance and binds no one directly, but the Commission applied its standard in the September 2022 sanctions against Google and Meta. In January 2024 the Commission announced a policy plan to revise it. Publish a behavioural information notice and an opt-out that works across advertising partners.",
+    "topics": [
+      "consent",
+      "opt-out-signals",
+      "children"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "PIPC sanctions Google and Meta for collecting behavioural information without consent",
+    "jurisdiction": "South Korea",
+    "type": "enforcement",
+    "date": "14 September 2022",
+    "url": "https://www.pipc.go.kr/eng/user/ltn/new/noticeList.do?bbsId=BBSMSTR_000000000001&pageIndex=19",
+    "status": "decided",
+    "takeaway": "The Commission imposed penalty surcharges of KRW 69.2 billion on Google and KRW 30.8 billion on Meta for collecting users' behavioural information from third-party websites and apps and using it for customised advertising without clearly informing users or obtaining consent, finding that Google hid the setting behind a default-on option and that Meta buried the disclosure in its terms. The decision binds the two companies and set the largest surcharges under the Act at the time. Corrective orders required an easy, clear consent screen for third-party behavioural data. Treat any cross-site behavioural data flow into Korean advertising accounts as requiring separate, explicit consent presented outside the terms of service.",
+    "topics": [
+      "consent",
+      "enforcement",
+      "dark-patterns"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "PIPC sanctions Meta for refusing service to users who declined behavioural data collection",
+    "jurisdiction": "South Korea",
+    "type": "enforcement",
+    "date": "9 March 2023",
+    "url": "https://www.pipc.go.kr/eng/user/ltn/new/noticeList.do?bbsId=BBSMSTR_000000000001&pageIndex=18",
+    "status": "decided",
+    "takeaway": "The Commission fined Meta KRW 660 million, for making acceptance of behavioural information collection for customised advertising a condition of using the service, contrary to the rule that a controller must not refuse a service because a user declines to consent to processing beyond what is necessary for the service. The decision binds the company and states the Commission's position that access to a social network cannot be conditioned on advertising consent. Do not deploy cookie walls or consent-or-leave designs for Korean users, and keep the service usable when advertising consent is withheld.",
+    "topics": [
+      "cookie-walls",
+      "consent",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Personal Information Protection Law (PIPL), Articles 13, 14, 24 and 66",
+    "jurisdiction": "China",
+    "type": "legislation",
+    "date": "1 November 2021",
+    "url": "https://digichina.stanford.edu/work/translation-personal-information-protection-law-of-the-peoples-republic-of-china-effective-nov-1-2021/",
+    "status": "in force",
+    "takeaway": "Article 13 lists the lawful bases, with consent first and no legitimate-interest basis, and Article 14 requires consent given voluntarily and explicitly on the basis of full information, refreshed when purpose, method or categories change. Article 24 requires that information push or commercial marketing based on automated decision-making be accompanied by an option not targeted at personal characteristics or a convenient way to refuse, and Article 66 allows fines up to RMB 50 million or 5 percent of the prior year's turnover for serious violations. It binds handlers in China and foreign handlers targeting individuals in China. Offer a visible non-personalised mode and a one-step refusal of personalised advertising.",
+    "topics": [
+      "consent",
+      "opt-out-signals",
+      "enforcement"
+    ],
+    "source": "secondary"
+  },
+  {
+    "title": "Cybersecurity Law, Article 22 and Article 41",
+    "jurisdiction": "China",
+    "type": "legislation",
+    "date": "1 June 2017",
+    "url": "https://www.chinalawtranslate.com/en/cybersecuritylaw/",
+    "status": "in force",
+    "takeaway": "Article 22 requires providers of network products and services with functions that collect user information to tell users and obtain their consent, and Article 41 requires network operators to collect and use personal information lawfully, properly and only as necessary, to publish their collection and use rules, to state purpose, method and scope, and to obtain consent. The law, in force since 1 June 2017, binds network operators in China and is the basis on which the Cyberspace Administration inspects apps and websites for undisclosed collection. Keep a published collection rule for every site and SDK and make sure the banner text matches the collection actually performed.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "secondary"
+  },
+  {
+    "title": "Provisions on the Management of Algorithmic Recommendations in Internet Information Services, Articles 17, 18 and 21",
+    "jurisdiction": "China",
+    "type": "legislation",
+    "date": "1 March 2022",
+    "url": "https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm",
+    "status": "in force",
+    "takeaway": "The provisions, in force from 1 March 2022, require algorithmic recommendation providers to offer users an option not targeted at their personal characteristics or a convenient way to turn the recommendation service off, to let users select or delete the user tags used for recommendations, to protect minors from harmful or addictive content, and not to use algorithms to apply unreasonable differential prices or transaction conditions based on user characteristics. They bind providers of algorithmic recommendation services to users in China. Implement a tag management screen and a global personalisation switch, and record the state of the switch with the same rigour as cookie consent.",
+    "topics": [
+      "opt-out-signals",
+      "children",
+      "dark-patterns"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Regulations on Network Data Security Management (State Council Decree 790), Articles 21, 22 and 42",
+    "jurisdiction": "China",
+    "type": "legislation",
+    "date": "1 January 2025",
+    "url": "https://www.gov.cn/zhengce/content/202409/content_6977766.htm",
+    "status": "in force",
+    "takeaway": "Published on 30 September 2024 and in force from 1 January 2025, the regulations require network data handlers to publish processing rules in a prominent place, to collect only what is necessary, to obtain separate consent for sensitive information and parental consent for children under 14, and not to repeat a consent request after refusal. Article 42 requires platform providers that push information by automated decision-making to offer an easy-to-understand, easy-to-reach switch to turn off personalised recommendation and to let users delete their tags. They bind network data handlers processing Chinese individuals' data. Remove repeated consent prompts and place the personalisation switch within the first layer of settings.",
+    "topics": [
+      "consent",
+      "opt-out-signals",
+      "children"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "GB/T 35273-2020, Information security technology: Personal information security specification",
+    "jurisdiction": "China",
+    "type": "standard",
+    "date": "1 October 2020",
+    "url": "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+    "status": "in force",
+    "takeaway": "The recommended national standard, published on 6 March 2020 and implemented on 1 October 2020, sets the detailed practice that regulators and app stores use to assess personal information handling: separate consent for each business function, no bundling of functions, personalised display marked as such with a way to opt out, restraints on third-party SDK data collection with contractual and technical controls, and privacy policy templates. It is voluntary in form but is the reference in CAC, MIIT and TC260 app assessments. Audit every embedded SDK against the standard's third-party access clauses and label personalised advertising content as required.",
+    "topics": [
+      "consent",
+      "opt-out-signals",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Measures for Determining Illegal Collection and Use of Personal Information by Apps (App违法违规收集使用个人信息行为认定方法)",
+    "jurisdiction": "China",
+    "type": "regulator guidance",
+    "date": "28 November 2019",
+    "url": "https://www.cac.gov.cn/2019-12/27/c_1578986455686625.htm",
+    "status": "in force",
+    "takeaway": "Issued jointly by the CAC, MIIT, Ministry of Public Security and SAMR, the measures list six categories of violation used in app enforcement: no privacy policy or one not shown at first launch or reachable within four clicks, unclear purpose, method and scope, collection before or after refusal of consent including default consent and inducement, collection of unnecessary data or refusal of service when non-essential data is declined, unauthorised sharing with third parties through embedded code or servers, and missing deletion, correction and complaint channels. They bind app operators in China and drive the CAC's periodic public naming of apps. Test the app against each category before release.",
+    "topics": [
+      "consent",
+      "dark-patterns",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Provisions on the Scope of Necessary Personal Information for Common Types of Mobile Apps",
+    "jurisdiction": "China",
+    "type": "regulator guidance",
+    "date": "1 May 2021",
+    "url": "https://www.cac.gov.cn/2021-03/22/c_1617990997054277.htm",
+    "status": "in force",
+    "takeaway": "Issued on 22 March 2021 and effective from 1 May 2021, the provisions define for 39 common app types the personal information necessary for basic functions, from location for navigation to phone number for social platforms, and state that an app must not refuse basic services because a user declines to provide non-necessary personal information; news, browser and utility apps need no personal information for basic use. They bind app operators and are enforced through CAC and MIIT app checks. Map every SDK and tracker to the necessary-information list for the app's category and keep advertising and analytics collection strictly optional.",
+    "topics": [
+      "strictly-necessary",
+      "consent",
+      "cookie-walls"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Digital Personal Data Protection Act, 2023, sections 6, 9 and the Schedule",
+    "jurisdiction": "India",
+    "type": "legislation",
+    "date": "11 August 2023",
+    "url": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+    "status": "applies from a future date",
+    "takeaway": "The Act, assented to on 11 August 2023, requires consent that is free, specific, informed, unconditional and unambiguous with a clear affirmative action, limited to necessary data and withdrawable with the same ease (section 6), manageable through a registered Consent Manager. Section 9 requires verifiable parental consent for anyone under 18 and prohibits tracking, behavioural monitoring and targeted advertising directed at children; the Schedule sets penalties up to INR 250 crore for security failures and INR 200 crore for children's obligations. It binds data fiduciaries processing digital personal data in India or serving India, phased in under the 2025 Rules. Remove behavioural tracking from services used by minors.",
+    "topics": [
+      "consent",
+      "children",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Digital Personal Data Protection Rules, 2025 (consent notice, Consent Managers, verifiable parental consent, phased commencement)",
+    "jurisdiction": "India",
+    "type": "legislation",
+    "date": "13 November 2025",
+    "url": "https://www.meity.gov.in/data-protection-framework",
+    "status": "applies from a future date",
+    "takeaway": "The Rules, notified on 13 November 2025, bring the Act into force in phases: the Data Protection Board provisions immediately, the Consent Manager framework after twelve months on 13 November 2026, and the remaining obligations, including consent notices, children's verifiable consent and breach notification, after eighteen months on 13 May 2027. They prescribe the content of a consent notice, the registration conditions for Consent Managers, and the methods for verifying a parent's identity and age. They bind every data fiduciary within the Act's scope. Schedule the consent banner rebuild and children's age-assurance design for completion before 13 May 2027 and plan integration with registered Consent Managers.",
+    "topics": [
+      "consent",
+      "children",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Personal Data Protection Act 2012, Parts 4 and 9A (consent, deemed consent by notification, legitimate interests, financial penalties)",
+    "jurisdiction": "Singapore",
+    "type": "legislation",
+    "date": "1 February 2021",
+    "url": "https://sso.agc.gov.sg/Act/PDPA2012",
+    "status": "in force",
+    "takeaway": "The Act requires consent, or deemed consent, before collecting, using or disclosing personal data, and the 2020 amendments in force from 1 February 2021 added deemed consent by notification, available only after an assessment shows no likely adverse effect and a reasonable opt-out period is given, and a legitimate interests exception that cannot be used for direct marketing. Financial penalties of up to 10 percent of annual turnover in Singapore or S$1 million, whichever is higher, apply from 1 October 2022. It binds organisations processing data in Singapore. Use deemed consent by notification only for low-risk cookies with a documented assessment, and obtain express consent for behavioural advertising.",
+    "topics": [
+      "consent",
+      "analytics-exemption",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "PDPC Advisory Guidelines on the PDPA for Selected Topics, chapter on online activities (cookies and behavioural targeting)",
+    "jurisdiction": "Singapore",
+    "type": "regulator guidance",
+    "date": "1 February 2021",
+    "url": "https://www.pdpc.gov.sg/guidelines-and-consultation/2020/02/advisory-guidelines-on-the-pdpa-for-selected-topics",
+    "status": "in force",
+    "takeaway": "The Commission's guidelines state that consent is not required for cookies needed to provide the service the user requested, that deemed consent may cover other cookies where the user voluntarily provides data with knowledge of the purpose, that behavioural targeting using personal data requires consent with a clear explanation of the purpose, and that IP addresses and device identifiers are personal data when they can identify an individual alone or with other data. They bind no one directly but state how the Commission assesses complaints. Classify each cookie as necessary, deemed-consent or express-consent, keep a written justification, and present advertising cookies as an opt-in choice.",
+    "topics": [
+      "consent",
+      "strictly-necessary",
+      "analytics-exemption"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Personal Data Protection Act B.E. 2562 (2019), sections 19, 23 and 82 to 90",
+    "jurisdiction": "Thailand",
+    "type": "legislation",
+    "date": "1 June 2022",
+    "url": "https://www.pdpc.or.th/",
+    "status": "in force",
+    "takeaway": "The Act, fully in force since 1 June 2022 after two deferrals, requires consent under section 19 to be explicit, in writing or electronic form, requested separately from other matters in a clear and accessible format without deceptive conditions, and withdrawable as easily as it was given, and section 23 requires a privacy notice before or at collection. Administrative fines reach THB 5 million and criminal penalties include imprisonment of up to one year for certain sensitive-data offences. It binds controllers in Thailand and foreign controllers offering goods or services to people in Thailand. Use a separate, granular cookie consent screen and keep necessary cookies outside the consent request.",
+    "topics": [
+      "consent",
+      "dark-patterns",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Protection of Personal Information Act 4 of 2013 (POPIA), sections 11, 18, 69 and 107 to 109",
+    "jurisdiction": "South Africa",
+    "type": "legislation",
+    "date": "1 July 2021",
+    "url": "https://www.gov.za/documents/protection-personal-information-act",
+    "status": "in force",
+    "takeaway": "POPIA commenced on 1 July 2020 with a grace period ending 30 June 2021. Section 11 requires a lawful basis such as consent or legitimate interest, section 18 requires notification of the purpose and source of collection, and section 69 prohibits direct marketing by electronic communication unless the data subject has consented or is an existing customer marketed with similar products, with an opt-out in every message; the Information Regulator may impose administrative fines of up to R10 million. The Act binds responsible parties domiciled in South Africa or using means there. Treat advertising cookies that feed electronic direct marketing as needing opt-in consent, and document legitimate-interest reliance for analytics.",
+    "topics": [
+      "email-marketing",
+      "consent",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Saudi Arabia Personal Data Protection Law (Royal Decree M/19 as amended by M/148) and Implementing Regulations",
+    "jurisdiction": "Saudi Arabia",
+    "type": "legislation",
+    "date": "14 September 2023",
+    "url": "https://sdaia.gov.sa/en/SDAIA/about/Pages/PDPL.aspx",
+    "status": "in force",
+    "takeaway": "The PDPL, amended in March 2023 and in force from 14 September 2023 with a compliance grace period to 14 September 2024, requires a lawful basis for processing, consent that can be withdrawn at any time, and a published privacy policy, and its Implementing Regulations allow direct marketing only with consent or to existing customers with an opt-out in every message. Fines reach SAR 5 million and double for repeat violations, with the Saudi Data and Artificial Intelligence Authority supervising, and foreign controllers processing residents' data are bound. Treat advertising cookies as consent-based and include a marketing opt-out in the banner's second layer.",
+    "topics": [
+      "consent",
+      "email-marketing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data",
+    "jurisdiction": "United Arab Emirates",
+    "type": "legislation",
+    "date": "2 January 2022",
+    "url": "https://uaelegislation.gov.ae/en/legislations/1972",
+    "status": "in force",
+    "takeaway": "The federal PDPL, effective 2 January 2022, requires consent that is clear, specific, informed and withdrawable unless another basis applies, and gives data subjects a right to object to processing for direct marketing and to automated decision-making, with the UAE Data Office as regulator. It applies to controllers in the UAE outside the financial free zones, which run their own regimes, and to foreign controllers processing UAE residents' data. Executive regulations that would set detailed consent mechanics and penalties have not been issued, so obligations are applied from the law's text. Run advertising cookies on opt-in consent and offer an objection route for profiling.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Israel Protection of Privacy Law 5741-1981 as amended by Amendment 13",
+    "jurisdiction": "Israel",
+    "type": "legislation",
+    "date": "14 August 2025",
+    "url": "https://www.gov.il/en/departments/the_privacy_protection_authority",
+    "status": "in force",
+    "takeaway": "Amendment 13, in force from 14 August 2025, modernises the 1981 law by widening the definitions of personal and sensitive data, requiring that a request for information state whether provision is mandatory, the purposes, recipients and rights, giving the Privacy Protection Authority powers to audit, order and impose administrative fines, and applying the law to foreign entities processing Israeli residents' data. Direct marketing databases remain subject to the database registration and opt-out rules. Practitioners should present cookie notices in Hebrew with the statutory disclosure items and maintain an easy opt-out from direct marketing profiles built from tracking data.",
+    "topics": [
+      "consent",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Argentina Personal Data Protection Law 25.326, Articles 5, 6 and 27",
+    "jurisdiction": "Argentina",
+    "type": "legislation",
+    "date": "4 October 2000",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/norma.htm",
+    "status": "in force",
+    "takeaway": "Law 25.326 requires free, express and informed consent, in writing or by an equivalent means, before personal data is processed unless an exception applies (Article 5), requires notice of purpose and recipients (Article 6), and lets any person opt out of processing for advertising at any time and without cost (Article 27). The Agency of Access to Public Information enforces it with fines that remain low under the current scale; a replacement bill with turnover-based fines has been pending since 2023. It binds controllers in Argentina and those using means there. Present advertising cookies as opt-in and provide a no-cost objection route for marketing profiles.",
+    "topics": [
+      "consent",
+      "opt-out-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Mexico Ley Federal de Protección de Datos Personales en Posesión de los Particulares (2025)",
+    "jurisdiction": "Mexico",
+    "type": "legislation",
+    "date": "21 March 2025",
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf",
+    "status": "in force",
+    "takeaway": "The new federal law, published on 20 March 2025 and in force from 21 March 2025, replaces the 2010 statute, moves supervision from INAI to the Secretaría Anticorrupción y Buen Gobierno, keeps tacit consent for non-sensitive data where the privacy notice is provided and the person does not object, and requires express consent for sensitive and financial data and for transfers. The privacy notice must be available before collection, and the regulations continue to require disclosure of cookies, web beacons and similar technologies and how to disable them. It binds private-sector controllers in Mexico. Keep the cookie disclosure in the notice and offer an objection route.",
+    "topics": [
+      "consent",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Colombia Statutory Law 1581 of 2012 and Decree 1377 of 2013 (prior, express and informed authorisation)",
+    "jurisdiction": "Colombia",
+    "type": "legislation",
+    "date": "17 October 2012",
+    "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981",
+    "status": "in force",
+    "takeaway": "Law 1581 requires prior, express and informed authorisation from the data subject before personal data is collected, and Decree 1377 allows that authorisation to be given by unequivocal conduct but never by silence, with the controller bearing the burden of proof. The Superintendencia de Industria y Comercio enforces the law and has sanctioned operators for collecting data through websites without valid authorisation, with fines of up to 2,000 monthly minimum wages. It binds controllers in Colombia and foreign controllers subject to Colombian law by treaty. Use an affirmative consent action for non-essential cookies, record the authorisation, and publish the treatment policy the law requires.",
+    "topics": [
+      "consent",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Kenya Data Protection Act 2019 and Data Protection (General) Regulations 2021 (direct marketing)",
+    "jurisdiction": "Kenya",
+    "type": "legislation",
+    "date": "25 November 2019",
+    "url": "https://www.odpc.go.ke/",
+    "status": "in force",
+    "takeaway": "The Act, in force from 25 November 2019, requires a lawful basis including consent that is express, unequivocal, free, specific and informed, and the General Regulations of 2021 permit direct marketing only with consent or to existing customers with an opt-out, and require controllers to use the least intrusive means of profiling. The Office of the Data Protection Commissioner enforces with penalties of up to KES 5 million or 1 percent of annual turnover and has issued determinations against operators for unsolicited marketing. It binds controllers in Kenya and those processing Kenyan residents' data. Treat advertising cookies as consent-based and honour marketing opt-outs across channels.",
+    "topics": [
+      "consent",
+      "email-marketing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Nigeria Data Protection Act 2023 and NDPC General Application and Implementation Directive 2025",
+    "jurisdiction": "Nigeria",
+    "type": "legislation",
+    "date": "12 June 2023",
+    "url": "https://cert.gov.ng/ngcert/resources/Nigeria_Data_Protection_Act_2023.pdf",
+    "status": "in force",
+    "takeaway": "The Act, signed on 12 June 2023, replaces the 2019 Regulation, requires consent that is freely given, specific, informed and unambiguous with the controller bearing the burden of proof, gives a right to object to direct marketing, and empowers the Nigeria Data Protection Commission to impose penalties of up to NGN 10 million or 2 percent of annual gross revenue for controllers of major importance. The Commission's General Application and Implementation Directive of 2025 adds detailed rules on consent design, cookie notices and privacy policies. It binds controllers in Nigeria and foreign controllers processing Nigerians' data. Deploy a consent banner with a documented consent log and a marketing objection route.",
+    "topics": [
+      "consent",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Indonesia Law No. 27 of 2022 on Personal Data Protection",
+    "jurisdiction": "Indonesia",
+    "type": "legislation",
+    "date": "17 October 2024",
+    "url": "https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022",
+    "status": "in force",
+    "takeaway": "The law, enacted on 17 October 2022 with a two-year transition that ended on 17 October 2024, requires explicit consent, in writing or recorded form, as the primary basis for processing, requires that a consent request be presented clearly and separately from other matters and be withdrawable, and gives data subjects rights to object to profiling and automated decisions, with administrative fines of up to 2 percent of annual revenue. A dedicated supervisory authority and implementing regulations were still being established after the transition ended. It binds controllers in Indonesia and foreign controllers whose processing has legal effect there. Run advertising and analytics cookies on explicit, separately presented consent.",
+    "topics": [
+      "consent",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Vietnam Personal Data Protection Law (Law 91/2025/QH15), successor to Decree 13/2023/ND-CP",
+    "jurisdiction": "Vietnam",
+    "type": "legislation",
+    "date": "1 January 2026",
+    "url": "https://cookie-script.com/privacy-laws/vietnam-personal-data-protection-law",
+    "status": "in force",
+    "takeaway": "The Law, passed on 26 June 2025 and in force from 1 January 2026, carries forward the consent standard of Decree 13/2023/ND-CP (in force from 1 July 2023): consent must be voluntary, specific, informed and given per purpose, and silence is not consent. It adds fines of up to 5 percent of the previous year's revenue for unlawful cross-border transfers and up to ten times the revenue gained from unlawful sale of personal data, and requires controllers to give users a way to refuse tracking and personalised advertising. It binds domestic and foreign controllers processing Vietnamese residents' data. Present cookie consent per purpose and provide a working tracking opt-out.",
+    "topics": [
+      "consent",
+      "opt-out-signals",
+      "enforcement"
+    ],
+    "source": "secondary"
+  },
+  {
+    "title": "Philippines Data Privacy Act of 2012 (Republic Act 10173) and NPC guidelines on consent",
+    "jurisdiction": "Philippines",
+    "type": "legislation",
+    "date": "15 August 2012",
+    "url": "https://privacy.gov.ph/data-privacy-act/",
+    "status": "in force",
+    "takeaway": "The Act defines consent as a freely given, specific, informed indication of will evidenced by written, electronic or recorded means, requires a privacy notice before collection, and gives data subjects a right to object to processing for direct marketing and profiling. The National Privacy Commission's guidelines on consent state that consent may not be bundled, that pre-ticked boxes and silence are not consent, and that withdrawal must be as easy as giving it, and the Commission has ordered operators to fix non-compliant consent interfaces. It binds controllers in the Philippines and those processing Filipino residents' data. Use an affirmative cookie consent action and an accessible withdrawal control.",
+    "topics": [
+      "consent",
+      "dark-patterns"
+    ],
+    "source": "primary"
+  }
+]

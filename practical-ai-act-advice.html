@@ -93,7 +93,7 @@
 							<summary><span class="aia-num">2</span> Prohibited AI Practices</summary>
 							<div class="aia-body">
 <p><strong>Why it matters.</strong> This is the one tier of the Act with no proportionality dial - no risk-based mitigation gets a prohibited practice back to "acceptable." It's also the tier with the harshest financial exposure (up to 7% of global annual turnover), which is the Act's way of signaling that these uses are considered incompatible with EU values outright, not merely risky. Every new AI use case should be screened against this list before any other compliance work starts, because nothing downstream fixes a practice that's banned at the root.</p>
-<p><strong>What the law requires.</strong> Eight categories of practice are prohibited:</p>
+<p><strong>What the law requires.</strong> Ten categories of practice are prohibited, eight from the original Act and two added by Regulation (EU) 2026/1744 with effect from 2 December 2026:</p>
 <ol>
 <li><strong>Manipulation through subliminal or deceptive design</strong> - systems built to distort behavior below someone's conscious awareness or through deception, where that distortion causes or is likely to cause significant harm.</li>
 <li><strong>Exploiting vulnerability</strong> - targeting people because of age, disability, or socioeconomic situation to distort their behavior in a way that causes or is likely to cause significant harm.</li>
@@ -103,10 +103,12 @@
 <li><strong>Untargeted scraping to build facial recognition databases</strong> - harvesting facial images in bulk from the internet or CCTV footage to create or expand such a database.</li>
 <li><strong>Biometric categorization used to infer protected traits</strong> - using biometric data to sort people by race, political opinion, trade union membership, religious belief, sex life, or sexual orientation.</li>
 <li><strong>Real-time remote biometric identification in public by law enforcement</strong> - banned as a default rule, with narrow, pre-defined exceptions: searching for victims of specified serious crimes, or preventing an imminent threat to life such as a terrorist attack. Even within those exceptions, prior authorization from an independent judicial or administrative body is required, and law enforcement must apply appropriate safeguards.</li>
+<li><strong>Generating non-consensual sexually explicit or intimate imagery</strong> - added as Article 5(1)(ba) by the Digital Omnibus on AI, applicable from 2 December 2026. For providers the test is the system's intended purpose, or a reasonably foreseeable and reproducible outcome without adequate safeguards; for deployers it is intent (new Article 5(1a)).</li>
+<li><strong>Generating child sexual abuse material</strong> - added as Article 5(1)(bb) on the same basis and from the same date. The Commission's February 2025 guidelines on prohibited practices predate both additions and have not yet been revised to cover them.</li>
 </ol>
 <p><strong>Practical steps.</strong></p>
 <ul>
-<li>Build a short screening questionnaire into project intake: does this system score or rank people by behavior or characteristics? Does it use biometric data to infer something the person didn't choose to disclose? Does it read emotion in a workplace or classroom setting?</li>
+<li>Build a short screening questionnaire into project intake: does this system score or rank people by behavior or characteristics? Does it use biometric data to infer something the person didn't choose to disclose? Does it read emotion in a workplace or classroom setting? Can it generate sexual or intimate imagery of real people, and what stops it?</li>
 <li>Route anything touching biometrics, profiling, or emotion inference to legal sign-off before development starts, not after a prototype exists.</li>
 <li>For any real-time biometric use by or for law enforcement, confirm the authorization pathway exists and is documented before deployment, not retroactively.</li>
 <li>Don't rely on "we'd never do that on purpose" - the risk is usually a well-intentioned feature (engagement scoring, wellness monitoring) drifting into a banned category without anyone naming it that way.</li>
@@ -167,7 +169,7 @@
 <ul>
 <li><strong>Route two: regulated products and safety components.</strong> A system is also high-risk if it is a product, or a safety component of a product, already governed by one of a specific set of EU product-safety laws - machinery (Directive 2006/42/EC), toys (Directive 2009/48/EC), medical devices (Regulation (EU) 2017/745 and 2017/746), motor vehicles (Regulation (EU) 2019/2144 and No 168/2013), aviation (Regulation (EU) 2018/1139 and (EC) 300/2008), marine equipment (Directive 2014/90/EU), rail (Directive (EU) 2016/797), gas-burning appliances (Regulation (EU) 2016/426), personal protective equipment (Regulation (EU) 2016/425), cableway installations (Regulation (EU) 2016/424), pressure equipment (Directive 2014/68/EU), lifts (Directive 2014/33/EU), and radio equipment (Directive 2014/53/EU).</li>
 <li><strong>The carve-out.</strong> A system that falls into an Annex III use case is not treated as high-risk if it doesn't pose a significant risk of harm to health, safety, or fundamental rights - for example, because it performs a narrow task that doesn't materially influence the outcome of a decision. The Act doesn't hand out a blanket pass here; it's a narrow, fact-specific exception, so don't lean on it without a documented rationale.</li>
-<li><strong>Registration.</strong> All systems classified as high-risk must be registered in the EU's public database before they go into use.</li>
+<li><strong>Registration.</strong> All systems classified as high-risk must be registered in the EU's public database before they go into use, and the Omnibus kept a simplified registration for Annex III systems a provider has assessed as not high-risk under the carve-out. The obligation applies from 2 December 2027; as of September 2026 the database itself was reported as not yet operational, so build the step into the launch checklist and watch for the opening date.</li>
 </ul>
 <p><strong>Practical steps.</strong></p>
 <ul>
@@ -215,10 +217,10 @@
 <li><strong>Regulatory cooperation.</strong> Cooperate with authorities, including during investigations or enforcement actions.</li>
 <li><strong>Data protection impact assessment.</strong> Complete a DPIA where one applies, drawing on the documentation the provider supplied.</li>
 </ul>
-<p><strong>Fundamental rights impact assessment (FRIA).</strong> This is not a blanket requirement across all high-risk deployments - it applies to a specific subset: deployers governed by public law, deployers providing public services, and deployers using AI for credit or insurance assessment.</p>
+<p><strong>Fundamental rights impact assessment (FRIA).</strong> This is not a blanket requirement across all high-risk deployments - it applies to a specific subset: deployers that are bodies governed by public law, private entities providing public services, and deployers of two Annex III use cases: evaluating the creditworthiness of natural persons or establishing their credit score (excluding systems used to detect financial fraud), and risk assessment and pricing of natural persons for life and health insurance. Motor, property and other insurance lines are not in the list. The Omnibus lets the FRIA cross-reference an existing DPIA rather than repeat it (Article 27(4)) and tasks the AI Office with a template questionnaire and an automated tool (Article 27(5)). The obligation applies from 2 December 2027.</p>
 <p><strong>Importers and distributors.</strong> Their duty is narrower but non-negotiable: verify that the high-risk system is actually in conformity with the Act's requirements before passing it along, typically by checking the Declaration of Conformity and the CE marking rather than taking the provider's word for it.</p>
-<p><strong>Practical steps.</strong> Build a standing vendor-vetting process specifically for AI providers, distinct from general procurement due diligence - request the instructions for use and technical documentation before signing, not after. Pre-identify which of your deployments fall into the FRIA-triggering categories (public-law body, public service, credit/insurance) so the assessment isn't discovered as a last-minute gap during an audit.</p>
-<p><strong>Worked example.</strong> A bank deploys a third-party AI system to help price consumer credit. As deployer, the bank needs the provider's instructions for use, must assign competent human oversight of the pricing decisions, must complete a fundamental rights impact assessment (credit assessment is one of the triggering use cases), and must be ready to show its logs if a serious incident or a regulator's inquiry arises. None of that is satisfied by the vendor's own compliance work - it's the bank's obligation as deployer.</p>
+<p><strong>Practical steps.</strong> Build a standing vendor-vetting process specifically for AI providers, distinct from general procurement due diligence - request the instructions for use and technical documentation before signing, not after. Pre-identify which of your deployments fall into the FRIA-triggering categories (public-law body, public service, credit scoring, life and health insurance) so the assessment isn't discovered as a last-minute gap during an audit.</p>
+<p><strong>Worked example.</strong> A bank deploys a third-party AI system to help price consumer credit. As deployer, the bank needs the provider's instructions for use, must assign competent human oversight of the pricing decisions, must complete a fundamental rights impact assessment (creditworthiness evaluation is one of the two triggering Annex III use cases), and must be ready to show its logs if a serious incident or a regulator's inquiry arises. None of that is satisfied by the vendor's own compliance work - it's the bank's obligation as deployer.</p>
 							</div>
 						</details>
 						<details class="aia-item" id="aia-general-purpose-ai-models-gpai">
@@ -233,7 +235,7 @@
 <li><strong>Systemic-risk classification.</strong> A model is treated as posing systemic risk if it has high-impact capabilities - measured primarily by the cumulative compute used to train it - or if the European Commission designates it as such by decision.</li>
 <li><strong>The 10^25 FLOPS threshold, in plain terms.</strong> FLOPS (floating-point operations) are just a way of measuring how much raw computation went into training a model. The Act uses cumulative training compute above 10^25 FLOPS as its main proxy for "this model is powerful enough that its capabilities could be hard to fully predict or control" - the underlying logic being that more training compute tends to track with more general capability, and more general capability is where systemic risk tends to concentrate. This is explicitly a moving target: the threshold is designed to be reviewed and adjusted as the technology develops, not fixed forever.</li>
 <li><strong>Extra obligations once a model crosses into systemic risk.</strong> On top of the baseline four: notify the European Commission; run model evaluation and adversarial testing; maintain adequate cybersecurity protections; report serious incidents; and actively assess and mitigate the model's key systemic risks.</li>
-<li><strong>Timing and compliance tools.</strong> GPAI obligations became applicable twelve months after the Act's entry into force (i.e., from roughly July/August 2025). Providers can point to Codes of Practice and standardized templates - issued by the AI Office - as a recognized way of demonstrating compliance, and are expected to cooperate with regulators and share relevant documentation on request.</li>
+<li><strong>Timing and compliance tools.</strong> GPAI obligations became applicable on 2 August 2025, twelve months after the Act's entry into force; the Commission's own enforcement powers over GPAI providers apply from 2 August 2026, and models already on the market before 2 August 2025 have until 2 August 2027 to comply. Providers can point to Codes of Practice and standardized templates - issued by the AI Office - as a recognized way of demonstrating compliance, and are expected to cooperate with regulators and share relevant documentation on request.</li>
 </ul>
 <p><strong>Practical steps.</strong> If you train or substantially fine-tune large models, track your cumulative training compute against the 10^25 FLOPS marker proactively - don't wait for a Commission designation to find out you're already over it. Treat the training-data summary and copyright-compliance policy as standing deliverables that need to be kept current across model versions, not one-off documents. If you rely on the open-source carve-out, re-check that classification every time you retrain, since crossing into systemic risk cancels the exemption.</p>
 							</div>
@@ -247,7 +249,7 @@
 <li><strong>Screen out prohibited practices first.</strong> Nothing else matters if a use case is banned outright - this has to be the first gate, not a later one.</li>
 <li><strong>Inventory and track high-risk AI.</strong> Identify every system you develop or use that clears either high-risk route (Annex III use case, or regulated product/safety component), and keep that inventory current as use cases evolve.</li>
 <li><strong>Run a gap analysis.</strong> For everything you've flagged as high-risk, measure current practice against the full requirement set and identify what needs to be built or fixed.</li>
-<li><strong>Register what needs registering.</strong> Get high-risk systems into the EU's public database - this is a discrete, trackable action item, not a vague aspiration.</li>
+<li><strong>Register what needs registering.</strong> Get high-risk systems into the EU's public database once it opens - this is a discrete, trackable action item due before the 2 December 2027 application date, not a vague aspiration.</li>
 <li><strong>Roll out AI literacy training.</strong> Employees actually working with or governing these systems need to understand them and their risks - this is itself a legal requirement (see Section 12), not just good practice.</li>
 </ol>
 <p><strong>Conformity assessment, in brief.</strong> High-risk systems must go through a conformity assessment before they're placed on the market or put into service - the process exists to test, demonstrate, and formally declare that the system meets the Act's requirements. Which specific assessment procedure applies varies by system type, so this isn't a single universal form.</p>
@@ -300,15 +302,32 @@
 <td>Deadline for member states to appoint their regulatory authorities</td>
 </tr>
 <tr>
+<td>27 July 2026</td>
+<td>Regulation (EU) 2026/1744, the Digital Omnibus on AI, enters into force and rewrites the remaining application dates</td>
+</tr>
+<tr>
 <td>2 August 2026</td>
-<td>The majority of the Act's provisions become applicable</td>
+<td>Transparency obligations (Article 50), penalties, governance, national authorities and the Commission's enforcement powers over general-purpose AI models become applicable</td>
+</tr>
+<tr>
+<td>2 December 2026</td>
+<td>The two prohibitions added by the Omnibus (non-consensual intimate imagery, child sexual abuse material) become applicable; grace period ends for machine-readable marking on generative systems already on the market</td>
 </tr>
 <tr>
 <td>2 August 2027</td>
-<td>Obligations for certain high-risk AI systems become applicable</td>
+<td>General-purpose AI models placed on the market before 2 August 2025 must comply; national regulatory sandboxes due</td>
+</tr>
+<tr>
+<td>2 December 2027</td>
+<td>Obligations for Annex III high-risk AI systems become applicable, including deployer duties, fundamental rights impact assessments, registration and serious incident reporting</td>
+</tr>
+<tr>
+<td>2 August 2028</td>
+<td>Obligations for high-risk AI systems embedded in regulated products (Annex I) become applicable</td>
 </tr>
 </tbody>
 </table></div>
+<p>The original Act set 2 August 2026 for most provisions and 2 August 2027 for Annex I systems. Regulation (EU) 2026/1744, adopted 8 July 2026 and in force from 27 July 2026, replaced those with the fixed dates above rather than a standards-linked trigger, softened the Article 4 literacy wording, added two prohibited practices, gave the AI Office direct competence over systems built on a general-purpose model from the same provider and over systems embedded in very large online platforms, and extended the SME simplifications to small mid-caps. What did apply on 2 August 2026 is transparency, penalties, governance and enforcement powers; the whole high-risk regime now starts on 2 December 2027.</p>
 <p><strong>Penalty tiers.</strong></p>
 <div class="table-wrapper"><table>
 <thead>
@@ -333,7 +352,7 @@
 </tbody>
 </table></div>
 <p>Each member state sets up its own penalty regime within these EU-wide ceilings, and the Act calls for lower, more proportionate fines for SMEs and startups rather than applying the same scale uniformly regardless of company size.</p>
-<p><strong>Practical steps.</strong> Build your compliance roadmap against the actual dated timeline above rather than treating "the AI Act" as one deadline - prohibited-practice screening and GPAI provider obligations were live well before the 2026 date most people associate with the law. Identify which national competent authority is your primary point of contact in each member state where you operate, before you need to find that out under time pressure.</p>
+<p><strong>Practical steps.</strong> Build your compliance roadmap against the actual dated timeline above rather than treating "the AI Act" as one deadline - prohibited-practice screening and GPAI provider obligations were live well before the 2026 date most people associate with the law, and the high-risk regime now starts on 2 December 2027 rather than 2 August 2026. Identify which national competent authority is your primary point of contact in each member state where you operate, before you need to find that out under time pressure.</p>
 							</div>
 						</details>
 						<details class="aia-item" id="aia-building-an-enterprise-ai-governance-program-10-foundations">
@@ -399,7 +418,7 @@
 						<details class="aia-item" id="aia-building-ai-literacy-across-an-organization">
 							<summary><span class="aia-num">12</span> Building AI Literacy Across an Organization</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> AI literacy isn't a nice-to-have training slide - Article 4 of the Act requires organizations to ensure a sufficient level of AI literacy among staff and others involved in operating or using AI systems, and this requirement has applied since 2 February 2025. It also underpins another obligation directly: human oversight of high-risk systems has to be assigned to people with the necessary competence and training, which is meaningless without a literacy program behind it.</p>
+<p><strong>Why it matters.</strong> AI literacy isn't a nice-to-have training slide - Article 4 of the Act has required providers and deployers to act on it since 2 February 2025. The original text asked for a "sufficient level" of AI literacy; Regulation (EU) 2026/1744 rewrote it so that providers and deployers must "take measures to support the development of AI literacy" of their staff and of others operating AI systems on their behalf, and the Commission's guidance now states that no specific or sufficient level is mandated. Enforcement sits with national market surveillance authorities from 2 August 2026. The obligation still underpins another one directly: human oversight of high-risk systems has to be assigned to people with the necessary competence and training, and that duty was not softened, so a literacy program remains the practical foundation for it.</p>
 <p><strong>A structure that actually differentiates by audience - four layers.</strong></p>
 <ul>
 <li><strong>Layer one: governance fundamentals for everyone.</strong> Mandatory, organization-wide, and deliberately simple - the goal is that every employee understands the basic pillars of responsible AI and the organization's own policies, not that they become experts.</li>
@@ -407,61 +426,66 @@
 <li><strong>Layer three: role-based training.</strong> Tailored content for the specific people who build, buy, use, or govern AI as part of their actual job - governance staff, privacy staff, procurement staff, data scientists, IT partners - each needs different depth on different topics, and generic training tends to under-serve all of them at once.</li>
 <li><strong>Layer four: system-specific operational training.</strong> Mandatory for anyone actually operating a high-risk system, or otherwise responsible for it - bespoke instructions on exercising human oversight and other risk-mitigation duties for that specific system, precise enough that end users can actually interpret the system's outputs and recognize a serious incident when one happens.</li>
 </ul>
-<p><strong>Practical steps.</strong> Don't run one generic "AI training" module and call the literacy obligation satisfied - regulators and auditors will look for evidence that training actually differs by audience and by risk exposure, which a single one-size module can't demonstrate. Tie layer four specifically to your high-risk system inventory (Section 3) so operational training rolls out to exactly the people who need it, not organization-wide by default.</p>
+<p><strong>Practical steps.</strong> Don't run one generic "AI training" module and call the literacy obligation satisfied. The amended Article 4 no longer sets a level, so the defensible position is evidence of measures that fit the audience and the risk exposure, and for anyone assigned to human oversight of a high-risk system the competence requirement is unchanged and specific. A single one-size module demonstrates neither. Tie layer four specifically to your high-risk system inventory (Section 3) so operational training rolls out to exactly the people who need it, not organization-wide by default.</p>
 							</div>
 						</details>
 						<details class="aia-item" id="aia-copyright-generative-ai">
 							<summary><span class="aia-num">13</span> Copyright &amp; Generative AI</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> Copyright protects original creative and intellectual work - books, articles, images, music, software - to encourage people to keep making it. Generative AI creates friction with that system at both ends: models are frequently trained on enormous amounts of copyrighted material, and they can reproduce or closely resemble that material in their outputs. There's a second, separate question sitting alongside the infringement risk: whether the organization's own AI-generated output is protectable by copyright at all. Both questions are live and contested enough that dozens of lawsuits are working through courts worldwide right now.</p>
+<p><strong>Why it matters.</strong> Copyright protects original creative and intellectual work - books, articles, images, music, software - to encourage people to keep making it. Generative AI creates friction with that system at both ends: models are trained on enormous amounts of copyrighted material, and they can reproduce or closely resemble that material in their outputs. A second, separate question sits alongside the infringement risk: whether the organization's own AI-generated output is protectable at all. Both questions are now being answered by courts rather than commentators, and the answers so far point in one direction: how the training data was obtained, and what the model reproduces, matter more than the fact of training itself.</p>
 <p><strong>Where copyright exposure shows up across the AI lifecycle.</strong></p>
 <ul>
-<li><strong>Training.</strong> Base models are frequently trained on large datasets that incorporate copyrighted material, often without individualized permission from each rightsholder.</li>
-<li><strong>Fine-tuning.</strong> Adjusting a pre-trained model on a narrower dataset can just as easily draw on copyrighted material as the original training run did.</li>
-<li><strong>Retrieval-augmented generation.</strong> RAG systems pull from a retrieval corpus at query time - if that corpus contains copyrighted material, it can end up reproduced in the augmented output.</li>
+<li><strong>Training.</strong> Base models are trained on large datasets that incorporate copyrighted material, often without individualized permission from each rightsholder. The first US merits rulings turned on how that material was acquired, not only on how it was used.</li>
+<li><strong>Fine-tuning.</strong> Adjusting a pre-trained model on a narrower dataset can draw on copyrighted material just as the original training run did.</li>
+<li><strong>Retrieval-augmented generation.</strong> RAG systems pull from a retrieval corpus at query time - if that corpus contains copyrighted material, it can be reproduced in the augmented output.</li>
 <li><strong>Prompts and inputs.</strong> Users routinely upload or paste copyrighted material - images, documents, text excerpts - directly into prompts, sometimes without thinking of it as a copyright-relevant act.</li>
-<li><strong>Inference and outputs.</strong> Generated content can reproduce, or come close enough to resemble, existing copyrighted work, creating potential infringement risk on the output side independent of anything that happened during training.</li>
+<li><strong>Inference and outputs.</strong> Generated content can reproduce, or come close enough to resemble, existing copyrighted work. This is now the live battleground: lyrics, characters and verbatim article text are what the 2025 and 2026 cases are about.</li>
 </ul>
-<p><strong>Whether AI output itself is copyrightable.</strong> Across most jurisdictions, some degree of human authorship is required for copyright to attach - content that is purely AI-generated, with no meaningful human creative input, generally isn't protectable, while "AI-assisted" work often is. The dividing line is the nature and degree of human creative contribution: in the US, for instance, simply typing a prompt isn't enough on its own, but the analysis changes once a human's own creative choices are perceptible in the resulting output.</p>
-<p><strong>A comparative regulatory snapshot</strong> - the applicable rules are generally determined by where the copying itself took place, and the landscape currently diverges sharply by jurisdiction:</p>
+<p><strong>Whether AI output itself is copyrightable.</strong> Across most jurisdictions, some degree of human authorship is required for copyright to attach - content that is purely AI-generated, with no meaningful human creative input, generally isn't protectable, while "AI-assisted" work often is. The dividing line is the nature and degree of human creative contribution: in the US, typing a prompt isn't enough on its own, but the analysis changes once a human's own creative choices are perceptible in the resulting output. That position is now settled at the top: the Supreme Court declined on 2 March 2026 to review <em>Thaler v Perlmutter</em>, leaving the D.C. Circuit's human-authorship holding in place.</p>
+<p><strong>A comparative regulatory snapshot</strong> - the applicable rules are generally determined by where the copying itself took place, and the landscape still diverges sharply by jurisdiction:</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>Jurisdiction</th>
-<th>Current posture</th>
+<th>Current posture (September 2026)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>United States</td>
-<td>No AI-specific copyright statute. Existing exclusive rights and existing exceptions - fair use chief among them - apply, and whether a given use of copyrighted material in AI training or operation qualifies as fair use is being worked out case-by-case in the courts.</td>
+<td>No AI-specific copyright statute; fair use decided case by case, and three district courts have now ruled on the merits. <em>Bartz v Anthropic</em> (June 2025) held training on lawfully acquired books to be fair use and the use of a pirated library not to be; the resulting class settlement of about USD 1.5 billion over roughly 482,000 works, around USD 3,000 per work, received final approval on 21 July 2026 and covers acquisition and storage only, not outputs. <em>Kadrey v Meta</em> (June 2025) found fair use on narrow facts, with a distribution claim continuing into 2027. <em>Thomson Reuters v Ross</em> found no fair use; the Third Circuit heard argument on 11 June 2026 and its decision will be the first appellate ruling on AI training. The <em>New York Times</em> case is now the consolidated OpenAI multidistrict litigation in New York, in summary judgment briefing since September 2026, with the US government filing in support of training as transformative.</td>
 </tr>
 <tr>
 <td>European Union</td>
-<td>The AI Act reinforces that existing EU copyright law already applies to AI systems and adds a new training-data transparency obligation. Separately, the EU's Copyright Directive contains two text-and-data-mining exceptions - one specific to scientific research, and a broader one that applies generally unless the rightsholder has opted out.</td>
+<td>The AI Act reinforces that existing EU copyright law applies to AI systems and adds a training-data transparency obligation for general-purpose models, given concrete shape by the Commission's summary template (July 2025) and the copyright chapter of the GPAI Code of Practice: lawful access only, respect for machine-readable reservations including robots.txt, no circumvention of paywalls, output safeguards and a rightsholder complaint channel. The Commission's fining powers over GPAI providers apply from 2 August 2026. The Copyright Directive's two text-and-data-mining exceptions stand: one for scientific research, one general and subject to rightsholder opt-out. The Court of Justice heard <em>Like Company v Google</em> (C-250/25), the first reference on training and chatbot outputs, in March 2026; judgment is pending. Parliament adopted a non-binding resolution in March 2026 calling for remuneration and a standardized opt-out, and the Commission is studying an EU-level opt-out registry.</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>The Munich Regional Court held in <em>GEMA v OpenAI</em> (November 2025) that memorization of lyrics in model parameters is reproduction outside the text-and-data-mining exception, and that chatbot outputs reproducing them are communication to the public; it repeated the result in <em>GEMA v Suno</em> (July 2026). Both are under appeal. The practical point: the TDM exception covers the gathering phase, not what the model retains.</td>
 </tr>
 <tr>
 <td>United Kingdom</td>
-<td>Ran a public Copyright and AI consultation starting December 2024, floating a proposal that would move toward an EU-style data-mining exception framework - as of this writing, a settled position hadn't yet been finalized.</td>
+<td>The opt-out proposal from the December 2024 consultation was not taken forward. The government's report and impact assessment under the Data (Use and Access) Act, published 18 March 2026, assessed four options and endorsed none; legislation is described as not imminent. <em>Getty Images v Stability AI</em> was decided at first instance on 4 November 2025: the secondary infringement claim failed because model weights do not store or reproduce the works, with a limited trade mark finding on older models; Getty has permission to appeal the secondary infringement point.</td>
 </tr>
 <tr>
 <td>Japan</td>
-<td>Takes a more permissive but conditional approach: AI training on copyrighted material is allowed in some circumstances, but this isn't a blanket exemption - it's limited where the use would unfairly prejudice rightsholders' interests.</td>
+<td>Still permissive but conditional: Article 30-4 of the Copyright Act allows training on copyrighted material except where it would unfairly prejudice rightsholders' interests. A non-binding government code on IP protection and transparency in training was consulted in early 2026 and does not amend the statute.</td>
 </tr>
 <tr>
 <td>China</td>
-<td>Applies a comparatively strict framework, with no explicit exemption carved out for text-and-data-mining or AI training specifically.</td>
+<td>Comparatively strict, with no explicit exemption for text-and-data-mining or AI training. Mandatory labelling of AI-generated content has applied since 1 September 2025, and the Supreme People's Court's opinions of 7 September 2026 set fault-based liability for platforms and allow courts to order disclosure of training data, while leaving the legality of training itself open.</td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>Litigation and the fair-use test.</strong> Multiple public trackers are following the wave of AI-and-copyright litigation worldwide - one widely referenced count put the number of active cases somewhere in the high thirties. Real, publicly filed cases include <em>Getty Images v Stability AI</em> and <em>The New York Times v Microsoft and OpenAI</em>, both cited here simply as real, public examples of the kind of dispute working through the courts, not as case studies with any endorsed outcome. Most of this litigation is concentrated in the US, where courts assess fair use through four factors: the purpose and character of the use, the nature of the copyrighted work, the amount and substantiality of the portion used, and the effect on the market for the original work.</p>
+<p><strong>Litigation and the fair-use test.</strong> The most cited US tracker counted 142 copyright suits against AI companies on 15 September 2026, up from the high thirties two years earlier, and the milestones to watch are the Third Circuit in <em>Ross</em>, the Court of Justice in <em>Like Company</em>, the Munich appeal court in <em>GEMA v OpenAI</em> and the Court of Appeal in <em>Getty</em>. US courts assess fair use through four factors: the purpose and character of the use, the nature of the copyrighted work, the amount and substantiality of the portion used, and the effect on the market for the original work. The rulings so far treat training on lawfully obtained material as strongly transformative and treat piracy, memorization and output reproduction as the exposure.</p>
 <p><strong>Practical steps to mitigate risk.</strong></p>
 <ul>
-<li><strong>License deliberately.</strong> Prefer data and content that's explicitly licensed for use in AI training or generation, rather than relying on ambiguous provenance.</li>
-<li><strong>Negotiate contractual protection.</strong> Push for IP indemnity clauses in vendor and licensing agreements rather than assuming the risk sits with the AI provider by default.</li>
+<li><strong>License deliberately, and prove provenance.</strong> Prefer data and content that's explicitly licensed for use in AI training or generation. The distinction between lawfully acquired and pirated material was decisive in <em>Bartz</em>, and the settlement priced the difference at about USD 3,000 per work.</li>
+<li><strong>Negotiate contractual protection.</strong> Push for IP indemnity clauses in vendor and licensing agreements rather than assuming the risk sits with the AI provider by default, and cover outputs as well as training, since the largest settlement so far excluded outputs.</li>
+<li><strong>Test for memorization and output reproduction.</strong> Lyrics, characters and verbatim article text are what the live cases turn on. Build output filtering and reproduction testing into deployment, not only into training due diligence.</li>
 <li><strong>Track data lineage.</strong> Make copyright provenance a standing part of your AI risk assessments, not a one-time diligence exercise done at the start of a project.</li>
 <li><strong>Train employees on prompting and uploads.</strong> A large share of practical exposure comes from ordinary employees pasting copyrighted documents, images, or text into prompts without thinking about it - this is a literacy-program topic (see Section 12), not just a legal one.</li>
-<li><strong>Meet the GPAI training-data transparency obligation.</strong> If you provide general-purpose AI models, remember the training-data summary requirement from Section 6 directly overlaps with copyright risk management - it's both a legal obligation and a genuine risk-reduction step.</li>
+<li><strong>Meet the GPAI training-data transparency obligation.</strong> If you provide general-purpose AI models, the training-data summary from Section 6 and the Code of Practice copyright measures directly overlap with copyright risk management - a legal obligation and a genuine risk-reduction step, now backed by Commission fining powers.</li>
 </ul>
 							</div>
 						</details>

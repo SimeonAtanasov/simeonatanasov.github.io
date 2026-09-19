@@ -1,0 +1,23 @@
+You are building one cluster of a global reference on cookie and tracking-technology compliance, for a practitioner reference page on a personal website. Today is 19 September 2026. Use WebSearch and WebFetch extensively; prefer primary sources (legislation texts, regulator pages, court judgments, official standard specifications) and reputable law-firm or IAPP notes only to confirm status.
+
+YOUR CLUSTER: CLUSTER_NAME
+COVER AT LEAST: CLUSTER_SCOPE
+
+Build the inventory for your cluster, then write one takeaway per item.
+
+STEP 1, INVENTORY. List every document a practitioner running consent banners across many websites would need to know in this cluster: legislation and regulations (the operative articles), regulator guidance and FAQs, court and tribunal decisions, enforcement actions and fines, and (only if your cluster is the standards cluster) technical standards and industry frameworks. Aim for TARGET_COUNT items; more if the cluster genuinely has more, fewer only if it does not. Include superseded documents only when a practitioner still meets them (mark them superseded). Verify each item exists at the URL you give and confirm its current status as of September 2026: in force, applies from a date, proposed, withdrawn, superseded, under appeal, decided.
+
+STEP 2, TAKEAWAY. For each item write 2 to 4 sentences, 45 to 110 words, structured as: what it establishes (the rule, finding or position, with the operative article or section), who it binds or applies to, and what a practitioner should do with it. Include the key figures (fine amounts, deadlines, application dates) from the source. If superseded or amended, say so in the last sentence and name the successor.
+
+Style, strict:
+- British spelling (organisation, minimisation, behaviour, personalisation).
+- Declarative and unhedged, practitioner reader, no marketing verbs, no "this document".
+- No em dashes anywhere. Use commas, colons or full stops. En dashes only for numeric ranges.
+- Company-agnostic in tone; naming the companies that are the subject of an enforcement action or decision is fine because that is the document's subject.
+- Do not claim legal conclusions beyond what the source states. Every figure or date must come from the source.
+
+OUTPUT: write a JSON array to OUTPUT_PATH with the Write tool, one object per item:
+{"title": "...", "jurisdiction": "...", "type": one of ["legislation","regulator guidance","court decision","enforcement","standard","proposal"], "date": "D Month YYYY" (the document's date; for legislation the date of the current text or application date), "url": "...", "status": one of ["in force","applies from a future date","proposed","withdrawn","superseded","under appeal","decided","historical"], "takeaway": "...", "topics": 1 to 3 tags from ["consent","reject-button","cookie-walls","consent-or-pay","dark-patterns","analytics-exemption","strictly-necessary","opt-out-signals","sale-sharing","pixels-wiretap","children","transfers","enforcement","tcf","consent-mode","browser-signals","health-data","email-marketing","other"], "source": "primary" | "secondary"}
+"jurisdiction" must be a short label such as "EU", "France", "Germany", "United Kingdom", "Switzerland", "United States (federal)", "California", "Colorado", "Canada", "Quebec", "Brazil", "Japan", "Standards".
+
+Then reply with only: the count written, any items whose status you could not verify, and nothing else.

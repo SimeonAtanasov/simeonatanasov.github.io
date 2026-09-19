@@ -1,0 +1,867 @@
+[
+  {
+    "title": "California Consumer Privacy Act as amended by the CPRA, Cal. Civ. Code 1798.100 et seq. (sections 1798.120, 1798.135, 1798.155)",
+    "jurisdiction": "California",
+    "type": "legislation",
+    "date": "1 January 2025",
+    "url": "https://law.justia.com/codes/california/code-civ/division-3/part-4/title-1-81-5/section-1798-135/",
+    "status": "in force",
+    "takeaway": "Section 1798.120 gives consumers the right to direct a business not to sell or share their personal information. Section 1798.135(a) requires a clear and conspicuous homepage link titled Do Not Sell or Share My Personal Information plus a Limit the Use of My Sensitive Personal Information link, or one consolidated link; 1798.135(b) lets a business omit the links if it honours an opt-out preference signal. Section 1798.120(c) requires opt-in under 16; section 1798.155 sets fines of up to $2,500 per violation and $7,500 for intentional violations or those involving minors. Route ad tech sharing, the link and the signal to one suppression path. Current text as amended by AB 3286.",
+    "topics": [
+      "sale-sharing",
+      "opt-out-signals",
+      "children"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CCPA Regulations, Cal. Code Regs. Title 11, Division 6, Chapter 1 (final text of 29 March 2023)",
+    "jurisdiction": "California",
+    "type": "legislation",
+    "date": "29 March 2023",
+    "url": "https://cppa.ca.gov/regulations/pdf/20230329_final_regs_text.pdf",
+    "status": "superseded",
+    "takeaway": "The 2023 text established the operative rules behind the statute: section 7004 bans dark patterns and requires symmetry in choice, so declining must take no more steps than accepting; sections 7013 to 7015 govern the Do Not Sell or Share link, the Limit the Use link and the Alternative Opt-out Link; section 7025 makes opt-out preference signals mandatory to process; section 7026 governs opt-out requests. It binds every business subject to the CCPA and its service providers and contractors. Use it to understand the reasoning behind current enforcement. Superseded as a document by the consolidated regulations text approved on 22 September 2025 and effective 1 January 2026.",
+    "topics": [
+      "dark-patterns",
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "CCPA Updates, Cybersecurity Audits, Risk Assessments, ADMT and Insurance Regulations (approved text, effective 1 January 2026)",
+    "jurisdiction": "California",
+    "type": "legislation",
+    "date": "1 January 2026",
+    "url": "https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf",
+    "status": "in force",
+    "takeaway": "Approved by the Office of Administrative Law on 22 September 2025, the amended regulations took effect on 1 January 2026. Section 7025(c)(6) now requires a business to display whether it has processed a consumer's opt-out preference signal, replacing the earlier permissive wording. Risk assessments are required for processing that presents significant risk, including selling or sharing personal information, with documentation due to the agency by 1 April 2028; ADMT obligations apply from 1 January 2027; cybersecurity audits are staggered from 1 April 2028 by revenue. It binds all CCPA businesses. Add the signal-status indicator to the banner and log selling and sharing through cookies in the risk assessment.",
+    "topics": [
+      "opt-out-signals",
+      "browser-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Cal. Code Regs. Title 11, section 7025, Opt-Out Preference Signals",
+    "jurisdiction": "California",
+    "type": "legislation",
+    "date": "29 March 2023",
+    "url": "https://law.cornell.edu/regulations/california/11-CCR-7025",
+    "status": "in force",
+    "takeaway": "Section 7025(b) requires a business that sells or shares personal information to process any opt-out preference signal sent in a commonly used format such as an HTTP header, and 7025(c) requires it to treat the signal as a valid opt-out for that browser or device and any associated consumer profile, without demanding extra information. Section 7025(e) and (f) let a business drop the Do Not Sell or Share link only if it processes the signal frictionlessly: no fee, no changed experience, no pop-up. It binds every CCPA business. Read Global Privacy Control before any tags fire. Amended from 1 January 2026 to require display of the signal's processing status.",
+    "topics": [
+      "opt-out-signals",
+      "browser-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "AB 566, California Opt Me Out Act (Chapter 465, Statutes of 2025), Cal. Civ. Code 1798.136",
+    "jurisdiction": "California",
+    "type": "legislation",
+    "date": "8 October 2025",
+    "url": "https://legiscan.com/CA/bill/AB566/2025",
+    "status": "applies from a future date",
+    "takeaway": "Chaptered on 8 October 2025, the act adds section 1798.136 to the Civil Code and requires a business that develops or maintains a browser to include a setting, easy for a reasonable person to locate and configure, that lets the consumer send an opt-out preference signal. The California Privacy Protection Agency may adopt implementing regulations, and browser developers are not liable for violations by businesses receiving the signal. The obligation is operative from 1 January 2027 and binds browser vendors, not website operators. Expect signal volumes to rise sharply after that date and size opt-out handling accordingly.",
+    "topics": [
+      "browser-signals",
+      "opt-out-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Delete Act (SB 362), Cal. Civ. Code 1798.99.86, accessible deletion mechanism",
+    "jurisdiction": "California",
+    "type": "legislation",
+    "date": "1 August 2026",
+    "url": "https://law.justia.com/codes/california/code-civ/division-3/part-4/title-1-81-48/section-1798-99-86/",
+    "status": "in force",
+    "takeaway": "Section 1798.99.86 required the California Privacy Protection Agency to establish, by 1 January 2026, a free mechanism through which a consumer submits a single verifiable request that every registered data broker delete their personal information. From 1 August 2026 each data broker must access the mechanism at least every 45 days, delete within 45 days of receipt, direct service providers and contractors to do the same, and undergo an independent compliance audit every three years from 1 January 2028. It binds registered data brokers. Process an unverifiable request as an opt-out of sale or sharing, and check whether tracking vendors in the stack are themselves registered brokers.",
+    "topics": [
+      "sale-sharing",
+      "other"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California Privacy Protection Agency, Delete Request and Opt-out Platform (DROP)",
+    "jurisdiction": "California",
+    "type": "regulator guidance",
+    "date": "1 January 2026",
+    "url": "https://privacy.ca.gov/drop/",
+    "status": "in force",
+    "takeaway": "DROP opened to Californians on 1 January 2026 and consolidates deletion and opt-out requests to more than 600 registered data brokers in a single submission verified through the California Identity Gateway. Data brokers began processing requests on 1 August 2026, status updates may take up to 90 days, and ongoing deletion is required every 45 days. It binds registered data brokers and is operated by the agency under the Delete Act. Failure to process carries fines of $200 per request per day. Confirm whether any advertising or enrichment partner is registered and build the 45-day retrieval cycle into vendor contracts.",
+    "topics": [
+      "sale-sharing",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "People v. Sephora USA, Inc., California Attorney General CCPA settlement",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "24 August 2022",
+    "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-announces-settlement-sephora-part-ongoing-enforcement",
+    "status": "decided",
+    "takeaway": "The first public CCPA settlement found that allowing third-party tracking software on a website and app in exchange for advertising and analytics services is a sale of personal information, that Sephora failed to disclose the sale, ignored Global Privacy Control signals and did not cure within the 30-day period. Sephora paid $1.2 million and must state in its privacy policy that it sells data, honour GPC, align service provider contracts with the CCPA and report to the Attorney General. It binds Sephora but signals the position taken against every business using ad tech cookies. Treat GPC as an opt-out request from the first page load.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California Privacy Protection Agency, Stipulated Final Order against American Honda Motor Co.",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "12 March 2025",
+    "url": "https://privacy.ca.gov/2025/03/honda-settles-with-cppa-over-privacy-violations/",
+    "status": "decided",
+    "takeaway": "The agency's first enforcement order found that Honda required excessive personal information and identity verification before honouring opt-out requests, offered a cookie management tool that did not present accept and decline choices in an equal way, obstructed authorised agents and shared consumer data with ad tech companies without CCPA-compliant contracts. Honda paid $632,500 and must simplify request handling, consult a user experience designer on its privacy request methods, train staff and revise contracting. It binds Honda but applies the symmetry rule in regulation section 7004 to cookie banners generally. Make Reject All as prominent as Accept All and never verify identity for an opt-out.",
+    "topics": [
+      "dark-patterns",
+      "reject-button",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California Privacy Protection Agency, Order against Todd Snyder, Inc.",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "6 May 2025",
+    "url": "https://privacy.ca.gov/2025/05/cppa-orders-clothing-retailer-todd-snyder-to-pay-six-figure-fine-overhaul-privacy-practices/",
+    "status": "decided",
+    "takeaway": "The agency found that the retailer's privacy portal was misconfigured so that opt-out requests, including those sent through its cookie banner, were not processed for 40 days, that it demanded more information than necessary for privacy requests, and that it required identity verification before opting consumers out of sale or sharing. Todd Snyder paid $345,178 and must correctly configure its opt-out mechanisms and train employees. It binds Todd Snyder, but the agency stated that a business remains responsible for its consent management vendor's failures. Test the banner and the downstream tag suppression after every release, and keep evidence of the tests.",
+    "topics": [
+      "consent",
+      "enforcement",
+      "opt-out-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "People v. Healthline Media LLC, California Attorney General CCPA settlement",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "1 July 2025",
+    "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-announces-largest-ccpa-settlement-date-secures-155",
+    "status": "decided",
+    "takeaway": "The Attorney General alleged that Healthline kept sharing data with advertisers after consumers opted out, ignored Global Privacy Control signals, ran a consent banner that did not actually disable tracking cookies, lacked required contract terms with third parties and breached the purpose limitation principle by sending article titles that revealed diagnoses to advertisers. Healthline paid $1.55 million and must stop disclosing data that links a consumer to an article title suggesting a diagnosis, audit third-party contracts and maintain accurate disclosures. It binds Healthline but is the first purpose limitation enforcement under the CCPA. Strip page titles and URLs that reveal health conditions from ad tech payloads.",
+    "topics": [
+      "health-data",
+      "pixels-wiretap",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California, Colorado and Connecticut joint investigative sweep on Global Privacy Control compliance",
+    "jurisdiction": "United States (multi-state)",
+    "type": "enforcement",
+    "date": "9 September 2025",
+    "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-announces-joint-investigative-privacy-sweep%C2%A0co-ct-and-ca",
+    "status": "in force",
+    "takeaway": "The California Attorney General, the California Privacy Protection Agency and the Attorneys General of Colorado and Connecticut announced a coordinated investigative sweep of businesses that fail to honour Global Privacy Control, describing it as a browser setting or extension that automatically signals a request to stop selling or sharing personal information. The announcement cites the CCPA and the Colorado and Connecticut privacy laws and asks businesses to come into immediate compliance. It applies to any business selling or sharing data of residents of those states. Assume GPC processing is being tested from outside, and confirm it works across every domain and subdomain.",
+    "topics": [
+      "opt-out-signals",
+      "browser-signals",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California Privacy Protection Agency, Stipulated Final Order against Tractor Supply Company",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "30 September 2025",
+    "url": "https://privacy.ca.gov/2025/09/nations-largest-rural-lifestyle-retailer-to-pay-1-35m-over-ccpa-violations/",
+    "status": "decided",
+    "takeaway": "The agency found that a Do Not Sell webform did not actually stop sale or sharing through third-party tracking technologies, that opt-out preference signals were not honoured until July 2024, that the privacy policy had not been updated since November 2021 and omitted how signals are processed, that job applicants received no CCPA notice and that third-party contracts lacked required terms. Tractor Supply paid $1,350,000, must scan its digital properties for tracking technologies quarterly, honour opt-out signals, and obtain annual officer certification for four years. It binds Tractor Supply. Prove that a webform opt-out and a GPC signal both suppress every tag, not just the cookie table.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "People v. Jam City, Inc., California Attorney General CCPA settlement",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "21 November 2025",
+    "url": "https://www.oag.ca.gov/news/press-releases/attorney-general-bonta-secures-14-million-settlement-mobile-app-gaming-company",
+    "status": "decided",
+    "takeaway": "The Attorney General alleged that the developer of 21 mobile games provided no in-app method to opt out of the sale or sharing of personal information and sold or shared the data of users aged 13 to 15 without the affirmative opt-in consent required by section 1798.120(c). Jam City paid $1.4 million in civil penalties and must add in-app opt-out methods, obtain opt-in consent for users aged 13 to 15 and maintain a compliance programme with reporting to the Attorney General. It binds Jam City but confirms that app SDK sharing is a sale or share. Provide the opt-out inside the app, not only on a website, and age-screen neutrally.",
+    "topics": [
+      "children",
+      "sale-sharing",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California Privacy Protection Agency, Delete Act enforcement against unregistered data brokers (Rickenbacher Data and S&P Global)",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "8 January 2026",
+    "url": "https://privacy.ca.gov/2026/01/calprivacy-brings-new-round-of-enforcement-actions-against-data-brokers/",
+    "status": "decided",
+    "takeaway": "The agency fined Rickenbacher Data LLC (Datamasters) $45,000 and S&P Global, Inc. $62,600 for failing to register as data brokers under the Delete Act, the former for reselling lists of people with conditions such as Alzheimer's disease and addiction. The registration duty binds any business that sells personal information about consumers with whom it has no direct relationship, which can include vendors that build audiences from website tracking. Both companies must register and implement compliance auditing. Check whether any audience, enrichment or identity partner meets the data broker definition before the 1 August 2026 DROP processing obligations apply.",
+    "topics": [
+      "sale-sharing",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "People v. The Walt Disney Company (Disney DTC and ABC Enterprises), California Attorney General CCPA settlement",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "11 February 2026",
+    "url": "https://oag.ca.gov/news/press-releases/california-wont-let-it-go-attorney-general-bonta-announces-275-million",
+    "status": "decided",
+    "takeaway": "The Attorney General alleged that Disney applied an opt-out toggle only to the streaming service and device in use rather than the whole account, that its webform opt-out did not stop sales through third-party ad tech code embedded in its platforms, that connected TV apps had no in-app opt-out, and that a Global Privacy Control signal was limited to the device even when the consumer was logged in. Disney paid $2.75 million, the largest CCPA settlement to date, and must honour opt-outs across every linked device and service. It binds Disney. Propagate opt-outs and GPC signals from the browser to the authenticated account and every property tied to it.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California Privacy Protection Agency, Order of Decision against PlayOn Sports",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "3 March 2026",
+    "url": "https://privacy.ca.gov/2026/03/youth-sports-media-company-to-pay-1-1-million-fine-change-practices-over-privacy-violations/",
+    "status": "decided",
+    "takeaway": "The agency found that the ticketing and streaming platform forced users to accept tracking before they could buy tickets or use the site, directed consumers to Network Advertising Initiative and Digital Advertising Alliance opt-out pages instead of providing its own opt-out, failed to recognise opt-out preference signals, gave insufficient privacy notice and sold or shared data of consumers aged 13 to 15 without opt-in consent. PlayOn must pay $1.10 million, conduct risk assessments and scan its tracking technologies. It binds PlayOn but rules out cookie walls and industry opt-out pages as CCPA compliance. Never condition access on accepting tracking, and operate the opt-out yourself.",
+    "topics": [
+      "cookie-walls",
+      "opt-out-signals",
+      "children"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California Privacy Protection Agency, Order of Decision against Ford Motor Company",
+    "jurisdiction": "California",
+    "type": "enforcement",
+    "date": "5 March 2026",
+    "url": "https://privacy.ca.gov/2026/03/ford-to-change-practices-pay-fine-for-adding-unnecessary-friction-to-opt-out-process/",
+    "status": "decided",
+    "takeaway": "The agency's board found that Ford required consumers to complete email verification before it would process a request to opt out of sale or sharing, treated unverified requests as expired and so failed to process dozens of opt-outs within the statutory timeframe; the decision states that unnecessary friction in the opt-out process violates the CCPA. Ford must pay $375,703, process the unverified requests, audit tracking technologies on its website and honour opt-out preference signals including Global Privacy Control. It binds Ford. Remove every confirmation step between the click and the suppression of tags; verification belongs to access and deletion requests, not opt-outs.",
+    "topics": [
+      "dark-patterns",
+      "opt-out-signals",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "California Invasion of Privacy Act, Cal. Penal Code 631 (wiretapping), with 632 and 638.51 (pen register and trap and trace)",
+    "jurisdiction": "California",
+    "type": "legislation",
+    "date": "1 January 2026",
+    "url": "https://law.justia.com/codes/california/code-pen/part-1/title-15/chapter-1-5/section-631/",
+    "status": "in force",
+    "takeaway": "Section 631(a) makes it an offence to tap a line or to read the contents of a communication in transit without the consent of all parties, or to aid another in doing so; section 638.51 prohibits installing a pen register or trap and trace device without a court order; section 637.2 gives a private right of action. Plaintiffs plead session replay, chat and pixel vendors under 631 and IP or device capture under 638.51. It applies to any website reachable from California. Obtain prior consent before any recording or third-party capture loads; later consent does not cure it. SB 690, awaiting the Governor, would remove the private action under 638.51.",
+    "topics": [
+      "pixels-wiretap",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "SB 690 (2025-2026), amendment of Cal. Penal Code 637.2 for pen register and trap and trace claims against websites and apps",
+    "jurisdiction": "California",
+    "type": "proposal",
+    "date": "4 September 2026",
+    "url": "https://legiscan.com/CA/bill/SB690/2025",
+    "status": "proposed",
+    "takeaway": "SB 690 passed the Assembly 66 to 0 on 28 August 2026, the Senate concurred 39 to 0, and the enrolled bill went to the Governor on 4 September 2026. As enrolled it amends only section 637.2 to remove the private right of action for section 638.51 pen register and trap and trace claims arising from website, online application and mobile application conduct, vests enforcement in the Attorney General, applies to pending claims commenced on or after 1 January 2025 and would operate from 1 January 2027. Sections 631 and 632 are untouched. Keep prior-consent gating for session replay, chat and pixels; the wiretap theory survives whatever the Governor decides.",
+    "topics": [
+      "pixels-wiretap",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Javier v. Assurance IQ, LLC, No. 21-16351 (9th Cir.)",
+    "jurisdiction": "California",
+    "type": "court decision",
+    "date": "31 May 2022",
+    "url": "https://cdn.ca9.uscourts.gov/datastore/memoranda/2022/05/31/21-16351.pdf",
+    "status": "decided",
+    "takeaway": "The Ninth Circuit held that CIPA section 631(a) requires the prior consent of all parties to a communication, so consent obtained after a session replay vendor has already begun recording does not defeat the claim, and reversed dismissal of a complaint alleging that ActiveProspect's TrustedForm recorded a website visitor's interactions before he accepted the site's terms. The memorandum is unpublished but is applied throughout the district courts. It applies to any operator whose recording, chat or form-capture vendor loads before consent. Delay session replay and similar scripts until an affirmative consent event, and keep a record of the consent timestamp.",
+    "topics": [
+      "pixels-wiretap",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Gutierrez v. Converse Inc., No. 24-4797 (9th Cir.)",
+    "jurisdiction": "California",
+    "type": "court decision",
+    "date": "9 July 2025",
+    "url": "https://cdn.ca9.uscourts.gov/datastore/memoranda/2025/07/09/24-4797.pdf",
+    "status": "decided",
+    "takeaway": "The Ninth Circuit affirmed summary judgment against a plaintiff who alleged that Salesforce's chat software on a retailer's website violated CIPA section 631(a), finding no evidence from which a jury could conclude that Salesforce made an unauthorised connection with a telephone wire or read messages in transit. A concurrence went further and reasoned that the section's reference to telegraph or telephone wires does not reach internet communications. The unpublished memorandum applies to operators deploying third-party chat and similar vendors. Keep records showing that vendors store and process data only for the operator and do not use it for their own purposes; that evidence carried the case.",
+    "topics": [
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Popa v. Microsoft Corp., No. 24-14 (9th Cir.)",
+    "jurisdiction": "United States (federal)",
+    "type": "court decision",
+    "date": "26 August 2025",
+    "url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2025/08/26/24-14.pdf",
+    "status": "decided",
+    "takeaway": "In a published opinion the Ninth Circuit affirmed dismissal for lack of Article III standing of wiretapping and intrusion claims based on Microsoft's Clarity session replay tool, which captured mouse movements, clicks, keystrokes, URLs and product browsing on a retailer's website. The court held that recording ordinary website interactions does not resemble a harm traditionally recognised at common law and is not highly offensive, comparing it to a shop assistant watching which aisles customers visit. It binds federal courts in the Ninth Circuit and is now routinely applied to dismiss CIPA pen register claims. Keep sensitive fields masked and avoid capturing health, financial or identity data.",
+    "topics": [
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Variety Media, LLC v. Superior Court, No. B350578 (Cal. Ct. App., 2d Dist., Div. 3), tentative opinion on CIPA section 638.51",
+    "jurisdiction": "California",
+    "type": "court decision",
+    "date": "21 August 2026",
+    "url": "https://www.jlaplaw.com/blog/2026/8/30/another-cipa-update-sb-690-passed-an-appellate-court-finally-spoke-neither-one-settles-cipa-yet",
+    "status": "under appeal",
+    "takeaway": "In a tentative opinion issued on 21 August 2026 before argument on 25 August 2026, the Court of Appeal indicated that section 638.51 can reach internet communications but that collecting a visitor's IP address alone does not state a pen register claim, because an IP address identifies the source of a communication whereas a pen register captures information identifying the destination of an outgoing communication; it proposed sustaining the demurrer with leave to amend. The ruling is not final and may change. It applies to website operators sued under the pen register theory. Watch for the final opinion and note that referrer and destination metadata may still support amended claims.",
+    "topics": [
+      "pixels-wiretap"
+    ],
+    "source": "secondary"
+  },
+  {
+    "title": "NetChoice, LLC v. Bonta, No. 25-2366 (9th Cir.), California Age-Appropriate Design Code Act (AB 2273)",
+    "jurisdiction": "California",
+    "type": "court decision",
+    "date": "12 March 2026",
+    "url": "https://netchoice.org/wp-content/uploads/2026/03/NetChoiice-v-Bonta-Ruling-Ninth-Circuit-March-12-2026.pdf",
+    "status": "decided",
+    "takeaway": "The Ninth Circuit affirmed the preliminary injunction against the Act's data use restrictions (Cal. Civ. Code 1798.99.31(b)(1) to (4)) and its dark patterns prohibition ((b)(7)) on vagueness grounds, but vacated the injunction covering the statute as a whole, the coverage definition and the age estimation requirement, and remanded, leaving the severability of the notice-and-cure provision unresolved. The Act applies to businesses providing online services likely to be accessed by children under 18. Treat the age estimation, high-privacy default settings, child-readable notices and tracking-signal provisions as potentially enforceable while the district court proceedings continue, and keep the earlier injunction history in mind when reading vendor claims.",
+    "topics": [
+      "children",
+      "dark-patterns"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Colorado Privacy Act, SB 21-190, C.R.S. 6-1-1301 et seq.",
+    "jurisdiction": "Colorado",
+    "type": "legislation",
+    "date": "1 July 2023",
+    "url": "https://leg.colorado.gov/bills/sb21-190",
+    "status": "in force",
+    "takeaway": "Signed on 7 July 2021 and effective 1 July 2023, the Act gives consumers the right to opt out of targeted advertising, sale of personal data and certain profiling, and C.R.S. 6-1-1306(1)(a)(IV) requires controllers to honour opt-outs sent through a universal opt-out mechanism meeting the Attorney General's technical specifications, with that duty operative from 1 July 2024. It binds controllers doing business in Colorado that process data of 100,000 or more consumers a year, or 25,000 with revenue from sales. The 60-day cure period expired on 1 January 2025. Recognise Global Privacy Control as an opt-out from targeted advertising, not only from sale.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Colorado Attorney General, Universal Opt-Out Mechanism list and Colorado Privacy Act Rules, 4 CCR 904-3",
+    "jurisdiction": "Colorado",
+    "type": "regulator guidance",
+    "date": "1 July 2024",
+    "url": "https://coag.gov/opt-out/",
+    "status": "in force",
+    "takeaway": "The Department of Law maintains the public list of recognised universal opt-out mechanisms under C.R.S. 6-1-1306(1)(a)(IV) and Rule 6.03 of the Colorado Privacy Act Rules, which were filed on 15 March 2023. Global Privacy Control is the only mechanism on the list, and controllers must honour it from 1 July 2024 as an opt-out from sale and from targeted advertising; the list does not exclude other mechanisms that meet the rules. It binds every controller subject to the Act. Implement GPC as a header and JavaScript signal, and treat a signal received while a consumer is logged in as applying to the account.",
+    "topics": [
+      "opt-out-signals",
+      "browser-signals"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Connecticut Data Privacy Act, Conn. Gen. Stat. 42-515 et seq. (Public Act 22-15)",
+    "jurisdiction": "Connecticut",
+    "type": "legislation",
+    "date": "1 July 2023",
+    "url": "https://portal.ct.gov/ag/sections/privacy/the-connecticut-data-privacy-act",
+    "status": "in force",
+    "takeaway": "Effective 1 July 2023, the Act grants rights to opt out of targeted advertising, sale of personal data and profiling, and from 1 January 2025 every controller subject to it must honour opt-out preference signals sent by consumers. Violations are enforceable by the Attorney General under the Connecticut Unfair Trade Practices Act with civil penalties of up to $5,000 per violation, alongside injunctive relief, restitution and disgorgement; the Attorney General publishes annual enforcement reports. It binds controllers meeting the consumer-volume thresholds. Map the banner's opt-out to both targeted advertising and sale, and honour Global Privacy Control without a confirmation step. Amended by Public Act 25-113 from 1 July 2026.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Connecticut Public Act 25-113 (SB 1295), amendments to the Connecticut Data Privacy Act",
+    "jurisdiction": "Connecticut",
+    "type": "legislation",
+    "date": "1 July 2026",
+    "url": "https://www.cga.ct.gov/2025/ACT/PA/PDF/2025PA-00113-R00SB-01295-PA.PDF",
+    "status": "in force",
+    "takeaway": "From 1 July 2026 the Act lowers the applicability threshold to controllers processing personal data of 35,000 or more consumers and covers any controller that sells personal data or processes sensitive data regardless of volume, adds neural, reproductive and gender-affirming health data to sensitive data, bars targeted advertising to or sale of data of consumers aged 13 to 17 without consent, and requires impact assessments and a right to question profiling decisions with significant effects. Opt-out preference signals must be honoured where the signal is affirmative, freely given and unambiguous. It binds controllers doing business in Connecticut. Re-run the scoping analysis, because many smaller publishers now fall inside the Act.",
+    "topics": [
+      "opt-out-signals",
+      "children",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Texas Data Privacy and Security Act, Tex. Bus. & Com. Code Chapter 541 (HB 4)",
+    "jurisdiction": "Texas",
+    "type": "legislation",
+    "date": "1 July 2024",
+    "url": "https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights",
+    "status": "in force",
+    "takeaway": "Effective 1 July 2024 and enforced by the Attorney General's Consumer Protection Division, the Act gives consumers the right to opt out of targeted advertising, sale of personal data and profiling, and from 1 January 2025 section 541.055 requires controllers to honour opt-out requests sent through a technology such as a browser setting, browser extension or global device setting. It binds any person conducting business in Texas that processes or sells personal data and is not a small business, with no volume threshold. A 30-day cure period applies and civil penalties reach $7,500 per violation. Honour Global Privacy Control for Texas visitors; head counts do not scope you out.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Oregon Consumer Privacy Act, ORS 646A.570 to 646A.589 (SB 619)",
+    "jurisdiction": "Oregon",
+    "type": "legislation",
+    "date": "1 July 2024",
+    "url": "https://www.doj.state.or.us/consumer-protection/id-theft-data-breaches/privacy/",
+    "status": "in force",
+    "takeaway": "Effective 1 July 2024, the Act gives consumers rights to opt out of targeted advertising, sale of personal data and profiling, and from 1 January 2026 controllers must honour opt-out signals that meet the statute's technical requirements, with Global Privacy Control cited by the Department of Justice as an example. The Department publishes quarterly and annual enforcement reports and issued a one-year report in August 2025. It binds controllers doing business in Oregon that process data of 100,000 or more consumers, or 25,000 with revenue from sales. Treat Oregon as a signal-mandatory state from 1 January 2026 and answer Department inquiries within the stated cure window.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Montana Consumer Data Privacy Act, SB 384, Mont. Code Ann. 30-14-2801 et seq.",
+    "jurisdiction": "Montana",
+    "type": "legislation",
+    "date": "1 October 2024",
+    "url": "https://archive.legmt.gov/bills/2023/billpdf/SB0384.pdf",
+    "status": "in force",
+    "takeaway": "Effective 1 October 2024, the Act gives consumers the right to opt out of targeted advertising, sale of personal data and profiling, and requires controllers to honour opt-out preference signals sent through a consumer-friendly platform, technology or mechanism by 1 January 2025. The Attorney General has exclusive enforcement authority, there is no private right of action, and the 60-day notice and cure requirement terminated on 1 April 2026. It binds controllers doing business in Montana that meet the consumer-volume thresholds. Route Global Privacy Control to the same opt-out as the banner and expect no cure notice before enforcement from April 2026.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Delaware Personal Data Privacy Act, 6 Del. C. Chapter 12D",
+    "jurisdiction": "Delaware",
+    "type": "legislation",
+    "date": "1 January 2025",
+    "url": "https://delcode.delaware.gov/title6/c012d/index.html",
+    "status": "in force",
+    "takeaway": "Effective 1 January 2025, the Act gives consumers rights to opt out of targeted advertising, sale of personal data and profiling, and from 1 January 2026 controllers must allow those opt-outs through an opt-out preference signal that is consumer friendly, requires an affirmative and unambiguous choice rather than a default, and lets the controller verify residency. It binds controllers that process data of 35,000 or more consumers, or 10,000 with 20 percent of revenue from sales, with the thresholds falling to 10,000 and 5,000 on 1 January 2027. The Attorney General enforces and may demand data protection assessments. Honour Global Privacy Control for Delaware visitors and revisit scope before 2027.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "New Jersey Data Privacy Act, P.L.2023, c.266 (S332), N.J.S.A. 56:8-166.4 et seq.",
+    "jurisdiction": "New Jersey",
+    "type": "legislation",
+    "date": "15 January 2025",
+    "url": "https://pub.njleg.state.nj.us/Bills/2022/PL23/266_.PDF",
+    "status": "in force",
+    "takeaway": "Approved on 16 January 2024 and effective 365 days later, the Act gives consumers rights to opt out of targeted advertising, sale of personal data and profiling, and requires controllers to honour opt-outs sent through a user-selected universal opt-out mechanism from six months after the effective date, that is 15 July 2025. It binds controllers that process data of 100,000 or more consumers, or 25,000 with revenue from sales. The Attorney General has sole enforcement authority, a 30-day cure notice applied only for the first 18 months, and the Division of Consumer Affairs must adopt rules for the mechanism. Treat Global Privacy Control as an opt-out for New Jersey visitors.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "New Hampshire Expectation of Privacy Act, RSA Chapter 507-H (SB 255)",
+    "jurisdiction": "New Hampshire",
+    "type": "legislation",
+    "date": "1 January 2025",
+    "url": "https://gc.nh.gov/rsa/html/LII/507-H/507-H-mrg.htm",
+    "status": "in force",
+    "takeaway": "Effective 1 January 2025, the chapter gives consumers rights to opt out of targeted advertising, sale of personal data and profiling, and RSA 507-H:6, V(a)(1)(B) requires controllers, not later than 1 January 2025, to accept opt-out preference signals sent through a platform, technology or mechanism that communicates the consumer's intent to opt out. It binds controllers meeting the consumer-volume thresholds. The Attorney General has exclusive enforcement authority, violations are unfair or deceptive practices under RSA 358-A:2, there is no private right of action, and a 60-day cure period applies after notice of violation. Recognise Global Privacy Control from day one for New Hampshire visitors.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Nebraska Data Privacy Act, LB 1074, Neb. Rev. Stat. 87-1101 to 87-1130",
+    "jurisdiction": "Nebraska",
+    "type": "legislation",
+    "date": "1 January 2025",
+    "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-1101",
+    "status": "in force",
+    "takeaway": "Effective 1 January 2025 and modelled on the Texas statute, the Act gives consumers rights to opt out of targeted advertising, sale of personal data and profiling, and requires controllers to honour opt-out requests sent through a technology such as a browser setting, browser extension or global device setting, with no separate later date for that duty. It binds any person conducting business in Nebraska that processes or sells personal data and is not a small business, with no volume threshold. The Attorney General enforces, may issue civil investigative demands and may request data protection assessments; a 30-day cure period applies. Treat Global Privacy Control as binding for Nebraska visitors.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Minnesota Consumer Data Privacy Act, Minn. Stat. Chapter 325O (2024 Minn. Laws ch. 121, art. 5)",
+    "jurisdiction": "Minnesota",
+    "type": "legislation",
+    "date": "31 July 2025",
+    "url": "https://www.revisor.mn.gov/laws/2024/0/Session+Law/Chapter/121/",
+    "status": "in force",
+    "takeaway": "Enacted in 2024 Minnesota Laws chapter 121 and effective 31 July 2025, the Act gives consumers rights to opt out of targeted advertising, sale of personal data and profiling, and requires controllers to honour opt-out preference signals from the same date. It adds a right to question the result of profiling and a duty to keep a data inventory. It binds controllers that process data of 100,000 or more consumers, or 25,000 with 25 percent of revenue from sales. The Attorney General enforces with civil penalties of up to $7,500 per violation and a 30-day cure period that sunsets on 31 January 2026. Recognise Global Privacy Control for Minnesota visitors.",
+    "topics": [
+      "opt-out-signals",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Maryland Online Data Privacy Act of 2024, SB 541 (Chapter 455), Md. Code Com. Law 14-4601 et seq.",
+    "jurisdiction": "Maryland",
+    "type": "legislation",
+    "date": "1 October 2025",
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0541?ys=2024RS",
+    "status": "in force",
+    "takeaway": "Approved on 9 May 2024, effective 1 October 2025 and applicable to processing after 1 April 2026, the Act gives consumers rights to opt out of targeted advertising, sale of personal data and profiling and requires controllers to honour a universal opt-out mechanism for preference signals. It prohibits the sale of sensitive data outright, limits collection to what is reasonably necessary, and bars targeted advertising to consumers the controller knows or should know are under 18. It binds controllers processing data of 35,000 or more consumers, or 10,000 with 20 percent of revenue from sales. Suppress all ad tech for known minors and honour Global Privacy Control for Maryland visitors.",
+    "topics": [
+      "opt-out-signals",
+      "children",
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Virginia Consumer Data Protection Act, Va. Code 59.1-575 to 59.1-584",
+    "jurisdiction": "Virginia",
+    "type": "legislation",
+    "date": "1 January 2023",
+    "url": "https://law.lis.virginia.gov/vacode/title59.1/chapter53/",
+    "status": "in force",
+    "takeaway": "Effective 1 January 2023, the Act gives consumers the right under 59.1-577 to opt out of targeted advertising, sale of personal data and profiling, requires a clear and conspicuous link where a controller sells data or engages in targeted advertising, and requires consent for sensitive data. It does not require controllers to honour universal opt-out signals. It binds persons conducting business in Virginia that process data of 100,000 or more consumers, or 25,000 with over 50 percent of revenue from sales. The Attorney General enforces with a 30-day cure period and civil penalties of up to $7,500 per violation. Offer an explicit opt-out link covering cookie-based targeted advertising.",
+    "topics": [
+      "sale-sharing",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Utah Consumer Privacy Act, Utah Code 13-61-101 et seq. (SB 227)",
+    "jurisdiction": "Utah",
+    "type": "legislation",
+    "date": "31 December 2023",
+    "url": "https://le.utah.gov/xcode/Title13/Chapter61/13-61.html",
+    "status": "in force",
+    "takeaway": "Effective 31 December 2023, the Act gives consumers under 13-61-201 the right to opt out of targeted advertising and the sale of personal data, requires a clear notice of that right, and requires only notice and an opportunity to opt out, rather than consent, before processing sensitive data. It contains no universal opt-out signal requirement and no right to opt out of profiling. It binds controllers with $25 million or more in annual revenue that also meet the consumer-volume thresholds. The Attorney General enforces on referral from the Division of Consumer Protection, with a 30-day cure period and penalties of up to $7,500 per violation. A conventional opt-out link suffices.",
+    "topics": [
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Iowa Consumer Data Protection Act, Iowa Code Chapter 715D",
+    "jurisdiction": "Iowa",
+    "type": "legislation",
+    "date": "1 January 2025",
+    "url": "https://www.legis.iowa.gov/docs/code/715D.pdf",
+    "status": "in force",
+    "takeaway": "Enacted in 2023 Acts chapter 17 and effective 1 January 2025, the chapter requires controllers under 715D.4 to disclose clearly and conspicuously any sale of personal data or targeted advertising and how consumers can opt out, and to provide secure and reliable means for requests. It does not mandate acceptance of universal opt-out signals, and sensitive data requires notice and an opportunity to opt out rather than consent. It binds controllers meeting the consumer-volume thresholds. Under 715D.8 the Attorney General has exclusive enforcement authority, must give 90 days' written notice to cure, and may seek civil penalties of up to $7,500 per violation. Signal handling is optional here.",
+    "topics": [
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Tennessee Information Protection Act, Tenn. Code Ann. 47-18-3201 et seq. (Public Chapter 408 of 2023)",
+    "jurisdiction": "Tennessee",
+    "type": "legislation",
+    "date": "1 July 2025",
+    "url": "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1181&GA=113",
+    "status": "in force",
+    "takeaway": "Effective 1 July 2025, the Act gives consumers the right to opt out of targeted advertising, sale of personal data and profiling and requires consent for sensitive data. It contains no universal opt-out signal requirement and provides an affirmative defence to a controller whose written privacy programme reasonably conforms to the NIST Privacy Framework. It binds controllers with more than $25 million in revenue that process data of 175,000 or more consumers, or 25,000 with over 50 percent of revenue from sales. The Attorney General enforces with a 60-day cure period and civil penalties of up to $7,500 per violation, trebled for wilful violations. Document the programme against NIST.",
+    "topics": [
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Indiana Consumer Data Protection Act, Ind. Code 24-15 (SEA 5 of 2023)",
+    "jurisdiction": "Indiana",
+    "type": "legislation",
+    "date": "1 January 2026",
+    "url": "https://iga.in.gov/laws/2025/ic/titles/24",
+    "status": "in force",
+    "takeaway": "Effective 1 January 2026, the Act gives consumers the right to opt out of targeted advertising, sale of personal data and profiling, requires consent for sensitive data and requires a controller that sells data or engages in targeted advertising to disclose that fact and the means to opt out. It contains no universal opt-out signal requirement. It binds controllers conducting business in Indiana that process data of 100,000 or more consumers, or 25,000 with over 50 percent of revenue from sales. The Attorney General has exclusive enforcement authority, with a 30-day cure period and civil penalties of up to $7,500 per violation. A disclosed opt-out link is sufficient for Indiana.",
+    "topics": [
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Kentucky Consumer Data Protection Act, HB 15 of 2024 (Acts Chapter 72), KRS 367.3611 to 367.3627",
+    "jurisdiction": "Kentucky",
+    "type": "legislation",
+    "date": "1 January 2026",
+    "url": "https://apps.legislature.ky.gov/record/24rs/hb15.html",
+    "status": "in force",
+    "takeaway": "Signed on 4 April 2024 and effective 1 January 2026, the Act gives consumers the right to confirm processing, correct, delete, obtain a copy and opt out of targeted advertising, the sale of data or profiling, and requires consent for sensitive data. It contains no universal opt-out signal requirement. It binds persons conducting business in Kentucky that process data of 100,000 or more consumers, or 25,000 with over 50 percent of revenue from sales. The Attorney General has exclusive enforcement authority with a 30-day cure period, civil penalties of up to $7,500 per violation and a consumer privacy fund. A disclosed opt-out link meets the requirement.",
+    "topics": [
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Rhode Island Data Transparency and Privacy Protection Act, R.I. Gen. Laws Chapter 6-48.1",
+    "jurisdiction": "Rhode Island",
+    "type": "legislation",
+    "date": "1 January 2026",
+    "url": "https://webserver.rilegislature.gov/Statutes/TITLE6/6-48.1/INDEX.htm",
+    "status": "in force",
+    "takeaway": "Operative from 1 January 2026, the chapter gives customers under 6-48.1-5 the right to opt out of processing for targeted advertising, sale of personal data or profiling in furtherance of solely automated decisions, exercised by secure and reliable means established by the controller and described in its privacy notice; no universal opt-out mechanism is required. It binds controllers meeting the consumer-volume thresholds. Under 6-48.1-8 the Attorney General has sole enforcement authority, there is no private right of action and no cure period, and intentional disclosure in violation of the chapter carries $100 to $500 per disclosure in addition to general commercial law remedies. Publish the opt-out method in the notice.",
+    "topics": [
+      "sale-sharing"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Washington My Health My Data Act, RCW Chapter 19.373 (HB 1155)",
+    "jurisdiction": "Washington",
+    "type": "legislation",
+    "date": "31 March 2024",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.373",
+    "status": "in force",
+    "takeaway": "Effective 31 March 2024 for regulated entities and 30 June 2024 for small businesses, RCW 19.373.030 prohibits collecting or sharing consumer health data without the consumer's affirmative consent or a necessity to provide a requested product or service, RCW 19.373.070 makes any sale of consumer health data unlawful without a separate signed authorisation, and RCW 19.373.080 bans geofencing around in-person health services. Consumer health data includes inferences drawn from non-health data. It binds any entity doing business in Washington or targeting Washington consumers; under RCW 19.373.090 a violation is a per se Consumer Protection Act breach with a private right of action. Gate pixels on health pages behind opt-in consent.",
+    "topics": [
+      "health-data",
+      "consent",
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Washington Attorney General, guidance on the My Health My Data Act",
+    "jurisdiction": "Washington",
+    "type": "regulator guidance",
+    "date": "31 March 2024",
+    "url": "https://www.atg.wa.gov/protecting-washingtonians-personal-health-data-and-privacy",
+    "status": "in force",
+    "takeaway": "The Attorney General's guidance states that the Act, signed on 27 April 2023, is the first privacy law to protect health data outside HIPAA, that all persons must comply with the geofencing section from 23 July 2023, non-small businesses with sections 4 to 9 from 31 March 2024 and small businesses from 30 June 2024, and that regulated entities must prominently publish a link to a consumer health data privacy policy on their homepage. It gives a retailer's pregnancy prediction score derived from purchases as an example of covered inferences. It applies to any entity in scope of the Act. Publish the separate policy link.",
+    "topics": [
+      "health-data",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Federal Trade Commission Act, Section 5, 15 U.S.C. 45",
+    "jurisdiction": "United States (federal)",
+    "type": "legislation",
+    "date": "19 September 2026",
+    "url": "https://www.ftc.gov/legal-library/browse/statutes/federal-trade-commission-act",
+    "status": "in force",
+    "takeaway": "Section 5 of the FTC Act, 15 U.S.C. 45, empowers the Commission to prevent unfair or deceptive acts or practices in or affecting commerce, and it is the legal basis for every federal tracking-pixel, health-data and dark-pattern case in this cluster: a privacy policy or consent interface that misstates what tags do is deceptive, and sharing sensitive data without consent in a way consumers cannot avoid is unfair. It binds virtually every company in United States commerce, with exemptions for common carriers and certain non-profits. Write cookie disclosures so that every statement about tags and data sharing is literally true; the FTC needs no state privacy statute to act.",
+    "topics": [
+      "dark-patterns",
+      "pixels-wiretap",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "FTC staff report, Bringing Dark Patterns to Light",
+    "jurisdiction": "United States (federal)",
+    "type": "regulator guidance",
+    "date": "15 September 2022",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick-trap-consumers",
+    "status": "in force",
+    "takeaway": "The staff report groups dark patterns into four categories: misleading consumers and disguising advertisements, making subscription cancellation difficult, burying terms and hiding fees, and tricking consumers into sharing data through privacy choices designed to steer them toward the option that gives away the most personal information, including default settings that share viewing activity with third parties behind an easily missed notice. It is guidance on how the Commission reads Section 5 and applies to any consumer-facing interface. Use it as the design checklist for consent banners: equal weight for accept and decline, no pre-selected sharing, and no interface that treats closing a pop-up as consent.",
+    "topics": [
+      "dark-patterns",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "United States v. GoodRx Holdings, Inc., FTC enforcement action under Section 5 and the Health Breach Notification Rule",
+    "jurisdiction": "United States (federal)",
+    "type": "enforcement",
+    "date": "1 February 2023",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2023/02/ftc-enforcement-action-bar-goodrx-sharing-consumers-sensitive-health-info-advertising",
+    "status": "decided",
+    "takeaway": "The Commission's first Health Breach Notification Rule action alleged that GoodRx shared users' prescription medications and health conditions with Facebook, Google, Criteo and other advertising platforms through pixels and identifiers, used the data to build targeted advertising audiences, and never notified users of the unauthorised disclosures. GoodRx paid a $1.5 million civil penalty and is permanently barred from disclosing health information for advertising, must obtain affirmative express consent for other sharing, direct third parties to delete the data, limit retention and avoid dark patterns when seeking consent. It binds GoodRx but sets the template for every health-adjacent site. Treat pixel disclosures of health data as reportable breaches.",
+    "topics": [
+      "health-data",
+      "pixels-wiretap",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "In the Matter of BetterHelp, Inc., FTC consent order",
+    "jurisdiction": "United States (federal)",
+    "type": "enforcement",
+    "date": "2 March 2023",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2023/03/ftc-ban-betterhelp-revealing-consumers-data-including-sensitive-mental-health-information-facebook",
+    "status": "decided",
+    "takeaway": "The Commission alleged that the online counselling platform disclosed email addresses, IP addresses and intake questionnaire answers to Facebook, Snapchat, Criteo and Pinterest for advertising, including building lookalike audiences from people who had sought therapy, despite promising not to share health data. The order, finalised on 14 July 2023 by a 3 to 0 vote, requires $7.8 million in consumer refunds, bans sharing health data for advertising and retargeting, requires affirmative express consent before any disclosure to third parties, and mandates a privacy programme, deletion by recipients and a retention schedule. It binds BetterHelp. Match every pixel event against the promises in the privacy policy before it fires.",
+    "topics": [
+      "health-data",
+      "pixels-wiretap",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "United States v. Easy Healthcare Corp. (Premom), FTC enforcement action",
+    "jurisdiction": "United States (federal)",
+    "type": "enforcement",
+    "date": "17 May 2023",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2023/05/ovulation-tracking-app-premom-will-be-barred-sharing-health-data-advertising-under-proposed-ftc",
+    "status": "decided",
+    "takeaway": "The Commission alleged that the Premom fertility app shared health data with AppsFlyer and Google through advertising and analytics SDKs, and sent device identifiers, precise location and social media data to the China-based analytics firms Umeng and Jiguang, contrary to privacy policy promises, and failed to notify users under the Health Breach Notification Rule. Easy Healthcare pays a $100,000 civil penalty plus $100,000 to Connecticut, the District of Columbia and Oregon, is barred from sharing health data for advertising, must obtain affirmative consent for other sharing, seek deletion by recipients and limit retention. It binds Easy Healthcare. Audit mobile SDKs with the same rigour as web pixels.",
+    "topics": [
+      "health-data",
+      "pixels-wiretap",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "FTC and HHS joint letters to hospital systems and telehealth providers on online tracking technologies",
+    "jurisdiction": "United States (federal)",
+    "type": "regulator guidance",
+    "date": "20 July 2023",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2023/07/ftc-hhs-warn-hospital-systems-telehealth-providers-about-privacy-security-risks-online-tracking",
+    "status": "in force",
+    "takeaway": "The Federal Trade Commission and the HHS Office for Civil Rights sent joint letters to approximately 130 hospital systems and telehealth providers warning that the Meta Pixel, Google Analytics and similar technologies on websites and apps may impermissibly disclose sensitive health data to third parties, citing HIPAA for covered entities and the FTC Act and Health Breach Notification Rule for everyone else. The letters reference the HHS bulletin of December 2022. They apply to health providers and to non-HIPAA health businesses alike. Inventory every tag on pages where users schedule appointments, search symptoms or log in, and remove those without a business associate agreement or consent.",
+    "topics": [
+      "health-data",
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "FTC v. Kochava Inc., stipulated final order banning sale of sensitive location data",
+    "jurisdiction": "United States (federal)",
+    "type": "enforcement",
+    "date": "4 May 2026",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-ban-kochava-subsidiary-selling-sensitive-location-data-settle-charges-they-sold-location-data",
+    "status": "decided",
+    "takeaway": "The Commission sued the data broker in the District of Idaho on 29 August 2022 under the unfairness prong of Section 5, alleging that it sold geolocation data from hundreds of millions of mobile devices that could track visits to reproductive health clinics, places of worship and shelters. The stipulated order, approved 2 to 0, prohibits Kochava and its subsidiary Collective Data Solutions from selling, licensing or sharing sensitive location data without affirmative express consent, and requires a sensitive location programme, consent verification, disclosure of recipients on request and scheduled deletion. It binds Kochava. Treat precise location collected through SDKs as sensitive data requiring opt-in.",
+    "topics": [
+      "health-data",
+      "consent",
+      "enforcement"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "FTC Health Breach Notification Rule, 16 CFR Part 318, 2024 final amendments",
+    "jurisdiction": "United States (federal)",
+    "type": "legislation",
+    "date": "26 April 2024",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/04/ftc-finalizes-changes-health-breach-notification-rule",
+    "status": "in force",
+    "takeaway": "Approved 3 to 2 and effective 60 days after Federal Register publication, the amended rule clarifies that a breach of security includes an unauthorised disclosure, not only a hacking incident, adds definitions of covered health care provider and health care services or supplies so that health apps and connected devices are covered as personal health record vendors, allows electronic notice, and requires notice to the Commission at the same time as consumers for breaches affecting 500 or more people, within 60 calendar days of discovery. It binds vendors of personal health records and related entities outside HIPAA. Sharing health data with an advertising pixel without authorisation is a notifiable breach.",
+    "topics": [
+      "health-data",
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Children's Online Privacy Protection Rule, 16 CFR Part 312, 2025 final amendments",
+    "jurisdiction": "United States (federal)",
+    "type": "legislation",
+    "date": "22 April 2025",
+    "url": "https://www.federalregister.gov/documents/2025/04/22/2025-05904/childrens-online-privacy-protection-rule",
+    "status": "in force",
+    "takeaway": "Published in the Federal Register on 22 April 2025, effective 23 June 2025 and with a compliance date of 22 April 2026 for most provisions, the amended rule requires operators to obtain separate verifiable parental consent before disclosing children's personal information to third parties, including for targeted advertising, limits retention to what is reasonably necessary for a specific purpose, adds biometric and government identifiers to personal information, confines persistent identifiers collected under the support for internal operations exception to those activities, and requires neutral age screening on mixed audience sites. It binds operators of child-directed services and those with actual knowledge. Behavioural advertising to children now needs a separate consent.",
+    "topics": [
+      "children",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "FTC Policy Statement on COPPA and age verification technologies",
+    "jurisdiction": "United States (federal)",
+    "type": "regulator guidance",
+    "date": "25 February 2026",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/02/ftc-issues-coppa-policy-statement-incentivize-use-age-verification-technologies-protect-children",
+    "status": "in force",
+    "takeaway": "Adopted 2 to 0, the statement announces that the Commission will not bring COPPA enforcement against an operator that collects personal information solely to verify age, provided the data is used only for that purpose, deleted promptly afterwards, not disclosed to third parties without written assurances, explained in clear notice to parents and children, secured reasonably and gathered through a reasonably accurate method. It remains in effect until final rule amendments on age verification are published or it is withdrawn, and the Commission intends to open a rule review. It applies to all COPPA operators. Age gates can use verification data without triggering consent if those conditions are met.",
+    "topics": [
+      "children",
+      "consent"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "HHS Office for Civil Rights, Use of Online Tracking Technologies by HIPAA Covered Entities and Business Associates",
+    "jurisdiction": "United States (federal)",
+    "type": "regulator guidance",
+    "date": "26 June 2024",
+    "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/hipaa-online-tracking/index.html",
+    "status": "in force",
+    "takeaway": "First issued on 1 December 2022 and revised in 2024, the bulletin states that regulated entities must configure tracking technologies on user-authenticated pages so that vendors use and disclose protected health information only as the Privacy Rule permits, with a business associate agreement in place, and that information entered on unauthenticated pages such as appointment schedulers or symptom checkers is also PHI. On 20 June 2024 the Northern District of Texas vacated the part treating an IP address combined with a visit to a page about a health condition as PHI; HHS is evaluating its next steps. It binds HIPAA covered entities and business associates. Keep ad tech off portals.",
+    "topics": [
+      "health-data",
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Solomon v. Flipps Media, Inc., No. 23-7597 (2d Cir.), Video Privacy Protection Act and the Meta Pixel",
+    "jurisdiction": "United States (federal)",
+    "type": "court decision",
+    "date": "1 May 2025",
+    "url": "https://law.justia.com/cases/federal/appellate-courts/ca2/23-7597/23-7597-2025-05-01.html",
+    "status": "decided",
+    "takeaway": "The Second Circuit adopted the ordinary person standard for personally identifiable information under the Video Privacy Protection Act and held that a Meta Pixel transmission of a Facebook ID together with an encoded video title is not PII, because an ordinary person could not use that code to identify a consumer's viewing habits without specialised knowledge. Dismissal was affirmed and the Supreme Court denied certiorari on 8 December 2025. It binds federal courts in New York, Connecticut and Vermont and deepens a split with circuits applying a broader reasonable foreseeability test. Pixel exposure on video pages remains live elsewhere, and the Supreme Court is reviewing who counts as a consumer.",
+    "topics": [
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "Salazar v. Paramount Global, No. 25-459 (U.S. Supreme Court), definition of consumer under the Video Privacy Protection Act",
+    "jurisdiction": "United States (federal)",
+    "type": "court decision",
+    "date": "26 January 2026",
+    "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/25-459.html",
+    "status": "under appeal",
+    "takeaway": "The Supreme Court granted certiorari on 26 January 2026 and set argument for 14 October 2026 on whether a person who subscribes to a non-audiovisual offering such as an email newsletter is a consumer under the Video Privacy Protection Act. The Sixth Circuit in Salazar v. Paramount and the D.C. Circuit in Pileggi require the goods or services to be audiovisual; the Second Circuit in Salazar v. NBA and the Seventh Circuit in Gardner v. Me-TV read consumer broadly. The decision will fix the class of plaintiffs able to sue over pixel disclosures of video viewing. Until judgment, do not send video titles with user identifiers to advertising platforms.",
+    "topics": [
+      "pixels-wiretap"
+    ],
+    "source": "primary"
+  },
+  {
+    "title": "New York Attorney General, Website Privacy Controls: A Guide for Business",
+    "jurisdiction": "New York",
+    "type": "regulator guidance",
+    "date": "15 July 2024",
+    "url": "https://ag.ny.gov/resources/organizations/business-guidance/website-privacy-controls",
+    "status": "in force",
+    "takeaway": "After reviewing 13 high-traffic websites with about 75 million visitors in March 2024, the Office found privacy controls that did not work as described: marketing and advertising tags stayed active after visitors disabled them, most often because tags were uncategorised or miscategorised in the consent management tool, hard-coded outside it, or because the consent tool was not passing opt-out signals to the tag manager. The guide states that New York's consumer protection law requires privacy representations to be truthful, warns that Accept All buttons must not imply cookies deploy only on click, and asks for equal-weight accept and decline options. It applies to any business serving New York consumers.",
+    "topics": [
+      "consent",
+      "dark-patterns",
+      "reject-button"
+    ],
+    "source": "primary"
+  }
+]
