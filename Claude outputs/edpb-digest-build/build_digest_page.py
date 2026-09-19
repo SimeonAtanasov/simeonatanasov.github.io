@@ -4,6 +4,9 @@ import json, html, re, os
 from collections import OrderedDict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+import sys
+sys.path.insert(0, HERE)
+from digest_nav import toc_html, results_html, jump_html, top_button, nav_js, nav_css
 E = json.load(open(os.path.join(HERE, "digest.json"), encoding="utf-8"))
 esc = lambda s: html.escape(s, quote=True)
 
@@ -34,7 +37,7 @@ def year(d):
     return m.group(0) if m else ""
 
 
-def entry_html(e):
+def entry_html(e, eid):
     yr = year(e["date"])
     tier = e["tier"]
     cls = "ed-entry ed-tier-%s ed-rel-%s" % (tier, e["rating"])
@@ -48,51 +51,76 @@ def entry_html(e):
     for t in e.get("topics") or []:
         chips.append('<span class="ed-chip ed-chip-topic">%s</span>' % esc(t.replace("-", " ")))
     return (
-        '<article class="%s" data-year="%s" data-tier="%s" data-rel="%s">'
+        '<article class="%s" id="%s" data-year="%s" data-tier="%s" data-rel="%s">'
         '<h3 class="ed-title"><a href="%s" target="_blank" rel="noopener noreferrer">%s</a></h3>'
         '<p class="ed-meta"><span class="ed-date">%s</span>%s</p>'
         '<p class="ed-take">%s</p>'
         "</article>"
-    ) % (cls, yr, tier, e["rating"], esc(e["url"]), esc(e["title"]), esc(e["date"]), "".join(chips), esc(e["takeaway"]))
+    ) % (cls, eid, yr, tier, e["rating"], esc(e["url"]), esc(e["title"]), esc(e["date"]), "".join(chips), esc(e["takeaway"]))
 
 
 def build_body():
     n_written = sum(1 for e in E if e["tier"] == "written")
     years = sorted({year(e["date"]) for e in E}, reverse=True)
     out = []
+    out.append('<div class="ed-head">')
+    out.append(jump_html("ed", [("#ed-filters", "Filters and search"), ("#ed-index", "Document types"), ("#ed-groups", "The documents"), ("#ed-sources-note", "Sources")]))
     out.append('<div class="ed-intro">')
     out.append('<p>Every document the European Data Protection Board has published, %d of them as of %s, with one takeaway each. For %d documents the takeaway is written from the document itself: what it establishes, who it binds and what to do about it. For the remaining %d, which are approvals of binding corporate rules, accreditation requirements, national DPIA lists, certification criteria, institutional reports and the Board\'s own procedures, a one-line description says what the document is so it can be ruled in or out in a second.</p>' % (len(E), DATE, n_written, len(E) - n_written))
     out.append('<p>Two limits, stated up front. The choice of which documents earned a written takeaway follows the topics of this site (privacy operations, the AI Act, assessment tools), not the document\'s importance in general. And a takeaway is a reading aid, not a substitute: every entry links to the EDPB page, and the document governs where the two differ. Dates are the publication dates shown in the EDPB listing. Guidelines still at consultation stage appear on the EDPB consultations page and are listed here only once the documents listing carries a version.</p>')
-    out.append('<p class="ed-privacy">Filters and search run in your browser. Nothing you type is sent anywhere.</p>')
+    out.append('<p class="ed-privacy">Filters and search run in your browser. Nothing you type is sent anywhere. Every entry links to the EDPB page it describes.</p>')
     out.append("</div>")
 
     # filter bar
-    out.append('<div class="ed-filters" role="search">')
+    out.append('<div class="ed-filters" id="ed-filters" role="search">')
     out.append('<label>Search <input type="text" id="ed-q" placeholder="title, takeaway or topic" autocomplete="off"></label>')
     out.append('<label>Type <select id="ed-type"><option value="">All types</option>%s</select></label>' % "".join('<option value="%s">%s</option>' % (esc(g), esc(g)) for g in GROUPS))
     out.append('<label>Year <select id="ed-year"><option value="">All years</option>%s</select></label>' % "".join('<option value="%s">%s</option>' % (y, y) for y in years if y))
     out.append('<label>Show <select id="ed-tier"><option value="">Everything</option><option value="written">Written takeaways only</option><option value="R">Directly relevant to this site</option></select></label>')
-    out.append('<p class="ed-count" id="ed-count" aria-live="polite"></p>')
+    out.append(results_html("ed", [
+        '<strong>Search</strong> matches any text in an entry: title, date, takeaway or description, chips. Type a word, a topic or a document number such as "01/2024". Ctrl+K puts the cursor here from anywhere on the page.',
+        '<strong>Type</strong> limits the list to one document type, the same groups as the side contents.',
+        '<strong>Year</strong> shows the documents published in that year, by the date on the EDPB listing.',
+        '<strong>Show</strong> narrows to the %d documents with a takeaway written from the document itself, or to the documents rated directly relevant to this site\'s topics (privacy operations, the AI Act, assessment tools).' % n_written,
+        'Filters combine: an entry must satisfy every active filter. The count line says how many match; <em>Go to first result</em> scrolls to the first match and the list under it links the first ten. Types with no match disappear. <em>Clear filters</em> resets everything. Clicking an entry in the side contents that the filters hide also clears them.',
+    ]))
     out.append("</div>")
 
     # index
-    out.append('<p class="ed-index-label">Jump to a type:</p><ul class="ed-index">')
+    out.append('<p class="ed-index-label" id="ed-index">Jump to a type:</p><ul class="ed-index">')
     for g, ts in GROUPS.items():
         n = sum(1 for e in E if e["type"] in ts)
         out.append('<li><a href="#%s">%s <span class="ed-n">%d</span></a></li>' % (slug(g), esc(g), n))
     out.append("</ul>")
 
-    # groups
-    out.append('<div class="ed-groups">')
+    out.append("</div>")
+
+    # side contents and groups
+    blocks = []
+    groups_html = ['<div class="ed-groups" id="ed-groups">']
+    n = 0
     for g, ts in GROUPS.items():
         items = [e for e in E if e["type"] in ts]
         items.sort(key=lambda e: (-int(year(e["date"]) or 0), e["title"]))
         nw = sum(1 for e in items if e["tier"] == "written")
-        out.append('<details class="ed-group" id="%s" open><summary><span class="ed-group-name">%s</span><span class="ed-group-count" data-total="%d">%d documents, %d written</span></summary><div class="ed-group-body">' % (slug(g), esc(g), len(items), len(items), nw))
+        groups_html.append('<details class="ed-group" id="%s" open><summary><span class="ed-group-name">%s</span><span class="ed-group-count" data-total="%d">%d documents, %d written</span></summary><div class="ed-group-body">' % (slug(g), esc(g), len(items), len(items), nw))
+        by_year = OrderedDict()
         for e in items:
-            out.append(entry_html(e))
-        out.append("</div></details>")
-    out.append("</div>")
+            n += 1
+            eid = "ed-d%03d" % n
+            groups_html.append(entry_html(e, eid))
+            by_year.setdefault(year(e["date"]) or "undated", []).append((eid, e["title"], e["url"]))
+        groups_html.append("</div></details>")
+        subs = [{"key": "%s-%s" % (slug(g)[3:], y), "label": y, "range": "%d" % len(v), "title": "", "items": v} for y, v in by_year.items()]
+        blocks.append({"key": slug(g)[3:], "label": g, "range": "%d" % len(items), "title": "%d with a written takeaway" % nw if nw else "one-line descriptions", "group_id": slug(g), "subs": subs})
+    groups_html.append("</div>")
+    groups_html.append('<p class="ed-sources-note" id="ed-sources-note">Sources: every entry links to its page on the EDPB website, which is the source for the title, date and document. The inventory CSV and the printable digest in the site\'s outputs folder list all %d with a numbered source. Snapshot %s.</p>' % (len(E), DATE))
+    out.append('<div class="ed-cols">')
+    out.append(toc_html("ed", blocks, views=("Types", "All documents"), overview_href="#ed-filters", overview_label="Filters and search", group_link="Jump to this type"))
+    out.append('<div class="ed-main">')
+    out.extend(groups_html)
+    out.append("</div></div>")
+    out.append(top_button("ed"))
     return "\n".join(out)
 
 
@@ -103,8 +131,7 @@ def slug(s):
 JS = r"""
 (function () {
 	var q = document.getElementById('ed-q'), t = document.getElementById('ed-type'),
-	    y = document.getElementById('ed-year'), tier = document.getElementById('ed-tier'),
-	    count = document.getElementById('ed-count');
+	    y = document.getElementById('ed-year'), tier = document.getElementById('ed-tier');
 	var groups = Array.prototype.slice.call(document.querySelectorAll('.ed-group'));
 	var total = document.querySelectorAll('.ed-entry').length;
 	function apply() {
@@ -122,20 +149,14 @@ JS = r"""
 			});
 			g.hidden = visibleInGroup === 0;
 			var c = g.querySelector('.ed-group-count');
-			if (visibleInGroup !== parseInt(c.getAttribute('data-total'), 10)) {
-				c.textContent = visibleInGroup + ' of ' + c.getAttribute('data-total') + ' shown';
-			} else {
-				c.textContent = c.getAttribute('data-default');
-			}
+			c.textContent = visibleInGroup === parseInt(c.getAttribute('data-total'), 10) ? c.getAttribute('data-default') : visibleInGroup + ' of ' + c.getAttribute('data-total') + ' shown';
 			shown += visibleInGroup;
 		});
-		count.textContent = 'Showing ' + shown + ' of ' + total + ' documents.';
+		window.DigestNav.afterApply(shown, total, !!(qq || tt || yy || tr), '');
 	}
-	groups.forEach(function (g) {
-		var c = g.querySelector('.ed-group-count');
-		c.setAttribute('data-default', c.textContent);
-	});
+	groups.forEach(function (g) { var c = g.querySelector('.ed-group-count'); c.setAttribute('data-default', c.textContent); });
 	[q, t, y, tier].forEach(function (el) { el.addEventListener('input', apply); el.addEventListener('change', apply); });
+	window.DigestNav.onClear = function () { q.value = ''; t.value = ''; y.value = ''; tier.value = ''; apply(); };
 	apply();
 })();
 """
@@ -143,10 +164,7 @@ JS = r"""
 CSS = """/* EDPB digest: scoped styles, matches the site's navy/blue palette and the
    Practical Privacy accordion pattern. */
 
-#edpb-digest {
-	max-width: 52em;
-	margin: 0;
-}
+#edpb-digest { margin: 0; }
 
 .ed-intro p { margin-bottom: 1em; }
 .ed-privacy { color: rgba(255,255,255,0.55); font-size: 0.9em; }
@@ -319,7 +337,9 @@ HEAD = """<!DOCTYPE HTML>
 						<li class="assessment-menu"><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a><ul class="assessment-submenu"><li><a href="privacy-ai-assessment.html#tool-privacy">Privacy Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-dpia">Full DPIA</a></li><li><a href="privacy-ai-assessment.html#tool-lia">Legitimate Interest Test</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-incident">Incident &amp; Breach Severity</a></li><li><a href="privacy-ai-assessment.html#tool-tpsa">Third-Party Security</a></li></ul></li>
 						<li><a href="practical-privacy.html">Practical Privacy</a></li>
 						<li><a href="practical-ai-act-advice.html">AI Act Advice</a></li>
+						<li><a href="ai-act-digest.html">AI Act Digest</a></li>
 						<li><a href="edpb-digest.html" class="active">EDPB Digest</a></li>
+						<li><a href="cookie-digest.html">Cookie Digest</a></li>
 						<li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li>
 					</ul>
 				</nav>
@@ -370,12 +390,13 @@ TAIL = """
 
 if __name__ == "__main__":
     body = build_body()
-    page = HEAD % (len(E), DATE) + body + TAIL % JS
+    page = HEAD % (len(E), DATE) + body + TAIL % (nav_js("ed", "documents") + JS)
+    CSS_OUT = CSS + nav_css("ed", "edpb-digest")
     page = page.replace("\r\n", "\n")
     outdir = "/mnt/user-data/outputs/site"
     os.makedirs(outdir + "/pages/edpb-digest", exist_ok=True)
     open(outdir + "/edpb-digest.html", "w", encoding="utf-8", newline="\n").write(page)
-    open(outdir + "/pages/edpb-digest/edpb-digest.css", "w", encoding="utf-8", newline="\n").write(CSS)
-    print("html", len(page.encode("utf-8")), "bytes; css", len(CSS.encode("utf-8")), "bytes")
-    print("em dashes:", page.count("—") + CSS.count("—"))
+    open(outdir + "/pages/edpb-digest/edpb-digest.css", "w", encoding="utf-8", newline="\n").write(CSS_OUT)
+    print("html", len(page.encode("utf-8")), "bytes; css", len(CSS_OUT.encode("utf-8")), "bytes")
+    print("em dashes:", page.count("\u2014") + CSS_OUT.count("\u2014"))
     print("entries:", page.count('<article class="ed-entry'))

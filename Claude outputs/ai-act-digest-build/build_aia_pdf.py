@@ -4,7 +4,8 @@ article, Part 2 the guidance and implementation corpus, numbered sources."""
 import json, html, re, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from build_aia_page import ARTS, CORPUS, CORPUS_GROUPS, chapters, BIND_LABEL, DATE, date_sort_key
+from build_aia_page import ARTS, CORPUS, CORPUS_GROUPS, chapters, BIND_LABEL, DATE, date_sort_key, ch_short, art_range, sections_of, sum_links
+from aia_extras import SUMMARY
 esc = lambda s: html.escape(s, quote=False)
 
 order = []
@@ -40,7 +41,22 @@ EXTRA_CSS = """
 .partdiv { break-before: page; }
 .partdiv h1 { string-set: parttitle content(text), sectitle ""; }
 .partdiv .lede { font-size: 11pt; }
+.hls p, .hls li { font-size: 9.6pt; }
+.hls ul { padding-left: 5mm; }
 """
+
+
+def summary_section():
+    b = ['<section class="front"><h1 id="summary">High-level summary</h1><p class="lede">The Act in ten short sections, written from the digest entries and current to the Omnibus. Article numbers point to the entries in Part 1.</p><div class="hls">']
+    for head, sub, blocks in SUMMARY:
+        b.append('<h2 class="sub">%s</h2>' % esc(head))
+        for blk in blocks:
+            if isinstance(blk, list):
+                b.append("<ul>" + "".join("<li>%s</li>" % sum_links(x, "pdf") for x in blk) + "</ul>")
+            else:
+                b.append("<p>%s</p>" % sum_links(blk, "pdf"))
+    b.append("</div></section>")
+    return "".join(b)
 
 
 def short_ref(a):
@@ -60,8 +76,8 @@ def compact_refs(items):
             out.extend("Art %d" % n for n in run)
         run.clear()
     for a in items:
-        if a["id"].startswith("art"):
-            n = int(a["id"].split("-")[1])
+        if a["id"].startswith("art") and not a["suffix"]:
+            n = a["num"]
             if run and n == run[-1] + 1:
                 run.append(n)
             else:
@@ -69,7 +85,7 @@ def compact_refs(items):
                 run.append(n)
         else:
             flush()
-            out.append(a["number"])
+            out.append(("Art %s" % a["short"]) if a["id"].startswith("art") else a["number"])
     flush()
     return ", ".join(out)
 
@@ -104,6 +120,19 @@ def doc_entry(c):
         esc(c["title"]), num[id(c)], esc(c["date"]), esc(c["issuer"]), (" &middot; " + esc(arts)) if arts else "", tags, esc(c["takeaway"]))
 
 
+def structure_table():
+    b = ['<table class="glance"><thead><tr><th>Chapter</th><th>Title</th><th>Provisions</th><th>Sections</th></tr></thead><tbody>']
+    for ch, items in chapters.items():
+        if ch == "Annexes":
+            b.append('<tr><td class="n">Annexes</td><td class="arts">I to %s</td><td class="n">%d</td><td class="arts"></td></tr>' % (esc(items[-1]["short"]), len(items)))
+            continue
+        lab, title = ch_short(ch)
+        secs = [re.sub(r"^Section \d+:\s*", "", sname) for sname, _ in sections_of(items) if sname]
+        b.append('<tr><td class="n">%s</td><td class="arts">%s</td><td class="n">%s (%d)</td><td class="arts">%s</td></tr>' % (esc(lab), esc(title), esc(art_range(items).replace("\u2013", " to ").replace("Arts. ", "").replace("Art. ", "")), len(items), esc("; ".join(secs))))
+    b.append("</tbody></table>")
+    return "".join(b)
+
+
 def glance_table():
     """Application dates at a glance: one row per date, the provisions it covers."""
     rows = {}
@@ -135,9 +164,11 @@ def build():
              '<p class="sub">Regulation (EU) 2024/1689 as amended by Regulation (EU) 2026/1744, article by article, and the guidance and implementation corpus around it, as of %s. One takeaway per provision and per document.</p>'
              '<div class="coverstats"><div><span class="n">%d</span><span class="l">articles</span></div><div><span class="n">%d</span><span class="l">annexes</span></div><div><span class="n">%d</span><span class="l">provisions changed by the Omnibus</span></div><div><span class="n">%d</span><span class="l">corpus documents</span></div></div>'
              '<p class="covernote">Reading aid, not legal advice. The consolidated text governs. Every entry carries a numbered source that resolves to the primary page at the end.</p></section>' % (DATE, n_arts, n_ann, n_omni, len(CORPUS)))
+    b.append(summary_section())
     b.append('<section class="front"><h1 id="how">How to read this</h1>'
-             '<p class="lede">Part 1 walks the Regulation in its own order, chapter by chapter, then the thirteen annexes. Each entry states what the provision establishes, who it binds and what a practitioner does with it, followed by its date of application under Article 113, the roles it binds, the recitals that explain it, and, where Regulation (EU) 2026/1744 touched it, a note on what changed. Part 2 covers the corpus around the Act: the amending regulation, the Commission guidelines, codes of practice, templates and Q&amp;As, the standardisation programme, the EDPB and EDPS positions including Opinion 28/2024 on AI models, the national implementing laws and the reference tools. Each entry states the document\'s legal status, the articles it interprets and what to do with it.</p>'
+             '<p class="lede">Part 1 walks the Regulation in its own order, chapter by chapter, then the fourteen annexes. Each entry states what the provision establishes, who it binds and what a practitioner does with it, followed by its date of application under Article 113, the roles it binds, the recitals that explain it, and, where Regulation (EU) 2026/1744 touched it, a note on what changed. Part 2 covers the corpus around the Act: the amending regulation, the Commission guidelines, codes of practice, templates and Q&amp;As, the standardisation programme, the EDPB and EDPS positions including Opinion 28/2024 on AI models, the national implementing laws and the reference tools. Each entry states the document\'s legal status, the articles it interprets and what to do with it.</p>'
              '<p>Application dates are those the consolidated text carries after the Digital Omnibus on AI, in force since 27 July 2026: the high-risk chapter applies from 2 December 2027 for Annex III systems and 2 August 2028 for Annex I systems, the Article 50 transparency duties for systems placed on the market before 2 August 2026 apply from 2 December 2026, and the two new prohibitions in Article 5(1)(ba) and (bb) apply from 2 December 2026. Guidance marked draft or consultation is not final. Where a page could not be reached the entry is marked. The number in brackets is the source number; the list at the end gives the URL for every provision and document.</p>'
+             '<h2 class="sub">Structure of the Act</h2>' + structure_table() +
              '<h2 class="sub">Application dates at a glance</h2>' + glance_table() +
              '<h2 class="sub">Provisions changed by the Omnibus</h2><p class="groupnote">%d provisions. The full change note sits with each entry.</p>' % n_omni + omni_table() +
              '<h2 class="sub">Contents</h2><ul class="legend">')
@@ -182,4 +213,4 @@ if __name__ == "__main__":
     from weasyprint import HTML
     out = "/mnt/user-data/outputs/ai-act-digest-2026-09-19.pdf"
     HTML(p).write_pdf(out)
-    print("pdf", out, os.path.getsize(out), "em dashes:", open(p, encoding="utf-8").read().count("—"))
+    print("pdf", out, os.path.getsize(out), "em dashes:", open(p, encoding="utf-8").read().count("\u2014"))

@@ -342,7 +342,10 @@
 		function fit() {
 			close();
 			header.classList.remove('is-collapsed');
-			if (!fitsOnOneRow()) header.classList.add('is-collapsed');
+			/* Phones always get the collapsed panel, even when the row would fit:
+			   the category dropdowns open on hover, which a touch screen has not,
+			   and the panel lists their pages inline instead. */
+			if (!fitsOnOneRow() || window.matchMedia('(max-width: 736px)').matches) header.classList.add('is-collapsed');
 		}
 
 		fit();

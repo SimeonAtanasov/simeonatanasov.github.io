@@ -27,14 +27,35 @@ nav collapse and the assessment dropdown).
 
 | Page | What it is | Code |
 |---|---|---|
-| `practical-privacy.html` | Practical Privacy: 18 recurring situations (surveillance, offboarding, mailbox access, meetings, remote work, surveys, talent data, rights requests, sensitive data, consent, secondary use, external requests, AI, regulators, digital products, breach response, records, marketing), each with key actions, never-do list and worked examples. | `pages/privacy-ai-assessment/practical-privacy.css` |
-| `practical-ai-act-advice.html` | Practical AI Act Advice: 13 sections from scope and prohibitions through provider and deployer duties, GPAI, conformity, governance, then program building, risk questions, vendor vetting, literacy and copyright. Needs the September 2026 updates listed in `Claude outputs/site-verification-report-2026-09-19.pdf`. | `pages/privacy-ai-assessment/practical-ai-act.css` |
+| `practical-privacy.html` | Practical Privacy: 18 recurring situations (surveillance, offboarding, mailbox access, meetings, remote work, surveys, talent data, rights requests, sensitive data, consent, secondary use, external requests, AI, regulators, digital products, breach response, records, marketing), each with key actions, never-do list and worked examples. Side contents (each situation with its parts), search with results, on-this-page bar, Top button. | `pages/privacy-ai-assessment/practical-privacy.css`; navigation added by `Claude outputs/site-nav-build/apply_nav.py` |
+| `practical-ai-act-advice.html` | Practical AI Act Advice: 13 sections from scope and prohibitions through provider and deployer duties, GPAI, conformity, governance, then program building, risk questions, vendor vetting, literacy and copyright. Updated for Regulation (EU) 2026/1744 on 19 September 2026. Side contents (each section with its parts), search with results, on-this-page bar, Top button. | `pages/privacy-ai-assessment/practical-ai-act.css`; navigation added by `Claude outputs/site-nav-build/apply_nav.py` |
 | `edpb-digest.html` | EDPB Digest: every document on the EDPB listing (532 as of 19 September 2026) with one takeaway each, 107 written from the document and 425 one-line descriptions; filters by type, year and relevance. | `pages/edpb-digest/edpb-digest.css`; generated from `Claude outputs/edpb-digest-build/` |
 | `cookie-digest.html` | Cookie Compliance Digest: 259 laws, regulator guidance documents, court decisions, enforcement actions and standards on cookies and tracking across 60 jurisdictions (EU, member states, UK, Switzerland, US federal and states, rest of world, standards), each with a practitioner takeaway; filters by jurisdiction, type and year. | `pages/cookie-digest/cookie-digest.css`; generated from `Claude outputs/cookie-digest-build/` |
-| `ai-act-digest.html` | AI Act Digest in two parts. Part 1: Regulation (EU) 2024/1689 as amended by Regulation (EU) 2026/1744, all 113 articles and 13 annexes by chapter, each with a takeaway, date of application, roles bound, recitals and a note on the 36 provisions the Omnibus changed. Part 2: 57 guidance and implementation documents (Commission guidelines, codes, templates, Q&As, standards, EDPB and EDPS including Opinion 28/2024, national laws, reference tools). Filters by part, role, application date, Omnibus flag and search. | `pages/ai-act-digest/ai-act-digest.css`; generated from `Claude outputs/ai-act-digest-build/` |
+| `ai-act-digest.html` | AI Act Digest in two parts. Part 1: Regulation (EU) 2024/1689 as amended by Regulation (EU) 2026/1744, all 119 articles (including 4a, 60a and 75a to 75d) and 14 annexes by chapter, each with a takeaway, date of application, roles bound, recitals and a note on the 43 provisions the Omnibus changed. Part 2: 57 guidance and implementation documents (Commission guidelines, codes, templates, Q&As, standards, EDPB and EDPS including Opinion 28/2024, national laws, reference tools). A high-level summary of the Act in ten sections, an obligations checker (role, scope, prohibitions, Annex I and III, GPAI, Article 50; result with the articles to read and the dates), a sticky side contents (chapters with sections, or all articles flat; a drawer on small screens), a Structure of the Act overview with a 180-recital grid that filters the provisions citing a recital, plus filters by part, role, application date, Omnibus flag and search. | `pages/ai-act-digest/ai-act-digest.css`; generated from `Claude outputs/ai-act-digest-build/` |
 
-The three digests are on disk but not yet linked from the other pages' header nav or from
-`sitemap.xml`. Each digest's own nav carries links to the other two.
+**Header nav (19 September 2026).** Every page except the home page carries the same
+four-item header: Home, Privacy, AI, Cookie Compliance. The three topics are dropdowns
+(the `assessment-menu` / `assessment-submenu` classes in `main.css`, reused as they are):
+Privacy holds Practical Privacy, Privacy & AI Assessment, GDPR Readiness, EDPB Digest, GDPR
+Fines Dashboard and Risk Matrix; AI holds AI Act Advice, AI Act Digest and AI Risk Assessment;
+Cookie Compliance holds Cookie Digest and Cookie Scanner. The current page's topic and entry
+are marked active. Below 736px `main.js` now always collapses the header into the Menu
+panel, where each topic lists its pages inline, because the dropdowns open on hover. The
+Asteroids game is reachable from the home page Portfolio menu and the sitemap only. The home
+page sidebar's Portfolio submenu is grouped the same way (Privacy, AI, Cookie Compliance,
+Other) with the three digests added; the page sections themselves are unchanged.
+
+`assets/js/back-to-top.js` and `assets/css/back-to-top.css` add a Top button to the three
+long tool pages (GDPR Readiness, Privacy & AI Assessment, Risk Matrix); the digests and
+advice pages carry their own. Short pages (home, dashboard, scanner, game, legal) have none.
+
+The three digests and the two advice pages share one navigation pattern: an on-this-page bar, a sticky side contents
+(grouped, with an all-documents view, scrollspy, copy-link and open-source actions, a drawer
+on small screens), a filters box with a first-result button, a list of the first ten matches
+and an explainer, and a Top button. The EDPB and cookie pages take it from
+`digest_nav.py` in their build folders; the AI Act page carries its own copy. All three
+digests are in the header nav, the home page Portfolio menu and `sitemap.xml`; they are
+not in the `sw.js` precache (deliberately, given their size).
 
 ### Home, legal and leftovers
 
@@ -64,10 +85,11 @@ Non-site deliverables. Nothing in here is referenced by any page.
 | `edpb-documents-inventory-2026-09-19.csv` | All 532 EDPB documents with type, date, relevance rating (R / B / N), where each lands on the site, and URL. Filterable. | You want to know whether an EDPB document matters to a page. |
 | `edpb-digest-2026-09-19.pdf` | Print version of the EDPB Digest page, 108 pages, one numbered source per document. | You want to read the digest on paper. |
 | `cookie-compliance-digest-2026-09-19.pdf` | Print version of the Cookie Compliance Digest, 71 pages, one numbered source per document. | Same, for cookies. |
-| `ai-act-digest-2026-09-19.pdf` | Print version of the AI Act Digest, 71 pages: application dates at a glance, the Omnibus change table, then every provision and document with a numbered source. | Same, for the AI Act. |
+| `ai-act-digest-2026-09-19-v2.pdf` | Print version of the AI Act Digest, 79 pages: high-level summary, structure of the Act, application dates at a glance, the Omnibus change table, then every provision and document with a numbered source. `ai-act-digest-2026-09-19.pdf` is the earlier 71-page build without the Omnibus-inserted articles; delete it. | Same, for the AI Act. |
 | `edpb-digest-build/` | Data and scripts that generate `edpb-digest.html`: the scraped inventory, the ratings script, the 107 written takeaways, the hand-written and templated one-liners, the page and PDF renderers. README inside. | You need to add EDPB documents or regenerate the page. |
 | `cookie-digest-build/` | Data and scripts that generate `cookie-digest.html`: six research briefs, six raw cluster outputs, the merged data set, the page and PDF renderers. README inside. | You need to add or correct a cookie entry (17 entries rest on secondary sources and are marked). |
-| `ai-act-digest-build/` | Data and scripts that generate `ai-act-digest.html`: five research briefs, the 126 provision entries and 57 corpus entries as JSON, the merged data set, the page and PDF renderers, the render test. README inside. | You need to add or correct an AI Act entry (5 corpus entries could not be fetched and are marked). |
+| `ai-act-digest-build/` | Data and scripts that generate `ai-act-digest.html`: five research briefs, the 133 provision entries and 57 corpus entries as JSON, the merged data set, the page and PDF renderers, the render test. README inside. | You need to add or correct an AI Act entry (5 corpus entries could not be fetched and are marked). |
+| `site-nav-build/` | `digest_nav.py` (the shared side contents, results box, jump bar and Top button used by the digests) and `apply_nav.py` (adds them to the two advice pages without touching their copy). README inside. | You change the navigation pattern or rebuild an advice page after editing its text. |
 | `risk-matrix-desktop.png`, `risk-matrix-phone.png` | Screenshots from the risk matrix layout work. | Reference only. |
 
 ## Working notes kept outside the repo

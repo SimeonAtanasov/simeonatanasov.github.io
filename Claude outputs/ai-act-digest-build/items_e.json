@@ -1,0 +1,162 @@
+[
+ {
+  "id": "art-4a",
+  "number": "Article 4a",
+  "title": "Processing of special categories of personal data for bias detection and correction",
+  "chapter": "Chapter I: General Provisions",
+  "section": "",
+  "takeaway": "Article 4a lets providers of high-risk AI systems process special categories of personal data, for bias detection and correction, under six cumulative conditions (paragraph 1, points (a) to (f)): other data including synthetic or anonymised data cannot do the job, technical limits on re-use and state-of-the-art security measures apply, access is strictly controlled and documented, the data is not passed to other parties, it is deleted once the bias is corrected or the retention period ends, and the processing record explains the necessity. Paragraph 2 extends the permission, under the same safeguards, to providers and deployers of other AI systems and deployers of high-risk systems, where strictly necessary to address biases affecting health and safety, fundamental rights or prohibited discrimination. It imposes no duty to detect bias.",
+  "applies_from": "27 July 2026",
+  "omnibus": "Inserted by Regulation (EU) 2026/1744: it moves the special category data permission out of Article 10(5) into a general provision and extends it to providers and deployers of non-high-risk systems and to deployers of high-risk systems.",
+  "binds": [
+   "provider",
+   "deployer"
+  ],
+  "recitals": [],
+  "topics": [
+   "data",
+   "provider-duties",
+   "deployer-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/4a/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-60a",
+  "number": "Article 60a",
+  "title": "Testing of high-risk AI systems covered by Union harmonisation legislation listed in Section B of Annex I in real-world conditions outside AI regulatory sandboxes",
+  "chapter": "Chapter VI: Measures in Support of Innovation",
+  "section": "",
+  "takeaway": "Article 60a lets Member States allow providers or prospective providers of AI-enabled products under Annex I Section B legislation to test high-risk AI systems in real-world conditions outside sandboxes, to verify conformity with Articles 8 to 15 (paragraph 1). A Member State that opts in adopts a testing framework, alone or jointly, notifies the Commission before applying it and makes its authorities cooperate to remove practical obstacles (paragraphs 2 to 4). Each framework requires a mandatory testing plan agreed with the national competent or market surveillance authority, compliance with Article 60(2), (3), (4)(d) to (j) and (5) to (9), governance and accountability arrangements and a high level of protection of health, safety and fundamental rights (paragraph 5). Testing is not placing on the market, and sectoral legislation prevails (paragraph 6).",
+  "applies_from": "27 July 2026",
+  "omnibus": "Inserted by Regulation (EU) 2026/1744: it creates an optional national real-world testing route for Annex I Section B products, which Article 2(2) now lists among the few provisions applying to those products.",
+  "binds": [
+   "provider",
+   "authority",
+   "commission"
+  ],
+  "recitals": [],
+  "topics": [
+   "sandboxes",
+   "conformity",
+   "scope"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/60a/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-75a",
+  "number": "Article 75a",
+  "title": "Supervisory and enforcement powers of the AI Office",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "Article 75a gives the AI Office, for the operators it supervises under Article 75(1), all the powers of a market surveillance authority under Section 3 and Articles 14(4) and 16(3) of Regulation (EU) 2019/1020, plus recovery of its full enforcement costs from non-compliant operators (paragraph 1). It may open an investigation on reasonable grounds or after an Article 85 complaint (paragraph 2), request information by simple request or decision, stating the Article 99(5) fines for incorrect answers (paragraph 3), and conduct remote or on-site inspections, entering premises, copying records and sealing premises, with judicial authorisation where national law requires it (paragraph 4). National authorities may investigate on its behalf, it may order access to systems and appoint external experts, and collected information serves only the Regulation (paragraphs 5 to 8).",
+  "applies_from": "27 July 2026",
+  "omnibus": "Inserted by Regulation (EU) 2026/1744: it gives the AI Office direct investigation, information request and inspection powers over the operators assigned to it by Article 75(1), mirroring the powers of national market surveillance authorities.",
+  "binds": [
+   "commission",
+   "provider",
+   "deployer"
+  ],
+  "recitals": [],
+  "topics": [
+   "enforcement",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/75a/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-75b",
+  "number": "Article 75b",
+  "title": "Commitments",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "Article 75b lets an operator under Article 75a(2) proceedings offer commitments to bring itself into compliance, and lets the AI Office make those commitments binding by decision and declare that there are no further grounds for action. The AI Office may reopen the proceedings, on request or on its own initiative, where the facts have materially changed, the operator acts contrary to its commitments, or the decision rested on incomplete, incorrect or misleading information from the operator (points (a) to (c)). Where the commitments cannot ensure effective compliance, the AI Office rejects them in a reasoned decision when closing the proceedings. Operators should draft commitments that are verifiable, because breach triggers fines and periodic penalty payments under Article 75c.",
+  "applies_from": "27 July 2026",
+  "omnibus": "Inserted by Regulation (EU) 2026/1744: it adds a competition-law style commitments procedure allowing the AI Office to close an investigation by making an operator's offered remedies binding.",
+  "binds": [
+   "commission",
+   "provider",
+   "deployer"
+  ],
+  "recitals": [],
+  "topics": [
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/75b/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-75c",
+  "number": "Article 75c",
+  "title": "Non-compliance, fines and periodic penalty payments",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "Article 75c sets the AI Office's sanction procedure for Article 75(1) operators. After preliminary findings it adopts a non-compliance decision ordering measures within a reasonable period and may hold a structured dialogue in which Article 75b commitments are offered (paragraphs 1 to 3). The decision may carry administrative fines under Article 99(3) to (7) for infringing the Regulation, ignoring measures under Articles 14(4) or 16(3) of Regulation (EU) 2019/1020 or Article 75a, or breaching commitments, and misleading information attracts Article 99(5) fines (paragraph 4). Periodic penalty payments of up to 5% of average daily income or worldwide annual turnover per day compel cooperation and compliance (paragraph 5). The Court of Justice has unlimited jurisdiction, fines go to the Union budget and a five-year limitation period applies (paragraphs 6 to 8).",
+  "applies_from": "27 July 2026",
+  "omnibus": "Inserted by Regulation (EU) 2026/1744: it gives the AI Office its own power to find non-compliance, impose Article 99 fines and levy periodic penalty payments of up to 5% of daily turnover on the operators it supervises.",
+  "binds": [
+   "commission",
+   "provider",
+   "deployer"
+  ],
+  "recitals": [],
+  "topics": [
+   "enforcement",
+   "penalties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/75c/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-75d",
+  "number": "Article 75d",
+  "title": "Safeguards and further specification",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "Article 75d supplies the procedural safeguards for operators facing AI Office enforcement under Article 75(1). Article 18 of Regulation (EU) 2019/1020 applies mutatis mutandis (paragraph 1). Rights of defence and access to the file are fully respected: before an Article 75c(1) decision the operator gets access to the AI Office file under negotiated disclosure terms that protect business secrets, with the AI Office fixing the terms if the parties disagree, while confidential information, internal documents and correspondence with national authorities stay outside the right of access (paragraph 2). The Commission may adopt implementing acts on file access arrangements (paragraph 3). The AI Office publishes its Article 75b and 75c decisions, naming the parties and stating the main content and any penalties, with regard to confidential information (paragraph 4).",
+  "applies_from": "27 July 2026",
+  "omnibus": "Inserted by Regulation (EU) 2026/1744: it adds rights of defence, negotiated access to the file, an implementing act power and mandatory publication of AI Office decisions to the new direct enforcement regime.",
+  "binds": [
+   "commission",
+   "provider",
+   "deployer"
+  ],
+  "recitals": [],
+  "topics": [
+   "enforcement",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/75d/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "annex-14",
+  "number": "Annex XIV",
+  "title": "The list of codes, categories and corresponding types of AI systems for the purpose of the notification procedure referred to in Article 30 specifying the scope of the designation as notified bodies",
+  "chapter": "Annexes",
+  "section": "",
+  "takeaway": "Annex XIV supplies the codes that fix the scope of a notified body's designation under Article 30: a body assesses only the types of AI system in its designation (section 1). Section 2 lists product and use categories: AIP 0102 to AIP 0112 for Annex I Section A products in points 2 to 12, and AIB 0201 to AIB 0203 for remote biometric identification, biometric categorisation and emotion recognition. Section 3 lists technology codes: AIH 0101 for symbolic, expert and knowledge-based systems, AIH 0201 to AIH 0205 for machine learning on structured, signal, text and image data, AIH 0301 for generative AI systems including those built on general-purpose AI models, and AIH 0401 for emerging technologies including agentic AI. Article 29 applicants must use these codes (section 4).",
+  "applies_from": "2 August 2026",
+  "omnibus": "Inserted by Regulation (EU) 2026/1744: it adds a standard code list (AIP, AIB and AIH codes) that notified bodies must use to define the product, biometric and technology scope of their designation.",
+  "binds": [
+   "notified-body",
+   "authority"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "standards"
+  ],
+  "url": "https://artificialintelligenceact.eu/annex/14/",
+  "fetched": true,
+  "source": "page"
+ }
+]

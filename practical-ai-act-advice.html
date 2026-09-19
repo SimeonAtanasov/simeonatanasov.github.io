@@ -27,14 +27,9 @@
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="power-bi.html">Power BI</a></li>
-						<li><a href="my-asteroids-game.html">My Asteroids Game</a></li>
-						<li><a href="risk-matrix-original.html">Risk Matrix</a></li>
-						<li><a href="gdpr-readiness.html">GDPR Readiness</a></li>
-						<li class="assessment-menu"><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a><ul class="assessment-submenu"><li><a href="privacy-ai-assessment.html#tool-privacy">Privacy Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-dpia">Full DPIA</a></li><li><a href="privacy-ai-assessment.html#tool-lia">Legitimate Interest Test</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-incident">Incident &amp; Breach Severity</a></li><li><a href="privacy-ai-assessment.html#tool-tpsa">Third-Party Security</a></li></ul></li>
-						<li><a href="practical-privacy.html">Practical Privacy</a></li>
-						<li><a href="practical-ai-act-advice.html" class="active">AI Act Advice</a></li>
-						<li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li>
+						<li class="assessment-menu"><a href="practical-privacy.html">Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html">Practical Privacy</a></li><li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html">GDPR Readiness</a></li><li><a href="edpb-digest.html">EDPB Digest</a></li><li><a href="power-bi.html">GDPR Fines Dashboard</a></li><li><a href="risk-matrix-original.html">Risk Matrix</a></li></ul></li>
+						<li class="assessment-menu"><a href="practical-ai-act-advice.html" class="active">AI</a><ul class="assessment-submenu"><li><a href="practical-ai-act-advice.html" class="active">AI Act Advice</a></li><li><a href="ai-act-digest.html">AI Act Digest</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li></ul></li>
+						<li class="assessment-menu"><a href="cookie-digest.html">Cookie Compliance</a><ul class="assessment-submenu"><li><a href="cookie-digest.html">Cookie Digest</a></li><li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li></ul></li>
 					</ul>
 				</nav>
 			</header>
@@ -47,10 +42,13 @@
 						<div class="inner">
 							<h1 class="major">Practical AI Act Advice</h1>
 						<section id="practical-ai-act-advice">
-							<div class="aia-intro">
+							<div class="aia-head">
+<nav class="aia-jump" aria-label="On this page"><span class="aia-jump-label">On this page</span><a href="#aia-filters">Search</a><a href="#aia-index">All sections</a><a href="#aia-groups">The sections</a><a href="#aia-sources-note">Sources</a></nav>
+<div class="aia-intro">
 <p>This section distills the EU AI Act into the questions a working practitioner actually needs answered: what applies to me, what do I have to build, and what do I have to go check on other people's systems. It is written as practical orientation, not legal advice, and it is genericized - none of it describes any single organization's actual program. If a specific obligation could change the outcome of a real decision, get that decision checked by counsel who knows your facts.</p>
 							</div>
-							<p class="aia-index-label">Jump to a topic:</p>
+<div class="aia-filters" id="aia-filters" role="search"><label>Search the sections <input type="text" id="aia-q" placeholder="word, topic, situation" autocomplete="off"></label><p class="aia-count" id="aia-count" aria-live="polite"><span id="aia-count-text"></span> <button type="button" class="aia-clear aia-first" id="aia-first" hidden>Go to first result</button> <button type="button" class="aia-clear" id="aia-clear" hidden>Clear filters</button></p><div class="aia-results" id="aia-results" hidden><p class="aia-results-label" id="aia-results-label"></p><ol class="aia-results-list" id="aia-results-list"></ol></div><details class="aia-howto"><summary>How the filters work</summary><ul><li><strong>Search</strong> matches any text in a section: its title, the why-it-matters paragraph, the key actions, the never list and the worked example. Type a word such as "consent", "GPS" or "DPIA". Ctrl+K puts the cursor here from anywhere on the page.</li><li>Matching sections stay in place, the rest hide, and the ones that match open so the text is visible. The count line says how many match; <em>Go to first result</em> scrolls to the first match and the list under it links the first ten. <em>Clear filters</em> shows everything again. Clicking a hidden section in the side contents also clears the search.</li><li>The side contents list every section with its parts (why it matters, key actions, never, worked example); the current one is highlighted as you scroll. Hover an item for a copy-link button; every section and every part has its own link.</li></ul></details></div>
+							<p class="aia-index-label" id="aia-index">Jump to a topic:</p>
 							<ul class="aia-index">
 <li><a href="#aia-scope-territorial-reach-key-definitions">1. Scope, Territorial Reach &amp; Key Definitions</a></li>
 <li><a href="#aia-prohibited-ai-practices">2. Prohibited AI Practices</a></li>
@@ -66,12 +64,16 @@
 <li><a href="#aia-building-ai-literacy-across-an-organization">12. Building AI Literacy Across an Organization</a></li>
 <li><a href="#aia-copyright-generative-ai">13. Copyright &amp; Generative AI</a></li>
 </ul>
-							<div class="aia-accordion">
-						<details class="aia-item" id="aia-scope-territorial-reach-key-definitions">
+							</div>
+<div class="aia-cols">
+<nav class="aia-toc" id="aia-toc" aria-label="Contents"><div class="aia-toc-head"><button type="button" class="aia-toc-search" id="aia-toc-search" title="Jump to search (Ctrl+K)"><i class="fas fa-search"></i><span>Search</span><kbd>Ctrl+K</kbd></button><button type="button" class="aia-toc-close" id="aia-toc-close" aria-label="Close contents"><i class="fas fa-times"></i><span>Close</span></button></div><a class="aia-toc-overview is-active" id="aia-toc-overview-link" href="#aia-filters"><i class="fas fa-th-list"></i>Search</a><div class="aia-toc-items" id="aia-toc-grouped"><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-scope-territorial-reach-key-definitions"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 1</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Scope, Territorial Reach &amp; Key Definitions</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-scope-territorial-reach-key-definitions" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-scope-territorial-reach-key-definitions" data-target="aia-scope-territorial-reach-key-definitions">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-scope-territorial-reach-key-definitions-p1" data-target="aia-scope-territorial-reach-key-definitions-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-scope-territorial-reach-key-definitions-p2" data-target="aia-scope-territorial-reach-key-definitions-p2">What the law requires</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-scope-territorial-reach-key-definitions-p3" data-target="aia-scope-territorial-reach-key-definitions-p3">Practical steps</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-scope-territorial-reach-key-definitions-p4" data-target="aia-scope-territorial-reach-key-definitions-p4">Worked example</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-prohibited-ai-practices"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 2</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Prohibited AI Practices</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-prohibited-ai-practices" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-prohibited-ai-practices" data-target="aia-prohibited-ai-practices">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-prohibited-ai-practices-p1" data-target="aia-prohibited-ai-practices-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-prohibited-ai-practices-p2" data-target="aia-prohibited-ai-practices-p2">What the law requires</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-prohibited-ai-practices-p3" data-target="aia-prohibited-ai-practices-p3">Practical steps</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-prohibited-ai-practices-p4" data-target="aia-prohibited-ai-practices-p4">Worked example</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-high-risk-ai-systems-what-counts"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 3</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">High-Risk AI Systems: What Counts</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-high-risk-ai-systems-what-counts" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-high-risk-ai-systems-what-counts" data-target="aia-high-risk-ai-systems-what-counts">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-high-risk-ai-systems-what-counts-p1" data-target="aia-high-risk-ai-systems-what-counts-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-high-risk-ai-systems-what-counts-p2" data-target="aia-high-risk-ai-systems-what-counts-p2">What the law requires</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-high-risk-ai-systems-what-counts-p3" data-target="aia-high-risk-ai-systems-what-counts-p3">Practical steps</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-obligations-for-ai-providers"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 4</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Obligations for AI Providers</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-obligations-for-ai-providers" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-obligations-for-ai-providers" data-target="aia-obligations-for-ai-providers">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-obligations-for-ai-providers-p1" data-target="aia-obligations-for-ai-providers-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-obligations-for-ai-providers-p2" data-target="aia-obligations-for-ai-providers-p2">What the law requires - provider checklist for high-risk systems</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-obligations-for-ai-providers-p3" data-target="aia-obligations-for-ai-providers-p3">Practical steps</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-obligations-for-ai-deployers"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 5</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Obligations for AI Deployers</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-obligations-for-ai-deployers" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-obligations-for-ai-deployers" data-target="aia-obligations-for-ai-deployers">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-obligations-for-ai-deployers-p1" data-target="aia-obligations-for-ai-deployers-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-obligations-for-ai-deployers-p2" data-target="aia-obligations-for-ai-deployers-p2">What the law requires - deployer obligations for high-risk systems</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-obligations-for-ai-deployers-p3" data-target="aia-obligations-for-ai-deployers-p3">Fundamental rights impact assessment (FRIA)</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-obligations-for-ai-deployers-p4" data-target="aia-obligations-for-ai-deployers-p4">Importers and distributors</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-obligations-for-ai-deployers-p5" data-target="aia-obligations-for-ai-deployers-p5">Practical steps</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-obligations-for-ai-deployers-p6" data-target="aia-obligations-for-ai-deployers-p6">Worked example</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-general-purpose-ai-models-gpai"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 6</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">General-Purpose AI Models (GPAI)</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-general-purpose-ai-models-gpai" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-general-purpose-ai-models-gpai" data-target="aia-general-purpose-ai-models-gpai">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-general-purpose-ai-models-gpai-p1" data-target="aia-general-purpose-ai-models-gpai-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-general-purpose-ai-models-gpai-p2" data-target="aia-general-purpose-ai-models-gpai-p2">What the law requires</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-general-purpose-ai-models-gpai-p3" data-target="aia-general-purpose-ai-models-gpai-p3">Practical steps</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-compliance-conformity-assessment"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 7</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Compliance &amp; Conformity Assessment</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-compliance-conformity-assessment" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-compliance-conformity-assessment" data-target="aia-compliance-conformity-assessment">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-compliance-conformity-assessment-p1" data-target="aia-compliance-conformity-assessment-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-compliance-conformity-assessment-p2" data-target="aia-compliance-conformity-assessment-p2">What the law requires - a working compliance sequence</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-compliance-conformity-assessment-p3" data-target="aia-compliance-conformity-assessment-p3">Conformity assessment, in brief</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-compliance-conformity-assessment-p4" data-target="aia-compliance-conformity-assessment-p4">Limited-risk transparency obligations</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-compliance-conformity-assessment-p5" data-target="aia-compliance-conformity-assessment-p5">The overlap point that trips people up</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-governance-enforcement"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 8</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Governance &amp; Enforcement</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-governance-enforcement" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-governance-enforcement" data-target="aia-governance-enforcement">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-governance-enforcement-p1" data-target="aia-governance-enforcement-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-governance-enforcement-p2" data-target="aia-governance-enforcement-p2">The regulatory landscape</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-governance-enforcement-p3" data-target="aia-governance-enforcement-p3">Enforcement timeline</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-governance-enforcement-p4" data-target="aia-governance-enforcement-p4">Penalty tiers</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-governance-enforcement-p5" data-target="aia-governance-enforcement-p5">Practical steps</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-building-an-enterprise-ai-governance-program-10-foundations"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 9</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Building an Enterprise AI Governance Program: 10 Foundations</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-building-an-enterprise-ai-governance-program-10-foundations" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-building-an-enterprise-ai-governance-program-10-foundations" data-target="aia-building-an-enterprise-ai-governance-program-10-foundations">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-building-an-enterprise-ai-governance-program-10-foundations-p1" data-target="aia-building-an-enterprise-ai-governance-program-10-foundations-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-building-an-enterprise-ai-governance-program-10-foundations-p2" data-target="aia-building-an-enterprise-ai-governance-program-10-foundations-p2">What a program actually needs - 10 foundations</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-building-an-enterprise-ai-governance-program-10-foundations-p3" data-target="aia-building-an-enterprise-ai-governance-program-10-foundations-p3">Practical steps</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-assessing-ai-risk-questions-worth-asking"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 10</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Assessing AI Risk: Questions Worth Asking</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-assessing-ai-risk-questions-worth-asking" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-assessing-ai-risk-questions-worth-asking" data-target="aia-assessing-ai-risk-questions-worth-asking">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-assessing-ai-risk-questions-worth-asking-p1" data-target="aia-assessing-ai-risk-questions-worth-asking-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-assessing-ai-risk-questions-worth-asking-p2" data-target="aia-assessing-ai-risk-questions-worth-asking-p2">A practical internal risk-assessment framework - ten questions to put in front of every new AI initiative</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-assessing-ai-risk-questions-worth-asking-p3" data-target="aia-assessing-ai-risk-questions-worth-asking-p3">Practical steps</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-vetting-ai-vendors-a-procurement-due-diligence-framework"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 11</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Vetting AI Vendors: A Procurement Due-Diligence Framework</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-vetting-ai-vendors-a-procurement-due-diligence-framework" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-vetting-ai-vendors-a-procurement-due-diligence-framework" data-target="aia-vetting-ai-vendors-a-procurement-due-diligence-framework">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-vetting-ai-vendors-a-procurement-due-diligence-framework-p1" data-target="aia-vetting-ai-vendors-a-procurement-due-diligence-framework-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-vetting-ai-vendors-a-procurement-due-diligence-framework-p2" data-target="aia-vetting-ai-vendors-a-procurement-due-diligence-framework-p2">A practical due-diligence framework - ask every AI vendor</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-vetting-ai-vendors-a-procurement-due-diligence-framework-p3" data-target="aia-vetting-ai-vendors-a-procurement-due-diligence-framework-p3">Practical steps</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-building-ai-literacy-across-an-organization"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 12</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Building AI Literacy Across an Organization</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-building-ai-literacy-across-an-organization" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-building-ai-literacy-across-an-organization" data-target="aia-building-ai-literacy-across-an-organization">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-building-ai-literacy-across-an-organization-p1" data-target="aia-building-ai-literacy-across-an-organization-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-building-ai-literacy-across-an-organization-p2" data-target="aia-building-ai-literacy-across-an-organization-p2">A structure that actually differentiates by audience - four layers</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-building-ai-literacy-across-an-organization-p3" data-target="aia-building-ai-literacy-across-an-organization-p3">Practical steps</a></div></div></div><div class="aia-toc-block"><button type="button" class="aia-toc-ch" aria-expanded="false" aria-controls="aia-tsub-copyright-generative-ai"><span class="aia-toc-info"><span class="aia-toc-id"><span class="aia-toc-label">Section 13</span><span class="aia-toc-range"></span></span><span class="aia-toc-title">Copyright &amp; Generative AI</span></span><i class="fas fa-chevron-right aia-toc-arrow"></i></button><div class="aia-toc-sub" id="aia-tsub-copyright-generative-ai" hidden><div class="aia-toc-item"><a class="aia-toc-link aia-toc-group" href="#aia-copyright-generative-ai" data-target="aia-copyright-generative-ai">Open this section</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-copyright-generative-ai-p1" data-target="aia-copyright-generative-ai-p1">Why it matters</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-copyright-generative-ai-p2" data-target="aia-copyright-generative-ai-p2">Where copyright exposure shows up across the AI lifecycle</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-copyright-generative-ai-p3" data-target="aia-copyright-generative-ai-p3">Whether AI output itself is copyrightable</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-copyright-generative-ai-p4" data-target="aia-copyright-generative-ai-p4">A comparative regulatory snapshot</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-copyright-generative-ai-p5" data-target="aia-copyright-generative-ai-p5">Litigation and the fair-use test</a></div><div class="aia-toc-item"><a class="aia-toc-link" href="#aia-copyright-generative-ai-p6" data-target="aia-copyright-generative-ai-p6">Practical steps to mitigate risk</a></div></div></div></div><div class="aia-toc-items" id="aia-toc-flat" hidden></div></nav>
+<div class="aia-main">
+<div class="aia-accordion" id="aia-groups">
+						<details class="aia-item aia-entry" id="aia-scope-territorial-reach-key-definitions">
 							<summary><span class="aia-num">1</span> Scope, Territorial Reach &amp; Key Definitions</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> The Act is a horizontal law - it does not sit inside one industry, it sits underneath all of them. That surprises two kinds of organizations: the ones who assume "AI regulation" means something for foundation-model labs and not for the internal tool their ops team built, and the ones outside the EU who assume a law with "EU" in the name can't reach them. Both assumptions are wrong often enough to be worth checking explicitly, up front, before any deeper compliance work.</p>
-<p><strong>What the law requires.</strong></p>
+<p id="aia-scope-territorial-reach-key-definitions-p1"><strong>Why it matters.</strong> The Act is a horizontal law - it does not sit inside one industry, it sits underneath all of them. That surprises two kinds of organizations: the ones who assume "AI regulation" means something for foundation-model labs and not for the internal tool their ops team built, and the ones outside the EU who assume a law with "EU" in the name can't reach them. Both assumptions are wrong often enough to be worth checking explicitly, up front, before any deeper compliance work.</p>
+<p id="aia-scope-territorial-reach-key-definitions-p2"><strong>What the law requires.</strong></p>
 <ul>
 <li><em>What counts as AI.</em> The Act's definition is broad on purpose: a system that operates with some degree of autonomy, can keep adapting its behavior after it's deployed, and turns the input it receives into outputs - predictions, generated content, recommendations, or decisions - that can affect the physical or digital world. It's built to track the OECD's definition, and it is intentionally technology-neutral rather than tied to a specific technique like machine learning.</li>
 <li><em>Who has obligations.</em> Four roles carry different duties: a <strong>provider</strong> builds an AI system or model (or has it built) and puts it into service or on the market under its own name; a <strong>deployer</strong> uses a system under its own authority (personal, non-professional use doesn't count); <strong>importers</strong> and <strong>distributors</strong> move other providers' systems into or through the EU market. Most of the Act's weight sits on providers, but that doesn't make the other three roles optional reading - and a deployer that substantially modifies a system, or rebrands it under its own name, can find itself reclassified as a provider with a provider's full obligation set.</li>
@@ -79,21 +81,21 @@
 <li><em>What's carved out.</em> The Act does not reach AI used solely for military, defense, or national security purposes; AI developed and used purely for scientific research; research, testing, or development work done before a system is placed on the market or put into service; non-EU public authorities and international organizations using AI for law-enforcement or judicial cooperation with the EU; individuals using AI for purely personal, non-professional reasons; or open-source AI systems - but that last exemption stops the moment the system in question is prohibited, high-risk, subject to the transparency rules, or a general-purpose AI model with systemic risk.</li>
 <li><em>Terms worth actually knowing cold</em>, because they gate everything downstream: a <strong>serious incident</strong> is a malfunction or incident that leads (directly or indirectly) to death, serious harm to health, serious disruption of critical infrastructure, breach of an EU fundamental right, or serious harm to property or the environment; a <strong>deep fake</strong> is AI-generated or manipulated image, audio, or video content resembling a real person, object, place, entity, or event, in a way that would falsely read as authentic; a <strong>general-purpose AI model</strong> is a model trained on large amounts of data (often via large-scale self-supervision) that shows broad general competence across many distinct tasks and can be plugged into many different downstream systems - research/prototyping models not yet on the market are excluded; and <strong>biometric identification</strong> is automated recognition of physical, physiological, behavioral, or psychological traits used to establish who someone is by matching their biometric data against a stored database.</li>
 </ul>
-<p><strong>Practical steps.</strong></p>
+<p id="aia-scope-territorial-reach-key-definitions-p3"><strong>Practical steps.</strong></p>
 <ul>
 <li>Map every internal and customer-facing AI activity against the four roles - don't assume "we're just a user of someone else's tool" settles the question; check whether you modify, rebrand, or repurpose what you buy.</li>
 <li>Run the territorial test even with zero EU headcount: if your output lands in the EU, you may be in scope.</li>
 <li>Treat "it's open source" as a question, not an answer - check whether the specific use crosses into prohibited, high-risk, transparency-triggering, or systemic-risk territory.</li>
 <li>Keep a one-page scope memo per major AI initiative recording which role(s) apply and why; you'll need that reasoning again at every later compliance stage.</li>
 </ul>
-<p><strong>Worked example.</strong> A software company headquartered outside the EU embeds a generative chatbot into a SaaS product sold to EU-based customers. It has no EU office and no EU staff. It is still a provider under the Act, because its AI's output is used within the EU - the extraterritorial trigger applies regardless of where the company sits.</p>
+<p id="aia-scope-territorial-reach-key-definitions-p4"><strong>Worked example.</strong> A software company headquartered outside the EU embeds a generative chatbot into a SaaS product sold to EU-based customers. It has no EU office and no EU staff. It is still a provider under the Act, because its AI's output is used within the EU - the extraterritorial trigger applies regardless of where the company sits.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-prohibited-ai-practices">
+						<details class="aia-item aia-entry" id="aia-prohibited-ai-practices">
 							<summary><span class="aia-num">2</span> Prohibited AI Practices</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> This is the one tier of the Act with no proportionality dial - no risk-based mitigation gets a prohibited practice back to "acceptable." It's also the tier with the harshest financial exposure (up to 7% of global annual turnover), which is the Act's way of signaling that these uses are considered incompatible with EU values outright, not merely risky. Every new AI use case should be screened against this list before any other compliance work starts, because nothing downstream fixes a practice that's banned at the root.</p>
-<p><strong>What the law requires.</strong> Ten categories of practice are prohibited, eight from the original Act and two added by Regulation (EU) 2026/1744 with effect from 2 December 2026:</p>
+<p id="aia-prohibited-ai-practices-p1"><strong>Why it matters.</strong> This is the one tier of the Act with no proportionality dial - no risk-based mitigation gets a prohibited practice back to "acceptable." It's also the tier with the harshest financial exposure (up to 7% of global annual turnover), which is the Act's way of signaling that these uses are considered incompatible with EU values outright, not merely risky. Every new AI use case should be screened against this list before any other compliance work starts, because nothing downstream fixes a practice that's banned at the root.</p>
+<p id="aia-prohibited-ai-practices-p2"><strong>What the law requires.</strong> Ten categories of practice are prohibited, eight from the original Act and two added by Regulation (EU) 2026/1744 with effect from 2 December 2026:</p>
 <ol>
 <li><strong>Manipulation through subliminal or deceptive design</strong> - systems built to distort behavior below someone's conscious awareness or through deception, where that distortion causes or is likely to cause significant harm.</li>
 <li><strong>Exploiting vulnerability</strong> - targeting people because of age, disability, or socioeconomic situation to distort their behavior in a way that causes or is likely to cause significant harm.</li>
@@ -106,21 +108,21 @@
 <li><strong>Generating non-consensual sexually explicit or intimate imagery</strong> - added as Article 5(1)(ba) by the Digital Omnibus on AI, applicable from 2 December 2026. For providers the test is the system's intended purpose, or a reasonably foreseeable and reproducible outcome without adequate safeguards; for deployers it is intent (new Article 5(1a)).</li>
 <li><strong>Generating child sexual abuse material</strong> - added as Article 5(1)(bb) on the same basis and from the same date. The Commission's February 2025 guidelines on prohibited practices predate both additions and have not yet been revised to cover them.</li>
 </ol>
-<p><strong>Practical steps.</strong></p>
+<p id="aia-prohibited-ai-practices-p3"><strong>Practical steps.</strong></p>
 <ul>
 <li>Build a short screening questionnaire into project intake: does this system score or rank people by behavior or characteristics? Does it use biometric data to infer something the person didn't choose to disclose? Does it read emotion in a workplace or classroom setting? Can it generate sexual or intimate imagery of real people, and what stops it?</li>
 <li>Route anything touching biometrics, profiling, or emotion inference to legal sign-off before development starts, not after a prototype exists.</li>
 <li>For any real-time biometric use by or for law enforcement, confirm the authorization pathway exists and is documented before deployment, not retroactively.</li>
 <li>Don't rely on "we'd never do that on purpose" - the risk is usually a well-intentioned feature (engagement scoring, wellness monitoring) drifting into a banned category without anyone naming it that way.</li>
 </ul>
-<p><strong>Worked example.</strong> An employer wants to add webcam-based emotion analysis to video meetings to gauge team engagement. There's no medical or safety purpose behind it - it's a productivity feature. That puts it squarely inside the workplace emotion-recognition prohibition; no mitigation plan brings it back into bounds. The only fix is not building it.</p>
+<p id="aia-prohibited-ai-practices-p4"><strong>Worked example.</strong> An employer wants to add webcam-based emotion analysis to video meetings to gauge team engagement. There's no medical or safety purpose behind it - it's a productivity feature. That puts it squarely inside the workplace emotion-recognition prohibition; no mitigation plan brings it back into bounds. The only fix is not building it.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-high-risk-ai-systems-what-counts">
+						<details class="aia-item aia-entry" id="aia-high-risk-ai-systems-what-counts">
 							<summary><span class="aia-num">3</span> High-Risk AI Systems: What Counts</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> "High-risk" is the tier that carries the Act's heaviest ongoing obligation set, so getting the classification right - including correctly concluding a system is <em>not</em> high-risk - is foundational. Two different routes get a system there, and they're evaluated independently.</p>
-<p><strong>What the law requires.</strong></p>
+<p id="aia-high-risk-ai-systems-what-counts-p1"><strong>Why it matters.</strong> "High-risk" is the tier that carries the Act's heaviest ongoing obligation set, so getting the classification right - including correctly concluding a system is <em>not</em> high-risk - is foundational. Two different routes get a system there, and they're evaluated independently.</p>
+<p id="aia-high-risk-ai-systems-what-counts-p2"><strong>What the law requires.</strong></p>
 <ul>
 <li><strong>Route one: the Annex III use-case list.</strong> A system is high-risk if it falls into one of the listed use-case categories:</li>
 </ul>
@@ -171,7 +173,7 @@
 <li><strong>The carve-out.</strong> A system that falls into an Annex III use case is not treated as high-risk if it doesn't pose a significant risk of harm to health, safety, or fundamental rights - for example, because it performs a narrow task that doesn't materially influence the outcome of a decision. The Act doesn't hand out a blanket pass here; it's a narrow, fact-specific exception, so don't lean on it without a documented rationale.</li>
 <li><strong>Registration.</strong> All systems classified as high-risk must be registered in the EU's public database before they go into use, and the Omnibus kept a simplified registration for Annex III systems a provider has assessed as not high-risk under the carve-out. The obligation applies from 2 December 2027; as of September 2026 the database itself was reported as not yet operational, so build the step into the launch checklist and watch for the opening date.</li>
 </ul>
-<p><strong>Practical steps.</strong></p>
+<p id="aia-high-risk-ai-systems-what-counts-p3"><strong>Practical steps.</strong></p>
 <ul>
 <li>Run every AI use case through both routes independently - a system can clear the product-safety route and still land in Annex III, or vice versa.</li>
 <li>When you conclude a system escapes high-risk status via the "no significant risk" carve-out, write down why, not just that it does - that record is what you'll need to defend the conclusion later.</li>
@@ -180,11 +182,11 @@
 </ul>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-obligations-for-ai-providers">
+						<details class="aia-item aia-entry" id="aia-obligations-for-ai-providers">
 							<summary><span class="aia-num">4</span> Obligations for AI Providers</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> If you provide a high-risk AI system, the Act expects you to have engineered compliance into the system itself, not bolted it on afterward. The requirement set below is meant to be threaded through the whole development lifecycle - risk management and data governance start at design time, not at ship time.</p>
-<p><strong>What the law requires - provider checklist for high-risk systems.</strong></p>
+<p id="aia-obligations-for-ai-providers-p1"><strong>Why it matters.</strong> If you provide a high-risk AI system, the Act expects you to have engineered compliance into the system itself, not bolted it on afterward. The requirement set below is meant to be threaded through the whole development lifecycle - risk management and data governance start at design time, not at ship time.</p>
+<p id="aia-obligations-for-ai-providers-p2"><strong>What the law requires - provider checklist for high-risk systems.</strong></p>
 <ul>
 <li><strong>Risk management system.</strong> Identify, evaluate, mitigate, and monitor risks continuously and iteratively - this is a running process, not a one-time assessment filed away after launch.</li>
 <li><strong>Data and data governance.</strong> Training, validation, and test datasets must be relevant, representative, and of sufficient quality to keep bias risk down; be ready to explain your data sourcing and curation choices.</li>
@@ -199,14 +201,14 @@
 <li><strong>Registration.</strong> Register the system in the European Commission's public database for high-risk AI.</li>
 <li><strong>Regulatory cooperation.</strong> Be prepared to share information about the system with regulatory authorities on request.</li>
 </ul>
-<p><strong>Practical steps.</strong> Turn the twelve items above into a stage-gated internal checklist - some belong at design (data governance, oversight design), some at pre-launch (conformity assessment, registration), and some are ongoing (logging, cooperation, risk monitoring). Assign an owner to each item rather than treating "compliance" as one team's job; documentation and quality-management obligations in particular tend to fall through cracks between engineering and legal.</p>
+<p id="aia-obligations-for-ai-providers-p3"><strong>Practical steps.</strong> Turn the twelve items above into a stage-gated internal checklist - some belong at design (data governance, oversight design), some at pre-launch (conformity assessment, registration), and some are ongoing (logging, cooperation, risk monitoring). Assign an owner to each item rather than treating "compliance" as one team's job; documentation and quality-management obligations in particular tend to fall through cracks between engineering and legal.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-obligations-for-ai-deployers">
+						<details class="aia-item aia-entry" id="aia-obligations-for-ai-deployers">
 							<summary><span class="aia-num">5</span> Obligations for AI Deployers</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> Most organizations touched by the Act are deployers, not providers - they're buying and using AI built by someone else, not building it themselves. That makes vendor selection a compliance decision, not just a procurement one: a deployer can be exposed by a provider's shortcomings even when the deployer did nothing wrong on its own systems. Choosing providers carefully, and doing real due diligence on them, is not optional risk hygiene here - it's load-bearing.</p>
-<p><strong>What the law requires - deployer obligations for high-risk systems.</strong></p>
+<p id="aia-obligations-for-ai-deployers-p1"><strong>Why it matters.</strong> Most organizations touched by the Act are deployers, not providers - they're buying and using AI built by someone else, not building it themselves. That makes vendor selection a compliance decision, not just a procurement one: a deployer can be exposed by a provider's shortcomings even when the deployer did nothing wrong on its own systems. Choosing providers carefully, and doing real due diligence on them, is not optional risk hygiene here - it's load-bearing.</p>
+<p id="aia-obligations-for-ai-deployers-p2"><strong>What the law requires - deployer obligations for high-risk systems.</strong></p>
 <ul>
 <li><strong>Follow the instructions for use.</strong> Obtain the provider's instructions and operate the system within them - deviating from documented use is where a deployer's own liability starts.</li>
 <li><strong>Human oversight.</strong> Assign oversight of the system to people who actually have the competence, training, and authority to exercise it - a formal sign-off from someone who doesn't understand the system doesn't satisfy this.</li>
@@ -217,17 +219,17 @@
 <li><strong>Regulatory cooperation.</strong> Cooperate with authorities, including during investigations or enforcement actions.</li>
 <li><strong>Data protection impact assessment.</strong> Complete a DPIA where one applies, drawing on the documentation the provider supplied.</li>
 </ul>
-<p><strong>Fundamental rights impact assessment (FRIA).</strong> This is not a blanket requirement across all high-risk deployments - it applies to a specific subset: deployers that are bodies governed by public law, private entities providing public services, and deployers of two Annex III use cases: evaluating the creditworthiness of natural persons or establishing their credit score (excluding systems used to detect financial fraud), and risk assessment and pricing of natural persons for life and health insurance. Motor, property and other insurance lines are not in the list. The Omnibus lets the FRIA cross-reference an existing DPIA rather than repeat it (Article 27(4)) and tasks the AI Office with a template questionnaire and an automated tool (Article 27(5)). The obligation applies from 2 December 2027.</p>
-<p><strong>Importers and distributors.</strong> Their duty is narrower but non-negotiable: verify that the high-risk system is actually in conformity with the Act's requirements before passing it along, typically by checking the Declaration of Conformity and the CE marking rather than taking the provider's word for it.</p>
-<p><strong>Practical steps.</strong> Build a standing vendor-vetting process specifically for AI providers, distinct from general procurement due diligence - request the instructions for use and technical documentation before signing, not after. Pre-identify which of your deployments fall into the FRIA-triggering categories (public-law body, public service, credit scoring, life and health insurance) so the assessment isn't discovered as a last-minute gap during an audit.</p>
-<p><strong>Worked example.</strong> A bank deploys a third-party AI system to help price consumer credit. As deployer, the bank needs the provider's instructions for use, must assign competent human oversight of the pricing decisions, must complete a fundamental rights impact assessment (creditworthiness evaluation is one of the two triggering Annex III use cases), and must be ready to show its logs if a serious incident or a regulator's inquiry arises. None of that is satisfied by the vendor's own compliance work - it's the bank's obligation as deployer.</p>
+<p id="aia-obligations-for-ai-deployers-p3"><strong>Fundamental rights impact assessment (FRIA).</strong> This is not a blanket requirement across all high-risk deployments - it applies to a specific subset: deployers that are bodies governed by public law, private entities providing public services, and deployers of two Annex III use cases: evaluating the creditworthiness of natural persons or establishing their credit score (excluding systems used to detect financial fraud), and risk assessment and pricing of natural persons for life and health insurance. Motor, property and other insurance lines are not in the list. The Omnibus lets the FRIA cross-reference an existing DPIA rather than repeat it (Article 27(4)) and tasks the AI Office with a template questionnaire and an automated tool (Article 27(5)). The obligation applies from 2 December 2027.</p>
+<p id="aia-obligations-for-ai-deployers-p4"><strong>Importers and distributors.</strong> Their duty is narrower but non-negotiable: verify that the high-risk system is actually in conformity with the Act's requirements before passing it along, typically by checking the Declaration of Conformity and the CE marking rather than taking the provider's word for it.</p>
+<p id="aia-obligations-for-ai-deployers-p5"><strong>Practical steps.</strong> Build a standing vendor-vetting process specifically for AI providers, distinct from general procurement due diligence - request the instructions for use and technical documentation before signing, not after. Pre-identify which of your deployments fall into the FRIA-triggering categories (public-law body, public service, credit scoring, life and health insurance) so the assessment isn't discovered as a last-minute gap during an audit.</p>
+<p id="aia-obligations-for-ai-deployers-p6"><strong>Worked example.</strong> A bank deploys a third-party AI system to help price consumer credit. As deployer, the bank needs the provider's instructions for use, must assign competent human oversight of the pricing decisions, must complete a fundamental rights impact assessment (creditworthiness evaluation is one of the two triggering Annex III use cases), and must be ready to show its logs if a serious incident or a regulator's inquiry arises. None of that is satisfied by the vendor's own compliance work - it's the bank's obligation as deployer.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-general-purpose-ai-models-gpai">
+						<details class="aia-item aia-entry" id="aia-general-purpose-ai-models-gpai">
 							<summary><span class="aia-num">6</span> General-Purpose AI Models (GPAI)</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> GPAI models are a separate regulatory lane from high-risk <em>systems</em> - a foundation model can sit underneath a high-risk system, a limited-risk system, or nothing classified as high-risk at all, and it has its own obligations regardless of where it ends up being used. If your organization builds or fine-tunes large general-purpose models, this lane applies to you even before you know exactly how customers will deploy them downstream.</p>
-<p><strong>What the law requires.</strong></p>
+<p id="aia-general-purpose-ai-models-gpai-p1"><strong>Why it matters.</strong> GPAI models are a separate regulatory lane from high-risk <em>systems</em> - a foundation model can sit underneath a high-risk system, a limited-risk system, or nothing classified as high-risk at all, and it has its own obligations regardless of where it ends up being used. If your organization builds or fine-tunes large general-purpose models, this lane applies to you even before you know exactly how customers will deploy them downstream.</p>
+<p id="aia-general-purpose-ai-models-gpai-p2"><strong>What the law requires.</strong></p>
 <ul>
 <li><strong>Definition.</strong> A GPAI model is one trained on large amounts of data - often through large-scale self-supervision - that shows broad, general competence across many distinct tasks and can be integrated into a wide range of downstream systems. Models still in research, development, or prototyping, not yet placed on the market, don't count yet.</li>
 <li><strong>Baseline obligations for GPAI providers.</strong> Publish a detailed summary of the content and data used to train the model; maintain a policy for complying with EU copyright and intellectual-property law; keep technical documentation current; and produce documentation that lets downstream providers integrating the model understand its capabilities and limitations.</li>
@@ -237,14 +239,14 @@
 <li><strong>Extra obligations once a model crosses into systemic risk.</strong> On top of the baseline four: notify the European Commission; run model evaluation and adversarial testing; maintain adequate cybersecurity protections; report serious incidents; and actively assess and mitigate the model's key systemic risks.</li>
 <li><strong>Timing and compliance tools.</strong> GPAI obligations became applicable on 2 August 2025, twelve months after the Act's entry into force; the Commission's own enforcement powers over GPAI providers apply from 2 August 2026, and models already on the market before 2 August 2025 have until 2 August 2027 to comply. Providers can point to Codes of Practice and standardized templates - issued by the AI Office - as a recognized way of demonstrating compliance, and are expected to cooperate with regulators and share relevant documentation on request.</li>
 </ul>
-<p><strong>Practical steps.</strong> If you train or substantially fine-tune large models, track your cumulative training compute against the 10^25 FLOPS marker proactively - don't wait for a Commission designation to find out you're already over it. Treat the training-data summary and copyright-compliance policy as standing deliverables that need to be kept current across model versions, not one-off documents. If you rely on the open-source carve-out, re-check that classification every time you retrain, since crossing into systemic risk cancels the exemption.</p>
+<p id="aia-general-purpose-ai-models-gpai-p3"><strong>Practical steps.</strong> If you train or substantially fine-tune large models, track your cumulative training compute against the 10^25 FLOPS marker proactively - don't wait for a Commission designation to find out you're already over it. Treat the training-data summary and copyright-compliance policy as standing deliverables that need to be kept current across model versions, not one-off documents. If you rely on the open-source carve-out, re-check that classification every time you retrain, since crossing into systemic risk cancels the exemption.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-compliance-conformity-assessment">
+						<details class="aia-item aia-entry" id="aia-compliance-conformity-assessment">
 							<summary><span class="aia-num">7</span> Compliance &amp; Conformity Assessment</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> The Act doesn't hand you one compliance checklist - it hands you several, layered at the level of the use case, the model, the system, and the organization, and which ones apply depends on your role and on which risk tiers are actually in play. Treating this as a single linear project ("get compliant, then done") misses that the requirement set shifts as your AI portfolio and your roles shift.</p>
-<p><strong>What the law requires - a working compliance sequence.</strong></p>
+<p id="aia-compliance-conformity-assessment-p1"><strong>Why it matters.</strong> The Act doesn't hand you one compliance checklist - it hands you several, layered at the level of the use case, the model, the system, and the organization, and which ones apply depends on your role and on which risk tiers are actually in play. Treating this as a single linear project ("get compliant, then done") misses that the requirement set shifts as your AI portfolio and your roles shift.</p>
+<p id="aia-compliance-conformity-assessment-p2"><strong>What the law requires - a working compliance sequence.</strong></p>
 <ol>
 <li><strong>Screen out prohibited practices first.</strong> Nothing else matters if a use case is banned outright - this has to be the first gate, not a later one.</li>
 <li><strong>Inventory and track high-risk AI.</strong> Identify every system you develop or use that clears either high-risk route (Annex III use case, or regulated product/safety component), and keep that inventory current as use cases evolve.</li>
@@ -252,27 +254,27 @@
 <li><strong>Register what needs registering.</strong> Get high-risk systems into the EU's public database once it opens - this is a discrete, trackable action item due before the 2 December 2027 application date, not a vague aspiration.</li>
 <li><strong>Roll out AI literacy training.</strong> Employees actually working with or governing these systems need to understand them and their risks - this is itself a legal requirement (see Section 12), not just good practice.</li>
 </ol>
-<p><strong>Conformity assessment, in brief.</strong> High-risk systems must go through a conformity assessment before they're placed on the market or put into service - the process exists to test, demonstrate, and formally declare that the system meets the Act's requirements. Which specific assessment procedure applies varies by system type, so this isn't a single universal form.</p>
-<p><strong>Limited-risk transparency obligations.</strong> A separate, lighter tier applies to systems that interact with people or generate content, independent of whether they're also high-risk:</p>
+<p id="aia-compliance-conformity-assessment-p3"><strong>Conformity assessment, in brief.</strong> High-risk systems must go through a conformity assessment before they're placed on the market or put into service - the process exists to test, demonstrate, and formally declare that the system meets the Act's requirements. Which specific assessment procedure applies varies by system type, so this isn't a single universal form.</p>
+<p id="aia-compliance-conformity-assessment-p4"><strong>Limited-risk transparency obligations.</strong> A separate, lighter tier applies to systems that interact with people or generate content, independent of whether they're also high-risk:</p>
 <ul>
 <li>Providers must design systems so people are told they're interacting with AI.</li>
 <li>Deployers using emotion-recognition systems must notify the people being assessed.</li>
 <li>Deployers must disclose when content is a deep fake and AI-generated.</li>
 </ul>
-<p><strong>The overlap point that trips people up.</strong> These categories are not mutually exclusive boxes - a system can be high-risk <em>and</em> separately subject to the limited-risk transparency rules (say, a high-risk hiring tool that also generates content and therefore has to disclose it's AI). A GPAI model can be embedded inside a high-risk system, exist as a standalone product, or sit inside a system that isn't high-risk at all - and, in principle, a GPAI model embedded in a high-risk system can also be used in a way that triggers the transparency rules on top. The practical consequence: never answer "what do we have to comply with" for an AI initiative in the abstract - the honest answer always depends on the specific combination of role, risk tier, and use case in front of you.</p>
+<p id="aia-compliance-conformity-assessment-p5"><strong>The overlap point that trips people up.</strong> These categories are not mutually exclusive boxes - a system can be high-risk <em>and</em> separately subject to the limited-risk transparency rules (say, a high-risk hiring tool that also generates content and therefore has to disclose it's AI). A GPAI model can be embedded inside a high-risk system, exist as a standalone product, or sit inside a system that isn't high-risk at all - and, in principle, a GPAI model embedded in a high-risk system can also be used in a way that triggers the transparency rules on top. The practical consequence: never answer "what do we have to comply with" for an AI initiative in the abstract - the honest answer always depends on the specific combination of role, risk tier, and use case in front of you.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-governance-enforcement">
+						<details class="aia-item aia-entry" id="aia-governance-enforcement">
 							<summary><span class="aia-num">8</span> Governance &amp; Enforcement</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> Enforcement isn't centralized in one Brussels office - it's distributed across every member state plus two EU-level bodies, and different obligations came online on different dates rather than all at once. Knowing the actual calendar and the actual regulator map matters for anyone trying to sequence a compliance program realistically.</p>
-<p><strong>The regulatory landscape.</strong></p>
+<p id="aia-governance-enforcement-p1"><strong>Why it matters.</strong> Enforcement isn't centralized in one Brussels office - it's distributed across every member state plus two EU-level bodies, and different obligations came online on different dates rather than all at once. Knowing the actual calendar and the actual regulator map matters for anyone trying to sequence a compliance program realistically.</p>
+<p id="aia-governance-enforcement-p2"><strong>The regulatory landscape.</strong></p>
 <ul>
 <li><strong>Member state regulators.</strong> Each member state must appoint at least one market surveillance authority and at least one notifying authority (together, the "national competent authorities"), meaning multiple regulators typically operate within a single country, each responsible for a different slice of enforcement. One market surveillance authority is designated as the primary point of contact for the Act within that jurisdiction.</li>
 <li><strong>The European AI Office.</strong> Sits inside the European Commission and is responsible for enforcing the rules on general-purpose AI models specifically - developing Codes of Practice and guidance, and working to keep enforcement of the Act coherent and coordinated across the EU.</li>
 <li><strong>The European AI Board.</strong> Made up of one representative per member state, it works to harmonize how the Act is implemented across the bloc, issuing opinions and guidance, and is supported by an Advisory Forum and a Scientific Panel of experts.</li>
 </ul>
-<p><strong>Enforcement timeline.</strong></p>
+<p id="aia-governance-enforcement-p3"><strong>Enforcement timeline.</strong></p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -328,7 +330,7 @@
 </tbody>
 </table></div>
 <p>The original Act set 2 August 2026 for most provisions and 2 August 2027 for Annex I systems. Regulation (EU) 2026/1744, adopted 8 July 2026 and in force from 27 July 2026, replaced those with the fixed dates above rather than a standards-linked trigger, softened the Article 4 literacy wording, added two prohibited practices, gave the AI Office direct competence over systems built on a general-purpose model from the same provider and over systems embedded in very large online platforms, and extended the SME simplifications to small mid-caps. What did apply on 2 August 2026 is transparency, penalties, governance and enforcement powers; the whole high-risk regime now starts on 2 December 2027.</p>
-<p><strong>Penalty tiers.</strong></p>
+<p id="aia-governance-enforcement-p4"><strong>Penalty tiers.</strong></p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -352,14 +354,14 @@
 </tbody>
 </table></div>
 <p>Each member state sets up its own penalty regime within these EU-wide ceilings, and the Act calls for lower, more proportionate fines for SMEs and startups rather than applying the same scale uniformly regardless of company size.</p>
-<p><strong>Practical steps.</strong> Build your compliance roadmap against the actual dated timeline above rather than treating "the AI Act" as one deadline - prohibited-practice screening and GPAI provider obligations were live well before the 2026 date most people associate with the law, and the high-risk regime now starts on 2 December 2027 rather than 2 August 2026. Identify which national competent authority is your primary point of contact in each member state where you operate, before you need to find that out under time pressure.</p>
+<p id="aia-governance-enforcement-p5"><strong>Practical steps.</strong> Build your compliance roadmap against the actual dated timeline above rather than treating "the AI Act" as one deadline - prohibited-practice screening and GPAI provider obligations were live well before the 2026 date most people associate with the law, and the high-risk regime now starts on 2 December 2027 rather than 2 August 2026. Identify which national competent authority is your primary point of contact in each member state where you operate, before you need to find that out under time pressure.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-building-an-enterprise-ai-governance-program-10-foundations">
+						<details class="aia-item aia-entry" id="aia-building-an-enterprise-ai-governance-program-10-foundations">
 							<summary><span class="aia-num">9</span> Building an Enterprise AI Governance Program: 10 Foundations</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> Point compliance with the Act - one gap analysis, one registration, one training module - doesn't hold up over time as your AI portfolio grows. A governance program needs standing structure so that new use cases get evaluated the same way every time, without reinventing the process per project.</p>
-<p><strong>What a program actually needs - 10 foundations.</strong></p>
+<p id="aia-building-an-enterprise-ai-governance-program-10-foundations-p1"><strong>Why it matters.</strong> Point compliance with the Act - one gap analysis, one registration, one training module - doesn't hold up over time as your AI portfolio grows. A governance program needs standing structure so that new use cases get evaluated the same way every time, without reinventing the process per project.</p>
+<p id="aia-building-an-enterprise-ai-governance-program-10-foundations-p2"><strong>What a program actually needs - 10 foundations.</strong></p>
 <ol>
 <li><strong>A policy and standards framework.</strong> Written rules covering how AI gets developed, procured, deployed, and used - not a single AI policy document, but a coherent set that different teams can actually apply to their own decisions.</li>
 <li><strong>A risk management framework.</strong> A defined method for classifying and assessing AI risk, with clear ownership of each risk, oversight of the framework itself, and a reporting line that surfaces issues to people who can act on them.</li>
@@ -372,14 +374,14 @@
 <li><strong>Technical tooling and guardrails.</strong> Evaluate whether you need dedicated technology for testing, ongoing monitoring, and MLOps - governance that lives only in policy documents, with no technical enforcement, tends to erode under delivery pressure.</li>
 <li><strong>Alignment with existing digital governance functions.</strong> Privacy, cybersecurity, and data governance teams are already doing adjacent work - build AI governance to collaborate with them, not duplicate or compete with what already exists.</li>
 </ol>
-<p><strong>Practical steps.</strong> Stand up the inventory (foundation 3) early - most of the rest depends on knowing what you actually have. Resist building governance as a standalone silo; the fastest path to a workable program usually runs through extending structures (risk committees, vendor review, data governance) that already exist rather than creating parallel ones.</p>
+<p id="aia-building-an-enterprise-ai-governance-program-10-foundations-p3"><strong>Practical steps.</strong> Stand up the inventory (foundation 3) early - most of the rest depends on knowing what you actually have. Resist building governance as a standalone silo; the fastest path to a workable program usually runs through extending structures (risk committees, vendor review, data governance) that already exist rather than creating parallel ones.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-assessing-ai-risk-questions-worth-asking">
+						<details class="aia-item aia-entry" id="aia-assessing-ai-risk-questions-worth-asking">
 							<summary><span class="aia-num">10</span> Assessing AI Risk: Questions Worth Asking</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> Before a new AI initiative gets built or deployed, someone needs to ask a consistent set of questions - not as a bureaucratic gate, but because the answers are what determine which of the Act's obligations actually apply, and what the real-world blast radius looks like if the system gets something wrong.</p>
-<p><strong>A practical internal risk-assessment framework - ten questions to put in front of every new AI initiative:</strong></p>
+<p id="aia-assessing-ai-risk-questions-worth-asking-p1"><strong>Why it matters.</strong> Before a new AI initiative gets built or deployed, someone needs to ask a consistent set of questions - not as a bureaucratic gate, but because the answers are what determine which of the Act's obligations actually apply, and what the real-world blast radius looks like if the system gets something wrong.</p>
+<p id="aia-assessing-ai-risk-questions-worth-asking-p2"><strong>A practical internal risk-assessment framework - ten questions to put in front of every new AI initiative:</strong></p>
 <ol>
 <li><strong>Purpose.</strong> What problem is this actually solving, and why does it need AI specifically rather than a simpler method?</li>
 <li><strong>Value.</strong> How much value does this generate, and how important is it to the business - worth understanding before you calibrate how much rigor the risk process gets.</li>
@@ -392,14 +394,14 @@
 <li><strong>Impact of failure.</strong> What happens if the output is wrong, biased, or incomplete - who is affected, and how badly?</li>
 <li><strong>Ongoing monitoring.</strong> How will performance and usage be tracked over time, so that drift or failure gets caught rather than discovered after the fact?</li>
 </ol>
-<p><strong>Practical steps.</strong> Make this a standard intake form, not a one-off interview - the value is in asking every initiative the same ten questions, so risk levels are comparable across the portfolio rather than assessed inconsistently project by project. Route answers that reveal high-risk classification, prohibited-practice overlap, or weak human oversight to a mandatory second review before build work proceeds.</p>
+<p id="aia-assessing-ai-risk-questions-worth-asking-p3"><strong>Practical steps.</strong> Make this a standard intake form, not a one-off interview - the value is in asking every initiative the same ten questions, so risk levels are comparable across the portfolio rather than assessed inconsistently project by project. Route answers that reveal high-risk classification, prohibited-practice overlap, or weak human oversight to a mandatory second review before build work proceeds.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-vetting-ai-vendors-a-procurement-due-diligence-framework">
+						<details class="aia-item aia-entry" id="aia-vetting-ai-vendors-a-procurement-due-diligence-framework">
 							<summary><span class="aia-num">11</span> Vetting AI Vendors: A Procurement Due-Diligence Framework</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> As established in Section 5, deployers can inherit a provider's compliance failures - so the procurement conversation with an AI vendor needs to go well beyond price and functionality. Treat this as the point where most of your actual downstream risk gets decided.</p>
-<p><strong>A practical due-diligence framework - ask every AI vendor:</strong></p>
+<p id="aia-vetting-ai-vendors-a-procurement-due-diligence-framework-p1"><strong>Why it matters.</strong> As established in Section 5, deployers can inherit a provider's compliance failures - so the procurement conversation with an AI vendor needs to go well beyond price and functionality. Treat this as the point where most of your actual downstream risk gets decided.</p>
+<p id="aia-vetting-ai-vendors-a-procurement-due-diligence-framework-p2"><strong>A practical due-diligence framework - ask every AI vendor:</strong></p>
 <ol>
 <li><strong>Governance.</strong> What is your organization's own approach to AI governance and risk management - do they have one, or are they answering for the first time?</li>
 <li><strong>Training data.</strong> What data was used to train the system, and under what legal basis was it collected and used?</li>
@@ -412,28 +414,28 @@
 <li><strong>Regulatory compliance.</strong> Can they demonstrate compliance with the AI Act and other applicable AI regulation - with evidence, not just assurance?</li>
 <li><strong>Support.</strong> What professional services and support will they provide for implementation and ongoing use?</li>
 </ol>
-<p><strong>Practical steps.</strong> Get answers to all ten in writing before contract signature, not as a post-signature follow-up - several of them (IP indemnity, data-use rights, output ownership) are things you want negotiated into the contract itself, not just disclosed informally. Treat a vendor who can't answer the compliance and documentation questions with specifics as a risk signal in itself, regardless of how good the product demo was.</p>
+<p id="aia-vetting-ai-vendors-a-procurement-due-diligence-framework-p3"><strong>Practical steps.</strong> Get answers to all ten in writing before contract signature, not as a post-signature follow-up - several of them (IP indemnity, data-use rights, output ownership) are things you want negotiated into the contract itself, not just disclosed informally. Treat a vendor who can't answer the compliance and documentation questions with specifics as a risk signal in itself, regardless of how good the product demo was.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-building-ai-literacy-across-an-organization">
+						<details class="aia-item aia-entry" id="aia-building-ai-literacy-across-an-organization">
 							<summary><span class="aia-num">12</span> Building AI Literacy Across an Organization</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> AI literacy isn't a nice-to-have training slide - Article 4 of the Act has required providers and deployers to act on it since 2 February 2025. The original text asked for a "sufficient level" of AI literacy; Regulation (EU) 2026/1744 rewrote it so that providers and deployers must "take measures to support the development of AI literacy" of their staff and of others operating AI systems on their behalf, and the Commission's guidance now states that no specific or sufficient level is mandated. Enforcement sits with national market surveillance authorities from 2 August 2026. The obligation still underpins another one directly: human oversight of high-risk systems has to be assigned to people with the necessary competence and training, and that duty was not softened, so a literacy program remains the practical foundation for it.</p>
-<p><strong>A structure that actually differentiates by audience - four layers.</strong></p>
+<p id="aia-building-ai-literacy-across-an-organization-p1"><strong>Why it matters.</strong> AI literacy isn't a nice-to-have training slide - Article 4 of the Act has required providers and deployers to act on it since 2 February 2025. The original text asked for a "sufficient level" of AI literacy; Regulation (EU) 2026/1744 rewrote it so that providers and deployers must "take measures to support the development of AI literacy" of their staff and of others operating AI systems on their behalf, and the Commission's guidance now states that no specific or sufficient level is mandated. Enforcement sits with national market surveillance authorities from 2 August 2026. The obligation still underpins another one directly: human oversight of high-risk systems has to be assigned to people with the necessary competence and training, and that duty was not softened, so a literacy program remains the practical foundation for it.</p>
+<p id="aia-building-ai-literacy-across-an-organization-p2"><strong>A structure that actually differentiates by audience - four layers.</strong></p>
 <ul>
 <li><strong>Layer one: governance fundamentals for everyone.</strong> Mandatory, organization-wide, and deliberately simple - the goal is that every employee understands the basic pillars of responsible AI and the organization's own policies, not that they become experts.</li>
 <li><strong>Layer two: generative AI enablement.</strong> Aimed at building comfort and skill using AI tools day to day - this layer works best when it's inspirational and interactive rather than compliance-flavored, and incentives like internal accreditation can help drive voluntary uptake.</li>
 <li><strong>Layer three: role-based training.</strong> Tailored content for the specific people who build, buy, use, or govern AI as part of their actual job - governance staff, privacy staff, procurement staff, data scientists, IT partners - each needs different depth on different topics, and generic training tends to under-serve all of them at once.</li>
 <li><strong>Layer four: system-specific operational training.</strong> Mandatory for anyone actually operating a high-risk system, or otherwise responsible for it - bespoke instructions on exercising human oversight and other risk-mitigation duties for that specific system, precise enough that end users can actually interpret the system's outputs and recognize a serious incident when one happens.</li>
 </ul>
-<p><strong>Practical steps.</strong> Don't run one generic "AI training" module and call the literacy obligation satisfied. The amended Article 4 no longer sets a level, so the defensible position is evidence of measures that fit the audience and the risk exposure, and for anyone assigned to human oversight of a high-risk system the competence requirement is unchanged and specific. A single one-size module demonstrates neither. Tie layer four specifically to your high-risk system inventory (Section 3) so operational training rolls out to exactly the people who need it, not organization-wide by default.</p>
+<p id="aia-building-ai-literacy-across-an-organization-p3"><strong>Practical steps.</strong> Don't run one generic "AI training" module and call the literacy obligation satisfied. The amended Article 4 no longer sets a level, so the defensible position is evidence of measures that fit the audience and the risk exposure, and for anyone assigned to human oversight of a high-risk system the competence requirement is unchanged and specific. A single one-size module demonstrates neither. Tie layer four specifically to your high-risk system inventory (Section 3) so operational training rolls out to exactly the people who need it, not organization-wide by default.</p>
 							</div>
 						</details>
-						<details class="aia-item" id="aia-copyright-generative-ai">
+						<details class="aia-item aia-entry" id="aia-copyright-generative-ai">
 							<summary><span class="aia-num">13</span> Copyright &amp; Generative AI</summary>
 							<div class="aia-body">
-<p><strong>Why it matters.</strong> Copyright protects original creative and intellectual work - books, articles, images, music, software - to encourage people to keep making it. Generative AI creates friction with that system at both ends: models are trained on enormous amounts of copyrighted material, and they can reproduce or closely resemble that material in their outputs. A second, separate question sits alongside the infringement risk: whether the organization's own AI-generated output is protectable at all. Both questions are now being answered by courts rather than commentators, and the answers so far point in one direction: how the training data was obtained, and what the model reproduces, matter more than the fact of training itself.</p>
-<p><strong>Where copyright exposure shows up across the AI lifecycle.</strong></p>
+<p id="aia-copyright-generative-ai-p1"><strong>Why it matters.</strong> Copyright protects original creative and intellectual work - books, articles, images, music, software - to encourage people to keep making it. Generative AI creates friction with that system at both ends: models are trained on enormous amounts of copyrighted material, and they can reproduce or closely resemble that material in their outputs. A second, separate question sits alongside the infringement risk: whether the organization's own AI-generated output is protectable at all. Both questions are now being answered by courts rather than commentators, and the answers so far point in one direction: how the training data was obtained, and what the model reproduces, matter more than the fact of training itself.</p>
+<p id="aia-copyright-generative-ai-p2"><strong>Where copyright exposure shows up across the AI lifecycle.</strong></p>
 <ul>
 <li><strong>Training.</strong> Base models are trained on large datasets that incorporate copyrighted material, often without individualized permission from each rightsholder. The first US merits rulings turned on how that material was acquired, not only on how it was used.</li>
 <li><strong>Fine-tuning.</strong> Adjusting a pre-trained model on a narrower dataset can draw on copyrighted material just as the original training run did.</li>
@@ -441,8 +443,8 @@
 <li><strong>Prompts and inputs.</strong> Users routinely upload or paste copyrighted material - images, documents, text excerpts - directly into prompts, sometimes without thinking of it as a copyright-relevant act.</li>
 <li><strong>Inference and outputs.</strong> Generated content can reproduce, or come close enough to resemble, existing copyrighted work. This is now the live battleground: lyrics, characters and verbatim article text are what the 2025 and 2026 cases are about.</li>
 </ul>
-<p><strong>Whether AI output itself is copyrightable.</strong> Across most jurisdictions, some degree of human authorship is required for copyright to attach - content that is purely AI-generated, with no meaningful human creative input, generally isn't protectable, while "AI-assisted" work often is. The dividing line is the nature and degree of human creative contribution: in the US, typing a prompt isn't enough on its own, but the analysis changes once a human's own creative choices are perceptible in the resulting output. That position is now settled at the top: the Supreme Court declined on 2 March 2026 to review <em>Thaler v Perlmutter</em>, leaving the D.C. Circuit's human-authorship holding in place.</p>
-<p><strong>A comparative regulatory snapshot</strong> - the applicable rules are generally determined by where the copying itself took place, and the landscape still diverges sharply by jurisdiction:</p>
+<p id="aia-copyright-generative-ai-p3"><strong>Whether AI output itself is copyrightable.</strong> Across most jurisdictions, some degree of human authorship is required for copyright to attach - content that is purely AI-generated, with no meaningful human creative input, generally isn't protectable, while "AI-assisted" work often is. The dividing line is the nature and degree of human creative contribution: in the US, typing a prompt isn't enough on its own, but the analysis changes once a human's own creative choices are perceptible in the resulting output. That position is now settled at the top: the Supreme Court declined on 2 March 2026 to review <em>Thaler v Perlmutter</em>, leaving the D.C. Circuit's human-authorship holding in place.</p>
+<p id="aia-copyright-generative-ai-p4"><strong>A comparative regulatory snapshot</strong> - the applicable rules are generally determined by where the copying itself took place, and the landscape still diverges sharply by jurisdiction:</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -477,8 +479,8 @@
 </tr>
 </tbody>
 </table></div>
-<p><strong>Litigation and the fair-use test.</strong> The most cited US tracker counted 142 copyright suits against AI companies on 15 September 2026, up from the high thirties two years earlier, and the milestones to watch are the Third Circuit in <em>Ross</em>, the Court of Justice in <em>Like Company</em>, the Munich appeal court in <em>GEMA v OpenAI</em> and the Court of Appeal in <em>Getty</em>. US courts assess fair use through four factors: the purpose and character of the use, the nature of the copyrighted work, the amount and substantiality of the portion used, and the effect on the market for the original work. The rulings so far treat training on lawfully obtained material as strongly transformative and treat piracy, memorization and output reproduction as the exposure.</p>
-<p><strong>Practical steps to mitigate risk.</strong></p>
+<p id="aia-copyright-generative-ai-p5"><strong>Litigation and the fair-use test.</strong> The most cited US tracker counted 142 copyright suits against AI companies on 15 September 2026, up from the high thirties two years earlier, and the milestones to watch are the Third Circuit in <em>Ross</em>, the Court of Justice in <em>Like Company</em>, the Munich appeal court in <em>GEMA v OpenAI</em> and the Court of Appeal in <em>Getty</em>. US courts assess fair use through four factors: the purpose and character of the use, the nature of the copyrighted work, the amount and substantiality of the portion used, and the effect on the market for the original work. The rulings so far treat training on lawfully obtained material as strongly transformative and treat piracy, memorization and output reproduction as the exposure.</p>
+<p id="aia-copyright-generative-ai-p6"><strong>Practical steps to mitigate risk.</strong></p>
 <ul>
 <li><strong>License deliberately, and prove provenance.</strong> Prefer data and content that's explicitly licensed for use in AI training or generation. The distinction between lawfully acquired and pirated material was decisive in <em>Bartz</em>, and the settlement priced the difference at about USD 3,000 per work.</li>
 <li><strong>Negotiate contractual protection.</strong> Push for IP indemnity clauses in vendor and licensing agreements rather than assuming the risk sits with the AI provider by default, and cover outputs as well as training, since the largest settlement so far excluded outputs.</li>
@@ -490,7 +492,11 @@
 							</div>
 						</details>
 							</div>
-						</section>
+						
+<p class="aia-sources-note" id="aia-sources-note">Sources: the numbered list in the study pack in the site's outputs folder gives the GDPR articles, EDPB guidelines and other documents behind each section.</p>
+</div></div>
+<button type="button" class="aia-top" id="aia-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button><div class="aia-toc-backdrop" id="aia-toc-backdrop" hidden></div><button type="button" class="aia-toc-fab" id="aia-toc-open" aria-controls="aia-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>
+</section>
 						</div>
 					</section>
 
@@ -516,5 +522,176 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+(function () {
+	var P = 'aia', noun = 'sections', titleSel = 'summary', extraTargets = '.aia-body p[id]';
+	var $ = function (id) { return document.getElementById(P + '-' + id); };
+	var q = $('q'), toc = $('toc'), grouped = $('toc-grouped'), flat = $('toc-flat'), opener = $('toc-open'), closer = $('toc-close'), backdrop = $('toc-backdrop');
+	var count = $('count-text'), clearBtn = $('clear'), firstBtn = $('first'), results = $('results'), resultsLabel = $('results-label'), resultsList = $('results-list');
+	var topBtn = $('top'), overviewLink = $('toc-overview-link');
+	var entrySel = '.' + P + '-entry', groupSel = '.' + P + '-group';
+	var nav = window.DigestNav = { onClear: null };
+
+	nav.afterApply = function (shown, total, active, extra) {
+		count.textContent = 'Showing ' + shown + ' of ' + total + ' ' + noun + '.' + (extra || '');
+		clearBtn.hidden = !active;
+		firstBtn.hidden = !(active && shown);
+		results.hidden = !(active && shown);
+		if (active && shown) {
+			var vis = Array.prototype.filter.call(document.querySelectorAll(entrySel), function (el) { return !el.hidden; });
+			resultsLabel.textContent = shown <= 10 ? 'Matching entries:' : 'First 10 of ' + shown + ' matching entries:';
+			resultsList.innerHTML = vis.slice(0, 10).map(function (el) {
+				var t = el.querySelector(titleSel); var g = el.closest(groupSel); var gname = g ? g.querySelector('.' + P + '-group-name').textContent : '';
+				var label = t ? t.textContent.trim() : el.id; if (titleSel === 'summary') label = label.replace(/^(\d+)\s+/, '$1. ');
+				return '<li><a href="#' + el.id + '">' + label + '</a>' + (gname ? '<span class="' + P + '-results-group">' + gname + '</span>' : '') + '</li>';
+			}).join('');
+		}
+		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-link[data-target]'), function (l) {
+			var t = document.getElementById(l.getAttribute('data-target'));
+			l.classList.toggle('is-hidden', !!(t && t.classList.contains(P + '-entry') && t.hidden));
+		});
+		Array.prototype.forEach.call(document.querySelectorAll('.' + P + '-part'), function (h) {
+			var next = h.nextElementSibling, any = false;
+			while (next && !next.classList.contains(P + '-part')) { if (next.classList.contains(P + '-group') && !next.hidden) any = true; next = next.nextElementSibling; }
+			h.hidden = !any;
+		});
+	};
+	function clearAll() { if (nav.onClear) nav.onClear(); }
+	clearBtn.addEventListener('click', clearAll);
+	firstBtn.addEventListener('click', function () {
+		var first = document.querySelector(entrySel + ':not([hidden])');
+		if (!first) return;
+		var d = first.closest('details'); if (d && !d.open) d.open = true;
+		first.scrollIntoView({ block: 'start' });
+		history.replaceState(null, '', '#' + first.id);
+	});
+
+	/* side contents: flat view cloned from the grouped one */
+	Array.prototype.forEach.call(grouped.querySelectorAll('.' + P + '-toc-item'), function (it) { if (!it.querySelector('.' + P + '-toc-group')) flat.appendChild(it.cloneNode(true)); });
+	Array.prototype.forEach.call(flat.querySelectorAll('.' + P + '-toc-deep'), function (l) { l.classList.remove(P + '-toc-deep'); });
+	function setView(v) {
+		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat';
+		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-view'), function (b) { var on = b.getAttribute('data-view') === v; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+		try { localStorage.setItem(P + '-toc-view', v); } catch (err) {}
+	}
+	Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-view'), function (b) { b.addEventListener('click', function () { setView(b.getAttribute('data-view')); }); });
+	try { if (toc.querySelector('.' + P + '-toc-view') && localStorage.getItem(P + '-toc-view') === 'flat') setView('flat'); } catch (err) {}
+	function setOpen(btn, open) {
+		btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+		var sub = document.getElementById(btn.getAttribute('aria-controls')); if (sub) sub.hidden = !open;
+	}
+	function addActions(item) {
+		if (!item || item.querySelector('.' + P + '-toc-actions')) return;
+		var l = item.querySelector('.' + P + '-toc-link[data-target]'); if (!l || l.classList.contains(P + '-toc-group')) return;
+		var span = document.createElement('span'); span.className = P + '-toc-actions';
+		span.innerHTML = (l.getAttribute('data-url') ? '<a href="' + l.getAttribute('data-url') + '" target="_blank" rel="noopener noreferrer" title="Open the source"><i class="fas fa-external-link-alt"></i></a>' : '')
+			+ '<button type="button" class="' + P + '-toc-copy" data-anchor="' + l.getAttribute('data-target') + '" title="Copy link to this entry"><i class="fas fa-link"></i></button>';
+		item.appendChild(span);
+	}
+	toc.addEventListener('mouseover', function (e) { addActions(e.target.closest && e.target.closest('.' + P + '-toc-item')); });
+	toc.addEventListener('focusin', function (e) { addActions(e.target.closest && e.target.closest('.' + P + '-toc-item')); });
+	toc.addEventListener('click', function (e) {
+		var btn = e.target.closest && e.target.closest('.' + P + '-toc-ch, .' + P + '-toc-sec');
+		if (btn) { setOpen(btn, btn.getAttribute('aria-expanded') !== 'true'); return; }
+		var cp = e.target.closest && e.target.closest('.' + P + '-toc-copy');
+		if (cp) {
+			var url = location.href.split('#')[0] + '#' + cp.getAttribute('data-anchor');
+			var done = function () { cp.classList.add('is-done'); cp.title = 'Copied'; setTimeout(function () { cp.classList.remove('is-done'); cp.title = 'Copy link to this entry'; }, 1500); };
+			if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy this link', url); });
+			else window.prompt('Copy this link', url);
+			return;
+		}
+		var link = e.target.closest && e.target.closest('.' + P + '-toc-link, .' + P + '-toc-overview');
+		if (link) {
+			var id = link.getAttribute('data-target') || link.getAttribute('href').slice(1), t = document.getElementById(id);
+			if (t && t.classList.contains(P + '-entry') && t.hidden) clearAll();
+			if (t) { var d = t.closest('details'); if (d && !d.open) d.open = true; }
+			closeDrawer();
+		}
+	});
+	function openDrawer() { toc.classList.add('is-open'); document.body.classList.add(P + '-toc-drawer'); opener.setAttribute('aria-expanded', 'true'); backdrop.hidden = false; }
+	function closeDrawer() { toc.classList.remove('is-open'); document.body.classList.remove(P + '-toc-drawer'); opener.setAttribute('aria-expanded', 'false'); backdrop.hidden = true; }
+	opener.addEventListener('click', function () { if (toc.classList.contains('is-open')) closeDrawer(); else openDrawer(); });
+	closer.addEventListener('click', closeDrawer);
+	backdrop.addEventListener('click', closeDrawer);
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape') closeDrawer();
+		if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) { e.preventDefault(); closeDrawer(); q.focus(); q.select(); q.scrollIntoView({ block: 'center' }); }
+	});
+	$('toc-search').addEventListener('click', function () { closeDrawer(); q.focus(); q.scrollIntoView({ block: 'center' }); });
+
+	/* any in-page link outside the contents opens its target group first */
+	document.addEventListener('click', function (e) {
+		var a = e.target.closest && e.target.closest('a[href^="#"]');
+		if (!a || toc.contains(a)) return;
+		var t = document.getElementById(a.getAttribute('href').slice(1));
+		if (!t) return;
+		if (t.classList.contains(P + '-entry') && t.hidden) clearAll();
+		var d = t.tagName === 'DETAILS' ? t : t.closest('details');
+		if (d && !d.open) d.open = true;
+		if (t.classList.contains(P + '-group')) setTimeout(function () { mark(t.id); }, 50);
+	});
+
+	/* back to top */
+	topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+	window.addEventListener('scroll', function () { topBtn.hidden = window.scrollY < 600; }, { passive: true });
+
+	/* scrollspy */
+	var links = {};
+	Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-link[data-target]'), function (l) { var k = l.getAttribute('data-target'); (links[k] = links[k] || []).push(l); });
+	var current = null;
+	function mark(id) {
+		if (id === current) return;
+		if (current && links[current]) links[current].forEach(function (l) { l.classList.remove('is-active'); });
+		current = id;
+		if (overviewLink) overviewLink.classList.toggle('is-active', !id);
+		if (!id || !links[id]) return;
+		links[id].forEach(function (l) {
+			l.classList.add('is-active');
+			var p = l.parentNode;
+			while (p && p !== toc) { if (p.classList.contains(P + '-toc-sub') && p.hidden) { var b = toc.querySelector('[aria-controls="' + p.id + '"]'); if (b) setOpen(b, true); } p = p.parentNode; }
+		});
+		if (!toc.classList.contains('is-open')) {
+			var vis = links[id].filter(function (l) { return l.offsetParent !== null; })[0];
+			if (vis) { var r = vis.getBoundingClientRect(), tr = toc.getBoundingClientRect(); if (r.top < tr.top + 40 || r.bottom > tr.bottom - 40) toc.scrollTop += r.top - tr.top - tr.height / 2; }
+		}
+	}
+	nav.mark = mark;
+	if ('IntersectionObserver' in window) {
+		var targets = Array.prototype.slice.call(document.querySelectorAll(entrySel + ', ' + groupSel + '[id]' + (extraTargets ? ', ' + extraTargets : '')));
+		var io = new IntersectionObserver(function () {
+			var top = window.innerHeight * 0.28, best = null, bestD = Infinity;
+			targets.forEach(function (t) {
+				var dd = t.classList.contains(P + '-group') ? null : t.closest('details');
+				if (t.hidden || (dd && dd !== t && !dd.open) || (dd && dd.hidden)) return;
+				var r = t.getBoundingClientRect();
+				if (r.bottom < 0 || r.top > window.innerHeight) return;
+				var d = Math.abs(r.top - top);
+				if (r.top <= top + 8 && r.bottom > top && d < bestD) { best = t; bestD = d; }
+			});
+			if (best) mark(best.id);
+			else if (window.scrollY < 300) mark(null);
+		}, { threshold: [0, 0.1, 0.5, 1] });
+		targets.forEach(function (t) { io.observe(t); });
+	}
+})();
+
+(function () {
+	var q = document.getElementById('aia-q');
+	var entries = Array.prototype.slice.call(document.querySelectorAll('.aia-entry'));
+	function apply() {
+		var qq = q.value.trim().toLowerCase(), shown = 0;
+		entries.forEach(function (el) {
+			var ok = !qq || el.textContent.toLowerCase().indexOf(qq) !== -1;
+			el.hidden = !ok;
+			if (ok) { shown++; if (qq && shown <= 8) el.open = true; }
+		});
+		window.DigestNav.afterApply(shown, entries.length, !!qq, '');
+	}
+	q.addEventListener('input', apply);
+	window.DigestNav.onClear = function () { q.value = ''; apply(); };
+	apply();
+})();
+</script>
 	</body>
 </html>

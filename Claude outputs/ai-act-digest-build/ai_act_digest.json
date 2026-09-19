@@ -29,10 +29,14 @@
    "part": "regulation",
    "chap_no": 1,
    "chap_label": "Chapter I: General Provisions",
+   "num": 1,
+   "suffix": "",
+   "short": "1",
    "order": [
     1,
     0,
-    1
+    1,
+    ""
    ]
   },
   {
@@ -65,10 +69,14 @@
    "part": "regulation",
    "chap_no": 1,
    "chap_label": "Chapter I: General Provisions",
+   "num": 2,
+   "suffix": "",
+   "short": "2",
    "order": [
     1,
     0,
-    2
+    2,
+    ""
    ]
   },
   {
@@ -109,10 +117,14 @@
    "part": "regulation",
    "chap_no": 1,
    "chap_label": "Chapter I: General Provisions",
+   "num": 3,
+   "suffix": "",
+   "short": "3",
    "order": [
     1,
     0,
-    3
+    3,
+    ""
    ]
   },
   {
@@ -141,10 +153,49 @@
    "part": "regulation",
    "chap_no": 1,
    "chap_label": "Chapter I: General Provisions",
+   "num": 4,
+   "suffix": "",
+   "short": "4",
    "order": [
     1,
     0,
-    4
+    4,
+    ""
+   ]
+  },
+  {
+   "id": "art-4a",
+   "number": "Article 4a",
+   "title": "Processing of special categories of personal data for bias detection and correction",
+   "chapter": "Chapter I: General Provisions",
+   "section": "",
+   "takeaway": "Article 4a lets providers of high-risk AI systems process special categories of personal data, for bias detection and correction, under six cumulative conditions (paragraph 1, points (a) to (f)): other data including synthetic or anonymised data cannot do the job, technical limits on re-use and state-of-the-art security measures apply, access is strictly controlled and documented, the data is not passed to other parties, it is deleted once the bias is corrected or the retention period ends, and the processing record explains the necessity. Paragraph 2 extends the permission, under the same safeguards, to providers and deployers of other AI systems and deployers of high-risk systems, where strictly necessary to address biases affecting health and safety, fundamental rights or prohibited discrimination. It imposes no duty to detect bias.",
+   "applies_from": "27 July 2026",
+   "omnibus": "Inserted by Regulation (EU) 2026/1744: it moves the special category data permission out of Article 10(5) into a general provision and extends it to providers and deployers of non-high-risk systems and to deployers of high-risk systems.",
+   "binds": [
+    "provider",
+    "deployer"
+   ],
+   "recitals": [],
+   "topics": [
+    "data",
+    "provider-duties",
+    "deployer-duties"
+   ],
+   "url": "https://artificialintelligenceact.eu/article/4a/",
+   "fetched": true,
+   "source": "page",
+   "part": "regulation",
+   "chap_no": 1,
+   "chap_label": "Chapter I: General Provisions",
+   "num": 4,
+   "suffix": "a",
+   "short": "4a",
+   "order": [
+    1,
+    0,
+    4,
+    "a"
    ]
   },
   {
@@ -187,10 +238,14 @@
    "part": "regulation",
    "chap_no": 2,
    "chap_label": "Chapter II: Prohibited AI Practices",
+   "num": 5,
+   "suffix": "",
+   "short": "5",
    "order": [
     2,
     0,
-    5
+    5,
+    ""
    ]
   },
   {
@@ -234,10 +289,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 6,
+   "suffix": "",
+   "short": "6",
    "order": [
     3,
     0,
-    6
+    6,
+    ""
    ]
   },
   {
@@ -264,10 +323,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 7,
+   "suffix": "",
+   "short": "7",
    "order": [
     3,
     0,
-    7
+    7,
+    ""
    ]
   },
   {
@@ -296,10 +359,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 8,
+   "suffix": "",
+   "short": "8",
    "order": [
     3,
     0,
-    8
+    8,
+    ""
    ]
   },
   {
@@ -326,10 +393,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 9,
+   "suffix": "",
+   "short": "9",
    "order": [
     3,
     0,
-    9
+    9,
+    ""
    ]
   },
   {
@@ -361,10 +432,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 10,
+   "suffix": "",
+   "short": "10",
    "order": [
     3,
     0,
-    10
+    10,
+    ""
    ]
   },
   {
@@ -394,10 +469,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 11,
+   "suffix": "",
+   "short": "11",
    "order": [
     3,
     0,
-    11
+    11,
+    ""
    ]
   },
   {
@@ -426,10 +505,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 12,
+   "suffix": "",
+   "short": "12",
    "order": [
     3,
     0,
-    12
+    12,
+    ""
    ]
   },
   {
@@ -459,10 +542,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 13,
+   "suffix": "",
+   "short": "13",
    "order": [
     3,
     0,
-    13
+    13,
+    ""
    ]
   },
   {
@@ -492,10 +579,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 14,
+   "suffix": "",
+   "short": "14",
    "order": [
     3,
     0,
-    14
+    14,
+    ""
    ]
   },
   {
@@ -529,10 +620,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 15,
+   "suffix": "",
+   "short": "15",
    "order": [
     3,
     0,
-    15
+    15,
+    ""
    ]
   },
   {
@@ -563,10 +658,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 16,
+   "suffix": "",
+   "short": "16",
    "order": [
     3,
     0,
-    16
+    16,
+    ""
    ]
   },
   {
@@ -593,10 +692,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 17,
+   "suffix": "",
+   "short": "17",
    "order": [
     3,
     0,
-    17
+    17,
+    ""
    ]
   },
   {
@@ -623,10 +726,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 18,
+   "suffix": "",
+   "short": "18",
    "order": [
     3,
     0,
-    18
+    18,
+    ""
    ]
   },
   {
@@ -654,10 +761,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 19,
+   "suffix": "",
+   "short": "19",
    "order": [
     3,
     0,
-    19
+    19,
+    ""
    ]
   },
   {
@@ -685,10 +796,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 20,
+   "suffix": "",
+   "short": "20",
    "order": [
     3,
     0,
-    20
+    20,
+    ""
    ]
   },
   {
@@ -717,10 +832,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 21,
+   "suffix": "",
+   "short": "21",
    "order": [
     3,
     0,
-    21
+    21,
+    ""
    ]
   },
   {
@@ -749,10 +868,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 22,
+   "suffix": "",
+   "short": "22",
    "order": [
     3,
     0,
-    22
+    22,
+    ""
    ]
   },
   {
@@ -780,10 +903,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 23,
+   "suffix": "",
+   "short": "23",
    "order": [
     3,
     0,
-    23
+    23,
+    ""
    ]
   },
   {
@@ -811,10 +938,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 24,
+   "suffix": "",
+   "short": "24",
    "order": [
     3,
     0,
-    24
+    24,
+    ""
    ]
   },
   {
@@ -851,10 +982,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 25,
+   "suffix": "",
+   "short": "25",
    "order": [
     3,
     0,
-    25
+    25,
+    ""
    ]
   },
   {
@@ -886,10 +1021,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 26,
+   "suffix": "",
+   "short": "26",
    "order": [
     3,
     0,
-    26
+    26,
+    ""
    ]
   },
   {
@@ -921,10 +1060,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 27,
+   "suffix": "",
+   "short": "27",
    "order": [
     3,
     0,
-    27
+    27,
+    ""
    ]
   },
   {
@@ -951,10 +1094,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 28,
+   "suffix": "",
+   "short": "28",
    "order": [
     3,
     0,
-    28
+    28,
+    ""
    ]
   },
   {
@@ -980,10 +1127,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 29,
+   "suffix": "",
+   "short": "29",
    "order": [
     3,
     0,
-    29
+    29,
+    ""
    ]
   },
   {
@@ -1011,10 +1162,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 30,
+   "suffix": "",
+   "short": "30",
    "order": [
     3,
     0,
-    30
+    30,
+    ""
    ]
   },
   {
@@ -1043,10 +1198,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 31,
+   "suffix": "",
+   "short": "31",
    "order": [
     3,
     0,
-    31
+    31,
+    ""
    ]
   },
   {
@@ -1073,10 +1232,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 32,
+   "suffix": "",
+   "short": "32",
    "order": [
     3,
     0,
-    32
+    32,
+    ""
    ]
   },
   {
@@ -1104,10 +1267,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 33,
+   "suffix": "",
+   "short": "33",
    "order": [
     3,
     0,
-    33
+    33,
+    ""
    ]
   },
   {
@@ -1132,10 +1299,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 34,
+   "suffix": "",
+   "short": "34",
    "order": [
     3,
     0,
-    34
+    34,
+    ""
    ]
   },
   {
@@ -1161,10 +1332,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 35,
+   "suffix": "",
+   "short": "35",
    "order": [
     3,
     0,
-    35
+    35,
+    ""
    ]
   },
   {
@@ -1191,10 +1366,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 36,
+   "suffix": "",
+   "short": "36",
    "order": [
     3,
     0,
-    36
+    36,
+    ""
    ]
   },
   {
@@ -1222,10 +1401,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 37,
+   "suffix": "",
+   "short": "37",
    "order": [
     3,
     0,
-    37
+    37,
+    ""
    ]
   },
   {
@@ -1253,10 +1436,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 38,
+   "suffix": "",
+   "short": "38",
    "order": [
     3,
     0,
-    38
+    38,
+    ""
    ]
   },
   {
@@ -1285,10 +1472,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 39,
+   "suffix": "",
+   "short": "39",
    "order": [
     3,
     0,
-    39
+    39,
+    ""
    ]
   },
   {
@@ -1318,10 +1509,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 40,
+   "suffix": "",
+   "short": "40",
    "order": [
     3,
     0,
-    40
+    40,
+    ""
    ]
   },
   {
@@ -1351,10 +1546,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 41,
+   "suffix": "",
+   "short": "41",
    "order": [
     3,
     0,
-    41
+    41,
+    ""
    ]
   },
   {
@@ -1384,10 +1583,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 42,
+   "suffix": "",
+   "short": "42",
    "order": [
     3,
     0,
-    42
+    42,
+    ""
    ]
   },
   {
@@ -1422,10 +1625,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 43,
+   "suffix": "",
+   "short": "43",
    "order": [
     3,
     0,
-    43
+    43,
+    ""
    ]
   },
   {
@@ -1451,10 +1658,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 44,
+   "suffix": "",
+   "short": "44",
    "order": [
     3,
     0,
-    44
+    44,
+    ""
    ]
   },
   {
@@ -1480,10 +1691,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 45,
+   "suffix": "",
+   "short": "45",
    "order": [
     3,
     0,
-    45
+    45,
+    ""
    ]
   },
   {
@@ -1512,10 +1727,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 46,
+   "suffix": "",
+   "short": "46",
    "order": [
     3,
     0,
-    46
+    46,
+    ""
    ]
   },
   {
@@ -1541,10 +1760,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 47,
+   "suffix": "",
+   "short": "47",
    "order": [
     3,
     0,
-    47
+    47,
+    ""
    ]
   },
   {
@@ -1572,10 +1795,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 48,
+   "suffix": "",
+   "short": "48",
    "order": [
     3,
     0,
-    48
+    48,
+    ""
    ]
   },
   {
@@ -1604,10 +1831,14 @@
    "part": "regulation",
    "chap_no": 3,
    "chap_label": "Chapter III: High-Risk AI Systems",
+   "num": 49,
+   "suffix": "",
+   "short": "49",
    "order": [
     3,
     0,
-    49
+    49,
+    ""
    ]
   },
   {
@@ -1643,10 +1874,14 @@
    "part": "regulation",
    "chap_no": 4,
    "chap_label": "Chapter IV: Transparency Obligations for Providers and Deployers of Certain AI Systems",
+   "num": 50,
+   "suffix": "",
+   "short": "50",
    "order": [
     4,
     0,
-    50
+    50,
+    ""
    ]
   },
   {
@@ -1676,10 +1911,14 @@
    "part": "regulation",
    "chap_no": 5,
    "chap_label": "Chapter V: General-Purpose AI Models",
+   "num": 51,
+   "suffix": "",
+   "short": "51",
    "order": [
     5,
     0,
-    51
+    51,
+    ""
    ]
   },
   {
@@ -1709,10 +1948,14 @@
    "part": "regulation",
    "chap_no": 5,
    "chap_label": "Chapter V: General-Purpose AI Models",
+   "num": 52,
+   "suffix": "",
+   "short": "52",
    "order": [
     5,
     0,
-    52
+    52,
+    ""
    ]
   },
   {
@@ -1748,10 +1991,14 @@
    "part": "regulation",
    "chap_no": 5,
    "chap_label": "Chapter V: General-Purpose AI Models",
+   "num": 53,
+   "suffix": "",
+   "short": "53",
    "order": [
     5,
     0,
-    53
+    53,
+    ""
    ]
   },
   {
@@ -1777,10 +2024,14 @@
    "part": "regulation",
    "chap_no": 5,
    "chap_label": "Chapter V: General-Purpose AI Models",
+   "num": 54,
+   "suffix": "",
+   "short": "54",
    "order": [
     5,
     0,
-    54
+    54,
+    ""
    ]
   },
   {
@@ -1809,10 +2060,14 @@
    "part": "regulation",
    "chap_no": 5,
    "chap_label": "Chapter V: General-Purpose AI Models",
+   "num": 55,
+   "suffix": "",
+   "short": "55",
    "order": [
     5,
     0,
-    55
+    55,
+    ""
    ]
   },
   {
@@ -1842,10 +2097,14 @@
    "part": "regulation",
    "chap_no": 5,
    "chap_label": "Chapter V: General-Purpose AI Models",
+   "num": 56,
+   "suffix": "",
+   "short": "56",
    "order": [
     5,
     0,
-    56
+    56,
+    ""
    ]
   },
   {
@@ -1875,10 +2134,14 @@
    "part": "regulation",
    "chap_no": 6,
    "chap_label": "Chapter VI: Measures in Support of Innovation",
+   "num": 57,
+   "suffix": "",
+   "short": "57",
    "order": [
     6,
     0,
-    57
+    57,
+    ""
    ]
   },
   {
@@ -1907,10 +2170,14 @@
    "part": "regulation",
    "chap_no": 6,
    "chap_label": "Chapter VI: Measures in Support of Innovation",
+   "num": 58,
+   "suffix": "",
+   "short": "58",
    "order": [
     6,
     0,
-    58
+    58,
+    ""
    ]
   },
   {
@@ -1939,10 +2206,14 @@
    "part": "regulation",
    "chap_no": 6,
    "chap_label": "Chapter VI: Measures in Support of Innovation",
+   "num": 59,
+   "suffix": "",
+   "short": "59",
    "order": [
     6,
     0,
-    59
+    59,
+    ""
    ]
   },
   {
@@ -1971,10 +2242,50 @@
    "part": "regulation",
    "chap_no": 6,
    "chap_label": "Chapter VI: Measures in Support of Innovation",
+   "num": 60,
+   "suffix": "",
+   "short": "60",
    "order": [
     6,
     0,
-    60
+    60,
+    ""
+   ]
+  },
+  {
+   "id": "art-60a",
+   "number": "Article 60a",
+   "title": "Testing of high-risk AI systems covered by Union harmonisation legislation listed in Section B of Annex I in real-world conditions outside AI regulatory sandboxes",
+   "chapter": "Chapter VI: Measures in Support of Innovation",
+   "section": "",
+   "takeaway": "Article 60a lets Member States allow providers or prospective providers of AI-enabled products under Annex I Section B legislation to test high-risk AI systems in real-world conditions outside sandboxes, to verify conformity with Articles 8 to 15 (paragraph 1). A Member State that opts in adopts a testing framework, alone or jointly, notifies the Commission before applying it and makes its authorities cooperate to remove practical obstacles (paragraphs 2 to 4). Each framework requires a mandatory testing plan agreed with the national competent or market surveillance authority, compliance with Article 60(2), (3), (4)(d) to (j) and (5) to (9), governance and accountability arrangements and a high level of protection of health, safety and fundamental rights (paragraph 5). Testing is not placing on the market, and sectoral legislation prevails (paragraph 6).",
+   "applies_from": "27 July 2026",
+   "omnibus": "Inserted by Regulation (EU) 2026/1744: it creates an optional national real-world testing route for Annex I Section B products, which Article 2(2) now lists among the few provisions applying to those products.",
+   "binds": [
+    "provider",
+    "authority",
+    "commission"
+   ],
+   "recitals": [],
+   "topics": [
+    "sandboxes",
+    "conformity",
+    "scope"
+   ],
+   "url": "https://artificialintelligenceact.eu/article/60a/",
+   "fetched": true,
+   "source": "page",
+   "part": "regulation",
+   "chap_no": 6,
+   "chap_label": "Chapter VI: Measures in Support of Innovation",
+   "num": 60,
+   "suffix": "a",
+   "short": "60a",
+   "order": [
+    6,
+    0,
+    60,
+    "a"
    ]
   },
   {
@@ -2002,10 +2313,14 @@
    "part": "regulation",
    "chap_no": 6,
    "chap_label": "Chapter VI: Measures in Support of Innovation",
+   "num": 61,
+   "suffix": "",
+   "short": "61",
    "order": [
     6,
     0,
-    61
+    61,
+    ""
    ]
   },
   {
@@ -2034,10 +2349,14 @@
    "part": "regulation",
    "chap_no": 6,
    "chap_label": "Chapter VI: Measures in Support of Innovation",
+   "num": 62,
+   "suffix": "",
+   "short": "62",
    "order": [
     6,
     0,
-    62
+    62,
+    ""
    ]
   },
   {
@@ -2065,10 +2384,14 @@
    "part": "regulation",
    "chap_no": 6,
    "chap_label": "Chapter VI: Measures in Support of Innovation",
+   "num": 63,
+   "suffix": "",
+   "short": "63",
    "order": [
     6,
     0,
-    63
+    63,
+    ""
    ]
   },
   {
@@ -2094,10 +2417,14 @@
    "part": "regulation",
    "chap_no": 7,
    "chap_label": "Chapter VII: Governance",
+   "num": 64,
+   "suffix": "",
+   "short": "64",
    "order": [
     7,
     0,
-    64
+    64,
+    ""
    ]
   },
   {
@@ -2124,10 +2451,14 @@
    "part": "regulation",
    "chap_no": 7,
    "chap_label": "Chapter VII: Governance",
+   "num": 65,
+   "suffix": "",
+   "short": "65",
    "order": [
     7,
     0,
-    65
+    65,
+    ""
    ]
   },
   {
@@ -2155,10 +2486,14 @@
    "part": "regulation",
    "chap_no": 7,
    "chap_label": "Chapter VII: Governance",
+   "num": 66,
+   "suffix": "",
+   "short": "66",
    "order": [
     7,
     0,
-    66
+    66,
+    ""
    ]
   },
   {
@@ -2186,10 +2521,14 @@
    "part": "regulation",
    "chap_no": 7,
    "chap_label": "Chapter VII: Governance",
+   "num": 67,
+   "suffix": "",
+   "short": "67",
    "order": [
     7,
     0,
-    67
+    67,
+    ""
    ]
   },
   {
@@ -2219,10 +2558,14 @@
    "part": "regulation",
    "chap_no": 7,
    "chap_label": "Chapter VII: Governance",
+   "num": 68,
+   "suffix": "",
+   "short": "68",
    "order": [
     7,
     0,
-    68
+    68,
+    ""
    ]
   },
   {
@@ -2251,10 +2594,14 @@
    "part": "regulation",
    "chap_no": 7,
    "chap_label": "Chapter VII: Governance",
+   "num": 69,
+   "suffix": "",
+   "short": "69",
    "order": [
     7,
     0,
-    69
+    69,
+    ""
    ]
   },
   {
@@ -2283,10 +2630,14 @@
    "part": "regulation",
    "chap_no": 7,
    "chap_label": "Chapter VII: Governance",
+   "num": 70,
+   "suffix": "",
+   "short": "70",
    "order": [
     7,
     0,
-    70
+    70,
+    ""
    ]
   },
   {
@@ -2316,10 +2667,14 @@
    "part": "regulation",
    "chap_no": 8,
    "chap_label": "Chapter VIII: EU Database for High-Risk AI Systems",
+   "num": 71,
+   "suffix": "",
+   "short": "71",
    "order": [
     8,
     0,
-    71
+    71,
+    ""
    ]
   },
   {
@@ -2347,10 +2702,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 72,
+   "suffix": "",
+   "short": "72",
    "order": [
     9,
     0,
-    72
+    72,
+    ""
    ]
   },
   {
@@ -2379,10 +2738,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 73,
+   "suffix": "",
+   "short": "73",
    "order": [
     9,
     0,
-    73
+    73,
+    ""
    ]
   },
   {
@@ -2414,10 +2777,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 74,
+   "suffix": "",
+   "short": "74",
    "order": [
     9,
     0,
-    74
+    74,
+    ""
    ]
   },
   {
@@ -2448,10 +2815,153 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 75,
+   "suffix": "",
+   "short": "75",
    "order": [
     9,
     0,
-    75
+    75,
+    ""
+   ]
+  },
+  {
+   "id": "art-75a",
+   "number": "Article 75a",
+   "title": "Supervisory and enforcement powers of the AI Office",
+   "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "section": "Section 3: Enforcement",
+   "takeaway": "Article 75a gives the AI Office, for the operators it supervises under Article 75(1), all the powers of a market surveillance authority under Section 3 and Articles 14(4) and 16(3) of Regulation (EU) 2019/1020, plus recovery of its full enforcement costs from non-compliant operators (paragraph 1). It may open an investigation on reasonable grounds or after an Article 85 complaint (paragraph 2), request information by simple request or decision, stating the Article 99(5) fines for incorrect answers (paragraph 3), and conduct remote or on-site inspections, entering premises, copying records and sealing premises, with judicial authorisation where national law requires it (paragraph 4). National authorities may investigate on its behalf, it may order access to systems and appoint external experts, and collected information serves only the Regulation (paragraphs 5 to 8).",
+   "applies_from": "27 July 2026",
+   "omnibus": "Inserted by Regulation (EU) 2026/1744: it gives the AI Office direct investigation, information request and inspection powers over the operators assigned to it by Article 75(1), mirroring the powers of national market surveillance authorities.",
+   "binds": [
+    "commission",
+    "provider",
+    "deployer"
+   ],
+   "recitals": [],
+   "topics": [
+    "enforcement",
+    "governance"
+   ],
+   "url": "https://artificialintelligenceact.eu/article/75a/",
+   "fetched": true,
+   "source": "page",
+   "part": "regulation",
+   "chap_no": 9,
+   "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 75,
+   "suffix": "a",
+   "short": "75a",
+   "order": [
+    9,
+    0,
+    75,
+    "a"
+   ]
+  },
+  {
+   "id": "art-75b",
+   "number": "Article 75b",
+   "title": "Commitments",
+   "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "section": "Section 3: Enforcement",
+   "takeaway": "Article 75b lets an operator under Article 75a(2) proceedings offer commitments to bring itself into compliance, and lets the AI Office make those commitments binding by decision and declare that there are no further grounds for action. The AI Office may reopen the proceedings, on request or on its own initiative, where the facts have materially changed, the operator acts contrary to its commitments, or the decision rested on incomplete, incorrect or misleading information from the operator (points (a) to (c)). Where the commitments cannot ensure effective compliance, the AI Office rejects them in a reasoned decision when closing the proceedings. Operators should draft commitments that are verifiable, because breach triggers fines and periodic penalty payments under Article 75c.",
+   "applies_from": "27 July 2026",
+   "omnibus": "Inserted by Regulation (EU) 2026/1744: it adds a competition-law style commitments procedure allowing the AI Office to close an investigation by making an operator's offered remedies binding.",
+   "binds": [
+    "commission",
+    "provider",
+    "deployer"
+   ],
+   "recitals": [],
+   "topics": [
+    "enforcement"
+   ],
+   "url": "https://artificialintelligenceact.eu/article/75b/",
+   "fetched": true,
+   "source": "page",
+   "part": "regulation",
+   "chap_no": 9,
+   "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 75,
+   "suffix": "b",
+   "short": "75b",
+   "order": [
+    9,
+    0,
+    75,
+    "b"
+   ]
+  },
+  {
+   "id": "art-75c",
+   "number": "Article 75c",
+   "title": "Non-compliance, fines and periodic penalty payments",
+   "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "section": "Section 3: Enforcement",
+   "takeaway": "Article 75c sets the AI Office's sanction procedure for Article 75(1) operators. After preliminary findings it adopts a non-compliance decision ordering measures within a reasonable period and may hold a structured dialogue in which Article 75b commitments are offered (paragraphs 1 to 3). The decision may carry administrative fines under Article 99(3) to (7) for infringing the Regulation, ignoring measures under Articles 14(4) or 16(3) of Regulation (EU) 2019/1020 or Article 75a, or breaching commitments, and misleading information attracts Article 99(5) fines (paragraph 4). Periodic penalty payments of up to 5% of average daily income or worldwide annual turnover per day compel cooperation and compliance (paragraph 5). The Court of Justice has unlimited jurisdiction, fines go to the Union budget and a five-year limitation period applies (paragraphs 6 to 8).",
+   "applies_from": "27 July 2026",
+   "omnibus": "Inserted by Regulation (EU) 2026/1744: it gives the AI Office its own power to find non-compliance, impose Article 99 fines and levy periodic penalty payments of up to 5% of daily turnover on the operators it supervises.",
+   "binds": [
+    "commission",
+    "provider",
+    "deployer"
+   ],
+   "recitals": [],
+   "topics": [
+    "enforcement",
+    "penalties"
+   ],
+   "url": "https://artificialintelligenceact.eu/article/75c/",
+   "fetched": true,
+   "source": "page",
+   "part": "regulation",
+   "chap_no": 9,
+   "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 75,
+   "suffix": "c",
+   "short": "75c",
+   "order": [
+    9,
+    0,
+    75,
+    "c"
+   ]
+  },
+  {
+   "id": "art-75d",
+   "number": "Article 75d",
+   "title": "Safeguards and further specification",
+   "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "section": "Section 3: Enforcement",
+   "takeaway": "Article 75d supplies the procedural safeguards for operators facing AI Office enforcement under Article 75(1). Article 18 of Regulation (EU) 2019/1020 applies mutatis mutandis (paragraph 1). Rights of defence and access to the file are fully respected: before an Article 75c(1) decision the operator gets access to the AI Office file under negotiated disclosure terms that protect business secrets, with the AI Office fixing the terms if the parties disagree, while confidential information, internal documents and correspondence with national authorities stay outside the right of access (paragraph 2). The Commission may adopt implementing acts on file access arrangements (paragraph 3). The AI Office publishes its Article 75b and 75c decisions, naming the parties and stating the main content and any penalties, with regard to confidential information (paragraph 4).",
+   "applies_from": "27 July 2026",
+   "omnibus": "Inserted by Regulation (EU) 2026/1744: it adds rights of defence, negotiated access to the file, an implementing act power and mandatory publication of AI Office decisions to the new direct enforcement regime.",
+   "binds": [
+    "commission",
+    "provider",
+    "deployer"
+   ],
+   "recitals": [],
+   "topics": [
+    "enforcement",
+    "governance"
+   ],
+   "url": "https://artificialintelligenceact.eu/article/75d/",
+   "fetched": true,
+   "source": "page",
+   "part": "regulation",
+   "chap_no": 9,
+   "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 75,
+   "suffix": "d",
+   "short": "75d",
+   "order": [
+    9,
+    0,
+    75,
+    "d"
    ]
   },
   {
@@ -2479,10 +2989,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 76,
+   "suffix": "",
+   "short": "76",
    "order": [
     9,
     0,
-    76
+    76,
+    ""
    ]
   },
   {
@@ -2511,10 +3025,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 77,
+   "suffix": "",
+   "short": "77",
    "order": [
     9,
     0,
-    77
+    77,
+    ""
    ]
   },
   {
@@ -2544,10 +3062,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 78,
+   "suffix": "",
+   "short": "78",
    "order": [
     9,
     0,
-    78
+    78,
+    ""
    ]
   },
   {
@@ -2573,10 +3095,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 79,
+   "suffix": "",
+   "short": "79",
    "order": [
     9,
     0,
-    79
+    79,
+    ""
    ]
   },
   {
@@ -2604,10 +3130,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 80,
+   "suffix": "",
+   "short": "80",
    "order": [
     9,
     0,
-    80
+    80,
+    ""
    ]
   },
   {
@@ -2633,10 +3163,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 81,
+   "suffix": "",
+   "short": "81",
    "order": [
     9,
     0,
-    81
+    81,
+    ""
    ]
   },
   {
@@ -2663,10 +3197,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 82,
+   "suffix": "",
+   "short": "82",
    "order": [
     9,
     0,
-    82
+    82,
+    ""
    ]
   },
   {
@@ -2693,10 +3231,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 83,
+   "suffix": "",
+   "short": "83",
    "order": [
     9,
     0,
-    83
+    83,
+    ""
    ]
   },
   {
@@ -2725,10 +3267,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 84,
+   "suffix": "",
+   "short": "84",
    "order": [
     9,
     0,
-    84
+    84,
+    ""
    ]
   },
   {
@@ -2756,10 +3302,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 85,
+   "suffix": "",
+   "short": "85",
    "order": [
     9,
     0,
-    85
+    85,
+    ""
    ]
   },
   {
@@ -2788,10 +3338,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 86,
+   "suffix": "",
+   "short": "86",
    "order": [
     9,
     0,
-    86
+    86,
+    ""
    ]
   },
   {
@@ -2818,10 +3372,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 87,
+   "suffix": "",
+   "short": "87",
    "order": [
     9,
     0,
-    87
+    87,
+    ""
    ]
   },
   {
@@ -2851,10 +3409,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 88,
+   "suffix": "",
+   "short": "88",
    "order": [
     9,
     0,
-    88
+    88,
+    ""
    ]
   },
   {
@@ -2884,10 +3446,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 89,
+   "suffix": "",
+   "short": "89",
    "order": [
     9,
     0,
-    89
+    89,
+    ""
    ]
   },
   {
@@ -2917,10 +3483,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 90,
+   "suffix": "",
+   "short": "90",
    "order": [
     9,
     0,
-    90
+    90,
+    ""
    ]
   },
   {
@@ -2949,10 +3519,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 91,
+   "suffix": "",
+   "short": "91",
    "order": [
     9,
     0,
-    91
+    91,
+    ""
    ]
   },
   {
@@ -2981,10 +3555,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 92,
+   "suffix": "",
+   "short": "92",
    "order": [
     9,
     0,
-    92
+    92,
+    ""
    ]
   },
   {
@@ -3013,10 +3591,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 93,
+   "suffix": "",
+   "short": "93",
    "order": [
     9,
     0,
-    93
+    93,
+    ""
    ]
   },
   {
@@ -3045,10 +3627,14 @@
    "part": "regulation",
    "chap_no": 9,
    "chap_label": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+   "num": 94,
+   "suffix": "",
+   "short": "94",
    "order": [
     9,
     0,
-    94
+    94,
+    ""
    ]
   },
   {
@@ -3079,10 +3665,14 @@
    "part": "regulation",
    "chap_no": 10,
    "chap_label": "Chapter X: Codes of Conduct and Guidelines",
+   "num": 95,
+   "suffix": "",
+   "short": "95",
    "order": [
     10,
     0,
-    95
+    95,
+    ""
    ]
   },
   {
@@ -3109,10 +3699,14 @@
    "part": "regulation",
    "chap_no": 10,
    "chap_label": "Chapter X: Codes of Conduct and Guidelines",
+   "num": 96,
+   "suffix": "",
+   "short": "96",
    "order": [
     10,
     0,
-    96
+    96,
+    ""
    ]
   },
   {
@@ -3141,10 +3735,14 @@
    "part": "regulation",
    "chap_no": 11,
    "chap_label": "Chapter XI: Delegation of Power and Committee Procedure",
+   "num": 97,
+   "suffix": "",
+   "short": "97",
    "order": [
     11,
     0,
-    97
+    97,
+    ""
    ]
   },
   {
@@ -3172,10 +3770,14 @@
    "part": "regulation",
    "chap_no": 11,
    "chap_label": "Chapter XI: Delegation of Power and Committee Procedure",
+   "num": 98,
+   "suffix": "",
+   "short": "98",
    "order": [
     11,
     0,
-    98
+    98,
+    ""
    ]
   },
   {
@@ -3204,10 +3806,14 @@
    "part": "regulation",
    "chap_no": 12,
    "chap_label": "Chapter XII: Penalties",
+   "num": 99,
+   "suffix": "",
+   "short": "99",
    "order": [
     12,
     0,
-    99
+    99,
+    ""
    ]
   },
   {
@@ -3235,10 +3841,14 @@
    "part": "regulation",
    "chap_no": 12,
    "chap_label": "Chapter XII: Penalties",
+   "num": 100,
+   "suffix": "",
+   "short": "100",
    "order": [
     12,
     0,
-    100
+    100,
+    ""
    ]
   },
   {
@@ -3267,10 +3877,14 @@
    "part": "regulation",
    "chap_no": 12,
    "chap_label": "Chapter XII: Penalties",
+   "num": 101,
+   "suffix": "",
+   "short": "101",
    "order": [
     12,
     0,
-    101
+    101,
+    ""
    ]
   },
   {
@@ -3298,10 +3912,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 102,
+   "suffix": "",
+   "short": "102",
    "order": [
     13,
     0,
-    102
+    102,
+    ""
    ]
   },
   {
@@ -3329,10 +3947,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 103,
+   "suffix": "",
+   "short": "103",
    "order": [
     13,
     0,
-    103
+    103,
+    ""
    ]
   },
   {
@@ -3360,10 +3982,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 104,
+   "suffix": "",
+   "short": "104",
    "order": [
     13,
     0,
-    104
+    104,
+    ""
    ]
   },
   {
@@ -3391,10 +4017,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 105,
+   "suffix": "",
+   "short": "105",
    "order": [
     13,
     0,
-    105
+    105,
+    ""
    ]
   },
   {
@@ -3422,10 +4052,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 106,
+   "suffix": "",
+   "short": "106",
    "order": [
     13,
     0,
-    106
+    106,
+    ""
    ]
   },
   {
@@ -3453,10 +4087,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 107,
+   "suffix": "",
+   "short": "107",
    "order": [
     13,
     0,
-    107
+    107,
+    ""
    ]
   },
   {
@@ -3484,10 +4122,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 108,
+   "suffix": "",
+   "short": "108",
    "order": [
     13,
     0,
-    108
+    108,
+    ""
    ]
   },
   {
@@ -3515,10 +4157,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 109,
+   "suffix": "",
+   "short": "109",
    "order": [
     13,
     0,
-    109
+    109,
+    ""
    ]
   },
   {
@@ -3548,10 +4194,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 110,
+   "suffix": "",
+   "short": "110",
    "order": [
     13,
     0,
-    110
+    110,
+    ""
    ]
   },
   {
@@ -3582,10 +4232,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 111,
+   "suffix": "",
+   "short": "111",
    "order": [
     13,
     0,
-    111
+    111,
+    ""
    ]
   },
   {
@@ -3614,10 +4268,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 112,
+   "suffix": "",
+   "short": "112",
    "order": [
     13,
     0,
-    112
+    112,
+    ""
    ]
   },
   {
@@ -3647,10 +4305,14 @@
    "part": "regulation",
    "chap_no": 13,
    "chap_label": "Chapter XIII: Final Provisions",
+   "num": 113,
+   "suffix": "",
+   "short": "113",
    "order": [
     13,
     0,
-    113
+    113,
+    ""
    ]
   },
   {
@@ -3684,10 +4346,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 1,
+   "suffix": "",
+   "short": "I",
    "order": [
     99,
     1,
-    1
+    1,
+    ""
    ]
   },
   {
@@ -3713,10 +4379,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 2,
+   "suffix": "",
+   "short": "II",
    "order": [
     99,
     1,
-    2
+    2,
+    ""
    ]
   },
   {
@@ -3758,10 +4428,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 3,
+   "suffix": "",
+   "short": "III",
    "order": [
     99,
     1,
-    3
+    3,
+    ""
    ]
   },
   {
@@ -3789,10 +4463,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 4,
+   "suffix": "",
+   "short": "IV",
    "order": [
     99,
     1,
-    4
+    4,
+    ""
    ]
   },
   {
@@ -3818,10 +4496,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 5,
+   "suffix": "",
+   "short": "V",
    "order": [
     99,
     1,
-    5
+    5,
+    ""
    ]
   },
   {
@@ -3847,10 +4529,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 6,
+   "suffix": "",
+   "short": "VI",
    "order": [
     99,
     1,
-    6
+    6,
+    ""
    ]
   },
   {
@@ -3877,10 +4563,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 7,
+   "suffix": "",
+   "short": "VII",
    "order": [
     99,
     1,
-    7
+    7,
+    ""
    ]
   },
   {
@@ -3909,10 +4599,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 8,
+   "suffix": "",
+   "short": "VIII",
    "order": [
     99,
     1,
-    8
+    8,
+    ""
    ]
   },
   {
@@ -3939,10 +4633,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 9,
+   "suffix": "",
+   "short": "IX",
    "order": [
     99,
     1,
-    9
+    9,
+    ""
    ]
   },
   {
@@ -3970,10 +4668,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 10,
+   "suffix": "",
+   "short": "X",
    "order": [
     99,
     1,
-    10
+    10,
+    ""
    ]
   },
   {
@@ -4003,10 +4705,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 11,
+   "suffix": "",
+   "short": "XI",
    "order": [
     99,
     1,
-    11
+    11,
+    ""
    ]
   },
   {
@@ -4035,10 +4741,14 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 12,
+   "suffix": "",
+   "short": "XII",
    "order": [
     99,
     1,
-    12
+    12,
+    ""
    ]
   },
   {
@@ -4067,10 +4777,48 @@
    "part": "regulation",
    "chap_no": 99,
    "chap_label": "Annexes",
+   "num": 13,
+   "suffix": "",
+   "short": "XIII",
    "order": [
     99,
     1,
-    13
+    13,
+    ""
+   ]
+  },
+  {
+   "id": "annex-14",
+   "number": "Annex XIV",
+   "title": "The list of codes, categories and corresponding types of AI systems for the purpose of the notification procedure referred to in Article 30 specifying the scope of the designation as notified bodies",
+   "chapter": "Annexes",
+   "section": "",
+   "takeaway": "Annex XIV supplies the codes that fix the scope of a notified body's designation under Article 30: a body assesses only the types of AI system in its designation (section 1). Section 2 lists product and use categories: AIP 0102 to AIP 0112 for Annex I Section A products in points 2 to 12, and AIB 0201 to AIB 0203 for remote biometric identification, biometric categorisation and emotion recognition. Section 3 lists technology codes: AIH 0101 for symbolic, expert and knowledge-based systems, AIH 0201 to AIH 0205 for machine learning on structured, signal, text and image data, AIH 0301 for generative AI systems including those built on general-purpose AI models, and AIH 0401 for emerging technologies including agentic AI. Article 29 applicants must use these codes (section 4).",
+   "applies_from": "2 August 2026",
+   "omnibus": "Inserted by Regulation (EU) 2026/1744: it adds a standard code list (AIP, AIB and AIH codes) that notified bodies must use to define the product, biometric and technology scope of their designation.",
+   "binds": [
+    "notified-body",
+    "authority"
+   ],
+   "recitals": [],
+   "topics": [
+    "conformity",
+    "standards"
+   ],
+   "url": "https://artificialintelligenceact.eu/annex/14/",
+   "fetched": true,
+   "source": "page",
+   "part": "regulation",
+   "chap_no": 99,
+   "chap_label": "Annexes",
+   "num": 14,
+   "suffix": "",
+   "short": "XIV",
+   "order": [
+    99,
+    1,
+    14,
+    ""
    ]
   }
  ],

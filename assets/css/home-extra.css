@@ -69,6 +69,22 @@
 	color: #ffffff;
 }
 
+/* Group headings inside the submenu (Privacy, AI, Cookie Compliance, Other):
+   plain text, not links, so they neither hover nor navigate. */
+.portfolio-submenu .portfolio-group {
+	color: #7fb2e5;
+	font-size: 0.5em;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	margin-top: 0.6em;
+	padding: 0.6em 1.1em 0.2em 1.1em;
+	text-transform: uppercase;
+}
+
+.portfolio-submenu .portfolio-group:first-child {
+	margin-top: 0;
+}
+
 /* Belt-and-braces: the JS also gates showing the menu to desktop and
    medium/tablet widths, but force it hidden below that too, so mobile -
    where #sidebar is hidden entirely in favor of its own nav - can never

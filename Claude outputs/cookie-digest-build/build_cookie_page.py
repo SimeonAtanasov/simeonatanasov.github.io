@@ -4,6 +4,9 @@ import json, html, re, os
 from collections import OrderedDict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+import sys
+sys.path.insert(0, HERE)
+from digest_nav import toc_html, results_html, jump_html, top_button, nav_js, nav_css
 E = json.load(open(os.path.join(HERE, "all_merged.json"), encoding="utf-8"))
 esc = lambda s: html.escape(s, quote=True)
 DATE = "19 September 2026"
@@ -62,7 +65,7 @@ def sortkey(e):
 TYPE_LABEL = {"legislation": "Legislation", "regulator guidance": "Regulator guidance", "court decision": "Court decision", "enforcement": "Enforcement", "standard": "Standard", "proposal": "Proposal"}
 
 
-def entry_html(e):
+def entry_html(e, eid):
     chips = ['<span class="ck-chip ck-chip-j">%s</span>' % esc(e["jurisdiction"]),
              '<span class="ck-chip ck-chip-t">%s</span>' % esc(TYPE_LABEL.get(e["type"], e["type"]))]
     if e["status"] not in ("in force", "decided"):
@@ -71,11 +74,11 @@ def entry_html(e):
         chips.append('<span class="ck-chip ck-chip-topic">%s</span>' % esc(t.replace("-", " ")))
     if e.get("source") == "secondary":
         chips.append('<span class="ck-chip ck-chip-src" title="Primary source could not be fetched; figures rest on a secondary source">secondary source</span>')
-    return ('<article class="ck-entry" data-year="%s" data-type="%s" data-jur="%s" data-status="%s">'
+    return ('<article class="ck-entry" id="%s" data-year="%s" data-type="%s" data-jur="%s" data-status="%s">'
             '<h3 class="ck-title"><a href="%s" target="_blank" rel="noopener noreferrer">%s</a></h3>'
             '<p class="ck-meta"><span class="ck-date">%s</span>%s</p>'
             '<p class="ck-take">%s</p></article>'
-            % (year(e["date"]), esc(e["type"]), esc(e["jurisdiction"]), esc(e["status"]), esc(e["url"]), esc(e["title"]), esc(e["date"]), "".join(chips), esc(e["takeaway"])))
+            % (eid, year(e["date"]), esc(e["type"]), esc(e["jurisdiction"]), esc(e["status"]), esc(e["url"]), esc(e["title"]), esc(e["date"]), "".join(chips), esc(e["takeaway"])))
 
 
 def slug(s):
@@ -90,39 +93,66 @@ def build_body():
     for e in E:
         counts[e["type"]] += 1
     out = []
+    out.append('<div class="ck-head">')
+    out.append(jump_html("ck", [("#ck-filters", "Filters and search"), ("#ck-index", "Regions"), ("#ck-groups", "The documents"), ("#ck-sources-note", "Sources")]))
     out.append('<div class="ck-intro">')
     out.append('<p>Every rule a consent banner has to satisfy, in one place: %d documents across %d jurisdictions as of %s, each with a takeaway written from the document itself, stating what it establishes, who it binds and what to do about it. The set covers %d pieces of legislation, %d regulator guidance documents, %d court decisions, %d enforcement actions, %d technical standards or industry frameworks and %d pending proposals. Depth follows the regimes a European consent platform meets daily: the EU and its member states, the United Kingdom, Switzerland and the United States in full; one entry per operative rule elsewhere.</p>' % (len(E), len(jurs), DATE, counts["legislation"], counts["regulator guidance"], counts["court decision"], counts["enforcement"], counts["standard"], counts["proposal"]))
     out.append('<p>Three limits, stated up front. A takeaway is a reading aid: every entry links to the source and the source governs where the two differ. Status is as of the date above; proposals and consultations move, and the entry says so where it applies from a future date or is under appeal. Where a primary page could not be reached and the figures rest on a secondary source, the entry is marked. None of this is legal advice.</p>')
     out.append('<p class="ck-privacy">Filters and search run in your browser. Nothing you type is sent anywhere.</p>')
     out.append("</div>")
-    out.append('<div class="ck-filters" role="search">')
+    out.append('<div class="ck-filters" id="ck-filters" role="search">')
     out.append('<label>Search <input type="text" id="ck-q" placeholder="title, takeaway, article number" autocomplete="off"></label>')
     out.append('<label>Jurisdiction <select id="ck-jur"><option value="">All</option>%s</select></label>' % "".join('<option value="%s">%s</option>' % (esc(j), esc(j)) for j in jurs))
     out.append('<label>Type <select id="ck-type"><option value="">All types</option>%s</select></label>' % "".join('<option value="%s">%s</option>' % (esc(t), esc(TYPE_LABEL[t])) for t in types))
     out.append('<label>Year <select id="ck-year"><option value="">All years</option>%s</select></label>' % "".join('<option value="%s">%s</option>' % (y, y) for y in years if y))
-    out.append('<p class="ck-count" id="ck-count" aria-live="polite"></p>')
+    out.append(results_html("ck", [
+        '<strong>Search</strong> matches any text in an entry: title, date, takeaway, jurisdiction, type and topic chips. Type a word, an article number such as "5(3)" or a fine amount. Ctrl+K puts the cursor here from anywhere on the page.',
+        '<strong>Jurisdiction</strong> narrows to one country, state or body; the side contents group the same jurisdictions by region.',
+        '<strong>Type</strong> keeps legislation, regulator guidance, court decisions, enforcement actions, standards or proposals.',
+        '<strong>Year</strong> shows the documents dated in that year (adoption, decision or publication date as the entry states it).',
+        'Filters combine: an entry must satisfy every active filter. The count line says how many match; <em>Go to first result</em> scrolls to the first match and the list under it links the first ten. Regions with no match disappear. <em>Clear filters</em> resets everything. Clicking an entry in the side contents that the filters hide also clears them.',
+    ]))
     out.append("</div>")
-    out.append('<p class="ck-index-label">Jump to a region:</p><ul class="ck-index">')
+    out.append('<p class="ck-index-label" id="ck-index">Jump to a region:</p><ul class="ck-index">')
     for g in GROUP_ORDER:
         n = sum(1 for e in E if e["group"] == g)
         out.append('<li><a href="#%s">%s <span class="ck-n">%d</span></a></li>' % (slug(g), esc(g), n))
     out.append("</ul>")
-    out.append('<div class="ck-groups">')
+    out.append("</div>")
+    blocks = []
+    groups_html = ['<div class="ck-groups" id="ck-groups">']
+    n = 0
     for g in GROUP_ORDER:
         items = sorted([e for e in E if e["group"] == g], key=sortkey)
-        out.append('<details class="ck-group" id="%s" open><summary><span class="ck-group-name">%s</span><span class="ck-group-count" data-total="%d">%d documents</span></summary><div class="ck-group-body">' % (slug(g), esc(g), len(items), len(items)))
+        groups_html.append('<details class="ck-group" id="%s" open><summary><span class="ck-group-name">%s</span><span class="ck-group-count" data-total="%d">%d documents</span></summary><div class="ck-group-body">' % (slug(g), esc(g), len(items), len(items)))
+        by_jur = OrderedDict()
         for e in items:
-            out.append(entry_html(e))
-        out.append("</div></details>")
-    out.append("</div>")
+            n += 1
+            eid = "ck-d%03d" % n
+            groups_html.append(entry_html(e, eid))
+            by_jur.setdefault(e["jurisdiction"], []).append((eid, e["title"], e["url"]))
+        groups_html.append("</div></details>")
+        key = slug(g)[3:]
+        if len(by_jur) > 1:
+            subs = [{"key": "%s-%s" % (key, re.sub(r"[^a-z0-9]+", "-", j.lower()).strip("-")), "label": j, "range": "%d" % len(v), "title": "", "items": v} for j, v in sorted(by_jur.items())]
+            blocks.append({"key": key, "label": g, "range": "%d" % len(items), "title": "%d jurisdictions" % len(by_jur), "group_id": slug(g), "subs": subs})
+        else:
+            blocks.append({"key": key, "label": g, "range": "%d" % len(items), "title": "", "group_id": slug(g), "items": [x for v in by_jur.values() for x in v]})
+    groups_html.append("</div>")
+    groups_html.append('<p class="ck-sources-note" id="ck-sources-note">Sources: every entry links to the primary page it was written from, or to the secondary source where the entry is marked. The printable digest in the site\'s outputs folder lists all %d with a numbered source. Snapshot %s.</p>' % (len(E), DATE))
+    out.append('<div class="ck-cols">')
+    out.append(toc_html("ck", blocks, views=("Regions", "All documents"), overview_href="#ck-filters", overview_label="Filters and search", group_link="Jump to this region"))
+    out.append('<div class="ck-main">')
+    out.extend(groups_html)
+    out.append("</div></div>")
+    out.append(top_button("ck"))
     return "\n".join(out)
 
 
 JS = r"""
 (function () {
 	var q = document.getElementById('ck-q'), j = document.getElementById('ck-jur'),
-	    t = document.getElementById('ck-type'), y = document.getElementById('ck-year'),
-	    count = document.getElementById('ck-count');
+	    t = document.getElementById('ck-type'), y = document.getElementById('ck-year');
 	var groups = Array.prototype.slice.call(document.querySelectorAll('.ck-group'));
 	var total = document.querySelectorAll('.ck-entry').length;
 	function apply() {
@@ -142,17 +172,18 @@ JS = r"""
 			c.textContent = visible === parseInt(c.getAttribute('data-total'), 10) ? c.getAttribute('data-default') : visible + ' of ' + c.getAttribute('data-total') + ' shown';
 			shown += visible;
 		});
-		count.textContent = 'Showing ' + shown + ' of ' + total + ' documents.';
+		window.DigestNav.afterApply(shown, total, !!(qq || jj || tt || yy), '');
 	}
 	groups.forEach(function (g) { var c = g.querySelector('.ck-group-count'); c.setAttribute('data-default', c.textContent); });
 	[q, j, t, y].forEach(function (el) { el.addEventListener('input', apply); el.addEventListener('change', apply); });
+	window.DigestNav.onClear = function () { q.value = ''; j.value = ''; t.value = ''; y.value = ''; apply(); };
 	apply();
 })();
 """
 
 CSS = """/* Cookie compliance digest: scoped styles, same pattern as the EDPB digest. */
 
-#cookie-digest { max-width: 52em; margin: 0; }
+#cookie-digest { margin: 0; }
 .ck-intro p { margin-bottom: 1em; }
 .ck-privacy { color: rgba(255,255,255,0.55); font-size: 0.9em; }
 
@@ -257,6 +288,7 @@ HEAD = """<!DOCTYPE HTML>
 						<li class="assessment-menu"><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a><ul class="assessment-submenu"><li><a href="privacy-ai-assessment.html#tool-privacy">Privacy Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-dpia">Full DPIA</a></li><li><a href="privacy-ai-assessment.html#tool-lia">Legitimate Interest Test</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-incident">Incident &amp; Breach Severity</a></li><li><a href="privacy-ai-assessment.html#tool-tpsa">Third-Party Security</a></li></ul></li>
 						<li><a href="practical-privacy.html">Practical Privacy</a></li>
 						<li><a href="practical-ai-act-advice.html">AI Act Advice</a></li>
+						<li><a href="ai-act-digest.html">AI Act Digest</a></li>
 						<li><a href="edpb-digest.html">EDPB Digest</a></li>
 						<li><a href="cookie-digest.html" class="active">Cookie Digest</a></li>
 						<li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li>
@@ -308,13 +340,14 @@ TAIL = """
 
 if __name__ == "__main__":
     jurs = sorted({e["jurisdiction"] for e in E})
-    page = HEAD % (len(E), len(jurs)) + build_body() + TAIL % JS
+    page = HEAD % (len(E), len(jurs)) + build_body() + TAIL % (nav_js("ck", "documents") + JS)
+    CSS_OUT = CSS + nav_css("ck", "cookie-digest")
     page = page.replace("\r\n", "\n")
     outdir = "/mnt/user-data/outputs/site"
     os.makedirs(outdir + "/pages/cookie-digest", exist_ok=True)
     open(outdir + "/cookie-digest.html", "w", encoding="utf-8", newline="\n").write(page)
-    open(outdir + "/pages/cookie-digest/cookie-digest.css", "w", encoding="utf-8", newline="\n").write(CSS)
+    open(outdir + "/pages/cookie-digest/cookie-digest.css", "w", encoding="utf-8", newline="\n").write(CSS_OUT)
     json.dump(E, open(os.path.join(HERE, "cookie_digest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("html", len(page.encode("utf-8")), "bytes; entries", page.count('<article class="ck-entry"'), "; em dashes", page.count("—"))
+    print("html", len(page.encode("utf-8")), "bytes; entries", page.count('<article class="ck-entry"'), "; em dashes", page.count("\u2014") + CSS_OUT.count("\u2014"))
     from collections import Counter
     print(Counter(e["group"] for e in E))
