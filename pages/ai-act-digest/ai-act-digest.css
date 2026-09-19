@@ -1,0 +1,68 @@
+/* AI Act digest: scoped styles, same pattern as the EDPB and cookie digests. */
+
+#ai-act-digest { max-width: 52em; margin: 0; }
+.ai-intro p { margin-bottom: 1em; }
+.ai-privacy { color: rgba(255,255,255,0.55); font-size: 0.9em; }
+
+.ai-filters {
+	display: grid; grid-template-columns: 2fr 1.3fr 1fr 1.3fr 1fr; gap: 0.75em 1em; align-items: end;
+	margin: 1.5em 0 1em 0; padding: 1em 1.25em;
+	border: solid 1px rgba(255,255,255,0.1); border-radius: 0.5em; background: rgba(255,255,255,0.02);
+}
+.ai-filters label { display: block; font-size: 0.8em; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.1em; }
+.ai-filters input, .ai-filters select { margin-top: 0.4em; }
+.ai-count { grid-column: 1 / -1; margin: 0; font-size: 0.9em; color: #7fb2e5; }
+
+.ai-index-label { color: rgba(255,255,255,0.55); font-size: 0.9em; margin: 1.5em 0 0.5em 0; }
+.ai-index {
+	display: grid; grid-template-columns: repeat(auto-fit, minmax(16em, 1fr)); gap: 0.4em 1.5em;
+	margin: 0 0 1.5em 0; padding: 1em 1.25em;
+	border: solid 1px rgba(255,255,255,0.1); border-radius: 0.5em; background: rgba(255,255,255,0.02); list-style: none;
+}
+.ai-index li { list-style: none; font-size: 0.9em; }
+.ai-index a { color: #7fb2e5; border-bottom: none; }
+.ai-index a:hover { color: #fff; }
+.ai-n { color: rgba(255,255,255,0.45); font-size: 0.85em; margin-left: 0.3em; }
+
+.ai-groups { display: flex; flex-direction: column; gap: 0.75em; }
+.ai-part { font-size: 1.1em; margin: 1.5em 0 0.25em 0; text-transform: none; letter-spacing: 0; color: #fff; }
+.ai-part[hidden] { display: none; }
+.ai-group { border: solid 1px rgba(255,255,255,0.15); border-radius: 0.5em; background: rgba(255,255,255,0.03); overflow: hidden; }
+.ai-group summary {
+	list-style: none; cursor: pointer; padding: 1em 3em 1em 1.25em; font-weight: bold; color: #fff;
+	display: flex; align-items: baseline; justify-content: space-between; gap: 0.75em; position: relative;
+}
+.ai-group summary::-webkit-details-marker { display: none; }
+.ai-group summary::after {
+	content: '\f107'; font-family: 'Font Awesome 5 Free'; font-weight: 900;
+	position: absolute; right: 1.25em; top: 1.1em; color: rgba(255,255,255,0.4); transition: transform 0.2s ease;
+}
+.ai-group[open] summary::after { transform: rotate(180deg); }
+.ai-group summary:hover { background: rgba(255,255,255,0.04); }
+.ai-group-count { font-weight: normal; font-size: 0.8em; color: rgba(255,255,255,0.5); white-space: nowrap; }
+.ai-group-body { padding: 0 1.25em 0.5em 1.25em; }
+
+.ai-entry { padding: 0.9em 0 1em 0; border-top: solid 1px rgba(255,255,255,0.08); }
+.ai-entry[hidden] { display: none; }
+.ai-title { font-size: 0.95em; margin: 0 0 0.35em 0; line-height: 1.4; text-transform: none; letter-spacing: 0; }
+.ai-title a { color: #fff; border-bottom: dotted 1px rgba(255,255,255,0.3); }
+.ai-title a:hover { color: #7fb2e5; border-bottom-color: #7fb2e5; }
+.ai-meta { margin: 0 0 0.5em 0; font-size: 0.8em; color: rgba(255,255,255,0.5); display: flex; flex-wrap: wrap; gap: 0.4em 0.6em; align-items: center; }
+.ai-chip { display: inline-block; padding: 0.1em 0.6em; border-radius: 1em; border: solid 1px rgba(255,255,255,0.15); font-size: 0.85em; line-height: 1.6; }
+.ai-chip-date { border-color: rgba(127,178,229,0.5); color: #7fb2e5; }
+.ai-chip-omni { border-color: rgba(255,200,120,0.5); color: #f2c98a; }
+.ai-chip-role, .ai-chip-type { color: rgba(255,255,255,0.75); }
+.ai-chip-art { color: #7fb2e5; }
+.ai-chip-status { border-color: rgba(255,200,120,0.4); color: #f2c98a; }
+.ai-chip-topic { color: rgba(255,255,255,0.6); }
+.ai-chip-src { border-style: dashed; color: rgba(255,255,255,0.45); }
+.ai-take { margin: 0; font-size: 0.95em; line-height: 1.6; color: rgba(255,255,255,0.72); }
+.ai-omni { margin: 0.4em 0 0 0; font-size: 0.85em; color: #f2c98a; }
+.ai-rec { margin: 0.3em 0 0 0; font-size: 0.8em; color: rgba(255,255,255,0.4); }
+
+@media (max-width: 736px) {
+	#ai-act-digest { margin-top: 3em; padding-top: 2em; }
+	.ai-filters { grid-template-columns: 1fr; }
+	.ai-index { grid-template-columns: 1fr; }
+	.ai-group summary { flex-direction: column; align-items: flex-start; gap: 0.25em; }
+}

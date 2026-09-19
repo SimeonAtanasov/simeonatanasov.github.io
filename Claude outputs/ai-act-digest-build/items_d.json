@@ -1,0 +1,318 @@
+[
+  {
+    "id": "annex-1",
+    "number": "Annex I",
+    "title": "List of Union Harmonisation Legislation",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex I lists the product legislation that makes an AI safety component, or an AI system that is itself a product, high-risk under Article 6(1). Section A holds New Legislative Framework acts (toys, recreational craft, lifts, equipment for explosive atmospheres, radio equipment, pressure equipment, cableways, personal protective equipment, gas appliances, medical devices and in vitro diagnostics), where the AI Act requirements are checked inside the sectoral conformity assessment. Section B holds aviation, vehicles, marine equipment and rail, where only Article 6(1) and Articles 102 to 109 bite. Providers of regulated products map every AI component against the list; the Annex I obligations apply from 2 August 2028.",
+    "applies_from": "2 August 2028",
+    "omnibus": "The amendment deleted point 1, the Machinery Directive 2006/42/EC, and added point 21, the Machinery Regulation (EU) 2023/1230, in Section B.",
+    "binds": [
+      "provider",
+      "notified-body"
+    ],
+    "recitals": [
+      33,
+      47,
+      49,
+      50,
+      51
+    ],
+    "topics": [
+      "high-risk-classification",
+      "conformity",
+      "scope"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/1/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-2",
+    "number": "Annex II",
+    "title": "List of Criminal Offences Referred to in Article 5(1), First Subparagraph, Point (h)(iii)",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex II lists the 16 categories of serious criminal offence (terrorism, trafficking in human beings, child sexual exploitation, drug and arms trafficking, murder and grievous bodily injury, organ trade, nuclear material, kidnapping, International Criminal Court crimes, hijacking, rape, environmental crime, organised or armed robbery, sabotage and participation in a criminal organisation) that unlock the third exception to the ban on real-time remote biometric identification in Article 5(1)(h)(iii). The exception covers only locating or identifying a suspect of one of these offences where the offence carries a custodial sentence of at least four years in the Member State concerned. Law enforcement deployers check the offence against the list before any use.",
+    "applies_from": "2 February 2025",
+    "omnibus": "",
+    "binds": [
+      "deployer",
+      "authority"
+    ],
+    "recitals": [],
+    "topics": [
+      "prohibitions"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/2/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-3",
+    "number": "Annex III",
+    "title": "High-Risk AI Systems Referred to in Article 6(2)",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex III lists the stand-alone use cases that are high-risk under Article 6(2), in eight areas: biometrics (remote identification, categorisation by sensitive attributes, emotion recognition), safety components of critical infrastructure, education and vocational training, employment and worker management, access to essential services (benefits, credit scoring, life and health insurance pricing, emergency triage), law enforcement, migration and border control, and administration of justice and elections. Providers classify against the list, then test the Article 6(3) filter for systems that do not materially influence the outcome; deployers of listed systems pick up Articles 26 and 27. The Commission amends the list under Article 7. Annex III obligations apply from 2 December 2027.",
+    "applies_from": "2 December 2027",
+    "omnibus": "",
+    "binds": [
+      "provider",
+      "deployer",
+      "commission"
+    ],
+    "recitals": [
+      48,
+      52,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      159
+    ],
+    "topics": [
+      "high-risk-classification",
+      "scope"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/3/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-4",
+    "number": "Annex IV",
+    "title": "Technical Documentation Referred to in Article 11(1)",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex IV sets the minimum content of the technical documentation a provider of a high-risk AI system draws up under Article 11(1) before placing it on the market. Its nine points cover a general description (intended purpose, versions, hardware, interfaces, instructions for use), a detailed description of development (methods, design choices, architecture, data provenance, human oversight assessment, pre-determined changes, validation and testing metrics, cybersecurity), monitoring and control information, performance metrics, the Article 9 risk management system, lifecycle changes, harmonised standards applied, the Article 47 declaration of conformity and the Article 72 post-market monitoring plan. Providers structure their evidence file around these headings; SMEs can use the Commission's simplified form.",
+    "applies_from": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+    "omnibus": "",
+    "binds": [
+      "provider",
+      "notified-body"
+    ],
+    "recitals": [],
+    "topics": [
+      "provider-duties",
+      "conformity",
+      "data"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/4/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-5",
+    "number": "Annex V",
+    "title": "EU Declaration of Conformity",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex V prescribes the eight elements of the EU declaration of conformity a provider signs under Article 47: identification of the system (name, type, traceability references), name and address of the provider or authorised representative, a statement that it is issued under the provider's sole responsibility, a statement of conformity with the Regulation and other Union law requiring a declaration, where personal data is processed a statement of compliance with Regulations (EU) 2016/679 and (EU) 2018/1725 and Directive (EU) 2016/680, references to harmonised standards or common specifications, notified body details and certificate where applicable, and place, date, signatory and signature. Providers update it after changes.",
+    "applies_from": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+    "omnibus": "",
+    "binds": [
+      "provider"
+    ],
+    "recitals": [],
+    "topics": [
+      "conformity",
+      "provider-duties"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/5/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-6",
+    "number": "Annex VI",
+    "title": "Conformity Assessment Procedure Based on Internal Control",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex VI defines the self-assessment route that Article 43(2) assigns to most Annex III high-risk systems and that Article 43(1) allows for biometric systems where harmonised standards are applied in full. Under points 2 to 4 the provider verifies that its quality management system meets Article 17, examines the technical documentation to confirm the system meets the essential requirements in Chapter III, Section 2, and verifies that the design and development process and the Article 72 post-market monitoring are consistent with that documentation. No notified body is involved, so the provider's own records carry the burden of proof; each check needs dated evidence before the Article 47 declaration is signed.",
+    "applies_from": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+    "omnibus": "",
+    "binds": [
+      "provider"
+    ],
+    "recitals": [],
+    "topics": [
+      "conformity",
+      "provider-duties"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/6/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-7",
+    "number": "Annex VII",
+    "title": "Conformity Based on an Assessment of the Quality Management System and an Assessment of the Technical Documentation",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex VII is the third-party route under Article 43(1), mandatory for Annex III biometric systems where harmonised standards are not fully applied. The provider applies to a single notified body with its Article 17 quality management system documentation and the technical documentation (point 2). The notified body audits the quality management system, examines the technical documentation, may demand tests and gains access to training, validation and testing data sets and, as a last resort on reasoned request, to trained models (points 4.3 to 4.5). It issues a Union technical documentation assessment certificate, assesses every change affecting compliance and runs periodic surveillance audits (points 4.6, 4.7 and 5).",
+    "applies_from": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+    "omnibus": "",
+    "binds": [
+      "provider",
+      "notified-body"
+    ],
+    "recitals": [],
+    "topics": [
+      "conformity",
+      "provider-duties"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/7/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-8",
+    "number": "Annex VIII",
+    "title": "Information to be Submitted upon the Registration of High-Risk AI Systems in Accordance with Article 49",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex VIII fixes the data entered in the EU database under Article 49. Section A, for providers of Annex III high-risk systems under Article 49(1), lists 13 items: provider details, trade name and identifiers, intended purpose, input and operating logic, market status, notified body certificate, Member States of availability, the declaration of conformity, electronic instructions for use. Section B, for providers relying on the Article 6(3) exemption under Article 49(2), lists identity, trade name, intended purpose, the Article 6(3) condition invoked and market status. Section C, for public authority deployers under Article 49(3), adds the provider's entry and impact assessment summaries.",
+    "applies_from": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+    "omnibus": "The amendment deleted Section B points 7 and 9, so providers relying on Article 6(3) no longer register a summary of the grounds for non-high-risk classification or the Member States where the system is available.",
+    "binds": [
+      "provider",
+      "deployer",
+      "commission"
+    ],
+    "recitals": [],
+    "topics": [
+      "registration",
+      "provider-duties",
+      "deployer-duties"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/8/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-9",
+    "number": "Annex IX",
+    "title": "Information to be Submitted upon the Registration of High-Risk AI Systems Listed in Annex III in Relation to Testing in Real World Conditions in Accordance with Article 60",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex IX lists the five items a provider or prospective provider registers in the EU database before testing an Annex III high-risk system in real world conditions outside a sandbox under Article 60(4)(c): a Union-wide unique identification number for the test, the name and contact details of the provider or prospective provider and of the deployers involved, a brief description of the system and its intended purpose, a summary of the main characteristics of the testing plan, and information on any suspension or termination. The entry is kept up to date throughout the test, so every change to the plan is logged as it happens.",
+    "applies_from": "2 August 2026",
+    "omnibus": "",
+    "binds": [
+      "provider",
+      "deployer"
+    ],
+    "recitals": [],
+    "topics": [
+      "registration",
+      "sandboxes"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/9/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-10",
+    "number": "Annex X",
+    "title": "Union Legislative Acts on Large-Scale IT Systems in the Area of Freedom, Security and Justice",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex X names the seven large-scale EU information systems whose legal bases trigger the transitional rule in Article 111(1): the Schengen Information System (Regulations (EU) 2018/1860, 2018/1861 and 2018/1862), the Visa Information System (Regulations (EU) 2021/1133 and 2021/1134), Eurodac (Regulation (EU) 2024/1358), the Entry/Exit System (Regulation (EU) 2017/2226), ETIAS (Regulations (EU) 2018/1240 and 2018/1241), ECRIS-TCN (Regulation (EU) 2019/816) and interoperability (Regulations (EU) 2019/817 and 2019/818). AI components of these systems placed on the market or put into service before 2 August 2027 must comply by 31 December 2030, except that the Article 5 prohibitions apply without delay. The list concerns the Commission and the Member State authorities operating those systems.",
+    "applies_from": "in force 1 August 2024",
+    "omnibus": "",
+    "binds": [
+      "authority",
+      "commission",
+      "institutional"
+    ],
+    "recitals": [],
+    "topics": [
+      "scope",
+      "other"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/10/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-11",
+    "number": "Annex XI",
+    "title": "Technical Documentation Referred to in Article 53(1), Point (a): Technical Documentation for Providers of General-Purpose AI Models",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex XI sets the minimum technical documentation every provider of a general-purpose AI model keeps under Article 53(1)(a) and supplies to the AI Office on request, scaled to the size and risk profile of the model. Section 1 requires a general description (intended tasks and integration types, acceptable use policies, release date and distribution channels, architecture and parameter count, modalities, licence) plus development details: integration means, design and training methodology, the type, provenance, curation, scope and bias-detection approach for training data, compute and training time, and known or estimated energy consumption. Section 2 adds, for systemic-risk models, evaluation results, adversarial testing and system architecture.",
+    "applies_from": "2 August 2025",
+    "omnibus": "",
+    "binds": [
+      "gpai-provider",
+      "authority"
+    ],
+    "recitals": [
+      101
+    ],
+    "topics": [
+      "gpai",
+      "provider-duties",
+      "data"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/11/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-12",
+    "number": "Annex XII",
+    "title": "Transparency Information Referred to in Article 53(1), Point (b): Technical Documentation for Providers of General-Purpose AI Models to Downstream Providers That Integrate the Model into Their AI System",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex XII lists what a general-purpose AI model provider must hand to downstream providers under Article 53(1)(b) so they can understand the model's capabilities and limitations and meet their own obligations. Point 1 covers the model: intended tasks and compatible system types, acceptable use policies, release date and distribution channels, hardware and software interaction, software versions, architecture and parameter count, modalities and formats, and licence. Point 2 covers the elements and development process: the technical means and instructions needed for integration, input and output modalities and maximum sizes, and the type, provenance and curation methodologies of training, testing and validation data. Downstream providers request this pack before integrating a model.",
+    "applies_from": "2 August 2025",
+    "omnibus": "",
+    "binds": [
+      "gpai-provider",
+      "provider"
+    ],
+    "recitals": [
+      101
+    ],
+    "topics": [
+      "gpai",
+      "transparency"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/12/",
+    "fetched": true,
+    "source": "page"
+  },
+  {
+    "id": "annex-13",
+    "number": "Annex XIII",
+    "title": "Criteria for the Designation of General-Purpose AI Models with Systemic Risk Referred to in Article 51",
+    "chapter": "Annexes",
+    "section": "",
+    "takeaway": "Annex XIII gives the Commission seven criteria for deciding under Article 51(1)(a) whether a general-purpose AI model has high-impact capabilities equivalent to those presumed above the 10^25 FLOPs threshold in Article 51(2): (a) number of parameters, (b) data set quality or size in tokens, (c) training compute in floating point operations or proxies, (d) input and output modalities, (e) benchmarks of capability, adaptability, autonomy, scalability and tool access, (f) market impact, presumed high at 10 000 or more registered business users, and (g) registered end users. GPAI providers track these indicators to anticipate or contest a designation under Article 52.",
+    "applies_from": "2 August 2025",
+    "omnibus": "",
+    "binds": [
+      "commission",
+      "gpai-provider"
+    ],
+    "recitals": [
+      111
+    ],
+    "topics": [
+      "gpai",
+      "governance"
+    ],
+    "url": "https://artificialintelligenceact.eu/annex/13/",
+    "fetched": true,
+    "source": "page"
+  }
+]

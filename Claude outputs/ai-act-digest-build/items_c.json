@@ -1,0 +1,1141 @@
+[
+ {
+  "id": "art-66",
+  "number": "Article 66",
+  "title": "Tasks of the Board",
+  "chapter": "Chapter VII: Governance",
+  "section": "Section 1: Governance at Union level",
+  "takeaway": "The European Artificial Intelligence Board advises and assists the Commission and the Member States to secure consistent and effective application of the Regulation. Its tasks in points (a) to (o) include coordinating national competent authorities and joint market surveillance activities under Article 74(11), advising on codes of practice and Commission guidelines, opining on harmonised standards under Articles 40 and 41, on amendments to Annex III under Article 7 and on qualified alerts about general-purpose AI models. Practitioners treat Board opinions and recommendations as the earliest signal of how authorities will read contested provisions.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "institutional",
+   "authority"
+  ],
+  "recitals": [
+   149
+  ],
+  "topics": [
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/66/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-67",
+  "number": "Article 67",
+  "title": "Advisory Forum",
+  "chapter": "Chapter VII: Governance",
+  "section": "Section 1: Governance at Union level",
+  "takeaway": "An advisory forum supplies technical expertise to the Board and the Commission. Paragraph 2 requires balanced membership across industry, start-ups, SMEs, civil society and academia; the Commission appoints members for two-year terms extendable to no more than four years, and the Fundamental Rights Agency, ENISA, CEN, CENELEC and ETSI sit as permanent members (paragraph 5). The forum meets at least twice a year, may form sub-groups and publishes an annual report (paragraphs 7, 9 and 10). Industry bodies seeking influence on guidance and codes should engage through it.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "institutional",
+   "commission"
+  ],
+  "recitals": [
+   150
+  ],
+  "topics": [
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/67/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-68",
+  "number": "Article 68",
+  "title": "Scientific Panel of Independent Experts",
+  "chapter": "Chapter VII: Governance",
+  "section": "Section 1: Governance at Union level",
+  "takeaway": "The Commission establishes by implementing act a scientific panel of independent experts to support enforcement, chosen for AI expertise and independence from providers, with fair gender and geographical representation (paragraphs 1 and 2). The panel advises the AI Office on systemic risks of general-purpose AI models, on evaluation tools and methodologies, on classifying models with systemic risk and on cross-border market surveillance (paragraph 3), and it can issue the qualified alerts that trigger Article 90. Members act independently, declare interests publicly and keep information confidential (paragraph 4). Providers of general-purpose AI models should expect panel input behind any AI Office evaluation.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional",
+   "gpai-provider"
+  ],
+  "recitals": [
+   151
+  ],
+  "topics": [
+   "governance",
+   "gpai"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/68/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-69",
+  "number": "Article 69",
+  "title": "Access to the Pool of Experts by the Member States",
+  "chapter": "Chapter VII: Governance",
+  "section": "Section 1: Governance at Union level",
+  "takeaway": "Member States may call on the scientific panel's experts to support their own enforcement work (paragraph 1) and may be charged fees at the rate the Commission pays under the Article 68(1) implementing act (paragraph 2). The Commission facilitates timely access and organises the combination of expert support and the Union AI testing support structures under Article 84 so that it adds the most value (paragraph 3). National authorities investigating complex systems can draw on Union-level technical capacity rather than building it alone.",
+  "applies_from": "2 August 2025",
+  "omnibus": "Paragraph 3 is marked as amended, adjusting how the Commission organises expert access alongside the Union AI testing support structures under Article 84.",
+  "binds": [
+   "authority",
+   "commission"
+  ],
+  "recitals": [
+   151
+  ],
+  "topics": [
+   "governance",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/69/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-70",
+  "number": "Article 70",
+  "title": "Designation of National Competent Authorities and Single Points of Contact",
+  "chapter": "Chapter VII: Governance",
+  "section": "Section 2: National competent authorities",
+  "takeaway": "Each Member State designates at least one notifying authority and at least one market surveillance authority, acting independently and impartially (paragraph 1), and names one market surveillance authority as single point of contact, with contact details published by 2 August 2025 (paragraph 2). Authorities need adequate technical, financial and human resources with expertise spanning AI, data protection, cybersecurity and fundamental rights, reviewed annually (paragraph 3), and Member States report on resources by 2 August 2025 and every two years (paragraph 6). Authorities may guide SMEs, start-ups and SMCs (paragraph 8); the European Data Protection Supervisor supervises Union institutions (paragraph 9). Operators should identify their national single point of contact now.",
+  "applies_from": "2 August 2025",
+  "omnibus": "Paragraph 8 is amended so that national guidance and advice extends to SMCs (small mid-caps) alongside SMEs and start-ups.",
+  "binds": [
+   "authority",
+   "institutional"
+  ],
+  "recitals": [
+   153,
+   154
+  ],
+  "topics": [
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/70/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-71",
+  "number": "Article 71",
+  "title": "EU Database for High-Risk AI Systems Listed in Annex III",
+  "chapter": "Chapter VIII: EU Database for High-Risk AI Systems",
+  "section": "",
+  "takeaway": "The Commission, with the Member States, runs an EU database of high-risk AI systems under Article 6(2) registered under Articles 49 and 60, and of systems the provider judges non-high-risk under Article 6(3) and registers under Article 6(4) (paragraph 1). Providers or authorised representatives enter Annex VIII Sections A and B data; deployers that are public authorities enter Section C (paragraphs 2 and 3). Article 49 registrations are public and machine-readable, while Article 60 real-world testing entries stay restricted to authorities unless the provider consents (paragraph 4). The Commission is controller (paragraph 6). Providers should prepare Annex VIII content before placing systems on the market.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "provider",
+   "deployer"
+  ],
+  "recitals": [
+   131
+  ],
+  "topics": [
+   "registration",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/71/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-72",
+  "number": "Article 72",
+  "title": "Post-Market Monitoring by Providers and Post-Market Monitoring Plan for High-Risk AI Systems",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 1: Post-market monitoring",
+  "takeaway": "Providers must establish and document a post-market monitoring system proportionate to the AI technology and the risks of the high-risk system (paragraph 1), which actively collects and analyses performance data across the system's lifetime to verify continued compliance with Chapter III, Section 2 (paragraph 2). The system rests on a post-market monitoring plan forming part of the Annex IV technical documentation, with Commission guidance and a template due by 2 September 2027 (paragraph 3). Providers covered by Annex I, Section A legislation or Annex III, point 5 financial rules may integrate the elements into existing systems (paragraph 4). Build the plan into the technical file from day one.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Paragraph 3 replaces the implementing act on a monitoring plan template that was due by 2 February 2026 with Commission guidance, including a template, adopted after taking utmost account of the Board's opinion by 2 September 2027.",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   155
+  ],
+  "topics": [
+   "provider-duties",
+   "oversight"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/72/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-73",
+  "number": "Article 73",
+  "title": "Reporting of Serious Incidents",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 2: Sharing of information on serious incidents",
+  "takeaway": "Providers of high-risk AI systems report any serious incident to the market surveillance authority of the Member State where it occurred (paragraph 1). The deadline is immediately after establishing a causal link or a reasonable likelihood of one, and no later than 15 days after awareness (paragraph 2), shortened to two days for widespread infringements or Article 3(49)(b) incidents (paragraph 3) and ten days for a death (paragraph 4); an incomplete initial report may be filed (paragraph 5). Providers investigate and cooperate without altering the system in ways that hinder evaluation (paragraph 6). Systems under equivalent sectoral reporting regimes report only Article 3(49)(c) incidents (paragraphs 9 and 10).",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "provider",
+   "authority"
+  ],
+  "recitals": [
+   155
+  ],
+  "topics": [
+   "incidents",
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/73/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-74",
+  "number": "Article 74",
+  "title": "Market Surveillance and Control of AI Systems in the Union Market",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "Regulation (EU) 2019/1020 governs market surveillance of AI systems, with providers, deployers, importers, distributors and authorised representatives all counted as economic operators (paragraph 1). Sectoral authorities under Annex I, Section A legislation, financial supervisors for financial institutions (paragraph 6) and data protection authorities for Annex III points 1, 6, 7 and 8 systems (paragraph 8) act as market surveillance authorities; the European Data Protection Supervisor covers Union institutions (paragraph 9). Authorities get full access to documentation and to training, validation and testing data sets, including remotely via APIs (paragraph 12), and to source code on reasoned request once other verification is exhausted (paragraph 13).",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "authority",
+   "provider"
+  ],
+  "recitals": [
+   156,
+   158,
+   159,
+   160
+  ],
+  "topics": [
+   "enforcement",
+   "oversight"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/74/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-75",
+  "number": "Article 75",
+  "title": "Market Surveillance and Control of AI Systems and Mutual Assistance",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "The AI Office holds exclusive competence to supervise and enforce obligations for AI systems built on a general-purpose AI model where the same provider develops both, and for AI systems embedded in very large online platforms or search engines designated under Regulation (EU) 2022/2065 (paragraph 1). Providers under AI Office competence report serious incidents to the AI Office (paragraph 1a); national authorities assist it and are consulted before restrictive measures (paragraphs 1b to 1d); it runs third-party conformity assessments at the provider's cost (paragraph 1e). Authorities may refer suspected infringements, with a four-month response, and obtain model information within 30 days (paragraphs 2a and 3).",
+  "applies_from": "2 August 2026",
+  "omnibus": "Substantially rewritten: paragraph 1 gives the AI Office exclusive competence over AI systems built on a provider's own general-purpose AI model and over systems in designated very large online platforms and search engines, and new paragraphs 1a to 1e and 2a add incident reporting to the AI Office, mutual assistance, consultation, AI Office conformity assessment and a referral procedure with a four-month answer.",
+  "binds": [
+   "commission",
+   "authority",
+   "provider"
+  ],
+  "recitals": [
+   161
+  ],
+  "topics": [
+   "enforcement",
+   "gpai",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/75/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-76",
+  "number": "Article 76",
+  "title": "Supervision of Testing in Real World Conditions by Market Surveillance Authorities",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "Market surveillance authorities hold the competences and powers to ensure that testing in real world conditions complies with the Regulation (paragraph 1). For testing inside an AI regulatory sandbox under Article 58 they check compliance with Article 60 and may permit derogations from Article 60(4), points (f) and (g) (paragraph 2). On a serious incident or grounds of non-compliance with Articles 60 and 61 they may suspend or terminate the testing or require modifications (paragraph 3), giving reasons and a route to challenge (paragraph 4) and informing other Member States named in the testing plan (paragraph 5). Providers testing in real world conditions should keep a live compliance file.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Paragraph 1 adds that for testing under Article 60a references to market surveillance authorities mean the national competent authorities, or the European Data Protection Supervisor for Union institutions.",
+  "binds": [
+   "authority",
+   "provider"
+  ],
+  "recitals": [],
+  "topics": [
+   "sandboxes",
+   "enforcement",
+   "oversight"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/76/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-77",
+  "number": "Article 77",
+  "title": "Powers of Authorities Protecting Fundamental Rights and Cooperation with Market Surveillance Authorities",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "National authorities protecting fundamental rights may request and access any documentation created or held under the Regulation, in accessible and machine-readable form, when needed for their mandate (paragraph 1). Market surveillance authorities must grant that access without undue delay, requesting it from providers or deployers where necessary (paragraph 1a), and both sets of authorities cooperate closely and coordinate procedures (paragraph 1b). Member States published their list of such authorities by 2 November 2024 (paragraph 2). Where documentation is insufficient, a fundamental rights authority may ask for technical testing of a high-risk system (paragraph 3). Deployers in employment or public services should expect equality bodies among their supervisors.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Paragraph 1a is amended to oblige market surveillance authorities to grant fundamental rights authorities access without undue delay, and new paragraph 1b requires close cooperation, information exchange and coordination between the two sets of authorities.",
+  "binds": [
+   "authority",
+   "deployer"
+  ],
+  "recitals": [
+   157
+  ],
+  "topics": [
+   "enforcement",
+   "oversight"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/77/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-78",
+  "number": "Article 78",
+  "title": "Confidentiality",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "The Commission, market surveillance authorities, notified bodies and everyone else involved in applying the Regulation must protect intellectual property, trade secrets including source code, the integrity of inspections, public and national security, criminal and administrative proceedings and classified information (paragraph 1). Authorities request only data strictly necessary to assess risk, secure it with adequate cybersecurity and delete it once no longer needed (paragraph 2). Confidential exchanges between authorities are not disclosed without consulting the originator; law enforcement, immigration and asylum providers keep technical documentation on their premises for cleared staff (paragraph 3). Article 113(b) lists Article 78 among the provisions applying from 2 August 2025.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "authority",
+   "notified-body",
+   "commission"
+  ],
+  "recitals": [
+   167
+  ],
+  "topics": [
+   "enforcement",
+   "oversight"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/78/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-79",
+  "number": "Article 79",
+  "title": "Procedure at National Level for Dealing with AI Systems Presenting a Risk",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "An AI system presenting a risk to health, safety or fundamental rights counts as a product presenting a risk under Regulation (EU) 2019/1020 (paragraph 1). Market surveillance authorities evaluate suspect systems and, on finding non-compliance, require the operator to correct, withdraw or recall within a period no longer than 15 working days (paragraph 2), and take provisional measures if the operator fails to act (paragraph 5). Notifications specify whether the breach concerns Article 5, Chapter III, Section 2, harmonised standards or Article 50 (paragraph 6); measures stand if no objection arrives within three months, or 30 days for Article 5 breaches (paragraph 8). Operators need a Union-wide corrective action capability.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "authority",
+   "provider"
+  ],
+  "recitals": [],
+  "topics": [
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/79/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-80",
+  "number": "Article 80",
+  "title": "Procedure for Dealing with AI Systems Classified by the Provider as Non-High-Risk in Application of Annex III",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "Market surveillance authorities may evaluate any system a provider has classified as non-high-risk under Article 6(3) and, applying the Article 6 criteria and Commission guidelines, decide whether it is in fact high-risk (paragraph 1). If so, the provider must bring the system into compliance and take corrective action within a set period (paragraph 2), across all affected systems on the Union market (paragraph 5); failure triggers the Article 79(5) to (9) measures (paragraph 6). Deliberate misclassification to escape Chapter III, Section 2 attracts fines under Article 99 (paragraph 7). Authorities may run checks using the Article 71 database (paragraph 8). Providers relying on Article 6(3) need a documented, defensible assessment.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "authority",
+   "provider"
+  ],
+  "recitals": [],
+  "topics": [
+   "high-risk-classification",
+   "enforcement",
+   "penalties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/80/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-81",
+  "number": "Article 81",
+  "title": "Union Safeguard Procedure",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "Where a Member State objects within three months, or 30 days for Article 5 breaches, to another Member State's measure under Article 79(5), or the Commission considers a measure contrary to Union law, the Commission consults the authorities and operators and decides within six months, or 60 days for Article 5 breaches, whether the measure is justified (paragraph 1). A justified measure must be mirrored by every Member State; an unjustified one is withdrawn (paragraph 2). Where the shortfall lies in a harmonised standard or common specification, the Commission applies Article 11 of Regulation (EU) No 1025/2012 (paragraph 3). Operators contesting a national ban should engage in the Commission consultation.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "authority"
+  ],
+  "recitals": [],
+  "topics": [
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/81/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-82",
+  "number": "Article 82",
+  "title": "Compliant AI Systems Which Present a Risk",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "A high-risk AI system that complies with the Regulation can still be stopped: where a market surveillance authority finds it presents a risk to health, safety, fundamental rights or other public interests, it requires the operator to remove the risk without undue delay within a set period (paragraph 1), and the provider applies corrective action to all affected systems on the Union market (paragraph 2). The Member State informs the Commission and the other Member States, giving system identification, origin, supply chain, the risk and the measures taken (paragraph 3); the Commission evaluates and may propose further measures (paragraphs 4 and 5). Conformity is necessary but not sufficient.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "authority",
+   "provider",
+   "commission"
+  ],
+  "recitals": [],
+  "topics": [
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/82/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-83",
+  "number": "Article 83",
+  "title": "Formal Non-Compliance",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "Market surveillance authorities order the provider to end formal non-compliance where the CE marking is affixed in breach of Article 48 or missing, the EU declaration of conformity is absent or wrongly drawn up, the EU database registration is missing, no authorised representative is appointed where required, or technical documentation is unavailable (paragraph 1). If non-compliance persists, the authority restricts or prohibits the high-risk system or has it recalled or withdrawn without delay (paragraph 2). Providers should run a pre-market checklist covering marking, declaration, registration, representative and technical file.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "authority",
+   "provider"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/83/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-84",
+  "number": "Article 84",
+  "title": "Union AI Testing Support Structures",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 3: Enforcement",
+  "takeaway": "The Commission designates one or more Union AI testing support structures to perform the tasks listed in Article 21(6) of Regulation (EU) 2019/1020 in the field of AI (paragraph 1). Beyond that, the structures give independent technical or scientific advice at the request of the Board, the Commission or market surveillance authorities (paragraph 2). They complement the scientific panel's experts under Article 69 and give national authorities a shared testing capacity for complex systems, so providers may meet them during investigations.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "authority"
+  ],
+  "recitals": [
+   152
+  ],
+  "topics": [
+   "governance",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/84/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-85",
+  "number": "Article 85",
+  "title": "Right to Lodge a Complaint with a Market Surveillance Authority",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 4: Remedies",
+  "takeaway": "Any natural or legal person with grounds to consider that the Regulation has been infringed may lodge a complaint with the relevant market surveillance authority, without prejudice to other administrative or judicial remedies (paragraph 1). Authorities handle complaints under the procedures of Regulation (EU) 2019/1020 and take them into account in their surveillance activities (paragraph 2). Civil society organisations, competitors and affected individuals gain a formal route into enforcement, so operators should expect complaints to trigger evaluations under Article 79.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "everyone",
+   "authority"
+  ],
+  "recitals": [
+   170
+  ],
+  "topics": [
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/85/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-86",
+  "number": "Article 86",
+  "title": "Right to Explanation of Individual Decision-Making",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 4: Remedies",
+  "takeaway": "Any affected person subject to a decision taken by a deployer on the basis of the output of an Annex III high-risk AI system, other than point 2 critical infrastructure, that produces legal effects or similarly significantly affects their health, safety or fundamental rights may obtain from the deployer clear and meaningful explanations of the AI system's role in the decision procedure and the main elements of the decision (paragraph 1). The right yields to exceptions provided under Union or national law (paragraph 2) and applies only where Union law grants no equivalent right (paragraph 3). Deployers in credit, employment, education and public services should build explanation workflows.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "deployer",
+   "everyone"
+  ],
+  "recitals": [
+   171
+  ],
+  "topics": [
+   "deployer-duties",
+   "transparency"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/86/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-87",
+  "number": "Article 87",
+  "title": "Reporting of Infringements and Protection of Reporting Persons",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 4: Remedies",
+  "takeaway": "Directive (EU) 2019/1937, the whistleblower protection directive, applies to the reporting of infringements of the Regulation and to the protection of persons reporting them. Employees and contractors of providers and deployers who report breaches of the AI Act therefore enjoy the same protection against retaliation as for other Union law, and organisations should extend their internal reporting channels and non-retaliation policies to cover AI Act infringements.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "everyone"
+  ],
+  "recitals": [
+   172
+  ],
+  "topics": [
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/87/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-88",
+  "number": "Article 88",
+  "title": "Enforcement of the Obligations of Providers of General-Purpose AI Models",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 5: Supervision, investigation, enforcement and monitoring in respect of providers of general-purpose AI models",
+  "takeaway": "The Commission holds exclusive powers to supervise and enforce Chapter V, the obligations of providers of general-purpose AI models, with the procedural safeguards of Article 94, and entrusts implementation to the AI Office (paragraph 1). Without prejudice to Article 75(3), market surveillance authorities may ask the Commission to use these powers where necessary and proportionate to their own tasks (paragraph 2). Providers of general-purpose AI models deal with the AI Office as their regulator, not with national authorities.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "gpai-provider",
+   "authority"
+  ],
+  "recitals": [
+   162
+  ],
+  "topics": [
+   "gpai",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/88/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-89",
+  "number": "Article 89",
+  "title": "Monitoring Actions",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 5: Supervision, investigation, enforcement and monitoring in respect of providers of general-purpose AI models",
+  "takeaway": "The AI Office may take any necessary action to monitor the effective implementation and compliance of general-purpose AI model providers, including adherence to approved codes of practice (paragraph 1). Downstream providers may lodge a substantiated complaint, giving the model provider's contact point, a description of the facts, the provisions concerned and the reasons for suspecting an infringement, plus any other relevant information (paragraph 2). Downstream providers denied the documentation owed under Article 53 should use this route rather than a national complaint.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "gpai-provider",
+   "provider"
+  ],
+  "recitals": [
+   164
+  ],
+  "topics": [
+   "gpai",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/89/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-90",
+  "number": "Article 90",
+  "title": "Alerts of Systemic Risks by the Scientific Panel",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 5: Supervision, investigation, enforcement and monitoring in respect of providers of general-purpose AI models",
+  "takeaway": "The scientific panel may send a qualified alert to the AI Office where it suspects that a general-purpose AI model poses a concrete identifiable risk at Union level or meets the systemic-risk conditions of Article 51 (paragraph 1). The Commission, through the AI Office and after informing the Board, may then use the powers in Articles 91 to 94 and keeps the Board informed (paragraph 2). The alert must be reasoned and name the provider, describe the facts and give the panel's grounds (paragraph 3). Model providers should expect enforcement to start from independent scientific scrutiny, not only from complaints.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "gpai-provider",
+   "institutional"
+  ],
+  "recitals": [
+   163
+  ],
+  "topics": [
+   "gpai",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/90/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-91",
+  "number": "Article 91",
+  "title": "Power to Request Documentation and Information",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 5: Supervision, investigation, enforcement and monitoring in respect of providers of general-purpose AI models",
+  "takeaway": "The Commission may require a general-purpose AI model provider to supply the documentation drawn up under Articles 53 and 55 or any other information needed to assess compliance (paragraph 1), after an optional structured dialogue with the AI Office (paragraph 2), and also at the substantiated request of the scientific panel (paragraph 3). Requests state the legal basis, purpose, the information required, a deadline and the Article 101 fines for incorrect, incomplete or misleading answers (paragraph 4). The provider or its representative answers; lawyers may act but the provider remains fully responsible (paragraph 5). Keep Article 53 and 55 documentation ready to hand over on demand.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "gpai-provider"
+  ],
+  "recitals": [
+   164
+  ],
+  "topics": [
+   "gpai",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/91/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-92",
+  "number": "Article 92",
+  "title": "Power to Conduct Evaluations",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 5: Supervision, investigation, enforcement and monitoring in respect of providers of general-purpose AI models",
+  "takeaway": "The AI Office, after consulting the Board, may evaluate a general-purpose AI model to assess compliance where Article 91 information is insufficient, or to investigate Union-level systemic risks of a model with systemic risk, in particular after a qualified alert under Article 90(1)(a) (paragraph 1). Independent experts, including scientific panel members, may conduct the evaluation (paragraph 2), and the Commission may demand access to the model through APIs or other technical means, including source code (paragraph 3), with requests citing Article 101 fines (paragraph 4). Implementing acts set the arrangements (paragraph 6); a structured dialogue on internal testing may precede access (paragraph 7). Providers should prepare secure evaluator access.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "gpai-provider"
+  ],
+  "recitals": [
+   164
+  ],
+  "topics": [
+   "gpai",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/92/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-93",
+  "number": "Article 93",
+  "title": "Power to Request Measures",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 5: Supervision, investigation, enforcement and monitoring in respect of providers of general-purpose AI models",
+  "takeaway": "Where warranted, the Commission may request a general-purpose AI model provider to take measures to comply with Articles 53 and 54, to implement mitigation measures where an Article 92 evaluation raises serious concern of a systemic risk at Union level, or to restrict, withdraw or recall the model from the market (paragraph 1). A structured dialogue with the AI Office may come first (paragraph 2), and commitments offered by the provider during that dialogue can be made binding by Commission decision, closing the matter (paragraph 3). Providers of models with systemic risk should keep mitigation options ready to offer as commitments.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "gpai-provider"
+  ],
+  "recitals": [
+   164
+  ],
+  "topics": [
+   "gpai",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/93/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-94",
+  "number": "Article 94",
+  "title": "Procedural Rights of Economic Operators of the General-Purpose AI Model",
+  "chapter": "Chapter IX: Post-Market Monitoring, Information Sharing and Market Surveillance",
+  "section": "Section 5: Supervision, investigation, enforcement and monitoring in respect of providers of general-purpose AI models",
+  "takeaway": "Article 18 of Regulation (EU) 2019/1020 applies mutatis mutandis to providers of general-purpose AI models, giving them the right to be heard, reasoned decisions and information on remedies before the Commission adopts measures under Section 5, without prejudice to more specific procedural rights elsewhere in the Regulation. Providers facing AI Office action should invoke these rights at the preliminary findings stage under Article 101(2) and keep a record of every exchange.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "gpai-provider",
+   "commission"
+  ],
+  "recitals": [
+   164
+  ],
+  "topics": [
+   "gpai",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/94/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-95",
+  "number": "Article 95",
+  "title": "Codes of Conduct for Voluntary Application of Specific Requirements",
+  "chapter": "Chapter X: Codes of Conduct and Guidelines",
+  "section": "",
+  "takeaway": "The AI Office and the Member States encourage voluntary codes of conduct, including governance mechanisms, that apply some or all of the Chapter III, Section 2 requirements to AI systems that are not high-risk (paragraph 1), and codes with clear objectives and key performance indicators on ethics guidelines, environmental sustainability, AI literacy, inclusive design and vulnerable persons (paragraph 2). Individual providers or deployers, their organisations or others may draw up codes covering one or several systems (paragraph 3), and the specific needs of SMEs, start-ups and SMCs are taken into account (paragraph 4). Voluntary adherence is a low-cost way to evidence good practice for non-high-risk systems.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Paragraph 4 is amended to add SMCs (small mid-caps) to the SMEs and start-ups whose interests are considered when codes are drawn up.",
+  "binds": [
+   "commission",
+   "provider",
+   "deployer"
+  ],
+  "recitals": [
+   165,
+   166
+  ],
+  "topics": [
+   "other",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/95/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-96",
+  "number": "Article 96",
+  "title": "Guidelines from the Commission on the Implementation of this Regulation",
+  "chapter": "Chapter X: Codes of Conduct and Guidelines",
+  "section": "",
+  "takeaway": "The Commission develops guidelines on practical implementation covering the Articles 8 to 15 requirements and Articles 25 and 26 obligations, the Article 5 prohibitions, substantial modification, the Article 50 transparency obligations, the interplay with Annex I and other Union law, the Article 3(1) definition of an AI system, and, by 1 August 2027, the complementarity and proportionality mechanisms of Articles 8(2), 9(10) and 17(3) (paragraph 1). It consults the Board and weighs the needs of SMEs, start-ups, SMCs, local authorities and affected sectors, and updates guidelines on request or on its own initiative (paragraph 2). Track these guidelines; they shape how authorities apply the Act.",
+  "applies_from": "2 August 2026",
+  "omnibus": "New point (g) in paragraph 1 requires guidelines on the complementarity and proportionality mechanisms of Articles 8(2), 9(10) and 17(3) by 1 August 2027, and the final sentence is amended to add Board consultation and SMCs.",
+  "binds": [
+   "commission",
+   "everyone"
+  ],
+  "recitals": [],
+  "topics": [
+   "governance",
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/96/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-97",
+  "number": "Article 97",
+  "title": "Exercise of the Delegation",
+  "chapter": "Chapter XI: Delegation of Power and Committee Procedure",
+  "section": "",
+  "takeaway": "The Commission's power to adopt delegated acts runs for five years from 1 August 2024, and for the delegations under Articles 2(13) and 30(2) from 27 July 2026, with tacit extension unless the European Parliament or the Council objects, the Commission reporting nine months before expiry (paragraph 2). Either institution may revoke a delegation (paragraph 3), and a delegated act enters into force only if neither objects within three months of notification, extendable by three months (paragraph 6). It concerns the Union legislator and the Commission; operators should watch delegated acts because they can change Annex III and the thresholds in Chapter V.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Paragraphs 2, 3 and 6 are amended to cover the new delegations under Articles 2(13) and 30(2), whose five-year period runs from 27 July 2026.",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   173
+  ],
+  "topics": [
+   "governance",
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/97/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-98",
+  "number": "Article 98",
+  "title": "Committee Procedure",
+  "chapter": "Chapter XI: Delegation of Power and Committee Procedure",
+  "section": "",
+  "takeaway": "The Commission is assisted by a committee within the meaning of Regulation (EU) No 182/2011 (paragraph 1), and the examination procedure of Article 5 of that Regulation applies wherever the Act refers to Article 98(2) (paragraph 2). It concerns the Commission and Member State representatives; practitioners should note that implementing acts on templates, common specifications and evaluation arrangements all pass through this procedure.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   175
+  ],
+  "topics": [
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/98/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-99",
+  "number": "Article 99",
+  "title": "Penalties",
+  "chapter": "Chapter XII: Penalties",
+  "section": "",
+  "takeaway": "Member States lay down penalties, including fines, warnings and non-monetary measures, that are effective, proportionate and dissuasive and reflect the interests of SMEs, start-ups and SMCs (paragraph 1). Breaches of Article 5 draw fines up to EUR 35 000 000 or 7 % of worldwide annual turnover, whichever is higher (paragraph 3); breaches of provider, representative, importer, distributor, deployer, notified body and Article 50 obligations, and of Article 25(2) and (4), up to EUR 15 000 000 or 3 % (paragraph 4); incorrect or misleading information up to EUR 7 500 000 or 1 % (paragraph 5). For SMEs and SMCs the lower amount applies (paragraphs 6 and 6a).",
+  "applies_from": "2 August 2025",
+  "omnibus": "New point (da) in paragraph 4 brings obligations under Article 25(2) and (4) into the EUR 15 000 000 or 3 % tier, and new paragraph 6a caps fines on SMCs at the lower of the two amounts.",
+  "binds": [
+   "authority",
+   "provider",
+   "deployer"
+  ],
+  "recitals": [
+   168
+  ],
+  "topics": [
+   "penalties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/99/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-100",
+  "number": "Article 100",
+  "title": "Administrative Fines on Union Institutions, Bodies, Offices and Agencies",
+  "chapter": "Chapter XII: Penalties",
+  "section": "",
+  "takeaway": "The European Data Protection Supervisor may fine Union institutions, bodies, offices and agencies, weighing the nature and gravity of the infringement, responsibility, mitigation, cooperation, previous infringements, how it came to light and the institution's annual budget (paragraph 1). Article 5 breaches draw fines up to EUR 1 500 000 (paragraph 2); other breaches up to EUR 750 000 (paragraph 3). The institution is heard first and has full rights of defence and file access (paragraphs 4 and 5), fines go to the Union budget (paragraph 6) and the Supervisor reports annually to the Commission (paragraph 7). It concerns Union bodies deploying AI, not private operators.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "authority",
+   "institutional"
+  ],
+  "recitals": [
+   168
+  ],
+  "topics": [
+   "penalties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/100/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-101",
+  "number": "Article 101",
+  "title": "Fines for Providers of General-Purpose AI Models",
+  "chapter": "Chapter XII: Penalties",
+  "section": "",
+  "takeaway": "The Commission may fine providers of general-purpose AI models up to 3 % of worldwide annual turnover or EUR 15 000 000, whichever is higher, for intentional or negligent breaches of Chapter V, failure to answer Article 91 requests or supplying incorrect information, non-compliance with Article 93 measures or refusing access for Article 92 evaluations (paragraph 1). Preliminary findings and a right to reply precede any decision (paragraph 2), fines must be effective, proportionate and dissuasive (paragraph 3), and the Court of Justice may cancel, reduce or increase them (paragraph 5). Article 113(b) excludes Article 101 from the 2 August 2025 date, so fining applies from 2 August 2026.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "gpai-provider"
+  ],
+  "recitals": [
+   169
+  ],
+  "topics": [
+   "penalties",
+   "gpai"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/101/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-102",
+  "number": "Article 102",
+  "title": "Amendment to Regulation (EC) No 300/2008",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "Regulation (EC) No 300/2008 on civil aviation security gains a subparagraph in Article 4(3) requiring that measures on technical specifications and on approval and use of security equipment involving AI systems take account of the Chapter III, Section 2 requirements. It concerns the Commission when legislating in aviation security and providers of such equipment, who should expect the AI Act requirements to flow into the sectoral rules rather than apply through the AI Act's own conformity route.",
+  "applies_from": "27 July 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   49
+  ],
+  "topics": [
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/102/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-103",
+  "number": "Article 103",
+  "title": "Amendment to Regulation (EU) No 167/2013",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "Regulation (EU) No 167/2013 on agricultural and forestry vehicles gains a subparagraph in Article 17(5) requiring the Commission, when adopting delegated acts on AI systems that are safety components under the AI Act, to take account of the Chapter III, Section 2 requirements. It concerns the Commission and manufacturers of such vehicles, whose AI safety components follow the sectoral type-approval route under Annex I, Section B.",
+  "applies_from": "27 July 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   49
+  ],
+  "topics": [
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/103/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-104",
+  "number": "Article 104",
+  "title": "Amendment to Regulation (EU) No 168/2013",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "Regulation (EU) No 168/2013 on two- or three-wheel vehicles and quadricycles gains a subparagraph in Article 22(5) requiring the Commission, when adopting delegated acts on AI systems that are safety components under the AI Act, to take account of the Chapter III, Section 2 requirements. It concerns the Commission and manufacturers of such vehicles, whose AI safety components follow the sectoral type-approval route under Annex I, Section B.",
+  "applies_from": "27 July 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   49
+  ],
+  "topics": [
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/104/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-105",
+  "number": "Article 105",
+  "title": "Amendment to Directive 2014/90/EU",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "Directive 2014/90/EU on marine equipment gains a new paragraph 5 in Article 8 requiring the Commission, when acting under paragraph 1 and when adopting technical specifications and testing standards under paragraphs 2 and 3 for AI systems that are safety components under the AI Act, to take account of the Chapter III, Section 2 requirements. It concerns the Commission and marine equipment manufacturers, whose AI safety components follow the sectoral route under Annex I, Section B.",
+  "applies_from": "27 July 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   49
+  ],
+  "topics": [
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/105/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-106",
+  "number": "Article 106",
+  "title": "Amendment to Directive (EU) 2016/797",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "Directive (EU) 2016/797 on rail interoperability gains a new paragraph 12 in Article 5 requiring the Commission, when adopting delegated or implementing acts on AI systems that are safety components under the AI Act, to take account of the Chapter III, Section 2 requirements. It concerns the Commission and rail subsystem manufacturers, whose AI safety components follow the sectoral route under Annex I, Section B.",
+  "applies_from": "27 July 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   49
+  ],
+  "topics": [
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/106/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-107",
+  "number": "Article 107",
+  "title": "Amendment to Regulation (EU) 2018/858",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "Regulation (EU) 2018/858 on type-approval of motor vehicles gains a new paragraph 4 in Article 5 requiring the Commission, when adopting delegated acts on AI systems that are safety components under the AI Act, to take account of the Chapter III, Section 2 requirements. It concerns the Commission and vehicle manufacturers, whose AI safety components follow the sectoral type-approval route under Annex I, Section B rather than the AI Act's own conformity assessment.",
+  "applies_from": "27 July 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   49
+  ],
+  "topics": [
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/107/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-108",
+  "number": "Article 108",
+  "title": "Amendments to Regulation (EU) 2018/1139",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "Regulation (EU) 2018/1139 on civil aviation safety is amended in six places, Articles 17, 19, 43, 47, 57 and 58, so that implementing and delegated acts on AI systems that are safety components under the AI Act take account of the Chapter III, Section 2 requirements. It concerns the Commission and aviation product and equipment manufacturers, whose AI safety components follow the sectoral certification route under Annex I, Section B.",
+  "applies_from": "27 July 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   49
+  ],
+  "topics": [
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/108/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-109",
+  "number": "Article 109",
+  "title": "Amendment to Regulation (EU) 2019/2144",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "Regulation (EU) 2019/2144 on general vehicle safety gains a new paragraph 3 in Article 11 requiring the Commission, when adopting implementing acts on AI systems that are safety components under the AI Act, to take account of the Chapter III, Section 2 requirements. It concerns the Commission and vehicle manufacturers, whose AI safety components, including automated driving functions, follow the sectoral route under Annex I, Section B.",
+  "applies_from": "27 July 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   49
+  ],
+  "topics": [
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/109/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-110",
+  "number": "Article 110",
+  "title": "Amendment to Directive (EU) 2020/1828",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "Annex I to Directive (EU) 2020/1828 on representative actions for the protection of consumers' collective interests gains a reference to the AI Act. Qualified entities can therefore bring collective redress actions against providers and deployers for infringements of the Regulation that harm consumers, so operators facing consumers should factor class-style litigation into their AI Act risk assessment.",
+  "applies_from": "27 July 2026",
+  "omnibus": "",
+  "binds": [
+   "everyone",
+   "provider",
+   "deployer"
+  ],
+  "recitals": [
+   49
+  ],
+  "topics": [
+   "enforcement",
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/110/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-111",
+  "number": "Article 111",
+  "title": "AI Systems Already Placed on the Market or Put into Service and General-Purpose AI Models Already Placed on the Market",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "AI systems that are components of the large-scale IT systems in Annex X placed on the market before 2 August 2027 must comply by 31 December 2030 (paragraph 1). Other high-risk AI systems on the market before the applicable Chapter III date fall under the Regulation only if their design changes significantly afterwards, but systems intended for public authorities must comply by 2 August 2030 (paragraph 2). General-purpose AI models on the market before 2 August 2025 comply by 2 August 2027 (paragraph 3). Providers of systems generating synthetic audio, image, video or text marketed before 2 August 2026 must meet Article 50(2) by 2 December 2026 (paragraph 4).",
+  "applies_from": "in force 1 August 2024",
+  "omnibus": "Paragraph 2 is amended to key the grandfathering of existing high-risk systems to the new Chapter III application dates in Article 113, and new paragraph 4 gives providers of synthetic content generators already on the market before 2 August 2026 until 2 December 2026 to comply with Article 50(2).",
+  "binds": [
+   "provider",
+   "deployer",
+   "gpai-provider"
+  ],
+  "recitals": [
+   177
+  ],
+  "topics": [
+   "scope",
+   "transparency",
+   "gpai"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/111/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-112",
+  "number": "Article 112",
+  "title": "Evaluation and Review",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "The Commission assesses annually whether Annex III and the Article 5 prohibitions need amendment (paragraph 1); by 2 August 2028 and every four years it reviews the Annex III headings, the Article 50 transparency list and the governance system (paragraph 2), with a broader enforcement evaluation by 2 August 2029 (paragraph 3). Further reports by 2 August 2028 cover the AI Office's powers and resources (paragraph 5), standardisation for energy-efficient general-purpose models (paragraph 6) and, every three years, voluntary codes of conduct (paragraph 7). The AI Office builds a risk-evaluation methodology for Annex III changes (paragraph 11); a final enforcement assessment is due by 2 August 2031 (paragraph 13).",
+  "applies_from": "in force 1 August 2024",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [
+   174
+  ],
+  "topics": [
+   "governance",
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/112/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-113",
+  "number": "Article 113",
+  "title": "Entry into Force and Application",
+  "chapter": "Chapter XIII: Final Provisions",
+  "section": "",
+  "takeaway": "The Regulation entered into force on 1 August 2024 and applies in general from 2 August 2026. Chapters I and II applied from 2 February 2025, except Article 5(1), points (ba) and (bb), and Article 5(1a) and (1b), which apply from 2 December 2026 (point (a)); Chapter III, Section 4, Chapters V, VII and XII and Article 78 applied from 2 August 2025, except Article 101 (point (b)). Chapter III, Sections 1 to 3, other than Article 6(5), apply from 2 December 2027 for Annex III high-risk systems and from 2 August 2028 for Annex I systems (point (c)); Articles 102 to 110 apply from 27 July 2026 (point (d)).",
+  "applies_from": "in force 1 August 2024",
+  "omnibus": "Point (a) is amended to defer the new Article 5 prohibitions to 2 December 2026, point (c) is amended and split so that Annex III high-risk rules apply from 2 December 2027 instead of 2 August 2026 and Annex I high-risk rules from 2 August 2028, and new point (d) applies Articles 102 to 110 from 27 July 2026.",
+  "binds": [
+   "everyone",
+   "institutional"
+  ],
+  "recitals": [
+   178,
+   179
+  ],
+  "topics": [
+   "scope",
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/113/",
+  "fetched": true,
+  "source": "page"
+ }
+]

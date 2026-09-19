@@ -1,0 +1,70 @@
+You are writing Part 2 of a study digest of the EU AI Act: the implementation and guidance corpus published around Regulation (EU) 2024/1689, as amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI, in force 27 July 2026). Today is 19 September 2026.
+
+IMPORTANT: the session's web search budget is exhausted. Do NOT call WebSearch. Use WebFetch only, on the URLs below (all exist) and on links you find on those pages. If a page cannot be fetched after one retry, write the entry from the description on the linking page or your own knowledge and mark "source": "knowledge".
+
+Build one entry per document for at least the following, and add any further official document you find linked from the Commission's AI Act policy pages or the AI Act Service Desk that a practitioner would need (implementing or delegated acts, further guidelines, templates, FAQs). Target 45 to 60 entries.
+
+A. Amending and founding texts
+1. Regulation (EU) 2024/1689, the AI Act: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+2. Regulation (EU) 2026/1744, Digital Omnibus on AI: https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng and https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force
+3. Council press releases on the Omnibus, 7 May 2026 and 29 June 2026: https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/ and https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/
+4. Parliament legislative train file on the Omnibus: https://www.europarl.europa.eu/legislative-train/package-digital-package/file-digital-omnibus-on-ai
+
+B. Commission guidelines, codes, templates, Q&As
+5. Guidelines on prohibited AI practices (4 Feb 2025): https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act
+6. Guidelines on the definition of an AI system (6 Feb 2025): https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-ai-system-definition-facilitate-first-ai-acts-rules-application
+7. Guidelines on the obligations of GPAI providers (18 July 2025): https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers
+8. GPAI Code of Practice (10 July 2025), three chapters, and its signatories: https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai
+9. Template for the public summary of training content (24 July 2025): https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models
+10. GPAI Q&A: https://digital-strategy.ec.europa.eu/en/faqs/general-purpose-ai-models-ai-act-questions-answers
+11. AI literacy Q&A (updated 27 July 2026): https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers
+12. Draft guidelines on high-risk classification (19 May 2026): https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems
+13. Draft guidance and template on serious incident reporting (26 Sept 2025): https://digital-strategy.ec.europa.eu/en/library/commission-launches-consultation-and-publishes-draft-guidance-serious-ai-incidents (if that URL fails, use https://digital-strategy.ec.europa.eu/en/policies/ai-act-serious-incidents or the Service Desk)
+14. Code of Practice on transparency of AI-generated content and the final guidelines on Article 50 (July 2026): https://digital-strategy.ec.europa.eu/en/news/strong-backing-code-practice-transparency-ai-generated-content and https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content
+15. AI Act Service Desk and Single Information Platform (8 Oct 2025): https://digital-strategy.ec.europa.eu/en/news/commission-launches-ai-act-service-desk-and-single-information-platform-support-ai-act and https://ai-act-service-desk.ec.europa.eu/en
+16. AI Act enforcement page (complaints, whistleblowers, AI Office powers): https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act
+17. AI Act standardisation (standardisation request C(2023)3215 and its amendment, JTC 21 status): https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation and https://jtc21.eu/category/news/
+18. Regulatory sandboxes and the AI Pact: https://digital-strategy.ec.europa.eu/en/policies/ai-pact
+19. Apply AI Strategy (8 Oct 2025): https://commission.europa.eu/news-and-media/news/keeping-european-industry-and-science-forefront-ai-2025-10-08_en
+20. Scientific Panel and Advisory Forum appointments (1 June 2026): https://digital-strategy.ec.europa.eu/en/news/ai-act-enforcement-gets-independent-expert-support
+21. European AI Office page: https://digital-strategy.ec.europa.eu/en/policies/ai-office
+22. European Artificial Intelligence Board page: https://digital-strategy.ec.europa.eu/en/policies/ai-board
+
+C. EDPB and EDPS
+23. EDPB Opinion 28/2024 on AI models (17 Dec 2024): https://www.edpb.europa.eu/news/edpb-opinion-on-ai-models-gdpr-principles-support-responsible-ai_en and https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en
+24. EDPB Statement 3/2024 on data protection authorities' role in the AI Act framework: https://www.edpb.europa.eu/our-work-tools/our-documents/statements/statement-32024-data-protection-authorities-role-artificial-intelligence-act-framework_en
+25. EDPB-EDPS Joint Opinion 5/2021 on the AI Act proposal: https://www.edpb.europa.eu/our-work-tools/our-documents/edpbedps-joint-opinion/edpb-edps-joint-opinion-52021-proposal_en
+26. EDPB-EDPS Joint Opinion 1/2026 on the AI Omnibus proposal: https://www.edpb.europa.eu/our-work-tools/our-documents/edpbedps-joint-opinion/edpb-edps-joint-opinion-12026-proposal-regulation-regards_en
+27. EDPB "AI Privacy Risks and Mitigations: LLMs" report (April 2025): https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf
+28. EDPB Guidelines 03/2026 on web scraping for generative AI (July 2026): https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en
+29. EDPB Report of the ChatGPT Taskforce (May 2024): https://www.edpb.europa.eu/our-work-tools/our-documents/other/report-work-undertaken-chatgpt-taskforce_en
+30. EDPS guidelines on generative AI for EU institutions (2024, revised 2025): https://www.edps.europa.eu/data-protection/our-work/publications/guidelines/2024-06-03-first-edps-orientations-eu-institutions-using-generative-ai_en
+
+D. National implementation
+31. Overview of national implementation plans and authorities: https://artificialintelligenceact.eu/national-implementation-plans/
+32. Germany: KI-MIG in force 29 July 2026, Bundesnetzagentur press release: https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2026/20260729_KI_VO.html
+33. Italy: Law 132/2025 (one entry, from the overview page or your knowledge)
+34. Spain: AESIA (one entry, from the overview page)
+35. Ireland: SI 366/2025 and the designated authorities (one entry)
+36. Netherlands, France: one entry each from the overview page
+
+E. Reference and study resources
+37. artificialintelligenceact.eu AI Act Explorer: https://artificialintelligenceact.eu/ai-act-explorer/
+38. Implementation timeline: https://artificialintelligenceact.eu/implementation-timeline/
+39. Compliance checker: https://artificialintelligenceact.eu/assessment/eu-ai-act-compliance-checker/
+40. Standard setting overview: https://artificialintelligenceact.eu/standard-setting-overview/
+41. AI Act Service Desk compliance checker and explorer (note its disclaimer that the text is not yet updated for 2026/1744): https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99
+
+For EACH entry write:
+- "takeaway": 2 to 4 sentences, 45 to 110 words: what the document establishes, who it binds or applies to (and whether it is binding, non-binding guidance, a voluntary code, or a reference tool), and what a practitioner should do with it. Include dates and figures from the source. State the interpretive relationship: which articles of the Act it interprets or implements.
+- "type": one of ["regulation","commission-guidelines","code-of-practice","template","qa","delegated-or-implementing-act","edpb-edps","national-law","reference-tool","policy","standards"].
+- "status": one of ["in force","final","draft","consultation","voluntary","reference","historical"].
+- "articles": the Act articles it mainly concerns, as strings like "Art 5", "Art 53-55", "Annex III" (up to 4).
+- "date": "D Month YYYY".
+- "url": the primary URL.
+- "topics": 1 to 3 tags from the same list as Part 1: ["scope","prohibitions","high-risk-classification","provider-duties","deployer-duties","conformity","transparency","gpai","governance","enforcement","penalties","sandboxes","literacy","fria","registration","incidents","standards","data","oversight","other"].
+- "source": "page" | "knowledge".
+
+Style, strict: British spelling; declarative and unhedged; practitioner reader; no em dashes anywhere; company-agnostic; every figure from the source.
+
+OUTPUT: write a JSON array to /home/claude/aia/items_corpus.json with the Write tool: {"id": "doc-NN", "title", "issuer", "type", "status", "articles", "date", "url", "takeaway", "topics", "source"}. Then reply with only: the count written and the ids marked knowledge.

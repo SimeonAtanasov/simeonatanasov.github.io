@@ -31,9 +31,10 @@ nav collapse and the assessment dropdown).
 | `practical-ai-act-advice.html` | Practical AI Act Advice: 13 sections from scope and prohibitions through provider and deployer duties, GPAI, conformity, governance, then program building, risk questions, vendor vetting, literacy and copyright. Needs the September 2026 updates listed in `Claude outputs/site-verification-report-2026-09-19.pdf`. | `pages/privacy-ai-assessment/practical-ai-act.css` |
 | `edpb-digest.html` | EDPB Digest: every document on the EDPB listing (532 as of 19 September 2026) with one takeaway each, 107 written from the document and 425 one-line descriptions; filters by type, year and relevance. | `pages/edpb-digest/edpb-digest.css`; generated from `Claude outputs/edpb-digest-build/` |
 | `cookie-digest.html` | Cookie Compliance Digest: 259 laws, regulator guidance documents, court decisions, enforcement actions and standards on cookies and tracking across 60 jurisdictions (EU, member states, UK, Switzerland, US federal and states, rest of world, standards), each with a practitioner takeaway; filters by jurisdiction, type and year. | `pages/cookie-digest/cookie-digest.css`; generated from `Claude outputs/cookie-digest-build/` |
+| `ai-act-digest.html` | AI Act Digest in two parts. Part 1: Regulation (EU) 2024/1689 as amended by Regulation (EU) 2026/1744, all 113 articles and 13 annexes by chapter, each with a takeaway, date of application, roles bound, recitals and a note on the 36 provisions the Omnibus changed. Part 2: 57 guidance and implementation documents (Commission guidelines, codes, templates, Q&As, standards, EDPB and EDPS including Opinion 28/2024, national laws, reference tools). Filters by part, role, application date, Omnibus flag and search. | `pages/ai-act-digest/ai-act-digest.css`; generated from `Claude outputs/ai-act-digest-build/` |
 
-The two digests are on disk but not yet linked from the other pages' header nav or from
-`sitemap.xml`. Their own nav carries both links.
+The three digests are on disk but not yet linked from the other pages' header nav or from
+`sitemap.xml`. Each digest's own nav carries links to the other two.
 
 ### Home, legal and leftovers
 
@@ -63,8 +64,10 @@ Non-site deliverables. Nothing in here is referenced by any page.
 | `edpb-documents-inventory-2026-09-19.csv` | All 532 EDPB documents with type, date, relevance rating (R / B / N), where each lands on the site, and URL. Filterable. | You want to know whether an EDPB document matters to a page. |
 | `edpb-digest-2026-09-19.pdf` | Print version of the EDPB Digest page, 108 pages, one numbered source per document. | You want to read the digest on paper. |
 | `cookie-compliance-digest-2026-09-19.pdf` | Print version of the Cookie Compliance Digest, 71 pages, one numbered source per document. | Same, for cookies. |
+| `ai-act-digest-2026-09-19.pdf` | Print version of the AI Act Digest, 71 pages: application dates at a glance, the Omnibus change table, then every provision and document with a numbered source. | Same, for the AI Act. |
 | `edpb-digest-build/` | Data and scripts that generate `edpb-digest.html`: the scraped inventory, the ratings script, the 107 written takeaways, the hand-written and templated one-liners, the page and PDF renderers. README inside. | You need to add EDPB documents or regenerate the page. |
 | `cookie-digest-build/` | Data and scripts that generate `cookie-digest.html`: six research briefs, six raw cluster outputs, the merged data set, the page and PDF renderers. README inside. | You need to add or correct a cookie entry (17 entries rest on secondary sources and are marked). |
+| `ai-act-digest-build/` | Data and scripts that generate `ai-act-digest.html`: five research briefs, the 126 provision entries and 57 corpus entries as JSON, the merged data set, the page and PDF renderers, the render test. README inside. | You need to add or correct an AI Act entry (5 corpus entries could not be fetched and are marked). |
 | `risk-matrix-desktop.png`, `risk-matrix-phone.png` | Screenshots from the risk matrix layout work. | Reference only. |
 
 ## Working notes kept outside the repo
@@ -74,7 +77,8 @@ with Claude: `site-context.md` (rules, deploy procedure, technical traps, open i
 `content-voice.md` (how the site is written), `assessment-tools-spec.md` and
 `gdpr-readiness-model.md` (the two large tools), `pwa-and-play-store.md`,
 `content-verification-2026-09.md` (the rated action list from the verification),
-`edpb-digest.md` and `cookie-digest.md` (what the digests are and how to rebuild them).
+`edpb-digest.md`, `cookie-digest.md` and `ai-act-digest.md` (what the digests are and how to
+rebuild them).
 
 ## Rules that apply to every edit
 

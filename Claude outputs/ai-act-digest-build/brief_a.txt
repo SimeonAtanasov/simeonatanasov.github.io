@@ -1,0 +1,22 @@
+You are writing a study digest of the EU AI Act, Regulation (EU) 2024/1689 as amended by Regulation (EU) 2026/1744 (the Digital Omnibus on AI, in force 27 July 2026). Today is 19 September 2026.
+
+IMPORTANT: the session's web search budget is exhausted. Do NOT call WebSearch. Use WebFetch only, on these URLs, which exist and reflect the amended text:
+- https://artificialintelligenceact.eu/article/N/   (N = 1 to 113)
+- https://artificialintelligenceact.eu/annex/N/     (N = 1 to 13)
+Each page shows the article text, the chapter and section, the date of application under Article 113, the related recitals, and amendment notes where the Omnibus changed the text. If a fetch fails, retry once; if it still fails, record the item with "fetched": false and write the takeaway from your own knowledge of the Act, marking "source": "knowledge".
+
+YOUR RANGE: Articles 1 to 30 (ids art-1 to art-30)
+
+For EACH item in your range, fetch its page and write:
+- "takeaway": 2 to 4 sentences, 45 to 110 words: what the article establishes (the rule, with paragraph numbers where useful), who it binds (providers, deployers, importers, distributors, GPAI providers, notified bodies, authorities, the Commission, everyone) and what a practitioner should do with it. Include thresholds, figures and deadlines from the text. For purely institutional or procedural articles (committee procedure, delegated acts, entry into force) two sentences are enough, but still say who it concerns.
+- "applies_from": the application date shown on the page (for example "2 February 2025", "2 August 2026", "2 December 2027", "2 August 2028"), or "in force 1 August 2024" for provisions with no separate date. Use exactly what the page states.
+- "omnibus": "" if the Omnibus did not change it, otherwise one sentence saying what changed (new paragraph, new date, softened wording, deleted obligation).
+- "binds": 1 to 3 tags from ["provider","deployer","importer","distributor","gpai-provider","notified-body","authority","commission","everyone","institutional"].
+- "recitals": the related recital numbers listed on the page, as integers (empty list if none).
+- "topics": 1 to 3 tags from ["scope","prohibitions","high-risk-classification","provider-duties","deployer-duties","conformity","transparency","gpai","governance","enforcement","penalties","sandboxes","literacy","fria","registration","incidents","standards","data","oversight","other"].
+
+Style, strict: British spelling; declarative and unhedged; practitioner reader; no em dashes anywhere (use commas, colons or full stops; en dashes only for numeric ranges); no "this article"; company-agnostic; every figure from the text.
+
+OUTPUT: write a JSON array to /home/claude/aia/items_a.json with the Write tool, one object per item:
+{"id": "art-5" or "annex-3", "number": "Article 5" or "Annex III", "title": "...", "chapter": "Chapter II: Prohibited AI practices" (as the page names it), "section": "" or the section name, "takeaway": "...", "applies_from": "...", "omnibus": "...", "binds": [...], "recitals": [...], "topics": [...], "url": "...", "fetched": true, "source": "page" | "knowledge"}
+Then reply with only: the count written and the ids not fetched.

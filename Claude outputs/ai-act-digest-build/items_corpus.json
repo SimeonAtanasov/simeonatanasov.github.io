@@ -1,0 +1,1141 @@
+[
+  {
+    "id": "doc-01",
+    "title": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (AI Act)",
+    "issuer": "European Parliament and Council",
+    "type": "regulation",
+    "status": "in force",
+    "articles": [
+      "Art 1-113",
+      "Annex I",
+      "Annex III",
+      "Annex IV"
+    ],
+    "date": "13 June 2024",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+    "takeaway": "The founding text, adopted 13 June 2024, published in the Official Journal on 12 July 2024 and in force since 1 August 2024. It binds providers, deployers, importers, distributors and authorised representatives of AI systems and providers of general-purpose AI models across 113 articles, 13 chapters, 180 recitals and its annexes. Read it in the consolidated form as amended by Regulation (EU) 2026/1744, which rewrote 42 articles and 3 annexes and shifted the high-risk application dates to 2 December 2027 (Annex III) and 2 August 2028 (Annex I). Every other document in this corpus interprets or implements it.",
+    "topics": [
+      "scope",
+      "high-risk-classification",
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-02",
+    "title": "Regulation (EU) 2026/1744 amending the AI Act (Digital Omnibus on AI)",
+    "issuer": "European Parliament and Council",
+    "type": "regulation",
+    "status": "in force",
+    "articles": [
+      "Art 4-6",
+      "Art 50",
+      "Art 74-75",
+      "Art 111-113"
+    ],
+    "date": "8 July 2026",
+    "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+    "takeaway": "Binding amending regulation adopted 8 July 2026, published 24 July 2026, in force 27 July 2026. It moves high-risk application to 2 December 2027 for Annex III and 2 August 2028 for Annex I, rewrites Article 4 on AI literacy, adds Article 4a allowing special-category data for bias detection, bans non-consensual intimate deepfakes and child sexual abuse material in Article 5(1)(ba) and (bb) from 2 December 2026, extends SME relief to small mid-caps and gives the AI Office exclusive competence over GPAI-based systems and AI in very large platforms. Pre-existing generative systems get four months from 2 August 2026 for Article 50(2) marking. Re-baseline every plan on it.",
+    "topics": [
+      "high-risk-classification",
+      "prohibitions",
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-03",
+    "title": "Council press release: Council and Parliament agree to simplify and streamline AI rules",
+    "issuer": "Council of the European Union",
+    "type": "policy",
+    "status": "historical",
+    "articles": [
+      "Art 5",
+      "Art 57",
+      "Art 111",
+      "Art 113"
+    ],
+    "date": "7 May 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
+    "takeaway": "Records the provisional trilogue agreement of 7 May 2026 on the Digital Omnibus on AI and is useful only as legislative history. It fixed the application dates of 2 December 2027 for stand-alone high-risk systems and 2 August 2028 for product-embedded systems, the sandbox deadline of 2 August 2027, a 2 December 2026 date for generative-content transparency solutions, the new ban on AI-generated non-consensual intimate content and child sexual abuse material, the extension of SME relief to small mid-caps, and the reinstatement of registration for exempted Annex III systems. Cite it for the negotiating record, not for the law.",
+    "topics": [
+      "governance",
+      "high-risk-classification"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-04",
+    "title": "Council press release: Council gives final green light to simplified AI rules",
+    "issuer": "Council of the European Union",
+    "type": "policy",
+    "status": "historical",
+    "articles": [
+      "Art 5",
+      "Art 57",
+      "Art 113"
+    ],
+    "date": "29 June 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/",
+    "takeaway": "Confirms the Council's final adoption of the Omnibus on 29 June 2026 as part of the Omnibus VII package, with entry into force on the third day after Official Journal publication. It restates the 2 December 2027 and 2 August 2028 high-risk dates, the December 2026 start of the sexual deepfake and CSAM prohibitions, the 2 December 2026 transparency transition (grace period reduced from six to three months in the final text), the 2 August 2027 sandbox deadline, the machinery exemption from direct application and the mechanism for resolving overlaps with medical device, toy, lift and watercraft legislation. Legislative history only.",
+    "topics": [
+      "governance",
+      "high-risk-classification"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-05",
+    "title": "European Parliament legislative train: Digital Omnibus on AI",
+    "issuer": "European Parliament",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 113"
+    ],
+    "date": "20 June 2026",
+    "url": "https://www.europarl.europa.eu/legislative-train/package-digital-package/file-digital-omnibus-on-ai",
+    "takeaway": "Procedure file 2025/0359(COD) tracking COM(2025) 836 from the proposal of 19 November 2025 through the Council general approach of 13 March 2026, the trilogue agreement of 7 May 2026, Coreper endorsement of 13 May 2026, the IMCO-LIBE committee vote of 2 June 2026 and the plenary adoption of 16 June 2026 by 423 votes to 57 with 174 abstentions. Rapporteurs were Arba Kokalari (EPP) and Michael McNamara (Renew). Use it to locate the committee reports and amendments when the final text needs interpretation against negotiating intent.",
+    "topics": [
+      "governance",
+      "other"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-06",
+    "title": "Commission proposal COM(2025) 836 for a Digital Omnibus on AI",
+    "issuer": "European Commission",
+    "type": "policy",
+    "status": "historical",
+    "articles": [
+      "Art 4",
+      "Art 6",
+      "Art 49",
+      "Art 113"
+    ],
+    "date": "19 November 2025",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/digital-omnibus-ai-regulation-proposal",
+    "takeaway": "The Commission's original proposal of 19 November 2025 (CELEX 52025PC0836), superseded by Regulation (EU) 2026/1744. It proposed linking high-risk application to the availability of standards with delays of up to 16 months for Annex III and 12 months for Annex I, a six-month transition for generative AI detectability, removal of registration for exempted systems, removal of the prescribed post-market monitoring plan, extension of SME relief to small mid-caps benefiting an estimated 8,250 additional companies, and an EU-level sandbox. Compare it with the enacted text to see where the co-legislators tightened the outcome.",
+    "topics": [
+      "governance",
+      "high-risk-classification"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-07",
+    "title": "Commission Guidelines on prohibited artificial intelligence practices",
+    "issuer": "European Commission",
+    "type": "commission-guidelines",
+    "status": "final",
+    "articles": [
+      "Art 5"
+    ],
+    "date": "4 February 2025",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act",
+    "takeaway": "Non-binding guidelines approved by the College on 4 February 2025, two days after the Article 5 prohibitions began to apply on 2 February 2025. They set out the Commission's reading of each prohibited practice, including harmful manipulation, exploitation of vulnerabilities, social scoring, predictive policing, untargeted facial scraping, emotion recognition at work and in education, biometric categorisation and real-time remote biometric identification, with exceptions and the interplay with other Union law. Authoritative interpretation stays with the Court of Justice. They predate the Omnibus, so read the new points (ba) and (bb) on intimate deepfakes and CSAM directly from Regulation (EU) 2026/1744.",
+    "topics": [
+      "prohibitions"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-08",
+    "title": "Commission Guidelines on the definition of an AI system",
+    "issuer": "European Commission",
+    "type": "commission-guidelines",
+    "status": "final",
+    "articles": [
+      "Art 3(1)",
+      "Art 96"
+    ],
+    "date": "6 February 2025",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-ai-system-definition-facilitate-first-ai-acts-rules-application",
+    "takeaway": "Non-binding guidelines published 6 February 2025 explaining how to apply the Article 3(1) definition of an AI system, which took effect with the first provisions on 2 February 2025. They walk through the definitional elements (machine-based system, autonomy, adaptiveness, objectives, inference, outputs, influence on environments) and distinguish systems that fall outside the Act, such as basic statistical or rule-based processing. The Commission states they will evolve and be updated. Use them as the first gate in any inventory: if software is not an AI system, the Act does not apply.",
+    "topics": [
+      "scope"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-09",
+    "title": "Commission Guidelines on the scope of obligations for providers of general-purpose AI models",
+    "issuer": "European Commission",
+    "type": "commission-guidelines",
+    "status": "final",
+    "articles": [
+      "Art 3(63)",
+      "Art 51-55",
+      "Art 111(3)"
+    ],
+    "date": "18 July 2025",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers",
+    "takeaway": "Non-binding guidelines approved 18 July 2025 and last updated 28 April 2026, setting out how the Commission will enforce Chapter V. They give technical criteria for when a model is general-purpose, explain the systemic-risk notification duty to the AI Office, the conditions of the open-source exemption, and the rule that only downstream actors making significant modifications become providers. Obligations applied from 2 August 2025, the Commission's fining powers started 2 August 2026, and models placed on the market before 2 August 2025 must comply by 2 August 2027. Read alongside the GPAI Code of Practice.",
+    "topics": [
+      "gpai",
+      "provider-duties"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-10",
+    "title": "General-Purpose AI Code of Practice and list of signatories",
+    "issuer": "European Commission (AI Office), drafted by independent experts",
+    "type": "code-of-practice",
+    "status": "voluntary",
+    "articles": [
+      "Art 53",
+      "Art 55",
+      "Art 56"
+    ],
+    "date": "10 July 2025",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "takeaway": "Voluntary code published 10 July 2025 with three chapters: Transparency provides a Model Documentation Form for the Article 53 documentation duties, Copyright gives practical measures for the copyright policy required by Article 53(1)(c), and Safety and Security sets state-of-the-art practices for systemic-risk models under Article 55. The first two chapters apply to all GPAI providers, the third only to systemic-risk providers, and the Commission and the AI Board confirmed it as an adequate voluntary tool. The page lists 21 signatories, with one provider signing only the Safety and Security chapter, and signature is by form to the AI Office. Non-signatories must show compliance by other means.",
+    "topics": [
+      "gpai",
+      "provider-duties"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-11",
+    "title": "Explanatory notice and template for the public summary of training content of GPAI models",
+    "issuer": "European Commission (AI Office)",
+    "type": "template",
+    "status": "final",
+    "articles": [
+      "Art 53(1)(d)"
+    ],
+    "date": "24 July 2025",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models",
+    "takeaway": "Mandatory template published 24 July 2025 in all 24 official languages for the public summary that Article 53(1)(d) requires from every GPAI provider, including open-source providers, from 2 August 2025. It sets a common minimal baseline: a general overview of the model and data modalities, a list of data sources by category, and data processing aspects such as lawful access and opt-out respect. For web-scraped data providers must name the largest domains, the top 10 percent by volume, reduced to 5 percent or 1,000 domains for SMEs. Providers of models already on the market have until 2 August 2027.",
+    "topics": [
+      "gpai",
+      "transparency",
+      "data"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-12",
+    "title": "Questions and answers on general-purpose AI models in the AI Act",
+    "issuer": "European Commission",
+    "type": "qa",
+    "status": "final",
+    "articles": [
+      "Art 51-55",
+      "Art 91-93",
+      "Art 101"
+    ],
+    "date": "9 September 2025",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/general-purpose-ai-models-ai-act-questions-answers",
+    "takeaway": "Non-binding Q&A last updated 9 September 2025 that condenses the GPAI guidelines. It gives the indicative criterion of training compute above 10^23 FLOP with generative capability, the systemic-risk presumption at 10^25 FLOP under Article 51(1)(a), the one-third-of-compute rule under which a modifier becomes a new provider, and the open-source exemption from Article 53(1)(a) and (b) that never covers systemic-risk models. It explains AI Office powers to request information, evaluate models and order recalls under Articles 91 to 93, and fines of up to 3 percent of worldwide turnover or EUR 15 million under Article 101. Use it as the quick reference before the full guidelines.",
+    "topics": [
+      "gpai",
+      "enforcement"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-13",
+    "title": "AI literacy questions and answers (updated for the Digital Omnibus)",
+    "issuer": "European Commission",
+    "type": "qa",
+    "status": "final",
+    "articles": [
+      "Art 4",
+      "Art 62(3)"
+    ],
+    "date": "27 July 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+    "takeaway": "Non-binding Q&A updated 27 July 2026 to reflect the rewritten Article 4. Providers and deployers must take measures to support the AI literacy of staff and other persons operating AI systems, taking account of their knowledge, experience, education and context; the former 'sufficient level' threshold is gone and no single approach is mandated. The Commission and Member States support compliance and publish practical examples on the Single Information Platform, and the AI Board adopts recommendations under Article 4(3). Article 4 applied from 2 February 2025 and national market surveillance authorities supervise it from 2 August 2026 with proportionate, case-by-case penalties, so document your measures and map them to roles.",
+    "topics": [
+      "literacy",
+      "deployer-duties"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-14",
+    "title": "Repository of AI literacy practices (living repository)",
+    "issuer": "European Commission (AI Office)",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 4"
+    ],
+    "date": "27 July 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-literacy-practices",
+    "takeaway": "Searchable collection of AI literacy practices submitted by providers and deployers, filterable by organisation size, sector, country, practice type (training, awareness events, guidance materials, workshops, peer learning) and implementation status. The AI literacy Q&A records more than 40 initiatives gathered from AI Pact pledgers between December 2024 and February 2025 and from wider organisations between April and June 2025. It is a reference tool with no legal effect: replicating a listed practice gives no presumption of compliance with Article 4. Use it to benchmark the scope and format of your own programme.",
+    "topics": [
+      "literacy"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-15",
+    "title": "Draft Commission Guidelines on the classification of high-risk AI systems",
+    "issuer": "European Commission",
+    "type": "commission-guidelines",
+    "status": "draft",
+    "articles": [
+      "Art 6",
+      "Annex I",
+      "Annex III",
+      "Art 25"
+    ],
+    "date": "19 May 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems",
+    "takeaway": "Draft guidelines published 19 May 2026 under Article 6(5), which required them by 2 February 2026, and opened to targeted stakeholder consultation with a last update on 23 July 2026. They treat the two classification routes separately: Article 6(1) safety components of Annex I products subject to third-party conformity assessment, and Article 6(2) Annex III use cases, with practical examples of systems that are and are not high-risk. The AI Act Service Desk hosts an accompanying guideline explorer. They remain non-binding and draft; expect a final version before the Annex III application date of 2 December 2027 and reconcile them with the Omnibus additions to Article 6(1a) to (1c).",
+    "topics": [
+      "high-risk-classification"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-16",
+    "title": "Draft guidance and reporting template on serious AI incidents",
+    "issuer": "European Commission (AI Office)",
+    "type": "template",
+    "status": "draft",
+    "articles": [
+      "Art 73",
+      "Art 3(49)"
+    ],
+    "date": "26 September 2025",
+    "url": "https://digital-strategy.ec.europa.eu/en/consultations/ai-act-commission-issues-draft-guidance-and-reporting-template-serious-ai-incidents-and-seeks",
+    "takeaway": "Draft guidance and reporting template published 26 September 2025 with consultation to 7 November 2025, delivered under Article 73(7), which required guidance by 2 August 2025. It clarifies the definition of a serious incident, gives examples and explains the interplay with other reporting regimes, aligned with the OECD AI Incidents Monitor. Article 73 itself obliges providers of high-risk systems to report within 15 days of awareness, 10 days for a death and 2 days for a widespread infringement, after which the market surveillance authority acts within 7 days. The final guidance is not yet published; build incident triage on the draft and the article text.",
+    "topics": [
+      "incidents",
+      "provider-duties"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-17",
+    "title": "Code of Practice on transparency of AI-generated content (marking and labelling)",
+    "issuer": "European Commission (AI Office), drafted by independent experts",
+    "type": "code-of-practice",
+    "status": "voluntary",
+    "articles": [
+      "Art 50(2)",
+      "Art 50(4)",
+      "Art 50(5)"
+    ],
+    "date": "10 June 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content",
+    "takeaway": "Voluntary code finalised 10 June 2026 after drafts of 17 December 2025 and 3 March 2026, drawn up by two working groups after a kick-off plenary on 5 November 2025. Section 1 binds signatory providers of generative systems to mark outputs in machine-readable form and enable detection under Article 50(2) with solutions that are effective, interoperable, robust and reliable; Section 2 binds deployers to disclose deepfakes and AI-generated text on matters of public interest under Article 50(4). By the end of July 2026 around 190 organisations had signed, 95 under Section 1 and 192 under Section 2. Obligations applied 2 August 2026: sign or document an equivalent approach.",
+    "topics": [
+      "transparency",
+      "provider-duties",
+      "deployer-duties"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-18",
+    "title": "Commission Opinion and AI Board adequacy assessment of the transparency Code of Practice",
+    "issuer": "European Commission and European Artificial Intelligence Board",
+    "type": "policy",
+    "status": "final",
+    "articles": [
+      "Art 50",
+      "Art 56"
+    ],
+    "date": "9 July 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-code-practice-transparency-ai-generated-content",
+    "takeaway": "The Commission Opinion of 8 July 2026 and the AI Board adequacy assessment of 9 July 2026 find that the Code of Practice adequately covers Articles 50(2), (4) and (5) and facilitates their implementation. Adherence does not constitute conclusive evidence of compliance, but signatories gain a recognised route that market surveillance authorities across the Union will take into account regardless of where the operator is established. Participation stays voluntary and the AI Office will facilitate updates at least every two years. Keep this opinion with your Article 50 compliance file as the basis for relying on the code.",
+    "topics": [
+      "transparency",
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-19",
+    "title": "Commission Guidelines on transparency obligations for providers and deployers of certain AI systems (Article 50)",
+    "issuer": "European Commission",
+    "type": "commission-guidelines",
+    "status": "final",
+    "articles": [
+      "Art 50",
+      "Art 111(4)"
+    ],
+    "date": "20 July 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+    "takeaway": "Final non-binding guidelines published 20 July 2026, following a draft of 8 May 2026, addressed to competent authorities, providers and deployers so that Article 50 is applied consistently, proportionately and uniformly from 2 August 2026. They cover disclosure when a person interacts with an AI system, machine-readable marking of synthetic audio, image, video and text, information duties for emotion recognition and biometric categorisation, and labelling of deepfakes and public-interest text, with the exceptions in Article 50. Providers of generative systems already on the market before 2 August 2026 have until 2 December 2026 for marking under the Omnibus transition. Pair with the code and the EU icons.",
+    "topics": [
+      "transparency",
+      "provider-duties",
+      "deployer-duties"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-20",
+    "title": "EU icons for labelling AI-generated content",
+    "issuer": "European Commission (AI Office)",
+    "type": "template",
+    "status": "voluntary",
+    "articles": [
+      "Art 50(4)"
+    ],
+    "date": "10 August 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content",
+    "takeaway": "A free set of visual markers, last updated 10 August 2026, in four colour variants and three types: a basic icon, 'Fully AI-Generated' and 'Partially AI-Modified'. Deployers may use them to satisfy the Article 50(4) labelling duty for deepfakes and AI-generated text on matters of public interest, and they form an integral part of Section 2 of the transparency Code of Practice, whose signatories must follow the placement specifications. Use of the icons is optional and confers no automatic compliance, but the labelling requirement itself is not optional. No attribution to the Commission is needed.",
+    "topics": [
+      "transparency",
+      "deployer-duties"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-21",
+    "title": "AI Act Service Desk and Single Information Platform",
+    "issuer": "European Commission (AI Office)",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 62(3)"
+    ],
+    "date": "8 October 2025",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en",
+    "takeaway": "Launched 8 October 2025 with the Apply AI Strategy as the central hub the Act foresees in Article 62(3). It offers a Compliance Checker to determine obligations, an AI Act Explorer through 13 chapters, 180 recitals and the annexes, FAQs built from AI Pact webinars and stakeholder submissions, a high-risk guideline explorer, a national resources section and a submission form for individual questions answered by experts coordinating with the AI Office. Initially in English, French and German with all 24 languages planned for early 2026. Answers are informational and non-binding; note that some explorer pages still show pre-Omnibus text.",
+    "topics": [
+      "other",
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-22",
+    "title": "AI Act Service Desk: timeline for the implementation of the EU AI Act",
+    "issuer": "European Commission (AI Office)",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 113",
+      "Art 111",
+      "Art 57"
+    ],
+    "date": "27 July 2026",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act",
+    "takeaway": "The Commission's official post-Omnibus timeline. Entry into force 1 August 2024; definitions, literacy and prohibitions 2 February 2025; GPAI obligations and governance 2 August 2025; transparency rules and enforcement of prohibitions, GPAI, transparency and literacy 2 August 2026; the sexual deepfake and CSAM prohibitions and the marking deadline for pre-existing generative systems 2 December 2026; at least one national sandbox per Member State 2 August 2027; Annex III high-risk rules 2 December 2027; Annex I product-embedded high-risk rules 2 August 2028. Use it as the authoritative date list when the explorer text lags behind the amendments.",
+    "topics": [
+      "governance",
+      "high-risk-classification"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-23",
+    "title": "AI Act Service Desk FAQ category on the Digital Omnibus on AI",
+    "issuer": "European Commission (AI Office)",
+    "type": "qa",
+    "status": "final",
+    "articles": [
+      "Art 4",
+      "Art 49",
+      "Art 75",
+      "Art 113"
+    ],
+    "date": "27 July 2026",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/faq?combine=&faq_category_id=99",
+    "takeaway": "Dedicated FAQ set that the Commission points to from every explorer page carrying the notice that its text has not yet been updated for Regulation (EU) 2026/1744. It explains why the Act was amended after stakeholder consultations throughout 2025, the delay of up to 16 months for Annex III and 12 months for Annex I systems, the extension of simplified compliance from SMEs to small mid-caps reaching an estimated 8,250 additional companies, the reduced registration burden, the AI Office's centralised oversight of GPAI-based systems and AI on very large platforms, special-category data for bias detection, expanded sandboxes and an EU-level sandbox from 2028. Non-binding; check answers against the enacted text.",
+    "topics": [
+      "governance",
+      "scope"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-24",
+    "title": "Navigating the AI Act: questions and answers",
+    "issuer": "European Commission",
+    "type": "qa",
+    "status": "final",
+    "articles": [
+      "Art 6",
+      "Art 51",
+      "Art 99",
+      "Art 113"
+    ],
+    "date": "7 August 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act",
+    "takeaway": "General non-binding Q&A updated 7 August 2026 covering scope and the risk-based approach, high-risk classification and obligations, GPAI documentation and the 10^25 FLOP systemic-risk presumption, the two-tier governance of AI Office and national authorities, penalties of up to EUR 35 million or 7 percent for prohibited practices, EUR 15 million or 3 percent for other breaches and EUR 7.5 million or 1 percent for misleading information, and the post-Omnibus dates of 2 December 2027 and 2 August 2028. It reports more than 3,000 organisations interested in the AI Pact and over 230 pledge signatories as of December 2025. A sound orientation text for non-specialists.",
+    "topics": [
+      "scope",
+      "penalties",
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-25",
+    "title": "The enforcement framework of the AI Act",
+    "issuer": "European Commission (AI Office)",
+    "type": "policy",
+    "status": "final",
+    "articles": [
+      "Art 70",
+      "Art 74-75",
+      "Art 85-88",
+      "Art 99-101"
+    ],
+    "date": "31 July 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act",
+    "takeaway": "Explains how enforcement is shared from 2 August 2026 between the AI Office, the EDPS for Union institutions and national market surveillance authorities. The AI Office supervises GPAI models and, after the Omnibus, systems built on them and AI in very large online platforms, using information requests, model evaluations, interviews and inspections. Penalty ceilings are EUR 35 million or 7 percent of worldwide turnover for prohibited practices, EUR 15 million or 3 percent for GPAI and other operator breaches, and EUR 7.5 million or 1 percent for misleading information. The deepfake and CSAM bans apply from 2 December 2026.",
+    "topics": [
+      "enforcement",
+      "penalties",
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-26",
+    "title": "AI Act complaints tool, whistleblower tool and downstream provider channel",
+    "issuer": "European Commission (AI Office)",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 85",
+      "Art 87",
+      "Art 89(2)"
+    ],
+    "date": "31 July 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool",
+    "takeaway": "Three channels opened for the start of enforcement on 2 August 2026. The complaints tool lets any natural or legal person report alleged infringements by providers or deployers within the AI Office's exclusive competence under Article 85; complainants receive a reference number, submissions are confidential, and with consent the AI Office forwards matters to national market surveillance or fundamental rights authorities. The whistleblower tool, live since 25 November 2025, gives anonymous reporting to persons professionally connected to an operator under Article 87, and a separate channel lets downstream providers raise Article 53 to 55 concerns about integrated GPAI models under Article 89(2). Reflect these in internal speak-up procedures.",
+    "topics": [
+      "enforcement",
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-27",
+    "title": "AI Act standardisation: standardisation request C(2023)3215 as amended by C(2025)3871",
+    "issuer": "European Commission",
+    "type": "standards",
+    "status": "in force",
+    "articles": [
+      "Art 40",
+      "Art 41",
+      "Art 8-15",
+      "Art 17"
+    ],
+    "date": "22 May 2023",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation",
+    "takeaway": "Commission Implementing Decision C(2023)3215 of 22 May 2023 asked CEN and CENELEC for harmonised standards in ten areas: risk management, governance and quality of datasets, record keeping, transparency, human oversight, accuracy, robustness, cybersecurity, quality management and conformity assessment. Decision C(2025)3871 amended it after the original 30 April 2025 delivery date passed. Standards remain voluntary but, once cited in the Official Journal under Article 40, give a presumption of conformity with Chapter III Section 2, with Article 41 common specifications as the fallback. The first deliverable, prEN 18286 on quality management systems, entered public enquiry on 30 October 2025, so track OJ citations before relying on any standard.",
+    "topics": [
+      "standards",
+      "conformity"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-28",
+    "title": "CEN-CENELEC JTC 21 news: EN 18286 and the AI Act standards programme",
+    "issuer": "CEN-CENELEC JTC 21",
+    "type": "standards",
+    "status": "draft",
+    "articles": [
+      "Art 17",
+      "Art 40",
+      "Art 9-15"
+    ],
+    "date": "9 July 2026",
+    "url": "https://jtc21.eu/category/news/",
+    "takeaway": "The joint technical committee's news feed is the primary status source for the harmonised standards. Milestones: technical report CEN/CLC/TR 18115:2024 on data governance and quality published 6 November 2024; a technical report on conformity assessment published 18 December 2024; prEN 18286 'Quality management system for EU AI Act regulatory purposes' reached enquiry on 10 November 2025; further drafts opened for public consultation on 9 April 2026 and 8 May 2026; and on 9 July 2026 JTC 21 announced EN 18286 for publication in July 2026. A published EN gives no presumption of conformity until cited in the Official Journal, so monitor both.",
+    "topics": [
+      "standards",
+      "conformity"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-29",
+    "title": "AI Pact: collaborative network and voluntary pledges",
+    "issuer": "European Commission (AI Office)",
+    "type": "policy",
+    "status": "voluntary",
+    "articles": [
+      "Art 4",
+      "Art 62",
+      "Art 95"
+    ],
+    "date": "25 September 2024",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-pact",
+    "takeaway": "Voluntary Commission initiative with two pillars. Pillar I is an open network with webinars and exchange of practice; Pillar II, launched 25 September 2024, collects pledges in which providers and deployers commit to three core actions: adopting an AI governance strategy, mapping likely high-risk systems and promoting AI literacy among staff. Over half of pledgers add commitments on human oversight, risk mitigation and transparency of generated content, and the page lists more than 500 pledging organisations from large groups to SMEs. It creates no legal obligations and no presumption of conformity; use it for early engagement with the AI Office and for the living repository of practices.",
+    "topics": [
+      "literacy",
+      "governance",
+      "other"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-30",
+    "title": "Apply AI Strategy and AI in Science Strategy",
+    "issuer": "European Commission",
+    "type": "policy",
+    "status": "final",
+    "articles": [
+      "Art 57",
+      "Art 62"
+    ],
+    "date": "8 October 2025",
+    "url": "https://commission.europa.eu/news-and-media/news/keeping-european-industry-and-science-forefront-ai-2025-10-08_en",
+    "takeaway": "Two non-binding strategies adopted 8 October 2025. Apply AI accelerates adoption in key industries and the public sector, shortens time-to-market by linking infrastructure, data and testing facilities, launches a Frontier AI initiative, an Apply AI Alliance, an AI Observatory and the AI Act Service Desk. AI in Science creates RAISE, a virtual European institute pooling AI resources, backed by EUR 600 million from Horizon Europe for compute access and a plan to double annual Horizon Europe AI investment above EUR 3 billion. Relevant to practitioners mainly for the implementation support ecosystem: the Service Desk, Experience Centres for AI and sandbox access.",
+    "topics": [
+      "sandboxes",
+      "governance",
+      "other"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-31",
+    "title": "Appointment of the Scientific Panel of independent experts and the Advisory Forum",
+    "issuer": "European Commission (AI Office)",
+    "type": "policy",
+    "status": "final",
+    "articles": [
+      "Art 67",
+      "Art 68",
+      "Art 90"
+    ],
+    "date": "1 June 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/news/ai-act-enforcement-gets-independent-expert-support",
+    "takeaway": "On 1 June 2026 the Commission announced the members of the two advisory bodies foreseen in Articles 67 and 68. The Scientific Panel has 60 independent experts serving two-year renewable terms, with at most three nationals per country, advising the AI Office on GPAI classification, systemic risks, evaluation methodologies and cross-border market surveillance, and able to issue qualified alerts under Article 90. The Advisory Forum brings academia, civil society and industry including SMEs, with the Fundamental Rights Agency, ENISA and the standardisation bodies as permanent members, also for two years. Neither body issues binding acts, but panel alerts can trigger AI Office action against a model.",
+    "topics": [
+      "governance",
+      "gpai"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-32",
+    "title": "Commission Implementing Regulation (EU) 2025/454 on the scientific panel of independent experts",
+    "issuer": "European Commission",
+    "type": "delegated-or-implementing-act",
+    "status": "in force",
+    "articles": [
+      "Art 68",
+      "Art 90"
+    ],
+    "date": "5 March 2025",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-scientific-panel",
+    "takeaway": "Binding implementing act adopted 5 March 2025 under Article 68(1), laying down rules for the establishment and functioning of the scientific panel: selection of experts through an open call, independence and conflict-of-interest declarations, the 24-month renewable term, the chair and vice-chair chosen from among members, working arrangements with the AI Office and the procedure for qualified alerts to the AI Office under Article 90 when a GPAI model presents a concrete identifiable Union-level risk or should be classified as posing systemic risk. Providers of GPAI models should understand that a panel alert can initiate a request for information, an evaluation or a classification decision.",
+    "topics": [
+      "governance",
+      "gpai"
+    ],
+    "source": "knowledge"
+  },
+  {
+    "id": "doc-33",
+    "title": "European AI Office and Commission Decision C(2024) 390 establishing it",
+    "issuer": "European Commission",
+    "type": "policy",
+    "status": "in force",
+    "articles": [
+      "Art 64",
+      "Art 74-75",
+      "Art 88-94"
+    ],
+    "date": "24 January 2024",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+    "takeaway": "The AI Office was created within DG CNECT by Commission Decision of 24 January 2024 and now employs more than 125 staff across six units, from Regulation and Compliance to AI Safety and AI in Health and Life Science, plus a Lead Scientific Adviser and an International Affairs Adviser. It supervises GPAI models under Articles 88 to 94, drafts codes of practice, guidelines and implementing and delegated acts, and since the Omnibus of 27 July 2026 holds exclusive competence over AI systems built on GPAI models and AI in very large online platforms. It is the counterpart for any GPAI provider and for complaints in its remit.",
+    "topics": [
+      "governance",
+      "gpai",
+      "enforcement"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-34",
+    "title": "European Artificial Intelligence Board",
+    "issuer": "European Commission (AI Office secretariat) and Member States",
+    "type": "policy",
+    "status": "in force",
+    "articles": [
+      "Art 65",
+      "Art 66",
+      "Art 4(3)"
+    ],
+    "date": "10 September 2024",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-board",
+    "takeaway": "The Board established by Articles 65 and 66 met first on 10 September 2024 and has held nine documented meetings to September 2026. It comprises one representative per Member State, with the EDPS and EEA-EFTA states as observers, chaired by a Member State and supported by the AI Office. It advises on guidelines and draft delegated and implementing acts, has adopted adequacy assessments of both codes of practice, runs subgroups on standards, policy topics and the interplay with the medical device regulations, and must adopt AI literacy recommendations under the amended Article 4(3). Its opinions are non-binding but shape how national authorities apply the Act.",
+    "topics": [
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-35",
+    "title": "Market surveillance authorities and single points of contact under the AI Act",
+    "issuer": "European Commission (AI Office)",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 70",
+      "Art 74",
+      "Art 77"
+    ],
+    "date": "7 September 2026",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/market-surveillance-authorities-under-ai-act",
+    "takeaway": "The Commission's consolidated list of the national market surveillance authorities and single points of contact that Member States had to designate by 2 August 2025 under Article 70, updated 7 September 2026, with a companion page listing fundamental rights authorities under Article 77. It names, among others, Bundesnetzagentur for Germany, the National Cybersecurity Agency for Italy, AESIA for Spain, the AI Office of Ireland, the Rijksinspectie Digitale Infrastructuur for the Netherlands, DGCCRF for France, the Agency for Digital Government for Denmark, Traficom for Finland and KRiBSI for Poland; asterisks mark designations awaiting final national adoption. Check it to identify your supervisor and the recipient of Article 73 incident reports.",
+    "topics": [
+      "enforcement",
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-36",
+    "title": "MDCG 2025-6: Interplay between the MDR/IVDR and the AI Act",
+    "issuer": "Medical Device Coordination Group with the AI Board",
+    "type": "qa",
+    "status": "final",
+    "articles": [
+      "Art 6(1)",
+      "Art 8",
+      "Art 43",
+      "Annex I"
+    ],
+    "date": "19 June 2025",
+    "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+    "takeaway": "Joint question-and-answer guidance published in June 2025 by the Medical Device Coordination Group and the AI Board's dedicated subgroup, non-binding but the reference for AI in medical devices. It confirms that an AI system that is a device or a safety component of a device requiring notified body assessment under the MDR or IVDR is high-risk under Article 6(1), and explains how the AI Act requirements fold into a single conformity assessment, technical documentation and quality management system under Article 8, how notified bodies are designated for both frameworks, and how post-market surveillance and incident reporting are coordinated. Medical device manufacturers now have until 2 August 2028 under the Omnibus.",
+    "topics": [
+      "high-risk-classification",
+      "conformity"
+    ],
+    "source": "knowledge"
+  },
+  {
+    "id": "doc-37",
+    "title": "EDPB Opinion 28/2024 on certain data protection aspects related to the processing of personal data in the context of AI models",
+    "issuer": "European Data Protection Board",
+    "type": "edpb-edps",
+    "status": "final",
+    "articles": [
+      "Art 10",
+      "Art 53",
+      "Art 2(7)"
+    ],
+    "date": "18 December 2024",
+    "url": "https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en",
+    "takeaway": "Article 64(2) GDPR opinion adopted 18 December 2024 at the request of the Irish supervisory authority. It holds that an AI model trained on personal data is anonymous only where identification of individuals or extraction of their data through queries is very unlikely, assessed case by case; sets a three-step test for legitimate interest in training and deployment, with conversational agents and cybersecurity as acceptable purposes when strictly necessary and balanced; and warns that models built on unlawfully processed data may face deployment restrictions unless properly anonymised. It does not implement the AI Act but governs the data side that Article 2(7) leaves to the GDPR.",
+    "topics": [
+      "data",
+      "gpai"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-38",
+    "title": "EDPB Statement 3/2024 on data protection authorities' role in the Artificial Intelligence Act framework",
+    "issuer": "European Data Protection Board",
+    "type": "edpb-edps",
+    "status": "final",
+    "articles": [
+      "Art 70",
+      "Art 74(8)",
+      "Art 77"
+    ],
+    "date": "16 July 2024",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/statements/statement-32024-data-protection-authorities-role-artificial-intelligence-act-framework_en",
+    "takeaway": "Statement adopted 16 July 2024, before the Act entered into force, addressed to Member States designing their supervision. The EDPB recommends that data protection authorities be designated as market surveillance authorities for high-risk AI systems in the Annex III areas likely to affect fundamental rights, as Article 74(8) already requires for law enforcement, migration, border control and justice, that they serve as single points of contact, and that clear procedures be set for cooperation between DPAs, other market surveillance authorities and the AI Office. It is non-binding; several Member States followed it in part, so check the national designation.",
+    "topics": [
+      "governance",
+      "enforcement"
+    ],
+    "source": "knowledge"
+  },
+  {
+    "id": "doc-39",
+    "title": "EDPB-EDPS Joint Opinion 5/2021 on the proposal for an Artificial Intelligence Act",
+    "issuer": "European Data Protection Board and European Data Protection Supervisor",
+    "type": "edpb-edps",
+    "status": "historical",
+    "articles": [
+      "Art 5",
+      "Art 70",
+      "Art 2(7)"
+    ],
+    "date": "18 June 2021",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/edpbedps-joint-opinion/edpb-edps-joint-opinion-52021-proposal_en",
+    "takeaway": "Joint opinion of 18 June 2021 on the Commission's April 2021 proposal, now legislative history. The two bodies called for a general ban on any use of AI for automated recognition of human features in publicly accessible spaces, a ban on social scoring, a ban on inferring emotions except for narrow cases and a ban on biometric categorisation by protected characteristics, and asked that data protection authorities be the national supervisory authorities and the EDPS the authority for Union institutions. The enacted Article 5 adopted narrower prohibitions. Read it to understand why DPAs still press for a fundamental-rights reading of the Act.",
+    "topics": [
+      "prohibitions",
+      "governance"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-40",
+    "title": "EDPB-EDPS Joint Opinion 1/2026 on the proposal for a Digital Omnibus on AI",
+    "issuer": "European Data Protection Board and European Data Protection Supervisor",
+    "type": "edpb-edps",
+    "status": "final",
+    "articles": [
+      "Art 4a",
+      "Art 10(5)",
+      "Art 74",
+      "Art 49"
+    ],
+    "date": "20 January 2026",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/edpbedps-joint-opinion/edpb-edps-joint-opinion-12026-proposal-regulation-regards_en",
+    "takeaway": "Joint opinion on COM(2025) 836 adopted in January 2026. The Board and Supervisor accepted the objective of simplification but asked that any processing of special categories of personal data for bias detection remain bound by strict necessity, pseudonymisation, access controls and deletion, that the exception not extend beyond high-risk systems without justification, that data protection authorities keep their supervisory role for AI affecting fundamental rights and be consulted where the AI Office takes over GPAI-based systems, and that registration of exempted Annex III systems be kept. The final Article 4a reflects the strict-necessity and safeguard conditions. Non-binding, but it signals how DPAs will read Article 4a.",
+    "topics": [
+      "data",
+      "governance"
+    ],
+    "source": "knowledge"
+  },
+  {
+    "id": "doc-41",
+    "title": "EDPB Support Pool of Experts report: AI Privacy Risks and Mitigations in Large Language Models",
+    "issuer": "European Data Protection Board (Support Pool of Experts), author Isabel Barbera",
+    "type": "edpb-edps",
+    "status": "reference",
+    "articles": [
+      "Art 9",
+      "Art 10",
+      "Art 26",
+      "Art 53"
+    ],
+    "date": "10 April 2025",
+    "url": "https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf",
+    "takeaway": "A 99-page expert report published April 2025 that the EDPB states is not a formal Board position. It maps privacy risks across the eight lifecycle phases of ISO/IEC 22989 and 5338, three service models (LLM as a service, off-the-shelf, self-developed) and six data-flow stages, sets a three-stage risk methodology of identification, estimation and control, and catalogues over 70 technical and organisational mitigations split by provider and deployer role, with three worked use cases. It maps to GDPR Articles 25, 32 and 35 and to the AI Act's provider and deployer roles. Use it as a practical companion to Article 9 risk management and DPIAs for LLM deployments.",
+    "topics": [
+      "data",
+      "gpai",
+      "deployer-duties"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-42",
+    "title": "EDPB Guidelines 03/2026 on web scraping for the development of generative AI models",
+    "issuer": "European Data Protection Board",
+    "type": "edpb-edps",
+    "status": "consultation",
+    "articles": [
+      "Art 53(1)(c)",
+      "Art 10",
+      "Art 2(7)"
+    ],
+    "date": "8 July 2026",
+    "url": "https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en",
+    "takeaway": "Adopted at the 8 July 2026 plenary for public consultation until 30 October 2026. The guidelines confirm that the GDPR applies to collection, storage, organisation and retrieval of scraped personal data, require purpose limitation, transparency, minimisation and accuracy with timestamping and validation, clarify legitimate interest as the basis for training, and require both an Article 6 basis and an Article 9 exception for special-category data, citing GC and Others (C-136/17) for incidental collection with safeguards. They complement the copyright policy and training-content summary duties in Article 53. Providers scraping for training should align data governance with them now, before the final version.",
+    "topics": [
+      "data",
+      "gpai"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-43",
+    "title": "EDPB Guidelines 02/2026 on anonymisation",
+    "issuer": "European Data Protection Board",
+    "type": "edpb-edps",
+    "status": "consultation",
+    "articles": [
+      "Art 10",
+      "Art 59",
+      "Art 2(7)"
+    ],
+    "date": "8 July 2026",
+    "url": "https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en",
+    "takeaway": "Adopted 8 July 2026 alongside the web-scraping guidelines, with consultation until 30 October 2026. They set a three-criterion test for anonymous data: no singling out of a record, no linkage and no inference, assessed either contextually against the capabilities of the actual recipient or under a simplified approach that disregards those differences. For AI Act work they determine whether training, validation and testing datasets under Article 10 and data used in sandboxes under Article 59 still contain personal data, and they operationalise the anonymity threshold that Opinion 28/2024 applied to models. Treat anonymisation claims in supplier documentation against this test.",
+    "topics": [
+      "data"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-44",
+    "title": "EDPB Report of the work undertaken by the ChatGPT Taskforce",
+    "issuer": "European Data Protection Board",
+    "type": "edpb-edps",
+    "status": "final",
+    "articles": [
+      "Art 53",
+      "Art 2(7)"
+    ],
+    "date": "23 May 2024",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/other/report-work-undertaken-chatgpt-taskforce_en",
+    "takeaway": "Report adopted 23 May 2024 by the taskforce created in April 2023 to coordinate national investigations into ChatGPT. It sets out preliminary common positions on lawfulness of web scraping and training, the role of legitimate interest with balancing safeguards, fairness, transparency towards data subjects whose data were scraped, accuracy of outputs and the handling of access, rectification and erasure requests, and notes the shift to one-stop-shop supervision after the provider's Irish establishment in February 2024. Not binding, but it is the origin of the positions later formalised in Opinion 28/2024 and the 2026 web-scraping guidelines.",
+    "topics": [
+      "data",
+      "gpai"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-45",
+    "title": "EDPS orientations on generative AI for EU institutions, bodies, offices and agencies",
+    "issuer": "European Data Protection Supervisor",
+    "type": "edpb-edps",
+    "status": "final",
+    "articles": [
+      "Art 2(7)",
+      "Art 26",
+      "Art 4"
+    ],
+    "date": "3 June 2024",
+    "url": "https://www.edps.europa.eu/data-protection/our-work/publications/guidelines/2024-06-03-first-edps-orientations-eu-institutions-using-generative-ai_en",
+    "takeaway": "First orientations published 3 June 2024 and revised in an expanded second version in October 2025, addressed to the Union institutions the EDPS supervises under Regulation (EU) 2018/1725 and under the AI Act as their market surveillance authority. Structured as practical questions: when generative AI processes personal data, the role of the data protection officer, when a DPIA is needed, lawful basis, minimisation, accuracy, transparency, automated decisions, fair processing, individual rights and security. Non-binding for private operators, but they show the supervisory expectations a deployer of a general-purpose AI system should meet and mirror the deployer duties in Article 26.",
+    "topics": [
+      "data",
+      "deployer-duties",
+      "gpai"
+    ],
+    "source": "knowledge"
+  },
+  {
+    "id": "doc-46",
+    "title": "National implementation plans and authorities overview (all Member States)",
+    "issuer": "Future of Life Institute (artificialintelligenceact.eu)",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 70",
+      "Art 77",
+      "Art 99"
+    ],
+    "date": "17 June 2026",
+    "url": "https://artificialintelligenceact.eu/national-implementation-plans/",
+    "takeaway": "Independent tracker updated 17 June 2026 rating each Member State as clear, partially clear or unclear on designation of market surveillance and notifying authorities, national implementing law and sandboxes. As of that date 9 Member States had clearly designated both authorities, 12 had proposals and 6 had none, against the 2 August 2025 deadline in Article 70, while all 27 had designated fundamental rights authorities by 2 November 2024 under Article 77. It records adopted laws in Italy, Denmark (Law 467/2025, in force 2 August 2025), Finland (Law 1377/2025, in force 1 January 2026), Hungary and Slovenia. Not official; verify against the Commission's list.",
+    "topics": [
+      "governance",
+      "enforcement"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-47",
+    "title": "Germany: KI-Marktueberwachungs- und Innovationsunterstuetzungsgesetz (KI-MIG) and Bundesnetzagentur designation",
+    "issuer": "Bundesnetzagentur (Germany)",
+    "type": "national-law",
+    "status": "in force",
+    "articles": [
+      "Art 70",
+      "Art 57",
+      "Art 99"
+    ],
+    "date": "29 July 2026",
+    "url": "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2026/20260729_KI_VO.html",
+    "takeaway": "Germany's implementing act, approved by the Federal Cabinet as a draft on 10 February 2026 and in force 29 July 2026, makes the Bundesnetzagentur the market surveillance authority, single point of contact, complaints body, operator of a regulatory sandbox for SMEs and start-ups and national AI service desk. It supervises AI in radio equipment, worker management, critical infrastructure and education, transparency obligations and prohibited practices, while the financial sector stays with BaFin, media with the state media authorities, and harmonised product sectors keep their existing supervisors. Germany lists 20 fundamental rights authorities. Operators in Germany now have a competent authority to notify and to report incidents to.",
+    "topics": [
+      "governance",
+      "enforcement",
+      "sandboxes"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-48",
+    "title": "Italy: Law No. 132/2025 on artificial intelligence",
+    "issuer": "Italian Parliament",
+    "type": "national-law",
+    "status": "in force",
+    "articles": [
+      "Art 70",
+      "Art 57",
+      "Art 99"
+    ],
+    "date": "10 October 2025",
+    "url": "https://artificialintelligenceact.eu/national-implementation-plans/",
+    "takeaway": "Italy was the first Member State to pass a comprehensive implementing law: Law No. 132/2025, 'Disposizioni e deleghe al Governo in materia di intelligenza artificiale', in force 10 October 2025. It designates the National Cybersecurity Agency (ACN) as market surveillance authority and single point of contact and the Agency for Digital Italy (AgID) as notifying authority, lists 5 fundamental rights authorities, and adds national sector rules on health, work, professions, justice and minors together with delegations to the Government for further decrees and new criminal provisions on unlawful dissemination of AI-generated content. Operators in Italy must read the national layer alongside the Act, especially in employment and healthcare.",
+    "topics": [
+      "governance",
+      "enforcement"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-49",
+    "title": "Spain: Spanish Artificial Intelligence Supervisory Agency (AESIA) and the draft AI governance law",
+    "issuer": "Government of Spain",
+    "type": "national-law",
+    "status": "draft",
+    "articles": [
+      "Art 70",
+      "Art 57",
+      "Art 99"
+    ],
+    "date": "17 June 2026",
+    "url": "https://artificialintelligenceact.eu/national-implementation-plans/",
+    "takeaway": "Spain established AESIA in 2023 as the first dedicated national AI supervisory agency and designates it as market surveillance authority and single point of contact, with sectoral authorities participating and 20 fundamental rights authorities listed; the Commission's list still marks the designation as pending final adoption. The draft 'Ley para el buen uso y la gobernanza de la Inteligencia Artificial' would confirm this model, name the Directorate-General for Artificial Intelligence as notifying authority and set the national penalty regime, but was still pending in June 2026. Spain also ran the first national sandbox pilot. Until the law passes, rely on AESIA guidance and the Act directly.",
+    "topics": [
+      "governance",
+      "enforcement",
+      "sandboxes"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-50",
+    "title": "Ireland: S.I. No. 366 of 2025 and the designated competent authorities",
+    "issuer": "Government of Ireland",
+    "type": "national-law",
+    "status": "in force",
+    "articles": [
+      "Art 70",
+      "Art 28",
+      "Art 77"
+    ],
+    "date": "17 June 2026",
+    "url": "https://artificialintelligenceact.eu/national-implementation-plans/",
+    "takeaway": "Ireland implemented a decentralised model through Statutory Instrument No. 366 of 2025, designating 15 sectoral market surveillance authorities with the Minister for Enterprise, Tourism and Employment as single point of contact and four notifying authorities: that Minister, the Minister for Transport, the Health Products Regulatory Authority and the Commission for Communications Regulation. Nine fundamental rights authorities are listed, a National AI Office was planned as the central coordinating authority by 2 August 2026, and the Commission's list of 7 September 2026 now names the AI Office of Ireland. Operators established in Ireland, including many GPAI providers, should map each of their systems to the relevant sectoral regulator.",
+    "topics": [
+      "governance",
+      "enforcement"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-51",
+    "title": "Netherlands: decentralised supervision with RDI as single point of contact and draft implementing law",
+    "issuer": "Government of the Netherlands",
+    "type": "national-law",
+    "status": "draft",
+    "articles": [
+      "Art 70",
+      "Art 74(8)",
+      "Art 77"
+    ],
+    "date": "17 June 2026",
+    "url": "https://artificialintelligenceact.eu/national-implementation-plans/",
+    "takeaway": "The Netherlands published draft implementing legislation in April 2026 confirming a decentralised model of ten sectoral market surveillance authorities, among them the Data Protection Authority, the State Inspectorate for Digital Infrastructure (RDI), the Financial Markets Authority and the central bank, with the same ten acting as notifying authorities and RDI as single point of contact; six fundamental rights authorities are listed. The Commission's list marks RDI as pending final adoption. The Dutch DPA has an early-warning role on algorithms and publishes AI Act guidance of its own. Operators in the Netherlands should expect the DPA to supervise fundamental-rights-sensitive high-risk uses in line with Article 74(8).",
+    "topics": [
+      "governance",
+      "enforcement"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-52",
+    "title": "France: DGCCRF as coordinating authority and single point of contact under a pending legislative proposal",
+    "issuer": "Government of France",
+    "type": "national-law",
+    "status": "draft",
+    "articles": [
+      "Art 70",
+      "Art 77"
+    ],
+    "date": "17 June 2026",
+    "url": "https://artificialintelligenceact.eu/national-implementation-plans/",
+    "takeaway": "France has published a legislative proposal, not yet adopted as of June 2026, for a decentralised model in which the Directorate-General for Competition, Consumer Affairs and Fraud Control (DGCCRF) coordinates market surveillance and serves as single point of contact, with existing sectoral regulators given a broadened scope as market surveillance and notifying authorities; the Commission's list marks DGCCRF as pending final adoption. Three fundamental rights authorities are designated, and the CNIL continues to publish AI Act and GDPR guidance for developers. Operators in France should track the bill for the penalty regime and the final split of competences between DGCCRF, CNIL and sector regulators.",
+    "topics": [
+      "governance",
+      "enforcement"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-53",
+    "title": "EU AI Act Explorer (artificialintelligenceact.eu)",
+    "issuer": "Future of Life Institute",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 1-113",
+      "Annex I-XIV"
+    ],
+    "date": "27 July 2026",
+    "url": "https://artificialintelligenceact.eu/ai-act-explorer/",
+    "takeaway": "Independent, free explorer maintained by the Future of Life Institute, explicitly not associated with the Union. It presents all 113 articles across 13 chapters, 14 annexes and 180 recitals in 24 languages with keyword search, hyperlinked cross-references with peek view, paragraph-level permalinks and a chatbot that answers from the text with citations. Unlike the Commission's own explorer it already shows the law as amended by the Digital Omnibus, which it records as amending 42 articles and 3 annexes and applying since 27 July 2026. Use it for the consolidated text and cite the Official Journal for anything formal.",
+    "topics": [
+      "other",
+      "scope"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-54",
+    "title": "AI Act implementation timeline (artificialintelligenceact.eu)",
+    "issuer": "Future of Life Institute",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 113",
+      "Art 111",
+      "Art 112",
+      "Art 97"
+    ],
+    "date": "27 July 2026",
+    "url": "https://artificialintelligenceact.eu/implementation-timeline/",
+    "takeaway": "Independent timeline that lists every Commission and Member State deadline with its article, beyond the core application dates. It records guidance on Articles 8(2), 9(10) and 17(3) due 1 August 2027, post-market monitoring guidance and template due 2 September 2027, notified body applications under Article 43(3) by 28 January 2028, the Article 112 evaluation reports of 2 August 2028 and 2 August 2029, public-authority legacy systems by 2 August 2030, Annex X systems by 31 December 2030 and expiry of delegated powers on 1 August 2029 and 27 July 2031. Use it to plan supplier and audit cycles.",
+    "topics": [
+      "governance",
+      "other"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-55",
+    "title": "EU AI Act Compliance Checker (artificialintelligenceact.eu)",
+    "issuer": "Future of Life Institute",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 2",
+      "Art 5",
+      "Art 6",
+      "Art 51"
+    ],
+    "date": "3 July 2025",
+    "url": "https://artificialintelligenceact.eu/assessment/eu-ai-act-compliance-checker/",
+    "takeaway": "Interactive questionnaire that walks through operator role (provider, deployer, distributor, importer, authorised representative, product manufacturer), prohibited practices, high-risk classification and GPAI status and returns a tailored obligation summary as a PDF flowchart or by email. It was last substantially updated 3 July 2025, before the Digital Omnibus, so its high-risk dates and registration answers need checking against Regulation (EU) 2026/1744. The site reports over 150,000 monthly visitors and more than 40,000 newsletter subscribers, is not affiliated with the Union and recommends professional legal advice. Suitable as a first triage, not as a record of a classification decision.",
+    "topics": [
+      "scope",
+      "high-risk-classification"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-56",
+    "title": "Standard setting overview (artificialintelligenceact.eu)",
+    "issuer": "Future of Life Institute",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 40",
+      "Art 41",
+      "Art 8-15"
+    ],
+    "date": "21 July 2025",
+    "url": "https://artificialintelligenceact.eu/standard-setting-overview/",
+    "takeaway": "Independent explainer updated 21 July 2025 on how harmonised standards work under the Act. It documents the standardisation request C(2023)3215 of 22 May 2023 with its missed delivery date of 30 April 2025 and the amending decision C(2025)3871 of June 2025 setting 31 August 2025, links the live CEN-CENELEC work-programme dashboard, and explains the presumption of conformity under Article 40 against the Commission's Article 41 power to adopt common specifications, which the Commission had not signalled using. It notes that European standards leverage ISO/IEC work such as ISO/IEC 42001 and 23894. Written before the Omnibus, so its 2026 and 2027 dates are superseded.",
+    "topics": [
+      "standards",
+      "conformity"
+    ],
+    "source": "page"
+  },
+  {
+    "id": "doc-57",
+    "title": "AI Act Service Desk explorer and compliance checker (Article 99 page with Omnibus notice)",
+    "issuer": "European Commission (AI Office)",
+    "type": "reference-tool",
+    "status": "reference",
+    "articles": [
+      "Art 99",
+      "Art 101"
+    ],
+    "date": "8 October 2025",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99",
+    "takeaway": "The Commission's own article-by-article explorer across 13 chapters, 180 recitals and the annexes in six interface languages, paired with the official compliance checker for AI systems and GPAI models. The Article 99 page shows penalty ceilings of EUR 35 million or 7 percent of worldwide turnover for Article 5 breaches, EUR 15 million or 3 percent for other operator and notified body breaches and EUR 7.5 million or 1 percent for misleading information, the lower figure applying to SMEs. It carries the notice that the provision was amended by the Digital Omnibus and the displayed text is not yet updated, so treat it as pre-Omnibus until that notice goes.",
+    "topics": [
+      "penalties",
+      "other"
+    ],
+    "source": "page"
+  }
+]

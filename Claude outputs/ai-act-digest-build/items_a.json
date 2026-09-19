@@ -1,0 +1,779 @@
+[
+ {
+  "id": "art-1",
+  "number": "Article 1",
+  "title": "Subject Matter",
+  "chapter": "Chapter I: General Provisions",
+  "section": "",
+  "takeaway": "Article 1 states the purpose of the Regulation: to improve the functioning of the internal market, promote human-centric and trustworthy AI and protect health, safety and fundamental rights while supporting innovation (paragraph 1). Paragraph 2 lists what the Regulation contains: harmonised rules for placing AI systems and general-purpose AI models on the market, prohibitions of certain practices, requirements for high-risk systems and their operators, transparency rules, rules on general-purpose AI models, market surveillance and enforcement, and innovation support for SMEs, start-ups and small mid-caps. It binds everyone in scope and is the reference point for reading every later obligation.",
+  "applies_from": "2 February 2025",
+  "omnibus": "",
+  "binds": [
+   "everyone"
+  ],
+  "recitals": [
+   1,
+   2,
+   3,
+   6,
+   7,
+   8
+  ],
+  "topics": [
+   "scope"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/1/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-2",
+  "number": "Article 2",
+  "title": "Scope",
+  "chapter": "Chapter I: General Provisions",
+  "section": "",
+  "takeaway": "Article 2 fixes who is caught: providers placing AI systems or general-purpose AI models on the Union market wherever established, deployers in the Union, third-country operators whose output is used in the Union, importers, distributors, product manufacturers, authorised representatives and affected persons (paragraph 1). Paragraphs 3 to 12 exclude military, defence and national security uses, scientific research, pre-market testing, purely personal use and free and open-source systems unless high-risk or caught by Articles 5 or 50. Paragraph 2 confines Annex I Section B products to Article 6(1), Article 60a and Articles 102 to 112; paragraph 13 lets the Commission limit Articles 9 to 15 by 2 August 2027.",
+  "applies_from": "2 February 2025",
+  "omnibus": "Paragraph 2 was rewritten so that only Article 6(1), Article 60a and Articles 102 to 112 apply to Annex I Section B products, with Articles 57 to 59 applying only where integrated into that sectoral legislation, and paragraph 7 now cross-refers to the new Article 4a.",
+  "binds": [
+   "everyone"
+  ],
+  "recitals": [
+   9,
+   21,
+   22,
+   23,
+   24,
+   25,
+   166
+  ],
+  "topics": [
+   "scope"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/2/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-3",
+  "number": "Article 3",
+  "title": "Definitions",
+  "chapter": "Chapter I: General Provisions",
+  "section": "",
+  "takeaway": "Article 3 supplies the 68 definitions on which every later obligation depends. An AI system is a machine-based system with varying levels of autonomy that infers from input how to generate outputs such as predictions, content, recommendations or decisions (point 1); a provider develops a system or model and places it on the market under its own name (point 3); a deployer uses a system under its authority outside personal activity (point 4). Points 63 and 65 define general-purpose AI models and systemic risk, and point 49 defines a serious incident as death, serious harm to health, critical infrastructure disruption, a fundamental rights infringement or serious harm to property.",
+  "applies_from": "2 February 2025",
+  "omnibus": "Point 14a now refers to Recommendation 2003/361/EC for SMEs and new point 14b defines a small mid-cap enterprise (SMC) by reference to Recommendation (EU) 2025/1099.",
+  "binds": [
+   "everyone"
+  ],
+  "recitals": [
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   97,
+   98,
+   99,
+   100,
+   110,
+   128
+  ],
+  "topics": [
+   "scope",
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/3/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-4",
+  "number": "Article 4",
+  "title": "AI Literacy",
+  "chapter": "Chapter I: General Provisions",
+  "section": "",
+  "takeaway": "Article 4 obliges providers and deployers of AI systems to take measures that support AI literacy among their staff and other persons operating the systems on their behalf, taking account of technical knowledge, experience, education, training, the context of use and the persons affected (paragraph 1). No specific level of literacy has to be guaranteed for any individual. Under paragraph 2 the Commission and Member States support providers and deployers, particularly SMEs, with practical examples published on the Article 62(3) platform, and under paragraph 3 the Board adopts recommendations on common objectives. Document role-based training now; the obligation has applied since 2 February 2025.",
+  "applies_from": "2 February 2025",
+  "omnibus": "Paragraph 1 was softened to a duty to support literacy without guaranteeing any individual level, and new paragraphs 2 and 3 add Commission, Member State and Board support duties.",
+  "binds": [
+   "provider",
+   "deployer",
+   "commission"
+  ],
+  "recitals": [
+   20
+  ],
+  "topics": [
+   "literacy"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/4/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-5",
+  "number": "Article 5",
+  "title": "Prohibited AI Practices",
+  "chapter": "Chapter II: Prohibited AI Practices",
+  "section": "",
+  "takeaway": "Article 5 prohibits eight AI practices: manipulative techniques, exploitation of vulnerabilities, social scoring, criminal risk prediction based solely on profiling, untargeted scraping of facial images, emotion recognition in workplaces and education except for medical or safety reasons, biometric categorisation inferring protected characteristics, and real-time remote biometric identification in public spaces for law enforcement (paragraph 1). Point (h) allows real-time identification only for victim searches, imminent threats or Annex II offences carrying at least four years' custody, with prior authorisation and a fundamental rights impact assessment (paragraphs 2 to 4). New points (ba) and (bb) ban generating non-consensual intimate imagery and child sexual abuse material from 2 December 2026.",
+  "applies_from": "2 February 2025; points (ba) and (bb) and paragraphs 1a and 1b from 2 December 2026",
+  "omnibus": "New points 1(ba) and 1(bb) and paragraphs 1a and 1b add prohibitions on AI systems generating or manipulating non-consensual intimate imagery and child sexual abuse material, applying from 2 December 2026.",
+  "binds": [
+   "everyone"
+  ],
+  "recitals": [
+   3,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45
+  ],
+  "topics": [
+   "prohibitions"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/5/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-6",
+  "number": "Article 6",
+  "title": "Classification Rules for High-Risk AI Systems",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 1: Classification of AI systems as high-risk",
+  "takeaway": "Article 6 sets the two routes to high-risk status: safety components of, or products under, Annex I harmonisation legislation that require third-party conformity assessment (paragraph 1), and the use cases in Annex III (paragraph 2). Paragraph 3 exempts Annex III systems that perform a narrow procedural task, improve a completed human activity, detect decision-making deviations or carry out preparatory assessments, but profiling of natural persons always stays high-risk. Providers relying on paragraph 3 must document the assessment before placing on the market and register under Article 49(2) (paragraph 4). New paragraphs 1a to 1c exclude systems limited to non-safety aspects such as user assistance unless failure endangers health and safety.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "New paragraphs 1a, 1b and 1c state that systems used only for non-safety aspects such as user assistance, performance optimisation, service efficiency, automation, convenience or quality control are not safety components unless their failure endangers health and safety, and that products assessed solely for non-safety risks such as spectrum use do not meet paragraph 1.",
+  "binds": [
+   "provider",
+   "commission"
+  ],
+  "recitals": [
+   46,
+   47,
+   48,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   63
+  ],
+  "topics": [
+   "high-risk-classification"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/6/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-7",
+  "number": "Article 7",
+  "title": "Amendments to Annex III",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 1: Classification of AI systems as high-risk",
+  "takeaway": "Article 7 empowers the Commission to adopt delegated acts under Article 97 adding or modifying Annex III use cases where a system falls within an existing Annex III area and poses a risk to health, safety or fundamental rights equivalent to or greater than the listed cases (paragraph 1). Paragraph 2 lists the criteria: intended purpose, extent of use, nature of data, autonomy and human override, documented harm, magnitude and reversibility of impact, benefits and existing remedies. Paragraph 3 allows removal of a use case that no longer poses a significant risk. Providers should monitor delegated acts because Annex III can change without a new regulation.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "provider"
+  ],
+  "recitals": [],
+  "topics": [
+   "high-risk-classification",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/7/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-8",
+  "number": "Article 8",
+  "title": "Compliance with the Requirements",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 2: Requirements for high-risk AI systems",
+  "takeaway": "Article 8 requires high-risk AI systems to meet the Section 2 requirements of Articles 9 to 15, read in the light of the intended purpose stated by the provider and the generally acknowledged state of the art, with the Article 9 risk management system used to verify compliance (paragraph 1). Where a product contains an AI system covered by both the Regulation and Annex I Section A harmonisation legislation, providers are responsible for full compliance with both sets of rules and may integrate the testing, reporting, information and documentation into what the sectoral legislation already requires (paragraph 2). Providers should build one integrated compliance file rather than parallel ones.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   46,
+   64
+  ],
+  "topics": [
+   "provider-duties",
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/8/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-9",
+  "number": "Article 9",
+  "title": "Risk Management System",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 2: Requirements for high-risk AI systems",
+  "takeaway": "Article 9 obliges providers to establish, implement, document and maintain a risk management system for each high-risk AI system as a continuous iterative process across the whole lifecycle (paragraphs 1 and 2). The steps are identifying known and reasonably foreseeable risks to health, safety and fundamental rights, estimating risks under intended use and foreseeable misuse, evaluating Article 72 post-market monitoring data and adopting targeted measures so that residual risk is acceptable (paragraphs 2 to 5). Systems must be tested against predefined metrics and probabilistic thresholds before placing on the market, including Article 60 real-world testing where appropriate (paragraphs 6 to 8). Paragraph 9 protects persons under 18 and vulnerable groups.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   65
+  ],
+  "topics": [
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/9/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-10",
+  "number": "Article 10",
+  "title": "Data and Data Governance",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 2: Requirements for high-risk AI systems",
+  "takeaway": "Article 10 requires high-risk AI systems trained with data to use training, validation and testing datasets that meet the quality criteria in paragraphs 2 to 4 and Article 4a(1) (paragraph 1). Governance practices must cover design choices, data origin and collection, preparation and labelling, assumptions, availability and suitability, examination for bias affecting health, safety, fundamental rights or discrimination, bias mitigation and data gaps (paragraph 2). Datasets must be relevant, sufficiently representative, as error-free and complete as possible and reflect the geographical, contextual, behavioural and functional setting of use (paragraphs 3 and 4); for systems not trained on data only testing datasets are caught (paragraph 6).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "Paragraph 5 on processing special categories of personal data for bias detection was deleted and moved to the new Article 4a, which paragraphs 1 and 6 now cross-refer to.",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   66,
+   67,
+   68,
+   69,
+   70
+  ],
+  "topics": [
+   "data",
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/10/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-11",
+  "number": "Article 11",
+  "title": "Technical Documentation",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 2: Requirements for high-risk AI systems",
+  "takeaway": "Article 11 requires providers to draw up technical documentation before a high-risk AI system is placed on the market or put into service, keep it up to date and include at least the elements in Annex IV so that authorities and notified bodies can assess compliance (paragraph 1). SMEs, start-ups and small mid-caps may supply the elements in a simplified manner using the Commission's simplified form, which notified bodies must accept. Where the system relates to an Annex I Section A product, a single set of documentation covers both regimes (paragraph 2), and the Commission may amend Annex IV by delegated act (paragraph 3).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "Paragraph 1 was amended so that SMEs, start-ups and small mid-caps may provide the documentation in a simplified manner using a Commission simplified form that notified bodies must accept.",
+  "binds": [
+   "provider",
+   "notified-body"
+  ],
+  "recitals": [
+   66,
+   71
+  ],
+  "topics": [
+   "provider-duties",
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/11/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-12",
+  "number": "Article 12",
+  "title": "Record-Keeping",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 2: Requirements for high-risk AI systems",
+  "takeaway": "Article 12 requires high-risk AI systems to technically allow automatic recording of events (logs) over their lifetime (paragraph 1). Logging must give traceability appropriate to the intended purpose so that Article 79(1) risks and substantial modifications can be identified, Article 72 post-market monitoring is supported and Article 26(5) deployer monitoring is possible (paragraph 2). For remote biometric identification systems under Annex III point 1(a), logs must at minimum record the start and end of each use, the reference database checked, the input data that produced a match and the persons who verified the result under Article 14(5) (paragraph 3). Providers design the logging; providers and deployers keep the logs.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   66,
+   71
+  ],
+  "topics": [
+   "provider-duties",
+   "oversight"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/12/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-13",
+  "number": "Article 13",
+  "title": "Transparency and Provision of Information to Deployers",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 2: Requirements for high-risk AI systems",
+  "takeaway": "Article 13 requires high-risk AI systems to be designed so that their operation is sufficiently transparent for deployers to interpret and use the output appropriately (paragraph 1), and to ship with instructions for use that are concise, complete, correct and clear (paragraph 2). Paragraph 3 lists the mandatory content: provider and authorised representative identity, intended purpose, accuracy, robustness and cybersecurity levels, known risks and foreseeable misuse, performance for specific groups, input data specifications, predetermined changes, the human oversight measures under Article 14, computational and hardware needs, expected lifetime and maintenance, and the logging mechanisms under Article 12. Providers write these instructions; deployers rely on them for Articles 26 and 27.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider",
+   "deployer"
+  ],
+  "recitals": [
+   66,
+   72
+  ],
+  "topics": [
+   "provider-duties",
+   "transparency"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/13/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-14",
+  "number": "Article 14",
+  "title": "Human Oversight",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 2: Requirements for high-risk AI systems",
+  "takeaway": "Article 14 requires high-risk AI systems to be designed with human-machine interface tools so that natural persons can effectively oversee them during use, to prevent or minimise risks to health, safety and fundamental rights (paragraphs 1 and 2). Measures must be proportionate to the risks and level of autonomy and are either built in by the provider or specified for the deployer (paragraph 3). Overseers must be able to understand capacities and limitations, resist automation bias, interpret output correctly, decide not to use the system, override it or halt it (paragraph 4). Remote biometric identification under Annex III point 1(a) needs separate verification by at least two persons (paragraph 5).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider",
+   "deployer"
+  ],
+  "recitals": [
+   66,
+   73
+  ],
+  "topics": [
+   "oversight",
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/14/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-15",
+  "number": "Article 15",
+  "title": "Accuracy, Robustness and Cybersecurity",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 2: Requirements for high-risk AI systems",
+  "takeaway": "Article 15 requires high-risk AI systems to achieve an appropriate level of accuracy, robustness and cybersecurity and to perform consistently throughout their lifecycle (paragraph 1). The Commission encourages benchmarks and measurement methodologies with stakeholders and metrology bodies (paragraph 2), and providers must declare accuracy levels and metrics in the instructions for use (paragraph 3). Robustness against errors, faults and inconsistencies may rely on redundancy, backup or fail-safe plans, and continuously learning systems must control biased feedback loops (paragraph 4). Cybersecurity measures must address data poisoning, model poisoning, adversarial examples, confidentiality attacks and model flaws (paragraph 5), so providers should map these threats into the Article 9 risk register.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider",
+   "commission"
+  ],
+  "recitals": [
+   66,
+   74,
+   75,
+   76,
+   77,
+   78
+  ],
+  "topics": [
+   "provider-duties",
+   "standards"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/15/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-16",
+  "number": "Article 16",
+  "title": "Obligations of Providers of High-Risk AI Systems",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 16 is the provider checklist for high-risk AI systems. Providers must ensure compliance with Section 2, mark the system or its packaging with their name and contact address, run an Article 17 quality management system, keep the Article 18 documentation and Article 19 logs, complete the Article 43 conformity assessment before placing on the market, draw up the Article 47 EU declaration of conformity, affix the CE marking under Article 48, register under Article 49(1), take corrective action under Article 20, demonstrate conformity on reasoned request and meet the accessibility requirements of Directives (EU) 2016/2102 and (EU) 2019/882 (points (a) to (l)).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   79,
+   80,
+   81,
+   145
+  ],
+  "topics": [
+   "provider-duties",
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/16/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-17",
+  "number": "Article 17",
+  "title": "Quality Management System",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 17 requires providers of high-risk AI systems to run a documented quality management system with written policies, procedures and instructions covering thirteen areas (paragraph 1): regulatory compliance strategy, design and development controls, examination and testing, technical specifications and standards, data management, the Article 9 risk management system, Article 72 post-market monitoring, Article 73 serious incident reporting, communication with authorities and notified bodies, record-keeping, resource management and an accountability framework. Implementation is proportionate to the provider's size, including SMEs, start-ups and small mid-caps, without lowering protection (paragraph 2). Sectoral quality systems may be integrated (paragraph 3), and financial institutions satisfy most points through internal governance rules (paragraph 4).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "Paragraph 2 now names small mid-caps (SMCs) alongside SMEs and start-ups among the organisations entitled to proportionate implementation.",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   81
+  ],
+  "topics": [
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/17/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-18",
+  "number": "Article 18",
+  "title": "Documentation Keeping",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 18 obliges providers to keep, at the disposal of national competent authorities for 10 years after a high-risk AI system is placed on the market or put into service, the Article 11 technical documentation, the Article 17 quality management documentation, changes approved by notified bodies, notified body decisions and documents, and the Article 47 EU declaration of conformity (paragraph 1). Member States set the rules for the documentation when a provider or its authorised representative goes bankrupt or ceases activity before the 10 years end (paragraph 2), and financial institutions keep it under their financial services rules (paragraph 3). Set retention schedules to the 10-year clock from release.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   81
+  ],
+  "topics": [
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/18/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-19",
+  "number": "Article 19",
+  "title": "Automatically Generated Logs",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 19 requires providers of high-risk AI systems to keep the logs their systems generate automatically under Article 12, to the extent the logs are under their control, for a period appropriate to the intended purpose and at least six months unless Union or national law, in particular data protection law, provides otherwise (paragraph 1). Financial institutions keep the logs as part of the documentation required by their financial services rules (paragraph 2). Providers should decide at design time which logs they control, for example in hosted deployments, and set retention accordingly; the matching deployer duty is in Article 26(6).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   81
+  ],
+  "topics": [
+   "provider-duties",
+   "oversight"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/19/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-20",
+  "number": "Article 20",
+  "title": "Corrective Actions and Duty of Information",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 20 requires providers who consider or have reason to consider that a high-risk AI system they have placed on the market is not in conformity to immediately bring it into conformity, withdraw it, disable it or recall it, and to inform the distributors, deployers, authorised representative and importers concerned (paragraph 1). Where the system presents an Article 79(1) risk and the provider becomes aware of it, the provider must immediately investigate the causes with the reporting deployer and inform the market surveillance authorities and, where applicable, the certifying notified body, describing the non-compliance and the corrective action (paragraph 2). Providers need a recall and notification procedure before release.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   81
+  ],
+  "topics": [
+   "provider-duties",
+   "incidents"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/20/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-21",
+  "number": "Article 21",
+  "title": "Cooperation with Competent Authorities",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 21 requires providers of high-risk AI systems, on reasoned request from a competent authority, to supply all information and documentation necessary to demonstrate conformity with Section 2 in an official Union language that the requesting Member State can readily understand (paragraph 1) and to give access to the automatically generated logs referred to in Article 12(1) to the extent those logs are under their control (paragraph 2). Information obtained is protected by the confidentiality obligations in Article 78 (paragraph 3). Providers should keep the technical file in a form that can be handed over on request and know which languages their markets require.",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider",
+   "authority"
+  ],
+  "recitals": [
+   81
+  ],
+  "topics": [
+   "provider-duties",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/21/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-22",
+  "number": "Article 22",
+  "title": "Authorised Representatives of Providers of High-Risk AI Systems",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 22 requires providers established outside the Union to appoint, by written mandate and before placing a high-risk AI system on the Union market, an authorised representative established in the Union (paragraph 1). The representative verifies that the EU declaration of conformity and technical documentation exist and the conformity assessment was carried out, keeps the provider's contact details and documentation copies for 10 years after placing on the market, supplies information to authorities on reasoned request, cooperates on risk mitigation and complies with Article 49(1) registration (paragraph 3). The representative must terminate the mandate and inform the market surveillance authority if the provider breaches the Regulation (paragraph 4).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   82,
+   83
+  ],
+  "topics": [
+   "provider-duties",
+   "registration"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/22/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-23",
+  "number": "Article 23",
+  "title": "Obligations of Importers",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 23 requires importers, before placing a high-risk AI system on the market, to verify that the provider has carried out the Article 43 conformity assessment, drawn up the Annex IV technical documentation, affixed the CE marking, supplied the EU declaration of conformity and instructions for use and appointed an authorised representative under Article 22(1) (paragraph 1). An importer with reason to believe the system is non-conforming must not place it on the market and must report any Article 79(1) risk (paragraph 2). Importers add their own name and address, keep the certificate, instructions and declaration for 10 years and cooperate with authorities (paragraphs 3 to 7).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "importer"
+  ],
+  "recitals": [
+   83
+  ],
+  "topics": [
+   "provider-duties",
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/23/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-24",
+  "number": "Article 24",
+  "title": "Obligations of Distributors",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 24 requires distributors, before making a high-risk AI system available, to verify that it bears the CE marking, is accompanied by the EU declaration of conformity and instructions for use, and that the provider and importer have met their marking duties under Article 16(b) and (c) and Article 23(3) (paragraph 1). A distributor with reason to believe the system does not meet Section 2 must not make it available and must report any Article 79(1) risk (paragraph 2). Distributors protect the system in storage and transport, take or secure corrective action, withdrawal or recall on discovering non-conformity, and cooperate with authorities (paragraphs 3 to 6).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "distributor"
+  ],
+  "recitals": [
+   83
+  ],
+  "topics": [
+   "provider-duties",
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/24/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-25",
+  "number": "Article 25",
+  "title": "Responsibilities Along the AI Value Chain",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 25 makes any distributor, importer, deployer or other third party the provider of a high-risk AI system, with all Article 16 duties, where it puts its name on the system, makes a substantial modification that keeps or renders it high-risk, or changes the intended purpose so that the system becomes high-risk (paragraph 1). The initial provider then ceases to be provider but must supply technical documentation, known limitations and failure modes and targeted technical access, unless it clearly specified that the system was not to become high-risk (paragraph 2). Annex I Section A product manufacturers are the provider (paragraph 3); component suppliers must agree assistance in writing (paragraph 4).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "Paragraph 2 now spells out the initial provider's cooperation duties (technical documentation, known limitations and failure modes, targeted technical access) and paragraph 4 lets the AI Office develop and recommend voluntary model contract terms for component suppliers.",
+  "binds": [
+   "provider",
+   "deployer",
+   "distributor"
+  ],
+  "recitals": [
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90
+  ],
+  "topics": [
+   "provider-duties",
+   "high-risk-classification"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/25/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-26",
+  "number": "Article 26",
+  "title": "Obligations of Deployers of High-Risk AI Systems",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 26 is the deployer checklist for high-risk AI systems. Deployers must follow the instructions for use (paragraph 1), assign human oversight to persons with competence, training and authority (paragraph 2), ensure input data under their control is relevant and representative (paragraph 4), monitor operation, report risks and serious incidents to the provider and market surveillance authority and suspend use (paragraph 5), and keep logs for at least six months (paragraph 6). Employers inform workers' representatives before use (paragraph 7), public authorities register under Article 49 (paragraph 8), and deployers inform persons subject to decisions (paragraph 11). Post-remote biometric identification in criminal investigations needs authorisation within 48 hours (paragraph 10).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "",
+  "binds": [
+   "deployer"
+  ],
+  "recitals": [
+   91,
+   92,
+   93,
+   94,
+   95
+  ],
+  "topics": [
+   "deployer-duties",
+   "oversight"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/26/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-27",
+  "number": "Article 27",
+  "title": "Fundamental Rights Impact Assessment for High-Risk AI Systems",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
+  "takeaway": "Article 27 requires deployers that are bodies governed by public law, private operators providing public services, and deployers of the credit scoring and life and health insurance systems in Annex III point 5(b) and (c) to complete a fundamental rights impact assessment before first use (paragraph 1). The assessment covers the deployer's processes and intended use, the period and frequency of use, the persons affected, the risks of harm, the human oversight measures and the mitigation and complaint arrangements. It is done once, updated when elements change (paragraph 2), notified to the market surveillance authority (paragraph 3) and may build on a GDPR Article 35 assessment (paragraph 4).",
+  "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+  "omnibus": "Paragraph 5 was amended so that the AI Office develops the questionnaire template including through an automated tool to simplify compliance.",
+  "binds": [
+   "deployer"
+  ],
+  "recitals": [
+   4,
+   5,
+   26,
+   93,
+   96
+  ],
+  "topics": [
+   "fria",
+   "deployer-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/27/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-28",
+  "number": "Article 28",
+  "title": "Notifying Authorities",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "Article 28 requires each Member State to designate or establish at least one notifying authority responsible for assessing, designating, notifying and monitoring conformity assessment bodies (paragraph 1), which may be its national accreditation body under Regulation (EC) No 765/2008 (paragraph 2). Notifying authorities must be free of conflicts of interest, separate assessment from decision-making, offer no consultancy, protect confidentiality under Article 78 and employ staff competent in information technology, AI, law and fundamental rights (paragraphs 3 to 7). New paragraphs 8 and 9 create a single application and unified assessment procedure for bodies seeking designation under both the Regulation and Annex I Section A legislation.",
+  "applies_from": "2 August 2025",
+  "omnibus": "New paragraphs 8 and 9 introduce a single application and unified assessment procedure for conformity assessment bodies designated under both the Regulation and Annex I Section A harmonisation legislation, administered by the sectoral notifying authority unless the Member State designates another.",
+  "binds": [
+   "authority",
+   "notified-body"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/28/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-29",
+  "number": "Article 29",
+  "title": "Application of a Conformity Assessment Body for Notification",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "Article 29 requires a conformity assessment body to apply to the notifying authority of the Member State where it is established (paragraph 1), describing its conformity assessment activities, modules and the types of AI systems for which it claims competence, and attaching an accreditation certificate showing compliance with Article 31 or, failing that, full documentary evidence (paragraphs 2 and 3). Bodies already designated under other Union harmonisation legislation may reuse those documents, must update the documentation whenever relevant changes occur, and Annex I Section A bodies submit the single application to the sectoral notifying authority under Article 28(8) (paragraph 4). Applicants should prepare an Article 31 evidence pack first.",
+  "applies_from": "2 August 2025",
+  "omnibus": "Paragraph 4 now lets bodies designated under other harmonisation legislation reuse existing designation documents, routes Annex I Section A bodies through the single application under Article 28(8) and adds a duty to update documentation whenever relevant changes occur.",
+  "binds": [
+   "notified-body",
+   "authority"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/29/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-30",
+  "number": "Article 30",
+  "title": "Notification Procedure",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "Article 30 allows notifying authorities to notify only conformity assessment bodies that satisfy Article 31 (paragraph 1), using the Commission's electronic notification tool and the codes, categories and AI system types in Annex XIV, which the Commission may amend by delegated act (paragraph 2). The notification states the activities, modules, AI system types and evidence of competence, with documentary proof and monitoring arrangements where no accreditation certificate exists (paragraph 3). The body may act as a notified body only if no objection is raised within two weeks of a notification based on accreditation or two months of one based on documentary evidence (paragraph 4); the Commission decides objections (paragraph 5).",
+  "applies_from": "2 August 2025",
+  "omnibus": "Paragraph 2 now requires notification through the Commission's electronic tool using the codes and categories in new Annex XIV, which the Commission may amend by delegated act, and paragraph 3 is new.",
+  "binds": [
+   "authority",
+   "notified-body",
+   "commission"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/30/",
+  "fetched": true,
+  "source": "page"
+ }
+]
