@@ -65,8 +65,11 @@ def jump_html(P, items):
 
 
 def top_button(P):
-    return ('<button type="button" class="%s-top" id="%s-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button>'
-            '<div class="%s-toc-backdrop" id="%s-toc-backdrop" hidden></div><button type="button" class="%s-toc-fab" id="%s-toc-open" aria-controls="%s-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>' % (P, P, P, P, P, P, P))
+    return ('<div class="%s-toc-fold" id="%s-toc-fold" role="group" aria-label="Contents blocks">'
+            '<button type="button" class="%s-toc-fold-btn" id="%s-expand" title="Open every block in the contents"><i class="fas fa-angle-double-down"></i> Expand all</button>'
+            '<button type="button" class="%s-toc-fold-btn" id="%s-collapse" title="Close every block in the contents"><i class="fas fa-angle-double-up"></i> Collapse all</button></div>'
+            '<button type="button" class="%s-top" id="%s-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button>'
+            '<div class="%s-toc-backdrop" id="%s-toc-backdrop" hidden></div><button type="button" class="%s-toc-fab" id="%s-toc-open" aria-controls="%s-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>' % (P, P, P, P, P, P, P, P, P, P, P, P, P))
 
 
 _JS = r"""
@@ -116,8 +119,9 @@ _JS = r"""
 	/* side contents: flat view cloned from the grouped one */
 	Array.prototype.forEach.call(grouped.querySelectorAll('.' + P + '-toc-item'), function (it) { if (!it.querySelector('.' + P + '-toc-group')) flat.appendChild(it.cloneNode(true)); });
 	Array.prototype.forEach.call(flat.querySelectorAll('.' + P + '-toc-deep'), function (l) { l.classList.remove(P + '-toc-deep'); });
+	var fold = $('toc-fold');
 	function setView(v) {
-		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat';
+		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat'; fold.hidden = v !== 'grouped';
 		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-view'), function (b) { var on = b.getAttribute('data-view') === v; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
 		try { localStorage.setItem(P + '-toc-view', v); } catch (err) {}
 	}
@@ -183,6 +187,14 @@ _JS = r"""
 	topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 	window.addEventListener('scroll', function () { topBtn.hidden = window.scrollY < 600; }, { passive: true });
 
+	/* expand or collapse every block in the contents (floating control, bottom left) */
+	function setAll(open) {
+		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-ch, .' + P + '-toc-sec'), function (b) { setOpen(b, open); });
+		if (!open) toc.scrollTop = 0;
+	}
+	$('expand').addEventListener('click', function () { setAll(true); });
+	$('collapse').addEventListener('click', function () { setAll(false); });
+
 	/* scrollspy */
 	var links = {};
 	Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-link[data-target]'), function (l) { var k = l.getAttribute('data-target'); (links[k] = links[k] || []).push(l); });
@@ -246,6 +258,13 @@ _CSS = """
 .ai-top { position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050; height: auto; line-height: 1.4; padding: 0.6em 1em; font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 2em; background: rgba(66,103,166,0.95); border: 0 !important; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); white-space: nowrap; }
 .ai-top::after { display: none; }
 .ai-top[hidden] { display: none; }
+.ai-toc-fold { position: fixed; left: 1.25em; bottom: 1.25em; z-index: 1150; display: flex; border-radius: 2em; overflow: hidden; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); }
+.ai-toc-fold[hidden] { display: none; }
+.ai-toc-fold-btn { height: auto; line-height: 1.4; padding: 0.6em 0.9em; font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(66,103,166,0.95); border: 0 !important; border-radius: 0 !important; box-shadow: none !important; white-space: nowrap; }
+.ai-toc-fold-btn + .ai-toc-fold-btn { border-left: solid 1px rgba(255,255,255,0.3) !important; }
+.ai-toc-fold-btn:hover, .ai-toc-fold-btn:focus { background: #4267a6; color: #fff !important; }
+.ai-toc-fold-btn::after { display: none; }
+#ai-toc-grouped { padding-bottom: 3.2em; }
 .ai-part { font-size: 1.1em; margin: 1.5em 0 0.25em 0; text-transform: none; letter-spacing: 0; color: #fff; }
 .ai-part[hidden] { display: none; }
 .ai-groups > .ai-part:first-child { margin-top: 0; }
@@ -339,6 +358,9 @@ _CSS = """
 	.ai-toc-backdrop[hidden] { display: none; }
 	.ai-toc-close { display: inline-flex !important; align-items: center; gap: 0.4em; }
 	.ai-top { bottom: 4.6em; }
+	.ai-toc-fold { display: none; }
+	body.ai-toc-drawer .ai-toc-fold { display: flex; }
+	body.ai-toc-drawer .ai-toc-fold[hidden] { display: none; }
 	.ai-toc-fab {
 		position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050; height: auto; line-height: 1.4; padding: 0.7em 1.2em; font-size: 0.85em;
 		letter-spacing: 0.05em; text-transform: uppercase; border-radius: 2em; background: #4267a6; border: 0 !important; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); white-space: nowrap;

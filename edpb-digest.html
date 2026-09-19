@@ -657,7 +657,7 @@
 </div>
 <p class="ed-sources-note" id="ed-sources-note">Sources: every entry links to its page on the EDPB website, which is the source for the title, date and document. The inventory CSV and the printable digest in the site's outputs folder list all 543 with a numbered source. Snapshot 19 September 2026.</p>
 </div></div>
-<button type="button" class="ed-top" id="ed-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button><div class="ed-toc-backdrop" id="ed-toc-backdrop" hidden></div><button type="button" class="ed-toc-fab" id="ed-toc-open" aria-controls="ed-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>
+<div class="ed-toc-fold" id="ed-toc-fold" role="group" aria-label="Contents blocks"><button type="button" class="ed-toc-fold-btn" id="ed-expand" title="Open every block in the contents"><i class="fas fa-angle-double-down"></i> Expand all</button><button type="button" class="ed-toc-fold-btn" id="ed-collapse" title="Close every block in the contents"><i class="fas fa-angle-double-up"></i> Collapse all</button></div><button type="button" class="ed-top" id="ed-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button><div class="ed-toc-backdrop" id="ed-toc-backdrop" hidden></div><button type="button" class="ed-toc-fab" id="ed-toc-open" aria-controls="ed-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>
 						</section>
 						</div>
 					</section>
@@ -731,8 +731,9 @@
 	/* side contents: flat view cloned from the grouped one */
 	Array.prototype.forEach.call(grouped.querySelectorAll('.' + P + '-toc-item'), function (it) { if (!it.querySelector('.' + P + '-toc-group')) flat.appendChild(it.cloneNode(true)); });
 	Array.prototype.forEach.call(flat.querySelectorAll('.' + P + '-toc-deep'), function (l) { l.classList.remove(P + '-toc-deep'); });
+	var fold = $('toc-fold');
 	function setView(v) {
-		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat';
+		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat'; fold.hidden = v !== 'grouped';
 		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-view'), function (b) { var on = b.getAttribute('data-view') === v; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
 		try { localStorage.setItem(P + '-toc-view', v); } catch (err) {}
 	}
@@ -797,6 +798,14 @@
 	/* back to top */
 	topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 	window.addEventListener('scroll', function () { topBtn.hidden = window.scrollY < 600; }, { passive: true });
+
+	/* expand or collapse every block in the contents (floating control, bottom left) */
+	function setAll(open) {
+		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-ch, .' + P + '-toc-sec'), function (b) { setOpen(b, open); });
+		if (!open) toc.scrollTop = 0;
+	}
+	$('expand').addEventListener('click', function () { setAll(true); });
+	$('collapse').addEventListener('click', function () { setAll(false); });
 
 	/* scrollspy */
 	var links = {};

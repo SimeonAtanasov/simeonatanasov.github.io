@@ -333,6 +333,7 @@ def build_body():
     out.append('<p class="ai-sources-note" id="ai-sources-note">Sources: every entry links to its primary page, the AI Act Explorer for the provisions and the issuing body for the documents. The printable digest in the site\'s outputs folder lists all %d numbered sources. Snapshot %s.</p>' % (len(ARTS) + len(CORPUS), DATE))
     out.append("</div>")
     out.append("</div>")
+    out.append('<div class="ai-toc-fold" id="ai-toc-fold" role="group" aria-label="Contents blocks"><button type="button" class="ai-toc-fold-btn" id="ai-expand" title="Open every block in the contents"><i class="fas fa-angle-double-down"></i> Expand all</button><button type="button" class="ai-toc-fold-btn" id="ai-collapse" title="Close every block in the contents"><i class="fas fa-angle-double-up"></i> Collapse all</button></div>')
     out.append('<button type="button" class="ai-top" id="ai-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button>')
     out.append('<div class="ai-toc-backdrop" id="ai-toc-backdrop" hidden></div><button type="button" class="ai-toc-fab" id="ai-toc-open" aria-controls="ai-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>')
     return "\n".join(out)
@@ -435,8 +436,9 @@ JS = r"""
 	Array.prototype.forEach.call(grouped.querySelectorAll('.ai-toc-item'), function (it) { flat.appendChild(it.cloneNode(true)); });
 	Array.prototype.forEach.call(flat.querySelectorAll('.ai-toc-group'), function (l) { l.parentNode.parentNode.removeChild(l.parentNode); });
 	Array.prototype.forEach.call(flat.querySelectorAll('.ai-toc-deep'), function (l) { l.classList.remove('ai-toc-deep'); });
+	var fold = document.getElementById('ai-toc-fold');
 	function setView(v) {
-		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat';
+		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat'; fold.hidden = v !== 'grouped';
 		Array.prototype.forEach.call(toc.querySelectorAll('.ai-toc-view'), function (b) { var on = b.getAttribute('data-view') === v; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
 		try { localStorage.setItem('ai-toc-view', v); } catch (err) {}
 	}
@@ -493,6 +495,14 @@ JS = r"""
 	var topBtn = document.getElementById('ai-top');
 	topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 	window.addEventListener('scroll', function () { topBtn.hidden = window.scrollY < 600; }, { passive: true });
+
+	/* expand or collapse every block in the contents (floating control, bottom left) */
+	function setAll(open) {
+		Array.prototype.forEach.call(toc.querySelectorAll('.ai-toc-ch, .ai-toc-sec'), function (b) { setOpen(b, open); });
+		if (!open) toc.scrollTop = 0;
+	}
+	document.getElementById('ai-expand').addEventListener('click', function () { setAll(true); });
+	document.getElementById('ai-collapse').addEventListener('click', function () { setAll(false); });
 
 	/* ------------------------------------------------------------ scrollspy */
 	var links = {};
@@ -551,6 +561,13 @@ CSS = """/* AI Act digest: scoped styles, same pattern as the EDPB and cookie di
 .ai-top { position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050; height: auto; line-height: 1.4; padding: 0.6em 1em; font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 2em; background: rgba(66,103,166,0.95); border: 0 !important; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); white-space: nowrap; }
 .ai-top::after { display: none; }
 .ai-top[hidden] { display: none; }
+.ai-toc-fold { position: fixed; left: 1.25em; bottom: 1.25em; z-index: 1150; display: flex; border-radius: 2em; overflow: hidden; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); }
+.ai-toc-fold[hidden] { display: none; }
+.ai-toc-fold-btn { height: auto; line-height: 1.4; padding: 0.6em 0.9em; font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(66,103,166,0.95); border: 0 !important; border-radius: 0 !important; box-shadow: none !important; white-space: nowrap; }
+.ai-toc-fold-btn + .ai-toc-fold-btn { border-left: solid 1px rgba(255,255,255,0.3) !important; }
+.ai-toc-fold-btn:hover, .ai-toc-fold-btn:focus { background: #4267a6; color: #fff !important; }
+.ai-toc-fold-btn::after { display: none; }
+#ai-toc-grouped { padding-bottom: 3.2em; }
 #ai-summary, #ai-checker, #ai-filters, .ai-part { scroll-margin-top: 5em; }
 .ai-privacy { color: rgba(255,255,255,0.55); font-size: 0.9em; }
 
@@ -638,6 +655,9 @@ CSS = """/* AI Act digest: scoped styles, same pattern as the EDPB and cookie di
 	.ai-toc-backdrop[hidden] { display: none; }
 	.ai-toc-close { display: inline-flex !important; align-items: center; gap: 0.4em; }
 	.ai-top { bottom: 4.6em; }
+	.ai-toc-fold { display: none; }
+	body.ai-toc-drawer .ai-toc-fold { display: flex; }
+	body.ai-toc-drawer .ai-toc-fold[hidden] { display: none; }
 	.ai-toc-fab {
 		position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050; height: auto; line-height: 1.4; padding: 0.7em 1.2em; font-size: 0.85em;
 		letter-spacing: 0.05em; text-transform: uppercase; border-radius: 2em; background: #4267a6; border: 0 !important; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); white-space: nowrap;

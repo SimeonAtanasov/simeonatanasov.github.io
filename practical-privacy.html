@@ -737,7 +737,7 @@ A marketing team plans a standalone campaign site that collects emails and compe
 						
 <p class="pp-sources-note" id="pp-sources-note">Sources: the numbered list in the study pack in the site's outputs folder gives the GDPR articles, EDPB guidelines and other documents behind each situation.</p>
 </div></div>
-<button type="button" class="pp-top" id="pp-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button><div class="pp-toc-backdrop" id="pp-toc-backdrop" hidden></div><button type="button" class="pp-toc-fab" id="pp-toc-open" aria-controls="pp-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>
+<div class="pp-toc-fold" id="pp-toc-fold" role="group" aria-label="Contents blocks"><button type="button" class="pp-toc-fold-btn" id="pp-expand" title="Open every block in the contents"><i class="fas fa-angle-double-down"></i> Expand all</button><button type="button" class="pp-toc-fold-btn" id="pp-collapse" title="Close every block in the contents"><i class="fas fa-angle-double-up"></i> Collapse all</button></div><button type="button" class="pp-top" id="pp-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button><div class="pp-toc-backdrop" id="pp-toc-backdrop" hidden></div><button type="button" class="pp-toc-fab" id="pp-toc-open" aria-controls="pp-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>
 </section>
 						</div>
 					</section>
@@ -811,8 +811,9 @@ A marketing team plans a standalone campaign site that collects emails and compe
 	/* side contents: flat view cloned from the grouped one */
 	Array.prototype.forEach.call(grouped.querySelectorAll('.' + P + '-toc-item'), function (it) { if (!it.querySelector('.' + P + '-toc-group')) flat.appendChild(it.cloneNode(true)); });
 	Array.prototype.forEach.call(flat.querySelectorAll('.' + P + '-toc-deep'), function (l) { l.classList.remove(P + '-toc-deep'); });
+	var fold = $('toc-fold');
 	function setView(v) {
-		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat';
+		grouped.hidden = v !== 'grouped'; flat.hidden = v !== 'flat'; fold.hidden = v !== 'grouped';
 		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-view'), function (b) { var on = b.getAttribute('data-view') === v; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
 		try { localStorage.setItem(P + '-toc-view', v); } catch (err) {}
 	}
@@ -877,6 +878,14 @@ A marketing team plans a standalone campaign site that collects emails and compe
 	/* back to top */
 	topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 	window.addEventListener('scroll', function () { topBtn.hidden = window.scrollY < 600; }, { passive: true });
+
+	/* expand or collapse every block in the contents (floating control, bottom left) */
+	function setAll(open) {
+		Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-ch, .' + P + '-toc-sec'), function (b) { setOpen(b, open); });
+		if (!open) toc.scrollTop = 0;
+	}
+	$('expand').addEventListener('click', function () { setAll(true); });
+	$('collapse').addEventListener('click', function () { setAll(false); });
 
 	/* scrollspy */
 	var links = {};

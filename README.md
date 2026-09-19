@@ -3,7 +3,7 @@
 Personal portfolio and privacy reference site, published through GitHub Pages at
 `https://www.simeonatanasov.com`. This file is the map: what each page is, where its
 code lives, what sits in `Claude outputs/`, and how to rebuild the generated pages.
-Last updated 19 September 2026.
+Last updated 20 September 2026 (evening).
 
 ## Pages
 
@@ -52,8 +52,11 @@ advice pages carry their own. Short pages (home, dashboard, scanner, game, legal
 The three digests and the two advice pages share one navigation pattern: an on-this-page bar, a sticky side contents
 (grouped, with an all-documents view, scrollspy, copy-link and open-source actions, a drawer
 on small screens), a filters box with a first-result button, a list of the first ten matches
-and an explainer, and a Top button. The EDPB and cookie pages take it from
-`digest_nav.py` in their build folders; the AI Act page carries its own copy. All three
+and an explainer, a Top button, and a floating Expand all / Collapse all control at the
+bottom left that opens or closes every block of the side contents (added 20 September
+2026; shown for the grouped view only, and on small screens only while the drawer is
+open). The EDPB and cookie pages take it from `digest_nav.py` in their build folders; the
+AI Act page carries its own copy. All three
 digests are in the header nav, the home page Portfolio menu and `sitemap.xml`; they are
 not in the `sw.js` precache (deliberately, given their size).
 
@@ -64,7 +67,9 @@ not in the `sw.js` precache (deliberately, given their size).
 | `index.html` | Home and portfolio. The Career & Education section is maintained by hand and is off limits to any automated edit. Sidebar portfolio menu: `assets/css/home-extra.css` and `assets/js/portfolio-menu.js` (behaviour spec below). |
 | `cookie-notice.html`, `privacy-notice.html`, `terms.html` | Legal pages. |
 | `offline.html` | Offline fallback served by the service worker. |
+| `404.html` | Custom not-found page in the same style as `offline.html`, served by GitHub Pages for any missing URL. Added 20 September 2026. |
 | `draft.html`, `elements.html`, `test-page.html` | Template leftovers, noindexed, kept rather than deleted. |
+| `pages/cookie-notice/draft-*.html` | Three unlinked cookie banner drafts, noindexed 20 September 2026. Delete when no longer needed. |
 
 ### PWA layer
 
@@ -80,19 +85,21 @@ Non-site deliverables. Nothing in here is referenced by any page.
 
 | File or folder | What it is | Read it when |
 |---|---|---|
-| `privacy-ai-act-assessments-study-pack-v2.pdf` | 145-page greyscale study pack (rebuilt 19 September 2026 night from the corrected pages and tool; the file without `-v2` is the earlier build, delete it): both reference pages in full with key-takeaway boxes, all six assessment tools with cheat sheets and full question banks, the readiness model with all 71 activities, 69 self-test questions with answers, a four-week study plan, a review card, numbered sources. | You want to learn or re-learn the site's content. |
-| `site-verification-report-2026-09-19-v2.pdf` | 40-page check of the site's legal claims against GDPR, the AI Act as amended by Regulation (EU) 2026/1744, EDPB and Commission guidance, courts and national rules. Every change rated High / Medium / Low, open items, a sweep of all 47 EDPB consultations and all 532 EDPB documents, 90 sources. All fix-now and add-later items are marked done (applied 19 September 2026); the four open items on the incident and DPIA tools wait on EDPB templates. A second-pass section records the corrections applied after the independent review of 19 September 2026 (the finding-by-finding audit is `chatgpt-review-audit-2026-09-19.md`). The file without `-v2` is the earlier build, delete it. | Before editing any legal content. |
+| `privacy-ai-act-assessments-study-pack-v2.pdf` | 145-page greyscale study pack (rebuilt 19 September 2026 night from the corrected pages and tool): both reference pages in full with key-takeaway boxes, all six assessment tools with cheat sheets and full question banks, the readiness model with all 71 activities, 69 self-test questions with answers, a four-week study plan, a review card, numbered sources. | You want to learn or re-learn the site's content. |
+| `site-verification-report-2026-09-19-v2.pdf` | 40-page check of the site's legal claims against GDPR, the AI Act as amended by Regulation (EU) 2026/1744, EDPB and Commission guidance, courts and national rules. Every change rated High / Medium / Low, open items, a sweep of all 47 EDPB consultations and all 532 EDPB documents, 90 sources. All fix-now and add-later items are marked done (applied 19 September 2026); the four open items on the incident and DPIA tools wait on EDPB templates. A second-pass section records the corrections applied after the independent review of 19 September 2026 (the finding-by-finding audit is `chatgpt-review-audit-2026-09-19.md`). | Before editing any legal content. |
 | `edpb-documents-inventory-2026-09-19.csv` | All 532 EDPB documents with type, date, relevance rating (R / B / N), where each lands on the site, and URL. Filterable. | You want to know whether an EDPB document matters to a page. |
 | `ai-act-guidance-inventory-2026-09-19.csv` | The 57 guidance and implementation documents of the AI Act Digest's Part 2 in their eight groups (the Regulation and its amendment, Commission guidelines and Q&As, codes of practice and templates, governance and policy, standards, EDPB and EDPS, national implementation, reference tools): group link, date, issuer, type, status, title, articles concerned, topics, document URL and the digest entry link. | You want the links behind Part 2 in a sheet. |
 | `cookie-compliance-inventory-2026-09-19.csv` | The 259 Cookie Compliance Digest documents in their nine region groups (European Union 30, EU member states 57, United Kingdom 18, Switzerland and other Europe 11, United States: California 23, federal 14, other states 24, rest of world 53, standards and frameworks 29): group link, jurisdiction, date, type, status, title, topics, primary or secondary source, document URL and the digest entry link. | You want the links behind the cookie digest in a sheet. |
 | `edpb-digest-2026-09-19.pdf` | Print version of the EDPB Digest page, 111 pages, one numbered source per document. | You want to read the digest on paper. |
 | `cookie-compliance-digest-2026-09-19.pdf` | Print version of the Cookie Compliance Digest, 71 pages, one numbered source per document. | Same, for cookies. |
-| `ai-act-digest-2026-09-19-v2.pdf` | Print version of the AI Act Digest, 79 pages: high-level summary, structure of the Act, application dates at a glance, the Omnibus change table, then every provision and document with a numbered source. `ai-act-digest-2026-09-19.pdf` is the earlier 71-page build without the Omnibus-inserted articles; delete it. | Same, for the AI Act. |
-| `edpb-digest-build/` | Data and scripts that generate `edpb-digest.html`: the scraped inventory, the ratings script, the 107 written takeaways, the hand-written and templated one-liners, the page and PDF renderers, and `fix_edpb_review.py` (the 19 September 2026 corrections, already applied to `digest.json`). README inside. | You need to add EDPB documents or regenerate the page. |
+| `ai-act-digest-2026-09-19-v2.pdf` | Print version of the AI Act Digest, 79 pages: high-level summary, structure of the Act, application dates at a glance, the Omnibus change table, then every provision and document with a numbered source. | Same, for the AI Act. |
+| `chatgpt-review-audit-2026-09-19.md` | Finding-by-finding audit of two independent reviews (30 findings on the AI Act study pack, 41 plus 3 presentation points on the cookie and EDPB digests): each finding checked against the digests, the published text and the sources, with a verdict and what was changed. Status: all accepted findings applied. | You want to know why a takeaway reads the way it does, or before re-reviewing the digests. |
+| `site-link-audit-2026-09-20.md` | Link and search audit of the live site (20 September 2026): internal links and anchors, external link coverage and its limits, the www versus apex canonical mismatch, page metadata lengths, files served that should not be, backlinks found, what was applied and what is recommended. | Before changing canonical URLs, the sitemap or `CNAME`, or when planning SEO work. |
+| `edpb-digest-build/` | Data and scripts that generate `edpb-digest.html`: the scraped inventory, the ratings script, the 117 written takeaways, the hand-written and templated one-liners, the page and PDF renderers, `fix_edpb_review.py` (the 19 September 2026 corrections, already applied to `digest.json`) and `add_consultations.py` (the 11 consultation versions, already applied). README inside. | You need to add EDPB documents or regenerate the page. |
 | `cookie-digest-build/` | Data and scripts that generate `cookie-digest.html`: six research briefs, six raw cluster outputs, the merged data set (`all_merged.json` is what the page builder reads; `cookie_digest.json` is its output), the page and PDF renderers, and `fix_cookie_review.py` (the 19 September 2026 corrections, already applied). README inside. | You need to add or correct a cookie entry (17 entries rest on secondary sources and are marked). |
-| `ai-act-digest-build/` | Data and scripts that generate `ai-act-digest.html`: five research briefs, the 133 provision entries and 57 corpus entries as JSON, the merged data set, the page and PDF renderers, the render test. README inside. | You need to add or correct an AI Act entry (5 corpus entries could not be fetched and are marked). |
-| `site-nav-build/` | `digest_nav.py` (the shared side contents, results box, jump bar and Top button used by the digests) and `apply_nav.py` (adds them to the two advice pages without touching their copy). README inside. | You change the navigation pattern or rebuild an advice page after editing its text. |
-| `risk-matrix-desktop.png`, `risk-matrix-phone.png` | Screenshots from the risk matrix layout work. | Reference only. |
+| `ai-act-digest-build/` | Data and scripts that generate `ai-act-digest.html`: five research briefs, the 133 provision entries and 57 corpus entries as JSON, the merged data set, the page and PDF renderers, the link audit and the render test. README inside. | You need to add or correct an AI Act entry (5 corpus entries could not be fetched and are marked). |
+| `site-nav-build/` | `digest_nav.py` (the master copy of the shared side contents, results box, jump bar and Top button; the EDPB and cookie builds carry identical copies) and `apply_nav.py` (adds them to the two advice pages without touching their copy; the advice jump bar is Search and All situations only). README inside. | You change the navigation pattern or rebuild an advice page after editing its text. |
+| `risk-matrix-desktop.png`, `risk-matrix-phone.png` | Screenshots from the risk matrix layout work. The home tile the site uses is `images/risk-matrix-tile.png` (1000 x 1000, matrix centred at mid size); `images/risk-matrix-desktop.png`, `risk-matrix-phone.png` and `risk-matrix-tile2.png` are earlier attempts no page references. | Reference only. |
 
 ## Working notes kept outside the repo
 
@@ -102,7 +109,8 @@ with Claude: `site-context.md` (rules, deploy procedure, technical traps, open i
 `gdpr-readiness-model.md` (the two large tools), `pwa-and-play-store.md`,
 `content-verification-2026-09.md` (the rated action list from the verification),
 `edpb-digest.md`, `cookie-digest.md` and `ai-act-digest.md` (what the digests are and how to
-rebuild them).
+rebuild them), `chatgpt-review-audit-2026-09.md` and `site-link-audit-2026-09.md` (copies of
+the two audits above), `folder-map.md` (which folder to connect).
 
 ## Rules that apply to every edit
 
@@ -114,6 +122,12 @@ rebuild them).
 - The html5up template styles every `button` (tall, uppercase, nowrap); custom buttons must
   reset height and line-height. It does not style `input[type="search"]`; use `type="text"`.
 - The header nav collapses by JS measurement in `main.js`, not by a pixel breakpoint.
+- The generated pages (three digests, two advice pages) are written by builders whose header
+  template predates the current four-item nav: after any rebuild, copy the current header block
+  from another root page and set the active marks. Details in each build folder's README.
+- Canonical tags, `sitemap.xml`, `robots.txt` and `og:url` use the apex `https://simeonatanasov.com/`
+  while `CNAME` serves `www`. Keep whichever host is chosen consistent across all of them
+  (see `Claude outputs/site-link-audit-2026-09-20.md`).
 
 ## Homepage portfolio menu: required behaviour
 
