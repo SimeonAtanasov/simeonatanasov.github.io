@@ -68,17 +68,17 @@ def template(x):
         role = "processor" if re.search(r"Processor Binding", t, re.I) else "controller"
         m = re.search(r"Binding Corporate Rules of (?:the )?(.+?)$", t)
         grp = m.group(1).strip() if m else "a corporate group"
-        return "Approves the %s binding corporate rules of %s, on the draft decision of %s under Article 64(1)(f). Matters only to organisations transferring personal data to or within that group." % (role, grp, who)
+        return "Favourable opinion on the draft decision of %s approving the %s binding corporate rules of %s under Article 64(1)(f); the authority gives the final approval. Matters only to organisations transferring personal data to or within that group." % (who, role, grp)
     if re.search(r"accreditation", t, re.I) and re.search(r"monitoring bod", t, re.I):
-        return "Approves the accreditation requirements for code of conduct monitoring bodies submitted by %s under Article 41(3), checked against Guidelines 1/2019. For code owners and would-be monitoring bodies in that country." % who
+        return "Opinion on the draft accreditation requirements for code of conduct monitoring bodies submitted by %s under Article 41(3), checked against Guidelines 1/2019; the authority adopts the final requirements. For code owners and would-be monitoring bodies in that country." % who
     if re.search(r"accreditation", t, re.I):
-        return "Approves the accreditation requirements for certification bodies submitted by %s under Article 43(3), checked against Guidelines 4/2018. For certification bodies seeking accreditation in that country." % who
+        return "Opinion on the draft accreditation requirements for certification bodies submitted by %s under Article 43(3), checked against Guidelines 4/2018; the authority adopts the final requirements. For certification bodies seeking accreditation in that country." % who
     if re.search(r"exempt", t, re.I):
         return "Reviews the draft list from %s of processing operations exempt from a DPIA under Article 35(5), asking for the list to stay narrow and consistent with the WP248 criteria." % who
     if re.search(r"35\(4\)|subject to the requirement of a data protection impact|data protection impact assessment", t, re.I):
         return "Reviews the draft national list from %s of processing operations requiring a DPIA under Article 35(4), asking for alignment with the nine WP248 criteria so national lists stay consistent. Check the final national list if you operate there." % who
     if re.search(r"Standard Contractual Clauses.*28\(8\)|Article 28\(8\)", t, re.I):
-        return "Approves the standard contractual clauses for controller to processor contracts submitted by %s under Article 28(8). One of the national templates that satisfy Article 28(3) without negotiation." % who
+        return "Opinion on the draft standard contractual clauses for controller to processor contracts submitted by %s under Article 28(8); the authority adopts the final clauses, which are Article 28 templates, not Chapter V transfer clauses. One of the national templates that satisfy Article 28(3) without negotiation." % who
     if re.search(r"code of conduct", t, re.I):
         m = re.search(r"[\"“](.+?)[\"”]", t)
         code = ("the " + m.group(1)) if m else ("the cloud services code of conduct" if "Cloud" in t else "a sector code of conduct")

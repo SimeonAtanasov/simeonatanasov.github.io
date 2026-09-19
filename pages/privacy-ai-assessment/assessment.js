@@ -635,9 +635,10 @@
 			title: "System inventory",
 			questions: [
 				{ id: "name", type: "text", label: "AI system / use case name" },
-				{ id: "description", type: "textarea", label: "Brief description of what it does" },
-				{ id: "aiType", type: "select", label: "What type of AI capability is this?", options: ["Traditional ML / predictive model"].concat(GENAI_TYPES).concat(["Decision-support / rules-based AI"]) },
-				{ id: "lifecycle", type: "select", label: "Lifecycle stage", options: ["Idea / concept", "Pilot", "Production", "Retired"] },
+				{ id: "description", type: "textarea", label: "Brief description of what it does: its intended purpose, who is affected by its outputs, and where and by whom it is deployed" },
+				{ id: "aiType", type: "select", label: "What type of AI capability is this? (A rules-based system is still an AI system under the Act if it infers from its input how to generate outputs.)", options: ["Traditional ML / predictive model"].concat(GENAI_TYPES).concat(["Decision-support / rules-based AI"]) },
+				{ id: "lifecycle", type: "select", label: "Lifecycle stage", options: ["Idea / concept", "Pilot", "Production", "Retired"],
+					note: { label: "Date placed on the market or put into service (or planned), any significant change since, and whether real-world testing is involved: these set which AI Act dates and transition rules apply", visibleIf: function (v) { return v === "Pilot" || v === "Production"; } } },
 				{ id: "ownersAssigned", type: "yesno", label: "Are a business owner and a technical owner formally assigned?",
 					note: { label: "Who should be assigned, and by when?", visibleIf: function (v) { return v === "No"; } } }
 			]
@@ -648,8 +649,10 @@
 			questions: [
 				{ id: "prohibitedUse", type: "select", label: "Does the system fall into a prohibited-use category under the EU AI Act (e.g. social scoring, manipulative/subliminal techniques causing harm, exploiting vulnerabilities, untargeted facial-recognition scraping, workplace/education emotion inference, biometric categorization inferring protected attributes, or, from 2 December 2026, generating non-consensual intimate imagery or child sexual abuse material)?", options: ["No", "Yes", "Unsure"],
 					note: { label: "Briefly explain why / what triggered this concern", visibleIf: function (v) { return v === "Yes" || v === "Unsure"; } } },
-				{ id: "highRiskAnnexIII", type: "select", label: "Does it fall under an EU AI Act Annex III high-risk category (e.g. employment/HR decisions, access to essential services, credit scoring, biometric identification, law enforcement, migration/border control, education/exam scoring, critical infrastructure safety)?", options: ["No", "Yes", "Unsure"],
-					note: { label: "Which Annex III category applies (or is suspected)?", visibleIf: function (v) { return v === "Yes" || v === "Unsure"; } } },
+				{ id: "highRiskAnnexIII", type: "select", label: "Does it fall under an EU AI Act Annex III high-risk category (e.g. employment/HR decisions, access to essential services, credit scoring, biometric identification, law enforcement, migration/border control, education/exam scoring, critical infrastructure safety)? Answer Yes even if you expect the Article 6(3) carve-out to apply; a system that profiles natural persons is always high-risk.", options: ["No", "Yes", "Unsure"],
+					note: { label: "Which Annex III category applies (or is suspected), and if you rely on the Article 6(3) carve-out, which of its four situations?", visibleIf: function (v) { return v === "Yes" || v === "Unsure"; } } },
+				{ id: "highRiskAnnexI", type: "select", label: "Is it a product, or a safety component of a product, covered by EU product-safety law listed in Annex I (machinery, toys, medical devices, vehicles, aviation, marine equipment, rail, lifts, radio equipment, pressure equipment, PPE, gas appliances, cableways) that has to go through a third-party conformity assessment under that law?", options: ["No", "Yes", "Unsure"],
+					note: { label: "Which product legislation, and does it require third-party conformity assessment?", visibleIf: function (v) { return v === "Yes" || v === "Unsure"; } } },
 				{ id: "humanOversight", type: "yesno", label: "Does a documented human-oversight and override capability exist for this system's decisions?",
 					note: { label: "What oversight mechanism is planned?", visibleIf: function (v) { return v === "No"; } } }
 			]
@@ -674,7 +677,7 @@
 			title: "Data sourcing & third-party risk",
 			questions: [
 				{ id: "thirdPartyData", type: "yesno", label: "Is training or input data sourced from third parties or public/external platforms?",
-					note: { label: "Which third parties/platforms?", visibleIf: function (v) { return v === "Yes"; } } },
+					note: { label: "Which third parties/platforms, under what licence or lawful access, and with what provenance record? Personal data in that material needs its own GDPR basis.", visibleIf: function (v) { return v === "Yes"; } } },
 				{ id: "providerTraining", type: "select", label: "Does the AI provider use your organization's data to train its underlying model?", options: ["No", "Yes", "Unsure"],
 					note: { label: "Note any contractual restriction or opt-out status", visibleIf: function (v) { return v === "Yes" || v === "Unsure"; } } },
 				{ id: "businessCriticalData", type: "yesno", label: "Does the system process business-critical data (contracts, transactions, financial, legal, or audit records)?",
@@ -690,7 +693,7 @@
 			questions: [
 				{ id: "contextSafeguards", type: "select", label: "Are safeguards in place to prevent context poisoning, data leakage, or use of outdated information in the system's memory/context?", options: ["Yes", "Partially", "No"],
 					note: { label: "Describe the gap and mitigation plan", visibleIf: function (v) { return v === "Partially" || v === "No"; } } },
-				{ id: "outputGuardrails", type: "yesno", label: "Are guardrails in place to prevent unsafe, non-compliant, or unintended outputs?",
+				{ id: "outputGuardrails", type: "yesno", label: "Are guardrails in place to prevent unsafe, non-compliant, or unintended outputs, and have they been tested? (Where the system talks to people or generates synthetic content, the Article 50 transparency duties apply on top.)",
 					note: { label: "What guardrails are planned?", visibleIf: function (v) { return v === "No"; } } }
 			]
 		},
@@ -714,17 +717,35 @@
 			regLevel = "Prohibited";
 			factors.push({ title: "Prohibited use", detail: "This use case appears to fall under an EU AI Act prohibited-use category. Stop deployment and escalate to legal immediately.", severity: "high" });
 		} else {
+			var unresolved = false;
 			if (a.prohibitedUse === "Unsure") {
-				factors.push({ title: "Prohibited-use status unclear", detail: "Confirm with legal/compliance whether this use case falls under a prohibited category before proceeding.", severity: "high" });
+				unresolved = true;
+				factors.push({ title: "Prohibited-use status unclear", detail: "Confirm with legal/compliance whether this use case falls under a prohibited category before proceeding. Until that is settled the classification is unresolved, whatever the answers below say.", severity: "high" });
 			}
 			if (a.highRiskAnnexIII === "Yes") {
 				regLevel = "High";
-				factors.push({ title: "Likely high-risk (Annex III)", detail: "High-risk systems carry conformity assessment, documentation, human oversight, and monitoring obligations under the EU AI Act. For Annex III systems these apply from 2 December 2027 (Regulation (EU) 2026/1744), and registration in the EU database is due before putting into service once the database opens.", severity: "high" });
-			} else if (a.highRiskAnnexIII === "Unsure") {
-				regLevel = "Limited";
-				factors.push({ title: "High-risk classification unclear", detail: "Confirm Annex III applicability with legal/compliance - this drives which obligations apply.", severity: "medium" });
-			} else {
-				regLevel = "Minimal";
+				factors.push({ title: "Likely high-risk (Annex III)", detail: "High-risk systems carry conformity assessment, documentation, logging, human oversight and monitoring obligations under the EU AI Act. For Annex III systems these apply from 2 December 2027 (Regulation (EU) 2026/1744), and registration in the EU database is due before putting into service once the database opens. If you rely on the Article 6(3) carve-out, document the assessment before placing the system on the market and register it under Article 49(2); a system that profiles natural persons cannot use the carve-out.", severity: "high" });
+			}
+			if (a.highRiskAnnexI === "Yes") {
+				regLevel = "High";
+				factors.push({ title: "Likely high-risk (Annex I product route)", detail: "A safety component of, or an AI system that is, a product under Annex I legislation requiring third-party conformity assessment is high-risk under Article 6(1). The AI requirements are checked inside the product's own conformity assessment (Section A) or the sectoral law carries the substance (Section B); they apply from 2 August 2028, and the system is not registered in the EU AI database.", severity: "high" });
+			}
+			if (a.highRiskAnnexIII === "Unsure") {
+				unresolved = true;
+				factors.push({ title: "Annex III classification unclear", detail: "Confirm Annex III applicability with legal/compliance, including the Article 6(3) carve-out and the profiling override - this drives which obligations apply.", severity: "medium" });
+			}
+			if (a.highRiskAnnexI === "Unsure") {
+				unresolved = true;
+				factors.push({ title: "Product-route classification unclear", detail: "Confirm whether the product is covered by Annex I legislation and whether that legislation requires third-party conformity assessment (Article 6(1)).", severity: "medium" });
+			}
+			if (regLevel !== "High" || a.prohibitedUse === "Unsure") {
+				regLevel = unresolved ? "Unresolved" : "Minimal";
+			}
+			if (regLevel === "Unresolved") {
+				factors.push({ title: "Classification unresolved: legal review required", detail: "An Unsure answer on a legal gate leaves the regulatory level open. It is not Limited and not Minimal; do not approve the use case on this result.", severity: "high" });
+			}
+			if (regLevel === "Minimal") {
+				factors.push({ title: "Minimal covers the prohibited and high-risk screens only", detail: "Article 50 transparency duties (telling people they interact with AI, marking synthetic content, emotion recognition and deep fake disclosures) and the general-purpose AI model duties apply separately and are not screened here.", severity: "low" });
 			}
 		}
 
@@ -3295,7 +3316,7 @@
 	function badgeClass(level) {
 		if (level === "Prohibited") return "paa-badge-prohibited";
 		if (level === "High") return "paa-badge-high";
-		if (level === "Medium" || level === "Limited") return "paa-badge-medium";
+		if (level === "Medium" || level === "Limited" || level === "Unresolved") return "paa-badge-medium";
 		if (level === "Not Applicable") return "paa-badge-na";
 		return "paa-badge-low";
 	}
@@ -3839,6 +3860,7 @@
 				el("span", { class: "paa-badge " + badgeClass(result.regLevel) }, ["Regulatory: " + result.regLevel]),
 				el("span", { class: "paa-badge " + badgeClass(result.bizLevel) }, ["Business risk: " + result.bizLevel])
 			]));
+			root.appendChild(el("p", { class: "paa-help" }, ["The regulatory level screens the prohibited-practice and high-risk gates only. The business level is an internal triage score for prioritization; it is not a legal assessment, a DPIA, a fundamental rights impact assessment or a conformity assessment."]));
 			root.appendChild(el("div", { class: "paa-result-item" }, [
 				el("h4", {}, ["Risk factors & recommendations"]),
 				renderFactors(result.factors)

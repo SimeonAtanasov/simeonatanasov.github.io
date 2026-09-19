@@ -15,6 +15,7 @@ DATE = "19 September 2026"
 GROUPS = OrderedDict([
  ("Guidelines", ["Guideline"]),
  ("Recommendations", ["Recommendation"]),
+ ("Consultation versions", ["Consultation version"]),
  ("Statements", ["Statement"]),
  ("Opinions of the Board (Article 64)", ["Opinion of the Board (Art. 64)"]),
  ("Binding decisions (Article 65)", ["EDPB Binding Decisions"]),
@@ -35,6 +36,17 @@ TYPE_TO_GROUP = {t: g for g, ts in GROUPS.items() for t in ts}
 def year(d):
     m = re.search(r"\d{4}", d)
     return m.group(0) if m else ""
+
+
+MONTHS = {m: i for i, m in enumerate(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], 1)}
+
+
+def datekey(d):
+    """Sort key from an EDPB listing date such as '07 July 2026'; unknown parts sort last within the year."""
+    m = re.match(r"\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})", d or "")
+    if not m:
+        return (-int(year(d) or 0), 13, 32)
+    return (-int(m.group(3)), -MONTHS.get(m.group(2), 0), -int(m.group(1)))
 
 
 def entry_html(e, eid):
@@ -66,8 +78,8 @@ def build_body():
     out.append('<div class="ed-head">')
     out.append(jump_html("ed", [("#ed-filters", "Filters and search"), ("#ed-index", "Document types"), ("#ed-groups", "The documents"), ("#ed-sources-note", "Sources")]))
     out.append('<div class="ed-intro">')
-    out.append('<p>Every document the European Data Protection Board has published, %d of them as of %s, with one takeaway each. For %d documents the takeaway is written from the document itself: what it establishes, who it binds and what to do about it. For the remaining %d, which are approvals of binding corporate rules, accreditation requirements, national DPIA lists, certification criteria, institutional reports and the Board\'s own procedures, a one-line description says what the document is so it can be ruled in or out in a second.</p>' % (len(E), DATE, n_written, len(E) - n_written))
-    out.append('<p>Two limits, stated up front. The choice of which documents earned a written takeaway follows the topics of this site (privacy operations, the AI Act, assessment tools), not the document\'s importance in general. And a takeaway is a reading aid, not a substitute: every entry links to the EDPB page, and the document governs where the two differ. Dates are the publication dates shown in the EDPB listing. Guidelines still at consultation stage appear on the EDPB consultations page and are listed here only once the documents listing carries a version.</p>')
+    out.append('<p>Every document the European Data Protection Board has published, %d of them as of %s (532 on the documents listing and 11 that were still at consultation stage), with one takeaway each. For %d documents the takeaway is written from the document itself: what it establishes, who it binds and what to do about it. For the remaining %d, which are approvals of binding corporate rules, accreditation requirements, national DPIA lists, certification criteria, institutional reports and the Board\'s own procedures, a one-line description says what the document is so it can be ruled in or out in a second.</p>' % (len(E), DATE, n_written, len(E) - n_written))
+    out.append('<p>Two limits, stated up front. The choice of which documents earned a written takeaway follows the topics of this site (privacy operations, the AI Act, assessment tools), not the document\'s importance in general. And a takeaway is a reading aid, not a substitute: every entry links to the EDPB page, and the document governs where the two differ. Dates are the publication dates shown in the EDPB listing. Documents still at consultation stage on that date (guidelines, recommendations and templates adopted for public consultation but not yet final) sit in their own group, Consultation versions, dated by their adoption for consultation and marked consultation; the final text may differ.</p>')
     out.append('<p class="ed-privacy">Filters and search run in your browser. Nothing you type is sent anywhere. Every entry links to the EDPB page it describes.</p>')
     out.append("</div>")
 
@@ -101,7 +113,7 @@ def build_body():
     n = 0
     for g, ts in GROUPS.items():
         items = [e for e in E if e["type"] in ts]
-        items.sort(key=lambda e: (-int(year(e["date"]) or 0), e["title"]))
+        items.sort(key=lambda e: (datekey(e["date"]), e["title"]))
         nw = sum(1 for e in items if e["tier"] == "written")
         groups_html.append('<details class="ed-group" id="%s" open><summary><span class="ed-group-name">%s</span><span class="ed-group-count" data-total="%d">%d documents, %d written</span></summary><div class="ed-group-body">' % (slug(g), esc(g), len(items), len(items), nw))
         by_year = OrderedDict()

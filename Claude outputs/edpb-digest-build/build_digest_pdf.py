@@ -3,7 +3,7 @@
 import json, html, re, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from build_digest_page import GROUPS, DATE, year
+from build_digest_page import GROUPS, DATE, year, datekey
 
 E = json.load(open(os.path.join(HERE, "digest.json"), encoding="utf-8"))
 esc = lambda s: html.escape(s, quote=False)
@@ -12,7 +12,7 @@ esc = lambda s: html.escape(s, quote=False)
 order = []
 for g, ts in GROUPS.items():
     items = [e for e in E if e["type"] in ts]
-    items.sort(key=lambda e: (-int(year(e["date"]) or 0), e["title"]))
+    items.sort(key=lambda e: (datekey(e["date"]), e["title"]))
     order += items
 num = {e["id"]: i + 1 for i, e in enumerate(order)}
 
@@ -52,13 +52,13 @@ def build():
     nw = sum(1 for e in E if e["tier"] == "written")
     b = []
     b.append('<section class="cover"><p class="kicker">Reference</p><h1>EDPB Digest</h1>'
-             '<p class="sub">Every document published by the European Data Protection Board, %d of them as of %s, with one takeaway each.</p>'
+             '<p class="sub">Every document published by the European Data Protection Board, %d of them as of %s (532 on the documents listing, 11 at consultation stage), with one takeaway each.</p>'
              '<div class="coverstats"><div><span class="n">%d</span><span class="l">documents</span></div><div><span class="n">%d</span><span class="l">written takeaways</span></div><div><span class="n">%d</span><span class="l">one-line descriptions</span></div><div><span class="n">%d</span><span class="l">document types</span></div></div>'
              '<p class="covernote">Reading aid, not a substitute. Every entry carries a numbered source that resolves to the EDPB page at the end.</p></section>' % (len(E), DATE, len(E), nw, len(E) - nw, len(GROUPS)))
     b.append('<section class="front"><h1 id="how">How to read this</h1>'
              '<p class="lede">For %d documents the takeaway was written from the document: what it establishes, who it binds and what to do about it. They are marked "read from the document" and set with a heavy left rule. For the remaining %d, which are approvals of binding corporate rules, accreditation requirements, national DPIA lists, certification criteria, institutional reports and the Board\'s own procedures, a one-line description says what the document is so it can be ruled in or out.</p>'
              '<p>The choice of which documents earned a written takeaway follows the topics of the site this digest accompanies (privacy operations, the AI Act, assessment tools), not the document\'s importance in general. Dates are the publication dates shown in the EDPB listing on %s. Guidelines still at consultation stage appear on the EDPB consultations page and are here only once the documents listing carries a version.</p>'
-             '<p>Documents are grouped by publication type, newest first within each group. The number in brackets on each entry is its source number; the source list at the end gives the EDPB URL for every one of the %d documents.</p>'
+             '<p>Documents are grouped by publication type, newest first within each group by the date on the EDPB listing, which is the publication date; where the adoption date differs, the takeaway says so. The number in brackets on each entry is its source number; the source list at the end gives the EDPB URL for every one of the %d documents.</p>'
              '<h2 class="sub">Contents</h2><ul class="legend">' % (nw, len(E) - nw, DATE, len(E)))
     for g, ts in GROUPS.items():
         items = [e for e in E if e["type"] in ts]
