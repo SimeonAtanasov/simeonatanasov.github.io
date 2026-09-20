@@ -1,0 +1,261 @@
+/* Print stylesheet for the study pack. A4, WeasyPrint. */
+
+@page {
+  size: A4;
+  margin: 20mm 18mm 18mm 18mm;
+  @top-left   { content: string(parttitle); font: italic 8.5pt "Bitstream Charter", serif; color: #6b6f76; }
+  @top-right  { content: string(sectitle);  font: 8.5pt "Bitstream Charter", serif; color: #6b6f76; }
+  @bottom-center { content: counter(page); font: 9pt "Bitstream Charter", serif; color: #6b6f76; }
+}
+@page :first { @top-left { content: ""; } @top-right { content: ""; } @bottom-center { content: ""; } }
+@page cover { margin: 0; }
+
+/* Greyscale only. Nothing in this document carries meaning by colour: the
+   matrices are labelled in words, and the tints are kept light enough to stay
+   readable on a mono laser. */
+:root {
+  --ink: #111111;
+  --soft: #575757;
+  --rule: #bcbcbc;
+  --accent: #111111;
+  --tint: #f1f1f1;
+  --warm: #ededed;
+  --warmrule: #555555;
+}
+
+html { font-size: 10.2pt; }
+body {
+  font-family: "Bitstream Charter", "DejaVu Serif", Georgia, serif;
+  color: var(--ink);
+  line-height: 1.45;
+  hyphens: auto;
+  text-align: justify;
+}
+
+p { margin: 0 0 .45em; orphans: 2; widows: 2; }
+strong { font-weight: 700; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: .82em; background: var(--tint); padding: 0 .2em; }
+
+/* ------------------------------------------------------------------ cover */
+.cover {
+  page: cover;
+  break-after: page;
+  height: 297mm;
+  padding: 45mm 22mm 20mm;
+  border-top: 6mm solid var(--ink);
+  text-align: left;
+}
+.cover .kicker {
+  font-family: "Carlito", "DejaVu Sans", sans-serif;
+  text-transform: uppercase; letter-spacing: .22em; font-size: 9pt;
+  color: var(--accent); margin-bottom: 8mm;
+}
+.cover h1 {
+  font-size: 34pt; line-height: 1.1; margin: 0 0 6mm; font-weight: 700;
+  color: var(--ink); letter-spacing: -.01em;
+}
+.cover .sub { font-size: 12pt; color: var(--soft); margin-bottom: 22mm; max-width: 130mm; }
+.coverstats {
+  display: flex; gap: 12mm; margin-bottom: 30mm;
+  border-top: .5pt solid var(--rule); border-bottom: .5pt solid var(--rule);
+  padding: 5mm 0;
+}
+.coverstats div { display: block; }
+.coverstats .n {
+  display: block; font-size: 22pt; font-weight: 700; color: var(--accent); line-height: 1;
+}
+.coverstats .l {
+  display: block; font-family: "Carlito", sans-serif; font-size: 8pt; color: var(--soft);
+  text-transform: uppercase; letter-spacing: .1em; margin-top: 2mm;
+}
+.cover .covernote { font-size: 9pt; color: var(--soft); font-style: italic; }
+
+/* ------------------------------------------------------- part openers etc */
+.partopen {
+  break-before: page;
+  padding-top: 55mm;
+  text-align: left;
+}
+.partopen .partno {
+  font-family: "Carlito", sans-serif; text-transform: uppercase; letter-spacing: .2em;
+  font-size: 9pt; color: var(--accent); margin-bottom: 4mm;
+}
+.partopen h1.parttitle {
+  font-size: 26pt; line-height: 1.12; margin: 0 0 6mm; font-weight: 700;
+  border: 0; padding: 0;
+  string-set: parttitle content(text), sectitle "";
+}
+.partblurb { font-size: 11.5pt; color: var(--soft); max-width: 120mm; }
+.partblurb p { margin: 0; }
+
+h1 {
+  font-size: 15pt; font-weight: 700; line-height: 1.2;
+  margin: 0 0 3mm; padding-bottom: 1.5mm;
+  border-bottom: 1.2pt solid var(--accent);
+  break-after: avoid; text-align: left;
+  string-set: sectitle content(text);
+}
+.topic, .tool { break-before: page; }
+.intro { break-after: page; margin-top: 8mm; padding-top: 5mm; border-top: .5pt solid var(--rule); }
+.intro p:first-child { font-size: 11pt; }
+
+h2.sub, h3.sub {
+  font-family: "Carlito", "DejaVu Sans", sans-serif;
+  font-size: 10.5pt; font-weight: 700; color: var(--accent);
+  margin: 4.5mm 0 1.5mm; break-after: avoid; text-align: left;
+  letter-spacing: .01em;
+}
+h4 { font-size: 10pt; margin: 3mm 0 1mm; break-after: avoid; text-align: left; }
+.count { font-weight: 400; color: var(--soft); font-size: 9pt; }
+.lede { color: var(--soft); font-size: 10.5pt; margin-bottom: 3mm; }
+
+ul, ol { margin: 0 0 .5em; padding-left: 5mm; }
+li { margin-bottom: .18em; orphans: 2; widows: 2; }
+
+table {
+  width: 100%; border-collapse: collapse; margin: 2mm 0 3.5mm;
+  font-size: 9pt; text-align: left;
+}
+th, td { border: .5pt solid var(--rule); padding: 1.3mm 2mm; vertical-align: top; text-align: left; hyphens: none; }
+thead th {
+  background: var(--tint); font-family: "Carlito", sans-serif; font-size: 8.5pt;
+  font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent);
+}
+tr { break-inside: avoid; }
+thead { display: table-header-group; }
+
+blockquote { margin: 2mm 0 2mm 4mm; padding-left: 3mm; border-left: 2pt solid var(--rule); color: var(--soft); }
+
+/* --------------------------------------------------------------- takeaway */
+.takeaway {
+  break-inside: avoid;
+  background: var(--warm);
+  border-left: 2.5pt solid var(--warmrule);
+  padding: 3mm 4mm 2.5mm;
+  margin: 4mm 0 2mm;
+  font-size: 9.5pt;
+}
+.takeaway h4 {
+  font-family: "Carlito", sans-serif; text-transform: uppercase; letter-spacing: .12em;
+  font-size: 8pt; color: #3c3c3c; margin: 0 0 1.5mm;
+}
+.takeaway ul { padding-left: 4mm; margin: 0; }
+.takeaway li { margin-bottom: .3em; }
+
+/* ------------------------------------------------------------ cheat sheet */
+/* Cheat sheet and takeaway box must stay tellable apart in mono: the cheat
+   sheet is an outlined white panel, the takeaway a filled block. */
+.cheat {
+  background: #ffffff;
+  border: .5pt solid var(--rule);
+  border-top: 2.5pt solid var(--accent);
+  padding: 3.5mm 4mm 3mm;
+  margin: 3mm 0 4mm;
+  font-size: 9.5pt;
+}
+.cheat h4 {
+  font-family: "Carlito", sans-serif; text-transform: uppercase; letter-spacing: .12em;
+  font-size: 8pt; color: var(--accent); margin: 3mm 0 1.5mm;
+}
+.cheat ul { padding-left: 4mm; }
+.cheat table { margin: 2mm 0; }
+.t {
+  font-family: "Carlito", sans-serif; font-size: 7.5pt; text-transform: uppercase;
+  letter-spacing: .1em; color: var(--accent); font-weight: 700;
+}
+.formula {
+  font-family: "DejaVu Sans Mono", monospace; font-size: 12pt; text-align: center;
+  margin: 2.5mm 0; color: var(--accent);
+}
+.fig { font-size: 8pt; color: var(--soft); margin-top: -1mm; }
+
+/* Greyscale ramp. The words in each cell already carry the meaning; the ramp
+   is only there to make the shape of the matrix visible at a glance. */
+.matrix td.lvl { text-align: center; font-family: "Carlito", sans-serif; font-size: 8.5pt; }
+.lvl-low { background: #ffffff; color: #444; }
+.lvl-medium { background: #ebebeb; }
+.lvl-high { background: #d4d4d4; font-weight: 700; }
+.lvl-veryhigh, .lvl-critical { background: #b5b5b5; font-weight: 700; }
+.matrix tbody th { font-size: 8.5pt; background: var(--tint); }
+
+.scales { column-count: 2; column-gap: 6mm; }
+.scale { break-inside: avoid; font-size: 8pt; }
+.scale td:last-child, .scale th:last-child { width: 14mm; text-align: center; }
+
+/* ------------------------------------------------------------ question bank */
+.step { break-inside: auto; margin-bottom: 3mm; }
+.stephead {
+  font-family: "Carlito", sans-serif; font-size: 9.5pt; font-weight: 700;
+  background: var(--tint); padding: 1.3mm 2mm; margin: 3.5mm 0 2mm;
+  border-left: 2pt solid var(--accent); break-after: avoid;
+}
+.stepintro { font-size: 9pt; color: var(--soft); margin-bottom: 2mm; }
+.q { break-inside: avoid; margin: 0 0 2.2mm; padding-left: 3mm; border-left: .5pt solid var(--rule); }
+.qlabel { font-size: 9.5pt; margin-bottom: .6mm; }
+.qtype {
+  font-family: "Carlito", sans-serif; font-size: 7.5pt; color: var(--soft);
+  text-transform: uppercase; letter-spacing: .08em; white-space: nowrap;
+}
+.opts, .note, .cond { font-size: 8.5pt; color: var(--soft); margin: 0 0 .4mm; }
+.toolfoot { font-size: 8.5pt; color: var(--soft); font-style: italic; margin-top: 3mm; }
+
+/* ------------------------------------------------------------- readiness */
+.racat { break-inside: auto; }
+.act { break-inside: avoid; margin: 0 0 2.4mm; padding-left: 3mm; border-left: .5pt solid var(--rule); }
+.actline { font-size: 9.5pt; margin-bottom: .6mm; }
+.actid {
+  font-family: "Carlito", sans-serif; font-weight: 700; font-size: 8.5pt;
+  color: #fff; background: var(--accent); padding: .3mm 1.3mm; margin-right: 1.5mm;
+}
+.ev { font-size: 8.5pt; color: var(--soft); margin: 0 0 .3mm; }
+.actmeta { font-family: "Carlito", sans-serif; font-size: 8pt; color: var(--accent); margin-top: .5mm; }
+.scope li { margin-bottom: .35em; font-size: 9.5pt; }
+.status td:nth-child(2) { width: 16mm; text-align: center; }
+.artidx td:first-child { width: 10mm; text-align: center; font-weight: 700; }
+.artidx td:last-child { width: 45mm; font-family: "Carlito", sans-serif; font-size: 8pt; }
+
+/* ------------------------------------------------------------- self-tests */
+.selftest { break-before: page; }
+.selftest h2 {
+  font-size: 15pt; font-weight: 700; margin: 0 0 3mm; padding-bottom: 1.5mm;
+  border-bottom: 1.2pt solid var(--accent); text-align: left;
+  string-set: sectitle content(text);
+}
+.hint { font-size: 9pt; color: var(--soft); font-style: italic; margin-bottom: 3mm; }
+.qlist li { margin-bottom: .75em; }
+.answers { break-before: page; }
+.answers h2 {
+  font-size: 13pt; margin: 0 0 3mm; padding-bottom: 1.5mm;
+  border-bottom: .8pt solid var(--rule); text-align: left;
+  string-set: sectitle content(text);
+}
+.alist li { margin-bottom: .7em; break-inside: avoid; }
+.alist .aq { display: block; color: var(--soft); font-size: 9pt; }
+.alist .aa { display: block; }
+
+/* ------------------------------------------------------------------- misc */
+.front { break-before: page; }
+.front h1 { string-set: parttitle content(text), sectitle content(text); }
+.plan { font-size: 8.5pt; }
+.plan td:first-child { width: 10mm; text-align: center; font-weight: 700; }
+.whatis li { margin-bottom: .4em; }
+.card li { margin-bottom: .35em; font-size: 9.5pt; }
+.cols { font-size: 8pt; color: var(--soft); column-count: 3; column-gap: 5mm; text-align: left; }
+
+/* -------------------------------------------------------------------- toc */
+.toc { break-before: page; break-after: page; }
+.toc h1 { string-set: parttitle "Contents", sectitle ""; }
+.toc ul { list-style: none; padding: 0; }
+.toc li { margin: 0; }
+.toc a { text-decoration: none; color: var(--ink); }
+.toc a::after { content: leader(".") " " target-counter(attr(href), page); color: var(--soft); }
+.toc .l0 {
+  font-weight: 700; margin-top: 4mm; font-size: 11pt; color: var(--accent);
+}
+.toc .l0 a { color: var(--accent); }
+.toc .l1 { padding-left: 5mm; font-size: 9.5pt; }
+
+/* --------------------------------------------------------------- sources */
+.refs { font-family: "Carlito", sans-serif; font-size: 8.5pt; color: var(--soft); margin-top: 2mm; }
+.sources { font-size: 8.5pt; color: var(--soft); padding-left: 6mm; }
+.sources li { margin-bottom: .35em; word-break: break-all; }

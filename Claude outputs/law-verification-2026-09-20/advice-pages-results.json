@@ -1,0 +1,29 @@
+[
+  {
+    "file": "practical-privacy.html",
+    "citation": "Article 48 GDPR",
+    "context": "Orders and requests from outside the EU: under EDPB Guidelines 02/2024 on Article 48 GDPR (final version June 2025), a judgment or decision of a court or authority in a non-EU country is not by itself a lawful basis for disclosing personal data, nor a ground for transferring it: it can only be acted on where an international agreement such as a mutual legal assistance treaty applies, and the organization still needs a GDPR legal basis and a Chapter V transfer tool.",
+    "law_says": "Article 48 GDPR: a third-country judgment or administrative decision requiring transfer or disclosure 'may only be recognised or enforceable in any manner if based on an international agreement, such as a mutual legal assistance treaty', but the article closes with the express saving 'without prejudice to other grounds for transfer pursuant to this Chapter'. Absence of an international agreement therefore does not shut the door: a Chapter V ground, in particular an Article 49 derogation, can still permit the transfer. The page states the rule as absolute and drops the saving clause.",
+    "severity": "medium",
+    "kind": "wrong-substance",
+    "suggested_fix": "Orders and requests from outside the EU: under EDPB Guidelines 02/2024 on Article 48 GDPR (final version June 2025), a judgment or decision of a court or authority in a non-EU country is not by itself a lawful basis for disclosing personal data, nor a ground for transferring it: it is recognised or enforceable only where an international agreement such as a mutual legal assistance treaty applies, and without one the organization still needs a GDPR legal basis and some other Chapter V ground, such as an Article 49 derogation."
+  },
+  {
+    "file": "practical-ai-act-advice.html",
+    "citation": "Article 27(5)",
+    "context": "The Omnibus lets the FRIA cross-reference an existing DPIA rather than repeat it (Article 27(4)) and tasks the AI Office with a template questionnaire and an automated tool (Article 27(5)).",
+    "law_says": "The duty on the AI Office to develop 'a template for a questionnaire, including through an automated tool' is original 2024 text: it is the whole of Article 27(5) as published in Regulation (EU) 2024/1689. Regulation (EU) 2026/1744, Article 1, point (13)(b) replaced paragraph 5, but only to append a second sentence letting the template carry DPIA cross-references; point (13)(a) replaced paragraph 4, which is the genuine Omnibus change. The page credits the Omnibus with a task the Act already imposed.",
+    "severity": "low",
+    "kind": "wrong-substance",
+    "suggested_fix": "The Omnibus lets the FRIA cross-reference an existing DPIA rather than repeat it (Article 27(4)); the AI Office already owed a template questionnaire and an automated tool under the 2024 text (Article 27(5))."
+  },
+  {
+    "file": "practical-ai-act-advice.html",
+    "citation": "Article 4",
+    "context": "The original text asked for a \"sufficient level\" of AI literacy; Regulation (EU) 2026/1744 rewrote it so that providers and deployers must \"take measures to support the development of AI literacy\" of their staff and of others operating AI systems on their behalf, and the Commission's guidance now states that no specific or sufficient level is mandated.",
+    "law_says": "Article 4(1) as amended says it itself, in binding terms: 'This obligation does not require providers or deployers to guarantee any specific level of AI literacy of any individual.' The point is in the enacting text, not only in Commission guidance, so the page attributes to soft guidance a rule that now sits in the Regulation.",
+    "severity": "low",
+    "kind": "wrong-substance",
+    "suggested_fix": "The original text asked for a \"sufficient level\" of AI literacy; Regulation (EU) 2026/1744 rewrote it so that providers and deployers must \"take measures to support the development of AI literacy\" of their staff and of others operating AI systems on their behalf, and Article 4(1) now says expressly that no specific level need be guaranteed for any individual."
+  }
+]

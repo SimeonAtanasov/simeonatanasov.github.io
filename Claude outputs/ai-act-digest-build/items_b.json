@@ -1,562 +1,834 @@
 [
-  {
-    "id": "art-31",
-    "number": "Article 31",
-    "title": "Requirements Relating to Notified Bodies",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 4: Notifying authorities and notified bodies",
-    "takeaway": "Sets the conditions a conformity assessment body must meet to be notified: legal personality under national law (paragraph 1), organisational, quality management, resource, process and cybersecurity requirements (2), independence from the providers it assesses and from their competitors (4), no involvement of staff in designing, marketing or using high-risk AI systems, including consultancy (5), confidentiality (7), liability insurance unless the Member State assumes liability (9), sufficient competent personnel (11) and participation in coordination and standardisation work (12). Binds notified bodies and the notifying authorities that vet them. Providers selecting a notified body should check its designation scope against these criteria.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["notified-body", "authority"],
-    "recitals": [145],
-    "topics": ["conformity", "governance"],
-    "url": "https://artificialintelligenceact.eu/article/31/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-32",
-    "number": "Article 32",
-    "title": "Presumption of Conformity with Requirements Relating to Notified Bodies",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 4: Notifying authorities and notified bodies",
-    "takeaway": "Where a conformity assessment body demonstrates conformity with harmonised standards whose references are published in the Official Journal, it is presumed to meet the Article 31 requirements to the extent those standards cover them. Binds notified bodies and the notifying authorities that assess them. Bodies seeking designation should map their accreditation evidence against the relevant published standards, because the presumption reaches only as far as the standards do and the notifying authority must verify the rest directly.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["notified-body", "authority"],
-    "recitals": [],
-    "topics": ["conformity", "standards"],
-    "url": "https://artificialintelligenceact.eu/article/32/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-33",
-    "number": "Article 33",
-    "title": "Subsidiaries of Notified Bodies and Subcontracting",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 4: Notifying authorities and notified bodies",
-    "takeaway": "Allows a notified body to subcontract conformity assessment tasks or use a subsidiary only if the subcontractor or subsidiary meets Article 31 and the notifying authority is informed (paragraph 1). The notified body keeps full responsibility for the work (2), needs the provider's agreement and must publish a list of its subsidiaries (3), and must keep the qualification and work records available to the notifying authority for five years after the subcontracting ends (4). Binds notified bodies. Providers should expect to be asked for consent before any part of their assessment is subcontracted.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["notified-body"],
-    "recitals": [126],
-    "topics": ["conformity", "governance"],
-    "url": "https://artificialintelligenceact.eu/article/33/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-34",
-    "number": "Article 34",
-    "title": "Operational Obligations of Notified Bodies",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 4: Notifying authorities and notified bodies",
-    "takeaway": "Notified bodies verify the conformity of high-risk AI systems using the Article 43 procedures (paragraph 1). They must avoid unnecessary burdens for providers, particularly micro and small enterprises, taking account of provider size, sector, structure and system complexity, while keeping the rigour and level of protection the Regulation requires (2). On request they must submit all relevant documentation, including the provider's documentation, to the notifying authority under Article 28 for its assessment, designation, notification and monitoring work (3). Binds notified bodies. Providers should structure their technical files knowing they may be passed to the notifying authority.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["notified-body"],
-    "recitals": [],
-    "topics": ["conformity"],
-    "url": "https://artificialintelligenceact.eu/article/34/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-35",
-    "number": "Article 35",
-    "title": "Identification Numbers and Lists of Notified Bodies",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 4: Notifying authorities and notified bodies",
-    "takeaway": "The Commission assigns each notified body a single identification number, even where the body is notified under more than one Union act (paragraph 1), and publishes and keeps up to date a list of the bodies notified under the Regulation with their numbers and the activities they are notified for (2). Binds the Commission. Providers use the list to confirm that a body is designated for the assessment they need, and the identification number is the one that accompanies the CE marking under Article 48.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["commission"],
-    "recitals": [],
-    "topics": ["conformity", "governance"],
-    "url": "https://artificialintelligenceact.eu/article/35/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-36",
-    "number": "Article 36",
-    "title": "Changes to Notifications",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 4: Notifying authorities and notified bodies",
-    "takeaway": "Governs changes to a notified body's designation: scope extensions follow Articles 29 and 30. A body ceasing activity gives one year's notice of a planned cessation, and certificates may remain valid for nine months if another body takes over in writing (paragraph 3). Where a body no longer meets Article 31, the notifying authority restricts, suspends or withdraws the designation (4) and the body informs affected providers within 10 days (5). After withdrawal, certificates stay valid for nine months where no risk is confirmed and a replacement body completes reassessment within 12 months (9). Binds notified bodies and authorities; providers should plan for certification continuity.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["notified-body", "authority"],
-    "recitals": [],
-    "topics": ["conformity", "governance"],
-    "url": "https://artificialintelligenceact.eu/article/36/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-37",
-    "number": "Article 37",
-    "title": "Challenge to the Competence of Notified Bodies",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 4: Notifying authorities and notified bodies",
-    "takeaway": "The Commission investigates where there is reason to doubt a notified body's competence or its continued compliance with Article 31 (paragraph 1); the notifying authority supplies all relevant information on request (2) and the Commission treats sensitive material confidentially under Article 78 (3). If the body falls short, the Commission asks the notifying Member State to take corrective measures, including suspending or withdrawing the notification, and if the Member State fails to act the Commission may itself suspend, restrict or withdraw the designation by implementing act under the Article 98(2) examination procedure (4). Binds the Commission, notifying authorities and notified bodies.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["commission", "authority", "notified-body"],
-    "recitals": [],
-    "topics": ["conformity", "enforcement"],
-    "url": "https://artificialintelligenceact.eu/article/37/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-38",
-    "number": "Article 38",
-    "title": "Coordination of Notified Bodies",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 4: Notifying authorities and notified bodies",
-    "takeaway": "The Commission ensures coordination and cooperation between notified bodies active in conformity assessment of high-risk AI systems through sectoral groups of notified bodies (paragraph 1). Each notifying authority ensures the bodies it designates take part in such a group, directly or through designated representatives (2), and the Commission facilitates the exchange of knowledge and best practice between notifying authorities (3). Binds the Commission, notifying authorities and notified bodies. Providers gain from more consistent assessment practice across bodies and Member States, so divergent interpretations by one body can be raised through the sectoral group.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["commission", "notified-body", "authority"],
-    "recitals": [],
-    "topics": ["conformity", "governance"],
-    "url": "https://artificialintelligenceact.eu/article/38/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-39",
-    "number": "Article 39",
-    "title": "Conformity Assessment Bodies of Third Countries",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 4: Notifying authorities and notified bodies",
-    "takeaway": "Conformity assessment bodies established under the law of a third country with which the Union has concluded an agreement may be authorised to carry out the activities of notified bodies, provided they meet the Article 31 requirements or ensure an equivalent level of compliance. Binds the Commission and notifying authorities, and third-country bodies seeking authorisation. Providers outside the Union should not assume that a home-country certification body can assess a high-risk AI system unless such an agreement exists and the body has been authorised under it.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["notified-body", "commission"],
-    "recitals": [127],
-    "topics": ["conformity", "scope"],
-    "url": "https://artificialintelligenceact.eu/article/39/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-40",
-    "number": "Article 40",
-    "title": "Harmonised Standards and Standardisation Deliverables",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "High-risk AI systems and general-purpose AI models that conform to harmonised standards published in the Official Journal under Regulation (EU) No 1025/2012 are presumed to comply with the Chapter III Section 2 requirements or the Chapter V Sections 2 and 3 obligations, to the extent the standards cover them (paragraph 1). The Commission must issue standardisation requests covering all those requirements, including reporting and documentation on resource performance such as energy consumption (2). Standardisation participants must promote investment, legal certainty, competitiveness, international alignment, fundamental rights and balanced governance (3). Binds the Commission; providers and GPAI providers should track published references because they are the cheapest route to presumption of conformity.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["commission", "provider", "gpai-provider"],
-    "recitals": [121],
-    "topics": ["standards", "conformity"],
-    "url": "https://artificialintelligenceact.eu/article/40/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-41",
-    "number": "Article 41",
-    "title": "Common Specifications",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "Allows the Commission to adopt implementing acts establishing common specifications for the Section 2 requirements or the Chapter V Sections 2 and 3 obligations, but only where a standardisation request was not accepted, not delivered by the deadline, delivered with fundamental rights shortcomings or not compliant with the request, and no harmonised standard reference is published or expected soon (paragraph 1). Systems and models conforming to common specifications are presumed compliant (3); the specifications are repealed once a harmonised standard covering the same requirements is published (4). Providers not following common specifications must justify that their technical solutions reach an equivalent level (5). Binds the Commission, providers and GPAI providers.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["commission", "provider", "gpai-provider"],
-    "recitals": [121],
-    "topics": ["standards", "conformity"],
-    "url": "https://artificialintelligenceact.eu/article/41/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-42",
-    "number": "Article 42",
-    "title": "Presumption of Conformity with Certain Requirements",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "Provides presumptions of conformity for specific requirements. High-risk AI systems trained and tested on data reflecting the geographical, behavioural, contextual or functional setting of intended use are presumed to meet Article 10(4) (paragraph 1). Systems certified under a cybersecurity scheme adopted under Regulation (EU) 2019/881, with references published in the Official Journal, are presumed to meet the Article 15 cybersecurity requirements to the extent covered (2). Systems within the scope of Regulation (EU) 2024/2847 that fulfil the conditions in its Article 12(1) are deemed to comply with Article 15 (3). Binds providers; use existing cybersecurity certification and Cyber Resilience Act compliance to discharge Article 15 rather than duplicating evidence.",
-    "applies_from": "2 August 2026",
-    "omnibus": "Adds a new paragraph 3 deeming high-risk AI systems within the scope of Regulation (EU) 2024/2847 that meet the conditions of its Article 12(1) to comply with the Article 15 cybersecurity requirements.",
-    "binds": ["provider"],
-    "recitals": [77, 78, 122],
-    "topics": ["conformity", "data"],
-    "url": "https://artificialintelligenceact.eu/article/42/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-43",
-    "number": "Article 43",
-    "title": "Conformity Assessment",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "Sets the conformity assessment route. For Annex III point 1 biometric systems, providers applying harmonised standards or common specifications choose internal control under Annex VI or notified body assessment under Annex VII; otherwise Annex VII is mandatory (paragraph 1). Annex III points 2 to 8 systems use internal control under Annex VI (2). Annex I Section A products follow their sectoral procedure with the Section 2 requirements folded in; sectoral notified bodies may assess them and must apply for designation by 28 January 2028 (3). Substantial modification triggers a new assessment, except pre-determined changes documented in the technical file (4). Binds providers and notified bodies.",
-    "applies_from": "2 August 2026",
-    "omnibus": "Paragraph 3 was amended so that notified bodies under Annex I Section A legislation must apply for designation under Section 4 by 28 January 2028, and new subparagraphs let manufacturers who applied harmonised standards covering all Section 2 requirements avoid third-party assessment and settle which procedure applies where a system falls under both Annex I and Annex III.",
-    "binds": ["provider", "notified-body"],
-    "recitals": [78, 123, 124, 125, 126, 128, 147],
-    "topics": ["conformity", "provider-duties"],
-    "url": "https://artificialintelligenceact.eu/article/43/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-44",
-    "number": "Article 44",
-    "title": "Certificates",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "Certificates issued under Annex VII must be drawn up in a language easily understood by the authorities of the notified body's Member State (paragraph 1). They are valid for at most five years for Annex I systems and four years for Annex III systems, renewable for equivalent periods after reassessment, and supplements remain valid while the main certificate does (2). Where a system no longer meets the Section 2 requirements, the body suspends, withdraws or restricts the certificate unless the provider corrects within a set deadline, gives written reasons, and an appeal procedure must be available (3). Binds notified bodies; providers should diarise renewal well before expiry.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["notified-body", "provider"],
-    "recitals": [],
-    "topics": ["conformity"],
-    "url": "https://artificialintelligenceact.eu/article/44/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-45",
-    "number": "Article 45",
-    "title": "Information Obligations of Notified Bodies",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "Notified bodies must inform their notifying authority of every Union technical documentation assessment certificate, supplement and quality management system approval issued under Annex VII, of any refusal, restriction, suspension or withdrawal, of circumstances affecting their notification and of information requests from market surveillance authorities (paragraph 1). They must tell other notified bodies about refused, suspended or withdrawn approvals and certificates, and on request about those issued (2), and share information on negative results with bodies assessing the same types of AI systems (3), all under Article 78 confidentiality (4). Binds notified bodies; providers should expect a refusal by one body to be known to the others.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["notified-body"],
-    "recitals": [],
-    "topics": ["conformity", "governance"],
-    "url": "https://artificialintelligenceact.eu/article/45/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-46",
-    "number": "Article 46",
-    "title": "Derogation from Conformity Assessment Procedure",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "Lets a market surveillance authority authorise placing a specific high-risk AI system on the market or into service without completing conformity assessment, for exceptional reasons of public security, protection of life and health, environmental protection or protection of key industrial and infrastructural assets, only while the assessment is carried out. Law enforcement may use a system in urgent situations without prior authorisation if it requests one immediately afterwards; if refused, use stops and outputs are discarded. The authority verifies Section 2 compliance and notifies the Commission and Member States; absent objections within 15 days the authorisation stands. Annex I Section A products use only sectoral derogations. Binds authorities and deployers.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["authority", "deployer"],
-    "recitals": [130],
-    "topics": ["conformity", "enforcement"],
-    "url": "https://artificialintelligenceact.eu/article/46/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-47",
-    "number": "Article 47",
-    "title": "EU Declaration of Conformity",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "Providers must draw up a written, machine-readable, physical or electronically signed EU declaration of conformity for each high-risk AI system, keep it for 10 years after placing on the market or putting into service and supply it to national competent authorities on request (paragraph 1). It states conformity with Section 2, contains the Annex V information and is translated into a language the relevant authorities understand (2). Where other Union harmonisation legislation also requires one, a single declaration covers all applicable law (3). By drawing it up the provider assumes responsibility for compliance and must keep it current (4). Binds providers.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["provider"],
-    "recitals": [],
-    "topics": ["conformity", "provider-duties"],
-    "url": "https://artificialintelligenceact.eu/article/47/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-48",
-    "number": "Article 48",
-    "title": "CE Marking",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "The CE marking signals conformity with Chapter III Section 2 and other applicable Union harmonisation legislation and follows the general principles in Article 30 of Regulation (EC) No 765/2008 (paragraph 1). For systems provided digitally, a digital CE marking is allowed if it is easily accessed through the interface or a machine-readable code (2). The marking must be visible, legible and indelible, or placed on packaging or documentation where that is impossible (3), and must carry the notified body's identification number where one was involved, including in promotional material claiming compliance (4). Binds providers; do not affix the marking before the conformity assessment and declaration are complete.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["provider"],
-    "recitals": [129],
-    "topics": ["conformity", "provider-duties"],
-    "url": "https://artificialintelligenceact.eu/article/48/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-49",
-    "number": "Article 49",
-    "title": "Registration",
-    "chapter": "Chapter III: High-Risk AI Systems",
-    "section": "Section 5: Standards, conformity assessment, certificates, registration",
-    "takeaway": "Before placing on the market or putting into service an Annex III high-risk AI system, other than point 2 critical infrastructure systems, the provider or authorised representative registers itself and the system in the EU database under Article 71 (paragraph 1). Providers who conclude under Article 6(3) that a system is not high-risk must also register it (2). Public authority and Union body deployers register themselves and the use of the system before use (3). Law enforcement, migration, asylum and border control systems under points 1, 6 and 7 go in a secure non-public section (4); point 2 systems are registered nationally (5). Binds providers and public deployers.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["provider", "deployer"],
-    "recitals": [131],
-    "topics": ["registration", "provider-duties"],
-    "url": "https://artificialintelligenceact.eu/article/49/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-50",
-    "number": "Article 50",
-    "title": "Transparency Obligations for Providers and Deployers of Certain AI Systems",
-    "chapter": "Chapter IV: Transparency Obligations for Providers and Deployers of Certain AI Systems",
-    "section": "",
-    "takeaway": "Providers must design AI systems that interact directly with people so that those people know they are dealing with AI, unless that is obvious (paragraph 1), and must mark synthetic audio, image, video or text output in a machine-readable, detectable way as far as technically feasible (2). Deployers of emotion recognition or biometric categorisation systems must inform exposed persons (3) and must disclose deep fakes and AI-generated text published on matters of public interest, with exceptions for artistic works and text under editorial responsibility (4). Information is given clearly at the first interaction or exposure (5). Uses authorised by law for criminal offences are exempt. Binds providers and deployers.",
-    "applies_from": "2 August 2026",
-    "omnibus": "Paragraph 7 was amended: the Commission may now approve codes of practice on detection and labelling of AI-generated content by implementing act under the Article 56(6) procedure, and may set common rules by implementing act if it finds a code inadequate.",
-    "binds": ["provider", "deployer"],
-    "recitals": [120, 132, 133, 134, 135, 136, 137],
-    "topics": ["transparency", "provider-duties", "deployer-duties"],
-    "url": "https://artificialintelligenceact.eu/article/50/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-51",
-    "number": "Article 51",
-    "title": "Classification of General-Purpose AI Models as General-Purpose AI Models with Systemic Risk",
-    "chapter": "Chapter V: General-Purpose AI Models",
-    "section": "Section 1: Classification rules",
-    "takeaway": "A general-purpose AI model is classified as having systemic risk if it has high-impact capabilities assessed with technical tools, indicators and benchmarks, or if the Commission so decides ex officio or after a qualified alert from the scientific panel, using the Annex XIII criteria (paragraph 1). High-impact capabilities are presumed where cumulative training compute exceeds 10^25 floating point operations (2). The Commission may amend the thresholds and supplement benchmarks and indicators by delegated act to track algorithmic and hardware progress (3). Binds GPAI providers and the Commission; providers should track cumulative training compute against the 10^25 line, since crossing it triggers the Article 52 notification duty.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["gpai-provider", "commission"],
-    "recitals": [110, 111],
-    "topics": ["gpai", "high-risk-classification"],
-    "url": "https://artificialintelligenceact.eu/article/51/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-52",
-    "number": "Article 52",
-    "title": "Procedure",
-    "chapter": "Chapter V: General-Purpose AI Models",
-    "section": "Section 1: Classification rules",
-    "takeaway": "A provider whose model meets the Article 51(1)(a) condition must notify the Commission within two weeks of meeting it or learning it will be met, with supporting information (paragraph 1). The provider may argue that the model exceptionally presents no systemic risk (2); if the Commission rejects the arguments the classification stands (3). The Commission may designate a model ex officio or after a qualified alert from the scientific panel using Annex XIII (4). A provider may request reassessment at the earliest six months after designation on new, objective grounds (5). The Commission publishes an up-to-date list of systemic-risk models (6). Binds GPAI providers and the Commission.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["gpai-provider", "commission"],
-    "recitals": [112, 113],
-    "topics": ["gpai", "governance"],
-    "url": "https://artificialintelligenceact.eu/article/52/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-53",
-    "number": "Article 53",
-    "title": "Obligations for Providers of General-Purpose AI Models",
-    "chapter": "Chapter V: General-Purpose AI Models",
-    "section": "Section 2: Obligations for providers of general-purpose AI models",
-    "takeaway": "Providers of general-purpose AI models must keep technical documentation with at least the Annex XI content for the AI Office and national authorities (paragraph 1(a)), give downstream AI system providers the Annex XII information they need to comply (1(b)), adopt a copyright policy that respects rights reservations under Article 4(3) of Directive (EU) 2019/790 (1(c)) and publish a sufficiently detailed summary of training content using the AI Office template (1(d)). Points (a) and (b) do not apply to free and open-source models with public weights and architecture, unless the model has systemic risk (2). Codes of practice under Article 56 or harmonised standards demonstrate compliance (4). Binds GPAI providers.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["gpai-provider"],
-    "recitals": [101, 102, 103, 104, 105, 106, 107, 108, 109],
-    "topics": ["gpai", "provider-duties"],
-    "url": "https://artificialintelligenceact.eu/article/53/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-54",
-    "number": "Article 54",
-    "title": "Authorised Representatives of Providers of General-Purpose AI Models",
-    "chapter": "Chapter V: General-Purpose AI Models",
-    "section": "Section 2: Obligations for providers of general-purpose AI models",
-    "takeaway": "Third-country providers must appoint, by written mandate, an authorised representative established in the Union before placing a general-purpose AI model on the market (paragraph 1). The representative verifies that the Annex XI technical documentation was drawn up and that Articles 53 and 55 are met, keeps the documentation available to the AI Office and national authorities for 10 years, and cooperates with authorities, which may address it instead of the provider (3 and 4). It may terminate the mandate, informing the AI Office (5). The duty does not apply to free and open-source models with public parameters unless they carry systemic risk (6). Binds GPAI providers and their representatives.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["gpai-provider"],
-    "recitals": [],
-    "topics": ["gpai", "provider-duties"],
-    "url": "https://artificialintelligenceact.eu/article/54/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-55",
-    "number": "Article 55",
-    "title": "Obligations of Providers of General-Purpose AI Models with Systemic Risk",
-    "chapter": "Chapter V: General-Purpose AI Models",
-    "section": "Section 3: Obligations of providers of general-purpose AI models with systemic risk",
-    "takeaway": "Providers of general-purpose AI models with systemic risk must, in addition to Articles 53 and 54, evaluate the model with standardised protocols including adversarial testing (paragraph 1(a)), assess and mitigate possible systemic risks at Union level from development, placing on the market or use (1(b)), track, document and report serious incidents and corrective measures to the AI Office and where relevant national authorities without undue delay (1(c)), and ensure adequate cybersecurity for the model and its physical infrastructure (1(d)). Codes of practice under Article 56 or harmonised standards demonstrate compliance; otherwise the provider shows alternative adequate means (2). Binds GPAI providers of systemic-risk models.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["gpai-provider"],
-    "recitals": [114, 115],
-    "topics": ["gpai", "incidents"],
-    "url": "https://artificialintelligenceact.eu/article/55/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-56",
-    "number": "Article 56",
-    "title": "Codes of Practice",
-    "chapter": "Chapter V: General-Purpose AI Models",
-    "section": "Section 4: Codes of practice",
-    "takeaway": "Tasks the AI Office with facilitating Union-level codes of practice for the Article 53 and 55 obligations, covering documentation upkeep, training content summaries, and the identification and management of systemic risks (paragraphs 1 and 2). Participants report against key performance indicators scaled to their size (5). The Commission and the Board monitor the codes and publish an adequacy assessment, and the Commission may approve a code by implementing act, giving it general validity (6). Codes were due by 2 May 2025; if none was adequate by 2 August 2025 the Commission may set common rules by implementing act (9). Binds GPAI providers and the Commission.",
-    "applies_from": "2 August 2025",
-    "omnibus": "Paragraph 6 was amended to revise how the Commission and the Board monitor and evaluate the codes and to confirm that the Commission approves a code and gives it general validity by implementing act under the Article 98(2) examination procedure.",
-    "binds": ["gpai-provider", "commission"],
-    "recitals": [116, 117],
-    "topics": ["gpai", "standards"],
-    "url": "https://artificialintelligenceact.eu/article/56/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-57",
-    "number": "Article 57",
-    "title": "AI Regulatory Sandboxes",
-    "chapter": "Chapter VI: Measures in Support of Innovation",
-    "section": "",
-    "takeaway": "Member States must have at least one national AI regulatory sandbox operational by 2 August 2026 (paragraph 1); the European Data Protection Supervisor may run one for Union bodies (3) and the AI Office may run a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs (3a). Sandboxes provide a controlled environment for developing and testing AI systems under an agreed plan, which may include real-world testing (5). Participants receive an exit report that notified bodies and market surveillance authorities take positively into account (7). No administrative fines apply to participants who follow the plan in good faith (12). Binds authorities and providers.",
-    "applies_from": "2 August 2026",
-    "omnibus": "Adds paragraph 3a allowing the AI Office to establish a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs, requires sandbox plans to incorporate the Article 60 and 60a real-world testing plans, adds SMCs to the objectives and strengthens coordination with the AI Office.",
-    "binds": ["authority", "provider", "commission"],
-    "recitals": [138, 139],
-    "topics": ["sandboxes"],
-    "url": "https://artificialintelligenceact.eu/article/57/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-58",
-    "number": "Article 58",
-    "title": "Detailed Arrangements for, and Functioning of, AI Regulatory Sandboxes",
-    "chapter": "Chapter VI: Measures in Support of Innovation",
-    "section": "",
-    "takeaway": "Requires the Commission to adopt implementing acts under the Article 98(2) examination procedure setting common principles for sandbox eligibility and selection criteria, application, monitoring, exit and termination procedures, participant terms and conditions, and the governance of sandboxes including data protection authority involvement and coordination at national and Union level (paragraph 1). Those acts must ensure open, transparent and fair selection with a decision within three months of application, free access for SMEs and start-ups apart from exceptional costs, mutual recognition of participation across the Union and time-limited participation proportionate to the project (2). Binds the Commission and national competent authorities; providers should use the learning outcomes to support conformity assessment.",
-    "applies_from": "2 August 2026",
-    "omnibus": "Paragraph 1(a) was amended and a new point 1(d) requires the implementing acts to set detailed governance rules for sandboxes, including data protection authority involvement and coordination at national and Union level.",
-    "binds": ["commission", "authority"],
-    "recitals": [139],
-    "topics": ["sandboxes", "governance"],
-    "url": "https://artificialintelligenceact.eu/article/58/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-59",
-    "number": "Article 59",
-    "title": "Further Processing of Personal Data for Developing Certain AI Systems in the Public Interest in the AI Regulatory Sandbox",
-    "chapter": "Chapter VI: Measures in Support of Innovation",
-    "section": "",
-    "takeaway": "Permits, within a sandbox, further processing of personal data collected for other purposes to develop, train and test AI systems serving a substantial public interest in public safety and health, environment and climate, energy, transport and critical infrastructure, or public administration (paragraph 1(a)). All conditions must hold: other data will not suffice (b), risks are monitored (c), processing stays in a separate, protected environment (d), created data stay inside (e), no measures affect data subjects (f), data are deleted when participation ends (g), with logs, Annex IV documentation and a published summary (h to j). Law enforcement processing needs a legal basis (2). Binds providers and public authorities.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["provider", "authority"],
-    "recitals": [140],
-    "topics": ["sandboxes", "data"],
-    "url": "https://artificialintelligenceact.eu/article/59/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-60",
-    "number": "Article 60",
-    "title": "Testing of High-Risk AI Systems in Real World Conditions Outside AI Regulatory Sandboxes",
-    "chapter": "Chapter VI: Measures in Support of Innovation",
-    "section": "",
-    "takeaway": "Providers and prospective providers of Annex III high-risk AI systems, and of Annex I Section A products, may test in real-world conditions outside a sandbox under a testing plan whose elements the Commission specifies by implementing act (paragraph 1). Conditions include submitting the plan to the market surveillance authority, with approval deemed after 30 days, registration with a Union-wide identification number, Union establishment or a legal representative, a maximum of six months extendable by six, protection of vulnerable groups, Article 61 consent and reversible outputs (4). Subjects may withdraw at any time (5), serious incidents are reported under Article 73 (7) and the provider stays liable (9). Binds providers.",
-    "applies_from": "2 August 2026",
-    "omnibus": "Paragraphs 1 and 2 were amended to extend real-world testing outside sandboxes to high-risk AI systems covered by the Union harmonisation legislation in Annex I Section A, without prejudice to sectoral rules on such testing.",
-    "binds": ["provider", "authority"],
-    "recitals": [141],
-    "topics": ["sandboxes", "oversight"],
-    "url": "https://artificialintelligenceact.eu/article/60/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-61",
-    "number": "Article 61",
-    "title": "Informed Consent to Participate in Testing in Real World Conditions Outside AI Regulatory Sandboxes",
-    "chapter": "Chapter VI: Measures in Support of Innovation",
-    "section": "",
-    "takeaway": "Before a person takes part in real-world testing under Article 60, the provider must obtain freely given informed consent, having given concise, clear, relevant and understandable information on the nature and objectives of the testing and any possible inconvenience (paragraph 1(a)), the conditions and expected duration (b), the right to refuse or withdraw without detriment (c), the arrangements for reversing or disregarding the system's outputs (d), and the Union-wide testing identification number and provider contact details (e). Consent must be dated and documented, with a copy given to the subject or legal representative (2). Binds providers and prospective providers; build the consent record into the testing plan before submission.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["provider"],
-    "recitals": [141],
-    "topics": ["sandboxes", "transparency"],
-    "url": "https://artificialintelligenceact.eu/article/61/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-62",
-    "number": "Article 62",
-    "title": "Measures for Providers and Deployers, in Particular SMEs, Including Start-Ups",
-    "chapter": "Chapter VI: Measures in Support of Innovation",
-    "section": "",
-    "takeaway": "Member States must give SMEs and start-ups with a registered office or branch in the Union priority access to regulatory sandboxes (paragraph 1(a)), run awareness and training activities on the Regulation tailored to them (b), use dedicated channels to communicate with them (c) and support their participation in standardisation (d). Conformity assessment fees must take account of the specific interests and needs of SME providers (2). The AI Office provides standardised templates, a single information platform, awareness campaigns and an evaluation of public procurement practice for AI systems (3). Binds Member States and the AI Office; small providers should ask their national authority about sandbox priority and fee arrangements.",
-    "applies_from": "2 August 2026",
-    "omnibus": "",
-    "binds": ["authority", "commission"],
-    "recitals": [143],
-    "topics": ["sandboxes", "other"],
-    "url": "https://artificialintelligenceact.eu/article/62/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-63",
-    "number": "Article 63",
-    "title": "Derogations for Specific Operators",
-    "chapter": "Chapter VI: Measures in Support of Innovation",
-    "section": "",
-    "takeaway": "SMEs, including start-ups, may comply with certain elements of the Article 17 quality management system in a simplified manner, provided they have no partner or linked enterprises within the meaning of Recommendation 2003/361/EC; the Commission issues guidelines identifying those elements without lowering the level of protection (paragraph 1). The simplification does not exempt them from any other requirement, including Articles 9 to 15, 72 and 73 (2). Binds providers that are SMEs. Small providers of high-risk AI systems must still document risk management, data governance, logging, human oversight, post-market monitoring and incident reporting in full.",
-    "applies_from": "2 August 2026",
-    "omnibus": "Paragraph 1 was amended to extend the simplified quality management system option from microenterprises to all SMEs including start-ups.",
-    "binds": ["provider"],
-    "recitals": [146],
-    "topics": ["provider-duties", "other"],
-    "url": "https://artificialintelligenceact.eu/article/63/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-64",
-    "number": "Article 64",
-    "title": "AI Office",
-    "chapter": "Chapter VII: Governance",
-    "section": "Section 1: Governance at Union level",
-    "takeaway": "The Commission develops Union expertise and capabilities in AI through the AI Office (paragraph 1), Member States facilitate the tasks entrusted to it (2), and the AI Office must be allocated adequate resources to perform its duties and exercise its enforcement powers (3). Concerns the Commission and Member States. Practitioners deal with the AI Office as the supervisor of general-purpose AI models, the facilitator of codes of practice and, following the Omnibus, the possible operator of a Union-level sandbox.",
-    "applies_from": "2 August 2025",
-    "omnibus": "Adds a new paragraph 3 requiring the AI Office to be allocated adequate resources to perform its duties and exercise its enforcement powers.",
-    "binds": ["commission", "institutional"],
-    "recitals": [],
-    "topics": ["governance"],
-    "url": "https://artificialintelligenceact.eu/article/64/",
-    "fetched": true,
-    "source": "page"
-  },
-  {
-    "id": "art-65",
-    "number": "Article 65",
-    "title": "Establishment and Structure of the European Artificial Intelligence Board",
-    "chapter": "Chapter VII: Governance",
-    "section": "Section 1: Governance at Union level",
-    "takeaway": "Establishes the European Artificial Intelligence Board, composed of one representative per Member State with the European Data Protection Supervisor as observer and the AI Office attending without a vote (paragraphs 1 and 2). Representatives serve three years, renewable once (3), act as single contact points for their Member State (4) and adopt rules of procedure by a two-thirds majority (5). The Board runs two standing sub-groups, on market surveillance and on notified bodies, the former acting as the administrative cooperation group under Regulation (EU) 2019/1020 (6). A Member State representative chairs and the AI Office provides the secretariat (8). Institutional; its guidance shapes how national authorities apply the Regulation.",
-    "applies_from": "2 August 2025",
-    "omnibus": "",
-    "binds": ["institutional"],
-    "recitals": [149],
-    "topics": ["governance"],
-    "url": "https://artificialintelligenceact.eu/article/65/",
-    "fetched": true,
-    "source": "page"
-  }
+ {
+  "id": "art-31",
+  "number": "Article 31",
+  "title": "Requirements Relating to Notified Bodies",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "Sets the conditions a conformity assessment body must meet to be notified: legal personality under national law (paragraph 1), organisational, quality management, resource, process and cybersecurity requirements (2), independence from the providers it assesses and from their competitors (4), no involvement of staff in designing, marketing or using high-risk AI systems, including consultancy (5), confidentiality (7), liability insurance unless the Member State assumes liability (9), sufficient competent personnel (11) and participation in coordination and standardisation work (12). Binds notified bodies and the notifying authorities that vet them. Providers selecting a notified body should check its designation scope against these criteria.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "notified-body",
+   "authority"
+  ],
+  "recitals": [
+   126
+  ],
+  "topics": [
+   "conformity",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/31/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-32",
+  "number": "Article 32",
+  "title": "Presumption of Conformity with Requirements Relating to Notified Bodies",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "Where a conformity assessment body demonstrates conformity with harmonised standards whose references are published in the Official Journal, it is presumed to meet the Article 31 requirements to the extent those standards cover them. Binds notified bodies and the notifying authorities that assess them. Bodies seeking designation should map their accreditation evidence against the relevant published standards, because the presumption reaches only as far as the standards do and the notifying authority must verify the rest directly.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "notified-body",
+   "authority"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "standards"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/32/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-33",
+  "number": "Article 33",
+  "title": "Subsidiaries of Notified Bodies and Subcontracting",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "Allows a notified body to subcontract conformity assessment tasks or use a subsidiary only if the subcontractor or subsidiary meets Article 31 and the notifying authority is informed (paragraph 1). The notified body keeps full responsibility for the work (2), needs the provider's agreement and must publish a list of its subsidiaries (3), and must keep the qualification and work records available to the notifying authority for five years after the subcontracting ends (4). Binds notified bodies. Providers should expect to be asked for consent before any part of their assessment is subcontracted.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "notified-body"
+  ],
+  "recitals": [
+   126
+  ],
+  "topics": [
+   "conformity",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/33/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-34",
+  "number": "Article 34",
+  "title": "Operational Obligations of Notified Bodies",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "Notified bodies verify the conformity of high-risk AI systems using the Article 43 procedures (paragraph 1). They must avoid unnecessary burdens for providers, particularly micro and small enterprises, taking account of provider size, sector, structure and system complexity, while keeping the rigour and level of protection the Regulation requires (2). On request they must submit all relevant documentation, including the provider's documentation, to the notifying authority under Article 28 for its assessment, designation, notification and monitoring work (3). Binds notified bodies. Providers should structure their technical files knowing they may be passed to the notifying authority.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "notified-body"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/34/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-35",
+  "number": "Article 35",
+  "title": "Identification Numbers and Lists of Notified Bodies",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "The Commission assigns each notified body a single identification number, even where the body is notified under more than one Union act (paragraph 1), and publishes and keeps up to date a list of the bodies notified under the Regulation with their numbers and the activities they are notified for (2). Binds the Commission. Providers use the list to confirm that a body is designated for the assessment they need, and the identification number is the one that accompanies the CE marking under Article 48.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "commission"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/35/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-36",
+  "number": "Article 36",
+  "title": "Changes to Notifications",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "Governs changes to a notified body's designation: scope extensions follow Articles 29 and 30. A body ceasing activity gives one year's notice of a planned cessation, and certificates may remain valid for nine months if another body takes over in writing (paragraph 3). Where a body no longer meets Article 31, the notifying authority restricts, suspends or withdraws the designation (4) and the body informs affected providers within 10 days (5). After withdrawal, certificates stay valid for nine months where no risk is confirmed and a replacement body completes reassessment within 12 months (9). Binds notified bodies and authorities; providers should plan for certification continuity.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "notified-body",
+   "authority"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/36/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-37",
+  "number": "Article 37",
+  "title": "Challenge to the Competence of Notified Bodies",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "The Commission investigates where there is reason to doubt a notified body's competence or its continued compliance with Article 31 (paragraph 1); the notifying authority supplies all relevant information on request (2) and the Commission treats sensitive material confidentially under Article 78 (3). If the body falls short, the Commission asks the notifying Member State to take corrective measures, including suspending or withdrawing the notification, and if the Member State fails to act the Commission may itself suspend, restrict or withdraw the designation by implementing act under the Article 98(2) examination procedure (4). Binds the Commission, notifying authorities and notified bodies.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "authority",
+   "notified-body"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/37/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-38",
+  "number": "Article 38",
+  "title": "Coordination of Notified Bodies",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "The Commission ensures coordination and cooperation between notified bodies active in conformity assessment of high-risk AI systems through sectoral groups of notified bodies (paragraph 1). Each notifying authority ensures the bodies it designates take part in such a group, directly or through designated representatives (2), and the Commission facilitates the exchange of knowledge and best practice between notifying authorities (3). Binds the Commission, notifying authorities and notified bodies. Providers gain from more consistent assessment practice across bodies and Member States, so divergent interpretations by one body can be raised through the sectoral group.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "notified-body",
+   "authority"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/38/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-39",
+  "number": "Article 39",
+  "title": "Conformity Assessment Bodies of Third Countries",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 4: Notifying authorities and notified bodies",
+  "takeaway": "Conformity assessment bodies established under the law of a third country with which the Union has concluded an agreement may be authorised to carry out the activities of notified bodies, provided they meet the Article 31 requirements or ensure an equivalent level of compliance. Binds the Commission and notifying authorities, and third-country bodies seeking authorisation. Providers outside the Union should not assume that a home-country certification body can assess a high-risk AI system unless such an agreement exists and the body has been authorised under it.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "notified-body",
+   "commission"
+  ],
+  "recitals": [
+   127
+  ],
+  "topics": [
+   "conformity",
+   "scope"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/39/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-40",
+  "number": "Article 40",
+  "title": "Harmonised Standards and Standardisation Deliverables",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "High-risk AI systems and general-purpose AI models that conform to harmonised standards published in the Official Journal under Regulation (EU) No 1025/2012 are presumed to comply with the Chapter III Section 2 requirements or the Chapter V Sections 2 and 3 obligations, to the extent the standards cover them (paragraph 1). The Commission must issue standardisation requests covering all those requirements, including reporting and documentation on resource performance such as energy consumption (2). Standardisation participants must promote investment, legal certainty, competitiveness, international alignment, fundamental rights and balanced governance (3). Binds the Commission; providers and GPAI providers should track published references because they are the cheapest route to presumption of conformity.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Paragraph 2 gains a subparagraph requiring the Commission to ask the European standardisation organisations, without undue delay, for standardisation deliverables, including harmonised standards as appropriate, to facilitate joint compliance and presumption of conformity with Chapter III Sections 2 and 3 and with the relevant requirements in the Annex I harmonisation legislation.",
+  "binds": [
+   "commission",
+   "provider",
+   "gpai-provider"
+  ],
+  "recitals": [
+   121
+  ],
+  "topics": [
+   "standards",
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/40/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-41",
+  "number": "Article 41",
+  "title": "Common Specifications",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "Allows the Commission to adopt implementing acts establishing common specifications for the Section 2 requirements or the Chapter V Sections 2 and 3 obligations, but only where a standardisation request was not accepted, not delivered by the deadline, delivered with fundamental rights shortcomings or not compliant with the request, and no harmonised standard reference is published or expected soon (paragraph 1). Systems and models conforming to common specifications are presumed compliant (3); the specifications are repealed once a harmonised standard covering the same requirements is published (4). Providers not following common specifications must justify that their technical solutions reach an equivalent level (5). Binds the Commission, providers and GPAI providers.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "commission",
+   "provider",
+   "gpai-provider"
+  ],
+  "recitals": [
+   121
+  ],
+  "topics": [
+   "standards",
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/41/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-42",
+  "number": "Article 42",
+  "title": "Presumption of Conformity with Certain Requirements",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "Provides presumptions of conformity for specific requirements. High-risk AI systems trained and tested on data reflecting the geographical, behavioural, contextual or functional setting of intended use are presumed to meet Article 10(4) (paragraph 1). Systems certified under a cybersecurity scheme adopted under Regulation (EU) 2019/881, with references published in the Official Journal, are presumed to meet the Article 15 cybersecurity requirements to the extent covered (2). Systems within the scope of Regulation (EU) 2024/2847 that fulfil the conditions in its Article 12(1) are deemed to comply with Article 15 (3). Binds providers; use existing cybersecurity certification and Cyber Resilience Act compliance to discharge Article 15 rather than duplicating evidence.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Adds a new paragraph 3 deeming high-risk AI systems within the scope of Regulation (EU) 2024/2847 that meet the conditions of its Article 12(1) to comply with the Article 15 cybersecurity requirements.",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   77,
+   78,
+   122
+  ],
+  "topics": [
+   "conformity",
+   "data"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/42/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-43",
+  "number": "Article 43",
+  "title": "Conformity Assessment",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "Sets the conformity assessment route. For Annex III point 1 biometric systems, providers applying harmonised standards or common specifications choose internal control under Annex VI or notified body assessment under Annex VII; otherwise Annex VII is mandatory (paragraph 1). Annex III points 2 to 8 systems use internal control under Annex VI (2). Annex I Section A products follow their sectoral procedure with the Section 2 requirements folded in; sectoral notified bodies may assess them and must apply for designation by 28 January 2028 (3). Substantial modification triggers a new assessment, except pre-determined changes documented in the technical file (4). Binds providers and notified bodies.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Paragraph 3 was amended so that notified bodies under Annex I Section A legislation must apply for designation under Section 4 by 28 January 2028, and new subparagraphs let manufacturers who applied harmonised standards covering all Section 2 requirements avoid third-party assessment and settle which procedure applies where a system falls under both Annex I and Annex III.",
+  "binds": [
+   "provider",
+   "notified-body"
+  ],
+  "recitals": [
+   78,
+   123,
+   124,
+   125,
+   126,
+   128
+  ],
+  "topics": [
+   "conformity",
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/43/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-44",
+  "number": "Article 44",
+  "title": "Certificates",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "Certificates issued under Annex VII must be drawn up in a language easily understood by the authorities of the notified body's Member State (paragraph 1). They are valid for at most five years for Annex I systems and four years for Annex III systems, renewable for equivalent periods after reassessment, and supplements remain valid while the main certificate does (2). Where a system no longer meets the Section 2 requirements, the body suspends, withdraws or restricts the certificate unless the provider corrects within a set deadline, gives reasons for its decision, and an appeal procedure must be available (3). Binds notified bodies; providers should diarise renewal well before expiry.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "notified-body",
+   "provider"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/44/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-45",
+  "number": "Article 45",
+  "title": "Information Obligations of Notified Bodies",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "Notified bodies must inform their notifying authority of every Union technical documentation assessment certificate, supplement and quality management system approval issued under Annex VII, of any refusal, restriction, suspension or withdrawal, of circumstances affecting their notification and of information requests from market surveillance authorities (paragraph 1). They must tell other notified bodies about refused, suspended or withdrawn approvals and certificates, and on request about those issued (2), and share information on negative results with bodies assessing the same types of AI systems (3), all under Article 78 confidentiality (4). Binds notified bodies; providers should expect a refusal by one body to be known to the others.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "notified-body"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/45/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-46",
+  "number": "Article 46",
+  "title": "Derogation from Conformity Assessment Procedure",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "Lets a market surveillance authority authorise, within the territory of its own Member State, placing a specific high-risk AI system on the market or into service without completing conformity assessment, for exceptional reasons of public security, protection of life and health, environmental protection or protection of key industrial and infrastructural assets, only while the assessment is carried out. Law enforcement or civil protection authorities may use a system in urgent situations without prior authorisation if one is requested during or after the use without undue delay; if refused, use stops and outputs are discarded. The authority verifies Section 2 compliance and notifies the Commission and Member States; absent objections within 15 calendar days the authorisation stands. Annex I Section A products use only sectoral derogations. Binds authorities and deployers.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "authority",
+   "deployer"
+  ],
+  "recitals": [
+   130
+  ],
+  "topics": [
+   "conformity",
+   "enforcement"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/46/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-47",
+  "number": "Article 47",
+  "title": "EU Declaration of Conformity",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "Providers must draw up a written, machine-readable, physical or electronically signed EU declaration of conformity for each high-risk AI system, keep it for 10 years after placing on the market or putting into service and supply it to national competent authorities on request (paragraph 1). It states conformity with Section 2, contains the Annex V information and is translated into a language the relevant authorities understand (2). Where other Union harmonisation legislation also requires one, a single declaration covers all applicable law (3). By drawing it up the provider assumes responsibility for compliance and must keep it current (4). Binds providers.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [],
+  "topics": [
+   "conformity",
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/47/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-48",
+  "number": "Article 48",
+  "title": "CE Marking",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "The CE marking follows the general principles in Article 30 of Regulation (EC) No 765/2008 (paragraph 1). For systems provided digitally, a digital CE marking is allowed if it is easily accessed through the interface or a machine-readable code (2). The marking must be visible, legible and indelible, or placed on packaging or documentation where that is impossible (3), and must carry the notified body's identification number where one was involved, including in promotional material claiming compliance (4). Where other Union law also provides for CE marking, the marking indicates conformity with that law too (5). Binds providers; do not affix the marking before the conformity assessment and declaration are complete.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   129
+  ],
+  "topics": [
+   "conformity",
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/48/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-49",
+  "number": "Article 49",
+  "title": "Registration",
+  "chapter": "Chapter III: High-Risk AI Systems",
+  "section": "Section 5: Standards, conformity assessment, certificates, registration",
+  "takeaway": "Before placing on the market or putting into service an Annex III high-risk AI system, other than point 2 critical infrastructure systems, the provider or authorised representative registers itself and the system in the EU database under Article 71 (paragraph 1). Providers who conclude under Article 6(3) that a system is not high-risk must also register it (2). Public authority and Union body deployers register themselves and the use of the system before use (3). Law enforcement, migration, asylum and border control systems under points 1, 6 and 7 go in a secure non-public section (4); point 2 systems are registered nationally (5). Binds providers and public deployers.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "provider",
+   "deployer"
+  ],
+  "recitals": [
+   131
+  ],
+  "topics": [
+   "registration",
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/49/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-50",
+  "number": "Article 50",
+  "title": "Transparency Obligations for Providers and Deployers of Certain AI Systems",
+  "chapter": "Chapter IV: Transparency Obligations for Providers and Deployers of Certain AI Systems",
+  "section": "",
+  "takeaway": "Providers must design AI systems that interact directly with people so that those people know they are dealing with AI, unless that is obvious (paragraph 1), and must mark synthetic audio, image, video or text output in a machine-readable, detectable way as far as technically feasible (2). Deployers of emotion recognition or biometric categorisation systems must inform exposed persons (3) and must disclose deep fakes and AI-generated text published on matters of public interest, with exceptions for artistic works and text under editorial responsibility (4). Information is given clearly at the first interaction or exposure (5). Uses authorised by law for criminal offences are exempt. Binds providers and deployers.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Paragraph 7 was replaced: the job of encouraging and facilitating codes of practice on the detection, marking and labelling of artificially generated content passes from the AI Office to the Commission, which, taking utmost account of the Board's opinion, assesses whether adherence to those codes is adequate for the paragraph 2 and 4 obligations under the Article 56(6) procedure. The old power to approve a code by implementing act is gone; the Commission may still set common rules by implementing act under the Article 98(2) examination procedure if it deems a code inadequate.",
+  "binds": [
+   "provider",
+   "deployer"
+  ],
+  "recitals": [
+   120,
+   132,
+   133,
+   134,
+   135,
+   136,
+   137
+  ],
+  "topics": [
+   "transparency",
+   "provider-duties",
+   "deployer-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/50/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-51",
+  "number": "Article 51",
+  "title": "Classification of General-Purpose AI Models as General-Purpose AI Models with Systemic Risk",
+  "chapter": "Chapter V: General-Purpose AI Models",
+  "section": "Section 1: Classification rules",
+  "takeaway": "A general-purpose AI model is classified as having systemic risk if it has high-impact capabilities assessed with technical tools, indicators and benchmarks, or if the Commission so decides ex officio or after a qualified alert from the scientific panel, using the Annex XIII criteria (paragraph 1). High-impact capabilities are presumed where cumulative training compute exceeds 10^25 floating point operations (2). The Commission may amend the thresholds and supplement benchmarks and indicators by delegated act to track algorithmic and hardware progress (3). Binds GPAI providers and the Commission; providers should track cumulative training compute against the 10^25 line, since crossing it triggers the Article 52 notification duty.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "gpai-provider",
+   "commission"
+  ],
+  "recitals": [
+   110,
+   111
+  ],
+  "topics": [
+   "gpai",
+   "high-risk-classification"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/51/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-52",
+  "number": "Article 52",
+  "title": "Procedure",
+  "chapter": "Chapter V: General-Purpose AI Models",
+  "section": "Section 1: Classification rules",
+  "takeaway": "A provider whose model meets the Article 51(1)(a) condition must notify the Commission within two weeks of meeting it or learning it will be met, with supporting information (paragraph 1). The provider may argue that the model exceptionally presents no systemic risk (2); if the Commission rejects the arguments the classification stands (3). The Commission may designate a model ex officio or after a qualified alert from the scientific panel using Annex XIII (4). A provider may request reassessment at the earliest six months after designation on new, objective grounds (5). The Commission publishes an up-to-date list of systemic-risk models (6). Binds GPAI providers and the Commission.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "gpai-provider",
+   "commission"
+  ],
+  "recitals": [
+   112,
+   113
+  ],
+  "topics": [
+   "gpai",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/52/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-53",
+  "number": "Article 53",
+  "title": "Obligations for Providers of General-Purpose AI Models",
+  "chapter": "Chapter V: General-Purpose AI Models",
+  "section": "Section 2: Obligations for providers of general-purpose AI models",
+  "takeaway": "Providers of general-purpose AI models must keep technical documentation with at least the Annex XI content for the AI Office and national authorities (paragraph 1(a)), give downstream AI system providers the Annex XII information they need to comply (1(b)), adopt a copyright policy that respects rights reservations under Article 4(3) of Directive (EU) 2019/790 (1(c)) and publish a sufficiently detailed summary of training content using the AI Office template (1(d)). Points (a) and (b) do not apply to free and open-source models with public weights and architecture, unless the model has systemic risk (2). Codes of practice under Article 56 or harmonised standards demonstrate compliance (4). Binds GPAI providers.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "gpai-provider"
+  ],
+  "recitals": [
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109
+  ],
+  "topics": [
+   "gpai",
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/53/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-54",
+  "number": "Article 54",
+  "title": "Authorised Representatives of Providers of General-Purpose AI Models",
+  "chapter": "Chapter V: General-Purpose AI Models",
+  "section": "Section 2: Obligations for providers of general-purpose AI models",
+  "takeaway": "Third-country providers must appoint, by written mandate, an authorised representative established in the Union before placing a general-purpose AI model on the market (paragraph 1). The representative verifies that the Annex XI technical documentation was drawn up and that Articles 53 and 55 are met, keeps the documentation available to the AI Office and national authorities for 10 years, and cooperates with authorities, which may address it instead of the provider (3 and 4). It must terminate the mandate where it considers the provider to be acting contrary to its obligations, and immediately inform the AI Office of the termination and the reasons (5). The duty does not apply to free and open-source models with public parameters unless they carry systemic risk (6). Binds GPAI providers and their representatives.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "gpai-provider"
+  ],
+  "recitals": [],
+  "topics": [
+   "gpai",
+   "provider-duties"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/54/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-55",
+  "number": "Article 55",
+  "title": "Obligations of Providers of General-Purpose AI Models with Systemic Risk",
+  "chapter": "Chapter V: General-Purpose AI Models",
+  "section": "Section 3: Obligations of providers of general-purpose AI models with systemic risk",
+  "takeaway": "Providers of general-purpose AI models with systemic risk must, in addition to Articles 53 and 54, evaluate the model with standardised protocols including adversarial testing (paragraph 1(a)), assess and mitigate possible systemic risks at Union level from development, placing on the market or use (1(b)), track, document and report serious incidents and corrective measures to the AI Office and where relevant national authorities without undue delay (1(c)), and ensure adequate cybersecurity for the model and its physical infrastructure (1(d)). Codes of practice under Article 56 or harmonised standards demonstrate compliance; otherwise the provider shows alternative adequate means (2). Binds GPAI providers of systemic-risk models.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "gpai-provider"
+  ],
+  "recitals": [
+   114,
+   115
+  ],
+  "topics": [
+   "gpai",
+   "incidents"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/55/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-56",
+  "number": "Article 56",
+  "title": "Codes of Practice",
+  "chapter": "Chapter V: General-Purpose AI Models",
+  "section": "Section 4: Codes of practice",
+  "takeaway": "Tasks the AI Office with facilitating Union-level codes of practice for the Article 53 and 55 obligations, covering documentation upkeep, training content summaries, and the identification and management of systemic risks (paragraphs 1 and 2). Participants report against key performance indicators scaled to their size (5). The Commission and the Board regularly monitor and evaluate the codes, and the Commission, taking utmost account of the Board's opinion, assesses whether they cover the Article 53 and 55 obligations and publishes that adequacy assessment (6). Codes were due by 2 May 2025; if none was adequate by 2 August 2025 the Commission may set common rules by implementing act (9). Binds GPAI providers, the AI Office, the Board and the Commission.",
+  "applies_from": "2 August 2025",
+  "omnibus": "Paragraph 6 was replaced: the Commission and the Board now regularly monitor and evaluate how far participants meet the codes' objectives, and the Commission, taking utmost account of the Board's opinion, assesses whether the codes cover the Articles 53 and 55 obligations and publishes that adequacy assessment. The former power to approve a code by implementing act and give it general validity across the Union was removed.",
+  "binds": [
+   "gpai-provider",
+   "commission"
+  ],
+  "recitals": [
+   116,
+   117
+  ],
+  "topics": [
+   "gpai",
+   "standards"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/56/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-57",
+  "number": "Article 57",
+  "title": "AI Regulatory Sandboxes",
+  "chapter": "Chapter VI: Measures in Support of Innovation",
+  "section": "",
+  "takeaway": "Member States must have at least one national AI regulatory sandbox operational by 2 August 2027 (paragraph 1); the European Data Protection Supervisor may run one for Union bodies (3) and the AI Office may run a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs (3a). Sandboxes provide a controlled environment for developing and testing AI systems under an agreed plan, which may include real-world testing (5). Participants receive an exit report that notified bodies and market surveillance authorities take positively into account (7). No administrative fines apply to participants who follow the plan in good faith (12). Binds authorities and providers.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Replaces the first subparagraph of paragraph 1, moving the deadline for a national sandbox to be operational from 2 August 2026 to 2 August 2027, adds paragraph 3a allowing the AI Office to establish a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs, requires sandbox plans to incorporate the Article 60 and 60a real-world testing plans, adds SMCs to the objectives and strengthens coordination with the AI Office.",
+  "binds": [
+   "authority",
+   "provider",
+   "commission"
+  ],
+  "recitals": [
+   138,
+   139
+  ],
+  "topics": [
+   "sandboxes"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/57/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-58",
+  "number": "Article 58",
+  "title": "Detailed Arrangements for, and Functioning of, AI Regulatory Sandboxes",
+  "chapter": "Chapter VI: Measures in Support of Innovation",
+  "section": "",
+  "takeaway": "Requires the Commission to adopt implementing acts under the Article 98(2) examination procedure setting common principles for sandbox eligibility and selection criteria, application, monitoring, exit and termination procedures, participant terms and conditions, and the governance of sandboxes including data protection authority involvement and coordination at national and Union level (paragraph 1). Those acts must ensure open, transparent and fair selection with a decision within three months of application, free access for SMEs and start-ups apart from exceptional costs, mutual recognition of participation across the Union and time-limited participation proportionate to the project (2). Binds the Commission and national competent authorities; providers should use the learning outcomes to support conformity assessment.",
+  "applies_from": "2 August 2026",
+  "omnibus": "The introductory part of paragraph 1 was replaced, and a new point 1(d) requires the implementing acts to set detailed governance rules for sandboxes, including data protection authority involvement and coordination at national and Union level. Point 1(a) on eligibility and selection criteria is unchanged.",
+  "binds": [
+   "commission",
+   "authority"
+  ],
+  "recitals": [
+   139
+  ],
+  "topics": [
+   "sandboxes",
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/58/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-59",
+  "number": "Article 59",
+  "title": "Further Processing of Personal Data for Developing Certain AI Systems in the Public Interest in the AI Regulatory Sandbox",
+  "chapter": "Chapter VI: Measures in Support of Innovation",
+  "section": "",
+  "takeaway": "Permits, within a sandbox, further processing of personal data collected for other purposes to develop, train and test AI systems serving a substantial public interest in public safety and health, environment and climate, energy, transport and critical infrastructure, or public administration (paragraph 1(a)). All conditions must hold: other data will not suffice (b), risks are monitored (c), processing stays in a separate, protected environment (d), created data stay inside (e), no measures affect data subjects (f), data are deleted when participation ends (g), with logs, Annex IV documentation and a published summary (h to j). Law enforcement processing needs a legal basis (2). Binds providers and public authorities.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "provider",
+   "authority"
+  ],
+  "recitals": [
+   140
+  ],
+  "topics": [
+   "sandboxes",
+   "data"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/59/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-60",
+  "number": "Article 60",
+  "title": "Testing of High-Risk AI Systems in Real World Conditions Outside AI Regulatory Sandboxes",
+  "chapter": "Chapter VI: Measures in Support of Innovation",
+  "section": "",
+  "takeaway": "Providers and prospective providers of Annex III high-risk AI systems, and of Annex I Section A products, may test in real-world conditions outside a sandbox under a testing plan whose elements the Commission specifies by implementing act (paragraph 1). Conditions include submitting the plan to the market surveillance authority, with approval deemed after 30 days, registration with a Union-wide identification number, Union establishment or a legal representative, a maximum of six months extendable by six, protection of vulnerable groups, Article 61 consent and reversible outputs (4). Subjects may withdraw at any time (5), serious incidents are reported under Article 73 (7) and the provider stays liable (9). Binds providers.",
+  "applies_from": "2 August 2026",
+  "omnibus": "The first subparagraph of paragraph 1 and the whole of paragraph 2 were replaced to extend real-world testing outside sandboxes to high-risk AI systems covered by the Union harmonisation legislation in Annex I Section A, without prejudice to the prohibitions in Article 5. The existing saving for sectoral rules on such testing is unchanged.",
+  "binds": [
+   "provider",
+   "authority"
+  ],
+  "recitals": [
+   141
+  ],
+  "topics": [
+   "sandboxes",
+   "oversight"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/60/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-61",
+  "number": "Article 61",
+  "title": "Informed Consent to Participate in Testing in Real World Conditions Outside AI Regulatory Sandboxes",
+  "chapter": "Chapter VI: Measures in Support of Innovation",
+  "section": "",
+  "takeaway": "Before a person takes part in real-world testing under Article 60, the provider must obtain freely given informed consent, having given concise, clear, relevant and understandable information on the nature and objectives of the testing and any possible inconvenience (paragraph 1(a)), the conditions and expected duration (b), the right to refuse or withdraw without detriment (c), the arrangements for reversing or disregarding the system's outputs (d), and the Union-wide testing identification number and provider contact details (e). Consent must be dated and documented, with a copy given to the subject or legal representative (2). Binds providers and prospective providers; build the consent record into the testing plan before submission.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   141
+  ],
+  "topics": [
+   "sandboxes",
+   "transparency"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/61/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-62",
+  "number": "Article 62",
+  "title": "Measures for Providers and Deployers, in Particular SMEs, Including Start-Ups",
+  "chapter": "Chapter VI: Measures in Support of Innovation",
+  "section": "",
+  "takeaway": "Member States must give SMEs and start-ups with a registered office or branch in the Union priority access to regulatory sandboxes (paragraph 1(a)), run awareness and training activities on the Regulation tailored to them (b), use dedicated channels to communicate with them (c) and support their participation in standardisation (d). Conformity assessment fees must take account of the specific interests and needs of SME providers (2). The AI Office provides standardised templates, a single information platform, awareness campaigns and an evaluation of public procurement practice for AI systems (3). Binds Member States and the AI Office; small providers should ask their national authority about sandbox priority and fee arrangements.",
+  "applies_from": "2 August 2026",
+  "omnibus": "",
+  "binds": [
+   "authority",
+   "commission"
+  ],
+  "recitals": [
+   143
+  ],
+  "topics": [
+   "sandboxes",
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/62/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-63",
+  "number": "Article 63",
+  "title": "Derogations for Specific Operators",
+  "chapter": "Chapter VI: Measures in Support of Innovation",
+  "section": "",
+  "takeaway": "SMEs, including start-ups, may comply with certain elements of the Article 17 quality management system in a simplified manner, provided they have no partner or linked enterprises within the meaning of Recommendation 2003/361/EC; the Commission issues guidelines identifying those elements without lowering the level of protection (paragraph 1). The simplification does not exempt them from any other requirement, including Articles 9 to 15, 72 and 73 (2). Binds providers that are SMEs. Small providers of high-risk AI systems must still document risk management, data governance, logging, human oversight, post-market monitoring and incident reporting in full.",
+  "applies_from": "2 August 2026",
+  "omnibus": "Paragraph 1 was amended to extend the simplified quality management system option from microenterprises to all SMEs including start-ups.",
+  "binds": [
+   "provider"
+  ],
+  "recitals": [
+   146
+  ],
+  "topics": [
+   "provider-duties",
+   "other"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/63/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-64",
+  "number": "Article 64",
+  "title": "AI Office",
+  "chapter": "Chapter VII: Governance",
+  "section": "Section 1: Governance at Union level",
+  "takeaway": "The Commission develops Union expertise and capabilities in AI through the AI Office (paragraph 1), Member States facilitate the tasks entrusted to it (2), and the AI Office must be allocated adequate resources to perform its duties and exercise its enforcement powers (3). Concerns the Commission and Member States. Practitioners deal with the AI Office as the supervisor of general-purpose AI models, the facilitator of codes of practice and, following the Omnibus, the possible operator of a Union-level sandbox.",
+  "applies_from": "2 August 2025",
+  "omnibus": "Adds a new paragraph 3 requiring the AI Office to be allocated adequate resources to perform its duties and exercise its enforcement powers.",
+  "binds": [
+   "commission",
+   "institutional"
+  ],
+  "recitals": [],
+  "topics": [
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/64/",
+  "fetched": true,
+  "source": "page"
+ },
+ {
+  "id": "art-65",
+  "number": "Article 65",
+  "title": "Establishment and Structure of the European Artificial Intelligence Board",
+  "chapter": "Chapter VII: Governance",
+  "section": "Section 1: Governance at Union level",
+  "takeaway": "Establishes the European Artificial Intelligence Board, composed of one representative per Member State with the European Data Protection Supervisor as observer and the AI Office attending without a vote (paragraphs 1 and 2). Representatives serve three years, renewable once (3), act as single contact points for their Member State (4) and adopt rules of procedure by a two-thirds majority (5). The Board runs two standing sub-groups, on market surveillance and on notified bodies, the former acting as the administrative cooperation group under Regulation (EU) 2019/1020 (6). A Member State representative chairs and the AI Office provides the secretariat (8). Institutional; its guidance shapes how national authorities apply the Regulation.",
+  "applies_from": "2 August 2025",
+  "omnibus": "",
+  "binds": [
+   "institutional"
+  ],
+  "recitals": [
+   149
+  ],
+  "topics": [
+   "governance"
+  ],
+  "url": "https://artificialintelligenceact.eu/article/65/",
+  "fetched": true,
+  "source": "page"
+ }
 ]

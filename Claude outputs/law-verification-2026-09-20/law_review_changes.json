@@ -1,0 +1,465 @@
+{
+ "art-1": {
+  "omnibus": {
+   "old": "",
+   "new": "Point (g) of paragraph 2 was replaced so that the innovation support measures are now framed around small mid-cap enterprises (SMCs) and SMEs, including start-ups."
+  }
+ },
+ "art-2": {
+  "takeaway": {
+   "old": "Article 2 fixes who is caught: providers placing AI systems or general-purpose AI models on the Union market wherever established, deployers in the Union, third-country operators whose output is used in the Union, importers, distributors, product manufacturers, authorised representatives and affected persons (paragraph 1). Paragraphs 3 to 12 exclude military, defence and national security uses, scientific research, pre-market testing, purely personal use and free and open-source systems unless high-risk or caught by Articles 5 or 50. Paragraph 2 confines Annex I Section B products to Article 6(1), Article 60a and Articles 102 to 112; paragraph 13 lets the Commission limit Articles 9 to 15 by 2 August 2027.",
+   "new": "Article 2 fixes who is caught: providers placing AI systems or general-purpose AI models on the Union market wherever established, deployers in the Union, third-country operators whose output is used in the Union, importers, distributors, product manufacturers, authorised representatives and affected persons (paragraph 1). Paragraphs 3 to 12 exclude military, defence and national security uses, scientific research, pre-market testing, purely personal use and free and open-source systems unless high-risk or caught by Articles 5 or 50. Paragraph 2 confines Annex I Section B products to Article 6(1), Article 60a and Articles 102 to 112; paragraph 13 lets the Commission limit Articles 9 to 15 and 17 to 25 by 2 August 2027."
+  },
+  "omnibus": {
+   "old": "Paragraph 2 was rewritten so that only Article 6(1), Article 60a and Articles 102 to 112 apply to Annex I Section B products, with Articles 57 to 59 applying only where integrated into that sectoral legislation, and paragraph 7 now cross-refers to the new Article 4a.",
+   "new": "Paragraph 2 was rewritten so that only Article 6(1), Article 60a and Articles 102 to 112 apply to Annex I Section B products, with Articles 57 to 59 applying only where integrated into that sectoral legislation, paragraph 7 now cross-refers to the new Article 4a, and a new paragraph 13 lets the Commission limit Articles 9 to 15 and 17 to 25 for Article 6(1) systems by delegated act."
+  }
+ },
+ "art-3": {
+  "takeaway": {
+   "old": "Article 3 supplies the 68 definitions on which every later obligation depends. An AI system is a machine-based system with varying levels of autonomy that infers from input how to generate outputs such as predictions, content, recommendations or decisions (point 1); a provider develops a system or model and places it on the market under its own name (point 3); a deployer uses a system under its authority outside personal activity (point 4). Points 63 and 65 define general-purpose AI models and systemic risk, and point 49 defines a serious incident as death, serious harm to health, critical infrastructure disruption, a fundamental rights infringement or serious harm to property.",
+   "new": "Article 3 supplies the 70 definitions on which every later obligation depends, numbered 1 to 68 with the inserted points 14a and 14b. An AI system is a machine-based system with varying levels of autonomy that infers from input how to generate outputs such as predictions, content, recommendations or decisions (point 1); a provider develops a system or model and places it on the market under its own name (point 3); a deployer uses a system under its authority outside personal activity (point 4). Points 63 and 65 define general-purpose AI models and systemic risk, and point 49 defines a serious incident as death, serious harm to health, a serious and irreversible disruption of critical infrastructure, a fundamental rights infringement or serious harm to property or the environment."
+  },
+  "omnibus": {
+   "old": "Point 14a now refers to Recommendation 2003/361/EC for SMEs and new point 14b defines a small mid-cap enterprise (SMC) by reference to Recommendation (EU) 2025/1099.",
+   "new": "New point 14a defines SMEs by reference to Recommendation 2003/361/EC and new point 14b defines a small mid-cap enterprise (SMC) by reference to Recommendation (EU) 2025/1099."
+  }
+ },
+ "art-5": {
+  "takeaway": {
+   "old": "Article 5 prohibits eight AI practices: manipulative techniques, exploitation of vulnerabilities, social scoring, criminal risk prediction based solely on profiling, untargeted scraping of facial images, emotion recognition in workplaces and education except for medical or safety reasons, biometric categorisation inferring protected characteristics, and real-time remote biometric identification in public spaces for law enforcement (paragraph 1). Point (h) allows real-time identification only for victim searches, imminent threats or Annex II offences carrying at least four years' custody, with prior authorisation and a fundamental rights impact assessment (paragraphs 2 to 4). New points (ba) and (bb) ban generating non-consensual intimate imagery and child sexual abuse material from 2 December 2026.",
+   "new": "Article 5 prohibits ten AI practices (paragraph 1): manipulative techniques, exploitation of vulnerabilities, social scoring, criminal risk prediction based solely on profiling, untargeted scraping of facial images, emotion recognition in workplaces and education except for medical or safety reasons, biometric categorisation inferring protected characteristics, real-time remote biometric identification in public spaces for law enforcement, and the two new points (ba) and (bb). Point (h) allows real-time identification only for victim searches, imminent threats or Annex II offences carrying at least four years' custody, with prior authorisation and a fundamental rights impact assessment (paragraphs 2 to 4). Points (ba) and (bb) ban generating or manipulating non-consensual intimate imagery and child sexual abuse material from 2 December 2026."
+  },
+  "recitals": {
+   "old": [
+    3,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+   ],
+   "new": [
+    26,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+   ]
+  }
+ },
+ "art-6": {
+  "applies_from": {
+   "old": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+   "new": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)"
+  },
+  "takeaway": {
+   "old": "Article 6 sets the two routes to high-risk status: safety components of, or products under, Annex I harmonisation legislation that require third-party conformity assessment (paragraph 1), and the use cases in Annex III (paragraph 2). Paragraph 3 exempts Annex III systems that perform a narrow procedural task, improve a completed human activity, detect decision-making deviations or carry out preparatory assessments, but profiling of natural persons always stays high-risk. Providers relying on paragraph 3 must document the assessment before placing on the market and register under Article 49(2) (paragraph 4). New paragraphs 1a to 1c exclude systems limited to non-safety aspects such as user assistance unless failure endangers health and safety.",
+   "new": "Article 6 sets the two routes to high-risk status: safety components of, or products under, Annex I harmonisation legislation that require third-party conformity assessment (paragraph 1), and the use cases in Annex III (paragraph 2). Paragraph 3 exempts Annex III systems that perform a narrow procedural task, improve a completed human activity, detect decision-making deviations or carry out preparatory assessments, but profiling of natural persons always stays high-risk. Providers relying on paragraph 3 must document the assessment before placing on the market and register under Article 49(2) (paragraph 4). New paragraphs 1a to 1c exclude systems limited to non-safety aspects such as user assistance unless failure endangers health and safety. Article 113(c) excepts paragraph 5, the Commission's duty to issue classification guidelines, from the deferred dates, so it applies from 2 August 2026."
+  }
+ },
+ "art-25": {
+  "omnibus": {
+   "old": "Paragraph 2 now spells out the initial provider's cooperation duties (technical documentation, known limitations and failure modes, targeted technical access) and paragraph 4 lets the AI Office develop and recommend voluntary model contract terms for component suppliers.",
+   "new": "Paragraph 2 now spells out the initial provider's cooperation duties (technical documentation, known limitations and failure modes, targeted technical access). In paragraph 4 only the first subparagraph was replaced, so that third parties supplying an AI model are also covered; the AI Office voluntary model contract terms were already in the base text."
+  },
+  "binds": {
+   "old": [
+    "provider",
+    "deployer",
+    "distributor"
+   ],
+   "new": [
+    "provider",
+    "deployer",
+    "importer",
+    "distributor"
+   ]
+  }
+ },
+ "art-27": {
+  "takeaway": {
+   "old": "Article 27 requires deployers that are bodies governed by public law, private operators providing public services, and deployers of the credit scoring and life and health insurance systems in Annex III point 5(b) and (c) to complete a fundamental rights impact assessment before first use (paragraph 1). The assessment covers the deployer's processes and intended use, the period and frequency of use, the persons affected, the risks of harm, the human oversight measures and the mitigation and complaint arrangements. It is done once, updated when elements change (paragraph 2), notified to the market surveillance authority (paragraph 3) and may build on a GDPR Article 35 assessment (paragraph 4).",
+   "new": "Article 27 requires deployers that are bodies governed by public law, private operators providing public services, and deployers of the credit scoring and life and health insurance systems in Annex III point 5(b) and (c) to complete a fundamental rights impact assessment before first use of a high-risk AI system under Article 6(2), other than one used in the area listed in point 2 of Annex III (paragraph 1). The assessment covers the deployer's processes and intended use, the period and frequency of use, the persons affected, the risks of harm, the human oversight measures and the mitigation and complaint arrangements. It is done once, updated when elements change (paragraph 2), notified to the market surveillance authority (paragraph 3) and may cross-refer to a GDPR Article 35 assessment (paragraph 4)."
+  },
+  "omnibus": {
+   "old": "Paragraph 5 was amended so that the AI Office develops the questionnaire template including through an automated tool to simplify compliance.",
+   "new": "Paragraph 4 was replaced: rather than the fundamental rights impact assessment complementing a data protection impact assessment, the deployer may now include cross-references to the relevant sections of that assessment or incorporate relevant parts of it. Paragraph 5 gained a second sentence requiring the AI Office template to offer those cross-references; the automated tool was already in the base text."
+  },
+  "recitals": {
+   "old": [
+    4,
+    5,
+    26,
+    93,
+    96
+   ],
+   "new": [
+    5,
+    93,
+    96
+   ]
+  }
+ },
+ "art-30": {
+  "omnibus": {
+   "old": "Paragraph 2 now requires notification through the Commission's electronic tool using the codes and categories in new Annex XIV, which the Commission may amend by delegated act, and paragraph 3 is new.",
+   "new": "Paragraph 2 now requires notification through the Commission's electronic tool using the codes and categories in new Annex XIV, which the Commission may amend by delegated act under Article 97. Paragraph 3 is unchanged base text."
+  }
+ },
+ "art-40": {
+  "omnibus": {
+   "old": "",
+   "new": "Paragraph 2 gains a subparagraph requiring the Commission to ask the European standardisation organisations, without undue delay, for standardisation deliverables, including harmonised standards as appropriate, to facilitate joint compliance and presumption of conformity with Chapter III Sections 2 and 3 and with the relevant requirements in the Annex I harmonisation legislation."
+  }
+ },
+ "art-44": {
+  "takeaway": {
+   "old": "Certificates issued under Annex VII must be drawn up in a language easily understood by the authorities of the notified body's Member State (paragraph 1). They are valid for at most five years for Annex I systems and four years for Annex III systems, renewable for equivalent periods after reassessment, and supplements remain valid while the main certificate does (2). Where a system no longer meets the Section 2 requirements, the body suspends, withdraws or restricts the certificate unless the provider corrects within a set deadline, gives written reasons, and an appeal procedure must be available (3). Binds notified bodies; providers should diarise renewal well before expiry.",
+   "new": "Certificates issued under Annex VII must be drawn up in a language easily understood by the authorities of the notified body's Member State (paragraph 1). They are valid for at most five years for Annex I systems and four years for Annex III systems, renewable for equivalent periods after reassessment, and supplements remain valid while the main certificate does (2). Where a system no longer meets the Section 2 requirements, the body suspends, withdraws or restricts the certificate unless the provider corrects within a set deadline, gives reasons for its decision, and an appeal procedure must be available (3). Binds notified bodies; providers should diarise renewal well before expiry."
+  }
+ },
+ "art-46": {
+  "takeaway": {
+   "old": "Lets a market surveillance authority authorise placing a specific high-risk AI system on the market or into service without completing conformity assessment, for exceptional reasons of public security, protection of life and health, environmental protection or protection of key industrial and infrastructural assets, only while the assessment is carried out. Law enforcement may use a system in urgent situations without prior authorisation if it requests one immediately afterwards; if refused, use stops and outputs are discarded. The authority verifies Section 2 compliance and notifies the Commission and Member States; absent objections within 15 days the authorisation stands. Annex I Section A products use only sectoral derogations. Binds authorities and deployers.",
+   "new": "Lets a market surveillance authority authorise, within the territory of its own Member State, placing a specific high-risk AI system on the market or into service without completing conformity assessment, for exceptional reasons of public security, protection of life and health, environmental protection or protection of key industrial and infrastructural assets, only while the assessment is carried out. Law enforcement or civil protection authorities may use a system in urgent situations without prior authorisation if one is requested during or after the use without undue delay; if refused, use stops and outputs are discarded. The authority verifies Section 2 compliance and notifies the Commission and Member States; absent objections within 15 calendar days the authorisation stands. Annex I Section A products use only sectoral derogations. Binds authorities and deployers."
+  }
+ },
+ "art-48": {
+  "takeaway": {
+   "old": "The CE marking signals conformity with Chapter III Section 2 and other applicable Union harmonisation legislation and follows the general principles in Article 30 of Regulation (EC) No 765/2008 (paragraph 1). For systems provided digitally, a digital CE marking is allowed if it is easily accessed through the interface or a machine-readable code (2). The marking must be visible, legible and indelible, or placed on packaging or documentation where that is impossible (3), and must carry the notified body's identification number where one was involved, including in promotional material claiming compliance (4). Binds providers; do not affix the marking before the conformity assessment and declaration are complete.",
+   "new": "The CE marking follows the general principles in Article 30 of Regulation (EC) No 765/2008 (paragraph 1). For systems provided digitally, a digital CE marking is allowed if it is easily accessed through the interface or a machine-readable code (2). The marking must be visible, legible and indelible, or placed on packaging or documentation where that is impossible (3), and must carry the notified body's identification number where one was involved, including in promotional material claiming compliance (4). Where other Union law also provides for CE marking, the marking indicates conformity with that law too (5). Binds providers; do not affix the marking before the conformity assessment and declaration are complete."
+  }
+ },
+ "art-50": {
+  "omnibus": {
+   "old": "Paragraph 7 was amended: the Commission may now approve codes of practice on detection and labelling of AI-generated content by implementing act under the Article 56(6) procedure, and may set common rules by implementing act if it finds a code inadequate.",
+   "new": "Paragraph 7 was replaced: the job of encouraging and facilitating codes of practice on the detection, marking and labelling of artificially generated content passes from the AI Office to the Commission, which, taking utmost account of the Board's opinion, assesses whether adherence to those codes is adequate for the paragraph 2 and 4 obligations under the Article 56(6) procedure. The old power to approve a code by implementing act is gone; the Commission may still set common rules by implementing act under the Article 98(2) examination procedure if it deems a code inadequate."
+  }
+ },
+ "art-54": {
+  "takeaway": {
+   "old": "Third-country providers must appoint, by written mandate, an authorised representative established in the Union before placing a general-purpose AI model on the market (paragraph 1). The representative verifies that the Annex XI technical documentation was drawn up and that Articles 53 and 55 are met, keeps the documentation available to the AI Office and national authorities for 10 years, and cooperates with authorities, which may address it instead of the provider (3 and 4). It may terminate the mandate, informing the AI Office (5). The duty does not apply to free and open-source models with public parameters unless they carry systemic risk (6). Binds GPAI providers and their representatives.",
+   "new": "Third-country providers must appoint, by written mandate, an authorised representative established in the Union before placing a general-purpose AI model on the market (paragraph 1). The representative verifies that the Annex XI technical documentation was drawn up and that Articles 53 and 55 are met, keeps the documentation available to the AI Office and national authorities for 10 years, and cooperates with authorities, which may address it instead of the provider (3 and 4). It must terminate the mandate where it considers the provider to be acting contrary to its obligations, and immediately inform the AI Office of the termination and the reasons (5). The duty does not apply to free and open-source models with public parameters unless they carry systemic risk (6). Binds GPAI providers and their representatives."
+  }
+ },
+ "art-56": {
+  "takeaway": {
+   "old": "Tasks the AI Office with facilitating Union-level codes of practice for the Article 53 and 55 obligations, covering documentation upkeep, training content summaries, and the identification and management of systemic risks (paragraphs 1 and 2). Participants report against key performance indicators scaled to their size (5). The Commission and the Board monitor the codes and publish an adequacy assessment, and the Commission may approve a code by implementing act, giving it general validity (6). Codes were due by 2 May 2025; if none was adequate by 2 August 2025 the Commission may set common rules by implementing act (9). Binds GPAI providers and the Commission.",
+   "new": "Tasks the AI Office with facilitating Union-level codes of practice for the Article 53 and 55 obligations, covering documentation upkeep, training content summaries, and the identification and management of systemic risks (paragraphs 1 and 2). Participants report against key performance indicators scaled to their size (5). The Commission and the Board regularly monitor and evaluate the codes, and the Commission, taking utmost account of the Board's opinion, assesses whether they cover the Article 53 and 55 obligations and publishes that adequacy assessment (6). Codes were due by 2 May 2025; if none was adequate by 2 August 2025 the Commission may set common rules by implementing act (9). Binds GPAI providers, the AI Office, the Board and the Commission."
+  },
+  "omnibus": {
+   "old": "Paragraph 6 was amended to revise how the Commission and the Board monitor and evaluate the codes and to confirm that the Commission approves a code and gives it general validity by implementing act under the Article 98(2) examination procedure.",
+   "new": "Paragraph 6 was replaced: the Commission and the Board now regularly monitor and evaluate how far participants meet the codes' objectives, and the Commission, taking utmost account of the Board's opinion, assesses whether the codes cover the Articles 53 and 55 obligations and publishes that adequacy assessment. The former power to approve a code by implementing act and give it general validity across the Union was removed."
+  }
+ },
+ "art-57": {
+  "takeaway": {
+   "old": "Member States must have at least one national AI regulatory sandbox operational by 2 August 2026 (paragraph 1); the European Data Protection Supervisor may run one for Union bodies (3) and the AI Office may run a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs (3a). Sandboxes provide a controlled environment for developing and testing AI systems under an agreed plan, which may include real-world testing (5). Participants receive an exit report that notified bodies and market surveillance authorities take positively into account (7). No administrative fines apply to participants who follow the plan in good faith (12). Binds authorities and providers.",
+   "new": "Member States must have at least one national AI regulatory sandbox operational by 2 August 2027 (paragraph 1); the European Data Protection Supervisor may run one for Union bodies (3) and the AI Office may run a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs (3a). Sandboxes provide a controlled environment for developing and testing AI systems under an agreed plan, which may include real-world testing (5). Participants receive an exit report that notified bodies and market surveillance authorities take positively into account (7). No administrative fines apply to participants who follow the plan in good faith (12). Binds authorities and providers."
+  },
+  "omnibus": {
+   "old": "Adds paragraph 3a allowing the AI Office to establish a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs, requires sandbox plans to incorporate the Article 60 and 60a real-world testing plans, adds SMCs to the objectives and strengthens coordination with the AI Office.",
+   "new": "Replaces the first subparagraph of paragraph 1, moving the deadline for a national sandbox to be operational from 2 August 2026 to 2 August 2027, adds paragraph 3a allowing the AI Office to establish a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs, requires sandbox plans to incorporate the Article 60 and 60a real-world testing plans, adds SMCs to the objectives and strengthens coordination with the AI Office."
+  }
+ },
+ "art-58": {
+  "omnibus": {
+   "old": "Paragraph 1(a) was amended and a new point 1(d) requires the implementing acts to set detailed governance rules for sandboxes, including data protection authority involvement and coordination at national and Union level.",
+   "new": "The introductory part of paragraph 1 was replaced, and a new point 1(d) requires the implementing acts to set detailed governance rules for sandboxes, including data protection authority involvement and coordination at national and Union level. Point 1(a) on eligibility and selection criteria is unchanged."
+  }
+ },
+ "art-60": {
+  "omnibus": {
+   "old": "Paragraphs 1 and 2 were amended to extend real-world testing outside sandboxes to high-risk AI systems covered by the Union harmonisation legislation in Annex I Section A, without prejudice to sectoral rules on such testing.",
+   "new": "The first subparagraph of paragraph 1 and the whole of paragraph 2 were replaced to extend real-world testing outside sandboxes to high-risk AI systems covered by the Union harmonisation legislation in Annex I Section A, without prejudice to the prohibitions in Article 5. The existing saving for sectoral rules on such testing is unchanged."
+  }
+ },
+ "art-69": {
+  "omnibus": {
+   "old": "Paragraph 3 is marked as amended, adjusting how the Commission organises expert access alongside the Union AI testing support structures under Article 84.",
+   "new": "Paragraph 2 was replaced to simplify the fee structure, so that Member States calling on the panel may be required to pay fees at a rate equivalent to the remuneration fees applicable to the Commission under the Article 68(1) implementing act. Paragraph 3 is unchanged."
+  }
+ },
+ "art-71": {
+  "takeaway": {
+   "old": "The Commission, with the Member States, runs an EU database of high-risk AI systems under Article 6(2) registered under Articles 49 and 60, and of systems the provider judges non-high-risk under Article 6(3) and registers under Article 6(4) (paragraph 1). Providers or authorised representatives enter Annex VIII Sections A and B data; deployers that are public authorities enter Section C (paragraphs 2 and 3). Article 49 registrations are public and machine-readable, while Article 60 real-world testing entries stay restricted to authorities unless the provider consents (paragraph 4). The Commission is controller (paragraph 6). Providers should prepare Annex VIII content before placing systems on the market.",
+   "new": "The Commission, with the Member States, runs an EU database of high-risk AI systems under Article 6(2) registered under Articles 49 and 60, and of systems the provider judges non-high-risk under Article 6(3) and registers under Article 6(4) (paragraph 1). Providers or authorised representatives enter Annex VIII Sections A and B data; deployers that are public authorities enter Section C (paragraphs 2 and 3). Article 49 registrations are public and machine-readable except the secure non-public section under Article 49(4), while Article 60 real-world testing entries stay restricted to market surveillance authorities and the Commission unless the provider consents (paragraph 4). The Commission is controller (paragraph 6). Providers should prepare Annex VIII content before placing systems on the market."
+  }
+ },
+ "art-74": {
+  "takeaway": {
+   "old": "Regulation (EU) 2019/1020 governs market surveillance of AI systems, with providers, deployers, importers, distributors and authorised representatives all counted as economic operators (paragraph 1). Sectoral authorities under Annex I, Section A legislation, financial supervisors for financial institutions (paragraph 6) and data protection authorities for Annex III points 1, 6, 7 and 8 systems (paragraph 8) act as market surveillance authorities; the European Data Protection Supervisor covers Union institutions (paragraph 9). Authorities get full access to documentation and to training, validation and testing data sets, including remotely via APIs (paragraph 12), and to source code on reasoned request once other verification is exhausted (paragraph 13).",
+   "new": "Regulation (EU) 2019/1020 governs market surveillance of AI systems, with providers, deployers, importers, distributors and authorised representatives all counted as economic operators (paragraph 1). Sectoral authorities under Annex I, Section A legislation, financial supervisors for financial institutions (paragraph 6) and data protection authorities for Annex III point 1 systems used for law enforcement, border management and justice and democracy and for points 6, 7 and 8 systems (paragraph 8) act as market surveillance authorities; the European Data Protection Supervisor covers Union institutions (paragraph 9). Authorities get full access to documentation and to training, validation and testing data sets, including remotely via APIs (paragraph 12), and to source code on reasoned request once other verification is exhausted (paragraph 13)."
+  }
+ },
+ "art-75": {
+  "takeaway": {
+   "old": "The AI Office holds exclusive competence to supervise and enforce obligations for AI systems built on a general-purpose AI model where the same provider develops both, and for AI systems embedded in very large online platforms or search engines designated under Regulation (EU) 2022/2065 (paragraph 1). Providers under AI Office competence report serious incidents to the AI Office (paragraph 1a); national authorities assist it and are consulted before restrictive measures (paragraphs 1b to 1d); it runs third-party conformity assessments at the provider's cost (paragraph 1e). Authorities may refer suspected infringements, with a four-month response, and obtain model information within 30 days (paragraphs 2a and 3).",
+   "new": "The AI Office holds exclusive competence to supervise and enforce obligations for AI systems built on a general-purpose AI model where the same provider or undertaking develops both, subject to the carve-outs in points (i) to (iv), and for AI systems embedded in very large online platforms or search engines designated under Regulation (EU) 2022/2065 (paragraph 1). Providers under AI Office competence report serious incidents to the AI Office (paragraph 1a); national authorities assist it and are consulted before restrictive measures (paragraphs 1b to 1d); it runs third-party conformity assessments at the provider's cost (paragraph 1e). Authorities may refer suspected infringements, with a four-month response, and obtain model information within 30 days (paragraphs 2a and 3)."
+  }
+ },
+ "art-76": {
+  "omnibus": {
+   "old": "Paragraph 1 adds that for testing under Article 60a references to market surveillance authorities mean the national competent authorities, or the European Data Protection Supervisor for Union institutions.",
+   "new": "Paragraph 1 adds that where testing in real world conditions is based on Article 60a, references to a market surveillance authority in that Article mean the national competent authority or the appropriate authority under the Union harmonisation legislation listed in Section B of Annex I, and references to Article 60 mean Article 60a."
+  }
+ },
+ "art-77": {
+  "omnibus": {
+   "old": "Paragraph 1a is amended to oblige market surveillance authorities to grant fundamental rights authorities access without undue delay, and new paragraph 1b requires close cooperation, information exchange and coordination between the two sets of authorities.",
+   "new": "Paragraph 1 is replaced, dropping the limit to Annex III high-risk systems and the duty to inform the market surveillance authority and adding machine-readable format by electronic means; new paragraph 1a obliges market surveillance authorities to grant fundamental rights authorities access without undue delay, and new paragraph 1b requires close cooperation, mutual assistance and information exchange between the two sets of authorities."
+  }
+ },
+ "art-78": {
+  "applies_from": {
+   "old": "2 August 2026",
+   "new": "2 August 2025"
+  }
+ },
+ "art-84": {
+  "takeaway": {
+   "old": "The Commission designates one or more Union AI testing support structures to perform the tasks listed in Article 21(6) of Regulation (EU) 2019/1020 in the field of AI (paragraph 1). Beyond that, the structures give independent technical or scientific advice at the request of the Board, the Commission or market surveillance authorities (paragraph 2). They complement the scientific panel's experts under Article 69 and give national authorities a shared testing capacity for complex systems, so providers may meet them during investigations.",
+   "new": "The Commission designates one or more Union AI testing support structures to perform the tasks listed in Article 21(6) of Regulation (EU) 2019/1020 in the field of AI (paragraph 1). Beyond that, the structures give independent technical or scientific advice at the request of the Board, the Commission or market surveillance authorities (paragraph 2). They complement the scientific panel of independent experts set up under Article 68, which Member States may call on under Article 69, and give national authorities a shared testing capacity for complex systems, so providers may meet them during investigations."
+  }
+ },
+ "art-85": {
+  "takeaway": {
+   "old": "Any natural or legal person with grounds to consider that the Regulation has been infringed may lodge a complaint with the relevant market surveillance authority, without prejudice to other administrative or judicial remedies (paragraph 1). Authorities handle complaints under the procedures of Regulation (EU) 2019/1020 and take them into account in their surveillance activities (paragraph 2). Civil society organisations, competitors and affected individuals gain a formal route into enforcement, so operators should expect complaints to trigger evaluations under Article 79.",
+   "new": "Without prejudice to other administrative or judicial remedies, any natural or legal person with grounds to consider that the Regulation has been infringed may submit a complaint to the relevant market surveillance authority. In accordance with Regulation (EU) 2019/1020, complaints are taken into account when conducting market surveillance activities and are handled in line with the dedicated procedures those authorities establish. Civil society organisations, competitors and affected individuals gain a formal route into enforcement, so operators should expect complaints to trigger evaluations under Article 79."
+  }
+ },
+ "art-86": {
+  "takeaway": {
+   "old": "Any affected person subject to a decision taken by a deployer on the basis of the output of an Annex III high-risk AI system, other than point 2 critical infrastructure, that produces legal effects or similarly significantly affects their health, safety or fundamental rights may obtain from the deployer clear and meaningful explanations of the AI system's role in the decision procedure and the main elements of the decision (paragraph 1). The right yields to exceptions provided under Union or national law (paragraph 2) and applies only where Union law grants no equivalent right (paragraph 3). Deployers in credit, employment, education and public services should build explanation workflows.",
+   "new": "Any affected person subject to a decision taken by a deployer on the basis of the output of an Annex III high-risk AI system, other than point 2 critical infrastructure, that produces legal effects or similarly significantly affects them in a way they consider to have an adverse impact on their health, safety or fundamental rights may obtain from the deployer clear and meaningful explanations of the AI system's role in the decision-making procedure and the main elements of the decision (paragraph 1). The right yields to exceptions or restrictions following from Union or national law (paragraph 2) and applies only to the extent the right is not otherwise provided for under Union law (paragraph 3). Deployers in credit, employment, education and public services should build explanation workflows."
+  }
+ },
+ "art-96": {
+  "takeaway": {
+   "old": "The Commission develops guidelines on practical implementation covering the Articles 8 to 15 requirements and Articles 25 and 26 obligations, the Article 5 prohibitions, substantial modification, the Article 50 transparency obligations, the interplay with Annex I and other Union law, the Article 3(1) definition of an AI system, and, by 1 August 2027, the complementarity and proportionality mechanisms of Articles 8(2), 9(10) and 17(3) (paragraph 1). It consults the Board and weighs the needs of SMEs, start-ups, SMCs, local authorities and affected sectors, and updates guidelines on request or on its own initiative (paragraph 2). Track these guidelines; they shape how authorities apply the Act.",
+   "new": "The Commission develops guidelines on practical implementation covering the Articles 8 to 15 requirements and Articles 25 and 26 obligations, the Article 5 prohibitions, substantial modification, the Article 50 transparency obligations, the interplay with Annex I and other Union law, the Article 3(1) definition of an AI system, and, by 1 August 2027, the complementarity and proportionality mechanisms of Articles 8(2), 9(10) and 17(3) (paragraph 1, points (a) to (g)). The second subparagraph of paragraph 1 requires it to involve the Board and to weigh the needs of SMEs, start-ups, SMCs, local public authorities and the sectors most likely to be affected, and under paragraph 2 it updates guidelines at the request of the Member States or the AI Office, or on its own initiative. Track these guidelines; they shape how authorities apply the Act."
+  },
+  "omnibus": {
+   "old": "New point (g) in paragraph 1 requires guidelines on the complementarity and proportionality mechanisms of Articles 8(2), 9(10) and 17(3) by 1 August 2027, and the final sentence is amended to add Board consultation and SMCs.",
+   "new": "Point (a) of paragraph 1 is replaced to extend the guidelines to Article 26 alongside Articles 8 to 15 and Article 25, a new point (g) requires guidelines on the complementarity and proportionality mechanisms of Articles 8(2), 9(10) and 17(3) by 1 August 2027, and the second subparagraph of paragraph 1 is replaced to add involvement of the Board and SMCs."
+  }
+ },
+ "art-99": {
+  "takeaway": {
+   "old": "Member States lay down penalties, including fines, warnings and non-monetary measures, that are effective, proportionate and dissuasive and reflect the interests of SMEs, start-ups and SMCs (paragraph 1). Breaches of Article 5 draw fines up to EUR 35 000 000 or 7 % of worldwide annual turnover, whichever is higher (paragraph 3); breaches of provider, representative, importer, distributor, deployer, notified body and Article 50 obligations, and of Article 25(2) and (4), up to EUR 15 000 000 or 3 % (paragraph 4); incorrect or misleading information up to EUR 7 500 000 or 1 % (paragraph 5). For SMEs and SMCs the lower amount applies (paragraphs 6 and 6a).",
+   "new": "Member States lay down penalties, including fines, warnings and non-monetary measures, that are effective, proportionate and dissuasive and reflect the interests of SMEs, start-ups and SMCs (paragraph 1). Breaches of Article 5 draw fines up to EUR 35 000 000 or 7 % of worldwide annual turnover, whichever is higher (paragraph 3); breaches of provider, representative, importer, distributor, deployer, notified body and Article 50 obligations, and of Article 25(2) and (4), up to EUR 15 000 000 or 3 % (paragraph 4); incorrect or misleading information up to EUR 7 500 000 or 1 % (paragraph 5). For SMEs and start-ups the lower amount applies across paragraphs 3, 4 and 5 (paragraph 6), and for SMCs across paragraphs 4 and 5 (paragraph 6a)."
+  },
+  "omnibus": {
+   "old": "New point (da) in paragraph 4 brings obligations under Article 25(2) and (4) into the EUR 15 000 000 or 3 % tier, and new paragraph 6a caps fines on SMCs at the lower of the two amounts.",
+   "new": "Paragraph 1 is replaced, adding administrative fines to the enforcement measures Member States may lay down and adding SMCs to the operators whose interests and economic viability count. New point (da) in paragraph 4 brings obligations under Article 25(2) and (4) into the EUR 15 000 000 or 3 % tier, and new paragraph 6a caps fines on SMCs under paragraphs 4 and 5 at the lower of the two amounts."
+  }
+ },
+ "art-101": {
+  "takeaway": {
+   "old": "The Commission may fine providers of general-purpose AI models up to 3 % of worldwide annual turnover or EUR 15 000 000, whichever is higher, for intentional or negligent breaches of Chapter V, failure to answer Article 91 requests or supplying incorrect information, non-compliance with Article 93 measures or refusing access for Article 92 evaluations (paragraph 1). Preliminary findings and a right to reply precede any decision (paragraph 2), fines must be effective, proportionate and dissuasive (paragraph 3), and the Court of Justice may cancel, reduce or increase them (paragraph 5). Article 113(b) excludes Article 101 from the 2 August 2025 date, so fining applies from 2 August 2026.",
+   "new": "The Commission may fine providers of general-purpose AI models up to 3 % of worldwide annual turnover or EUR 15 000 000, whichever is higher, for intentionally or negligently infringing the relevant provisions of the Regulation, failing to answer Article 91 requests or supplying incorrect information, non-compliance with Article 93 measures or refusing access for Article 92 evaluations (paragraph 1). Preliminary findings and a right to reply precede any decision (paragraph 2), fines must be effective, proportionate and dissuasive (paragraph 3), and the Court of Justice may cancel, reduce or increase them (paragraph 5). Article 113(b) excludes Article 101 from the 2 August 2025 date, so fining applies from 2 August 2026."
+  },
+  "applies_from": {
+   "old": "2 August 2025",
+   "new": "2 August 2026"
+  }
+ },
+ "art-111": {
+  "applies_from": {
+   "old": "in force 1 August 2024",
+   "new": "2 August 2026"
+  }
+ },
+ "art-112": {
+  "applies_from": {
+   "old": "in force 1 August 2024",
+   "new": "2 August 2026"
+  }
+ },
+ "annex-1": {
+  "takeaway": {
+   "old": "Annex I lists the product legislation that makes an AI safety component, or an AI system that is itself a product, high-risk under Article 6(1). Section A holds New Legislative Framework acts (toys, recreational craft, lifts, equipment for explosive atmospheres, radio equipment, pressure equipment, cableways, personal protective equipment, gas appliances, medical devices and in vitro diagnostics), where the AI Act requirements are checked inside the sectoral conformity assessment. Section B holds aviation, vehicles, marine equipment and rail, where only Article 6(1) and Articles 102 to 109 bite. Providers of regulated products map every AI component against the list; the Annex I obligations apply from 2 August 2028.",
+   "new": "Annex I lists the product legislation that makes an AI safety component, or an AI system that is itself a product, high-risk under Article 6(1). Section A holds New Legislative Framework acts (toys, recreational craft, lifts, equipment for explosive atmospheres, radio equipment, pressure equipment, cableways, personal protective equipment, gas appliances, medical devices and in vitro diagnostics), where the AI Act requirements are checked inside the sectoral conformity assessment. Section B holds aviation, vehicles, marine equipment, rail and machinery, where only Article 6(1), Article 60a and Articles 102 to 112 bite. Providers of regulated products map every AI component against the list; the Annex I obligations apply from 2 August 2028."
+  },
+  "recitals": {
+   "old": [
+    33,
+    47,
+    49,
+    50,
+    51
+   ],
+   "new": [
+    47,
+    49,
+    50,
+    51
+   ]
+  }
+ },
+ "annex-2": {
+  "takeaway": {
+   "old": "Annex II lists the 16 categories of serious criminal offence (terrorism, trafficking in human beings, child sexual exploitation, drug and arms trafficking, murder and grievous bodily injury, organ trade, nuclear material, kidnapping, International Criminal Court crimes, hijacking, rape, environmental crime, organised or armed robbery, sabotage and participation in a criminal organisation) that unlock the third exception to the ban on real-time remote biometric identification in Article 5(1)(h)(iii). The exception covers only locating or identifying a suspect of one of these offences where the offence carries a custodial sentence of at least four years in the Member State concerned. Law enforcement deployers check the offence against the list before any use.",
+   "new": "Annex II lists the 16 categories of serious criminal offence (terrorism, trafficking in human beings, child sexual exploitation, drug and arms trafficking, murder and grievous bodily injury, organ trade, nuclear material, kidnapping, International Criminal Court crimes, hijacking, rape, environmental crime, organised or armed robbery, sabotage and participation in a criminal organisation) that unlock the third exception to the ban on real-time remote biometric identification in Article 5(1)(h)(iii). The exception covers only locating or identifying a suspect of one of these offences where the offence is punishable in the Member State concerned by a custodial sentence or detention order for a maximum period of at least four years. Law enforcement deployers check the offence against the list before any use."
+  }
+ },
+ "annex-3": {
+  "takeaway": {
+   "old": "Annex III lists the stand-alone use cases that are high-risk under Article 6(2), in eight areas: biometrics (remote identification, categorisation by sensitive attributes, emotion recognition), safety components of critical infrastructure, education and vocational training, employment and worker management, access to essential services (benefits, credit scoring, life and health insurance pricing, emergency triage), law enforcement, migration and border control, and administration of justice and elections. Providers classify against the list, then test the Article 6(3) filter for systems that do not materially influence the outcome; deployers of listed systems pick up Articles 26 and 27. The Commission amends the list under Article 7. Annex III obligations apply from 2 December 2027.",
+   "new": "Annex III lists the stand-alone use cases that are high-risk under Article 6(2), in eight areas: biometrics (remote identification, categorisation by sensitive attributes, emotion recognition), safety components of critical infrastructure, education and vocational training, employment and worker management, access to essential services (benefits, credit scoring, life and health insurance pricing, emergency triage), law enforcement, migration and border control, and administration of justice and elections. Providers classify against the list, then test the Article 6(3) filter for systems that do not materially influence the outcome; deployers of listed systems pick up Article 26, and public bodies, private providers of public services and deployers of the credit and insurance systems in point 5 also pick up Article 27. The Commission amends the list under Article 7. Annex III obligations apply from 2 December 2027."
+  }
+ },
+ "annex-4": {
+  "takeaway": {
+   "old": "Annex IV sets the minimum content of the technical documentation a provider of a high-risk AI system draws up under Article 11(1) before placing it on the market. Its nine points cover a general description (intended purpose, versions, hardware, interfaces, instructions for use), a detailed description of development (methods, design choices, architecture, data provenance, human oversight assessment, pre-determined changes, validation and testing metrics, cybersecurity), monitoring and control information, performance metrics, the Article 9 risk management system, lifecycle changes, harmonised standards applied, the Article 47 declaration of conformity and the Article 72 post-market monitoring plan. Providers structure their evidence file around these headings; SMEs can use the Commission's simplified form.",
+   "new": "Annex IV sets the minimum content of the technical documentation a provider of a high-risk AI system draws up under Article 11(1) before placing it on the market. Its nine points cover a general description (intended purpose, versions, hardware, interfaces, instructions for use), a detailed description of development (methods, design choices, architecture, data provenance, human oversight assessment, pre-determined changes, validation and testing metrics, cybersecurity), monitoring and control information, performance metrics, the Article 9 risk management system, lifecycle changes, harmonised standards applied, the Article 47 declaration of conformity and the Article 72 post-market monitoring plan. Providers structure their evidence file around these headings; SMEs, start-ups and small mid-cap enterprises can use the Commission's simplified form, which notified bodies must accept."
+  },
+  "applies_from": {
+   "old": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+   "new": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)"
+  }
+ },
+ "annex-7": {
+  "takeaway": {
+   "old": "Annex VII is the third-party route under Article 43(1), mandatory for Annex III biometric systems where harmonised standards are not fully applied. The provider applies to a single notified body with its Article 17 quality management system documentation and the technical documentation (point 2). The notified body audits the quality management system, examines the technical documentation, may demand tests and gains access to training, validation and testing data sets and, as a last resort on reasoned request, to trained models (points 4.3 to 4.5). It issues a Union technical documentation assessment certificate, assesses every change affecting compliance and runs periodic surveillance audits (points 4.6, 4.7 and 5).",
+   "new": "Annex VII is the third-party route under Article 43(1), mandatory for Annex III biometric systems where harmonised standards are not fully applied. The provider applies to a single notified body with its Article 17 quality management system documentation and the technical documentation (points 3.1 and 4.2). The notified body audits the quality management system, examines the technical documentation, may demand tests and gains access to training, validation and testing data sets and, as a last resort on reasoned request, to trained models (points 4.3 to 4.5). It issues a Union technical documentation assessment certificate, assesses every change affecting compliance and runs periodic surveillance audits (points 4.6, 4.7 and 5)."
+  },
+  "applies_from": {
+   "old": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+   "new": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)"
+  }
+ },
+ "annex-10": {
+  "applies_from": {
+   "old": "in force 1 August 2024",
+   "new": "2 August 2026"
+  }
+ },
+ "annex-11": {
+  "takeaway": {
+   "old": "Annex XI sets the minimum technical documentation every provider of a general-purpose AI model keeps under Article 53(1)(a) and supplies to the AI Office on request, scaled to the size and risk profile of the model. Section 1 requires a general description (intended tasks and integration types, acceptable use policies, release date and distribution channels, architecture and parameter count, modalities, licence) plus development details: integration means, design and training methodology, the type, provenance, curation, scope and bias-detection approach for training data, compute and training time, and known or estimated energy consumption. Section 2 adds, for systemic-risk models, evaluation results, adversarial testing and system architecture.",
+   "new": "Annex XI sets the minimum technical documentation a provider of a general-purpose AI model keeps under Article 53(1)(a), apart from providers of qualifying free and open-source models without systemic risk, and supplies to the AI Office on request, scaled to the size and risk profile of the model. Section 1 requires a general description (intended tasks and integration types, acceptable use policies, release date and distribution channels, architecture and parameter count, modalities, licence) plus development details: integration means, design and training methodology, the type, provenance, curation, scope and bias-detection approach for training data, compute and training time, and known or estimated energy consumption. Section 2 adds, for systemic-risk models, evaluation results, adversarial testing and system architecture."
+  }
+ },
+ "annex-13": {
+  "takeaway": {
+   "old": "Annex XIII gives the Commission seven criteria for deciding under Article 51(1)(a) whether a general-purpose AI model has high-impact capabilities equivalent to those presumed above the 10^25 FLOPs threshold in Article 51(2): (a) number of parameters, (b) data set quality or size in tokens, (c) training compute in floating point operations or proxies, (d) input and output modalities, (e) benchmarks of capability, adaptability, autonomy, scalability and tool access, (f) market impact, presumed high at 10 000 or more registered business users, and (g) registered end users. GPAI providers track these indicators to anticipate or contest a designation under Article 52.",
+   "new": "Annex XIII gives the Commission seven criteria for deciding under Article 51(1)(b) whether a general-purpose AI model has capabilities or an impact equivalent to those presumed above the 10^25 FLOPs threshold in Article 51(2): (a) number of parameters, (b) data set quality or size in tokens, (c) training compute in floating point operations or proxies, (d) input and output modalities, (e) benchmarks of capability, adaptability, autonomy, scalability and tool access, (f) market impact, presumed high at 10 000 or more registered business users established in the Union, and (g) registered end users. GPAI providers track these indicators to anticipate or contest a designation under Article 52."
+  }
+ },
+ "art-60a": {
+  "takeaway": {
+   "old": "Article 60a lets Member States allow providers or prospective providers of AI-enabled products under Annex I Section B legislation to test high-risk AI systems in real-world conditions outside sandboxes, to verify conformity with Articles 8 to 15 (paragraph 1). A Member State that opts in adopts a testing framework, alone or jointly, notifies the Commission before applying it and makes its authorities cooperate to remove practical obstacles (paragraphs 2 to 4). Each framework requires a mandatory testing plan agreed with the national competent or market surveillance authority, compliance with Article 60(2), (3), (4)(d) to (j) and (5) to (9), governance and accountability arrangements and a high level of protection of health, safety and fundamental rights (paragraph 5). Testing is not placing on the market, and sectoral legislation prevails (paragraph 6).",
+   "new": "Article 60a lets Member States allow providers or prospective providers of AI-enabled products under Annex I Section B legislation to test high-risk AI systems in real-world conditions outside sandboxes, to verify conformity with Articles 8 to 15 (paragraph 1). A Member State that opts in adopts a testing framework, alone or jointly, notifies the Commission before applying it and makes its authorities cooperate to remove practical obstacles (paragraphs 2 to 4). Each framework requires a mandatory testing plan agreed with the national competent authority or the relevant authority under that sectoral legislation, compliance with Article 60(2), (3), (4)(d) to (j) and (5) to (9), governance and accountability arrangements and a high level of protection of health, safety and fundamental rights (paragraph 5). Testing must comply with the applicable Annex I Section B legislation, but those sectoral requirements do not affect the application of this Article so far as that is necessary to enable the testing (paragraph 6)."
+  }
+ },
+ "annex-14": {
+  "takeaway": {
+   "old": "Annex XIV supplies the codes that fix the scope of a notified body's designation under Article 30: a body assesses only the types of AI system in its designation (section 1). Section 2 lists product and use categories: AIP 0102 to AIP 0112 for Annex I Section A products in points 2 to 12, and AIB 0201 to AIB 0203 for remote biometric identification, biometric categorisation and emotion recognition. Section 3 lists technology codes: AIH 0101 for symbolic, expert and knowledge-based systems, AIH 0201 to AIH 0205 for machine learning on structured, signal, text and image data, AIH 0301 for generative AI systems including those built on general-purpose AI models, and AIH 0401 for emerging technologies including agentic AI. Article 29 applicants must use these codes (section 4).",
+   "new": "Annex XIV supplies the codes that fix the scope of a notified body's designation under Article 30: a body assesses only the types of AI system in its designation (section 1). Section 2 lists product and use categories: AIP 0102 to AIP 0112 for Annex I Section A products in points 2 to 12, and AIB 0201 to AIB 0203 for remote biometric identification, biometric categorisation and emotion recognition. Section 3 lists technology codes: AIH 0101 for symbolic, expert and knowledge-based systems and search and optimisation, AIH 0201 to AIH 0204 for machine learning on structured, signal and audio, text, and image and video data, AIH 0205 for systems that learn from their environment, AIH 0301 for generative AI systems including those built on general-purpose AI models, and AIH 0401 for emerging technologies including agentic AI. Article 29 applicants must use these codes (section 4)."
+  },
+  "applies_from": {
+   "old": "2 August 2026",
+   "new": "27 July 2026"
+  }
+ },
+ "art-16": {
+  "recitals": {
+   "old": [
+    79,
+    80,
+    81,
+    145
+   ],
+   "new": [
+    79,
+    80,
+    81
+   ]
+  }
+ },
+ "art-31": {
+  "recitals": {
+   "old": [
+    145
+   ],
+   "new": [
+    126
+   ]
+  }
+ },
+ "art-43": {
+  "recitals": {
+   "old": [
+    78,
+    123,
+    124,
+    125,
+    126,
+    128,
+    147
+   ],
+   "new": [
+    78,
+    123,
+    124,
+    125,
+    126,
+    128
+   ]
+  }
+ },
+ "art-95": {
+  "recitals": {
+   "old": [
+    165,
+    166
+   ],
+   "new": [
+    165
+   ]
+  }
+ },
+ "annex-5": {
+  "applies_from": {
+   "old": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+   "new": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)"
+  }
+ },
+ "annex-6": {
+  "applies_from": {
+   "old": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+   "new": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)"
+  }
+ },
+ "annex-8": {
+  "applies_from": {
+   "old": "2 December 2027 (Annex III systems); 2 August 2028 (Annex I systems)",
+   "new": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)"
+  }
+ }
+}

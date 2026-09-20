@@ -1,0 +1,26 @@
+[
+ {
+  "id": "art-5",
+  "number": "Article 5",
+  "bad": [
+   {
+    "recital": 3,
+    "recital_topic": "fragmentation of the internal market caused by diverging national AI rules",
+    "severity": "low",
+    "better": 26
+   }
+  ]
+ },
+ {
+  "id": "art-43",
+  "number": "Article 43",
+  "bad": [
+   {
+    "recital": 147,
+    "recital_topic": "the Commission facilitating access to testing and experimentation facilities, an innovation-support measure",
+    "severity": "low",
+    "better": null
+   }
+  ]
+ }
+]

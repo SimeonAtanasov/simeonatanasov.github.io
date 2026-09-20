@@ -46,6 +46,16 @@ against the official texts (see `../source-verification-2026-09-20.md`): three w
 by `../source-verification-2026-09-20/apply_source_review.py`, already applied to
 items_corpus.json.
 
+On 20 September 2026 all 133 Part 1 entries were checked against the official consolidated
+text of the Act on EUR-Lex, CELEX 02024R1689-20260727 (see `../law-verification-2026-09-20.md`):
+66 field changes across 50 entries were applied by
+`../law-verification-2026-09-20/apply_law_review.py`, already applied to items_a.json to
+items_e.json. Rerun it after any rebuild that regenerates those files. The material fixes
+were the application dates of Articles 78 (2 August 2025, not 2026) and 101 (2 August 2026,
+not 2025), four Omnibus notes that had the amendment backwards (Articles 25, 27, 50 and 56),
+five amended provisions that carried no note (Articles 1, 2, 40, 77, 99), and two stale
+counts (Article 3 now has 70 definitions, Article 5 prohibits ten practices).
+
 To add or correct an entry: edit the items file, then run build_aia_page.py and build_aia_pdf.py.
 The page builder still carries the old header nav in its HEAD template: after a rebuild, replace
 the header block with the current one (Home | Privacy | AI | Cookie Compliance) copied from another

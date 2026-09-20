@@ -1,0 +1,1737 @@
+[
+ {
+  "id": "art-1",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "",
+    "source_says": "Article 1(2), point (g) sits inside a ▼M1 block: the Omnibus replaced it so that the measures to support innovation now focus in particular on small mid-cap enterprises (SMCs) and SMEs, including start-ups. The entry's takeaway already reflects the amended wording but the omnibus note is empty.",
+    "severity": "medium",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "Point (g) of paragraph 2 was replaced so that the innovation support measures are now framed around small mid-cap enterprises (SMCs) and SMEs, including start-ups.",
+  "note": "Takeaway and date correct; only the missing Omnibus note. Recitals could not be checked, see final reply."
+ },
+ {
+  "id": "art-2",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "paragraph 13 lets the Commission limit Articles 9 to 15 by 2 August 2027",
+    "source_says": "Article 2(13) (▼M1): the application of specific requirements or obligations laid down in 'Articles 9 to 15 and 17 to 25' may be limited; the Commission shall adopt the delegated acts by 2 August 2027. The entry omits Articles 17 to 25.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "field": "omnibus",
+    "claim": "Paragraph 2 was rewritten ... and paragraph 7 now cross-refers to the new Article 4a.",
+    "source_says": "Paragraph 13 is itself a ▼M1 insertion and is not mentioned in the note, although the takeaway relies on it.",
+    "severity": "low",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": "Article 2 fixes who is caught: providers placing AI systems or general-purpose AI models on the Union market wherever established, deployers in the Union, third-country operators whose output is used in the Union, importers, distributors, product manufacturers, authorised representatives and affected persons (paragraph 1). Paragraphs 3 to 12 exclude military, defence and national security uses, scientific research, pre-market testing, purely personal use and free and open-source systems unless high-risk or caught by Articles 5 or 50. Paragraph 2 confines Annex I Section B products to Article 6(1), Article 60a and Articles 102 to 112; paragraph 13 lets the Commission limit Articles 9 to 15 and 17 to 25 by 2 August 2027.",
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 2 was rewritten so that only Article 6(1), Article 60a and Articles 102 to 112 apply to Annex I Section B products, with Articles 57 to 59 applying only where integrated into that sectoral legislation, paragraph 7 now cross-refers to the new Article 4a, and a new paragraph 13 lets the Commission limit Articles 9 to 15 and 17 to 25 for Article 6(1) systems by delegated act.",
+  "note": "Scope list and exclusions all check out; the paragraph 13 range was short by Articles 17 to 25."
+ },
+ {
+  "id": "art-3",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "Article 3 supplies the 68 definitions",
+    "source_says": "The consolidated Article 3 runs to point (68) but the Omnibus inserted points (14a) 'SME' and (14b) 'small mid-cap enterprise (SMC)', so there are now 70 definitions.",
+    "severity": "medium",
+    "kind": "outdated"
+   },
+   {
+    "field": "takeaway",
+    "claim": "point 49 defines a serious incident as death, serious harm to health, critical infrastructure disruption, a fundamental rights infringement or serious harm to property",
+    "source_says": "Point (49)(b) is 'a serious and irreversible disruption of the management or operation of critical infrastructure' and point (49)(d) is 'serious harm to property or the environment'. The entry drops the environment limb and the 'serious and irreversible' qualifier.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "field": "omnibus",
+    "claim": "Point 14a now refers to Recommendation 2003/361/EC for SMEs",
+    "source_says": "Point (14a) is itself inside the ▼M1 insertion, so it is new rather than a point that 'now refers' to something different.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Article 3 supplies the 70 definitions on which every later obligation depends, numbered 1 to 68 with the inserted points 14a and 14b. An AI system is a machine-based system with varying levels of autonomy that infers from input how to generate outputs such as predictions, content, recommendations or decisions (point 1); a provider develops a system or model and places it on the market under its own name (point 3); a deployer uses a system under its authority outside personal activity (point 4). Points 63 and 65 define general-purpose AI models and systemic risk, and point 49 defines a serious incident as death, serious harm to health, a serious and irreversible disruption of critical infrastructure, a fundamental rights infringement or serious harm to property or the environment.",
+  "new_applies_from": null,
+  "new_omnibus": "New point 14a defines SMEs by reference to Recommendation 2003/361/EC and new point 14b defines a small mid-cap enterprise (SMC) by reference to Recommendation (EU) 2025/1099.",
+  "note": "Definitions 1, 3, 4, 63 and 65 verified verbatim; only the count and the point 49 limbs needed fixing."
+ },
+ {
+  "id": "art-4",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Article 4 is wholly ▼M1 replaced; paragraphs 1 to 3 match the entry, including the Article 62(3) platform and the Board recommendations."
+ },
+ {
+  "id": "art-5",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "Article 5 prohibits eight AI practices",
+    "source_says": "Article 5(1), first subparagraph now runs (a), (b), (ba), (bb), (c), (d), (e), (f), (g), (h): ten prohibited practices in the consolidated text.",
+    "severity": "medium",
+    "kind": "outdated"
+   }
+  ],
+  "new_takeaway": "Article 5 prohibits ten AI practices (paragraph 1): manipulative techniques, exploitation of vulnerabilities, social scoring, criminal risk prediction based solely on profiling, untargeted scraping of facial images, emotion recognition in workplaces and education except for medical or safety reasons, biometric categorisation inferring protected characteristics, real-time remote biometric identification in public spaces for law enforcement, and the two new points (ba) and (bb). Point (h) allows real-time identification only for victim searches, imminent threats or Annex II offences carrying at least four years' custody, with prior authorisation and a fundamental rights impact assessment (paragraphs 2 to 4). Points (ba) and (bb) ban generating or manipulating non-consensual intimate imagery and child sexual abuse material from 2 December 2026.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Point (h) conditions, the four-year Annex II threshold, Article 27 assessment and Article 5(3) prior authorisation all verified; only the count is stale."
+ },
+ {
+  "id": "art-6",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "applies_from",
+    "claim": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
+    "source_says": "Article 113(c) applies those two dates to Chapter III Sections 1 to 3 'with the exception of Article 6(5)', which therefore falls under the default 2 August 2026. The guidelines duty in Article 6(5) is itself due no later than 2 February 2026.",
+    "severity": "medium",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I); Article 6(5) from 2 August 2026",
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 4 and the new 1a to 1c match the entry word for word; only the Article 6(5) carve-out was missing."
+ },
+ {
+  "id": "art-7",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "No ▼M1 in Article 7; paragraphs 1 to 3 and the eleven paragraph 2 criteria match, empty omnibus note is right."
+ },
+ {
+  "id": "art-8",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 and 2 match, including the Annex I Section A integration choice; no ▼M1 in the article."
+ },
+ {
+  "id": "art-9",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 9 verified, including Article 72 data, Article 60 real-world testing and the under-18 duty in paragraph 9."
+ },
+ {
+  "id": "art-10",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 5 shows the ▼M1 deletion marker and Article 4a carries the bias-detection rule, so the omnibus note is accurate."
+ },
+ {
+  "id": "art-11",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "The ▼M1 block in paragraph 1 matches the note, including the mandatory use of the form and notified body acceptance."
+ },
+ {
+  "id": "art-12",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 3 match, including the four Annex III point 1(a) logging minima and the Article 14(5) cross-reference."
+ },
+ {
+  "id": "art-13",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 3 points (a) to (f) all appear as described; no ▼M1 in the article."
+ },
+ {
+  "id": "art-14",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 5 match, including automation bias, the stop function and the two-person verification for Annex III point 1(a)."
+ },
+ {
+  "id": "art-15",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 5, the Commission benchmarking role and the five attack types all match; no M1 change, so the empty omnibus note is right."
+ },
+ {
+  "id": "art-16",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "recitals",
+    "claim": "145",
+    "source_says": "Recital 145 is about the AI-on-demand platform, the European Digital Innovation Hubs and the testing and experimentation facilities contributing to implementation, not about the provider obligations in Article 16",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Points (a) to (l) and every article cross-reference match; only the recital 145 citation is off topic."
+ },
+ {
+  "id": "art-17",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 1 has thirteen points (a) to (m); the M1 paragraph 2 does add SMC, defined in Article 3(14b) as small mid-cap enterprise."
+ },
+ {
+  "id": "art-18",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Ten-year period, the five documents in points (a) to (e) and paragraphs 2 and 3 all match; no M1 change."
+ },
+ {
+  "id": "art-19",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Six-month minimum, the Article 12(1) reference, the control qualifier and the Article 26(6) deployer cross-reference all check out."
+ },
+ {
+  "id": "art-20",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Both paragraphs match, including the Article 79(1) risk trigger and the notified body that issued the Article 44 certificate."
+ },
+ {
+  "id": "art-21",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 3 match, including the language rule, the Article 12(1) logs and the Article 78 confidentiality reference."
+ },
+ {
+  "id": "art-22",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 3 points (a) to (e), the ten-year retention and the paragraph 4 termination duty all match; no M1 change."
+ },
+ {
+  "id": "art-23",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 1 points (a) to (d) and paragraphs 2 to 7 match, including the ten-year retention in paragraph 5."
+ },
+ {
+  "id": "art-24",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 1 verification list, the Article 16 points (b) and (c) and Article 23(3) cross-references and paragraphs 2 to 6 all match."
+ },
+ {
+  "id": "art-25",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "paragraph 4 lets the AI Office develop and recommend voluntary model contract terms for component suppliers",
+    "source_says": "The AI Office voluntary model terms subparagraph of Article 25(4) is base text, marked as such in the consolidated version and already present in Regulation (EU) 2024/1689. Article 1(12)(b) of Regulation (EU) 2026/1744 replaces only the first subparagraph of paragraph 4, adding 'AI model' to the list of things a third party may supply",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "field": "binds",
+    "claim": "provider, deployer, distributor",
+    "source_says": "Article 25(1) names 'any distributor, importer, deployer or other third-party' as a possible new provider, so the importer is one of the addressees",
+    "severity": "low",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 2 now spells out the initial provider's cooperation duties (technical documentation, known limitations and failure modes, targeted technical access). In paragraph 4 only the first subparagraph was replaced, so that third parties supplying an AI model are also covered; the AI Office voluntary model contract terms were already in the base text.",
+  "note": "The omnibus note credits the amendment with base text on AI Office model terms and misses the real paragraph 4 change."
+ },
+ {
+  "id": "art-26",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "All quoted paragraph numbers (1, 2, 4, 5, 6, 7, 8, 10, 11) match; Article 26 carries no M1 change, so the empty note is right."
+ },
+ {
+  "id": "art-27",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "Paragraph 5 was amended so that the AI Office develops the questionnaire template including through an automated tool to simplify compliance.",
+    "source_says": "That sentence is the original Article 27(5) of Regulation (EU) 2024/1689. Article 1(13) of Regulation (EU) 2026/1744 replaces paragraph 4 (the assessment no longer 'shall complement' a data protection impact assessment; the deployer 'may include cross-references' to it) and adds a second sentence to paragraph 5 about those cross-references",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "field": "takeaway",
+    "claim": "requires deployers that are bodies governed by public law, private operators providing public services, and deployers of the credit scoring and life and health insurance systems in Annex III point 5(b) and (c) to complete a fundamental rights impact assessment before first use (paragraph 1)",
+    "source_says": "Paragraph 1 applies only 'prior to deploying a high-risk AI system referred to in Article 6(2), with the exception of high-risk AI systems intended to be used in the area listed in point 2 of Annex III'. The entry drops both the Annex III limitation and the critical infrastructure exception",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "field": "recitals",
+    "claim": "4, 5, 26",
+    "source_says": "Recital 4 is the general description of AI's benefits and recital 26 introduces the risk-based approach; neither is about the fundamental rights impact assessment, which is recital 96",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Article 27 requires deployers that are bodies governed by public law, private operators providing public services, and deployers of the credit scoring and life and health insurance systems in Annex III point 5(b) and (c) to complete a fundamental rights impact assessment before first use of a high-risk AI system under Article 6(2), other than one used in the area listed in point 2 of Annex III (paragraph 1). The assessment covers the deployer's processes and intended use, the period and frequency of use, the persons affected, the risks of harm, the human oversight measures and the mitigation and complaint arrangements. It is done once, updated when elements change (paragraph 2), notified to the market surveillance authority (paragraph 3) and may cross-refer to a GDPR Article 35 assessment (paragraph 4).",
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 4 was replaced: rather than the fundamental rights impact assessment complementing a data protection impact assessment, the deployer may now include cross-references to the relevant sections of that assessment or incorporate relevant parts of it. Paragraph 5 gained a second sentence requiring the AI Office template to offer those cross-references; the automated tool was already in the base text.",
+  "note": "The omnibus note describes base paragraph 5 wording as new and misses the substantive paragraph 4 replacement."
+ },
+ {
+  "id": "art-28",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "binds",
+    "claim": "authority, notified-body",
+    "source_says": "Paragraphs 1 and 2 place the duty on the Member State ('Each Member State shall designate or establish at least one notifying authority'), and paragraph 9 lets the Member State designate another notifying authority",
+    "severity": "low",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 7 and the M1 paragraphs 8 and 9 match the note exactly; 2 August 2025 is right under Article 113(b) for Chapter III Section 4."
+ },
+ {
+  "id": "art-29",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 4 and the M1 insertion at paragraph 4 all match; Article 28(8) unified procedure confirmed."
+ },
+ {
+  "id": "art-30",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "and paragraph 3 is new",
+    "source_says": "Article 30(3) sits in a base text block. Regulation (EU) 2026/1744, point (16), reads: 'in Article 30, paragraph 2 is replaced by the following'. Only paragraph 2 was amended; paragraph 3 is unchanged base text.",
+    "severity": "high",
+    "kind": "wrong"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 2 now requires notification through the Commission's electronic tool using the codes and categories in new Annex XIV, which the Commission may amend by delegated act under Article 97. Paragraph 3 is unchanged base text.",
+  "note": "Takeaway and date are sound; the omnibus note wrongly calls unamended paragraph 3 new."
+ },
+ {
+  "id": "art-31",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "recitals",
+    "claim": "145",
+    "source_says": "Recital 145 is about support structures, the AI-on-demand platform, European Digital Innovation Hubs and testing and experimentation facilities helping providers, SMEs and notified bodies comply. The recital that explains the Article 31 conditions is 126, on notification subject to requirements on independence, competence, absence of conflicts of interest and suitable cybersecurity.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1, 2, 4, 5, 7, 9, 11 and 12 all verified; only the recital citation is off target."
+ },
+ {
+  "id": "art-32",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Single unnumbered article, wording and the 'in so far as' limit match; no M1 change."
+ },
+ {
+  "id": "art-33",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 4 including the five-year record period match; recital 126 is on topic."
+ },
+ {
+  "id": "art-34",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 3 match, including the micro and small enterprise wording and the Article 28 referral."
+ },
+ {
+  "id": "art-35",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Both paragraphs match and Article 48(4) confirms the identification number follows the CE marking."
+ },
+ {
+  "id": "art-36",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "One year, nine months, 10 days and 12 months all verified against paragraphs 3, 4, 5 and 9."
+ },
+ {
+  "id": "art-37",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 4 match, including Article 78 confidentiality and the Article 98(2) examination procedure."
+ },
+ {
+  "id": "art-38",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 3 match; the text speaks of a single sectoral group, which the entry pluralises harmlessly."
+ },
+ {
+  "id": "art-39",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Wording matches and recital 127 on mutual recognition with third countries is on topic."
+ },
+ {
+  "id": "art-40",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "",
+    "source_says": "Article 40(2) carries an M1 block adding a subparagraph: the Commission shall request the European standardisation organisations, without undue delay, to develop standardisation deliverables, including harmonised standards as appropriate, to facilitate joint compliance and presumption of conformity with Chapter III Sections 2 and 3 and the relevant requirements in the Annex I harmonisation legislation. Regulation (EU) 2026/1744 point (17) confirms the insertion.",
+    "severity": "medium",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 2 gains a subparagraph requiring the Commission to ask the European standardisation organisations, without undue delay, for standardisation deliverables, including harmonised standards as appropriate, to facilitate joint compliance and presumption of conformity with Chapter III Sections 2 and 3 and with the relevant requirements in the Annex I harmonisation legislation.",
+  "note": "Takeaway and date are correct; the empty omnibus note misses the new Article 40(2) subparagraph."
+ },
+ {
+  "id": "art-41",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "All four conditions in paragraph 1 and paragraphs 3, 4 and 5 match; no M1 change, so the empty note is right."
+ },
+ {
+  "id": "art-42",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 3 match and the omnibus note describes the M1 paragraph 3 accurately."
+ },
+ {
+  "id": "art-43",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph numbering, the Annex VI/VII split and the 28 January 2028 designation deadline all match the M1 text of paragraph 3."
+ },
+ {
+  "id": "art-44",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "gives written reasons",
+    "source_says": "Article 44(3): 'The notified body shall give reasons for its decision.' No form is prescribed, so 'written' is added.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Certificates issued under Annex VII must be drawn up in a language easily understood by the authorities of the notified body's Member State (paragraph 1). They are valid for at most five years for Annex I systems and four years for Annex III systems, renewable for equivalent periods after reassessment, and supplements remain valid while the main certificate does (2). Where a system no longer meets the Section 2 requirements, the body suspends, withdraws or restricts the certificate unless the provider corrects within a set deadline, gives reasons for its decision, and an appeal procedure must be available (3). Binds notified bodies; providers should diarise renewal well before expiry.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Article 44 carries no M1 marker, so the empty omnibus note is right; only the added word 'written' needed fixing."
+ },
+ {
+  "id": "art-45",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "All four paragraphs, including the Article 78 confidentiality cross-reference, match; no M1 marker in the article."
+ },
+ {
+  "id": "art-46",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "Law enforcement may use a system in urgent situations without prior authorisation if it requests one immediately afterwards",
+    "source_says": "Article 46(2) names 'law-enforcement authorities or civil protection authorities', and the authorisation must be 'requested during or after the use without undue delay', not only afterwards.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "field": "takeaway",
+    "claim": "authorise placing a specific high-risk AI system on the market or into service",
+    "source_says": "Article 46(1) limits the authorisation to 'within the territory of the Member State concerned'.",
+    "severity": "low",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": "Lets a market surveillance authority authorise, within the territory of its own Member State, placing a specific high-risk AI system on the market or into service without completing conformity assessment, for exceptional reasons of public security, protection of life and health, environmental protection or protection of key industrial and infrastructural assets, only while the assessment is carried out. Law enforcement or civil protection authorities may use a system in urgent situations without prior authorisation if one is requested during or after the use without undue delay; if refused, use stops and outputs are discarded. The authority verifies Section 2 compliance and notifies the Commission and Member States; absent objections within 15 calendar days the authorisation stands. Annex I Section A products use only sectoral derogations. Binds authorities and deployers.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Substance is right; the urgency route also covers civil protection authorities and the authorisation is territorially limited."
+ },
+ {
+  "id": "art-47",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "The 10 year retention, Annex V content, single declaration rule and responsibility clause all match; no M1 marker."
+ },
+ {
+  "id": "art-48",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "The CE marking signals conformity with Chapter III Section 2 and other applicable Union harmonisation legislation and follows the general principles in Article 30 of Regulation (EC) No 765/2008 (paragraph 1)",
+    "source_says": "Article 48(1) says only that the CE marking is subject to the general principles in Article 30 of Regulation (EC) No 765/2008. The point about other Union law is Article 48(5).",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "The CE marking follows the general principles in Article 30 of Regulation (EC) No 765/2008 (paragraph 1). For systems provided digitally, a digital CE marking is allowed if it is easily accessed through the interface or a machine-readable code (2). The marking must be visible, legible and indelible, or placed on packaging or documentation where that is impossible (3), and must carry the notified body's identification number where one was involved, including in promotional material claiming compliance (4). Where other Union law also provides for CE marking, the marking indicates conformity with that law too (5). Binds providers; do not affix the marking before the conformity assessment and declaration are complete.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Only the paragraph attribution was off: the other Union law point sits in paragraph 5, not paragraph 1."
+ },
+ {
+  "id": "art-49",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Point 2 carve-out, the Article 6(3) registration duty, the public deployer duty and the secure section for points 1, 6 and 7 all match; no M1 marker."
+ },
+ {
+  "id": "art-50",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "the Commission may now approve codes of practice on detection and labelling of AI-generated content by implementing act under the Article 56(6) procedure",
+    "source_says": "That is the pre-Omnibus wording. Consolidated Article 50(7), the M1 block, says the Commission 'taking utmost account of the opinion of the Board, shall assess whether adherence to those codes of practice is adequate to ensure compliance with the obligations laid down in paragraphs 2 and 4 of this Article, in accordance with the procedure laid down in Article 56(6)'. The power to approve a code by implementing act was removed.",
+    "severity": "high",
+    "kind": "outdated"
+   },
+   {
+    "field": "omnibus",
+    "claim": "Paragraph 7 was amended",
+    "source_says": "The note omits the two other changes in the replaced paragraph 7: the task of encouraging and facilitating the codes moves from the AI Office to the Commission, and the subject matter becomes 'detection, marking and labelling' rather than detection and labelling.",
+    "severity": "medium",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 7 was replaced: the job of encouraging and facilitating codes of practice on the detection, marking and labelling of artificially generated content passes from the AI Office to the Commission, which, taking utmost account of the Board's opinion, assesses whether adherence to those codes is adequate for the paragraph 2 and 4 obligations under the Article 56(6) procedure. The old power to approve a code by implementing act is gone; the Commission may still set common rules by implementing act under the Article 98(2) examination procedure if it deems a code inadequate.",
+  "note": "Takeaway is sound; the omnibus note repeats the old approval power that the Omnibus deleted."
+ },
+ {
+  "id": "art-51",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "The 10^25 floating point operations presumption, the Annex XIII route and the delegated act power all match; no M1 marker and Chapter V applies from 2 August 2025."
+ },
+ {
+  "id": "art-52",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Two week notification, the rebuttal route, ex officio designation, the six month reassessment bar and the published list all match; no M1 marker."
+ },
+ {
+  "id": "art-53",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Points 1(a) to 1(d), the open-source carve-out in paragraph 2 and the paragraph 4 compliance route all match; no M1 marker."
+ },
+ {
+  "id": "art-54",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "It may terminate the mandate, informing the AI Office (5)",
+    "source_says": "Article 54(5): the authorised representative 'shall terminate the mandate if it considers or has reason to consider the provider to be acting contrary to its obligations', and 'shall also immediately inform the AI Office about the termination of the mandate and the reasons therefor'. It is a duty, not a discretion.",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "field": "binds",
+    "claim": "[\"gpai-provider\"]",
+    "source_says": "Paragraphs 3 to 5 address the authorised representative directly, and the entry's own takeaway says the article binds providers and their representatives. The list omits that addressee.",
+    "severity": "low",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": "Third-country providers must appoint, by written mandate, an authorised representative established in the Union before placing a general-purpose AI model on the market (paragraph 1). The representative verifies that the Annex XI technical documentation was drawn up and that Articles 53 and 55 are met, keeps the documentation available to the AI Office and national authorities for 10 years, and cooperates with authorities, which may address it instead of the provider (3 and 4). It must terminate the mandate where it considers the provider to be acting contrary to its obligations, and immediately inform the AI Office of the termination and the reasons (5). The duty does not apply to free and open-source models with public parameters unless they carry systemic risk (6). Binds GPAI providers and their representatives.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 5 is a mandatory termination duty; the entry rendered it as an option."
+ },
+ {
+  "id": "art-55",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Points 1(a) to 1(d) and the paragraph 2 codes of practice route match; no M1 marker."
+ },
+ {
+  "id": "art-56",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "the Commission may approve a code by implementing act, giving it general validity (6)",
+    "source_says": "Consolidated Article 56(6), the M1 block, no longer contains any approval power. It reads: the Commission and the Board regularly monitor and evaluate the achievement of the codes' objectives; the Commission, taking utmost account of the Board's opinion, assesses whether the codes cover the Articles 53 and 55 obligations, and publishes its assessment of their adequacy.",
+    "severity": "high",
+    "kind": "outdated"
+   },
+   {
+    "field": "omnibus",
+    "claim": "to confirm that the Commission approves a code and gives it general validity by implementing act under the Article 98(2) examination procedure",
+    "source_says": "The Omnibus did the opposite. Article 56(6) as replaced by point (21) of Regulation (EU) 2026/1744 drops the approval by implementing act and the Union-wide general validity, leaving only monitoring, an adequacy assessment and its publication. The Article 98(2) implementing act power survives only in paragraph 9, for common rules where no adequate code exists.",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "field": "binds",
+    "claim": "[\"gpai-provider\", \"commission\"]",
+    "source_says": "Paragraphs 1 to 5 and 7 to 9 address the AI Office, which is the article's principal addressee ('The AI Office shall encourage and facilitate...'), and paragraph 6 also addresses the Board.",
+    "severity": "medium",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": "Tasks the AI Office with facilitating Union-level codes of practice for the Article 53 and 55 obligations, covering documentation upkeep, training content summaries, and the identification and management of systemic risks (paragraphs 1 and 2). Participants report against key performance indicators scaled to their size (5). The Commission and the Board regularly monitor and evaluate the codes, and the Commission, taking utmost account of the Board's opinion, assesses whether they cover the Article 53 and 55 obligations and publishes that adequacy assessment (6). Codes were due by 2 May 2025; if none was adequate by 2 August 2025 the Commission may set common rules by implementing act (9). Binds GPAI providers, the AI Office, the Board and the Commission.",
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 6 was replaced: the Commission and the Board now regularly monitor and evaluate how far participants meet the codes' objectives, and the Commission, taking utmost account of the Board's opinion, assesses whether the codes cover the Articles 53 and 55 obligations and publishes that adequacy assessment. The former power to approve a code by implementing act and give it general validity across the Union was removed.",
+  "note": "Both the takeaway and the note keep the deleted approval power; the consolidated paragraph 6 is monitoring and published assessment only."
+ },
+ {
+  "id": "art-57",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "Member States must have at least one national AI regulatory sandbox operational by 2 August 2026 (paragraph 1)",
+    "source_says": "Article 57(1), first subparagraph, as replaced by the Omnibus (marked M1): 'Member States shall ensure that their competent authorities establish at least one AI regulatory sandbox at national level, which shall be operational by 2 August 2027.'",
+    "severity": "high",
+    "kind": "outdated"
+   },
+   {
+    "field": "omnibus",
+    "claim": "Adds paragraph 3a allowing the AI Office to establish a Union-level sandbox ... adds SMCs to the objectives and strengthens coordination with the AI Office.",
+    "source_says": "Regulation 2026/1744, point (22)(a) replaces the first subparagraph of Article 57(1), moving the national sandbox deadline from 2 August 2026 to 2 August 2027. The note omits this, the most operationally significant change to the Article.",
+    "severity": "medium",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": "Member States must have at least one national AI regulatory sandbox operational by 2 August 2027 (paragraph 1); the European Data Protection Supervisor may run one for Union bodies (3) and the AI Office may run a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs (3a). Sandboxes provide a controlled environment for developing and testing AI systems under an agreed plan, which may include real-world testing (5). Participants receive an exit report that notified bodies and market surveillance authorities take positively into account (7). No administrative fines apply to participants who follow the plan in good faith (12). Binds authorities and providers.",
+  "new_applies_from": null,
+  "new_omnibus": "Replaces the first subparagraph of paragraph 1, moving the deadline for a national sandbox to be operational from 2 August 2026 to 2 August 2027, adds paragraph 3a allowing the AI Office to establish a Union-level sandbox for Article 75(1) systems with priority access for SMEs and SMCs, requires sandbox plans to incorporate the Article 60 and 60a real-world testing plans, adds SMCs to the objectives and strengthens coordination with the AI Office.",
+  "note": "Sandbox deadline is 2 August 2027 in the consolidated text, not 2026."
+ },
+ {
+  "id": "art-58",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "Paragraph 1(a) was amended and a new point 1(d) requires the implementing acts to set detailed governance rules for sandboxes",
+    "source_says": "Regulation 2026/1744, point (23): 'in Article 58(1), the first subparagraph is amended as follows: (a) the introductory part is replaced ...; (b) the following point is added: (d) ...'. In the consolidated text the M1 block covers the paragraph 1 chapeau; point (a) on eligibility and selection criteria is unchanged base text marked B.",
+    "severity": "medium",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "The introductory part of paragraph 1 was replaced, and a new point 1(d) requires the implementing acts to set detailed governance rules for sandboxes, including data protection authority involvement and coordination at national and Union level. Point 1(a) on eligibility and selection criteria is unchanged.",
+  "note": "The chapeau of paragraph 1 was replaced, not point (a)."
+ },
+ {
+  "id": "art-59",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 1(a) to (j), paragraph 2 and the empty omnibus note all match; Article 59 carries no M1 markers."
+ },
+ {
+  "id": "art-60",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "Paragraphs 1 and 2 were amended ... without prejudice to sectoral rules on such testing.",
+    "source_says": "Regulation 2026/1744, point (24) replaces only the first subparagraph of paragraph 1 and the whole of paragraph 2. The replaced subparagraph ends 'without prejudice to the prohibitions under Article 5'. The saving for Union or national law on real-world testing of Annex I products is the third subparagraph of paragraph 1, unchanged base text marked B.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "The first subparagraph of paragraph 1 and the whole of paragraph 2 were replaced to extend real-world testing outside sandboxes to high-risk AI systems covered by the Union harmonisation legislation in Annex I Section A, without prejudice to the prohibitions in Article 5. The existing saving for sectoral rules on such testing is unchanged.",
+  "note": "Substance right; the sectoral-rules saving is pre-existing base text, not part of the amendment."
+ },
+ {
+  "id": "art-61",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Points (a) to (e) and paragraph 2 match; Article 61 carries no M1 markers."
+ },
+ {
+  "id": "art-62",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1(a) to (d), 2 and 3 match; Article 62 carries no M1 markers."
+ },
+ {
+  "id": "art-63",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 1 as amended covers all SMEs including start-ups; recital 28 of the Omnibus confirms the extension from microenterprises."
+ },
+ {
+  "id": "art-64",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "New paragraph 3 is marked M1 as described; Chapter VII applies from 2 August 2025 under Article 113(b)."
+ },
+ {
+  "id": "art-65",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 8 match, including the two-thirds majority and the ADCO role; no M1 markers."
+ },
+ {
+  "id": "art-66",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Points (a) to (o) confirmed, including Article 74(11), Articles 40 and 41, Article 7 and the qualified alerts; no M1 markers."
+ },
+ {
+  "id": "art-67",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Membership, terms, permanent members in paragraph 5 and paragraphs 7, 9 and 10 all match; no M1 markers."
+ },
+ {
+  "id": "art-68",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 4 match, including the Article 90 alerts and the declarations of interest; no M1 markers."
+ },
+ {
+  "id": "art-69",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "Paragraph 3 is marked as amended, adjusting how the Commission organises expert access alongside the Union AI testing support structures under Article 84.",
+    "source_says": "In the consolidated text the M1 block covers paragraph 2 only; paragraph 3 on Commission facilitation and Article 84 is unchanged base text marked B. Regulation 2026/1744, point (28): 'in Article 69, paragraph 2 is replaced by the following', and its recital 30 gives the reason as simplifying the fee structure of the scientific panel.",
+    "severity": "high",
+    "kind": "wrong"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 2 was replaced to simplify the fee structure, so that Member States calling on the panel may be required to pay fees at a rate equivalent to the remuneration fees applicable to the Commission under the Article 68(1) implementing act. Paragraph 3 is unchanged.",
+  "note": "Paragraph 2 was amended, not paragraph 3; the takeaway itself is correct."
+ },
+ {
+  "id": "art-70",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1, 2, 3, 6, 8 and 9 match, and paragraph 8 is the M1 block adding SMCs as the note says."
+ },
+ {
+  "id": "art-71",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "Article 49 registrations are public and machine-readable",
+    "source_says": "Article 71(4) makes Article 49 information publicly available and machine-readable 'with the exception of the section referred to in Article 49(4) and Article 60(4), point (c)'. Article 49(4) puts registrations for Annex III points 1, 6 and 7 in the areas of law enforcement, migration, asylum and border control into a secure non-public section.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "The Commission, with the Member States, runs an EU database of high-risk AI systems under Article 6(2) registered under Articles 49 and 60, and of systems the provider judges non-high-risk under Article 6(3) and registers under Article 6(4) (paragraph 1). Providers or authorised representatives enter Annex VIII Sections A and B data; deployers that are public authorities enter Section C (paragraphs 2 and 3). Article 49 registrations are public and machine-readable except the secure non-public section under Article 49(4), while Article 60 real-world testing entries stay restricted to market surveillance authorities and the Commission unless the provider consents (paragraph 4). The Commission is controller (paragraph 6). Providers should prepare Annex VIII content before placing systems on the market.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Accurate except that public access under paragraph 4 excludes the Article 49(4) secure section."
+ },
+ {
+  "id": "art-72",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 4 and the M1 note on the 2 September 2027 guidance all match."
+ },
+ {
+  "id": "art-73",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "15 day, two day and 10 day deadlines and paragraphs 9 and 10 all match; no M1 change, so the empty note is right."
+ },
+ {
+  "id": "art-74",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "data protection authorities for Annex III points 1, 6, 7 and 8 systems (paragraph 8)",
+    "source_says": "Paragraph 8 covers Annex III point 1 systems only 'in so far as the systems are used for law enforcement purposes, border management and justice and democracy', plus points 6, 7 and 8, and lets Member States designate either the data protection supervisory authority or another authority under Articles 41 to 44 of Directive (EU) 2016/680.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Regulation (EU) 2019/1020 governs market surveillance of AI systems, with providers, deployers, importers, distributors and authorised representatives all counted as economic operators (paragraph 1). Sectoral authorities under Annex I, Section A legislation, financial supervisors for financial institutions (paragraph 6) and data protection authorities for Annex III point 1 systems used for law enforcement, border management and justice and democracy and for points 6, 7 and 8 systems (paragraph 8) act as market surveillance authorities; the European Data Protection Supervisor covers Union institutions (paragraph 9). Authorities get full access to documentation and to training, validation and testing data sets, including remotely via APIs (paragraph 12), and to source code on reasoned request once other verification is exhausted (paragraph 13).",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 8 covers Annex III point 1 only for law enforcement, border, justice and democracy uses."
+ },
+ {
+  "id": "art-75",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "The AI Office holds exclusive competence to supervise and enforce obligations for AI systems built on a general-purpose AI model where the same provider develops both",
+    "source_says": "Paragraph 1(a) also covers providers forming part of the same undertaking, and carves out four categories at points (i) to (iv): Annex I products, Annex III point 2 systems, systems provided by law enforcement, border management authorities and financial institutions under Article 74(6), and Annex III point 8 systems as regards the administration of justice.",
+    "severity": "medium",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "The AI Office holds exclusive competence to supervise and enforce obligations for AI systems built on a general-purpose AI model where the same provider or undertaking develops both, subject to the carve-outs in points (i) to (iv), and for AI systems embedded in very large online platforms or search engines designated under Regulation (EU) 2022/2065 (paragraph 1). Providers under AI Office competence report serious incidents to the AI Office (paragraph 1a); national authorities assist it and are consulted before restrictive measures (paragraphs 1b to 1d); it runs third-party conformity assessments at the provider's cost (paragraph 1e). Authorities may refer suspected infringements, with a four-month response, and obtain model information within 30 days (paragraphs 2a and 3).",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Omnibus note and all paragraph references check out; only the unqualified statement of exclusive competence needs the carve-outs."
+ },
+ {
+  "id": "art-76",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "references to market surveillance authorities mean the national competent authorities, or the European Data Protection Supervisor for Union institutions",
+    "source_says": "The M1 subparagraph in paragraph 1 says references to a market surveillance authority mean 'the national competent authority or appropriate authority under the Union harmonisation legislation listed in Section B of Annex I, and references to Article 60 shall be construed as references to Article 60a'. The European Data Protection Supervisor is not mentioned.",
+    "severity": "high",
+    "kind": "wrong"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 1 adds that where testing in real world conditions is based on Article 60a, references to a market surveillance authority in that Article mean the national competent authority or the appropriate authority under the Union harmonisation legislation listed in Section B of Annex I, and references to Article 60 mean Article 60a.",
+  "note": "The takeaway is sound; the omnibus note invents an EDPS rule the consolidated text does not contain."
+ },
+ {
+  "id": "art-77",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "Paragraph 1a is amended to oblige market surveillance authorities to grant fundamental rights authorities access without undue delay",
+    "source_says": "Paragraph 1a is newly inserted by M1, not amended. M1 also replaces paragraph 1 itself: the old text limited the power to documentation 'in relation to the use of high-risk AI systems referred to in Annex III' and required the requesting body to inform the market surveillance authority; the new text drops both and requires accessible language and machine-readable format by electronic means.",
+    "severity": "medium",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 1 is replaced, dropping the limit to Annex III high-risk systems and the duty to inform the market surveillance authority and adding machine-readable format by electronic means; new paragraph 1a obliges market surveillance authorities to grant fundamental rights authorities access without undue delay, and new paragraph 1b requires close cooperation, mutual assistance and information exchange between the two sets of authorities.",
+  "note": "Takeaway matches the consolidated text; the note calls a new paragraph amended and misses the rewrite of paragraph 1."
+ },
+ {
+  "id": "art-78",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "applies_from",
+    "claim": "2 August 2026",
+    "source_says": "Article 113(b) lists Article 78 among the provisions applying from 2 August 2025, which the entry's own takeaway states.",
+    "severity": "high",
+    "kind": "wrong"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": "2 August 2025",
+  "new_omnibus": null,
+  "note": "The date field contradicts the takeaway and Article 113(b); Article 78 applies from 2 August 2025."
+ },
+ {
+  "id": "art-79",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "15 working days, the paragraph 6 categories and the three month and 30 day periods in paragraph 8 all match."
+ },
+ {
+  "id": "art-80",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1, 2, 5, 6, 7 and 8 all match, including the Article 79(5) to (9) and Article 99 references."
+ },
+ {
+  "id": "art-81",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Three month, 30 day, six month and 60 day periods and the Regulation (EU) No 1025/2012 reference all match."
+ },
+ {
+  "id": "art-82",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 5 match, including the notification content in paragraph 3."
+ },
+ {
+  "id": "art-83",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "All seven findings in paragraph 1 and the paragraph 2 escalation match."
+ },
+ {
+  "id": "art-84",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "They complement the scientific panel's experts under Article 69",
+    "source_says": "The scientific panel of independent experts is established by Article 68; Article 69 is 'Access to the pool of experts by the Member States', under which Member States may call on panel experts to support enforcement.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "The Commission designates one or more Union AI testing support structures to perform the tasks listed in Article 21(6) of Regulation (EU) 2019/1020 in the field of AI (paragraph 1). Beyond that, the structures give independent technical or scientific advice at the request of the Board, the Commission or market surveillance authorities (paragraph 2). They complement the scientific panel of independent experts set up under Article 68, which Member States may call on under Article 69, and give national authorities a shared testing capacity for complex systems, so providers may meet them during investigations.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Article 84 itself is quoted correctly; the scientific panel is established by Article 68, not Article 69."
+ },
+ {
+  "id": "art-85",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "may lodge a complaint with the relevant market surveillance authority, without prejudice to other administrative or judicial remedies (paragraph 1). Authorities handle complaints under the procedures of Regulation (EU) 2019/1020 and take them into account in their surveillance activities (paragraph 2).",
+    "source_says": "Article 85 has no numbered paragraphs. It is a single unnumbered paragraph containing both sentences: the right to submit complaints and the sentence beginning 'In accordance with Regulation (EU) 2019/1020, such complaints shall be taken into account ... and shall be handled in line with the dedicated procedures established therefor by the market surveillance authorities.'",
+    "severity": "medium",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Without prejudice to other administrative or judicial remedies, any natural or legal person with grounds to consider that the Regulation has been infringed may submit a complaint to the relevant market surveillance authority. Article 85 is a single unnumbered paragraph, and it adds that in accordance with Regulation (EU) 2019/1020 such complaints are taken into account for the purpose of conducting market surveillance activities and are handled in line with the dedicated procedures established by those authorities. Civil society organisations, competitors and affected individuals gain a formal route into enforcement, so operators should expect complaints to trigger evaluations under Article 79.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Substance correct; Article 85 has no numbered paragraphs, so the two paragraph citations are invented."
+ },
+ {
+  "id": "art-86",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "that produces legal effects or similarly significantly affects their health, safety or fundamental rights",
+    "source_says": "Article 86(1): the decision must produce legal effects or similarly significantly affect that person 'in a way that they consider to have an adverse impact on their health, safety or fundamental rights'. The adverse-impact element is a condition of the right and the entry drops it, broadening the trigger.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Any affected person subject to a decision taken by a deployer on the basis of the output of an Annex III high-risk AI system, other than point 2 critical infrastructure, that produces legal effects or similarly significantly affects them in a way they consider to have an adverse impact on their health, safety or fundamental rights may obtain from the deployer clear and meaningful explanations of the AI system's role in the decision-making procedure and the main elements of the decision (paragraph 1). The right yields to exceptions or restrictions following from Union or national law (paragraph 2) and applies only to the extent the right is not otherwise provided for under Union law (paragraph 3). Deployers in credit, employment, education and public services should build explanation workflows.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph structure and Annex III point 2 carve-out correct; the adverse-impact condition was dropped."
+ },
+ {
+  "id": "art-87",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Matches Article 87 and recital 172; no Omnibus change to the provision."
+ },
+ {
+  "id": "art-88",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Exclusive Commission powers, Article 94 guarantees, AI Office entrustment and the Article 75(3) proviso all match."
+ },
+ {
+  "id": "art-89",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 2 points (a) to (c) are reported accurately; no Omnibus change."
+ },
+ {
+  "id": "art-90",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Alert conditions, Article 51 reference, Board information duty and paragraph 3 contents all match."
+ },
+ {
+  "id": "art-91",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "All five paragraphs, the Article 101 fine warning and the lawyer-responsibility rule match."
+ },
+ {
+  "id": "art-92",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Evaluation grounds, Article 90(1)(a) reference, API and source-code access and paragraphs 4, 6 and 7 all match."
+ },
+ {
+  "id": "art-93",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Points (a) to (c) of paragraph 1 and the binding-commitments mechanism in paragraph 3 match."
+ },
+ {
+  "id": "art-94",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Article 18 of Regulation (EU) 2019/1020 applies mutatis mutandis; the Article 101(2) preliminary-findings pointer is correct."
+ },
+ {
+  "id": "art-95",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "binds",
+    "claim": "commission, provider, deployer",
+    "source_says": "Paragraphs 1, 2 and 4 address 'The AI Office and the Member States'. Member States are a principal addressee and are missing from the list.",
+    "severity": "low",
+    "kind": "missing"
+   },
+   {
+    "field": "recitals",
+    "claim": "165, 166",
+    "source_says": "Recital 165 is on point for voluntary codes of conduct for non-high-risk systems. Recital 166 is about Regulation (EU) 2023/988 acting as a product safety net for non-high-risk AI systems and does not support Article 95; cite 165 alone.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Takeaway and the SMC amendment note are accurate; binds omits Member States and recital 166 is off topic."
+ },
+ {
+  "id": "art-96",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "It consults the Board and weighs the needs of SMEs, start-ups, SMCs, local authorities and affected sectors, and updates guidelines on request or on its own initiative (paragraph 2).",
+    "source_says": "The Board involvement and SME, start-up, SMC, local public authority and affected-sector duty sit in the second subparagraph of paragraph 1, not in paragraph 2. Paragraph 2 says only that the Commission shall update previously adopted guidelines at the request of the Member States or the AI Office, or on its own initiative.",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "field": "omnibus",
+    "claim": "New point (g) in paragraph 1 requires guidelines on the complementarity and proportionality mechanisms of Articles 8(2), 9(10) and 17(3) by 1 August 2027, and the final sentence is amended to add Board consultation and SMCs.",
+    "source_says": "Regulation (EU) 2026/1744, point (36), also replaces point (a) of the first subparagraph of paragraph 1, extending the guidelines from 'Articles 8 to 15 and Article 25' to 'Articles 8 to 15 and in Articles 25 and 26'. That change carries a M1 marker in the consolidated text and the note omits it.",
+    "severity": "medium",
+    "kind": "missing"
+   },
+   {
+    "field": "omnibus",
+    "claim": "the final sentence is amended",
+    "source_says": "Point (36)(c) replaces the second subparagraph of paragraph 1. It is not the final sentence: the final subparagraph of paragraph 1 is the unamended B text on the state of the art and harmonised standards.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "The Commission develops guidelines on practical implementation covering the Articles 8 to 15 requirements and Articles 25 and 26 obligations, the Article 5 prohibitions, substantial modification, the Article 50 transparency obligations, the interplay with Annex I and other Union law, the Article 3(1) definition of an AI system, and, by 1 August 2027, the complementarity and proportionality mechanisms of Articles 8(2), 9(10) and 17(3) (paragraph 1, points (a) to (g)). The second subparagraph of paragraph 1 requires it to involve the Board and to weigh the needs of SMEs, start-ups, SMCs, local public authorities and the sectors most likely to be affected, and under paragraph 2 it updates guidelines at the request of the Member States or the AI Office, or on its own initiative. Track these guidelines; they shape how authorities apply the Act.",
+  "new_applies_from": null,
+  "new_omnibus": "Point (a) of paragraph 1 is replaced to extend the guidelines to Article 26 alongside Articles 8 to 15 and Article 25, a new point (g) requires guidelines on the complementarity and proportionality mechanisms of Articles 8(2), 9(10) and 17(3) by 1 August 2027, and the second subparagraph of paragraph 1 is replaced to add involvement of the Board and SMCs.",
+  "note": "Board and SME duty misattributed to paragraph 2, and the Omnibus note misses the amendment to point (a)."
+ },
+ {
+  "id": "art-97",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Dates, the Articles 2(13) and 30(2) delegations and the amended paragraphs 2, 3 and 6 all match the consolidated text."
+ },
+ {
+  "id": "art-98",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Committee under Regulation (EU) No 182/2011 and the Article 5 examination procedure match; recital 175 is on point."
+ },
+ {
+  "id": "art-99",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "omnibus",
+    "claim": "New point (da) in paragraph 4 brings obligations under Article 25(2) and (4) into the EUR 15 000 000 or 3 % tier, and new paragraph 6a caps fines on SMCs at the lower of the two amounts.",
+    "source_says": "Regulation (EU) 2026/1744, point (38), amends Article 99 in three places, not two: point (a) replaces paragraph 1 in full, adding administrative fines to the enforcement measures Member States may lay down and adding SMCs to the operators whose interests and economic viability must be taken into account. The consolidated paragraph 1 carries a ▼M1 marker. The note covers only the new point (da) and new paragraph 6a.",
+    "severity": "medium",
+    "kind": "missing"
+   },
+   {
+    "field": "takeaway",
+    "claim": "For SMEs and SMCs the lower amount applies (paragraphs 6 and 6a).",
+    "source_says": "Paragraph 6 applies the lower of the percentage and the amount to SMEs, including start-ups, for the fines in paragraphs 3, 4 and 5. Paragraph 6a (▼M1) applies it to SMCs only for the fines referred to in paragraphs 4 and 5, so the Article 5 tier in paragraph 3 is not covered for SMCs.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "field": "binds",
+    "claim": "authority, provider, deployer",
+    "source_says": "Article 99(1), (2), (8), (9) and (11) place the duties on the Member States, which are the provision's principal addressee and are not in the list.",
+    "severity": "low",
+    "kind": "missing"
+   }
+  ],
+  "new_takeaway": "Member States lay down penalties, including fines, warnings and non-monetary measures, that are effective, proportionate and dissuasive and reflect the interests of SMEs, start-ups and SMCs (paragraph 1). Breaches of Article 5 draw fines up to EUR 35 000 000 or 7 % of worldwide annual turnover, whichever is higher (paragraph 3); breaches of provider, representative, importer, distributor, deployer, notified body and Article 50 obligations, and of Article 25(2) and (4), up to EUR 15 000 000 or 3 % (paragraph 4); incorrect or misleading information up to EUR 7 500 000 or 1 % (paragraph 5). For SMEs and start-ups the lower amount applies across paragraphs 3, 4 and 5 (paragraph 6), and for SMCs across paragraphs 4 and 5 (paragraph 6a).",
+  "new_applies_from": null,
+  "new_omnibus": "Paragraph 1 is replaced, adding administrative fines to the enforcement measures Member States may lay down and adding SMCs to the operators whose interests and economic viability count. New point (da) in paragraph 4 brings obligations under Article 25(2) and (4) into the EUR 15 000 000 or 3 % tier, and new paragraph 6a caps fines on SMCs under paragraphs 4 and 5 at the lower of the two amounts.",
+  "note": "Figures and tiers all check out; the omnibus note misses the replacement of paragraph 1 and paragraph 6a is narrower than stated."
+ },
+ {
+  "id": "art-100",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "All seven paragraphs, both fine ceilings and the 2 August 2025 date match; no M1 markers in the article."
+ },
+ {
+  "id": "art-101",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "applies_from",
+    "claim": "2 August 2025",
+    "source_says": "Article 113, point (b) applies Chapter III Section 4, Chapter V, Chapter VII, Chapter XII and Article 78 from 2 August 2025 'with the exception of Article 101'. Article 101 therefore falls under the default date in the second paragraph of Article 113, 2 August 2026. The entry's own takeaway says the same, so the field contradicts it.",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "field": "takeaway",
+    "claim": "for intentional or negligent breaches of Chapter V",
+    "source_says": "Article 101(1), point (a) refers to a provider that 'infringed the relevant provisions of this Regulation', not to Chapter V alone.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "The Commission may fine providers of general-purpose AI models up to 3 % of worldwide annual turnover or EUR 15 000 000, whichever is higher, for intentionally or negligently infringing the relevant provisions of the Regulation, failing to answer Article 91 requests or supplying incorrect information, non-compliance with Article 93 measures or refusing access for Article 92 evaluations (paragraph 1). Preliminary findings and a right to reply precede any decision (paragraph 2), fines must be effective, proportionate and dissuasive (paragraph 3), and the Court of Justice may cancel, reduce or increase them (paragraph 5). Article 113(b) excludes Article 101 from the 2 August 2025 date, so fining applies from 2 August 2026.",
+  "new_applies_from": "2 August 2026",
+  "new_omnibus": null,
+  "note": "The applies_from field says 2 August 2025 although Article 113(b) expressly excepts Article 101, as the takeaway itself explains."
+ },
+ {
+  "id": "art-102",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Subparagraph added to Article 4(3) of Regulation (EC) No 300/2008; date matches new Article 113(d)."
+ },
+ {
+  "id": "art-103",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Subparagraph added to Article 17(5) of Regulation (EU) No 167/2013; delegated acts, Chapter III Section 2, all match."
+ },
+ {
+  "id": "art-104",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Subparagraph added to Article 22(5) of Regulation (EU) No 168/2013; matches."
+ },
+ {
+  "id": "art-105",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "New Article 8(5) of Directive 2014/90/EU, covering activities under paragraph 1 and specifications under paragraphs 2 and 3, as stated."
+ },
+ {
+  "id": "art-106",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "New Article 5(12) of Directive (EU) 2016/797 covering delegated acts under paragraph 1 and implementing acts under paragraph 11."
+ },
+ {
+  "id": "art-107",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "New Article 5(4) of Regulation (EU) 2018/858 on delegated acts under paragraph 3; matches."
+ },
+ {
+  "id": "art-108",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Six amendments to Regulation (EU) 2018/1139, in Articles 17, 19, 43, 47, 57 and 58, exactly as listed."
+ },
+ {
+  "id": "art-109",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "New Article 11(3) of Regulation (EU) 2019/2144 on implementing acts under paragraph 2; matches."
+ },
+ {
+  "id": "art-110",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "recitals",
+    "claim": "49",
+    "source_says": "Recital 49 is about amending the sectoral product acts listed there, Regulations (EC) No 300/2008, (EU) No 167/2013, (EU) No 168/2013, (EU) 2018/858, (EU) 2018/1139 and (EU) 2019/2144 and Directives 2014/90/EU and (EU) 2016/797, so that the Commission takes the high-risk requirements into account in delegated and implementing acts. It does not mention Directive (EU) 2020/1828 or collective redress, which is what Article 110 amends. Recital 170, on remedies and the right to lodge a complaint, is the closer fit.",
+    "severity": "low",
+    "kind": "wrong"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "The amendment itself checks out (new point (68) in Annex I to Directive (EU) 2020/1828); only the cited recital is off topic."
+ },
+ {
+  "id": "art-111",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "applies_from",
+    "claim": "in force 1 August 2024",
+    "source_says": "Article 113 lists exceptions only for Chapters I and II, Chapter III Section 4, Chapters V, VII and XII, Article 78, Chapter III Sections 1 to 3 and Articles 102 to 110. Article 111 is not among them, so it applies from the default date in the second paragraph of Article 113, 2 August 2026.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": "2 August 2026",
+  "new_omnibus": null,
+  "note": "All four paragraphs and the omnibus note on paragraph 2 and new paragraph 4 are accurate; only the application date is stated as entry into force."
+ },
+ {
+  "id": "art-112",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "applies_from",
+    "claim": "in force 1 August 2024",
+    "source_says": "Article 112 is not among the exceptions in Article 113, points (a) to (d), so it applies from the default date in the second paragraph of Article 113, 2 August 2026. Paragraph 1 measures its annual cycle from entry into force, but that does not change the date of application.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": "2 August 2026",
+  "new_omnibus": null,
+  "note": "Every paragraph number, deadline and cycle in the takeaway matches; no M1 markers, so the empty omnibus note is right."
+ },
+ {
+  "id": "art-113",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Points (a), (c)(i), (c)(ii) and (d) match the consolidated text; recitals 178 and 179 are on topic."
+ },
+ {
+  "id": "annex-1",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "Section B holds aviation, vehicles, marine equipment and rail, where only Article 6(1) and Articles 102 to 109 bite.",
+    "source_says": "Article 2(2), as amended: for Article 6(1) high-risk systems related to products covered by the legislation in Section A of Annex I... 'only Article 6(1), Article 60a and Articles 102 to 112 shall apply' (the reference is to Section B).",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "field": "takeaway",
+    "claim": "Section B holds aviation, vehicles, marine equipment and rail",
+    "source_says": "Section B now also contains point 21, Regulation (EU) 2023/1230 on machinery, inserted by the amendment; the entry's own omnibus note says so but the Section B list does not.",
+    "severity": "medium",
+    "kind": "missing"
+   },
+   {
+    "field": "recitals",
+    "claim": "33",
+    "source_says": "Recital 33 concerns the narrow law enforcement exceptions to the ban on real-time remote biometric identification, not Annex I product legislation. Recital 46, on the mandatory requirements for high-risk AI systems, would fit.",
+    "severity": "low",
+    "kind": "wrong"
+   }
+  ],
+  "new_takeaway": "Annex I lists the product legislation that makes an AI safety component, or an AI system that is itself a product, high-risk under Article 6(1). Section A holds New Legislative Framework acts (toys, recreational craft, lifts, equipment for explosive atmospheres, radio equipment, pressure equipment, cableways, personal protective equipment, gas appliances, medical devices and in vitro diagnostics), where the AI Act requirements are checked inside the sectoral conformity assessment. Section B holds aviation, vehicles, marine equipment, rail and machinery, where only Article 6(1), Article 60a and Articles 102 to 112 bite. Providers of regulated products map every AI component against the list; the Annex I obligations apply from 2 August 2028.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Omnibus note is accurate: point 1 (Machinery Directive) deleted from Section A, point 21 (Machinery Regulation) added to Section B."
+ },
+ {
+  "id": "annex-2",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "where the offence carries a custodial sentence of at least four years in the Member State concerned",
+    "source_says": "Article 5(1), first subparagraph, point (h)(iii): offences 'referred to in Annex II and punishable in the Member State concerned by a custodial sentence or a detention order for a maximum period of at least four years'. The test is the maximum penalty available, not the sentence actually carried.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Annex II lists the 16 categories of serious criminal offence (terrorism, trafficking in human beings, child sexual exploitation, drug and arms trafficking, murder and grievous bodily injury, organ trade, nuclear material, kidnapping, International Criminal Court crimes, hijacking, rape, environmental crime, organised or armed robbery, sabotage and participation in a criminal organisation) that unlock the third exception to the ban on real-time remote biometric identification in Article 5(1)(h)(iii). The exception covers only locating or identifying a suspect of one of these offences where the offence is punishable in the Member State concerned by a custodial sentence or detention order for a maximum period of at least four years. Law enforcement deployers check the offence against the list before any use.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Count of 16 offence categories is right and the Annex carries no amendment marker, so the empty omnibus note is correct."
+ },
+ {
+  "id": "annex-3",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "deployers of listed systems pick up Articles 26 and 27",
+    "source_says": "Article 27(1) binds only deployers that are bodies governed by public law or private entities providing public services, plus deployers of the Annex III point 5(b) and (c) systems, and it excludes systems in Annex III point 2. Article 26 binds all deployers.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Annex III lists the stand-alone use cases that are high-risk under Article 6(2), in eight areas: biometrics (remote identification, categorisation by sensitive attributes, emotion recognition), safety components of critical infrastructure, education and vocational training, employment and worker management, access to essential services (benefits, credit scoring, life and health insurance pricing, emergency triage), law enforcement, migration and border control, and administration of justice and elections. Providers classify against the list, then test the Article 6(3) filter for systems that do not materially influence the outcome; deployers of listed systems pick up Article 26, and public bodies, private providers of public services and deployers of the credit and insurance systems in point 5 also pick up Article 27. The Commission amends the list under Article 7. Annex III obligations apply from 2 December 2027.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Eight areas, the Article 7 power and the 2 December 2027 date all match; Annex III carries no amendment marker."
+ },
+ {
+  "id": "annex-4",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "SMEs can use the Commission's simplified form",
+    "source_says": "Article 11(1), as amended, extends the simplified form to 'SMEs, including start-ups, and SMCs', requires an operator that opts for the simplified route to use that form, and obliges notified bodies to accept it.",
+    "severity": "low",
+    "kind": "outdated"
+   }
+  ],
+  "new_takeaway": "Annex IV sets the minimum content of the technical documentation a provider of a high-risk AI system draws up under Article 11(1) before placing it on the market. Its nine points cover a general description (intended purpose, versions, hardware, interfaces, instructions for use), a detailed description of development (methods, design choices, architecture, data provenance, human oversight assessment, pre-determined changes, validation and testing metrics, cybersecurity), monitoring and control information, performance metrics, the Article 9 risk management system, lifecycle changes, harmonised standards applied, the Article 47 declaration of conformity and the Article 72 post-market monitoring plan. Providers structure their evidence file around these headings; SMEs, start-ups and small mid-cap enterprises can use the Commission's simplified form, which notified bodies must accept.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "The nine points and every article cross-reference check out; the amendment sits in Article 11(1), not in the Annex, so the empty omnibus note is right."
+ },
+ {
+  "id": "annex-5",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "All eight elements and the three data protection instruments match; no amendment marker in the Annex."
+ },
+ {
+  "id": "annex-6",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Points 2 to 4 and the Article 43(1) and 43(2) routing match the consolidated text."
+ },
+ {
+  "id": "annex-7",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "The provider applies to a single notified body with its Article 17 quality management system documentation and the technical documentation (point 2).",
+    "source_says": "Point 2 is only the overview. The quality management system application is point 3.1 and the technical documentation application is point 4.2; the bar on lodging the same application with another notified body is points 3.1(f) and 4.2(b).",
+    "severity": "medium",
+    "kind": "wrong"
+   }
+  ],
+  "new_takeaway": "Annex VII is the third-party route under Article 43(1), mandatory for Annex III biometric systems where harmonised standards are not fully applied. The provider applies to a single notified body with its Article 17 quality management system documentation and the technical documentation (points 3.1 and 4.2). The notified body audits the quality management system, examines the technical documentation, may demand tests and gains access to training, validation and testing data sets and, as a last resort on reasoned request, to trained models (points 4.3 to 4.5). It issues a Union technical documentation assessment certificate, assesses every change affecting compliance and runs periodic surveillance audits (points 4.6, 4.7 and 5).",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Only the point reference for the application is wrong; points 4.3 to 4.7 and point 5 are described correctly."
+ },
+ {
+  "id": "annex-8",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Section A still has 13 items, Section B points 7 and 9 are struck out in the consolidated text, and Section C matches; the omnibus note is accurate."
+ },
+ {
+  "id": "annex-9",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Five items match, and Article 60(4)(c) requires registration with the Annex IX information; Chapter VI applies from 2 August 2026."
+ },
+ {
+  "id": "annex-10",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "applies_from",
+    "claim": "in force 1 August 2024",
+    "source_says": "Article 111, the only provision that uses Annex X, is in Chapter XIII and is not carved out by Article 113, points (a) to (d), so it applies from the default date of 2 August 2026.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": null,
+  "new_applies_from": "2 August 2026",
+  "new_omnibus": null,
+  "note": "The seven systems, the 2 August 2027 cut-off, the 31 December 2030 deadline and the Article 5 carve-out all match Article 111(1)."
+ },
+ {
+  "id": "annex-11",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "the minimum technical documentation every provider of a general-purpose AI model keeps under Article 53(1)(a)",
+    "source_says": "Article 53(2): the obligations in Article 53(1), points (a) and (b), do not apply to providers of models released under a free and open-source licence meeting the stated conditions, unless the model has systemic risk.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Annex XI sets the minimum technical documentation a provider of a general-purpose AI model keeps under Article 53(1)(a), apart from providers of qualifying free and open-source models without systemic risk, and supplies to the AI Office on request, scaled to the size and risk profile of the model. Section 1 requires a general description (intended tasks and integration types, acceptable use policies, release date and distribution channels, architecture and parameter count, modalities, licence) plus development details: integration means, design and training methodology, the type, provenance, curation, scope and bias-detection approach for training data, compute and training time, and known or estimated energy consumption. Section 2 adds, for systemic-risk models, evaluation results, adversarial testing and system architecture.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Section 1 and Section 2 contents match; only the universal 'every provider' overstates Article 53(1)(a) given the Article 53(2) exception."
+ },
+ {
+  "id": "annex-12",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Points 1 and 2 match item by item; recital 101 is on topic and the Annex carries no amendment marker."
+ },
+ {
+  "id": "annex-13",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "gives the Commission seven criteria for deciding under Article 51(1)(a) whether a general-purpose AI model has high-impact capabilities equivalent to those presumed above the 10^25 FLOPs threshold",
+    "source_says": "Article 51(1)(b): the Commission decides, ex officio or after a qualified alert from the scientific panel, that a model has capabilities or an impact equivalent to those in point (a), 'having regard to the criteria set out in Annex XIII'. Point (a) is the condition the criteria are measured against, not the basis of the decision.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Annex XIII gives the Commission seven criteria for deciding under Article 51(1)(b) whether a general-purpose AI model has capabilities or an impact equivalent to those presumed above the 10^25 FLOPs threshold in Article 51(2): (a) number of parameters, (b) data set quality or size in tokens, (c) training compute in floating point operations or proxies, (d) input and output modalities, (e) benchmarks of capability, adaptability, autonomy, scalability and tool access, (f) market impact, presumed high at 10 000 or more registered business users established in the Union, and (g) registered end users. GPAI providers track these indicators to anticipate or contest a designation under Article 52.",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "All seven criteria and the 10 000 business user presumption match; the trailing amendment marker in the Annex belongs to the new Annex XIV."
+ },
+ {
+  "id": "art-4a",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Matches inserted Article 4a; Article 10(5) is shown deleted by M1 and Article 10(6) now cross-refers to Article 4a(1)."
+ },
+ {
+  "id": "art-60a",
+  "verdict": "correction",
+  "issues": [
+   {
+    "field": "takeaway",
+    "claim": "a mandatory testing plan agreed with the national competent or market surveillance authority",
+    "source_says": "Article 60a(5)(a): the plan is agreed between the provider or prospective provider and 'the national competent authority or relevant authority' under the Annex I Section B legislation. Point (b) in fact converts references to market surveillance authorities in Article 60 into references to the national competent or relevant authority.",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "field": "takeaway",
+    "claim": "Testing is not placing on the market, and sectoral legislation prevails (paragraph 6).",
+    "source_says": "Article 60a(6) says only that real-world testing shall comply with the applicable provisions of the Annex I Section B legislation and that 'any requirements laid down in those provisions shall not affect the application of this Article to the extent necessary to enable the testing referred to in paragraph 1'. There is no statement that testing is not placing on the market, and the sectoral rules do not prevail where they would block the testing.",
+    "severity": "high",
+    "kind": "wrong"
+   }
+  ],
+  "new_takeaway": "Article 60a lets Member States allow providers or prospective providers of AI-enabled products under Annex I Section B legislation to test high-risk AI systems in real-world conditions outside sandboxes, to verify conformity with Articles 8 to 15 (paragraph 1). A Member State that opts in adopts a testing framework, alone or jointly, notifies the Commission before applying it and makes its authorities cooperate to remove practical obstacles (paragraphs 2 to 4). Each framework requires a mandatory testing plan agreed with the national competent authority or the relevant authority under that sectoral legislation, compliance with Article 60(2), (3), (4)(d) to (j) and (5) to (9), governance and accountability arrangements and a high level of protection of health, safety and fundamental rights (paragraph 5). Testing must comply with the applicable Annex I Section B legislation, but those sectoral requirements do not affect the application of this Article so far as that is necessary to enable the testing (paragraph 6).",
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraph 6 is misread; the sectoral rules yield where needed to enable testing, and there is no placing-on-the-market carve-out."
+ },
+ {
+  "id": "art-75a",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 8 all check out, including cost recovery, Article 85 complaints, Article 99(5) warnings and judicial authorisation."
+ },
+ {
+  "id": "art-75b",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Article 75b is unnumbered but the points (a) to (c) and the rejection clause match; Article 75c(4)(c) and (5)(f) confirm the enforcement consequence."
+ },
+ {
+  "id": "art-75c",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Fines under Article 99(3) to (7), the Article 99(5) information fine, the 5 % daily cap and the five-year limitation period all match paragraphs 4, 5 and 8."
+ },
+ {
+  "id": "art-75d",
+  "verdict": "confirmed",
+  "issues": [],
+  "new_takeaway": null,
+  "new_applies_from": null,
+  "new_omnibus": null,
+  "note": "Paragraphs 1 to 4 match, including the negotiated disclosure terms and the exclusion of internal documents and correspondence."
+ },
+ {
+  "id": "annex-14",
+  "verdict": "minor",
+  "issues": [
+   {
+    "field": "applies_from",
+    "claim": "2 August 2026",
+    "source_says": "Annex XIV is inserted by Regulation (EU) 2026/1744, which entered into force on 27 July 2026, the third day after its publication in OJ L of 24 July 2026. The provision that uses it, Article 30(2), sits in Chapter III Section 4, which has applied since 2 August 2025 under Article 113(b), so the annex bites from the Omnibus entry into force, not from 2 August 2026.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "field": "takeaway",
+    "claim": "AIH 0201 to AIH 0205 for machine learning on structured, signal, text and image data",
+    "source_says": "Section 3(b) gives four data-type codes, AIH 0201 structured data, AIH 0202 signal and audio data, AIH 0203 text data and AIH 0204 image and video, while AIH 0205 covers AI systems that learn from their environment, excluding systems under AIH 0401.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "new_takeaway": "Annex XIV supplies the codes that fix the scope of a notified body's designation under Article 30: a body assesses only the types of AI system in its designation (section 1). Section 2 lists product and use categories: AIP 0102 to AIP 0112 for Annex I Section A products in points 2 to 12, and AIB 0201 to AIB 0203 for remote biometric identification, biometric categorisation and emotion recognition. Section 3 lists technology codes: AIH 0101 for symbolic, expert and knowledge-based systems and search and optimisation, AIH 0201 to AIH 0204 for machine learning on structured, signal and audio, text, and image and video data, AIH 0205 for systems that learn from their environment, AIH 0301 for generative AI systems including those built on general-purpose AI models, and AIH 0401 for emerging technologies including agentic AI. Article 29 applicants must use these codes (section 4).",
+  "new_applies_from": "27 July 2026",
+  "new_omnibus": null,
+  "note": "Codes and structure are right apart from AIH 0205; the claimed date sits a week after the annex actually took effect."
+ }
+]

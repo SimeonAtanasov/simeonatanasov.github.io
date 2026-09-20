@@ -7,7 +7,7 @@
   "section": "",
   "takeaway": "Article 1 states the purpose of the Regulation: to improve the functioning of the internal market, promote human-centric and trustworthy AI and protect health, safety and fundamental rights while supporting innovation (paragraph 1). Paragraph 2 lists what the Regulation contains: harmonised rules for placing AI systems and general-purpose AI models on the market, prohibitions of certain practices, requirements for high-risk systems and their operators, transparency rules, rules on general-purpose AI models, market surveillance and enforcement, and innovation support for SMEs, start-ups and small mid-caps. It binds everyone in scope and is the reference point for reading every later obligation.",
   "applies_from": "2 February 2025",
-  "omnibus": "",
+  "omnibus": "Point (g) of paragraph 2 was replaced so that the innovation support measures are now framed around small mid-cap enterprises (SMCs) and SMEs, including start-ups.",
   "binds": [
    "everyone"
   ],
@@ -32,9 +32,9 @@
   "title": "Scope",
   "chapter": "Chapter I: General Provisions",
   "section": "",
-  "takeaway": "Article 2 fixes who is caught: providers placing AI systems or general-purpose AI models on the Union market wherever established, deployers in the Union, third-country operators whose output is used in the Union, importers, distributors, product manufacturers, authorised representatives and affected persons (paragraph 1). Paragraphs 3 to 12 exclude military, defence and national security uses, scientific research, pre-market testing, purely personal use and free and open-source systems unless high-risk or caught by Articles 5 or 50. Paragraph 2 confines Annex I Section B products to Article 6(1), Article 60a and Articles 102 to 112; paragraph 13 lets the Commission limit Articles 9 to 15 by 2 August 2027.",
+  "takeaway": "Article 2 fixes who is caught: providers placing AI systems or general-purpose AI models on the Union market wherever established, deployers in the Union, third-country operators whose output is used in the Union, importers, distributors, product manufacturers, authorised representatives and affected persons (paragraph 1). Paragraphs 3 to 12 exclude military, defence and national security uses, scientific research, pre-market testing, purely personal use and free and open-source systems unless high-risk or caught by Articles 5 or 50. Paragraph 2 confines Annex I Section B products to Article 6(1), Article 60a and Articles 102 to 112; paragraph 13 lets the Commission limit Articles 9 to 15 and 17 to 25 by 2 August 2027.",
   "applies_from": "2 February 2025",
-  "omnibus": "Paragraph 2 was rewritten so that only Article 6(1), Article 60a and Articles 102 to 112 apply to Annex I Section B products, with Articles 57 to 59 applying only where integrated into that sectoral legislation, and paragraph 7 now cross-refers to the new Article 4a.",
+  "omnibus": "Paragraph 2 was rewritten so that only Article 6(1), Article 60a and Articles 102 to 112 apply to Annex I Section B products, with Articles 57 to 59 applying only where integrated into that sectoral legislation, paragraph 7 now cross-refers to the new Article 4a, and a new paragraph 13 lets the Commission limit Articles 9 to 15 and 17 to 25 for Article 6(1) systems by delegated act.",
   "binds": [
    "everyone"
   ],
@@ -60,9 +60,9 @@
   "title": "Definitions",
   "chapter": "Chapter I: General Provisions",
   "section": "",
-  "takeaway": "Article 3 supplies the 68 definitions on which every later obligation depends. An AI system is a machine-based system with varying levels of autonomy that infers from input how to generate outputs such as predictions, content, recommendations or decisions (point 1); a provider develops a system or model and places it on the market under its own name (point 3); a deployer uses a system under its authority outside personal activity (point 4). Points 63 and 65 define general-purpose AI models and systemic risk, and point 49 defines a serious incident as death, serious harm to health, critical infrastructure disruption, a fundamental rights infringement or serious harm to property.",
+  "takeaway": "Article 3 supplies the 70 definitions on which every later obligation depends, numbered 1 to 68 with the inserted points 14a and 14b. An AI system is a machine-based system with varying levels of autonomy that infers from input how to generate outputs such as predictions, content, recommendations or decisions (point 1); a provider develops a system or model and places it on the market under its own name (point 3); a deployer uses a system under its authority outside personal activity (point 4). Points 63 and 65 define general-purpose AI models and systemic risk, and point 49 defines a serious incident as death, serious harm to health, a serious and irreversible disruption of critical infrastructure, a fundamental rights infringement or serious harm to property or the environment.",
   "applies_from": "2 February 2025",
-  "omnibus": "Point 14a now refers to Recommendation 2003/361/EC for SMEs and new point 14b defines a small mid-cap enterprise (SMC) by reference to Recommendation (EU) 2025/1099.",
+  "omnibus": "New point 14a defines SMEs by reference to Recommendation 2003/361/EC and new point 14b defines a small mid-cap enterprise (SMC) by reference to Recommendation (EU) 2025/1099.",
   "binds": [
    "everyone"
   ],
@@ -120,14 +120,14 @@
   "title": "Prohibited AI Practices",
   "chapter": "Chapter II: Prohibited AI Practices",
   "section": "",
-  "takeaway": "Article 5 prohibits eight AI practices: manipulative techniques, exploitation of vulnerabilities, social scoring, criminal risk prediction based solely on profiling, untargeted scraping of facial images, emotion recognition in workplaces and education except for medical or safety reasons, biometric categorisation inferring protected characteristics, and real-time remote biometric identification in public spaces for law enforcement (paragraph 1). Point (h) allows real-time identification only for victim searches, imminent threats or Annex II offences carrying at least four years' custody, with prior authorisation and a fundamental rights impact assessment (paragraphs 2 to 4). New points (ba) and (bb) ban generating non-consensual intimate imagery and child sexual abuse material from 2 December 2026.",
+  "takeaway": "Article 5 prohibits ten AI practices (paragraph 1): manipulative techniques, exploitation of vulnerabilities, social scoring, criminal risk prediction based solely on profiling, untargeted scraping of facial images, emotion recognition in workplaces and education except for medical or safety reasons, biometric categorisation inferring protected characteristics, real-time remote biometric identification in public spaces for law enforcement, and the two new points (ba) and (bb). Point (h) allows real-time identification only for victim searches, imminent threats or Annex II offences carrying at least four years' custody, with prior authorisation and a fundamental rights impact assessment (paragraphs 2 to 4). Points (ba) and (bb) ban generating or manipulating non-consensual intimate imagery and child sexual abuse material from 2 December 2026.",
   "applies_from": "2 February 2025; points (ba) and (bb) and paragraphs 1a and 1b from 2 December 2026",
   "omnibus": "New points 1(ba) and 1(bb) and paragraphs 1a and 1b add prohibitions on AI systems generating or manipulating non-consensual intimate imagery and child sexual abuse material, applying from 2 December 2026.",
   "binds": [
    "everyone"
   ],
   "recitals": [
-   3,
+   26,
    28,
    29,
    30,
@@ -158,7 +158,7 @@
   "title": "Classification Rules for High-Risk AI Systems",
   "chapter": "Chapter III: High-Risk AI Systems",
   "section": "Section 1: Classification of AI systems as high-risk",
-  "takeaway": "Article 6 sets the two routes to high-risk status: safety components of, or products under, Annex I harmonisation legislation that require third-party conformity assessment (paragraph 1), and the use cases in Annex III (paragraph 2). Paragraph 3 exempts Annex III systems that perform a narrow procedural task, improve a completed human activity, detect decision-making deviations or carry out preparatory assessments, but profiling of natural persons always stays high-risk. Providers relying on paragraph 3 must document the assessment before placing on the market and register under Article 49(2) (paragraph 4). New paragraphs 1a to 1c exclude systems limited to non-safety aspects such as user assistance unless failure endangers health and safety.",
+  "takeaway": "Article 6 sets the two routes to high-risk status: safety components of, or products under, Annex I harmonisation legislation that require third-party conformity assessment (paragraph 1), and the use cases in Annex III (paragraph 2). Paragraph 3 exempts Annex III systems that perform a narrow procedural task, improve a completed human activity, detect decision-making deviations or carry out preparatory assessments, but profiling of natural persons always stays high-risk. Providers relying on paragraph 3 must document the assessment before placing on the market and register under Article 49(2) (paragraph 4). New paragraphs 1a to 1c exclude systems limited to non-safety aspects such as user assistance unless failure endangers health and safety. Article 113(c) excepts paragraph 5, the Commission's duty to issue classification guidelines, from the deferred dates, so it applies from 2 August 2026.",
   "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
   "omnibus": "New paragraphs 1a, 1b and 1c state that systems used only for non-safety aspects such as user assistance, performance optimisation, service efficiency, automation, convenience or quality control are not safety components unless their failure endangers health and safety, and that products assessed solely for non-safety risks such as spectrum use do not meet paragraph 1.",
   "binds": [
@@ -429,8 +429,7 @@
   "recitals": [
    79,
    80,
-   81,
-   145
+   81
   ],
   "topics": [
    "provider-duties",
@@ -632,10 +631,11 @@
   "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
   "takeaway": "Article 25 makes any distributor, importer, deployer or other third party the provider of a high-risk AI system, with all Article 16 duties, where it puts its name on the system, makes a substantial modification that keeps or renders it high-risk, or changes the intended purpose so that the system becomes high-risk (paragraph 1). The initial provider then ceases to be provider but must supply technical documentation, known limitations and failure modes and targeted technical access, unless it clearly specified that the system was not to become high-risk (paragraph 2). Annex I Section A product manufacturers are the provider (paragraph 3); component suppliers must agree assistance in writing (paragraph 4).",
   "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
-  "omnibus": "Paragraph 2 now spells out the initial provider's cooperation duties (technical documentation, known limitations and failure modes, targeted technical access) and paragraph 4 lets the AI Office develop and recommend voluntary model contract terms for component suppliers.",
+  "omnibus": "Paragraph 2 now spells out the initial provider's cooperation duties (technical documentation, known limitations and failure modes, targeted technical access). In paragraph 4 only the first subparagraph was replaced, so that third parties supplying an AI model are also covered; the AI Office voluntary model contract terms were already in the base text.",
   "binds": [
    "provider",
    "deployer",
+   "importer",
    "distributor"
   ],
   "recitals": [
@@ -689,16 +689,14 @@
   "title": "Fundamental Rights Impact Assessment for High-Risk AI Systems",
   "chapter": "Chapter III: High-Risk AI Systems",
   "section": "Section 3: Obligations of providers and deployers of high-risk AI systems and other parties",
-  "takeaway": "Article 27 requires deployers that are bodies governed by public law, private operators providing public services, and deployers of the credit scoring and life and health insurance systems in Annex III point 5(b) and (c) to complete a fundamental rights impact assessment before first use (paragraph 1). The assessment covers the deployer's processes and intended use, the period and frequency of use, the persons affected, the risks of harm, the human oversight measures and the mitigation and complaint arrangements. It is done once, updated when elements change (paragraph 2), notified to the market surveillance authority (paragraph 3) and may build on a GDPR Article 35 assessment (paragraph 4).",
+  "takeaway": "Article 27 requires deployers that are bodies governed by public law, private operators providing public services, and deployers of the credit scoring and life and health insurance systems in Annex III point 5(b) and (c) to complete a fundamental rights impact assessment before first use of a high-risk AI system under Article 6(2), other than one used in the area listed in point 2 of Annex III (paragraph 1). The assessment covers the deployer's processes and intended use, the period and frequency of use, the persons affected, the risks of harm, the human oversight measures and the mitigation and complaint arrangements. It is done once, updated when elements change (paragraph 2), notified to the market surveillance authority (paragraph 3) and may cross-refer to a GDPR Article 35 assessment (paragraph 4).",
   "applies_from": "2 December 2027 (high-risk under Annex III) / 2 August 2028 (high-risk under Annex I)",
-  "omnibus": "Paragraph 5 was amended so that the AI Office develops the questionnaire template including through an automated tool to simplify compliance.",
+  "omnibus": "Paragraph 4 was replaced: rather than the fundamental rights impact assessment complementing a data protection impact assessment, the deployer may now include cross-references to the relevant sections of that assessment or incorporate relevant parts of it. Paragraph 5 gained a second sentence requiring the AI Office template to offer those cross-references; the automated tool was already in the base text.",
   "binds": [
    "deployer"
   ],
   "recitals": [
-   4,
    5,
-   26,
    93,
    96
   ],
@@ -761,7 +759,7 @@
   "section": "Section 4: Notifying authorities and notified bodies",
   "takeaway": "Article 30 allows notifying authorities to notify only conformity assessment bodies that satisfy Article 31 (paragraph 1), using the Commission's electronic notification tool and the codes, categories and AI system types in Annex XIV, which the Commission may amend by delegated act (paragraph 2). The notification states the activities, modules, AI system types and evidence of competence, with documentary proof and monitoring arrangements where no accreditation certificate exists (paragraph 3). The body may act as a notified body only if no objection is raised within two weeks of a notification based on accreditation or two months of one based on documentary evidence (paragraph 4); the Commission decides objections (paragraph 5).",
   "applies_from": "2 August 2025",
-  "omnibus": "Paragraph 2 now requires notification through the Commission's electronic tool using the codes and categories in new Annex XIV, which the Commission may amend by delegated act, and paragraph 3 is new.",
+  "omnibus": "Paragraph 2 now requires notification through the Commission's electronic tool using the codes and categories in new Annex XIV, which the Commission may amend by delegated act under Article 97. Paragraph 3 is unchanged base text.",
   "binds": [
    "authority",
    "notified-body",

@@ -47,6 +47,10 @@ On 20 September 2026 the takeaways were checked against the official texts (see
 `../source-verification-2026-09-20.md`): 57 EDPB entries were corrected by
 `../source-verification-2026-09-20/apply_source_review.py`, already applied to digest.json.
 Rerun it after any rebuild that regenerates digest.json.
+A 20 September 2026 pass over every GDPR article citation in the digest, against Regulation
+2016/679 itself (see `../law-verification-2026-09-20.md`), found one more: Opinion 04/2024
+on main establishment had Article 4(16)(a) backwards. That correction is entry 157 in the
+same change set, so the EDPB section now holds 60 changes.
 
 Two traps:
 

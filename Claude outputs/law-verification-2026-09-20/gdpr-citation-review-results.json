@@ -1,0 +1,16 @@
+[
+ {
+  "key": 157,
+  "digest": "edpb",
+  "issues": [
+   {
+    "claim": "the place of central administration counts only if it actually takes the decisions on purposes and means, otherwise the one-stop-shop does not apply",
+    "gdpr_says": "Article 4(16)(a) provides that the main establishment is the place of central administration in the Union unless the decisions on purposes and means are taken in another establishment of the controller in the Union which has the power to have them implemented, in which case that establishment is the main establishment. The article does not say the one-stop-shop ceases to apply; it relocates the main establishment, and with it the lead authority under Article 56(1). Only where no Union establishment takes those decisions is there no main establishment and no one-stop-shop.",
+    "severity": "medium",
+    "kind": "wrong-substance"
+   }
+  ],
+  "new_takeaway": "Opinion on when a controller has a main establishment in the Union under Article 4(16)(a): the place of central administration counts only if it actually takes the decisions on purposes and means, otherwise the Union establishment that does take them is the main establishment, and where no Union establishment takes them the one-stop-shop does not apply. Procedural, for authorities deciding competence.",
+  "note": "Article 4(16)(a) moves the main establishment to the deciding Union establishment; only decisions taken outside the Union defeat the one-stop-shop."
+ }
+]

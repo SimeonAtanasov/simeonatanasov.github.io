@@ -1,0 +1,10 @@
+const fs=require("fs");
+const src=fs.readFileSync("/mnt/user-data/uploads/simeonatanasov.github.io/pages/gdpr-readiness/readiness-data.js","utf8");
+const code = src + "\nmodule.exports={ARTICLE_TITLES,CONDITIONS,CATEGORIES,ACTIVITIES,STATUS};\n";
+fs.writeFileSync("/tmp/rd.js",code);
+const D=require("/tmp/rd.js");
+fs.writeFileSync("/home/claude/pack/src/readiness.json",JSON.stringify(D,null,1));
+console.log("articles",Object.keys(D.ARTICLE_TITLES).length,"conditions",D.CONDITIONS.length,"categories",D.CATEGORIES.length,"activities",D.ACTIVITIES.length,"status",D.STATUS.length);
+console.log(JSON.stringify(D.CONDITIONS[0],null,1));
+console.log(JSON.stringify(D.CATEGORIES[0],null,1));
+console.log(JSON.stringify(D.ACTIVITIES[0],null,1));
