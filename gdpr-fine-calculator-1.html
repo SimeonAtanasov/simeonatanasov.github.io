@@ -50,10 +50,10 @@
 
 								<!-- How to use it -->
 								<section class="fc-block fc-howto">
-									<h2 id="fc-how">How to use this</h2>
+									<h2>How to use this</h2>
 									<ol class="fc-steps">
 										<li><strong>Enter your annual turnover.</strong> Use the whole undertaking, not one legal entity. Art. 83 refers to the undertaking, which the Court of Justice reads as the whole economic unit, and it is the same basis used for every organisation in the comparison set. You can type <code>20bn</code>, <code>450m</code> or a plain number.</li>
-										<li><strong>Pick what went wrong, or leave it.</strong> The categories come from the enforcement tracker's own classification, one per decision. <strong>If you do not know which Article is in play, leave it on "Not sure".</strong> You are not giving up much: once organisations of a similar size are compared with each other, the violation type barely moves the answer. The number beside each category is how many comparable cases carry a known turnover, which tells you how much weight it can bear.</li>
+										<li><strong>Pick what went wrong, or leave it.</strong> The categories come from the enforcement tracker's own classification, one per decision. <strong>If you do not know which Article is in play, leave it on "Not sure".</strong> You are not giving much up: once organisations of a similar size are compared with each other, the violation type barely moves the answer. The number beside each category is how many comparable cases carry a known turnover, which tells you how much weight it can bear.</li>
 										<li><strong>Narrow by sector if it helps.</strong> Optional. The tool widens the search automatically if too few peers match, and tells you when it did.</li>
 										<li><strong>Read all three numbers.</strong> The typical outcome, the realistic range and the statutory ceiling. The range matters more than the midpoint: fines for the same conduct vary by orders of magnitude, and any single figure hides that.</li>
 									</ol>
@@ -62,7 +62,7 @@
 
 								<!-- Inputs -->
 								<section class="fc-block">
-									<h2 id="fc-org">Your organisation</h2>
+									<h2>Your organisation</h2>
 									<div class="fc-inputs">
 										<div class="fc-field">
 											<label for="fc-turnover">Annual turnover of the undertaking</label>
@@ -96,7 +96,7 @@
 
 								<!-- Method -->
 								<section class="fc-block fc-method">
-									<h2 id="fc-method">How the number is worked out</h2>
+									<h2>How the number is worked out</h2>
 
 									<h3>The index</h3>
 									<p>For every published decision where the organisation's turnover is known, the index is the fine divided by that turnover. It is the only figure that lets a EUR 3,000 fine in Romania and a EUR 225 million fine in Ireland sit on the same scale.</p>
@@ -106,8 +106,8 @@
 									<p>The turnover band is not decoration. Fines scale far less than proportionally with size: across this data the fitted elasticity is about 0.35, meaning a company ten times larger draws a fine only about twice as large. A small company's index is therefore not comparable with a large one's, and an average taken across sizes is meaningless.</p>
 
 									<h3>Not knowing what went wrong costs you very little</h3>
-									<p>Knowing whether a decision turns on Art. 6 rather than Art. 5 is a lawyer's judgement, and the people who most need a rough figure are often the ones who cannot make it. So "Not sure" is the default here rather than a fallback. Inside the EUR 1bn to 100bn band the five well evidenced violation categories have median indices between 0.0020% and 0.0023% of turnover, which is no difference worth having. Size is what moves the number, by a factor of several hundred across the range, and size is the one thing you always know.</p>
-									<p>The one place the choice does matter is the ceiling, because Art. 83 puts different Articles in the 2% and 4% tiers. With no category chosen the tool assumes the 4% tier: that is the cautious reading, and 73% of the cases here sit in it. If the decision cited only Art. 28, 31, 32, 33, 34 or 58 the ceiling would be the 2% one instead, and the card says which is in play.</p>
+									<p>Knowing whether a decision turns on Art. 6 rather than Art. 5 is a lawyer's judgement, and the people who most need a rough figure are usually the ones who cannot make it. So "Not sure" is the default rather than a fallback. Inside the EUR 1bn to 100bn band the five well evidenced violation categories have median indices between 0.0020% and 0.0023% of turnover, which is no difference worth having. Size is what moves the number, by a factor of several hundred across the range, and size is the one thing you always know.</p>
+									<p>The one place the choice does matter is the ceiling, because Art. 83 puts different Articles in the 2% and 4% tiers. With no category chosen the tool assumes the 4% tier: that is the cautious reading, and 73% of the cases here sit in it. If the decision were to cite only Art. 28, 31, 32, 33, 34 or 58, the ceiling would be the 2% one instead, and the card says so.</p>
 
 									<h3>One vote per organisation</h3>
 									<p>Some regulators fine the same operator repeatedly, in one case more than sixty times. Each organisation is collapsed to a single index, the median of its own cases, before percentiles are taken. Without that step one heavily fined operator would decide the answer for its whole size band.</p>
@@ -137,8 +137,6 @@
 						</div>
 					</section>
 			</div>
-
-		<nav class="fc-rail" id="fc-rail" aria-label="On this page"><a href="#fc-how" data-target="fc-how"><i aria-hidden="true"></i><span>How to use this</span></a><a href="#fc-org" data-target="fc-org"><i aria-hidden="true"></i><span>Your organisation</span></a><a href="#fc-method" data-target="fc-method"><i aria-hidden="true"></i><span>How the number is worked out</span></a></nav>
 
 		<!-- Footer -->
 		<footer id="footer" class="wrapper style1-alt">
