@@ -1,6 +1,10 @@
 /* Back to top button for the tool pages; same look as the one on the digests. */
 .site-top {
-	position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050;
+	position: fixed; right: 1.25em; bottom: 1.25em; left: auto; z-index: 1050;
+	/* width is set explicitly because a page stylesheet may give bare buttons
+	   width: 100% on small screens, which would stretch this one across the
+	   footer (it did on the risk matrix page). */
+	width: auto; max-width: none; min-width: 0;
 	height: auto; line-height: 1.4; padding: 0.6em 1em; font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase;
 	border-radius: 2em; background: rgba(66,103,166,0.95); border: 0 !important; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); white-space: nowrap;
 }

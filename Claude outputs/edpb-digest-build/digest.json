@@ -1985,7 +1985,7 @@
   "url": "https://www.edpb.europa.eu/documents/support-pool-of-experts/data-protection-officer-training_en",
   "rating": "B",
   "where": "Readiness governance",
-  "takeaway": "Training material for data protection officers, produced for the Croatian DPA under the Support Pool of Experts programme, comes in three modules: a general module, a public health sector module covering hospitals, clinics, pharmacies and the national health information systems, and an educational sector module, each with questions from practice. The material is in Croatian, the health module was submitted in May 2024, and it expresses the external author's views rather than an EDPB position. It is relevant to organisations designing DPO training or role-based curricula for public health and education, and to Croatian-speaking DPOs directly.",
+  "takeaway": "Training material for data protection officers, produced for the Croatian DPA under the Support Pool of Experts programme, comes in three modules: a general module, a public health sector module and an educational sector module. The material is in Croatian, the general module states it was submitted in May 2024, and it expresses the external author's views rather than an EDPB position. It is relevant to organisations designing DPO training or role-based curricula for public health and education, and to Croatian-speaking DPOs directly.",
   "status": "current",
   "topics": [
    "governance"
@@ -3484,7 +3484,7 @@
   "url": "https://www.edpb.europa.eu/documents/edpb-binding-decisions/binding-decision-52022-on-the-dispute-submitted-by-the-irish-sa_en",
   "rating": "B",
   "where": "Topic 15: transparency, WhatsApp",
-  "takeaway": "WhatsApp Ireland cannot rely on Article 6(1)(b) GDPR to process personal data for service improvement and security features, because processing must be objectively necessary and integral to the contracted service, judged from both the controller's and a reasonable user's perspective, and a controller cannot pick a basis that serves its commercial interests at the expense of data subject protection. The EDPB instructed the Irish SA to record the Article 6(1) infringement, to increase the administrative fine beyond its draft, and to order the privacy policy into compliance with Articles 12(1) and 13(1)(c). Any controller citing contract for improvement or analytics processing should re-evaluate that basis.",
+  "takeaway": "WhatsApp Ireland cannot rely on Article 6(1)(b) GDPR to process personal data for service improvement and security features, because processing must be objectively necessary and integral to the contracted service, judged from both the controller's and a reasonable user's perspective, and a controller cannot pick a basis that serves its commercial interests at the expense of data subject protection. The EDPB instructed the Irish SA to record the Article 5(1)(a) and 6(1) infringement and impose an administrative fine; the separate order to bring WhatsApp's privacy policy into compliance with Articles 12(1) and 13(1)(c) was made in the EDPB's earlier 2021 binding decision on WhatsApp, not this one. Any controller citing contract for improvement or analytics processing should re-evaluate that basis.",
   "status": "current",
   "topics": [
    "lawful-basis",
@@ -5969,7 +5969,7 @@
   "url": "https://www.edpb.europa.eu/documents/internal-document/internal-edpb-document-22020-on-how-to-deal-with-complaints-relating-to_en",
   "rating": "N",
   "where": "EDPB internal procedure",
-  "takeaway": "Internal document of the Board. Governs how the Board itself works: no obligation on controllers or processors.",
+  "takeaway": "Internal document of the Board. Guides supervisory authorities on handling cross-border complaints spanning the pre-GDPR and post-GDPR period: no obligation on controllers or processors.",
   "status": "",
   "topics": [],
   "tier": "oneliner",

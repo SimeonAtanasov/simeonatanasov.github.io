@@ -171,7 +171,7 @@
   ],
   "date": "18 July 2025",
   "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers",
-  "takeaway": "Non-binding guidelines approved 18 July 2025 and last updated 28 April 2026, setting out how the Commission will enforce Chapter V. They give technical criteria for when a model is general-purpose, explain the systemic-risk notification duty to the AI Office, the conditions of the open-source exemption, and the rule that only downstream actors making significant modifications become providers. Obligations applied from 2 August 2025, the Commission's fining powers started 2 August 2026, and models placed on the market before 2 August 2025 must comply by 2 August 2027. Read alongside the GPAI Code of Practice.",
+  "takeaway": "Non-binding guidelines approved 18 July 2025 and last updated 20 April 2026, setting out how the Commission will enforce Chapter V. They give technical criteria for when a model is general-purpose, explain the systemic-risk notification duty to the AI Office, the conditions of the open-source exemption, and the rule that only downstream actors making significant modifications become providers. Obligations applied from 2 August 2025, the Commission's fining powers started 2 August 2026, and models placed on the market before 2 August 2025 must comply by 2 August 2027. Read alongside the GPAI Code of Practice.",
   "topics": [
    "gpai",
    "provider-duties"

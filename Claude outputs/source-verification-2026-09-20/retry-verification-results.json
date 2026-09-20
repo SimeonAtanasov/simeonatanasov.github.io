@@ -1,0 +1,930 @@
+[
+ {
+  "id": "aia-24",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "wrong_file",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "The source page (enforcement-ai-act) has no PDF at all, only a page-print option; the given Council document (Digital Omnibus text, PE-30-2026-INIT) is not linked from it and is not the same document. Content was cross-checked directly against the live page: the penalty figures and the 2 December 2026 deepfake/CSAM date all matched. The Council document itself, where read, corroborated the AI Office's post-Omnibus exclusive competence but gave different dates (2 December 2027, 2 August 2028) for unrelated Chapter III high-risk provisions.",
+  "digest": "aia",
+  "title": "The enforcement framework of the AI Act"
+ },
+ {
+  "id": "aia-16",
+  "fetched": true,
+  "better_pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/129555",
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "around 190 organisations had signed, 95 under Section 1 and 192 under Section 2",
+    "source_says": "The source page confirms about 190 organisations had signed by end of July 2026 but does not give the 95/192 split; the PDF itself could not be fetched (blocked by robots.txt) to check the split.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url (118480) does not match the code text; the real code PDF is 129555, found via the source page's own download link. The finalisation date, both draft dates, the kick-off plenary, the two working groups, the Section 1/2 obligations and the 2 August 2026 obligations date all matched.",
+  "digest": "aia",
+  "title": "Code of Practice on transparency of AI-generated content (marking and labelling)"
+ },
+ {
+  "id": "aia-8",
+  "fetched": true,
+  "better_pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/118340",
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "last updated 28 April 2026",
+    "source_says": "The Commission's guidelines library page states the guidelines were last updated 20 April 2026.",
+    "severity": "medium",
+    "kind": "wrong"
+   }
+  ],
+  "proposed_takeaway": "Non-binding guidelines approved 18 July 2025 and last updated 20 April 2026, setting out how the Commission will enforce Chapter V. They give technical criteria for when a model is general-purpose, explain the systemic-risk notification duty to the AI Office, the conditions of the open-source exemption, and the rule that only downstream actors making significant modifications become providers. Obligations applied from 2 August 2025, the Commission's fining powers started 2 August 2026, and models placed on the market before 2 August 2025 must comply by 2 August 2027. Read alongside the GPAI Code of Practice.",
+  "note": "Given pdf_url (131215) does not match the guidelines; the correct English PDF is 118340, per the guidelines library page. Both were blocked by robots.txt, so the approval date and application dates were checked against the library page text rather than the PDF itself.",
+  "digest": "aia",
+  "title": "Commission Guidelines on the scope of obligations for providers of general-purpose AI models"
+ },
+ {
+  "id": "aia-9",
+  "fetched": true,
+  "better_pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/118120",
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the Commission and the AI Board confirmed it as an adequate voluntary tool, and signature is by form to the AI Office",
+    "source_says": "The source page describes the three chapters and lists the 21 signatories but does not state an adequacy confirmation or a signing-by-form process; the chapter PDFs could not be fetched (blocked by robots.txt) to check further.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url (128559) matches none of the three chapter PDFs on the page; used the Transparency chapter (118120) as the representative link. The 21 signatories and the note that one provider (xAI) signed only the Safety and Security chapter both matched exactly.",
+  "digest": "aia",
+  "title": "General-Purpose AI Code of Practice and list of signatories"
+ },
+ {
+  "id": "aia-21",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "wrong_file",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "The service desk timeline is a live web tool with no PDF or print/download link at all; the given pdf_url is unrelated to it. Checked all eight milestone dates directly against the live page and every one matched the takeaway exactly.",
+  "digest": "aia",
+  "title": "AI Act Service Desk: timeline for the implementation of the EU AI Act"
+ },
+ {
+  "id": "aia-32",
+  "fetched": true,
+  "better_pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/101625",
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "supervises GPAI models under Articles 88 to 94",
+    "source_says": "Not stated on the AI Office overview page, and the Commission Decision PDF (101625) could not be fetched (blocked by robots.txt) to check the article numbers.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url is an unrelated EDPB opinion on data protection in AI models; the real Commission Decision PDF is at 101625 (also blocked by robots.txt). Staff count (125+), the six units, the two advisers, and the post-Omnibus exclusive-competence claim were all confirmed via the AI Office page and, for the competence point, the Digital Omnibus text itself.",
+  "digest": "aia",
+  "title": "European AI Office and Commission Decision C(2024) 390 establishing it"
+ },
+ {
+  "id": "aia-35",
+  "fetched": true,
+  "better_pdf_url": "https://health.ec.europa.eu/document/download/b78a17d7-e3cd-4943-851d-e02a2f22bbb4_en?filename=mdcg_2025-6_en.pdf",
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Medical device manufacturers now have until 2 August 2028 under the Omnibus",
+    "source_says": "The June 2025 MDCG document itself only gives the pre-Omnibus date of 2 August 2027 for high-risk AI obligations; the 2028 date comes from the later Digital Omnibus, not from this document.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url was an unrelated EDPB paper on LLM privacy risks; the correct MDCG 2025-6 PDF was found and fetched directly. Joint MDCG/AI Board authorship, the high-risk classification under Article 6(1), the single documentation/QMS approach under Article 8, and the notified-body and post-market-surveillance coordination were all confirmed in the text.",
+  "digest": "aia",
+  "title": "MDCG 2025-6: Interplay between the MDR/IVDR and the AI Act"
+ },
+ {
+  "id": "aia-13",
+  "fetched": true,
+  "better_pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/112203",
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The AI literacy Q&A records more than 40 initiatives gathered from AI Pact pledgers between December 2024 and February 2025 and from wider organisations between April and June 2025",
+    "source_says": "Neither the repository page nor the linked living-repository background document mentions this figure or these date ranges, and no separate 'AI literacy Q&A' document with this statistic could be located.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url (129555) actually belongs to a different entry's document, the AI-generated-content Code of Practice. The filter categories and the no-presumption-of-compliance-with-Article-4 statement both matched exactly; the 40-initiatives Q&A claim could not be traced to any source.",
+  "digest": "aia",
+  "title": "Repository of AI literacy practices (living repository)"
+ },
+ {
+  "id": "cookie-145",
+  "fetched": true,
+  "better_pdf_url": "https://iabeurope.eu/wp-content/uploads/TCF_V-CMP_comms_TheReleaseOfTCFv.2.3-Mandatory%E2%80%98DisclosedVendorsSectionUpdateContactInfo-Reminder_190625_IABEurope.pdf",
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "pdf_url was an unrelated US Federal Register notice; found IAB Europe's own 19 June 2025 release notification PDF via search. It confirms the mandatory disclosedVendors segment, the 28 February 2026 CMP deadline without re-surfacing the UI, and that pre-deadline TC Strings remain valid until progressively replaced as users renew or change choices.",
+  "digest": "cookie",
+  "title": "IAB Europe TCF v2.3 and the mandatory disclosed vendors segment"
+ },
+ {
+  "id": "cookie-166",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "wrong_file",
+  "issues": [
+   {
+    "claim": "pdf_url (whole document)",
+    "source_says": "The linked PDF is a Montana Senate Bill 384 (2023), the Montana Consumer Data Privacy Act enrolled bill, an unrelated US state privacy statute with no connection to Do Not Track.",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "claim": "Global Privacy Control ... is its successor for opt-out signalling",
+    "source_says": "The W3C Note itself (17 January 2019) predates GPC and does not name a successor; this is accurate outside context the document does not state.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "The W3C Note is published only as HTML, no PDF exists to substitute. Verified the takeaway directly against the canonical https://www.w3.org/TR/tracking-dnt/ page; the closure rationale, date and status all match exactly.",
+  "digest": "cookie",
+  "title": "W3C Tracking Preference Expression (Do Not Track), Working Group Note"
+ },
+ {
+  "id": "cookie-21",
+  "fetched": true,
+  "better_pdf_url": "https://www.aepd.es/guias/guia-cookies.pdf",
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "pdf_url was EDPB Guidelines 8/2020 (targeting of social media users), the wrong guideline number entirely. Verified the takeaway against the AEPD press release page itself, which names Guidelines 03/2022 on deceptive design and the 11 January 2024 deadline exactly as stated. The live cookie guide PDF found on the same page now carries a May 2024 date, confirming the takeaway's supersession claim.",
+  "digest": "cookie",
+  "title": "AEPD, press release: cookie guide updated to the EDPB deceptive design guidelines, compliance by 11 January 2024"
+ },
+ {
+  "id": "cookie-155",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "wrong_file",
+  "issues": [
+   {
+    "claim": "pdf_url (whole document)",
+    "source_says": "The linked PDF is Kentucky House Bill 15, the Kentucky Consumer Data Privacy Act (effective 1 January 2026), an unrelated state's general privacy statute, not California AB 566.",
+    "severity": "high",
+    "kind": "wrong"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "leginfo.legislature.ca.gov blocks automated fetches; no substitute PDF was found. Verified via the chaptered bill text on Legiscan and the Hunton blog cited as url: the 8 October 2025 signing date, 1 January 2027 operative date, safe harbour and CPPA rulemaking authority all match the takeaway.",
+  "digest": "cookie",
+  "title": "California AB 566, the Opt Me Out Act (browser opt-out preference signal)"
+ },
+ {
+  "id": "cookie-91",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "wrong_file",
+  "issues": [
+   {
+    "claim": "pdf_url (whole document)",
+    "source_says": "The linked PDF is the UK Data (Use and Access) Act 2025, Schedule 12 (storing information in the terminal equipment of a subscriber or user), a British statute unrelated to the OPC's 2011 Canadian guidelines.",
+    "severity": "high",
+    "kind": "wrong"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "priv.gc.ca could not be fetched (repeated robots/timeout errors on the live page). Cross-checked via a contemporaneous law-firm summary of the same guidelines, which matches the takeaway's opt-out timing, sensitivity, children and data-destruction conditions, but this is a secondary source rather than the primary text.",
+  "digest": "cookie",
+  "title": "OPC Guidelines on privacy and online behavioural advertising"
+ },
+ {
+  "id": "cookie-214",
+  "fetched": true,
+  "better_pdf_url": "https://privacy.ca.gov/wp-content/uploads/sites/357/2026/03/Order-of-Decision_PlayOn_Enforcement.pdf",
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "pdf_url was an unrelated 2021 ACCC Australia ad-tech market study; found the actual Order of Decision PDF linked from the CPPA press release. It confirms the $1.10 million fine against 2080 Media, Inc. d/b/a PlayOn Sports, the forced-consent banner, the referral to NAI/DAA instead of an own opt-out, and the failure to honour opt-out preference signals.",
+  "digest": "cookie",
+  "title": "California Privacy Protection Agency, Order of Decision against PlayOn Sports"
+ },
+ {
+  "id": "cookie-144",
+  "fetched": true,
+  "better_pdf_url": "https://iabeurope.eu/wp-content/uploads/TCF-Policies-TransparencyConsentFramework_Policies_Version-2026-05-29.5.0.b.docx.pdf",
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "pdf_url was an unrelated US Second Circuit court filing. Found the actual TCF Policies PDF (version 2026-05-29.5.0.b) via search; it confirms the CMP, vendor and publisher obligations quoted in the takeaway. The document itself does not mention the Belgian APD or Brussels Market Court, but the takeaway presents those as outside context rather than the document's own claim, so this is not an error.",
+  "digest": "cookie",
+  "title": "IAB Europe TCF Policies (current version 2026-05-29.5.0.b)"
+ },
+ {
+  "id": "cookie-40",
+  "fetched": true,
+  "better_pdf_url": "https://www.edpb.europa.eu/system/files/2026-07/edpb_bindingdecision_202601_be_sa_vrt_redacted_en.pdf",
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url was a Danish cookie guidance PDF, unrelated. Correct binding decision PDF found on the EDPB page and confirms the complaint route, the abuse-of-rights dismissal under articles 77 and 80(1), and the instruction to reassess on the merits under article 60(3). Text extraction did not surface an explicit '28 May 2026' adoption line, though nothing contradicts it.",
+  "digest": "cookie",
+  "title": "EDPB, article 65 binding decision requiring the Belgian DPA to examine a noyb cookie banner complaint against VRT on the merits"
+ },
+ {
+  "id": "cookie-192",
+  "fetched": true,
+  "better_pdf_url": "https://www.edoeb.admin.ch/dam/en/sd-web/brLL9rM3ny9d/Leitfaden%20des%20ED%C3%96B%20betreffend%20Datenbearbeitungen%20mittels%20Cookies%20und%20%C3%A4hnlichen%20Technologien%20V.%201.1%20vom%2006.10.2025_EN.pdf",
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Penalties reach CHF 250,000 (FADP) and CHF 5,000 (TCA)",
+    "source_says": "The guidelines state only the CHF 5,000 fine under Article 45c TCA (Art. 53 TCA); no CHF 250,000 figure appears anywhere in the document, so attributing it to the FADP as if the guidelines said so overstates the source.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": "Version 1.1 of 6 October 2025 replaces version 1.0 of 22 January 2025 and sets out how the FDPIC supervises cookies, pixels and similar technologies under the FADP, the Data Protection Ordinance and Article 45c TCA: necessary cookies need information only; other non-essential cookies justified by overriding interests need information and a mandatory opt-out; express consent is required for sensitive data, high-risk profiling, any profiling by federal bodies and unexpected uses that seriously intrude, including paid access for multiple embedded advertising third parties and location profiling. Banners must not use pre-ticked boxes or dark patterns; cookie paywalls need a proportionate price. The guidelines themselves state only the Article 45c TCA fine of up to CHF 5,000; the general FADP penalty regime separately allows fines of up to CHF 250,000.",
+  "note": "Given pdf_url was an Indonesian data protection statute, unrelated. Correct guidance PDF found on the FDPIC page; every other claim checked out against it.",
+  "digest": "cookie",
+  "title": "FDPIC Guidelines on data processing using cookies and similar technologies, version 1.1"
+ },
+ {
+  "id": "cookie-87",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url was a UK statutory instrument, unrelated, and the source page's own 'PDF' link is a robots-blocked carriage report. No adopted document exists yet for this proposal, so verified against the legislative train tracker page itself: it confirms the consultation closed 24 October 2025 and a legislative proposal is scheduled for Q4 2026, matching the takeaway.",
+  "digest": "cookie",
+  "title": "Digital Fairness Act initiative (dark patterns, addictive design, consent fatigue)"
+ },
+ {
+  "id": "cookie-2",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url was an unrelated EDPB recommendations document on user accounts. The Conseil d'Etat's decision page carries the ruling as HTML with no PDF link; that text confirms the annulment of the absolute cookie-wall ban and the retained requirements for purpose-specific consent, easy withdrawal and identifying trackers.",
+  "digest": "cookie",
+  "title": "Conseil d'Etat, decision no. 434684 on the CNIL's 2019 cookie guidelines (cookie walls)"
+ },
+ {
+  "id": "cookie-161",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url was a New Jersey privacy statute, unrelated, and the blog post itself has no PDF. Verified against the blog page: the named APIs match, and counting sub-components listed in the post (Shared Storage, requestStorageAccessFor, Related Website Partition) reaches thirteen. CHIPS, FedCM, the W3C attribution work and the cookie-choice line all check out.",
+  "digest": "cookie",
+  "title": "Google Privacy Sandbox: update on plans for Privacy Sandbox technologies (API retirement)"
+ },
+ {
+  "id": "cookie-93",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Given pdf_url was a UK statutory instrument, unrelated, and the OPC page has no separate PDF. The published findings text confirms the four-authority investigation, the closed-app tracking versus stated behaviour, the unused advertising purpose, one-month deletion, a privacy-impact-assessment programme and the nine-month reporting deadline.",
+  "digest": "cookie",
+  "title": "Joint investigation into location tracking by the Tim Hortons app (PIPEDA Findings 2022-001)"
+ },
+ {
+  "id": "edpb-162",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Opinion 01/2024, 16 January 2024, Dutch SA as BCR Lead, Booking.com Group Processor BCR (BCR-P): all match.",
+  "digest": "edpb",
+  "title": "Opinion 01/2024 on the draft decision of the Dutch Supervisory Authority regarding the Processor Binding Corporate Rules of the Booking.com Group"
+ },
+ {
+  "id": "edpb-330",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Opinion 17/2021, 19 May 2021, French SA, CISPE cloud code of conduct: matches.",
+  "digest": "edpb",
+  "title": "Opinion 17/2021 on the draft decision of the French Supervisory Authority regarding the European code of conduct submitted by the Cloud Infrastructure Service Providers (CISPE)"
+ },
+ {
+  "id": "edpb-399",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "date field: 15 August 2020",
+    "source_says": "The PDF's own header states 'Adopted on 23 July 2020' (confirmed on three separate reads of the cover text), not 15 August 2020.",
+    "severity": "low",
+    "kind": "wrong"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Takeaway text (Greece, Art 43(3), Guidelines 4/2018) is correct; only the entry's date field (not part of the takeaway) looks off by three weeks.",
+  "digest": "edpb",
+  "title": "Opinion 22/2020 on the draft decision of the competent supervisory authority of Greece regarding the approval of the requirements for accreditation of a certification body pursuant to Article 43.3 (GDPR)"
+ },
+ {
+  "id": "edpb-402",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Opinion 18/2020, 23 July 2020, Netherlands SA, Article 41 monitoring body accreditation, Guidelines 1/2019: all match.",
+  "digest": "edpb",
+  "title": "Opinion 18/2020 on the draft decision of the competent supervisory authority of the Netherlands regarding the approval of the requirements for accreditation of a code of conduct monitoring body pursuant to article 41 GDPR"
+ },
+ {
+  "id": "edpb-253",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Opinion 18/2022, 26 August 2022, Baden-Wurttemberg SA, Daimler Truck Group Controller BCR (BCR-C): all match.",
+  "digest": "edpb",
+  "title": "Opinion 18/2022 on the draft decision of the Baden-Württemberg (Germany) Supervisory Authority regarding the Controller Binding Corporate Rules of the Daimler Truck Group"
+ },
+ {
+  "id": "edpb-44",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "date field: 22 January 2026",
+    "source_says": "The version-history table in the PDF gives version 2.0 as 'Adopted on 15 January 2026', a week earlier than the entry's date field (likely a website publication date rather than the adoption date).",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Title, version 2.0, and purpose (DPF commercial complaint form for individuals) confirmed; only the date field is slightly off from the PDF's stated adoption date.",
+  "digest": "edpb",
+  "title": "EU-US Data Privacy Framework Template Complaint Form for Submitting Complaints to EU DPAs related to the Data Privacy Framework Principles - version 2.0"
+ },
+ {
+  "id": "edpb-286",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Call for Expressions of Interest \"Experts for the implementation of the EDPB's Support Pool of Experts\"",
+    "source_says": "The linked PDF is the formal notice/corrigendum (ref. 2022/S 070-181896) for this same call, whose body text matches the entry's title and purpose (setting up an expert list for the Support Pool of Experts 2022-2024).",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Subject matches (Support Pool of Experts call); the PDF is formatted as the official notice/corrigendum rather than a plain call document, but it is the right document.",
+  "digest": "edpb",
+  "title": "Call for Expressions of Interest \"Experts for the implementation of the EDPB's Support Pool of Experts\""
+ },
+ {
+  "id": "edpb-456",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Cover confirms EDPB Annual Report 2018.",
+  "digest": "edpb",
+  "title": "EDPB Annual Report 2018"
+ },
+ {
+  "id": "edpb-523",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Cover confirms EDPB Rules of Procedure, adopted 25 May 2018, matching the entry date.",
+  "digest": "edpb",
+  "title": "Rules of Procedure - version 1"
+ },
+ {
+  "id": "edpb-371",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Cover confirms Internal EDPB Document 07/2020 on the Support Pool of Experts Terms of Reference, adopted 15 December 2020, matching the entry.",
+  "digest": "edpb",
+  "title": "Internal EDPB Document 07/2020 on the Terms of Reference of the EDPB Support Pool of Experts"
+ },
+ {
+  "id": "edpb-153",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Report dated 17 April 2024 covers Article 3(2) extraterritorial scope, representatives, service of decisions and cross-border cooperation, matching the takeaway.",
+  "digest": "edpb",
+  "title": "Report on the extraterritorial enforcement of the GDPR"
+ },
+ {
+  "id": "edpb-327",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Cover confirms EDPB Annual Report 2020; text cites 10 guidelines, 32 Art. 64 opinions, first Art. 65 dispute resolution, and IMI case figures.",
+  "digest": "edpb",
+  "title": "EDPB Annual Report 2020"
+ },
+ {
+  "id": "edpb-393",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "External study (Milieu/University of Namur) on big data and profiling in EU insurance, commissioned by but not endorsed by the EDPB, matches the takeaway.",
+  "digest": "edpb",
+  "title": "Study on the Big Data applications in the European insurance sector"
+ },
+ {
+  "id": "edpb-222",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Title and 27 February 2023 adoption date match; the document sets internal Board procedure, no controller or processor obligation.",
+  "digest": "edpb",
+  "title": "EDPB Document on the procedure for the adoption of the EDPB opinions regarding national criteria for certification and European Data Protection Seals"
+ },
+ {
+  "id": "edpb-42",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Confirmed version 2.0 of the Informal Panel rules; governs DPA-to-DPA panel procedure for DPF complaints, not a direct obligation on controllers or processors. PDF is dated 15 January 2026 versus the digest's 23 January 2026, but that date is not part of the takeaway text.",
+  "digest": "edpb",
+  "title": "Rules of Procedure for the \"Informal Panel of EU DPAs\" according to the EU-U.S. Data Privacy Framework - version 2.0"
+ },
+ {
+  "id": "edpb-340",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Opinion 04/2021 confirmed: paragraph 30 rules out a central EU database, paragraph 23 limits purpose to free movement, and paragraphs 22 and 28 call for suspension once the pandemic ends.",
+  "digest": "edpb",
+  "title": "EDPB-EDPS Joint Opinion 04/2021 on the Proposal for a Regulation of the European Parliament and of the Council on a framework for the issuance, verification and acceptance of interoperable certificates on vaccination, testing and recovery"
+ },
+ {
+  "id": "edpb-257",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Opinion 04/2022 confirmed, adopted 28 July 2022; the opinion states detection measures for solicitation and unknown CSAM go beyond what is necessary and proportionate.",
+  "digest": "edpb",
+  "title": "EDPB-EDPS Joint Opinion 04/2022 on the Proposal for a Regulation of the European Parliament and of the Council laying down rules to prevent and combat child sexual abuse"
+ },
+ {
+  "id": "edpb-355",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Recommendations 01/2021, adopted 2 February 2021, confirmed as the Article 36 LED adequacy referential for third-country police and justice transfers.",
+  "digest": "edpb",
+  "title": "Recommendations 01/2021 on the adequacy referential under the Law Enforcement Directive"
+ },
+ {
+  "id": "edpb-287",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Opinion number and Luxembourg authority match; the document itself invokes Article 42(5) for the certification criteria (Article 64(1)(c) is the procedural basis for the opinion). PDF shows adoption 1 February 2022 versus the digest's 8 February 2022, not part of the takeaway text.",
+  "digest": "edpb",
+  "title": "Opinion 1/2022 on the draft decision of the Luxembourg Supervisory Authority regarding the GDPR - CARPA certification criteria"
+ },
+ {
+  "id": "edpb-130",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Confirmed as the first report on the Support Pool of Experts programme, covering its initial projects since launch. PDF dated 16 April 2024 versus the digest's 27 June 2024, not part of the takeaway text.",
+  "digest": "edpb",
+  "title": "Report on the use of SPE external experts"
+ },
+ {
+  "id": "edpb-529",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Confirmed as the EDPB-EDPS Memorandum of Understanding on secretariat, budget and HR administration under Article 75 GDPR, an internal arrangement with no controller or processor obligation.",
+  "digest": "edpb",
+  "title": "Memorandum of Understanding"
+ },
+ {
+  "id": "edpb-322",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Confirmed as the public-facing One-Stop-Shop leaflet, using a worked example to explain the mechanism that reduces administrative burden and simplifies exercising rights.",
+  "digest": "edpb",
+  "title": "One-Stop-Shop Leaflet"
+ },
+ {
+  "id": "edpb-389",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Confirmed: first Article 65(1)(a) decision, Irish SA draft on Twitter International Company, fine raised from EUR 405,000 to EUR 405,000,000 (paragraph 145).",
+  "digest": "edpb",
+  "title": "Decision 01/2020 on the dispute arisen on the draft decision of the Irish Supervisory Authority regarding Twitter International Company under Article 65(1)(a) GDPR"
+ },
+ {
+  "id": "edpb-331",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Opinion under Article 40(7)",
+    "source_says": "The opinion's own legal basis paragraph cites Article 63, Article 64(1)(b) and Article 40 generally, not paragraph 7 specifically, though Article 40(7) is the substantive provision covering transnational codes.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Opinion 16/2021, Belgian SA, EU Data Protection Code of Conduct for Cloud Service Providers submitted by Scope Europe, all confirmed.",
+  "digest": "edpb",
+  "title": "Opinion 16/2021 on the draft decision of the Belgian Supervisory Authority regarding the \"EU Data Protection Code of Conduct for Cloud Service Providers\" submitted by Scope Europe"
+ },
+ {
+  "id": "edpb-334",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Title and date match; document concerns Second Additional Protocol safeguards including direct cross-border access provisions. PDF needed several retries to fetch.",
+  "digest": "edpb",
+  "title": "EDPB contribution to the 6th round of consultations on the draft Second Additional Protocol to the Council of Europe Budapest Convention on Cybercrime"
+ },
+ {
+  "id": "edpb-407",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Governs how the Board itself works",
+    "source_says": "The document gives supervisory authorities practical guidance on resolving cross-border competence disputes for complaints about infringements that started before 25 May 2018 and continue after, not internal Board governance.",
+    "severity": "medium",
+    "kind": "imprecise"
+   }
+  ],
+  "proposed_takeaway": "Internal document of the Board. Guides supervisory authorities on handling cross-border complaints spanning the pre-GDPR and post-GDPR period: no obligation on controllers or processors.",
+  "note": "Number, date and no-obligation point confirmed; the description of what the document governs was off.",
+  "digest": "edpb",
+  "title": "Internal EDPB Document 2/2020 on how to deal with complaints relating to data protection infringements started before the entry into application of GDPR that continue after 25 May 2018"
+ },
+ {
+  "id": "edpb-419",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Cover page reads European Data Protection Board 2019 Annual Report, matching the takeaway.",
+  "digest": "edpb",
+  "title": "EDPB Annual Report 2019"
+ },
+ {
+  "id": "edpb-346",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Now adopted",
+    "source_says": "The opinion itself only addresses the draft proposal and does not state anything about later adoption; whether the Data Governance Act was later adopted is a wider-world fact the document does not cover.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Joint Opinion 03/2021 on the draft Data Governance Act proposal confirmed; the later-adoption claim is outside the document itself.",
+  "digest": "edpb",
+  "title": "EDPB-EDPS Joint Opinion 03/2021 on the Proposal for a regulation of the European Parliament and of the Council on European data governance (Data Governance Act)"
+ },
+ {
+  "id": "edpb-431",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Confirmed as the EDPB's contribution to the Commission's Article 97 evaluation, dated 18 February 2020.",
+  "digest": "edpb",
+  "title": "Contribution of the EDPB to the evaluation of the GDPR under Article 97"
+ },
+ {
+  "id": "edpb-359",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Opinion 04/2021, Belgian SA, BDO Processor BCR, favourable under Article 64(1)(f): all confirmed.",
+  "digest": "edpb",
+  "title": "Opinion 04/2021 on the draft decision of the Belgian Supervisory Authority regarding the Processor Binding Corporate Rules of BDO"
+ },
+ {
+  "id": "edpb-311",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Only document on the source page, dated 01 August 2021; study on AMLD/GDPR interplay by an external provider for the EDPB confirmed.",
+  "digest": "edpb",
+  "title": "Study on the interplay between the AMLD and the GDPR framework"
+ },
+ {
+  "id": "edpb-377",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Opinion 32/2020, Dutch SA, Equinix Controller BCR, favourable under Article 64(1)(f): all confirmed.",
+  "digest": "edpb",
+  "title": "Opinion 32/2020 on the draft decision of the Dutch Supervisory Authority regarding the Controller Binding Corporate Rules of Equinix"
+ },
+ {
+  "id": "edpb-528",
+  "fetched": true,
+  "better_pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/44099",
+  "verdict": "wrong_file",
+  "issues": [
+   {
+    "claim": "Guidelines on the right to data portability under Regulation 2016/679, WP242 rev.01",
+    "source_says": "The pdf_url is a two-page Danish Data Protection Agency decision (J.No. 2022-7320-3298, Doc.no. 495942) about a complaint against Organic Basics ApS over a Trustpilot review reply. It has nothing to do with data portability.",
+    "severity": "high",
+    "kind": "wrong"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "Source page's only on-domain PDF is an unrelated Danish DPA decision; the real WP242 rev.01 text lives at ec.europa.eu (found via the page's external link) but that host's robots.txt blocks fetching it, so the takeaway itself could not be checked.",
+  "digest": "edpb",
+  "title": "Guidelines on the right to data portability under Regulation 2016/679, WP242 rev.01"
+ },
+ {
+  "id": "edpb-41",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Every claim matches the FAQ text: DPF List check, FTC/DoT self-certification, SCC/BCR fallback, HR Data and cooperation commitment, Article 28 agreement, version 2.0 adopted 15 January 2026 replacing version 1.0 of July 2024.",
+  "digest": "edpb",
+  "title": "EU-U.S. Data Privacy Framework F.A.Q. for European businesses - version 2.0"
+ },
+ {
+  "id": "edpb-43",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Rights, 45-day company response window, DPA/EDPB template route, informal panel for HR Data or opted-in companies, referral to FTC/DoC/OACP, and version 2.0 replacing the July 2024 version all check out.",
+  "digest": "edpb",
+  "title": "EU-US Data Privacy Framework FAQ for European individuals - version 2.0"
+ },
+ {
+  "id": "edpb-106",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Anonymity standard (para 43), three-step legitimate interest test (paras 66-76) and the development/deployment unlawfulness scenarios (section 3.4) all match; the opinion is general guidance requested by the Irish SA, naming no company, consistent with the takeaway.",
+  "digest": "edpb",
+  "title": "Opinion 28/2024 on certain data protection aspects related to the processing of personal data in the context of AI models"
+ },
+ {
+  "id": "edpb-450",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Behavioural advertising and service improvement are ruled out, fraud prevention is 'likely to go beyond' necessity, and personalisation depends on whether it is intrinsic to the service, all matching the guidelines' wording.",
+  "digest": "edpb",
+  "title": "Guidelines 2/2019 on the processing of personal data under Article 6(1)(b) GDPR in the context of the provision of online services to data subjects"
+ },
+ {
+  "id": "edpb-520",
+  "fetched": false,
+  "better_pdf_url": null,
+  "verdict": "unverifiable",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "The pdf_url is the correct file per the source page's own download link (wp260rev01_en.pdf), but every fetch attempt returned a 404, so the takeaway's specific claims could not be checked.",
+  "digest": "edpb",
+  "title": "Transparency"
+ },
+ {
+  "id": "edpb-194",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "PDF is Binding Decision 2/2023, adopted 2 August 2023. All articles (25(1), 25(2), 5(1)(c), 24(1), 13(1)(e), 12(1), plus the added 5(1)(a) fairness finding), the 31 July to 31 December 2020 period, and the registration/video-posting pop-up nudging are confirmed in the text.",
+  "digest": "edpb",
+  "title": "Binding Decision 2/2023 on the dispute submitted by the Irish SA regarding TikTok Technology Limited (Art. 65 GDPR)"
+ },
+ {
+  "id": "edpb-235",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "to order the privacy policy into compliance with Articles 12(1) and 13(1)(c)",
+    "source_says": "This order was made in the EDPB's earlier, separate Binding Decision 1/2021 on WhatsApp. In Binding Decision 5/2022 the IE SA only 'reiterates that in a previous inquiry on WhatsApp IE, an infringement of the GDPR was found as to its compliance with Article 12(1) and Article 13(1)(c) GDPR...and an order to WhatsApp IE to bring its Privacy Policy into compliance'. Decision 5/2022 itself concerns only the Article 6(1)(b) legal-basis dispute.",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "claim": "to increase the administrative fine beyond its draft",
+    "source_says": "The operative part instructs the IE SA to record the Article 5(1)(a)/6(1) infringement and impose a fine calculated under Article 83 GDPR; a fine of EUR 5.5 million was confirmed for this specific infringement, but the retrievable text does not state the LSA's draft figure or frame the EDPB's instruction explicitly as an increase over it.",
+    "severity": "medium",
+    "kind": "imprecise"
+   }
+  ],
+  "proposed_takeaway": "WhatsApp Ireland cannot rely on Article 6(1)(b) GDPR to process personal data for service improvement and security features, because processing must be objectively necessary and integral to the contracted service, judged from both the controller's and a reasonable user's perspective, and a controller cannot pick a basis that serves its commercial interests at the expense of data subject protection. The EDPB instructed the Irish SA to record the Article 5(1)(a) and 6(1) infringement and impose an administrative fine; the separate order to bring WhatsApp's privacy policy into compliance with Articles 12(1) and 13(1)(c) was made in the EDPB's earlier 2021 binding decision on WhatsApp, not this one. Any controller citing contract for improvement or analytics processing should re-evaluate that basis.",
+  "note": "The takeaway conflates two WhatsApp decisions: the Art 12(1)/13(1)(c) privacy-policy order comes from the EDPB's 2021 decision, which 5/2022 only references.",
+  "digest": "edpb",
+  "title": "Binding Decision 5/2022 on the dispute submitted by the Irish SA regarding WhatsApp Ireland Limited (Art. 65 GDPR)"
+ },
+ {
+  "id": "edpb-420",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Title, date and the replacement of WP259 rev.01 are confirmed, as are the cookie-wall, pre-ticked-box and public-authority/employer imbalance-of-power points.",
+  "digest": "edpb",
+  "title": "Guidelines 05/2020 on consent under Regulation 2016/679"
+ },
+ {
+  "id": "edpb-390",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Version 2.0, dated 20 October 2020, confirmed. KPIs, the by-default data minimisation factors, applicability to legacy systems and to processors/producers, and the Article 83(4) fine link all match the text.",
+  "digest": "edpb",
+  "title": "Guidelines 4/2019 on Article 25 Data Protection by Design and by Default"
+ },
+ {
+  "id": "edpb-133",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "the health module was submitted in May 2024",
+    "source_says": "The linked PDF is the general module itself, which states it was submitted in May 2024; the EDPB source page instead lists the health sector module PDF as completed in December 2023. The May 2024 date is not confirmed for the health module specifically.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "a public health sector module covering hospitals, clinics, pharmacies and the national health information systems... each with questions from practice",
+    "source_says": "Fetch attempts on the health-sector module PDF failed (server error), and the EDPB source page gives no description of that module's specific coverage or confirms Q&A content for it; the general programme description mentions Q&As only in general terms.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": "Training material for data protection officers, produced for the Croatian DPA under the Support Pool of Experts programme, comes in three modules: a general module, a public health sector module and an educational sector module. The material is in Croatian, the general module states it was submitted in May 2024, and it expresses the external author's views rather than an EDPB position. It is relevant to organisations designing DPO training or role-based curricula for public health and education, and to Croatian-speaking DPOs directly.",
+  "note": "Three modules, Croatian language, Support Pool of Experts programme, Croatian DPA and the non-EDPB-position disclaimer are all confirmed; only the health module's specific content and submission date could not be confirmed.",
+  "digest": "edpb",
+  "title": "Data Protection Officer training"
+ },
+ {
+  "id": "edpb-388",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Exporters apply them in step 3 of Recommendations 01/2020",
+    "source_says": "This document does not itself state a step number; it references EDPB Recommendations 01/2020 only in a footnote. The step-3 framing is accurate to Recommendations 01/2020's own six-step structure but is not something this document addresses.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "proposed_takeaway": null,
+  "note": "The four guarantees, the 10 November 2020 adoption date, the WP237/Schrems II update, the notification-once-it-no-longer-jeopardises-an-investigation detail, and the Article 45 adequacy link are all confirmed in the text.",
+  "digest": "edpb",
+  "title": "Recommendations 02/2020 on the European Essential Guarantees for surveillance measures"
+ },
+ {
+  "id": "edpb-217",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Para 73 confirms non-EU Art 3(2) controllers must notify every affected Member State's authority; rest of takeaway matches standard Art 33/34/33(5) content.",
+  "digest": "edpb",
+  "title": "Guidelines 9/2022 on personal data breach notification under GDPR"
+ },
+ {
+  "id": "edpb-336",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "All six flagged concerns and the four-year sunset clause are in the opinion as described; PDF matches the named opinion exactly.",
+  "digest": "edpb",
+  "title": "Opinion 14/2021 regarding the European Commission Draft Implementing Decision pursuant to Regulation (EU) 2016/679 on the adequate protection of personal data in the United Kingdom"
+ },
+ {
+  "id": "edpb-339",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Joint controllership, Art 26, Art 6(1)(b) exclusion, legitimate interests and consent points confirmed; v2.0/13 Apr 2021 and v2.1/7 Jul 2021 reference-only update both confirmed.",
+  "digest": "edpb",
+  "title": "Guidelines 8/2020 on the targeting of social media users"
+ },
+ {
+  "id": "edpb-436",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Household exemption, Art 6(1)(f) closure to public authorities, consent, biometric/Art 9(2), layered notice, retention and DPIA points all quoted directly from the PDF (paras 12, 23, 46, 75, 111, 121, 136).",
+  "digest": "edpb",
+  "title": "Guidelines 3/2019 on processing of personal data through video devices"
+ },
+ {
+  "id": "edpb-312",
+  "fetched": true,
+  "better_pdf_url": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "proposed_takeaway": null,
+  "note": "Art 13(1)(d) addition, personal-data status of the lossy-hash table under Art 14, and the upward reassessment from the draft's 30-50m euro range are each confirmed by direct quotes (paras 66, 161, 9.4/68).",
+  "digest": "edpb",
+  "title": "Binding decision 1/2021 on the dispute arisen on the draft decision of the Irish Supervisory Authority regarding WhatsApp Ireland under Article 65(1)(a) GDPR"
+ }
+]
