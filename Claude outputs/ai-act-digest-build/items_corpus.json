@@ -166,7 +166,7 @@
   "status": "final",
   "articles": [
    "Art 3(63)",
-   "Art 51-55",
+   "Art 51-56",
    "Art 111(3)"
   ],
   "date": "18 July 2025",
@@ -435,7 +435,7 @@
   "type": "qa",
   "status": "final",
   "articles": [
-   "Art 4",
+   "Art 4a",
    "Art 49",
    "Art 75",
    "Art 113"
@@ -632,7 +632,7 @@
    "governance",
    "gpai"
   ],
-  "source": "knowledge"
+  "source": "page"
  },
  {
   "id": "doc-33",
@@ -713,7 +713,7 @@
    "high-risk-classification",
    "conformity"
   ],
-  "source": "knowledge"
+  "source": "page"
  },
  {
   "id": "doc-37",
@@ -753,7 +753,7 @@
    "governance",
    "enforcement"
   ],
-  "source": "knowledge"
+  "source": "page"
  },
  {
   "id": "doc-39",
@@ -783,7 +783,6 @@
   "status": "final",
   "articles": [
    "Art 4a",
-   "Art 10(5)",
    "Art 74",
    "Art 49"
   ],
@@ -794,7 +793,7 @@
    "data",
    "governance"
   ],
-  "source": "knowledge"
+  "source": "page"
  },
  {
   "id": "doc-41",
@@ -831,7 +830,7 @@
   ],
   "date": "8 July 2026",
   "url": "https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en",
-  "takeaway": "Adopted on 7 July 2026 for public consultation until 30 October 2026. The guidelines confirm that the GDPR applies to collection, storage, organisation and retrieval of scraped personal data, require purpose limitation, transparency and minimisation, recommend timestamping and validation for accuracy, clarify legitimate interest as the basis for training, and require both an Article 6 basis and an Article 9 exception for special-category data, citing GC and Others (C-136/17) for incidental collection with safeguards. They complement the copyright policy and training-content summary duties in Article 53. Providers scraping for training should align data governance with them now, before the final version.",
+  "takeaway": "Adopted on 7 July 2026 for public consultation until 30 October 2026. The guidelines confirm that the GDPR applies to collection, storage, organisation and retrieval of scraped personal data, require purpose limitation, transparency and minimisation, recommend timestamping and validation for accuracy, clarify legitimate interest as the basis for training, and require both a GDPR Article 6 basis and an Article 9 exception for special-category data, citing GC and Others (C-136/17) for incidental collection with safeguards. They complement the copyright policy and training-content summary duties in Article 53. Providers scraping for training should align data governance with them now, before the final version.",
   "topics": [
    "data",
    "gpai"
@@ -895,7 +894,7 @@
    "deployer-duties",
    "gpai"
   ],
-  "source": "knowledge"
+  "source": "page"
  },
  {
   "id": "doc-46",

@@ -1,0 +1,53 @@
+{
+ "8": {
+  "articles": {
+   "old": [
+    "Art 3(63)",
+    "Art 51-55",
+    "Art 111(3)"
+   ],
+   "new": [
+    "Art 3(63)",
+    "Art 51-56",
+    "Art 111(3)"
+   ]
+  }
+ },
+ "22": {
+  "articles": {
+   "old": [
+    "Art 4",
+    "Art 49",
+    "Art 75",
+    "Art 113"
+   ],
+   "new": [
+    "Art 4a",
+    "Art 49",
+    "Art 75",
+    "Art 113"
+   ]
+  }
+ },
+ "39": {
+  "articles": {
+   "old": [
+    "Art 4a",
+    "Art 10(5)",
+    "Art 74",
+    "Art 49"
+   ],
+   "new": [
+    "Art 4a",
+    "Art 74",
+    "Art 49"
+   ]
+  }
+ },
+ "41": {
+  "takeaway": {
+   "old": "Adopted on 7 July 2026 for public consultation until 30 October 2026. The guidelines confirm that the GDPR applies to collection, storage, organisation and retrieval of scraped personal data, require purpose limitation, transparency and minimisation, recommend timestamping and validation for accuracy, clarify legitimate interest as the basis for training, and require both an Article 6 basis and an Article 9 exception for special-category data, citing GC and Others (C-136/17) for incidental collection with safeguards. They complement the copyright policy and training-content summary duties in Article 53. Providers scraping for training should align data governance with them now, before the final version.",
+   "new": "Adopted on 7 July 2026 for public consultation until 30 October 2026. The guidelines confirm that the GDPR applies to collection, storage, organisation and retrieval of scraped personal data, require purpose limitation, transparency and minimisation, recommend timestamping and validation for accuracy, clarify legitimate interest as the basis for training, and require both a GDPR Article 6 basis and an Article 9 exception for special-category data, citing GC and Others (C-136/17) for incidental collection with safeguards. They complement the copyright policy and training-content summary duties in Article 53. Providers scraping for training should align data governance with them now, before the final version."
+  }
+ }
+}

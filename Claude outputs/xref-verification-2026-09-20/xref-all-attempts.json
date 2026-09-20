@@ -1,0 +1,645 @@
+[
+ {
+  "id": "doc-01",
+  "verdict": "clean",
+  "checked": 6,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 1-113 spans the whole Act; Annexes I, III and IV exist and match (harmonisation legislation, high-risk areas, technical documentation). Art 113(c) carries the 2 December 2027 (Annex III) and 2 August 2028 (Annex I) dates cited in the takeaway.",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-02",
+  "verdict": "clean",
+  "checked": 10,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "All confirmed: Art 4 AI literacy, Art 4a special-category data for bias detection, Art 5(1)(ba) and (bb) inserted by M1, Art 50(2) marking, Art 75(1) AI Office exclusive competence over GPAI-based systems and VLOPs, Art 111(4) giving pre-existing generative systems until 2 December 2026, Art 113(c) high-risk dates.",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-03",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 5 prohibitions, Art 57(1) sandbox operational by 2 August 2027, Art 111(4) the 2 December 2026 transparency transition, Art 113 application dates. All four chips bear on the entry.",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-04",
+  "verdict": "clean",
+  "checked": 3,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 5 (including the new (ba) and (bb) deepfake and CSAM bans), Art 57(1) sandbox deadline and Art 113 application dates all match the content restated in the press release.",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-05",
+  "verdict": "clean",
+  "checked": 1,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 113 Entry into force and application is the provision the Omnibus procedure file turns on; no other reference appears in the takeaway.",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-06",
+  "verdict": "clean",
+  "checked": 6,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 4 AI literacy, Art 6 classification rules for high-risk systems, Art 49(2) registration of systems the provider concluded are not high-risk, Art 113 application dates. Each chip matches a proposal element described in the takeaway.",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-07",
+  "verdict": "clean",
+  "checked": 2,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 5 Prohibited AI practices covers every practice listed, and the new points (ba) and (bb) the takeaway sends the reader to Regulation (EU) 2026/1744 for are indeed the M1 insertions in Art 5(1).",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-08",
+  "verdict": "clean",
+  "checked": 3,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 3(1) is the AI system definition, unchanged in the consolidated text; Art 96 is Guidelines from the Commission on the implementation of this Regulation, the power these guidelines rest on.",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-09",
+  "verdict": "minor",
+  "checked": 3,
+  "issues": [
+   {
+    "ref": "Art 51-55",
+    "where": "chip",
+    "act_says": "Chapter V General-purpose AI models runs from Article 51 to Article 56; Article 56 Codes of practice closes it, and Chapter VI Measures in support of innovation only begins at Article 57.",
+    "severity": "low",
+    "kind": "range",
+    "suggest": "Art 51-56"
+   }
+  ],
+  "proposed_chips": [
+   "Art 3(63)",
+   "Art 51-56",
+   "Art 111(3)"
+  ],
+  "proposed_takeaway": null,
+  "note": "Art 3(63) general-purpose AI model and Art 111(3) (models placed before 2 August 2025 to comply by 2 August 2027) are exact. The range stops one article short of Chapter V, which the takeaway names and which includes Art 56 codes of practice.",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-10",
+  "verdict": "clean",
+  "checked": 6,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 53 obligations for GPAI model providers with the Annex XI documentation duty, Art 53(1)(c) the copyright policy point, Art 55 obligations for systemic-risk models, Art 56 codes of practice. All four match.",
+  "_pass": "p1"
+ },
+ {
+  "id": "doc-11",
+  "verdict": "clean",
+  "checked": 2,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 53(1)(d) is the public summary of training content per an AI Office template, and Art 53(2) exempts only points (a) and (b) for open source models, so the open source point holds.",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-12",
+  "verdict": "clean",
+  "checked": 7,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 51-55 is the GPAI run, Art 91-93 are information, evaluation and measures including recall under 93(1)(c), and Art 101 carries the 3 percent or EUR 15 000 000 fines.",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-13",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 4 is the rewritten AI literacy duty with no specific level required, Art 4(3) is the Board recommendations, and Art 4(2) itself points to the single information platform in Art 62(3), point (b).",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-14",
+  "verdict": "clean",
+  "checked": 2,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 4 AI literacy is the right and only provision this repository bears on.",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-15",
+  "verdict": "clean",
+  "checked": 11,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 6(5) sets the 2 February 2026 guidelines deadline, 6(1) and 6(2) are the two routes, the inserted 6(1a) to (1c) carry M1 markers, Annex I is the harmonisation legislation list and Annex III the Art 6(2) use cases; Art 25 holds because 25(1)(b) and (c) turn on whether a system becomes high-risk under Art 6.",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-16",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 3(49) defines serious incident, Art 73(7) carries the guidance mandate due 2 August 2025, and the 15, 2, 10 and 7 day periods sit in 73(2), 73(3), 73(4) and 73(8) as described.",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-17",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 50(2) is machine-readable marking, 50(4) is deepfake and public-interest text disclosure, and 50(5) is the clear and distinguishable manner of giving that information, which the placement specifications bear on.",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-18",
+  "verdict": "clean",
+  "checked": 6,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 50 is the transparency article and Art 56 holds because the amended Art 50(7) routes the adequacy assessment of a transparency code through the procedure in Art 56(6).",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-19",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 50 is correct and the inserted Art 111(4) is exactly the transition giving pre-2 August 2026 generative systems until 2 December 2026 to comply with Art 50(2).",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-20",
+  "verdict": "clean",
+  "checked": 2,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 50(4) is the deepfake and public-interest text labelling duty the icons serve.",
+  "_pass": "p2"
+ },
+ {
+  "id": "doc-21",
+  "verdict": "clean",
+  "checked": 2,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 62(3) is right: point (b) of that paragraph tasks the AI Office with the single information platform.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-22",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 113 carries the dates, Art 111(4) the 2 December 2026 marking deadline, Art 57(1) the 2 August 2027 national sandbox; Annexes I and III exist.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-23",
+  "verdict": "correction",
+  "checked": 6,
+  "issues": [
+   {
+    "ref": "Art 4",
+    "where": "chip",
+    "act_says": "Article 4 is 'AI literacy', the duty on providers and deployers to support the AI literacy of their staff. The special-category data point the takeaway describes is Article 4a, 'Processing of special categories of personal data for bias detection and correction', inserted by the Digital Omnibus.",
+    "severity": "high",
+    "kind": "wrong",
+    "suggest": "Art 4a"
+   }
+  ],
+  "proposed_chips": [
+   "Art 4a",
+   "Art 49",
+   "Art 75",
+   "Art 113"
+  ],
+  "proposed_takeaway": null,
+  "note": "Chip Art 4 should be Art 4a; the takeaway never mentions AI literacy but does mention special-category data for bias detection. Art 49, Art 75 and Art 113 all hold.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-24",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 6 classification, Art 51(2) the 10^25 FLOP presumption, Art 99(3) to (5) the three fine tiers, Art 113(c) the 2027 and 2028 dates.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-25",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "All four ranges hold: Art 70 designation of national authorities, Art 74-75 market surveillance including the AI Office's exclusive competence, Art 85-88 remedies and GPAI enforcement, Art 99-101 the penalty articles.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-26",
+  "verdict": "clean",
+  "checked": 7,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 85 complaint right, Art 87 reporting persons, Art 89(2) the downstream provider complaint, and Art 53 to 55 is the correct run of GPAI model provider obligations.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-27",
+  "verdict": "clean",
+  "checked": 6,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 40(1) gives the presumption of conformity with Chapter III Section 2, which is exactly Art 8-15; Art 41 common specifications and Art 17 quality management system both fit.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-28",
+  "verdict": "clean",
+  "checked": 3,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 17 quality management system matches prEN 18286, Art 40 the OJ citation point, and Art 9-15 the substantive requirements the standards cover.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-29",
+  "verdict": "clean",
+  "checked": 3,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 4 AI literacy is one of the three pledge actions, Art 62(1) covers awareness raising and dedicated channels, Art 95 is the voluntary codes of conduct provision.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-30",
+  "verdict": "clean",
+  "checked": 2,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 57 covers the sandbox access the strategy supports and Art 62(3)(b) is the basis for the Service Desk.",
+  "_pass": "p3"
+ },
+ {
+  "id": "doc-31",
+  "verdict": "clean",
+  "checked": 6,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 67 Advisory forum, Art 68 Scientific panel and Art 90 alerts all match the entry.",
+  "_pass": "p4"
+ },
+ {
+  "id": "doc-32",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 68(1) is the implementing-act basis for the scientific panel; Art 90 is the qualified alert.",
+  "_pass": "p4"
+ },
+ {
+  "id": "doc-33",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 64 AI Office; Art 74-75 market surveillance including the AI Office exclusive competence in Art 75(1); Art 88-94 is the GPAI enforcement run.",
+  "_pass": "p4"
+ },
+ {
+  "id": "doc-34",
+  "verdict": "clean",
+  "checked": 6,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 65 and 66 are the Board; the amended Art 4(3) does require Board recommendations on AI literacy.",
+  "_pass": "p4"
+ },
+ {
+  "id": "doc-35",
+  "verdict": "clean",
+  "checked": 6,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 70 designation, Art 74 market surveillance, Art 77 fundamental rights authorities, Art 73 serious incidents all hold.",
+  "_pass": "p4"
+ },
+ {
+  "id": "doc-36",
+  "verdict": "clean",
+  "checked": 6,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 6(1) is the Annex I third-party assessment route, Annex I Section A lists the MDR and IVDR, Art 8 and Art 43 fit.",
+  "_pass": "p4"
+ },
+ {
+  "id": "doc-37",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 2(7) is the clause leaving the GDPR unaffected; Art 10 and Art 53 fit; Article 64(2) in the takeaway is GDPR, not the AI Act.",
+  "_pass": "p4"
+ },
+ {
+  "id": "doc-38",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 74(8) exists and does require DPAs as market surveillance authorities for the Annex III law enforcement, migration, border and justice uses.",
+  "_pass": "p4"
+ },
+ {
+  "id": "doc-39",
+  "verdict": "correction",
+  "checked": 7,
+  "issues": [
+   {
+    "ref": "Art 10(5)",
+    "where": "chip",
+    "act_says": "Article 10 is 'Data and data governance'. In the consolidated text its paragraph 5 has been deleted by the Digital Omnibus (marked as a deletion), leaving paragraphs 1 to 4 and 6. The special categories of personal data provision it held is now Article 4a, 'Processing of special categories of personal data for bias detection and correction'.",
+    "severity": "medium",
+    "kind": "renumbered",
+    "suggest": "Art 4a"
+   }
+  ],
+  "proposed_chips": [
+   "Art 4a",
+   "Art 74",
+   "Art 49"
+  ],
+  "proposed_takeaway": null,
+  "note": "Art 10(5) was the right citation pre-Omnibus but the paragraph is now deleted and its content sits in Art 4a, which the entry already chips, so the stale chip drops out.",
+  "_pass": "p4"
+ },
+ {
+  "id": "doc-41",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 9, 10, 26 and 53 all match the report's subject matter; Articles 25, 32 and 35 in the takeaway are expressly labelled GDPR.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-42",
+  "verdict": "minor",
+  "checked": 6,
+  "issues": [
+   {
+    "ref": "Article 6",
+    "where": "takeaway",
+    "act_says": "AI Act Article 6 is 'Classification rules for high-risk AI systems'; the basis for processing meant here is GDPR Article 6, which the sentence does not label",
+    "severity": "low",
+    "kind": "imprecise",
+    "suggest": "GDPR Article 6"
+   }
+  ],
+  "proposed_chips": null,
+  "proposed_takeaway": "Adopted on 7 July 2026 for public consultation until 30 October 2026. The guidelines confirm that the GDPR applies to collection, storage, organisation and retrieval of scraped personal data, require purpose limitation, transparency and minimisation, recommend timestamping and validation for accuracy, clarify legitimate interest as the basis for training, and require both a GDPR Article 6 basis and an Article 9 exception for special-category data, citing GC and Others (C-136/17) for incidental collection with safeguards. They complement the copyright policy and training-content summary duties in Article 53. Providers scraping for training should align data governance with them now, before the final version.",
+  "note": "Art 53(1)(c) exists and is the copyright policy duty; 53(1)(d) is the training-content summary, so the Article 53 claim holds. Only the unlabelled GDPR Article 6 and 9 citations could be misread in an AI Act digest.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-43",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 10 is data and data governance and Art 59 is further processing of personal data in the sandbox, exactly as the takeaway uses them; Art 2(7) is the data protection savings clause.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-44",
+  "verdict": "clean",
+  "checked": 2,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 53 is the GPAI provider obligations and Art 2(7) the relationship with Union data protection law; both bear on a taskforce report about a GPAI provider.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-45",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 26 deployer duties matches the takeaway's own claim and Art 2(7) is the data protection savings clause; Art 4 AI literacy is the loosest of the three but still bears on staff use guidance.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-46",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 70(2) does carry the 2 August 2025 publication deadline and Art 77(2) the 2 November 2024 fundamental rights list; Art 99 is penalties.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-47",
+  "verdict": "clean",
+  "checked": 3,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 70 covers the market surveillance authority and single point of contact, Art 57 the national sandbox and Art 99 the penalty regime.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-48",
+  "verdict": "clean",
+  "checked": 3,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 70 and Art 99 fit the designations and penalties; Art 57 is sandboxes, which the Italian law provides for even though the takeaway does not spell it out.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-49",
+  "verdict": "clean",
+  "checked": 3,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "AESIA as market surveillance authority and single point of contact is Art 70, the national sandbox pilot Art 57 and the penalty regime Art 99.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-50",
+  "verdict": "clean",
+  "checked": 3,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 70 for the sectoral market surveillance authorities and single point of contact, Art 28 for the four notifying authorities and Art 77 for the fundamental rights authorities.",
+  "_pass": "p5"
+ },
+ {
+  "id": "doc-51",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 70, 74(8) and 77 all hold; Art 74 has 14 paragraphs and (8) is the DPA-as-market-surveillance provision.",
+  "_pass": "p6"
+ },
+ {
+  "id": "doc-52",
+  "verdict": "clean",
+  "checked": 2,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 70 covers designation and single points of contact; Art 77 covers fundamental rights authorities.",
+  "_pass": "p6"
+ },
+ {
+  "id": "doc-53",
+  "verdict": "clean",
+  "checked": 2,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Articles run 1 to 113 and the consolidated text has exactly Annexes I to XIV.",
+  "_pass": "p6"
+ },
+ {
+  "id": "doc-54",
+  "verdict": "clean",
+  "checked": 10,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 8(2), 9(10), 17(3), 43(3), 97, 111, 112, 113 and Annex X all exist and carry the dates cited.",
+  "_pass": "p6"
+ },
+ {
+  "id": "doc-55",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 2 scope, Art 5 prohibitions, Art 6 high-risk classification and Art 51 GPAI systemic-risk classification match the checker's four branches.",
+  "_pass": "p6"
+ },
+ {
+  "id": "doc-56",
+  "verdict": "clean",
+  "checked": 5,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 40 carries the presumption of conformity, Art 41 the common specifications power, and Art 8-15 is the high-risk requirements run.",
+  "_pass": "p6"
+ },
+ {
+  "id": "doc-57",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "Art 99(3) to (5) give the 35m/7, 15m/3 and 7.5m/1 ceilings as quoted; Art 101 is the GPAI fines provision.",
+  "_pass": "p6"
+ },
+ {
+  "id": "doc-39",
+  "verdict": "clean",
+  "checked": 4,
+  "issues": [],
+  "proposed_chips": null,
+  "proposed_takeaway": null,
+  "note": "All three chips land on the subjects the 2021 opinion actually addressed: Art 5 Prohibited AI practices carries the social scoring, emotion inference and biometric categorisation bans it argued over, Art 70 Designation of national competent authorities is where the adopted Act settled the DPA-as-supervisor question the opinion raised under the proposal's Art 59, and Art 2(7) is the clause preserving the GDPR, the EUDPR, the LED and ePrivacy that the opinion pressed for.",
+  "_pass": "p7"
+ },
+ {
+  "id": "doc-40",
+  "verdict": "correction",
+  "checked": 6,
+  "issues": [
+   {
+    "ref": "Art 10(5)",
+    "where": "chip",
+    "act_says": "Article 10 'Data and data governance' now runs 1, 2, 3, 4, 6 in the consolidated text: the Omnibus deleted paragraph 5 (marked by the M1 deletion rule between paragraphs 4 and 6) and moved its special categories of personal data for bias detection rule into the inserted Article 4a 'Processing of special categories of personal data for bias detection and correction'. The bias detection and correction duties the new Article 4a(1) serves are Article 10(2), points (f) and (g).",
+    "severity": "medium",
+    "kind": "renumbered",
+    "suggest": "Art 10(2)"
+   }
+  ],
+  "proposed_chips": [
+   "Art 4a",
+   "Art 10(2)",
+   "Art 74",
+   "Art 49"
+  ],
+  "proposed_takeaway": null,
+  "note": "Art 4a, Art 74 and Art 49 all hold: Art 4a is the strict necessity and safeguards regime with the extension beyond high-risk systems in its paragraph 2, Art 74(8) and (9) put the data protection authorities and the EDPS in the supervisory seat with AI Office coordination in (11), and Art 49(2) is the registration of systems the provider concluded are not high-risk under Art 6(3). Only Art 10(5) has moved, and the takeaway's own references to Article 4a and Annex III are correct.",
+  "_pass": "p7"
+ }
+]
