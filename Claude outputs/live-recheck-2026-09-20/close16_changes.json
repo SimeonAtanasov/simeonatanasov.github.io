@@ -1,0 +1,72 @@
+{
+ "139": {
+  "takeaway": {
+   "old": "The Act, signed on 12 June 2023, replaces the 2019 Regulation, requires consent that is freely given, specific, informed and unambiguous with the controller bearing the burden of proof, gives a right to object to direct marketing, and empowers the Nigeria Data Protection Commission to impose penalties of up to the greater of NGN 10 million and 2 per cent of annual gross revenue for controllers of major importance (NGN 2 million or 2 per cent for others). The Commission's General Application and Implementation Directive of 2025 adds detailed rules on consent design, cookie notices and privacy policies. It binds controllers in Nigeria and foreign controllers processing Nigerians' data. Deploy a consent banner with a documented consent log and a marketing objection route.",
+   "new": "The Act, signed on 12 June 2023, establishes the Nigeria Data Protection Commission in place of the Data Protection Bureau, requires consent that is freely given, specific, informed and unambiguous with the controller bearing the burden of proof, gives a right to object to direct marketing, and empowers the Commission to impose penalties of up to the greater of NGN 10 million and 2 per cent of annual gross revenue for controllers of major importance (the greater of NGN 2 million and 2 per cent for others). The Commission's General Application and Implementation Directive of 2025 adds detailed rules on consent design, cookie notices and privacy policies. It binds controllers in Nigeria and foreign controllers processing the data of data subjects in Nigeria. Deploy a consent banner with a documented consent log and a marketing objection route."
+  },
+  "url": {
+   "old": "https://cert.gov.ng/ngcert/resources/Nigeria_Data_Protection_Act_2023.pdf",
+   "new": "https://ndpc.gov.ng/wp-content/uploads/2024/03/Nigeria_Data_Protection_Act_2023.pdf"
+  }
+ },
+ "142": {
+  "takeaway": {
+   "old": "The Act defines consent as a freely given, specific, informed indication of will evidenced by written, electronic or recorded means, requires a privacy notice before collection, and gives data subjects a right to object to processing for direct marketing and profiling. The National Privacy Commission's guidelines on consent state that consent may not be bundled, that pre-ticked boxes and silence are not consent, and that withdrawal must be as easy as giving it, and the Commission has ordered operators to fix non-compliant consent interfaces. It binds controllers in the Philippines and those processing Filipino residents' data. Use an affirmative cookie consent action and an accessible withdrawal control.",
+   "new": "The Act defines consent as a freely given, specific, informed indication of will evidenced by written, electronic or recorded means, requires a privacy notice before collection, and its implementing rules give data subjects a right to object to processing for direct marketing and profiling. The National Privacy Commission's guidelines on consent state that consent may not be bundled, that non-response or implied consent is not consent, and that withdrawal must be as easy as giving it, and the Commission has ordered operators to fix non-compliant consent interfaces. It binds controllers in the Philippines and those processing Filipino residents' data. Use an affirmative cookie consent action and an accessible withdrawal control."
+  }
+ },
+ "150": {
+  "takeaway": {
+   "old": "The MSPA is a springing contract among signatories that governs personal information flows for selecting and delivering digital advertising under US state privacy laws; the Fifth Amended and Restated version took effect on 4 June 2026, after a March 2026 revision prompted by California's Healthline and Honda enforcement actions. First parties operate in either Opt-Out Option Mode or Service Provider Mode, and downstream participants must read and honour signals and verify that counterparties are signatories. The National Approach lets a signatory treat every user as a resident of all covered states. It is a private contract, not law; publishers using it work with the GPP US National string.",
+   "new": "The MSPA is a springing contract among signatories that governs personal information flows for selecting and delivering digital advertising under US state privacy laws; the Fifth Amended and Restated version took effect on 4 June 2026, after a March 2026 revision prompted by California's Healthline and Honda enforcement actions. First parties must now process under the US National Approach, an earlier state-specific approach surviving only for signatories from before 2026 until 31 December 2026, and downstream participants must read and honour signals and verify that counterparties are signatories. The National Approach means treating every user as a resident of all covered states. It is a private contract, not law; publishers using it work with the GPP US National string."
+  },
+  "url": {
+   "old": "https://www.iabprivacy.com/",
+   "new": "https://www.iabprivacy.com/IAB%20Fifth%20Amended%20and%20Restated%20Multi-State%20Privacy%20Agreement%20(MSPA)%20(07.30.2026).pdf"
+  }
+ },
+ "155": {
+  "takeaway": {
+   "old": "AB 566, signed on 8 October 2025, amends the CCPA to require a business that develops or maintains a web browser to include a setting that lets a consumer send an opt-out preference signal to every business, easy to use and configure, with an explanation of how the signal works and its intended effect. It operates from 1 January 2027, with a safe harbour for compliant browser makers when a website fails to honour the signal, and the California Privacy Protection Agency may adopt regulations. It binds browser developers; businesses already must honour such signals under the CCPA regulations, so expect more signals from 2027.",
+   "new": "AB 566, signed on 8 October 2025, amends the CCPA to require a business that develops or maintains a web browser to include a setting that lets a consumer send an opt-out preference signal to businesses the consumer interacts with through the browser, easy to locate and configure, with an explanation of how the signal works and its intended effect. It operates from 1 January 2027, with a safe harbour for compliant browser makers when a website fails to honour the signal, and the California Privacy Protection Agency may adopt regulations. It binds browser developers; businesses already must honour such signals under the CCPA regulations, so expect more signals from 2027."
+  },
+  "url": {
+   "old": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/california-enacts-first-in-nation-law-requiring-web-browser-opt-out-preference-signal",
+   "new": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB566"
+  },
+  "source": {
+   "old": "secondary",
+   "new": "primary"
+  }
+ },
+ "196": {
+  "takeaway": {
+   "old": "The Personal Data Protection Board's guideline applies Law No. 6698 to cookies: strictly necessary cookies may be used without explicit consent, while cookies for advertising, profiling and non-essential analytics require explicit consent under Article 5 of the Law, with information duties under Article 10 met through a cookie policy and banner, and cross-border transfers through cookies subject to the Law's transfer rules. It applies to every data controller whose website or app processes data of users in Turkey. Provide a Turkish-language banner with granular explicit opt-in for non-essential cookies, no pre-ticked boxes, and a cookie policy listing each cookie, purpose and duration.",
+   "new": "The Personal Data Protection Authority's guideline, in its July 2025 edition, applies Law No. 6698 to cookies: cookies strictly necessary for a service the user requested, and first party analytics, may be used without explicit consent under Article 5(2), while social plugin tracking and online behavioural advertising cookies require explicit consent under Article 5(1), with information duties under Article 10 met through a cookie policy and banner, and cross-border transfers through cookies subject to Article 9. It applies to data controllers processing personal data through cookies on websites and web applications. Provide a banner with equally prominent accept, reject and preferences buttons, granular explicit opt-in for non-essential cookies, no consent inferred from mere site use, and a cookie policy listing each cookie, purpose, type and duration."
+  },
+  "url": {
+   "old": "https://www.kvkk.gov.tr/Icerik/7288/Cerez-Uygulamalari-Hakkinda-Rehber",
+   "new": "https://www.kvkk.gov.tr/SharedFolderServer/CMSFiles/fb193dbb-b159-4221-8a7b-3addc083d33f.pdf"
+  },
+  "date": {
+   "old": "20 June 2022",
+   "new": "July 2025"
+  }
+ },
+ "205": {
+  "url": {
+   "old": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-announces-settlement-sephora-part-ongoing-enforcement",
+   "new": "https://oag.ca.gov/system/files/attachments/press-docs/Filed%20Judgment.pdf.pdf"
+  }
+ },
+ "207": {
+  "url": {
+   "old": "https://privacy.ca.gov/2025/05/cppa-orders-clothing-retailer-todd-snyder-to-pay-six-figure-fine-overhaul-privacy-practices/",
+   "new": "https://privacy.ca.gov/wp-content/uploads/sites/357/2026/01/20250501_snyder_order.pdf"
+  },
+  "date": {
+   "old": "6 May 2025",
+   "new": "1 May 2025"
+  }
+ }
+}

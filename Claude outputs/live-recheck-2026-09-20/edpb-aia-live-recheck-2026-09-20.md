@@ -170,13 +170,14 @@ a rerun after another edit fails loudly and a rerun on current data is a no-op.
 
 | Digest | Entries | Checked against the source |
 | --- | --- | --- |
-| EDPB | 543 | **543** |
-| Cookie | 259 | 256 |
+| EDPB | 543 | **541** |
+| Cookie | 259 | **259** |
 | AI Act Part 1 | 133 | 133, against EUR-Lex |
 | AI Act Part 2 | 57 | **57** |
 
-Every entry in the EDPB digest and in both parts of the AI Act digest has now been checked
-against its source. The three outstanding cookie entries are named in the companion report:
-a Chinese standard behind a portal viewer, the Nigerian Act which exists online only as an
-image scan, and one entry whose takeaway is verified but whose source page no longer exists
-anywhere.
+Both parts of the AI Act digest have now been checked in full against their sources. Two
+EDPB entries remain outstanding: edpb-520, which has no reachable source, and edpb-528,
+whose downloaded file was a Danish supervisory decision rather than WP242 rev.01. The
+cookie digest was finished on 20 September 2026 by a third pass on the sixteen entries whose
+takeaway had never been read against its own source, reported in
+`cookie-final-sixteen-2026-09-20.md`. The table above shows the position after that pass.

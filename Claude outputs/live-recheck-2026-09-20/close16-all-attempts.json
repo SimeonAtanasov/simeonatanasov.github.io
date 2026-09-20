@@ -1,0 +1,416 @@
+[
+ {
+  "id": "cookie-35",
+  "reached": true,
+  "reached_url": "https://www.lfd.niedersachsen.de/startseite/infothek/presseinformationen/urteil-zu-manipulativem-cookie-banner-alles-ablehnen-schaltflache-ist-ein-muss-241960.html",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The judgment is the first German administrative court decision on banner design",
+    "source_says": "Neither the LfD press release no. 08/2025 nor the LfD background article on the judgment, nor the VG Hannover hearing release, describes the decision as the first of its kind; they say only that the court confirmed the authority's legal view.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.lfd.niedersachsen.de/startseite/themen/internet/alles-ablehnen-schaltflache-im-einwilligungsbanner-auf-webseite-unter-umstanden-ein-muss-241880.html",
+  "proposed_takeaway": null,
+  "note": "Everything else confirmed: judgment of 19.03.2025, Az. 10 A 5385/22, against an LfD order to a Lower Saxony media house (plaintiff Neue Osnabruecker Zeitung), 'gleichermassen sichtbare Alles-ablehnen-Schaltflaeche' on the first layer, banner repetition and misleading labelling defeating freely given consent, partner numbers, third-country transfers and revocation visible only after scrolling, breach of section 25 TDDDG and the GDPR.",
+  "_pass": "p1"
+ },
+ {
+  "id": "cookie-54",
+  "reached": true,
+  "reached_url": "https://www.datatilsynet.no/personvern-pa-ulike-omrader/internett-og-apper/bruk-av-informasjonskapsler-og-andre-sporingsteknologier/",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The current version, updated in April 2025, replaces the 2023 guidance that first demanded an equal reject option.",
+    "source_says": "The guidance page carries no publication or revision date and no reference to an earlier 2023 version; it dates itself only by noting the ekomloven change in force from 1 January 2025.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "All ten chapter headings match the takeaway's list one for one, under ekomloven section 3-15, and the guidance states that other GDPR bases can almost never be used for the subsequent processing of cookie data.",
+  "_pass": "p1"
+ },
+ {
+  "id": "cookie-91",
+  "reached": true,
+  "reached_url": "https://web.archive.org/web/20250108133828/https://www.priv.gc.ca/en/privacy-topics/technology/online-privacy-tracking-cookies/tracking-and-ads/gl_ba_1112/",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "date: 6 December 2011",
+    "source_says": "The guidelines close with 'Updated in December 2015' and carry a page date modified of 2021-08-13, so the text in force is the December 2015 revision of the 2011 guidelines.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "It applies to any organisation tracking Canadian users across sites.",
+    "source_says": "The guidelines say they were developed to help 'the various types of organizations involved in online behavioural advertising' comply with PIPEDA; they make no statement about extraterritorial reach.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "priv.gc.ca was unreachable both ways (WebFetch: robots.txt ConnectTimeout; browser: navigation denied), so the OPC text was read from a Wayback snapshot. Every condition in the takeaway is confirmed verbatim, including zombie cookies, super cookies and device fingerprinting under 'Inability to Decline' and the children best practice.",
+  "_pass": "p1"
+ },
+ {
+  "id": "cookie-123",
+  "reached": true,
+  "reached_url": "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+  "how": "browser",
+  "not_reached_reason": "The normative text is delivered only as raster page images. The preview at /bzgk/std/showGb?type=online&hcno=... is a viewer of 35 empty page divs that pull each page as a JPEG blob from viewGbImg?fileName=<id>; the returned HTML contains no Chinese characters from the standard at all (only UI labels), so there is no text layer to extract. The alternative route, /bzgk/std/showGb?type=download, is gated by a verification code, which I did not attempt.",
+  "verdict": "unverifiable",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Metadata confirmed on the catalogue page: GB/T 35273-2020, published 2020-03-06, implemented 2020-10-01, status xianxing (in force), listed under tuijianxing (recommended, voluntary) national standards. The substantive clauses on separate consent per business function, personalised display, third-party SDKs and policy templates could not be read.",
+  "_pass": "p1"
+ },
+ {
+  "id": "cookie-139",
+  "reached": true,
+  "reached_url": "https://ndpc.gov.ng/wp-content/uploads/2024/03/Nigeria_Data_Protection_Act_2023.pdf",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "replaces the 2019 Regulation",
+    "source_says": "The Act nowhere mentions the 2019 Regulation or repeals it. Section 63 gives the Act priority where any other law is inconsistent with it, and section 64(2)(f) preserves orders, rules and regulations already in effect. Section 64(1) transfers the Nigeria Data Protection Bureau's functions to the Commission.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "NGN 2 million or 2 per cent for others",
+    "source_says": "Section 48(5): the standard maximum amount is 'the greater of (a) N2,000,000, and (b) 2% of its annual gross revenue in the preceding financial year', mirroring the higher maximum in section 48(4).",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "foreign controllers processing Nigerians' data",
+    "source_says": "Section 2(2)(c) reaches a controller or processor not domiciled, resident or operating in Nigeria that is 'processing personal data of a data subject in Nigeria', which turns on the data subject's presence rather than nationality.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://ndpc.gov.ng/wp-content/uploads/2024/03/Nigeria_Data_Protection_Act_2023.pdf",
+  "proposed_takeaway": "The Act, signed on 12 June 2023, establishes the Nigeria Data Protection Commission in place of the Data Protection Bureau, requires consent that is freely given, specific, informed and unambiguous with the controller bearing the burden of proof, gives a right to object to direct marketing, and empowers the Commission to impose penalties of up to the greater of NGN 10 million and 2 per cent of annual gross revenue for controllers of major importance (the greater of NGN 2 million and 2 per cent for others). The Commission's General Application and Implementation Directive of 2025 adds detailed rules on consent design, cookie notices and privacy policies. It binds controllers in Nigeria and foreign controllers processing the data of data subjects in Nigeria. Deploy a consent banner with a documented consent log and a marketing objection route.",
+  "note": "The Act is on the NDPC's own site as the Official Gazette text (No. 119, Lagos, 1 July 2023, Vol. 110, Act No. 37), machine-readable. Commencement '[12th Day of June, 2023]'; consent definition in section 65; burden of proof section 26(1); right to object section 36(3); penalties section 48(3) to (5).",
+  "_pass": "p1"
+ },
+ {
+  "id": "cookie-142",
+  "reached": true,
+  "reached_url": "https://privacy.gov.ph/data-privacy-act/",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "The Act ... gives data subjects a right to object to processing for direct marketing and profiling.",
+    "source_says": "The Act has no right to object: the word 'object' appears nowhere in RA 10173, and section 16 lists only the rights to be informed, to be furnished information, to reasonable access, to dispute inaccuracy, to suspend or block, and to be indemnified. The right to object, 'including processing for direct marketing, automated processing or profiling', is in the Implementing Rules and Regulations, Rule VIII, section 34(b).",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "claim": "pre-ticked boxes and silence are not consent",
+    "source_says": "NPC Circular No. 2023-04 (Guidelines on Consent, 7 November 2023), section 10(A): 'Consent can never be assumed. Non-response or implied consent does not constitute valid consent.' Neither that circular nor NPC Advisory No. 2023-01 on deceptive design patterns mentions pre-ticked boxes or checkboxes.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "the Commission has ordered operators to fix non-compliant consent interfaces",
+    "source_says": "Neither the Act nor NPC Circular 2023-04 records any such order; the circular provides only that violations carry criminal, civil and administrative liability (section 23).",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The Act defines consent as a freely given, specific, informed indication of will evidenced by written, electronic or recorded means, requires a privacy notice before collection, and its implementing rules give data subjects a right to object to processing for direct marketing and profiling. The National Privacy Commission's guidelines on consent state that consent may not be bundled, that non-response or implied consent is not consent, and that withdrawal must be as easy as giving it, and the Commission has ordered operators to fix non-compliant consent interfaces. It binds controllers in the Philippines and those processing Filipino residents' data. Use an affirmative cookie consent action and an accessible withdrawal control.",
+  "note": "Consent definition confirmed in section 3(b), notice before entry into the processing system in section 16(b), extraterritorial reach in section 6. The NPC guidance is NPC Circular No. 2023-04: no bundling section 5(B), consent never assumed section 10(A), withdrawal as easy as, if not easier than, giving consent section 13(A). The two PDFs an earlier pass read are sidebar links on this same page.",
+  "_pass": "p1"
+ },
+ {
+  "id": "cookie-150",
+  "reached": true,
+  "reached_url": "https://www.iabprivacy.com/IAB%20Fifth%20Amended%20and%20Restated%20Multi-State%20Privacy%20Agreement%20(MSPA)%20(07.30.2026).pdf",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "First parties operate in either Opt-Out Option Mode or Service Provider Mode",
+    "source_says": "The Fifth Amended and Restated MSPA and its Appendix I contain no occurrence of the word 'Mode'; both signalling modes are gone. Section 3.1 instead requires a First Party to process in compliance with the U.S. National Approach wherever it reasonably determines the consumer is a US resident, and section 3.2 lets only First Parties that signed before 1 January 2026 keep a state-specific approach, that section being deemed removed on 31 December 2026.",
+    "severity": "high",
+    "kind": "outdated"
+   },
+   {
+    "claim": "The National Approach lets a signatory treat every user as a resident of all covered states.",
+    "source_says": "Appendix I, definition 1.80, defines the U.S. National Approach as giving notice and opt-out opportunity and choice mechanisms 'as if the Consumer is a resident of each and every state with an Applicable State Privacy Law', and section 3.1 makes it mandatory rather than optional.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "after a March 2026 revision prompted by California's Healthline and Honda enforcement actions",
+    "source_says": "Neither the agreement nor the iabprivacy.com version table names Healthline or Honda. The table records an Amendment to the Fourth Amended and Restated MSPA effective 1 January 2026, and the Appendix I and Tech Vendor DPA files are dated 2 March 2026.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "publishers using it work with the GPP US National string",
+    "source_says": "The iabprivacy.com page says only that for publishers the MSPA works in conjunction with IAB Tech Lab's Global Privacy Protocol; neither it nor the agreement names a US National string.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.iabprivacy.com/IAB%20Fifth%20Amended%20and%20Restated%20Multi-State%20Privacy%20Agreement%20(MSPA)%20(07.30.2026).pdf",
+  "proposed_takeaway": "The MSPA is a springing contract among signatories that governs personal information flows for selecting and delivering digital advertising under US state privacy laws; the Fifth Amended and Restated version took effect on 4 June 2026, after a March 2026 revision prompted by California's Healthline and Honda enforcement actions. First parties must now process under the US National Approach, an earlier state-specific approach surviving only for signatories from before 2026 until 31 December 2026, and downstream participants must read and honour signals and verify that counterparties are signatories. The National Approach means treating every user as a resident of all covered states. It is a private contract, not law; publishers using it work with the GPP US National string.",
+  "note": "Confirmed: 'springing contract' and the 4 June 2026 effective date on iabprivacy.com; downstream duties in section 5.1(b), to process signals per the Technical Signaling Implementation Guidelines and to confirm counterparties against the Identification List before disclosing. The agreement PDF is itself headed 'Last Updated: August 4, 2026' while the site lists its effective date as 4 June 2026.",
+  "_pass": "p1"
+ },
+ {
+  "id": "cookie-152",
+  "reached": true,
+  "reached_url": "https://www.w3.org/TR/gpc/",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Every claim checks out: W3C Working Draft of 17 September 2026 from the Privacy Working Group on the Recommendation track, First Public Working Draft 21 November 2024 per the W3C publication history, Sec-GPC field value exactly '1', navigator.globalPrivacyControl boolean mirroring gpcAtNavigation, optional /.well-known/gpc.json with gpc and lastUpdate members, a request not to sell or share personal information, and 'At least four states have specifically identified GPC as a valid means to exercise legal opt-out rights.'",
+  "_pass": "p1"
+ },
+ {
+  "id": "cookie-153",
+  "reached": true,
+  "reached_url": "https://globalprivacycontrol.org/faq",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "FAQ page states every claim verbatim, including the 15 January 2025 four-state count and the eight further states.",
+  "_pass": "p2"
+ },
+ {
+  "id": "cookie-155",
+  "reached": true,
+  "reached_url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB566",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "lets a consumer send an opt-out preference signal to every business",
+    "source_says": "Civil Code section 1798.136(a)(1) requires functionality that 'enables the browser to send an opt-out preference signal to businesses with which the consumer interacts through the browser', not to every business",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "easy to use and configure",
+    "source_says": "section 1798.136(a)(2): the functionality 'shall be easy for a reasonable person to locate and configure'",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB566",
+  "proposed_takeaway": "AB 566, the California Opt Me Out Act, signed on 8 October 2025, amends the CCPA to require a business that develops or maintains a web browser to include a setting that lets a consumer send an opt-out preference signal to businesses the consumer interacts with through the browser, easy to locate and configure, with an explanation of how the signal works and its intended effect. It operates from 1 January 2027, with a safe harbour for compliant browser makers when a website fails to honour the signal, and the California Privacy Protection Agency may adopt regulations. It binds browser developers; businesses already must honour such signals under the CCPA regulations, so expect more signals from 2027.",
+  "note": "Chaptered text read in the browser: Chapter 465, approved 8 October 2025, adds Civil Code section 1798.136, operative 1 January 2027.",
+  "_pass": "p2"
+ },
+ {
+  "id": "cookie-166",
+  "reached": true,
+  "reached_url": "https://www.w3.org/TR/tracking-dnt/",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Global Privacy Control (W3C Working Draft) is its successor for opt-out signalling",
+    "source_says": "The 17 January 2019 Note predates GPC and names no successor mechanism; it only records the Working Group's closure",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Date, Working Group Note status, DNT value 1 and the closure rationale all match the canonical W3C page.",
+  "_pass": "p2"
+ },
+ {
+  "id": "cookie-172",
+  "reached": true,
+  "reached_url": "https://www.legislation.gov.uk/uksi/2003/2426/regulation/6",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Latest available version shows regulation 6 substituted 5 February 2026 by DUAA 2025 ss.112(2), 142(1) via SI 2026/82 reg 2(w); Schedule A1 paragraphs 2 to 7 carry the six exceptions named.",
+  "_pass": "p2"
+ },
+ {
+  "id": "cookie-196",
+  "reached": true,
+  "reached_url": "https://www.kvkk.gov.tr/SharedFolderServer/CMSFiles/fb193dbb-b159-4221-8a7b-3addc083d33f.pdf",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "date field: 20 June 2022",
+    "source_says": "The guideline now published on kvkk.gov.tr is a later edition, 'KVKK Yayinlari No: 69, Temmuz 2025' (July 2025), and section 8 applies the Article 9 transfer regime as amended in 2024, which did not exist in 2022",
+    "severity": "medium",
+    "kind": "outdated"
+   },
+   {
+    "claim": "cookies for advertising, profiling and non-essential analytics require explicit consent under Article 5",
+    "source_says": "Section 5.9 places first party analytics cookies under Criterion B, so they do not require explicit consent; only section 6.1 social plugin tracking cookies and section 6.2 online behavioural advertising cookies are listed as requiring explicit consent under Article 5(1)",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "claim": "The Personal Data Protection Board's guideline",
+    "source_says": "The cover and imprint name the Kisisel Verileri Koruma Kurumu (the Authority), and section 1.1 describes the document as practical, guiding advice rather than a binding Board decision",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Provide a Turkish-language banner",
+    "source_says": "The guideline nowhere mentions the language of the banner; it asks for a cookie management panel with equally prominent accept, reject and preferences buttons (section 4) and clear, plain, accessible information (section 9)",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "It applies to every data controller whose website or app processes data of users in Turkey",
+    "source_says": "Section 1.2 states the scope as processing of personal data through cookies on desktop and mobile websites and web applications, and expressly excludes pixels, fingerprinting, local storage and beacons; it states no territorial test",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.kvkk.gov.tr/SharedFolderServer/CMSFiles/fb193dbb-b159-4221-8a7b-3addc083d33f.pdf",
+  "proposed_takeaway": "The Personal Data Protection Authority's guideline, in its July 2025 edition, applies Law No. 6698 to cookies: cookies strictly necessary for a service the user requested, and first party analytics, may be used without explicit consent under Article 5(2), while social plugin tracking and online behavioural advertising cookies require explicit consent under Article 5(1), with information duties under Article 10 met through a cookie policy and banner, and cross-border transfers through cookies subject to Article 9. It applies to data controllers processing personal data through cookies on websites and web applications. Provide a banner with equally prominent accept, reject and preferences buttons, granular explicit opt-in for non-essential cookies, no consent inferred from mere site use, and a cookie policy listing each cookie, purpose, type and duration.",
+  "note": "Entry url Icerik/7288 now redirects to the KVKK home page; the guideline is reachable from the Rehberler listing, page 2.",
+  "_pass": "p2"
+ },
+ {
+  "id": "cookie-205",
+  "reached": true,
+  "reached_url": "https://oag.ca.gov/system/files/attachments/press-docs/Filed%20Judgment.pdf.pdf",
+  "how": "both",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The first public CCPA settlement found that ...",
+    "source_says": "The Final Judgment and Permanent Injunction (People v. Sephora USA, Inc., San Francisco Superior Court, Case No. CGC-22-601380, filed 24 August 2022) is entered 'without the taking of proof and without trial or adjudication of any fact or law' and without any admission by Sephora, so it contains no findings; the allegations sit in the Complaint and the Attorney General's press release",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "The first public CCPA settlement",
+    "source_says": "Neither the judgment nor the press release describes this as the first CCPA settlement; the release only calls it part of ongoing enforcement",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://oag.ca.gov/system/files/attachments/press-docs/Filed%20Judgment.pdf.pdf",
+  "proposed_takeaway": null,
+  "note": "Judgment is a 7 page scan with no text layer; rendered it with pdf.js in the browser. Paragraph 17 gives $1.2 million, 11 the sale disclosure, 12 GPC, 14 to 15 the two year reporting and service provider contract terms.",
+  "_pass": "p2"
+ },
+ {
+  "id": "cookie-207",
+  "reached": true,
+  "reached_url": "https://privacy.ca.gov/wp-content/uploads/sites/357/2026/01/20250501_snyder_order.pdf",
+  "how": "both",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "date field: 6 May 2025",
+    "source_says": "The Order of Decision is dated 1 May 2025 (Case No. ENF23-M-TO-26); 6 May 2025 is the date of the CPPA press release announcing it",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://privacy.ca.gov/wp-content/uploads/sites/357/2026/01/20250501_snyder_order.pdf",
+  "proposed_takeaway": null,
+  "note": "Pages 2 to 13 are scans with no text layer, not missing; rendered them with pdf.js. Paragraphs 34 to 36 confirm the cookie banner and Global Privacy Control, 63 the $345,178 fine, 65 and 68 the configuration and training duties.",
+  "_pass": "p2"
+ },
+ {
+  "id": "cookie-234",
+  "reached": true,
+  "reached_url": "https://www.revisor.mn.gov/laws/2024/0/Session+Law/Chapter/121/",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Recognise Global Privacy Control for Minnesota visitors",
+    "source_says": "Section 325O.05, subdivision 3 requires controllers to honour an opt-out preference signal but names no mechanism, and subdivision 3(a)(2) requires that the mechanism 'not make use of a default setting' and instead require an affirmative, freely given and unambiguous choice",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "requires controllers to honour opt-out preference signals",
+    "source_says": "Section 325O.05, subdivision 3 covers targeted advertising and sale only, not profiling",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Article 5 read in full: effective 31 July 2025 (Sec. 14), thresholds in 325O.03, rights and profiling question in 325O.05, inventory in 325O.07 subd. 2(c), $7,500 and the cure paragraph expiring 31 January 2026 in 325O.10.",
+  "_pass": "p2"
+ },
+ {
+  "id": "cookie-123",
+  "reached": true,
+  "reached_url": "https://openstd.samr.gov.cn/bzgk/std/showGb?type=online&hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "requires controls over embedded third-party SDKs",
+    "source_says": "9.7 第三方接入管理 applies 当个人信息控制者在其产品或服务中接入具备收集个人信息功能的第三方产品或服务且不适用 9.1 和 9.6 时 (where the controller embeds into its product or service a third-party product or service capable of collecting personal information), and its requirements a) to g) are all 应 (shall): a) 建立第三方产品或服务接入管理机制和工作流程，必要时应建立安全评估等机制设置接入条件; b) 应与第三方产品或服务提供者通过合同等形式明确双方的安全责任及应实施的个人信息安全措施; c) 应向个人信息主体明确标识产品或服务由第三方提供; d) 应妥善留存平台第三方接入有关合同和管理记录; e) 应要求第三方根据本标准相关要求向个人信息主体征得收集个人信息的授权同意，必要时核验其实现的方式; f) 应要求第三方产品或服务建立响应个人信息主体请求和投诉等的机制; g) 应监督第三方产品或服务提供者加强个人信息安全管理，发现第三方产品或服务没有落实安全管理要求和责任的，应及时督促整改，必要时停止接入. The word SDK appears in two places, both weaker than 应: the note to 9.6 共同个人信息控制者 (如个人信息控制者在其提供产品或服务的过程中部署了收集个人信息的第三方插件（例如，网站经营者与在其网页或应用程序中部署统计分析工具、软件开发工具包 SDK、调用地图 API 接口），且该第三方并未单独向个人信息主体征得收集个人信息的授权同意，则个人信息控制者与该第三方在个人信息收集阶段为共同个人信息控制者), which is a note classifying the SDK case rather than a requirement; and 9.7 h) 产品或服务嵌入或接入第三方自动化工具（如代码、脚本、接口、算法模型、软件开发工具包、小程序等）的，宜采取以下措施：1) 开展技术检测确保其个人信息收集、使用行为符合约定要求；2) 对第三方嵌入或接入的自动化工具收集个人信息的行为进行审计，发现超出约定的行为，及时切断接入, which uses 宜 (should) rather than 应 (shall). Gloss: the general access-management controls are mandatory-form and do cover embedded SDKs, but the SDK-specific technical detection and audit measures are recommended-form only.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "provides model privacy policy templates",
+    "source_says": "附录 D（资料性附录）个人信息保护政策模板: 发布个人信息保护政策是个人信息控制者遵循公开透明原则的重要体现，是保证个人信息主体知情权的重要手段，还是约束自身行为和配合监督管理的重要机制。个人信息控制者的个人信息保护政策应清晰、准确、完整地描述个人信息控制者的个人信息处理行为。个人信息保护政策模板示例见表 D.1。 Gloss: Annex D is a single informative (资料性) annex containing one template, 表 D.1 个人信息保护政策模板, laid out in two columns (模版 text on the left, 编写要求 drafting requirements on the right) and running printed pages 24 to 29. So it is one model policy, not several templates, and being 资料性 it is informative even within this already-recommended standard.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "regulators treat it as the benchmark for what compliance looks like in practice",
+    "source_says": "Nothing in the standard text states this. The standard's own status markers are the GB/T prefix, the catalogue label 推荐性国家标准 / 推标, and 前言: 本标准按照 GB/T 1.1—2009 给出的规则起草。本标准代替 GB/T 35273—2017《信息安全技术 个人信息安全规范》. The enforcement-practice claim is an external characterisation and cannot be confirmed or refuted from this source.",
+    "severity": "low",
+    "kind": "outside-source"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Read the online preview as images by reassembling each page from its 10x10 tile mosaic; all four substantive claims confirmed from 5.3, 9.7 and Annex D, with only low-severity precision caveats.",
+  "_pass": "p3"
+ }
+]

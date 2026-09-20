@@ -33,10 +33,19 @@ Also on 20 September 2026 the other 149 entries, the ones with no downloaded PDF
 rechecked against the live source page (see `../live-recheck-2026-09-20/`): 110 confirmed,
 28 tightened, 8 corrected, and every page reached. 63 field changes, 36 takeaways and 27
 source links, were applied by `../live-recheck-2026-09-20/apply_recheck.py`. Rerun it after
-any edit that regenerates all_merged.json. Three entries remain short and are named in that
-report: the EDPB link for the Criteo item is dead with no replacement found, the Chinese
-standard GB/T 35273-2020 sits behind a portal viewer, and the Nigeria Data Protection Act
-2023 exists online only as an image scan or behind Cloudflare.
+any edit that regenerates all_merged.json.
+
+A fourth pass later on 20 September 2026 closed the last sixteen entries whose takeaway had
+never been read against its own source, thirteen of them entries whose downloaded PDF was
+the wrong document (see `../live-recheck-2026-09-20/cookie-final-sixteen-2026-09-20.md`).
+All sixteen were reached: 11 confirmed, 3 corrections, 2 minor fixes, so every one of the
+259 entries is now verified against its source. 14 field changes, 5 takeaways, 6 source
+links, 2 dates and one source marker, were applied by
+`../live-recheck-2026-09-20/apply_close16.py`. Rerun that too after any edit that
+regenerates all_merged.json, so the order is apply_source_review.py, apply_recheck.py,
+apply_close16.py. The lesson worth keeping: in all thirteen wrong-file cases the entry's own
+link was fine and the document was there, so a wrong-file download says nothing about the
+link.
 
 Two practical notes from that pass. A host that refuses one tool often answers the other:
 the browser clears robots.txt refusals and bot checks, and the fetch tool extracts text from

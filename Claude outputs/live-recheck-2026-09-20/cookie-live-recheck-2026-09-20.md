@@ -172,8 +172,11 @@ rerun on current data is a no-op. Remember the build trap: `build_cookie_page.py
 
 | Digest | Entries | Checked against the source |
 | --- | --- | --- |
-| Cookie | 259 | **256** |
+| Cookie | 259 | **259** |
 
-The three outstanding are cookie-11 (link dead, takeaway verified from the underlying
+This pass left sixteen entries whose takeaway had still never been read against its own
+source, among them cookie-11 (link dead, takeaway verified from the underlying
 deliberation), cookie-123 (text behind a portal viewer) and cookie-139 (the Nigerian Act
-itself). Each is marked above and none of them is a silent gap.
+itself). All sixteen were closed on 20 September 2026 in a third pass, reported in
+`cookie-final-sixteen-2026-09-20.md`, which took the cookie digest to 259 of 259. The table
+above shows the position after that pass, not after this one.
