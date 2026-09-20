@@ -14,6 +14,7 @@ Usage:
   python3 rail_patch.py slim <file> <prefix>              upgrade v1 rail CSS to v2 in place
   python3 rail_patch.py touch <file> <prefix>             upgrade to v3 CSS and the v2 script
   python3 rail_patch.py readiness <html> <css> <js>       add the rail to GDPR Readiness
+  python3 rail_patch.py calculator <html> <css> <js>      add the rail to the Fine Calculator
 
 Order: patch the module and the builder first, rebuild the three digests from their
 builders, then patch the two advice pages, which are not regenerated from a builder.
@@ -210,29 +211,40 @@ def touch(path, P):
 RA_HEADS = [("How to fill this in", "ra-how"), ("Step 1: Scope", "ra-step-1"),
             ("Step 2: Assessment", "ra-step-2"), ("Step 3: Readiness", "ra-step-3")]
 
+FC_HEADS = [("How to use this", "fc-how"), ("Your organisation", "fc-org"),
+            ("How the number is worked out", "fc-method")]
 
-def readiness(html_path, css_path, js_path):
-    """GDPR Readiness has no side contents and no drawer, so the rail is its only section
-    navigation. Its four headings carry no ids, so they get them first."""
+
+def standalone(html_path, css_path, js_path, P, heads, anchor):
+    """Add the rail to a page that does not use the shared module: give its headings ids,
+    put the rail in front of `anchor`, and append the CSS and the script to the page's own
+    two files. Used for GDPR Readiness and the GDPR Fine Calculator, neither of which has
+    side contents or a drawer, so the rail is their only section navigation."""
     h = open(html_path, encoding="utf-8", newline="").read()
     items = []
-    for label, hid in RA_HEADS:
-        old = "<h2>%s</h2>" % label
-        h = sub1(h, old, '<h2 id="%s">%s</h2>' % (hid, label), "heading %s" % label)
+    for label, hid in heads:
+        h = sub1(h, "<h2>%s</h2>" % label, '<h2 id="%s">%s</h2>' % (hid, label), "heading %s" % label)
         items.append(("#" + hid, label))
-    h = sub1(h, "\t\t<!-- Floating expand and collapse for the activity categories -->",
-             "\t\t" + rail_markup("ra", items) + "\n\n\t\t<!-- Floating expand and collapse for the activity categories -->",
-             "rail anchor")
+    h = sub1(h, anchor, "\t\t" + rail_markup(P, items) + "\n\n" + anchor, "rail anchor")
     write(html_path, h)
     print("   %d sections: %s" % (len(items), ", ".join(l for _, l in items)))
 
     c = open(css_path, encoding="utf-8", newline="").read()
-    assert ".ra-rail" not in c, "%s already carries the rail CSS" % css_path
-    write(css_path, c.rstrip("\n") + "\n\n/* on this page rail */\n" + CSS_V3.replace(".ai-", ".ra-") + "\n")
+    assert ".%s-rail" % P not in c, "%s already carries the rail CSS" % css_path
+    write(css_path, c.rstrip("\n") + "\n\n/* on this page rail */\n" + CSS_V3.replace(".ai-", ".%s-" % P) + "\n")
 
     j = open(js_path, encoding="utf-8", newline="").read()
     assert "aria-label=\"On this page\"" not in j, "%s already carries the rail script" % js_path
     write(js_path, j.rstrip("\n") + "\n\n(function () {\n" + JS_V2.rstrip("\n") + "\n})();\n")
+
+
+def readiness(html_path, css_path, js_path):
+    standalone(html_path, css_path, js_path, "ra", RA_HEADS,
+               "\t\t<!-- Floating expand and collapse for the activity categories -->")
+
+
+def calculator(html_path, css_path, js_path):
+    standalone(html_path, css_path, js_path, "fc", FC_HEADS, "\t\t<!-- Footer -->")
 
 
 def navmod(path):
@@ -300,5 +312,7 @@ if __name__ == "__main__":
         touch(sys.argv[2], sys.argv[3])
     elif mode == "readiness":
         readiness(sys.argv[2], sys.argv[3], sys.argv[4])
+    elif mode == "calculator":
+        calculator(sys.argv[2], sys.argv[3], sys.argv[4])
     else:
         raise SystemExit(__doc__)
