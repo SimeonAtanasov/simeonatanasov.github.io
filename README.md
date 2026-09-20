@@ -3,7 +3,7 @@
 Personal portfolio and privacy reference site, published through GitHub Pages at
 `https://www.simeonatanasov.com`. This file is the map: what each page is, where its
 code lives, what sits in `Claude outputs/`, and how to rebuild the generated pages.
-Last updated 20 September 2026 (end of day).
+Last updated 21 September 2026.
 
 ## Pages
 
@@ -47,7 +47,10 @@ Other) with the three digests added; the page sections themselves are unchanged.
 
 `assets/js/back-to-top.js` and `assets/css/back-to-top.css` add a Top button to the three
 long tool pages (GDPR Readiness, Privacy & AI Assessment, Risk Matrix); the digests and
-advice pages carry their own. Short pages (home, dashboard, scanner, game, legal) have none.
+advice pages carry their own. `.site-top` sets `width: auto` on purpose: the risk matrix
+stylesheet gives bare `button` elements `width: 100%` below 736px, which stretched the
+fixed Top button across the footer and hid the cookie notice link (fixed 20 September 2026).
+A page stylesheet that styles bare `button` will do the same to any future floating control. Short pages (home, dashboard, scanner, game, legal) have none.
 
 The three digests and the two advice pages share one navigation pattern: an on-this-page bar, a sticky side contents
 (grouped, with an all-documents view, scrollspy, copy-link and open-source actions, a drawer
