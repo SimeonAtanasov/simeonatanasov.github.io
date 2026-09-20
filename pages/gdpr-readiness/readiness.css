@@ -518,3 +518,15 @@
     .ra-rulebox { padding: 14px 16px; }
     .ra-rule-table { min-width: 560px; }
 }
+
+/* Floating expand and collapse for the activity categories. Bottom left,
+   in the gutter opposite the Top button; appears while the activity list is
+   on screen. Same look as the pair on the digest and advice pages. */
+.ra-fold { position: fixed; left: 0.6em; bottom: 1.25em; z-index: 1150; display: flex; flex-direction: column; border-radius: 1.1em; overflow: hidden; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); }
+.ra-fold[hidden] { display: none; }
+.ra-fold-btn { display: flex !important; flex-direction: column; align-items: center; justify-content: center; gap: 0.2em; width: 2.6em; height: auto; line-height: 1; padding: 0.55em 0 0.5em 0; font-size: 1em; letter-spacing: 0; background: rgba(66,103,166,0.95); border: 0 !important; border-radius: 0 !important; box-shadow: none !important; white-space: nowrap; }
+.ra-fold-btn i { font-size: 0.9em; }
+.ra-fold-btn span { font-size: 0.5em; letter-spacing: 0.1em; text-transform: uppercase; }
+.ra-fold-btn + .ra-fold-btn { border-top: solid 1px rgba(255,255,255,0.3) !important; }
+.ra-fold-btn:hover, .ra-fold-btn:focus { background: #4267a6; color: #fff !important; }
+.ra-fold-btn::after { display: none; }

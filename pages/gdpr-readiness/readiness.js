@@ -360,21 +360,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // -------------------------------------------------------------- controls ---
-  document.getElementById("ra-expand").addEventListener("click", () => {
+  /* One pair of actions, two sets of buttons: the inline ones at the top of
+   * Step 2 and the floating pair that follows the reader down the list. */
+  function setAllCategories(open) {
     listEl.querySelectorAll(".ra-cat").forEach(c => {
-      c.querySelector(".ra-cat-body").hidden = false;
-      c.querySelector(".ra-cat-head").setAttribute("aria-expanded", "true");
-      c.querySelector(".ra-chevron").textContent = "−";
+      c.querySelector(".ra-cat-body").hidden = !open;
+      c.querySelector(".ra-cat-head").setAttribute("aria-expanded", String(open));
+      c.querySelector(".ra-chevron").textContent = open ? "−" : "+";
     });
+    syncFold();
+  }
+
+  ["ra-expand", "ra-expand-float"].forEach(id => {
+    const b = document.getElementById(id);
+    if (b) b.addEventListener("click", () => setAllCategories(true));
   });
 
-  document.getElementById("ra-collapse").addEventListener("click", () => {
-    listEl.querySelectorAll(".ra-cat").forEach(c => {
-      c.querySelector(".ra-cat-body").hidden = true;
-      c.querySelector(".ra-cat-head").setAttribute("aria-expanded", "false");
-      c.querySelector(".ra-chevron").textContent = "+";
-    });
+  ["ra-collapse", "ra-collapse-float"].forEach(id => {
+    const b = document.getElementById(id);
+    if (b) b.addEventListener("click", () => setAllCategories(false));
   });
+
+  /* The floating pair is only useful while the activity list is on screen, so
+   * it appears once the list has reached the upper half of the viewport and
+   * goes away again past its end. Same trigger shape as the Top button. */
+  const foldEl = document.getElementById("ra-fold");
+
+  function syncFold() {
+    if (!foldEl) return;
+    const r = listEl.getBoundingClientRect();
+    foldEl.hidden = !(r.top < window.innerHeight * 0.5 && r.bottom > 0);
+  }
+
+  window.addEventListener("scroll", syncFold, { passive: true });
+  window.addEventListener("resize", syncFold);
 
   document.getElementById("ra-fill-implemented").addEventListener("click", () => {
     if (!confirm("Mark every in-scope activity as implemented? This overwrites the statuses you have set.")) return;
@@ -545,4 +564,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderScope();
   renderActivities();
   renderResults();
+  syncFold();
 });
