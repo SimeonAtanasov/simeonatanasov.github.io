@@ -109,7 +109,7 @@ for i, x in enumerate(rows):
 # checks
 assert len(entries) == 532
 for e in entries:
-    assert "—" not in e["takeaway"], e["id"]
+    assert chr(0x2014) not in e["takeaway"], e["id"]
     assert e["takeaway"].strip(), e["id"]
 fallback = [e for e in entries if e["takeaway"] == "Article 64 opinion outside the site's scope."]
 print("entries", len(entries), "written", sum(1 for e in entries if e["tier"] == "written"), "oneliners", sum(1 for e in entries if e["tier"] == "oneliner"), "fallback", len(fallback))

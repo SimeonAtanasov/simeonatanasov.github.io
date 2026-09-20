@@ -26,7 +26,7 @@ def main(path):
             e["url"] = FIX[u]
             applied += 1
     blob = json.dumps(items, ensure_ascii=False, indent=1)
-    assert "—" not in blob, "em dash in output"
+    assert chr(0x2014) not in blob, "em dash in output"
     for old in FIX:
         assert '"%s"' % old not in blob, "old URL still present: %s" % old
     open(path, "w", encoding="utf-8", newline="\n").write(blob)

@@ -19,7 +19,8 @@ Available globals in that tab (all read-only for you):
   plus the inserted articles `"4a"`, `"60a"`, `"75a"`, `"75b"`, `"75c"`, `"75d"`.
   Each value is `{title, text}`. `text` is the full consolidated article including the
   amendment markers: `▼M1` opens text inserted or replaced by the Omnibus, `▼B` returns
-  to unamended base text, and `▼M1 ————— ▼B` marks a deleted point.
+  to unamended base text, and a run of long dashes between a ▼M1 and a ▼B marker,
+  with no words between them, marks a deleted point.
 - `window.__AX` : object keyed by annex numeral, `"I"` .. `"XIV"`, value is the annex text.
 - `window.__CT` : the whole consolidated act as one string. It holds the enacting terms
   ONLY, with no preamble, so do not look for recitals here. Use it to search across

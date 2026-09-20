@@ -96,7 +96,7 @@ print("templates", t)
 left = [e["id"] for e in E if e["takeaway"].startswith("Approves")]
 assert not left, left
 for e in E:
-    assert "—" not in e["takeaway"]
+    assert chr(0x2014) not in e["takeaway"]
 json.dump(E, open("digest.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("individual edits", n_changes)
 

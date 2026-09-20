@@ -46,7 +46,7 @@ def main():
                 dirty = True
         if dirty:
             blob = json.dumps(items, ensure_ascii=False, indent=1)
-            assert "—" not in blob, "em dash in %s" % path
+            assert chr(0x2014) not in blob, "em dash in %s" % path
             open(path, "w", encoding="utf-8", newline="\n").write(blob)
         print("%-16s %d entries" % (os.path.basename(path), len(items)))
     missing = set(CHANGES) - seen

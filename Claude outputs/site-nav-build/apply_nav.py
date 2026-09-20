@@ -108,4 +108,4 @@ css_out = css.rstrip("\n") + "\n" + nav_css(P, SECTION) + extra
 
 open(out_html, "w", encoding="utf-8", newline="\n").write(s3)
 open(out_css, "w", encoding="utf-8", newline="\n").write(css_out)
-print(out_html, len(s3.encode("utf-8")), "bytes;", len(items), "entries;", sum(len(i["subs"]) for i in items), "parts; em dashes", s3.count("—") + css_out.count("—"))
+print(out_html, len(s3.encode("utf-8")), "bytes;", len(items), "entries;", sum(len(i["subs"]) for i in items), "parts; em dashes", s3.count(chr(0x2014)) + css_out.count(chr(0x2014)))

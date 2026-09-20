@@ -18,7 +18,7 @@ Everything needed to regenerate cookie-digest.html and the PDF. Snapshot date: 1
   copy is in site-nav-build; keep the two identical).
 - build_cookie_page.py: renders cookie-digest.html and pages/cookie-digest/cookie-digest.css.
 - build_cookie_pdf.py: renders the greyscale PDF (needs pack.css from the study pack build and
-  WeasyPrint; 71 pages as of 19 September 2026, cover with six type counts including proposals).
+  WeasyPrint; 74 pages as of 20 September 2026, cover with six type counts including proposals).
 - The links behind the page are also in cookie-compliance-inventory-2026-09-19.csv, one folder
   up (259 rows, grouped by region).
 
@@ -28,6 +28,21 @@ On 20 September 2026 the takeaways were checked against the official texts (see
 Eighteen entries could not be checked because the downloaded PDFs are not the document the
 entry names (mostly CJEU judgments from curia pages that link many cases); they are listed in
 the verification register and are the first to re-download.
+
+Also on 20 September 2026 the other 149 entries, the ones with no downloaded PDF, were
+rechecked against the live source page (see `../live-recheck-2026-09-20/`): 110 confirmed,
+28 tightened, 8 corrected, and every page reached. 63 field changes, 36 takeaways and 27
+source links, were applied by `../live-recheck-2026-09-20/apply_recheck.py`. Rerun it after
+any edit that regenerates all_merged.json. Three entries remain short and are named in that
+report: the EDPB link for the Criteo item is dead with no replacement found, the Chinese
+standard GB/T 35273-2020 sits behind a portal viewer, and the Nigeria Data Protection Act
+2023 exists online only as an image scan or behind Cloudflare.
+
+Two practical notes from that pass. A host that refuses one tool often answers the other:
+the browser clears robots.txt refusals and bot checks, and the fetch tool extracts text from
+PDFs that Chrome renders with nothing selectable. And a regulator press release is not the
+decision, so a takeaway detail that is right but absent from the linked page is a link
+problem, not a content error.
 
 To add or update an item: edit all_merged.json (keep the field set: title, jurisdiction, type,
 date, url, status, takeaway, topics, source), then run the two build scripts. Never edit

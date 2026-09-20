@@ -49,7 +49,7 @@ sub(75, "Practitioners meet it as the reason the pledge stalled and as an early 
 sub(65, "The obligation binds designated gatekeepers from 6 March 2024, with fines up to 10 per cent of worldwide turnover.", "The obligation binds each designated gatekeeper six months after its designation, which for the first six gatekeepers meant 6 March 2024, with fines up to 10 per cent of worldwide turnover and 20 per cent for repeat infringements.")
 
 for e in C:
-    assert "—" not in e["takeaway"]
+    assert chr(0x2014) not in e["takeaway"]
 json.dump(C, open("all_merged.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("edits", n)
 

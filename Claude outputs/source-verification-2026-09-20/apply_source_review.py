@@ -45,7 +45,7 @@ def main():
         applied += 1
     assert applied + skipped == len(changes), "matched %d of %d changes" % (applied + skipped, len(changes))
     blob = json.dumps(items, ensure_ascii=False, indent=1)
-    assert "—" not in blob, "em dash in output"
+    assert chr(0x2014) not in blob, "em dash in output"
     open(path, "w", encoding="utf-8", newline="\n").write(blob)
     print("%s: %d applied, %d already current, %d entries" % (digest, applied, skipped, len(items)))
 

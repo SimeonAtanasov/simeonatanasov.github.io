@@ -88,4 +88,4 @@ if __name__ == "__main__":
     out = "/mnt/user-data/outputs/edpb-digest-2026-09-19.pdf"
     HTML(p).write_pdf(out)
     print("pdf", out, os.path.getsize(out))
-    print("em dashes:", open(p, encoding="utf-8").read().count("—"))
+    print("em dashes:", open(p, encoding="utf-8").read().count(chr(0x2014)))

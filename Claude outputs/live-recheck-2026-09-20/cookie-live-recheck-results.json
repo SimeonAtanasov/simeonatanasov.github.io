@@ -1,0 +1,3394 @@
+[
+ {
+  "id": "cookie-0",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Every claim matches: consent libre, specifique, eclairee et univoque; scrolling and continued browsing excluded; refusal as simple as acceptance; third parties covered; strictly necessary and audience measurement exemptions; proof of consent at any time under article 7.1 GDPR; deliberation 2019-093 of 4 July 2019 expressly abrogated.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-3",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "the CNIL sets no threshold but expects a published justification",
+    "source_says": "The CNIL confirms it sets no threshold ('Il n'appartient pas a la CNIL de fixer un seuil') but only encourages publication: 'Pour plus de transparence a l'egard des internautes, la CNIL encourage les editeurs a publier leur analyse.' Encouragement, not an expectation.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "It applies to any publisher serving French users.",
+    "source_says": "The page frames the criteria as first criteria to be applied case by case ('ils doivent etre utilises dans le cadre d'une analyse au cas par cas'), not as a rule of general application.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The CNIL sets out when conditioning access on consent can still yield free consent: a real and equitable alternative must exist, a paid alternative must be reasonably priced (the CNIL sets no threshold but encourages publishers to publish their pricing analysis), consent must be requested only for trackers needed to monetise the free path, and the paid path may carry only strictly necessary trackers, with separate consent for third-party content. The criteria are applied case by case to publishers serving French users. Document the pricing rationale and audit the paid path for stray advertising or analytics tags.",
+  "note": "Substance is right; only the strength of the publication expectation is overstated.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-4",
+  "reached": true,
+  "reached_url": "https://justice.pappers.fr/decision/29f0c282a1f4690191e57e014feac7a48aa66a9d",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The Conseil d'Etat upheld the decision on 28 January 2022.",
+    "source_says": "The deliberation of 7 December 2020 predates any appeal; it only notes that a recours may be brought before the Conseil d'Etat within four months. The 28 January 2022 judgment (no. 449209) is outside this document.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "fined Google LLC 60 million euros and Google Ireland Limited 40 million euros",
+    "source_says": "The published text of SAN-2020-012 is anonymised (societe X, societe Y, [...].fr) because the two-year naming period has expired; the amounts 60 000 000 and 40 000 000 euros under article 82 are in the dispositif, and SAN-2021-023 at paragraph 7 attributes 60 million to GOOGLE LLC and 40 million to GOOGLE IRELAND LIMITED.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Legifrance blocks both the fetcher (403) and the browser (Cloudflare 'Just a moment' challenge); full official text read on the Pappers Justice mirror, every claim matches.",
+  "_pass": "b07"
+ },
+ {
+  "id": "cookie-5",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "around 40 advertising cookies were written to French users' terminals on arrival",
+    "source_says": "Point 87: 'quel que soit le parcours de l'utilisateur ... plus de 40 cookies poursuivant une finalite publicitaire etaient deposes' (more than 40, not around 40).",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "The Conseil d'Etat confirmed the sanction on 27 June 2022 (decision no. 451423).",
+    "source_says": "The 7 December 2020 deliberation predates any appeal and says nothing about later judicial review.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The CNIL found that more than 40 advertising cookies were written to French users' terminals on arrival at amazon.fr, whether from the home page or from third-party advertisements, and that the banner text (offer and improve our services) described neither the advertising purpose nor the means of refusal, in breach of article 82. The fine was 35 million euros with a three-month injunction backed by 100,000 euros per day. Landing pages reached from advertising links need the same banner as the home page. The Conseil d'Etat confirmed the sanction on 27 June 2022 (decision no. 451423).",
+  "note": "Banner wording, 35 million euro fine, three-month injunction and 100,000 euro daily astreinte all confirmed in the operative part.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-6",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "a 100 million euro fine",
+    "source_says": "The decision reviews two fines totalling 100 million euros: 60 million on Google LLC and 40 million on Google Ireland Limited.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "One-stop-shop held inapplicable to article 82 enforcement, market share above 90 percent, about 47 million French users and the refusal of a preliminary reference to the CJEU are all in the decision.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-7",
+  "reached": true,
+  "reached_url": "https://justice.pappers.fr/decision/da6823b5919afe65b49461c1c1dfba50599a1aa7",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "The decision is the CNIL's clearest statement that a first-layer reject-all button is mandatory.",
+    "source_says": "Paragraphs 125 to 129 and the dispositif require a refusal mechanism of equivalent simplicity to acceptance; the first-layer 'Tout refuser' button is only 'fortement preconise' in the recommendation of 17 September 2020, which the formation restreinte says merely clarifies the statutory duty. The decision does not mandate a particular button.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "The CNIL later closed the injunction after Google added a reject all button.",
+    "source_says": "Not addressed; the closure was decided separately by deliberation SAN-2023-012 of 13 July 2023.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The CNIL fined Google LLC 90 million euros and Google Ireland Limited 60 million euros because google.fr and youtube.com offered a one-click accept button but required several clicks to refuse all cookies, which the CNIL held discourages refusal and invalidates consent under article 82. An injunction required a refusal mechanism as simple as acceptance within three months, backed by 100,000 euros per day of delay. The decision is the CNIL's clearest statement that refusing must be as simple as accepting, which in practice means a reject all control on the first layer. The CNIL later closed the injunction after Google added a reject all button.",
+  "note": "Dispositif confirms 90 million on GOOGLE LLC, 60 million on GOOGLE IRELAND LIMITED, article 82, three months, 100,000 euros per day.",
+  "_pass": "b07"
+ },
+ {
+  "id": "cookie-8",
+  "reached": true,
+  "reached_url": "https://justice.pappers.fr/decision/1156a5226b8bd6467d71cdfbc5754a18d0016487",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the button ending the refusal path was labelled Accept cookies, which misled users about what they were doing",
+    "source_says": "Paragraph 113 and 114: to refuse, the user had to click 'Gerer les parametres de donnees', scroll the second window and then click 'Accepter les cookies'; the formation restreinte holds it 'particulierement contre-intuitif de devoir cliquer sur un bouton intitule Accepter les cookies' to refuse. Paragraph 109 of the same published text calls that final button 'Tout accepter', an internal inconsistency in the anonymised version.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "the CNIL has since closed the injunction",
+    "source_says": "Not addressed in this deliberation.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Dispositif confirms 60 million euros on FACEBOOK IRELAND LIMITED, article 82, injunction of equivalent simplicity, 100,000 euros per day after three months.",
+  "_pass": "b07"
+ },
+ {
+  "id": "cookie-9",
+  "reached": true,
+  "reached_url": "https://justice.pappers.fr/decision/c5ef64ea3729163e4e333f82742e0066c8fa9358",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "An injunction required a refusal mechanism as simple as acceptance within three months, backed by 60,000 euros per day of delay.",
+    "source_says": "Dispositif: the injunction is 'de recueillir le consentement des utilisateurs lors de leur arrivee sur le site web bing.com avant toute operation de lecture et ecriture d'informations sur le terminal des utilisateurs residant en France ayant pour finalite la lutte contre la fraude publicitaire', with an astreinte of 60 000 euros per day after three months. The injunction does not cover the refusal mechanism, which the company had already changed on 29 March 2022 (paragraph 13).",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "claim": "offered no first-layer button to refuse cookies, while acceptance took one click",
+    "source_says": "Paragraphs 65 and 70 to 73: the banner had an immediate accept button but no equivalent one-click refusal; refusing took at least two further actions via 'Plus d'options' and 'Enregistrer les parametres'.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The CNIL fined Microsoft Ireland Operations Limited 60 million euros because bing.com wrote an advertising cookie to the terminal before any consent and offered no first-layer button to refuse cookies, while acceptance took one click, in breach of article 82. An injunction required consent to be collected on arrival at bing.com before any write used for advertising fraud detection, within three months, backed by 60,000 euros per day of delay. The case confirms that a cookie used for both fraud detection and advertising still needs consent. Search engines and other high-traffic services operating in France are treated as within the CNIL's direct reach.",
+  "note": "Fine, article and astreinte all correct; the injunction was about consent before the MUID write, not about the refusal path.",
+  "_pass": "b07"
+ },
+ {
+  "id": "cookie-10",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Secondary source confirms both entities, 5 million euros, May 2020 to June 2022, one-click accept versus several clicks to refuse, inadequate purpose information in banner and consent tool, article 82, and the aggravating factors including minors and prior CNIL communications.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-11",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/news/national-news/2023/personalised-advertising-french-sa-fined-criteo-eur-40000000_en",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "wrong_document",
+  "issues": [
+   {
+    "claim": "the whole takeaway (Criteo 40 million euro fine, articles 7(1), 12, 13, 15, 17 and 26 GDPR, Conseil d'Etat appeal)",
+    "source_says": "The link no longer serves the individual national news item. It loads the EDPB's generic News listing ('News | European Data Protection Board', 186 items, most recent entries dated September 2026). No Criteo item appears on it, and the EDPB site search returns its unfiltered 3381-item index for any query, so the item could not be located.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "EDPB redesigned its site in June 2026 and this 2023 deep link now resolves to the news index; the entry needs a replacement source link.",
+  "_pass": "b01"
+ },
+ {
+  "id": "cookie-12",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Yahoo EMEA Limited ... under article 82",
+    "source_says": "The article names only 'Yahoo' and does not cite article 82 of the loi Informatique et Libertes. Both details are correct in the underlying CNIL decision but cannot be checked from this secondary page.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "10 million euros, 29 December 2023, refusals ignored on yahoo.com, Yahoo Mail withdrawal tied to loss of mailbox access, and 27 complaints all confirmed.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-13",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "All four listed banner patterns match the CNIL wording (disproportionate colour, size and font; refusal blending into the information text; refusal abutting paragraphs without sufficient spacing; accept shown several times against a single unclear refusal), the one-month deadline is stated, and the page restates that refusing must be as simple as accepting.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-17",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the rules were well known from its long-running action plan",
+    "source_says": "The page says only that 'the rules regarding cookies are well known'; it does not attribute that to an action plan.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "A mid-sized fine for a national subsidiary shows the CNIL is now enforcing beyond the largest platforms.",
+    "source_says": "Commentary about CNIL enforcement strategy; the announcement does not make this point.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "American Express Carte France, 1.5 million euros, 27 November 2025, January 2023 inspections of americanexpress.com/fr-fr, all three cookie breaches and article 82 confirmed, as is compliance during proceedings as a mitigating factor.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-18",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "without a valid legal basis (articles 6, 12 and 13 GDPR)",
+    "source_says": "Article 6 is the legal basis finding; articles 12 and 13 concern the exercise of rights and information given to data subjects, which are separate breaches, not part of the legal basis failure.",
+    "severity": "medium",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The CNIL fined an unnamed retailer 3.5 million euros for sending loyalty members' email addresses and phone numbers to a social media platform for targeted advertising since February 2018 without a valid legal basis (article 6 GDPR) and without adequate information or rights handling (articles 12 and 13), for weak password rules (article 32), for a missing impact assessment (article 35), and under article 82 because eleven consent-requiring cookies were written before any choice and were neither deleted nor stopped from being read after refusal, affecting more than 10.5 million people. Customer-matching uploads to ad platforms need their own legal basis, separate from the cookie banner.",
+  "note": "Amount, 30 December 2025 date, February 2018 start, eleven cookies, post-refusal reading and 10.5 million people all confirmed; only the article grouping needed fixing.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-25",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Provvedimento n. 231 of 10 June 2021 confirmed: Gazzetta Ufficiale n. 163 of 9 July 2021, six months to comply, scroll alone insufficient, cookie walls unlawful absent an equivalent alternative, X top right with graphic parity leaving defaults untouched, re-presentation after at least six months or a material change, and analytics exempt only with at least the fourth IP octet masked and no cross-site combination, under article 122 of the Codice.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-26",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Provvedimento of 13 November 2024 confirmed: 30 March 2021 protocol with the Guardia di Finanza's Nucleo speciale tutela privacy, OK and No grazie banner with a privacy notice that never mentioned cookies and no cookie categories, breaches of articles 4(11), 5, 7, 12, 13, 24 and 25 GDPR and article 122, ammonimento under article 58(2)(b) plus an injunction under 58(2)(d), and no fine given partial remediation.",
+  "_pass": "a01"
+ },
+ {
+  "id": "cookie-27",
+  "reached": true,
+  "reached_url": null,
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The act was renamed from TTDSG to TDDDG on 14 May 2024 with the section unchanged.",
+    "source_says": "The page carries the current title 'Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz - TDDDG' and the section 25 text, but states no renaming date; the date itself is not on the page.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Section 25(1) and (2) read verbatim; scope claim matched against section 1(3) (all undertakings established in, or supplying services or goods into, the territory).",
+  "_pass": "b06"
+ },
+ {
+  "id": "cookie-28",
+  "reached": true,
+  "reached_url": null,
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "under section 26(2) TDDDG",
+    "source_says": "The consolidated text names its citation ('Einwilligungsverwaltungsverordnung vom 6. Februar 2025 (BGBl. 2025 I Nr. 32)') and its makers (Bundesregierung with Bundestag consent, BMDV with Bundesrat consent) but does not print the enabling provision. The only TDDDG cross-reference to section 26 in the text is section 12, which cites section 26(1) no. 4 TDDDG for the security concept.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Every other claim checks out: BGBl. citation, 1.4.2025 entry into force (Art. 3), sections 4, 5, 6, 12, 13, 8, 18(1), 19, 17 and 1(2) all say what the takeaway says.",
+  "_pass": "b01"
+ },
+ {
+  "id": "cookie-29",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Recognition makes the section 18 and 19 EinwV duties concrete for any German digital service that chooses to integrate the service",
+    "source_says": "The post cites only § 19 Abs. 1 EinwV, and attributes both duties to it: providers must 'dafuer Sorge tragen, dass die Einstellungen der Nutzer*innen beruecksichtigt werden' and must tell users without stored settings 'welchen Dienst der Anbieter nutzt'. § 18 EinwV is not mentioned anywhere on the page.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "users must be told the service is integrated",
+    "source_says": "§ 19 Abs. 1 as quoted: users without existing settings must be informed which service the provider uses and that settings can be made there. The duty is narrower and conditional on the user having no stored settings.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "On 17 October 2025 the Federal Commissioner (BfDI) recognised the first service under the Einwilligungsverwaltungsverordnung, the PIMS Consenter from Law & Innovation Technology GmbH, and entered it in the public register required by section 13 EinwV. Recognition makes the section 19 EinwV duties concrete for any German digital service that chooses to integrate the service: stored end-user settings must be honoured, and users without stored settings must be told which service the provider uses and that settings can be made there. Consent platforms operating in Germany should decide whether to interoperate with recognised services and document that decision.",
+  "note": "Date, BfDI, Consenter, Law & Innovation Technology GmbH and the section 13 register all confirmed; only the section 18 reference is unsupported.",
+  "_pass": "a02"
+ },
+ {
+  "id": "cookie-32",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "was later codified in section 25 TTDSG (now TDDDG) from 1 December 2021",
+    "source_says": "The 2020 press release does not address the TTDSG, which did not yet exist when it was issued.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Case I ZR 7/16 of 28 May 2020, the richtlinienkonforme Auslegung of § 15(3) TMG against art 5(3) ePrivacy, the pre-ticked box and the 57 partner companies all match the press release.",
+  "_pass": "a02"
+ },
+ {
+  "id": "cookie-33",
+  "reached": true,
+  "reached_url": null,
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The judgment triggered a wave of warning letters in Germany and is the reference for treating third-party resource loads as data transfers needing a legal basis.",
+    "source_says": "The judgment says nothing about later warning letters or its own reception; it decides only the claim before it.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Tenor confirms 100 euros plus interest, injunction backed by an Ordnungsgeld of up to 250,000 euros and an Article 15 access order; damages rest on Article 82(1) GDPR, the lack of consent on Article 6(1)(a) and section 13(2) TMG old version.",
+  "_pass": "b06"
+ },
+ {
+  "id": "cookie-34",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "a banner offering consent on the first layer while allowing refusal only on the second layer",
+    "source_says": "The court found that 'weder auf der ersten noch auf der zweiten Ebene des Banners existiere eine zur Einwilligung gleichwertige Ablehn-Option' (neither on the first nor on the second layer was there a reject option equivalent to consent). The second layer offered only 'Speichern' or 'Alles akzeptieren' beside the labelled X.",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "claim": "so the consent is invalid under section 25 TTDSG and the GDPR",
+    "source_says": "The article names only the TTDSG as the basis of the decision; neither the GDPR nor art 4(11) GDPR is mentioned.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "The claim was brought by a consumer association under German unfair competition law",
+    "source_says": "The article says a Verbraucherverband sued a weather portal, but does not name the UWG or any other statutory basis for the claim.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The OLG Koeln held that a banner offering Accept, Settings and an X labelled Accept and close in the corner on the first layer, and only Save or Accept all on the second, gave users no rejection option equivalent to the consent option on either layer, and that pairing the X with Accept and close was misleading and intransparent, so the consent is invalid under section 25 TTDSG. The claim was brought by a consumer association against a weather portal; the judgment (6 U 80/23, 19 January 2024) is not final. Site operators in Germany face civil injunctions from competitors and associations, not only regulators, for asymmetric banners; give both options the same layer and weight.",
+  "note": "Case number, date and the X finding match; the first layer versus second layer framing is the substantive error.",
+  "_pass": "a02"
+ },
+ {
+  "id": "cookie-37",
+  "reached": true,
+  "reached_url": null,
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the framework breached the GDPR on legal basis, transparency, security and accountability",
+    "source_says": "The page states only that the Litigation Chamber 'imposes several sanctions including an action plan for compliance' and that the Market Court 'confirms the infringements established by the BE DPA'; it does not list the four grounds.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "status_field: superseded",
+    "source_says": "The page says decision 21/2022 was annulled on procedural grounds by the Market Court on 14 May 2025, not superseded by a later decision of the same body.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "The linked page is the DPA's own account of the case, not decision 21/2022; it confirms the 2 February 2022 date, the 250,000 euro fine, the two-month action plan, its approval on 11 January 2023, the one-stop-shop endorsement and the 2025 annulment.",
+  "_pass": "b06"
+ },
+ {
+  "id": "cookie-38",
+  "reached": true,
+  "reached_url": null,
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "judgment 2022/AR/292",
+    "source_says": "The page does not give a case number for the Market Court judgment; it dates the ruling 14 May 2025 and names the parties only.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Publishers and vendors relying on TCF signals remain individually responsible for a valid legal basis and transparency",
+    "source_says": "The page does not address the position of publishers or vendors.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Page confirms full jurisdiction, CJEU C-604/22 of 7 March 2024, TC String as personal data, joint controllership for user preferences within the TCF, confirmation of infringements and the 250,000 euro fine, annulment on procedural grounds, and rejection of controllership for processing entirely within OpenRTB.",
+  "_pass": "b06"
+ },
+ {
+  "id": "cookie-41",
+  "reached": true,
+  "reached_url": null,
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "across finance, media and hospitality",
+    "source_says": "The page lists those three as examples, not as the full set: 'veelbezochte websites in verschillende sectoren, zoals de financiele sector, de media en de horeca' (much-visited websites in various sectors, such as finance, media and hospitality).",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "expect a warning letter and a short window to fix the first layer",
+    "source_says": "The page says only 'Organisaties die niet voldoen aan de wet, krijgen eerst een waarschuwing en de kans om de cookiebanner aan te passen' (organisations that do not comply get a warning first and the chance to adjust the banner). It states no deadline and does not mention a letter or the first layer specifically.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Date 08 april 2025, five 2024 investigations, all five in breach, all five corrected, hidden reject button, pre-ticked consent, cookies before or despite refusal, functional-cookie exemption, 10,000-site scanning and warning-before-fine all match.",
+  "_pass": "b01"
+ },
+ {
+  "id": "cookie-42",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "since it began structural checks in February 2024",
+    "source_says": "'Sinds april 2025 controleert de AP structureel of websites in Nederland op de juiste manier toestemming vragen voor tracking cookies.' (Since April 2025 the AP has been checking structurally.)",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "claim": "it had warned more than 200 organisations about their cookie banners",
+    "source_says": "'De Autoriteit Persoonsgegevens (AP) heeft meer dan 200 websites gewaarschuwd over hun cookiebanner.' The article counts websites, not organisations.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "voluntary, informed and unambiguous consent",
+    "source_says": "'een tracking cookie [mag] alleen worden geplaatst als iemand vrijwillig en op basis van duidelijke, juiste informatie toestemming heeft gegeven.' The article says voluntary and on the basis of clear, correct information; it does not add unambiguous.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The AP announced that, since it began structural checks in April 2025, it had warned more than 200 websites about their cookie banners, that about three quarters had already adjusted them, and that it was now taking enforcement steps against those that had not. Its position is that tracking cookies may be placed only with voluntary consent given on the basis of clear and correct information, and that the simplest way to respect users' choice is not to use tracking software at all, so no banner is needed. Organisations serving Dutch users should treat an AP warning as the last step before a formal investigation.",
+  "note": "Date 11 November 2025, the three quarters figure and the enforcement step all confirmed; the start date of the structural checks is wrong.",
+  "_pass": "a02"
+ },
+ {
+  "id": "cookie-45",
+  "reached": true,
+  "reached_url": "https://www.retsinformation.dk/eli/lta/2011/1148/pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "It applies to any website or app addressed to Danish users regardless of whether personal data is processed.",
+    "source_says": "The order governs 'lagring af eller adgang til oplysninger i slutbrugerens terminaludstyr' and is not limited to personal data, but it states no territorial or addressed to Danish users scope in those terms.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "The Danish Agency for Digital Government (Digitaliseringsstyrelsen) supervises the order, while Datatilsynet supervises the subsequent processing under the GDPR",
+    "source_says": "The order contains no supervision provision and names no supervisory authority; it was issued by Erhvervs- og Vaekstministeriet (Den danske telemyndighed) on 9 December 2011. § 5 provides only for fines.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the two authorities' joint guidance of May 2025",
+    "source_says": "Not addressed by the 2011 order.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.retsinformation.dk/eli/lta/2011/1148/pdf",
+  "proposed_takeaway": null,
+  "note": "The main page is a JavaScript viewer; the /pdf path on the same host returns the text. § 3 consent and information, § 4 transmission and strictly necessary exemptions, and entry into force on 14 December 2011 all confirmed.",
+  "_pass": "a02"
+ },
+ {
+  "id": "cookie-46",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The criteria require a reasonable alternative for visitors who refuse, a price that does not make the choice illusory, consent requested only for purposes needed to fund the free path (statistics and personalisation need separate consent), and only strictly necessary processing on the paid path.",
+    "source_says": "The news page confirms the guidelines 'indeholder fire kriterier' and gives the assessment points from the Gul og Gratis decision (a payment alternative exists, pricing is not unreasonably high, the paid service is largely equivalent, statistical processing must be shown necessary or separately consented), but the four criteria themselves sit on a separate guidance page that returned 404 on both path variants, so their exact wording could not be read.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Date 20 February 2023, the two decisions with opposite outcomes and the reasons for each, and the orders on statistical purposes against both publishers are all confirmed on the page.",
+  "_pass": "a02"
+ },
+ {
+  "id": "cookie-47",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "replaces the earlier separate Danish cookie guidance as the reference for supervision",
+    "source_says": "The news page says nothing about replacing or withdrawing earlier guidance; it only announces that the two authorities have published a joint guidance covering 'de vaesentligste regler i cookiebekendtgoerelsen og databeskyttelsesforordningen'.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "in particular the treatment of statistics cookies",
+    "source_says": "Statistics cookies are not singled out on the news page.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The two Danish authorities issued one guidance document, with a supplementary annex of practical advice and an accompanying podcast, covering both the cookie order and the data protection rules that often apply in parallel: the cookie order requires consent before cookies are placed, and the GDPR governs the processing that follows, including any statistics or advertising. The guidance goes through the main rules of each regime, gives practical advice and examples, and flags the typical pitfalls. Danish-facing sites should re-check banners against it, in particular the treatment of statistics cookies.",
+  "note": "Date 15 May 2025, the joint authorship, the dual coverage and the supplementary advice annex are confirmed; the guidance PDF itself redirects to a CDN host that WebFetch refused on provenance grounds.",
+  "_pass": "a02"
+ },
+ {
+  "id": "cookie-49",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "BVwG 18 August 2025, the 9.90 euro subscription, the 2023 DSB decision, global-only consent versus per-purpose consent, the DSB not objecting to pay-or-okay as such, the allowed VwGH appeal and the likely CJEU referral all match noyb's account.",
+  "_pass": "a02"
+ },
+ {
+  "id": "cookie-50",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "This is the first Austrian court ruling on button colour and contrast",
+    "source_says": "noyb does not describe the decision as Austria's first court ruling on button colour; it notes the decision's significance without that claim.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Date 21 May 2026, case W171 2303402-1, the October 2024 DSB decision, the 422 complaints of August 2021, the colour-highlighted Accept leading to unintended consent and the equal-prominence remedy are all confirmed.",
+  "_pass": "a02"
+ },
+ {
+  "id": "cookie-53",
+  "reached": true,
+  "reached_url": "https://lovdata.no/dokument/NL/lov/2024-12-13-76/KAPITTEL_3",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Browser settings no longer count as consent in Norway.",
+    "source_says": "Section 3-15 does not mention browser settings. It requires consent that meets the GDPR's requirements ('Samtykke skal oppfylle kravene til samtykke i personvernforordningen'), which is the basis for that conclusion, but the point itself is made in the preparatory works, not in the Act.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Datatilsynet and Nkom share supervision: Nkom decides scope and exemptions, Datatilsynet decides information and consent validity.",
+    "source_says": "The word 'Datatilsynet' does not appear anywhere in the Act. Section 1-4 only says the ministry may by regulation give Nasjonal kommunikasjonsmyndighet, other public bodies or private parties authority under the Act; section 3-15 third paragraph lets the ministry make regulations on the duty and on exemptions. The split described is not stated in the Act.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Section 3-15 (Bruk av informasjonskapsler mv.) matches the takeaway word for word on the prohibition, the information required, GDPR-standard consent and both exemptions; LOV-2024-12-13-76, ikrafttredelse 01.01.2025, endrer LOV-2003-07-04-83.",
+  "_pass": "b02"
+ },
+ {
+  "id": "cookie-56",
+  "reached": true,
+  "reached_url": "https://cnpd.public.lu/fr/dossiers-thematiques/cookies0/cookies/contexte-juridique.html",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "including many EU headquarters of platforms",
+    "source_says": "The guidelines address themselves to 'les opérateurs de sites internet ou d'applications' generally. They say nothing about EU headquarters of platforms being established in Luxembourg.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://cnpd.public.lu/fr/dossiers-thematiques/cookies0/cookies.html",
+  "proposed_takeaway": null,
+  "note": "News blurb dated 26/10/2021 confirms the French-only update; the guidelines themselves confirm the essential/non-essential split (art. 4.3 e) of the loi modifiée du 30 mai 2005), prior informed consent, the Planet49 judgment and EDPB opinion 05/2020, and the fiche pratique for the public and operators.",
+  "_pass": "b02"
+ },
+ {
+  "id": "cookie-58",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the amendment to Act No. 127/2005 on Electronic Communications",
+    "source_says": "The article names only 'novela zakona o elektronickych komunikacich' (amendment to the electronic communications act) and gives no act number.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Czech-facing sites should present layered information and per-purpose choices",
+    "source_says": "Supported: 'informace poskytovat v nekolika vrstvach' (provide information in several layers) and 'Souhlas by mel byt rovnez strukturovany a udeleny pro kazdy ze zamyslenych ucelu' (consent should be structured and given for each intended purpose).",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Effective date 1 January 2022, opt-in, demonstrable consent, technical-cookie exception including secure communication, invalid pre-set browser consent and 'staying on the site' notices all quoted on the page.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-59",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The campaign, later routed through ten data protection authorities, is the origin of many of the national decisions on this page, including the Austrian, Swedish and Belgian ones.",
+    "source_says": "The May 2021 page does not mention ten authorities or any later national decisions; the ten authorities figure comes from the August 2021 follow-up.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Page states 560 sites in 33 countries, 81 percent no reject on first page, 73 percent deceptive colours, 90 percent no easy withdrawal, up to 10,000 further complaints in 2021, one month to fix, complaints generated by noyb software.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-60",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "filed 422 formal complaints with ten European authorities, plus 36 complaints against major platforms",
+    "source_says": "'noyb filed 422 complaints with ten data protection authorities'; the 36 figure is described as 36 'major' pages that 'fully resisted' any change, not a separate batch of complaints on top of the 422.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Decisions from these complaints continued to arrive in 2025 and 2026",
+    "source_says": "The August 2021 page says nothing about later decisions.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "After the May 2021 warning letters, noyb reported that 42 percent of the flagged violations were remedied within 30 days but 82 percent of companies had not fully stopped violating the GDPR, and filed 422 formal complaints with ten European authorities, among them 36 major sites that had resisted any change, targeting missing reject buttons, pre-ticked boxes, deceptive colours, absent withdrawal options and unsupported legitimate-interest claims. Roughly half went to the Austrian DPA. Decisions from these complaints continued to arrive in 2025 and 2026, so a banner that passed in 2021 may still be the subject of a pending case.",
+  "note": "42 percent, 82 percent, 422, ten authorities and roughly 50 percent to the Austrian DPA all match; only the framing of the 36 major sites is off.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-62",
+  "reached": true,
+  "reached_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02002L0058-20091219",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The rules bind anyone placing cookies, pixels or scripts on EU users' devices, whatever the sender's location.",
+    "source_says": "Article 5(3) addresses obligations on Member States ('Member States shall ensure that...'); the Directive does not state an extraterritorial rule of that kind.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Article 5(3), 13(1) and 13(2) quoted in full from the consolidated HTML text and match the takeaway, including the two exemptions and the soft opt-in.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-63",
+  "reached": true,
+  "reached_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02016R0679-20160504",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Article 25 requires privacy by design and by default",
+    "source_says": "Article 25 is titled 'Data protection by design and by default'.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "applied by regulators to default banner settings",
+    "source_says": "Article 25 says nothing about banners or regulators' application of it.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Article 4(11), Article 7(1) to (4), Article 25(1) and (2), Article 3(2) and Recital 30 all verified verbatim; Articles 83(5) and 99(2) sit past the point where the fetcher truncates, so the 20 million euro or 4 per cent figure and the 25 May 2018 date were not read on the page.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-64",
+  "reached": true,
+  "reached_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R2065",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R2065",
+  "proposed_takeaway": null,
+  "note": "Full text read: Article 25(1), (2), (3)(a)-(c), Article 26(1)(a)-(d) and (3), Article 28(2) and Article 93(2) all match; the 6 per cent cap appears at Article 52(3) for Member States and Article 74(1) for Commission fines. Article 25(3) lists those practices as candidates for Commission guidelines rather than as part of the prohibition itself.",
+  "_pass": "b06"
+ },
+ {
+  "id": "cookie-65",
+  "reached": true,
+  "reached_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02022R1925-20221012",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "which for the first six gatekeepers meant 6 March 2024",
+    "source_says": "Article 3(10) sets compliance at six months after a core platform service is listed in the designation decision; the Regulation names no designation dates.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Publishers using gatekeeper advertising products should expect the gatekeeper to surface the consent moment",
+    "source_says": "The Regulation imposes the obligation on gatekeepers and says nothing about publishers' tag configuration.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Article 5(2)(a) to (d), the GDPR-standard consent condition, the once-a-year repeat limit, Article 3(10) six months and Article 30(1) and 30(2) fines of 10 and 20 per cent of worldwide turnover all verified verbatim.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-76",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "They address gatekeepers, with indirect effect on the advertisers and publishers",
+    "source_says": "The page says the guidelines aim to help 'gatekeepers, business users and individuals to better understand their obligations and rights under the DMA'.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "The final adopted version had not been located as of September 2026.",
+    "source_says": "The October 2025 news item cannot speak to a later adoption.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Endorsement on 9 October 2025, consultation open until 4 December 2025, and coverage of Article 5(2) specific choice and valid consent, third-party app distribution, data portability, data access and messaging interoperability all confirmed on the page.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-77",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "The work programme adopted on 11 February 2026 (published 12 February)",
+    "source_says": "The page says only 'During its latest plenary, the EDPB adopted its work programme for 2026-2027' and carries the dateline 'Brussels, 12 February' 2026; no 11 February adoption date appears.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "the expectation is that they extend the reasoning of Opinion 08/2024 beyond large online platforms",
+    "source_says": "Opinion 08/2024 is not mentioned anywhere on the page.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The work programme adopted at the EDPB's February 2026 plenary and announced on 12 February 2026 lists guidelines on consent or pay among the guidance the Board will deliver in the 2026-2027 cycle; the programme states no scope, but the expectation is that they extend the reasoning of Opinion 08/2024 beyond large online platforms. It binds no one and contains no rule, but it tells publishers running paid ad-free tiers that a general EDPB position covering their model is coming. Keep any consent or pay implementation aligned with Opinion 08/2024 now, including a free alternative with less intrusive advertising where feasible, and plan for a review when the guidelines are published for consultation.",
+  "note": "Consent or pay guidelines are indeed listed, alongside anonymisation, pseudonymisation, children's data, generative AI, data scraping, AI Act interplay and political advertising, with no scope given; only the adoption date is unsupported.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-85",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The Commission's 2025 work programme of 11 February 2025",
+    "source_says": "The page refers to 'the Commission work programme 2025' without giving its date.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the Digital Omnibus of 19 November 2025 is the successor reform vehicle for terminal equipment rules",
+    "source_says": "The page does not mention the Digital Omnibus.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Proposal published 10 January 2017, Council mandate 10 February 2021, trilogues from 20 May 2021, withdrawal approved at the College's 2533rd meeting on 16 July 2025 and published in the Official Journal as C/2025/5423 on 6 October 2025, all quoted on the page.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-88",
+  "reached": true,
+  "reached_url": "https://commission.europa.eu/publications/cookies-pledge-summary-project_en",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "the Commission published nothing further after January 2024 and the pledge never launched",
+    "source_says": "The hub links a publication 'Cookies Pledge - summary of the project' dated 8 November 2024, with Annex I (best practice principles), Annex II (report on the behavioural experiment) and Annex III (opinion of the EDPB on draft pledging principles), all dated 8 November 2024. The last dated item on the hub page itself is the 12 January 2024 report on the 2nd plenary meeting, but the project was closed out publicly in November 2024.",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "claim": "with signature planned for April 2024",
+    "source_says": "The hub says the aim was 'to finalise the pledging principles in January and present a final version at the Consumer Summit of April 2024', and that the next step was for stakeholders to reflect on whether they could adopt them voluntarily. It does not say a signature ceremony was scheduled.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Its ideas resurface in the Digital Omnibus six-month rule.",
+    "source_says": "The page does not mention the Digital Omnibus or any six-month rule.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://commission.europa.eu/publications/cookies-pledge-summary-project_en",
+  "proposed_takeaway": "Announced on 28 March 2023 and developed through round tables and working groups, the pledge set out voluntary principles for signatories: no consent request for strictly necessary cookies, upfront disclosure that content is financed by advertising, clear presentation of the business model and the choices, a less intrusive advertising alternative, fewer repeat consent requests per tracker, no further consent requests after a business model choice, and a one-year non-solicitation period after a refusal. Draft principles were presented on 19 December 2023, to be finalised in January 2024 and put to the Consumer Summit of April 2024, but no pledge was ever signed: the Commission closed the project on 8 November 2024 with a summary and three annexes, including best practice principles and the EDPB opinion. Its ideas resurface in the Digital Omnibus six-month rule.",
+  "note": "Announcement of 28 March 2023, round tables, working groups and the 19 December 2023 draft principles all confirmed; the seven principles themselves sit in a PDF the browser renders in a viewer and could not be read line by line.",
+  "_pass": "b02"
+ },
+ {
+  "id": "cookie-89",
+  "reached": true,
+  "reached_url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_25_1085/IP_25_1085_EN.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Publishers copying the model should offer a less data-intensive free option.",
+    "source_says": "The decision requires the gatekeeper to offer a less personalised but equivalent alternative; it says nothing about publishers generally.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_25_1085/IP_25_1085_EN.pdf",
+  "proposed_takeaway": null,
+  "note": "The press corner HTML page is a JavaScript shell, but its print PDF confirms the 200 million euro fine, the March 2024 to November 2024 period, the November 2023 binary consent or pay model, the missing less-personalised alternative under Article 5(2), and Apple's 500 million euro anti-steering fine in the same package.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-92",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "consent that is meaningful under PIPEDA and the Alberta and British Columbia PIPAs",
+    "source_says": "The document says the guidelines apply under PIPEDA 'and its substantially similar provincial counterparts', naming the Alberta PIPA, the British Columbia PIPA and the Quebec Act Respecting the Protection of Personal Information in the Private Sector.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "The guidelines have been applied by the offices since 1 January 2019.",
+    "source_says": "No coming-into-effect date appears in the page text retrieved.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "All seven principles match the document's own wording, as does the express-consent test for sensitive information, uses outside reasonable expectations and meaningful residual risk of significant harm.",
+  "_pass": "a03"
+ },
+ {
+  "id": "cookie-94",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "It died on the Order Paper when Parliament was prorogued on 6 January 2025 after committee study but before third reading.",
+    "source_says": "LEGISinfo still shows the status as \"At consideration in committee in the House of Commons\" (Standing Committee on Industry and Technology, last meeting 26 September 2024) and never reports report stage or third reading. The page does not use the words prorogation or Order Paper, but the session date range ends Monday, 6 January 2025, which is consistent with the claim.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Bill C-36, which the government tabled on 15 June 2026 as the successor",
+    "source_says": "This page tracks Bill C-27 of the 44th Parliament, 1st session only. It says nothing about any successor bill.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "First reading 16 June 2022 and the three enacted Acts (CPPA, Personal Information and Data Protection Tribunal Act, AIDA) all match the long title.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-95",
+  "reached": true,
+  "reached_url": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-36/first-reading",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "It received first reading in the House of Commons on 15 June 2026 and has not progressed further.",
+    "source_says": "LEGISinfo gives the current status as 'At second reading in the House of Commons', with latest activity 'Introduction and first reading on Monday, June 15, 2026' and 'No activity' recorded at second reading. The substance is right, but the site's own status label reads as second reading.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-36/first-reading",
+  "proposed_takeaway": null,
+  "note": "Summary confirms repeal of Part 1 of PIPEDA; s.2(2) 'de-identified personal information does not cease to be personal information'; ss.18, 20, 21 exceptions; s.15(4) plain language; a child's information is sensitive and 'best interests of children' is a mandatory factor; s.114 greater of $10,000,000 and 3% gross global revenue; indictable offence greater of $25,000,000 and 5%.",
+  "_pass": "b02"
+ },
+ {
+  "id": "cookie-96",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Section 8.1, in force since 22 September 2023",
+    "source_says": "The consolidated text attributes s. 8.1 to 2021, c. 25, s. 107 and s. 9.1 to 2021, c. 25, s. 108, but the page shows no coming into force date for either section.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "which the Commission d'acces a l'information reads as requiring such functions to be off by default and switched on only by the individual",
+    "source_says": "Section 8.1 requires only that the person be informed of the technology and of the means available to activate the functions. The default off reading is the Commission's interpretation, not statutory text.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "s. 8.1 and s. 9.1 quoted almost verbatim, including the express carve out: \"The first paragraph does not apply to privacy settings for browser cookies.\"",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-98",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Art. 7 has ten incisos with consent at I and legitimate interest at IX; Art. 8 caput, para 1 (clausula destacada), para 2 (onus da prova) and para 5 (revogacao gratuita e facilitada) all match; Art. 52 II gives 2 percent capped at R$50.000.000,00 por infracao, III multa diaria, IV publicizacao, V bloqueio; Art. 3 territorial scope matches.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-101",
+  "reached": true,
+  "reached_url": "https://www.abrapp.org.br/legislacao/resolucao-cd-anpd-no-4-de-24-de-fevereiro-de-2023/",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Since the first fine in July 2023 the authority has applied it consistently.",
+    "source_says": "The regulation sets the method only. It says nothing about enforcement practice or any first fine.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "It binds every processing agent subject to LGPD sanctions, which became applicable on 1 August 2021.",
+    "source_says": "The regulation binds processing agents under the LGPD, but the 1 August 2021 sanction start date comes from Law 14.010/2020 and the LGPD itself, not from this text.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "The entry's own PDF URL redirect loops between its https and http forms (302 to itself) and the ANPD news page returns 401, so the text was read from a full reproduction. Art. 8 classifies leve, media and grave; Art. 11 sets the calculation basis and Art. 15 the 2 percent and R$50.000.000 ceilings; Art. 12 lists agravantes including reincidencia and Art. 13 atenuantes including boa-fe, cooperacao and governance programmes. An official working link should be found before the next review.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-102",
+  "reached": true,
+  "reached_url": "https://bibliotecadigital.mj.gov.br/bitstream/1/10215/2/Enunciado_ANPD_2023_1.html",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "It binds the ANPD's own enforcement posture and applies to any controller handling minors' data, including operators of sites and apps used by children.",
+    "source_says": "The Enunciado states only its normative basis (art. 55-J, XX of Law 13.709/2018, art. 2, XX of Decree 10.474/2020, arts. 5, IX and 51 of the ANPD's internal rules) and that it enters into force on publication. It says nothing about who it binds or about sites and apps.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Do not rely on it to run behavioural advertising cookies on child-directed services; document a best-interest assessment for any tracker on such services, and default to no tracking where the assessment is unclear.",
+    "source_says": "The Enunciado does not mention advertising, cookies or trackers; it requires only that the best interest of the minor be observed and prevail, assessed in the concrete case, under art. 14 of the LGPD.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://bibliotecadigital.mj.gov.br/bitstream/1/10215/2/Enunciado_ANPD_2023_1.html",
+  "proposed_takeaway": null,
+  "note": "The gov.br news item is login-walled ('Conteudo Restrito'); the full text of ENUNCIADO CD/ANPD No 1, de 22 de maio de 2023 was read on the Ministry of Justice digital library and matches the takeaway's legal reading word for word.",
+  "_pass": "b07"
+ },
+ {
+  "id": "cookie-103",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "broadly organisations with annual turnover above $3 million and all health service providers",
+    "source_says": "s. 6D(4)(b) removes small business operator status from a business that provides a health service and holds health information other than in an employee record, so the coverage is health service providers holding health information, not every health service provider.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "obtain express consent before any tracker can capture sensitive information",
+    "source_says": "APP 3.3 requires consent, and s. 6 defines consent as \"express consent or implied consent\". The Act itself does not demand express consent for sensitive information; that is OAIC guidance.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Definitions of personal information and consent, APP 3.3, APP 5, APP 6.1, the APP 7 simple opt out mechanism, APP 8 reasonable steps and the $3,000,000 small business threshold all match Compilation No. 103.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-104",
+  "reached": true,
+  "reached_url": "https://www.legislation.gov.au/C2024A00128/asmade/2024-12-10/text/1/epub/OEBPS/document_1/document_1.html",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "requires the OAIC to register a Children's Online Privacy Code by 10 December 2026",
+    "source_says": "The commencement table confirms a 24 month clock for Schedule 1 Part 15 (10 December 2026) but the Children's Online Privacy Code registration deadline sits in a substantive provision of Schedule 1, which was not read on this pass.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Section 2 confirms assent 10 December 2024, Schedule 2 (statutory tort) on 10 June 2025 by the six month default, Schedule 1 Parts 1 to 7 and 9 to 14 on 11 December 2024, and Schedule 1 Part 15 on 10 December 2026, which is the automated decision making disclosure.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-105",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "engaging APP 1, 3, 5, 6, 7, 8 and 11",
+    "source_says": "The guidance names APP 1, 3, 5, 6, 7 and 8 as the principles engaged by tracking pixels. APP 11 is not among them; the page only cross refers to the separate Guide to securing personal information.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "notify users through banners or notices naming the recipients and any overseas transfer",
+    "source_says": "The guidance says organisations should notify individuals of their use of third party tracking pixels and such other APP 5.2 matters \"as are reasonable in the circumstances\", which \"may include the third-party pixel providers that the organisation usually discloses personal information to, and any overseas recipients\". Naming is suggested, not mandated.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The Commissioner explains that a third-party pixel collects IP address, location, URLs and transaction data and sends it to an advertising platform, engaging APP 1, 3, 5, 6, 7 and 8. Organisations must understand the pixel before deployment, review the provider's terms, run a privacy impact assessment, configure it to collect the minimum, avoid site-wide placement, prevent capture of sensitive information without express opt-in consent, notify users through banners or notices covering the pixel providers and any overseas recipients, and offer a simple opt-out from targeted advertising. It applies to every APP entity using pixels. Treat the list as a pre-deployment checklist and revisit it at each review cycle.",
+  "note": "Published 4 November 2024. The advice against site-wide placement, the review of provider terms and the privacy impact assessment are all present verbatim; only the APP 11 reference is unsupported.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-106",
+  "reached": true,
+  "reached_url": null,
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "breached APP 3.3 ... APP 5.1 by failing to notify, and APP 7.1 by using sensitive information for direct marketing without consent",
+    "source_says": "The media release states the finding that pixel-based tracking on health websites amounts to collecting sensitive information requiring consent, but cites no Australian Privacy Principle numbers.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Monash IVF ran seven pixels from 30 July 2012 to 9 December 2024 and Medmate from April 2021 to 9 December 2024; neither ran a privacy impact assessment, and the argument that data sent straight to a platform was not collected was rejected.",
+    "source_says": "The media release gives no pixel counts, date ranges, privacy impact assessment findings or the parties' arguments; those sit in the determinations themselves, which AustLII serves only as 'Access denied for AI crawlers'.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://classic.austlii.edu.au/au/cases/cth/AICmr/2026/41.html",
+  "proposed_takeaway": null,
+  "note": "Release confirms both entities, [2026] AICmr 40 (Monash IVF) and 41 (Medmate), both dated 11 June 2026, and the consent finding; AustLII blocked the browser on both classic and www hosts, so the figures stay unchecked.",
+  "_pass": "b06"
+ },
+ {
+  "id": "cookie-107",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "entry date 10 March 2023",
+    "source_says": "The page carries a modified date of 5 September 2024.",
+    "severity": "low",
+    "kind": "outdated"
+   },
+   {
+    "claim": "draw attention to it in each communication where practicable",
+    "source_says": "The guidance ties the prominent statement in each communication to the APP 7.3 situations, where the information came from a third party or the individual would not reasonably expect the marketing, rather than to a general practicability test.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "The guidance confirms that APP 7 reaches targeted marketing online where personal information is used or disclosed, and that communications covered by the Spam Act 2003 or the Do Not Call Register Act 2006 fall outside APP 7, along with the simple opt out and the reasonable period to stop.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-110",
+  "reached": true,
+  "reached_url": "https://www.accc.gov.au/system/files/Digital%20advertising%20services%20inquiry%20-%20final%20report.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "complementing its 2019 platforms inquiry call for opt-in consent",
+    "source_says": "This report does not restate the 2019 Digital Platforms Inquiry consent recommendation.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Six recommendations confirmed: rec 1 requires Google to describe publicly how it uses first party data in ad tech, rec 3 covers data separation or data access, and rec 6 gives the ACCC power to mandate transparency rules if the industry standards in rec 4 fail. The landing page gives the 28 September 2021 release date; the report itself is dated August 2021 as provided to the Treasurer.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-114",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "e-commerce sites and personal blogs are outside scope",
+    "source_says": "The page lists the in scope services as message mediation services, SNS, search services and website operation providing news or other information online. Electronic commerce sites and personal blogs are outside that closed list, but the page does not name them as excluded.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "The page confirms the 16 June 2023 entry into force, the four in scope service categories, the routes of notice or easily knowable publication, consent and opt out, the three disclosure items (送信されることとなる利用者に関する情報の内容, 情報を取り扱うこととなる者の氏名又は名称, 情報の利用目的, that is the information sent, the recipient and the purpose) and the exemptions for information necessary to provide the service and identifiers the operator itself sent.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-115",
+  "reached": true,
+  "reached_url": "https://elaw.klri.re.kr/kor_service/lawView.do?lang=ENG&hseq=62389",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "raises the penalty surcharge to up to 3 percent of total related sales",
+    "source_says": "Article 64-2(1): a penalty surcharge 'within the scope not exceeding 3/100 of the total sales', with a cap of two billion won where there are no sales or sales cannot be calculated. Article 64-2(2): the surcharge is calculated 'based on the gross sales net of the sales unrelated to the violation'. The phrase 'related sales' does not appear anywhere in the Act; moving the base from related sales to total sales was the point of the 2023 amendment.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "automatic collection devices such as cookies",
+    "source_says": "Article 30(1)7 requires the privacy policy to state the 'Installation and operation of an automatic collection tool for personal information, including Internet access data files, and the denial thereof (if applicable)'. Cookies are not named in the Act; 'Internet access data files' is the statutory term.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://www.pipc.go.kr/eng/user/lgp/law/lawDetail.do?nttId=2371",
+  "proposed_takeaway": "The amended Act, in force from 15 September 2023, unifies the rules for online service providers and other controllers, requires consent to collect personal information unless another basis applies, requires separate consent for marketing and third-party provision, requires the privacy policy to describe the installation, operation and refusal of automatic collection devices such as cookies, adds a right to refuse automated decisions, and raises the penalty surcharge under Article 64-2 to up to 3 percent of total sales, calculated net of sales unrelated to the violation. It binds domestic and foreign operators processing Korean residents' data. Provide granular opt-in consent for behavioural advertising cookies, keep the cookie section of the privacy policy current, and expect PIPC audits of consent screens.",
+  "note": "PIPC's index row 'Personal Information Protection Act [Enforcement Date September 15, 2023]' leads to the official English text (Act No. 19234, 14 March 2023); Chapter VI is marked 'Deleted', confirming unification, and Articles 22, 30(1)7, 31-2 and 37-2 confirm the rest.",
+  "_pass": "b02"
+ },
+ {
+  "id": "cookie-116",
+  "reached": true,
+  "reached_url": "https://www.kmcc.go.kr/user.do?mode=view&page=A02030700&boardId=1099&cp=1&boardSeq=44473",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "PIPC and KCC Guideline (entry title and framing)",
+    "source_says": "The guideline register entry shows it was issued by the KCC (방송통신위원회) and registered 2017-02-07, with a notice that responsibility passed to the PIPC on 5 August 2020 following the Personal Information Protection Act amendment. It was never a joint document.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "disclose the items collected, the collection method, the purpose, the retention period and how users can control the processing",
+    "source_says": "The transparency principle lists 수집 항목, 방법, 목적 및 이용자 통제권 행사 방법 (items, method, purpose, and how to exercise control). Retention is not a disclosure item; it sits under the security principle, which requires storage only for the period needed and destruction or safe separate storage once the purpose is met.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "requires separate treatment of children under 14",
+    "source_says": "The guideline prohibits, not merely separates: advertising businesses must not collect behavioural information for customised advertising from services whose main users are under 14, and must not serve customised advertising to a child known to be under 14.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "the Commission applied its standard in the September 2022 sanctions against Google and Meta; In January 2024 the Commission announced a policy plan to revise it",
+    "source_says": "Neither event is addressed by the 2017 guideline or its register entry.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.kmcc.go.kr/user.do?mode=view&page=A02030700&boardId=1099&cp=1&boardSeq=44473",
+  "proposed_takeaway": "The guideline, issued by the KCC on 7 February 2017 and moved to the PIPC on 5 August 2020, treats online behavioural information as protected data, requires advertising businesses and the media operators hosting them to disclose the items collected, the collection method, the purpose and how users can exercise control, prohibits generating or using sensitive information from behavioural data without consent, bans collecting behavioural information for advertising from services whose main users are children under 14, and requires an easy control, with a direct control on the advert itself for third-party advertising. It is guidance and binds no one directly, but the Commission applied its standard in the September 2022 sanctions against Google and Meta. In January 2024 the Commission announced a policy plan to revise it. Publish a behavioural information notice and an opt-out that works across advertising partners.",
+  "note": "Entry's PIPC board URL is a listing that does not hold this document; the guideline's official register entry and the KCC press release of 7 February 2017 setting out its four principles were read on kmcc.go.kr, the KCC's successor site. The guideline text itself is only offered as an .hwp attachment on the press release.",
+  "_pass": "b07"
+ },
+ {
+  "id": "cookie-117",
+  "reached": true,
+  "reached_url": "https://pipc.go.kr/eng/user/ltn/new/noticeDetail.do?bbsId=BBSMSTR_000000000001&nttId=1901",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "finding that Google hid the setting behind a default-on option and that Meta buried the disclosure in its terms",
+    "source_says": "The notice detail page states only: 'On September 14, the PIPC held its 15th plenary session and deliberated on the violations committed by Google and Meta. The PIPC imposed an administrative penalty of KRW 69.2 billion on Google and KRW 30.8 billion on Meta along with corrective order. Please find more details in the attached file.' The reasoning sits in the attached PIPC Press Release.pdf, which the browser could not render as text.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "set the largest surcharges under the Act at the time",
+    "source_says": "The notice page does not describe the surcharges as the largest ever imposed under PIPA.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Corrective orders required an easy, clear consent screen for third-party behavioural data.",
+    "source_says": "The notice page confirms a corrective order was issued alongside the penalty but does not set out its contents.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://pipc.go.kr/eng/user/ltn/new/noticeDetail.do?bbsId=BBSMSTR_000000000001&nttId=1901",
+  "proposed_takeaway": null,
+  "note": "Date, both company names, both figures and the corrective order all match the PIPC notice; the reasoning is only in the attached PDF.",
+  "_pass": "b03"
+ },
+ {
+  "id": "cookie-118",
+  "reached": true,
+  "reached_url": "https://pipc.go.kr/eng/user/ltn/new/noticeDetail.do?bbsId=BBSMSTR_000000000001&nttId=2092",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "The Commission fined Meta KRW 660 million",
+    "source_says": "PIPC press release of 9 March 2023: 'the PIPC issued a corrective order against Meta and levied an administrative fine of KRW 6.6 million.' The figure is 6.6 million won, one hundredth of the amount claimed.",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "claim": "9 March 2023 (entry date, status decided)",
+    "source_says": "The press release is published on 9 March 2023 but records that the sanction was decided at the PIPC's second plenary meeting of 2023, held on Wednesday, 8 February 2023.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "contrary to the rule that a controller must not refuse a service because a user declines to consent to processing beyond what is necessary for the service",
+    "source_says": "The PIPC concluded that third-party behavioural information 'is not the minimum personal information necessary, as defined in Article 39-3(3) of the PIPA, for Meta to provide its services', and found Meta violated PIPA 'by refusing to provide services to customers who did not agree to Meta's collection of third-party behavioral information'. The document names Article 39-3(3); the takeaway cites no article.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://pipc.go.kr/eng/user/ltn/new/noticeDetail.do?bbsId=BBSMSTR_000000000001&nttId=2092",
+  "proposed_takeaway": "The Commission fined Meta KRW 6.6 million, for making acceptance of behavioural information collection for customised advertising a condition of using the service, finding under article 39-3(3) of the Act that behavioural information gathered from third-party sites and apps is not the minimum personal information necessary to provide the service. The decision binds the company and states the Commission's position that access to a social network cannot be conditioned on advertising consent. Do not deploy cookie walls or consent-or-leave designs for Korean users, and keep the service usable when advertising consent is withheld.",
+  "note": "Fine amount is out by a factor of one hundred: the press release says KRW 6.6 million.",
+  "_pass": "b03"
+ },
+ {
+  "id": "cookie-119",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Article 13 lists seven bases with consent first and no legitimate interest; Article 14 requires consent \"under the precondition of full knowledge, and in a voluntary and explicit statement\" and fresh consent on change of purpose, method or categories; Article 24 second paragraph gives the option not targeted to personal characteristics or a convenient method to refuse; Article 66 gives up to 50 million yuan or 5 percent of turnover for serious violations; Article 3 covers the extraterritorial reach. Correctly flagged as secondary since this is a translation.",
+  "_pass": "a04"
+ },
+ {
+  "id": "cookie-120",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "is the basis on which the Cyberspace Administration inspects apps and websites for undisclosed collection",
+    "source_says": "The statute text does not name the Cyberspace Administration as inspector of apps and websites for undisclosed collection; Article 8 assigns general network security oversight to the national cyberspace administration.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Article 22 paragraph 3 and Article 41 both quoted as described; Article 79 gives 1 June 2017.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-121",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Art 17 (non-targeted option, off switch, select or delete tags), Art 18 (minors, 沉迷), Art 21 (差别待遇), in force 1 March 2022, all match.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-122",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Decree 790, published 30 Sept 2024, in force 1 Jan 2025; Art 21 prominent rules, Art 22 necessity, separate consent, under-14 guardian consent, no 频繁征求同意 after refusal; Art 42 switch and tag deletion.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-123",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "unverifiable",
+  "issues": [
+   {
+    "claim": "separate consent for each business function, no bundling of functions, personalised display marked as such with a way to opt out, restraints on third-party SDK data collection with contractual and technical controls, and privacy policy templates",
+    "source_says": "The catalogue page carries only metadata. The normative text sits behind an 'online preview' viewer and a download action with no exposed file URL, so none of these clauses could be read.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Catalogue page confirms GB/T 35273-2020, published 6 March 2020, implemented 1 October 2020, status 现行, recommended (voluntary) standard; substantive clauses not readable.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-124",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "drive the CAC's periodic public naming of apps",
+    "source_says": "The notice does not describe a public naming practice; it sets out the six determination categories for supervision and enforcement.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Four issuing bodies and 28 November 2019 confirmed; all six categories match, including the more-than-four-clicks and first-launch pop-up tests.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-125",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Issued on 22 March 2021",
+    "source_says": "The notice 国信办秘字〔2021〕14号 is signed by the four issuing bodies on 2021年3月12日 (12 March 2021); 22 March 2021 is the date the CAC posted it on its website.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Issued on 12 March 2021 and effective from 1 May 2021, the provisions define for 39 common app types the personal information necessary for basic functions, from location for navigation to phone number for social platforms, and state that an app must not refuse basic services because a user declines to provide non-necessary personal information; news, browser and utility apps need no personal information for basic use. They bind app operators and are enforced through CAC and MIIT app checks. Map every SDK and tracker to the necessary-information list for the app's category and keep advertising and analytics collection strictly optional.",
+  "note": "39 types, 1 May 2021 effect, the no-refusal rule and the no-information categories all confirmed; only the issue date is off.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-127",
+  "reached": true,
+  "reached_url": "https://www.dpdpa.com/DPDP_Rules_2025_English_only.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "the Consent Manager framework after twelve months on 13 November 2026, and the remaining obligations ... after eighteen months on 13 May 2027",
+    "source_says": "Rule 1(2) runs both periods from the date of publication in the Official Gazette, not from the date on the notification. G.S.R. 846(E) is dated New Delhi, 13th November 2025, while the PIB release states the Rules were notified on 14 November 2025, so the two calendar dates may fall a day later.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "the Data Protection Board provisions immediately",
+    "source_says": "Rule 1(2): 'Rules 1, 2 and 17 to 21 shall come into force on the date of their publication in the Official Gazette.' Rules 17 to 21 are the Board provisions, so the claim holds.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa",
+  "proposed_takeaway": "The Rules, notified as G.S.R. 846(E) on 13 November 2025, bring the Act into force in phases measured from publication in the Official Gazette: the Data Protection Board provisions (rules 17 to 21) at once, the Consent Manager registration rule after twelve months in November 2026, and the remaining rules, including consent notices, children's verifiable consent and breach notification, after eighteen months in May 2027. They prescribe the content of a consent notice, the registration conditions for Consent Managers, and the methods for verifying a parent's identity and age. They bind every data fiduciary within the Act's scope. Schedule the consent banner rebuild and children's age-assurance design for completion before the eighteen-month date and plan integration with registered Consent Managers.",
+  "note": "Entry URL is a JavaScript landing page that returns only meta tags; verified against the notification text and the official PIB release, phasing structure matches exactly.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-128",
+  "reached": true,
+  "reached_url": "https://sso.agc.gov.sg/Act/PDPA2012",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Section 15A applies from 1 February 2021 and requires an assessment of no likely adverse effect plus a reasonable opt-out period; First Schedule Part 3 para 1(4) excludes legitimate interests for messages for an applicable purpose under section 37(6); section 48J(3) sets 10 percent of Singapore turnover or S$1 million with effect from 1 October 2022.",
+  "_pass": "b03"
+ },
+ {
+  "id": "cookie-129",
+  "reached": true,
+  "reached_url": "https://files.app.optical.gov.sg/pdpc/production/assets/72533084-1745-444b-9c82-cd5d69f4d928.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "behavioural targeting using personal data requires consent with a clear explanation of the purpose",
+    "source_says": "Chapter 7 para 7.10: 'Where behavioural targeting involves the collection and use of personal data, the individual's consent is required.' The chapter states the consent requirement but does not add a separate express requirement of a clear explanation of the purpose beyond the general notification obligation.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "entry date field: 1 February 2021",
+    "source_says": "The PDF cover of the Advisory Guidelines on Selected Topics carries 05 February 2013 as the issue date; the guidelines have been revised several times since, most recently in May 2024.",
+    "severity": "low",
+    "kind": "outdated"
+   }
+  ],
+  "better_url": "https://files.app.optical.gov.sg/pdpc/production/assets/72533084-1745-444b-9c82-cd5d69f4d928.pdf",
+  "proposed_takeaway": null,
+  "note": "Chapter 7 Online Activities read in full: 7.8 (no consent needed for cookies serving an activity the user clearly requested, deemed consent where data is volunteered), 7.10 (consent for behavioural targeting), 7.1 and 7.3 (IP address personal data only if an individual can be identified from it with other available information).",
+  "_pass": "b08"
+ },
+ {
+  "id": "cookie-130",
+  "reached": true,
+  "reached_url": "https://cc.kmutt.ac.th/Files/Act%20Eng/personal-data-protection-act-2019-en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "fully in force since 1 June 2022 after two deferrals",
+    "source_says": "The Act itself provides that Chapters II, III, V, VI, VII and sections 95 and 96 take effect one year after publication in the Government Gazette of 27 May 2019. The two deferrals to 1 June 2022 were made by Royal Decrees, which this document does not contain.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "source link https://www.pdpc.or.th/",
+    "source_says": "That URL is the Thai PDPC homepage, not the Act, and it is behind a bot check. The official English translation is published by the Ministry of Digital Economy and Society.",
+    "severity": "medium",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://www.mdes.go.th/law/detail/3577-Personal-Data-Protection-Act-B-E--2562--2019-",
+  "proposed_takeaway": null,
+  "note": "Official English translation read: s19 (explicit consent, written or electronic, clearly distinguishable, not deceptive, withdrawal as easy as giving), s23 (notice prior to or at collection), s5 (foreign controllers offering goods or services to data subjects in Thailand), s84 and s87 (5,000,000 baht), s79 (imprisonment up to one year for sensitive-data misuse for unlawful benefit). All takeaway figures match.",
+  "_pass": "b08"
+ },
+ {
+  "id": "cookie-132",
+  "reached": true,
+  "reached_url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "its Implementing Regulations allow direct marketing only with consent or to existing customers with an opt-out in every message",
+    "source_says": "Article 29 of the Implementing Regulations requires the controller to obtain the data subject's consent under Article 11 before processing for direct marketing, to provide a means of halting reception that is as simple as giving consent, to disclose the sender's identity in the material, and to stop without undue delay on withdrawal. There is no existing-customer exception; Article 26 of the Law likewise requires consent and direct collection.",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "claim": "in force from 14 September 2023 with a compliance grace period to 14 September 2024",
+    "source_says": "Article 43 of the Law says only that it comes into force 720 days after publication in the Official Gazette; neither the Law nor the Regulations state a calendar date or a grace period.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "with the Saudi Data and Artificial Intelligence Authority supervising",
+    "source_says": "Article 1(3) of the Law defines the Competent Authority as the one to be determined by resolution of the Council of Ministers; the Law does not name SDAIA.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Treat advertising cookies as consent-based and include a marketing opt-out in the banner's second layer.",
+    "source_says": "Neither the Law nor the Implementing Regulations mention cookies or consent banners.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf",
+  "proposed_takeaway": "The PDPL, amended by Royal Decree M/148 of 5/9/1444 AH (March 2023) and in force 720 days after publication under Article 43, requires a lawful basis for processing, consent that can be withdrawn at any time (Article 5), and a privacy policy made available before collection (Article 12), and its Implementing Regulations allow direct marketing only with the data subject's consent, with the sender identified and a way to stop the messages that is as easy as giving consent (Article 29). Fines reach SAR 5 million and may be doubled for a repeat violation (Article 36), with the competent authority supervising, and parties outside the Kingdom processing residents' data are bound (Article 2). Treat advertising cookies as consent-based and include a marketing opt-out in the banner's second layer.",
+  "note": "Law and Implementing Regulations read in full from the SDAIA PDFs; the existing-customer carve-out does not exist in Saudi law.",
+  "_pass": "b06"
+ },
+ {
+  "id": "cookie-133",
+  "reached": true,
+  "reached_url": "https://uaelegislation.gov.ae/en/legislations/1972/download",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Executive regulations that would set detailed consent mechanics and penalties have not been issued",
+    "source_says": "Article 28 requires the Council of Ministers to issue the executive regulations within six months of promulgation, and Article 29 gives controllers six months from their issuance to comply. The law itself cannot say whether they were later issued.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://uaelegislation.gov.ae/en/legislations/1972/download",
+  "proposed_takeaway": null,
+  "note": "Effective 2 Jan 2022; Art 6 consent (clear, simple, unambiguous, withdrawable), Art 4 other bases, Art 17 direct marketing objection, Art 18 automated processing, UAE Data Office as regulator, Art 2 free-zone exclusion (which also covers government, health and banking data).",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-134",
+  "reached": true,
+  "reached_url": "https://www.gov.il/BlobFolder/reports/guide_tikon13_professional/he/tikun%2013%20_170825.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "applying the law to foreign entities processing Israeli residents' data",
+    "source_says": "Asked directly, the Authority's own Amendment 13 guide does not address extraterritorial scope: its תחולה section says only that the law applies to anyone who collects, uses or processes personal information, with no geographic reach clause. The extension it does make is to outsourced holders (מחזיק) acting for a controller.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Practitioners should present cookie notices in Hebrew with the statutory disclosure items",
+    "source_says": "The guide sets the disclosure items for a request for information but says nothing about the language of a cookie notice.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.gov.il/BlobFolder/reports/guide_tikon13_professional/he/tikun%2013%20_170825.pdf",
+  "proposed_takeaway": "Amendment 13, in force from 14 August 2025, modernises the 1981 law by widening the definitions of personal and sensitive data, requiring that a request for information state whether provision is mandatory, the purposes, recipients and rights, giving the Privacy Protection Authority powers to audit, order and impose administrative fines, and extending duties to outsourced holders processing data for a controller. Direct marketing databases remain subject to the database registration and opt-out rules. Practitioners should present cookie notices with the statutory disclosure items and maintain an easy opt-out from direct marketing profiles built from tracking data.",
+  "note": "Entry URL is the Authority's department landing page and returns only meta tags; verified against the Authority's own Amendment 13 guide, which confirms the date, the definitions, the notice items, the enforcement powers and the direct marketing registration and deletion rules.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-135",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "lets any person opt out of processing for advertising at any time and without cost (Article 27)",
+    "source_says": "Article 27 paragraph 3: 'El titular podrá en cualquier momento solicitar el retiro o bloqueo de su nombre de los bancos de datos a los que se refiere el presente artículo.' (at any time, no mention of cost). The free-of-charge wording sits in paragraph 2 and attaches to the right of access: 'el titular de los datos podrá ejercer el derecho de acceso sin cargo alguno.'",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "The Agency of Access to Public Information enforces it",
+    "source_says": "Article 29 creates an 'órgano de control' as a decentralised body within the Ministry of Justice and Human Rights and does not name the Agency; Article 31 sets fines of 1,000 to 100,000 pesos.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Law 25.326 requires free, express and informed consent, in writing or by an equivalent means, before personal data is processed unless an exception applies (Article 5), requires notice of purpose and recipients (Article 6), and lets any person ask at any time for the removal or blocking of their name from advertising databases, with access to those records free of charge (Article 27). The Agency of Access to Public Information enforces it with fines that remain low under the current scale; a replacement bill with turnover-based fines has been pending since 2023. It binds controllers in Argentina and those using means there. Present advertising cookies as opt-in and provide a no-cost objection route for marketing profiles.",
+  "note": "Articles 5, 6 and 27 confirmed word for word; only the attachment of 'without cost' to the opt-out rather than to access is off.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-137",
+  "reached": true,
+  "reached_url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "has sanctioned operators for collecting data through websites without valid authorisation",
+    "source_says": "Law 1581 gives the Superintendencia de Industria y Comercio the power to investigate and sanction (articles 19, 21 and 23) but records no enforcement history; the statute does not address specific website cases.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Article 3(a) defines authorisation as 'Consentimiento previo, expreso e informado del Titular'; article 23(a) sets fines up to 2,000 monthly minimum wages; article 2 extends the law to controllers abroad by international norms and treaties; Decree 1377 article 7 allows authorisation by 'conductas inequivocas' and article 8 puts the proof on the controller.",
+  "_pass": "b03"
+ },
+ {
+  "id": "cookie-138",
+  "reached": true,
+  "reached_url": "https://kentrade.go.ke/wp-content/uploads/2022/09/Data-Protection-Act-1.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "require controllers to use the least intrusive means of profiling",
+    "source_says": "The phrase 'least intrusive' does not appear anywhere in the Data Protection (General) Regulations 2021. Part on commercial use runs regulation 14 (meaning of commercial purposes), regulation 15 (use of personal data for commercial purposes, consent or an unexercised opt out) and regulation 16 (features of an opt out message: visible, clear, minimal time and effort, direct channel, free of charge, accessible to persons with a disability).",
+    "severity": "medium",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "penalties of up to KES 5 million or 1 percent of annual turnover",
+    "source_says": "Section 63 caps the administrative fine at five million shillings or, in the case of an undertaking, one per centum of its annual turnover of the preceding financial year, whichever is lower.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "has issued determinations against operators for unsolicited marketing",
+    "source_says": "Neither the Act nor the General Regulations records any determination; ODPC determinations are separate published decisions.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.odpc.go.ke/wp-content/uploads/2024/03/THE-DATA-PROTECTION-GENERAL-REGULATIONS-2021-1.pdf",
+  "proposed_takeaway": "The Act, in force from 25 November 2019, requires a lawful basis including consent that is express, unequivocal, free, specific and informed, and the General Regulations of 2021 permit direct marketing only with consent or to existing customers who have not opted out, and require the opt out route to be visible, easy and free of charge. The Office of the Data Protection Commissioner enforces with penalties of up to KES 5 million or 1 percent of annual turnover, whichever is lower, and has issued determinations against operators for unsolicited marketing. It binds controllers in Kenya and those processing Kenyan residents' data. Treat advertising cookies as consent-based and honour marketing opt-outs across channels.",
+  "note": "Act checked at kentrade copy: assent 8 November 2019, commencement 25 November 2019, s2 consent definition word for word as quoted, s4 extraterritorial scope, s63 fine cap. Regulations checked at the ODPC copy.",
+  "_pass": "b08"
+ },
+ {
+  "id": "cookie-139",
+  "reached": true,
+  "reached_url": "https://ndpc.gov.ng/wp-content/uploads/2025/07/NDP-ACT-GAID-2025-MARCH-20TH.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "unverifiable",
+  "issues": [
+   {
+    "claim": "The Commission's General Application and Implementation Directive of 2025 adds detailed rules on consent design, cookie notices and privacy policies",
+    "source_says": "Confirmed in the GAID: Article 17 on reliance on consent (17(6) record of consent, 17(7) withdrawal as easy as giving), Article 19 on cookies (19(4) banner conspicuous and obvious, 19(6) necessary cookies distinguished from those needing a yes or no selection, 19(7)(a) banner appears first without scrolling), Articles 7(l) and 27 on privacy notices, Article 18(1)(a) direct marketing on consent, Article 8 on controllers of major importance.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "penalties of up to the greater of NGN 10 million and 2 per cent of annual gross revenue for controllers of major importance (NGN 2 million or 2 per cent for others)",
+    "source_says": "The GAID carries no NGN penalty figures or percentages of annual gross revenue; those sit in the Act, which could not be reached.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://ndpc.gov.ng/wp-content/uploads/2025/07/NDP-ACT-GAID-2025-MARCH-20TH.pdf",
+  "proposed_takeaway": null,
+  "note": "The GAID half of the takeaway is confirmed. The Act itself was not reached: cert.gov.ng returns 403 behind Cloudflare, the placng.org copy is a scan with no machine-readable text, NDPC publishes no Act PDF, and the ICNL copy exists but Chrome's viewer yields no text while WebFetch refuses the URL.",
+  "_pass": "b08"
+ },
+ {
+  "id": "cookie-140",
+  "reached": true,
+  "reached_url": "https://peraturan.bpk.go.id/Download/224884/UU%20Nomor%202027%20Tahun%202022.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "A dedicated supervisory authority and implementing regulations were still being established after the transition ended",
+    "source_says": "The law provides for an authority set up by presidential regulation but cannot state what had or had not happened by October 2024.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Art 22(1) written or recorded consent, Art 22(4) clearly distinguishable and plain language, Art 9 withdrawal, Art 10 objection to automated decisions and profiling, Art 57(3) fine up to 2 percent of annual revenue, Art 74 two-year transition, enacted 17 October 2022.",
+  "_pass": "a05"
+ },
+ {
+  "id": "cookie-141",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "requires controllers to give users a way to refuse tracking and personalised advertising",
+    "source_says": "The page places this duty on a specific sector, not on controllers generally: under its social network and online service section, \"Organizations must provide a Do-not-track option\" and \"Organizations must provide opt-outs for cookies and tracking.\"",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "fines of up to 5 percent of the previous year's revenue for unlawful cross-border transfers and up to ten times the revenue gained from unlawful sale of personal data",
+    "source_says": "Both figures carry a floor the takeaway omits: \"fines can reach up to 5% of organizations' previous year's revenue or VND 3 billion (around EUR 100.000), whichever is higher\" and \"the maximum fine is either ten times the revenue gained from the violation or VND 3 billion, whichever is higher\".",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Decree 13/2023/ND-CP (in force from 1 July 2023)",
+    "source_says": "The page gives only the year: the PDPD, \"also called Decree No. 13/2023/ND-CP, that came into effect in 2023\". It does not state 1 July 2023.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The Law, passed on 26 June 2025 and in force from 1 January 2026, carries forward the consent standard of Decree 13/2023/ND-CP (in force from 1 July 2023): consent must be voluntary, specific, informed and given per purpose, and silence is not consent. It adds fines of up to 5 percent of the previous year's revenue for unlawful cross-border transfers and up to ten times the revenue gained from unlawful sale of personal data, in each case the higher of that figure and VND 3 billion, and requires social network and online service providers to offer a do-not-track option and opt-outs for cookies and tracking. It binds domestic and foreign controllers processing Vietnamese residents' data. Present cookie consent per purpose and provide a working tracking opt-out.",
+  "note": "Declared secondary; the explainer confirms the law number, both dates, the consent tests and extraterritorial scope, but scopes the tracking opt-out to social network and online services and attaches a VND 3 billion floor to both fines.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-146",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "note": "Document confirms the May 2023 update, the three TC String segments, GVL specification version 3 at v2.2, every listed v2.2 change including no legitimate interest for purposes 3 to 6, the v2.3 mandatory Disclosed Vendor segment and the binding TCF Policies; note the guidelines are titled IAB Europe's, hosted in the IAB Tech Lab repository.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-149",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the US National string (section ID 7 ...)",
+    "source_says": "The page lists the sections (IAB Europe TCF, IAB Canada TCF, the MSPA's US National string, US State strings) but gives no section ID numbers; it refers readers to the Section Information document in the GitHub repository.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "defined by the MSPA US National Technical Specification, version 2.0 in October 2024",
+    "source_says": "The page records that the GPP was \"Updated to support the latest MSPA\" and mentions \"updates to the GPP US National Section with the Multi-State Privacy Agreement\", but states no version 2.0 and no October 2024 date.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "records whether a Global Privacy Control signal was received",
+    "source_says": "The page does not mention Global Privacy Control at all.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "should emit GPP in place of the deprecated US Privacy String",
+    "source_says": "The page does not mention the US Privacy String or its deprecation.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://github.com/InteractiveAdvertisingBureau/Global-Privacy-Platform",
+  "proposed_takeaway": null,
+  "note": "Page confirms specification 1.0 of 28 September 2022, CMP API 1.1 of June 2023 and the set of sections carried; the section IDs, MSPA spec version and GPC handling live in the linked GitHub specification, not here.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-151",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "encoded a single California do-not-sell choice for the advertising supply chain",
+    "source_says": "The post describes the signal only as the \"legacy US Privacy signal\" whose specification \"has not been updated since 2020\"; it does not describe what the string encodes.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "It never had legal force.",
+    "source_says": "The post does not address the legal status of the signal.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Post of 31 August 2023 confirms the 31 January 2024 deprecation date extended from 30 September 2023, the VA, CO, CT and UT 2023 laws as the reason, and GPP as the only mechanism covering all US state privacy signals.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-154",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Connecticut, California and Colorado announced a joint investigative privacy sweep in 2025",
+    "source_says": "The 30 December 2024 release makes no mention of any joint investigative sweep.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Release dated 30/12/2024 confirms the 1 January 2025 start, Global Privacy Control by name, coverage of targeted advertising and sale, the override of an earlier choice or loyalty programme participation, and the HIPAA exemption.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-156",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Default states must be denied before the user acts and updated afterwards; basic mode holds tags until consent, advanced mode sends cookieless pings.",
+    "source_says": "This help article covers the consent settings check and the EEA audience consequence; it does not discuss default consent states or the basic and advanced consent mode implementations.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the cookieless pings of advanced mode are a platform feature, not a legal exemption",
+    "source_says": "The article does not address cookieless pings or their legal effect.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://developers.google.com/tag-platform/security/guides/consent",
+  "proposed_takeaway": null,
+  "note": "Article confirms the ad_user_data and ad_personalization parameters, adherence to the EU user consent policy, and that from early March 2024 only end users outside the EEA are included in audiences shared with linked advertising products unless the signals are sent.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-157",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Switzerland added on 31 July 2024",
+    "source_says": "The policy names \"the European Economic Area, the UK and Switzerland\" but carries no effective date, last modified date or version date, so neither the 31 July 2024 addition nor the entry's own date field can be checked here. The 31 July 2024 date is stated on Google's Ad Manager certified CMP page.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Publishers must use a Google-certified CMP and advertisers with EEA traffic must send verified consent signals through TCF or consent mode.",
+    "source_says": "The policy itself states no certified CMP requirement and no TCF or consent mode signalling requirement; those sit in the Ad Manager and Analytics help pages.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Policy confirms the three territories and all five obligations quoted, and its contractual character (\"If your agreement with Google incorporates this policy\"); the page shows no date at all.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-158",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Certified CMPs must ... recertify annually and, since 4 October 2024, pass a check on TC String storage and retention (TCF policy check 30).",
+    "source_says": "A targeted search of the page for \"recertif\", \"annual\", \"October 2024\", \"policy check\", \"retention\" and \"TC String\" returned no matches; the article does not mention recertification or any TCF policy check.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Article confirms 16 January 2024 for the EEA and UK, 31 July 2024 for Switzerland, the CTV enforcement extension until July 2025, non-personalised or limited ads for non-certified traffic, the Additional Consent specification, and that \"Google does not check CMPs for full compliance with the TCF or applicable privacy laws\".",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-159",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Superseded by the 22 April 2025 decision not to introduce a standalone prompt and the 17 October 2025 retirement of most Sandbox APIs.",
+    "source_says": "Later events the July 2024 post cannot address.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Post of 22 July 2024 by Anthony Chavez confirms the reversal, the adjustable browser-level choice, CMA and ICO consultation, continued Privacy Sandbox API investment and IP Protection in Incognito.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-160",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Post of 22 April 2025 confirms no new standalone prompt, the existing choice in Chrome's Privacy and Security Settings, Incognito blocking third-party cookies by default, IP Protection planned for Q3 2025 and an updated roadmap to follow.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-162",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Since 26 April 2021",
+    "source_says": "The page states the requirement applies \"In iOS 14.5, iPadOS 14.5, and tvOS 14.5 or later\" but gives no release date.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "a separate consent under the ePrivacy rules may still be needed",
+    "source_says": "Apple's page does not address European ePrivacy obligations.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Page confirms the three OS versions, the tracking definition including data brokers, the on-device and fraud prevention exclusions, the all-zeros advertising identifier and the 5.1.2(i) answer forbidding gating or incentives.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-163",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Post of 24 March 2020 by John Wilander confirms Safari 13.1 and iOS and iPadOS 13.4, the Storage Access API exception and deletion of script-writable storage after seven days of Safari use without interaction; cookies belong in that list because ITP had already capped client-side cookies at seven days from February 2019, and the CNAME, IP cloaking and link decoration caps are correctly attributed to the separate tracking prevention page.",
+  "_pass": "a06"
+ },
+ {
+  "id": "cookie-164",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Global Privacy Control has been available since Firefox 120 as an opt-in setting labelled 'Tell websites not to sell or share my data'; Mozilla notes that some websites may ignore it",
+    "source_says": "The 14 June 2022 post (updated 28 August 2024) does not mention Global Privacy Control or Firefox 120 anywhere; it covers only Total Cookie Protection and Enhanced Tracking Protection.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Post dated 14 June 2022 confirms default for all Firefox desktop users worldwide, separate cookie jar per site, and ETP launched 2018; GPC facts come from elsewhere.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-165",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Brave has sent the Global Privacy Control signal by default since 7 October 2020",
+    "source_says": "The 7 October 2020 post says GPC is 'available today in the Nightly channel of our Desktop browser and in our Android browser beta release' and that Brave 'is currently testing an implementation of the GPC proposal in our Nightly desktop and Android beta channels', adding 'For versions of Brave that have GPC implemented, the feature is on by default.' iOS was only promised for later.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Brave Shields blocks third-party ads, trackers and cross-site cookies on every page by default, using EasyList, EasyPrivacy, uBlock Origin and Brave's own filter lists, and randomises the browser fingerprint",
+    "source_says": "The GPC page does not address Shields at all. The claim is accurate but rests on https://brave.com/shields/, which says Shields block 'third-party ads, trackers, cross-site cookies, phishing, fingerprinting & more' using 'EasyList and EasyPrivacy projects, the uBlock Origin project, and lists Brave has generated internally', and protects by 'randomizing (or occasionally removing) the browser features trackers use to follow you'.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "with an option to turn it off in privacy settings",
+    "source_says": "The page says 'To disable GPC in Brave, please see this support article' and links out, without describing where the setting sits.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Brave Shields blocks third-party ads, trackers and cross-site cookies on every page by default, using EasyList, EasyPrivacy, uBlock Origin and Brave's own filter lists, and randomises the browser fingerprint. Brave announced Global Privacy Control on 7 October 2020, first in the Nightly desktop channel and the Android beta, and the signal is on by default in every version that implements it, described as a way for users to assert legal privacy rights, with an option to turn it off. These are browser defaults, not law. A business that receives Sec-GPC: 1 from a Brave visitor in a state that recognises the signal must treat it as an opt-out of sale, sharing and targeted advertising.",
+  "note": "GPC half checks out apart from the rollout date nuance; the Shields half is correct but documented on brave.com/shields/, not this page.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-167",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Page confirms 29 January 2024, EUPL 1.2, Support Pool of Experts origin, screenshots, import/export, searchable databases, five languages and the 'does not necessarily reflect the official position of the EDPB' disclaimer.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-168",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Catalogue page confirms published 2 June 2020, edition 1, 25 pages, confirmed on review in 2026, and the scope on notice content, structure and the consent process for PII.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-169",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "BfDI page confirms the draft decision sent to applicant and all Landesdatenschutzbehoerden, 'eine Frist von vier Wochen', the security requirements under s.12 EinwV, the independence test, the public register under s.13 EinwV, and Consenter by Law & Innovation Technology GmbH on 17 October 2025.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-170",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "because the data is not used for optimisation",
+    "source_says": "The post says only 'Failing to do so by May 5 will impact your advertising performance for site visits originating from the EEA, UK, and Switzerland', without stating the mechanism.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Post dated 31 March 2025, deadline 5 May 2025, EEA, UK and Switzerland, consent mode on UET and Microsoft pixels with ad_storage granted or denied, IAB TCF, or a tag manager integration: all confirmed.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-171",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Advertisers running the Meta Pixel and Conversions API remain responsible for their own website consent under the ePrivacy rules and the GDPR",
+    "source_says": "The announcement concerns Meta's own DMA commitment and does not address advertisers' website consent obligations.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Confirms 8 December 2025, the two options for EU Facebook and Instagram users, availability from January 2026, and the April 2025 non-compliance decision.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-174",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The maximum penalty for a regulation 6 contravention becomes the UK GDPR higher ceiling of £17.5 million or 4 per cent of worldwide annual turnover",
+    "source_says": "Paragraph 18 of the substituted Schedule 1 modifies DPA 2018 s.157 so that in subsection (2)(a) the listed provisions become 'regulation 5, 6, 7, 8, 14, 19, 20, 21, 21A, 21B, 22, 23 or 24', which attracts the higher maximum amount under s.157(2)(a). The figures £17,500,000 and 4 per cent are set by DPA 2018 s.157(5) and are not restated in this Schedule.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "replacing the previous £500,000 cap; the former threshold of serious contravention causing substantial damage or distress falls away",
+    "source_says": "The Schedule substitutes the old Schedule 1 wholesale and says nothing about the regime it replaces; the £500,000 cap and the serious contravention test belong to the previous Schedule 1, not to this text.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Text confirms substitution of Schedule 1 to the PEC Regulations, information (s.142), assessment (s.146), interview (s.148A) and enforcement (s.149) notices, entry and inspection (s.154 and Sch 15), penalty notices (ss.155 to 157 as modified), and commencement 5.2.2026 by SI 2026/82.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-178",
+  "reached": true,
+  "reached_url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/about-this-guidance/",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "applies to every organisation subject to PECR",
+    "source_says": "'Who is it for?' says the guidance 'is aimed at providers of online services, including web or app developers'; it does not describe its audience as every organisation subject to PECR.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Contents page dated 'last updated 29 April 2026'; every substantive claim matches, including the exact phrase 'how your service is used, not about who uses it'.",
+  "_pass": "b04"
+ },
+ {
+  "id": "cookie-179",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "confirmed that consent must meet the UK GDPR standard, that reject must be as easy as accept, that the strictly necessary exception is judged from the user's perspective and that pixels and fingerprinting are in scope",
+    "source_says": "The consultation page announces the exercise and links out to the draft; it does not set out the draft's substantive positions. The draft itself has since been replaced at that link by the final guidance.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "was directed at every organisation deploying such technologies for UK users",
+    "source_says": "The page invites feedback from organisations generally but does not name an audience.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Page confirms the draft was 'previously known as the detailed cookies guidance' and that it stayed open 'until 5pm on Friday 21 March 2025'; the linked guidance page confirms the final version of 29 April 2026.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-180",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "added a chapter explaining the statistical purposes and appearance exceptions introduced by the Data (Use and Access) Act 2025, including the information and objection conditions and the restriction on sharing statistical data beyond processors",
+    "source_says": "The consultation page says only that 'This new chapter contains updates to our guidance following the introduction of the Data (Use and Access) Act 2025' and links to the chapter; it does not describe the exceptions or their conditions.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "It was addressed to website and app operators, analytics vendors and consent management platform providers serving UK users",
+    "source_says": "The page labels it a stakeholder consultation without naming those audiences.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Start date 7 July 2025 and closing date 26 September 2025 confirmed; the final guidance page confirms it was finalised on 29 April 2026 after two consultations, with a new chapter on the five exceptions.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-181",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Version 1.0 of 3 July 2019",
+    "source_says": "The page now renders as HTML and shows 'Version 1.0.54' with the date 03 July 2019.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "All substantive positions confirmed in the text: PECR consent takes the UK GDPR definition, continuing to browse is not consent, no pre-ticked boxes or 'on' sliders, analytics are not strictly necessary, no non-essential cookies before consent, third parties must be named, cookie walls only where there is genuine choice.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-182",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "present both options with equal prominence",
+    "source_says": "This introductory page sets out the four factors and the children expectations but does not state an equal prominence rule; that sits in the privacy by design material rather than here.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Page confirms the 23 January 2025 update, the audience of 'any organisation currently operating, or considering, a consent or pay model in the UK', the four factors (power imbalance, appropriate fee, equivalence, privacy by design), the Children's code with profiling off by default, and parental consent under Article 8 UK GDPR for under 13s.",
+  "_pass": "a07"
+ },
+ {
+  "id": "cookie-183",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "written to 134 of them about advertising cookies placed before consent and unequal accept and reject options",
+    "source_says": "The announcement says the ICO 'communicated concerns to 134 of those organisations, setting out clear regulatory expectations that organisations must comply with the law by giving people meaningful choice'. It does not enumerate the two practices the takeaway attributes to those letters.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Audit banners against the three ICO tests: no non-essential advertising cookies before choice, reject as easy as accept, and no cookies set after refusal.",
+    "source_says": "The three checks are not set out in this January 2025 announcement; they appear in the ICO's December 2025 outcome release.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "The announcement launched the ICO's 2025 online tracking strategy",
+    "source_says": "Confirmed: 'This action forms part of our online tracking strategy for 2025, which seeks to ensure that people have meaningful control over how their personal information is tracked and used online.' The announcement also covers new guidance on consent or pay models and further engagement with consent management platforms, which the takeaway omits.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The announcement launched the ICO's 2025 online tracking strategy with a plan to bring the UK's top 1,000 websites into compliance, having already assessed the top 200 and communicated concerns to 134 of them, setting out the expectation that they comply with the law by giving people meaningful choice. It also sets out the ICO's position on consent or pay models and further engagement with consent management platforms. It targets every operator of a high-traffic UK website and the ad tech vendors behind them. Audit banners so that non-essential advertising cookies are not set before a choice is made and rejecting is as easy as accepting.",
+  "note": "Numbers 200 and 134 and the top 1,000 plan all confirmed; the characterisation of the letters and the three tests are not in this page.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-184",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "979, 21, 415, 564, 17 PENs, the three checks and 80 per cent of UK internet users over 14 all match the page verbatim.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-185",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "in breach of PECR and the UK GDPR",
+    "source_says": "The announcement says the ICO 'concluded that Sky Betting and Gaming was processing personal data through the use of certain cookies in a way that was not lawful, transparent or fair' and refers to 'data protection law'. PECR appears only in the notes to editors boilerplate listing the ICO's responsibilities, not as a provision found breached in this case.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "leaving 99 of the top 100 offering a meaningful choice",
+    "source_says": "Stephen Bonner: '99 of the top 100 websites either already offering a meaningful choice over advertising cookies or making improvements to gain people's consent'. The page does not say all 99 already offer a meaningful choice.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "the company changed its banner in March 2023",
+    "source_says": "'Sky Betting and Gaming made changes in March 2023 to ensure that people could reject advertising cookies before their personal information was shared for these purposes.' The page does not say the change was specifically to the banner.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The ICO found that between 10 January and 3 March 2023 Bonne Terre Limited, trading as Sky Betting and Gaming, processed personal data through advertising cookies and shared it with ad tech companies before visitors could accept or reject them, in a way that was not lawful, transparent or fair, and issued a reprimand; the company made changes in March 2023. The same announcement reported that 52 of 53 warned top-100 websites had made changes, leaving 99 of the top 100 either offering a meaningful choice or making improvements. It applies to any operator whose tags fire before consent. Verify tag sequencing on first page load and block ad tech calls until consent is recorded.",
+  "note": "Dates, entity, reprimand and the 52 of 53 figure confirmed; the legal basis and the 99 figure are overstated.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-186",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "design practices that breach data protection and consumer law",
+    "source_says": "The page introduces the list as 'Some of the main design practices which could break data protection laws'. It does not state that the listed practices breach consumer protection law, although the CMA is a joint author and warns of CMA action.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "records both regulators' warning that businesses which deliberately and persistently design unfairly risk enforcement",
+    "source_says": "The 'deliberately and persistently' formulation is the ICO's alone (Stephen Almond: 'if they deliberately and persistently choose to design their websites in an unfair and dishonest way, the ICO will not hesitate to take necessary enforcement action'). The CMA's Will Hayter says only 'Businesses that stand in the way of that risk action from the CMA or ICO.'",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "as the reference for the ICO's later reject-as-easy-as-accept enforcement tests",
+    "source_says": "The paper predates and does not refer to the 2024 and 2025 ICO enforcement tests.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The joint paper identifies design practices that could break data protection law, including failing to give an equal choice between accept all and reject all cookies, overly complicated privacy controls, leading language steering data sharing, bundled choices and default settings that give less control. It applies to every organisation designing online interfaces for UK consumers; the ICO warns it will act against businesses that deliberately and persistently design unfairly, and the CMA warns that businesses standing in the way risk action from either regulator. Use the paper as the UK benchmark for banner and preference-centre design.",
+  "note": "All five listed practices and the 9 August 2023 date confirmed; the consumer-law framing and the attribution of one warning to both regulators are loose.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-190",
+  "reached": true,
+  "reached_url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "entered into force on 1 September 2023 without a transition period",
+    "source_says": "Art. 74 gives 'Commencement date: 1 September 2023'. There is no general grace period, but Articles 69 to 71 are headed transitional provisions: Art. 69 disapplies Articles 7, 22 and 23 to processing begun before commencement where the purpose is unchanged and no new data are collected.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "tracking needs consent only where it reaches sensitive data or high-risk profiling",
+    "source_says": "The Act contains no rule on tracking technologies. Art. 6 para. 7 lists the cases needing express consent (sensitive personal data, high-risk profiling by a private person, profiling by a federal body); it does not address tracking as such.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Art. 6(6) voluntary and informed, Art. 6(7) express consent, Art. 5(g) high-risk profiling, Art. 19(4) countries of disclosure abroad and Art. 60 CHF 250,000 fine on private persons all check out.",
+  "_pass": "b04"
+ },
+ {
+  "id": "cookie-191",
+  "reached": true,
+  "reached_url": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/en",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "or where the processing is necessary for the service",
+    "source_says": "Art. 45c let. a permits processing 'for telecommunications services and charging purposes' ('fuer Fernmeldedienste und Verrechnungszwecke'). The statute has no necessity test and the takeaway drops the charging limb.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "which covers setting and reading cookies and similar identifiers",
+    "source_says": "Art. 45c speaks only of 'processing of data on external equipment by means of transmission using telecommunications techniques'. Cookies are not named.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "It binds every operator of a website or app reaching users in Switzerland; the FDPIC applies it cumulatively with the FADP, reads the refusal requirement as a mandatory opt-out control",
+    "source_says": "The Act says nothing about website or app operators or about FDPIC practice; these rest on the regulator's reading, not on the text.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Article 45c permits the processing of data on external equipment by means of transmission using telecommunications techniques, which covers setting and reading cookies and similar identifiers, only where users are informed about the processing and its purpose and are informed that they may refuse it, or where the processing is for telecommunications services and charging purposes. It binds every operator of a website or app reaching users in Switzerland; the FDPIC applies it cumulatively with the FADP, reads the refusal requirement as a mandatory opt-out control, and cites a fine of up to CHF 5,000 under Article 53 TCA. Provide the notice and a refusal control before any non-necessary cookie is set.",
+  "note": "In force since 1 April 2007 per footnote 163; Art. 53 fine 'not exceeding CHF 5000' confirmed.",
+  "_pass": "b04"
+ },
+ {
+  "id": "cookie-194",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "replacing the former section 2-7b",
+    "source_says": "The page confirms the substance ('Frem til nå har det for eksempel vært tilstrekkelig at standardinnstillinger i nettlesere tillater cookies', until now browser default settings allowing cookies sufficed) but does not name the former section 2-7b.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "It binds every operator of a website or app directed at users in Norway, whether or not established there.",
+    "source_says": "The page says only 'All virksomhet knyttet til elektronisk kommunikasjon omfattes av bestemmelsen' and refers to ekomloven §§ 1-2 and 1-3 for the material and geographic scope, without setting out extraterritorial reach.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Section 3-15, 1 January 2025, GDPR-valid consent with all seven listed qualities and joint Nkom and Datatilsynet supervision all confirmed in the Norwegian text.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-195",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the operative rule since 1 January 2025 is section 3-15 with joint supervision",
+    "source_says": "This is a statement about the current law that the Datatilsynet page itself does not make; the page is the stale one being flagged. It is corroborated by the Nkom page.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "It is addressed to Norwegian website and app operators and to foreign operators serving Norwegian users.",
+    "source_says": "The page does not state an addressee or territorial scope.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "The takeaway's central point is right: the page cites ekomloven § 2-7b, names Nkom as the ekomloven authority and Datatilsynet only for personopplysningsloven, and states that post-GDPR consent cannot be given through browser settings.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-197",
+  "reached": true,
+  "reached_url": null,
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "in breach of Articles 5, 10 and 12 of Law No. 6698",
+    "source_says": "The operative part also finds breach of the general principles in Article 4 and of the transfer provisions: data were shared and sent abroad without valid explicit consent under Articles 8 and 9, the Board noting that no adequate-protection countries had been designated and the undertaking letters were not approved.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "TRY 1,100,000 under Article 12 ... TRY 100,000 under Article 10",
+    "source_says": "The fines are imposed under Article 18(1)(b) for the Article 12(1) failure and Article 18(1)(a) for the Article 10 failure.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "It remains the reference enforcement precedent that the 2022 Guideline on Cookie Practices later codified",
+    "source_says": "The decision predates and does not mention the guideline.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The Board found that Amazon Turkey processed personal data through cookies and sent marketing communications without obtaining explicit consent and without adequate information, in breach of Articles 4, 5, 10 and 12 of Law No. 6698, and that it also transferred data abroad without valid explicit consent under Article 9. It imposed administrative fines totalling TRY 1,200,000: TRY 1,100,000 under Article 18(1)(b) for the Article 12 failure to take the technical and organisational measures that would have prevented processing without explicit consent, and TRY 100,000 under Article 18(1)(a) for failing to inform users about the cookies, and it ordered the company to bring its privacy notice, terms and cookie notice into line and report back. The decision binds the addressee and sets the Board's position for all controllers using cookies on Turkish users. It remains the reference enforcement precedent that the 2022 Guideline on Cookie Practices later codified; treat cookie consent in Turkey as an opt-in explicit consent regime.",
+  "note": "Full decision summary read: date 27/02/2020, no. 2020/173, controller Amazon Turkey Perakende Hizmetleri Limited Sirketi, fines 1.100.000 TL and 100.000 TL, plus an order to update the notices and publication under Article 23(5).",
+  "_pass": "b06"
+ },
+ {
+  "id": "cookie-198",
+  "reached": true,
+  "reached_url": "https://law.justia.com/codes/california/code-civ/division-3/part-4/title-1-81-5/section-1798-135/",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "amounts the California Privacy Protection Agency adjusts for inflation ($2,663 and $7,988 from 1 January 2025)",
+    "source_says": "Section 1798.155 states only the $2,500 and $7,500 figures. The inflation adjustment and the adjusted amounts are not in the statutory text on these pages.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "1798.135(a) and (b), the two link titles, the consolidated link, the opt-out preference signal alternative and the AB 3286 amendment effective 1 January 2025 all confirmed; 1798.120(a) and (c) and the 1798.155 fine figures confirmed on the sibling Justia pages.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-201",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Amended from 1 January 2026 to require display of the signal's processing status.",
+    "source_says": "The text at this link carries only the note 'New section filed 3-29-2023; operative 3/29/2023' and no 2026 amendment. As shown, 7025(c)(6) makes display permissive: a business 'may display whether it has processed the consumer's opt-out preference signal as a valid request to opt-out of sale/sharing'.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Section 7025(b) requires a business that sells or shares personal information to process any opt-out preference signal sent in a commonly used format such as an HTTP header field or JavaScript object, and 7025(c) requires it to treat the signal as a valid opt-out for that browser or device and any consumer profile associated with it, including pseudonymous profiles, without demanding extra information. Section 7025(e) and (f) let a business drop the Do Not Sell or Share link only if it processes the signal frictionlessly: no fee, no changed experience, no pop-up or other interstitial content. It binds every CCPA business. Read Global Privacy Control before any tags fire. Under 7025(c)(6) displaying the signal's processing status is optional, so check the CPPA's updated regulations for any change from 1 January 2026.",
+  "note": "Subsections (b), (c), (e) and (f) all confirmed; only the claimed 2026 amendment is absent from the linked text.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-202",
+  "reached": true,
+  "reached_url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB566",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Expect signal volumes to rise sharply after that date and size opt-out handling accordingly.",
+    "source_says": "The chaptered text says nothing about signal volumes; it is advice beyond the document.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB566",
+  "proposed_takeaway": null,
+  "note": "LegiScan is behind a bot wall; chaptered text on leginfo confirms Chapter 465, approved 8 October 2025, Civ. Code 1798.136(a)(2), (c), (d) and (f) operative 1 January 2027.",
+  "_pass": "b04"
+ },
+ {
+  "id": "cookie-203",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "every registered data broker delete their personal information",
+    "source_says": "Subsection (a)(2) says 'every data broker that maintains any personal information' rather than 'every registered data broker'. The mechanism is free: (b)(5) 'The accessible deletion mechanism shall not charge a consumer to make a request'.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "1 January 2026 establishment deadline, 1 August 2026 access date, 45-day access and deletion cycles, the direction to service providers and contractors, the triennial audit from 1 January 2028 and the unverifiable-request-as-opt-out rule all confirmed verbatim.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-204",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Failure to process carries fines of $200 per request per day.",
+    "source_says": "The DROP page carries no penalty figure. The $200 per deletion request per day figure comes from the Delete Act itself, not from this page.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "1 January 2026 launch, over 600 registered data brokers, California Identity Gateway verification, 1 August 2026 processing start, up to 90 days for status updates and the 45-day deletion cycle all confirmed.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-209",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "cites the CCPA and the Colorado and Connecticut privacy laws",
+    "source_says": "The CCPA is named. The Colorado and Connecticut statutes are referred to through the rights they confer (Attorney General Tong: 'In Connecticut, you have the right to access, correct, and delete personal data ... and the right to opt-out of the sale of personal data and targeted advertising') rather than by statute name.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Participants, the 9 September 2025 date, the GPC description as 'an easy-to-use browser setting or extension' and the call to come into immediate compliance all confirmed.",
+  "_pass": "a08"
+ },
+ {
+  "id": "cookie-211",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "must ... maintain a compliance programme with reporting to the Attorney General",
+    "source_says": "The release lists only two injunctive terms: Jam City must provide \"in-app methods for consumers to opt-out of the sale or sharing of their data\" and must not \"sell or share the personal information of consumers at least 13 and less than 16 years old without their affirmative 'opt-in' consent\". No compliance programme or reporting obligation is described.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the affirmative opt-in consent required by section 1798.120(c)",
+    "source_says": "The release cites no CCPA section number; it says only that \"minors under the age of 16 are afforded special protections for the sale of their data\".",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "confirms that app SDK sharing is a sale or share",
+    "source_says": "The release refers to ad-tech partners generally (\"Jam City and its ad-tech partners use information obtained from consumers to display personalized ads within Jam City games\") but never mentions software development kits or characterises SDK sharing.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "age-screen neutrally",
+    "source_says": "The release gives no detail on age verification or screening mechanisms.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The Attorney General alleged that the developer of 21 mobile games provided no in-app method to opt out of the sale or sharing of personal information and sold or shared the data of users aged 13 to 15 without the affirmative opt-in consent required by section 1798.120(c). Jam City paid $1.4 million in civil penalties and must add in-app opt-out methods and obtain opt-in consent before selling or sharing the data of users aged 13 to 15. It binds Jam City but confirms that in-game ad tech sharing is a sale or share. Provide the opt-out inside the app, not only on a website, and age-screen neutrally.",
+  "note": "Company, 21 apps, ages 13 to 15, $1.4m and both injunctive terms confirmed; compliance programme and SDK framing are not in the release.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-216",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "section 638.51 prohibits installing a pen register or trap and trace device without a court order; section 637.2 gives a private right of action",
+    "source_says": "The linked page carries only Penal Code section 631. It does not mention 632, 637.2 or 638.51, which are separate Justia pages.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "SB 690, awaiting the Governor, would remove the private action under 638.51",
+    "source_says": "Not addressed by the statute page. Checked separately against the source for entry cookie-221: SB 690 passed both houses on 28 August 2026 and is with the Governor, so the claim stands as of today.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "date field of 1 January 2026, in force",
+    "source_says": "The page states \"Amended by Stats. 2022, Ch. 27, Sec. 1. (SB 1272) Effective January 1, 2023\"; the 2026 date appears to reflect the code edition year, not an amendment.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "631(a) wording on tapping, reading contents in transit, consent of all parties and aiding is confirmed verbatim; the other section claims are off this page.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-217",
+  "reached": true,
+  "reached_url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB690",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "would operate from 1 January 2027",
+    "source_says": "The enrolled text sets no operative date; Penal Code 637.2(d)(2) refers to 'the operative date of that legislation' without fixing it. 1 January 2027 follows from the default rule for statutes enacted in the 2026 regular session, not from the bill.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "remove the private right of action for section 638.51 pen register and trap and trace claims arising from website, online application and mobile application conduct",
+    "source_says": "Penal Code 637.2(d)(1) as amended limits only 'An action against a private actor for a violation of Section 638.51'; the takeaway omits the private actor qualifier.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB690",
+  "proposed_takeaway": null,
+  "note": "History page confirms Assembly 66 to 0 and Senate concurrence 39 to 0 on 28 August 2026 and 'Enrolled and presented to the Governor' on 4 September 2026; the act amends section 637.2 only, plus a severability clause.",
+  "_pass": "b04"
+ },
+ {
+  "id": "cookie-221",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Tentative opinion 21 August 2026, argument 25 August 2026, pen register not limited to telephones, IP identifies source not destination, demurrer sustained with leave to amend: all match the post.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-223",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "C.R.S. 6-1-1306(1)(a)(IV) ... with that duty operative from 1 July 2024",
+    "source_says": "The bill page confirms the Attorney General \"is required to adopt rules detailing technical specifications for a universal opt-out mechanism that controllers must use\" but gives no statutory citation and no 1 July 2024 date.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "The 60-day cure period expired on 1 January 2025",
+    "source_says": "Absent from the bill tracking page.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Signed 07/07/2021, effective 07/01/2023 and both thresholds (100,000; 25,000 with sale revenue) confirmed on the bill page; the statute text itself is not hosted there.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-224",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "Rule 6.03 of the Colorado Privacy Act Rules",
+    "source_says": "The page cites Rule 5.07, which requires the Attorney General to \"maintain a public list of Universal Opt-Out Mechanisms that have been recognized to meet the standards of this subsection\", together with C.R.S. 6-1-1313 and 4 CCR 904-3, Part 5. Rule 6.03 is not the provision governing the list.",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "claim": "which were filed on 15 March 2023",
+    "source_says": "The page gives no filing or adoption date for the Rules.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The Department of Law maintains the public list of recognised universal opt-out mechanisms under C.R.S. 6-1-1306(1)(a)(IV) and Rule 5.07 of the Colorado Privacy Act Rules, 4 CCR 904-3, Part 5. Global Privacy Control is the only mechanism on the list, and controllers must honour it from 1 July 2024 as an opt-out from sale and from targeted advertising; the list does not exclude other mechanisms that meet the rules. It binds every controller subject to the Act. Implement GPC as a header and JavaScript signal, and treat a signal received while a consumer is logged in as applying to the account.",
+  "note": "GPC as sole listed mechanism, the 1 July 2024 date, the sale plus targeted advertising scope and the non-exclusivity wording all confirmed; only the rule number is wrong.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-227",
+  "reached": true,
+  "reached_url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "section 541.055 requires controllers to honour opt-out requests sent through a technology such as a browser setting, browser extension or global device setting",
+    "source_says": "Section 541.055(e) covers only opt-outs 'under Sections 541.051(b)(5)(A) and (B)', that is targeted advertising and sale of personal data. Profiling opt-outs under 541.051(b)(5)(C) cannot be exercised through such a technology, and the duty is conditional on verifying the consumer and the agent's authority.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "from 1 January 2025",
+    "source_says": "The codified chapter carries no 1 January 2025 date; section 541.055 is noted 'Added by Acts 2023, 88th Leg., R.S., Ch. 995 (H.B. 4), Sec. 2, eff. July 1, 2024.' The deferred date sits in an uncodified section of HB 4.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "binds any person conducting business in Texas that processes or sells personal data",
+    "source_says": "Section 541.002(a)(1) also reaches a person that 'produces a product or service consumed by residents of this state', so Texas presence is not required.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+  "proposed_takeaway": "Effective 1 July 2024 and enforced by the Attorney General's Consumer Protection Division, the Act gives consumers the right to opt out of targeted advertising, sale of personal data and profiling, and from 1 January 2025 section 541.055(e) requires controllers to honour targeted advertising and sale opt-outs sent through a technology such as a browser setting, browser extension or global device setting. It binds any person conducting business in Texas, or producing a product or service consumed by Texas residents, that processes or sells personal data and is not a small business, with no volume threshold. A 30-day cure period applies and civil penalties reach $7,500 per violation. Honour Global Privacy Control for Texas visitors; head counts do not scope you out.",
+  "note": "The entry's AG page is a hub: it confirms only the 1 July 2024 date and Consumer Protection Division enforcement. Chapter 541 confirms HB 4, sections 541.002, 541.051, 541.055, 541.154 (30-day cure) and 541.155 ($7,500 per violation).",
+  "_pass": "b04"
+ },
+ {
+  "id": "cookie-229",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Effective 1 October 2024, opt-out signal via \"a platform, technology, or mechanism\" by 1 January 2025, exclusive AG authority, no private right of action and cure termination on 1 April 2026 all confirmed in the enrolled bill.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-230",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Effective 1 January 2025",
+    "source_says": "The code pages carry only the bracketed markers \"[Effective until Jan. 1, 2027]\" and \"[Effective Jan. 1, 2027]\"; no 1 January 2025 commencement date is printed.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Thresholds 35,000 and 10,000 with 20 percent, the 2027 drop to 10,000 and 5,000, the 1 January 2026 signal duty with its three conditions and AG enforcement with assessments all confirmed.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-231",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "the Division of Consumer Affairs must adopt rules for the mechanism",
+    "source_says": "C.56:8-166.11(c): \"The Division of Consumer Affairs in the Department of Law and Public Safety may adopt rules and regulations that detail the technical specifications for one or more universal opt-out mechanisms\". The power is discretionary, not mandatory.",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "claim": "a 30-day cure notice applied only for the first 18 months",
+    "source_says": "\"Until the first day of the 18th month next following the effective date of P.L.2023, c.266 ... the Division of Consumer Affairs ... shall issue a notice to the controller if a cure is deemed possible\", with 30 days to cure. The 18 months run from the effective date, not from enactment.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Approved on 16 January 2024 and effective 365 days later, the Act gives consumers rights to opt out of targeted advertising, sale of personal data and profiling, and requires controllers to honour opt-outs sent through a user-selected universal opt-out mechanism from six months after the effective date, that is 15 July 2025. It binds controllers that process data of 100,000 or more consumers, or 25,000 with revenue from sales. The Attorney General has sole enforcement authority, a 30-day cure notice applied only for the first 18 months after the effective date, and the Division of Consumer Affairs may adopt rules for the mechanism. Treat Global Privacy Control as an opt-out for New Jersey visitors.",
+  "note": "Approval date, 365-day commencement, six-month UOOM duty, thresholds and sole AG authority confirmed; the rulemaking duty is permissive.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-232",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "a 60-day cure period applies after notice of violation",
+    "source_says": "RSA 507-H:11, II: \"During the period beginning January 1, 2025 and ending December 31, 2025, the attorney general shall, and following said period the attorney general may, prior to initiating any action for a violation under this chapter, issue a notice of violation ... If the controller fails to cure such violation within 60 days of receipt of the notice of violation, the attorney general may bring an action\". The notice is mandatory only during 2025 and discretionary from 1 January 2026.",
+    "severity": "medium",
+    "kind": "outdated"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Effective 1 January 2025, the chapter gives consumers rights to opt out of targeted advertising, sale of personal data and profiling, and RSA 507-H:6, V(a)(1)(B) requires controllers, not later than 1 January 2025, to accept opt-out preference signals sent through a platform, technology or mechanism that communicates the consumer's intent to opt out. It binds controllers meeting the consumer-volume thresholds. The Attorney General has exclusive enforcement authority, violations are unfair or deceptive practices under RSA 358-A:2, there is no private right of action, and the 60-day cure notice was mandatory only during 2025 and is discretionary after that. Recognise Global Privacy Control from day one for New Hampshire visitors.",
+  "note": "507-H:6, V(a)(1)(B), exclusive AG authority, RSA 358-A:2 characterisation and no private right of action all confirmed; the cure period is no longer guaranteed.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-233",
+  "reached": true,
+  "reached_url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-1103",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the linked page supports the takeaway",
+    "source_says": "The entry's URL holds only 87-1101: \"Sections 87-1101 to 87-1130 shall be known and may be cited as the Data Privacy Act.\" The substantive claims had to be checked in 87-1103 and 87-1111, which are separate pages.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "modelled on the Texas statute ... effective 1 January 2025 ... may issue civil investigative demands and may request data protection assessments; a 30-day cure period applies",
+    "source_says": "Not addressed in the sections read (87-1101, 87-1103, 87-1106, 87-1111, 87-1113); the enforcement and commencement provisions sit in later sections that were outside the fetch budget.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-1103",
+  "proposed_takeaway": null,
+  "note": "87-1103 confirms the no-threshold, not-a-small-business test and 87-1111(5) confirms opt-out via a link, browser setting or extension, or global device setting, with no later compliance date.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-236",
+  "reached": true,
+  "reached_url": "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "requires a clear and conspicuous link where a controller sells data or engages in targeted advertising",
+    "source_says": "59.1-578(D): if a controller sells personal data to third parties or processes personal data for targeted advertising, it 'shall clearly and conspicuously disclose such processing, as well as the manner in which a consumer may exercise the right to opt out of such processing'. The statute requires a disclosure, not a link. 59.1-578(E) requires one or more secure and reliable means described in the privacy notice.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "the right under 59.1-577 to opt out of targeted advertising, sale of personal data and profiling",
+    "source_says": "59.1-577(A)(5): opt out of processing for purposes of (i) targeted advertising, (ii) the sale of personal data, or (iii) 'profiling in furtherance of decisions that produce legal or similarly significant effects concerning the consumer'. The profiling opt-out is qualified, not general.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "binds persons conducting business in Virginia that process data of 100,000 or more consumers, or 25,000 with over 50 percent of revenue from sales",
+    "source_says": "59.1-576(A) applies to persons that conduct business in the Commonwealth 'or produce products or services that are targeted to residents of the Commonwealth' and that (i) during a calendar year control or process personal data of at least 100,000 consumers or (ii) control or process personal data of at least 25,000 consumers and 'derive over 50 percent of gross revenue from the sale of personal data'. The targeting limb is omitted and 'revenue from sales' should be gross revenue from the sale of personal data.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
+  "proposed_takeaway": "Effective 1 January 2023, the Act gives consumers the right under 59.1-577 to opt out of targeted advertising, sale of personal data and profiling in furtherance of decisions that produce legal or similarly significant effects, requires under 59.1-578(D) a clear and conspicuous disclosure of that processing and of the manner in which a consumer may opt out where a controller sells data or engages in targeted advertising, and requires consent for sensitive data. It does not require controllers to honour universal opt-out signals. It binds persons conducting business in Virginia or targeting its residents that control or process data of 100,000 or more consumers, or 25,000 with over 50 percent of gross revenue from the sale of personal data. The Attorney General enforces with a 30-day cure period and civil penalties of up to $7,500 per violation. Offer an explicit opt-out link covering cookie-based targeted advertising.",
+  "note": "Sensitive-data consent (59.1-578(A)(5)), exclusive AG enforcement, 30-day cure and $7,500 per violation (59.1-584) all check out; no universal opt-out signal duty appears anywhere in the chapter.",
+  "_pass": "b05"
+ },
+ {
+  "id": "cookie-237",
+  "reached": true,
+  "reached_url": "https://le.utah.gov/xcode/Title13/Chapter61/13-61-S201.html",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "note": "Chapter header reads 'Effective 12/31/2023'; 13-61-201(5) opt-out of targeted advertising and sale only, no profiling and no universal signal; 13-61-302(1)(b) clear and conspicuous notice of the opt-out; 13-61-302(3)(a) sensitive data needs clear notice and an opportunity to opt out, not consent; 13-61-102(1) $25,000,000 revenue plus 100,000 consumers or 25,000 plus over 50 percent of gross revenue from sale; 13-61-402 AG exclusive, on referral from the division, 30-day cure, up to $7,500 per violation. A 2025 amendment effective 1 July 2026 added a correction right at 13-61-201(4), which does not disturb the takeaway.",
+  "_pass": "b05"
+ },
+ {
+  "id": "cookie-239",
+  "reached": true,
+  "reached_url": "https://legiscan.com/TN/text/SB0073/id/2817209/Tennessee-2023-SB0073-Chaptered.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": "https://publications.tnsosfiles.com/acts/113/pub/pc0408.pdf",
+  "proposed_takeaway": null,
+  "note": "Chaptered text checked: effective 1 July 2025; 47-18-3202 thresholds ($25,000,000 revenue, 175,000 consumers, or 25,000 with more than 50 percent of gross revenue from sale); 47-18-3203(a)(2)(E) opt outs; 47-18-3204(a)(6) sensitive data consent; no universal opt-out provision; 47-18-3213(a)(1)(A) NIST Privacy Framework affirmative defence; 47-18-3212 attorney general exclusive enforcement, 60 days notice, $7,500 per violation, treble damages for wilful or knowing violations.",
+  "_pass": "b08"
+ },
+ {
+  "id": "cookie-240",
+  "reached": true,
+  "reached_url": "https://law.justia.com/codes/indiana/title-24/article-15/chapter-1/section-24-15-1-1/",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the entry's link points to the Act",
+    "source_says": "https://iga.in.gov/laws/2025/ic/titles/24 returns only a JavaScript shell (\"You need to enable JavaScript to run this app\") and in any case addresses the whole of Title 24, not Article 15. The text was read from the Justia mirror of Ind. Code 24-15.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "a 30-day cure period",
+    "source_says": "24-15-10-2 sets the penalty and injunction but carries no cure period; the right to cure sits in 24-15-10-3, \"Notice of Alleged Violation; Controller's or Processor's Right to Cure\", whose text was not read.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "It contains no universal opt-out signal requirement",
+    "source_says": "No such requirement appears in the article's eleven chapter headings or in the sections read, which is consistent with the claim but does not prove it from a single section.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://law.justia.com/codes/indiana/title-24/article-15/",
+  "proposed_takeaway": null,
+  "note": "24-15-1-1 confirms both thresholds and the 1-1-2026 effective note; 24-15-10-2 confirms the $7,500 per violation penalty and AG action; 24-15-10-1 is titled exclusive AG enforcement.",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-241",
+  "reached": true,
+  "reached_url": "https://apps.legislature.ky.gov/law/acts/24RS/documents/0072.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Acts Ch. 72 PDF confirms the 1 January 2026 effective date, both thresholds, the five consumer rights, sensitive data consent, absence of a universal opt-out duty, exclusive AG enforcement, 30-day cure, $7,500 penalty and the consumer privacy fund; the bill page confirms \"04/04/24: signed by Governor (Acts Ch. 72)\".",
+  "_pass": "a09"
+ },
+ {
+  "id": "cookie-242",
+  "reached": true,
+  "reached_url": "https://webserver.rilegislature.gov/Statutes/TITLE6/6-48.1/6-48.1-5.htm",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "The host that refused the browser answers WebFetch. Index shows the chapter effective 1 January 2026. 6-48.1-5 gives the opt out from targeted advertising, sale, or profiling in furtherance of solely automated decisions, exercised by secure and reliable means established by the controller and described in its privacy notice, with no universal opt-out mechanism. 6-48.1-8 read separately: attorney general exclusive enforcement, no private right of action, no cure period, not less than $100 and no more than $500 per intentional disclosure, plus deceptive trade practice remedies. The consumer-volume applicability thresholds sit in earlier sections and were not read.",
+  "_pass": "b08"
+ },
+ {
+  "id": "cookie-243",
+  "reached": true,
+  "reached_url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "under RCW 19.373.090 a violation is a per se Consumer Protection Act breach with a private right of action",
+    "source_says": "RCW 19.373.090 declares the practices matters vitally affecting the public interest and a violation an unfair or deceptive act in trade or commerce and an unfair method of competition for the purpose of applying chapter 19.86 RCW. It says nothing about a private right of action; that arises under the Consumer Protection Act itself, RCW 19.86.090.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true",
+  "proposed_takeaway": null,
+  "note": "Dates (31 March 2024, small businesses 30 June 2024), 19.373.030 consent or necessity, 19.373.070 separate signed valid authorisation for any sale, 19.373.080 geofence ban around in-person health care providers, inferences from non-health data at 19.373.010(8)(b)(xiii) and the regulated entity definition at 19.373.010(23) all check out; the geofence ban is tied to the three listed uses, which the takeaway compresses fairly.",
+  "_pass": "b05"
+ },
+ {
+  "id": "cookie-244",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Every claim matches: signed 27 April 2023, first law outside HIPAA, section 10 from 23 July 2023, sections 4 to 9 from 31 March 2024 and 30 June 2024, homepage policy link, 2012 pregnancy prediction score example.",
+  "_pass": "a10"
+ },
+ {
+  "id": "cookie-251",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "sued the data broker in the District of Idaho on 29 August 2022",
+    "source_says": "The release gives the court as the U.S. District Court for the District of Idaho but dates the suit only as 'August 2022'; no day is given.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "under the unfairness prong of Section 5",
+    "source_says": "The release does not cite Section 5 or use the word unfair; it says the conduct 'invaded consumers' privacy'.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "visits to reproductive health clinics, places of worship and shelters",
+    "source_says": "The release names reproductive health clinics, places of worship and health facilities. Shelters are not named on this page.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Release dated 4 May 2026; vote 2 to 0, Kochava and Collective Data Solutions, and every order obligation listed in the takeaway are confirmed verbatim.",
+  "_pass": "a10"
+ },
+ {
+  "id": "cookie-252",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "so that health apps and connected devices are covered as personal health record vendors",
+    "source_says": "The release says the rule clarifies coverage of 'health apps and other similar technologies' and revises 'PHR related entity'; it does not use the phrase connected devices.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Release dated 26 April 2024. Vote 3 to 2, effective 60 days after publication, unauthorised disclosure in the breach definition, electronic notice, and the 500 or more and 60 calendar day FTC notice rule all confirmed.",
+  "_pass": "a10"
+ },
+ {
+  "id": "cookie-253",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Published 22 April 2025, effective 23 June 2025, compliance 22 April 2026 except section 312.11(d)(1), (d)(4) and (g); biometric and government identifiers, the internal operations limit and neutral age screening all confirmed. The separate consent and retention provisions sit in the amendatory text, which the fetcher truncated; nothing read contradicts them.",
+  "_pass": "a10"
+ },
+ {
+  "id": "cookie-254",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": "https://www.ftc.gov/legal-library/browse/enforcement-policy-statement-promoting-adoption-age-verification-technology",
+  "proposed_takeaway": null,
+  "note": "Release dated 25 February 2026, vote 2 to 0, all six conditions, the duration clause and the intended COPPA rule review confirmed word for word.",
+  "_pass": "a10"
+ },
+ {
+  "id": "cookie-255",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "First issued on 1 December 2022",
+    "source_says": "The page text does not state an original issuance date. Its own metadata gives published_time 19 November 2022 and modified_time 26 June 2024, with 'Content last reviewed June 26, 2024'.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Authenticated page configuration, business associate agreements, the appointment scheduler and symptom checker examples, and the 20 June 2024 Northern District of Texas vacatur with HHS evaluating next steps are all confirmed.",
+  "_pass": "a10"
+ },
+ {
+  "id": "cookie-256",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the Supreme Court denied certiorari on 8 December 2025",
+    "source_says": "The opinion, decided 1 May 2025, says nothing about certiorari.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the Supreme Court is reviewing who counts as a consumer",
+    "source_says": "Not addressed anywhere in the opinion.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "It binds federal courts in New York, Connecticut and Vermont",
+    "source_says": "The opinion does not describe its own territorial reach; this is the Second Circuit's composition, stated outside the document.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "Decided 1 May 2025, ordinary person standard adopted, Facebook ID plus encoded video title held not to be PII, dismissal affirmed, and the split with the First Circuit's reasonably foreseeable approach all confirmed.",
+  "_pass": "a10"
+ },
+ {
+  "id": "cookie-258",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "note": "13 sites, about 75 million visitors in March 2024, uncategorised tags as the leading cause, hard-coded tags, consent tool not passing opt-out signals, truthful representations, the misleading Accept All warning and the one click to decline recommendation all confirmed.",
+  "_pass": "a10"
+ }
+]

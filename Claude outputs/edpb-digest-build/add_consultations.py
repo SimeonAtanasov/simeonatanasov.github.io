@@ -59,7 +59,7 @@ for d in NEW:
     e = {"id": nid, "title": d["title"], "type": C, "date": d["date"], "url": d["url"], "rating": d["rating"],
          "where": d["where"], "takeaway": d["takeaway"], "status": "consultation", "topics": [],
          "tier": d.get("tier", "written"), "source": "document"}
-    assert "—" not in e["takeaway"]
+    assert chr(0x2014) not in e["takeaway"]
     E.append(e); nid += 1
 json.dump(E, open("digest.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(len(E), "entries")
