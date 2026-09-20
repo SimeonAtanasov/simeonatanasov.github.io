@@ -35,6 +35,17 @@ Field set for a provision: id, number, title, chapter, section, takeaway, applie
 Field set for a corpus document: id, title, issuer, type, status, articles, date, url, takeaway,
 topics, source.
 
+On 20 September 2026 two corpus links were found to 404 because the documents sit under a
+different EDPB section than the link assumed (Statement 3/2024 and Joint Opinion 1/2026);
+both are repaired by `../source-verification-2026-09-20/apply_linkfix.py`. Only 4 of the 57
+corpus documents exist as PDFs at all: the Commission publishes AI Act guidance as HTML, so
+a PDF downloader is the wrong tool for this corpus.
+
+On 20 September 2026 the five corpus entries with a downloaded EDPB source were checked
+against the official texts (see `../source-verification-2026-09-20.md`): three were corrected
+by `../source-verification-2026-09-20/apply_source_review.py`, already applied to
+items_corpus.json.
+
 To add or correct an entry: edit the items file, then run build_aia_page.py and build_aia_pdf.py.
 The page builder still carries the old header nav in its HEAD template: after a rebuild, replace
 the header block with the current one (Home | Privacy | AI | Cookie Compliance) copied from another

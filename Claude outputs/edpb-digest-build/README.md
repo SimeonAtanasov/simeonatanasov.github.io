@@ -36,6 +36,18 @@ To add new documents: append them to edpb_documents.json, run classify_edpb.py, 
 takeaway for anything rated R or B following agent_brief.txt, add a MANUAL one-liner for
 any substantive N, run oneliners_build.py, then the two build scripts.
 
+On 20 September 2026 thirteen Article 64 opinion URLs were found to serve the EDPB's generic
+Documents listing rather than the opinion, because the slug omits `draft-decision-of-the`.
+They are repaired in digest.json by `../source-verification-2026-09-20/apply_linkfix.py`.
+If you scrape new opinions, take the href from the listing rather than building the slug
+from the title, and check that the page you land on carries the opinion's own title: the
+EDPB answers 200 for an unknown slug, so a link checker will not catch it.
+
+On 20 September 2026 the takeaways were checked against the official texts (see
+`../source-verification-2026-09-20.md`): 57 EDPB entries were corrected by
+`../source-verification-2026-09-20/apply_source_review.py`, already applied to digest.json.
+Rerun it after any rebuild that regenerates digest.json.
+
 Two traps:
 
 - oneliners_build.py regenerates digest.json, which drops the fix_edpb_review.py entry

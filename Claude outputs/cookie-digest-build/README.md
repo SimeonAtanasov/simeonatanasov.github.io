@@ -22,6 +22,13 @@ Everything needed to regenerate cookie-digest.html and the PDF. Snapshot date: 1
 - The links behind the page are also in cookie-compliance-inventory-2026-09-19.csv, one folder
   up (259 rows, grouped by region).
 
+On 20 September 2026 the takeaways were checked against the official texts (see
+`../source-verification-2026-09-20.md`): 32 entries were corrected by
+`../source-verification-2026-09-20/apply_source_review.py`, already applied to all_merged.json.
+Eighteen entries could not be checked because the downloaded PDFs are not the document the
+entry names (mostly CJEU judgments from curia pages that link many cases); they are listed in
+the verification register and are the first to re-download.
+
 To add or update an item: edit all_merged.json (keep the field set: title, jurisdiction, type,
 date, url, status, takeaway, topics, source), then run the two build scripts. Never edit
 cookie_digest.json: build_cookie_page.py overwrites it on every run, so edits made there vanish.

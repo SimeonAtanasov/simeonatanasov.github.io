@@ -5624,7 +5624,7 @@
    ],
    "date": "18 December 2024",
    "url": "https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en",
-   "takeaway": "Article 64(2) GDPR opinion adopted 18 December 2024 at the request of the Irish supervisory authority. It holds that an AI model trained on personal data is anonymous only where identification of individuals or extraction of their data through queries is very unlikely, assessed case by case; sets a three-step test for legitimate interest in training and deployment, with conversational agents and cybersecurity as acceptable purposes when strictly necessary and balanced; and warns that models built on unlawfully processed data may face deployment restrictions unless properly anonymised. It does not implement the AI Act but governs the data side that Article 2(7) leaves to the GDPR.",
+   "takeaway": "Article 64(2) GDPR opinion adopted 17 December 2024 and published the next day, at the request of the Irish supervisory authority. It holds that an AI model trained on personal data is anonymous only where the likelihood of extracting individuals' data from the model or obtaining it through queries is insignificant, assessed case by case; sets a three-step test for legitimate interest in training and deployment, with conversational agents and threat detection as acceptable purposes when strictly necessary and balanced; and warns that models built on unlawfully processed data may face corrective measures and restrictions on subsequent use unless properly anonymised. It does not implement the AI Act but governs the data side that Article 2(7) leaves to the GDPR.",
    "topics": [
     "data",
     "gpai"
@@ -5645,7 +5645,7 @@
     "Art 77"
    ],
    "date": "16 July 2024",
-   "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/statements/statement-32024-data-protection-authorities-role-artificial-intelligence-act-framework_en",
+   "url": "https://www.edpb.europa.eu/documents/reports-statements-and-letters/statement-32024-on-data-protection-authorities-role-in-the_en",
    "takeaway": "Statement adopted 16 July 2024, before the Act entered into force, addressed to Member States designing their supervision. The EDPB recommends that data protection authorities be designated as market surveillance authorities for high-risk AI systems in the Annex III areas likely to affect fundamental rights, as Article 74(8) already requires for law enforcement, migration, border control and justice, that they serve as single points of contact, and that clear procedures be set for cooperation between DPAs, other market surveillance authorities and the AI Office. It is non-binding; several Member States followed it in part, so check the national designation.",
    "topics": [
     "governance",
@@ -5668,7 +5668,7 @@
    ],
    "date": "18 June 2021",
    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/edpbedps-joint-opinion/edpb-edps-joint-opinion-52021-proposal_en",
-   "takeaway": "Joint opinion of 18 June 2021 on the Commission's April 2021 proposal, now legislative history. The two bodies called for a general ban on any use of AI for automated recognition of human features in publicly accessible spaces, a ban on social scoring, a ban on inferring emotions except for narrow cases and a ban on biometric categorisation by protected characteristics, and asked that data protection authorities be the national supervisory authorities and the EDPS the authority for Union institutions. The enacted Article 5 adopted narrower prohibitions. Read it to understand why DPAs still press for a fundamental-rights reading of the Act.",
+   "takeaway": "Joint opinion of 18 June 2021 on the Commission's April 2021 proposal, now legislative history. The two bodies called for a general ban on any use of AI for automated recognition of human features in publicly accessible spaces, a ban on social scoring, a ban on inferring emotions except for narrow cases and a ban on biometric categorisation by protected characteristics, asked that data protection authorities be the national supervisory authorities and welcomed the EDPS as the authority for Union institutions. The enacted Article 5 adopted narrower prohibitions. Read it to understand why DPAs still press for a fundamental-rights reading of the Act.",
    "topics": [
     "prohibitions",
     "governance"
@@ -5690,7 +5690,7 @@
     "Art 49"
    ],
    "date": "20 January 2026",
-   "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/edpbedps-joint-opinion/edpb-edps-joint-opinion-12026-proposal-regulation-regards_en",
+   "url": "https://www.edpb.europa.eu/documents/legislative-opinion/edpb-edps-joint-opinion-12026-on-the-proposal-for-a-regulation-as_en",
    "takeaway": "Joint opinion on COM(2025) 836 adopted in January 2026. The Board and Supervisor accepted the objective of simplification but asked that any processing of special categories of personal data for bias detection remain bound by strict necessity, pseudonymisation, access controls and deletion, that the exception not extend beyond high-risk systems without justification, that data protection authorities keep their supervisory role for AI affecting fundamental rights and be consulted where the AI Office takes over GPAI-based systems, and that registration of exempted Annex III systems be kept. The final Article 4a reflects the strict-necessity and safeguard conditions. Non-binding, but it signals how DPAs will read Article 4a.",
    "topics": [
     "data",
@@ -5737,7 +5737,7 @@
    ],
    "date": "8 July 2026",
    "url": "https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en",
-   "takeaway": "Adopted at the 8 July 2026 plenary for public consultation until 30 October 2026. The guidelines confirm that the GDPR applies to collection, storage, organisation and retrieval of scraped personal data, require purpose limitation, transparency, minimisation and accuracy with timestamping and validation, clarify legitimate interest as the basis for training, and require both an Article 6 basis and an Article 9 exception for special-category data, citing GC and Others (C-136/17) for incidental collection with safeguards. They complement the copyright policy and training-content summary duties in Article 53. Providers scraping for training should align data governance with them now, before the final version.",
+   "takeaway": "Adopted on 7 July 2026 for public consultation until 30 October 2026. The guidelines confirm that the GDPR applies to collection, storage, organisation and retrieval of scraped personal data, require purpose limitation, transparency and minimisation, recommend timestamping and validation for accuracy, clarify legitimate interest as the basis for training, and require both an Article 6 basis and an Article 9 exception for special-category data, citing GC and Others (C-136/17) for incidental collection with safeguards. They complement the copyright policy and training-content summary duties in Article 53. Providers scraping for training should align data governance with them now, before the final version.",
    "topics": [
     "data",
     "gpai"
@@ -5800,7 +5800,7 @@
     "Art 4"
    ],
    "date": "3 June 2024",
-   "url": "https://www.edps.europa.eu/data-protection/our-work/publications/guidelines/2024-06-03-first-edps-orientations-eu-institutions-using-generative-ai_en",
+   "url": "https://www.edps.europa.eu/data-protection/our-work/publications/guidelines/2024-06-03-first-edps-orientations-euis-using-generative-ai_en",
    "takeaway": "First orientations published 3 June 2024 and revised in an expanded second version in October 2025, addressed to the Union institutions the EDPS supervises under Regulation (EU) 2018/1725 and under the AI Act as their market surveillance authority. Structured as practical questions: when generative AI processes personal data, the role of the data protection officer, when a DPIA is needed, lawful basis, minimisation, accuracy, transparency, automated decisions, fair processing, individual rights and security. Non-binding for private operators, but they show the supervisory expectations a deployer of a general-purpose AI system should meet and mirror the deployer duties in Article 26.",
    "topics": [
     "data",

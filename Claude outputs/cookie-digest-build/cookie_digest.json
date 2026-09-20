@@ -23,7 +23,7 @@
   "date": "17 September 2020",
   "url": "https://www.cnil.fr/sites/cnil/files/atoms/files/recommandation-cookies-et-autres-traceurs.pdf",
   "status": "in force",
-  "takeaway": "The recommendation gives the CNIL's expected banner design: a first layer that names every purpose, identifies the controllers behind consent-requiring trackers, and offers an accept action and a refuse action of equal effort, with a refusal remembered so that the user is not asked again at each visit. It applies to sites and apps subject to the 2020 guidelines and is the reference the CNIL uses in its cookie fines. Build banners to it, log consent and refusal, and re-ask no more often than the recommended six-month rhythm.",
+  "takeaway": "The recommendation gives the CNIL's expected banner design: a first layer that names every purpose, gives access to the full list of controllers behind consent-requiring trackers, and offers an accept action and a refuse action of equal effort, with a refusal remembered so that the user is not asked again at each visit. It applies to every organisation using trackers as defined in the 2020 guidelines, web and mobile first, and is the reference the CNIL uses in its cookie fines. Build banners to it, log consent and refusal, and re-ask no more often than the recommended six-month rhythm.",
   "topics": [
    "consent",
    "reject-button",
@@ -239,7 +239,7 @@
   "date": "8 April 2025",
   "url": "https://www.cnil.fr/fr/recommandations-applications-mobiles-modifiee",
   "status": "in force",
-  "takeaway": "The recommendation, first published on 24 September 2024 and amended by Deliberation 2025-024 of 27 March 2025, sets the CNIL's expectations for each actor in the mobile chain (publisher, developer, SDK provider, operating system and store), including how consent for trackers and permissions must be collected in-app under article 82 and the GDPR. The 2025 amendments are non-substantive corrections and clarifications requested by stakeholders. Apps distributed in France should map SDKs against it and treat it as the yardstick for the CNIL's announced app inspections.",
+  "takeaway": "The recommendation, first adopted on 18 July 2024 (Deliberation 2024-061) and replaced by the amended version adopted in Deliberation 2025-024 of 27 March 2025 and published on 8 April 2025, sets the CNIL's expectations for each actor in the mobile chain (publisher, developer, SDK provider, operating system and store), including how consent for trackers and permissions must be collected in-app under article 82 and the GDPR. The 2025 amendments are targeted corrections and clarifications, shown in an annotated version, including the roles of publisher and SDK provider in one SDK example. Apps distributed in France should map SDKs against it and treat it as the yardstick for CNIL app inspections.",
   "topics": [
    "consent",
    "other"
@@ -255,7 +255,7 @@
   "date": "1 September 2025",
   "url": "https://www.cnil.fr/en/cookies-and-advertisements-inserted-between-emails-google-fined-325-million-euros-cnil",
   "status": "decided",
-  "takeaway": "The CNIL fined Google LLC 200 million euros and Google Ireland Limited 125 million euros for placing advertising cookies during Google account creation without valid, informed consent (article 82 of the French Data Protection Act) and for displaying adverts between emails in the Gmail Promotions and Social tabs without prior consent (article L.34-5 of the Postal and Electronic Communications Code), affecting more than 74 million accounts and 53 million users respectively. Both companies must comply within six months under a penalty of 100,000 euros per day each. Account sign-up flows are cookie consent flows and the same banner standard applies.",
+  "takeaway": "The CNIL fined Google LLC 200 million euros and Google Ireland Limited 125 million euros for placing advertising cookies during Google account creation without valid, informed consent (article 82 of the French Data Protection Act) and for displaying adverts between emails in the Gmail Promotions and Social tabs without prior consent (article L.34-5 of the Postal and Electronic Communications Code), affecting more than 74 million accounts and 53 million users respectively. Both companies must comply within six months under a penalty of 100,000 euros per day of delay. Account sign-up flows are cookie consent flows and the same banner standard applies.",
   "topics": [
    "consent",
    "email-marketing",
@@ -321,7 +321,7 @@
   "date": "14 April 2026",
   "url": "https://www.cnil.fr/fr/recommandation-pixel-suivi-courriels",
   "status": "in force",
-  "takeaway": "The recommendation, adopted on 12 March 2026 and published on 14 April 2026, states that open-tracking pixels in emails require consent under article 82, with one exemption: measuring the individual deliverability of emails tied to a service the recipient asked for, which covers transactional messages such as order confirmations, password resets and security alerts and messages the recipient consented to receive; consent to receive marketing does not exempt any other tracking purpose. Senders must clearly inform recipients about pixels and offer a simple way to object. For addresses collected before publication, senders had three months to inform recipients and give them an easy objection route. Email platforms and marketing teams should reconfigure open tracking to consent-gated operation.",
+  "takeaway": "The recommendation, adopted on 12 March 2026 and published on 14 April 2026, states that open-tracking pixels in emails require consent under article 82, with two exemptions: security measures that help authenticate the user, and measuring individual open rates for deliverability, limited to what is needed to adapt or stop sending to inactive recipients. Both exemptions cover only emails the recipient asked for or that relate to a service they requested, such as transactional messages (order confirmations, password resets, account alerts) and messages they consented to receive; pixel consent is separate from consent to receive the email itself, although one consent can cover direct marketing and the pixel purposes connected to it. Senders must clearly inform recipients about pixels and let them withdraw consent as easily as they gave it, for example through a footer link. For addresses collected before publication, senders had three months to inform recipients and give them an easy objection route. Email platforms and marketing teams should reconfigure open tracking to consent-gated operation.",
   "topics": [
    "email-marketing",
    "pixels-wiretap",
@@ -338,7 +338,7 @@
   "date": "23 January 2025",
   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758",
   "status": "in force",
-  "takeaway": "Article 22.2 LSSI allows a service provider to store or access information on a recipient's terminal only after the recipient has consented on the basis of clear and complete information about the purposes, exempts storage strictly necessary for transmission or for a service the user requested, and permits consent to be expressed through appropriate browser or application settings where technically possible. It binds every information-society service targeting users in Spain. The consolidated text was last updated on 23 January 2025 and the AEPD enforces it as a leve or grave infringement depending on the breach.",
+  "takeaway": "Article 22.2 LSSI allows a service provider to store or access information on a recipient's terminal only after the recipient has consented on the basis of clear and complete information about the purposes, exempts storage strictly necessary for transmission or for a service the user requested, and permits consent to be expressed through appropriate browser or application settings where technically possible. It binds providers established in Spain and non-EU providers that direct their services at Spain. The consolidated text was last updated on 23 January 2025 and the AEPD enforces it as a leve infringement, which becomes grave on repeat offences within three years.",
   "topics": [
    "consent",
    "strictly-necessary"
@@ -371,7 +371,7 @@
   "date": "1 May 2024",
   "url": "https://www.aepd.es/guias/guia-cookies.pdf",
   "status": "in force",
-  "takeaway": "The current guide applies article 22.2 LSSI together with the GDPR and LOPDGDD: a reject option must sit at the same layer and with the same visibility as accept, consent should be renewed at most every 24 months, cookie walls are lawful only with clear notice and a genuinely equivalent alternative that need not be free, and access to legally guaranteed rights cannot be blocked. A May 2024 section transposes EDPB Opinion 08/2024: large platforms cannot rely on a binary pay-or-consent choice and should offer a free alternative such as contextual advertising. It is the reference for AEPD sanction procedures in Spain.",
+  "takeaway": "The current guide applies article 22.2 LSSI together with the GDPR and LOPDGDD: a reject option must sit at the same layer and with the same visibility as accept, consent should be renewed at most every 24 months, cookie walls are lawful only with clear notice and a genuinely equivalent alternative that need not be free, and access to legally guaranteed rights cannot be blocked. A May 2024 section transposes EDPB Opinion 08/2024: large platforms will in most cases not obtain valid consent from a binary pay-or-consent choice and should consider a free alternative such as contextual advertising. It is the reference for AEPD sanction procedures in Spain.",
   "topics": [
    "reject-button",
    "consent-or-pay",
@@ -388,7 +388,7 @@
   "date": "3 February 2021",
   "url": "https://www.aepd.es/documento/reposicion-ps-00032-2020.pdf",
   "status": "decided",
-  "takeaway": "The AEPD imposed the maximum 30,000 euro fine for a leve infringement of article 22.2 LSSI under article 39.1.c because Iberia's banner used unclear wording, loaded cookies automatically without acceptance, omitted first-party and third-party detail and profiling purposes, and offered no genuine way to refuse: users could only accept or be denied access. The AEPD also found that the compliance changes Iberia claimed had not been implemented until after proceedings began, and confirmed the fine on reconsideration. A missing reject option alone reaches the top of the leve scale in Spain.",
+  "takeaway": "The AEPD imposed the maximum 30,000 euro fine for a leve infringement of article 22.2 LSSI under article 39.1.c because Iberia's banner used unclear wording, cookies were installed on the first visit, the second layer did not identify third-party cookies or their retention periods, and there was no genuine way to refuse: users could only accept or open the settings, where cookies had to be rejected group by group behind a cookie wall. The AEPD also found that the compliance changes Iberia claimed had not been implemented until after proceedings began, and confirmed the fine on reconsideration. A banner without an easy reject option reaches the top of the leve scale in Spain.",
   "topics": [
    "reject-button",
    "cookie-walls",
@@ -519,7 +519,7 @@
   "date": "22 March 2023",
   "url": "https://www.datenschutzkonferenz-online.de/media/pm/DSK_Beschluss_Bewertung_von_Pur-Abo-Modellen_auf_Websites.pdf",
   "status": "in force",
-  "takeaway": "The German authorities accept consent-or-pay (Pur-Abo) models on websites only where the paid alternative gives fundamentally the same service at a market-standard price, consent for the tracked version meets every GDPR requirement including granular consent per distinct purpose, and the paid version stores or reads only what is strictly necessary for the chosen service. Blanket consent covering several purposes is invalid. Publishers using Pur-Abo models in Germany should separate advertising, measurement and personalisation consents and audit the paid path for tracking; the EDPB's April 2024 opinion adds stricter conditions for large platforms.",
+  "takeaway": "The German authorities accept consent-or-pay (Pur-Abo) models on websites only where the paid alternative gives fundamentally the same service at a market-standard price, consent for the tracked version meets every GDPR requirement including granular consent per materially distinct purpose, and the paid version stores or reads only what is strictly necessary for the chosen service. Blanket consent covering materially different purposes is invalid; only closely related purposes may be bundled. Publishers using Pur-Abo models in Germany should separate advertising, measurement and personalisation consents and audit the paid path for tracking; the EDPB's April 2024 opinion adds stricter conditions for large platforms.",
   "topics": [
    "consent-or-pay",
    "consent"
@@ -600,7 +600,7 @@
   "date": "9 February 2024",
   "url": "https://www.lda.bayern.de/media/pm/pm2024_02.pdf",
   "status": "decided",
-  "takeaway": "The Bavarian State Office for Data Protection Supervision announced that it had used an automated tool to check more than 350 Bavarian websites and 15 apps, finding that almost all apps read data before any consent and that the websites' banners failed the requirement that the option to withhold consent appear on the first layer alongside Accept all. Operators were given the opportunity to respond and fix their sites, and the BayLDA said it would extend the tool to further consent platforms. Expect scripted first-layer checks from German state authorities and design banners to pass them without human review.",
+  "takeaway": "The Bavarian State Office for Data Protection Supervision announced that in a partly automated sweep it had checked more than 350 Bavarian websites and 15 apps, finding that almost all apps ran consent-requiring processes before any consent and that about 350 websites failed the requirement, tested by its automated banner tool, that the option to withhold consent appear on the first layer alongside Accept all. Operators were given the opportunity to respond and fix their sites, and the BayLDA said it would extend the tool to further consent platforms. Expect scripted first-layer checks from German state authorities and design banners to pass them without human review.",
   "topics": [
    "reject-button",
    "enforcement"
@@ -649,7 +649,7 @@
   "date": "25 May 2022",
   "url": "https://www.autoriteprotectiondonnees.be/citoyen/enquete-cookies-sur-les-sites-de-presse-roularta-mis-a-lamende",
   "status": "decided",
-  "takeaway": "In its first thematic investigation the Belgian DPA's Inspection Service examined the 20 most visited Belgian news sites for cookie use, consent and transparency, and fined Roularta 50,000 euros for cookies placed before consent, reliance on legitimate interest for non-essential cookies, pre-ticked choices and deficient information and withdrawal on two of its sites, with an order to comply. A parallel decision of 16 June 2022 fined Rossel 50,000 euros for similar practices on three sites. Publishers in Belgium should expect sector-wide sweeps with technical evidence and orders addressed to each violation.",
+  "takeaway": "In its first thematic investigation the Belgian DPA's Inspection Service examined the 20 most visited Belgian news sites for cookie use, consent and transparency, and fined Roularta 50,000 euros for cookies placed before consent, statistics cookies treated as exempt from consent, pre-ticked partner choices, a disclaimer for third-party cookies, deficient information, excessive cookie lifetimes and ineffective withdrawal on two of its sites, with an order to comply within three months. A parallel decision of 16 June 2022 fined Rossel 50,000 euros for similar practices on three sites. Publishers in Belgium should expect sector-wide sweeps with technical evidence and orders addressed to each violation.",
   "topics": [
    "consent",
    "enforcement",
@@ -796,7 +796,7 @@
   "date": "13 January 2022",
   "url": "https://noyb.eu/en/austrian-dsb-eu-us-data-transfers-google-analytics-illegal",
   "status": "decided",
-  "takeaway": "In the first decision on noyb's 101 complaints after Schrems II, the DSB held that an Austrian website's use of Google Analytics transferred personal data (identifiers, IP address, browser data) to the United States in breach of Chapter V GDPR, because the standard contractual clauses and Google's supplementary measures could not prevent access under FISA 702 and EO 12333. The reasoning was adopted by other authorities in 2022 and drove the move to consent-gated or EU-hosted analytics. The EU-US Data Privacy Framework adopted in July 2023 changed the transfer basis, but the analysis of what analytics tags actually send remains the practical checklist.",
+  "takeaway": "In the first decision on noyb's 101 complaints after Schrems II, the DSB held that an Austrian website's use of Google Analytics transferred personal data (identifiers, IP address, browser data) to the United States in breach of Chapter V GDPR, because the standard contractual clauses and Google's supplementary measures could not prevent access by US intelligence services under FISA 702. The reasoning was adopted by other authorities in 2022 and drove the move to consent-gated or EU-hosted analytics. The EU-US Data Privacy Framework adopted in July 2023 changed the transfer basis, but the analysis of what analytics tags actually send remains the practical checklist.",
   "topics": [
    "transfers",
    "analytics-exemption",
@@ -845,7 +845,7 @@
   "date": "30 April 2025",
   "url": "https://www.imy.se/nyheter/imy-riktar-kritik-mot-foretags-kakbanners/",
   "status": "decided",
-  "takeaway": "Investigating complaints from individuals abroad, IMY reprimanded Warner Music Sweden for not adequately informing users of the right to withdraw consent (articles 6 and 7(3) GDPR), ATG for misleading banner design that hindered informed and voluntary consent, and Aller Media for processing without a legal basis by citing legitimate interest for cookie data without a documented balancing test (article 6(1)(f)). IMY noted that the Post and Telecom Authority (PTS) alone supervises the Electronic Communications Act's cookie rules, while IMY supervises the subsequent GDPR processing. Swedish-facing sites need a documented basis for post-consent processing, not only a banner.",
+  "takeaway": "Investigating complaints channelled through the EDPB cookie banner taskforce, IMY reprimanded Warner Music Sweden (October 2024) for not adequately informing users of the right to withdraw consent (articles 6 and 7(3) GDPR), ATG (December 2024) for not making withdrawal as easy as consent and for misleading banner design that hindered informed and voluntary consent, and Aller Media (April 2025) for processing without a legal basis by citing legitimate interest for cookie data without a documented balancing test (article 6(1)(f)). IMY noted that the Post and Telecom Authority (PTS) alone supervises the Electronic Communications Act's cookie rules, while IMY supervises the subsequent GDPR processing. Swedish-facing sites need a documented basis for post-consent processing, not only a banner.",
   "topics": [
    "dark-patterns",
    "consent",
@@ -862,7 +862,7 @@
   "date": "13 September 2021",
   "url": "https://www.kyberturvallisuuskeskus.fi/fi/toimintamme/saantely-ja-valvonta/evasteet",
   "status": "in force",
-  "takeaway": "Following Helsinki Administrative Court rulings that transferred cookie consent questions to Traficom, the agency's guidance under section 205 of the Act on Electronic Communications Services (917/2014) states that consent for non-essential cookies cannot be given through browser settings, continued use or pre-ticked toggles, must be as easy to refuse as to give and as easy to withdraw, and that legitimate interest is not a basis for storing on the terminal. Only cookies necessary for a requested service (login, security, payment) are exempt. The page records updates through 23 April 2026 and enforcement decisions against major Finnish providers for misclassifying cookies as necessary.",
+  "takeaway": "Following Helsinki Administrative Court rulings of 8 April 2021 that confirmed Traficom as the competent authority for cookie consent questions, the agency's guidance under section 205 of the Act on Electronic Communications Services (917/2014) states that consent for non-essential cookies cannot be given through browser settings, continued use or pre-ticked toggles, must be as easy to refuse as to give and as easy to withdraw, and that legitimate interest is not a basis for storing on the terminal. Only cookies whose sole purpose is transmitting a communication or that are necessary for a service the user has requested (session login, shopping basket, language choice, load balancing) are exempt. The page records updates through 23 April 2026 and enforcement decisions against major Finnish providers for setting consent-requiring cookies without valid consent.",
   "topics": [
    "consent",
    "reject-button",
@@ -912,7 +912,7 @@
   "date": "1 March 2025",
   "url": "https://uodo.gov.pl/pl/file/5869",
   "status": "in force",
-  "takeaway": "The Polish supervisory authority's March 2025 bulletin states that consent to cookies must be voluntary, informed, unambiguous and preceded by an active user action, that pre-ticked boxes are invalid, that rejecting must be as easy as accepting, that cookie walls which block content unless all cookies are accepted are incompatible with freely given consent, and that clear pre-consent information on data and purposes is required; it relies on EDPB Guidelines 05/2020 and the CJEU judgments in Planet49 (C-673/17) and Orange Romania (C-61/19). Poland has no separate cookie regulator, so UODO applies the GDPR standard to banners directly.",
+  "takeaway": "The Polish supervisory authority's March 2025 bulletin states that consent to cookies must be voluntary, informed, unambiguous and preceded by an active user action, that pre-ticked boxes are invalid, that withdrawing consent must be as easy as giving it, that cookie walls which block access to a site unless cookies are accepted are incompatible with the GDPR, and that clear pre-consent information on data, recipients and purposes is required; it relies on EDPB Guidelines 05/2020, the EDPB cookie banner task force report and the CJEU judgments in Planet49 (C-673/17) and Orange Romania (C-61/19). The bulletin applies the GDPR consent standard to banners directly and notes that not every article in it states the authority's official position.",
   "topics": [
    "consent",
    "cookie-walls",
@@ -945,7 +945,7 @@
   "date": "25 February 2020",
   "url": "https://www.dpa.gr/sites/default/files/2020-12/Sistaseis_1_2020.pdf",
   "status": "in force",
-  "takeaway": "Issued after an audit of popular Greek websites found widespread non-compliance, the recommendations under Law 3471/2006 require prior consent for every tracker not technically necessary, including third-party analytics, with a two-month grace period. Accepting and refusing must take the same number of clicks from the same layer, withdrawal must be as easy as consent, access may not be restricted for refusal, buttons must share size, tone and colour, and the storage period of a refusal must equal that of an acceptance. Scrolling, continued browsing and pre-ticked boxes are invalid. The HDPA re-invoked points C4 and C7 in its 2022 action on news websites.",
+  "takeaway": "Issued after the authority found widespread non-compliance by Greek website operators, the recommendations under Law 3471/2006 require prior consent for every tracker not technically necessary, including third-party analytics such as Google Analytics, with a two-month grace period. Accepting and refusing must take the same number of clicks from the same layer, withdrawal must be as easy as consent, access may not be restricted for refusal, buttons and fonts should share size, emphasis and colour, and the storage period of a refusal must equal that of an acceptance. Scrolling, continued browsing, pre-ticked boxes and browser settings are invalid. The HDPA re-invoked points C4 and C7 in its 2022 action on news websites.",
   "topics": [
    "reject-button",
    "cookie-walls",
@@ -1012,7 +1012,7 @@
   "date": "3 June 2026",
   "url": "https://noyb.eu/en/nordic-media-giant-schibsted-switches-pay-or-okay-complaint-filed",
   "status": "proposed",
-  "takeaway": "noyb filed a complaint with Datatilsynet, together with the Norwegian Consumer Council, alleging that Schibsted's requirement that readers either accept tracking for personalised advertising or pay a fee produces consent rates near 99 percent although only a small share of users want to be tracked, so consent is not freely given under the GDPR. noyb states that the Swedish IMY has received at least 56 complaints against Schibsted since the Swedish rollout. The complaint is pending; Nordic publishers should expect the first consent-or-pay decisions under ekomloven section 3-15 and the GDPR to come from this case.",
+  "takeaway": "noyb filed a complaint with Datatilsynet, in cooperation with the Norwegian Consumer Council, alleging that Schibsted's requirement that readers of vg.no either accept tracking for personalised advertising or pay 49 NOK a month produces consent rates near 99 percent although only about 3 percent of users want to be tracked, so consent is not freely given under Articles 5(1), 6(1) and 7 GDPR. The complaint records that 64 consumers contacted the Consumer Council about the model between 28 April and 2 June 2026 and that Schibsted rolled the model out on its Swedish sites first. The complaint is pending; Nordic publishers should expect the first consent-or-pay decisions on news sites under the GDPR to come from this case.",
   "topics": [
    "consent-or-pay",
    "consent"
@@ -1096,7 +1096,7 @@
   "date": "7 October 2024",
   "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-22023-technical-scope-art-53-eprivacy-directive_en",
   "status": "in force",
-  "takeaway": "The guidelines set four criteria for Article 5(3): information, whether personal or not; terminal equipment of a user; a connection to a public communications network; and storage of, or gaining access to, that information. Paragraphs 47 to 63 apply them to URL and pixel tracking, local processing whose output is sent to a third party, tracking based on IP address alone, IoT reporting and unique identifiers, and find that each falls within Article 5(3) where the instruction to send information comes from code the entity distributed. Treat server-side tagging, link decoration, fingerprinting and pixel calls as consent events unless an exemption applies. Version 1.0 of 14 November 2023 is superseded.",
+  "takeaway": "The guidelines set three criteria for Article 5(3): information, whether personal or not; terminal equipment of a user, which requires a connection to a public communications network; and storage of, or gaining access to, that information. Paragraphs 47 to 63 apply them to URL and pixel tracking, local processing whose output is sent to a third party, tracking based on IP address alone, IoT reporting and unique identifiers, and find that each falls within Article 5(3) where the instruction to send information comes from code the entity distributed or, for IP-only tracking, where the address originates from the user's terminal equipment. Treat server-side tagging, link decoration, fingerprinting and pixel calls as consent events unless an exemption applies. Version 1.0 of 14 November 2023 is superseded.",
   "topics": [
    "pixels-wiretap",
    "strictly-necessary",
@@ -1181,7 +1181,7 @@
   "date": "17 January 2023",
   "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/other/report-work-undertaken-cookie-banner-taskforce_en",
   "status": "in force",
-  "takeaway": "The report records the positions supervisory authorities share on the noyb banner complaints: a first layer with an accept button but no reject option is non-compliant (paragraphs 6 to 8); pre-ticked boxes do not create consent (paragraphs 9 to 10); a reject option hidden as a small link or outside the banner is insufficient (paragraphs 11 to 14); unreadable button contrast is manifestly misleading (paragraph 18); legitimate interest cannot ground a cookie under Article 5(3) (paragraphs 20 to 25); operators must prove and keep updated the list of essential cookies (paragraph 27); and withdrawal must be as easy as consent (paragraph 34). It sets the common enforcement baseline.",
+  "takeaway": "The report records the positions supervisory authorities share on the noyb banner complaints: a first layer with an accept button but no reject option is non-compliant (paragraphs 6 to 8); pre-ticked boxes do not create consent (paragraphs 9 to 10); a reject option hidden as a small link or outside the banner is insufficient (paragraphs 11 to 14); unreadable button contrast is manifestly misleading (paragraph 18); legitimate interest cannot ground a cookie under Article 5(3) (paragraphs 20 to 25); operators must prove and keep updated the list of essential cookies (paragraph 28); and withdrawal must be as easy as consent (paragraph 34). It sets the common enforcement baseline.",
   "topics": [
    "reject-button",
    "dark-patterns",
@@ -1249,7 +1249,7 @@
   "date": "19 December 2023",
   "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/letters/edpb-reply-commissions-initiative-voluntary-business-pledge_en",
   "status": "historical",
-  "takeaway": "The letter gives the Board's feedback on the Commission's draft cookie pledge principles and records that a voluntary pledge cannot lower the consent standard of Article 5(3) ePrivacy and Articles 4(11) and 7 GDPR, and that principles on advertising business models and consent or pay had to be read with the Board's forthcoming opinion on that subject. It addressed the Commission, not operators. Practitioners meet it as one of the reasons the pledge is understood to have stalled and as an early statement of the positions later formalised in Opinion 08/2024. Treat it as background only; the operative EDPB positions are in Opinion 08/2024 and the Cookie Banner Taskforce report.",
+  "takeaway": "The letter gives the Board's feedback on the Commission's draft cookie pledge principles and records that a voluntary pledge cannot be used to circumvent legal obligations, and that the validity of consent under Article 5(3) ePrivacy, Article 4(11) and Article 7 GDPR cannot be assessed in the abstract: whether a paid alternative to tracking secures free consent depends on whether a less intrusive alternative, such as contextual advertising, is also offered. It addressed the Commission, not operators. Practitioners meet it as one of the reasons the pledge is understood to have stalled and as an early statement of positions later formalised in Opinion 08/2024. Treat it as background only; the operative EDPB positions are in Opinion 08/2024 and the Cookie Banner Taskforce report.",
   "topics": [
    "consent-or-pay",
    "consent",
@@ -1348,7 +1348,7 @@
   "date": "4 July 2023",
   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A62021CJ0252",
   "status": "decided",
-  "takeaway": "The Grand Chamber held that a competition authority may examine GDPR compliance when assessing abuse of dominance, that personalised advertising which finances a social network is not necessary for the contract under Article 6(1)(b) and cannot be justified as a legitimate interest under Article 6(1)(f) for the data at issue, and that a dominant position does not by itself invalidate consent but is an important factor in judging whether it was freely given, with the burden on the operator. Visiting a website revealing sensitive characteristics does not make that data manifestly public. Do not rely on contract or legitimate interest for off-site tracking data used in ad personalisation.",
+  "takeaway": "The Grand Chamber held that a competition authority may examine GDPR compliance when assessing abuse of dominance, provided it cooperates with the supervisory authorities; that collecting data from other group services and third-party sites is necessary for the contract under Article 6(1)(b) only where it is objectively indispensable to a purpose integral to the contract, and can rest on Article 6(1)(f) only where the interest was disclosed to users, the processing is strictly necessary and the balancing favours the controller; and that a dominant position does not by itself invalidate consent but is an important factor in judging whether it was freely given, with the burden on the operator. Visiting a website revealing sensitive characteristics does not make that data manifestly public. Treat contract and legitimate interest as hard to sustain for off-site tracking data used in ad personalisation.",
   "topics": [
    "consent",
    "consent-or-pay",
@@ -1431,7 +1431,7 @@
   "date": "19 November 2025",
   "url": "https://data.consilium.europa.eu/doc/document/ST-15698-2025-INIT/en/pdf",
   "status": "proposed",
-  "takeaway": "The proposal moves the rules on storing and accessing personal data on terminal equipment from Article 5(3) ePrivacy into a new GDPR Article 88a, which keeps consent as the default, exempts transmission, requested services, aggregated first-party audience measurement and security, and bars a fresh consent request for the same purpose for at least six months after a refusal. A new Article 88b obliges controllers to honour automated, machine-readable consent and refusal signals once standards exist, with a six-month grace period, and requires browser providers other than SMEs to offer the feature. As of September 2026 the file remains in committee with no Council general approach and no trilogue.",
+  "takeaway": "The proposal moves the rules on storing and accessing personal data on terminal equipment from Article 5(3) ePrivacy into a new GDPR Article 88a, which keeps consent as the default, exempts transmission, requested services, aggregated first-party audience measurement and security, and bars a fresh consent request for the same purpose for at least six months after a refusal. A new Article 88b obliges controllers to honour automated, machine-readable consent and refusal signals once standards exist, applying from 24 months after entry into force, and requires browser providers other than SMEs to offer the feature from 48 months after entry into force. As of September 2026 the file remains in committee with no Council general approach and no trilogue.",
   "topics": [
    "browser-signals",
    "analytics-exemption",
@@ -1797,7 +1797,7 @@
   "date": "31 March 2026",
   "url": "https://www.oaic.gov.au/news/media-centre/oaic-releases-exposure-draft-of-the-childrens-online-privacy-code",
   "status": "proposed",
-  "takeaway": "The draft Code, released on 31 March 2026 for consultation to 5 June 2026, would apply to APP entities providing social media, relevant electronic services or designated internet services likely to be accessed by children, other than health services. It requires collection, use and disclosure to be consistent with the child's best interests, permits direct marketing to children only with consent, in the child's best interests and from information collected directly from the child, and requires age-appropriate notices and a deletion right. The Act requires registration by 10 December 2026. Inventory trackers on child-accessible services now and plan to disable advertising and profiling cookies for those audiences.",
+  "takeaway": "The draft Code, released on 31 March 2026 for consultation to 5 June 2026, would apply to APP entities providing social media, relevant electronic services or designated internet services likely to be accessed by children, other than health services. It requires collection, use and disclosure to be consistent with the child's best interests, and limits direct marketing to children: non-sensitive information may be used only with consent and consistently with the child's best interests, while sensitive information may be used only if it was collected from the child or a person with parental responsibility, an opt-out mechanism is offered, and the use is consistent with the child's best interests. It also requires age-appropriate notices and a deletion right. The final Code must be registered by 10 December 2026. Inventory trackers on child-accessible services now and plan to disable advertising and profiling cookies for those audiences.",
   "topics": [
    "children",
    "consent"
@@ -1813,7 +1813,7 @@
   "date": "31 August 2026",
   "url": "https://consultations.ag.gov.au/rights-and-protections/privacy-reform/",
   "status": "proposed",
-  "takeaway": "The Attorney-General's Department released the tranche 2 exposure draft on 31 August 2026 with consultation closing on 18 September 2026. It would define consent as voluntary, informed, current, specific and unambiguous, extend collection to information generated or inferred, confirm that IP addresses, device identifiers and cookie IDs are personal information where reasonably linkable, make precise geolocation tracking data sensitive, add a fair and reasonable test weighing the child's best interests, require consent before trading personal information, and require an opt-out from targeted online behavioural advertising with an ad-free alternative where a service relies on marketing revenue. It is not law. Model banner changes now against the proposed standard.",
+  "takeaway": "The Attorney-General's Department released the tranche 2 exposure draft, with the Bill and an accompanying consultation paper, in 2026. It would define consent as voluntary, informed, current, specific and unambiguous, extend collection to information generated or inferred, give identifiers and location or behavioural data as examples of information that is personal where reasonably linkable, make precise geolocation tracking data sensitive, add a fair and reasonable test weighing the child's best interests, require consent before trading personal information, and retain a simple opt-out from direct marketing, including online behavioural advertising based on personal information, while keeping flexibility for ad-supported services. It is not law. Model banner changes now against the proposed standard.",
   "topics": [
    "consent",
    "consent-or-pay",
@@ -2198,7 +2198,7 @@
   "jurisdiction": "Saudi Arabia",
   "type": "legislation",
   "date": "14 September 2023",
-  "url": "https://sdaia.gov.sa/en/SDAIA/about/Pages/PDPL.aspx",
+  "url": "https://sdaia.gov.sa/en/SDAIA/about/Pages/RegulationsAndPolicies.aspx",
   "status": "in force",
   "takeaway": "The PDPL, amended in March 2023 and in force from 14 September 2023 with a compliance grace period to 14 September 2024, requires a lawful basis for processing, consent that can be withdrawn at any time, and a published privacy policy, and its Implementing Regulations allow direct marketing only with consent or to existing customers with an opt-out in every message. Fines reach SAR 5 million and double for repeat violations, with the Saudi Data and Artificial Intelligence Authority supervising, and foreign controllers processing residents' data are bound. Treat advertising cookies as consent-based and include a marketing opt-out in the banner's second layer.",
   "topics": [
@@ -2409,7 +2409,7 @@
   "date": "19 June 2025",
   "url": "https://iabeurope.eu/all-you-need-to-know-about-the-transition-to-tcf-v2-3/",
   "status": "in force",
-  "takeaway": "TCF v2.3, released on 19 June 2025, makes the disclosedVendors segment of the TC String mandatory so that a vendor can tell whether it was shown to the user or whether the user objected. CMPs had to update by 28 February 2026 without re-surfacing the interface; vendors must read and act on the segment from 1 March 2026, after which a new TC String without it is invalid. TC Strings created before the deadline remain valid until users refresh their choices. The change binds TCF-registered CMPs and vendors by contract, not law; confirm that your CMP's TC Strings carry the segment and that each vendor's ID bit is set.",
+  "takeaway": "TCF v2.3, released on 19 June 2025, makes the disclosedVendors segment of the TC String mandatory so that a vendor can tell whether it was disclosed to the user, resolving earlier ambiguity in legitimate interest signalling. CMPs had to update by 28 February 2026 without re-surfacing the interface; vendors must read and act on the segment from 1 March 2026, after which a new TC String without it is invalid. TC Strings created before the deadline remain valid until users refresh their choices. The change binds TCF-registered CMPs and vendors by contract, not law; confirm that your CMP's TC Strings carry the segment and that each vendor's ID bit is set.",
   "topics": [
    "tcf",
    "consent"
@@ -2860,7 +2860,7 @@
   "date": "5 February 2026",
   "url": "https://www.legislation.gov.uk/ukpga/2025/18/schedule/12/enacted",
   "status": "in force",
-  "takeaway": "Schedule 12 inserts Schedule A1 into PECR. Paragraph 2 permits storage or access where the user receives clear and comprehensive information and gives consent, which may be signified through browser or application settings; paragraphs 3 and 4 keep the transmission and strictly necessary exceptions; paragraph 5 covers collection solely for statistical purposes to improve the service; paragraph 6 covers adapting appearance or functionality to user preferences; paragraph 7 covers emergency geolocation. Paragraphs 5 and 6 require prior information, a simple free means of objecting, and no disclosure except to a party assisting with improvements. Rely on paragraph 5 only with processor-only analytics and a live objection control.",
+  "takeaway": "Schedule 12 inserts Schedule A1 into PECR. Paragraph 2 permits storage or access where the user receives clear and comprehensive information and gives consent, which may be signified through browser or application settings; paragraphs 3 and 4 keep the transmission and strictly necessary exceptions; paragraph 5 covers collection solely for statistical purposes to improve the service; paragraph 6 covers adapting or enhancing a website's appearance or functionality; paragraph 7 covers emergency geolocation. Paragraphs 5 and 6 both require prior information and a simple free means of objecting; paragraph 5 additionally bars disclosure except to a party assisting with the improvements. Rely on paragraph 5 only with processor-only analytics and a live objection control.",
   "topics": [
    "analytics-exemption",
    "strictly-necessary",
@@ -2909,7 +2909,7 @@
   "date": "30 September 2026",
   "url": "https://www.legislation.gov.uk/uksi/2026/1015/contents/made",
   "status": "applies from a future date",
-  "takeaway": "Made on 10 September 2026, regulation 2 commences sections 118 and 119 of the 2025 Act on 30 September 2026: the office of Information Commissioner is abolished and its functions transfer to the Information Commission, a body corporate with a board of seven non-executive members and an interim chief executive. The ICO confirms it will continue to be known as the ICO operationally and that existing regulatory functions, guidance and enforcement continue. Update references in privacy notices, DPIAs and contracts to the Information Commission after that date; no change to PECR obligations follows from the renaming.",
+  "takeaway": "Made on 10 September 2026, regulation 2 commences sections 118 and 119 of the 2025 Act (with the related section 117(4)(a) amendment) on 30 September 2026: the office of Information Commissioner is abolished and its functions transfer to the Information Commission, a body corporate with non-executive and executive members, including an interim chief executive. Update references in privacy notices, DPIAs and contracts to the Information Commission after that date; no change to PECR obligations follows from the renaming.",
   "topics": [
    "enforcement",
    "other"
@@ -3542,7 +3542,7 @@
   "date": "3 March 2026",
   "url": "https://privacy.ca.gov/2026/03/youth-sports-media-company-to-pay-1-1-million-fine-change-practices-over-privacy-violations/",
   "status": "decided",
-  "takeaway": "The agency found that the ticketing and streaming platform forced users to accept tracking before they could buy tickets or use the site, directed consumers to Network Advertising Initiative and Digital Advertising Alliance opt-out pages instead of providing its own opt-out, failed to recognise opt-out preference signals, gave insufficient privacy notice and sold or shared data of consumers aged 13 to 15 without opt-in consent. PlayOn must pay $1.10 million, conduct risk assessments and scan its tracking technologies. It binds PlayOn but rules out cookie walls and industry opt-out pages as CCPA compliance. Never condition access on accepting tracking, and operate the opt-out yourself.",
+  "takeaway": "The agency found that the ticketing and streaming platform forced users to accept tracking before they could buy tickets or use the site, directed consumers to Network Advertising Initiative and Digital Advertising Alliance opt-out pages instead of providing its own opt-out, failed to recognise opt-out preference signals and gave insufficient privacy notice. PlayOn must pay $1.10 million, conduct risk assessments and scan its tracking technologies. It binds PlayOn but rules out cookie walls and industry opt-out pages as CCPA compliance. Never condition access on accepting tracking, and operate the opt-out yourself.",
   "topics": [
    "cookie-walls",
    "opt-out-signals",
@@ -3608,7 +3608,7 @@
   "date": "31 May 2022",
   "url": "https://cdn.ca9.uscourts.gov/datastore/memoranda/2022/05/31/21-16351.pdf",
   "status": "decided",
-  "takeaway": "The Ninth Circuit held that CIPA section 631(a) requires the prior consent of all parties to a communication, so consent obtained after a session replay vendor has already begun recording does not defeat the claim, and reversed dismissal of a complaint alleging that ActiveProspect's TrustedForm recorded a website visitor's interactions before he accepted the site's terms. The memorandum is unpublished but is applied throughout the district courts. It applies to any operator whose recording, chat or form-capture vendor loads before consent. Delay session replay and similar scripts until an affirmative consent event, and keep a record of the consent timestamp.",
+  "takeaway": "The Ninth Circuit held that CIPA section 631(a) requires the prior consent of all parties to a communication, so consent obtained after a session replay vendor has already begun recording does not defeat the claim, and reversed dismissal of a complaint alleging that ActiveProspect's TrustedForm recorded a website visitor's interactions before he agreed to the site's privacy policy. The memorandum is unpublished and not precedential. It applies to any operator whose recording, chat or form-capture vendor loads before consent. Delay session replay and similar scripts until an affirmative consent event, and keep a record of the consent timestamp.",
   "topics": [
    "pixels-wiretap",
    "consent"
@@ -3624,7 +3624,7 @@
   "date": "9 July 2025",
   "url": "https://cdn.ca9.uscourts.gov/datastore/memoranda/2025/07/09/24-4797.pdf",
   "status": "decided",
-  "takeaway": "The Ninth Circuit affirmed summary judgment against a plaintiff who alleged that Salesforce's chat software on a retailer's website violated CIPA section 631(a), finding no evidence from which a jury could conclude that Salesforce made an unauthorised connection with a telephone wire or read messages in transit. A concurrence went further and reasoned that the section's reference to telegraph or telephone wires does not reach internet communications. The unpublished memorandum applies to operators deploying third-party chat and similar vendors. Keep records showing that vendors store and process data only for the operator and do not use it for their own purposes; that evidence carried the case.",
+  "takeaway": "The Ninth Circuit affirmed summary judgment against a plaintiff who alleged that Salesforce's chat software on a retailer's website violated CIPA section 631(a), finding no evidence from which a jury could conclude that Salesforce made an unauthorised connection with a telephone wire or read messages in transit. A concurrence went further and reasoned that the section's reference to telegraph or telephone wires does not reach internet communications. The unpublished memorandum applies to operators deploying third-party chat and similar vendors. Keep evidence of what the vendor's software actually accesses or reads, since the plaintiff's inability to show that Salesforce read her messages, rather than merely being capable of doing so, was fatal to the claim.",
   "topics": [
    "pixels-wiretap"
   ],
@@ -3639,7 +3639,7 @@
   "date": "26 August 2025",
   "url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2025/08/26/24-14.pdf",
   "status": "decided",
-  "takeaway": "In a published opinion the Ninth Circuit affirmed dismissal for lack of Article III standing of wiretapping and intrusion claims based on Microsoft's Clarity session replay tool, which captured mouse movements, clicks, keystrokes, URLs and product browsing on a retailer's website. The court held that recording ordinary website interactions does not resemble a harm traditionally recognised at common law and is not highly offensive, comparing it to a shop assistant watching which aisles customers visit. It binds federal courts in the Ninth Circuit and is now routinely applied to dismiss CIPA pen register claims. Keep sensitive fields masked and avoid capturing health, financial or identity data.",
+  "takeaway": "In a published opinion the Ninth Circuit affirmed dismissal for lack of Article III standing of wiretapping and intrusion claims based on Microsoft's Clarity session replay tool, which captured mouse movements, clicks, keystrokes, URLs and product browsing on a retailer's website. The court held that recording ordinary website interactions does not resemble a harm traditionally recognised at common law and is not highly offensive, comparing it to a shop assistant watching which aisles customers visit. The underlying claims were brought under Pennsylvania's wiretapping statute, not California's CIPA, but the standing reasoning binds federal courts across the Ninth Circuit and is now cited to dismiss session-replay claims generally. Keep sensitive fields masked and avoid capturing health, financial or identity data.",
   "topics": [
    "pixels-wiretap"
   ],
@@ -3717,7 +3717,7 @@
   "date": "1 July 2023",
   "url": "https://portal.ct.gov/ag/sections/privacy/the-connecticut-data-privacy-act",
   "status": "in force",
-  "takeaway": "Effective 1 July 2023, the Act grants rights to opt out of targeted advertising, sale of personal data and profiling, and from 1 January 2025 every controller subject to it must honour opt-out preference signals sent by consumers. Violations are enforceable by the Attorney General under the Connecticut Unfair Trade Practices Act with civil penalties of up to $5,000 per violation, alongside injunctive relief, restitution and disgorgement; the Attorney General publishes annual enforcement reports. It binds controllers meeting the consumer-volume thresholds. Map the banner's opt-out to both targeted advertising and sale, and honour Global Privacy Control without a confirmation step. Amended by Public Act 25-113 from 1 July 2026.",
+  "takeaway": "Effective 1 July 2023, the Act grants rights to opt out of targeted advertising, sale of personal data and profiling, and from 1 January 2025 every controller subject to it must honour opt-out preference signals sent by consumers. Violations are enforceable by the Attorney General under the Connecticut Unfair Trade Practices Act with civil penalties of up to $5,000 per wilful violation, alongside injunctive relief, restitution and disgorgement; the Attorney General publishes annual enforcement reports. It binds controllers meeting the consumer-volume thresholds. Map the banner's opt-out to both targeted advertising and sale, and honour Global Privacy Control without a confirmation step. Amended by Public Act 25-113 from 1 July 2026.",
   "topics": [
    "opt-out-signals",
    "sale-sharing"
@@ -3878,7 +3878,7 @@
   "date": "1 October 2025",
   "url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0541?ys=2024RS",
   "status": "in force",
-  "takeaway": "Approved on 9 May 2024, effective 1 October 2025 and applicable to processing after 1 April 2026, the Act gives consumers rights to opt out of targeted advertising, sale of personal data and profiling and requires controllers to honour a universal opt-out mechanism for preference signals. It prohibits the sale of sensitive data outright, limits collection to what is reasonably necessary, and bars targeted advertising to consumers the controller knows or should know are under 18. It binds controllers processing data of 35,000 or more consumers, or 10,000 with 20 percent of revenue from sales. Suppress all ad tech for known minors and honour Global Privacy Control for Maryland visitors.",
+  "takeaway": "Approved on 9 May 2024 and effective 1 October 2025, the Act gives consumers rights to opt out of targeted advertising, sale of personal data and profiling and requires controllers to honour an opt-out preference signal for these choices. It prohibits the sale of sensitive data outright, limits collection to what is reasonably necessary, and bars targeted advertising and sale of personal data to consumers the controller knows or should know are aged 13 to 17. A narrower provision on permitted-processing exceptions applies only to activity after 1 April 2026. It binds controllers processing data of 35,000 or more consumers, or 10,000 with 20 percent of revenue from sales. Suppress ad tech for known teenage users and honour Global Privacy Control for Maryland visitors.",
   "topics": [
    "opt-out-signals",
    "children",
@@ -4230,7 +4230,7 @@
   "date": "26 January 2026",
   "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/25-459.html",
   "status": "under appeal",
-  "takeaway": "The Supreme Court granted certiorari on 26 January 2026 and set argument for 14 October 2026 on whether a person who subscribes to a non-audiovisual offering such as an email newsletter is a consumer under the Video Privacy Protection Act. The Sixth Circuit in Salazar v. Paramount and the D.C. Circuit in Pileggi require the goods or services to be audiovisual; the Second Circuit in Salazar v. NBA and the Seventh Circuit in Gardner v. Me-TV read consumer broadly. The decision will fix the class of plaintiffs able to sue over pixel disclosures of video viewing. Until judgment, do not send video titles with user identifiers to advertising platforms.",
+  "takeaway": "The Supreme Court granted certiorari on 26 January 2026 on whether a person who subscribes to a non-audiovisual offering such as an email newsletter is a consumer under the Video Privacy Protection Act. The Sixth Circuit in Salazar v. Paramount and the D.C. Circuit in Pileggi require the goods or services to be audiovisual; the Second Circuit in Salazar v. NBA and the Seventh Circuit in Gardner v. Me-TV read consumer broadly. The decision will fix the class of plaintiffs able to sue over pixel disclosures of video viewing. Until judgment, do not send video titles with user identifiers to advertising platforms.",
   "topics": [
    "pixels-wiretap"
   ],
