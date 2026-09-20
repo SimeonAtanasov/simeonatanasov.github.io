@@ -449,9 +449,11 @@
 			secSel.appendChild(o);
 		});
 
-		var ANY_NOTE = "Leave this as it is if you do not know which Article is in play. Once "
-			+ "organisations of a similar size are compared with each other, the violation type "
-			+ "barely moves the number.";
+		var ANY_NOTE = "Leave this as it is if you do not know which Article is in play, or if "
+			+ "more than one applies, which is usual. It costs very little: once organisations of a "
+			+ "similar size are compared with each other, the violation type barely moves the number, "
+			+ "while size moves it by a factor of several hundred. The one thing it does change is "
+			+ "which Art. 83 ceiling applies, and with no choice made the tool assumes the higher one.";
 		document.getElementById("fc-typenote").textContent = ANY_NOTE;
 
 		typeSel.addEventListener("change", function () {
