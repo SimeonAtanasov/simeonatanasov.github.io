@@ -11,6 +11,7 @@ Usage:
   python3 rail_patch.py navmod <digest_nav.py>            the shared module
   python3 rail_patch.py aiabuild <build_aia_page.py>      the AI Act builder's inline copy
   python3 rail_patch.py page <html> <css> <prefix>        a shipped page and its stylesheet
+  python3 rail_patch.py slim <file> <prefix>              upgrade v1 rail CSS to v2 in place
 
 Order: patch the module and the builder first, rebuild the three digests from their
 builders, then patch the two advice pages, which are not regenerated from a builder.
@@ -52,7 +53,7 @@ CSS_OLD = ('.ai-jump { display: flex; flex-wrap: wrap; gap: 0.4em 0.6em; align-i
            'border-radius: 1em; color: rgba(255,255,255,0.85); border-bottom: solid 1px rgba(255,255,255,0.15); }\n'
            '.ai-jump a:hover { border-color: #7fb2e5; color: #fff; background: rgba(127,178,229,0.1); }')
 
-CSS_NEW = """.ai-rail { position: fixed; right: 0.85em; top: 50%; transform: translateY(-50%); z-index: 1150; display: flex; flex-direction: column; gap: 0.1em; padding: 0.55em 0.5em; border-radius: 1.5em; border: solid 1px rgba(255,255,255,0.12); background: rgba(13,20,30,0.78); box-shadow: 0 0.3em 1em rgba(0,0,0,0.35); opacity: 0.5; transition: opacity 0.18s ease; }
+CSS_V1 = """.ai-rail { position: fixed; right: 0.85em; top: 50%; transform: translateY(-50%); z-index: 1150; display: flex; flex-direction: column; gap: 0.1em; padding: 0.55em 0.5em; border-radius: 1.5em; border: solid 1px rgba(255,255,255,0.12); background: rgba(13,20,30,0.78); box-shadow: 0 0.3em 1em rgba(0,0,0,0.35); opacity: 0.5; transition: opacity 0.18s ease; }
 .ai-rail:hover, .ai-rail:focus-within { opacity: 1; }
 .ai-rail[hidden] { display: none; }
 .ai-rail a { display: flex; align-items: center; gap: 0.7em; height: 1.45em; padding: 0 0.3em; border: 0; border-radius: 0.8em; color: rgba(255,255,255,0.8); text-decoration: none; white-space: nowrap; }
@@ -63,6 +64,20 @@ CSS_NEW = """.ai-rail { position: fixed; right: 0.85em; top: 50%; transform: tra
 .ai-rail a:hover i, .ai-rail a:focus-visible i { background: #7fb2e5; }
 .ai-rail a.is-on { color: #fff; }
 .ai-rail a.is-on i { background: #7fb2e5; width: 0.62em; height: 0.62em; }
+@media (max-width: 980px) { .ai-rail { display: none; } }"""
+
+CSS_V2 = """.ai-rail { position: fixed; right: 0.55em; top: 50%; transform: translateY(-50%); z-index: 1150; display: flex; flex-direction: column; gap: 0; padding: 0.2em 0.25em; border-radius: 0.9em; border: solid 1px transparent; background: transparent; transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease; }
+.ai-rail:hover, .ai-rail:focus-within { border-color: rgba(255,255,255,0.12); background: rgba(13,20,30,0.82); box-shadow: 0 0.3em 1em rgba(0,0,0,0.35); }
+.ai-rail[hidden] { display: none; }
+.ai-rail a { display: flex; align-items: center; gap: 0.6em; height: 1.15em; padding: 0 0.2em; border: 0; border-radius: 0.6em; color: rgba(255,255,255,0.75); text-decoration: none; white-space: nowrap; }
+.ai-rail a i { flex: 0 0 auto; width: 0.34em; height: 0.34em; border-radius: 50%; background: rgba(255,255,255,0.35); transition: background 0.15s ease, transform 0.15s ease; }
+.ai-rail:hover a i, .ai-rail:focus-within a i { background: rgba(255,255,255,0.45); }
+.ai-rail a span { max-width: 0; overflow: hidden; opacity: 0; font-size: 0.78em; letter-spacing: 0.01em; transition: max-width 0.24s ease, opacity 0.18s ease; }
+.ai-rail:hover a span, .ai-rail:focus-within a span { max-width: 26em; opacity: 1; }
+.ai-rail a:hover, .ai-rail a:focus-visible { color: #fff; background: rgba(127,178,229,0.12); }
+.ai-rail a:hover i, .ai-rail a:focus-visible i { background: #7fb2e5; }
+.ai-rail a.is-on { color: #fff; }
+.ai-rail a.is-on i { background: #7fb2e5; transform: scale(1.5); }
 @media (max-width: 980px) { .ai-rail { display: none; } }"""
 
 
@@ -107,10 +122,21 @@ def sub1(text, old, new, what):
     return text.replace(old, new)
 
 
+def slim(path, P):
+    """Version 2 of the rail CSS, 20 September 2026: no pill around the dots at rest.
+    Version 1 wrapped them in a bordered panel with a shadow, which read as bulky with
+    only two or three dots. Now the chrome appears on hover with the labels, and at rest
+    the rail is just the dots: 31px wide against 49px, and a third shorter."""
+    t = open(path, encoding="utf-8", newline="").read()
+    sw = lambda s: s.replace(".ai-", ".%s-" % P)
+    t = sub1(t, sw(CSS_V1), sw(CSS_V2), "%s rail CSS v1" % path)
+    write(path, t)
+
+
 def navmod(path):
     t = open(path, encoding="utf-8", newline="").read()
     t = sub1(t, JUMP_OLD, JUMP_NEW, "jump_html")
-    t = sub1(t, CSS_OLD, CSS_NEW, "jump CSS")
+    t = sub1(t, CSS_OLD, CSS_V2, "jump CSS")
     t = sub1(t, JS_ANCHOR, JS_NEW + JS_ANCHOR, "scrollspy anchor")
     write(path, t)
 
@@ -128,7 +154,7 @@ def aiabuild(path):
            '                   % (h, h.lstrip("#"), t) for h, t in items)\n'
            '    return \'<nav class="ai-rail" id="ai-rail" aria-label="On this page">%s</nav>\' % dots\n')
     t = sub1(t, old, new, "AI Act inline jump bar")
-    t = sub1(t, CSS_OLD, CSS_NEW, "AI Act inline jump CSS")
+    t = sub1(t, CSS_OLD, CSS_V2, "AI Act inline jump CSS")
     t = sub1(t, AIA_JS_ANCHOR, JS_NEW + AIA_JS_ANCHOR, "AI Act inline scrollspy anchor")
     write(path, t)
 
@@ -146,7 +172,7 @@ def page(html_path, css_path, P):
 
     c = open(css_path, encoding="utf-8", newline="").read()
     t = lambda s: s.replace(".ai-", ".%s-" % P)
-    c = sub1(c, t(CSS_OLD), t(CSS_NEW), "%s jump CSS" % css_path)
+    c = sub1(c, t(CSS_OLD), t(CSS_V2), "%s jump CSS" % css_path)
     write(css_path, c)
     print("   %d sections: %s" % (len(items), ", ".join(lbl for _, lbl in items)))
 
@@ -166,5 +192,7 @@ if __name__ == "__main__":
         aiabuild(sys.argv[2])
     elif mode == "page":
         page(sys.argv[2], sys.argv[3], sys.argv[4])
+    elif mode == "slim":
+        slim(sys.argv[2], sys.argv[3])
     else:
         raise SystemExit(__doc__)

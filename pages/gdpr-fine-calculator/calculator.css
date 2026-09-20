@@ -387,3 +387,29 @@
 
     .fc-chart-wrap { padding: 12px; }
 }
+
+/* -------------------------------------------------- article chips and tags --- */
+
+.fc-arts { display: inline-block; margin-top: 4px; }
+
+.fc-art {
+    display: inline-block;
+    padding: 1px 6px;
+    margin: 2px 3px 0 0;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.09);
+    font-size: 0.78em;
+    white-space: nowrap;
+    cursor: help;
+}
+
+.fc-tag {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background: rgba(246, 178, 107, 0.22);
+    color: #f6b26b;
+    font-size: 0.75em;
+    white-space: nowrap;
+    cursor: help;
+}

@@ -26,6 +26,7 @@
 			type: r[F.type], sector: r[F.sector], articles: r[F.articles],
 			tier: r[F.tier], conf: r[F.conf], fin: r[F.fin],
 			tyear: r[F.tyear], tbasis: r[F.tbasis], tsource: r[F.tsource],
+			ep: r[F.ep],
 			index: r[F.fine] / r[F.turnover],
 			key: normKey(r[F.company])
 		};
@@ -110,10 +111,11 @@
 	];
 	var MIN_COMPANIES = 8;
 
-	function selectPeers(turnover, type, sector, sourcedOnly, excludeFin) {
+	function selectPeers(turnover, type, sector, sourcedOnly, excludeFin, excludeEp) {
 		var pool = ROWS.filter(function (r) {
 			if (sourcedOnly && r.conf < 1) return false;
 			if (excludeFin && r.fin) return false;
+			if (excludeEp && r.ep) return false;
 			return true;
 		});
 
@@ -229,6 +231,15 @@
 		el.innerHTML = s;
 	}
 
+	/* Article numbers with the Regulation's own headings on hover, from the
+	   lookup table the Power BI model uses. */
+	function artChips(list) {
+		return list.map(function (n) {
+			var name = (typeof ARTICLE_NAMES !== "undefined" && ARTICLE_NAMES[n]) || "";
+			return '<span class="fc-art"' + (name ? ' title="Art. ' + esc(n) + ": " + esc(name) + '"' : "") + ">Art. " + esc(n) + "</span>";
+		}).join(" ");
+	}
+
 	function esc(t) {
 		return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 	}
@@ -249,8 +260,9 @@
 		var sector = document.getElementById("fc-sector").value || null;
 		var sourcedOnly = document.getElementById("fc-sourced").checked;
 		var excludeFin = document.getElementById("fc-nofin").checked;
+		var excludeEp = document.getElementById("fc-noep").checked;
 
-		var peers = selectPeers(turnover, type, sector, sourcedOnly, excludeFin);
+		var peers = selectPeers(turnover, type, sector, sourcedOnly, excludeFin, excludeEp);
 		var idx = peers.companies.map(function (c) { return c.index; }).sort(function (a, b) { return a - b; });
 		var p25 = quantile(idx, 0.25), p50 = quantile(idx, 0.5), p90 = quantile(idx, 0.90);
 		var tierInfo = TIER_BY_TYPE[type] || TIER_BY_TYPE["principles"];
@@ -311,7 +323,7 @@
 			+ '<span><i class="fc-swatch" style="background:#5c6684"></i>All other cases in the data</span>'
 			+ "</div><div id=\"fc-chart-slot\"></div></div>";
 
-		h += sectorView(turnover, sourcedOnly, excludeFin, sector);
+		h += sectorView(turnover, sourcedOnly, excludeFin, excludeEp, sector);
 
 		h += "<h3 style=\"margin-top:2em\">The cases behind the number</h3>";
 		h += '<p class="fc-note">Every peer used in the calculation, largest index first. The index is the fine divided by turnover. '
@@ -321,8 +333,9 @@
 			+ "</tr></thead><tbody>";
 		peers.rows.slice().sort(function (a, b) { return b.index - a.index; }).forEach(function (r) {
 			h += "<tr>"
-				+ "<td>" + esc(r.company) + "</td>"
-				+ "<td>" + esc(r.country) + "</td>"
+				+ "<td>" + esc(r.company) + (r.ep ? ' <span class="fc-tag" title="National ePrivacy or cookie rules, not GDPR Art. 83">ePrivacy</span>' : "")
+				+ (r.articles && r.articles.length ? '<br><span class="fc-arts">' + artChips(r.articles) + "</span>" : "") + "</td>"
+				+ "<td>" + esc(r.country) + ""
 				+ '<td class="fc-num">' + (r.year || "") + "</td>"
 				+ '<td class="fc-num">' + eurFull(r.fine) + "</td>"
 				+ '<td class="fc-num">' + eur(r.turnover) + "</td>"
@@ -344,10 +357,11 @@
 	/* Shows whether the sector filter is worth using at this size. One series,
 	   so no legend: the heading names it. Bars are direct labelled rather than
 	   carrying an axis, because the interesting comparison is between rows. */
-	function sectorView(turnover, sourcedOnly, excludeFin, selected) {
+	function sectorView(turnover, sourcedOnly, excludeFin, excludeEp, selected) {
 		var pool = ROWS.filter(function (r) {
 			if (sourcedOnly && r.conf < 1) return false;
 			if (excludeFin && r.fin) return false;
+			if (excludeEp && r.ep) return false;
 			if (!r.sector || r.sector === "Not assigned") return false;
 			return r.turnover >= turnover * 0.1 && r.turnover <= turnover * 10;
 		});
@@ -436,7 +450,7 @@
 			render();
 		});
 
-		["fc-turnover", "fc-sector", "fc-sourced", "fc-nofin"].forEach(function (id) {
+		["fc-turnover", "fc-sector", "fc-sourced", "fc-nofin", "fc-noep"].forEach(function (id) {
 			var el = document.getElementById(id);
 			el.addEventListener("input", render);
 			el.addEventListener("change", render);
@@ -447,6 +461,7 @@
 			document.getElementById("fc-sector").value = "";
 			document.getElementById("fc-sourced").checked = false;
 			document.getElementById("fc-nofin").checked = false;
+			document.getElementById("fc-noep").checked = false;
 			typeSel.value = "security";
 			render();
 		});
