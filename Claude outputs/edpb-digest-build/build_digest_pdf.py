@@ -26,7 +26,7 @@ EXTRA_CSS = """
 .entry.oneliner p.take { font-size: 8.8pt; color: var(--soft); }
 .entry.oneliner h4 { font-size: 9pt; font-weight: 400; }
 .groupnote { color: var(--soft); font-size: 9pt; margin-bottom: 3mm; }
-.tag { font-family: "Carlito", sans-serif; font-size: 7.5pt; text-transform: uppercase; letter-spacing: .06em; border: .5pt solid var(--rule); padding: 0 1.2mm; margin-left: 1.5mm; }
+.tag { font-family: "Carlito", sans-serif; font-size: 7.5pt; text-transform: uppercase; letter-spacing: .06em; border: .5pt solid var(--rule); padding: 0 1.2mm; margin-left: 1.5mm; white-space: nowrap; }
 .tag.w { border-color: var(--ink); }
 .legend { font-size: 9pt; }
 .front h1 { string-set: parttitle "EDPB Digest", sectitle content(text); }

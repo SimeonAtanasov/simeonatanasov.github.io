@@ -20,7 +20,7 @@ EXTRA_CSS = """
 .entry .meta .ref { color: var(--ink); font-weight: 700; }
 .entry p.take { margin: 0; font-size: 9.3pt; }
 .groupnote { color: var(--soft); font-size: 9pt; margin-bottom: 3mm; }
-.tag { font-family: "Carlito", sans-serif; font-size: 7.5pt; text-transform: uppercase; letter-spacing: .06em; border: .5pt solid var(--rule); padding: 0 1.2mm; margin-left: 1.5mm; }
+.tag { font-family: "Carlito", sans-serif; font-size: 7.5pt; text-transform: uppercase; letter-spacing: .06em; border: .5pt solid var(--rule); padding: 0 1.2mm; margin-left: 1.5mm; white-space: nowrap; }
 .tag.j { border-color: var(--ink); font-weight: 700; }
 .legend { font-size: 9pt; }
 .front h1 { string-set: parttitle "Cookie Compliance Digest", sectitle content(text); }

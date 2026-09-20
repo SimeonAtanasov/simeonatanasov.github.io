@@ -88,7 +88,7 @@ def art_html(a):
 
 def doc_html(c):
     chips = ['<span class="ai-chip ai-chip-type">%s</span>' % esc(c["type"].replace("-", " "))]
-    if c["status"] not in ("final", "in force"):
+    if c["status"] != "final":
         chips.append('<span class="ai-chip ai-chip-status">%s</span>' % esc(c["status"]))
     for ar in c.get("articles") or []:
         chips.append('<span class="ai-chip ai-chip-art">%s</span>' % esc(ar))
@@ -231,7 +231,9 @@ def build_summary():
 def build_jump():
     items = [("#ai-summary", "High-level summary"), ("#ai-checker", "Obligations checker"), ("#ai-filters", "Filters and search"),
              ("#ai-overview", "Structure of the Act"), ("#ai-part-1", "Part 1: the Regulation"), ("#ai-part-2", "Part 2: guidance and implementation"), ("#ai-sources-note", "Sources")]
-    return '<nav class="ai-jump" aria-label="On this page"><span class="ai-jump-label">On this page</span>%s</nav>' % "".join('<a href="%s">%s</a>' % (h, t) for h, t in items)
+    dots = "".join('<a href="%s" data-target="%s"><i aria-hidden="true"></i><span>%s</span></a>'
+                   % (h, h.lstrip("#"), t) for h, t in items)
+    return '<nav class="ai-rail" id="ai-rail" aria-label="On this page">%s</nav>' % dots
 
 
 def build_checker():
@@ -549,6 +551,35 @@ JS = r"""
 		window.requestAnimationFrame(function () { stepTick = false; stepSync(); });
 	}, { passive: true });
 
+	/* on this page: a column of dots at the right edge, labels on hover. The dot that
+	   lights up is the last section whose top has passed the reading line, the same rule
+	   the side contents highlights by. Queried by its aria-label rather than by id,
+	   because the AI Act builder's own copy of this script has no $ helper. */
+	var rail = document.querySelector('nav[aria-label="On this page"]');
+	if (rail) {
+		var railLinks = Array.prototype.slice.call(rail.querySelectorAll('a[data-target]')), railOn = null, railTick = false;
+		var railSync = function () {
+			var line = window.innerHeight * 0.3, best = null;
+			railLinks.forEach(function (a) {
+				var t = document.getElementById(a.getAttribute('data-target'));
+				if (!t || t.hidden) return;
+				if (t.getBoundingClientRect().top <= line + 8) best = a;
+			});
+			if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) best = railLinks[railLinks.length - 1];
+			if (best === railOn) return;
+			if (railOn) railOn.classList.remove('is-on');
+			railOn = best;
+			if (railOn) railOn.classList.add('is-on');
+		};
+		window.addEventListener('scroll', function () {
+			if (railTick) return;
+			railTick = true;
+			window.requestAnimationFrame(function () { railTick = false; railSync(); });
+		}, { passive: true });
+		window.addEventListener('resize', railSync);
+		railSync();
+	}
+
 	/* ------------------------------------------------------------ scrollspy */
 	var links = {};
 	Array.prototype.forEach.call(toc.querySelectorAll('.ai-toc-link[data-target]'), function (l) { var k = l.getAttribute('data-target'); (links[k] = links[k] || []).push(l); });
@@ -597,10 +628,18 @@ CSS = """/* AI Act digest: scoped styles, same pattern as the EDPB and cookie di
 .ai-head { max-width: none; }
 .ai-main { min-width: 0; }
 .ai-intro p { margin-bottom: 1em; }
-.ai-jump { display: flex; flex-wrap: wrap; gap: 0.4em 0.6em; align-items: center; margin: 0 0 1.5em 0; padding: 0.75em 1em; border: solid 1px rgba(255,255,255,0.1); border-radius: 0.5em; background: rgba(255,255,255,0.02); font-size: 0.85em; }
-.ai-jump-label { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85em; color: rgba(255,255,255,0.5); margin-right: 0.4em; }
-.ai-jump a { display: inline-block; padding: 0.25em 0.8em; border: solid 1px rgba(255,255,255,0.15); border-radius: 1em; color: rgba(255,255,255,0.85); border-bottom: solid 1px rgba(255,255,255,0.15); }
-.ai-jump a:hover { border-color: #7fb2e5; color: #fff; background: rgba(127,178,229,0.1); }
+.ai-rail { position: fixed; right: 0.85em; top: 50%; transform: translateY(-50%); z-index: 1150; display: flex; flex-direction: column; gap: 0.1em; padding: 0.55em 0.5em; border-radius: 1.5em; border: solid 1px rgba(255,255,255,0.12); background: rgba(13,20,30,0.78); box-shadow: 0 0.3em 1em rgba(0,0,0,0.35); opacity: 0.5; transition: opacity 0.18s ease; }
+.ai-rail:hover, .ai-rail:focus-within { opacity: 1; }
+.ai-rail[hidden] { display: none; }
+.ai-rail a { display: flex; align-items: center; gap: 0.7em; height: 1.45em; padding: 0 0.3em; border: 0; border-radius: 0.8em; color: rgba(255,255,255,0.8); text-decoration: none; white-space: nowrap; }
+.ai-rail a i { flex: 0 0 auto; width: 0.42em; height: 0.42em; border-radius: 50%; background: rgba(255,255,255,0.4); transition: background 0.15s ease, width 0.15s ease, height 0.15s ease; }
+.ai-rail a span { max-width: 0; overflow: hidden; opacity: 0; font-size: 0.8em; letter-spacing: 0.01em; transition: max-width 0.24s ease, opacity 0.18s ease; }
+.ai-rail:hover a span, .ai-rail:focus-within a span { max-width: 26em; opacity: 1; }
+.ai-rail a:hover, .ai-rail a:focus-visible { color: #fff; background: rgba(127,178,229,0.12); }
+.ai-rail a:hover i, .ai-rail a:focus-visible i { background: #7fb2e5; }
+.ai-rail a.is-on { color: #fff; }
+.ai-rail a.is-on i { background: #7fb2e5; width: 0.62em; height: 0.62em; }
+@media (max-width: 980px) { .ai-rail { display: none; } }
 .ai-sum-hint { font-weight: normal; font-size: 0.75em; color: rgba(255,255,255,0.5); margin-left: auto; padding-right: 1.5em; }
 .ai-sources-note { margin: 2em 0 0 0; font-size: 0.85em; color: rgba(255,255,255,0.5); }
 .ai-top { position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050; height: auto; line-height: 1.4; padding: 0.6em 1em; font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 2em; background: rgba(66,103,166,0.95); border: 0 !important; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); white-space: nowrap; }

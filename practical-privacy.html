@@ -27,7 +27,7 @@
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li class="assessment-menu"><a href="practical-privacy.html" class="active">Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html" class="active">Practical Privacy</a></li><li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html">GDPR Readiness</a></li><li><a href="edpb-digest.html">EDPB Digest</a></li><li><a href="power-bi.html">GDPR Fines Dashboard</a></li><li><a href="risk-matrix-original.html">Risk Matrix</a></li></ul></li>
+						<li class="assessment-menu"><a href="practical-privacy.html" class="active">Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html" class="active">Practical Privacy</a></li><li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html">GDPR Readiness</a></li><li><a href="edpb-digest.html">EDPB Digest</a></li><li><a href="power-bi.html">GDPR Fines Dashboard</a></li><li><a href="gdpr-fine-calculator.html">GDPR Fine Calculator</a></li><li><a href="risk-matrix-original.html">Risk Matrix</a></li></ul></li>
 						<li class="assessment-menu"><a href="practical-ai-act-advice.html">AI</a><ul class="assessment-submenu"><li><a href="practical-ai-act-advice.html">AI Act Advice</a></li><li><a href="ai-act-digest.html">AI Act Digest</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li></ul></li>
 						<li class="assessment-menu"><a href="cookie-digest.html">Cookie Compliance</a><ul class="assessment-submenu"><li><a href="cookie-digest.html">Cookie Digest</a></li><li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li></ul></li>
 					</ul>
@@ -43,7 +43,7 @@
 							<h1 class="major">Practical Privacy</h1>
 						<section id="practical-privacy">
 							<div class="pp-head">
-<nav class="pp-jump" aria-label="On this page"><span class="pp-jump-label">On this page</span><a href="#pp-filters">Search</a><a href="#pp-index">All situations</a></nav>
+<nav class="pp-rail" id="pp-rail" aria-label="On this page"><a href="#pp-filters" data-target="pp-filters"><i aria-hidden="true"></i><span>Search</span></a><a href="#pp-index" data-target="pp-index"><i aria-hidden="true"></i><span>All situations</span></a></nav>
 <div class="pp-intro">
 <p>Privacy programs live or die on the small, everyday decisions people make - whether to record a meeting, how long to keep a spreadsheet, who gets access to a shared mailbox. This reference distills practitioner-tested guidance on the situations that come up again and again inside a modern organization: surveillance and monitoring, offboarding, meetings, remote work, surveys, talent data, individual rights requests, sensitive data, consent, secondary use, external and regulatory requests, digital products, breach response, records management, and marketing.</p>
 <p>None of this is legal advice, and none of it describes any single company's internal program - it is a genericized synthesis of practices that recur across privacy programs, intended as a practical starting point you can adapt to your own organization's tools, policies and legal environment. Wherever it says "your organization," substitute your own employer's approved systems, escalation paths and legal counsel.</p>
@@ -930,6 +930,35 @@ A marketing team plans a standalone campaign site that collects emails and compe
 		stepTick = true;
 		window.requestAnimationFrame(function () { stepTick = false; stepSync(); });
 	}, { passive: true });
+
+	/* on this page: a column of dots at the right edge, labels on hover. The dot that
+	   lights up is the last section whose top has passed the reading line, the same rule
+	   the side contents highlights by. Queried by its aria-label rather than by id,
+	   because the AI Act builder's own copy of this script has no $ helper. */
+	var rail = document.querySelector('nav[aria-label="On this page"]');
+	if (rail) {
+		var railLinks = Array.prototype.slice.call(rail.querySelectorAll('a[data-target]')), railOn = null, railTick = false;
+		var railSync = function () {
+			var line = window.innerHeight * 0.3, best = null;
+			railLinks.forEach(function (a) {
+				var t = document.getElementById(a.getAttribute('data-target'));
+				if (!t || t.hidden) return;
+				if (t.getBoundingClientRect().top <= line + 8) best = a;
+			});
+			if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) best = railLinks[railLinks.length - 1];
+			if (best === railOn) return;
+			if (railOn) railOn.classList.remove('is-on');
+			railOn = best;
+			if (railOn) railOn.classList.add('is-on');
+		};
+		window.addEventListener('scroll', function () {
+			if (railTick) return;
+			railTick = true;
+			window.requestAnimationFrame(function () { railTick = false; railSync(); });
+		}, { passive: true });
+		window.addEventListener('resize', railSync);
+		railSync();
+	}
 
 	/* scrollspy */
 	var links = {};

@@ -27,7 +27,7 @@
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li class="assessment-menu"><a href="practical-privacy.html">Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html">Practical Privacy</a></li><li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html">GDPR Readiness</a></li><li><a href="edpb-digest.html">EDPB Digest</a></li><li><a href="power-bi.html">GDPR Fines Dashboard</a></li><li><a href="risk-matrix-original.html">Risk Matrix</a></li></ul></li>
+						<li class="assessment-menu"><a href="practical-privacy.html">Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html">Practical Privacy</a></li><li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html">GDPR Readiness</a></li><li><a href="edpb-digest.html">EDPB Digest</a></li><li><a href="power-bi.html">GDPR Fines Dashboard</a></li><li><a href="gdpr-fine-calculator.html">GDPR Fine Calculator</a></li><li><a href="risk-matrix-original.html">Risk Matrix</a></li></ul></li>
 						<li class="assessment-menu"><a href="practical-ai-act-advice.html" class="active">AI</a><ul class="assessment-submenu"><li><a href="practical-ai-act-advice.html" class="active">AI Act Advice</a></li><li><a href="ai-act-digest.html">AI Act Digest</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li></ul></li>
 						<li class="assessment-menu"><a href="cookie-digest.html">Cookie Compliance</a><ul class="assessment-submenu"><li><a href="cookie-digest.html">Cookie Digest</a></li><li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li></ul></li>
 					</ul>
@@ -43,7 +43,7 @@
 							<h1 class="major">Practical AI Act Advice</h1>
 						<section id="practical-ai-act-advice">
 							<div class="aia-head">
-<nav class="aia-jump" aria-label="On this page"><span class="aia-jump-label">On this page</span><a href="#aia-filters">Search</a><a href="#aia-index">All sections</a></nav>
+<nav class="aia-rail" id="aia-rail" aria-label="On this page"><a href="#aia-filters" data-target="aia-filters"><i aria-hidden="true"></i><span>Search</span></a><a href="#aia-index" data-target="aia-index"><i aria-hidden="true"></i><span>All sections</span></a></nav>
 <div class="aia-intro">
 <p>This section distills the EU AI Act into the questions a working practitioner actually needs answered: what applies to me, what do I have to build, and what do I have to go check on other people's systems. It is written as practical orientation, not legal advice, and it is genericized - none of it describes any single organization's actual program. If a specific obligation could change the outcome of a real decision, get that decision checked by counsel who knows your facts.</p>
 							</div>
@@ -695,6 +695,35 @@
 		stepTick = true;
 		window.requestAnimationFrame(function () { stepTick = false; stepSync(); });
 	}, { passive: true });
+
+	/* on this page: a column of dots at the right edge, labels on hover. The dot that
+	   lights up is the last section whose top has passed the reading line, the same rule
+	   the side contents highlights by. Queried by its aria-label rather than by id,
+	   because the AI Act builder's own copy of this script has no $ helper. */
+	var rail = document.querySelector('nav[aria-label="On this page"]');
+	if (rail) {
+		var railLinks = Array.prototype.slice.call(rail.querySelectorAll('a[data-target]')), railOn = null, railTick = false;
+		var railSync = function () {
+			var line = window.innerHeight * 0.3, best = null;
+			railLinks.forEach(function (a) {
+				var t = document.getElementById(a.getAttribute('data-target'));
+				if (!t || t.hidden) return;
+				if (t.getBoundingClientRect().top <= line + 8) best = a;
+			});
+			if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) best = railLinks[railLinks.length - 1];
+			if (best === railOn) return;
+			if (railOn) railOn.classList.remove('is-on');
+			railOn = best;
+			if (railOn) railOn.classList.add('is-on');
+		};
+		window.addEventListener('scroll', function () {
+			if (railTick) return;
+			railTick = true;
+			window.requestAnimationFrame(function () { railTick = false; railSync(); });
+		}, { passive: true });
+		window.addEventListener('resize', railSync);
+		railSync();
+	}
 
 	/* scrollspy */
 	var links = {};

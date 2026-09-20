@@ -8,7 +8,11 @@ Snapshot 19 September 2026.
   (label, range, title, optional sub-blocks, items with id, label and optional source
   URL); results_html() the count line with Go to first result and Clear filters, the
   first-ten list and the How the filters work explainer; jump_html() the on-this-page
-  bar; top_button() the Expand all / Collapse all buttons (bottom left, double chevron
+  navigation, a floating dot rail at the right edge since 20 September 2026 (it was a
+  horizontal bar until then; the function name is unchanged so call sites did not have to
+  move). One dot per section, only as tall as its own dots, vertically centred, labels
+  sliding out on hover, the dot of the section you are in filled and larger, hidden below
+  980px where the Contents drawer takes over. rail_patch.py applied it; top_button() the Expand all / Collapse all buttons (bottom left, double chevron
   plus EXP or COL, shown once the contents has scrolled into the upper half of the screen,
   grouped view only, inside the drawer on small screens), the Top button, the drawer
   backdrop and the Contents button, and the Prev / Next column beside them;

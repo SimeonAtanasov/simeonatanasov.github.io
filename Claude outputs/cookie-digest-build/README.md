@@ -14,7 +14,7 @@ Everything needed to regenerate cookie-digest.html and the PDF. Snapshot date: 1
   Oregon figures, Nigeria and Mexico wording, Consent Mode mapping, Safari's seven-day cap, the
   Digital Omnibus joint opinion, DMA dates, "binds" to "applies to" for guidance). Already
   applied to all_merged.json.
-- digest_nav.py: the shared side contents, results box, jump bar and Top button (the master
+- digest_nav.py: the shared side contents, results box, on-this-page rail and Top button (the master
   copy is in site-nav-build; keep the two identical).
 - build_cookie_page.py: renders cookie-digest.html and pages/cookie-digest/cookie-digest.css.
 - build_cookie_pdf.py: renders the greyscale PDF (needs pack.css from the study pack build and

@@ -30,7 +30,7 @@ EXTRA_CSS = """
 .entry p.omni b { font-family: "Carlito", sans-serif; font-size: 7.5pt; text-transform: uppercase; letter-spacing: .06em; }
 .entry p.rec { margin: .5mm 0 0; font-size: 7.8pt; color: var(--soft); font-family: "Carlito", sans-serif; }
 .groupnote { color: var(--soft); font-size: 9pt; margin-bottom: 3mm; }
-.tag { font-family: "Carlito", sans-serif; font-size: 7.5pt; text-transform: uppercase; letter-spacing: .06em; border: .5pt solid var(--rule); padding: 0 1.2mm; margin-left: 1.5mm; }
+.tag { font-family: "Carlito", sans-serif; font-size: 7.5pt; text-transform: uppercase; letter-spacing: .06em; border: .5pt solid var(--rule); padding: 0 1.2mm; margin-left: 1.5mm; white-space: nowrap; }
 .tag.j { border-color: var(--ink); font-weight: 700; }
 .legend { font-size: 9pt; }
 .front h1 { string-set: parttitle "AI Act Digest", sectitle content(text); }
@@ -109,7 +109,7 @@ def art_entry(a):
 
 def doc_entry(c):
     tags = '<span class="tag j">%s</span>' % esc(TYPE_LABEL.get(c["type"], c["type"]))
-    if c["status"] not in ("in force", "final"):
+    if c["status"] != "final":
         tags += '<span class="tag">%s</span>' % esc(c["status"])
     for t in c.get("topics") or []:
         tags += '<span class="tag">%s</span>' % esc(t.replace("-", " "))

@@ -61,7 +61,11 @@ def results_html(P, howto_items, noun="documents"):
 
 
 def jump_html(P, items):
-    return '<nav class="%s-jump" aria-label="On this page"><span class="%s-jump-label">On this page</span>%s</nav>' % (P, P, "".join('<a href="%s">%s</a>' % (esc(h), esc(t)) for h, t in items))
+    """The on-this-page navigation. A horizontal bar until 20 September 2026, a floating
+    dot rail at the right edge since. The name is kept so call sites do not have to change."""
+    dots = "".join('<a href="%s" data-target="%s"><i aria-hidden="true"></i><span>%s</span></a>'
+                   % (esc(h), esc(h.lstrip("#")), esc(t)) for h, t in items)
+    return '<nav class="%s-rail" id="%s-rail" aria-label="On this page">%s</nav>' % (P, P, dots)
 
 
 def top_button(P):
@@ -243,6 +247,35 @@ _JS = r"""
 		window.requestAnimationFrame(function () { stepTick = false; stepSync(); });
 	}, { passive: true });
 
+	/* on this page: a column of dots at the right edge, labels on hover. The dot that
+	   lights up is the last section whose top has passed the reading line, the same rule
+	   the side contents highlights by. Queried by its aria-label rather than by id,
+	   because the AI Act builder's own copy of this script has no $ helper. */
+	var rail = document.querySelector('nav[aria-label="On this page"]');
+	if (rail) {
+		var railLinks = Array.prototype.slice.call(rail.querySelectorAll('a[data-target]')), railOn = null, railTick = false;
+		var railSync = function () {
+			var line = window.innerHeight * 0.3, best = null;
+			railLinks.forEach(function (a) {
+				var t = document.getElementById(a.getAttribute('data-target'));
+				if (!t || t.hidden) return;
+				if (t.getBoundingClientRect().top <= line + 8) best = a;
+			});
+			if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) best = railLinks[railLinks.length - 1];
+			if (best === railOn) return;
+			if (railOn) railOn.classList.remove('is-on');
+			railOn = best;
+			if (railOn) railOn.classList.add('is-on');
+		};
+		window.addEventListener('scroll', function () {
+			if (railTick) return;
+			railTick = true;
+			window.requestAnimationFrame(function () { railTick = false; railSync(); });
+		}, { passive: true });
+		window.addEventListener('resize', railSync);
+		railSync();
+	}
+
 	/* scrollspy */
 	var links = {};
 	Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-link[data-target]'), function (l) { var k = l.getAttribute('data-target'); (links[k] = links[k] || []).push(l); });
@@ -299,10 +332,18 @@ _CSS = """
 	.ai-toc { position: sticky; top: 5em; max-height: calc(100vh - 6em); overflow-y: auto; overscroll-behavior: contain; }
 	.ai-toc-fab, .ai-toc-close, .ai-toc-backdrop { display: none; }
 }
-.ai-jump { display: flex; flex-wrap: wrap; gap: 0.4em 0.6em; align-items: center; margin: 0 0 1.5em 0; padding: 0.75em 1em; border: solid 1px rgba(255,255,255,0.1); border-radius: 0.5em; background: rgba(255,255,255,0.02); font-size: 0.85em; }
-.ai-jump-label { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85em; color: rgba(255,255,255,0.5); margin-right: 0.4em; }
-.ai-jump a { display: inline-block; padding: 0.25em 0.8em; border: solid 1px rgba(255,255,255,0.15); border-radius: 1em; color: rgba(255,255,255,0.85); border-bottom: solid 1px rgba(255,255,255,0.15); }
-.ai-jump a:hover { border-color: #7fb2e5; color: #fff; background: rgba(127,178,229,0.1); }
+.ai-rail { position: fixed; right: 0.85em; top: 50%; transform: translateY(-50%); z-index: 1150; display: flex; flex-direction: column; gap: 0.1em; padding: 0.55em 0.5em; border-radius: 1.5em; border: solid 1px rgba(255,255,255,0.12); background: rgba(13,20,30,0.78); box-shadow: 0 0.3em 1em rgba(0,0,0,0.35); opacity: 0.5; transition: opacity 0.18s ease; }
+.ai-rail:hover, .ai-rail:focus-within { opacity: 1; }
+.ai-rail[hidden] { display: none; }
+.ai-rail a { display: flex; align-items: center; gap: 0.7em; height: 1.45em; padding: 0 0.3em; border: 0; border-radius: 0.8em; color: rgba(255,255,255,0.8); text-decoration: none; white-space: nowrap; }
+.ai-rail a i { flex: 0 0 auto; width: 0.42em; height: 0.42em; border-radius: 50%; background: rgba(255,255,255,0.4); transition: background 0.15s ease, width 0.15s ease, height 0.15s ease; }
+.ai-rail a span { max-width: 0; overflow: hidden; opacity: 0; font-size: 0.8em; letter-spacing: 0.01em; transition: max-width 0.24s ease, opacity 0.18s ease; }
+.ai-rail:hover a span, .ai-rail:focus-within a span { max-width: 26em; opacity: 1; }
+.ai-rail a:hover, .ai-rail a:focus-visible { color: #fff; background: rgba(127,178,229,0.12); }
+.ai-rail a:hover i, .ai-rail a:focus-visible i { background: #7fb2e5; }
+.ai-rail a.is-on { color: #fff; }
+.ai-rail a.is-on i { background: #7fb2e5; width: 0.62em; height: 0.62em; }
+@media (max-width: 980px) { .ai-rail { display: none; } }
 .ai-top { position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050; height: auto; line-height: 1.4; padding: 0.6em 1em; font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 2em; background: rgba(66,103,166,0.95); border: 0 !important; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); white-space: nowrap; }
 .ai-top::after { display: none; }
 .ai-top[hidden] { display: none; }

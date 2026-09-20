@@ -25,7 +25,7 @@ documents on the EDPB listing plus 11 consultation versions; 117 written takeawa
 - add_consultations.py: adds the 11 consultation-stage documents (type "Consultation
   version", status chip "consultation") as a group of their own. Already applied; it
   asserts the group is not there yet, so it cannot run twice.
-- digest_nav.py: the shared side contents, results box, jump bar and Top button (the
+- digest_nav.py: the shared side contents, results box, on-this-page rail and Top button (the
   master copy is in site-nav-build; keep the two identical).
 - build_digest_page.py: renders edpb-digest.html and pages/edpb-digest/edpb-digest.css
   from digest.json, entries within a group ordered by full date (datekey()).

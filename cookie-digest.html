@@ -27,7 +27,7 @@
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li class="assessment-menu"><a href="practical-privacy.html">Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html">Practical Privacy</a></li><li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html">GDPR Readiness</a></li><li><a href="edpb-digest.html">EDPB Digest</a></li><li><a href="power-bi.html">GDPR Fines Dashboard</a></li><li><a href="risk-matrix-original.html">Risk Matrix</a></li></ul></li>
+						<li class="assessment-menu"><a href="practical-privacy.html">Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html">Practical Privacy</a></li><li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html">GDPR Readiness</a></li><li><a href="edpb-digest.html">EDPB Digest</a></li><li><a href="power-bi.html">GDPR Fines Dashboard</a></li><li><a href="gdpr-fine-calculator.html">GDPR Fine Calculator</a></li><li><a href="risk-matrix-original.html">Risk Matrix</a></li></ul></li>
 						<li class="assessment-menu"><a href="practical-ai-act-advice.html">AI</a><ul class="assessment-submenu"><li><a href="practical-ai-act-advice.html">AI Act Advice</a></li><li><a href="ai-act-digest.html">AI Act Digest</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li></ul></li>
 						<li class="assessment-menu"><a href="cookie-digest.html" class="active">Cookie Compliance</a><ul class="assessment-submenu"><li><a href="cookie-digest.html" class="active">Cookie Digest</a></li><li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li></ul></li>
 					</ul>
@@ -43,7 +43,7 @@
 							<h1 class="major">Cookie Compliance Digest</h1>
 						<section id="cookie-digest">
 <div class="ck-head">
-<nav class="ck-jump" aria-label="On this page"><span class="ck-jump-label">On this page</span><a href="#ck-filters">Filters and search</a><a href="#ck-index">Regions</a><a href="#ck-groups">The documents</a><a href="#ck-sources-note">Sources</a></nav>
+<nav class="ck-rail" id="ck-rail" aria-label="On this page"><a href="#ck-filters" data-target="ck-filters"><i aria-hidden="true"></i><span>Filters and search</span></a><a href="#ck-index" data-target="ck-index"><i aria-hidden="true"></i><span>Regions</span></a><a href="#ck-groups" data-target="ck-groups"><i aria-hidden="true"></i><span>The documents</span></a><a href="#ck-sources-note" data-target="ck-sources-note"><i aria-hidden="true"></i><span>Sources</span></a></nav>
 <div class="ck-intro">
 <p>Every rule a consent banner has to satisfy, in one place: 259 documents across 66 jurisdictions as of 19 September 2026, each with a takeaway written from the document itself, stating what it establishes, who it binds and what to do about it. The set covers 79 pieces of legislation, 69 regulator guidance documents, 24 court decisions, 53 enforcement actions, 24 technical standards or industry frameworks and 10 pending proposals. Depth follows the regimes a European consent platform meets daily: the EU and its member states, the United Kingdom, Switzerland and the United States in full; one entry per operative rule elsewhere.</p>
 <p>Three limits, stated up front. A takeaway is a reading aid: every entry links to the source and the source governs where the two differ. Status is as of the date above; proposals and consultations move, and the entry says so where it applies from a future date or is under appeal. Where a primary page could not be reached and the figures rest on a secondary source, the entry is marked. None of this is legal advice.</p>
@@ -545,6 +545,35 @@
 		stepTick = true;
 		window.requestAnimationFrame(function () { stepTick = false; stepSync(); });
 	}, { passive: true });
+
+	/* on this page: a column of dots at the right edge, labels on hover. The dot that
+	   lights up is the last section whose top has passed the reading line, the same rule
+	   the side contents highlights by. Queried by its aria-label rather than by id,
+	   because the AI Act builder's own copy of this script has no $ helper. */
+	var rail = document.querySelector('nav[aria-label="On this page"]');
+	if (rail) {
+		var railLinks = Array.prototype.slice.call(rail.querySelectorAll('a[data-target]')), railOn = null, railTick = false;
+		var railSync = function () {
+			var line = window.innerHeight * 0.3, best = null;
+			railLinks.forEach(function (a) {
+				var t = document.getElementById(a.getAttribute('data-target'));
+				if (!t || t.hidden) return;
+				if (t.getBoundingClientRect().top <= line + 8) best = a;
+			});
+			if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) best = railLinks[railLinks.length - 1];
+			if (best === railOn) return;
+			if (railOn) railOn.classList.remove('is-on');
+			railOn = best;
+			if (railOn) railOn.classList.add('is-on');
+		};
+		window.addEventListener('scroll', function () {
+			if (railTick) return;
+			railTick = true;
+			window.requestAnimationFrame(function () { railTick = false; railSync(); });
+		}, { passive: true });
+		window.addEventListener('resize', railSync);
+		railSync();
+	}
 
 	/* scrollspy */
 	var links = {};

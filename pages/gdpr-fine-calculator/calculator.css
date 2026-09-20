@@ -1,0 +1,389 @@
+/* GDPR Fine Calculator styling.
+   Sits on the site's dark template, so colours are chosen to read against it.
+   The card and control styling follows pages/gdpr-readiness/readiness.css so the
+   two tools look like parts of one set.
+
+   Chart colours are validated for the dark chart surface #1e2a4d:
+   aqua #199e70 (comparable peers) and orange #d95926 (your organisation).
+   Worst all-pairs CVD delta E 9.4, normal vision 26.5, contrast both above 3:1. */
+
+.finecalc {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.fc-block {
+    margin: 0 0 2.5em 0;
+}
+
+.fc-block h2 {
+    margin-bottom: 0.4em;
+}
+
+.fc-lead {
+    font-size: 0.95em;
+    opacity: 0.85;
+    margin-bottom: 1.2em;
+}
+
+.fc-note {
+    font-size: 0.9em;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------------------- how-to --- */
+
+.fc-howto {
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 3px solid #199e70;
+    border-radius: 6px;
+}
+
+.fc-howto h2 { margin-bottom: 0.6em; }
+
+.fc-steps {
+    margin: 0 0 1em 0;
+    padding-left: 1.25em;
+}
+
+.fc-steps li {
+    list-style: decimal;
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------ inputs --- */
+
+.fc-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+}
+
+.fc-field {
+    flex: 1 1 260px;
+    min-width: 0;
+}
+
+.fc-field label {
+    display: block;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+    margin-bottom: 0.5em;
+}
+
+.fc-field input[type="text"],
+.fc-field select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fc-hint {
+    font-size: 0.82em;
+    opacity: 0.7;
+    margin: 0.5em 0 0 0;
+}
+
+.fc-toggles {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    padding-top: 4px;
+}
+
+/* The template hides native checkboxes in favour of a styled label. These are
+   plain checkboxes, so put them back. */
+.fc-toggles input[type="checkbox"] {
+    appearance: checkbox;
+    -webkit-appearance: checkbox;
+    opacity: 1;
+    float: none;
+    z-index: auto;
+    width: auto;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+}
+
+.fc-toggles label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9em;
+    opacity: 0.9;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* ----------------------------------------------------------------- results --- */
+
+.fc-results { margin-top: 2em; }
+
+.fc-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.fc-card {
+    flex: 1 1 200px;
+    min-width: 0;
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.fc-card.fc-card-main { border-top-color: #199e70; }
+.fc-card.fc-card-cap  { border-top-color: #d95926; }
+
+.fc-card .fc-card-label {
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.75;
+    margin-bottom: 0.4em;
+}
+
+.fc-card .fc-card-value {
+    font-size: 1.6em;
+    font-weight: 600;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+.fc-card .fc-card-sub {
+    font-size: 0.82em;
+    opacity: 0.75;
+    margin-top: 0.4em;
+    line-height: 1.5;
+}
+
+.fc-basis {
+    margin-top: 1.2em;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #4276a6;
+    border-radius: 4px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.fc-warn {
+    margin-top: 1.2em;
+    padding: 14px 18px;
+    background: rgba(217, 89, 38, 0.14);
+    border-left: 3px solid #d95926;
+    border-radius: 4px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------- chart --- */
+
+.fc-chart-wrap {
+    margin-top: 2em;
+    padding: 18px;
+    background: #1e2a4d;
+    border-radius: 6px;
+}
+
+.fc-chart-wrap h3 { margin-bottom: 0.3em; }
+
+.fc-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin: 0 0 12px 0;
+    font-size: 0.85em;
+}
+
+.fc-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.fc-swatch {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+    flex: 0 0 auto;
+}
+
+.fc-chart { width: 100%; height: auto; display: block; }
+
+/* ------------------------------------------------------------------ tables --- */
+
+.fc-table-scroll { overflow-x: auto; margin-top: 1em; }
+
+.fc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88em;
+}
+
+.fc-table th,
+.fc-table td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    vertical-align: top;
+}
+
+.fc-table th {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+.fc-table td.fc-num { text-align: right; white-space: nowrap; }
+
+.fc-conf {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-size: 0.78em;
+    white-space: nowrap;
+}
+
+.fc-conf-3 { background: rgba(25, 158, 112, 0.3);  color: #b6d7a8; }
+.fc-conf-2 { background: rgba(66, 118, 166, 0.35); color: #a4c2f4; }
+.fc-conf-1 { background: rgba(246, 178, 107, 0.25); color: #f6b26b; }
+.fc-conf-0 { background: rgba(255, 255, 255, 0.1);  color: #d9d9d9; }
+
+/* ------------------------------------------------------- sector comparison --- */
+
+.fc-sector-table tr.fc-sector-on td { background: rgba(25, 158, 112, 0.12); }
+
+.fc-barcell { width: 34%; min-width: 130px; }
+
+.fc-bartrack {
+    position: relative;
+    display: block;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: visible;
+}
+
+.fc-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #199e70;
+    border-radius: 3px 4px 4px 3px;
+}
+
+/* Median across all sectors at this size, so each bar can be read against it. */
+.fc-barmark {
+    position: absolute;
+    top: -3px;
+    width: 0;
+    height: 18px;
+    border-left: 2px dashed rgba(255, 255, 255, 0.65);
+}
+
+/* ----------------------------------------------------------------- actions --- */
+
+.fc-actions {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* The site template gives every button height: calc(4.75em + 2px) and
+   line-height: 4.75em, which pushes the label well below the middle of any
+   button we pad ourselves. Reset the height and let flex do the centring. */
+.fc-actions button {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    background-color: #199e70;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 0;
+    line-height: 1.25;
+}
+
+.fc-actions button:hover { background-color: #15845e; }
+.fc-actions button.fc-secondary { background-color: #4276a6; }
+.fc-actions button.fc-secondary:hover { background-color: #35618a; }
+
+/* ------------------------------------------------------------------ method --- */
+
+.fc-method {
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+}
+
+.fc-method h3 {
+    margin: 1.2em 0 0.4em 0;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.fc-method h3:first-of-type { margin-top: 0; }
+
+.fc-method p,
+.fc-method li { line-height: 1.65; font-size: 0.92em; }
+
+.fc-method ul {
+    padding-left: 1.2em;
+    margin-bottom: 1em;
+}
+
+.fc-method li {
+    list-style: disc;
+    margin-bottom: 0.4em;
+}
+
+.fc-caveat {
+    margin-top: 1.5em;
+    padding: 14px 18px;
+    background: rgba(246, 178, 107, 0.12);
+    border-left: 3px solid #f6b26b;
+    border-radius: 4px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------ mobile --- */
+
+@media screen and (max-width: 736px) {
+
+    .fc-inputs { padding: 16px; gap: 16px; }
+
+    .fc-field { flex: 1 1 100%; }
+
+    .fc-card { flex: 1 1 100%; }
+
+    .fc-actions button { width: 100%; }
+
+    .fc-table { min-width: 620px; }
+
+    .fc-chart-wrap { padding: 12px; }
+}

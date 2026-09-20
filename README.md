@@ -21,6 +21,7 @@ nav collapse and the assessment dropdown).
 | `risk-matrix-original.html` | Interactive risk matrix over a risk library. | `pages/risk-matrix-front-end/` |
 | `cookie-banner-scanner.html` | Front end for the cookie banner scanner. The backend is a separate project, `scan-banner-api`, deployed on Render. | inline; keeps a `localhost:3005` dev fallback on purpose |
 | `power-bi.html` | GDPR fines in Europe dashboard (embedded). | inline |
+| `gdpr-fine-calculator.html` | GDPR Fine Calculator. Enter an annual turnover and a violation type and the tool benchmarks it against published enforcement decisions where the fined undertaking's turnover is known: peer median, 25th to 90th percentile, and the Art. 83 statutory ceiling (percentage or the absolute floor, whichever is higher). Shows the peer cases used and a log-log scatter. No state. | `pages/gdpr-fine-calculator/` : `calculator.js`, `calculator-data.js` (353 indexed decisions), `calculator.css` |
 | `my-asteroids-game.html` | Asteroids game, keyboard and touch. | `pages/my-asteroids-game/` |
 
 ### Reference pages (written content, no state)
@@ -88,6 +89,15 @@ is stale and unreferenced; the live manifest is the root one.
 
 Non-site deliverables. Nothing in here is referenced by any page.
 
+Two conventions worth knowing before you go looking. A verification pass keeps its
+scripts, change sets and raw results in a dated folder, but its **report** may sit
+either at this root or inside that folder: the source verification, retry, coverage,
+link audit and review audit reports are at the root, while the law verification, live
+recheck and cross-reference reports are inside their own folders. The table below says
+which. And a build folder or a pass folder carries its own README where one would help;
+the rerun order for the apply scripts across all four digest data files is in
+`claude/verification-method.md` in the Claude project, not here.
+
 | File or folder | What it is | Read it when |
 |---|---|---|
 | `privacy-ai-act-assessments-study-pack-v2.pdf` | 145-page greyscale study pack (rebuilt 20 September 2026 from the corrected pages and tool; build files now in `study-pack-build/`): both reference pages in full with key-takeaway boxes, all six assessment tools with cheat sheets and full question banks, the readiness model with all 71 activities, 69 self-test questions with answers, a four-week study plan, a review card, numbered sources. | You want to learn or re-learn the site's content. |
@@ -124,7 +134,11 @@ with Claude: `site-context.md` (rules, deploy procedure, technical traps, open i
 `content-verification-2026-09.md` (the rated action list from the verification),
 `edpb-digest.md`, `cookie-digest.md` and `ai-act-digest.md` (what the digests are and how to
 rebuild them), `chatgpt-review-audit-2026-09.md` and `site-link-audit-2026-09.md` (copies of
-the two audits above), `folder-map.md` (which folder to connect).
+the two audits above), `folder-map.md` (which folder to connect). For the verification work:
+`verification-method.md` (how to run a check, the techniques, and the authoritative rerun
+order after a rebuild) and, one per pass, `source-verification-2026-09.md`,
+`digest-source-coverage-2026-09.md`, `retry-verification-2026-09.md`,
+`live-recheck-2026-09.md` and `law-verification-2026-09.md`.
 
 ## Rules that apply to every edit
 

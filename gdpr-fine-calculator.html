@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Simeon Atanasov | GDPR Fine Calculator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Benchmark a possible GDPR fine against published enforcement decisions. Enter your annual turnover and the type of violation to see what comparable organisations actually paid, and the statutory ceiling.">
+		<link rel="stylesheet" href="pages/gdpr-fine-calculator/calculator.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/back-to-top.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="canonical" href="https://simeonatanasov.com/gdpr-fine-calculator.html">
+		<!-- Progressive web app -->
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<meta name="theme-color" content="#2a3860" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="Privacy Tools" />
+		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" />
+		<script src="/assets/js/pwa.js" defer></script>
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Simeon Atanasov</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="assessment-menu"><a href="practical-privacy.html" class="active">Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html">Practical Privacy</a></li><li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html">GDPR Readiness</a></li><li><a href="edpb-digest.html">EDPB Digest</a></li><li><a href="power-bi.html">GDPR Fines Dashboard</a></li><li><a href="gdpr-fine-calculator.html" class="active">GDPR Fine Calculator</a></li><li><a href="risk-matrix-original.html">Risk Matrix</a></li></ul></li>
+						<li class="assessment-menu"><a href="practical-ai-act-advice.html">AI</a><ul class="assessment-submenu"><li><a href="practical-ai-act-advice.html">AI Act Advice</a></li><li><a href="ai-act-digest.html">AI Act Digest</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li></ul></li>
+						<li class="assessment-menu"><a href="cookie-digest.html">Cookie Compliance</a><ul class="assessment-submenu"><li><a href="cookie-digest.html">Cookie Digest</a></li><li><a href="cookie-banner-scanner.html">Cookie Scanner</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<header>
+								<h1 class="major">GDPR Fine Calculator 💶</h1>
+							</header>
+							<section>
+								<p>Supervisory authorities do not publish a formula. What they publish is decisions. This tool takes the published decisions where the fined organisation's turnover is known, finds the ones closest to your own size and circumstance, and shows what those organisations actually paid as a proportion of turnover. It is a benchmark drawn from enforcement practice, not a prediction and not a legal opinion.</p>
+							</section>
+
+							<div class="finecalc" id="fc-app">
+
+								<!-- How to use it -->
+								<section class="fc-block fc-howto">
+									<h2>How to use this</h2>
+									<ol class="fc-steps">
+										<li><strong>Enter your annual turnover.</strong> Use the whole undertaking, not one legal entity. Art. 83 refers to the undertaking, which the Court of Justice reads as the whole economic unit, and it is the same basis used for every organisation in the comparison set. You can type <code>20bn</code>, <code>450m</code> or a plain number.</li>
+										<li><strong>Pick what went wrong.</strong> The categories come from the enforcement tracker's own classification, one per decision. The number beside each is how many comparable cases carry a known turnover, which tells you how much weight the answer can bear.</li>
+										<li><strong>Narrow by sector if it helps.</strong> Optional. The tool widens the search automatically if too few peers match, and tells you when it did.</li>
+										<li><strong>Read all three numbers.</strong> The typical outcome, the realistic range and the statutory ceiling. The range matters more than the midpoint: fines for the same conduct vary by orders of magnitude, and any single figure hides that.</li>
+									</ol>
+									<p class="fc-note"><strong>Nothing you type is sent anywhere.</strong> The calculation runs entirely in your browser and no figure leaves this page.</p>
+								</section>
+
+								<!-- Inputs -->
+								<section class="fc-block">
+									<h2>Your organisation</h2>
+									<div class="fc-inputs">
+										<div class="fc-field">
+											<label for="fc-turnover">Annual turnover of the undertaking</label>
+											<input type="text" id="fc-turnover" placeholder="for example 20bn, 450m or 12500000" autocomplete="off">
+											<p class="fc-hint">Worldwide, most recent full financial year.</p>
+										</div>
+										<div class="fc-field">
+											<label for="fc-type">What went wrong</label>
+											<select id="fc-type"></select>
+											<p class="fc-hint" id="fc-typenote"></p>
+										</div>
+										<div class="fc-field">
+											<label for="fc-sector">Sector (optional)</label>
+											<select id="fc-sector"><option value="">Any sector</option></select>
+											<p class="fc-hint">Narrows the peer set. Dropped automatically if too few peers match.</p>
+										</div>
+										<div class="fc-toggles">
+											<label><input type="checkbox" id="fc-sourced"> Use only peers whose turnover has a recorded source</label>
+											<label><input type="checkbox" id="fc-nofin"> Exclude banks and insurers</label>
+										</div>
+									</div>
+								</section>
+
+								<!-- Results -->
+								<section class="fc-block fc-results" id="fc-output"></section>
+
+								<div class="fc-actions">
+									<button id="fc-reset" class="fc-secondary">Reset</button>
+								</div>
+
+								<!-- Method -->
+								<section class="fc-block fc-method">
+									<h2>How the number is worked out</h2>
+
+									<h3>The index</h3>
+									<p>For every published decision where the organisation's turnover is known, the index is the fine divided by that turnover. It is the only figure that lets a EUR 3,000 fine in Romania and a EUR 225 million fine in Ireland sit on the same scale.</p>
+
+									<h3>Choosing the peers</h3>
+									<p>Peers are the cases in the same violation category whose turnover is within 50% of yours, optionally in the same sector. If fewer than eight organisations match, the turnover band widens in defined steps, then the sector filter is dropped, then the violation filter. The tool always says which step it ended on. It never quietly averages a handful of rows and presents the result as an answer.</p>
+									<p>The turnover band is not decoration. Fines scale far less than proportionally with size: across this data the fitted elasticity is about 0.35, meaning a company ten times larger draws a fine only about twice as large. A small company's index is therefore not comparable with a large one's, and an average taken across sizes is meaningless.</p>
+
+									<h3>One vote per organisation</h3>
+									<p>Some regulators fine the same operator repeatedly, in one case more than sixty times. Each organisation is collapsed to a single index, the median of its own cases, before percentiles are taken. Without that step one heavily fined operator would decide the answer for its whole size band.</p>
+
+									<h3>Median and percentiles, not an average</h3>
+									<p>The index distribution is heavily skewed: a few small organisations paid a large share of their turnover, which drags any mean upwards by an order of magnitude. The headline is the median across peer organisations, and the range is the 25th to the 90th percentile. Across the whole dataset the 25th percentile is about 0.0009% of turnover and the 90th about 0.98%, a spread of three orders of magnitude for the same statute.</p>
+
+									<h3>The statutory ceiling</h3>
+									<p>Art. 83(4) caps the relevant infringements at 2% of total worldwide annual turnover <em>or EUR 10 million, whichever is higher</em>. Art. 83(5) caps the rest at 4% <em>or EUR 20 million</em>. The absolute floor is the part usually forgotten: an organisation needs roughly EUR 500 million of turnover before 4% of it exceeds EUR 20 million. Below that, the ceiling is a flat EUR 20 million and turnover does not enter into it, which is why small organisations occasionally pay a double-digit percentage of revenue entirely lawfully.</p>
+
+									<h3>Where the data comes from</h3>
+									<p>Fines, dates, countries, cited Articles and the violation classification come from the public GDPR enforcement tracker. Turnover is not in that source and had to be attached separately, from annual reports, statutory filings and national company registers. Each peer row shows the confidence attached to its turnover figure, and the peer set can be restricted to rows with a recorded source.</p>
+									<p class="fc-note">Coverage: <strong id="fc-count"></strong> carry both a fine and a turnover. That is a minority of all published decisions, because most fined organisations are public bodies, micro-entities or private companies whose accounts are not published for free.</p>
+									<p class="fc-note">To explore the enforcement record itself rather than benchmark against it, the <a href="power-bi.html">GDPR Fines Dashboard</a> covers every published decision, refreshed from the tracker, with breakdowns by country, sector, Article and year.</p>
+
+									<div class="fc-caveat">
+										<p><strong>What this tool cannot tell you.</strong> Turnover explains under 10% of the variation in fine size across this data. Everything a regulator actually weighs under Art. 83(2): how many people were affected, whether the conduct was negligent or deliberate, what was done to mitigate it, how the organisation behaved during the investigation, whether it had been fined before, all of it is absent from these figures because it is not in any structured source. Two organisations of identical size doing identical things can and do receive fines an order of magnitude apart. Treat the range as the scale of exposure, not as a number to put in a risk register without a caveat beside it.</p>
+										<p><strong>Categories with too few peers.</strong> Information obligations, breach notification, DPO involvement and processing agreements are marked thin. Those violations are enforced overwhelmingly against public bodies and very small organisations, which have no published turnover, so no amount of further research will make them benchmarkable. The tool will still calculate, but the warning it shows should be believed.</p>
+										<p>This is not legal advice and not a prediction of what any authority would do.</p>
+									</div>
+								</section>
+
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Simeon. All rights reserved.</li>
+					<li><a href="terms.html">Terms of use</a></li>
+					<li><a href="privacy-notice.html">Privacy notice</a></li>
+					<li><a href="cookie-notice.html">Cookie notice</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/back-to-top.js"></script>
+			<script src="pages/gdpr-fine-calculator/calculator-data.js"></script>
+			<script src="pages/gdpr-fine-calculator/calculator.js"></script>
+	</body>
+</html>
