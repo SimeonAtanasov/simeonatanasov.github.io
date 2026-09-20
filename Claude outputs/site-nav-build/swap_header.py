@@ -9,14 +9,14 @@ HEADER = """			<header id="header">
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li class="assessment-menu"><a href="practical-privacy.html"{A_privacy}>Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html"{A_practical-privacy.html}>Practical Privacy</a></li><li><a href="privacy-ai-assessment.html"{A_privacy-ai-assessment.html}>Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html"{A_gdpr-readiness.html}>GDPR Readiness</a></li><li><a href="edpb-digest.html"{A_edpb-digest.html}>EDPB Digest</a></li><li><a href="power-bi.html"{A_power-bi.html}>GDPR Fines Dashboard</a></li><li><a href="risk-matrix-original.html"{A_risk-matrix-original.html}>Risk Matrix</a></li></ul></li>
+						<li class="assessment-menu"><a href="practical-privacy.html"{A_privacy}>Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html"{A_practical-privacy.html}>Practical Privacy</a></li><li><a href="privacy-ai-assessment.html"{A_privacy-ai-assessment.html}>Privacy &amp; AI Assessment</a></li><li><a href="gdpr-readiness.html"{A_gdpr-readiness.html}>GDPR Readiness</a></li><li><a href="edpb-digest.html"{A_edpb-digest.html}>EDPB Digest</a></li><li><a href="power-bi.html"{A_power-bi.html}>GDPR Fines Dashboard</a></li><li><a href="gdpr-fine-calculator.html"{A_gdpr-fine-calculator.html}>GDPR Fine Calculator</a></li><li><a href="risk-matrix-original.html"{A_risk-matrix-original.html}>Risk Matrix</a></li></ul></li>
 						<li class="assessment-menu"><a href="practical-ai-act-advice.html"{A_ai}>AI</a><ul class="assessment-submenu"><li><a href="practical-ai-act-advice.html"{A_practical-ai-act-advice.html}>AI Act Advice</a></li><li><a href="ai-act-digest.html"{A_ai-act-digest.html}>AI Act Digest</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li></ul></li>
 						<li class="assessment-menu"><a href="cookie-digest.html"{A_cookie}>Cookie Compliance</a><ul class="assessment-submenu"><li><a href="cookie-digest.html"{A_cookie-digest.html}>Cookie Digest</a></li><li><a href="cookie-banner-scanner.html"{A_cookie-banner-scanner.html}>Cookie Scanner</a></li></ul></li>
 					</ul>
 				</nav>
 			</header>"""
 
-CATEGORY = {"practical-privacy.html": "privacy", "privacy-ai-assessment.html": "privacy", "gdpr-readiness.html": "privacy", "edpb-digest.html": "privacy", "power-bi.html": "privacy", "risk-matrix-original.html": "privacy",
+CATEGORY = {"practical-privacy.html": "privacy", "privacy-ai-assessment.html": "privacy", "gdpr-readiness.html": "privacy", "edpb-digest.html": "privacy", "power-bi.html": "privacy", "gdpr-fine-calculator.html": "privacy", "risk-matrix-original.html": "privacy",
             "practical-ai-act-advice.html": "ai", "ai-act-digest.html": "ai",
             "cookie-digest.html": "cookie", "cookie-banner-scanner.html": "cookie"}
 

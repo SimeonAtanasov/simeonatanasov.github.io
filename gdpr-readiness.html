@@ -51,7 +51,7 @@
 
 								<!-- How to fill it in -->
 								<section class="ra-block ra-howto">
-									<h2>How to fill this in</h2>
+									<h2 id="ra-how">How to fill this in</h2>
 									<ol class="ra-steps">
 										<li><strong>Set the scope.</strong> Thirteen yes or no questions about your organisation. Each one says how many activities depend on it: answering "no" takes those out of the assessment altogether, so you are not marked down for something that cannot apply to you. Leave one blank and its activities stay in.</li>
 										<li><strong>Work through the activities.</strong> Seventy-one of them, grouped into thirteen categories. Click a category to open it. Each activity carries two questions and one status.</li>
@@ -64,14 +64,14 @@
 
 								<!-- Scope -->
 								<section class="ra-block" id="scope-block">
-									<h2>Step 1: Scope</h2>
+									<h2 id="ra-step-1">Step 1: Scope</h2>
 									<p class="ra-lead">Answer these first. The count on the right of each row is how many activities depend on that answer. Answering "no" removes them from scoring entirely rather than counting them against you.</p>
 									<div id="scope-questions"></div>
 								</section>
 
 								<!-- Assessment -->
 								<section class="ra-block">
-									<h2>Step 2: Assessment</h2>
+									<h2 id="ra-step-2">Step 2: Assessment</h2>
 									<p class="ra-lead">For each activity, record its status. The Privacy Office question captures the programme view; the Operational Unit question is the one to put to a business area such as HR, Marketing or Sales.</p>
 
 									<div id="status-legend"></div>
@@ -136,7 +136,7 @@
 
 								<!-- Results -->
 								<section class="ra-block">
-									<h2>Step 3: Readiness</h2>
+									<h2 id="ra-step-3">Step 3: Readiness</h2>
 									<div class="ra-summary" id="ra-summary"></div>
 
 									<div class="ra-tabs" role="tablist">
@@ -161,6 +161,8 @@
 						</div>
 					</section>
 			</div>
+
+		<nav class="ra-rail" id="ra-rail" aria-label="On this page"><a href="#ra-how" data-target="ra-how"><i aria-hidden="true"></i><span>How to fill this in</span></a><a href="#ra-step-1" data-target="ra-step-1"><i aria-hidden="true"></i><span>Step 1: Scope</span></a><a href="#ra-step-2" data-target="ra-step-2"><i aria-hidden="true"></i><span>Step 2: Assessment</span></a><a href="#ra-step-3" data-target="ra-step-3"><i aria-hidden="true"></i><span>Step 3: Readiness</span></a></nav>
 
 		<!-- Floating expand and collapse for the activity categories -->
 		<div class="ra-fold" id="ra-fold" role="group" aria-label="Activity categories" hidden><button type="button" class="ra-fold-btn" id="ra-expand-float" title="Expand all activity categories" aria-label="Expand all"><i class="fas fa-angle-double-down"></i><span>Exp</span></button><button type="button" class="ra-fold-btn" id="ra-collapse-float" title="Collapse all activity categories" aria-label="Collapse all"><i class="fas fa-angle-double-up"></i><span>Col</span></button></div>

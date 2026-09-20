@@ -250,7 +250,8 @@ _JS = r"""
 	/* on this page: a column of dots at the right edge, labels on hover. The dot that
 	   lights up is the last section whose top has passed the reading line, the same rule
 	   the side contents highlights by. Queried by its aria-label rather than by id,
-	   because the AI Act builder's own copy of this script has no $ helper. */
+	   because the AI Act builder's own copy of this script has no $ helper. Where there
+	   is no hover, a first tap opens the labels and the next one follows the link. */
 	var rail = document.querySelector('nav[aria-label="On this page"]');
 	if (rail) {
 		var railLinks = Array.prototype.slice.call(rail.querySelectorAll('a[data-target]')), railOn = null, railTick = false;
@@ -267,10 +268,17 @@ _JS = r"""
 			railOn = best;
 			if (railOn) railOn.classList.add('is-on');
 		};
+		var railHover = window.matchMedia('(hover: hover)');
+		rail.addEventListener('click', function (e) {
+			if (!railHover.matches && !rail.classList.contains('is-open')) { e.preventDefault(); rail.classList.add('is-open'); return; }
+			if (e.target.closest && e.target.closest('a')) rail.classList.remove('is-open');
+		});
+		document.addEventListener('click', function (e) { if (!rail.contains(e.target)) rail.classList.remove('is-open'); });
 		window.addEventListener('scroll', function () {
 			if (railTick) return;
 			railTick = true;
 			window.requestAnimationFrame(function () { railTick = false; railSync(); });
+			rail.classList.remove('is-open');
 		}, { passive: true });
 		window.addEventListener('resize', railSync);
 		railSync();
@@ -333,18 +341,18 @@ _CSS = """
 	.ai-toc-fab, .ai-toc-close, .ai-toc-backdrop { display: none; }
 }
 .ai-rail { position: fixed; right: 0.55em; top: 50%; transform: translateY(-50%); z-index: 1150; display: flex; flex-direction: column; gap: 0; padding: 0.2em 0.25em; border-radius: 0.9em; border: solid 1px transparent; background: transparent; transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease; }
-.ai-rail:hover, .ai-rail:focus-within { border-color: rgba(255,255,255,0.12); background: rgba(13,20,30,0.82); box-shadow: 0 0.3em 1em rgba(0,0,0,0.35); }
+.ai-rail:hover, .ai-rail:focus-within, .ai-rail.is-open { border-color: rgba(255,255,255,0.12); background: rgba(13,20,30,0.82); box-shadow: 0 0.3em 1em rgba(0,0,0,0.35); }
 .ai-rail[hidden] { display: none; }
 .ai-rail a { display: flex; align-items: center; gap: 0.6em; height: 1.15em; padding: 0 0.2em; border: 0; border-radius: 0.6em; color: rgba(255,255,255,0.75); text-decoration: none; white-space: nowrap; }
 .ai-rail a i { flex: 0 0 auto; width: 0.34em; height: 0.34em; border-radius: 50%; background: rgba(255,255,255,0.35); transition: background 0.15s ease, transform 0.15s ease; }
-.ai-rail:hover a i, .ai-rail:focus-within a i { background: rgba(255,255,255,0.45); }
+.ai-rail:hover a i, .ai-rail:focus-within a i, .ai-rail.is-open a i { background: rgba(255,255,255,0.45); }
 .ai-rail a span { max-width: 0; overflow: hidden; opacity: 0; font-size: 0.78em; letter-spacing: 0.01em; transition: max-width 0.24s ease, opacity 0.18s ease; }
-.ai-rail:hover a span, .ai-rail:focus-within a span { max-width: 26em; opacity: 1; }
+.ai-rail:hover a span, .ai-rail:focus-within a span, .ai-rail.is-open a span { max-width: 26em; opacity: 1; }
 .ai-rail a:hover, .ai-rail a:focus-visible { color: #fff; background: rgba(127,178,229,0.12); }
 .ai-rail a:hover i, .ai-rail a:focus-visible i { background: #7fb2e5; }
 .ai-rail a.is-on { color: #fff; }
 .ai-rail a.is-on i { background: #7fb2e5; transform: scale(1.5); }
-@media (max-width: 980px) { .ai-rail { display: none; } }
+@media (hover: none) { .ai-rail { padding: 0.25em 0.35em; } .ai-rail a { height: 2.1em; } .ai-rail a i { width: 0.4em; height: 0.4em; } }
 .ai-top { position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050; height: auto; line-height: 1.4; padding: 0.6em 1em; font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 2em; background: rgba(66,103,166,0.95); border: 0 !important; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); white-space: nowrap; }
 .ai-top::after { display: none; }
 .ai-top[hidden] { display: none; }

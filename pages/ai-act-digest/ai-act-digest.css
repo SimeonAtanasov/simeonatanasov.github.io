@@ -5,18 +5,18 @@
 .ai-main { min-width: 0; }
 .ai-intro p { margin-bottom: 1em; }
 .ai-rail { position: fixed; right: 0.55em; top: 50%; transform: translateY(-50%); z-index: 1150; display: flex; flex-direction: column; gap: 0; padding: 0.2em 0.25em; border-radius: 0.9em; border: solid 1px transparent; background: transparent; transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease; }
-.ai-rail:hover, .ai-rail:focus-within { border-color: rgba(255,255,255,0.12); background: rgba(13,20,30,0.82); box-shadow: 0 0.3em 1em rgba(0,0,0,0.35); }
+.ai-rail:hover, .ai-rail:focus-within, .ai-rail.is-open { border-color: rgba(255,255,255,0.12); background: rgba(13,20,30,0.82); box-shadow: 0 0.3em 1em rgba(0,0,0,0.35); }
 .ai-rail[hidden] { display: none; }
 .ai-rail a { display: flex; align-items: center; gap: 0.6em; height: 1.15em; padding: 0 0.2em; border: 0; border-radius: 0.6em; color: rgba(255,255,255,0.75); text-decoration: none; white-space: nowrap; }
 .ai-rail a i { flex: 0 0 auto; width: 0.34em; height: 0.34em; border-radius: 50%; background: rgba(255,255,255,0.35); transition: background 0.15s ease, transform 0.15s ease; }
-.ai-rail:hover a i, .ai-rail:focus-within a i { background: rgba(255,255,255,0.45); }
+.ai-rail:hover a i, .ai-rail:focus-within a i, .ai-rail.is-open a i { background: rgba(255,255,255,0.45); }
 .ai-rail a span { max-width: 0; overflow: hidden; opacity: 0; font-size: 0.78em; letter-spacing: 0.01em; transition: max-width 0.24s ease, opacity 0.18s ease; }
-.ai-rail:hover a span, .ai-rail:focus-within a span { max-width: 26em; opacity: 1; }
+.ai-rail:hover a span, .ai-rail:focus-within a span, .ai-rail.is-open a span { max-width: 26em; opacity: 1; }
 .ai-rail a:hover, .ai-rail a:focus-visible { color: #fff; background: rgba(127,178,229,0.12); }
 .ai-rail a:hover i, .ai-rail a:focus-visible i { background: #7fb2e5; }
 .ai-rail a.is-on { color: #fff; }
 .ai-rail a.is-on i { background: #7fb2e5; transform: scale(1.5); }
-@media (max-width: 980px) { .ai-rail { display: none; } }
+@media (hover: none) { .ai-rail { padding: 0.25em 0.35em; } .ai-rail a { height: 2.1em; } .ai-rail a i { width: 0.4em; height: 0.4em; } }
 .ai-sum-hint { font-weight: normal; font-size: 0.75em; color: rgba(255,255,255,0.5); margin-left: auto; padding-right: 1.5em; }
 .ai-sources-note { margin: 2em 0 0 0; font-size: 0.85em; color: rgba(255,255,255,0.5); }
 .ai-top { position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050; height: auto; line-height: 1.4; padding: 0.6em 1em; font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 2em; background: rgba(66,103,166,0.95); border: 0 !important; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); white-space: nowrap; }

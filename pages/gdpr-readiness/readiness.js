@@ -566,3 +566,42 @@ document.addEventListener("DOMContentLoaded", () => {
   renderResults();
   syncFold();
 });
+
+(function () {
+	/* on this page: a column of dots at the right edge, labels on hover. The dot that
+	   lights up is the last section whose top has passed the reading line, the same rule
+	   the side contents highlights by. Queried by its aria-label rather than by id,
+	   because the AI Act builder's own copy of this script has no $ helper. Where there
+	   is no hover, a first tap opens the labels and the next one follows the link. */
+	var rail = document.querySelector('nav[aria-label="On this page"]');
+	if (rail) {
+		var railLinks = Array.prototype.slice.call(rail.querySelectorAll('a[data-target]')), railOn = null, railTick = false;
+		var railSync = function () {
+			var line = window.innerHeight * 0.3, best = null;
+			railLinks.forEach(function (a) {
+				var t = document.getElementById(a.getAttribute('data-target'));
+				if (!t || t.hidden) return;
+				if (t.getBoundingClientRect().top <= line + 8) best = a;
+			});
+			if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) best = railLinks[railLinks.length - 1];
+			if (best === railOn) return;
+			if (railOn) railOn.classList.remove('is-on');
+			railOn = best;
+			if (railOn) railOn.classList.add('is-on');
+		};
+		var railHover = window.matchMedia('(hover: hover)');
+		rail.addEventListener('click', function (e) {
+			if (!railHover.matches && !rail.classList.contains('is-open')) { e.preventDefault(); rail.classList.add('is-open'); return; }
+			if (e.target.closest && e.target.closest('a')) rail.classList.remove('is-open');
+		});
+		document.addEventListener('click', function (e) { if (!rail.contains(e.target)) rail.classList.remove('is-open'); });
+		window.addEventListener('scroll', function () {
+			if (railTick) return;
+			railTick = true;
+			window.requestAnimationFrame(function () { railTick = false; railSync(); });
+			rail.classList.remove('is-open');
+		}, { passive: true });
+		window.addEventListener('resize', railSync);
+		railSync();
+	}
+})();
