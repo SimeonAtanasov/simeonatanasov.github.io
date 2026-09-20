@@ -58,17 +58,27 @@
 /* ------------------------------------------------------------------ inputs --- */
 
 .fc-inputs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     padding: 20px 24px;
     background: rgba(255, 255, 255, 0.06);
     border-radius: 6px;
 }
 
+/* One grid for all three fields, with a row each for the label, the control and
+   the hint. `display: contents` on the field promotes its three children to grid
+   items, so the controls line up across the columns however many lines a label
+   wraps to. A flex row cannot do this: there each column is its own box, so a
+   two-line label pushes only its own control down. */
+.fc-fields {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto auto auto;
+    grid-auto-flow: column;
+    column-gap: 20px;
+    align-items: start;
+}
+
 .fc-field {
-    flex: 1 1 260px;
-    min-width: 0;
+    display: contents;
 }
 
 .fc-field label {
@@ -77,7 +87,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     opacity: 0.8;
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5em 0;
 }
 
 .fc-field input[type="text"],
@@ -90,14 +100,14 @@
     font-size: 0.82em;
     opacity: 0.7;
     margin: 0.5em 0 0 0;
+    align-self: start;
 }
 
 .fc-toggles {
-    flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px 28px;
-    padding-top: 4px;
+    margin-top: 20px;
 }
 
 /* The template hides native checkboxes in favour of a styled label. These are
@@ -375,9 +385,15 @@
 
 @media screen and (max-width: 736px) {
 
-    .fc-inputs { padding: 16px; gap: 16px; }
+    .fc-inputs { padding: 16px; }
 
-    .fc-field { flex: 1 1 100%; }
+    /* Stack on a phone: the grid and `display: contents` both come off, so each
+       field is an ordinary block again. */
+    .fc-fields { display: block; }
+
+    .fc-field { display: block; margin-bottom: 18px; }
+
+    .fc-field:last-child { margin-bottom: 0; }
 
     .fc-card { flex: 1 1 100%; }
 
