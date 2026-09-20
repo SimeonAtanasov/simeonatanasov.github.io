@@ -1,0 +1,23 @@
+{
+  "chosen_url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2026-03-04/482872",
+  "why": "Both CNIL pages on the Criteo sanction are now depublished, because the deliberation ordered publication identifying Criteo for only two years, so no cnil.fr source survives. The Conseil d'Etat Ariane Web page for decision no. 482872 is the only live primary source, and it recites the CNIL deliberation, the amount, every article breached and the appeal outcome in a single document.",
+  "page_title": "Decision n° 482872 - Conseil d'Etat (Ariane Web: Conseil d'Etat 482872, lecture du 4 mars 2026, ECLI:FR:CECHR:2026:482872.20260304)",
+  "verified": [
+    "The CNIL formation restreinte imposed an administrative fine of 40 million euros on Criteo (point 1 and point 22, '40 000 000 d'euros').",
+    "The CNIL deliberation is dated 15 June 2023 (point 1).",
+    "Article 7(1): Criteo processed the data of users visiting its partners' sites without being able to demonstrate that those users had validly consented, and its contracts placing consent collection on partners did not exonerate it from holding the proof itself (point 15).",
+    "Articles 12 and 13: information was incomplete, disclosing only the purpose 'Criteo traite vos donnees personnelles pour des annonces personnalisees' and not the separate purpose of configuring and improving its targeting algorithms (points 16 to 17).",
+    "Article 15: a breach was found and upheld, on the same incomplete-information basis (point 17).",
+    "Article 17: on erasure requests Criteo merely stopped displaying personalised adverts, kept the individual identifiers in its databases and went on using the associated data to improve its algorithms, though effective deletion was materially possible (point 19).",
+    "Article 26: the joint-controller agreement with partners did not specify required respective obligations, including the exercise of data subject rights, breach notification and any data protection impact assessment (point 14).",
+    "The Conseil d'Etat rejected Criteo's appeal on 4 March 2026 (Article 1er: 'La requete de la societe Criteo est rejetee').",
+    "Pseudonymous identifiers tied to browsing data are personal data: an identifier linked to IP address, geolocation, device ID, partner identifiers, sites visited, purchases and adverts viewed means at least some of the data subjects were identifiable by means not involving disproportionate effort in time, cost and labour (points 11 to 12)."
+  ],
+  "not_on_page": [
+    "The reduction from a proposed 60 million euros to 40 million. The decision never mentions 60 million; it says only that 40 million is half the maximum incurred, and that Criteo's cooperation and partial remediation did not make the amount excessive (point 22).",
+    "The characterisation of the article 15 finding as 'deficient access responses'. The decision upholds an article 15 breach but grounds it on the undisclosed second purpose, not on the quality of responses to access requests."
+  ],
+  "proposed_takeaway": "The CNIL fined Criteo 40 million euros for failing to demonstrate under article 7(1) GDPR that its publisher partners had collected valid consent for its tracker, for incomplete information that disclosed only personalised advertising and not the reuse of the data to configure and improve its targeting algorithms (articles 12, 13 and 15), for treating erasure requests by merely stopping personalised ads while keeping the identifiers and training on the data (article 17) and for joint-controller contracts missing required terms on rights, breach notification and impact assessments (article 26). An adtech vendor must audit partner consent, not merely contract for it: the Conseil d'Etat held that contracting the duty to partners does not relieve the controller of holding the proof. On 4 March 2026 it rejected Criteo's appeal in full, holding that pseudonymous identifiers tied to browsing data are personal data because the volume and precision of the information recouped for one identifier make at least some users identifiable without disproportionate effort.",
+  "second_url": null,
+  "note": "The rapporteur public's conclusions at conseil-etat.fr/fr/arianeweb/CRP/conclusion/2026-03-04/482872 exist but the page is only a PDF download stub, so it was not verified; the 60 million figure now has no reachable primary source, as Legifrance holds SAN-2023-009 behind a bot wall and the CNIL 2023 annual report carries only the 40 million headline."
+}

@@ -65,11 +65,15 @@ def jump_html(P, items):
 
 
 def top_button(P):
-    return ('<div class="%s-toc-fold" id="%s-toc-fold" role="group" aria-label="Contents blocks" hidden>'
+    return ('<div class="%s-step" id="%s-step" role="group" aria-label="Move through the matching entries" hidden>'
+            '<button type="button" class="%s-step-btn" id="%s-prev" title="Previous matching entry" aria-label="Previous match"><i class="fas fa-chevron-up"></i><span>Prev</span></button>'
+            '<span class="%s-step-n" id="%s-step-n">-</span>'
+            '<button type="button" class="%s-step-btn" id="%s-next" title="Next matching entry" aria-label="Next match"><i class="fas fa-chevron-down"></i><span>Next</span></button></div>'
+            '<div class="%s-toc-fold" id="%s-toc-fold" role="group" aria-label="Contents blocks" hidden>'
             '<button type="button" class="%s-toc-fold-btn" id="%s-expand" title="Expand all blocks in the contents" aria-label="Expand all"><i class="fas fa-angle-double-down"></i><span>Exp</span></button>'
             '<button type="button" class="%s-toc-fold-btn" id="%s-collapse" title="Collapse all blocks in the contents" aria-label="Collapse all"><i class="fas fa-angle-double-up"></i><span>Col</span></button></div>'
             '<button type="button" class="%s-top" id="%s-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button>'
-            '<div class="%s-toc-backdrop" id="%s-toc-backdrop" hidden></div><button type="button" class="%s-toc-fab" id="%s-toc-open" aria-controls="%s-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>' % (P, P, P, P, P, P, P, P, P, P, P, P, P))
+            '<div class="%s-toc-backdrop" id="%s-toc-backdrop" hidden></div><button type="button" class="%s-toc-fab" id="%s-toc-open" aria-controls="%s-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>' % (P, P, P, P, P, P, P, P, P, P, P, P, P, P, P, P, P, P, P, P, P))
 
 
 _JS = r"""
@@ -86,6 +90,7 @@ _JS = r"""
 		count.textContent = 'Showing ' + shown + ' of ' + total + ' ' + noun + '.' + (extra || '');
 		clearBtn.hidden = !active;
 		firstBtn.hidden = !(active && shown);
+		stepShow(!!(active && shown));
 		results.hidden = !(active && shown);
 		if (active && shown) {
 			var vis = Array.prototype.filter.call(document.querySelectorAll(entrySel), function (el) { return !el.hidden; });
@@ -200,6 +205,44 @@ _JS = r"""
 	window.addEventListener('resize', syncFold);
 	syncFold();
 
+	/* step through the entries the filter is showing: Prev and Next at the bottom left,
+	   beside the contents control, with the position of the entry you are on between them.
+	   That entry is the last match whose top has passed the reading line, the same rule the
+	   side contents highlights by, so Next always moves one match further down the page. */
+	var step = $('step'), stepN = $('step-n'), stepMatches = [], stepTick = false;
+	function stepIndex() {
+		var line = window.innerHeight * 0.3, idx = -1;
+		for (var i = 0; i < stepMatches.length; i++) { if (stepMatches[i].getBoundingClientRect().top <= line + 8) idx = i; else break; }
+		return idx;
+	}
+	function stepSync() {
+		if (step.hidden) return;
+		var i = stepIndex();
+		stepN.textContent = (i < 0 ? '-' : i + 1) + '/' + stepMatches.length;
+		step.title = (i < 0 ? 'Before the first of ' : 'Entry ' + (i + 1) + ' of ') + stepMatches.length + ' matching';
+	}
+	function stepShow(on) {
+		stepMatches = on ? Array.prototype.filter.call(document.querySelectorAll(entrySel), function (el) { return !el.hidden; }) : [];
+		step.hidden = !on;
+		stepSync();
+	}
+	function stepGo(d) {
+		if (!stepMatches.length) return;
+		var i = Math.max(0, Math.min(stepMatches.length - 1, stepIndex() + d));
+		var el = stepMatches[i], dt = el.closest('details');
+		if (dt && !dt.open) dt.open = true;
+		el.scrollIntoView({ block: 'start' });
+		history.replaceState(null, '', '#' + el.id);
+		setTimeout(stepSync, 80);
+	}
+	$('prev').addEventListener('click', function () { stepGo(-1); });
+	$('next').addEventListener('click', function () { stepGo(1); });
+	window.addEventListener('scroll', function () {
+		if (stepTick) return;
+		stepTick = true;
+		window.requestAnimationFrame(function () { stepTick = false; stepSync(); });
+	}, { passive: true });
+
 	/* scrollspy */
 	var links = {};
 	Array.prototype.forEach.call(toc.querySelectorAll('.' + P + '-toc-link[data-target]'), function (l) { var k = l.getAttribute('data-target'); (links[k] = links[k] || []).push(l); });
@@ -271,6 +314,14 @@ _CSS = """
 .ai-toc-fold-btn + .ai-toc-fold-btn { border-top: solid 1px rgba(255,255,255,0.3) !important; }
 .ai-toc-fold-btn:hover, .ai-toc-fold-btn:focus { background: #4267a6; color: #fff !important; }
 .ai-toc-fold-btn::after { display: none; }
+.ai-step { position: fixed; left: 3.6em; bottom: 1.25em; z-index: 1150; display: flex; flex-direction: column; border-radius: 1.1em; overflow: hidden; box-shadow: 0 0.3em 1em rgba(0,0,0,0.4); }
+.ai-step[hidden] { display: none; }
+.ai-step-btn { display: flex !important; flex-direction: column; align-items: center; justify-content: center; gap: 0.2em; min-width: 2.6em; width: auto; max-width: none; height: auto; line-height: 1; padding: 0.55em 0.35em 0.5em 0.35em; font-size: 1em; letter-spacing: 0; background: rgba(66,103,166,0.95); border: 0 !important; border-radius: 0 !important; box-shadow: none !important; white-space: nowrap; }
+.ai-step-btn i { font-size: 0.9em; }
+.ai-step-btn span { font-size: 0.5em; letter-spacing: 0.1em; text-transform: uppercase; }
+.ai-step-btn:hover, .ai-step-btn:focus { background: #4267a6; color: #fff !important; }
+.ai-step-btn::after { display: none; }
+.ai-step-n { display: block; padding: 0.35em 0.4em; font-size: 0.55em; line-height: 1; letter-spacing: 0.05em; text-align: center; white-space: nowrap; color: #fff; background: #2a3860; border-top: solid 1px rgba(255,255,255,0.3); border-bottom: solid 1px rgba(255,255,255,0.3); }
 .ai-part { font-size: 1.1em; margin: 1.5em 0 0.25em 0; text-transform: none; letter-spacing: 0; color: #fff; }
 .ai-part[hidden] { display: none; }
 .ai-groups > .ai-part:first-child { margin-top: 0; }
@@ -367,6 +418,8 @@ _CSS = """
 	.ai-toc-fold { display: none; }
 	body.ai-toc-drawer .ai-toc-fold { display: flex; }
 	body.ai-toc-drawer .ai-toc-fold[hidden] { display: none; }
+	.ai-step { left: 0.6em; }
+	body.ai-toc-drawer .ai-step { display: none; }
 	#ai-toc-grouped { padding-bottom: 5em; }
 	.ai-toc-fab {
 		position: fixed; right: 1.25em; bottom: 1.25em; z-index: 1050; height: auto; line-height: 1.4; padding: 0.7em 1.2em; font-size: 0.85em;

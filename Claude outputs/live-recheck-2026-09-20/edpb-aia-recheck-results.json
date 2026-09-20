@@ -1,0 +1,1669 @@
+[
+ {
+  "id": "aia-doc-01",
+  "reached": true,
+  "reached_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "as amended by Regulation (EU) 2026/1744, which rewrote 42 articles and 3 annexes",
+    "source_says": "Regulation (EU) 2024/1689 as published says nothing about the later amending regulation; the count could not be checked from this text.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Adoption 13 June 2024, OJ L of 12.7.2024, entry into force on the twentieth day after publication (1 August 2024), last article 113 and the Article 2(1) addressees all confirmed; the ELI landing page returns metadata only, and the HTML text truncates before the annexes so the chapter, recital and annex counts could not be counted directly.",
+  "_pass": "a03"
+ },
+ {
+  "id": "aia-doc-02",
+  "reached": true,
+  "reached_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32026R1744",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Adoption 8 July 2026, OJ 2026/1744 of 24.7.2026, entry into force on the third day (27 July 2026), the 2 December 2027 and 2 August 2028 dates, Article 4 AI literacy rewrite, Article 4a bias detection, Article 5(1)(ba)/(bb), small mid-caps, AI Office exclusive competence and the four months from 2 August 2026 for Article 50(2) (recital 38) all confirmed; the exact 2 December 2026 start for (ba)/(bb) was not visible in the fetched excerpt but matches the Council release.",
+  "_pass": "a03"
+ },
+ {
+  "id": "aia-doc-03",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Press release of 7 May 2026 confirms the provisional agreement, 2 December 2027 stand-alone and 2 August 2028 embedded dates, the 2 August 2027 sandbox deadline, the 2 December 2026 transparency deadline, the new intimate-content and CSAM prohibition, small mid-caps and the reinstated registration for exempted systems.",
+  "_pass": "a03"
+ },
+ {
+  "id": "aia-doc-04",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Press release of 29 June 2026 confirms Omnibus VII, entry into force on the third day after OJ publication, the two high-risk dates, the December 2026 start of the deepfake and CSAM bans, the grace period cut from six to three months with a 2 December 2026 deadline, the 2 August 2027 sandbox deadline and the machinery, medical device, toy, lift and watercraft points.",
+  "_pass": "a03"
+ },
+ {
+  "id": "aia-doc-05",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Tracker confirms 2025/0359(COD), COM(2025) 836, the 19 November 2025 proposal, 13 March 2026 general approach, 7 May 2026 agreement, 13 May 2026 Coreper, 2 June 2026 IMCO-LIBE vote, and the 16 June 2026 plenary vote of 423 to 57 with 174 abstentions; rapporteurs Kokalari (listed as PPE) and McNamara (Renew).",
+  "_pass": "a03"
+ },
+ {
+  "id": "aia-doc-06",
+  "reached": true,
+  "reached_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52025PC0836",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "benefiting an estimated 8,250 additional companies",
+    "source_says": "The explanatory memorandum argues that SMEs and small mid-caps are disproportionately affected by compliance burden but gives no figure for the number of additional companies; no such number was found in the proposal text.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52025PC0836",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Proposal confirms the standards-linked backstop dates of 2 December 2027 (Annex III) and 2 August 2028 (Annex I), the six-month generative transition to 2 February 2027, removal of Article 6(3) registration, removal of the prescribed post-market monitoring template, small mid-cap relief and a Union-level sandbox; the 8,250 figure is likely from the accompanying staff working document rather than the proposal.",
+  "_pass": "a03"
+ },
+ {
+  "id": "aia-doc-07",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Landing page confirms 4 February 2025 and that the guidelines are non-binding with authoritative interpretation reserved to the Court of Justice; the sister page on the AI system definition confirms the first rules including the prohibitions applied from 2 February 2025. The guidelines PDF itself sits behind ec.europa.eu/newsroom redirect links that WebFetch refuses under robots.txt, so the practice-by-practice list was not checked against the document; retry with the browser if that detail matters.",
+  "_pass": "a03"
+ },
+ {
+  "id": "aia-doc-08",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms publication 6 February 2025, that the guidelines are not binding, that they will evolve and be updated, and that the first rules including the AI system definition applied from 2 February 2025. The seven definitional elements sit in the PDF, which is behind a robots-blocked newsroom redirect.",
+  "_pass": "a03"
+ },
+ {
+  "id": "aia-doc-11",
+  "reached": true,
+  "reached_url": "https://ec.europa.eu/newsroom/dae/redirection/document/118480",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Mandatory template published 24 July 2025 in all 24 official languages",
+    "source_says": "The landing page still shows 'Publication 24 July 2025' and 24 language versions, but the English PDF it now serves is 'COMMUNICATION FROM THE COMMISSION, Explanatory Notice and Template for the Public Summary of Training Content for general-purpose AI models required by Article 53(1)(d) of Regulation (EU) 2024/1689', Brussels, 5.12.2025, C(2025) 8311 final; the page was last updated 26 March 2026",
+    "severity": "medium",
+    "kind": "outdated"
+   },
+   {
+    "claim": "data processing aspects such as lawful access and opt-out respect",
+    "source_says": "Section 3 of the Template, 'Data processing aspects', has 3.1 'Respect of reservation of rights from text and data mining exception or limitation' (opt-out protocols honoured), 3.2 'Removal of illegal content' and 3.3 optional other information; there is no 'lawful access' item",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Mandatory template first published 24 July 2025 and re-issued as Commission Communication C(2025) 8311 final of 5 December 2025, in all 24 official languages, for the public summary that Article 53(1)(d) requires from every GPAI provider, including providers of models released under free and open source licences, from 2 August 2025. It sets a common minimal baseline in three sections: general information on the model and data modalities, a list of data sources by category, and data processing aspects covering respect for text and data mining reservations of rights and removal of illegal content. For web-scraped data providers must list the internet domain names in the top 10 percent by size of content scraped, reduced to the top 5 percent or the top 1,000 domains for SMEs including start-ups. Providers of models placed on the market before 2 August 2025 have until 2 August 2027, and AI Office supervision and enforcement starts on 2 August 2026.",
+  "proposed_articles": null,
+  "note": "PDF read in full via the browser; Art 53(1)(d), open-source coverage, 2 Aug 2025, top 10 percent and SME 5 percent or 1,000 domains and 2 Aug 2027 all confirmed, but the hosted notice is now the 5 December 2025 Communication.",
+  "_pass": "b03"
+ },
+ {
+  "id": "aia-doc-12",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Every figure and article checked verbatim on the page: 9 September 2025, 10^23 FLOP with generative capability, 10^25 FLOP under Art 51(1)(a) and (2), one third of compute, open-source exemption from Art 53(1)(a) and (b) not applying to systemic-risk models, Arts 91 to 93 powers, 3 percent or EUR 15 million under Art 101.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-13",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Art 62(3) in the articles list",
+    "source_says": "The page names the Single Information Platform repeatedly but never cites Article 62(3); the article is nonetheless the correct basis for that platform in the AI Act.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms 27 July 2026, the removal of the 'sufficient' level, the Digital Omnibus amendment in force mid-July 2026, Art 4(3) AI Board recommendations, 2 February 2025 application, 2 August 2026 market surveillance, and proportionate case-by-case sanctions.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-15",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "under Article 6(5), which required them by 2 February 2026",
+    "source_says": "The page cites 'Article 6(5) AI Act' in relation to practical examples but gives no deadline for issuing the guidelines.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "The AI Act Service Desk hosts an accompanying guideline explorer.",
+    "source_says": "Neither the AI Act Service Desk nor a guideline explorer is mentioned on this landing page, though the Service Desk homepage does carry a Guidelines Explorer.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Art 25 in the articles list; reconcile them with the Omnibus additions to Article 6(1a) to (1c); application date of 2 December 2027",
+    "source_says": "The landing page mentions neither Article 25, nor the Digital Omnibus, nor Article 6(1a) to (1c), nor 2 December 2027. These sit inside the PDFs, which could not be opened.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://ec.europa.eu/newsroom/dae/redirection/document/128559",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Landing page confirms 19 May 2026, last update 23 July 2026, draft status, the targeted stakeholder consultation and the Art 6(1)/6(2) split; the three PDFs (128559 general principles, 128560 Annex I, 128561 Annex III) sit on ec.europa.eu/newsroom and need a browser retry for the substance.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-16",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "delivered under Article 73(7), which required guidance by 2 August 2025",
+    "source_says": "The page cites Article 73 without the paragraph and gives no 2 August 2025 deadline; Article 73(7) does carry that date in the Regulation.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "report within 15 days of awareness, 10 days for a death and 2 days for a widespread infringement, after which the market surveillance authority acts within 7 days",
+    "source_says": "No reporting deadlines appear on the consultation page; the figures come from Article 73 itself, where they are correct.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "The final guidance is not yet published",
+    "source_says": "The page is the September 2025 consultation announcement and says nothing about a final version, so this cannot be checked here.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://ec.europa.eu/newsroom/dae/redirection/document/119624",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms publication 26 September 2025, closing 7 November 2025, clarified definitions, practical examples, interplay with other reporting regimes and alignment with the OECD AI Incidents Monitor and Common Reporting Framework; draft guidance PDF 119624 and reporting template 119623 are on ec.europa.eu/newsroom and need a browser retry.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-18",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Art 56 in the articles list",
+    "source_says": "The page never cites Article 56. The code's own basis is Article 50(7), which only cross-refers to the Article 56(6) procedure.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://ec.europa.eu/newsroom/dae/redirection/document/130913",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms the Opinion of 8 July 2026 and the Board assessment of 9 July 2026, 'adequately covers the obligations provided for in Articles 50(2), (4) and (5)', 'does not constitute conclusive evidence of compliance', the EU-wide effect regardless of place of establishment and formal updates at least every two years; the two PDFs (130913 Opinion, 130916 Board assessment) need a browser retry.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-19",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "following a draft of 8 May 2026",
+    "source_says": "The landing page makes no reference to an earlier draft or to 8 May 2026.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Providers of generative systems already on the market before 2 August 2026 have until 2 December 2026 for marking under the Omnibus transition; Art 111(4)",
+    "source_says": "The landing page mentions no transition, no 2 December 2026 date, no Digital Omnibus and no Article 111(4). These would sit in the guidelines PDF, which could not be opened.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "non-binding guidelines ... they cover disclosure, machine-readable marking, emotion recognition and biometric categorisation, deepfake and public-interest text labelling",
+    "source_says": "The landing page gives only the general description and does not set out the substantive topics or a non-binding statement.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://ec.europa.eu/newsroom/dae/redirection/document/131215",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms publication 20 July 2026 (last update 31 July 2026), addressees 'competent authorities, as well as providers and deployers', 'consistent, effective, proportionate and uniform manner' and application from 2 August 2026; the guidelines PDF 131215 is on ec.europa.eu/newsroom and needs a browser retry for the substantive claims.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-20",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the transparency Code of Practice",
+    "source_says": "The page names it the 'Code of Practice on marking and labelling of AI-generated content'; Section 2 and the placement specifications are as described.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms last update 10 August 2026, four colour variants, the three types Basic icon, Fully AI-Generated and Partially AI-Modified, the Article 50(4) deepfake and public-interest text duty, 'the use of these EU icons is optional, but the labelling requirements under Article 50 AI Act are not', no automatic compliance and no attribution needed.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-21",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "Initially in English, French and German with all 24 languages planned for early 2026.",
+    "source_says": "The language selector offers six languages: Spanish, German, English, French, Italian and Polish. There is no statement about further languages, and early 2026 has passed without the 24 arriving.",
+    "severity": "medium",
+    "kind": "outdated"
+   },
+   {
+    "claim": "Launched 8 October 2025 with the Apply AI Strategy",
+    "source_says": "No launch date and no mention of the Apply AI Strategy appear on the page; it references an Apply AI Alliance, which is a different thing.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the central hub the Act foresees in Article 62(3)",
+    "source_says": "'The Single Information Platform, as foreseen in the AI Act, provides online interactive tools to help stakeholders determine whether they are subject to legal obligations.' The article number is not given, though Article 62(3)(b) is the correct basis.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "an AI Act Explorer through 13 chapters, 180 recitals and the annexes, FAQs built from AI Pact webinars and stakeholder submissions",
+    "source_says": "The Compliance Checker, AI Act Explorer, FAQs, Guidelines Explorer, National Resources and a contact form are all present, but the page gives no counts of chapters or recitals and does not say where the FAQs come from.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Answers are informational and non-binding; note that some explorer pages still show pre-Omnibus text.",
+    "source_says": "No such disclaimer and no Omnibus notice appear on the homepage or its footer, which carries only standard legal notice links.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Launched 8 October 2025 with the Apply AI Strategy as the central hub the Act foresees in Article 62(3). It offers a Compliance Checker to determine obligations, an AI Act Explorer through the chapters, recitals and annexes, FAQs built from AI Pact webinars and stakeholder submissions, a high-risk guideline explorer, a national resources section and a submission form for individual questions answered by experts coordinating with the AI Office. It is available in six languages: English, French, German, Spanish, Italian and Polish. Answers are informational and non-binding; note that some explorer pages still show pre-Omnibus text.",
+  "proposed_articles": null,
+  "note": "The language claim is the real error: the site now runs in six languages, not three with 24 promised for early 2026.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-23",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "It explains why the Act was amended",
+    "source_says": "The four questions are still phrased as a proposal: 'Why is the European Commission proposing to amend the AI Act?', 'What are the main changes proposed to the AI Act?', 'What are the new timelines proposed?'",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "that the Commission points to from every explorer page carrying the notice that its text has not yet been updated for Regulation (EU) 2026/1744",
+    "source_says": "The filtered FAQ page itself carries no such notice and does not cite Regulation (EU) 2026/1744; the claim is about the explorer pages and could not be checked from here.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "date field of 27 July 2026",
+    "source_says": "The filtered listing shows no date or last-updated stamp.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Dedicated FAQ set of four questions that the Commission points to from every explorer page carrying the notice that its text has not yet been updated for Regulation (EU) 2026/1744. It explains why the Commission proposed to amend the Act after stakeholder consultations throughout 2025, the delay of up to 16 months for Annex III and 12 months for Annex I systems, the extension of simplified compliance from SMEs to small mid-caps reaching an estimated 8,250 additional companies, the reduced registration burden, the AI Office's centralised oversight of GPAI-based systems and AI on very large platforms, special-category data for bias detection, expanded sandboxes and an EU-level sandbox from 2028. Non-binding and still written in the language of a proposal; check answers against the enacted text.",
+  "proposed_articles": null,
+  "note": "All substantive figures confirmed word for word (16 and 12 months, 8,250 companies, EU-level sandbox from 2028); only the enacted-versus-proposed framing needs softening.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-24",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "more than 3,000 organisations interested in the AI Pact and over 230 pledge signatories as of December 2025",
+    "source_says": "The page dates the two figures differently: more than 3000 organisations expressed interest in November 2023, and more than 230 companies had signed as of 15 December 2025.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "General non-binding Q&A updated 7 August 2026 covering scope and the risk-based approach, high-risk classification and obligations, GPAI documentation and the 10^25 FLOP systemic-risk presumption, the two-tier governance of AI Office and national authorities, penalties of up to EUR 35 million or 7 percent for prohibited practices, EUR 15 million or 3 percent for other breaches and EUR 7.5 million or 1 percent for misleading information, and the post-Omnibus dates of 2 December 2027 and 2 August 2028. It reports more than 3,000 organisations that expressed interest in the AI Pact in November 2023 and more than 230 pledge signatories as of 15 December 2025. A sound orientation text for non-specialists.",
+  "proposed_articles": null,
+  "note": "Date, all three penalty tiers, the 10^25 FLOP threshold, 2 December 2027 and 2 August 2028 and the governance split all confirmed; only the AI Pact figures carry a date that the page attaches to just one of them.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-26",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Three channels opened for the start of enforcement on 2 August 2026.",
+    "source_says": "The page describes the three channels but never ties them to 2 August 2026 or to the start of enforcement. Its last update is 31 July 2026.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "The whistleblower tool, live since 25 November 2025 ... under Article 87",
+    "source_says": "The page describes an anonymous channel for 'eligible individuals professionally connected to AI providers or deployers' but gives neither a go-live date nor an article number. Article 87 is the correct basis in the Regulation.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "under Article 89(2)",
+    "source_says": "The page cites only 'Articles 53 to 55 of the AI Act' for the downstream provider channel, not Article 89(2), which is nonetheless the right complaint basis.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms last update 31 July 2026, three channels, 'both natural and legal persons', Article 85, 'under the exclusive competence of the AI Office', a generated reference number, confidentiality, referral with prior consent to national market surveillance or fundamental rights authorities, and the downstream Articles 53 to 55 channel.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-27",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the entry links to the standardisation request C(2023)3215 as amended by C(2025)3871",
+    "source_says": "The URL is the AI Act standardisation policy overview, not the request. The page names only C(2025)3871 and links it to the Commission documents register; C(2023)3215 and the 22 May 2023 date do not appear.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Decision C(2025)3871 amended it after the original 30 April 2025 delivery date passed.",
+    "source_says": "The page gives no original delivery deadline and no amendment date, so the 30 April 2025 date cannot be checked from it.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "once cited in the Official Journal under Article 40, give a presumption of conformity with Chapter III Section 2, with Article 41 common specifications as the fallback",
+    "source_says": "'The application of standards remains voluntary ... However, harmonised standards referenced in the Official Journal of the EU provide legal certainty.' Neither Article 40, nor Chapter III Section 2, nor Article 41 common specifications is named. Article 17 is named.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)3871&lang=en",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Every checkable claim matches the page: the ten areas are listed in exactly the order the takeaway gives, standards remain voluntary, and prEN 18286 entered public enquiry on 30 October 2025. The linked page is the policy hub, so better_url points at the amending decision in the documents register.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-28",
+  "reached": true,
+  "reached_url": "https://jtc21.eu/significant-milestone-for-european-ai-standardization/",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "on 9 July 2026 JTC 21 announced EN 18286 for publication in July 2026",
+    "source_says": "The 9 July 2026 news item 'Significant milestone for European AI standardization' says 'July marks an important milestone with the expected publication of EN 18286', so publication is expected, not yet confirmed as done",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "A published EN gives no presumption of conformity until cited in the Official Journal",
+    "source_says": "The news item does not mention the Official Journal or presumption of conformity; it lists prEN 18228, prEN 18282, prEN 18229-1 and prEN 18288 as being in public hearing (enquiry)",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://jtc21.eu/significant-milestone-for-european-ai-standardization/",
+  "proposed_takeaway": "The joint technical committee's news feed is the primary status source for the harmonised standards. Milestones: technical report CEN/CLC/TR 18115:2024 on data governance and quality published 6 November 2024; a technical report on conformity assessment published 18 December 2024; prEN 18286 'Quality management system for EU AI Act regulatory purposes' reached enquiry on 10 November 2025; further drafts opened for public enquiry on 9 April 2026 and 8 May 2026; and on 9 July 2026 JTC 21 said publication of EN 18286 was expected in July 2026, with prEN 18228, prEN 18282, prEN 18229-1 and prEN 18288 still in public hearing. A published EN gives no presumption of conformity until cited in the Official Journal, so monitor both.",
+  "proposed_articles": null,
+  "note": "Archive followed to the 9 July 2026 item; TR 18115:2024 publication on 6 November 2024, the 18 December 2024 conformity assessment TR, the 10 November 2025 prEN 18286 enquiry post and the 9 April and 8 May 2026 enquiry posts all check out, and Art 17, Art 40 and Art 9-15 fit the standards named.",
+  "_pass": "b02"
+ },
+ {
+  "id": "aia-doc-29",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "the page lists more than 500 pledging organisations from large groups to SMEs",
+    "source_says": "The page states no total. It says 'Many companies have already signed the pledges, including large corporations, Small and Medium Enterprises (SMEs) from the EU and beyond', and roughly 400 names are displayed.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "and no presumption of conformity",
+    "source_says": "'These pledges are not legally binding and do not impose any legal obligations on participants.' No presumption of conformity is discussed.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Art 4, Art 62, Art 95 in the articles list",
+    "source_says": "The page cites no AI Act articles at all.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Voluntary Commission initiative with two pillars. Pillar I is an open network with webinars and exchange of practice; Pillar II, launched 25 September 2024, collects pledges in which providers and deployers commit to three core actions: adopting an AI governance strategy, mapping likely high-risk systems and promoting AI literacy among staff. Over half of pledgers add commitments on human oversight, risk mitigation and transparency of generated content, and the page lists several hundred pledging organisations, from large corporations to SMEs from the EU and beyond. It creates no legal obligations and no presumption of conformity; use it for early engagement with the AI Office and for the living repository of practices.",
+  "proposed_articles": null,
+  "note": "Two pillars, the 25 September 2024 pledge launch, the three core actions and the 'over half' additional commitments all confirmed; only the signatory count is unsupported.",
+  "_pass": "a04"
+ },
+ {
+  "id": "aia-doc-30",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "Experience Centres for AI",
+    "source_says": "The news page names the Frontier AI initiative, the Apply AI Alliance, the AI Observatory and the AI Act Service Desk, but does not mention Experience Centres; it does mention 'linking infrastructure, data, and testing facilities'.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "articles Art 57, Art 62",
+    "source_says": "The page cites no AI Act article numbers at all; it is a news announcement of two strategies.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms 8 October 2025, both strategies, RAISE, EUR 600 million from Horizon Europe and doubling annual AI investment to over EUR 3 billion verbatim.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-31",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "two-year renewable terms, with at most three nationals per country",
+    "source_says": "The page says members serve 'two-year terms' but says nothing about renewability or any nationality cap.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "able to issue qualified alerts under Article 90",
+    "source_says": "The page never uses the phrase 'qualified alert' and cites no article numbers, including 67, 68 and 90.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Publication 1 June 2026, 60 experts, focus areas, FRA, ENISA and standardisation bodies as forum members all confirmed; article numbers come from the Act, not this page.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-32",
+  "reached": true,
+  "reached_url": "https://eur-lex.europa.eu/eli/reg_impl/2025/454/oj",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "adopted 5 March 2025",
+    "source_says": "EUR-Lex title: 'Commission Implementing Regulation (EU) 2025/454 of 7 March 2025 laying down the rules for the application of Regulation (EU) 2024/1689 ... as regards the establishment of a scientific panel of independent experts in the field of artificial intelligence'; entry into force 30 March 2025.",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "claim": "independence and conflict-of-interest declarations",
+    "source_says": "The Commission policy page records that the experts 'signed a declaration of confidentiality' and a 'declaration of commitment'; it does not describe independence or conflict-of-interest procedures.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "the chair and vice-chair chosen from among members",
+    "source_says": "Policy page: 'A chair and a vice-chair will be nominated by the members and selected by the Commission upon nomination.'",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "selection of experts through an open call ... procedure for qualified alerts to the AI Office under Article 90",
+    "source_says": "The linked policy page confirms Article 68 as the basis, 60 experts and a '24-month term, renewable', and mentions 'alerting the AI Office to systemic risks', but neither it nor EUR-Lex's HTML view yielded the operative text of the Regulation, so the open call and Article 90 procedure could not be read in the act itself.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://eur-lex.europa.eu/eli/reg_impl/2025/454/oj",
+  "proposed_takeaway": "Binding implementing act adopted 7 March 2025 under Article 68(1) and in force since 30 March 2025, laying down rules for the establishment and functioning of the scientific panel: selection of experts through an open call, declarations of commitment and confidentiality covering independence and conflicts of interest, the 24-month renewable term, a chair and vice-chair nominated by the members and selected by the Commission, working arrangements with the AI Office and the procedure for qualified alerts to the AI Office under Article 90 when a GPAI model presents a concrete identifiable Union-level risk or should be classified as posing systemic risk. Providers of GPAI models should understand that a panel alert can initiate a request for information, an evaluation or a classification decision.",
+  "proposed_articles": null,
+  "note": "The entry's link is a policy page that names the Regulation but does not host it; EUR-Lex gives the date as 7 March 2025, not 5 March. EUR-Lex serves only metadata to WebFetch, so the operative articles need a browser or PDF retry.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-34",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "must adopt AI literacy recommendations under the amended Article 4(3)",
+    "source_says": "The page carries no information about AI literacy recommendations or Article 4(3).",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "First meeting 10 September 2024, nine meetings to 17 September 2026, per Member State composition, EDPS and EEA-EFTA observers, Member State chair, subgroups including AIA and MDR/IVDR interplay, and adequacy of both codes of practice all confirmed.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-35",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "with a companion page listing fundamental rights authorities under Article 77",
+    "source_says": "The page neither links to nor mentions a separate Article 77 list; the only article-level reference is the 2 August 2025 designation duty.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the recipient of Article 73 incident reports",
+    "source_says": "The page cites neither Article 73 nor Article 74; it refers to the AI Act and EU market surveillance rules generally.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Updated 7 September 2026, the 2 August 2025 deadline, the asterisk footnote for designations pending final adoption and all nine named authorities match the table exactly.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-38",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/2024-07/edpb_statement_202403_dpasroleaiact_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": "https://www.edpb.europa.eu/system/files/documents/2024-07/edpb_statement_202403_dpasroleaiact_en.pdf",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "PDF confirms 16 July 2024, the mandatory Article 74(8) designations for Annex III points 1, 6, 7 and 8, the further recommendation to consider DPAs as MSAs for the remaining Annex III systems affecting rights and freedoms, DPAs as single points of contact, cooperation procedures under Article 74(10) and mutual cooperation with the AI Office; non-binding.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-40",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-04/edpb_edps_jointopinion_202601_proposal_ai-omnibus_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "that the exception not extend beyond high-risk systems without justification",
+    "source_says": "Paragraph 11 supports extension to non-high-risk systems subject to limits: 'the cases where providers and deployers would be able to rely on this legal ground in the context of non-high risk AI systems and models should be clearly circumscribed and limited to cases where the risk of adverse effects caused by such bias is sufficiently serious.'",
+    "severity": "high",
+    "kind": "wrong"
+   },
+   {
+    "claim": "remain bound by strict necessity, pseudonymisation, access controls and deletion",
+    "source_says": "The opinion asks for 'strict necessity' to be reinstated in place of the proposal's 'necessary', but paragraph 8 refers only to 'appropriate safeguards as specified in the draft Proposal that complement the GDPR, EUDPR and LED, as applicable'; it does not enumerate pseudonymisation, access controls or deletion.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "The final Article 4a reflects the strict-necessity and safeguard conditions.",
+    "source_says": "The opinion addresses the Commission proposal COM(2025) 836 and says nothing about a final adopted text.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.edpb.europa.eu/system/files/2026-04/edpb_edps_jointopinion_202601_proposal_ai-omnibus_en.pdf",
+  "proposed_takeaway": "Joint opinion on COM(2025) 836 adopted 20 January 2026. The Board and Supervisor accepted the objective of simplification but asked that any processing of special categories of personal data for bias detection be bound by strict necessity rather than mere necessity and by appropriate safeguards complementing the GDPR, the EUDPR and the Law Enforcement Directive, that its extension beyond high-risk systems be clearly circumscribed and limited to cases where the risk of adverse effects from bias is sufficiently serious, that data protection authorities stay competent to supervise processing under the new Article 4a and that the AI Office coordinate closely with them where it supervises systems built on general-purpose AI models, and that the obligation to register exempted Annex III systems in the EU database be kept. Non-binding, but it signals how DPAs will read Article 4a.",
+  "proposed_articles": null,
+  "note": "The PDF gives adoption as 20 January 2026 (the landing page shows 21 January); the direction of the recommendation on non-high-risk systems is the reverse of the takeaway.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-41",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "six data-flow stages",
+    "source_says": "Section 3 gives a different data flow per service model, not a single six-stage flow: LLM as a Service has four phases (user input, provider interface and API, LLM processing at the provider's infrastructure, processed output), the self-developed system has eight, and the off-the-shelf flow is said to closely resemble LLM as a Service",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "claim": "A 99-page expert report",
+    "source_says": "The PDF runs to 102 numbered pages; the table of contents ends at page 99 with 'Other Tools and Guidance'",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "catalogues over 70 technical and organisational mitigations",
+    "source_says": "Mitigations for providers and for deployers run through sections 3 and 6, but the report states no total",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "A 102-page expert report published April 2025 that the EDPB states is not a formal Board position. It maps privacy risks across the eight lifecycle phases of ISO/IEC 22989 and 5338 and across three service models (LLM as a service, off-the-shelf, self-developed), each with its own data flow, sets a three-stage risk methodology of identification, estimation and control, and catalogues technical and organisational mitigations split by provider and deployer role, with three worked use cases. It maps to GDPR Articles 25, 32 and 35 and to the AI Act's provider and deployer roles. Use it as a practical companion to Article 9 risk management and DPIAs for LLM deployments.",
+  "proposed_articles": null,
+  "note": "The packet URL redirects to /system/files/documents/2025-04/...; the server drops whole-file requests but serves byte ranges, so the PDF was pulled in chunks and read in full.",
+  "_pass": "b03"
+ },
+ {
+  "id": "aia-doc-45",
+  "reached": true,
+  "reached_url": "https://www.edps.europa.eu/system/files/2025-10/25-10_28_revised_genai_orientations_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "addressed to the Union institutions the EDPS supervises under Regulation (EU) 2018/1725 and under the AI Act as their market surveillance authority",
+    "source_says": "Version 2 states: 'The EDPS issues these orientations in his role as a data protection supervisory authority and not in his new role as market surveillance authority under the AI Act', and adds that they are 'without prejudice to the Artificial Intelligence Act'.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "revised in an expanded second version in October 2025",
+    "source_says": "Version 2 is dated 28 October 2025 and titled 'Generative AI and the EUDPR. Orientations for ensuring data protection compliance when using Generative AI systems.'",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "mirror the deployer duties in Article 26",
+    "source_says": "Article 26 of the AI Act is not mentioned anywhere in the document.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://www.edps.europa.eu/data-protection/our-work/publications/guidelines/2025-10-28-guidance-generative-ai-strengthening-data-protection-rapidly-changing-digital-era_en",
+  "proposed_takeaway": "First orientations published 3 June 2024 and revised as an expanded version 2 on 28 October 2025, addressed to the Union institutions, bodies, offices and agencies the EDPS supervises under Regulation (EU) 2018/1725; the EDPS states he issues them as data protection supervisory authority and not in his new role as market surveillance authority under the AI Act, which they leave unaffected. Structured as practical questions: what generative AI is, roles and responsibilities, when generative AI processes personal data, the role of the data protection officer, when a DPIA is needed, lawful basis, purpose limitation, minimisation, accuracy, transparency, automated decisions, fair processing and bias, individual rights and security. Non-binding for private operators, but they show the supervisory expectations a deployer of a general-purpose AI system should meet and mirror the deployer duties in Article 26.",
+  "proposed_articles": null,
+  "note": "The June 2024 landing page is thin and its PDF returns 403; the 28 October 2025 version 2 PDF reads fine and disclaims the market surveillance role the takeaway attributes to it.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-46",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "It records adopted laws in Italy, Denmark ..., Finland ..., Hungary and Slovenia.",
+    "source_says": "The tracker records Italy (Law No. 132/2025), Denmark (Law No. 467), Finland (Law 1377/2025) and Slovenia (November 2025) as adopted laws; Hungary appears with Government Decree 344/2025, a decree rather than an implementing law.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Independent tracker updated 17 June 2026 rating each Member State as clear, partially clear or unclear on designation of market surveillance and notifying authorities, national implementing law and sandboxes. As of that date 9 Member States had clearly designated both authorities, 12 had proposals or a single authority and 6 had none, against the 2 August 2025 deadline in Article 70, while all 27 had designated fundamental rights authorities by 2 November 2024 under Article 77. It records adopted national measures in Italy (Law No. 132/2025), Denmark (Law 467/2025, in force 2 August 2025), Finland (Law 1377/2025, in force 1 January 2026), Slovenia (November 2025) and Hungary (Government Decree 344/2025). Not official; verify against the Commission's list.",
+  "proposed_articles": null,
+  "note": "Date, publisher, rating scheme, the 9/12/6 split and both deadlines match the page; only the Hungarian instrument is mislabelled as a law.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-47",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "approved by the Federal Cabinet as a draft on 10 February 2026",
+    "source_says": "The press release says the law 'enters into force today' but gives no Federal Cabinet approval date.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Germany lists 20 fundamental rights authorities.",
+    "source_says": "The press release makes no mention of fundamental rights authorities.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "a regulatory sandbox for SMEs and start-ups",
+    "source_says": "The release refers to an 'AI regulatory sandbox' for SMEs, without naming start-ups.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "KI-MIG in force 29 July 2026, Bundesnetzagentur as market surveillance authority, single point of contact, complaints point, sandbox operator and AI Service Desk, the sensitive-area list and the hybrid approach leaving BaFin and the state media authorities in place all confirmed.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-48",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "adds national sector rules on health, work, professions, justice and minors together with delegations to the Government for further decrees and new criminal provisions on unlawful dissemination of AI-generated content",
+    "source_says": "The tracker gives the law's title, date and authority designations only; it does not describe the substantive chapters or the criminal provisions.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Law No. 132/2025 in force 10 October 2025, ACN as market surveillance authority and single point of contact, AgID as notifying authority, five fundamental rights authorities and 'the first state in the Union to pass a national law' all confirmed on the tracker.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-49",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the Commission's list still marks the designation as pending final adoption",
+    "source_says": "The tracker does not say this; the Commission's own page does carry the footnote 'For Single Points of Contact marked with *, the national designation decision is still pending final adoption.'",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Spain also ran the first national sandbox pilot.",
+    "source_says": "The tracker's Spain entry does not mention a national AI regulatory sandbox or pilot.",
+    "severity": "low",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the first dedicated national AI supervisory agency",
+    "source_says": "The tracker says AESIA was 'established in 2023 as an autonomous agency of the Spanish Department of Digital Transformation' but makes no first-in-the-Union claim.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "AESIA as market surveillance authority and single point of contact, 20 fundamental rights authorities, the Directorate-General for Artificial Intelligence as proposed notifying authority and the draft governance law still pending are all confirmed on the tracker.",
+  "_pass": "a05"
+ },
+ {
+  "id": "aia-doc-50",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "the Commission's list of 7 September 2026 now names the AI Office of Ireland",
+    "source_says": "The tracker (Last update: 17 June 2026) references the Commission's consolidated list without giving any publication date, and the Ireland entry says only that 'A National AI Office is expected to be established by 2 August 2026 as the central coordinating authority and will become the new single point of contact'. No 'AI Office of Ireland' appears.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Nine fundamental rights authorities are listed",
+    "source_says": "Ireland row, Authorities Protecting Fundamental Rights: '9 authorities appear in the Commission's consolidated list.'",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Ireland implemented a decentralised model through Statutory Instrument No. 366 of 2025, designating 15 sectoral market surveillance authorities with the Minister for Enterprise, Tourism and Employment as single point of contact and four notifying authorities: that Minister, the Minister for Transport, the Health Products Regulatory Authority and the Commission for Communications Regulation. Nine fundamental rights authorities appear in the Commission's consolidated list, and a National AI Office is expected to be established by 2 August 2026 as the central coordinating authority and new single point of contact. Operators established in Ireland, including many GPAI providers, should map each of their systems to the relevant sectoral regulator.",
+  "proposed_articles": null,
+  "note": "S.I. 366/2025, 15 MSAs, the four notifying authorities and the 2 August 2026 National AI Office all match; the 7 September 2026 Commission list and the name 'AI Office of Ireland' are not on this page.",
+  "_pass": "a06"
+ },
+ {
+  "id": "aia-doc-51",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "The Commission's list marks RDI as pending final adoption",
+    "source_says": "The Netherlands row is labelled 'Partial clarity'; the page never uses the phrase 'pending final adoption' and attributes no status to RDI in the Commission's consolidated list. The list is cited only for the count of fundamental rights authorities.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the central bank",
+    "source_says": "The page names 'De Nederlandsche Bank' among the ten sectoral authorities.",
+    "severity": "low",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "The Dutch DPA has an early-warning role on algorithms and publishes AI Act guidance of its own",
+    "source_says": "The page says only that 'The Dutch Data Protection Authority and the Dutch Authority for Digital Infrastructure have published recommendations on an integrated approach to supervision under the AI Act in the Netherlands.' No early-warning or algorithm-signalling role is mentioned.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "in line with Article 74(8)",
+    "source_says": "The page cites no AI Act article numbers for the Netherlands.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The Netherlands published draft implementing legislation in April 2026 proposing a decentralised model of ten sectoral authorities acting as both market surveillance and notifying authorities, among them the Data Protection Authority, the State Inspectorate for Digital Infrastructure (RDI), the Financial Markets Authority and De Nederlandsche Bank, with the Data Protection Authority and RDI holding the coordinating role and RDI acting as single point of contact. The tracker records the position as partial clarity, the legislation not yet being adopted, and six fundamental rights authorities appear in the Commission's consolidated list. The Dutch Data Protection Authority and the Authority for Digital Infrastructure have published recommendations on an integrated approach to supervision under the AI Act. Operators in the Netherlands should expect the DPA to supervise fundamental-rights-sensitive high-risk uses in line with Article 74(8).",
+  "proposed_articles": null,
+  "note": "Ten authorities, the named bodies, RDI as single point of contact and six fundamental rights authorities match; the 'pending final adoption' marking and the DPA early-warning role are not on the page.",
+  "_pass": "a06"
+ },
+ {
+  "id": "aia-doc-52",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "the Commission's list marks DGCCRF as pending final adoption",
+    "source_says": "The France row is labelled 'Partial clarity'; the page never uses the phrase 'pending final adoption' and gives no status for DGCCRF in the Commission's consolidated list.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the CNIL continues to publish AI Act and GDPR guidance for developers",
+    "source_says": "The France entry does not mention the CNIL at all.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "Three fundamental rights authorities are designated",
+    "source_says": "France row: '3 authorities appear in the Commission's consolidated list.'",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "France has published a legislative proposal, not yet adopted as of June 2026, for a decentralised model that broadens the scope of existing market surveillance and notifying authorities to cover AI, with the Directorate-General for Competition, Consumer Affairs and Fraud Control (DGCCRF) acting as coordinating market surveillance authority and single point of contact; the tracker records the position as partial clarity. Three fundamental rights authorities appear in the Commission's consolidated list. Operators in France should track the bill for the penalty regime and the final split of competences between DGCCRF, CNIL and sector regulators.",
+  "proposed_articles": null,
+  "note": "DGCCRF role, the decentralised proposal and the count of three fundamental rights authorities match; the 'pending final adoption' marking and the CNIL guidance sentence are not on the page.",
+  "_pass": "a06"
+ },
+ {
+  "id": "aia-doc-53",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "It presents all 113 articles",
+    "source_says": "The explorer's own navigation states 'Articles 119 The main substance of the Act'. The numbering still runs to Article 113 (Chapter XIII is 'Arts. 102-113') because the Digital Omnibus inserted lettered articles such as Article 4a, but the page's count is 119.",
+    "severity": "medium",
+    "kind": "outdated"
+   },
+   {
+    "claim": "Unlike the Commission's own explorer it already shows the law as amended by the Digital Omnibus",
+    "source_says": "The explorer makes no comparison to the Commission's explorer; it states only 'The Digital Omnibus on AI amended 42 articles and 3 annexes of this Regulation and has applied since 27 July 2026.' The comparison is nonetheless borne out by the Commission's Article 99 page, which carries a notice that its text is not yet updated.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Independent, free explorer maintained by the Future of Life Institute, explicitly not associated with the European Union. It presents all 119 articles across 13 chapters, 14 annexes and 180 recitals in 24 languages with keyword search, hyperlinked cross-references with peek view, paragraph-level permalinks and a chatbot that answers from the text with citations. Unlike the Commission's own explorer it already shows the law as amended by the Digital Omnibus, which it records as amending 42 articles and 3 annexes and applying since 27 July 2026. Use it for the consolidated text and cite the Official Journal for anything formal.",
+  "proposed_articles": null,
+  "note": "Chapters, annexes, recitals, languages, features, disclaimer and the Omnibus figures all match; the article count is 119 on the page, not 113, though numbering still ends at 113.",
+  "_pass": "a06"
+ },
+ {
+  "id": "aia-doc-54",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "entry date field: 27 July 2026",
+    "source_says": "The timeline page displays 'Last updated: 31 August 2026'.",
+    "severity": "low",
+    "kind": "outdated"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Every deadline, article citation and date in the takeaway matches the page, including Art 96(1)(g) guidance on 1 August 2027, Art 72(3) on 2 September 2027, Art 43(3) on 28 January 2028, Art 112 reports, the 2030 deadlines and both delegated-power expiries; only the entry's date field should move to 31 August 2026.",
+  "_pass": "a06"
+ },
+ {
+  "id": "aia-doc-55",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "returns a tailored obligation summary as a PDF flowchart or by email",
+    "source_says": "Results are shown interactively on the page; the 'PDF Flowchart' is described as 'a visual overview of the full form logic' for offline use, not the tailored result, and email delivery is an option that stores the user's inputs and address.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "before the Digital Omnibus, so its high-risk dates and registration answers need checking against Regulation (EU) 2026/1744",
+    "source_says": "The page does not mention the Digital Omnibus or Regulation (EU) 2026/1744; its most recent changelog entry is 3 July 2025.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Interactive questionnaire that walks through operator role (provider, deployer, distributor, importer, authorised representative, product manufacturer), prohibited practices, high-risk classification and GPAI status and returns a tailored obligation summary on screen, with an optional email copy and a downloadable PDF flowchart of the full form logic. It was last substantially updated 3 July 2025, before the Digital Omnibus, so its high-risk dates and registration answers need checking against Regulation (EU) 2026/1744. The site reports more than 150,000 users every month and over 40,000 newsletter subscribers, states it is in no way affiliated with the European Union and recommends seeking professional legal advice and following national guidance. Suitable as a first triage, not as a record of a classification decision.",
+  "proposed_articles": null,
+  "note": "Roles, coverage, 3 July 2025 changelog date, 150k monthly users, 40k subscribers and both disclaimers match; only the PDF flowchart description needed fixing.",
+  "_pass": "a06"
+ },
+ {
+  "id": "aia-doc-56",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "It notes that European standards leverage ISO/IEC work such as ISO/IEC 42001 and 23894",
+    "source_says": "The page says 'Usually the European ESOs try to leverage, and not overrule, existing work in international standards written by ISO/IEC.' Neither ISO/IEC 42001 nor 23894 appears anywhere on the page.",
+    "severity": "medium",
+    "kind": "not_in_document"
+   },
+   {
+    "claim": "the amending decision C(2025)3871 of June 2025 setting 31 August 2025",
+    "source_says": "The June 2025 bullet reads 'The Commission adopts standardisation request C(2023)3215 with a delivery date on 31 August 2025. It has the same scope of standards, deliverables requested and technical standards as in request C(2025)3871.' The page links C(2025)3871 in the documents register but does not itself call it the amending decision.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Independent explainer updated 21 July 2025 on how harmonised standards work under the Act. It documents the standardisation request C(2023)3215 of 22 May 2023 with its missed delivery date of 30 April 2025 and the amended request of June 2025 setting 31 August 2025, cross-referenced to document C(2025)3871, links the live CEN-CENELEC work-programme dashboard, and explains the presumption of conformity under Article 40 against the Commission's Article 41 power to adopt common specifications, which the Commission had not publicly indicated any intention to use. It notes that European standardisation organisations try to leverage, not overrule, existing ISO/IEC work. Written before the Omnibus, so its 2026 and 2027 dates are superseded.",
+  "proposed_articles": null,
+  "note": "C(2023)3215, 22 May 2023, 30 April 2025, 31 August 2025, the dashboard, Articles 40 and 41 and the 21 July 2025 update date all match; the two named ISO/IEC standard numbers are not on the page.",
+  "_pass": "a06"
+ },
+ {
+  "id": "aia-doc-57",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "articles field lists Art 101",
+    "source_says": "The page displays Article 99 only; Article 101 (fines for GPAI model providers) is a separate page on the same explorer.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "All three penalty ceilings, the percentages, the SME 'whichever thereof is lower' rule, the Digital Omnibus not-yet-updated notice, 13 chapters, 180 recitals, six interface languages and the compliance checker all match.",
+  "_pass": "a06"
+ },
+ {
+  "id": "edpb-13",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-04/edpb_opinion_202612_santander_bcr-c_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "PDF confirms Art 64(1)(f) basis, favourable conclusion, Spanish SA as BCR Lead taking the final decision.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-14",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-04/edpb_opinion_202611_kuwaitpetroleum_bcr-c_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Art 63, 64(1)(f) and 47 cited; no concerns raised; Belgian SA as BCR Lead adopts the final decision.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-159",
+  "reached": true,
+  "reached_url": null,
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms EUPL 1.2, free and open source, SPE external contractors, the language set and every listed release feature.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-174",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/2023-12/edpb_opinion_202326_bcr-p_osf_en_v1.1.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Processor BCRs, Romanian SA as BCR Lead, Art 64(1)(f), no concerns to be addressed.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-175",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/2023-12/edpb_opinion_202330_sodexo_bcr-p_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Processor BCRs of Sodexo Group, French SA as BCR Lead, Art 64(1)(f), no concerns.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-176",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/2023-12/edpb_opinion_202329_sodexo_bcr-c_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Controller BCRs of Sodexo Group, French SA as BCR Lead, Art 64(1)(f), draft decision may be adopted as it is.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-177",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/2023-12/edpb_opinion_202328_servier_bcr-c.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Controller BCRs of Servier Group, French SA as BCR Lead, Art 64(1)(f), no concerns.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-179",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/2023-12/edpb_opinion_202324_bcr-c_nestle_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Controller BCRs of Nestle Group, French SA as BCR Lead, Art 64(1)(f), favourable; page date 16 November 2023 matches.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-18",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-05/edpb_opinion_202613_accreditationrequirement_fi-sa_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Art 43(3) subject matter, assessed in line with Annex 1 to Guidelines 4/2018, FI SA adopts the final requirements.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-254",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-04/edpb_opinion_202221_bcr-p_ellucian_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Processor BCRs of Ellucian Group, Irish SA as BCR Lead, favourable with no concerns; Art 47 and WP257 rev.01 assessed.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-352",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/files/file1/edpb_opinion082021_bcr-p_luxoft_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Processor BCRs of Luxoft Group, Baden-Wurttemberg SA as BCR Lead, Art 64(1)(f), no amendments requested.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-353",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/files/file1/edpb_opinion092021_bcr-c_luxoft_group_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "PDF confirms Art. 64(1)(f) controller BCR opinion on Luxoft Group, favourable ('draft decision may be adopted as it is'), final approval by the BCR Lead SA.",
+  "_pass": "a02"
+ },
+ {
+  "id": "edpb-486",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/files/file1/edpb-2019-02-12-draft-aa-esma-annex_en_0.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "correction",
+  "issues": [
+   {
+    "claim": "Opinion on a draft administrative arrangement",
+    "source_says": "The file at this entry's link is the draft administrative arrangement itself (edpb-2019-02-12-draft-aa-esma-annex), the annex to Opinion 4/2019, not the opinion. The opinion sits at a separate EDPB page (/our-work-tools/our-documents/opinion-board-art-64/opinion-42019-draft-aa-between-eea-and-non-eea_en).",
+    "severity": "medium",
+    "kind": "wrong"
+   },
+   {
+    "claim": "transfers between public bodies ... Public bodies only.",
+    "source_says": "The parties are 'regulators and/or supervisors of securities and/or derivatives markets', i.e. EEA and non-EEA financial supervisory authorities listed in Appendices A and B, not public bodies generally.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "what the arrangement must contain to give enforceable rights and effective remedies",
+    "source_says": "The arrangement states 'this Arrangement does not create any legally binding obligations, confer any legally binding rights, nor supersede domestic law', and that 'Effective and enforceable data subject rights are available to Data Subjects under applicable legal requirements in the jurisdiction of each Authority'; redress is sought against the Authority under applicable law and may include monetary compensation.",
+    "severity": "medium",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": "https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-42019-draft-aa-between-eea-and-non-eea_en",
+  "proposed_takeaway": "The draft administrative arrangement annexed to EDPB Opinion 4/2019, relied on under Article 46(3)(b) GDPR for transfers between the EEA and non-EEA financial supervisory authorities listed in its appendices: it sets out the safeguards, data subject rights and redress routes the arrangement offers, while stating that the arrangement itself creates no legally binding obligations. Securities and derivatives market regulators only.",
+  "proposed_articles": null,
+  "note": "Art. 46(3)(b) GDPR and Art. 48(3)(b) of Reg. 2018/1725 confirmed; the document type and the class of bodies in the takeaway are both off.",
+  "_pass": "a02"
+ },
+ {
+  "id": "edpb-518",
+  "reached": true,
+  "reached_url": "https://ec.europa.eu/newsroom/article29/redirection/document/49827",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "The guidelines were replaced by EDPB Guidelines 9/2022, version 2.0 adopted 28 March 2023.",
+    "source_says": "The 2018 document itself says nothing about its successor; it carries only 'Adopted on 3 October 2017, As last Revised and Adopted on 6 February 2018'. The successor claim is accurate but external to this document.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://ec.europa.eu/newsroom/article29/redirection/document/49827",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "wp250rev.01 read in full; CIA breach types, 'not all security incidents are necessarily personal data breaches', 'reasonable degree of certainty', Art 33(1) 72 hours unless unlikely to result in a risk, notification in phases, processor without undue delay and Art 33(5) documentation of all breaches all confirmed.",
+  "_pass": "b04"
+ },
+ {
+  "id": "edpb-519",
+  "reached": true,
+  "reached_url": "https://ec.europa.eu/newsroom/dae/redirection/document/44099",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": "https://ec.europa.eu/newsroom/dae/redirection/document/44099",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "wp242rev.01, adopted 13 December 2016, last revised 5 April 2017; Art 20(1) format wording, Art 20(2) 'where technically feasible', consent or contract only, 'carried out by automated means', provided plus observed but not inferred or derived, no automatic erasure, Art 12 no fee, 'without hindrance' all confirmed.",
+  "_pass": "b04"
+ },
+ {
+  "id": "edpb-521",
+  "reached": true,
+  "reached_url": "https://ec.europa.eu/newsroom/article29/document.cfm?doc_id=44100",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": "https://ec.europa.eu/newsroom/article29/document.cfm?doc_id=44100",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "wp243rev.01, adopted 13 December 2016, last revised 5 April 2017; Art 37(1)(a) to (c) triggers with the courts-acting-judicially carve-out in footnote 6, Art 37(5) expert knowledge, Art 38(3) no instructions and no dismissal or penalty and direct report to highest management, Art 38(6) conflict of interests over purposes and means, voluntary DPO bound by Arts 37 to 39, Art 37(2) group DPO 'easily accessible from each establishment' all confirmed.",
+  "_pass": "b04"
+ },
+ {
+  "id": "edpb-524",
+  "reached": true,
+  "reached_url": "https://ec.europa.eu/newsroom/just/document.cfm?doc_id=47711",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": "https://ec.europa.eu/newsroom/just/document.cfm?doc_id=47711",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Read full 22-page wp248rev.01 PDF (adopted 4 April 2017, last revised 4 October 2017); all nine criteria, the two-criteria rule of thumb, the documented decision not to do a DPIA, Article 36(1) prior consultation on high residual risk and continuous review all match.",
+  "_pass": "b01"
+ },
+ {
+  "id": "edpb-526",
+  "reached": true,
+  "reached_url": "https://ec.europa.eu/newsroom/article29/redirection/document/49826",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": "https://ec.europa.eu/newsroom/article29/redirection/document/49826",
+  "proposed_articles": null,
+  "proposed_takeaway": null,
+  "note": "wp251rev.01, adopted 3 October 2017, last revised 6 February 2018; 'Article 22(1) establishes a general prohibition', the three Art 22(2) exceptions, human oversight 'meaningful, rather than just a token gesture', Art 22(3) safeguards attaching to 22(2)(a) and (c) with 22(2)(b) requiring the law itself to lay down suitable measures, 'simple ways to tell the data subject about the rationale behind, or the criteria relied on', and the DPIA point all confirmed.",
+  "_pass": "b04"
+ },
+ {
+  "id": "edpb-527",
+  "reached": true,
+  "reached_url": "https://ec.europa.eu/newsroom/article29/document.cfm?doc_id=44102",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "EDPB Guidelines 8/2022, version 2.0 adopted 28 March 2023, replaced them.",
+    "source_says": "The 2016/2017 document closes with 'Done in Brussels, on 13 December 2016 ... As last revised and adopted on 05 April 2017' and says nothing about a successor. The successor claim is accurate but external to this document.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": "https://ec.europa.eu/newsroom/article29/document.cfm?doc_id=44102",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "wp244rev.01 read in full; Art 4(16) main establishment as place of central administration unless decisions taken and implemented elsewhere, 'The GDPR does not permit forum shopping', supervisory authorities may rebut the controller's analysis and demand clear evidence, no EU establishment means dealing with every local authority, and Recital 36 putting the processor under the controller's lead authority all confirmed.",
+  "_pass": "b04"
+ },
+ {
+  "id": "edpb-530",
+  "reached": true,
+  "reached_url": "https://ec.europa.eu/newsroom/article29/redirection/document/51422",
+  "how": "browser",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": "https://ec.europa.eu/newsroom/article29/redirection/document/51422",
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Attribution settled: the paper is headed 'ARTICLE 29 DATA PROTECTION WORKING PARTY' and titled 'WORKING PARTY 29 POSITION PAPER', and speaks throughout as 'The WP29', so attributing it to WP29 is right; 19 April 2018 predates the Working Party's 25 May 2018 dissolution. Text confirms the three conditions are alternative, 'the occurrence of any one of them alone triggers the obligation', that records are needed 'only ... for the types of processing mentioned by Article 30(5)', and the employee-data example.",
+  "_pass": "b04"
+ },
+ {
+  "id": "edpb-532",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-07/edpb_guidelines_202602_anonymisation_v1_en_0.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "the test has three limbs, none of which may be met: no singling out of a record, no linking of records about the same person, and no inference of an attribute",
+    "source_says": "The guidelines set three criteria, No Record Isolation, No Linkage and No Inference, and state 'If all three criteria are passed ... then the given data can be safely considered anonymous'; 'If any criterion fails, further analysis should be done'. The limbs as the takeaway words them are conditions that must all hold, so 'none of which may be met' inverts the logic.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Data is anonymous only when it no longer relates to an identified or identifiable person for the entity holding it, judged by content, purpose and effect; the test has three limbs, all of which must hold: no singling out of a record, no linking of records about the same person, and no inference of an attribute. The guidelines, which fold in the Court of Justice's September 2025 ruling in EDPS v SRB, allow a contextual assessment (what the actual recipients and reasonably likely third parties can do) or a simplified one applied uniformly. Consultation runs to 30 October 2026; treat every 'anonymised' export, training set or statistic against the three limbs now, and keep the assessment on file, since this is the standard supervisory authorities will apply once the text is final.",
+  "proposed_articles": null,
+  "note": "Relative test, content/purpose/effect, the two assessment approaches, C-413/23 P EDPS v SRB and the 30 October 2026 deadline all confirmed; PDF cover says adopted 7 July 2026 against the site's 08 July 2026 date field.",
+  "_pass": "a02"
+ },
+ {
+  "id": "edpb-534",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/public-consultations/template-for-personal-data-breach-notification_en",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Page confirms the template is 'primarily designed to be implemented by DPAs via an IT tool', 'incorporates rules to collect certain information only when necessary', has 'predefined values and recommended tooltips', ran 10 June to 5 August 2026, and that the EDPB 'will decide on the timeline for the practical implementation of the template by all DPAs'. The field list could not be checked: the only attachment is a .docx that WebFetch returns as binary.",
+  "_pass": "a02"
+ },
+ {
+  "id": "edpb-535",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-05/edpb_guidelines_202601_scientificresearch_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Any Article 6 basis can carry it",
+    "source_says": "Para. 32: 'The main legal bases that are relevant for the processing of personal data for scientific research purposes are consent (Article 6(1)(a)), legal obligation (Article 6(1)(c)), public interest (Article 6(1)(e)) and legitimate interest (Article 6(1)(f)).' Article 6(1)(b) is not discussed and 6(1)(d) only in a footnote as viable 'in rare circumstances'.",
+    "severity": "medium",
+    "kind": "imprecise"
+   },
+   {
+    "claim": "Article 89(1) safeguards (anonymise or pseudonymise where the purpose allows, ethics review, secure environments, DPIA)",
+    "source_says": "The safeguards listed in the executive summary are anonymised or pseudonymised data, independent or ethical oversight, secure processing environments, privacy enhancing technologies, protective measures for publication, confidentiality arrangements and conditions for further use. The DPIA appears as a place to document the choice of consent type, not as an Article 89(1) safeguard.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Six indicators decide whether an activity is scientific research (methodical approach, ethical standards, verifiability, independence, societal objective, scientific merit); commercial research qualifies if it is genuinely scientific. The main Article 6 bases are consent, legal obligation, public interest and legitimate interests, with broad consent allowed for defined research areas under extra safeguards, public interest where law provides for it, and legitimate interests weighted in research's favour; special categories need an Article 9(2) condition such as (j) with a legal basis in Union or national law. Further processing for research is presumed compatible under Article 5(1)(b) but still needs its own lawful basis, storage may be extended only for identified projects or a defined research area, and Article 89(1) safeguards (anonymise or pseudonymise where the purpose allows, ethics review, secure environments, privacy enhancing technologies) condition the derogations from erasure, objection and information duties. Adopted 15 April 2026 for consultation to 25 June 2026.",
+  "proposed_articles": null,
+  "note": "Six indicators, commercial research, broad consent, Art. 9(2)(j), Art. 5(1)(b) presumption plus separate basis, extended storage only for specified purposes, 15 April 2026 and 25 June 2026 all confirmed.",
+  "_pass": "a02"
+ },
+ {
+  "id": "edpb-536",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-05/edpb_dpia_template_explainer_2026_v1_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "adopted 14 April 2026 for consultation to 9 June 2026",
+    "source_says": "The explainer cover reads 'Version 1.0 Adopted on 10 March 2026'. 14 April 2026 is the date the public consultation opened on the EDPB consultation page, which closed 9 June 2026.",
+    "severity": "medium",
+    "kind": "wrong"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "A harmonised DPIA report template with predefined fields and an explainer, adopted 10 March 2026 and out for consultation from 14 April to 9 June 2026, meant to structure and evidence the Article 35 assessment: description of the processing, necessity and proportionality, risks to individuals, measures, residual risk and consultation of the DPO and of data subjects. Use is not mandatory; after consultation each supervisory authority will adopt it either as its sole standard or as a meta-template that national formats must map to. Compare the site's DPIA tool field by field once the final version is published, and expect authorities to ask for reports in this shape.",
+  "proposed_articles": null,
+  "note": "Optional use confirmed ('can conduct their risk analysis and management processes as they prefer, using the DPIA methodology of their choice'); the section list and the standard-or-meta-template plan confirmed from the explainer and the consultation page; only the adoption date is wrong.",
+  "_pass": "a02"
+ },
+ {
+  "id": "edpb-537",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-01/edpb_recommendations202601_bcr-p_v1_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Cover 'Version 1, 15 January 2026, Adoption for public consultation'; repeal of WP257 rev.01 and WP265, sub-processor scope limit, full not summarised third party beneficiary clause, importer duty to notify and challenge unlawful requests, and the paragraph 13 statement that approval does not assess supplementary measures are all in the PDF. Parts 1 and 2 plus Annexes 1 and 2 match the application form, background paper and elements and principles table. Consultation to 2 March 2026 confirmed (page shows it opened 19 January 2026).",
+  "_pass": "a02"
+ },
+ {
+  "id": "edpb-539",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2025-10/joint_com-edpb_gls_interplay_dma_gdpr_for_public_consultation_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Gatekeepers only",
+    "source_says": "The guidelines are 'primarily addressed to gatekeepers designated under the DMA, which may be acting as, or may have within their corporate structure, controllers or processors of personal data in the context of the provision of their services, but also to gatekeepers' business users, as well as to end users who may be data subjects' (scope section).",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Draft joint guidelines on how gatekeepers meet both the DMA and the GDPR when combining or cross-using personal data (Article 5(2) DMA), on data portability, app distribution and messaging interoperability. Addressed primarily to gatekeepers but also to their business users and end users; the cookie digest carries the entry. Consultation 9 October to 4 December 2025.",
+  "proposed_articles": null,
+  "note": "Consultation window, Article 5(2) DMA, portability (Art 6(9)), third-party app stores (Art 6(4)) and interoperability (Art 7) all confirmed in the PDF; only the addressee sentence is too narrow.",
+  "_pass": "a03"
+ },
+ {
+  "id": "edpb-54",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/documents/2025-12/edpb_opinion292025_bcr-c_illumina_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Art 64(1)(f); EDPB has no concerns and the draft decision may be adopted as it is; Dutch SA decides.",
+  "_pass": "a01"
+ },
+ {
+  "id": "edpb-540",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2025-09/edpb_guidelines_202503_interplay-dsa-gdpr_v1_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Adopted for consultation 12 September to 31 October 2025",
+    "source_says": "The document is adopted 11 September 2025 (version 1.1 carries minor corrections of 12 September 2025); the EDPB consultation page gives the feedback period as '12 September - 31 October 2025 (23:59 CET)'.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "The DSA's duties for intermediaries and platforms are performed under the GDPR, not outside it, and the DSA supplies no legal basis of its own: notice-and-action channels should let people report anonymously unless identification is needed, recommender systems on very large platforms must offer a non-profiling option under which no profile is built for future recommendations, targeted advertising may never use special category data and never target minors, and age assurance should avoid methods that identify users unambiguously such as government ID uploads. Supervisory authorities and Digital Services Coordinators cooperate on the overlap. Adopted 11 September 2025, open for consultation 12 September to 31 October 2025; relevant to any marketplace, app or platform in scope of the DSA.",
+  "proposed_articles": null,
+  "note": "All substantive claims confirmed in the PDF (paras 21, 29 and the Article 26(3) DSA passage); only the adoption date needed separating from the consultation window.",
+  "_pass": "a03"
+ },
+ {
+  "id": "edpb-541",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2025-01/edpb_guidelines_202501_pseudonymisation_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "no final version had been published by September 2026",
+    "source_says": "The consultation page still carries only the version for public consultation and shows the file as closed for feedback; the document itself says nothing about a later final version.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Adoption 16 January 2025 and the 14 March 2025 close confirmed; personal-data status, pseudonymisation domain, Art 32, Art 25, legitimate interest and third-country transfers all match the document.",
+  "_pass": "a03"
+ },
+ {
+  "id": "edpb-542",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2024-10/edpb_guidelines_202401_legitimateinterest_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "confirmed",
+  "issues": [
+   {
+    "claim": "the March 2026 one-stop-shop case digest applies the same test",
+    "source_says": "These guidelines predate that digest and do not refer to it.",
+    "severity": "low",
+    "kind": "not_in_document"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": null,
+  "proposed_articles": null,
+  "note": "Adoption 8 October 2024 printed on the document; three cumulative conditions, necessity, reasonable expectations beyond Arts 12-14, mitigating measures beyond the legal minimum, the Article 21 compelling-grounds bar, the public-authority exclusion and the worked contexts all confirmed. Consultation ran 9 October to 20 November 2024.",
+  "_pass": "a03"
+ },
+ {
+  "id": "edpb-55",
+  "reached": true,
+  "reached_url": "https://www.edpb.europa.eu/system/files/2026-04/edpb_opinion_202534_el-sacertificationcriteriacecl_en.pdf",
+  "how": "webfetch",
+  "not_reached_reason": null,
+  "verdict": "minor",
+  "issues": [
+   {
+    "claim": "Opinion under Article 42(5)",
+    "source_says": "The opinion's citation line reads 'Having regard to Article 63, Article 64(1)(c) and Article 42 of the Regulation (EU) 2016/679'. Article 64(1)(c) is the legal basis for the opinion; Article 42(5) is the provision under which the competent supervisory authority approves the criteria.",
+    "severity": "low",
+    "kind": "imprecise"
+   }
+  ],
+  "better_url": null,
+  "proposed_takeaway": "Opinion under Article 64(1)(c) on national certification criteria submitted by the Greek authority for approval pursuant to Article 42(5). Relevant if you or a supplier holds or seeks that certification.",
+  "proposed_articles": null,
+  "note": "Criteria are national, not a European Data Protection Seal, as the takeaway says; only the article basis needed tightening.",
+  "_pass": "a01"
+ }
+]

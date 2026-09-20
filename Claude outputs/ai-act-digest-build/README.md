@@ -56,6 +56,22 @@ not 2025), four Omnibus notes that had the amendment backwards (Articles 25, 27,
 five amended provisions that carried no note (Articles 1, 2, 40, 77, 99), and two stale
 counts (Article 3 now has 70 definitions, Article 5 prohibits ten practices).
 
+On 20 September 2026 the 44 corpus entries that had no downloaded source were checked
+against their live pages (see `../live-recheck-2026-09-20/edpb-aia-live-recheck-2026-09-20.md`):
+26 confirmed, 14 tightened, 4 corrected, all 44 reached. 20 field changes, 17 takeaways and
+3 source links, applied by `../live-recheck-2026-09-20/apply_recheck2.py aia items_corpus.json`.
+Rerun it after any rebuild that regenerates items_corpus.json, alongside
+apply_source_review.py and apply_linkfix.py.
+
+Part 2 describes living web pages, so it goes stale faster than Part 1. The corrections
+were: the EDPB-EDPS joint opinion on the Omnibus had its recommendation backwards, the
+implementing regulation on the scientific panel is dated 7 March 2025 not 5 March, the LLM
+expert report is 102 pages with a data flow per service model rather than one six-stage
+flow, and the Service Desk is in six languages rather than the 24 once promised. Several
+smaller fixes were counts and dates that had simply moved on, including the Explorer now
+listing 119 articles. Re-read the corpus pages before any release that quotes their
+figures.
+
 To add or correct an entry: edit the items file, then run build_aia_page.py and build_aia_pdf.py.
 The page builder still carries the old header nav in its HEAD template: after a rebuild, replace
 the header block with the current one (Home | Privacy | AI | Cookie Compliance) copied from another

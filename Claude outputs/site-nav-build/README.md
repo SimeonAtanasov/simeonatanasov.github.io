@@ -11,7 +11,7 @@ Snapshot 19 September 2026.
   bar; top_button() the Expand all / Collapse all buttons (bottom left, double chevron
   plus EXP or COL, shown once the contents has scrolled into the upper half of the screen,
   grouped view only, inside the drawer on small screens), the Top button, the drawer
-  backdrop and the Contents button;
+  backdrop and the Contents button, and the Prev / Next column beside them;
   nav_js(prefix, noun, title selector, extra scrollspy targets) the script; nav_css(prefix,
   section id) the styles. Every class is prefixed (ed-, ck-, pp-, aia-); the two-column
   wrapper is <prefix>-cols (not -body, which the advice pages already use).
@@ -33,6 +33,16 @@ Snapshot 19 September 2026.
   without it). Already applied everywhere; kept as the record of what changed and as the
   pattern for the next such addition. A rebuild of the EDPB page from the patched module
   reproduced the patched shipped page byte for byte.
+- prevnext_patch.py: the script that added the Prev / Next control on 20 September 2026,
+  the same way, to the same five pages, the four copies of digest_nav.py and
+  build_aia_page.py. A second small column beside Expand / Collapse, shown only while a
+  filter or search is narrowing the page and something matches, exactly when Go to first
+  result is shown, with the position of the entry you are on between the two buttons
+  (for example 13/44). That entry is the last match whose top has passed the reading line
+  at 30 percent of the viewport, the rule the side contents highlights by, so the position
+  follows ordinary scrolling and Next always moves one match further down. Below 1101px
+  the column moves to the left edge, where Expand / Collapse is hidden, and it steps aside
+  while the drawer is open. Ids: <prefix>-step, -prev, -next, -step-n.
 - The digest builders (edpb-digest-build, cookie-digest-build) import digest_nav.py from
   beside them (copies of this file; change it here and copy it over); the AI Act digest
   carries its own copy of the same mechanics.

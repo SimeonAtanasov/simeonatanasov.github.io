@@ -1,0 +1,156 @@
+[
+  {
+    "id": "edpb-518",
+    "url": "https://ec.europa.eu/newsroom/article29/redirection/document/49827",
+    "attempt_1": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "20180713_wp250rev_01_en_C521EC14-99FD-FB6A-F550FB846F60A5C1_49827.pdf",
+      "bytes": 1434195,
+      "identified_as": "WP 250 rev.01"
+    },
+    "attempt_2": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "20180713_wp250rev_01_en_C521EC14-99FD-FB6A-F550FB846F60A5C1_49827.pdf",
+      "bytes": 1434195,
+      "identified_as": "WP 250 rev.01"
+    },
+    "stable": true,
+    "is_the_named_document": true,
+    "verdict": "use",
+    "note": "Header reads 18/EN WP 250 rev.01 Guidelines on Personal data breach notification under Regulation 2016/679, adopted 3 Oct 2017, last revised 6 Feb 2018."
+  },
+  {
+    "id": "edpb-519",
+    "url": "https://ec.europa.eu/newsroom/dae/redirection/document/44099",
+    "attempt_1": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "wp242_rev_01_en_D8A6FCF6-9039-846A-0C8040819826D818_44099.pdf",
+      "bytes": 460590,
+      "identified_as": "WP 242 rev.01"
+    },
+    "attempt_2": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "wp242_rev_01_en_D8A6FCF6-9039-846A-0C8040819826D818_44099.pdf",
+      "bytes": 460590,
+      "identified_as": "WP 242 rev.01"
+    },
+    "stable": true,
+    "is_the_named_document": true,
+    "verdict": "use",
+    "note": "Header reads 16/EN WP 242 rev.01 Guidelines on the right to data portability, adopted 13 Dec 2016, last revised 5 Apr 2017; redirects /dae/ to /just/redirection/document/44099 identically both times."
+  },
+  {
+    "id": "edpb-521",
+    "url": "https://ec.europa.eu/newsroom/article29/document.cfm?doc_id=44100",
+    "attempt_1": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "wp243_rev_01_en_D8C7A64C-9064-B4B5-543CB5093ACA4937_44100.pdf",
+      "bytes": 1259687,
+      "identified_as": "WP 243 rev.01"
+    },
+    "attempt_2": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "wp243_rev_01_en_D8C7A64C-9064-B4B5-543CB5093ACA4937_44100.pdf",
+      "bytes": 1259687,
+      "identified_as": "WP 243 rev.01"
+    },
+    "stable": true,
+    "is_the_named_document": true,
+    "verdict": "use",
+    "note": "Header reads 16/EN WP 243 rev.01, adopted 13 Dec 2016, last revised 5 Apr 2017; XMP title wp243_rev.01_en and body text on Data Protection Officers (DPOs) confirm the DPO guidelines."
+  },
+  {
+    "id": "edpb-524",
+    "url": "https://ec.europa.eu/newsroom/just/document.cfm?doc_id=47711",
+    "attempt_1": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "20171013_wp248_rev_01_en_D7D5A266-FAE9-3CA1-65B7371E82EE1891_47711.pdf",
+      "bytes": 1137918,
+      "identified_as": "WP 248 rev.01"
+    },
+    "attempt_2": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "20171013_wp248_rev_01_en_D7D5A266-FAE9-3CA1-65B7371E82EE1891_47711.pdf",
+      "bytes": 1137918,
+      "identified_as": "WP 248 rev.01"
+    },
+    "stable": true,
+    "is_the_named_document": true,
+    "verdict": "use",
+    "note": "Header reads 17/EN WP 248 rev.01 Guidelines on Data Protection Impact Assessment (DPIA), adopted 4 Apr 2017, last revised 4 Oct 2017."
+  },
+  {
+    "id": "edpb-526",
+    "url": "https://ec.europa.eu/newsroom/article29/redirection/document/49826",
+    "attempt_1": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "wp251rev_01_en_A754F3E1-FB46-9E76-C0A919864E4B6641_49826.pdf",
+      "bytes": 1066717,
+      "identified_as": "WP 251 rev.01"
+    },
+    "attempt_2": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "wp251rev_01_en_A754F3E1-FB46-9E76-C0A919864E4B6641_49826.pdf",
+      "bytes": 1066717,
+      "identified_as": "WP 251 rev.01"
+    },
+    "stable": true,
+    "is_the_named_document": true,
+    "verdict": "use",
+    "note": "Header reads 17/EN WP 251 rev.01 Guidelines on Automated individual decision-making and Profiling for the purposes of Regulation 2016/679, adopted 3 Oct 2017, last revised."
+  },
+  {
+    "id": "edpb-527",
+    "url": "https://ec.europa.eu/newsroom/article29/document.cfm?doc_id=44102",
+    "attempt_1": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "wp244_rev_01_en_D8F5C63C-0B05-0150-00FADAD64B767E4E_44102.pdf",
+      "bytes": 471838,
+      "identified_as": "WP 244 rev.01"
+    },
+    "attempt_2": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "wp244_rev_01_en_D8F5C63C-0B05-0150-00FADAD64B767E4E_44102.pdf",
+      "bytes": 471838,
+      "identified_as": "WP 244 rev.01"
+    },
+    "stable": true,
+    "is_the_named_document": true,
+    "verdict": "use",
+    "note": "Header reads 16/EN WP 244 rev.01, adopted 13 Dec 2016, last revised 5 Apr 2017; XMP title wp244_rev.01_en and contents section Identifying a lead supervisory authority confirm it."
+  },
+  {
+    "id": "edpb-530",
+    "url": "https://ec.europa.eu/newsroom/article29/redirection/document/51422",
+    "attempt_1": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "20180419_art29_wp_position_paper_art_30_publish_AF01E86A-01CE-DBDD-6368D0296A2413B0_51422.pdf",
+      "bytes": 144630,
+      "identified_as": null
+    },
+    "attempt_2": {
+      "status": 200,
+      "content_type": "application/",
+      "filename": "20180419_art29_wp_position_paper_art_30_publish_AF01E86A-01CE-DBDD-6368D0296A2413B0_51422.pdf",
+      "bytes": 144630,
+      "identified_as": null
+    },
+    "stable": true,
+    "is_the_named_document": true,
+    "verdict": "use",
+    "note": "No WP number exists on this document; title line reads WORKING PARTY 29 POSITION PAPER on the derogations from the obligation to maintain records of processing activities pursuant to Article 30(5) GDPR."
+  }
+]

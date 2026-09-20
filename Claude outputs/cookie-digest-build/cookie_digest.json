@@ -186,9 +186,9 @@
   "jurisdiction": "France",
   "type": "enforcement",
   "date": "15 June 2023",
-  "url": "https://www.edpb.europa.eu/news/national-news/2023/personalised-advertising-french-sa-fined-criteo-eur-40000000_en",
+  "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2026-03-04/482872",
   "status": "decided",
-  "takeaway": "The CNIL fined Criteo 40 million euros, reduced from a proposed 60 million, for failing to demonstrate under article 7(1) GDPR that its publisher partners had collected valid consent for its tracker, for incomplete information (articles 12 and 13), for treating erasure requests by merely stopping personalised ads (article 17), for deficient access responses (article 15) and for joint-controller contracts missing required terms (article 26). An adtech vendor must audit partner consent, not merely contract for it. The Conseil d'Etat rejected Criteo's appeal in March 2026, holding that pseudonymous identifiers tied to browsing data are personal data.",
+  "takeaway": "The CNIL fined Criteo 40 million euros for failing to demonstrate under article 7(1) GDPR that its publisher partners had collected valid consent for its tracker, for incomplete information that disclosed only personalised advertising and not the reuse of the data to configure and improve its targeting algorithms (articles 12, 13 and 15), for treating erasure requests by merely stopping personalised ads while keeping the identifiers and training on the data (article 17) and for joint-controller contracts missing required terms on rights, breach notification and impact assessments (article 26). An adtech vendor must audit partner consent, not merely contract for it: the Conseil d'Etat held that contracting the duty to partners does not relieve the controller of holding the proof. On 4 March 2026 it rejected Criteo's appeal in full, holding that pseudonymous identifiers tied to browsing data are personal data because the volume and precision of the information recouped for one identifier make at least some users identifiable without disproportionate effort.",
   "topics": [
    "consent",
    "tcf",

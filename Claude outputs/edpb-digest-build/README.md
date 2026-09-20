@@ -52,6 +52,23 @@ A 20 September 2026 pass over every GDPR article citation in the digest, against
 on main establishment had Article 4(16)(a) backwards. That correction is entry 157 in the
 same change set, so the EDPB section now holds 60 changes.
 
+On the same day the 31 entries that had no downloaded source were checked against their
+live source pages (see `../live-recheck-2026-09-20/edpb-aia-live-recheck-2026-09-20.md`):
+24 confirmed, 6 tightened, 1 corrected, all 31 reached. Seven takeaways were changed by
+`../live-recheck-2026-09-20/apply_recheck2.py edpb digest.json`. Rerun it after any rebuild
+that regenerates digest.json, alongside apply_source_review.py.
+
+Worth knowing about the six 2018 WP29 guidelines plus the DPIA guidelines (entries 518,
+519, 521, 524, 526, 527 and 530): their EDPB pages are metadata stubs and the text lives in
+the legacy EC newsroom archive, which serves the PDFs as attachments and refuses the fetch
+tool. They were read in a browser by fetching each PDF same-origin and extracting the text
+in the page, and all seven links now point at those documents rather than the stubs. Each
+URL was fetched twice before the change and identified from the WP number in the PDF's own
+header, the Content-Disposition filename and the XMP title; all seven were stable. Two
+quirks to expect: the links download a file rather than opening a page, and the server
+returns a malformed Content-Type of `application/` with no subtype, so a link checker that
+validates content type will flag all seven.
+
 Two traps:
 
 - oneliners_build.py regenerates digest.json, which drops the fix_edpb_review.py entry

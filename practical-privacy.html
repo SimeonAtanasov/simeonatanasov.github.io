@@ -737,7 +737,7 @@ A marketing team plans a standalone campaign site that collects emails and compe
 						
 <p class="pp-sources-note" id="pp-sources-note">Sources: the numbered list in the study pack in the site's outputs folder gives the GDPR articles, EDPB guidelines and other documents behind each situation.</p>
 </div></div>
-<div class="pp-toc-fold" id="pp-toc-fold" role="group" aria-label="Contents blocks" hidden><button type="button" class="pp-toc-fold-btn" id="pp-expand" title="Expand all blocks in the contents" aria-label="Expand all"><i class="fas fa-angle-double-down"></i><span>Exp</span></button><button type="button" class="pp-toc-fold-btn" id="pp-collapse" title="Collapse all blocks in the contents" aria-label="Collapse all"><i class="fas fa-angle-double-up"></i><span>Col</span></button></div><button type="button" class="pp-top" id="pp-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button><div class="pp-toc-backdrop" id="pp-toc-backdrop" hidden></div><button type="button" class="pp-toc-fab" id="pp-toc-open" aria-controls="pp-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>
+<div class="pp-step" id="pp-step" role="group" aria-label="Move through the matching entries" hidden><button type="button" class="pp-step-btn" id="pp-prev" title="Previous matching entry" aria-label="Previous match"><i class="fas fa-chevron-up"></i><span>Prev</span></button><span class="pp-step-n" id="pp-step-n">-</span><button type="button" class="pp-step-btn" id="pp-next" title="Next matching entry" aria-label="Next match"><i class="fas fa-chevron-down"></i><span>Next</span></button></div><div class="pp-toc-fold" id="pp-toc-fold" role="group" aria-label="Contents blocks" hidden><button type="button" class="pp-toc-fold-btn" id="pp-expand" title="Expand all blocks in the contents" aria-label="Expand all"><i class="fas fa-angle-double-down"></i><span>Exp</span></button><button type="button" class="pp-toc-fold-btn" id="pp-collapse" title="Collapse all blocks in the contents" aria-label="Collapse all"><i class="fas fa-angle-double-up"></i><span>Col</span></button></div><button type="button" class="pp-top" id="pp-top" aria-label="Back to top" hidden><i class="fas fa-arrow-up"></i> Top</button><div class="pp-toc-backdrop" id="pp-toc-backdrop" hidden></div><button type="button" class="pp-toc-fab" id="pp-toc-open" aria-controls="pp-toc" aria-expanded="false"><i class="fas fa-list"></i> Contents</button>
 </section>
 						</div>
 					</section>
@@ -778,6 +778,7 @@ A marketing team plans a standalone campaign site that collects emails and compe
 		count.textContent = 'Showing ' + shown + ' of ' + total + ' ' + noun + '.' + (extra || '');
 		clearBtn.hidden = !active;
 		firstBtn.hidden = !(active && shown);
+		stepShow(!!(active && shown));
 		results.hidden = !(active && shown);
 		if (active && shown) {
 			var vis = Array.prototype.filter.call(document.querySelectorAll(entrySel), function (el) { return !el.hidden; });
@@ -891,6 +892,44 @@ A marketing team plans a standalone campaign site that collects emails and compe
 	window.addEventListener('scroll', syncFold, { passive: true });
 	window.addEventListener('resize', syncFold);
 	syncFold();
+
+	/* step through the entries the filter is showing: Prev and Next at the bottom left,
+	   beside the contents control, with the position of the entry you are on between them.
+	   That entry is the last match whose top has passed the reading line, the same rule the
+	   side contents highlights by, so Next always moves one match further down the page. */
+	var step = $('step'), stepN = $('step-n'), stepMatches = [], stepTick = false;
+	function stepIndex() {
+		var line = window.innerHeight * 0.3, idx = -1;
+		for (var i = 0; i < stepMatches.length; i++) { if (stepMatches[i].getBoundingClientRect().top <= line + 8) idx = i; else break; }
+		return idx;
+	}
+	function stepSync() {
+		if (step.hidden) return;
+		var i = stepIndex();
+		stepN.textContent = (i < 0 ? '-' : i + 1) + '/' + stepMatches.length;
+		step.title = (i < 0 ? 'Before the first of ' : 'Entry ' + (i + 1) + ' of ') + stepMatches.length + ' matching';
+	}
+	function stepShow(on) {
+		stepMatches = on ? Array.prototype.filter.call(document.querySelectorAll(entrySel), function (el) { return !el.hidden; }) : [];
+		step.hidden = !on;
+		stepSync();
+	}
+	function stepGo(d) {
+		if (!stepMatches.length) return;
+		var i = Math.max(0, Math.min(stepMatches.length - 1, stepIndex() + d));
+		var el = stepMatches[i], dt = el.closest('details');
+		if (dt && !dt.open) dt.open = true;
+		el.scrollIntoView({ block: 'start' });
+		history.replaceState(null, '', '#' + el.id);
+		setTimeout(stepSync, 80);
+	}
+	$('prev').addEventListener('click', function () { stepGo(-1); });
+	$('next').addEventListener('click', function () { stepGo(1); });
+	window.addEventListener('scroll', function () {
+		if (stepTick) return;
+		stepTick = true;
+		window.requestAnimationFrame(function () { stepTick = false; stepSync(); });
+	}, { passive: true });
 
 	/* scrollspy */
 	var links = {};

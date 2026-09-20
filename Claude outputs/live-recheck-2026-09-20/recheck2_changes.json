@@ -1,0 +1,204 @@
+{
+ "edpb": {
+  "55": {
+   "takeaway": {
+    "old": "Opinion under Article 42(5) on national certification criteria submitted by the Greek authority. Relevant if you or a supplier holds or seeks that certification.",
+    "new": "Opinion under Article 64(1)(c) on national certification criteria submitted by the Greek authority for approval pursuant to Article 42(5). Relevant if you or a supplier holds or seeks that certification."
+   }
+  },
+  "486": {
+   "takeaway": {
+    "old": "Opinion on a draft administrative arrangement for transfers between public bodies under Article 46(3)(b): what the arrangement must contain to give enforceable rights and effective remedies. Public bodies only.",
+    "new": "The draft administrative arrangement annexed to EDPB Opinion 4/2019, relied on under Article 46(3)(b) GDPR for transfers between the EEA and non-EEA financial supervisory authorities listed in its appendices: it sets out the safeguards, data subject rights and redress routes the arrangement offers, while stating that the arrangement itself creates no legally binding obligations. Securities and derivatives market regulators only."
+   }
+  },
+  "532": {
+   "takeaway": {
+    "old": "Data is anonymous only when it no longer relates to an identified or identifiable person for the entity holding it, judged by content, purpose and effect; the test has three limbs, none of which may be met: no singling out of a record, no linking of records about the same person, and no inference of an attribute. The guidelines, which fold in the Court of Justice's September 2025 ruling in EDPS v SRB, allow a contextual assessment (what the actual recipients and reasonably likely third parties can do) or a simplified one applied uniformly. Consultation runs to 30 October 2026; treat every 'anonymised' export, training set or statistic against the three limbs now, and keep the assessment on file, since this is the standard supervisory authorities will apply once the text is final.",
+    "new": "Data is anonymous only when it no longer relates to an identified or identifiable person for the entity holding it, judged by content, purpose and effect; the test has three limbs, all of which must hold: no singling out of a record, no linking of records about the same person, and no inference of an attribute. The guidelines, which fold in the Court of Justice's September 2025 ruling in EDPS v SRB, allow a contextual assessment (what the actual recipients and reasonably likely third parties can do) or a simplified one applied uniformly. Consultation runs to 30 October 2026; treat every 'anonymised' export, training set or statistic against the three limbs now, and keep the assessment on file, since this is the standard supervisory authorities will apply once the text is final."
+   }
+  },
+  "535": {
+   "takeaway": {
+    "old": "Six indicators decide whether an activity is scientific research (methodical approach, ethical standards, verifiability, independence, societal objective, scientific merit); commercial research qualifies if it is genuinely scientific. Any Article 6 basis can carry it, with broad consent allowed for defined research areas under extra safeguards, public interest where law provides for it, and legitimate interests weighted in research's favour; special categories need an Article 9(2) condition such as (j) with a legal basis in Union or national law. Further processing for research is presumed compatible under Article 5(1)(b) but still needs its own lawful basis, storage may be extended only for identified projects or a defined research area, and Article 89(1) safeguards (anonymise or pseudonymise where the purpose allows, ethics review, secure environments, DPIA) condition the derogations from erasure, objection and information duties. Adopted 15 April 2026 for consultation to 25 June 2026.",
+    "new": "Six indicators decide whether an activity is scientific research (methodical approach, ethical standards, verifiability, independence, societal objective, scientific merit); commercial research qualifies if it is genuinely scientific. The main Article 6 bases are consent, legal obligation, public interest and legitimate interests, with broad consent allowed for defined research areas under extra safeguards, public interest where law provides for it, and legitimate interests weighted in research's favour; special categories need an Article 9(2) condition such as (j) with a legal basis in Union or national law. Further processing for research is presumed compatible under Article 5(1)(b) but still needs its own lawful basis, storage may be extended only for identified projects or a defined research area, and Article 89(1) safeguards (anonymise or pseudonymise where the purpose allows, ethics review, secure environments, privacy enhancing technologies) condition the derogations from erasure, objection and information duties. Adopted 15 April 2026 for consultation to 25 June 2026."
+   }
+  },
+  "536": {
+   "takeaway": {
+    "old": "A harmonised DPIA report template with predefined fields and an explainer, adopted 14 April 2026 for consultation to 9 June 2026, meant to structure and evidence the Article 35 assessment: description of the processing, necessity and proportionality, risks to individuals, measures, residual risk and consultation of the DPO and of data subjects. Use is not mandatory; after consultation each supervisory authority will adopt it either as its sole standard or as a meta-template that national formats must map to. Compare the site's DPIA tool field by field once the final version is published, and expect authorities to ask for reports in this shape.",
+    "new": "A harmonised DPIA report template with predefined fields and an explainer, adopted 10 March 2026 and out for consultation from 14 April to 9 June 2026, meant to structure and evidence the Article 35 assessment: description of the processing, necessity and proportionality, risks to individuals, measures, residual risk and consultation of the DPO and of data subjects. Use is not mandatory; after consultation each supervisory authority will adopt it either as its sole standard or as a meta-template that national formats must map to. Compare the site's DPIA tool field by field once the final version is published, and expect authorities to ask for reports in this shape."
+   }
+  },
+  "539": {
+   "takeaway": {
+    "old": "Draft joint guidelines on how gatekeepers meet both the DMA and the GDPR when combining or cross-using personal data (Article 5(2) DMA), on data portability, app distribution and messaging interoperability. Gatekeepers only; the cookie digest carries the entry. Consultation 9 October to 4 December 2025.",
+    "new": "Draft joint guidelines on how gatekeepers meet both the DMA and the GDPR when combining or cross-using personal data (Article 5(2) DMA), on data portability, app distribution and messaging interoperability. Addressed primarily to gatekeepers but also to their business users and end users; the cookie digest carries the entry. Consultation 9 October to 4 December 2025."
+   }
+  },
+  "540": {
+   "takeaway": {
+    "old": "The DSA's duties for intermediaries and platforms are performed under the GDPR, not outside it, and the DSA supplies no legal basis of its own: notice-and-action channels should let people report anonymously unless identification is needed, recommender systems on very large platforms must offer a non-profiling option under which no profile is built for future recommendations, targeted advertising may never use special category data and never target minors, and age assurance should avoid methods that identify users unambiguously such as government ID uploads. Supervisory authorities and Digital Services Coordinators cooperate on the overlap. Adopted for consultation 12 September to 31 October 2025; relevant to any marketplace, app or platform in scope of the DSA.",
+    "new": "The DSA's duties for intermediaries and platforms are performed under the GDPR, not outside it, and the DSA supplies no legal basis of its own: notice-and-action channels should let people report anonymously unless identification is needed, recommender systems on very large platforms must offer a non-profiling option under which no profile is built for future recommendations, targeted advertising may never use special category data and never target minors, and age assurance should avoid methods that identify users unambiguously such as government ID uploads. Supervisory authorities and Digital Services Coordinators cooperate on the overlap. Adopted 11 September 2025, open for consultation 12 September to 31 October 2025; relevant to any marketplace, app or platform in scope of the DSA."
+   }
+  },
+  "518": {
+   "url": {
+    "old": "https://www.edpb.europa.eu/documents/guideline/guidelines-on-personal-data-breach-notification-under-regulation-2016679-wp250_en",
+    "new": "https://ec.europa.eu/newsroom/article29/redirection/document/49827"
+   }
+  },
+  "519": {
+   "url": {
+    "old": "https://www.edpb.europa.eu/documents/guideline/right-to-data-portability_en",
+    "new": "https://ec.europa.eu/newsroom/just/redirection/document/44099"
+   }
+  },
+  "521": {
+   "url": {
+    "old": "https://www.edpb.europa.eu/documents/guideline/data-protection-officer_en",
+    "new": "https://ec.europa.eu/newsroom/just/redirection/document/44100"
+   }
+  },
+  "524": {
+   "url": {
+    "old": "https://www.edpb.europa.eu/documents/guideline/data-protection-impact-assessments-high-risk-processing_en",
+    "new": "https://ec.europa.eu/newsroom/just/redirection/document/47711"
+   }
+  },
+  "526": {
+   "url": {
+    "old": "https://www.edpb.europa.eu/documents/guideline/automated-decision-making-and-profiling_en",
+    "new": "https://ec.europa.eu/newsroom/article29/redirection/document/49826"
+   }
+  },
+  "527": {
+   "url": {
+    "old": "https://www.edpb.europa.eu/documents/guideline/guidelines-for-identifying-a-controller-or-processors-lead-supervisory_en",
+    "new": "https://ec.europa.eu/newsroom/just/redirection/document/44102"
+   }
+  },
+  "530": {
+   "url": {
+    "old": "https://www.edpb.europa.eu/documents/other-guidance/position-paper-on-the-derogations-from-the-obligation-to-maintain-records_en",
+    "new": "https://ec.europa.eu/newsroom/article29/redirection/document/51422"
+   }
+  }
+ },
+ "aia": {
+  "10": {
+   "takeaway": {
+    "old": "Mandatory template published 24 July 2025 in all 24 official languages for the public summary that Article 53(1)(d) requires from every GPAI provider, including open-source providers, from 2 August 2025. It sets a common minimal baseline: a general overview of the model and data modalities, a list of data sources by category, and data processing aspects such as lawful access and opt-out respect. For web-scraped data providers must name the largest domains, the top 10 percent by volume, reduced to 5 percent or 1,000 domains for SMEs. Providers of models already on the market have until 2 August 2027.",
+    "new": "Mandatory template first published 24 July 2025 and re-issued as Commission Communication C(2025) 8311 final of 5 December 2025, in all 24 official languages, for the public summary that Article 53(1)(d) requires from every GPAI provider, including providers of models released under free and open source licences, from 2 August 2025. It sets a common minimal baseline in three sections: general information on the model and data modalities, a list of data sources by category, and data processing aspects covering respect for text and data mining reservations of rights and removal of illegal content. For web-scraped data providers must list the internet domain names in the top 10 percent by size of content scraped, reduced to the top 5 percent or the top 1,000 domains for SMEs including start-ups. Providers of models placed on the market before 2 August 2025 have until 2 August 2027, and AI Office supervision and enforcement starts on 2 August 2026."
+   }
+  },
+  "20": {
+   "takeaway": {
+    "old": "Launched 8 October 2025 with the Apply AI Strategy as the central hub the Act foresees in Article 62(3). It offers a Compliance Checker to determine obligations, an AI Act Explorer through 13 chapters, 180 recitals and the annexes, FAQs built from AI Pact webinars and stakeholder submissions, a high-risk guideline explorer, a national resources section and a submission form for individual questions answered by experts coordinating with the AI Office. Initially in English, French and German with all 24 languages planned for early 2026. Answers are informational and non-binding; note that some explorer pages still show pre-Omnibus text.",
+    "new": "Launched 8 October 2025 with the Apply AI Strategy as the central hub the Act foresees in Article 62(3). It offers a Compliance Checker to determine obligations, an AI Act Explorer through the chapters, recitals and annexes, FAQs built from AI Pact webinars and stakeholder submissions, a high-risk guideline explorer, a national resources section and a submission form for individual questions answered by experts coordinating with the AI Office. It is available in six languages: English, French, German, Spanish, Italian and Polish. Answers are informational and non-binding; note that some explorer pages still show pre-Omnibus text."
+   }
+  },
+  "22": {
+   "takeaway": {
+    "old": "Dedicated FAQ set that the Commission points to from every explorer page carrying the notice that its text has not yet been updated for Regulation (EU) 2026/1744. It explains why the Act was amended after stakeholder consultations throughout 2025, the delay of up to 16 months for Annex III and 12 months for Annex I systems, the extension of simplified compliance from SMEs to small mid-caps reaching an estimated 8,250 additional companies, the reduced registration burden, the AI Office's centralised oversight of GPAI-based systems and AI on very large platforms, special-category data for bias detection, expanded sandboxes and an EU-level sandbox from 2028. Non-binding; check answers against the enacted text.",
+    "new": "Dedicated FAQ set of four questions that the Commission points to from every explorer page carrying the notice that its text has not yet been updated for Regulation (EU) 2026/1744. It explains why the Commission proposed to amend the Act after stakeholder consultations throughout 2025, the delay of up to 16 months for Annex III and 12 months for Annex I systems, the extension of simplified compliance from SMEs to small mid-caps reaching an estimated 8,250 additional companies, the reduced registration burden, the AI Office's centralised oversight of GPAI-based systems and AI on very large platforms, special-category data for bias detection, expanded sandboxes and an EU-level sandbox from 2028. Non-binding and still written in the language of a proposal; check answers against the enacted text."
+   }
+  },
+  "23": {
+   "takeaway": {
+    "old": "General non-binding Q&A updated 7 August 2026 covering scope and the risk-based approach, high-risk classification and obligations, GPAI documentation and the 10^25 FLOP systemic-risk presumption, the two-tier governance of AI Office and national authorities, penalties of up to EUR 35 million or 7 percent for prohibited practices, EUR 15 million or 3 percent for other breaches and EUR 7.5 million or 1 percent for misleading information, and the post-Omnibus dates of 2 December 2027 and 2 August 2028. It reports more than 3,000 organisations interested in the AI Pact and over 230 pledge signatories as of December 2025. A sound orientation text for non-specialists.",
+    "new": "General non-binding Q&A updated 7 August 2026 covering scope and the risk-based approach, high-risk classification and obligations, GPAI documentation and the 10^25 FLOP systemic-risk presumption, the two-tier governance of AI Office and national authorities, penalties of up to EUR 35 million or 7 percent for prohibited practices, EUR 15 million or 3 percent for other breaches and EUR 7.5 million or 1 percent for misleading information, and the post-Omnibus dates of 2 December 2027 and 2 August 2028. It reports more than 3,000 organisations that expressed interest in the AI Pact in November 2023 and more than 230 pledge signatories as of 15 December 2025. A sound orientation text for non-specialists."
+   }
+  },
+  "28": {
+   "takeaway": {
+    "old": "Voluntary Commission initiative with two pillars. Pillar I is an open network with webinars and exchange of practice; Pillar II, launched 25 September 2024, collects pledges in which providers and deployers commit to three core actions: adopting an AI governance strategy, mapping likely high-risk systems and promoting AI literacy among staff. Over half of pledgers add commitments on human oversight, risk mitigation and transparency of generated content, and the page lists more than 500 pledging organisations from large groups to SMEs. It creates no legal obligations and no presumption of conformity; use it for early engagement with the AI Office and for the living repository of practices.",
+    "new": "Voluntary Commission initiative with two pillars. Pillar I is an open network with webinars and exchange of practice; Pillar II, launched 25 September 2024, collects pledges in which providers and deployers commit to three core actions: adopting an AI governance strategy, mapping likely high-risk systems and promoting AI literacy among staff. Over half of pledgers add commitments on human oversight, risk mitigation and transparency of generated content, and the page lists several hundred pledging organisations, from large corporations to SMEs from the EU and beyond. It creates no legal obligations and no presumption of conformity; use it for early engagement with the AI Office and for the living repository of practices."
+   }
+  },
+  "31": {
+   "takeaway": {
+    "old": "Binding implementing act adopted 5 March 2025 under Article 68(1), laying down rules for the establishment and functioning of the scientific panel: selection of experts through an open call, independence and conflict-of-interest declarations, the 24-month renewable term, the chair and vice-chair chosen from among members, working arrangements with the AI Office and the procedure for qualified alerts to the AI Office under Article 90 when a GPAI model presents a concrete identifiable Union-level risk or should be classified as posing systemic risk. Providers of GPAI models should understand that a panel alert can initiate a request for information, an evaluation or a classification decision.",
+    "new": "Binding implementing act adopted 7 March 2025 under Article 68(1) and in force since 30 March 2025, laying down rules for the establishment and functioning of the scientific panel: selection of experts through an open call, declarations of commitment and confidentiality covering independence and conflicts of interest, the 24-month renewable term, a chair and vice-chair nominated by the members and selected by the Commission, working arrangements with the AI Office and the procedure for qualified alerts to the AI Office under Article 90 when a GPAI model presents a concrete identifiable Union-level risk or should be classified as posing systemic risk. Providers of GPAI models should understand that a panel alert can initiate a request for information, an evaluation or a classification decision."
+   },
+   "url": {
+    "old": "https://digital-strategy.ec.europa.eu/en/policies/ai-scientific-panel",
+    "new": "https://eur-lex.europa.eu/eli/reg_impl/2025/454/oj"
+   }
+  },
+  "39": {
+   "takeaway": {
+    "old": "Joint opinion on COM(2025) 836 adopted in January 2026. The Board and Supervisor accepted the objective of simplification but asked that any processing of special categories of personal data for bias detection remain bound by strict necessity, pseudonymisation, access controls and deletion, that the exception not extend beyond high-risk systems without justification, that data protection authorities keep their supervisory role for AI affecting fundamental rights and be consulted where the AI Office takes over GPAI-based systems, and that registration of exempted Annex III systems be kept. The final Article 4a reflects the strict-necessity and safeguard conditions. Non-binding, but it signals how DPAs will read Article 4a.",
+    "new": "Joint opinion on COM(2025) 836 adopted 20 January 2026. The Board and Supervisor accepted the objective of simplification but asked that any processing of special categories of personal data for bias detection be bound by strict necessity rather than mere necessity and by appropriate safeguards complementing the GDPR, the EUDPR and the Law Enforcement Directive, that its extension beyond high-risk systems be clearly circumscribed and limited to cases where the risk of adverse effects from bias is sufficiently serious, that data protection authorities stay competent to supervise processing under the new Article 4a and that the AI Office coordinate closely with them where it supervises systems built on general-purpose AI models, and that the obligation to register exempted Annex III systems in the EU database be kept. Non-binding, but it signals how DPAs will read Article 4a."
+   }
+  },
+  "40": {
+   "takeaway": {
+    "old": "A 99-page expert report published April 2025 that the EDPB states is not a formal Board position. It maps privacy risks across the eight lifecycle phases of ISO/IEC 22989 and 5338, three service models (LLM as a service, off-the-shelf, self-developed) and six data-flow stages, sets a three-stage risk methodology of identification, estimation and control, and catalogues over 70 technical and organisational mitigations split by provider and deployer role, with three worked use cases. It maps to GDPR Articles 25, 32 and 35 and to the AI Act's provider and deployer roles. Use it as a practical companion to Article 9 risk management and DPIAs for LLM deployments.",
+    "new": "A 102-page expert report published April 2025 that the EDPB states is not a formal Board position. It maps privacy risks across the eight lifecycle phases of ISO/IEC 22989 and 5338 and across three service models (LLM as a service, off-the-shelf, self-developed), each with its own data flow, sets a three-stage risk methodology of identification, estimation and control, and catalogues technical and organisational mitigations split by provider and deployer role, with three worked use cases. It maps to GDPR Articles 25, 32 and 35 and to the AI Act's provider and deployer roles. Use it as a practical companion to Article 9 risk management and DPIAs for LLM deployments."
+   }
+  },
+  "44": {
+   "takeaway": {
+    "old": "First orientations published 3 June 2024 and revised in an expanded second version in October 2025, addressed to the Union institutions the EDPS supervises under Regulation (EU) 2018/1725 and under the AI Act as their market surveillance authority. Structured as practical questions: when generative AI processes personal data, the role of the data protection officer, when a DPIA is needed, lawful basis, minimisation, accuracy, transparency, automated decisions, fair processing, individual rights and security. Non-binding for private operators, but they show the supervisory expectations a deployer of a general-purpose AI system should meet and mirror the deployer duties in Article 26.",
+    "new": "First orientations published 3 June 2024 and revised as an expanded version 2 on 28 October 2025, addressed to the Union institutions, bodies, offices and agencies the EDPS supervises under Regulation (EU) 2018/1725; the EDPS states he issues them as data protection supervisory authority and not in his new role as market surveillance authority under the AI Act, which they leave unaffected. Structured as practical questions: what generative AI is, roles and responsibilities, when generative AI processes personal data, the role of the data protection officer, when a DPIA is needed, lawful basis, purpose limitation, minimisation, accuracy, transparency, automated decisions, fair processing and bias, individual rights and security. Non-binding for private operators, but they show the supervisory expectations a deployer of a general-purpose AI system should meet and mirror the deployer duties in Article 26."
+   },
+   "url": {
+    "old": "https://www.edps.europa.eu/data-protection/our-work/publications/guidelines/2024-06-03-first-edps-orientations-euis-using-generative-ai_en",
+    "new": "https://www.edps.europa.eu/data-protection/our-work/publications/guidelines/2025-10-28-guidance-generative-ai-strengthening-data-protection-rapidly-changing-digital-era_en"
+   }
+  },
+  "45": {
+   "takeaway": {
+    "old": "Independent tracker updated 17 June 2026 rating each Member State as clear, partially clear or unclear on designation of market surveillance and notifying authorities, national implementing law and sandboxes. As of that date 9 Member States had clearly designated both authorities, 12 had proposals and 6 had none, against the 2 August 2025 deadline in Article 70, while all 27 had designated fundamental rights authorities by 2 November 2024 under Article 77. It records adopted laws in Italy, Denmark (Law 467/2025, in force 2 August 2025), Finland (Law 1377/2025, in force 1 January 2026), Hungary and Slovenia. Not official; verify against the Commission's list.",
+    "new": "Independent tracker updated 17 June 2026 rating each Member State as clear, partially clear or unclear on designation of market surveillance and notifying authorities, national implementing law and sandboxes. As of that date 9 Member States had clearly designated both authorities, 12 had proposals or a single authority and 6 had none, against the 2 August 2025 deadline in Article 70, while all 27 had designated fundamental rights authorities by 2 November 2024 under Article 77. It records adopted national measures in Italy (Law No. 132/2025), Denmark (Law 467/2025, in force 2 August 2025), Finland (Law 1377/2025, in force 1 January 2026), Slovenia (November 2025) and Hungary (Government Decree 344/2025). Not official; verify against the Commission's list."
+   }
+  },
+  "49": {
+   "takeaway": {
+    "old": "Ireland implemented a decentralised model through Statutory Instrument No. 366 of 2025, designating 15 sectoral market surveillance authorities with the Minister for Enterprise, Tourism and Employment as single point of contact and four notifying authorities: that Minister, the Minister for Transport, the Health Products Regulatory Authority and the Commission for Communications Regulation. Nine fundamental rights authorities are listed, a National AI Office was planned as the central coordinating authority by 2 August 2026, and the Commission's list of 7 September 2026 now names the AI Office of Ireland. Operators established in Ireland, including many GPAI providers, should map each of their systems to the relevant sectoral regulator.",
+    "new": "Ireland implemented a decentralised model through Statutory Instrument No. 366 of 2025, designating 15 sectoral market surveillance authorities with the Minister for Enterprise, Tourism and Employment as single point of contact and four notifying authorities: that Minister, the Minister for Transport, the Health Products Regulatory Authority and the Commission for Communications Regulation. Nine fundamental rights authorities appear in the Commission's consolidated list, and a National AI Office is expected to be established by 2 August 2026 as the central coordinating authority and new single point of contact. Operators established in Ireland, including many GPAI providers, should map each of their systems to the relevant sectoral regulator."
+   }
+  },
+  "50": {
+   "takeaway": {
+    "old": "The Netherlands published draft implementing legislation in April 2026 confirming a decentralised model of ten sectoral market surveillance authorities, among them the Data Protection Authority, the State Inspectorate for Digital Infrastructure (RDI), the Financial Markets Authority and the central bank, with the same ten acting as notifying authorities and RDI as single point of contact; six fundamental rights authorities are listed. The Commission's list marks RDI as pending final adoption. The Dutch DPA has an early-warning role on algorithms and publishes AI Act guidance of its own. Operators in the Netherlands should expect the DPA to supervise fundamental-rights-sensitive high-risk uses in line with Article 74(8).",
+    "new": "The Netherlands published draft implementing legislation in April 2026 proposing a decentralised model of ten sectoral authorities acting as both market surveillance and notifying authorities, among them the Data Protection Authority, the State Inspectorate for Digital Infrastructure (RDI), the Financial Markets Authority and De Nederlandsche Bank, with the Data Protection Authority and RDI holding the coordinating role and RDI acting as single point of contact. The tracker records the position as partial clarity, the legislation not yet being adopted, and six fundamental rights authorities appear in the Commission's consolidated list. The Dutch Data Protection Authority and the Authority for Digital Infrastructure have published recommendations on an integrated approach to supervision under the AI Act. Operators in the Netherlands should expect the DPA to supervise fundamental-rights-sensitive high-risk uses in line with Article 74(8)."
+   }
+  },
+  "51": {
+   "takeaway": {
+    "old": "France has published a legislative proposal, not yet adopted as of June 2026, for a decentralised model in which the Directorate-General for Competition, Consumer Affairs and Fraud Control (DGCCRF) coordinates market surveillance and serves as single point of contact, with existing sectoral regulators given a broadened scope as market surveillance and notifying authorities; the Commission's list marks DGCCRF as pending final adoption. Three fundamental rights authorities are designated, and the CNIL continues to publish AI Act and GDPR guidance for developers. Operators in France should track the bill for the penalty regime and the final split of competences between DGCCRF, CNIL and sector regulators.",
+    "new": "France has published a legislative proposal, not yet adopted as of June 2026, for a decentralised model that broadens the scope of existing market surveillance and notifying authorities to cover AI, with the Directorate-General for Competition, Consumer Affairs and Fraud Control (DGCCRF) acting as coordinating market surveillance authority and single point of contact; the tracker records the position as partial clarity. Three fundamental rights authorities appear in the Commission's consolidated list. Operators in France should track the bill for the penalty regime and the final split of competences between DGCCRF, CNIL and sector regulators."
+   }
+  },
+  "52": {
+   "takeaway": {
+    "old": "Independent, free explorer maintained by the Future of Life Institute, explicitly not associated with the Union. It presents all 113 articles across 13 chapters, 14 annexes and 180 recitals in 24 languages with keyword search, hyperlinked cross-references with peek view, paragraph-level permalinks and a chatbot that answers from the text with citations. Unlike the Commission's own explorer it already shows the law as amended by the Digital Omnibus, which it records as amending 42 articles and 3 annexes and applying since 27 July 2026. Use it for the consolidated text and cite the Official Journal for anything formal.",
+    "new": "Independent, free explorer maintained by the Future of Life Institute, explicitly not associated with the European Union. It presents all 119 articles across 13 chapters, 14 annexes and 180 recitals in 24 languages with keyword search, hyperlinked cross-references with peek view, paragraph-level permalinks and a chatbot that answers from the text with citations. Unlike the Commission's own explorer it already shows the law as amended by the Digital Omnibus, which it records as amending 42 articles and 3 annexes and applying since 27 July 2026. Use it for the consolidated text and cite the Official Journal for anything formal."
+   }
+  },
+  "54": {
+   "takeaway": {
+    "old": "Interactive questionnaire that walks through operator role (provider, deployer, distributor, importer, authorised representative, product manufacturer), prohibited practices, high-risk classification and GPAI status and returns a tailored obligation summary as a PDF flowchart or by email. It was last substantially updated 3 July 2025, before the Digital Omnibus, so its high-risk dates and registration answers need checking against Regulation (EU) 2026/1744. The site reports over 150,000 monthly visitors and more than 40,000 newsletter subscribers, is not affiliated with the Union and recommends professional legal advice. Suitable as a first triage, not as a record of a classification decision.",
+    "new": "Interactive questionnaire that walks through operator role (provider, deployer, distributor, importer, authorised representative, product manufacturer), prohibited practices, high-risk classification and GPAI status and returns a tailored obligation summary on screen, with an optional email copy and a downloadable PDF flowchart of the full form logic. It was last substantially updated 3 July 2025, before the Digital Omnibus, so its high-risk dates and registration answers need checking against Regulation (EU) 2026/1744. The site reports more than 150,000 users every month and over 40,000 newsletter subscribers, states it is in no way affiliated with the European Union and recommends seeking professional legal advice and following national guidance. Suitable as a first triage, not as a record of a classification decision."
+   }
+  },
+  "55": {
+   "takeaway": {
+    "old": "Independent explainer updated 21 July 2025 on how harmonised standards work under the Act. It documents the standardisation request C(2023)3215 of 22 May 2023 with its missed delivery date of 30 April 2025 and the amending decision C(2025)3871 of June 2025 setting 31 August 2025, links the live CEN-CENELEC work-programme dashboard, and explains the presumption of conformity under Article 40 against the Commission's Article 41 power to adopt common specifications, which the Commission had not signalled using. It notes that European standards leverage ISO/IEC work such as ISO/IEC 42001 and 23894. Written before the Omnibus, so its 2026 and 2027 dates are superseded.",
+    "new": "Independent explainer updated 21 July 2025 on how harmonised standards work under the Act. It documents the standardisation request C(2023)3215 of 22 May 2023 with its missed delivery date of 30 April 2025 and the amended request of June 2025 setting 31 August 2025, cross-referenced to document C(2025)3871, links the live CEN-CENELEC work-programme dashboard, and explains the presumption of conformity under Article 40 against the Commission's Article 41 power to adopt common specifications, which the Commission had not publicly indicated any intention to use. It notes that European standardisation organisations try to leverage, not overrule, existing ISO/IEC work. Written before the Omnibus, so its 2026 and 2027 dates are superseded."
+   }
+  },
+  "27": {
+   "takeaway": {
+    "old": "The joint technical committee's news feed is the primary status source for the harmonised standards. Milestones: technical report CEN/CLC/TR 18115:2024 on data governance and quality published 6 November 2024; a technical report on conformity assessment published 18 December 2024; prEN 18286 'Quality management system for EU AI Act regulatory purposes' reached enquiry on 10 November 2025; further drafts opened for public consultation on 9 April 2026 and 8 May 2026; and on 9 July 2026 JTC 21 announced EN 18286 for publication in July 2026. A published EN gives no presumption of conformity until cited in the Official Journal, so monitor both.",
+    "new": "The joint technical committee's news feed is the primary status source for the harmonised standards. Milestones: technical report CEN/CLC/TR 18115:2024 on data governance and quality published 6 November 2024; a technical report on conformity assessment published 18 December 2024; prEN 18286 'Quality management system for EU AI Act regulatory purposes' reached enquiry on 10 November 2025; further drafts opened for public enquiry on 9 April 2026 and 8 May 2026; and on 9 July 2026 JTC 21 said publication of EN 18286 was expected in July 2026, with prEN 18228, prEN 18282, prEN 18229-1 and prEN 18288 still in public hearing. A published EN gives no presumption of conformity until cited in the Official Journal, so monitor both."
+   },
+   "url": {
+    "old": "https://jtc21.eu/category/news/",
+    "new": "https://jtc21.eu/significant-milestone-for-european-ai-standardization/"
+   }
+  }
+ }
+}
