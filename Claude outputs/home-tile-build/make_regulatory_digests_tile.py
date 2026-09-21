@@ -8,8 +8,9 @@ the left half of the image already name the AI Act, cookie and EDPB digests, and
 two sets of labels read as clutter.
 
 Palette and proportions match images/risk-matrix-tile.png: 1000 x 1000, the
-#2a3860 page navy, content held between y 290 and y 790 so the spotlight's
-horizontal crop never cuts it, and drawn at 2x then resized for clean edges.
+#2a3860 page navy, content held between y 276 and y 760, which is inside both
+the central 82 percent of width the desktop crop keeps and the central 56 percent of
+height the 900px tablet crop keeps, and drawn at 2x then resized for clean edges.
 
 Needs Pillow and the DejaVu fonts. Run it from anywhere:
     python3 make_regulatory_digests_tile.py
@@ -72,11 +73,11 @@ f_field = f(R, 13)
 LEFT, RIGHT = 165, 835
 
 # Filter field.
-rr((LEFT, 296, RIGHT, 340), 8, fill=FIELD, outline=CARD_EDGE, width=1)
+rr((LEFT, 276, RIGHT, 320), 8, fill=FIELD, outline=CARD_EDGE, width=1)
 # magnifier
-d.ellipse([(LEFT + 20) * S, 310 * S, (LEFT + 36) * S, 326 * S], outline=DIM, width=2 * S)
-d.line([(LEFT + 34) * S, 324 * S, (LEFT + 41) * S, 331 * S], fill=DIM, width=2 * S)
-d.text(((LEFT + 54) * S, 309 * S), "filter by jurisdiction, type, year",
+d.ellipse([(LEFT + 20) * S, 290 * S, (LEFT + 36) * S, 306 * S], outline=DIM, width=2 * S)
+d.line([(LEFT + 34) * S, 304 * S, (LEFT + 41) * S, 311 * S], fill=DIM, width=2 * S)
+d.text(((LEFT + 54) * S, 289 * S), "filter by jurisdiction, type, year",
        font=f_field, fill=DIM)
 
 # Entry cards: a chip, a title bar and two takeaway lines each.
@@ -87,7 +88,7 @@ entries = [
     ("ENFORCEMENT", OLIVE, 0.44, 0.85, 0.66),
 ]
 
-y = 368
+y = 348
 for label, colour, t_w, l1, l2 in entries:
     rr((LEFT, y, RIGHT, y + 84), 8, fill=CARD, outline=CARD_EDGE, width=1)
     d.rounded_rectangle([LEFT * S, (y + 10) * S, (LEFT + 6) * S, (y + 74) * S],
@@ -111,7 +112,7 @@ for label, colour, t_w, l1, l2 in entries:
     y += 96
 
 tw = tracked_width("EVERY ENTRY CARRIES A WRITTEN TAKEAWAY", f_cap, 3.4) / S
-tracked(((W - tw) / 2) * S, 778 * S, "EVERY ENTRY CARRIES A WRITTEN TAKEAWAY",
+tracked(((W - tw) / 2) * S, 748 * S, "EVERY ENTRY CARRIES A WRITTEN TAKEAWAY",
         f_cap, DIM, 3.4)
 
 im = im.resize((W, H), Image.LANCZOS)
