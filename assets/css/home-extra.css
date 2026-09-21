@@ -170,12 +170,14 @@
    every width. At 1600px the slot is 433 x 573 and keeps only the central 76%
    of the width, which takes the ends off the wordmark; at 900px it is 900 x 500
    and keeps the central 56% of the height, which slices the wordmark through
-   the middle. Contain it instead and let the screenshot's own white fill the
-   rest of the panel. No !important is needed: home-extra.css loads after
+   the middle. Contain it instead.
+   rest of the panel: images/power-bi-tile.png is trimmed to its two content
+   blocks, and no background colour is set, so what is left of the slot is the
+   card's own background rather than a white slab. No !important is needed:
+   home-extra.css loads after
    main.css and this selector outranks the template's
    .spotlights > section > .image. */
 #one.spotlights > section.spotlight-power-bi > .image {
-	background-color: #ffffff;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
