@@ -145,6 +145,35 @@
 										<div class="rating-guide-body" id="rating-guide-body"></div>
 									</details>
 
+									<!-- Where the suggested Likelihood and Impact come from. Static copy: unlike
+									     the guide above it does not change with the category. Longer version in
+									     the project notes (risk-matrix-rationale). -->
+									<details class="rating-guide rating-note" id="rating-basis">
+										<summary>Where the suggested ratings come from</summary>
+										<div class="rating-guide-body">
+											<p class="rg-lead">Picking a predefined risk prefills a suggested Likelihood and Impact. Those are practitioner defaults: set by judgement against the scales above, and ranked against the other risks in the same section. They are not calculated from incident data, threat intelligence or any scoring formula, and both fields stay editable. Treat a suggestion as a starting point and change it to fit your own environment.</p>
+											<section class="rg-section">
+												<h3 class="rg-heading">How the matrix combines the two</h3>
+												<p class="rg-help">Impact is weighted above likelihood, following the level-of-risk table of NIST SP 800-30 Rev. 1. A critical impact never rates below High however rare it is, a low impact never rates above Medium however likely it is, and a rating only rises as you move up or to the right through the grid.</p>
+											</section>
+											<section class="rg-section">
+												<h3 class="rg-heading">The rules a suggestion follows</h3>
+												<ul class="rg-list rg-note-list">
+													<li>Ratings are inherent: no suggestion assumes a control is already in place.</li>
+													<li>A risk that needs a precondition, whether a specific target, configuration or attacker choice, sits a band below the commodity version of the same thing.</li>
+													<li>Critical impact is reserved for blast radius: a control plane, a whole estate, an irreversible outcome for individuals, a notifiable breakdown. Single account, single device and single record events top out at High.</li>
+													<li>Process and transparency failures cluster at Likely and Medium: common, real, and recoverable.</li>
+													<li>Each suggestion is ranked against its own section first, so neighbouring risks read correctly against each other.</li>
+												</ul>
+											</section>
+											<section class="rg-section">
+												<h3 class="rg-heading">A worked example</h3>
+												<p class="rg-help">Cyber, MFA bypass, suggested Possible and High. Possible rather than Likely because the attack is well established but conditional: multi-factor authentication has to be deployed and then targeted, which puts it a band below stolen credentials in the same section. High rather than Critical because a bypassed account is takeover of one identity, disruptive and notifiable but recoverable, where a cloud control-plane compromise in the same catalog is rated Critical.</p>
+											</section>
+											<p class="rg-help">The risk wording itself: the LLM and GenAI entries follow the EDPB Support Pool of Experts report on AI privacy risks and mitigations for large language models (Barbera, 2025); the rest are drawn from practitioner guidance and written generically.</p>
+										</div>
+									</details>
+
 									<button id="add-risk">Add to Matrix</button>
 								  </div>
 								  

@@ -931,3 +931,29 @@ button#add-risk {
 .rg-more > .rg-dimensions {
     margin: 0 0.6em 0.6em;
 }
+
+/* ---- "Where the suggested ratings come from" ----
+   A second, static <details> under the rating guide, sharing its chrome. The
+   list here is prose rather than the level rows above, so it gets its own
+   bullets: .rg-list has already stripped the markers and the padding. */
+.rating-note {
+    margin-top: 10px;
+}
+
+.rg-note-list li {
+    position: relative;
+    margin: 0 0 0.5em;
+    padding-left: 1.1em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.rg-note-list li:last-child {
+    margin-bottom: 0;
+}
+
+.rg-note-list li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.45);
+}
