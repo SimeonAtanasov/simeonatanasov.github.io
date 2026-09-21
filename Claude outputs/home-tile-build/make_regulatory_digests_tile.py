@@ -1,5 +1,10 @@
-"""Builds images/regulatory-digests.png, the home page tile for the Regulatory
-Digests spotlight (21 September 2026).
+"""Builds images/regulatory-digests-flat.png, the first home page tile for the
+Regulatory Digests spotlight (21 September 2026).
+
+SUPERSEDED. Simeon replaced the tile with his own artwork later the same day, and
+that artwork is what images/regulatory-digests.png now holds. This script writes to
+regulatory-digests-flat.png so that running it can never overwrite the artwork.
+Kept because the flat treatment is the fallback if the artwork is ever dropped.
 
 A flat mock of a digest page: the filter field, four entry cards with a type
 chip, a title bar and two takeaway lines each, and a caption. It deliberately
@@ -117,6 +122,6 @@ tracked(((W - tw) / 2) * S, 748 * S, "EVERY ENTRY CARRIES A WRITTEN TAKEAWAY",
 
 im = im.resize((W, H), Image.LANCZOS)
 out = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                   "..", "..", "images", "regulatory-digests.png")
+                   "..", "..", "images", "regulatory-digests-flat.png")
 im.save(out, optimize=True)
 print(os.path.normpath(out), os.path.getsize(out))
