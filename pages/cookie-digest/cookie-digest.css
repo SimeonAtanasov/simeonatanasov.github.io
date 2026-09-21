@@ -113,6 +113,11 @@
 .ck-part[hidden] { display: none; }
 .ck-groups > .ck-part:first-child { margin-top: 0; }
 #ck-filters, .ck-part, .ck-group, .ck-entry { scroll-margin-top: 5em; }
+/* The header is sticky and 73px tall, so an anchor that lands at the top of the
+   viewport sits under it. The entries above use 5em, which resolves against each
+   element's own font size; on the small head band headings that came out at 78px,
+   5px clear of the header. rem tracks the root size the header scales with. */
+#ck-index, #ck-groups, #ck-sources-note { scroll-margin-top: 6rem; }
 .ck-entry:target { box-shadow: inset 3px 0 0 #7fb2e5; }
 .ck-entry[hidden] { display: none; }
 

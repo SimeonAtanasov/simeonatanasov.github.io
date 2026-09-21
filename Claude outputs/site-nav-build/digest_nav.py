@@ -376,6 +376,12 @@ _CSS = """
 .ai-part[hidden] { display: none; }
 .ai-groups > .ai-part:first-child { margin-top: 0; }
 #ai-filters, .ai-part, .ai-group, .ai-entry { scroll-margin-top: 5em; }
+/* The header is sticky and 73px tall, so an anchor that lands at the top of the
+   viewport sits under it. The entries above use 5em, which resolves against each
+   element's own font size; on the small head band headings that came out at 78px,
+   5px clear of the header. rem tracks the root size the header scales with. */
+#ai-index, #ai-groups, #ai-sources-note { scroll-margin-top: 6rem; }
+
 .ai-entry:target { box-shadow: inset 3px 0 0 #7fb2e5; }
 .ai-entry[hidden] { display: none; }
 

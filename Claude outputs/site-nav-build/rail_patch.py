@@ -231,7 +231,12 @@ def standalone(html_path, css_path, js_path, P, heads, anchor):
 
     c = open(css_path, encoding="utf-8", newline="").read()
     assert ".%s-rail" % P not in c, "%s already carries the rail CSS" % css_path
-    write(css_path, c.rstrip("\n") + "\n\n/* on this page rail */\n" + CSS_V3.replace(".ai-", ".%s-" % P) + "\n")
+    # The header is sticky and 73px tall, so a heading the rail jumps to lands under
+    # it without a scroll margin. The shared module gives its targets one; a
+    # standalone page has to be given it here.
+    margins = ", ".join("#" + hid for _, hid in heads)
+    write(css_path, c.rstrip("\n") + "\n\n/* on this page rail */\n" + CSS_V3.replace(".ai-", ".%s-" % P)
+          + "\n%s { scroll-margin-top: 6rem; }\n" % margins)
 
     j = open(js_path, encoding="utf-8", newline="").read()
     assert "aria-label=\"On this page\"" not in j, "%s already carries the rail script" % js_path

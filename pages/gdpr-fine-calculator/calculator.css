@@ -444,3 +444,8 @@
 .fc-rail a.is-on { color: #fff; }
 .fc-rail a.is-on i { background: #7fb2e5; transform: scale(1.5); }
 @media (hover: none) { .fc-rail { padding: 0.25em 0.35em; } .fc-rail a { height: 2.1em; } .fc-rail a i { width: 0.4em; height: 0.4em; } }
+
+/* The header is sticky and 73px tall, so an anchor that lands at the top of the
+   viewport sits under it. Every target the rail and the jump bar point at needs a
+   scroll margin, not just the entries. 5em is 86.7px, which clears it. */
+#fc-how, #fc-org, #fc-method { scroll-margin-top: 6rem; }

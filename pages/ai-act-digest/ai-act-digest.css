@@ -39,6 +39,11 @@
 .ai-step-btn::after { display: none; }
 .ai-step-n { display: block; padding: 0.35em 0.4em; font-size: 0.55em; line-height: 1; letter-spacing: 0.05em; text-align: center; white-space: nowrap; color: #fff; background: #2a3860; border-top: solid 1px rgba(255,255,255,0.3); border-bottom: solid 1px rgba(255,255,255,0.3); }
 #ai-summary, #ai-checker, #ai-filters, .ai-part { scroll-margin-top: 5em; }
+/* The header is sticky and 73px tall, so an anchor that lands at the top of the
+   viewport sits under it. The entries above use 5em, which resolves against each
+   element's own font size; on the small head band headings that came out at 78px,
+   5px clear of the header. rem tracks the root size the header scales with. */
+#ai-sources-note { scroll-margin-top: 6rem; }
 .ai-privacy { color: rgba(255,255,255,0.55); font-size: 0.9em; }
 
 /* Two columns from 1101px: the side contents and the digest. */
