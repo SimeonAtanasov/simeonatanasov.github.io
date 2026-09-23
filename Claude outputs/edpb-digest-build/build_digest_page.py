@@ -323,7 +323,7 @@ HEAD = """<!DOCTYPE HTML>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="pages/edpb-digest/edpb-digest.css">
-		<link rel="canonical" href="https://simeonatanasov.com/edpb-digest.html">
+		<link rel="canonical" href="https://www.simeonatanasov.com/edpb-digest.html">
 		<!-- Progressive web app -->
 		<link rel="manifest" href="/manifest.webmanifest" />
 		<meta name="theme-color" content="#2a3860" />

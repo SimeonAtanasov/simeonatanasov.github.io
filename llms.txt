@@ -1,0 +1,33 @@
+# Simeon Atanasov
+
+> Free, practitioner-built resources on data protection, the EU AI Act and cookie compliance: reference digests of primary sources, practical advice, and browser-based assessment tools. Content is informational, not legal advice.
+
+## Digests
+
+- [AI Act Digest](https://www.simeonatanasov.com/ai-act-digest.html): The EU AI Act article by article, as amended by the 2026 Digital Omnibus, with takeaways, application dates and the guidance around it.
+- [EDPB Digest](https://www.simeonatanasov.com/edpb-digest.html): Every European Data Protection Board document, 543 in all, with one takeaway each: what it establishes, who it binds and what to do.
+- [Cookie Compliance Digest](https://www.simeonatanasov.com/cookie-digest.html): 259 cookie and tracking laws, regulator guidance documents, court decisions and enforcement actions across 66 jurisdictions, each with a takeaway.
+
+## Advice
+
+- [Practical Privacy](https://www.simeonatanasov.com/practical-privacy.html): A practitioner-tested privacy playbook for eighteen recurring situations, from surveillance and offboarding to marketing and breach response.
+- [Practical AI Act Advice](https://www.simeonatanasov.com/practical-ai-act-advice.html): A working reference on the EU AI Act in thirteen topics: what applies to you, what you have to build, and what to check on other people's systems.
+
+## Tools
+
+- [Privacy & AI Risk Assessments](https://www.simeonatanasov.com/privacy-ai-assessment.html): Free privacy and AI governance assessments: privacy check, full DPIA, legitimate interest test, AI Act risk, breach severity and third-party security.
+- [GDPR Readiness Assessment](https://www.simeonatanasov.com/gdpr-readiness.html): An accountability-based GDPR readiness assessment: record the privacy activities you perform and see which GDPR Articles they evidence.
+- [GDPR Fine Calculator](https://www.simeonatanasov.com/gdpr-fine-calculator.html): Benchmark a possible GDPR fine against published enforcement decisions: see what comparable organisations paid and the statutory ceiling.
+- [GDPR Fines Dashboard](https://www.simeonatanasov.com/power-bi.html): A Power BI dashboard of GDPR fines across Europe since 2018: enforcement trends, country breakdowns and company-level analysis.
+- [Interactive Risk Matrix](https://www.simeonatanasov.com/risk-matrix-original.html): An interactive risk matrix for privacy and data protection: add risks, place them by likelihood and impact, assign mitigations and export.
+- [Cookie Banner Scanner](https://www.simeonatanasov.com/cookie-banner-scanner.html): Run a cookie banner scan and export the results to Excel.
+
+## Legal
+
+- [Privacy Notice](https://www.simeonatanasov.com/privacy-notice.html): How this website collects, uses and protects personal data, and your rights as a data subject, including access, rectification and erasure.
+- [Cookie Notice](https://www.simeonatanasov.com/cookie-notice.html): The cookies used on this website, what each one does, and how to manage your cookie preferences.
+- [Terms of Use](https://www.simeonatanasov.com/terms.html): Terms of Use for this website: acceptable use, intellectual property, the informational nature of the tools and demos, and liability.
+
+## Other
+
+- [Asteroids Game](https://www.simeonatanasov.com/my-asteroids-game.html): A browser Asteroids game written in JavaScript: pilot a ship, dodge and destroy asteroids, with keyboard and touch controls.
