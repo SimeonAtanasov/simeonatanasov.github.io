@@ -3,7 +3,7 @@
 Personal portfolio and privacy reference site, published through GitHub Pages at
 `https://www.simeonatanasov.com`. This file is the map: what each page is, where its
 code lives, what sits in `Claude outputs/`, and how to rebuild the generated pages.
-Last updated 21 September 2026.
+Last updated 24 September 2026.
 
 ## Pages
 
@@ -20,7 +20,7 @@ nav collapse and the assessment dropdown).
 | `privacy-ai-assessment.html` | Six assessment tools behind one landing page: Privacy Assessment (DPIA screening), Full DPIA, Legitimate Interest Test, AI Risk Assessment, Incident & Breach Severity (ENISA method), Third-Party Security Assessment. 68 steps, 338 questions (the AI Risk Assessment gained the Annex I product-route question and an Unresolved outcome on 19 September 2026). | `pages/privacy-ai-assessment/` : `assessment.js` (all six tools and their scoring), `assessment.css` |
 | `risk-matrix-original.html` | Interactive risk matrix over a risk library. | `pages/risk-matrix-front-end/` |
 | `cookie-banner-scanner.html` | Front end for the cookie banner scanner. The backend is a separate project, `scan-banner-api`, deployed on Render. | inline; keeps a `localhost:3005` dev fallback on purpose |
-| `power-bi.html` | GDPR fines in Europe dashboard (embedded). | inline |
+| `power-bi.html` | GDPR fines in Europe dashboard (embedded). The iframe is consent gated: it carries `data-cc-src` rather than `src`, so Microsoft is not contacted until the visitor allows group C0002, and a click to load card stands in its place until then. A `<noscript>` block explains the same thing when JavaScript is off. | inline |
 | `gdpr-fine-calculator.html` | GDPR Fine Calculator. Enter an annual turnover and a violation type and the tool benchmarks it against published enforcement decisions where the fined undertaking's turnover is known: peer median, 25th to 90th percentile, and the Art. 83 statutory ceiling (percentage or the absolute floor, whichever is higher). Shows the peer cases used and a log-log scatter. No state. | `pages/gdpr-fine-calculator/` : `calculator.js`, `calculator-data.js` (353 indexed decisions), `calculator.css` |
 | `my-asteroids-game.html` | Asteroids game, keyboard and touch. | `pages/my-asteroids-game/` |
 
@@ -71,11 +71,14 @@ not in the `sw.js` precache (deliberately, given their size).
 | Page | Notes |
 |---|---|
 | `index.html` | Home and portfolio. The Career & Education section is maintained by hand and is off limits to any automated edit. Sidebar portfolio menu: `assets/css/home-extra.css` and `assets/js/portfolio-menu.js` (behaviour spec below). |
-| `cookie-notice.html`, `privacy-notice.html`, `terms.html` | Legal pages. |
+| `cookie-notice.html` | Cookie notice, rewritten 24 September 2026 from a full site scan rather than from the previous version. Cookies are grouped by what triggers them (home page, dashboard page, everything else), and the "last verified against a full site scan" date at the top is the thing to update after each rescan. Native `<details>`, no script of its own. See `claude/cookie-consent.md`. |
+| `privacy-notice.html` | Privacy notice, rewritten 24 September 2026 against what the site actually does: one block per processing activity (contact form, cookie banner scanner, plain page visits, embedded content, browser storage), each with its data, purpose, Article 6 basis, recipients and retention, plus transfers, an explicit "what does not happen" section, rights and the supervisory authority. Controller is Simeon Atanasov as a private individual in Bulgaria. See `claude/legal-pages.md`. |
+| `terms.html` | Terms of use. Governing law is Bulgaria as of 24 September 2026 (it said Spain, which did not match where the author is established), and the intro now names `simeonatanasov.com` rather than the old `github.io` host. |
 | `offline.html` | Offline fallback served by the service worker. |
 | `404.html` | Custom not-found page in the same style as `offline.html`, served by GitHub Pages for any missing URL. Added 20 September 2026. |
 | `draft.html`, `elements.html`, `test-page.html` | Template leftovers, noindexed, kept rather than deleted. |
 | `pages/cookie-notice/draft-*.html` | Three unlinked cookie banner drafts, noindexed 20 September 2026. Delete when no longer needed. |
+| `onetrust-cookie-banner/` | A downloaded OneTrust CDN bundle (production and test, script templates, en/de/es consent JSON, May 2025). Unlinked, never loaded by any page, and superseded by the site's own consent layer. Delete it or keep it deliberately, but it is not live. |
 
 ### PWA layer
 
@@ -84,6 +87,47 @@ the worker, `images/favicon/maskable-512x512.png` as the Android adaptive icon. 
 page carries a PWA block before `</head>`. `.nojekyll` is what lets `.well-known/` be served;
 deleting it silently breaks the Android app's domain verification. `images/favicon/site.webmanifest`
 is stale and unreferenced; the live manifest is the root one.
+
+`pwa.js` does one more job since 24 September 2026: it injects the consent pair into the
+head of every page. That is why the consent layer needed no per-page script tag. A page
+added without the PWA block therefore gets no cookie banner.
+
+### Consent layer
+
+`assets/js/cookie-consent.js` and `assets/css/cookie-consent.css`, added 24 September 2026.
+A banner on first visit, a preference centre with per-category switches, and an expanding
+cookie details panel per category. No OneTrust, no third-party request, no cookie of its
+own: the choice lives in `localStorage` under `cc-consent`, versioned, expiring after a
+year.
+
+Three groups, named on the OneTrust convention so a later migration maps cleanly: C0001
+strictly necessary (locked), C0002 performance (the Power BI embed), C0003 functional
+(certificate badges and institution logos).
+
+**How to block something.** Give the element `data-cc-src` instead of `src`, plus
+`data-cc-group="C0002"` or whichever group applies. Nothing is requested until the script
+puts the URL back. Add `data-cc-placeholder` to an iframe and a click to load card is drawn
+in its place. Nothing else is needed; there is no list of hosts to maintain.
+
+**What the details panel lists** comes from the `items` array on each group at the top of
+`cookie-consent.js`. That array and `cookie-notice.html` describe the same cookies in two
+places, so after a scan update both, or they drift apart.
+
+Both files are in the `sw.js` precache, and `VERSION` went to `v2` when they shipped.
+
+**Revocation runs the same logic in reverse.** Turning a category off unloads its content
+immediately, with no reload: the URL moves back from `src` to `data-cc-src` and the
+placeholder returns. For an iframe the element is replaced with a clone carrying no
+source, because removing `src` does not unload the document already inside one, and its
+scripts and timers would otherwise keep running. What it cannot do is delete cookies a
+provider has already set, since no site can reach another origin's storage, and both
+notices say so.
+
+The banner and the preference centre each link to `cookie-notice.html` and
+`privacy-notice.html`.
+
+`window.CookieConsent` exposes `isAllowed(id)`, `accepted()`, `groups()`, `acceptAll()`,
+`rejectAll()`, `showPreferences()`, `onChange(fn)` and `reset()`.
 
 ## Claude outputs/
 
@@ -152,10 +196,22 @@ order after a rebuild) and, one per pass, `source-verification-2026-09.md`,
 - No em dashes anywhere: page copy, code comments, commit text.
 - British spelling. Company-agnostic content: no employer, team or system names.
 - Sentence case headings, one `h1.major` per content page, titles `Simeon Atanasov | <Page>`.
+- **Page copy sits on a dark navy wrapper.** Any panel or card added to a content page has
+  to set its own text colour, or it inherits near-white and disappears. Use a translucent
+  white background (`rgba(255, 255, 255, 0.07)`) rather than a light fill, and check the
+  result: the notice pages measure 6:1 or better on every element.
 - `assets/css/main.css` is CRLF; edit it in binary mode or it silently converts to LF. Root
   HTML files are LF.
 - The html5up template styles every `button` (tall, uppercase, nowrap); custom buttons must
-  reset height and line-height. It does not style `input[type="search"]`; use `type="text"`.
+  reset height and line-height, and declare their own `width`, `min-width`, `max-width` and
+  `left` so a page rule like the risk matrix page's `button { width: 100% }` cannot claim
+  them. It does not style `input[type="search"]`; use `type="text"`. It also hides native
+  checkboxes in favour of a styled sibling label, so a standalone checkbox renders invisible:
+  use `<button role="switch">` instead, as the consent preference centre does.
+- Changing `assets/js/pwa.js` or either consent file means bumping `VERSION` in `sw.js`.
+  Both are `.js` or `.css`, so the service worker serves them stale while revalidate, and
+  without a bump a returning visitor runs the previous copy for one more visit. With the
+  consent layer that visit has no banner and a blank gap where a gated embed should be.
 - The header nav collapses by JS measurement in `main.js`, not by a pixel breakpoint.
 - The generated pages (three digests, two advice pages) are written by builders whose header
   template predates the current four-item nav: after any rebuild, copy the current header block

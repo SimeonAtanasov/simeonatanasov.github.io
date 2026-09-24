@@ -127,6 +127,7 @@
 	];
 
 	var NOTICE_URL = '/cookie-notice.html';
+	var PRIVACY_URL = '/privacy-notice.html';
 
 	/* ---------------------------------------------------------------- state */
 
@@ -194,7 +195,7 @@
 	function apply(map, persist) {
 		state = map;
 		if (persist !== false) write(map);
-		unblock();
+		syncBlocked();
 		for (var i = 0; i < listeners.length; i++) {
 			try {
 				listeners[i](copy(map));
@@ -210,23 +211,64 @@
 		return out;
 	}
 
-	/* ------------------------------------------------------------ unblocking */
+	/* --------------------------------------------------- blocking, both ways
 
-	function unblock() {
-		var nodes = document.querySelectorAll('[data-cc-src]');
-		for (var i = 0; i < nodes.length; i++) {
-			var el = nodes[i];
+	   An element waiting for consent holds its URL in data-cc-src, which the
+	   browser does not understand, so nothing is requested. Once allowed, the
+	   URL moves to src and the request fires. The element then carries
+	   data-cc-loaded instead, which is how a later revocation finds it again
+	   and puts it back. Consent is not a filter in front of the load, it is
+	   what supplies the address, and withdrawing it takes the address away.
+	*/
+
+	function syncBlocked() {
+		var found = document.querySelectorAll('[data-cc-src], [data-cc-loaded]');
+
+		/* Copied to an array first: tearing an iframe down replaces the node,
+		   and mutating the DOM underneath a list being walked is how you skip
+		   elements. */
+		var list = [];
+		for (var i = 0; i < found.length; i++) list.push(found[i]);
+
+		for (var j = 0; j < list.length; j++) {
+			var el = list[j];
 			var group = el.getAttribute('data-cc-group') || 'C0001';
-			if (!isAllowed(group)) {
+			var pending = el.getAttribute('data-cc-src');
+			var loaded = el.getAttribute('data-cc-loaded');
+
+			if (isAllowed(group)) {
+				if (!pending) continue;
+				removePlaceholder(el);
+				el.removeAttribute('data-cc-src');
+				el.setAttribute('data-cc-loaded', pending);
+				el.setAttribute('src', pending);
+			} else {
+				if (loaded) el = teardown(el, loaded);
 				placeholder(el, group);
-				continue;
 			}
-			var src = el.getAttribute('data-cc-src');
-			if (!src) continue;
-			removePlaceholder(el);
-			el.removeAttribute('data-cc-src');
-			el.setAttribute('src', src);
 		}
+	}
+
+	/* Puts a loaded element back into its blocked state and returns the
+	   element to carry on with, which is not always the one passed in. */
+	function teardown(el, url) {
+		var node = el;
+
+		if (el.tagName === 'IFRAME') {
+			/* Removing src does not unload the document already inside an
+			   iframe: it keeps rendering, its scripts keep running and its
+			   timers keep firing. Replacing the element is the only thing
+			   that reliably tears the embedded document down. */
+			node = el.cloneNode(false);
+			node.removeAttribute('src');
+			if (el.parentNode) el.parentNode.replaceChild(node, el);
+		} else {
+			el.removeAttribute('src');
+		}
+
+		node.removeAttribute('data-cc-loaded');
+		node.setAttribute('data-cc-src', url);
+		return node;
 	}
 
 	function placeholderId(el) {
@@ -235,6 +277,10 @@
 	}
 
 	function placeholder(el, group) {
+		/* Hidden whether or not it gets a card, so a blocked image does not
+		   sit there as a broken icon. */
+		el.style.display = 'none';
+
 		if (el.getAttribute('data-cc-placeholder') === null) return;
 		var id = placeholderId(el);
 		if (document.getElementById(id)) return;
@@ -281,7 +327,6 @@
 		}
 		box.appendChild(actions);
 
-		el.style.display = 'none';
 		if (el.parentNode) el.parentNode.insertBefore(box, el);
 	}
 
@@ -313,6 +358,12 @@
 		return n;
 	}
 
+	function anchor(href, label) {
+		var a = el('a', null, label);
+		a.href = href;
+		return a;
+	}
+
 	/* ---------------------------------------------------------------- banner */
 
 	var bannerNode = null;
@@ -334,9 +385,9 @@
 			'organisations, and those providers set cookies once their content loads. ' +
 			'Nothing non-essential is loaded until you choose. '
 		));
-		var link = el('a', null, 'Read the cookie notice');
-		link.href = NOTICE_URL;
-		p.appendChild(link);
+		p.appendChild(anchor(NOTICE_URL, 'Cookie notice'));
+		p.appendChild(document.createTextNode(' and '));
+		p.appendChild(anchor(PRIVACY_URL, 'privacy notice'));
 		p.appendChild(document.createTextNode('.'));
 		text.appendChild(p);
 
@@ -478,7 +529,10 @@
 
 		var intro = el('p', 'cc-modal-intro',
 			'Choose what may load on this site. Blocking a category means the content ' +
-			'it covers is not requested at all, so the provider never sees your visit.');
+			'it covers is not requested at all, so the provider never sees your visit. ' +
+			'Turning off something you had allowed unloads it straight away, without a ' +
+			'reload, though cookies a provider has already set stay in your browser ' +
+			'until you clear them.');
 
 		var list = el('div', 'cc-groups');
 
@@ -513,6 +567,16 @@
 			})(GROUPS[i]);
 		}
 
+		/* The two documents that say, in full, what this dialog summarises.
+		   A preference centre without them makes the visitor take the summary
+		   on trust. */
+		var refs = el('p', 'cc-modal-links');
+		refs.appendChild(document.createTextNode('Every cookie listed here is described in the '));
+		refs.appendChild(anchor(NOTICE_URL, 'cookie notice'));
+		refs.appendChild(document.createTextNode('. What is done with personal data across the whole site, on what legal basis and for how long, is in the '));
+		refs.appendChild(anchor(PRIVACY_URL, 'privacy notice'));
+		refs.appendChild(document.createTextNode('.'));
+
 		var foot = el('div', 'cc-modal-foot');
 
 		var rejectAll = button('cc-btn cc-btn-secondary', 'Reject all');
@@ -543,6 +607,7 @@
 		panel.appendChild(head);
 		panel.appendChild(intro);
 		panel.appendChild(list);
+		panel.appendChild(refs);
 		panel.appendChild(foot);
 		prefNode.appendChild(panel);
 		document.body.appendChild(prefNode);
