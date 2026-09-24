@@ -382,8 +382,8 @@
 		var p = el('p', null);
 		p.appendChild(document.createTextNode(
 			'This site sets no cookies of its own. Some pages embed content from other ' +
-			'organisations, and those providers set cookies once their content loads. ' +
-			'Nothing non-essential is loaded until you choose. '
+			'organisations, which set theirs once it loads. Nothing non-essential ' +
+			'loads until you choose. '
 		));
 		p.appendChild(anchor(NOTICE_URL, 'Cookie notice'));
 		p.appendChild(document.createTextNode(' and '));
@@ -399,7 +399,7 @@
 			hideBanner();
 		});
 
-		var manage = button('cc-btn cc-btn-secondary', 'Manage preferences');
+		var manage = button('cc-btn cc-btn-secondary cc-btn-manage', 'Manage preferences');
 		manage.addEventListener('click', function () { openPreferences(); });
 
 		var accept = button('cc-btn cc-btn-primary', 'Accept all');
