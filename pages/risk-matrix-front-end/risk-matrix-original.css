@@ -957,3 +957,57 @@ button#add-risk {
     left: 0;
     color: rgba(255, 255, 255, 0.45);
 }
+
+/* ---- Per-risk bubble colours ----
+   Each risk carries its own colour (--risk-color, --risk-fg, set by the JS),
+   used on its bubble in the matrix and on its number in the risk list. The
+   white ring plus a thin dark outer ring keep a bubble readable on every cell
+   colour and on the page background; the highlight and inner shadow give it
+   a slight bevel. */
+#risk-matrix .risk-id,
+#risk-notes li .risk-number {
+    box-sizing: border-box;
+    background:
+        radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 58%),
+        var(--risk-color, #ffffff);
+    color: var(--risk-fg, #1e2a4d);
+    border: 2px solid #ffffff;
+    box-shadow:
+        0 0 0 1px rgba(10, 15, 35, 0.8),
+        inset 0 -2px 3px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        0 2px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+#risk-matrix .risk-id {
+    height: 1.9em;
+    min-width: 1.9em;
+    border-radius: 0.95em;
+}
+
+#risk-notes li .risk-number {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.4em;
+    height: 2.4em;
+    padding: 0 0.5em;
+    border-radius: 1.2em;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+}
+
+#risk-notes li[style*="--risk-color"] {
+    border-left: 6px solid var(--risk-color);
+}
+
+@media screen and (max-width: 736px) {
+    #risk-matrix .risk-id {
+        height: 1.8em;
+        min-width: 1.8em;
+        border-width: 1.5px;
+    }
+}
