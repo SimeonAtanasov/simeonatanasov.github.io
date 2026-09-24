@@ -13,10 +13,15 @@
 	    API), anything that is not a GET, and range requests (the game
 	    sounds). Those behave exactly as they would with no service worker.
 
-	Bump VERSION to retire every cache at once.
+	Bump VERSION to retire every cache at once. It was bumped to v2 when the
+	consent banner shipped: pwa.js is a .js asset, so it is served stale while
+	revalidate, and a returning visitor would otherwise have run the previous
+	copy for one more visit. That copy does not load the consent script, and
+	the gated embeds carry no src, so the dashboard would have been a blank
+	gap rather than a placeholder. Retiring the caches avoids that one visit.
 */
 
-var VERSION = 'v1';
+var VERSION = 'v2';
 var PAGE_CACHE = 'pages-' + VERSION;
 var ASSET_CACHE = 'assets-' + VERSION;
 var OFFLINE_URL = '/offline.html';
@@ -27,6 +32,8 @@ var PRECACHE = [
 	'/privacy-ai-assessment.html',
 	'/assets/css/main.css',
 	'/assets/js/main.js',
+	'/assets/css/cookie-consent.css',
+	'/assets/js/cookie-consent.js',
 	'/images/favicon/android-chrome-192x192.png'
 ];
 

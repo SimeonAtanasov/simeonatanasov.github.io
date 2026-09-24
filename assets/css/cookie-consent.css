@@ -1,0 +1,420 @@
+/*
+	Cookie consent banner and preference centre.
+
+	Two things about the site template drive most of what is here.
+
+	1. The template styles every bare `button` with a fixed height of
+	   calc(4.75em + 2px), a line-height of 4.75em, uppercase text, wide
+	   letter spacing and nowrap, and it sets border and colour with
+	   !important. Any control here has to reset all of that, and the
+	   !important declarations have to be answered in kind.
+
+	2. Some page stylesheets style bare `button` themselves. The risk matrix
+	   page sets `button { width: 100% }` below 736px, which once stretched
+	   the floating Top button across the footer. Every control here declares
+	   its own width, min-width, max-width and left so a page rule cannot
+	   reach it. A class only outranks an element selector for the properties
+	   it actually declares.
+*/
+
+:root {
+	--cc-ink: #3d4449;
+	--cc-ink-soft: #5b6268;
+	--cc-accent: #2a3860;
+	--cc-accent-hover: #38497d;
+	--cc-surface: #ffffff;
+	--cc-line: #dce1e4;
+	--cc-shadow: 0 0.5rem 2rem rgba(20, 28, 48, 0.22);
+}
+
+.cc-no-scroll,
+.cc-no-scroll body {
+	overflow: hidden;
+}
+
+/* ------------------------------------------------------------------ buttons */
+
+.cc-btn {
+	-webkit-appearance: none;
+	appearance: none;
+	display: inline-block;
+	box-sizing: border-box;
+	width: auto;
+	min-width: 0;
+	max-width: none;
+	left: auto;
+	height: auto;
+	min-height: 0;
+	line-height: 1.4;
+	padding: 0.7em 1.35em;
+	margin: 0;
+	font-size: 0.85rem;
+	font-weight: 600;
+	font-family: inherit;
+	letter-spacing: 0.02em;
+	text-transform: none;
+	text-align: center;
+	white-space: normal;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.cc-btn:focus-visible {
+	outline: 3px solid var(--cc-accent);
+	outline-offset: 2px;
+}
+
+.cc-btn-primary {
+	background-color: var(--cc-accent) !important;
+	color: #ffffff !important;
+	border: 1px solid var(--cc-accent) !important;
+}
+
+.cc-btn-primary:hover {
+	background-color: var(--cc-accent-hover) !important;
+	border-color: var(--cc-accent-hover) !important;
+}
+
+.cc-btn-secondary {
+	background-color: #ffffff !important;
+	color: var(--cc-accent) !important;
+	border: 1px solid var(--cc-accent) !important;
+}
+
+.cc-btn-secondary:hover {
+	background-color: #eef1f7 !important;
+}
+
+.cc-btn-quiet {
+	background-color: transparent !important;
+	color: var(--cc-accent) !important;
+	border: 1px solid transparent !important;
+	text-decoration: underline;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+}
+
+.cc-btn-close {
+	background-color: transparent !important;
+	color: var(--cc-ink-soft) !important;
+	border: 1px solid var(--cc-line) !important;
+	padding: 0.45em 0.9em;
+	font-size: 0.78rem;
+}
+
+.cc-btn-close:hover {
+	color: var(--cc-ink) !important;
+	border-color: var(--cc-ink-soft) !important;
+}
+
+/* ------------------------------------------------------------------- banner */
+
+.cc-banner {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10020;
+	background: var(--cc-surface);
+	border-top: 3px solid var(--cc-accent);
+	box-shadow: var(--cc-shadow);
+	color: var(--cc-ink);
+	transform: translateY(100%);
+	transition: transform 0.28s ease;
+}
+
+.cc-banner-in {
+	transform: translateY(0);
+}
+
+.cc-banner-inner {
+	max-width: 68rem;
+	margin: 0 auto;
+	padding: 1.5rem 1.5rem 1.6rem 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.cc-banner-text {
+	flex: 1 1 22rem;
+	/* Without this a flex item refuses to shrink and overflows sideways
+	   rather than wrapping. */
+	min-width: 0;
+}
+
+.cc-banner-title {
+	margin: 0 0 0.5rem 0;
+	font-size: 1.05rem;
+	line-height: 1.3;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--cc-accent);
+}
+
+.cc-banner-text p {
+	margin: 0;
+	font-size: 0.88rem;
+	line-height: 1.65;
+	color: var(--cc-ink-soft);
+}
+
+.cc-banner-text a {
+	color: var(--cc-accent);
+}
+
+.cc-banner-actions {
+	flex: 0 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	align-items: center;
+}
+
+/* -------------------------------------------------------- preference centre */
+
+.cc-modal-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10030;
+	background: rgba(16, 22, 38, 0.62);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
+	overflow-y: auto;
+}
+
+.cc-modal {
+	background: var(--cc-surface);
+	color: var(--cc-ink);
+	width: 100%;
+	max-width: 40rem;
+	max-height: calc(100vh - 3rem);
+	overflow-y: auto;
+	border-radius: 6px;
+	box-shadow: var(--cc-shadow);
+	padding: 1.75rem;
+}
+
+.cc-modal-head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.cc-modal-title {
+	margin: 0;
+	font-size: 1.1rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--cc-accent);
+}
+
+.cc-modal-intro {
+	margin: 0 0 1.25rem 0;
+	font-size: 0.85rem;
+	line-height: 1.65;
+	color: var(--cc-ink-soft);
+}
+
+.cc-group {
+	border-top: 1px solid var(--cc-line);
+	padding: 1.1rem 0;
+}
+
+.cc-group-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 0.4rem;
+}
+
+.cc-group-name {
+	margin: 0;
+	font-size: 0.95rem;
+	letter-spacing: 0.02em;
+	text-transform: none;
+	color: var(--cc-ink);
+}
+
+.cc-group-always {
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--cc-accent);
+	white-space: nowrap;
+}
+
+.cc-group-desc {
+	margin: 0 0 0.35rem 0;
+	font-size: 0.83rem;
+	line-height: 1.6;
+	color: var(--cc-ink-soft);
+}
+
+.cc-group-id {
+	margin: 0;
+	font-size: 0.7rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #939a9f;
+}
+
+/* The template hides native checkboxes (opacity 0, float left, z-index -1)
+   in favour of a styled sibling label, so a real checkbox here would be
+   invisible. This is a button with role="switch" instead, which sidesteps
+   the template entirely and reads correctly to a screen reader. */
+.cc-switch {
+	-webkit-appearance: none;
+	appearance: none;
+	flex: 0 0 auto;
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 3.1rem;
+	min-width: 0;
+	max-width: none;
+	left: auto;
+	height: 1.7rem;
+	min-height: 0;
+	line-height: 1;
+	padding: 0;
+	margin: 0;
+	border-radius: 1rem;
+	cursor: pointer;
+	background-color: #c3cad0 !important;
+	border: 1px solid #b0b8bf !important;
+	transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.cc-switch[aria-checked="true"] {
+	background-color: var(--cc-accent) !important;
+	border-color: var(--cc-accent) !important;
+}
+
+.cc-switch:focus-visible {
+	outline: 3px solid var(--cc-accent);
+	outline-offset: 2px;
+}
+
+.cc-switch-track {
+	position: absolute;
+	top: 50%;
+	left: 0.2rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-top: -0.6rem;
+	border-radius: 50%;
+	background: #ffffff;
+	transition: left 0.18s ease;
+}
+
+.cc-switch[aria-checked="true"] .cc-switch-track {
+	left: 1.65rem;
+}
+
+.cc-modal-foot {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	justify-content: flex-end;
+	border-top: 1px solid var(--cc-line);
+	padding-top: 1.25rem;
+	margin-top: 0.25rem;
+}
+
+/* -------------------------------------------------------------- placeholder */
+
+.cc-placeholder {
+	box-sizing: border-box;
+	border: 1px dashed #b7bfc6;
+	border-radius: 6px;
+	background: #f6f8fa;
+	padding: 2rem 1.5rem;
+	text-align: center;
+	color: var(--cc-ink);
+}
+
+.cc-placeholder-title {
+	margin: 0 0 0.5rem 0;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--cc-accent);
+}
+
+.cc-placeholder-body {
+	margin: 0 auto 0.5rem auto;
+	max-width: 34rem;
+	font-size: 0.85rem;
+	line-height: 1.65;
+	color: var(--cc-ink-soft);
+}
+
+.cc-placeholder-note {
+	margin: 0 0 1.1rem 0;
+	font-size: 0.7rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #939a9f;
+}
+
+.cc-placeholder-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	justify-content: center;
+}
+
+/* -------------------------------------------------------------- narrow view */
+
+@media screen and (max-width: 736px) {
+
+	.cc-banner-inner {
+		padding: 1.25rem 1.1rem 1.35rem 1.1rem;
+		gap: 1.1rem;
+	}
+
+	.cc-banner-actions {
+		width: 100%;
+	}
+
+	/* Full width taps, but each button still declares its own width so a
+	   page rule cannot claim it. */
+	.cc-banner-actions .cc-btn,
+	.cc-modal-foot .cc-btn {
+		width: 100%;
+		max-width: none;
+		flex: 1 1 100%;
+	}
+
+	.cc-modal {
+		padding: 1.35rem 1.1rem;
+		max-height: calc(100vh - 2rem);
+	}
+
+	.cc-modal-backdrop {
+		padding: 1rem;
+		align-items: flex-start;
+	}
+
+	.cc-placeholder {
+		padding: 1.5rem 1rem;
+	}
+
+	.cc-placeholder-actions .cc-btn {
+		width: 100%;
+		flex: 1 1 100%;
+	}
+}

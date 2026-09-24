@@ -18,3 +18,38 @@
 	});
 
 })();
+
+/*
+	Loads the cookie consent banner on every page.
+
+	This lives here rather than as a script tag on each page for one reason:
+	every root page already pulls this file into its head with defer, so one
+	edit covers the whole site and no page markup has to change. If a page is
+	ever added without the PWA block, it gets no banner, so add the block.
+
+	The pair it loads is assets/css/cookie-consent.css and
+	assets/js/cookie-consent.js. Blocking is by markup: an element carries
+	data-cc-src instead of src, so nothing is requested before the script
+	runs. Because this file is deferred, an element left with a real src
+	loads regardless of consent, which is why the attribute swap is the part
+	that does the work.
+*/
+(function () {
+
+	if (window.__ccLoaded) return;
+	window.__ccLoaded = true;
+
+	var head = document.head || document.getElementsByTagName('head')[0];
+	if (!head) return;
+
+	var link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.href = '/assets/css/cookie-consent.css';
+	head.appendChild(link);
+
+	var script = document.createElement('script');
+	script.src = '/assets/js/cookie-consent.js';
+	script.defer = true;
+	head.appendChild(script);
+
+})();
