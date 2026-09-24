@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-manifest.schema.json",
+
+  "id": "c20453f7-db8e-4f13-a0dc-82b2c5875e9c",
+  "alias": "GdprFineCalculatorWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsTab", "TeamsPersonalApp", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": { "default": "Advanced" },
+      "title": { "default": "GDPR Fine Calculator" },
+      "description": {
+        "default": "Benchmarks a turnover figure against published GDPR enforcement decisions and shows a typical outcome, a realistic range and the Art. 83 statutory ceiling. All data is bundled and the calculation runs in the browser."
+      },
+      "officeFabricIconFontName": "Calculator",
+      "properties": {
+        "heading": "GDPR Fine Calculator",
+        "showIntro": true,
+        "showHowTo": true,
+        "showMethod": true,
+        "defaultTurnover": ""
+      }
+    }
+  ]
+}

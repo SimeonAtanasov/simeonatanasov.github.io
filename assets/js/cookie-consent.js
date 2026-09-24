@@ -30,25 +30,99 @@
 
 	/* The groups. Order is the order they appear in the preference centre.
 	   To add a group, add it here and tag the elements it covers with
-	   data-cc-group. Nothing else needs to change. */
+	   data-cc-group. Nothing else needs to change.
+
+	   The `items` list is what the Cookie details panel shows. Keep it in
+	   step with cookie-notice.html after every site scan: the notice and
+	   this list describe the same cookies and must not drift apart. */
 	var GROUPS = [
 		{
 			id: 'C0001',
 			name: 'Strictly necessary',
 			locked: true,
-			description: 'Needed for the site to work. At present this covers only the record of the choice you make here, which is kept in your browser and is not a cookie and is not sent anywhere.'
+			description: 'Needed for the site to work. At present this covers only the record of the choice you make here, which is kept in your browser and is not a cookie and is not sent anywhere.',
+			items: [
+				{
+					name: 'cc-consent',
+					kind: 'Local storage, not a cookie',
+					host: 'This site',
+					duration: 'One year, then you are asked again',
+					purpose: 'Remembers which categories you allowed, so you are not asked on every page. It stays on your device, is never transmitted, and is cleared when you clear site data.'
+				}
+			]
 		},
 		{
 			id: 'C0002',
 			name: 'Performance',
 			locked: false,
-			description: 'The embedded fines dashboard is served by its provider, which measures how the embed is used. Allowing this loads the dashboard and lets the provider set its own cookies, including a visitor identifier that lasts a year.'
+			description: 'The embedded fines dashboard is served by its provider, which measures how the embed is used. Allowing this loads the dashboard and lets the provider set its own cookies, including a visitor identifier that lasts a year.',
+			note: 'Two of these measure use and seven keep the embed working. They cannot be refused separately, because they all arrive with the report, which is why the whole embed sits behind one choice.',
+			items: [
+				{
+					name: 'ai_user',
+					kind: 'Third party cookie',
+					host: 'app.powerbi.com',
+					duration: 'One year',
+					purpose: 'Microsoft Azure Application Insights. Assigns a persistent identifier so Microsoft can count returning users of the embedded report. This is the one genuinely analytical cookie on the site.'
+				},
+				{
+					name: 'ai_session',
+					kind: 'Third party cookie',
+					host: 'app.powerbi.com',
+					duration: 'Less than a day',
+					purpose: 'Microsoft Azure Application Insights. Groups a single visit to the embedded report into one session for the same measurement.'
+				},
+				{
+					name: 'WFESessionId',
+					kind: 'Third party cookie',
+					host: 'app.powerbi.com',
+					duration: 'Session, until you close the browser',
+					purpose: 'Identifies the front end session serving the embedded report.'
+				},
+				{
+					name: 'ARRAffinity',
+					kind: 'Third party cookie',
+					host: 'app.powerbi.com, appsource.powerbi.com, pbivisuals.powerbi.com',
+					duration: 'Session, until you close the browser',
+					purpose: 'Keeps your requests going to the same server while the dashboard is open. It is a load balancing cookie and carries no identifier of you.'
+				},
+				{
+					name: 'ARRAffinitySameSite',
+					kind: 'Third party cookie',
+					host: 'app.powerbi.com, appsource.powerbi.com, pbivisuals.powerbi.com',
+					duration: 'Session, until you close the browser',
+					purpose: 'The same load balancing cookie as the one above, with a stricter cross site rule.'
+				},
+				{
+					name: 'Power BI local and session storage',
+					kind: 'Storage, not a cookie',
+					host: 'app.powerbi.com',
+					duration: 'Until you clear site data for powerbi.com',
+					purpose: 'Report configuration and theme data, a service access token for Microsoft’s own API, and a buffer of Application Insights telemetry waiting to be sent. None of it is readable by this site.'
+				}
+			]
 		},
 		{
 			id: 'C0003',
 			name: 'Functional',
 			locked: false,
-			description: 'Certificate badges and institution logos loaded from the organisations that issued them. Allowing this lets those providers set short-lived session cookies when the images are fetched.'
+			description: 'Certificate badges and institution logos loaded from the organisations that issued them. Allowing this lets those providers set short-lived session cookies when the images are fetched.',
+			items: [
+				{
+					name: 'WMF-Uniq',
+					kind: 'Third party cookie',
+					host: 'upload.wikimedia.org',
+					duration: 'One year',
+					purpose: 'Set by the Wikimedia Foundation because one university logo is loaded from Wikimedia Commons rather than from this site. It is a unique visitor identifier used for their own traffic measurement, and it is the longest lived cookie reached from this site.'
+				},
+				{
+					name: '_session_id',
+					kind: 'Third party cookie',
+					host: 'api.accredible.com',
+					duration: 'Session, until you close the browser',
+					purpose: 'Set by the certification provider when a credential badge image is fetched from its API. It holds a session reference for their service. Nobody signs in on this site, so it identifies nothing about you here.'
+				}
+			]
 		}
 	];
 
@@ -305,6 +379,75 @@
 		bannerNode = null;
 	}
 
+	/* --------------------------------------------------- group detail panels */
+
+	/* The "Group C0001 details" row. Clicking it expands the list of what the
+	   group actually covers, in place, without leaving the dialog. */
+	function detailsToggle(g) {
+		var panelId = 'cc-details-' + g.id;
+		var count = (g.items || []).length;
+
+		var toggle = button('cc-group-toggle', '');
+		toggle.setAttribute('aria-expanded', 'false');
+		toggle.setAttribute('aria-controls', panelId);
+
+		toggle.appendChild(el('span', 'cc-chev'));
+		toggle.appendChild(el('span', 'cc-group-toggle-id', 'Group ' + g.id + ' details'));
+		toggle.appendChild(el('span', 'cc-group-toggle-count',
+			count === 1 ? '1 item' : count + ' items'));
+
+		toggle.addEventListener('click', function () {
+			var panel = document.getElementById(panelId);
+			if (!panel) return;
+			var open = toggle.getAttribute('aria-expanded') === 'true';
+			toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+			if (open) panel.setAttribute('hidden', 'hidden');
+			else panel.removeAttribute('hidden');
+		});
+
+		return toggle;
+	}
+
+	function detailsPanel(g) {
+		var panel = el('div', 'cc-details');
+		panel.id = 'cc-details-' + g.id;
+		panel.setAttribute('hidden', 'hidden');
+
+		if (g.note) panel.appendChild(el('p', 'cc-details-note', g.note));
+
+		var items = g.items || [];
+		if (!items.length) {
+			panel.appendChild(el('p', 'cc-details-empty', 'Nothing is stored for this category.'));
+			return panel;
+		}
+
+		for (var i = 0; i < items.length; i++) {
+			var item = items[i];
+			var card = el('div', 'cc-item');
+
+			var head = el('p', 'cc-item-name');
+			var code = el('code', null, item.name);
+			head.appendChild(code);
+			head.appendChild(el('span', 'cc-item-kind', item.kind));
+			card.appendChild(head);
+
+			card.appendChild(fact('Host', item.host));
+			card.appendChild(fact('Duration', item.duration));
+			card.appendChild(el('p', 'cc-item-purpose', item.purpose));
+
+			panel.appendChild(card);
+		}
+
+		return panel;
+	}
+
+	function fact(label, value) {
+		var p = el('p', 'cc-item-fact');
+		p.appendChild(el('span', 'cc-item-label', label));
+		p.appendChild(document.createTextNode(value));
+		return p;
+	}
+
 	/* ------------------------------------------------------- preference centre */
 
 	var prefNode = null;
@@ -364,7 +507,8 @@
 
 				row.appendChild(rowHead);
 				row.appendChild(el('p', 'cc-group-desc', g.description));
-				row.appendChild(el('p', 'cc-group-id', 'Group ' + g.id));
+				row.appendChild(detailsToggle(g));
+				row.appendChild(detailsPanel(g));
 				list.appendChild(row);
 			})(GROUPS[i]);
 		}

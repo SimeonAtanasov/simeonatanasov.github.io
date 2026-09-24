@@ -1,0 +1,710 @@
+/* GDPR Fine Calculator, SharePoint Framework port.
+
+   Same method as the web version:
+     1. Select peers: same violation type, turnover within a band of the figure
+        entered, optionally the same sector.
+     2. Collapse to one index per company (the median of that company's cases),
+        so a regulator that fines the same operator sixty times does not decide
+        the answer on its own.
+     3. Report the median and the 25th to 90th percentile across companies,
+        alongside the Art. 83 statutory ceiling.
+
+   Nothing is sent anywhere. Every figure is bundled in the package and the
+   whole calculation runs in the browser, so no tenant data and no typed
+   turnover ever leaves the page.
+
+   Differences from the website version, all cosmetic:
+     - ids are prefixed per web part instance, so two copies can sit on one page
+     - the chart ink is light rather than dark, for a modern SharePoint surface
+     - no locale-dependent number formatting, so every tenant sees one format */
+
+import { FINE_ROWS, FINE_TYPES, FINE_SECTORS, ARTICLE_NAMES, FineRow } from './fineData';
+import { buildTemplate, TemplateOptions } from './template';
+
+/* --------------------------------------------------------------- the rows --- */
+
+interface Row {
+  etid: string;
+  company: string;
+  country: string;
+  year: number;
+  fine: number;
+  turnover: number;
+  type: string;
+  sector: string;
+  articles: string[];
+  tier: string;
+  conf: number;
+  fin: number;
+  tyear: string;
+  tbasis: string;
+  tsource: string;
+  ep: number;
+  index: number;
+  key: string;
+}
+
+function normKey(name: string): string {
+  const lower = String(name || '').toLowerCase();
+  /* normalize is ES2015. Feature detect rather than widen the tsconfig lib. */
+  const folded: string =
+    typeof (lower as unknown as { normalize?: unknown }).normalize === 'function'
+      ? (lower as unknown as { normalize: (f: string) => string })
+          .normalize('NFD')
+          .replace(/[̀-ͯ]/g, '')
+      : lower;
+  return folded
+    .replace(/[^a-z0-9 ]/g, ' ')
+    .replace(
+      /\b(sau|sa|slu|sl|spa|srl|gmbh|ag|ab|as|oy|nv|bv|plc|ltd|limited|llc|inc|corp|co|kg|group|holding|international|espana|espagne)\b/g,
+      ' '
+    )
+    .replace(/\s+/g, ' ')
+    .replace(/^ | $/g, '');
+}
+
+const ROWS: Row[] = FINE_ROWS.map(function (r: FineRow): Row {
+  return {
+    etid: r[0],
+    company: r[1],
+    country: r[2],
+    year: r[3],
+    fine: r[4],
+    turnover: r[5],
+    type: r[6],
+    sector: r[7],
+    articles: r[8],
+    tier: r[9],
+    conf: r[10],
+    fin: r[11],
+    tyear: r[12],
+    tbasis: r[13],
+    tsource: r[14],
+    ep: r[15],
+    index: r[4] / r[5],
+    key: normKey(r[1])
+  };
+});
+
+/* ------------------------------------------------------------- formatting --- */
+
+/* Grouped by hand rather than through toLocaleString. A tenant in Sofia and a
+   tenant in London should read the same string, and the ES5 lib does not
+   declare the locale argument anyway. */
+function group(n: number): string {
+  return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+function log10(v: number): number {
+  return Math.log(v) / Math.LN10;
+}
+
+function eur(v: number | undefined): string {
+  if (v === undefined || !isFinite(v)) { return 'n/a'; }
+  const abs = Math.abs(v);
+  if (abs >= 1e9) { return '€ ' + (v / 1e9).toFixed(v / 1e9 >= 10 ? 0 : 1) + ' bn'; }
+  if (abs >= 1e6) { return '€ ' + (v / 1e6).toFixed(v / 1e6 >= 10 ? 0 : 1) + ' m'; }
+  return '€ ' + group(v);
+}
+
+function eurFull(v: number | undefined): string {
+  if (v === undefined || !isFinite(v)) { return 'n/a'; }
+  return '€ ' + group(v);
+}
+
+function pct(v: number | undefined): string {
+  if (v === undefined || !isFinite(v)) { return 'n/a'; }
+  if (v >= 0.01) { return (v * 100).toFixed(2) + '%'; }
+  if (v >= 0.0001) { return (v * 100).toFixed(3) + '%'; }
+  return (v * 100).toFixed(5) + '%';
+}
+
+export function parseMoney(s: string): number | undefined {
+  let t = String(s || '').toLowerCase().replace(/[\s,€]/g, '');
+  let mult = 1;
+  if (/bn$|b$|billion$/.test(t)) { mult = 1e9; t = t.replace(/(bn|b|billion)$/, ''); }
+  else if (/m$|mn$|million$/.test(t)) { mult = 1e6; t = t.replace(/(mn|m|million)$/, ''); }
+  else if (/k$|thousand$/.test(t)) { mult = 1e3; t = t.replace(/(k|thousand)$/, ''); }
+  const n = parseFloat(t);
+  return isFinite(n) && n > 0 ? n * mult : undefined;
+}
+
+function esc(t: string | number): string {
+  return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+/* -------------------------------------------------------------- statistics --- */
+
+function quantile(sorted: number[], p: number): number | undefined {
+  if (!sorted.length) { return undefined; }
+  if (sorted.length === 1) { return sorted[0]; }
+  const pos = (sorted.length - 1) * p;
+  const lo = Math.floor(pos);
+  const hi = Math.ceil(pos);
+  if (lo === hi) { return sorted[lo]; }
+  return sorted[lo] + (sorted[hi] - sorted[lo]) * (pos - lo);
+}
+
+interface Company { key: string; rows: Row[]; index: number; n: number; }
+
+/* One index per company, so a heavily fined operator counts once. */
+function byCompany(rows: Row[]): Company[] {
+  const m: { [k: string]: Row[] } = {};
+  rows.forEach(function (r: Row): void {
+    if (!m[r.key]) { m[r.key] = []; }
+    m[r.key].push(r);
+  });
+  return Object.keys(m).map(function (k: string): Company {
+    const idx = m[k]
+      .map(function (r: Row): number { return r.index; })
+      .sort(function (a: number, b: number): number { return a - b; });
+    return { key: k, rows: m[k], index: quantile(idx, 0.5) as number, n: m[k].length };
+  });
+}
+
+/* --------------------------------------------------------- peer selection --- */
+
+/* Widen in defined steps rather than silently returning two peers.
+
+   The order matters and is set by the data, not by intuition. Within the
+   1bn to 100bn band the median index for the five well populated violation
+   types runs from 0.000020 to 0.000023, which is no difference at all.
+   Within a single violation type, moving from the 1m to 100m band to the
+   10bn plus band moves the median by a factor of several hundred. Size is
+   therefore the control worth protecting, so the ladder drops the sector
+   and then the violation type before it widens the turnover band. */
+
+interface Band { lo: number; hi: number; label: string; }
+
+const BANDS: Band[] = [
+  { lo: 0.5, hi: 1.5, label: 'within 50% of your turnover' },
+  { lo: 0.25, hi: 4, label: 'within a quarter to four times your turnover' },
+  { lo: 0.1, hi: 10, label: 'within a tenth to ten times your turnover' }
+];
+const MIN_COMPANIES = 8;
+
+export interface PeerSet {
+  rows: Row[];
+  companies: Company[];
+  band: Band;
+  usedType: string | undefined;
+  usedSector: string | undefined;
+  droppedType: boolean;
+  droppedSector: boolean;
+  widened: boolean;
+  relaxed: boolean;
+  enough: boolean;
+}
+
+interface Step { band: Band; type: string | undefined; sector: string | undefined; }
+
+export function selectPeers(
+  turnover: number,
+  type: string | undefined,
+  sector: string | undefined,
+  sourcedOnly: boolean,
+  excludeFin: boolean,
+  excludeEp: boolean
+): PeerSet {
+  const pool = ROWS.filter(function (r: Row): boolean {
+    if (sourcedOnly && r.conf < 1) { return false; }
+    if (excludeFin && r.fin) { return false; }
+    if (excludeEp && r.ep) { return false; }
+    return true;
+  });
+
+  const steps: Step[] = [];
+  BANDS.forEach(function (b: Band): void {
+    if (sector) { steps.push({ band: b, type: type, sector: sector }); }
+    steps.push({ band: b, type: type, sector: undefined });
+    steps.push({ band: b, type: undefined, sector: undefined });
+  });
+
+  let last: PeerSet | undefined;
+  for (let i = 0; i < steps.length; i++) {
+    const s = steps[i];
+    const sel = pool.filter(function (r: Row): boolean {
+      if (r.turnover < turnover * s.band.lo || r.turnover > turnover * s.band.hi) { return false; }
+      if (s.type && r.type !== s.type) { return false; }
+      if (s.sector && r.sector !== s.sector) { return false; }
+      return true;
+    });
+    const comps = byCompany(sel);
+    last = {
+      rows: sel,
+      companies: comps,
+      band: s.band,
+      usedType: s.type,
+      usedSector: s.sector,
+      droppedType: !!type && !s.type,
+      droppedSector: !!sector && !s.sector,
+      widened: s.band !== BANDS[0],
+      relaxed: i > 0,
+      enough: comps.length >= MIN_COMPANIES
+    };
+    if (comps.length >= MIN_COMPANIES || i === steps.length - 1) { return last; }
+  }
+  return last as PeerSet;
+}
+
+/* ------------------------------------------------------------- the ceiling --- */
+
+/* Art. 83(4): 2% of worldwide annual turnover or EUR 10 million, whichever is
+   higher. Art. 83(5): 4% or EUR 20 million. The absolute floor is what binds
+   for anyone under EUR 500 million of turnover, which is most organisations. */
+interface TierInfo { tier: number; why: string; }
+
+const TIER_BY_TYPE: { [code: string]: TierInfo } = {
+  'any': {
+    tier: 4,
+    why: 'With no violation type chosen the higher tier is assumed, which is both the cautious reading and where 73% of the cases in this data sit. If the decision cited only Art. 28, 31, 32, 33, 34 or 58, the ceiling would be the 2% one instead.'
+  },
+  'security': {
+    tier: 2,
+    why: 'Art. 32 alone sits in the 2% tier, but most security decisions also cite Art. 5(1)(f), which moves them to 4%.'
+  },
+  'legal-basis': { tier: 4, why: 'Art. 6 and Art. 5 are both in the 4% tier.' },
+  'principles': { tier: 4, why: 'Art. 5 is in the 4% tier.' },
+  'rights': { tier: 4, why: 'Art. 12 to 22 are in the 4% tier.' },
+  'cooperation': { tier: 2, why: 'Art. 31 and 58 sit in the 2% tier.' },
+  'information': { tier: 4, why: 'Art. 12 to 14 are in the 4% tier.' },
+  'breach': { tier: 2, why: 'Art. 33 and 34 sit in the 2% tier.' },
+  'dpo': { tier: 2, why: 'Art. 37 to 39 sit in the 2% tier.' },
+  'dpa': { tier: 2, why: 'Art. 28 sits in the 2% tier.' }
+};
+
+export function ceiling(turnover: number, tier: number): number {
+  return tier === 4
+    ? Math.max(0.04 * turnover, 20000000)
+    : Math.max(0.02 * turnover, 10000000);
+}
+
+/* -------------------------------------------------------------------- chart --- */
+
+/* The palette is the one validated for the website, rechecked against a light
+   SharePoint surface (#faf9f8): worst all pairs CVD delta E 9.4 deutan and
+   32.4 tritan, 26.5 in normal vision, both above 3:1 contrast on the surface.
+   The dots therefore need no change. Only the ink around them is inverted,
+   because a modern SharePoint page is light where the website is navy. */
+const C_PEER = '#199e70';
+const C_YOU = '#d95926';
+const C_OTHER = '#5c6684';
+
+const INK_GRID = 'rgba(0,0,0,0.10)';
+const INK_AXIS = 'rgba(0,0,0,0.58)';
+const INK_TITLE = 'rgba(0,0,0,0.78)';
+const INK_HALO = '#ffffff';
+const INK_LABEL = '#242424';
+
+function drawChart(el: HTMLElement, peers: PeerSet, turnover: number, estimate: number | undefined): void {
+  const W = 860;
+  const H = 420;
+  const ML = 66;
+  const MR = 18;
+  const MT = 16;
+  const MB = 48;
+  const pw = W - ML - MR;
+  const ph = H - MT - MB;
+  const all = ROWS;
+
+  let xs = all.map(function (r: Row): number { return log10(r.turnover); });
+  xs = xs.concat([log10(turnover)]);
+  let ys = all.map(function (r: Row): number { return log10(r.fine); });
+  if (estimate) { ys = ys.concat([log10(estimate)]); }
+
+  const x0 = Math.floor(Math.min.apply(null, xs));
+  const x1 = Math.ceil(Math.max.apply(null, xs));
+  const y0 = Math.floor(Math.min.apply(null, ys));
+  const y1 = Math.ceil(Math.max.apply(null, ys));
+
+  const X = function (v: number): number { return ML + (log10(v) - x0) / (x1 - x0) * pw; };
+  const Y = function (v: number): number { return MT + ph - (log10(v) - y0) / (y1 - y0) * ph; };
+  const tick = function (e: number): string {
+    return e >= 9 ? String(Math.pow(10, e - 9)) + 'bn'
+      : e >= 6 ? String(Math.pow(10, e - 6)) + 'm'
+        : e >= 3 ? String(Math.pow(10, e - 3)) + 'k'
+          : String(Math.pow(10, e));
+  };
+
+  const peerSet: { [id: string]: number } = {};
+  peers.rows.forEach(function (r: Row): void { peerSet[r.etid] = 1; });
+
+  let s = '<svg class="fc-chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" '
+    + 'aria-label="Fine against turnover, both on logarithmic scales. Comparable peers are highlighted and your position is marked.">';
+
+  for (let e = y0; e <= y1; e++) {
+    const yy = Y(Math.pow(10, e));
+    s += '<line x1="' + ML + '" y1="' + yy + '" x2="' + (W - MR) + '" y2="' + yy + '" stroke="' + INK_GRID + '" stroke-width="1"/>';
+    s += '<text x="' + (ML - 10) + '" y="' + (yy + 4) + '" text-anchor="end" font-size="11" fill="' + INK_AXIS + '">€' + tick(e) + '</text>';
+  }
+  for (let e2 = x0; e2 <= x1; e2++) {
+    const xx = X(Math.pow(10, e2));
+    s += '<line x1="' + xx + '" y1="' + MT + '" x2="' + xx + '" y2="' + (MT + ph) + '" stroke="' + INK_GRID + '" stroke-width="1"/>';
+    s += '<text x="' + xx + '" y="' + (MT + ph + 18) + '" text-anchor="middle" font-size="11" fill="' + INK_AXIS + '">€' + tick(e2) + '</text>';
+  }
+  s += '<text x="' + (ML + pw / 2) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="12" fill="' + INK_TITLE + '">Annual turnover of the undertaking</text>';
+  s += '<text x="14" y="' + (MT + ph / 2) + '" text-anchor="middle" font-size="12" fill="' + INK_TITLE + '" transform="rotate(-90 14 ' + (MT + ph / 2) + ')">Fine imposed</text>';
+
+  all.forEach(function (r: Row): void {
+    if (peerSet[r.etid]) { return; }
+    s += '<circle cx="' + X(r.turnover).toFixed(1) + '" cy="' + Y(r.fine).toFixed(1) + '" r="3" fill="' + C_OTHER + '" opacity="0.55"><title>'
+      + esc(r.company) + ', ' + r.year + ': ' + eur(r.fine) + ' on ' + eur(r.turnover) + '</title></circle>';
+  });
+  peers.rows.forEach(function (r: Row): void {
+    s += '<circle cx="' + X(r.turnover).toFixed(1) + '" cy="' + Y(r.fine).toFixed(1) + '" r="5.5" fill="' + C_PEER
+      + '" stroke="' + INK_HALO + '" stroke-width="2"><title>' + esc(r.company) + ', ' + r.year + ': ' + eur(r.fine)
+      + ' on ' + eur(r.turnover) + ' (' + pct(r.index) + ')</title></circle>';
+  });
+
+  if (estimate) {
+    const cx = X(turnover);
+    const cy = Y(estimate);
+    s += '<line x1="' + cx + '" y1="' + MT + '" x2="' + cx + '" y2="' + (MT + ph) + '" stroke="' + C_YOU + '" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>';
+    s += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="8" fill="' + C_YOU + '" stroke="' + INK_HALO + '" stroke-width="2"><title>Your organisation: median estimate '
+      + eur(estimate) + ' on ' + eur(turnover) + '</title></circle>';
+    const lx = cx < ML + pw - 120 ? cx + 14 : cx - 14;
+    s += '<text x="' + lx.toFixed(1) + '" y="' + (cy - 12).toFixed(1) + '" text-anchor="' + (cx < ML + pw - 120 ? 'start' : 'end')
+      + '" font-size="12" font-weight="600" fill="' + INK_LABEL + '">You: ' + eur(estimate) + '</text>';
+  }
+  s += '</svg>';
+  el.innerHTML = s;
+}
+
+/* Article numbers with the Regulation's own headings on hover, from the
+   lookup table the Power BI model uses. */
+function artChips(list: string[]): string {
+  return list.map(function (n: string): string {
+    const name = ARTICLE_NAMES[n] || '';
+    return '<span class="fc-art"' + (name ? ' title="Art. ' + esc(n) + ': ' + esc(name) + '"' : '') + '>Art. ' + esc(n) + '</span>';
+  }).join(' ');
+}
+
+/* ----------------------------------------------------------------- results --- */
+
+const CONF_LABEL: { [n: number]: string } = {
+  3: 'sourced, high',
+  2: 'sourced, medium',
+  1: 'sourced, low',
+  0: 'unsourced'
+};
+
+function card(label: string, value: string, sub: string, cls?: string): string {
+  return '<div class="fc-card ' + (cls || '') + '">'
+    + '<div class="fc-card-label">' + label + '</div>'
+    + '<div class="fc-card-value">' + value + '</div>'
+    + (sub ? '<div class="fc-card-sub">' + sub + '</div>' : '')
+    + '</div>';
+}
+
+function typeLabel(code: string | undefined): string {
+  for (let i = 0; i < FINE_TYPES.length; i++) {
+    if (FINE_TYPES[i].code === code) { return FINE_TYPES[i].label; }
+  }
+  return String(code);
+}
+
+/* ------------------------------------------------------ sector comparison --- */
+
+/* Shows whether the sector filter is worth using at this size. One series,
+   so no legend: the heading names it. Bars are direct labelled rather than
+   carrying an axis, because the interesting comparison is between rows. */
+function sectorView(
+  turnover: number,
+  sourcedOnly: boolean,
+  excludeFin: boolean,
+  excludeEp: boolean,
+  selected: string | undefined
+): string {
+  const pool = ROWS.filter(function (r: Row): boolean {
+    if (sourcedOnly && r.conf < 1) { return false; }
+    if (excludeFin && r.fin) { return false; }
+    if (excludeEp && r.ep) { return false; }
+    if (!r.sector || r.sector === 'Not assigned') { return false; }
+    return r.turnover >= turnover * 0.1 && r.turnover <= turnover * 10;
+  });
+
+  const bySector: { [s: string]: Row[] } = {};
+  pool.forEach(function (r: Row): void {
+    if (!bySector[r.sector]) { bySector[r.sector] = []; }
+    bySector[r.sector].push(r);
+  });
+
+  interface SectorRow { sector: string; n: number; cases: number; med: number; }
+  const rows: SectorRow[] = [];
+  Object.keys(bySector).forEach(function (s: string): void {
+    const comps = byCompany(bySector[s]);
+    if (comps.length < 3) { return; }
+    const idx = comps
+      .map(function (c: Company): number { return c.index; })
+      .sort(function (a: number, b: number): number { return a - b; });
+    rows.push({ sector: s, n: comps.length, cases: bySector[s].length, med: quantile(idx, 0.5) as number });
+  });
+  if (rows.length < 3) { return ''; }
+
+  rows.sort(function (a: SectorRow, b: SectorRow): number { return b.med - a.med; });
+  const max = rows[0].med;
+  const overall = quantile(
+    byCompany(pool)
+      .map(function (c: Company): number { return c.index; })
+      .sort(function (a: number, b: number): number { return a - b; }),
+    0.5
+  ) as number;
+
+  let h = '<h3 class="fc-h3-spaced">Does sector matter at your size?</h3>';
+  h += '<p class="fc-note">Median index by sector, across organisations within a tenth to ten times your turnover. '
+    + 'Sectors with fewer than three organisations are left out. The dashed line is the median across all sectors at this size ('
+    + pct(overall) + '). Read the counts: a sector sitting high on four organisations is not evidence of much.</p>';
+  h += '<div class="fc-table-scroll"><table class="fc-table fc-sector-table"><thead><tr>'
+    + '<th>Sector</th><th>Organisations</th><th>Decisions</th><th>Median index</th><th>Relative</th>'
+    + '</tr></thead><tbody>';
+  rows.forEach(function (r: SectorRow): void {
+    const w = max > 0 ? Math.max(2, (r.med / max) * 100) : 0;
+    const mark = overall > 0 && max > 0 ? (overall / max) * 100 : -1;
+    h += '<tr' + (r.sector === selected ? ' class="fc-sector-on"' : '') + '>'
+      + '<td>' + esc(r.sector) + (r.sector === selected ? ' <strong>(selected)</strong>' : '') + '</td>'
+      + '<td class="fc-num">' + r.n + '</td>'
+      + '<td class="fc-num">' + r.cases + '</td>'
+      + '<td class="fc-num">' + pct(r.med) + '</td>'
+      + '<td class="fc-barcell"><span class="fc-bartrack">'
+      + '<span class="fc-bar" style="width:' + w.toFixed(1) + '%"></span>'
+      + (mark >= 0 ? '<span class="fc-barmark" style="left:' + mark.toFixed(1) + '%"></span>' : '')
+      + '</span></td></tr>';
+  });
+  h += '</tbody></table></div>';
+  return h;
+}
+
+/* --------------------------------------------------------------- mounting --- */
+
+const ANY_NOTE = 'Leave this as it is if you do not know which Article is in play, or if '
+  + 'more than one applies, which is usual. It costs very little: once organisations of a '
+  + 'similar size are compared with each other, the violation type barely moves the number, '
+  + 'while size moves it by a factor of several hundred. The one thing it does change is '
+  + 'which Art. 83 ceiling applies, and with no choice made the tool assumes the higher one.';
+
+export interface MountOptions extends TemplateOptions {
+  /* Unique per web part instance, so two copies on one page keep their own
+     label/control pairing. */
+  prefix: string;
+  defaultTurnover?: string;
+}
+
+export function mountCalculator(root: HTMLElement, opts: MountOptions): void {
+  const p = opts.prefix;
+  root.innerHTML = buildTemplate(p, opts);
+
+  const $ = function (suffix: string): HTMLElement {
+    return root.querySelector('#' + p + '-' + suffix) as HTMLElement;
+  };
+
+  const out = $('output');
+  const turnoverEl = $('turnover') as HTMLInputElement;
+  const typeSel = $('type') as HTMLSelectElement;
+  const secSel = $('sector') as HTMLSelectElement;
+  const sourcedEl = $('sourced') as HTMLInputElement;
+  const nofinEl = $('nofin') as HTMLInputElement;
+  const noepEl = $('noep') as HTMLInputElement;
+  const typeNote = $('typenote');
+
+  /* ------------------------------------------------------------- dropdowns --- */
+
+  const anyOpt = document.createElement('option');
+  anyOpt.value = 'any';
+  anyOpt.text = 'Not sure, or more than one  (' + ROWS.length + ' cases with a turnover)';
+  typeSel.appendChild(anyOpt);
+
+  FINE_TYPES.forEach(function (t): void {
+    const n = ROWS.filter(function (r: Row): boolean { return r.type === t.code; }).length;
+    const o = document.createElement('option');
+    o.value = t.code;
+    o.text = t.label + '  (' + n + ' cases with a turnover)' + (t.thin ? '  [thin]' : '');
+    typeSel.appendChild(o);
+  });
+  typeSel.value = 'any';
+
+  FINE_SECTORS.forEach(function (s: string): void {
+    const o = document.createElement('option');
+    o.value = s;
+    o.text = s;
+    secSel.appendChild(o);
+  });
+
+  typeNote.innerHTML = esc(ANY_NOTE);
+
+  /* ---------------------------------------------------------------- render --- */
+
+  function render(): void {
+    const turnover = parseMoney(turnoverEl.value);
+    if (!turnover) {
+      out.innerHTML = '<p class="fc-note">Enter an annual turnover figure to see a benchmark.</p>';
+      return;
+    }
+
+    const typeChoice = typeSel.value;
+    const type: string | undefined = typeChoice === 'any' ? undefined : typeChoice;
+    const sector: string | undefined = secSel.value || undefined;
+    const sourcedOnly = sourcedEl.checked;
+    const excludeFin = nofinEl.checked;
+    const excludeEp = noepEl.checked;
+
+    const peers = selectPeers(turnover, type, sector, sourcedOnly, excludeFin, excludeEp);
+    const idx = peers.companies
+      .map(function (c: Company): number { return c.index; })
+      .sort(function (a: number, b: number): number { return a - b; });
+    const p25 = quantile(idx, 0.25);
+    const p50 = quantile(idx, 0.5);
+    const p90 = quantile(idx, 0.90);
+    const tierInfo = TIER_BY_TYPE[typeChoice] || TIER_BY_TYPE.any;
+    const cap = ceiling(turnover, tierInfo.tier);
+    const capIsFloor = (tierInfo.tier === 4 ? 0.04 : 0.02) * turnover < (tierInfo.tier === 4 ? 20000000 : 10000000);
+
+    const est = p50 !== undefined ? p50 * turnover : undefined;
+    const lo = p25 !== undefined ? p25 * turnover : undefined;
+    const hi = p90 !== undefined ? p90 * turnover : undefined;
+
+    let h = '';
+
+    h += '<div class="fc-cards">';
+    h += card(
+      'Typical outcome',
+      est !== undefined ? eur(Math.min(est, cap)) : 'not enough data',
+      est !== undefined ? 'The median of ' + peers.companies.length + ' comparable organisations, ' + pct(p50) + ' of turnover' : '',
+      'fc-card-main'
+    );
+    h += card(
+      'Realistic range',
+      lo !== undefined && hi !== undefined ? eur(Math.min(lo, cap)) + ' to ' + eur(Math.min(hi, cap)) : 'not enough data',
+      lo !== undefined ? '25th to 90th percentile, ' + pct(p25) + ' to ' + pct(p90) + ' of turnover' : ''
+    );
+    h += card(
+      'Statutory ceiling',
+      eur(cap),
+      capIsFloor
+        ? 'The flat € ' + (tierInfo.tier === 4 ? '20' : '10') + ' million floor, which is higher than ' + (tierInfo.tier === 4 ? '4%' : '2%') + ' of your turnover'
+        : (tierInfo.tier === 4 ? '4%' : '2%') + ' of turnover, Art. 83(' + (tierInfo.tier === 4 ? '5' : '4') + ')',
+      'fc-card-cap'
+    );
+    h += '</div>';
+
+    h += '<div class="fc-basis"><strong>What this is built on.</strong> '
+      + peers.companies.length + ' comparable organisations across ' + peers.rows.length + ' decisions, '
+      + (peers.usedType
+        ? 'for ' + typeLabel(peers.usedType).toLowerCase()
+        : (type ? 'across all violation types' : 'across all violation types, because you did not pick one'))
+      + (peers.usedSector ? ', in ' + peers.usedSector : '')
+      + ', ' + peers.band.label + '. '
+      + 'The ceiling assumes the ' + (tierInfo.tier === 4 ? '4%' : '2%') + ' tier. ' + tierInfo.why
+      + '</div>';
+
+    if (!peers.enough) {
+      h += '<div class="fc-warn"><strong>Too few comparable cases.</strong> Even after widening the turnover band and dropping the filters, '
+        + 'only ' + peers.companies.length + ' organisations of a similar size have a published fine with a known turnover. '
+        + 'Treat the figures above as an illustration of the method rather than an estimate. '
+        + 'This is most common at the small end: regulators fine small companies often, but small companies rarely publish accounts that are free to read.</div>';
+    } else if (peers.relaxed) {
+      const what: string[] = [];
+      if (peers.droppedSector) { what.push('the sector filter was dropped'); }
+      if (peers.droppedType) {
+        what.push('the violation type was dropped and these peers are cases of <em>every</em> kind, not just ' + typeLabel(type).toLowerCase());
+      }
+      if (peers.widened) { what.push('the turnover band was widened to ' + peers.band.label); }
+      h += '<div class="fc-warn"><strong>Filters were relaxed to find enough peers.</strong> '
+        + 'Fewer than ' + MIN_COMPANIES + ' organisations matched your exact selection, so '
+        + what.join(', and ') + '. ';
+      if (peers.droppedType) {
+        h += 'That costs less than it sounds: once organisations of a similar size are compared with each other, '
+          + 'the violation type barely moves the index. The five well evidenced categories all sit between 0.0020% and 0.0023% '
+          + 'of turnover in the 1bn to 100bn band. Size is what moves the number, which is why the band is protected first.';
+      }
+      h += '</div>';
+    }
+
+    h += '<div class="fc-chart-wrap"><h3>Where you sit</h3>'
+      + '<p class="fc-note">Both axes are logarithmic. Each dot is one published decision. Hover a dot for the case.</p>'
+      + '<div class="fc-legend">'
+      + '<span><i class="fc-swatch" style="background:' + C_PEER + '"></i>Comparable peers (' + peers.rows.length + ')</span>'
+      + '<span><i class="fc-swatch" style="background:' + C_YOU + '"></i>Your organisation</span>'
+      + '<span><i class="fc-swatch" style="background:' + C_OTHER + '"></i>All other cases in the data</span>'
+      + '</div><div id="' + p + '-chart-slot"></div></div>';
+
+    h += sectorView(turnover, sourcedOnly, excludeFin, excludeEp, sector);
+
+    h += '<h3 class="fc-h3-spaced">The cases behind the number</h3>';
+    h += '<p class="fc-note">Every peer used in the calculation, largest index first. The index is the fine divided by turnover. '
+      + 'Confidence describes the turnover figure, not the fine: fines come from the public enforcement tracker, turnover was researched separately.</p>';
+    h += '<div class="fc-table-scroll"><table class="fc-table"><thead><tr>'
+      + '<th>Organisation</th><th>Country</th><th>Year</th><th>Fine</th><th>Turnover</th><th>Index</th><th>Turnover source</th><th>Case</th>'
+      + '</tr></thead><tbody>';
+    peers.rows.slice()
+      .sort(function (a: Row, b: Row): number { return b.index - a.index; })
+      .forEach(function (r: Row): void {
+        h += '<tr>'
+          + '<td>' + esc(r.company)
+          + (r.ep ? ' <span class="fc-tag" title="National ePrivacy or cookie rules, not GDPR Art. 83">ePrivacy</span>' : '')
+          + (r.articles && r.articles.length ? '<br><span class="fc-arts">' + artChips(r.articles) + '</span>' : '')
+          + '</td>'
+          + '<td>' + esc(r.country) + '</td>'
+          + '<td class="fc-num">' + (r.year || '') + '</td>'
+          + '<td class="fc-num">' + eurFull(r.fine) + '</td>'
+          + '<td class="fc-num">' + eur(r.turnover) + '</td>'
+          + '<td class="fc-num">' + pct(r.index) + '</td>'
+          + '<td><span class="fc-conf fc-conf-' + r.conf + '">' + CONF_LABEL[r.conf] + '</span>'
+          + (r.tsource ? '<br><span class="fc-note">' + esc(r.tsource) + (r.tyear ? ' (FY' + esc(r.tyear) + ')' : '') + '</span>' : '')
+          + '</td>'
+          + '<td><a href="https://www.enforcementtracker.com/' + esc(r.etid) + '" target="_blank" rel="noopener noreferrer">' + esc(r.etid) + '</a></td>'
+          + '</tr>';
+      });
+    h += '</tbody></table></div>';
+
+    out.innerHTML = h;
+
+    const slot = root.querySelector('#' + p + '-chart-slot') as HTMLElement;
+    if (slot) {
+      drawChart(slot, peers, turnover, est !== undefined ? Math.min(est, cap) : undefined);
+    }
+  }
+
+  /* ----------------------------------------------------------------- wiring --- */
+
+  typeSel.addEventListener('change', function (): void {
+    const matches = FINE_TYPES.filter(function (x): boolean { return x.code === typeSel.value; });
+    typeNote.innerHTML = esc(matches.length ? matches[0].note : ANY_NOTE);
+    render();
+  });
+
+  [turnoverEl, secSel, sourcedEl, nofinEl, noepEl].forEach(function (el: HTMLElement): void {
+    el.addEventListener('input', render);
+    el.addEventListener('change', render);
+  });
+
+  const resetBtn = $('reset');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function (): void {
+      turnoverEl.value = '';
+      secSel.value = '';
+      sourcedEl.checked = false;
+      nofinEl.checked = false;
+      noepEl.checked = false;
+      typeSel.value = 'any';
+      typeNote.innerHTML = esc(ANY_NOTE);
+      render();
+    });
+  }
+
+  const countEl = root.querySelector('#' + p + '-count');
+  if (countEl) {
+    countEl.innerHTML = ROWS.length + ' decisions across ' + byCompany(ROWS).length + ' organisations';
+  }
+
+  if (opts.defaultTurnover) {
+    turnoverEl.value = opts.defaultTurnover;
+  }
+
+  render();
+}
+
+/* Exposed so the coverage line can be shown before anything is calculated, and
+   so a build check can assert the bundled data is the size it should be. */
+export function coverage(): { decisions: number; organisations: number } {
+  return { decisions: ROWS.length, organisations: byCompany(ROWS).length };
+}
