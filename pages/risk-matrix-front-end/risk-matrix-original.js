@@ -439,8 +439,7 @@ document.addEventListener("DOMContentLoaded", () => {
       likelihood: risk.likelihood,
       impact: risk.impact,
       mitigation: risk.mitigation,
-      category: risk.category,
-      color: risk.color
+      category: risk.category
     }));
     const matrixValues = Array.from(inputs).map(input => input.value);
     localStorage.setItem(
@@ -545,8 +544,7 @@ addRiskButton.addEventListener("click", () => {
       likelihood,
       impact,
       mitigation, // Store mitigation with risk
-      category,
-      color: pickRiskColor()
+      category
     };
 
     risksList.push(risk);
@@ -565,42 +563,28 @@ addRiskButton.addEventListener("click", () => {
   }
 });
 
-// Per-risk bubble colours. Hues are kept away from the green, amber, orange
-// and red of the matrix cells, and every bubble also gets a white ring and a
-// dark outer ring in CSS, so it stays visible on all four cell colours. fg is
-// the number colour chosen for contrast on that fill. The colour belongs to
-// the risk, not to its number, so it survives renumbering after a delete.
-var RISK_COLORS = [
-  { bg: "#2f6fed", fg: "#ffffff" }, // blue
-  { bg: "#8b3dff", fg: "#ffffff" }, // violet
-  { bg: "#d6399f", fg: "#ffffff" }, // magenta
-  { bg: "#0e8fc7", fg: "#ffffff" }, // sky
-  { bg: "#1b2340", fg: "#ffffff" }, // ink
-  { bg: "#ff8ccf", fg: "#2a0f22" }, // pink
-  { bg: "#b3a6ff", fg: "#1c1540" }, // lavender
-  { bg: "#5d6b89", fg: "#ffffff" }, // slate
-  { bg: "#8fdcff", fg: "#0b2a3a" }, // ice
-  { bg: "#ffffff", fg: "#1e2a4d" }  // white
-];
-
-// Least-used colour first, so the first ten risks never share one.
-function pickRiskColor() {
-  const counts = RISK_COLORS.map(c => risksList.filter(r => r.color === c.bg).length);
-  const min = Math.min(...counts);
-  return RISK_COLORS[counts.indexOf(min)].bg;
-}
+// Bubble colours by category: every risk in a category shares one colour,
+// on its matrix bubble and its number in the risk list. Hues are kept away
+// from the green, amber, orange and red of the matrix cells, and each bubble
+// also gets a white ring and a dark outer ring in CSS, so it stays visible on
+// all four cell colours. fg is the number colour chosen for that fill.
+var CATEGORY_COLORS = {
+  Privacy:     { bg: "#2f6fed", fg: "#ffffff" }, // blue
+  AI:          { bg: "#8b3dff", fg: "#ffffff" }, // violet
+  LLM:         { bg: "#d6399f", fg: "#ffffff" }, // magenta
+  Cyber:       { bg: "#1b2340", fg: "#ffffff" }, // ink
+  Operational: { bg: "#0e8fc7", fg: "#ffffff" }, // sky
+  Custom:      { bg: "#ffffff", fg: "#1e2a4d" }  // white
+};
 
 function applyRiskColor(el, risk) {
-  const entry = RISK_COLORS.find(c => c.bg === risk.color) || RISK_COLORS[RISK_COLORS.length - 1];
+  const entry = CATEGORY_COLORS[risk.category] || CATEGORY_COLORS.Custom;
   el.style.setProperty("--risk-color", entry.bg);
   el.style.setProperty("--risk-fg", entry.fg);
 }
 
 // Add risk to notes and matrix
 function addRiskToNotes(risk) {
-  // Risks saved before colours existed get one on load.
-  if (!risk.color) risk.color = pickRiskColor();
-
   // Create note element
   const riskListItem = document.createElement("li");
   riskListItem.dataset.riskId = risk.number;
