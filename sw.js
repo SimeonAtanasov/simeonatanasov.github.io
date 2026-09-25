@@ -13,15 +13,17 @@
 	    API), anything that is not a GET, and range requests (the game
 	    sounds). Those behave exactly as they would with no service worker.
 
-	Bump VERSION to retire every cache at once. It was bumped to v2 when the
-	consent banner shipped: pwa.js is a .js asset, so it is served stale while
+	Bump VERSION to retire every cache at once. It is at v3: v2 shipped the
+	consent banner, v3 the phone sheet and the placeholder fix, which had to
+	retire the caches again because v2 was already live by then. The reason
+	the bump is not optional: pwa.js is a .js asset, so it is served stale while
 	revalidate, and a returning visitor would otherwise have run the previous
 	copy for one more visit. That copy does not load the consent script, and
 	the gated embeds carry no src, so the dashboard would have been a blank
 	gap rather than a placeholder. Retiring the caches avoids that one visit.
 */
 
-var VERSION = 'v2';
+var VERSION = 'v3';
 var PAGE_CACHE = 'pages-' + VERSION;
 var ASSET_CACHE = 'assets-' + VERSION;
 var OFFLINE_URL = '/offline.html';

@@ -132,6 +132,8 @@
 	/* ---------------------------------------------------------------- state */
 
 	var state = null;
+	var decidedAt = null;
+	var scrollLocks = 0;
 	var listeners = [];
 	var lastFocus = null;
 
@@ -165,6 +167,8 @@
 		var age = Date.now() - (parsed.ts || 0);
 		if (age > MAX_AGE_DAYS * 86400000) return null;
 
+		decidedAt = parsed.ts || null;
+
 		/* A group added since the record was written counts as not allowed,
 		   so new tracking never inherits an old yes. */
 		var map = defaults(false);
@@ -177,10 +181,12 @@
 	}
 
 	function write(map) {
+		var now = Date.now();
+		decidedAt = now;
 		try {
 			window.localStorage.setItem(STORE_KEY, JSON.stringify({
 				v: STORE_VERSION,
-				ts: Date.now(),
+				ts: now,
 				groups: map
 			}));
 		} catch (e) {
@@ -276,10 +282,38 @@
 		return 'cc-ph-' + el.id;
 	}
 
+	/* Where the card should go, and what should be hidden with it.
+
+	   An embed often sits in a fixed aspect ratio box: a wrapper with
+	   `overflow: hidden` whose height comes from a percentage padding. The
+	   dashboard's `.iframe-container` is one. Dropping the card inside that
+	   gets it cut off at the wrapper's height, which on a phone sliced the
+	   button in half. So walk up past any ancestor that clips, and put the
+	   card before that instead, hiding the wrapper rather than the element. */
+	function cardAnchor(el) {
+		var node = el;
+		var parent = node.parentNode;
+
+		for (var i = 0; i < 3; i++) {
+			if (!parent || parent.nodeType !== 1) break;
+			if (parent === document.body || parent === document.documentElement) break;
+
+			var s = window.getComputedStyle(parent);
+			if (s.overflow === 'hidden' || s.overflowY === 'hidden') {
+				node = parent;
+				parent = node.parentNode;
+			} else {
+				break;
+			}
+		}
+		return node;
+	}
+
 	function placeholder(el, group) {
 		/* Hidden whether or not it gets a card, so a blocked image does not
 		   sit there as a broken icon. */
-		el.style.display = 'none';
+		var anchor = cardAnchor(el);
+		anchor.style.display = 'none';
 
 		if (el.getAttribute('data-cc-placeholder') === null) return;
 		var id = placeholderId(el);
@@ -327,13 +361,13 @@
 		}
 		box.appendChild(actions);
 
-		if (el.parentNode) el.parentNode.insertBefore(box, el);
+		if (anchor.parentNode) anchor.parentNode.insertBefore(box, anchor);
 	}
 
 	function removePlaceholder(el) {
 		var box = document.getElementById('cc-ph-' + (el.id || ''));
 		if (box && box.parentNode) box.parentNode.removeChild(box);
-		el.style.display = '';
+		cardAnchor(el).style.display = '';
 	}
 
 	function groupById(id) {
@@ -364,9 +398,36 @@
 		return a;
 	}
 
+	/* Counted, because on a phone the banner and the preference centre can
+	   both want the page held still at once, and whichever closed first would
+	   otherwise unlock it out from under the other. */
+	function lockScroll() {
+		scrollLocks++;
+		if (scrollLocks === 1) {
+			document.documentElement.className += ' cc-no-scroll';
+		}
+	}
+
+	function unlockScroll() {
+		scrollLocks = Math.max(0, scrollLocks - 1);
+		if (scrollLocks === 0) {
+			document.documentElement.className =
+				document.documentElement.className.replace(/\s*cc-no-scroll/g, '');
+		}
+	}
+
+	function isSheet() {
+		try {
+			return window.matchMedia('(max-width: 736px)').matches;
+		} catch (e) {
+			return false;
+		}
+	}
+
 	/* ---------------------------------------------------------------- banner */
 
 	var bannerNode = null;
+	var bannerLocked = false;
 
 	function showBanner() {
 		if (bannerNode) return;
@@ -419,15 +480,21 @@
 		bannerNode.appendChild(inner);
 		document.body.appendChild(bannerNode);
 
-		window.setTimeout(function () {
-			if (bannerNode) bannerNode.className = 'cc-banner cc-banner-in';
-		}, 20);
+		/* Full screen on a phone, so hold the page still behind it. */
+		if (isSheet()) {
+			bannerLocked = true;
+			lockScroll();
+		}
 	}
 
 	function hideBanner() {
 		if (!bannerNode) return;
 		if (bannerNode.parentNode) bannerNode.parentNode.removeChild(bannerNode);
 		bannerNode = null;
+		if (bannerLocked) {
+			bannerLocked = false;
+			unlockScroll();
+		}
 	}
 
 	/* --------------------------------------------------- group detail panels */
@@ -567,6 +634,34 @@
 			})(GROUPS[i]);
 		}
 
+		/* What the visitor cannot otherwise find out on a phone: whether a
+		   choice is on record at all, and how to get rid of it. Without this
+		   the only way to tell a stored "reject everything" from a first
+		   visit is to open developer tools. */
+		var status = el('p', 'cc-modal-state');
+		if (decidedAt) {
+			var when;
+			try {
+				when = new Date(decidedAt).toLocaleDateString(undefined, {
+					year: 'numeric', month: 'long', day: 'numeric'
+				});
+			} catch (e) {
+				when = new Date(decidedAt).toDateString();
+			}
+			status.appendChild(document.createTextNode('Your choice was recorded on ' + when + '. '));
+
+			var forget = button('cc-btn cc-btn-quiet cc-btn-forget', 'Forget my choice');
+			forget.addEventListener('click', function () {
+				closePreferences();
+				window.CookieConsent.reset();
+			});
+			status.appendChild(forget);
+		} else {
+			status.appendChild(document.createTextNode(
+				'Nothing is on record yet, so nothing non-essential has loaded.'
+			));
+		}
+
 		/* The two documents that say, in full, what this dialog summarises.
 		   A preference centre without them makes the visitor take the summary
 		   on trust. */
@@ -607,11 +702,12 @@
 		panel.appendChild(head);
 		panel.appendChild(intro);
 		panel.appendChild(list);
+		panel.appendChild(status);
 		panel.appendChild(refs);
 		panel.appendChild(foot);
 		prefNode.appendChild(panel);
 		document.body.appendChild(prefNode);
-		document.documentElement.className += ' cc-no-scroll';
+		lockScroll();
 
 		prefNode.addEventListener('click', function (event) {
 			if (event.target === prefNode) closePreferences();
@@ -626,8 +722,7 @@
 		document.removeEventListener('keydown', onKeydown, true);
 		if (prefNode.parentNode) prefNode.parentNode.removeChild(prefNode);
 		prefNode = null;
-		document.documentElement.className =
-			document.documentElement.className.replace(/\s*cc-no-scroll/g, '');
+		unlockScroll();
 		if (lastFocus && lastFocus.focus) lastFocus.focus();
 	}
 

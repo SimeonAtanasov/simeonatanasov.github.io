@@ -120,12 +120,26 @@
 	border-top: 3px solid var(--cc-accent);
 	box-shadow: var(--cc-shadow);
 	color: var(--cc-ink);
-	transform: translateY(100%);
-	transition: transform 0.28s ease;
+
+	/* The rest position is visible, and the entrance is a keyframe animation
+	   rather than a class the script adds a moment later. That ordering
+	   matters: with `transform: translateY(100%)` as the resting state,
+	   anything that stops the class being applied leaves a banner that is in
+	   the page, correct in every other way, and entirely below the viewport.
+	   The template's own `body.is-preload *` rule already kills animations
+	   with !important, and killing this one now just means the banner appears
+	   without sliding, which is the right failure. */
+	animation: cc-banner-rise 0.28s ease both;
 }
 
-.cc-banner-in {
-	transform: translateY(0);
+@keyframes cc-banner-rise {
+	from {
+		transform: translateY(100%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
 }
 
 .cc-banner-inner {
@@ -457,10 +471,26 @@
 	left: 1.65rem;
 }
 
-.cc-modal-links {
+.cc-modal-state {
 	border-top: 1px solid var(--cc-line);
-	margin: 0 0 1.25rem 0;
+	margin: 0;
 	padding-top: 1.1rem;
+	font-size: 0.8rem;
+	line-height: 1.65;
+	color: var(--cc-ink-soft);
+}
+
+.cc-btn-forget {
+	font-size: 0.8rem;
+	padding-left: 0;
+	padding-right: 0;
+	vertical-align: baseline;
+}
+
+/* No rule of its own: .cc-modal-state directly above draws the one that
+   separates this block from the categories. */
+.cc-modal-links {
+	margin: 0.4rem 0 1.25rem 0;
 	font-size: 0.8rem;
 	line-height: 1.65;
 	color: var(--cc-ink-soft);
@@ -529,29 +559,81 @@
 
 @media screen and (max-width: 736px) {
 
+	/* On a phone the banner is a full screen sheet, not a strip at the bottom.
+
+	   A 250px strip is the one shape that browser and system UI can sit on
+	   top of: Android's gesture bar, a bottom address bar, and the visual
+	   viewport moving under a fixed element as the page scrolls. A sheet that
+	   owns the screen cannot be obscured by any of them, and cannot be
+	   mistaken for part of the page.
+
+	   It asks a question rather than pushing an answer: Reject all is exactly
+	   as large, as reachable and as prominent as Accept all. Anything else
+	   would be a consent dark pattern, on a site about consent. */
+	.cc-banner {
+		top: 0;
+		border-top: 0;
+		box-shadow: none;
+		/* The same scrim as the preference centre, so the two read as one
+		   thing rather than two. A full white screen with the content at the
+		   bottom looks like a page that failed to load. */
+		background: rgba(16, 22, 38, 0.62);
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		animation-name: cc-banner-fade;
+	}
+
+	@keyframes cc-banner-fade {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
 	.cc-banner-inner {
-		padding: 0.9rem 1.1rem 1rem 1.1rem;
-		gap: 0.9rem;
+		/* Pinned to the bottom for thumb reach, but free to grow upward and
+		   scroll if the text ever wraps past the top of the screen. */
+		margin-top: auto;
+		width: 100%;
+		background: var(--cc-surface);
+		border-top: 3px solid var(--cc-accent);
+		border-radius: 10px 10px 0 0;
+		box-shadow: var(--cc-shadow);
+		padding: 1.5rem 1.25rem 1.75rem 1.25rem;
+		gap: 1.25rem;
+	}
+
+	.cc-banner-title {
+		font-size: 1.05rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.cc-banner-text p {
+		font-size: 0.9rem;
+		line-height: 1.7;
 	}
 
 	.cc-banner-actions {
 		width: 100%;
 	}
 
-	/* Three stacked full width buttons cost about 140px of a phone screen,
-	   which is most of why the banner was so tall. The two answers share a
-	   row and Manage preferences, which fewer people want, takes the line
-	   below. Each still declares its own width so a page rule styling bare
-	   `button` cannot claim it. */
+	/* Room to stack now, so every target is full width. Manage preferences
+	   goes last, after the two answers. Each declares its own width so a page
+	   rule styling bare `button` cannot claim it. */
 	.cc-banner-actions .cc-btn {
-		width: auto;
+		width: 100%;
 		max-width: none;
-		flex: 1 1 45%;
+		flex: 1 1 100%;
+		padding-top: 0.85em;
+		padding-bottom: 0.85em;
 	}
 
 	.cc-banner-actions .cc-btn-manage {
-		width: 100%;
-		flex: 1 1 100%;
 		order: 3;
 	}
 
