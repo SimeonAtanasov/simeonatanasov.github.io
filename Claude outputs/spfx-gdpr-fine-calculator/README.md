@@ -1,13 +1,13 @@
 # GDPR Fine Calculator for SharePoint
 
 The calculator from simeonatanasov.com, packaged two ways for SharePoint. Same
-method, same data, same numbers, and in both cases nothing calls out: all 357
+method, same data, same numbers, and in both cases nothing calls out: all 355
 decisions travel inside the file and every calculation happens in the browser,
 so no turnover anyone types reaches SharePoint or anywhere else.
 
 | | Single file | SPFx web part |
 |---|---|---|
-| What you get | one `.aspx`, 115 KB | a `.sppkg` you build |
+| What you get | one `.aspx`, 128 KB | a `.sppkg` you build |
 | Who has to agree | nobody, if your site already allows it | a SharePoint admin, via the App Catalog |
 | Build step | none, it is already built | Node 22, `npm install`, `npm run build` |
 | Where it lives | a document library, opens as its own page | any modern page, as a web part |
@@ -31,8 +31,8 @@ standalone/dist/gdpr-fine-calculator.aspx
 standalone/dist/gdpr-fine-calculator.aspx.txt   (identical, for the paste-then-rename route)
 ```
 
-115 KB, one file, no build, no admin, no App Catalog. Everything is inline: the
-styling, the logic and all 357 rows. It loads no font, no script, no image and
+128 KB, one file, no build, no admin, no App Catalog. Everything is inline: the
+styling, the logic and all 355 rows. It loads no font, no script, no image and
 no stylesheet from anywhere. It works with the browser offline. The build
 refuses to write the file if any of that stops being true.
 
@@ -47,7 +47,7 @@ page. The build checks for both.
 navigation, no breadcrumb: it is a standalone page that happens to be served
 from a library. That is what you get with this route, not something I chose.
 
-**Pasting 115 KB into the SharePoint text editor may be unpleasant.** If your
+**Pasting 128 KB into the SharePoint text editor may be unpleasant.** If your
 site lets you upload an `.aspx` directly, upload the `.aspx`. If it does not,
 that is the same custom script restriction described below, and the paste route
 is the workaround you already know.

@@ -167,10 +167,10 @@ function byCompany(rows: Row[]): Company[] {
 /* Widen in defined steps rather than silently returning two peers.
 
    The order matters and is set by the data, not by intuition. Within the
-   1bn to 100bn band the median index for the five well populated violation
-   types runs from 0.000020 to 0.000023, which is no difference at all.
-   Within a single violation type, moving from the 1m to 100m band to the
-   10bn plus band moves the median by a factor of several hundred. Size is
+   1bn to 100bn band the median index for the five best evidenced violation
+   types runs from 0.000028 to 0.00015, a spread of about five times. Moving
+   from the 1m to 100m band to the 10bn plus band moves the median from
+   0.0098 to 0.000057, a factor of about a hundred and seventy. Size is
    therefore the control worth protecting, so the ladder drops the sector
    and then the violation type before it widens the turnover band. */
 
@@ -478,9 +478,9 @@ function sectorView(
 
 const ANY_NOTE = 'Leave this as it is if you do not know which Article is in play, or if '
   + 'more than one applies, which is usual. It costs very little: once organisations of a '
-  + 'similar size are compared with each other, the violation type barely moves the number, '
-  + 'while size moves it by a factor of several hundred. The one thing it does change is '
-  + 'which Art. 83 ceiling applies, and with no choice made the tool assumes the higher one.';
+  + 'similar size are compared with each other, the violation type moves the number by about '
+  + 'five times, while size moves it by about a hundred and seventy. The one thing it does '
+  + 'change is which Art. 83 ceiling applies, and with no choice made the tool assumes the higher one.';
 
 export interface MountOptions extends TemplateOptions {
   /* Unique per web part instance, so two copies on one page keep their own
@@ -613,8 +613,9 @@ export function mountCalculator(root: HTMLElement, opts: MountOptions): void {
         + what.join(', and ') + '. ';
       if (peers.droppedType) {
         h += 'That costs less than it sounds: once organisations of a similar size are compared with each other, '
-          + 'the violation type barely moves the index. The five well evidenced categories all sit between 0.0020% and 0.0023% '
-          + 'of turnover in the 1bn to 100bn band. Size is what moves the number, which is why the band is protected first.';
+          + 'the violation type moves the index far less than size does. In the 1bn to 100bn band the five best evidenced '
+          + 'categories span about five times, from 0.0028% to 0.015% of turnover, while moving across the size range moves '
+          + 'the median about a hundred and seventy times. That is why the band is protected first.';
       }
       h += '</div>';
     }
