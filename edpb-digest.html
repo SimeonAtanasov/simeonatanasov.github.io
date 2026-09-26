@@ -884,7 +884,7 @@
 	   lights up is the last section whose top has passed the reading line, the same rule
 	   the side contents highlights by. Queried by its aria-label rather than by id,
 	   because the AI Act builder's own copy of this script has no $ helper. Where there
-	   is no hover, a first tap opens the labels and the next one follows the link. */
+	   is no hover, a dot jumps at once and a small handle above the dots opens the labels. */
 	var rail = document.querySelector('nav[aria-label="On this page"]');
 	if (rail) {
 		var railLinks = Array.prototype.slice.call(rail.querySelectorAll('a[data-target]')), railOn = null, railTick = false;
@@ -902,16 +902,37 @@
 			if (railOn) railOn.classList.add('is-on');
 		};
 		var railHover = window.matchMedia('(hover: hover)');
+		var railKnob = document.createElement('span');
+		railKnob.className = 'rail-knob';
+		railKnob.setAttribute('aria-hidden', 'true');
+		railKnob.title = 'Show section names';
+		railKnob.style.cssText = 'align-items: center; height: 1.9em; padding: 0 0.2em; border-radius: 0.6em; color: rgba(255,255,255,0.9); font-size: 1.1em; font-weight: bold; line-height: 1; cursor: pointer; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;';
+		rail.insertBefore(railKnob, rail.firstChild);
+		var railOpen = function (open) {
+			rail.classList.toggle('is-open', open);
+			railKnob.textContent = String.fromCharCode(open ? 8250 : 8249);
+		};
+		var railKnobShow = function () {
+			railKnob.style.display = railHover.matches ? 'none' : 'flex';
+			if (railHover.matches) railOpen(false);
+		};
+		if (railHover.addEventListener) railHover.addEventListener('change', railKnobShow);
+		railOpen(false);
+		railKnobShow();
 		rail.addEventListener('click', function (e) {
-			if (!railHover.matches && !rail.classList.contains('is-open')) { e.preventDefault(); rail.classList.add('is-open'); return; }
-			if (e.target.closest && e.target.closest('a')) rail.classList.remove('is-open');
+			if (e.target === railKnob) { railOpen(!rail.classList.contains('is-open')); return; }
+			var link = e.target.closest ? e.target.closest('a') : null;
+			if (!link) return;
+			railOpen(false);
+			/* a tapped link keeps focus, and :focus-within would hold the labels open */
+			if (!railHover.matches) link.blur();
 		});
-		document.addEventListener('click', function (e) { if (!rail.contains(e.target)) rail.classList.remove('is-open'); });
+		document.addEventListener('click', function (e) { if (!rail.contains(e.target)) railOpen(false); });
 		window.addEventListener('scroll', function () {
 			if (railTick) return;
 			railTick = true;
 			window.requestAnimationFrame(function () { railTick = false; railSync(); });
-			rail.classList.remove('is-open');
+			railOpen(false);
 		}, { passive: true });
 		window.addEventListener('resize', railSync);
 		railSync();
