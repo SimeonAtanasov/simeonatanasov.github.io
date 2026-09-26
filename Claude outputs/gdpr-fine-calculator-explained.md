@@ -44,36 +44,36 @@ failure**, and follow what the page does.
 
 **Step one: find comparable organisations.** Look for published fines against
 organisations with turnover between EUR 10bn and EUR 30bn (within 50% of yours)
-where the violation was a security failure. That yields **9 decisions against
-5 organisations**. Not enough: the tool requires at least eight organisations
+where the violation was a security failure. That yields **6 decisions against
+4 organisations**. Not enough: the tool requires at least eight organisations
 before it will report a number.
 
 **Step two: relax, in a fixed order.** Drop the violation type, keep the size
-band. Now **52 decisions against 25 organisations**. Enough, so it stops here and
+band. Now **40 decisions against 22 organisations**. Enough, so it stops here and
 says on screen exactly what it ended up comparing you against.
 
 Why drop the violation type rather than widen the size band? Because the data
 says size matters and violation type does not, which is covered in section 4.
 
-**Step three: one vote per organisation.** Those 52 decisions are not 52
+**Step three: one vote per organisation.** Those 40 decisions are not 40
 independent data points. Some organisations appear repeatedly. Each organisation
 is collapsed to a single number, the median of its own cases, before anything
-else happens. That leaves 25 values:
+else happens. That leaves 22 values:
 
 | Organisation | Median index | Cases |
 |---|---|---|
-| Uber Technologies | 2.783% | 1 |
-| TikTok Technology | 2.478% | 1 |
+| TikTok Technology Limited | 2.478% | 1 |
 | LinkedIn | 2.036% | 1 |
-| Uber Technologies / Uber B.V. | 0.506% | 2 |
-| H&M Hennes & Mauritz | 0.292% | 1 |
+| H&M Hennes & Mauritz Online Shop | 0.292% | 1 |
 | TIM | 0.155% | 1 |
+| Axpo Italia | 0.096% | 1 |
+| TikTok | 0.063% | 3 |
 | ... | ... | ... |
-| BBVA | 0.00024% | 2 |
 | STU ERGO Hestia | 0.00017% | 1 |
 | Iberia | 0.00014% | 1 |
+| BBVA | 0.00010% | 1 |
 
-Note the spread: **the top of this list is roughly twenty thousand times the
+Note the spread: **the top of this list is roughly twenty five thousand times the
 bottom, for organisations of comparable size.** That is the real finding, and it
 is why the output is a range.
 
@@ -81,15 +81,15 @@ is why the output is a range.
 
 | | Index | At EUR 20bn |
 |---|---|---|
-| 25th percentile | 0.00289% | EUR 577,933 |
-| Median | 0.01000% | EUR 1,999,600 |
-| 90th percentile | 1.4241% | EUR 284,825,930 |
+| 25th percentile | 0.00305% | EUR 609,911 |
+| Median | 0.00899% | EUR 1,797,022 |
+| 90th percentile | 0.27802% | EUR 55,603,210 |
 
 **Step five: the statutory ceiling.** For this violation type the relevant tier
 is 2%, so the maximum is the higher of 2% of EUR 20bn and EUR 10 million, which
 is **EUR 400 million**.
 
-The page shows three numbers: EUR 2.0m typical, EUR 578k to EUR 285m realistic
+The page shows three numbers: EUR 1.8m typical, EUR 610k to EUR 56m realistic
 range, EUR 400m legal maximum. Plus the count of organisations behind it, the
 full list of cases used, and a chart of where you sit.
 
@@ -99,12 +99,12 @@ Run the identical peer set through an average instead of a median:
 
 | Method | Result at EUR 20bn |
 |---|---|
-| Median across organisations | **EUR 2.0m** |
-| Mean across organisations | EUR 68.4m |
-| Mean across all 52 raw decisions | EUR 41.7m |
+| Median across organisations | **EUR 1.8m** |
+| Mean across organisations | EUR 47.7m |
+| Mean across all 40 raw decisions | EUR 35.1m |
 
-**A factor of 34 between the median and the mean, on identical data.** The
-distribution is so skewed that the mean is really just reporting Uber, TikTok and
+**A factor of 27 between the median and the mean, on identical data.** The
+distribution is so skewed that the mean is really just reporting TikTok and
 LinkedIn. This single comparison explains the earlier EUR 7.65m to EUR 59.75m
 range better than anything else: that was not three answers, it was one answer
 seen through three different peer sets, all averaged.
@@ -116,21 +116,29 @@ preferences; each was measured.
 
 **1. Median, not average.** Shown above. The index distribution is heavily
 right skewed because a small organisation with a modest fine produces an enormous
-ratio. Across the whole dataset the 25th percentile is 0.0008% of turnover and
-the 90th is 0.73%, a spread of three orders of magnitude.
+ratio. Across organisations the 25th percentile is 0.0020% of turnover and the
+90th is 1.6%, a spread of nearly three orders of magnitude. Across individual
+cases it is 0.00085% and 0.56%.
 
 **2. Compare by size before anything else.** Fines scale far less than
 proportionally with size. Fitting the whole dataset gives an elasticity of
-**0.344**, meaning an organisation ten times larger draws a fine only about twice
+**0.372**, meaning an organisation ten times larger draws a fine only about twice
 as large, not ten times. So a small organisation's index is simply not comparable
 with a large one's, and averaging across sizes is meaningless.
 
-**3. Size beats violation type, by a lot.** Inside the EUR 1bn to 100bn band, the
-five well evidenced violation types have median indices between 0.000020 and
-0.000023. That is no difference at all. Inside a single violation type, moving
-from the EUR 1m-100m band to the EUR 10bn+ band moves the median by several
-hundred times. So when the tool has to relax something, it drops sector first,
-then violation type, and widens the size band last. The first version of the code
+**3. Size beats violation type, though not infinitely.** Inside the EUR 1bn to
+100bn band the five best evidenced violation types have median indices between
+0.0028% and 0.015%, a spread of about five times. Moving from the EUR 1m-100m
+band to the EUR 10bn+ band moves the median from 0.98% to 0.0057%, a factor of
+about a hundred and seventy. So the violation type is worth something and size is
+worth roughly thirty times more. When the tool has to relax something, it drops
+sector first, then violation type, and widens the size band last.
+
+An earlier version of this document, and of the page, claimed the five types sat
+between 0.000020 and 0.000023 and that this was "no difference at all". That was
+never true of this dataset: even before the September 2026 turnover corrections
+the spread was five and a half times. The conclusion survives, the overstatement
+does not. The first version of the code
 had this backwards and was comparing a EUR 20bn organisation against a EUR 2bn to
 EUR 200bn peer set.
 
@@ -139,16 +147,17 @@ data under a single normalised name. Without collapsing per organisation, that
 one operator would decide the answer for its entire size band.
 
 **5. Turnover barely predicts the fine, and the tool says so.** The fit is
-`log10(fine) = 1.858 + 0.344 x log10(turnover)`, **R squared = 0.10**. Turnover
-explains about a tenth of the variation. The residual spread is 1.13 orders of
+`log10(fine) = 1.598 + 0.372 x log10(turnover)`, **R squared = 0.11**. Turnover
+explains about a ninth of the variation. The residual spread is 1.12 orders of
 magnitude, roughly a thirteenfold band. Everything a regulator actually weighs
 under Art. 83(2), how many people were affected, negligence versus intent,
 mitigation, cooperation, prior history, is absent from any structured source.
 That is stated plainly on the page rather than buried.
 
 Point five is worth being candid about: the fit got **weaker** as the data got
-better. An earlier version showed R squared 0.19, which was an artefact of a
-small sample dominated by big tech.
+better. An early version showed R squared 0.19, which was an artefact of a small
+sample dominated by big tech. Correcting the turnover figures in September 2026
+moved it from 0.102 to 0.112, which is noise, not a recovery.
 
 ## 5. Two legal points people get wrong
 
@@ -156,7 +165,7 @@ small sample dominated by big tech.
 **or EUR 10 million, whichever is higher**. Art. 83(5) is 4% **or EUR 20 million**.
 An organisation needs roughly **EUR 500 million of turnover before 4% of it
 exceeds the EUR 20 million floor**. Below that, the ceiling is a flat EUR 20
-million and turnover does not enter into it. For 15% of the tier one cases in this
+million and turnover does not enter into it. For 37% of the 2% tier cases in this
 data the binding ceiling is the flat amount. This is also why an index above 4% is
 not automatically an error: a Romanian micro-company paid 6% of its turnover
 entirely lawfully.
@@ -169,11 +178,11 @@ quoted as GDPR records everywhere, including in the earlier deck. They are kept 
 the comparison because they are real privacy enforcement at a known turnover, they
 are tagged in the peer table, and a toggle removes them. The toggle is not
 cosmetic: at EUR 40bn turnover, excluding them moves the median estimate from
-EUR 2.0m to EUR 196,792, because those three cases dominate that size band.
+EUR 1.1m to EUR 291,633, because those cases dominate that size band.
 
 ## 6. Where the data comes from, and what is weak about it
 
-**3,088 cases. 357 of them carry both a fine and a turnover, across 170
+**3,088 cases. 355 of them carry both a fine and a turnover, across 169
 organisations.**
 
 Fines, dates, countries, sectors, Articles and the violation classification come
@@ -183,11 +192,23 @@ reports, statutory filings and national company registers.
 
 That is the weak point, and it should be volunteered rather than defended:
 
-- **100 rows** were researched with a recorded financial year, a basis, and a
-  source URL.
-- **257 rows** were carried over from the earlier spreadsheets with no source
-  recorded. They are labelled "unsourced" in the peer table and a toggle
+- **218 rows** carry a recorded financial year, a basis and a source.
+- **137 rows** are still carried over from the earlier spreadsheets with no
+  source recorded. They are labelled "unsourced" in the peer table and a toggle
   restricts the calculation to sourced rows only.
+
+That split used to be 100 sourced against 257 unsourced. It moved in September
+2026, when every figure that failed an automated plausibility check was
+re-sourced against company filings, national registers and published results.
+**121 figures were corrected.** The commonest fault by far was one company's
+turnover standing in for a whole corporate group, or for every year of a decade:
+a single Greek operator's revenue had been applied to Vodafone entities in five
+countries, and one Spanish figure was carried across decisions from 2019 to 2025
+without being matched to a year. Two rows lost their turnover entirely and now
+fall out of the benchmark, because the figure attached to them belonged to a
+parent company and nothing published replaces it. Two figures were wrong by more
+than two orders of magnitude: one had the fine amount copied into the turnover
+field, the other looks like thousands read as units.
 
 Three further honest limits:
 
@@ -219,8 +240,8 @@ is more useful for a risk register than a narrow invented one, provided the
 caveat travels with it.
 
 **"Where did the turnover numbers come from?"** Every peer row shows its
-confidence and, where one exists, its source. Roughly a third are sourced with a
-URL and a financial year; the rest are inherited from earlier work without a
+confidence and, where one exists, its source. About three in five are sourced
+with a financial year; the rest are inherited from earlier work without a
 recorded source, and the tool can exclude them.
 
 ---
@@ -234,7 +255,7 @@ Everything below is for a technical audience.
 | File | What it is |
 |---|---|
 | `gdpr-fine-calculator.html` | The page. Site chrome, inputs, an empty results container, and the method copy. |
-| `pages/gdpr-fine-calculator/calculator-data.js` | The dataset. `FINE_ROWS` (357 arrays), `ARTICLE_NAMES`, `FINE_TYPES`, `FINE_SECTORS`. About 65 KB. |
+| `pages/gdpr-fine-calculator/calculator-data.js` | The dataset. `FINE_ROWS` (355 arrays), `ARTICLE_NAMES`, `FINE_TYPES`, `FINE_SECTORS`. About 80 KB. |
 | `pages/gdpr-fine-calculator/calculator.js` | All the logic. One IIFE, no dependencies. |
 | `pages/gdpr-fine-calculator/calculator.css` | Page styling on the site's dark template. |
 
@@ -326,7 +347,10 @@ Claude project:
 2. `rebuild_union.py` merges it with the previous master, carrying turnover
    forward by ETid then by normalised name.
 3. `reparse_master.py` re-derives Articles, the tier, and the ePrivacy flag.
-4. `build_data_v4.py` writes `calculator-data.js`.
+4. `build_data_v4.py` writes `calculator-data.js`. The current master is
+   `fines_master_v4.csv`; `v3` is kept beside it as the pre-correction state.
+   The same generator feeds the SharePoint web part and the single-file build,
+   so all three answer identically.
 5. Re-run the checks: no row above `max(percentage, absolute floor)`, the
    log-log fit, per-band peer counts, then the Playwright harness.
 
