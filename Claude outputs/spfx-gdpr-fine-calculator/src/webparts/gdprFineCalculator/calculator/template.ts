@@ -52,9 +52,9 @@ export function buildTemplate(p: string, opts: TemplateOptions): string {
       + 'ceiling. The range matters more than the midpoint: fines for the same conduct vary by orders of magnitude, '
       + 'and any single figure hides that.</li>'
       + '</ol>'
-      + '<p class="fc-note"><strong>Nothing you type is sent anywhere.</strong> The figures are bundled inside this '
-      + 'web part, the calculation runs entirely in your browser, and no turnover you enter reaches SharePoint, this '
-      + 'site’s owner or any other service.</p>'
+      + '<p class="fc-note"><strong>Nothing you type is sent anywhere.</strong> Every figure is bundled here, the '
+      + 'calculation runs entirely in your browser, and no turnover you enter is transmitted to anyone: not to '
+      + 'the owner of this page, not to anybody hosting it, not to any other service.</p>'
       + '</section>';
   }
 

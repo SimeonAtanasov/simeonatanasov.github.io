@@ -1,61 +1,130 @@
-# GDPR Fine Calculator, SharePoint Framework web part
+# GDPR Fine Calculator for SharePoint
 
-The calculator from simeonatanasov.com, ported to run as a modern SharePoint
-web part. Same method, same data, same numbers. Nothing calls out: the 357
-decisions travel inside the package and every calculation happens in the
-browser, so no turnover anyone types reaches SharePoint or anywhere else.
+The calculator from simeonatanasov.com, packaged two ways for SharePoint. Same
+method, same data, same numbers, and in both cases nothing calls out: all 357
+decisions travel inside the file and every calculation happens in the browser,
+so no turnover anyone types reaches SharePoint or anywhere else.
+
+| | Single file | SPFx web part |
+|---|---|---|
+| What you get | one `.aspx`, 115 KB | a `.sppkg` you build |
+| Who has to agree | nobody, if your site already allows it | a SharePoint admin, via the App Catalog |
+| Build step | none, it is already built | Node 22, `npm install`, `npm run build` |
+| Where it lives | a document library, opens as its own page | any modern page, as a web part |
+| How long it lasts | see the dates below | supported indefinitely |
+
+Both are generated from the same four TypeScript modules in
+`src/webparts/gdprFineCalculator/calculator/`, so the two cannot drift apart.
+Change the method there and rebuild, never edit the built `.aspx`.
+
+---
+
+## Route 1: the single file
+
+This is the one that matches how you already work: make a `.txt` in a document
+library, paste, rename to `.aspx`, click it.
+
+The file is at:
+
+```
+standalone/dist/gdpr-fine-calculator.aspx
+standalone/dist/gdpr-fine-calculator.aspx.txt   (identical, for the paste-then-rename route)
+```
+
+115 KB, one file, no build, no admin, no App Catalog. Everything is inline: the
+styling, the logic and all 357 rows. It loads no font, no script, no image and
+no stylesheet from anywhere. It works with the browser offline. The build
+refuses to write the file if any of that stops being true.
+
+Three things about it worth knowing.
+
+**It contains no `<%` or `%>`.** SharePoint serves an `.aspx` from a document
+library through the ASP.NET pipeline, so either sequence anywhere in the file,
+even inside a JavaScript string, throws a parser error instead of rendering the
+page. The build checks for both.
+
+**It takes over the whole page.** There is no SharePoint chrome, no site
+navigation, no breadcrumb: it is a standalone page that happens to be served
+from a library. That is what you get with this route, not something I chose.
+
+**Pasting 115 KB into the SharePoint text editor may be unpleasant.** If your
+site lets you upload an `.aspx` directly, upload the `.aspx`. If it does not,
+that is the same custom script restriction described below, and the paste route
+is the workaround you already know.
+
+### The dates that matter for this route
+
+The `.aspx` file format is not being removed, and pages you have already made
+keep working. What is being switched off is the ability to **add or update**
+custom script, which is exactly what creating one of these files is.
+
+- **1 March 2027**, new tenants only: users can no longer create classic pages
+  and custom script addition and updates are off by default. All tenants lose
+  the ability to create classic publishing sites.
+- **1 October 2028**, all existing tenants: classic user-created pages become
+  **read-only**. That explicitly includes custom `.aspx` pages created by
+  SharePoint Designer or third-party means. They stay viewable. You cannot make
+  new ones or edit the ones you have.
+
+Also worth knowing now rather than on the day: since **15 September 2025**,
+custom script is off by default on classic publishing sites, and the per-site
+opt-out (`Set-SPOSite ... DenyAddAndCustomizePages`) lasts **24 hours** and then
+switches itself back on. It needs tenant admin approval each time. If your site
+works today, custom script is currently allowed on it; that is a property of
+your site, and it can be turned off without warning.
+
+So: the single file is the fastest way to have this working this afternoon, and
+it has a known end date. The web part does not.
+
+### Rebuilding the single file
+
+```console
+node tools/build-standalone.js [outDir]
+```
+
+Needs esbuild, which `npx` will fetch. The script bundles `standalone/entry.ts`,
+drops it into `standalone/page.template.html`, and then refuses to write the
+result if it finds an ASP.NET delimiter, a `</script` inside the bundle, an em
+dash, an external URL, a subresource tag or a CSS `url()` that is not a data
+URI.
+
+---
+
+## Route 2: the SPFx web part
+
+The supported way. It survives every date above, it goes on ordinary modern
+pages beside other web parts, and the same package can be surfaced as a Teams
+tab.
 
 This folder holds source files, not a project. You scaffold an empty SPFx
 solution on your machine, drop these in, and build. That is deliberate: the
 version numbers in `package.json`, `tsconfig.json` and `config/config.json`
-change with every SPFx release, and a set of them written by hand today would
-be wrong by the time you ran it.
+change with every SPFx release, and a set of them written by hand today would be
+wrong by the time you ran it.
 
----
+### The gate is your tenant, not the code
 
-## Before you start: the real gate is your tenant, not the code
+An SPFx web part is installed by uploading a `.sppkg` to the tenant App Catalog.
+That is an admin action. If you are not a SharePoint administrator in the
+tenant, you need one, and in most corporate tenants that is a review rather than
+a formality.
 
-Worth settling before you spend an evening on the build.
-
-An SPFx web part is installed by uploading a `.sppkg` file to the tenant App
-Catalog. That is an admin action. If you are not a SharePoint administrator in
-the tenant you are targeting, you will need one to upload and approve it, and
-in most corporate tenants that is a review, not a formality.
-
-Two things that are **not** in the way, which are worth knowing because they
-usually are:
+Two things that are **not** in the way, which usually are:
 
 - **Custom script does not apply.** The `requiresCustomScript: false` flag in
-  the manifest is accurate: this web part uses no `eval`, no injected script
-  tags and no external resources. The "Allow users to run custom script"
-  setting, which is off by default and which blocks the old classic-page
-  approach, is irrelevant here.
+  the manifest is accurate: no `eval`, no injected script tags, no external
+  resources. The setting that governs route 1 is irrelevant to route 2.
 - **No outbound access is needed.** The data is bundled. A tenant that blocks
-  external CDNs, or a site with no internet egress, runs this fine.
+  external CDNs runs this fine.
 
-You can also test the whole thing without an admin: `npm run start` serves it
-into your own machine's workbench with nothing deployed anywhere.
+You can test the whole thing without an admin: `npm run start` serves it into
+your own machine's workbench with nothing deployed anywhere.
 
----
-
-## Why SPFx rather than ASPX
-
-You originally asked about ASPX. Classic ASPX pages are being retired:
-new tenants lose the ability to create them on 1 March 2027, and all tenants go
-read-only on 1 October 2028. Custom script has been off by default on classic
-publishing sites since 15 September 2025, which already blocks the usual way of
-putting a script like this on an ASPX page.
-
-SPFx is the supported route, works on modern pages, survives the retirement,
-and can also be surfaced as a Teams tab from the same package.
-
----
-
-## What you need
+### What you need
 
 | Thing | Version | Notes |
 |---|---|---|
-| Node.js | `>=22.14.0 <23.0.0` | This is what the SPFx 1.23 generator declares. Node 24 will be refused. |
+| Node.js | `>=22.14.0 <23.0.0` | What the SPFx 1.23 generator declares. Node 24 is refused. |
 | SPFx | 1.23.2 | Current general release as of September 2026. |
 | Scaffolder | Yeoman | Still the supported scaffolder. The new SPFx CLI replaces it at 1.25, expected around the turn of the year. |
 | Build tool | Heft | Heft replaced gulp at SPFx 1.22. Every `gulp serve` / `gulp bundle --ship` instruction you will find online is for 1.21 and earlier. |
@@ -64,9 +133,7 @@ and can also be surfaced as a Teams tab from the same package.
 npm install -g yo @microsoft/generator-sharepoint@1.23.2
 ```
 
----
-
-## 1. Scaffold the solution
+### 1. Scaffold
 
 ```console
 mkdir gdpr-fine-calculator
@@ -74,9 +141,8 @@ cd gdpr-fine-calculator
 yo @microsoft/sharepoint
 ```
 
-Answer the prompts like this. The two marked **exactly** matter, because the
-generator derives folder and class names from them and the files in this folder
-are named to match:
+The two marked **exactly** matter, because the generator derives folder and
+class names from them and the files here are named to match:
 
 | Prompt | Answer |
 |---|---|
@@ -86,12 +152,10 @@ are named to match:
 | Web part name | `GdprFineCalculator` **exactly** |
 | Framework | **No framework** **exactly** |
 
-That produces `src/webparts/gdprFineCalculator/` with a sample web part in it.
-
-## 2. Drop in these files
+### 2. Drop in these files
 
 Delete what the generator put in `src/webparts/gdprFineCalculator/`, then copy
-the contents of this folder's `src/` over it:
+this folder's `src/` over it:
 
 ```
 src/webparts/gdprFineCalculator/
@@ -118,7 +182,7 @@ in. Nothing else references it.
 Nothing needs changing in `config/config.json`: it points at the web part by
 path, and the paths are unchanged.
 
-## 3. Build
+### 3. Build
 
 ```console
 npm install
@@ -139,12 +203,12 @@ settings: no errors and no warnings, checked before it was written out. That
 matters because a production Heft build is less forgiving of warnings than a
 debug one.
 
-Note on testing: the hosted workbench at
-`https://<tenant>.sharepoint.com/_layouts/15/workbench.aspx` is deprecated as of
-SPFx 1.23 and retires on 1 December 2026. Use the local workbench that
-`npm run start` opens, or the SPFx Debug Toolbar against a real modern page.
+The hosted workbench at `https://<tenant>.sharepoint.com/_layouts/15/workbench.aspx`
+is deprecated as of SPFx 1.23 and retires on 1 December 2026. Use the local
+workbench that `npm run start` opens, or the SPFx Debug Toolbar against a real
+modern page.
 
-## 4. Deploy
+### 4. Deploy
 
 1. Upload `gdpr-fine-calculator.sppkg` to the tenant App Catalog
    (`https://<tenant>.sharepoint.com/sites/appcatalog`, **Apps for SharePoint**).
@@ -154,13 +218,11 @@ SPFx 1.23 and retires on 1 December 2026. Use the local workbench that
 4. Edit a modern page, add the **GDPR Fine Calculator** web part from the
    **Advanced** group in the toolbox.
 
----
+### What you can configure on the page
 
-## What you can configure on the page
-
-The property pane exposes five settings, all cosmetic. The calculation is not
-configurable, on purpose: a benchmark whose peer selection can be quietly tuned
-by whoever edits the page is not a benchmark.
+Five settings, all cosmetic. The calculation is not configurable, on purpose: a
+benchmark whose peer selection can be quietly tuned by whoever edits the page is
+not a benchmark.
 
 | Property | Default | What it does |
 |---|---|---|
@@ -170,23 +232,25 @@ by whoever edits the page is not a benchmark.
 | Show "How the number is worked out" | on | The method notes and the caveats. Worth leaving on. |
 | Turnover to start with | empty | Prefills the box. Accepts `20bn`, `450m` or a plain number. |
 
-The web part reads its width rather than the viewport's, so a copy dropped into
-a one-third column stacks its three selectors the same way a phone does.
+The web part reads its own width rather than the viewport's, so a copy dropped
+into a one-third column stacks its three selectors the same way a phone does.
 
 ---
 
 ## What changed in the port, and what did not
 
-The arithmetic did not change at all. The ported logic was run side by side with
-the live site version across 420 combinations of turnover, violation type,
-sector and the three filter toggles: the rendered output was identical in every
-one, and the scatter chart's 358 plotted points came out at the same coordinates
-to the decimal place.
+The arithmetic did not change at all. Both builds were run side by side with the
+live site version across 420 combinations of turnover, violation type, sector
+and the three filter toggles: the rendered output was identical in every one,
+and the scatter chart's 358 plotted points came out at the same coordinates to
+the decimal place. The single file additionally ran with every network request
+intercepted and made none.
 
 What changed:
 
-- **Ids are prefixed per web part instance**, so two copies of the calculator
-  on one page keep their own label-to-control pairing.
+- **Ids are prefixed per web part instance**, so two copies of the calculator on
+  one page keep their own label-to-control pairing. The single file uses the
+  plain `fc-` prefix, since it owns the page.
 - **The theme is light.** The website sits on a dark navy template; a modern
   SharePoint page does not. Surfaces, borders and chart ink are inverted, and
   the neutrals read the SharePoint theme variables with Fluent defaults as a
@@ -204,29 +268,34 @@ What changed:
 - **Number grouping is done by hand** rather than through `toLocaleString`, so a
   reader in Sofia and a reader in London see the same string.
 - **The links out are gone.** The website version links to its own Power BI page;
-  that would point outside the tenant.
+  that would point outside the tenant. The only external links left are the
+  per-case links to the enforcement tracker in the peer table.
 
 ---
 
 ## Refreshing the data
 
 `src/webparts/gdprFineCalculator/calculator/fineData.ts` is generated. When the
-website's dataset is rebuilt, regenerate this from it rather than editing it:
+website's dataset is rebuilt, regenerate this from it rather than editing it,
+then rebuild the single file:
 
 ```console
 node tools/build-fine-data.js <path to calculator-data.js> src/webparts/gdprFineCalculator/calculator/fineData.ts
+node tools/build-standalone.js
 ```
 
-`tools/build-fine-data.js` is in this folder. It reads the site's
-`calculator-data.js`, checks the field order has not moved, and writes the
-TypeScript module. Keeping the two builds generated from one source is what
-stops the web part and the website quietly answering the same question
-differently.
+`tools/build-fine-data.js` reads the site's `calculator-data.js`, checks the
+field order has not moved, rejects rows with no usable fine or turnover, and
+writes the TypeScript module. Keeping every build generated from one source is
+what stops the web part, the single file and the website quietly answering the
+same question differently.
 
 ---
 
 ## Sources
 
+- [Deprecation of classic SharePoint pages](https://learn.microsoft.com/en-us/sharepoint/classic-user-created-page-deprecation)
+- [MC1117115, custom scripting and classic publishing site creation](https://mc.merill.net/message/MC1117115)
 - [SPFx roadmap update, August 2026](https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-august-2026/)
 - [SharePoint Framework v1.23 release notes](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/release-1.23)
 - [SharePoint Framework toolchain](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/toolchain/sharepoint-framework-toolchain)
