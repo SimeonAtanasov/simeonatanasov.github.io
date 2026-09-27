@@ -544,7 +544,6 @@
 			if (e.target === railKnob) { railOpen(!rail.classList.contains('is-open')); return; }
 			var link = e.target.closest ? e.target.closest('a') : null;
 			if (!link) return;
-			railOpen(false);
 			/* a tapped link keeps focus, and :focus-within would hold the labels open */
 			if (!railHover.matches) link.blur();
 		});
@@ -553,7 +552,6 @@
 			if (railTick) return;
 			railTick = true;
 			window.requestAnimationFrame(function () { railTick = false; railSync(); });
-			railOpen(false);
 		}, { passive: true });
 		window.addEventListener('resize', railSync);
 		railSync();

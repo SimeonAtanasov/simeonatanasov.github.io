@@ -75,7 +75,6 @@ JS_NEW = """		var railHover = window.matchMedia('(hover: hover)');
 			if (e.target === railKnob) { railOpen(!rail.classList.contains('is-open')); return; }
 			var link = e.target.closest ? e.target.closest('a') : null;
 			if (!link) return;
-			railOpen(false);
 			/* a tapped link keeps focus, and :focus-within would hold the labels open */
 			if (!railHover.matches) link.blur();
 		});
@@ -84,11 +83,13 @@ JS_NEW = """		var railHover = window.matchMedia('(hover: hover)');
 			if (railTick) return;
 			railTick = true;
 			window.requestAnimationFrame(function () { railTick = false; railSync(); });
-			railOpen(false);
 		}, { passive: true });
 """
 
 
+# v3.2, 27 September 2026: once open, the labels stay open while a topic is chosen and the
+# page scrolls. Only the handle or a tap outside the rail closes them (a click, so a drag
+# never does). Applied to all files by hand; JS_NEW below carries it.
 # v3.1, 27 September 2026: the handle opened the labels on a phone but did not close
 # them, because the tapped rail kept :hover. Files already on v3 get the style block only.
 V3_ANCHOR = "\t\trail.insertBefore(railKnob, rail.firstChild);\n"
