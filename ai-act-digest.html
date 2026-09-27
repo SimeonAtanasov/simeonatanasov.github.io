@@ -613,6 +613,17 @@
 		railKnob.title = 'Show section names';
 		railKnob.style.cssText = 'align-items: center; height: 1.9em; padding: 0 0.2em; border-radius: 0.6em; color: rgba(255,255,255,0.9); font-size: 1.1em; font-weight: bold; line-height: 1; cursor: pointer; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;';
 		rail.insertBefore(railKnob, rail.firstChild);
+		/* a touch screen keeps :hover on whatever was tapped last, so after the handle is
+		   tapped the rail stays hovered and its hover rules hold the labels open. Under
+		   (hover: none) only is-open (or keyboard focus) may open them. */
+		var railStyle = document.createElement('style');
+		railStyle.textContent = ['@media (hover: none) {',
+			'nav[aria-label="On this page"]:not(.is-open):not(:focus-within) { border-color: transparent; background: transparent; box-shadow: none; }',
+			'nav[aria-label="On this page"]:not(.is-open):not(:focus-within) a span { max-width: 0; opacity: 0; }',
+			'nav[aria-label="On this page"]:not(.is-open):not(:focus-within) a:not(.is-on) i { background: rgba(255,255,255,0.35); }',
+			'nav[aria-label="On this page"] a:hover { background: transparent; }',
+			'}'].join(' ');
+		document.head.appendChild(railStyle);
 		var railOpen = function (open) {
 			rail.classList.toggle('is-open', open);
 			railKnob.textContent = String.fromCharCode(open ? 8250 : 8249);
