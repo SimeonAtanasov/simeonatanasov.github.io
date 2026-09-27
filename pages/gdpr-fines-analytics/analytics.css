@@ -1,0 +1,358 @@
+/* GDPR Fines Analytics styling.
+   Sits on the site's dark template. Panels, labels and cards follow
+   pages/gdpr-fine-calculator/calculator.css so the fine tools read as one set.
+   The chart surface is #1e2a4d, the surface the chart palette was validated on.
+
+   The template styles every button with a fixed height, a 4.75em line height,
+   uppercase text and wide letter spacing, so every button here resets all of
+   those. It does not style input[type="number"] or type="search", which is why
+   the page uses selects and a text input. */
+
+.gfa {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gfa-meta {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.gfa-visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.gfa-panel {
+    padding: 20px 24px 24px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    margin: 0 0 2.5em 0;
+}
+
+.gfa-block { margin: 0 0 2.5em 0; }
+.gfa-block h2 { margin-bottom: 0.4em; }
+.gfa-block h3 { margin: 1.4em 0 0.4em; }
+.gfa-block p { line-height: 1.7; }
+
+/* Anchor targets clear the 73px sticky header. */
+#gfa-build, #gfa-read { scroll-margin-top: 6rem; }
+
+/* ------------------------------------------------------------ controls --- */
+
+.gfa-controls,
+.gfa-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 14px 20px;
+}
+
+.gfa-control {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.gfa-control select,
+.gfa-control input[type="text"] {
+    min-width: 150px;
+    height: 2.6em;
+    box-sizing: border-box;
+}
+
+.gfa-control-wide { flex: 1 1 260px; }
+.gfa-control-wide input[type="text"] { width: 100%; }
+.gfa-control-narrow select { min-width: 100px; }
+.gfa-control-end { margin-left: auto; }
+
+.gfa-label {
+    display: block;
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+    margin: 0 0 0.45em 0;
+    font-weight: normal;
+}
+
+/* Segmented control: a row of buttons, one pressed. */
+.gfa-seg {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 3px;
+    gap: 2px;
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+}
+
+.gfa-seg button,
+.gfa-btn {
+    height: auto !important;
+    line-height: 1.3 !important;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    white-space: nowrap;
+    font-size: 0.88em !important;
+    font-weight: 600;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+.gfa-seg button {
+    padding: 0.5em 0.9em !important;
+    border: 0 !important;
+    border-radius: 4px;
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.gfa-seg button:hover:not(:disabled) { background: rgba(255, 255, 255, 0.08) !important; }
+
+.gfa-seg button[aria-pressed="true"] {
+    background: #3987e5 !important;
+    color: #ffffff !important;
+}
+
+.gfa-seg button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.gfa-seg button:focus-visible,
+.gfa-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.gfa-btn {
+    padding: 0.6em 1.1em !important;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+.gfa-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.16) !important; }
+.gfa-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.gfa-btn-quiet {
+    background: transparent !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+    font-weight: normal;
+}
+
+.gfa-btn[aria-expanded]::after {
+    content: "";
+    display: inline-block;
+    width: 0.45em;
+    height: 0.45em;
+    margin-left: 0.6em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-0.2em) rotate(45deg);
+    transition: transform 0.15s ease;
+}
+
+.gfa-btn[aria-expanded="true"]::after { transform: translateY(0.05em) rotate(-135deg); }
+
+.gfa-filterbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 0;
+}
+
+.gfa-filters {
+    margin-top: 14px;
+    padding: 16px 18px;
+    background: rgba(0, 0, 0, 0.14);
+    border-radius: 6px;
+}
+
+.gfa-filters[hidden],
+.gfa-table-wrap[hidden],
+.gfa-notes[hidden],
+.gfa-empty[hidden],
+.gfa-control[hidden] { display: none; }
+
+/* --------------------------------------------------------------- chart --- */
+
+.gfa-figure {
+    margin: 22px 0 0;
+    padding: 18px 18px 12px;
+    background: #1e2a4d;
+    border-radius: 6px;
+}
+
+.gfa-figure figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0 0 10px;
+}
+
+.gfa-chart-title {
+    font-weight: 600;
+    font-size: 1.05em;
+    color: #ffffff;
+}
+
+.gfa-chart-sub {
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+.gfa-chartbox {
+    position: relative;
+    width: 100%;
+    min-height: 320px;
+}
+
+.gfa-empty {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    opacity: 0.75;
+}
+
+/* ---------------------------------------------------------------- KPIs --- */
+
+.gfa-kpis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 16px 0 0;
+}
+
+.gfa-kpis > div {
+    flex: 1 1 140px;
+    min-width: 0;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+
+.gfa-kpis > div:first-child { border-top-color: #3987e5; }
+
+.gfa-kpis dt {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.75;
+    margin: 0;
+    font-weight: normal;
+}
+
+.gfa-kpis dd {
+    margin: 0.15em 0 0;
+    font-size: 1.45em;
+    font-weight: 600;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+/* --------------------------------------------------------------- notes --- */
+
+.gfa-notes {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #4276a6;
+    border-radius: 4px;
+    font-size: 0.88em;
+    line-height: 1.6;
+}
+
+.gfa-notes p { margin: 0 0 0.5em; }
+.gfa-notes p:last-child { margin-bottom: 0; }
+
+/* ------------------------------------------------------------- actions --- */
+
+.gfa-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.gfa-actions-right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* --------------------------------------------------------------- table --- */
+
+.gfa-table-wrap {
+    margin-top: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.gfa-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88em;
+    margin: 0;
+}
+
+.gfa-table th,
+.gfa-table td {
+    padding: 0.55em 0.8em;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gfa-table thead th {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.85;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.gfa-table .gfa-num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.gfa-table tbody tr:nth-child(2n) { background: rgba(255, 255, 255, 0.03); }
+
+.gfa-table-caption {
+    font-size: 0.82em;
+    opacity: 0.7;
+    margin: 0.6em 0 0;
+}
+
+/* -------------------------------------------------------------- narrow --- */
+
+@media screen and (max-width: 736px) {
+    .gfa-panel { padding: 16px 14px 18px; }
+    .gfa-figure { padding: 14px 10px 8px; }
+    .gfa-controls > .gfa-control { flex: 1 1 140px; }
+    .gfa-control select,
+    .gfa-control input[type="text"] { min-width: 0; width: 100%; }
+    .gfa-control-end { margin-left: 0; }
+    .gfa-actions,
+    .gfa-actions-right { width: 100%; }
+    .gfa-actions-right .gfa-btn { flex: 1 1 auto; }
+    .gfa-table th,
+    .gfa-table td { padding: 0.5em 0.6em; }
+}
