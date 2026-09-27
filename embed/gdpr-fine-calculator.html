@@ -7,7 +7,13 @@
 <title>GDPR Fine Calculator</title>
 
 <!--
-  Single file build. Everything is inline: the styling, the logic and all
+  Single file build, byte for byte the same content as the SharePoint copy in
+  Claude outputs/spfx-gdpr-fine-calculator/standalone/dist/. It lives here so it
+  can be iframed into a modern SharePoint page through the Embed web part, which
+  needs a URL that actually renders HTML. Do not edit it here: edit the
+  TypeScript modules and run tools/build-standalone.js.
+
+  Everything is inline: the styling, the logic and all
   355 enforcement decisions. The page makes no network request of any
   kind, loads no font, no script and no image from anywhere, and sends nothing
   it is given. It works with the browser offline.

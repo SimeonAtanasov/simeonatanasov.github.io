@@ -1,0 +1,41 @@
+# Python build cache, which is what put 41 .pyc files in this repo.
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments, in case a build script ever creates one here.
+.venv/
+venv/
+env/
+
+# Node, in case the SPFx project is ever scaffolded inside the repo
+# rather than beside it.
+node_modules/
+npm-debug.log*
+.heft/
+temp/
+lib/
+
+# Operating system cruft.
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Editor and IDE state.
+.vscode/
+.idea/
+*.swp
+
+# Scratch files. Anything genuinely worth keeping gets a real name.
+*.tmp
+*.bak
+*.orig
+~$*
+
+# Design masters are kept outside the repo on purpose: .psd and .tif
+# files are large, are not served to anyone, and bloat every clone.
+# The ones already committed are still here by choice. Uncomment these
+# two lines if you move them out.
+# *.psd
+# *.tif

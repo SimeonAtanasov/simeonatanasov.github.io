@@ -44,7 +44,7 @@ export function buildTemplate(p: string, opts: TemplateOptions): string {
       + '<li><strong>Pick what went wrong, or leave it.</strong> The categories come from the enforcement tracker’s '
       + 'own classification, one per decision. <strong>If you do not know which Article is in play, leave it on '
       + '"Not sure".</strong> You are not giving up much: once organisations of a similar size are compared with each '
-      + 'other, the violation type barely moves the answer. The number beside each category is how many comparable '
+      + 'other, the violation type moves the answer far less than size does. The number beside each category is how many comparable '
       + 'cases carry a known turnover, which tells you how much weight it can bear.</li>'
       + '<li><strong>Narrow by sector if it helps.</strong> Optional. The tool widens the search automatically if too '
       + 'few peers match, and tells you when it did.</li>'
