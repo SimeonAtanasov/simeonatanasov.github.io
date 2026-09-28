@@ -39,7 +39,7 @@ def entry(e):
     cls = "entry " + e["tier"]
     tags = ""
     if e["tier"] == "written":
-        tags += '<span class="tag w">read from the document</span>'
+        tags += '<span class="tag w">source: published document</span>'
     if e.get("status") and e["status"] != "current":
         tags += '<span class="tag">%s</span>' % esc(e["status"].replace("-", " "))
     for t in e.get("topics") or []:
@@ -56,7 +56,7 @@ def build():
              '<div class="coverstats"><div><span class="n">%d</span><span class="l">documents</span></div><div><span class="n">%d</span><span class="l">written takeaways</span></div><div><span class="n">%d</span><span class="l">one-line descriptions</span></div><div><span class="n">%d</span><span class="l">document types</span></div></div>'
              '<p class="covernote">Reading aid, not a substitute. Every entry carries a numbered source that resolves to the EDPB page at the end.</p></section>' % (len(E), DATE, len(E), nw, len(E) - nw, len(GROUPS)))
     b.append('<section class="front"><h1 id="how">How to read this</h1>'
-             '<p class="lede">For %d documents the takeaway was written from the document: what it establishes, who it binds and what to do about it. They are marked "read from the document" and set with a heavy left rule. For the remaining %d, which are approvals of binding corporate rules, accreditation requirements, national DPIA lists, certification criteria, institutional reports and the Board\'s own procedures, a one-line description says what the document is so it can be ruled in or out.</p>'
+             '<p class="lede">For %d documents the takeaway was written from the document: what it establishes, who it binds and what to do about it. They are marked "source: published document" and set with a heavy left rule. For the remaining %d, which are approvals of binding corporate rules, accreditation requirements, national DPIA lists, certification criteria, institutional reports and the Board\'s own procedures, a one-line description says what the document is so it can be ruled in or out.</p>'
              '<p>The choice of which documents earned a written takeaway follows the topics of the site this digest accompanies (privacy operations, the AI Act, assessment tools), not the document\'s importance in general. Dates are the publication dates shown in the EDPB listing on %s. Guidelines still at consultation stage appear on the EDPB consultations page and are here only once the documents listing carries a version.</p>'
              '<p>Documents are grouped by publication type, newest first within each group by the date on the EDPB listing, which is the publication date; where the adoption date differs, the takeaway says so. The number in brackets on each entry is its source number; the source list at the end gives the EDPB URL for every one of the %d documents.</p>'
              '<h2 class="sub">Contents</h2><ul class="legend">' % (nw, len(E) - nw, DATE, len(E)))

@@ -55,9 +55,9 @@ def entry_html(e, eid):
     cls = "ed-entry ed-tier-%s ed-rel-%s" % (tier, e["rating"])
     chips = []
     if tier == "written":
-        chips.append('<span class="ed-chip ed-chip-written">Read from the document</span>')
+        chips.append('<span class="ed-chip ed-chip-written" title="The takeaway was written from the published document itself: what it establishes, who it binds and what to do.">Source: published document</span>')
     else:
-        chips.append('<span class="ed-chip">Description</span>')
+        chips.append('<span class="ed-chip" title="A one-line description of what the document is, not a full takeaway.">Description</span>')
     if e.get("status") and e["status"] != "current":
         chips.append('<span class="ed-chip ed-chip-status">%s</span>' % esc(e["status"].replace("-", " ")))
     for t in e.get("topics") or []:
