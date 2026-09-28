@@ -1136,5 +1136,23 @@
    "other"
   ],
   "source": "page"
+ },
+ {
+  "id": "doc-58",
+  "title": "Responsible Artificial Intelligence Innovation: Insights from the Data Protection Commission's Supervision of AI (2021-2025)",
+  "issuer": "Data Protection Commission (Ireland)",
+  "type": "national-dpa",
+  "status": "final",
+  "articles": [
+   "Art 2(7)"
+  ],
+  "date": "25 September 2026",
+  "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-publishes-ai-insights-report",
+  "takeaway": "Report of the Irish Data Protection Commission on about 180 AI engagements with controllers between 2021 and 2025, 143 of them on generative AI, run through its voluntary supervision function rather than formal inquiries. Not binding, but it states how the lead authority for many large technology providers applies the GDPR: clear notice and a reasonable notice period before personal data is used for training, repeated when a user turns 18; objection routes with as little friction as possible; enhanced transparency where historical data is reused, and private messages unlikely to be within users' expectations; a DPIA likely for training a new model, kept as a living document after launch; and a human trigger or appeal does not by itself take a decision outside Article 22 GDPR. Use it as a pre-training checklist beside Opinion 28/2024, which it follows.",
+  "topics": [
+   "data",
+   "transparency"
+  ],
+  "source": "page"
  }
 ]

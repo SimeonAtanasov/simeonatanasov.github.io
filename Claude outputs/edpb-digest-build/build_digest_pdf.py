@@ -52,7 +52,7 @@ def build():
     nw = sum(1 for e in E if e["tier"] == "written")
     b = []
     b.append('<section class="cover"><p class="kicker">Reference</p><h1>EDPB Digest</h1>'
-             '<p class="sub">Every document published by the European Data Protection Board, %d of them as of %s (532 on the documents listing, 11 at consultation stage), with one takeaway each.</p>'
+             '<p class="sub">Every document published by the European Data Protection Board, %d of them as of %s (533 final documents from the documents listing, 11 at consultation stage), with one takeaway each.</p>'
              '<div class="coverstats"><div><span class="n">%d</span><span class="l">documents</span></div><div><span class="n">%d</span><span class="l">written takeaways</span></div><div><span class="n">%d</span><span class="l">one-line descriptions</span></div><div><span class="n">%d</span><span class="l">document types</span></div></div>'
              '<p class="covernote">Reading aid, not a substitute. Every entry carries a numbered source that resolves to the EDPB page at the end.</p></section>' % (len(E), DATE, len(E), nw, len(E) - nw, len(GROUPS)))
     b.append('<section class="front"><h1 id="how">How to read this</h1>'
@@ -85,7 +85,7 @@ def build():
 if __name__ == "__main__":
     p = build()
     from weasyprint import HTML
-    out = "/mnt/user-data/outputs/edpb-digest-2026-09-19.pdf"
+    out = os.environ.get("PDFOUT", "/mnt/user-data/outputs/edpb-digest-2026-09-28.pdf")
     HTML(p).write_pdf(out)
     print("pdf", out, os.path.getsize(out))
     print("em dashes:", open(p, encoding="utf-8").read().count(chr(0x2014)))

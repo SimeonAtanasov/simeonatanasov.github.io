@@ -10,7 +10,7 @@ from digest_nav import toc_html, results_html, jump_html, top_button, nav_js, na
 E = json.load(open(os.path.join(HERE, "digest.json"), encoding="utf-8"))
 esc = lambda s: html.escape(s, quote=True)
 
-DATE = "19 September 2026"
+DATE = "28 September 2026"
 
 GROUPS = OrderedDict([
  ("Guidelines", ["Guideline"]),
@@ -78,7 +78,7 @@ def build_body():
     out.append('<div class="ed-head">')
     out.append(jump_html("ed", [("#ed-filters", "Filters and search"), ("#ed-index", "Document types"), ("#ed-groups", "The documents"), ("#ed-sources-note", "Sources")]))
     out.append('<div class="ed-intro">')
-    out.append('<p>Every document the European Data Protection Board has published, %d of them as of %s (532 on the documents listing and 11 that were still at consultation stage), with one takeaway each. For %d documents the takeaway is written from the document itself: what it establishes, who it binds and what to do about it. For the remaining %d, which are approvals of binding corporate rules, accreditation requirements, national DPIA lists, certification criteria, institutional reports and the Board\'s own procedures, a one-line description says what the document is so it can be ruled in or out in a second.</p>' % (len(E), DATE, n_written, len(E) - n_written))
+    out.append('<p>Every document the European Data Protection Board has published, %d of them as of %s (533 final documents from the documents listing and 11 that were still at consultation stage), with one takeaway each. For %d documents the takeaway is written from the document itself: what it establishes, who it binds and what to do about it. For the remaining %d, which are approvals of binding corporate rules, accreditation requirements, national DPIA lists, certification criteria, institutional reports and the Board\'s own procedures, a one-line description says what the document is so it can be ruled in or out in a second.</p>' % (len(E), DATE, n_written, len(E) - n_written))
     out.append('<p>Two limits, stated up front. The choice of which documents earned a written takeaway follows the topics of this site (privacy operations, the AI Act, assessment tools), not the document\'s importance in general. And a takeaway is a reading aid, not a substitute: every entry links to the EDPB page, and the document governs where the two differ. Dates are the publication dates shown in the EDPB listing. Documents still at consultation stage on that date (guidelines, recommendations and templates adopted for public consultation but not yet final) sit in their own group, Consultation versions, dated by their adoption for consultation and marked consultation; the final text may differ.</p>')
     out.append('<p class="ed-privacy">Filters and search run in your browser. Nothing you type is sent anywhere. Every entry links to the EDPB page it describes.</p>')
     out.append("</div>")
@@ -405,7 +405,7 @@ if __name__ == "__main__":
     page = HEAD % (len(E), DATE) + body + TAIL % (nav_js("ed", "documents") + JS)
     CSS_OUT = CSS + nav_css("ed", "edpb-digest")
     page = page.replace("\r\n", "\n")
-    outdir = "/mnt/user-data/outputs/site"
+    outdir = os.environ.get("OUTDIR","/mnt/user-data/outputs/site")
     os.makedirs(outdir + "/pages/edpb-digest", exist_ok=True)
     open(outdir + "/edpb-digest.html", "w", encoding="utf-8", newline="\n").write(page)
     open(outdir + "/pages/edpb-digest/edpb-digest.css", "w", encoding="utf-8", newline="\n").write(CSS_OUT)

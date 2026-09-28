@@ -5,7 +5,7 @@
 ## Digests
 
 - [AI Act Digest](https://www.simeonatanasov.com/ai-act-digest.html): The EU AI Act article by article, as amended by the 2026 Digital Omnibus, with takeaways, application dates and the guidance around it.
-- [EDPB Digest](https://www.simeonatanasov.com/edpb-digest.html): Every European Data Protection Board document, 543 in all, with one takeaway each: what it establishes, who it binds and what to do.
+- [EDPB Digest](https://www.simeonatanasov.com/edpb-digest.html): Every European Data Protection Board document, 544 in all, with one takeaway each: what it establishes, who it binds and what to do.
 - [Cookie Compliance Digest](https://www.simeonatanasov.com/cookie-digest.html): 259 cookie and tracking laws, regulator guidance documents, court decisions and enforcement actions across 66 jurisdictions, each with a takeaway.
 
 ## Advice

@@ -17,7 +17,7 @@ num = {id(e): i + 1 for i, e in enumerate(order)}
 
 TYPE_LABEL = {"regulation": "regulation", "commission-guidelines": "Commission guidelines", "code-of-practice": "code of practice",
               "template": "template", "qa": "Q&A", "delegated-or-implementing-act": "delegated or implementing act",
-              "edpb-edps": "EDPB / EDPS", "national-law": "national law", "reference-tool": "reference tool",
+              "edpb-edps": "EDPB / EDPS", "national-dpa": "national DPA", "national-law": "national law", "reference-tool": "reference tool",
               "policy": "policy", "standards": "standards"}
 
 EXTRA_CSS = """
@@ -166,7 +166,7 @@ def build():
              '<p class="covernote">Reading aid, not legal advice. The consolidated text governs. Every entry carries a numbered source that resolves to the primary page at the end.</p></section>' % (DATE, n_arts, n_ann, n_omni, len(CORPUS)))
     b.append(summary_section())
     b.append('<section class="front"><h1 id="how">How to read this</h1>'
-             '<p class="lede">Part 1 walks the Regulation in its own order, chapter by chapter, then the fourteen annexes. Each entry states what the provision establishes, who it binds and what a practitioner does with it, followed by its date of application under Article 113, the roles it binds, the recitals that explain it, and, where Regulation (EU) 2026/1744 touched it, a note on what changed. Part 2 covers the corpus around the Act: the amending regulation, the Commission guidelines, codes of practice, templates and Q&amp;As, the standardisation programme, the EDPB and EDPS positions including Opinion 28/2024 on AI models, the national implementing laws and the reference tools. Each entry states the document\'s legal status, the articles it interprets and what to do with it.</p>'
+             '<p class="lede">Part 1 walks the Regulation in its own order, chapter by chapter, then the fourteen annexes. Each entry states what the provision establishes, who it binds and what a practitioner does with it, followed by its date of application under Article 113, the roles it binds, the recitals that explain it, and, where Regulation (EU) 2026/1744 touched it, a note on what changed. Part 2 covers the corpus around the Act: the amending regulation, the Commission guidelines, codes of practice, templates and Q&amp;As, the standardisation programme, the EDPB and EDPS positions including Opinion 28/2024 on AI models, a national data protection authority\'s report on supervising AI, the national implementing laws and the reference tools. Each entry states the document\'s legal status, the articles it interprets and what to do with it.</p>'
              '<p>Application dates are those the consolidated text carries after the Digital Omnibus on AI, in force since 27 July 2026: the high-risk chapter applies from 2 December 2027 for Annex III systems and 2 August 2028 for Annex I systems, the Article 50 transparency duties for systems placed on the market before 2 August 2026 apply from 2 December 2026, and the two new prohibitions in Article 5(1)(ba) and (bb) apply from 2 December 2026. Guidance marked draft or consultation is not final. Where a page could not be reached the entry is marked. The number in brackets is the source number; the list at the end gives the URL for every provision and document.</p>'
              '<h2 class="sub">Structure of the Act</h2>' + structure_table() +
              '<h2 class="sub">Application dates at a glance</h2>' + glance_table() +
@@ -185,7 +185,7 @@ def build():
         for a in items:
             b.append(art_entry(a))
         b.append("</section>")
-    b.append('<section class="partdiv"><h1>Part 2: guidance and implementation</h1><p class="lede">%d documents around the Act as of %s, grouped by kind and listed alphabetically within each group.</p></section>' % (len(CORPUS), DATE))
+    b.append('<section class="partdiv"><h1>Part 2: guidance and implementation</h1><p class="lede">%d documents around the Act as of %s, with one report added on 28 September 2026, grouped by kind and listed alphabetically within each group.</p></section>' % (len(CORPUS), DATE))
     for g in CORPUS_GROUPS:
         items = sorted([c for c in CORPUS if c["group"] == g], key=lambda c: c["title"])
         if not items:
@@ -211,6 +211,6 @@ def build():
 if __name__ == "__main__":
     p = build()
     from weasyprint import HTML
-    out = "/mnt/user-data/outputs/ai-act-digest-2026-09-19.pdf"
+    out = os.environ.get("PDFOUT", "/mnt/user-data/outputs/ai-act-digest-2026-09-28.pdf")
     HTML(p).write_pdf(out)
     print("pdf", out, os.path.getsize(out), "em dashes:", open(p, encoding="utf-8").read().count("\u2014"))

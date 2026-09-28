@@ -47,7 +47,7 @@ CORPUS_GROUPS = OrderedDict([
     ("Codes of practice and templates", ["code-of-practice", "template"]),
     ("Governance, enforcement and policy", ["policy"]),
     ("Standards", ["standards"]),
-    ("EDPB and EDPS", ["edpb-edps"]),
+    ("Data protection authorities", ["edpb-edps", "national-dpa"]),
     ("National implementation", ["national-law"]),
     ("Reference tools", ["reference-tool"]),
 ])
@@ -280,7 +280,7 @@ def build_body():
     out.append('<div class="ai-head">')
     out.append(build_jump())
     out.append('<div class="ai-intro">')
-    out.append('<p>The EU AI Act for study, in two layers. Part 1 is Regulation (EU) 2024/1689 itself as amended by Regulation (EU) 2026/1744, the Digital Omnibus on AI in force since 27 July 2026: all %d articles (the 113 of the original text plus the six the Omnibus inserted) and %d annexes, grouped by chapter, each with a takeaway written from the consolidated text stating what it establishes, who it binds and what to do, its date of application, the recitals that explain it, and a flag on the %d provisions the Omnibus changed. Part 2 is the corpus around the Act as of %s: %d documents, from the Commission\'s guidelines, codes of practice, templates and Q&amp;As through the standardisation programme, EDPB and EDPS opinions including Opinion 28/2024 on AI models, national implementing laws and the reference tools, each with a takeaway and the articles it interprets.</p>' % (n_arts, n_ann, n_omni, DATE, len(CORPUS)))
+    out.append('<p>The EU AI Act for study, in two layers. Part 1 is Regulation (EU) 2024/1689 itself as amended by Regulation (EU) 2026/1744, the Digital Omnibus on AI in force since 27 July 2026: all %d articles (the 113 of the original text plus the six the Omnibus inserted) and %d annexes, grouped by chapter, each with a takeaway written from the consolidated text stating what it establishes, who it binds and what to do, its date of application, the recitals that explain it, and a flag on the %d provisions the Omnibus changed. Part 2 is the corpus around the Act as of %s, with one report added on 28 September 2026: %d documents, from the Commission\'s guidelines, codes of practice, templates and Q&amp;As through the standardisation programme, EDPB and EDPS opinions including Opinion 28/2024 on AI models and a national data protection authority\'s report on supervising AI, national implementing laws and the reference tools, each with a takeaway and the articles it interprets.</p>' % (n_arts, n_ann, n_omni, DATE, len(CORPUS)))
     out.append('<p>Three limits, stated up front. A takeaway is a reading aid and the text governs; every entry links to the source. Application dates are the ones the consolidated text carries under Article 113 after the Omnibus; the high-risk chapter applies from 2 December 2027 for Annex III systems and 2 August 2028 for Annex I systems, not the 2 August 2026 date the original Act set. Guidance marked draft or consultation is not final and may change. None of this is legal advice.</p>')
     out.append('<p class="ai-privacy">Filters, search and the checker run in your browser. Nothing you type is sent anywhere.</p>')
     out.append("</div>")
@@ -332,7 +332,7 @@ def build_body():
             out.append(doc_html(c))
         out.append("</div></details>")
     out.append("</div>")
-    out.append('<p class="ai-sources-note" id="ai-sources-note">Sources: every entry links to its primary page, the AI Act Explorer for the provisions and the issuing body for the documents. The printable digest in the site\'s outputs folder lists all %d numbered sources. Snapshot %s.</p>' % (len(ARTS) + len(CORPUS), DATE))
+    out.append('<p class="ai-sources-note" id="ai-sources-note">Sources: every entry links to its primary page, the AI Act Explorer for the provisions and the issuing body for the documents. The printable digest in the site\'s outputs folder lists all %d numbered sources. Snapshot %s; one report added 28 September 2026.</p>' % (len(ARTS) + len(CORPUS), DATE))
     out.append("</div>")
     out.append("</div>")
     out.append('<div class="ai-step" id="ai-step" role="group" aria-label="Move through the matching entries" hidden><button type="button" class="ai-step-btn" id="ai-prev" title="Previous matching entry" aria-label="Previous match"><i class="fas fa-chevron-up"></i><span>Prev</span></button><span class="ai-step-n" id="ai-step-n">-</span><button type="button" class="ai-step-btn" id="ai-next" title="Next matching entry" aria-label="Next match"><i class="fas fa-chevron-down"></i><span>Next</span></button></div>')
@@ -1002,7 +1002,7 @@ TAIL = """
 if __name__ == "__main__":
     page = HEAD + build_body() + TAIL % (JS + CHECKER_JS)
     page = page.replace("\r\n", "\n")
-    outdir = "/mnt/user-data/outputs/site"
+    outdir = os.environ.get("OUTDIR", "/mnt/user-data/outputs/site")
     os.makedirs(outdir + "/pages/ai-act-digest", exist_ok=True)
     open(outdir + "/ai-act-digest.html", "w", encoding="utf-8", newline="\n").write(page)
     open(outdir + "/pages/ai-act-digest/ai-act-digest.css", "w", encoding="utf-8", newline="\n").write(CSS + SUMMARY_CSS + CHECKER_CSS)

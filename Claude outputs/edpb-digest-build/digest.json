@@ -1,5 +1,23 @@
 [
  {
+  "id": 543,
+  "title": "Guidelines 3/2025 on the interplay between the Digital Services Act and the GDPR",
+  "type": "Guideline",
+  "date": "17 September 2026",
+  "url": "https://www.edpb.europa.eu/documents/guideline/guidelines-32025-on-the-interplay-between-the-dsa-and-the-gdpr_en",
+  "rating": "B",
+  "where": "Topic 15 digital products: platforms and marketplaces",
+  "takeaway": "The DSA supplies no GDPR legal basis of its own: the Article 26 advertising transparency duty is not a basis for choosing which advert reaches whom. Adverts based on profiling with special category data, inferred data included, are banned even where an Article 9(2) exception would apply; recommender options must be presented equally, with no background profiling while the non-profiling option is on; and a systemic risk found under Articles 34 and 35 makes a DPIA likely to be mandatory. Applies to intermediary services, online platforms and very large platforms and search engines acting as controllers or processors. Final version of 17 September 2026, replacing the 2025 consultation draft; check ad targeting, recommender systems and risk assessments against both laws.",
+  "status": "current",
+  "topics": [
+   "marketing",
+   "lawful-basis",
+   "dpia"
+  ],
+  "tier": "written",
+  "source": "edpb-pdf"
+ },
+ {
   "id": 0,
   "title": "Template for Cross-Regulatory Cooperation Agreements",
   "type": "Other guidance",
@@ -7870,20 +7888,6 @@
   "source": "document"
  },
  {
-  "id": 540,
-  "title": "Guidelines 3/2025 on the interplay between the Digital Services Act and the GDPR (version for public consultation)",
-  "type": "Consultation version",
-  "date": "11 September 2025",
-  "url": "https://www.edpb.europa.eu/public-consultations/guidelines-32025-on-the-interplay-between-the-dsa-and-the-gdpr_en",
-  "rating": "B",
-  "where": "Topic 15 digital products: platforms and marketplaces",
-  "takeaway": "The DSA's duties for intermediaries and platforms are performed under the GDPR, not outside it, and the DSA supplies no legal basis of its own: notice-and-action channels should let people report anonymously unless identification is needed, recommender systems on very large platforms must offer a non-profiling option under which no profile is built for future recommendations, targeted advertising may never use special category data and never target minors, and age assurance should avoid methods that identify users unambiguously such as government ID uploads. Supervisory authorities and Digital Services Coordinators cooperate on the overlap. Adopted 11 September 2025, open for consultation 12 September to 31 October 2025; relevant to any marketplace, app or platform in scope of the DSA.",
-  "status": "consultation",
-  "topics": [],
-  "tier": "written",
-  "source": "document"
- },
- {
   "id": 541,
   "title": "Guidelines 01/2025 on pseudonymisation (version for public consultation)",
   "type": "Consultation version",
@@ -7910,5 +7914,21 @@
   "topics": [],
   "tier": "written",
   "source": "document"
+ },
+ {
+  "id": 544,
+  "title": "Guidelines 04/2026 on the application of the power to impose administrative fines in relation to other corrective powers under the GDPR (version for public consultation)",
+  "type": "Consultation version",
+  "date": "17 September 2026",
+  "url": "https://www.edpb.europa.eu/public-consultations/guidelines-042026-on-the-application-of-the-power-to-impose-administrative_en",
+  "rating": "B",
+  "where": "Topic 14 context",
+  "takeaway": "Authorities decide whether to fine in five steps: can the infringement be fined, can this party be fined, was it at least negligent, do the Article 83(2) factors make it minor, and would a fine be effective, proportionate and dissuasive. A minor infringement as a rule draws no fine; any other carries a strong presumption in favour of one, and legal advice rarely excuses negligence. Addressed to supervisory authorities; replaces the WP29 fines guidelines (WP253), complements Guidelines 04/2022 on calculating the amount, and sets which corrective measures a fine can be combined with. Adopted 17 September 2026, open for comment until 13 November 2026; keep evidence of remediation and cooperation, the factors that decide whether an infringement is minor.",
+  "status": "consultation",
+  "topics": [
+   "enforcement"
+  ],
+  "tier": "written",
+  "source": "edpb-pdf"
  }
 ]
