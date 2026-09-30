@@ -13,10 +13,11 @@
 	    API), anything that is not a GET, and range requests (the game
 	    sounds). Those behave exactly as they would with no service worker.
 
-	Bump VERSION to retire every cache at once. It is at v5: v2 shipped the
+	Bump VERSION to retire every cache at once. It is at v6: v2 shipped the
 	consent banner, v3 the phone sheet and the placeholder fix, which had to
 	retire the caches again because v2 was already live by then. v4 and v5 swapped
-	the SA icons for the S-only set. The reason
+	the SA icons for the S-only set, v6 added the Install app menu item to
+	pwa.js. The reason
 	the bump is not optional: pwa.js is a .js asset, so it is served stale while
 	revalidate, and a returning visitor would otherwise have run the previous
 	copy for one more visit. That copy does not load the consent script, and
@@ -24,7 +25,7 @@
 	gap rather than a placeholder. Retiring the caches avoids that one visit.
 */
 
-var VERSION = 'v5';
+var VERSION = 'v6';
 var PAGE_CACHE = 'pages-' + VERSION;
 var ASSET_CACHE = 'assets-' + VERSION;
 var OFFLINE_URL = '/offline.html';
