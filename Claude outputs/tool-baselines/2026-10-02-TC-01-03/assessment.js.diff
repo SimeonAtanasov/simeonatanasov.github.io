@@ -1,0 +1,823 @@
+--- "Claude outputs/tool-baselines/2026-10-02-TC-01-03/assessment.js"	2026-09-19 21:02:05.000000000 +0000
++++ pages/privacy-ai-assessment/assessment.js	2026-10-02 21:46:49.477926600 +0000
+@@ -2538,6 +2538,785 @@
+ 	}
+ 
+ 	/* =================================================================
++	 *  ADDED 2026-10-02 (tool change log TC-01, TC-02, TC-03).
++	 *  Three additive modules. They read the shared vocabularies above
++	 *  but change none of them, and none of the six earlier modules
++	 *  reads anything defined here.
++	 * ================================================================= */
++
++	var AIA_ART27_URL = "https://eur-lex.europa.eu/eli/reg/2024/1689/oj";
++	var EDPB_REC_01_2020_URL = "https://www.edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en";
++	var NIST_AI_600_1_URL = "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf";
++	var OWASP_LLM_URL = "https://genai.owasp.org/llm-top-10/";
++	var MITRE_ATLAS_URL = "https://atlas.mitre.org/";
++
++	/* ---------------- TC-01: FUNDAMENTAL RIGHTS IMPACT ASSESSMENT ----------------
++	 * EU AI Act Article 27. Steps follow the six elements of Art. 27(1)(a) to (f),
++	 * preceded by an applicability screen (who has to do one) and followed by the
++	 * DPIA link of Art. 27(4) and the notification of Art. 27(3). */
++
++	var FRIA_ANNEX_III = [
++		"1. Biometrics (remote identification, categorisation, emotion recognition)",
++		"2. Critical infrastructure (safety components)",
++		"3. Education and vocational training",
++		"4. Employment, workers' management and access to self-employment",
++		"5(a). Eligibility for public assistance benefits and services",
++		"5(b). Creditworthiness or credit scoring of natural persons (not fraud detection)",
++		"5(c). Risk assessment and pricing in life and health insurance",
++		"5(d). Emergency call evaluation, dispatch and patient triage",
++		"6. Law enforcement",
++		"7. Migration, asylum and border control",
++		"8. Administration of justice and democratic processes",
++		"Not an Annex III high-risk system",
++		"Not sure"
++	];
++
++	var FRIA_DEPLOYER_TYPES = [
++		"Body governed by public law",
++		"Private entity providing public services",
++		"Other private entity"
++	];
++
++	var FRIA_AFFECTED = [
++		"Job applicants or employees",
++		"Students or learners",
++		"Applicants for or recipients of public benefits",
++		"Consumers or customers",
++		"Patients or people seeking emergency help",
++		"Suspects, defendants or people in contact with law enforcement",
++		"Migrants, asylum seekers or travellers",
++		"Members of the public in a public space",
++		"Other"
++	];
++
++	var FRIA_VULNERABLE = [
++		"Children",
++		"Elderly people",
++		"Persons with disabilities",
++		"People in financial hardship",
++		"People in a dependent position (employees, detainees, asylum seekers)",
++		"Minority or under-represented groups",
++		"Other"
++	];
++
++	// Rights from the EU Charter of Fundamental Rights most often engaged by
++	// Annex III uses. The Article number is the Charter's.
++	var FRIA_RIGHTS = [
++		"Human dignity (Art. 1)",
++		"Respect for private and family life (Art. 7)",
++		"Protection of personal data (Art. 8)",
++		"Freedom of expression and information (Art. 11)",
++		"Freedom of assembly and association (Art. 12)",
++		"Right to education (Art. 14)",
++		"Freedom to choose an occupation and right to work (Art. 15)",
++		"Right to asylum and protection on removal (Arts. 18 and 19)",
++		"Non-discrimination (Art. 21)",
++		"Equality between women and men (Art. 23)",
++		"Rights of the child (Art. 24)",
++		"Rights of the elderly (Art. 25)",
++		"Integration of persons with disabilities (Art. 26)",
++		"Fair and just working conditions (Art. 31)",
++		"Social security and social assistance (Art. 34)",
++		"Health care (Art. 35)",
++		"Consumer protection (Art. 38)",
++		"Right to good administration (Art. 41)",
++		"Right to an effective remedy and to a fair trial (Art. 47)",
++		"Presumption of innocence and right of defence (Art. 48)"
++	];
++
++	var FRIA_SEVERITY = [
++		"Negligible - a minor, short-lived effect on the right that people overcome without difficulty",
++		"Limited - a real interference people can overcome with some difficulty",
++		"Significant - a serious interference that is hard to reverse or affects many people",
++		"Maximum - an irreversible interference, or one that denies access to an essential service, liberty or livelihood"
++	];
++	var FRIA_LIKELIHOOD = [
++		"Negligible - it does not seem possible in this deployment",
++		"Limited - it seems unlikely in this deployment",
++		"Significant - it seems possible in this deployment",
++		"Maximum - it is expected to happen in this deployment"
++	];
++
++	function friaApplicability(a) {
++		var area = a.annexIIIArea || "";
++		if (!area) return { status: "Not determined", detail: "Select the Annex III area first." };
++		if (area === "Not sure") return { status: "Check", detail: "Confirm whether the system is high-risk under Annex III before relying on this result." };
++		if (area === "Not an Annex III high-risk system") return { status: "Not required", detail: "Article 27 applies only to high-risk systems under Article 6(2), that is the Annex III list. You can still use this assessment voluntarily." };
++		if (area.indexOf("2.") === 0) return { status: "Not required", detail: "Article 27(1) excludes systems intended for use in the critical infrastructure area of Annex III point 2." };
++		if (area.indexOf("5(b)") === 0 || area.indexOf("5(c)") === 0) return { status: "Required", detail: "Every deployer of a system under Annex III point 5(b) or 5(c) must carry out a FRIA, whether public or private." };
++		if (a.deployerType === "Body governed by public law" || a.deployerType === "Private entity providing public services") {
++			return { status: "Required", detail: "Bodies governed by public law and private entities providing public services must carry out a FRIA before deploying an Annex III high-risk system." };
++		}
++		if (a.deployerType === "Other private entity") return { status: "Not required", detail: "A private deployer that does not provide public services is not in scope of Article 27 for this Annex III area. A DPIA may still be required under the GDPR." };
++		return { status: "Not determined", detail: "Select the type of deployer." };
++	}
++
++	var FRIA_STEPS = [
++		{
++			key: "scope",
++			title: "Scope and applicability",
++			intro: "Article 27 requires certain deployers of high-risk AI systems to assess the impact on fundamental rights before first use. The obligation sits with the deployer, not the provider, and applies with the other Annex III high-risk obligations, from 2 December 2027 (Regulation (EU) 2026/1744).",
++			sources: [{ label: "EU AI Act, Article 27", url: AIA_ART27_URL }],
++			questions: [
++				{ id: "name", type: "text", label: "AI system and deployment name" },
++				{ id: "description", type: "textarea", label: "What the system does and the decision or process it supports" },
++				{ id: "deployerType", type: "select", label: "What kind of deployer are you?", options: FRIA_DEPLOYER_TYPES },
++				{ id: "annexIIIArea", type: "select", label: "Which Annex III area does the intended purpose fall under?", options: FRIA_ANNEX_III },
++				{ id: "provider", type: "text", label: "Provider of the system, and the version or release assessed" },
++				{ id: "firstUseDate", type: "date", label: "Planned date of first use" }
++			]
++		},
++		{
++			key: "process",
++			title: "Process, period and frequency",
++			intro: "Article 27(1)(a) and (b): describe the deployer's process the system is used in, in line with its intended purpose, and how long and how often it is used.",
++			questions: [
++				{ id: "deployerProcess", type: "textarea", label: "Describe the process in which the system is used, who uses it, and what happens to its output" },
++				{ id: "intendedPurposeAligned", type: "select", label: "Is the use within the intended purpose stated in the provider's instructions for use?", options: ["Yes", "Partially", "No", "Not sure"],
++					note: { label: "Where does the use go beyond the stated purpose?", visibleIf: function (v) { return v === "Partially" || v === "No" || v === "Not sure"; } } },
++				{ id: "usePeriod", type: "text", label: "Period of use (for example a pilot of six months, or indefinite)" },
++				{ id: "useFrequency", type: "select", label: "How often is the system used on individuals?", options: ["Occasionally", "Regularly (daily or weekly)", "Continuously or for every case"] }
++			]
++		},
++		{
++			key: "affected",
++			title: "People affected",
++			intro: "Article 27(1)(c): the categories of natural persons and groups likely to be affected by its use in this specific context.",
++			questions: [
++				{ id: "affectedCategories", type: "multiselect", label: "Who is affected by the system's output?", options: FRIA_AFFECTED,
++					note: { label: "Specify", visibleIf: function (v) { return (v || []).indexOf("Other") !== -1; } } },
++				{ id: "friaVulnerable", type: "multiselect", label: "Are any of them in a vulnerable situation? Leave blank if none.", options: FRIA_VULNERABLE,
++					note: { label: "Specify", visibleIf: function (v) { return (v || []).indexOf("Other") !== -1; } } },
++				{ id: "affectedScale", type: "select", label: "Roughly how many people are affected each year?", options: ["Fewer than 100", "100 to 10,000", "10,000 to 1 million", "More than 1 million"] },
++				{ id: "affectedAware", type: "select", label: "Are affected people told that a high-risk AI system is used in decisions about them (Article 26(11))?", options: ["Yes", "Planned", "No"] }
++			]
++		},
++		{
++			key: "risks",
++			title: "Risks of harm to rights",
++			intro: "Article 27(1)(d): the specific risks of harm likely to affect those people, taking into account the information the provider gives under Article 13. Rate the worst credible case before any of the measures in the next steps.",
++			questions: [
++				{ id: "rightsAtRisk", type: "multiselect", label: "Which fundamental rights could the system interfere with?", options: FRIA_RIGHTS },
++				{ id: "harmsDescription", type: "textarea", label: "Describe the specific harms: what could go wrong, for whom, and how it would show up (a wrongful refusal, a biased score, an intrusive inference)" },
++				{ id: "providerInfoReviewed", type: "select", label: "Have the provider's instructions for use been reviewed, including known limitations, accuracy levels and foreseeable misuse?", options: ["Yes", "Partially", "No"] },
++				{ id: "biasEvaluated", type: "select", label: "Has the output been checked for different error rates or outcomes across groups in your own population?", options: ["Yes", "Planned", "No", "Not possible with the data available"],
++					note: { label: "What was found, or why it cannot be done?", visibleIf: function (v) { return !!v; } } },
++				{ id: "friaInherentSeverity", type: "select", label: "Inherent severity: how serious would the interference be?", options: FRIA_SEVERITY },
++				{ id: "friaInherentLikelihood", type: "select", label: "Inherent likelihood: how likely is it in this deployment?", options: FRIA_LIKELIHOOD }
++			]
++		},
++		{
++			key: "oversight",
++			title: "Human oversight",
++			intro: "Article 27(1)(e): how the human oversight measures in the instructions for use are implemented. Article 26(2) requires the people assigned to have the competence, training, authority and support they need.",
++			questions: [
++				{ id: "oversightAssigned", type: "yesno", label: "Are named people or roles assigned to oversee the system's output?",
++					note: { label: "Which roles?", visibleIf: function (v) { return v === "Yes"; } } },
++				{ id: "oversightCompetence", type: "select", label: "Do they have the competence, training and authority to disregard or override the output?", options: ["Yes", "Partially", "No"] },
++				{ id: "oversightMode", type: "select", label: "When does a human act on an individual case?", options: ["Before every decision takes effect", "On flagged or contested cases only", "After the fact, by sampling", "No human review"] },
++				{ id: "automationBias", type: "select", label: "Are reviewers protected against automation bias (output shown with its confidence and limitations, a reason required to follow it in sensitive cases, workload that allows real review)?", options: ["Yes", "Partially", "No"] }
++			]
++		},
++		{
++			key: "measures",
++			title: "Measures, governance and complaints",
++			intro: "Article 27(1)(f): the measures to take if the risks materialise, including internal governance and complaint mechanisms.",
++			questions: [
++				{ id: "mitigationMeasures", type: "textarea", label: "Which measures reduce the risks identified (thresholds, exclusions, second review, data quality checks, limits on scope)?" },
++				{ id: "materialiseMeasures", type: "textarea", label: "What happens if a risk materialises: who is told, how affected people are contacted, and how decisions are corrected?" },
++				{ id: "suspensionProcess", type: "select", label: "Is there a process to suspend use and inform the provider and the authority where the system presents a risk or a serious incident occurs (Article 26(5))?", options: ["Yes", "Partially", "No"] },
++				{ id: "complaintMechanism", type: "select", label: "Can affected people complain or contest an outcome?", options: ["Yes", "Planned", "No"] },
++				{ id: "explanationProcess", type: "select", label: "Can you give an affected person a clear explanation of the role the system played in a decision about them (Article 86)?", options: ["Yes", "Planned", "No"] },
++				{ id: "friaGovernance", type: "text", label: "Who owns the FRIA and approves the deployment?" },
++				{ id: "friaResidualSeverity", type: "select", label: "Residual severity, with every measure above in place", options: FRIA_SEVERITY },
++				{ id: "friaResidualLikelihood", type: "select", label: "Residual likelihood, with every measure above in place", options: FRIA_LIKELIHOOD }
++			]
++		},
++		{
++			key: "links",
++			title: "DPIA link, notification and review",
++			intro: "Article 27(4): where a DPIA under Article 35 GDPR already covers some of these points, the FRIA complements it rather than repeating it. Article 27(3): the deployer notifies the market surveillance authority of the results using the AI Office template.",
++			questions: [
++				{ id: "friaDpia", type: "select", label: "Has a DPIA been carried out for the same processing?", options: ["Yes", "In progress", "No", "Not applicable (no personal data)"],
++					note: { label: "Reference or date of the DPIA", visibleIf: function (v) { return v === "Yes" || v === "In progress"; } } },
++				{ id: "priorAssessmentReused", type: "select", label: "Does this assessment rely on an earlier FRIA or an impact assessment by the provider (Article 27(2))?", options: ["No", "Yes, and it still reflects this deployment", "Yes, but the deployment has changed"] },
++				{ id: "authorityNotified", type: "select", label: "Has the market surveillance authority been notified of the results?", options: ["Yes", "Not yet", "Exempt under Article 46(1)"] },
++				{ id: "friaReviewDate", type: "date", label: "Next review date, or when any element above changes" }
++			]
++		}
++	];
++
++	function friaResult(a) {
++		var app = friaApplicability(a);
++		var factors = [];
++		var inh = riskLevelFor(FRIA_SEVERITY.indexOf(a.friaInherentSeverity), FRIA_LIKELIHOOD.indexOf(a.friaInherentLikelihood));
++		var res = riskLevelFor(FRIA_SEVERITY.indexOf(a.friaResidualSeverity), FRIA_LIKELIHOOD.indexOf(a.friaResidualLikelihood));
++
++		if (app.status === "Check") factors.push({ title: "Classification not settled", detail: app.detail, severity: "high" });
++		if (a.intendedPurposeAligned === "No") factors.push({ title: "Use outside the intended purpose", detail: "Using a high-risk system outside its intended purpose can make the deployer a provider under Article 25(1)(c), with the full provider obligations. Bring the use back within the instructions or take legal advice.", severity: "high" });
++		else if (a.intendedPurposeAligned === "Partially" || a.intendedPurposeAligned === "Not sure") factors.push({ title: "Intended purpose not confirmed", detail: "Check the use against the provider's instructions for use. A use beyond the intended purpose can shift provider obligations to you.", severity: "medium" });
++		if (!(a.affectedCategories || []).length) factors.push({ title: "Affected people not identified", detail: "Article 27(1)(c) requires the categories of people and groups likely to be affected.", severity: "medium" });
++		if (a.affectedAware === "No") factors.push({ title: "People are not told", detail: "Deployers of Annex III systems that make or assist decisions about natural persons must inform them that they are subject to the system (Article 26(11)).", severity: "medium" });
++		if (!(a.rightsAtRisk || []).length) factors.push({ title: "No rights identified", detail: "An Annex III use almost always engages at least non-discrimination and data protection. Record which rights are engaged, even where the risk is low.", severity: "medium" });
++		if (a.providerInfoReviewed === "No" || a.providerInfoReviewed === "Partially") factors.push({ title: "Provider information not fully reviewed", detail: "Article 27(1)(d) requires the risk analysis to take the provider's Article 13 information into account: limitations, accuracy and foreseeable misuse.", severity: "medium" });
++		if (a.biasEvaluated === "No") factors.push({ title: "No check for unequal outcomes", detail: "Without checking error rates or outcomes across groups in your own population, a non-discrimination risk cannot be rated with confidence.", severity: "medium" });
++		if (!inh) factors.push({ title: "Inherent risk not rated", detail: "Rate severity and likelihood so the effect of the measures can be shown.", severity: "low" });
++		if (a.oversightAssigned !== "Yes") factors.push({ title: "No assigned human oversight", detail: "Article 26(2) requires the deployer to assign human oversight to people with the necessary competence, training and authority.", severity: "high" });
++		else if (a.oversightCompetence === "No" || a.oversightCompetence === "Partially") factors.push({ title: "Oversight without full competence or authority", detail: "Oversight only counts if the people assigned can understand the output and are empowered to disregard or override it.", severity: "medium" });
++		if (a.oversightMode === "No human review") factors.push({ title: "No human review of individual cases", detail: "Describe the oversight measures from the instructions for use and how they are implemented (Article 27(1)(e)). Where decisions have legal or similarly significant effects, Article 22 GDPR applies as well.", severity: "high" });
++		if (a.automationBias === "No") factors.push({ title: "Automation bias not addressed", detail: "Article 14(4)(b) expects oversight that stays aware of the tendency to over-rely on the output.", severity: "medium" });
++		if (!a.materialiseMeasures) factors.push({ title: "No plan for when a risk materialises", detail: "Article 27(1)(f) requires the measures to take if the risks materialise.", severity: "medium" });
++		if (a.suspensionProcess === "No") factors.push({ title: "No suspension and reporting process", detail: "Article 26(5) requires deployers to inform the provider and the authority and suspend use where the system presents a risk, and to report serious incidents.", severity: "medium" });
++		if (a.complaintMechanism === "No") factors.push({ title: "No complaint mechanism", detail: "Article 27(1)(f) names complaint mechanisms explicitly. Give affected people a way to contest an outcome.", severity: "high" });
++		if (a.explanationProcess === "No") factors.push({ title: "No way to explain decisions", detail: "Article 86 gives affected people a right to a clear and meaningful explanation of the system's role in decisions with legal or similarly significant effects.", severity: "medium" });
++		if (a.friaDpia === "No") factors.push({ title: "No DPIA alongside the FRIA", detail: "Where personal data is processed, an Annex III use will almost always need a DPIA. Article 27(4) lets the FRIA complement it rather than repeat it.", severity: "medium" });
++		if (a.priorAssessmentReused === "Yes, but the deployment has changed") factors.push({ title: "Earlier assessment out of date", detail: "Article 27(2) requires the assessment to be updated where any of its elements has changed.", severity: "medium" });
++		if (app.status === "Required" && a.authorityNotified === "Not yet") factors.push({ title: "Authority not yet notified", detail: "Notify the market surveillance authority of the results, using the AI Office template, before first use (Article 27(3)).", severity: "medium" });
++		// RISK_MATRIX also produces "Very High", which LEVELS does not hold.
++		var ORDER = ["Low", "Medium", "High", "Very High"];
++		if (inh && res && ORDER.indexOf(res) > ORDER.indexOf(inh)) factors.push({ title: "Residual above inherent", detail: "The residual rating is higher than the inherent one. Check both ratings.", severity: "medium" });
++		if (res === "High" || res === "Very High") factors.push({ title: "High residual risk to rights", detail: "Do not deploy until further measures bring the risk down, or the decision to accept it is taken and recorded at the right level.", severity: "high" });
++
++		var level = res || inh || "Not rated";
++		var verdict = "FRIA " + app.status.toLowerCase() + (res ? " - residual risk " + res.toLowerCase() : (inh ? " - inherent risk " + inh.toLowerCase() : ""));
++		return {
++			badgeLevel: (res || inh) === "Very High" ? "High" : (res || inh || "Not Applicable"),
++			badgeText: verdict,
++			verdictDetail: app.detail,
++			stats: [
++				["Applicability", app.status, "Article 27(1)"],
++				["Inherent risk", inh || "Not rated", "before measures"],
++				["Residual risk", res || "Not rated", "with every measure in place"],
++				["Rights engaged", String((a.rightsAtRisk || []).length), "from the Charter"]
++			],
++			tables: [],
++			factors: factors,
++			help: "This follows the elements of Article 27(1) and is decision support, not a legal determination. The severity and likelihood bands use the same matrix as the Full DPIA. The AI Office template, once published, is the format for notifying the authority.",
++			historyLabel: verdict,
++			level: level
++		};
++	}
++
++	/* ---------------- TC-03: GENERATIVE AI RISK ASSESSMENT ----------------
++	 * Questions are written once and mapped to two published lists: the twelve
++	 * risks of the NIST Generative AI Profile (NIST AI 600-1) and the OWASP Top
++	 * 10 for LLM Applications (2025). MITRE ATLAS is used for threat modelling.
++	 * Each check below names the question it reads, the answers that count as
++	 * a gap, and what it maps to. The coverage tables are derived from these. */
++
++	var NIST_GAI_RISKS = [
++		"CBRN information or capabilities",
++		"Confabulation",
++		"Dangerous, violent or hateful content",
++		"Data privacy",
++		"Environmental impacts",
++		"Harmful bias and homogenization",
++		"Human-AI configuration",
++		"Information integrity",
++		"Information security",
++		"Intellectual property",
++		"Obscene, degrading and/or abusive content",
++		"Value chain and component integration"
++	];
++
++	var OWASP_LLM = [
++		"LLM01 Prompt Injection",
++		"LLM02 Sensitive Information Disclosure",
++		"LLM03 Supply Chain",
++		"LLM04 Data and Model Poisoning",
++		"LLM05 Improper Output Handling",
++		"LLM06 Excessive Agency",
++		"LLM07 System Prompt Leakage",
++		"LLM08 Vector and Embedding Weaknesses",
++		"LLM09 Misinformation",
++		"LLM10 Unbounded Consumption"
++	];
++
++	var GAI_PATTERNS = [
++		"Internal assistant or chat",
++		"Customer-facing chat or assistant",
++		"Search or question answering over our own documents (RAG)",
++		"Agent that calls tools or other systems",
++		"Content generation (text, images, audio, video)",
++		"Code generation"
++	];
++
++	var GAI_PROMPT_DATA = [
++		"Personal data",
++		"Special category data",
++		"Confidential business information",
++		"Source code or credentials",
++		"None of these"
++	];
++
++	function gaiHasRag(a) { return (a.gaiPatterns || []).indexOf(GAI_PATTERNS[2]) !== -1; }
++	function gaiHasAgent(a) { return (a.gaiPatterns || []).indexOf(GAI_PATTERNS[3]) !== -1; }
++	function gaiPublicFacing(a) { return (a.gaiPatterns || []).indexOf(GAI_PATTERNS[1]) !== -1 || a.gaiUsers === "The public"; }
++	function gaiPersonalData(a) { var d = a.gaiPromptData || []; return d.indexOf("Personal data") !== -1 || d.indexOf("Special category data") !== -1; }
++
++	var GAI_STEPS = [
++		{
++			key: "profile",
++			title: "System profile",
++			intro: "Describe the generative AI system as it is deployed. The answers decide which of the later questions apply. For the EU AI Act classification of the same system, use the AI Risk Assessment; this tool covers the risks specific to generative models.",
++			sources: [
++				{ label: "NIST AI 600-1, Generative AI Profile", url: NIST_AI_600_1_URL },
++				{ label: "OWASP Top 10 for LLM Applications", url: OWASP_LLM_URL },
++				{ label: "MITRE ATLAS", url: MITRE_ATLAS_URL }
++			],
++			questions: [
++				{ id: "name", type: "text", label: "System or use case name" },
++				{ id: "description", type: "textarea", label: "What it does, for whom, and what it is connected to" },
++				{ id: "gaiPatterns", type: "multiselect", label: "Which patterns describe it?", options: GAI_PATTERNS },
++				{ id: "gaiModelSource", type: "select", label: "Where does the model come from?", options: ["Third-party model through an API", "Open-weight model we host", "Third-party or open model we fine-tuned", "Model we trained ourselves"] },
++				{ id: "gaiUsers", type: "select", label: "Who uses it?", options: ["Staff only", "Selected business partners", "The public"] },
++				{ id: "gaiPromptData", type: "multiselect", label: "What can end up in prompts, retrieved context or outputs?", options: GAI_PROMPT_DATA }
++			]
++		},
++		{
++			key: "input",
++			title: "Inputs and prompts",
++			intro: "Prompt injection is the top item on the OWASP list: instructions hidden in user input or in content the system reads can override its own instructions.",
++			questions: [
++				{ id: "gaiUntrustedContent", type: "yesno", label: "Does the system read content it does not control (web pages, emails, uploaded files, third-party documents)?" },
++				{ id: "gaiInjectionTested", type: "select", label: "Has it been tested against direct and indirect prompt injection?", options: ["Yes, before release and on every major change", "Once", "No"] },
++				{ id: "gaiSystemPromptSecrets", type: "select", label: "Does the system prompt or configuration hold secrets, credentials, or access rules the model is trusted to enforce?", options: ["No", "Yes", "Not sure"] },
++				{ id: "gaiInputFiltering", type: "select", label: "Are inputs screened before they reach the model (length limits, known attack patterns, content classification)?", options: ["Yes", "Partially", "No"] }
++			]
++		},
++		{
++			key: "data",
++			title: "Data, privacy and intellectual property",
++			questions: [
++				{ id: "gaiProviderUse", type: "select", label: "Can the model provider retain prompts or use them for training?", options: ["No, contractually excluded", "Retained for abuse monitoring only", "Yes", "Not sure", "Not applicable (self-hosted)"] },
++				{ id: "gaiOutputLeakCheck", type: "select", label: "Are outputs checked for personal or confidential data before they are shown or stored?", options: ["Yes", "Partially", "No"] },
++				{ id: "gaiRagPermissions", type: "select", label: "Does retrieval respect each user's own access rights, so the assistant cannot surface a document the user could not open?", options: ["Yes", "Partially", "No"],
++					visibleIf: gaiHasRag },
++				{ id: "gaiEmbeddingStore", type: "select", label: "Is the vector store protected like the source data (access control, encryption, deletion when the source is deleted)?", options: ["Yes", "Partially", "No"],
++					visibleIf: gaiHasRag },
++				{ id: "gaiIpCheck", type: "select", label: "Are outputs used externally checked for third-party copyrighted material, and are the licence terms of the model and its training data understood?", options: ["Yes", "Partially", "No", "Outputs are not used externally"] }
++			]
++		},
++		{
++			key: "output",
++			title: "Outputs and accuracy",
++			intro: "Confabulation (NIST) and misinformation (OWASP) are the same problem seen from two sides: fluent output that is wrong.",
++			questions: [
++				{ id: "gaiOutputHandling", type: "select", label: "Is model output passed to another system (rendered as HTML, run as code or SQL, used in an API call) without validation?", options: ["No, it is validated or only shown as text", "Yes", "Not sure"] },
++				{ id: "gaiGrounding", type: "select", label: "Are answers grounded in sources and shown with citations or a confidence signal?", options: ["Yes", "Partially", "No", "Not applicable"] },
++				{ id: "gaiHumanReview", type: "select", label: "Is output reviewed by a person before it is relied on for a decision or sent outside the organization?", options: ["Always", "For high-impact uses", "No"] },
++				{ id: "gaiContentFilters", type: "select", label: "Are there filters for violent, hateful, abusive, sexual and dangerous (including CBRN) content, in both prompts and outputs?", options: ["Yes, tested", "Yes, provider defaults only", "No"] },
++				{ id: "gaiDisclosure", type: "select", label: "Are people told when they interact with AI, and is synthetic content marked as such (EU AI Act Article 50)?", options: ["Yes", "Partially", "No", "Not applicable"] }
++			]
++		},
++		{
++			key: "agency",
++			title: "Agency, supply chain and consumption",
++			questions: [
++				{ id: "gaiToolPermissions", type: "select", label: "What can the system do through its tools?", options: ["Nothing beyond producing text", "Read-only access", "Limited write actions", "Broad write or transactional actions"],
++					visibleIf: gaiHasAgent },
++				{ id: "gaiApproval", type: "select", label: "Do high-impact actions need human approval?", options: ["Yes", "Some", "No"],
++					visibleIf: function (a) { return gaiHasAgent(a) && (a.gaiToolPermissions === "Limited write actions" || a.gaiToolPermissions === "Broad write or transactional actions"); } },
++				{ id: "gaiProvenance", type: "select", label: "Are the model, its version and its third-party components documented (model card, licence, an AI bill of materials)?", options: ["Yes", "Partially", "No"] },
++				{ id: "gaiTrainingDataVetted", type: "select", label: "Is fine-tuning or training data vetted for poisoning, provenance and quality?", options: ["Yes", "Partially", "No"],
++					visibleIf: function (a) { return a.gaiModelSource === "Third-party or open model we fine-tuned" || a.gaiModelSource === "Model we trained ourselves"; } },
++				{ id: "gaiRateLimits", type: "select", label: "Are there rate limits, token budgets and cost alerts?", options: ["Yes", "Partially", "No"] }
++			]
++		},
++		{
++			key: "testing",
++			title: "Testing, monitoring and people",
++			questions: [
++				{ id: "gaiRedTeam", type: "select", label: "Has the system been red-teamed or adversarially tested?", options: ["Yes, including by people outside the build team", "Yes, internally", "No"] },
++				{ id: "gaiThreatModel", type: "select", label: "Has a threat model been built against the MITRE ATLAS tactics and techniques?", options: ["Yes", "Partially", "No"] },
++				{ id: "gaiBiasEval", type: "select", label: "Have outputs been evaluated for harmful bias or stereotyping across groups?", options: ["Yes", "Partially", "No"] },
++				{ id: "gaiUserGuidance", type: "select", label: "Are users trained on the system's limits, so they do not over-rely on it?", options: ["Yes", "Partially", "No"] },
++				{ id: "gaiMonitoring", type: "select", label: "Are prompts and outputs logged and monitored, with a route for reporting and handling AI incidents?", options: ["Yes", "Partially", "No"] },
++				{ id: "gaiEnergy", type: "select", label: "Is the energy use or carbon footprint of the system known?", options: ["Yes", "Estimated", "No"] }
++			]
++		}
++	];
++
++	// Each check: question id, answers that are a gap (and their severity),
++	// NIST risk indexes and OWASP indexes it maps to, a finding, and an
++	// optional applicability test. A check whose question is unanswered or
++	// hidden counts as "not assessed".
++	var GAI_CHECKS = [
++		{ q: "gaiInjectionTested", gaps: { "No": "high", "Once": "medium" }, nist: [8], owasp: [0], title: "Prompt injection not tested", detail: "Test against direct and indirect injection before release and on every change to the prompt, model or connected content." },
++		{ q: "gaiSystemPromptSecrets", gaps: { "Yes": "high", "Not sure": "medium" }, nist: [8], owasp: [6], title: "Secrets or rules in the system prompt", detail: "Assume the system prompt can be extracted. Move credentials out and enforce access rules outside the model." },
++		{ q: "gaiInputFiltering", gaps: { "No": "medium", "Partially": "low" }, nist: [8, 2], owasp: [0], title: "Inputs not screened", detail: "Screen inputs for length, known attack patterns and harmful content before they reach the model." },
++		{ q: "gaiProviderUse", gaps: { "Yes": "high", "Not sure": "medium" }, nist: [3, 11], owasp: [1], title: "Provider may retain or train on prompts", detail: "Confirm the provider's terms and opt out of training, or keep personal and confidential data out of prompts." },
++		{ q: "gaiOutputLeakCheck", gaps: { "No": "medium", "Partially": "low" }, nist: [3], owasp: [1], title: "Outputs not checked for leakage", detail: "Check outputs for personal and confidential data before they are shown, stored or sent on.", when: function (a) { return gaiPersonalData(a) || (a.gaiPromptData || []).indexOf("Confidential business information") !== -1; } },
++		{ q: "gaiRagPermissions", gaps: { "No": "high", "Partially": "medium" }, nist: [3, 8], owasp: [7, 1], title: "Retrieval ignores user permissions", detail: "Filter retrieved content by the asking user's own access rights, or the assistant becomes a way round them." },
++		{ q: "gaiEmbeddingStore", gaps: { "No": "medium", "Partially": "low" }, nist: [3, 8], owasp: [7], title: "Vector store less protected than its source", detail: "Embeddings can be inverted to recover text. Protect the store like the source and delete entries when the source is deleted." },
++		{ q: "gaiIpCheck", gaps: { "No": "medium", "Partially": "low" }, nist: [9], owasp: [], title: "Intellectual property not checked", detail: "Check outputs used externally for third-party material and confirm the licence terms of the model." },
++		{ q: "gaiOutputHandling", gaps: { "Yes": "high", "Not sure": "medium" }, nist: [8], owasp: [4], title: "Output used without validation", detail: "Treat model output as untrusted input: encode before rendering, and never execute it without validation." },
++		{ q: "gaiGrounding", gaps: { "No": "medium", "Partially": "low" }, nist: [1, 7], owasp: [8], title: "Answers not grounded", detail: "Ground answers in sources and show citations, so users can check what the model asserts." },
++		{ q: "gaiHumanReview", gaps: { "No": "medium" }, nist: [1, 6], owasp: [8], title: "Output relied on without review", detail: "Require human review before output is used for a decision or leaves the organization." },
++		{ q: "gaiContentFilters", gaps: { "No": "high", "Yes, provider defaults only": "low" }, nist: [0, 2, 10], owasp: [], title: "Harmful content not filtered", detail: "Add and test filters for violent, hateful, abusive, sexual and dangerous content in prompts and outputs.", sevIf: function (a, s) { return gaiPublicFacing(a) ? s : (s === "high" ? "medium" : s); } },
++		{ q: "gaiDisclosure", gaps: { "No": "medium", "Partially": "low" }, nist: [7], owasp: [], title: "AI use or synthetic content not disclosed", detail: "Tell people when they interact with AI and mark synthetic content, as Article 50 of the EU AI Act requires where it applies." },
++		{ q: "gaiToolPermissions", gaps: { "Broad write or transactional actions": "medium" }, nist: [6], owasp: [5], title: "Broad tool permissions", detail: "Scope each tool to the minimum the task needs." },
++		{ q: "gaiApproval", gaps: { "No": "high", "Some": "medium" }, nist: [6], owasp: [5], title: "High-impact actions without approval", detail: "Require a human to approve actions that change data, spend money or reach outside the organization." },
++		{ q: "gaiProvenance", gaps: { "No": "medium", "Partially": "low" }, nist: [11], owasp: [2], title: "Model and components not documented", detail: "Record the model, version, licence and third-party components, so a vulnerable or withdrawn component can be found." },
++		{ q: "gaiTrainingDataVetted", gaps: { "No": "high", "Partially": "medium" }, nist: [8, 11], owasp: [3], title: "Training data not vetted", detail: "Vet fine-tuning and training data for provenance, quality and poisoning." },
++		{ q: "gaiRateLimits", gaps: { "No": "medium", "Partially": "low" }, nist: [4], owasp: [9], title: "No limits on consumption", detail: "Set rate limits, token budgets and cost alerts against denial of service and runaway cost." },
++		{ q: "gaiRedTeam", gaps: { "No": "medium" }, nist: [0, 2, 8], owasp: [0], title: "Not red-teamed", detail: "Run adversarial testing before release, ideally including people outside the build team.", sevIf: function (a, s) { return gaiPublicFacing(a) ? "high" : s; } },
++		{ q: "gaiThreatModel", gaps: { "No": "low", "Partially": "low" }, nist: [8], owasp: [], title: "No ATLAS threat model", detail: "Map the system against the MITRE ATLAS tactics to find attack paths the questionnaire does not cover." },
++		{ q: "gaiBiasEval", gaps: { "No": "medium", "Partially": "low" }, nist: [5], owasp: [], title: "Bias not evaluated", detail: "Evaluate outputs for harmful bias and stereotyping across the groups the system serves." },
++		{ q: "gaiUserGuidance", gaps: { "No": "medium", "Partially": "low" }, nist: [6, 1], owasp: [8], title: "Users not trained on limits", detail: "Train users on what the system gets wrong, so they do not over-rely on it." },
++		{ q: "gaiMonitoring", gaps: { "No": "medium", "Partially": "low" }, nist: [7, 8], owasp: [], title: "No monitoring or incident route", detail: "Log prompts and outputs within privacy limits, monitor for misuse, and give AI incidents a reporting route." },
++		{ q: "gaiEnergy", gaps: { "No": "low" }, nist: [4], owasp: [], title: "Energy use unknown", detail: "Estimate the energy use, especially for self-hosted or high-volume systems." }
++	];
++
++	function gaiResult(a) {
++		var visibleIds = {};
++		GAI_STEPS.forEach(function (s) {
++			if (s.visibleIf && !s.visibleIf(a)) return;
++			s.questions.forEach(function (q) { if (!q.visibleIf || q.visibleIf(a)) visibleIds[q.id] = true; });
++		});
++
++		var factors = [];
++		var level = "Low";
++		var nistState = NIST_GAI_RISKS.map(function () { return { gaps: 0, ok: 0, worst: null }; });
++		var owaspState = OWASP_LLM.map(function () { return { gaps: 0, ok: 0, worst: null }; });
++		var SEV_ORDER = ["low", "medium", "high"];
++
++		function mark(list, idxs, sev) {
++			idxs.forEach(function (i) {
++				var s = list[i];
++				if (sev) {
++					s.gaps++;
++					if (!s.worst || SEV_ORDER.indexOf(sev) > SEV_ORDER.indexOf(s.worst)) s.worst = sev;
++				} else {
++					s.ok++;
++				}
++			});
++		}
++
++		GAI_CHECKS.forEach(function (c) {
++			if (!visibleIds[c.q]) return;
++			if (c.when && !c.when(a)) return;
++			var v = a[c.q];
++			if (!v) return;
++			var sev = c.gaps[v] || null;
++			if (sev && c.sevIf) sev = c.sevIf(a, sev);
++			mark(nistState, c.nist, sev);
++			mark(owaspState, c.owasp, sev);
++			if (sev) {
++				factors.push({ title: c.title, detail: c.detail, severity: sev });
++				level = escalate(level, sev === "high" ? "High" : (sev === "medium" ? "Medium" : "Low"));
++			}
++		});
++
++		if (gaiPersonalData(a) && a.gaiProviderUse !== "No, contractually excluded" && a.gaiProviderUse !== "Not applicable (self-hosted)") {
++			factors.push({ title: "Personal data sent to a model provider", detail: "Treat the provider as a processor: data processing terms, transfer safeguards, and a privacy assessment of this use.", severity: "medium" });
++			level = escalate(level, "Medium");
++		}
++
++		factors.sort(function (x, y) { return SEV_ORDER.indexOf(y.severity) - SEV_ORDER.indexOf(x.severity); });
++
++		function status(s) {
++			if (s.gaps) return "Gap (" + s.worst + ")";
++			if (s.ok) return "Addressed";
++			return "Not assessed";
++		}
++		var nistRows = NIST_GAI_RISKS.map(function (r, i) { return [r, status(nistState[i])]; });
++		var owaspRows = OWASP_LLM.map(function (r, i) { return [r, status(owaspState[i])]; });
++		var nistGaps = nistState.filter(function (s) { return s.gaps; }).length;
++		var owaspGaps = owaspState.filter(function (s) { return s.gaps; }).length;
++		var assessed = nistState.filter(function (s) { return s.gaps || s.ok; }).length;
++
++		if (!assessed && !factors.length) {
++			return {
++				badgeLevel: "Not Applicable", badgeText: "Not assessed",
++				verdictDetail: "None of your answers bear on the risks this tool rates, so there is nothing to score. Go back and answer the questions that apply.",
++				stats: [], tables: [], factors: [], help: "",
++				historyLabel: "Not assessed", level: "Not assessed"
++			};
++		}
++		return {
++			badgeLevel: level,
++			badgeText: level + " risk",
++			verdictDetail: level === "High"
++				? "At least one gap is serious enough to fix before release or wider rollout."
++				: (level === "Medium" ? "No blocking gap, but several controls are missing or partial. Plan them with owners and dates." : "No significant gaps from your answers. Re-run after major changes to the model, prompts or connected data."),
++			stats: [
++				["Overall", level, "highest gap found"],
++				["NIST risks with a gap", nistGaps + " of 12", assessed + " assessed"],
++				["OWASP items with a gap", owaspGaps + " of 10", "LLM Top 10, 2025"],
++				["Findings", String(factors.length), "listed below"]
++			],
++			tables: [
++				{ title: "Coverage against the NIST Generative AI Profile", rows: nistRows },
++				{ title: "Coverage against the OWASP Top 10 for LLM Applications", rows: owaspRows }
++			],
++			factors: factors,
++			help: "The mapping of questions to NIST and OWASP items is this tool's own, made for triage. \"Not assessed\" means no question you answered touches that item; it is not a pass. CBRN information is only screened through content filters and red-teaming, and needs specialist review for any model that could provide such information.",
++			historyLabel: level + " risk - " + nistGaps + " NIST / " + owaspGaps + " OWASP gaps",
++			level: level
++		};
++	}
++
++	/* ---------------- TC-02: TRANSFER IMPACT ASSESSMENT ----------------
++	 * The six steps of EDPB Recommendations 01/2020 (version 2.0). Steps 3 and 4
++	 * are skipped where the transfer rests on an adequacy decision or the
++	 * EU-US Data Privacy Framework, with the same rule as tiaNeeded() above. */
++
++	var TIA_TECH_MEASURES = [
++		"Encryption at rest with keys held only by the exporter or in the EEA",
++		"Encryption in transit end to end",
++		"Pseudonymisation, with the additional information held only by the exporter",
++		"Split or multi-party processing, so no single importer can read the data",
++		"Data stays in the EEA; the importer has no access in the clear",
++		"None"
++	];
++	var TIA_CONTRACT_MEASURES = [
++		"Obligation to notify the exporter of any access request, where legally permitted",
++		"Obligation to challenge requests and seek interim measures",
++		"Transparency on the laws and past requests the importer is subject to",
++		"Right for the exporter to suspend or terminate the transfer",
++		"None"
++	];
++	var TIA_ORG_MEASURES = [
++		"Internal policy for handling public authority requests",
++		"Record of requests received and responses given",
++		"Transparency reports published by the importer",
++		"Data minimisation before transfer",
++		"None"
++	];
++
++	function tiaStepsNeeded(a) {
++		return a.tiaTool !== "Adequacy decision" && a.tiaTool !== "EU-US Data Privacy Framework (certified US recipient)";
++	}
++
++	var TIA_STEPS = [
++		{
++			key: "map",
++			title: "Step 1: Know your transfer",
++			intro: "Map the transfer, including onward transfers and remote access. Remote access from a third country is a transfer. Check that the data transferred is adequate, relevant and limited to what is necessary.",
++			sources: [{ label: "EDPB Recommendations 01/2020", url: EDPB_REC_01_2020_URL }],
++			questions: [
++				{ id: "name", type: "text", label: "Transfer name (importer and service)" },
++				{ id: "tiaExporterRole", type: "select", label: "Your role as exporter", options: ["Controller", "Processor"] },
++				{ id: "tiaImporterRole", type: "select", label: "The importer's role", options: ["Controller", "Processor", "Sub-processor"] },
++				{ id: "tiaCountries", type: "multiselect", label: "Destination countries, including where the data can be accessed from", options: COUNTRIES_REGIONS },
++				{ id: "tiaData", type: "multiselect", label: "Categories of data transferred", options: DATA_CATEGORIES },
++				{ id: "tiaFormat", type: "select", label: "How does the importer handle the data?", options: ["Stores or processes it in the clear", "Stores it encrypted, without the keys", "Remote access only, for support or administration", "Receives pseudonymised data only"] },
++				{ id: "tiaOnward", type: "yesno", label: "Will the importer transfer the data on to others (sub-processors, group companies)?",
++					note: { label: "To whom and where?", visibleIf: function (v) { return v === "Yes"; } } },
++				{ id: "tiaMinimised", type: "select", label: "Is the data limited to what the importer needs?", options: ["Yes", "Partially", "No"] }
++			]
++		},
++		{
++			key: "tool",
++			title: "Step 2: Identify the transfer tool",
++			intro: "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are for occasional and non-repetitive transfers and are interpreted strictly.",
++			questions: [
++				{ id: "tiaTool", type: "select", label: "Which tool does the transfer rely on?", options: TRANSFER_SAFEGUARDS },
++				{ id: "tiaDpfScope", type: "select", label: "Does the recipient's Data Privacy Framework certification cover this type of data (for example HR data) and is it active?", options: ["Yes", "No", "Not checked"],
++					visibleIf: function (a) { return a.tiaTool === "EU-US Data Privacy Framework (certified US recipient)"; } },
++				{ id: "tiaSccModule", type: "select", label: "Which module of the standard contractual clauses (Decision 2021/914)?", options: ["Module 1: controller to controller", "Module 2: controller to processor", "Module 3: processor to processor", "Module 4: processor to controller"],
++					visibleIf: function (a) { return /^Standard contractual clauses/.test(a.tiaTool || ""); } },
++				{ id: "tiaSccUnmodified", type: "select", label: "Are the clauses used without changes to their text?", options: ["Yes", "No", "Not sure"],
++					visibleIf: function (a) { return /^Standard contractual clauses/.test(a.tiaTool || ""); } },
++				{ id: "tiaDerogationOccasional", type: "select", label: "Is the transfer occasional and non-repetitive?", options: ["Yes", "No"],
++					visibleIf: function (a) { return a.tiaTool === "Derogation for a specific situation"; } }
++			]
++		},
++		{
++			key: "law",
++			title: "Step 3: Assess the law and practice of the destination",
++			intro: "Assess whether anything in the law or practice of the destination country may undermine the protection of the transfer tool, in the circumstances of this transfer. Use relevant, objective, reliable, verifiable and publicly available sources, and document them.",
++			visibleIf: tiaStepsNeeded,
++			questions: [
++				{ id: "tiaImporterTriggers", type: "multiselect", label: "Do any of these describe the importer? Each one points to surveillance laws that may apply to it.", options: TIA_TRIGGERS },
++				{ id: "tiaPublicAccessLaw", type: "select", label: "Does the destination's law allow public authorities to access the data beyond what is necessary and proportionate in a democratic society, without effective redress?", options: ["No", "Yes", "Unclear"] },
++				{ id: "tiaImporterInScope", type: "select", label: "Is the importer, or the data, likely to fall in scope of those laws?", options: ["No", "Yes", "Unclear"],
++					visibleIf: function (a) { return a.tiaPublicAccessLaw === "Yes" || a.tiaPublicAccessLaw === "Unclear"; } },
++				{ id: "tiaRequestsHistory", type: "select", label: "Has the importer received requests from public authorities for data of this kind?", options: ["No, and it reports this transparently", "Yes", "Unknown"] },
++				{ id: "tiaSources", type: "textarea", label: "Sources used for this assessment (laws, case law, reports of authorities and NGOs, the importer's transparency reports)" }
++			]
++		},
++		{
++			key: "measures",
++			title: "Step 4: Supplementary measures",
++			intro: "Where Step 3 finds a problem, identify measures that bring protection up to the EU standard. Contractual and organisational measures on their own will generally not stop a public authority accessing data in the clear; a technical measure is usually what makes the difference.",
++			visibleIf: tiaStepsNeeded,
++			questions: [
++				{ id: "tiaClearAccess", type: "select", label: "Does the importer need the data in the clear to provide the service?", options: ["No", "Yes"] },
++				{ id: "tiaTechMeasures", type: "multiselect", label: "Technical measures in place", options: TIA_TECH_MEASURES },
++				{ id: "tiaContractMeasures", type: "multiselect", label: "Contractual measures in place", options: TIA_CONTRACT_MEASURES },
++				{ id: "tiaOrgMeasures", type: "multiselect", label: "Organisational measures in place", options: TIA_ORG_MEASURES }
++			]
++		},
++		{
++			key: "procedure",
++			title: "Steps 5 and 6: Procedure and re-evaluation",
++			intro: "Take any formal steps the supplementary measures require, and re-evaluate at appropriate intervals or when the law, the importer or the processing changes.",
++			questions: [
++				{ id: "tiaProcedure", type: "select", label: "Have the procedural steps been completed (clauses signed unmodified, BCRs approved, authority consulted where required)?", options: ["Yes", "In progress", "No", "None needed"] },
++				{ id: "tiaReviewDate", type: "date", label: "Next re-evaluation date" },
++				{ id: "tiaMonitoring", type: "select", label: "Is someone responsible for monitoring legal developments in the destination and changes at the importer?", options: ["Yes", "No"] },
++				{ id: "tiaConclusionNote", type: "textarea", label: "Your conclusion, in your own words" }
++			]
++		}
++	];
++
++	function tiaResult(a) {
++		var factors = [];
++		var outcome, level;
++		var tool = a.tiaTool || "";
++		var full = tiaStepsNeeded(a);
++		var tech = (a.tiaTechMeasures || []).filter(function (m) { return m !== "None"; });
++		var contract = (a.tiaContractMeasures || []).filter(function (m) { return m !== "None"; });
++		var org = (a.tiaOrgMeasures || []).filter(function (m) { return m !== "None"; });
++
++		if (!tool) {
++			outcome = "Incomplete"; level = "Medium";
++			factors.push({ title: "No transfer tool selected", detail: "Step 2 is required before any conclusion can be drawn.", severity: "high" });
++		} else if (tool === "None identified yet") {
++			outcome = "Do not transfer"; level = "High";
++			factors.push({ title: "No transfer tool", detail: "A transfer outside the EEA needs an adequacy decision, an Article 46 safeguard or a valid derogation before it starts.", severity: "high" });
++		} else if (tool === "Adequacy decision") {
++			outcome = "No TIA needed"; level = "Low";
++			factors.push({ title: "Adequacy decision", detail: "Steps 3 and 4 are not needed. Check that the decision covers the destination and, where it is partial, the sector or recipient, and monitor it for changes.", severity: "low" });
++		} else if (tool === "EU-US Data Privacy Framework (certified US recipient)") {
++			if (a.tiaDpfScope === "Yes") {
++				outcome = "No TIA needed"; level = "Low";
++				factors.push({ title: "Data Privacy Framework", detail: "The adequacy decision covers certified recipients only. Re-check the certification on the DPF list at each review.", severity: "low" });
++			} else {
++				outcome = "Check certification"; level = "Medium";
++				factors.push({ title: "Certification not confirmed", detail: "The transfer can rely on the DPF only if the recipient's certification is active and covers this type of data. Otherwise use another tool and complete Steps 3 and 4.", severity: "high" });
++			}
++		} else if (tool === "Derogation for a specific situation") {
++			if (a.tiaDerogationOccasional === "No") {
++				outcome = "Wrong transfer tool"; level = "High";
++				factors.push({ title: "Derogation used for a regular transfer", detail: "Article 49 derogations are for occasional and non-repetitive transfers. A regular transfer needs an Article 46 safeguard.", severity: "high" });
++			} else {
++				outcome = "Derogation, documented"; level = "Medium";
++				factors.push({ title: "Derogation", detail: "Document which Article 49 ground applies and why the transfer is occasional. Derogations are interpreted strictly.", severity: "medium" });
++			}
++		} else {
++			var problem = a.tiaPublicAccessLaw === "Yes" || a.tiaPublicAccessLaw === "Unclear";
++			var inScope = a.tiaImporterInScope === "Yes" || a.tiaImporterInScope === "Unclear";
++			if (!a.tiaPublicAccessLaw) {
++				outcome = "Incomplete"; level = "Medium";
++				factors.push({ title: "Step 3 not completed", detail: "Assess the law and practice of the destination before concluding.", severity: "high" });
++			} else if (!problem || (problem && a.tiaImporterInScope === "No")) {
++				outcome = "Transfer can proceed"; level = "Low";
++				factors.push({ title: "No problematic law or practice found", detail: "The transfer tool can be relied on as it stands. Keep the sources from Step 3 on file and re-evaluate at the date set.", severity: "low" });
++			} else if (inScope && a.tiaClearAccess === "Yes") {
++				outcome = "Do not transfer, or suspend"; level = "High";
++				factors.push({ title: "Clear-text access where public authorities can reach it", detail: "Where the importer needs the data in the clear and is subject to laws that go beyond what is necessary and proportionate, the EDPB found no effective technical measure (use cases 6 and 7). Contractual and organisational measures alone will not close the gap. Do not start the transfer, or suspend it.", severity: "high" });
++			} else if (inScope && tech.length) {
++				outcome = "Proceed with supplementary measures"; level = "Medium";
++				factors.push({ title: "Technical measures carry the transfer", detail: "Document why the technical measures prevent access in the clear, and make sure the keys or additional information never leave the exporter's control.", severity: "medium" });
++			} else {
++				outcome = "Do not transfer, or suspend"; level = "High";
++				factors.push({ title: "No effective technical measure", detail: "Laws of concern apply and no technical measure prevents access in the clear. Add an effective technical measure or do not transfer.", severity: "high" });
++			}
++			if (a.tiaPublicAccessLaw === "Unclear" || a.tiaImporterInScope === "Unclear") factors.push({ title: "Assessment rests on unclear findings", detail: "Unclear answers are treated as a problem. Resolve them with better sources or legal advice.", severity: "medium" });
++			if (problem && inScope && !contract.length) factors.push({ title: "No contractual measures", detail: "Contractual measures do not work alone but support technical ones: notification of requests, an obligation to challenge them, and a right to suspend.", severity: "low" });
++			if (problem && inScope && !org.length) factors.push({ title: "No organisational measures", detail: "Add a policy for handling public authority requests and keep a record of them.", severity: "low" });
++			if (/^Standard contractual clauses/.test(tool) && a.tiaSccUnmodified !== "Yes") factors.push({ title: "Clauses may have been modified", detail: "Changes that contradict the clauses mean they are no longer standard contractual clauses and may need authority approval. Additional clauses must not contradict them.", severity: "medium" });
++			if (!a.tiaSources) factors.push({ title: "Sources not recorded", detail: "Record the sources used in Step 3 so the assessment can be checked and updated.", severity: "low" });
++		}
++
++		if (a.tiaOnward === "Yes") factors.push({ title: "Onward transfers", detail: "Each onward transfer needs the same level of protection. Cover them in this assessment or a separate one.", severity: "medium" });
++		if (a.tiaMinimised === "No") factors.push({ title: "Data not minimised", detail: "Limit the data to what the importer needs before any other measure is considered.", severity: "medium" });
++		if (a.tiaProcedure === "No") factors.push({ title: "Procedural steps open", detail: "Complete Step 5 before the transfer starts.", severity: "medium" });
++		if (!a.tiaReviewDate) factors.push({ title: "No re-evaluation date", detail: "Set a date to re-evaluate (Step 6).", severity: "low" });
++		if (a.tiaMonitoring === "No") factors.push({ title: "No one monitors developments", detail: "Assign responsibility for watching legal changes in the destination and changes at the importer.", severity: "low" });
++
++		return {
++			badgeLevel: level,
++			badgeText: outcome,
++			verdictDetail: !tool ? "No transfer tool selected yet." : full ? "Transfer tool: " + (tool || "not selected") + ". Steps 3 and 4 were assessed." : "Transfer tool: " + tool + ". Steps 3 and 4 do not apply.",
++			stats: [
++				["Outcome", outcome, "EDPB Recommendations 01/2020"],
++				["Transfer tool", tool ? tool.replace(/ \(.*\)$/, "") : "None", full ? "Article 46 or 49" : "Article 45"],
++				["Technical measures", String(tech.length), full ? "in place" : "not needed"],
++				["Destinations", String((a.tiaCountries || []).length), "countries or regions"]
++			],
++			tables: [],
++			factors: factors,
++			help: "This follows the six steps of EDPB Recommendations 01/2020 and is decision support, not legal advice. For transfers from the United Kingdom, the ICO's own transfer risk assessment approach applies alongside the IDTA or the Addendum.",
++			historyLabel: outcome,
++			level: level
++		};
++	}
++
++	// One renderer for the three modules above, so none of the six existing
++	// result renderers is touched.
++	function renderAddedResult(r) {
++		root.appendChild(el("div", { class: "paa-result-head" }, [
++			el("span", { class: "paa-badge " + badgeClass(r.badgeLevel) }, [r.badgeText])
++		]));
++		if (r.verdictDetail) root.appendChild(el("p", { class: "paa-hero-meaning" }, [r.verdictDetail]));
++		if (r.stats.length) {
++			root.appendChild(el("div", { class: "paa-stats" }, r.stats.map(function (s) { return statTile(s[0], s[1], s[2]); })));
++		}
++		root.appendChild(el("div", { class: "paa-result-item" }, [
++			el("h4", {}, ["Findings & recommendations"]),
++			renderFactors(r.factors)
++		]));
++		r.tables.forEach(function (t) {
++			var tbl = el("table", { class: "paa-table" });
++			t.rows.forEach(function (row) {
++				tbl.appendChild(el("tr", {}, row.map(function (c) { return el("td", {}, [c]); })));
++			});
++			root.appendChild(el("div", { class: "paa-result-item" }, [el("h4", {}, [t.title]), tbl]));
++		});
++		if (r.help) root.appendChild(el("p", { class: "paa-help" }, [r.help]));
++	}
++
++	/* Article 27(4): a FRIA complements a DPIA for the same processing. When a
++	 * DPIA is saved on this device, offer to start the FRIA from it. Returns
++	 * false when there is nothing to offer, so the caller starts as usual. */
++	function friaSeedFromDpia(entry) {
++		var d = entry.answers || {};
++		return {
++			name: d.name || "",
++			description: d.description || "",
++			harmsDescription: d.harmsDetail || "",
++			friaDpia: "Yes",
++			friaDpiaNote: "DPIA \"" + (entry.name || "(untitled)") + "\", saved " + new Date(entry.date).toLocaleDateString()
++		};
++	}
++
++	function renderFriaSeedChooser() {
++		var dpias = history().filter(function (h) { return h.moduleId === "dpia"; });
++		if (!dpias.length) return false;
++		root.innerHTML = "";
++		root.className = "";
++		root.appendChild(el("h3", {}, [MODULES.fria.label]));
++		root.appendChild(el("p", {}, ["A DPIA is saved on this device. Under Article 27(4) the FRIA complements the DPIA for the same processing, so you can start from it: the name, description and harms carry over, and the DPIA is recorded as done."]));
++		var table = el("table", { class: "paa-table" });
++		dpias.forEach(function (h) {
++			var b = el("button", { type: "button", class: "button alt small" }, ["Start from this DPIA"]);
++			b.addEventListener("click", function () { startModule("fria", friaSeedFromDpia(h)); });
++			table.appendChild(el("tr", {}, [
++				el("td", {}, [h.name || "(untitled)"]),
++				el("td", {}, [new Date(h.date).toLocaleDateString()]),
++				el("td", {}, [b])
++			]));
++		});
++		root.appendChild(table);
++		var nav = el("div", { class: "paa-nav actions" });
++		var blank = el("button", { type: "button", class: "button" }, ["Start a blank FRIA"]);
++		blank.addEventListener("click", function () { startModule("fria", {}); });
++		var back = el("button", { type: "button", class: "button alt" }, ["Back to overview"]);
++		back.addEventListener("click", goLanding);
++		nav.appendChild(blank);
++		nav.appendChild(back);
++		root.appendChild(nav);
++		scrollToTool();
++		return true;
++	}
++
++	var ADDED_MODULE_IDS = ["fria", "tia", "genai"];
++
++	/* =================================================================
+ 	 *  Generic step-based engine
+ 	 * ================================================================= */
+ 	var MODULES = {
+@@ -2552,7 +3331,13 @@
+ 		incident: { id: "incident", label: "Incident & Breach Severity", steps: INCIDENT_STEPS, compute: incidentResult,
+ 			intro: "Record a privacy incident and, where it qualifies as a personal data breach, score its severity using the published ENISA method - SE = (DPC × EI) + CB - with an analysis of what drives the score and what would change it." },
+ 		tpsa: { id: "tpsa", label: "Third-Party Security Assessment", steps: TPSA_STEPS, compute: tpsaResult,
+-			intro: "A detailed vendor security questionnaire across governance, people, assets, development, access, operations, cryptography, incident response, physical security, continuity and compliance - plus an AI/ML supplement - scored as inherent risk tempered by control maturity, with a full list of gaps to close." }
++			intro: "A detailed vendor security questionnaire across governance, people, assets, development, access, operations, cryptography, incident response, physical security, continuity and compliance - plus an AI/ML supplement - scored as inherent risk tempered by control maturity, with a full list of gaps to close." },
++		fria: { id: "fria", label: "Fundamental Rights Impact Assessment", steps: FRIA_STEPS, compute: friaResult,
++			intro: "The EU AI Act Article 27 assessment for deployers of high-risk systems: who has to do one, the process and the people affected, the risks to their rights before and after mitigation, human oversight, complaints, and the link to the DPIA. Can start from a DPIA saved on this device." },
++		genai: { id: "genai", label: "Generative AI Risk Assessment", steps: GAI_STEPS, compute: gaiResult,
++			intro: "Prompts, data leakage, output handling, agency, supply chain and testing for a generative AI system, with the gaps mapped to the twelve risks of the NIST Generative AI Profile and the OWASP Top 10 for LLM Applications." },
++		tia: { id: "tia", label: "Transfer Impact Assessment", steps: TIA_STEPS, compute: tiaResult,
++			intro: "The six steps of EDPB Recommendations 01/2020 for a transfer outside the EEA: map the transfer, pick the tool, assess the destination's law and practice, choose supplementary measures, and set a re-evaluation date. Ends in a clear proceed, proceed with measures, or do not transfer." }
+ 	};
+ 
+ 	var state = { moduleId: null, stepIndex: 0, answers: {} };
+@@ -2893,6 +3678,7 @@
+ 	}
+ 
+ 	function startModule(id, seed) {
++		if (id === "fria" && seed === undefined && renderFriaSeedChooser()) return;
+ 		state.moduleId = id;
+ 		state.stepIndex = 0;
+ 		state.answers = seed || {};
+@@ -3855,6 +4641,11 @@
+ 				resultLabel: "Residual: " + result.residual + (result.residualProvisional ? " (provisional)" : "") + " - maturity " + result.maturity.tier,
+ 				answers: state.answers, result: result };
+ 			saveHistory(entry);
++		} else if (ADDED_MODULE_IDS.indexOf(state.moduleId) !== -1) {
++			renderAddedResult(result);
++			entry = { moduleId: state.moduleId, name: name, date: new Date().toISOString(),
++				resultLabel: result.historyLabel, answers: state.answers, result: result };
++			saveHistory(entry);
+ 		} else {
+ 			root.appendChild(el("div", { class: "paa-result-head" }, [
+ 				el("span", { class: "paa-badge " + badgeClass(result.regLevel) }, ["Regulatory: " + result.regLevel]),
