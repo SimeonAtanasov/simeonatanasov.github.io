@@ -55,7 +55,8 @@
 	function rowText(r) {
 		return [r.obligation, r.note, r.aia.map(function (a) { return a.label + " " + a.title; }).join(" "),
 			r.iso.map(function (i) { return i + " " + (ISO[i] ? ISO[i].title : ""); }).join(" "),
-			r.nist.map(function (n) { return n + " " + (NIST[n] ? NIST[n].text : ""); }).join(" ")].join(" ").toLowerCase();
+			r.nist.map(function (n) { return n + " " + (NIST[n] ? NIST[n].text : ""); }).join(" "),
+			(r.related || []).map(function (x) { return x.id + " " + x.title; }).join(" ")].join(" ").toLowerCase();
 	}
 
 	/* ---------------- links between views ---------------- */
@@ -163,6 +164,9 @@
 			r.iso.forEach(function (i) { ul1.appendChild(isoRef(i)); });
 			isoCol.appendChild(ul1);
 		} else isoCol.appendChild(el("p", { class: "cw-none", text: "No equivalent." }));
+		(r.related || []).forEach(function (x) {
+			isoCol.appendChild(el("p", { class: "cw-related" }, [el("strong", { text: "Related standard: " }), x.id + ", " + x.title + ". ", el("span", { class: "cw-quote", text: x.note })]));
+		});
 		var nistCol = el("div", { class: "cw-col" }, [el("h4", { text: "NIST AI RMF 1.0" })]);
 		if (r.nist.length) {
 			var ul2 = el("ul", { class: "cw-reflist" });

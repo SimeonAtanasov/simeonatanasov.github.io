@@ -1,6 +1,6 @@
 # Study pack build
 
-Generates `../study-guides/privacy-ai-act-assessments-study-pack-v2.pdf` (161 pages since 3 October 2026, greyscale): the
+Generates `../privacy-ai-act-assessments-study-pack-v2.pdf` (161 pages since 3 October 2026, greyscale): the
 two advice pages plus an authored study layer and the two assessment tools, laid out for
 print.
 
@@ -17,7 +17,6 @@ sandbox, so the PDF could not be rebuilt from the repo.
 | `study_pp.py`, `study_aia.py`, `study_tools.py` | The authored study layer: key takeaways and self-test questions per section. Written by hand, not extracted. |
 | `front.py` | Cover, how to use, and the closing matter. |
 | `assessment.json`, `readiness.json` | The two assessment tools' content, dumped from the source by `dump_assessment.js` (node, `SRC=<assessment.js> OUT=<assessment.json> node dump_assessment.js`) and `dump_readiness.js`. |
-| `pdf_to_md.py` | Converts a digest PDF to a Markdown text version beside it (needs pymupdf4llm). Used for the digest PDFs in `../study-guides/`. |
 | `pack.css` | Print stylesheet, shared with the three digest PDF builders. |
 
 ## Rebuilding
@@ -26,7 +25,7 @@ sandbox, so the PDF could not be rebuilt from the repo.
 
 It writes `pack.html` beside the script and the PDF to `/mnt/user-data/outputs/`. The
 output file is named without `-v2`; the repo copy carries `-v2` because the first build
-was open in another application when the second was written. Copy it over the `-v2` name in `../study-guides/`.
+was open in another application when the second was written. Copy it over the `-v2` name.
 
 The build is deterministic: rebuilding from unchanged inputs reproduces the same text,
 which is how the 20 September edits were confirmed to be the only change.
@@ -62,9 +61,3 @@ step and question counts instead of hard-coding them. Rebuilt text compared with
 previous PDF: Parts 1, 2 and 4 unchanged; the only removed lines are the edited counts,
 two reworded source entries and table of contents page numbers. Before-images of every
 file are in `../tool-baselines/2026-10-03-STUDY-01/`.
-
-## Markdown version
-
-Since 3 October 2026 `build.py` also writes `privacy-ai-act-assessments-study-pack.md`
-beside the PDF, converted by pandoc from `pack.html` (skipped if pandoc is missing). Copy it
-to `../study-guides/` with the `-v2` name, next to the PDF.

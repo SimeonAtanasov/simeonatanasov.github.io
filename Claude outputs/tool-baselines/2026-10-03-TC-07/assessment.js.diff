@@ -1,0 +1,21 @@
+3127c3127
+< 			action = { short: plus ? "Amend agreement + measures" : "Amend agreement", detail: "Amend the existing data processing agreement to incorporate the standard contractual clauses (" + modShort + ")" + tail + ".", severity: "medium" };
+---
+> 			action = { short: plus ? "Amend agreement + measures" : "Amend agreement", detail: "Amend the existing data processing agreement to incorporate the standard contractual clauses (" + modShort + ")" + tail + ". The clauses must prevail over any conflicting term.", severity: "medium" };
+3129c3129
+< 			action = { short: plus ? "New agreement + measures" : "New agreement", detail: "Sign a new data processing agreement incorporating the standard contractual clauses (" + modShort + ")" + tail + ".", severity: "medium" };
+---
+> 			action = { short: plus ? "New agreement + measures" : "New agreement", detail: "Sign the standard contractual clauses (" + modShort + "), on their own or in a new data processing agreement" + tail + ". Modules 2 and 3 already contain the Article 28 terms, so no separate agreement is needed for them.", severity: "medium" };
+3154a3155
+> 				{ id: "tiaImporterGdpr", type: "select", label: "Is the importer's processing itself subject to the GDPR under Article 3(2), for example because it offers goods or services to people in the EU or monitors them there?", options: ["No", "Yes", "Not sure"] },
+3163c3164
+< 			intro: "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are for occasional and non-repetitive transfers and are interpreted strictly.",
+---
+> 			intro: "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are exceptions, interpreted restrictively, and not suited to regular or systematic transfers.",
+3246c3247
+< 				factors.push({ title: "Derogation used for a regular transfer", detail: "Article 49 derogations are for occasional and non-repetitive transfers. A regular transfer needs an Article 46 safeguard.", severity: "high" });
+---
+> 				factors.push({ title: "Derogation used for a regular transfer", detail: "Article 49 derogations are interpreted restrictively and are not suited to regular or systematic transfers. A regular transfer needs an Article 46 safeguard.", severity: "high" });
+3276a3278,3279
+> 		if (a.tiaImporterGdpr === "Yes" && tiaNeedsClauses(a)) factors.push({ title: "Importer subject to the GDPR", detail: "The Commission states that the 2021 standard contractual clauses do not work for importers whose processing is already subject to the GDPR under Article 3(2). Check whether clauses designed for that case have been adopted, and record the approach taken in the meantime.", severity: "medium" });
+> 		else if (a.tiaImporterGdpr === "Not sure" && tiaNeedsClauses(a)) factors.push({ title: "Importer's GDPR status unknown", detail: "Whether the importer is itself subject to the GDPR under Article 3(2) affects which clauses fit. Settle it before signing.", severity: "low" });

@@ -147,6 +147,7 @@ CHEATSHEETS = {
    "Private deployers outside 5(b) and 5(c) are not in scope however sensitive the use. A private employer screening candidates with an Annex III point 4 system needs a DPIA, not a FRIA.",
    "Article 27(4), as amended by Regulation (EU) 2026/1744, lets the FRIA cross-refer to the relevant sections of a DPIA or incorporate them, so nothing is assessed twice. It does not let a DPIA replace a FRIA: the rights beyond data protection still need their own assessment.",
    "Article 46(1) exemptions from conformity assessment also exempt from notifying the authority, which is why the notification question has an exemption answer.",
+   "ISO/IEC 42005:2025 is the method guidance for AI system impact assessments and is cited as a source. It helps with how to assess; it does not tell you who must do a FRIA or that the authority must be notified, which are Article 27's own.",
   ],
  },
  "genai": {
@@ -169,21 +170,24 @@ CHEATSHEETS = {
  },
  "tia": {
   "purpose": "A transfer impact assessment following the six steps of EDPB Recommendations 01/2020.",
-  "shape": "5 screens, 26 questions: know your transfer (step 1), the transfer tool (step 2), the law and practice of the destination (step 3), supplementary measures (step 4), procedure and re-evaluation (steps 5 and 6). Steps 3 and 4 are hidden when the tool is an adequacy decision or the EU-US Data Privacy Framework.",
-  "output": "One of seven outcomes: No TIA needed, Check certification, Transfer can proceed, Proceed with supplementary measures, Do not transfer or suspend, Wrong transfer tool, Incomplete. Plus findings on onward transfers, minimisation, procedure and review.",
+  "shape": "5 screens, 28 questions: know your transfer (step 1), the transfer tool (step 2), the law and practice of the destination (step 3), supplementary measures (step 4), procedure and re-evaluation (steps 5 and 6). Steps 3 and 4 are hidden when the tool is an adequacy decision or the EU-US Data Privacy Framework.",
+  "output": "One of seven outcomes: No TIA needed, Check certification, Transfer can proceed, Proceed with supplementary measures, Do not transfer or suspend, Wrong transfer tool, Incomplete. Plus a contract action for the importer and findings on onward transfers, minimisation, procedure and review.",
   "logic": [
    "Adequacy, or a Data Privacy Framework certification confirmed to be active and to cover the data, ends the assessment at No TIA needed. An unconfirmed certification returns Check certification.",
-   "A derogation used for a regular transfer returns Wrong transfer tool: Article 49 is for occasional and non-repetitive transfers.",
+   "A derogation used for a regular transfer returns Wrong transfer tool: the Article 49 derogations are exceptions, interpreted restrictively, and not suited to regular or systematic transfers.",
    "For an Article 46 tool, step 3 decides. If the destination's law does not allow access beyond what is necessary and proportionate, or the importer is not in scope of it, the transfer can proceed.",
    "If laws of concern apply and the importer needs the data in the clear, the outcome is Do not transfer or suspend, following the EDPB's use cases 6 and 7, where no effective technical measure was found. Contractual and organisational measures alone do not change that.",
    "If laws of concern apply and a technical measure prevents access in the clear (encryption with keys held by the exporter, pseudonymisation with the additional information held by the exporter, split processing), the outcome is Proceed with supplementary measures. Without one, Do not transfer.",
    "Unclear answers in step 3 are treated as a problem, not as a pass.",
+   "The contract action turns the outcome into the work to be done with this importer, from the roles (which module of the clauses) and where the clauses stand today: no change; a new data processing agreement with the clauses; an amendment adding them to an existing agreement; either of those with the supplementary measures; clauses for a controller importer, which need no Article 28 agreement; or do not sign or renew. Run across a transfer inventory, it sorts importers into work queues. Modules 2 and 3 of the 2021 clauses already contain the Article 28 terms, so they can be signed on their own; where they are added to an existing agreement they must prevail over any conflicting term.",
   ],
   "traps": [
    "Remote access from a third country is a transfer, including support and administration access.",
    "Changing the text of the standard contractual clauses in a way that contradicts them means they are no longer standard contractual clauses.",
    "Contractual measures cannot bind a public authority. They support a technical measure; they do not replace one.",
    "Step 6 is a real step: a TIA without a re-evaluation date and an owner watching the destination goes stale silently.",
+   "Adequacy or a confirmed Data Privacy Framework certification removes the need for clauses, not for an Article 28 agreement where the importer is a processor.",
+   "The 2021 clauses do not work for an importer whose processing is itself subject to the GDPR under Article 3(2), as the Commission states in its questions and answers. The tool flags it; check whether clauses for that case have been adopted.",
   ],
  },
 }
@@ -231,6 +235,8 @@ SUITE_SELFTEST = [
   "That none of the answered questions touches those risks, not that they are under control. Not assessed is not a pass; go back and answer the questions that apply."),
  ("Under the Transfer Impact Assessment, an importer is subject to surveillance laws of concern and needs the data in the clear to provide its service. What is the outcome, and why do contractual measures not save it?",
   "Do not transfer, or suspend. The EDPB found no effective technical measure where the importer needs the data in the clear (use cases 6 and 7), and contractual and organisational measures cannot bind a public authority, so they cannot close the gap alone."),
+ ("A controller exports to a processor under an existing data processing agreement that does not contain the 2021 clauses, and step 3 finds no problematic law. What is the contract action?",
+  "Amend the existing data processing agreement to incorporate the standard contractual clauses, Module 2 (controller to processor). Had step 3 found laws of concern with an effective technical measure, the amendment would also carry the supplementary measures."),
  ("Which transfer tools skip steps 3 and 4 of the TIA, and what still has to be checked?",
   "An adequacy decision, and the EU-US Data Privacy Framework for a certified recipient. For the DPF, check that the certification is active and covers the type of data; for a partial adequacy decision, that it covers the sector or recipient."),
 ]
@@ -282,7 +288,7 @@ READINESS_SELFTEST = [
 PACK_SOURCES = [
  "Practical Privacy, site page (practical-privacy.html), as extracted on 19 September 2026.",
  "Practical AI Act Advice, site page (practical-ai-act-advice.html), as extracted on 19 September 2026.",
- "Privacy & AI Assessment tools, source file pages/privacy-ai-assessment/assessment.js (nine tools, 86 steps, 431 questions), as extracted on 19 September 2026, with the three added tools extracted on 2 October 2026.",
+ "Privacy & AI Assessment tools, source file pages/privacy-ai-assessment/assessment.js (nine tools, 86 steps, 433 questions), as extracted on 19 September 2026, with the three added tools extracted on 2 October 2026 and the Transfer Impact Assessment contract action on 3 October 2026.",
  "GDPR Readiness model, source files pages/gdpr-readiness/readiness-data.js and readiness.js (71 activities, 13 categories, 13 scope questions, 37 Articles), as extracted on 19 September 2026.",
  "Regulation (EU) 2016/679 (GDPR), Articles 5, 6, 9, 12, 14, 22, 28, 30, 33 to 36, 44 to 49: https://eur-lex.europa.eu/eli/reg/2016/679/oj",
  "Regulation (EU) 2024/1689 (AI Act) as amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI, in force 27 July 2026): https://eur-lex.europa.eu/eli/reg/2024/1689/oj and https://eur-lex.europa.eu/eli/reg/2026/1744/oj",
@@ -301,6 +307,7 @@ PACK_SOURCES = [
  "Companion verification report, The site against the law, as of 19 September 2026 (site-verification-report-2026-09-19.pdf): what has changed since the pages were written, rated High to Low, with 90 sources.",
  "NIST AI 600-1, Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (July 2024): the twelve risks in the Generative AI Risk Assessment: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
  "MITRE ATLAS, Adversarial Threat Landscape for Artificial-Intelligence Systems: the threat-modelling question in the Generative AI Risk Assessment: https://atlas.mitre.org/",
+ "ISO/IEC 42005:2025, Information technology, Artificial intelligence, AI system impact assessment: the method source cited by the Fundamental Rights Impact Assessment: https://www.iso.org/standard/42005",
 ]
 
 # Reference numbers per cheat sheet (index into PACK_SOURCES, 1-based).
@@ -311,7 +318,7 @@ CHEATSHEET_REFS = {
  "ai": [3, 6],
  "incident": [3, 5, 9, 10, 11],
  "tpsa": [3, 14, 15],
- "fria": [3, 6, 5],
+ "fria": [3, 6, 5, 22],
  "genai": [3, 20, 15, 21, 6],
  "tia": [3, 13, 5],
  "readiness": [4, 5, 17],

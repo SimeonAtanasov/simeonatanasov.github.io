@@ -538,3 +538,17 @@ if __name__ == "__main__":
     pdf = os.path.join(outdir, "privacy-ai-act-assessments-study-pack.pdf")
     HTML(p).write_pdf(pdf)
     print("pdf:", pdf, os.path.getsize(pdf), "bytes")
+
+    # Markdown text version beside the PDF (since 3 October 2026). Needs pandoc.
+    import shutil, subprocess
+    if shutil.which("pandoc"):
+        md = subprocess.run(["pandoc", p, "-f", "html", "-t", "gfm-raw_html", "--wrap=none"],
+                            capture_output=True, text=True, check=True).stdout
+        head, rest = md[:3000], md[3000:]
+        head = re.sub(r"^(\d+)([a-z])", r"\1 \2", head, flags=re.M)
+        mdp = os.path.join(outdir, "privacy-ai-act-assessments-study-pack.md")
+        open(mdp, "w", encoding="utf-8").write(
+            "<!-- Text version of privacy-ai-act-assessments-study-pack-v2.pdf, generated from the same HTML the PDF is printed from (study-pack-build/pack.html). The PDF is the reference for layout. -->\n\n" + head + rest)
+        print("md:", mdp, os.path.getsize(mdp), "bytes")
+    else:
+        print("md: skipped, pandoc not found")

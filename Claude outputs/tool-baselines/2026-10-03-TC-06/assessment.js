@@ -2656,7 +2656,7 @@
 			key: "scope",
 			title: "Scope and applicability",
 			intro: "Article 27 requires certain deployers of high-risk AI systems to assess the impact on fundamental rights before first use. The obligation sits with the deployer, not the provider, and applies with the other Annex III high-risk obligations, from 2 December 2027 (Regulation (EU) 2026/1744).",
-			sources: [{ label: "EU AI Act, Article 27", url: AIA_ART27_URL }, { label: "ISO/IEC 42005:2025, AI system impact assessment (method guidance)", url: "https://www.iso.org/standard/42005" }],
+			sources: [{ label: "EU AI Act, Article 27", url: AIA_ART27_URL }],
 			questions: [
 				{ id: "name", type: "text", label: "AI system and deployment name" },
 				{ id: "description", type: "textarea", label: "What the system does and the decision or process it supports" },
@@ -2791,7 +2791,7 @@
 			],
 			tables: [],
 			factors: factors,
-			help: "This follows the elements of Article 27(1) and is decision support, not a legal determination. The severity and likelihood bands use the same matrix as the Full DPIA. The AI Office template, once published, is the format for notifying the authority. For the method of the assessment itself, ISO/IEC 42005:2025 gives guidance on AI system impact assessments; it supports the Article 27 points but does not replace them.",
+			help: "This follows the elements of Article 27(1) and is decision support, not a legal determination. The severity and likelihood bands use the same matrix as the Full DPIA. The AI Office template, once published, is the format for notifying the authority.",
 			historyLabel: verdict,
 			level: level
 		};
@@ -3085,56 +3085,6 @@
 		"None"
 	];
 
-	// Added 2026-10-03 (TC-06). A transfer inventory is worked through as a
-	// contract action per importer: no action, a new agreement with the clauses,
-	// an amendment adding them, either of those plus supplementary measures, or
-	// controller-to-controller clauses. The full TIA decides which.
-	var TIA_CONTRACT_STATES = [
-		"Already in a signed contract with the importer (2021 clauses)",
-		"There is a data processing agreement, but without the 2021 clauses",
-		"No contract covering this data yet"
-	];
-	function tiaNeedsClauses(a) {
-		return /^Standard contractual clauses/.test(a.tiaTool || "") || a.tiaTool === "None identified yet";
-	}
-	function tiaModuleFor(a) {
-		var ex = a.tiaExporterRole, im = a.tiaImporterRole;
-		if (!ex || !im) return "";
-		var imCtrl = im === "Controller";
-		if (ex === "Controller") return imCtrl ? "Module 1: controller to controller" : "Module 2: controller to processor";
-		return imCtrl ? "Module 4: processor to controller" : "Module 3: processor to processor";
-	}
-	function tiaContractAction(a, outcome) {
-		var tool = a.tiaTool || "";
-		var mod = tiaModuleFor(a);
-		var modShort = mod ? mod.split(":")[0] : "the right module";
-		var c2c = mod.indexOf("Module 1") === 0 || mod.indexOf("Module 4") === 0;
-		if (outcome === "No TIA needed") return { short: "None for the transfer", detail: "The transfer needs no clauses. Where the importer is a processor, an Article 28 agreement is still required.", severity: "low" };
-		if (outcome === "Check certification") return { short: "Confirm certification", detail: "Confirm the certification first. If it does not cover this data, put the standard contractual clauses (" + modShort + ") in place and complete Steps 3 and 4.", severity: "medium" };
-		if (outcome === "Wrong transfer tool") return { short: "Replace the derogation", detail: "Replace the derogation with an Article 46 tool, normally the standard contractual clauses (" + modShort + ").", severity: "high" };
-		if (!tiaNeedsClauses(a)) return null;
-		if (outcome === "Do not transfer, or suspend" && tool !== "None identified yet") return { short: "Do not sign or renew", detail: "Do not sign or renew the contract for this transfer until it can be protected, and suspend it if it is already running. Clauses alone do not close the gap Step 3 found.", severity: "high" };
-		var state = a.tiaContractState || "";
-		var plus = outcome === "Proceed with supplementary measures";
-		var tail = plus ? ", together with the supplementary measures from Step 4 (the contractual ones written into the agreement)" : "";
-		var action;
-		if (state === TIA_CONTRACT_STATES[0]) {
-			action = plus ? { short: "Add supplementary measures", detail: "The clauses are in place. Add the supplementary measures from Step 4, writing the contractual ones into the agreement.", severity: "medium" }
-				: { short: "No change", detail: "The clauses are already in a signed contract. Keep them under review at the re-evaluation date.", severity: "low" };
-		} else if (c2c) {
-			action = { short: "Clauses for a controller importer", detail: "Sign the standard contractual clauses for a controller importer (" + modShort + ")" + tail + ". No Article 28 agreement is needed where the importer is a controller.", severity: "medium" };
-		} else if (state === TIA_CONTRACT_STATES[1]) {
-			action = { short: plus ? "Amend agreement + measures" : "Amend agreement", detail: "Amend the existing data processing agreement to incorporate the standard contractual clauses (" + modShort + ")" + tail + ". The clauses must prevail over any conflicting term.", severity: "medium" };
-		} else if (state === TIA_CONTRACT_STATES[2]) {
-			action = { short: plus ? "New agreement + measures" : "New agreement", detail: "Sign the standard contractual clauses (" + modShort + "), on their own or in a new data processing agreement" + tail + ". Modules 2 and 3 already contain the Article 28 terms, so no separate agreement is needed for them.", severity: "medium" };
-		} else {
-			action = { short: "Not determined", detail: "Say where the clauses stand today (Step 2) to see the contract action.", severity: "low" };
-		}
-		if (tool === "None identified yet") action.detail += " Do this before the transfer starts, then complete Steps 3 and 4.";
-		if (outcome === "Incomplete") action.detail += " This is provisional until Step 3 is complete.";
-		return action;
-	}
-
 	function tiaStepsNeeded(a) {
 		return a.tiaTool !== "Adequacy decision" && a.tiaTool !== "EU-US Data Privacy Framework (certified US recipient)";
 	}
@@ -3152,7 +3102,6 @@
 				{ id: "tiaCountries", type: "multiselect", label: "Destination countries, including where the data can be accessed from", options: COUNTRIES_REGIONS },
 				{ id: "tiaData", type: "multiselect", label: "Categories of data transferred", options: DATA_CATEGORIES },
 				{ id: "tiaFormat", type: "select", label: "How does the importer handle the data?", options: ["Stores or processes it in the clear", "Stores it encrypted, without the keys", "Remote access only, for support or administration", "Receives pseudonymised data only"] },
-				{ id: "tiaImporterGdpr", type: "select", label: "Is the importer's processing itself subject to the GDPR under Article 3(2), for example because it offers goods or services to people in the EU or monitors them there?", options: ["No", "Yes", "Not sure"] },
 				{ id: "tiaOnward", type: "yesno", label: "Will the importer transfer the data on to others (sub-processors, group companies)?",
 					note: { label: "To whom and where?", visibleIf: function (v) { return v === "Yes"; } } },
 				{ id: "tiaMinimised", type: "select", label: "Is the data limited to what the importer needs?", options: ["Yes", "Partially", "No"] }
@@ -3161,7 +3110,7 @@
 		{
 			key: "tool",
 			title: "Step 2: Identify the transfer tool",
-			intro: "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are exceptions, interpreted restrictively, and not suited to regular or systematic transfers.",
+			intro: "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are for occasional and non-repetitive transfers and are interpreted strictly.",
 			questions: [
 				{ id: "tiaTool", type: "select", label: "Which tool does the transfer rely on?", options: TRANSFER_SAFEGUARDS },
 				{ id: "tiaDpfScope", type: "select", label: "Does the recipient's Data Privacy Framework certification cover this type of data (for example HR data) and is it active?", options: ["Yes", "No", "Not checked"],
@@ -3171,9 +3120,7 @@
 				{ id: "tiaSccUnmodified", type: "select", label: "Are the clauses used without changes to their text?", options: ["Yes", "No", "Not sure"],
 					visibleIf: function (a) { return /^Standard contractual clauses/.test(a.tiaTool || ""); } },
 				{ id: "tiaDerogationOccasional", type: "select", label: "Is the transfer occasional and non-repetitive?", options: ["Yes", "No"],
-					visibleIf: function (a) { return a.tiaTool === "Derogation for a specific situation"; } },
-				{ id: "tiaContractState", type: "select", label: "Where do the clauses stand today with this importer?", options: TIA_CONTRACT_STATES,
-					visibleIf: tiaNeedsClauses }
+					visibleIf: function (a) { return a.tiaTool === "Derogation for a specific situation"; } }
 			]
 		},
 		{
@@ -3244,7 +3191,7 @@
 		} else if (tool === "Derogation for a specific situation") {
 			if (a.tiaDerogationOccasional === "No") {
 				outcome = "Wrong transfer tool"; level = "High";
-				factors.push({ title: "Derogation used for a regular transfer", detail: "Article 49 derogations are interpreted restrictively and are not suited to regular or systematic transfers. A regular transfer needs an Article 46 safeguard.", severity: "high" });
+				factors.push({ title: "Derogation used for a regular transfer", detail: "Article 49 derogations are for occasional and non-repetitive transfers. A regular transfer needs an Article 46 safeguard.", severity: "high" });
 			} else {
 				outcome = "Derogation, documented"; level = "Medium";
 				factors.push({ title: "Derogation", detail: "Document which Article 49 ground applies and why the transfer is occasional. Derogations are interpreted strictly.", severity: "medium" });
@@ -3275,12 +3222,6 @@
 			if (!a.tiaSources) factors.push({ title: "Sources not recorded", detail: "Record the sources used in Step 3 so the assessment can be checked and updated.", severity: "low" });
 		}
 
-		if (a.tiaImporterGdpr === "Yes" && tiaNeedsClauses(a)) factors.push({ title: "Importer subject to the GDPR", detail: "The Commission states that the 2021 standard contractual clauses do not work for importers whose processing is already subject to the GDPR under Article 3(2). Check whether clauses designed for that case have been adopted, and record the approach taken in the meantime.", severity: "medium" });
-		else if (a.tiaImporterGdpr === "Not sure" && tiaNeedsClauses(a)) factors.push({ title: "Importer's GDPR status unknown", detail: "Whether the importer is itself subject to the GDPR under Article 3(2) affects which clauses fit. Settle it before signing.", severity: "low" });
-		var expectedModule = tiaModuleFor(a);
-		if (a.tiaSccModule && expectedModule && a.tiaSccModule !== expectedModule) factors.push({ title: "Module may not match the roles", detail: "For a " + a.tiaExporterRole.toLowerCase() + " exporting to a " + a.tiaImporterRole.toLowerCase() + ", the expected module is " + expectedModule + ".", severity: "medium" });
-		var contract = tiaContractAction(a, outcome);
-		if (contract) factors.unshift({ title: "Contract action: " + contract.short, detail: contract.detail, severity: contract.severity });
 		if (a.tiaOnward === "Yes") factors.push({ title: "Onward transfers", detail: "Each onward transfer needs the same level of protection. Cover them in this assessment or a separate one.", severity: "medium" });
 		if (a.tiaMinimised === "No") factors.push({ title: "Data not minimised", detail: "Limit the data to what the importer needs before any other measure is considered.", severity: "medium" });
 		if (a.tiaProcedure === "No") factors.push({ title: "Procedural steps open", detail: "Complete Step 5 before the transfer starts.", severity: "medium" });
@@ -3295,12 +3236,11 @@
 				["Outcome", outcome, "EDPB Recommendations 01/2020"],
 				["Transfer tool", tool ? tool.replace(/ \(.*\)$/, "") : "None", full ? "Article 46 or 49" : "Article 45"],
 				["Technical measures", String(tech.length), full ? "in place" : "not needed"],
-				["Destinations", String((a.tiaCountries || []).length), "countries or regions"],
-				["Contract action", contract ? contract.short : "Not applicable", contract ? "for this importer" : "transfer tool is not contractual"]
+				["Destinations", String((a.tiaCountries || []).length), "countries or regions"]
 			],
 			tables: [],
 			factors: factors,
-			help: "This follows the six steps of EDPB Recommendations 01/2020 and is decision support, not legal advice. For transfers from the United Kingdom, the ICO's own transfer risk assessment approach applies alongside the IDTA or the Addendum. Run across a transfer inventory, the contract action sorts importers into the usual work queues: no action, new agreement, amendment, either with supplementary measures, controller clauses, or a full assessment first.",
+			help: "This follows the six steps of EDPB Recommendations 01/2020 and is decision support, not legal advice. For transfers from the United Kingdom, the ICO's own transfer risk assessment approach applies alongside the IDTA or the Addendum.",
 			historyLabel: outcome,
 			level: level
 		};

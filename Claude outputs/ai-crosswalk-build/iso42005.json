@@ -1,0 +1,502 @@
+{
+  "title": "Crosswalk ISO/IEC 42005 Information technology - Artificial intelligence - AI system impact assessment to NIST AI RMF (1.0)",
+  "listing_title": "Crosswalk ISO/IEC 42005 and NIST AI RMF",
+  "date": "2025-08-14 (date shown on NIST AIRC crosswalks listing; no date inside the PDF)",
+  "provider": "INCITS/AI (per NIST AIRC listing; no author named inside the PDF)",
+  "url": "https://airc.nist.gov/documents/2/ai-2025-00108_ISO_IEC_42005_to_NIST_AI_RMF_Crosswalk.pdf",
+  "listing_url": "https://airc.nist.gov/airmf-resources/crosswalks/",
+  "caveats": [
+    "NIST listing page: 'Inclusion of a crosswalk below does not imply NIST endorsement of the resource the AI RMF is mapped to, nor does it imply that either resource comprehensively covers the contents of the other.'",
+    "PDF itself contains no date, author, footer or disclaimer.",
+    "Crosswalk is against ISO/IEC DIS 42005 (draft), not the published ISO/IEC 42005:2025; clause numbers/titles may differ in the final text.",
+    "Mapping is at AI RMF CATEGORY level (e.g. MAP 5), not subcategory level (e.g. MAP 5.1). No subcategory IDs appear in the document."
+  ],
+  "iso42005_title": "ISO/IEC 42005:2025 Information technology - Artificial intelligence (AI) - AI system impact assessment",
+  "published": "2025 (May 2025, edition 1, per iso.org)",
+  "iso42005_purpose": "Guidance for organizations on assessing how AI systems and their foreseeable applications may affect individuals, groups and society, supporting transparency and accountability across the AI lifecycle (paraphrase of iso.org).",
+  "clauses_note": "Only clauses cited in the crosswalk (DIS numbering). Not a full TOC: 5.2, 5.3, 5.7, 6.1, parent titles of 6.3/6.6 and any clause beyond 6.8 not given and not verified. ISO OBP TOC not retrievable (JS-only).",
+  "clauses": [
+    {
+      "id": "5.1",
+      "title": "General",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "5.4",
+      "title": "Timing of AI system impact assessment",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "5.5",
+      "title": "Scope of the AI system impact assessment",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "5.6",
+      "title": "Allocating responsibilities",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "5.8",
+      "title": "Performing the AI system impact assessment",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "5.9",
+      "title": "Analysing the results of the AI system impact assessment",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "5.10",
+      "title": "Recording and reporting",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "5.11",
+      "title": "Approval process",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "5.12",
+      "title": "Monitoring and review",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.2",
+      "title": "Scope of the AI system impact assessment",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.3.1",
+      "title": "AI system description",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.3.2",
+      "title": "AI system functionalities and capabilities",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.3.3",
+      "title": "AI system purpose",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.3.4",
+      "title": "Intended use",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.3.5",
+      "title": "Unintended uses",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.4",
+      "title": "Data information and quality",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.5",
+      "title": "Algorithm and model information",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.6.1",
+      "title": "Geographical area and languages",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.6.2",
+      "title": "Deployment environment complexity and constraints",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.7",
+      "title": "Relevant interested parties",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.8",
+      "title": "Actual and reasonably foreseeable impacts",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.8.1",
+      "title": "General",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.8.2",
+      "title": "Benefits and harms",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.8.3",
+      "title": "AI system failures and reasonably foreseeable misuse",
+      "source": "crosswalk (DIS)"
+    },
+    {
+      "id": "6.8.3.3",
+      "title": "Impact of reasonably foreseeable misuse of AI system",
+      "source": "crosswalk (DIS)"
+    }
+  ],
+  "mapping_level": "NIST AI RMF categories",
+  "rows": [
+    {
+      "iso": "5.1",
+      "iso_title": "General",
+      "nist": [
+        "GOVERN 1"
+      ]
+    },
+    {
+      "iso": "5.4",
+      "iso_title": "Timing of AI system impact assessment",
+      "nist": [
+        "GOVERN 4"
+      ]
+    },
+    {
+      "iso": "5.5",
+      "iso_title": "Scope of the AI system impact assessment",
+      "nist": [
+        "MAP 2"
+      ]
+    },
+    {
+      "iso": "5.6",
+      "iso_title": "Allocating responsibilities",
+      "nist": [
+        "GOVERN 2",
+        "GOVERN 4"
+      ]
+    },
+    {
+      "iso": "5.8",
+      "iso_title": "Performing the AI system impact assessment",
+      "nist": [
+        "MEASURE 2"
+      ]
+    },
+    {
+      "iso": "5.9",
+      "iso_title": "Analysing the results of the AI system impact assessment",
+      "nist": [
+        "MEASURE 3",
+        "MEASURE 4"
+      ]
+    },
+    {
+      "iso": "5.10",
+      "iso_title": "Recording and reporting",
+      "nist": [
+        "GOVERN 1"
+      ]
+    },
+    {
+      "iso": "5.11",
+      "iso_title": "Approval process",
+      "nist": [
+        "GOVERN 2"
+      ]
+    },
+    {
+      "iso": "5.12",
+      "iso_title": "Monitoring and review",
+      "nist": [
+        "GOVERN 1",
+        "MEASURE 3",
+        "MEASURE 4"
+      ]
+    },
+    {
+      "iso": "6.2",
+      "iso_title": "Scope of the AI system impact assessment",
+      "nist": [
+        "MAP 1",
+        "MAP 2"
+      ]
+    },
+    {
+      "iso": "6.3.1",
+      "iso_title": "AI system description",
+      "nist": [
+        "MAP 2",
+        "MAP 3"
+      ]
+    },
+    {
+      "iso": "6.3.2",
+      "iso_title": "AI system functionalities and capabilities",
+      "nist": [
+        "MAP 2",
+        "MAP 3"
+      ]
+    },
+    {
+      "iso": "6.3.3",
+      "iso_title": "AI system purpose",
+      "nist": [
+        "MAP 1",
+        "MAP 3"
+      ]
+    },
+    {
+      "iso": "6.3.4",
+      "iso_title": "Intended use",
+      "nist": [
+        "MAP 1",
+        "MAP 3"
+      ]
+    },
+    {
+      "iso": "6.3.5",
+      "iso_title": "Unintended uses",
+      "nist": [
+        "MAP 1",
+        "MAP 3"
+      ]
+    },
+    {
+      "iso": "6.4",
+      "iso_title": "Data information and quality",
+      "nist": [
+        "MAP 2"
+      ]
+    },
+    {
+      "iso": "6.5",
+      "iso_title": "Algorithm and model information",
+      "nist": [
+        "MAP 2"
+      ]
+    },
+    {
+      "iso": "6.6.1",
+      "iso_title": "Geographical area and languages",
+      "nist": [
+        "MAP 1"
+      ]
+    },
+    {
+      "iso": "6.6.2",
+      "iso_title": "Deployment environment complexity and constraints",
+      "nist": [
+        "MAP 1"
+      ]
+    },
+    {
+      "iso": "6.7",
+      "iso_title": "Relevant interested parties",
+      "nist": [
+        "GOVERN 5",
+        "MAP 1"
+      ]
+    },
+    {
+      "iso": "6.8",
+      "iso_title": "Actual and reasonably foreseeable impacts",
+      "nist": [
+        "MEASURE 2"
+      ]
+    },
+    {
+      "iso": "6.8.1",
+      "iso_title": "General",
+      "nist": [
+        "MAP 5"
+      ]
+    },
+    {
+      "iso": "6.8.2",
+      "iso_title": "Benefits and harms",
+      "nist": [
+        "MAP 5"
+      ]
+    },
+    {
+      "iso": "6.8.3",
+      "iso_title": "AI system failures and reasonably foreseeable misuse",
+      "nist": [
+        "MAP 5"
+      ]
+    },
+    {
+      "iso": "6.8.3.3",
+      "iso_title": "Impact of reasonably foreseeable misuse of AI system",
+      "nist": [
+        "MEASURE 2"
+      ]
+    }
+  ],
+  "rows_by_nist": [
+    {
+      "nist": "GOVERN 1",
+      "iso": [
+        "5.1",
+        "5.10",
+        "5.12"
+      ]
+    },
+    {
+      "nist": "GOVERN 2",
+      "iso": [
+        "5.6",
+        "5.11"
+      ]
+    },
+    {
+      "nist": "GOVERN 3",
+      "iso": []
+    },
+    {
+      "nist": "GOVERN 4",
+      "iso": [
+        "5.4",
+        "5.6"
+      ]
+    },
+    {
+      "nist": "GOVERN 5",
+      "iso": [
+        "6.7"
+      ]
+    },
+    {
+      "nist": "GOVERN 6",
+      "iso": []
+    },
+    {
+      "nist": "MAP 1",
+      "iso": [
+        "6.2",
+        "6.3.3",
+        "6.3.4",
+        "6.3.5",
+        "6.6.1",
+        "6.6.2",
+        "6.7"
+      ]
+    },
+    {
+      "nist": "MAP 2",
+      "iso": [
+        "5.5",
+        "6.2",
+        "6.3.1",
+        "6.3.2",
+        "6.4",
+        "6.5"
+      ]
+    },
+    {
+      "nist": "MAP 3",
+      "iso": [
+        "6.3.1",
+        "6.3.2",
+        "6.3.3",
+        "6.3.4",
+        "6.3.5"
+      ]
+    },
+    {
+      "nist": "MAP 4",
+      "iso": []
+    },
+    {
+      "nist": "MAP 5",
+      "iso": [
+        "6.8.1",
+        "6.8.2",
+        "6.8.3"
+      ]
+    },
+    {
+      "nist": "MEASURE 1",
+      "iso": []
+    },
+    {
+      "nist": "MEASURE 2",
+      "iso": [
+        "5.8",
+        "6.8",
+        "6.8.3.3"
+      ]
+    },
+    {
+      "nist": "MEASURE 3",
+      "iso": [
+        "5.9",
+        "5.12"
+      ]
+    },
+    {
+      "nist": "MEASURE 4",
+      "iso": [
+        "5.9",
+        "5.12"
+      ]
+    },
+    {
+      "nist": "MANAGE 1",
+      "iso": []
+    },
+    {
+      "nist": "MANAGE 2",
+      "iso": []
+    },
+    {
+      "nist": "MANAGE 3",
+      "iso": []
+    },
+    {
+      "nist": "MANAGE 4",
+      "iso": []
+    }
+  ],
+  "counts": {
+    "iso_clauses_mapped": 25,
+    "total_links": 36,
+    "per_nist_category": {
+      "GOVERN 1": 3,
+      "GOVERN 2": 2,
+      "GOVERN 3": 0,
+      "GOVERN 4": 2,
+      "GOVERN 5": 1,
+      "GOVERN 6": 0,
+      "MAP 1": 7,
+      "MAP 2": 6,
+      "MAP 3": 5,
+      "MAP 4": 0,
+      "MAP 5": 3,
+      "MEASURE 1": 0,
+      "MEASURE 2": 3,
+      "MEASURE 3": 2,
+      "MEASURE 4": 2,
+      "MANAGE 1": 0,
+      "MANAGE 2": 0,
+      "MANAGE 3": 0,
+      "MANAGE 4": 0
+    },
+    "nist_categories_unmapped": [
+      "GOVERN 3",
+      "GOVERN 6",
+      "MAP 4",
+      "MEASURE 1",
+      "MANAGE 1",
+      "MANAGE 2",
+      "MANAGE 3",
+      "MANAGE 4"
+    ]
+  },
+  "flags": [
+    "No subcategory-level mapping exists in the source; 'nist' values are categories. Any subcategory mapping (e.g. MAP 5.1) would be our own inference, not NIST/INCITS.",
+    "MAP 2 cites '5.5 Scope of the AI system impact assessment' while MAP 1 and MAP 2 also cite '6.2 Scope of the AI system impact assessment' - same title on two clause numbers; possible source error, unverified against the standard.",
+    "8 of 19 AI RMF categories have no mapping: GOVERN 3, GOVERN 6, MAP 4, MEASURE 1, MANAGE 1-4. Entire MANAGE function unmapped.",
+    "Clause numbers are from the DIS draft; not verified against published ISO/IEC 42005:2025.",
+    "Date and provider come only from the NIST listing page, not the PDF.",
+    "Extraction via WebFetch summarizer (text transcription); not a byte-level PDF parse. Recommend spot check against the PDF."
+  ]
+}

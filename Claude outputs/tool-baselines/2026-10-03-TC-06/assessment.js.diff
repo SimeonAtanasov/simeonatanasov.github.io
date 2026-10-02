@@ -1,0 +1,79 @@
+2659c2659
+< 			sources: [{ label: "EU AI Act, Article 27", url: AIA_ART27_URL }],
+---
+> 			sources: [{ label: "EU AI Act, Article 27", url: AIA_ART27_URL }, { label: "ISO/IEC 42005:2025, AI system impact assessment (method guidance)", url: "https://www.iso.org/standard/42005" }],
+2794c2794
+< 			help: "This follows the elements of Article 27(1) and is decision support, not a legal determination. The severity and likelihood bands use the same matrix as the Full DPIA. The AI Office template, once published, is the format for notifying the authority.",
+---
+> 			help: "This follows the elements of Article 27(1) and is decision support, not a legal determination. The severity and likelihood bands use the same matrix as the Full DPIA. The AI Office template, once published, is the format for notifying the authority. For the method of the assessment itself, ISO/IEC 42005:2025 gives guidance on AI system impact assessments; it supports the Article 27 points but does not replace them.",
+3087a3088,3137
+> 	// Added 2026-10-03 (TC-06). A transfer inventory is worked through as a
+> 	// contract action per importer: no action, a new agreement with the clauses,
+> 	// an amendment adding them, either of those plus supplementary measures, or
+> 	// controller-to-controller clauses. The full TIA decides which.
+> 	var TIA_CONTRACT_STATES = [
+> 		"Already in a signed contract with the importer (2021 clauses)",
+> 		"There is a data processing agreement, but without the 2021 clauses",
+> 		"No contract covering this data yet"
+> 	];
+> 	function tiaNeedsClauses(a) {
+> 		return /^Standard contractual clauses/.test(a.tiaTool || "") || a.tiaTool === "None identified yet";
+> 	}
+> 	function tiaModuleFor(a) {
+> 		var ex = a.tiaExporterRole, im = a.tiaImporterRole;
+> 		if (!ex || !im) return "";
+> 		var imCtrl = im === "Controller";
+> 		if (ex === "Controller") return imCtrl ? "Module 1: controller to controller" : "Module 2: controller to processor";
+> 		return imCtrl ? "Module 4: processor to controller" : "Module 3: processor to processor";
+> 	}
+> 	function tiaContractAction(a, outcome) {
+> 		var tool = a.tiaTool || "";
+> 		var mod = tiaModuleFor(a);
+> 		var modShort = mod ? mod.split(":")[0] : "the right module";
+> 		var c2c = mod.indexOf("Module 1") === 0 || mod.indexOf("Module 4") === 0;
+> 		if (outcome === "No TIA needed") return { short: "None for the transfer", detail: "The transfer needs no clauses. Where the importer is a processor, an Article 28 agreement is still required.", severity: "low" };
+> 		if (outcome === "Check certification") return { short: "Confirm certification", detail: "Confirm the certification first. If it does not cover this data, put the standard contractual clauses (" + modShort + ") in place and complete Steps 3 and 4.", severity: "medium" };
+> 		if (outcome === "Wrong transfer tool") return { short: "Replace the derogation", detail: "Replace the derogation with an Article 46 tool, normally the standard contractual clauses (" + modShort + ").", severity: "high" };
+> 		if (!tiaNeedsClauses(a)) return null;
+> 		if (outcome === "Do not transfer, or suspend" && tool !== "None identified yet") return { short: "Do not sign or renew", detail: "Do not sign or renew the contract for this transfer until it can be protected, and suspend it if it is already running. Clauses alone do not close the gap Step 3 found.", severity: "high" };
+> 		var state = a.tiaContractState || "";
+> 		var plus = outcome === "Proceed with supplementary measures";
+> 		var tail = plus ? ", together with the supplementary measures from Step 4 (the contractual ones written into the agreement)" : "";
+> 		var action;
+> 		if (state === TIA_CONTRACT_STATES[0]) {
+> 			action = plus ? { short: "Add supplementary measures", detail: "The clauses are in place. Add the supplementary measures from Step 4, writing the contractual ones into the agreement.", severity: "medium" }
+> 				: { short: "No change", detail: "The clauses are already in a signed contract. Keep them under review at the re-evaluation date.", severity: "low" };
+> 		} else if (c2c) {
+> 			action = { short: "Clauses for a controller importer", detail: "Sign the standard contractual clauses for a controller importer (" + modShort + ")" + tail + ". No Article 28 agreement is needed where the importer is a controller.", severity: "medium" };
+> 		} else if (state === TIA_CONTRACT_STATES[1]) {
+> 			action = { short: plus ? "Amend agreement + measures" : "Amend agreement", detail: "Amend the existing data processing agreement to incorporate the standard contractual clauses (" + modShort + ")" + tail + ".", severity: "medium" };
+> 		} else if (state === TIA_CONTRACT_STATES[2]) {
+> 			action = { short: plus ? "New agreement + measures" : "New agreement", detail: "Sign a new data processing agreement incorporating the standard contractual clauses (" + modShort + ")" + tail + ".", severity: "medium" };
+> 		} else {
+> 			action = { short: "Not determined", detail: "Say where the clauses stand today (Step 2) to see the contract action.", severity: "low" };
+> 		}
+> 		if (tool === "None identified yet") action.detail += " Do this before the transfer starts, then complete Steps 3 and 4.";
+> 		if (outcome === "Incomplete") action.detail += " This is provisional until Step 3 is complete.";
+> 		return action;
+> 	}
+> 
+3123c3173,3175
+< 					visibleIf: function (a) { return a.tiaTool === "Derogation for a specific situation"; } }
+---
+> 					visibleIf: function (a) { return a.tiaTool === "Derogation for a specific situation"; } },
+> 				{ id: "tiaContractState", type: "select", label: "Where do the clauses stand today with this importer?", options: TIA_CONTRACT_STATES,
+> 					visibleIf: tiaNeedsClauses }
+3224a3277,3280
+> 		var expectedModule = tiaModuleFor(a);
+> 		if (a.tiaSccModule && expectedModule && a.tiaSccModule !== expectedModule) factors.push({ title: "Module may not match the roles", detail: "For a " + a.tiaExporterRole.toLowerCase() + " exporting to a " + a.tiaImporterRole.toLowerCase() + ", the expected module is " + expectedModule + ".", severity: "medium" });
+> 		var contract = tiaContractAction(a, outcome);
+> 		if (contract) factors.unshift({ title: "Contract action: " + contract.short, detail: contract.detail, severity: contract.severity });
+3239c3295,3296
+< 				["Destinations", String((a.tiaCountries || []).length), "countries or regions"]
+---
+> 				["Destinations", String((a.tiaCountries || []).length), "countries or regions"],
+> 				["Contract action", contract ? contract.short : "Not applicable", contract ? "for this importer" : "transfer tool is not contractual"]
+3243c3300
+< 			help: "This follows the six steps of EDPB Recommendations 01/2020 and is decision support, not legal advice. For transfers from the United Kingdom, the ICO's own transfer risk assessment approach applies alongside the IDTA or the Addendum.",
+---
+> 			help: "This follows the six steps of EDPB Recommendations 01/2020 and is decision support, not legal advice. For transfers from the United Kingdom, the ICO's own transfer risk assessment approach applies alongside the IDTA or the Addendum. Run across a transfer inventory, the contract action sorts importers into the usual work queues: no action, new agreement, amendment, either with supplementary measures, controller clauses, or a full assessment first.",

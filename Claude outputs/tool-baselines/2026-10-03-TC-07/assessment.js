@@ -3124,9 +3124,9 @@
 		} else if (c2c) {
 			action = { short: "Clauses for a controller importer", detail: "Sign the standard contractual clauses for a controller importer (" + modShort + ")" + tail + ". No Article 28 agreement is needed where the importer is a controller.", severity: "medium" };
 		} else if (state === TIA_CONTRACT_STATES[1]) {
-			action = { short: plus ? "Amend agreement + measures" : "Amend agreement", detail: "Amend the existing data processing agreement to incorporate the standard contractual clauses (" + modShort + ")" + tail + ". The clauses must prevail over any conflicting term.", severity: "medium" };
+			action = { short: plus ? "Amend agreement + measures" : "Amend agreement", detail: "Amend the existing data processing agreement to incorporate the standard contractual clauses (" + modShort + ")" + tail + ".", severity: "medium" };
 		} else if (state === TIA_CONTRACT_STATES[2]) {
-			action = { short: plus ? "New agreement + measures" : "New agreement", detail: "Sign the standard contractual clauses (" + modShort + "), on their own or in a new data processing agreement" + tail + ". Modules 2 and 3 already contain the Article 28 terms, so no separate agreement is needed for them.", severity: "medium" };
+			action = { short: plus ? "New agreement + measures" : "New agreement", detail: "Sign a new data processing agreement incorporating the standard contractual clauses (" + modShort + ")" + tail + ".", severity: "medium" };
 		} else {
 			action = { short: "Not determined", detail: "Say where the clauses stand today (Step 2) to see the contract action.", severity: "low" };
 		}
@@ -3152,7 +3152,6 @@
 				{ id: "tiaCountries", type: "multiselect", label: "Destination countries, including where the data can be accessed from", options: COUNTRIES_REGIONS },
 				{ id: "tiaData", type: "multiselect", label: "Categories of data transferred", options: DATA_CATEGORIES },
 				{ id: "tiaFormat", type: "select", label: "How does the importer handle the data?", options: ["Stores or processes it in the clear", "Stores it encrypted, without the keys", "Remote access only, for support or administration", "Receives pseudonymised data only"] },
-				{ id: "tiaImporterGdpr", type: "select", label: "Is the importer's processing itself subject to the GDPR under Article 3(2), for example because it offers goods or services to people in the EU or monitors them there?", options: ["No", "Yes", "Not sure"] },
 				{ id: "tiaOnward", type: "yesno", label: "Will the importer transfer the data on to others (sub-processors, group companies)?",
 					note: { label: "To whom and where?", visibleIf: function (v) { return v === "Yes"; } } },
 				{ id: "tiaMinimised", type: "select", label: "Is the data limited to what the importer needs?", options: ["Yes", "Partially", "No"] }
@@ -3161,7 +3160,7 @@
 		{
 			key: "tool",
 			title: "Step 2: Identify the transfer tool",
-			intro: "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are exceptions, interpreted restrictively, and not suited to regular or systematic transfers.",
+			intro: "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are for occasional and non-repetitive transfers and are interpreted strictly.",
 			questions: [
 				{ id: "tiaTool", type: "select", label: "Which tool does the transfer rely on?", options: TRANSFER_SAFEGUARDS },
 				{ id: "tiaDpfScope", type: "select", label: "Does the recipient's Data Privacy Framework certification cover this type of data (for example HR data) and is it active?", options: ["Yes", "No", "Not checked"],
@@ -3244,7 +3243,7 @@
 		} else if (tool === "Derogation for a specific situation") {
 			if (a.tiaDerogationOccasional === "No") {
 				outcome = "Wrong transfer tool"; level = "High";
-				factors.push({ title: "Derogation used for a regular transfer", detail: "Article 49 derogations are interpreted restrictively and are not suited to regular or systematic transfers. A regular transfer needs an Article 46 safeguard.", severity: "high" });
+				factors.push({ title: "Derogation used for a regular transfer", detail: "Article 49 derogations are for occasional and non-repetitive transfers. A regular transfer needs an Article 46 safeguard.", severity: "high" });
 			} else {
 				outcome = "Derogation, documented"; level = "Medium";
 				factors.push({ title: "Derogation", detail: "Document which Article 49 ground applies and why the transfer is occasional. Derogations are interpreted strictly.", severity: "medium" });
@@ -3275,8 +3274,6 @@
 			if (!a.tiaSources) factors.push({ title: "Sources not recorded", detail: "Record the sources used in Step 3 so the assessment can be checked and updated.", severity: "low" });
 		}
 
-		if (a.tiaImporterGdpr === "Yes" && tiaNeedsClauses(a)) factors.push({ title: "Importer subject to the GDPR", detail: "The Commission states that the 2021 standard contractual clauses do not work for importers whose processing is already subject to the GDPR under Article 3(2). Check whether clauses designed for that case have been adopted, and record the approach taken in the meantime.", severity: "medium" });
-		else if (a.tiaImporterGdpr === "Not sure" && tiaNeedsClauses(a)) factors.push({ title: "Importer's GDPR status unknown", detail: "Whether the importer is itself subject to the GDPR under Article 3(2) affects which clauses fit. Settle it before signing.", severity: "low" });
 		var expectedModule = tiaModuleFor(a);
 		if (a.tiaSccModule && expectedModule && a.tiaSccModule !== expectedModule) factors.push({ title: "Module may not match the roles", detail: "For a " + a.tiaExporterRole.toLowerCase() + " exporting to a " + a.tiaImporterRole.toLowerCase() + ", the expected module is " + expectedModule + ".", severity: "medium" });
 		var contract = tiaContractAction(a, outcome);

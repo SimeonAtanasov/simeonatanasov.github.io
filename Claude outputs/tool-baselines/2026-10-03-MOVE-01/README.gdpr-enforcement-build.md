@@ -18,7 +18,7 @@ Builds `gdpr-enforcement.html` (GDPR Enforcement in Europe), its companion `priv
 - `research/graw/`: raw worldwide JSON plus `.verify.json`; `research/gapply_verify.py` applies the 71 corrections and four manual patches (Singapore appeal wording, dropped non-cases for Mexico, the Philippines and Argentina) and writes `gdata/`.
 - `summary_world.py`: map legends, first court, route, tile grid for the worldwide page; `OVERRIDE` holds map values changed from the JSON with the reason (Israel's maximum shown as not confirmed).
 - `build_world_page.py`: writes `out/privacy-enforcement-worldwide.html`, reusing the European builder's head, header, cards and tile map.
-- `build_study_guide.py`: writes `out/gdpr-enforcement-study-guide.md`, `.html` and `.pdf` (needs pandoc and Playwright Chromium). The published copies of the .md and .pdf live in `../study-guides/`.
+- `build_study_guide.py`: writes `out/gdpr-enforcement-study-guide.md`, `.html` and `.pdf` (needs pandoc and Playwright Chromium).
 
 ## Rebuild
 

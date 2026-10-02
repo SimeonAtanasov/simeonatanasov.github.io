@@ -82,5 +82,3 @@ same data: chapter ranges come from the first and last article of each chapter, 
 Application dates follow Article 113 as amended: Annex III high-risk from 2 December 2027, Annex I
 high-risk from 2 August 2028, Article 50 grace to 2 December 2026, the two new prohibitions in
 Article 5(1)(ba) and (bb) from 2 December 2026. British spelling, no em dashes, company-agnostic.
-
-The PDFs are kept in `../study-guides/` since 3 October 2026.

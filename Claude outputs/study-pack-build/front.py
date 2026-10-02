@@ -8,9 +8,9 @@ COVER = """
   <p class="sub">Practical Privacy &middot; Practical AI Act Advice &middot; nine assessment tools &middot; the GDPR readiness model</p>
   <div class="coverstats">
     <div><span class="n">31</span><span class="l">reference topics</span></div>
-    <div><span class="n">431</span><span class="l">assessment questions</span></div>
+    <div><span class="n">433</span><span class="l">assessment questions</span></div>
     <div><span class="n">71</span><span class="l">readiness activities</span></div>
-    <div><span class="n">73</span><span class="l">self-test questions</span></div>
+    <div><span class="n">74</span><span class="l">self-test questions</span></div>
   </div>
   <p class="covernote">Printed for study. Everything here is reference material and none of it is legal advice.</p>
 </section>
@@ -135,9 +135,9 @@ is the target once the material is in place.</p>
 <li><strong>AI Risk Assessment.</strong> Two independent levels: regulatory from the prohibited-use, Annex III and Annex I gates (Unsure returns Unresolved, never Limited), business from autonomy, data access, logging and guardrails as a triage score.</li>
 <li><strong>Incident &amp; Breach Severity.</strong> SE = (DPC x EI) + CB. DPC 1 to 4, EI 0.25 to 1, CB up to 1.5. Bands at 2, 3 and 4. Medium notifies the authority; High notifies individuals too.</li>
 <li><strong>Third-Party Security.</strong> Inherent risk out of 9 from intake alone, maturity from the control answers, residual from a lookup. Critical inherent never falls below Medium residual.</li>
-<li><strong>Fundamental Rights Impact Assessment.</strong> Required for public-law bodies and public-service providers on any Annex III system except critical infrastructure, and for every deployer under 5(b) credit and 5(c) insurance. Risk to rights uses the DPIA matrix. Can cross-refer to or incorporate a DPIA (Article 27(4) as amended), never replaced by one.</li>
+<li><strong>Fundamental Rights Impact Assessment.</strong> Required for public-law bodies and public-service providers on any Annex III system except critical infrastructure, and for every deployer under 5(b) credit and 5(c) insurance. Risk to rights uses the DPIA matrix. Can cross-refer to or incorporate a DPIA (Article 27(4) as amended), never replaced by one. ISO/IEC 42005 is the method guidance.</li>
 <li><strong>Generative AI Risk Assessment.</strong> 24 checks mapped to the 12 NIST GenAI risks and the OWASP LLM Top 10. Not assessed is not a pass. Public-facing systems escalate missing filters and red-teaming.</li>
-<li><strong>Transfer Impact Assessment.</strong> EDPB six steps. Adequacy or a confirmed DPF certification skips steps 3 and 4. Laws of concern plus clear-text access means do not transfer; only a technical measure changes that.</li>
+<li><strong>Transfer Impact Assessment.</strong> EDPB six steps. Adequacy or a confirmed DPF certification skips steps 3 and 4. Laws of concern plus clear-text access means do not transfer; only a technical measure changes that. The contract action says what to do with the importer: none, new agreement, amendment, either with measures, controller clauses.</li>
 </ul>
 
 <h3 class="sub">The readiness model</h3>

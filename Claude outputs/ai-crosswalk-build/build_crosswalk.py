@@ -73,6 +73,7 @@ for r in R.ROWS:
         "obligation": r["obligation"], "iso": r["iso"], "nist": r["nist"],
         "note": r.get("note", ""), "gap": r.get("gap", ""), "tool": r.get("tool", ""),
         "applies": r["applies"],
+        "related": r.get("related", []),
     })
 
 data = {

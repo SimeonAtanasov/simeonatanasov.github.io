@@ -8057,6 +8057,10 @@
     {
      "label": "EU AI Act, Article 27",
      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    },
+    {
+     "label": "ISO/IEC 42005:2025, AI system impact assessment (method guidance)",
+     "url": "https://www.iso.org/standard/42005"
     }
    ],
    "questions": [
@@ -9588,6 +9592,16 @@
      ]
     },
     {
+     "id": "tiaImporterGdpr",
+     "type": "select",
+     "label": "Is the importer's processing itself subject to the GDPR under Article 3(2), for example because it offers goods or services to people in the EU or monitors them there?",
+     "options": [
+      "No",
+      "Yes",
+      "Not sure"
+     ]
+    },
+    {
      "id": "tiaOnward",
      "type": "yesno",
      "label": "Will the importer transfer the data on to others (sub-processors, group companies)?",
@@ -9613,7 +9627,7 @@
   {
    "key": "tool",
    "title": "Step 2: Identify the transfer tool",
-   "intro": "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are for occasional and non-repetitive transfers and are interpreted strictly.",
+   "intro": "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are exceptions, interpreted restrictively, and not suited to regular or systematic transfers.",
    "questions": [
     {
      "id": "tiaTool",
@@ -9683,6 +9697,19 @@
      ],
      "visibleIf": {
       "__fn": "function (a) { return a.tiaTool === \"Derogation for a specific situation\"; }"
+     }
+    },
+    {
+     "id": "tiaContractState",
+     "type": "select",
+     "label": "Where do the clauses stand today with this importer?",
+     "options": [
+      "Already in a signed contract with the importer (2021 clauses)",
+      "There is a data processing agreement, but without the 2021 clauses",
+      "No contract covering this data yet"
+     ],
+     "visibleIf": {
+      "__fn": "function tiaNeedsClauses(a) { return /^Standard contractual clauses/.test(a.tiaTool || \"\") || a.tiaTool === \"None identified yet\"; }"
      }
     }
    ]

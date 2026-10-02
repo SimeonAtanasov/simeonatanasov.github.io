@@ -22,6 +22,7 @@ the page with `ai-governance-crosswalk.html` as the active page).
 | `ai_act_digest.json` | Copy of `../ai-act-digest-build/ai_act_digest.json`, used for article titles. Refresh it when the digest is rebuilt. |
 | `page_template.html` | The page around the app: head, nav, intro, method and sources. |
 | `crosswalk.js`, `crosswalk.css` | The app: four views, filters, deep links (`#cw-r05`, `#iso-a-6-2-4`, `#nist-govern-1-1`, `#view=nist`). |
+| `iso42005.json` | The NIST-hosted ISO/IEC 42005 to AI RMF crosswalk (INCITS/AI, against the DIS, category level), used to check row r21. Added 3 October 2026 with the "Related standard" field in `rows.py`. |
 | `review.md` | The independent review of the first draft (2 errors, 14 should-fix, 12 consider). All errors and should-fix items were applied, and most consider items. |
 | `build_crosswalk.py` | The builder. Asserts every ISO and NIST reference resolves and that no em dash reaches the output. |
 
