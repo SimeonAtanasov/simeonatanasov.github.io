@@ -1,0 +1,115 @@
+{
+  "code": "id",
+  "country": "Indonesia",
+  "membership": "World",
+  "region": "Asia-Pacific",
+  "dpa": {
+    "name_en": "Personal Data Protection Agency (not yet established); interim: Ministry of Communication and Digital Affairs",
+    "name_native": "Lembaga Pelindungan Data Pribadi (not yet established); interim: Kementerian Komunikasi dan Digital (Komdigi)",
+    "abbr": "Lembaga PDP (planned); Komdigi (interim)",
+    "url": "https://www.komdigi.go.id",
+    "structure": "The PDP Law foresees an agency set up by the President and answerable to the President (Articles 58 to 61), not an independent authority. As of October 2026 the Presidential Regulation creating it has not been issued and the agency does not exist; Komdigi (the former Kominfo, renamed in October 2024), through its Directorate General of Digital Space Supervision, supervises electronic system operators in the meantime.",
+    "regional": "Sector regulators enforce their own confidentiality rules, notably the Financial Services Authority (OJK) for banks and capital markets. The police and public prosecutors enforce the criminal offences in the PDP Law and the Electronic Information and Transactions (ITE) Law."
+  },
+  "law": {
+    "name": "Law No. 27 of 2022 on Personal Data Protection (UU PDP), enacted 17 October 2022 with a two-year transition, fully applicable from 17 October 2024; implementing Government Regulation No. 33 of 2026, signed 16 July 2026 and in force 16 January 2027",
+    "url": "https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022"
+  },
+  "complaint": {
+    "how": "Not confirmed: with no PDP agency, there is no dedicated PDP complaint channel. In practice individuals complain to Komdigi about electronic system operators, to OJK for financial institutions, or report criminal conduct to the police.",
+    "contact_controller_first": "Not confirmed as a legal requirement; data subjects have rights to request access, correction and erasure from the controller directly (Articles 5 to 13).",
+    "deadlines": "Not confirmed.",
+    "complainant_status": "Not confirmed; the agency's complaint procedure is to be set out in GR 33/2026 and future agency regulations."
+  },
+  "procedure": {
+    "stages": [
+      "Today: Komdigi can act against electronic system operators under the older electronic systems rules (GR 71/2019), with warnings, suspension, access blocking or deregistration.",
+      "Criminal route: police investigation and prosecution under Articles 67 to 70 of the PDP Law, decided by the District Court.",
+      "Once the agency exists: supervision, investigation and administrative sanctions under Article 57, with an objection to the agency within 14 working days of a sanction decision (GR 33/2026), then the State Administrative Court."
+    ],
+    "decision_maker": "Administrative sanctions under the PDP Law will be imposed by the PDP agency; criminal penalties by the District Courts on prosecution.",
+    "limitation": "Not confirmed."
+  },
+  "fines": {
+    "imposed_by": "No body can currently impose the PDP Law's administrative fines because the agency does not exist, so penalties come in practice through criminal prosecution in the courts (map value court). Once operational, the agency may impose fines of up to 2% of annual income or revenue (Article 57; GR 33/2026 Article 185 refers to gross revenue), alongside warnings, suspension of processing and data deletion.",
+    "public_bodies": "Not confirmed. The PDP Law applies to public bodies as controllers, but whether the agency can fine them is not confirmed.",
+    "quirks": "Criminal offences cover unlawful collection, disclosure and use of personal data and creating false personal data (Articles 67 and 68), originally up to 4 to 6 years' imprisonment and IDR 4 to 6 billion; corporations face up to ten times the fine plus measures such as licence revocation or dissolution (Article 70). Chambers reports that Law No. 1 of 2026 (penalty adjustment after the new Criminal Code) cut the maximum fines to IDR 200 million and IDR 500 million; not confirmed from the primary text."
+  },
+  "appeal": {
+    "court": "Sanction decisions of the future agency go first to an objection to the agency, then to the State Administrative Court (PTUN) under GR 33/2026. Criminal convictions follow the ordinary route: District Court, High Court, Supreme Court.",
+    "deadline": "Objection within 14 working days of the sanction decision (GR 33/2026, in force 16 January 2027); court deadlines not confirmed.",
+    "suspensive": "Not confirmed.",
+    "further": "State Administrative High Court and Supreme Court on cassation (general administrative law route; not confirmed specifically for PDP cases).",
+    "inaction": "A Constitutional Court petition (case 236/PUU-XXII/2024) seeking to compel the government to set up the agency was pending as of September 2026. No other remedy for regulator inaction confirmed."
+  },
+  "private": {
+    "courts": "Yes: data subjects have a right to sue and receive compensation for breaches (Article 12), through the District Courts, arbitration or other dispute resolution (Article 64), and general tort liability under the Civil Code also applies.",
+    "damages": "Compensation for loss under Article 12 and the Civil Code; no statutory damages.",
+    "collective": "Class actions are possible under Supreme Court Regulation No. 1 of 2002 on class action procedure; no PDP-specific class action confirmed."
+  },
+  "cases": [
+    {
+      "title": "First criminal conviction under the PDP Law, Karanganyar District Court",
+      "year": "2023",
+      "summary": "A defendant was sentenced to four years' imprisonment and an IDR 1 billion fine for personal data falsification, the first reported criminal conviction under the PDP Law.",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/indonesia/trends-and-developments"
+    },
+    {
+      "title": "Constitutional Court Decision 151/PUU-XXII/2024",
+      "year": "2024",
+      "summary": "The Constitutional Court read 'and' in Article 53(1)(b) (when a data protection officer is required) as 'and/or', widening the DPO obligation.",
+      "url": "https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022"
+    },
+    {
+      "title": "Constitutional Court case 236/PUU-XXII/2024 on the missing agency",
+      "year": "pending (2026)",
+      "summary": "A petition that could push the executive to establish the supervisory agency remained pending as of September 2026; no administrative PDP fine has been imposed anywhere because the agency does not exist.",
+      "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/"
+    }
+  ],
+  "quirks": [
+    "The law has been fully applicable since October 2024, but the regulator it creates still does not exist two years later, so the turnover-based fines are unenforceable.",
+    "The future agency will be a presidential body, not an independent authority.",
+    "Criminal law does the heavy lifting: individuals and companies can be imprisoned or fined for misusing personal data, even while administrative enforcement is absent.",
+    "GR 33/2026, the main implementing regulation, only enters into force on 16 January 2027."
+  ],
+  "plain": "There is no data protection regulator yet, so a person with a complaint usually goes to the ministry for digital affairs, a sector regulator such as the financial services authority, or the police if a crime is involved. You can also sue the organisation for compensation in the civil courts. Once the planned agency is created it will be able to fine organisations up to 2% of revenue.",
+  "map": {
+    "who_penalises": "court",
+    "cap": "turnover",
+    "private_action": "yes"
+  },
+  "confidence": "medium: the agency's absence is consistent across sources, but the 2026 reduction of criminal fines by Law No. 1 of 2026 and GR 33/2026 article numbers come from secondary sources only.",
+  "sources": [
+    {
+      "title": "Law No. 27 of 2022 on Personal Data Protection (BPK legal database)",
+      "url": "https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022",
+      "source_type": "primary"
+    },
+    {
+      "title": "Komdigi (Ministry of Communication and Digital Affairs)",
+      "url": "https://www.komdigi.go.id",
+      "source_type": "primary"
+    },
+    {
+      "title": "Nusantara DFDL: GR 33/2026 compliance guide",
+      "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Chambers Data Protection & Privacy 2026: Indonesia trends and developments",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/indonesia/trends-and-developments",
+      "source_type": "secondary"
+    },
+    {
+      "title": "DLA Piper Data Protection Laws of the World: Indonesia",
+      "url": "https://www.dlapiperdataprotection.com/?t=law&c=ID",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Isentia: Indonesia's PDP law in 2026",
+      "url": "https://www.isentia.com/latest-reads/indonesias-pdp-law-and-social-listening-what-buyers-need-to-know-in-2026/",
+      "source_type": "secondary"
+    }
+  ]
+}

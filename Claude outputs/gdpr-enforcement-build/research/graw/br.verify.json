@@ -1,0 +1,117 @@
+{
+ "code": "br",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Telekall fined BRL 14,400 in total in July 2023; leading example of a fine against a private company",
+   "verdict": "corrected",
+   "evidence": "Telesintese (25 July 2023): BRL 14,400 fine on micro-enterprise Telekall for processing without legal basis for the 2020 election campaign; only one of eight sanctioning procedures produced a fine. Confidata (2026 map): 'A única empresa privada sancionada foi a Telekall'. Amount and year confirmed; 'leading example' understates that it is the only one.",
+   "url": "https://confidata.com.br/blog/mapa-sancoes-anpd-todos-casos-2026",
+   "replacement": "In July 2023 the ANPD fined a small telemarketing firm BRL 14,400 in total, plus a warning, for processing personal data without a legal basis to sell contact lists for the 2020 municipal election campaign and for failing to cooperate. It is the only ANPD fine on a private company found in the sources checked."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Meta AI preventive suspension 2 July 2024, BRL 50,000 daily fine, lifted 30 August 2024 by Despacho Decisório 33/2024/PR/ANPD after compliance plan",
+   "verdict": "confirmed",
+   "evidence": "Portal de Privacidade: decision 2 July 2024, daily fine BRL 50,000, legitimate interest, transparency, obstacles to objection, children's data. Desinformante: lifted Friday 30 August 2024, Despacho 33/2024/PR/ANPD; in-app notices, opt-out forms, 30 days after notification, no data from under-18 accounts.",
+   "url": "https://desinformante.com.br/anpd-meta-ia/"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "INSS publicity order over a breach exposing more than 90 million queries; warnings to Ministry of Health over CPF numbers exposed through an unprotected API",
+   "verdict": "corrected",
+   "evidence": "Mayer Brown: INSS sanction was publicisation of the infringement (notice on its site for 60 days) for failing to notify data subjects of an incident involving over 90 million queries to its benefits system; Ministry of Health received two warnings in each of two procedures, one over an unauthenticated API exposing CPF data. 'Breach exposing 90 million queries' misstates what was counted and why INSS was sanctioned.",
+   "url": "https://www.mayerbrown.com/pt/insights/publications/2025/01/um-olhar-retrospectivo-sobre-a-anpd-e-a-protecao-de-dados-no-brasil-em-2024",
+   "replacement": "In 2024 the ANPD ordered the National Social Security Institute (INSS) to publicise its infringement for 60 days after it failed to notify data subjects of an incident involving more than 90 million unauthorised queries to its benefits systems, and issued warnings to the Ministry of Health, including over CPF numbers and health data exposed through an unauthenticated API. No fines were possible because art. 52 para. 3 LGPD excludes public bodies from monetary penalties."
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "ANPD fines by administrative decision, up to 2% of Brazilian revenue capped at BRL 50 million per infringement",
+   "verdict": "confirmed",
+   "evidence": "Art. 52 LGPD: 'multa simples, de até 2% ... do faturamento ... limitada, no total, a R$ 50.000.000,00 por infração'; applied by the national authority.",
+   "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies cannot be fined (art. 52 para. 3)",
+   "verdict": "confirmed",
+   "evidence": "Art. 52 para. 3: only items I, IV, V, VI, X, XI and XII (not the fines in II and III) may be applied to public bodies. Confidata lists IAMSPE, SES-SC, INSS, SEEDF, SAS-PE and Ministry of Health with warnings or publicity only.",
+   "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "Prior request to controller required for a data subject petition (not confirmed against the regulation)",
+   "verdict": "corrected",
+   "evidence": "Resolution CD/ANPD 1/2021 art. 25 para. 1: the petition must be accompanied by proof that the request was previously submitted to the controller and not resolved in time; a self-declaration is accepted where no other evidence is available.",
+   "url": "https://www.abrapp.org.br/legislacao/resolucao-cd-anpd-no-1-de-28-de-outubro-de-2021/",
+   "replacement": "Yes for a data subject petition: art. 18 para. 1 LGPD gives the right to petition the ANPD against the controller, and art. 25 para. 1 of Resolution CD/ANPD 1/2021 requires proof that the request was first made to the controller and not resolved in time (a self-declaration is accepted if no other proof exists). A denúncia does not need prior contact."
+  },
+  {
+   "field": "procedure.decision_maker",
+   "claim": "General Coordination of Inspection decides at first instance; Board decides appeals",
+   "verdict": "confirmed",
+   "evidence": "Resolution CD/ANPD 1/2021 art. 55: first-instance decision by the Coordenação-Geral de Fiscalização; art. 58: appeal to the Conselho Diretor, 'instância administrativa máxima'.",
+   "url": "https://www.abrapp.org.br/legislacao/resolucao-cd-anpd-no-1-de-28-de-outubro-de-2021/"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Administrative appeal 10 working days (not confirmed); judicial review not confirmed",
+   "verdict": "corrected",
+   "evidence": "Resolution CD/ANPD 1/2021 art. 58: appeal to the Board of Directors within 'dez dias úteis'.",
+   "url": "https://www.abrapp.org.br/legislacao/resolucao-cd-anpd-no-1-de-28-de-outubro-de-2021/",
+   "replacement": "Administrative appeal: 10 working days to the Board of Directors (art. 58 Resolution CD/ANPD 1/2021). Judicial review: not confirmed."
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "corrected",
+   "evidence": "Resolution CD/ANPD 1/2021 art. 60: the appeal 'terá efeito suspensivo limitado à matéria contestada', unless there is a justified risk of harm that is hard to repair from execution of the decision.",
+   "url": "https://www.abrapp.org.br/legislacao/resolucao-cd-anpd-no-1-de-28-de-outubro-de-2021/",
+   "replacement": "The administrative appeal suspends the decision only as to the matter contested, unless there is a justified risk of harm that is hard to repair (art. 60 Resolution CD/ANPD 1/2021). Preventive measures can stay in force meanwhile, as in the 2024 Meta case."
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Five-year limitation under Law 9.873/1999 reported to apply",
+   "verdict": "unverifiable",
+   "evidence": "Resolution CD/ANPD 1/2021 sets no limitation period of its own (art. 68 allows revision at any time on new facts); Law 9.873/1999 not checked.",
+   "url": "https://www.abrapp.org.br/legislacao/resolucao-cd-anpd-no-1-de-28-de-outubro-de-2021/"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "ANPD has fined almost exclusively small private actors",
+   "verdict": "corrected",
+   "evidence": "Telesintese and Confidata: only one fine (Telekall, a micro-enterprise); all other sanctioned entities are public bodies with warnings or publicity orders.",
+   "url": "https://confidata.com.br/blog/mapa-sancoes-anpd-todos-casos-2026",
+   "replacement": "The ANPD became a full regulatory agency only in 2025-2026 and its only confirmed fine is BRL 14,400 on a micro-enterprise; most sanctioned entities are public bodies, which can be warned but never fined."
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Cap is 2% of Brazilian revenue, BRL 50 million per infringement",
+   "verdict": "confirmed",
+   "evidence": "Art. 52 II LGPD: revenue 'no Brasil', limited to BRL 50 million per infringement.",
+   "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator",
+   "verdict": "confirmed",
+   "evidence": "ANPD imposes fines itself (art. 52 LGPD; first-instance decision by CGF under Res. 1/2021 art. 55).",
+   "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+  },
+  {
+   "field": "map.cap",
+   "claim": "turnover",
+   "verdict": "confirmed",
+   "evidence": "2% of Brazilian revenue with an absolute ceiling of BRL 50 million; revenue-linked, so turnover fits best.",
+   "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "yes",
+   "verdict": "confirmed",
+   "evidence": "Art. 42 LGPD: controller or processor causing material or moral damage in breach of data protection law must compensate it.",
+   "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+  }
+ ],
+ "notes": "planalto.gov.br and abrapp.org.br (text of Resolution CD/ANPD 1/2021) were readable this time. Not checked: the MP 1.317/2025 conversion and its law number (dpa.structure), the STJ moral damages ruling (private.damages). The Meta reconsideration claim in appeal.suspensive comes from Correio Braziliense and was not refetched."
+}

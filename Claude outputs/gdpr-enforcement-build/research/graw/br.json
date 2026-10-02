@@ -1,0 +1,99 @@
+{
+  "code": "br",
+  "country": "Brazil",
+  "membership": "World",
+  "region": "Americas",
+  "dpa": {
+    "name_en": "National Data Protection Agency (formerly National Data Protection Authority)",
+    "name_native": "Agência Nacional de Proteção de Dados (formerly Autoridade Nacional de Proteção de Dados)",
+    "abbr": "ANPD",
+    "url": "https://www.gov.br/anpd/",
+    "structure": "Federal regulatory agency (special autonomous body) linked to the Ministry of Justice and Public Security, with functional, technical, decision-making, administrative and financial autonomy, run by a Board of Directors (Conselho Diretor). Provisional Measure 1.317 of 17/18 September 2025 converted it from an authority into a regulatory agency under Law 13.848/2019 and gave it supervision of the Digital Statute of Children and Adolescents (Law 15.211/2025); Congress approved the conversion on 24 February 2026, and the number of the resulting law was not confirmed.",
+    "regional": "No regional data protection authorities. In practice consumer bodies (state and municipal Procons and the federal National Consumer Secretariat, Senacon) and public prosecutors (Ministério Público) also act on privacy failures under the Consumer Defence Code and through public civil actions."
+  },
+  "law": {
+    "name": "Lei Geral de Proteção de Dados Pessoais (LGPD), Law 13.709 of 14 August 2018, in force 18 September 2020; administrative sanctions (arts. 52 to 54) applicable from 1 August 2021. Key ANPD rules: Resolution CD/ANPD 1/2021 (inspection and sanctioning procedure) and Resolution CD/ANPD 4/2023 (dosimetry and application of sanctions, February 2023).",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+  },
+  "complaint": {
+    "how": "Through the ANPD's online petition service on the gov.br portal, free of charge, in Portuguese. Two routes exist: a data subject petition (petição de titular) about one's own data, and a report (denúncia) about a suspected LGPD breach that anyone can file.",
+    "contact_controller_first": "Yes for a data subject petition: art. 18 para. 1 LGPD gives the right to petition the ANPD against the controller, and the ANPD procedure requires proof that the request was first made to the controller and not resolved in time (not confirmed against the regulation text in this research). A denúncia does not need prior contact.",
+    "deadlines": "Not confirmed. The ANPD does not commit to deciding individual petitions within a fixed period; it handles complaints in bulk, using them to prioritise monitoring and inspection.",
+    "complainant_status": "Limited. The petitioner is informed of the outcome but the sanctioning procedure runs between the ANPD and the controller; the complainant is not a party with appeal rights in the way a GDPR complainant is (not confirmed in a primary source)."
+  },
+  "procedure": {
+    "stages": [
+      "Monitoring, guidance and preventive phase: the ANPD can request information, issue guidance and impose preventive measures (for example the 2024 Meta AI suspension) with a daily fine for non-compliance.",
+      "Inspection (fiscalização) triggered by complaints, breach notifications or own initiative.",
+      "Administrative sanctioning procedure (processo administrativo sancionador) opened by the General Coordination of Inspection, with notice of charges and a defence period.",
+      "First-instance decision applying sanctions graded under Resolution CD/ANPD 4/2023; administrative appeal to the Board of Directors.",
+      "Publication of the sanction and, where applicable, a publicity order requiring the controller to disclose the infringement."
+    ],
+    "decision_maker": "The General Coordination of Inspection decides at first instance; the Board of Directors (Conselho Diretor) decides administrative appeals and adopts preventive measures in urgent cases.",
+    "limitation": "Not confirmed in a primary source; the general five-year limitation for federal punitive administrative action (Law 9.873/1999) is reported to apply."
+  },
+  "fines": {
+    "imposed_by": "The ANPD imposes fines itself by administrative decision (art. 52 LGPD), so who_penalises is regulator. The simple fine is up to 2% of the revenue of the private legal entity, group or conglomerate in Brazil in its last financial year, excluding taxes, capped at BRL 50 million per infringement; a daily fine is also available.",
+    "public_bodies": "Public bodies cannot be fined: art. 52 para. 3 LGPD limits them to warnings, publicity, blocking, deletion and suspension-type sanctions. Most ANPD sanctions to date (Ministry of Health, INSS, state health and education secretariats) were warnings or publicity orders against public entities.",
+    "quirks": "Other sanctions are warning, publicisation of the infringement, blocking or deletion of the data, partial suspension of the database for up to six months (renewable), suspension of the processing activity, and partial or total prohibition of data processing. The LGPD itself creates no criminal offences; criminal liability comes from other laws. The 2% cap uses Brazilian revenue only, not global turnover."
+  },
+  "appeal": {
+    "court": "Administrative appeal first lies to the ANPD Board of Directors. Judicial review is before the federal courts (Justiça Federal), since the ANPD is a federal body.",
+    "deadline": "Administrative appeal: 10 working days is reported under Resolution CD/ANPD 1/2021 (not confirmed against the text). Judicial review: not confirmed.",
+    "suspensive": "Not confirmed. In the Meta case the Board refused to rule quickly on Meta's request for suspensive effect and kept the preventive measure in force.",
+    "further": "Ordinary federal appeals: Regional Federal Court (TRF), then the Superior Court of Justice (STJ) and, on constitutional questions, the Federal Supreme Court (STF).",
+    "inaction": "Not confirmed. There is no specific statutory remedy against ANPD inaction; complainants typically turn to consumer bodies, public prosecutors or the courts directly."
+  },
+  "private": {
+    "courts": "Yes: art. 42 LGPD makes controllers and processors liable for material, moral, individual or collective damage caused by processing in breach of the law, and art. 22 allows defence of data subjects' interests individually or collectively in court. Claims go to the ordinary state civil courts, including small claims courts, or consumer courts where the Consumer Defence Code applies.",
+    "damages": "No statutory damages; compensation is assessed by the judge. There is heavy volume of individual LGPD litigation, and the burden of proof can be reversed in the data subject's favour (art. 42 para. 2). The STJ has reportedly held that a leak of ordinary (non-sensitive) personal data does not by itself create presumed moral damages (case reference not confirmed).",
+    "collective": "Yes: collective redress through the public civil action (ação civil pública, Law 7.347/1985) and the Consumer Defence Code, brought by public prosecutors, public defenders, consumer bodies and associations such as Idec. Prosecutors also obtain settlement agreements (TACs) with companies."
+  },
+  "cases": [
+    {
+      "title": "Telekall Infoservice: first ANPD fine",
+      "year": "2023",
+      "summary": "In July 2023 the ANPD fined a small telemarketing firm BRL 14,400 in total, plus a warning, for processing personal data without a legal basis to sell contact lists for the 2020 municipal election campaign and for failing to cooperate. It remains the leading example of a fine against a private company.",
+      "url": "https://www.telesintese.com.br/anpd-so-pode-aplicar-uma-multa-entre-os-oito-processos-sancionadores-abertos/"
+    },
+    {
+      "title": "Meta AI training: preventive suspension",
+      "year": "2024",
+      "summary": "On 2 July 2024 the ANPD Board ordered Meta, as a preventive measure, to suspend its new privacy policy allowing Facebook, Instagram and Messenger data to be used to train generative AI, under a daily fine of BRL 50,000, citing an inadequate legitimate interest basis, poor transparency, obstacles to objecting and risks to children's data. After Meta submitted a compliance plan (in-app notices, opt-out forms, a 30-day wait, no use of under-18 accounts), the ANPD lifted the suspension on 30 August 2024 by Despacho Decisório 33/2024/PR/ANPD.",
+      "url": "https://www.portaldeprivacidade.ipemad.pb.gov.br/noticia/anpd-determina-suspensao-cautelar-do-tratamento-de-dados-pessoais-para-treinamento-da-ia-da-meta.html"
+    },
+    {
+      "title": "INSS and Ministry of Health: sanctions against public bodies",
+      "year": "2024",
+      "summary": "In 2024 the ANPD sanctioned the National Social Security Institute (INSS) with a publicity order over a breach exposing more than 90 million queries, and issued warnings to the Ministry of Health over CPF numbers exposed through an unprotected API. No fines were possible because art. 52 para. 3 LGPD excludes public bodies from monetary penalties.",
+      "url": "https://www.mayerbrown.com/pt/insights/publications/2025/01/um-olhar-retrospectivo-sobre-a-anpd-e-a-protecao-de-dados-no-brasil-em-2024"
+    }
+  ],
+  "quirks": [
+    "The cap is 2% of Brazilian revenue, capped at BRL 50 million per infringement, not a share of worldwide turnover, so the absolute ceiling is low for multinationals; the daily fine attached to preventive orders can matter more.",
+    "Consumer authorities (Procons, Senacon) and public prosecutors have historically produced larger privacy-related penalties and settlements than the ANPD, using the Consumer Defence Code; a controller can face several enforcers for the same facts.",
+    "The ANPD became a full regulatory agency only in 2025-2026 and has fined almost exclusively small private actors; most sanctioned entities are public bodies, which can be warned but never fined.",
+    "Private litigation is the main real-world enforcement channel: thousands of individual LGPD damages claims are filed in civil and small claims courts."
+  ],
+  "plain": "In Brazil you first ask the company to deal with your data request; if it does not, you can petition the national data protection agency (ANPD) online for free. The ANPD uses complaints to decide whom to inspect, and if it finds a breach it can itself fine a company up to 2% of its Brazilian revenue (maximum BRL 50 million per breach) or order it to stop processing, with appeals going to its board and then the federal courts. Many people instead go straight to a consumer body or sue the company in a civil or small claims court for compensation.",
+  "map": {
+    "who_penalises": "regulator",
+    "cap": "turnover",
+    "private_action": "yes"
+  },
+  "confidence": "medium: the planalto.gov.br statute text and gov.br ANPD pages could not be fetched, so article-level details on the complaint and appeal procedure (prior-contact requirement, 10-day appeal, suspensive effect, limitation) and the number of the law converting MP 1.317/2025 are not confirmed against primary text.",
+  "sources": [
+    {"title": "LGPD, Law 13.709/2018 (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm", "source_type": "primary"},
+    {"title": "Chamber of Deputies: Provisional measure structures the National Data Protection Agency", "url": "https://www.camara.leg.br/noticias/1201600-medida-provisoria-estrutura-a-agencia-nacional-de-protecao-de-dados/", "source_type": "primary"},
+    {"title": "Senado Notícias: Provisional measure transforms ANPD into regulatory agency", "url": "https://www12.senado.leg.br/noticias/materias/2025/09/18/medida-provisoria-transforma-anpd-em-agencia-reguladora", "source_type": "primary"},
+    {"title": "Teletime: Senate approves MP that transforms ANPD into agency (24 Feb 2026)", "url": "https://teletime.com.br/24/02/2026/senado-aprova-mp-que-transforma-a-anpd-em-agencia/", "source_type": "secondary"},
+    {"title": "DLA Piper Data Protection Laws of the World: Brazil enforcement and authority", "url": "https://www.dlapiperdataprotection.com/index.html?t=enforcement&c=BR", "source_type": "secondary"},
+    {"title": "Telesíntese: ANPD can apply only one fine among eight sanctioning procedures (Telekall)", "url": "https://www.telesintese.com.br/anpd-so-pode-aplicar-uma-multa-entre-os-oito-processos-sancionadores-abertos/", "source_type": "secondary"},
+    {"title": "Confidata: map of ANPD sanctions", "url": "https://confidata.com.br/blog/mapa-sancoes-anpd-todos-casos-2026", "source_type": "secondary"},
+    {"title": "Mayer Brown: retrospective on ANPD in 2024", "url": "https://www.mayerbrown.com/pt/insights/publications/2025/01/um-olhar-retrospectivo-sobre-a-anpd-e-a-protecao-de-dados-no-brasil-em-2024", "source_type": "secondary"},
+    {"title": "Portal de Privacidade (Paraíba state): ANPD orders precautionary suspension of Meta AI training", "url": "https://www.portaldeprivacidade.ipemad.pb.gov.br/noticia/anpd-determina-suspensao-cautelar-do-tratamento-de-dados-pessoais-para-treinamento-da-ia-da-meta.html", "source_type": "secondary"},
+    {"title": "Consumidor Moderno: ANPD suspends Meta privacy policy", "url": "https://consumidormoderno.com.br/lgpd-privacidade-meta-ia/", "source_type": "secondary"},
+    {"title": "Correio Braziliense: ANPD keeps Meta suspension after reconsideration request", "url": "https://www.correiobraziliense.com.br/economia/2024/07/6895652-anpd-recusa-pedido-de-reconsideracao-da-meta-e-mantem-suspensao.html", "source_type": "secondary"},
+    {"title": "Desinformante: ANPD frees Meta to use Brazilians' data for AI (Despacho Decisório 33/2024)", "url": "https://desinformante.com.br/anpd-meta-ia/", "source_type": "secondary"}
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "code": "vn",
+  "checked": [
+    {
+      "field": "cases[0].summary",
+      "claim": "More than 30 criminal cases, about 160 million data files, 2023 to 2025",
+      "verdict": "confirmed",
+      "evidence": "Vietnam Law Magazine citing MPS: more than 30 cases of illegal purchase, sale and theft of personal data, approximately 160 million data files, sectors including healthcare, education, banking, finance, electricity, insurance and telecoms.",
+      "url": "https://vietnamlawmagazine.vn/businesses-face-tightened-personal-data-protection-requirements-79374.html"
+    },
+    {
+      "field": "cases[1].summary",
+      "claim": "Issued 19 August 2026; no published fine found",
+      "verdict": "confirmed",
+      "evidence": "Tilleke: Decree No. 330/2026/ND-CP 'issued and effective from August 19, 2026'. Viet An: takes effect 19 August 2026, published 3 September 2026. No sanction decision under it found in any source.",
+      "url": "https://www.tilleke.com/insights/vietnam-issues-cybersecurity-and-personal-data-protection-sanctions-decree/"
+    },
+    {
+      "field": "law.name",
+      "claim": "PDPL 91/2025/QH15 adopted 26 June 2025, in force 1 January 2026; Decree 330/2026/ND-CP dated 19 August 2026",
+      "verdict": "confirmed",
+      "evidence": "LuatVietnam: adopted 26 June 2025, effective 1 January 2026. Decree 330 dated 19 August 2026. Decree 356/2025 details not independently checked.",
+      "url": "https://english.luatvietnam.vn/dan-su/law-on-personal-data-protection-law-no-91-2025-qh15-405135-d1.html"
+    },
+    {
+      "field": "procedure.limitation",
+      "claim": "1 year, Decree 330 Article 3(1)",
+      "verdict": "confirmed",
+      "evidence": "LuatVietnam Decree 330: 'The statute of limitations for sanctioning administrative violations in the fields of cybersecurity and personal data protection shall be 01 year.' Clause number not seen.",
+      "url": "https://english.luatvietnam.vn/decree-no-330-2026-nd-cp-dated-august-19-2026-of-the-government-on-sanctioning-of-administrative-violations-in-the-fields-of-cybersecurity-and-perso-445214-doc1.html"
+    },
+    {
+      "field": "fines.imposed_by",
+      "claim": "MPS imposes fines; caps 5% revenue cross-border, 10x proceeds, VND 3 billion, individuals half; Decree 330 sets the higher of the percentage or VND 3 billion; consent up to VND 70 million",
+      "verdict": "corrected",
+      "evidence": "PDPL Article 8 (LuatVietnam): 5%, 10 times, VND 3 billion, individuals half. Viet An quotes Decree 330 with the same three caps. Tilleke: consent violations up to VND 70 million. No source says Decree 330 applies 'the higher of' the percentage or VND 3 billion; Tilleke only lists '5% of revenue or VND 3 billion'. The effective date is also now confirmed.",
+      "url": "https://english.luatvietnam.vn/dan-su/law-on-personal-data-protection-law-no-91-2025-qh15-405135-d1.html",
+      "replacement": "The MPS imposes fines itself by administrative decision under Decree 330/2026/ND-CP (issued and in force 19 August 2026), so the map value is regulator. Maximums (Article 8 PDPL): 5% of the previous year's revenue for unlawful cross-border transfers, 10 times the proceeds for buying or selling personal data, and VND 3 billion for other violations by organisations, with individuals facing half; Decree 330 sets lower bands for specific breaches (for example up to VND 70 million for consent failures)."
+    },
+    {
+      "field": "fines.quirks",
+      "claim": "Before Decree 330 there was no specific fining regime",
+      "verdict": "corrected",
+      "evidence": "Overstated. Before the PDPL, some personal information breaches were already fineable under Decree 15/2020/ND-CP (as amended by Decree 14/2022), for example collecting personal information without consent (own knowledge; not fetched). What was missing was a sanctions decree for the PDPL itself and for Decree 13/2023. Penal Code Article 288 figures not checked against the code.",
+      "url": "https://english.luatvietnam.vn/decree-no-330-2026-nd-cp-dated-august-19-2026-of-the-government-on-sanctioning-of-administrative-violations-in-the-fields-of-cybersecurity-and-perso-445214-doc1.html",
+      "replacement": "Before Decree 330 the PDPL and Decree 13/2023 had no penalty schedule of their own; only scattered personal information breaches were fineable under the older telecoms and information sanctions decree (Decree 15/2020). Criminal liability for illegal provision or use of information on networks (Penal Code Article 288) carries fines of VND 30 million to 1 billion or 6 months to 7 years' imprisonment per secondary sources. Small enterprises and start-ups get a five-year deferral of some assessment duties."
+    },
+    {
+      "field": "fines.public_bodies",
+      "claim": "Not confirmed",
+      "verdict": "unverifiable",
+      "evidence": "Decree 330 extract only addresses defence and military split between MND and MPS.",
+      "url": "https://english.luatvietnam.vn/decree-no-330-2026-nd-cp-dated-august-19-2026-of-the-government-on-sanctioning-of-administrative-violations-in-the-fields-of-cybersecurity-and-perso-445214-doc1.html"
+    },
+    {
+      "field": "appeal.deadline",
+      "claim": "Not confirmed; general administrative law gives 1 year to sue",
+      "verdict": "unverifiable",
+      "evidence": "Not in fetched sources; 1 year from receipt of the decision under the Law on Administrative Procedure matches my knowledge, so the hedge is appropriate.",
+      "url": "https://english.luatvietnam.vn/decree-no-330-2026-nd-cp-dated-august-19-2026-of-the-government-on-sanctioning-of-administrative-violations-in-the-fields-of-cybersecurity-and-perso-445214-doc1.html"
+    },
+    {
+      "field": "quirks[1]",
+      "claim": "5% cap only for cross-border transfers; others VND 3 billion (about USD 115,000)",
+      "verdict": "confirmed",
+      "evidence": "PDPL Article 8 and Decree 330 as quoted by Viet An; VND 3 billion is about USD 114,000 at current rates.",
+      "url": "https://english.luatvietnam.vn/dan-su/law-on-personal-data-protection-law-no-91-2025-qh15-405135-d1.html"
+    },
+    {
+      "field": "quirks[3]",
+      "claim": "For eight months in 2026 the law was in force but its fines could not be applied",
+      "verdict": "corrected",
+      "evidence": "1 January to 19 August 2026 is about seven and a half months.",
+      "url": "https://www.tilleke.com/insights/vietnam-issues-cybersecurity-and-personal-data-protection-sanctions-decree/",
+      "replacement": "For about seven and a half months in 2026 the law was in force but its own fines could not be applied because the sanctions decree had not been issued."
+    },
+    {
+      "field": "dpa.structure",
+      "claim": "MPS is the focal point (Article 36 PDPL)",
+      "verdict": "confirmed",
+      "evidence": "LuatVietnam: Article 36, the Ministry of Public Security is the focal-point agency for state management of personal data protection, except matters under the Ministry of National Defence.",
+      "url": "https://english.luatvietnam.vn/dan-su/law-on-personal-data-protection-law-no-91-2025-qh15-405135-d1.html"
+    },
+    {
+      "field": "private.courts",
+      "claim": "Article 4 right to sue and claim compensation",
+      "verdict": "confirmed",
+      "evidence": "Article 4: 'To file complaints and denunciations, initiate lawsuits, and request compensation for damage in accordance with law.'",
+      "url": "https://english.luatvietnam.vn/dan-su/law-on-personal-data-protection-law-no-91-2025-qh15-405135-d1.html"
+    },
+    {
+      "field": "map.who_penalises",
+      "claim": "regulator",
+      "verdict": "confirmed",
+      "evidence": "MPS is the enforcing authority under Decree 330 (Tilleke).",
+      "url": "https://www.tilleke.com/insights/vietnam-issues-cybersecurity-and-personal-data-protection-sanctions-decree/"
+    },
+    {
+      "field": "map.cap",
+      "claim": "turnover",
+      "verdict": "confirmed",
+      "evidence": "5% of preceding-year revenue for cross-border violations is a turnover-linked maximum, even though most breaches are capped at a fixed VND 3 billion.",
+      "url": "https://english.luatvietnam.vn/dan-su/law-on-personal-data-protection-law-no-91-2025-qh15-405135-d1.html"
+    },
+    {
+      "field": "map.private_action",
+      "claim": "yes",
+      "verdict": "confirmed",
+      "evidence": "Article 4 PDPL.",
+      "url": "https://english.luatvietnam.vn/dan-su/law-on-personal-data-protection-law-no-91-2025-qh15-405135-d1.html"
+    }
+  ],
+  "notes": "Most serious: fines.quirks says there was no fining regime at all before Decree 330, which ignores Decree 15/2020 sanctions for personal information breaches; and fines.imposed_by asserts a 'higher of 5% or VND 3 billion' rule no source supports. Decree 330's effective date (19 August 2026, same as issue) is now confirmed by Tilleke and Viet An, so the confidence line can drop that caveat. LuatVietnam text is behind a paywall for parts of Decree 330, so the list of competent officers remains unconfirmed. The source labelled 'primary' (LuatVietnam English) is an unofficial translation; consider marking it secondary."
+}

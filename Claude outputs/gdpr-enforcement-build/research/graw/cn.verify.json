@@ -1,0 +1,91 @@
+{
+ "code": "cn",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "CAC fined Didi CNY 8.026 billion on 21 July 2022 under CSL, DSL, PIPL and APL; Cheng Wei and Liu Qing CNY 1 million each",
+   "verdict": "confirmed",
+   "evidence": "CAC notice of 21 July 2022: 80.26亿元 on Didi Global, 100万元 each on Cheng Wei and Liu Qing; violations of Network Security Law, Data Security Law, PIPL, penalty under Administrative Penalty Law.",
+   "url": "http://www.cac.gov.cn/2022-07/21/c_1660021534306352.htm"
+  },
+  {
+   "field": "cases[1].url",
+   "claim": "BCLP note as source for Guo Bing v Hangzhou Safari Park",
+   "verdict": "corrected",
+   "evidence": "The BCLP page does not mention the case. China Daily (9 April 2021): Hangzhou Intermediate People's Court upheld the Fuyang District Court ruling, ordered deletion of facial data and the fingerprint data, compensation CNY 1,038.",
+   "url": "https://www.chinadaily.com.cn/a/202104/09/WS60704822a31024ad0bab4980.html",
+   "replacement": "https://www.chinadaily.com.cn/a/202104/09/WS60704822a31024ad0bab4980.html"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Hangzhou courts ordered deletion of facial and fingerprint data and modest compensation",
+   "verdict": "confirmed",
+   "evidence": "Fuyang District Court (first instance 2020) and Hangzhou Intermediate Court (appeal, 9 April 2021): delete facial and fingerprint data; CNY 1,038 compensation, on contract grounds.",
+   "url": "https://www.chinadaily.com.cn/a/202104/09/WS60704822a31024ad0bab4980.html"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Art 66(1) up to CNY 1m and 10k-100k on individuals; Art 66(2) up to CNY 50m or 5% of previous year's turnover, 100k-1m on individuals, bans",
+   "verdict": "confirmed",
+   "evidence": "BCLP quotes Art 66: max RMB 50,000,000 or 5% of revenue of the preceding year; RMB 10,000-100,000 for responsible staff (ordinary tier). Serious-tier individual range and bans match PIPL text.",
+   "url": "https://www.bclplaw.com/en-US/events-insights-news/part-4-of-5-penalties-and-liabilities-under-chinas-data-protection-laws.html"
+  },
+  {
+   "field": "procedure.decision_maker",
+   "claim": "Serious tier only by department at provincial level or above",
+   "verdict": "confirmed",
+   "evidence": "PIPL Art 66(2): 由省级以上履行个人信息保护职责的部门 (provincial level or above). Checked against the PIPL text as known; translation page not refetched.",
+   "url": "https://digichina.stanford.edu/work/translation-personal-information-protection-law-of-the-peoples-republic-of-china-effective-nov-1-2021/"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "No fines on state organs; superior authority orders rectification, officials disciplined (Art 68)",
+   "verdict": "confirmed",
+   "evidence": "Consistent with PIPL Art 68 text.",
+   "url": "https://digichina.stanford.edu/work/translation-personal-information-protection-law-of-the-peoples-republic-of-china-effective-nov-1-2021/"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "APL Art 36: two years, five years where life, health or financial security involved with harmful consequences",
+   "verdict": "confirmed",
+   "evidence": "Matches Administrative Penalty Law 2021 Art 36 as known; not refetched online.",
+   "url": ""
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "60 days reconsideration, six months litigation",
+   "verdict": "confirmed",
+   "evidence": "Matches Administrative Reconsideration Law (60 days) and Administrative Litigation Law Art 46 (six months), general rules; already hedged in the file.",
+   "url": ""
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not suspensive unless stay ordered",
+   "verdict": "confirmed",
+   "evidence": "Consistent with Administrative Litigation Law Art 56 and Administrative Reconsideration Law; general rule.",
+   "url": ""
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Criminal Law Art 253-1: up to three years, three to seven in particularly serious cases",
+   "verdict": "confirmed",
+   "evidence": "Matches Criminal Law Art 253-1 as amended 2015; not refetched.",
+   "url": ""
+  },
+  {
+   "field": "law.name",
+   "claim": "CSL first amendment in force 1 January 2026; NDSM Regulations 1 January 2025; Compliance Audit Measures 1 May 2025",
+   "verdict": "unverifiable",
+   "evidence": "Not refetched; dates match my understanding (CSL amendment adopted 28 October 2025, in force 1 January 2026).",
+   "url": ""
+  },
+  {
+   "field": "map",
+   "claim": "who_penalises regulator, cap turnover, private_action yes",
+   "verdict": "confirmed",
+   "evidence": "CAC and departments fine by decision; Art 66(2) 5% turnover alternative; Art 69 civil claims.",
+   "url": ""
+  }
+ ],
+ "notes": "No serious problem. The Guo Bing case was cited to a page that does not mention it; replacement URL supplied. Items marked confirmed without a URL rest on statute text as known, not on a fetch in this pass."
+}

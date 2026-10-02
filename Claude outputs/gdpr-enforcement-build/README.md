@@ -1,6 +1,6 @@
 # gdpr-enforcement-build
 
-Builds `gdpr-enforcement.html` (GDPR Enforcement in Europe) and the study guide.
+Builds `gdpr-enforcement.html` (GDPR Enforcement in Europe), its companion `privacy-enforcement-worldwide.html` (23 jurisdictions outside Europe), and the study guide. Both pages share `pages/gdpr-enforcement/enforcement.css` and `enforcement.js`; each map tile carries its own colours per view, so one script serves both.
 
 ## Files
 
@@ -14,12 +14,16 @@ Builds `gdpr-enforcement.html` (GDPR Enforcement in Europe) and the study guide.
 - `header.html`: the site header embedded in the page. It must match `site-nav-build/swap_header.py`; after any nav change update both.
 - `enforcement.css`, `enforcement.js`: copied to `pages/gdpr-enforcement/` by the builder.
 - `build_enforcement_page.py`: writes `out/gdpr-enforcement.html` and `out/pages/gdpr-enforcement/`.
+- `research/GBRIEF.md`, `research/GVERIFY.md`: the research and verification briefs for the worldwide page.
+- `research/graw/`: raw worldwide JSON plus `.verify.json`; `research/gapply_verify.py` applies the 71 corrections and four manual patches (Singapore appeal wording, dropped non-cases for Mexico, the Philippines and Argentina) and writes `gdata/`.
+- `summary_world.py`: map legends, first court, route, tile grid for the worldwide page; `OVERRIDE` holds map values changed from the JSON with the reason (Israel's maximum shown as not confirmed).
+- `build_world_page.py`: writes `out/privacy-enforcement-worldwide.html`, reusing the European builder's head, header, cards and tile map.
 - `build_study_guide.py`: writes `out/gdpr-enforcement-study-guide.md`, `.html` and `.pdf` (needs pandoc and Playwright Chromium).
 
 ## Rebuild
 
-1. `python3 research/apply_verify.py` (only if `raw/` changed)
-2. `python3 build_enforcement_page.py`
+1. `python3 research/apply_verify.py` and `python3 research/gapply_verify.py` (only if `raw/` or `graw/` changed)
+2. `python3 build_enforcement_page.py` and `python3 build_world_page.py`
 3. `python3 build_study_guide.py`
-4. Copy `out/gdpr-enforcement.html` to the repo root and `out/pages/gdpr-enforcement/*` to `pages/gdpr-enforcement/`.
+4. Copy `out/gdpr-enforcement.html` and `out/privacy-enforcement-worldwide.html` to the repo root and `out/pages/gdpr-enforcement/*` to `pages/gdpr-enforcement/`.
 5. Check: no em dashes, every `#ge-c-xx` anchor resolves, no horizontal overflow at 390px.

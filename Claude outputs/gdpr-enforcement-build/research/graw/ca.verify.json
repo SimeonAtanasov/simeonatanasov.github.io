@@ -1,0 +1,120 @@
+{
+ "code": "ca",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "FC dismissed April 2023; FCA reversed 9 Sept 2024 (2024 FCA 140); SCC leave 12 June 2025; heard 19 March 2026; no judgment",
+   "verdict": "confirmed",
+   "evidence": "Bennett Jones: FC 13 April 2023, FCA 9 September 2024 (2024 FCA 140), leave 12 June 2025 (2025 CanLII 54713), hearing 19 March 2026. SCC Hearings site (docket 41538) shows the case as reserved; no judgment found in search. The SCC's own judgments page refused WebFetch (403).",
+   "url": "https://scchearings.ca/e/facebook-inc-v-privacy-commissioner-of-canada-41538/"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "A.T. v Globe24h.com, 2017 FC 114, removal order, CAD 5,000 damages, s.14 application",
+   "verdict": "confirmed",
+   "evidence": "Gowling: 2017 FC 114, 14 February 2017, CAD 5,000 damages, orders to remove Canadian decisions and from search engine caches; s.14 application after a well-founded OPC finding.",
+   "url": "https://gowlingwlg.com/en/insights-resources/articles/2017/canada-s-federal-court-awards-damages-against-a-fo"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Report within one year (s.13(1))",
+   "verdict": "confirmed",
+   "evidence": "s.13(1): 'The Commissioner shall, within one year after the day on which a complaint is filed or is initiated by the Commissioner, prepare a report'. The 'nearly three years' anecdote was not checked.",
+   "url": "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-3.html"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Federal Court application one year after report or notice of discontinuance, extendable (s.14)",
+   "verdict": "confirmed",
+   "evidence": "s.14(2): within one year after the report or notification is sent; OPC page confirms the Court may extend.",
+   "url": "https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda-complaints-and-enforcement-process/federal-court-applications-under-pipeda/"
+  },
+  {
+   "field": "complaint.complainant_status",
+   "claim": "Only the complainant (not the organisation) may apply under s.14",
+   "verdict": "confirmed",
+   "evidence": "OPC: organisations against which complaints are filed cannot initiate s.14 applications.",
+   "url": "https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda-complaints-and-enforcement-process/federal-court-applications-under-pipeda/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "OPC no fining power; s.28 offences up to CAD 100,000; Quebec AMPs CAD 50,000 / CAD 10m or 2%; penal CAD 25m or 4%, doubled for repeat",
+   "verdict": "confirmed",
+   "evidence": "Loi 25 simple: CAI AMP up to CAD 10m or 2% of worldwide turnover imposed without court intervention; penal up to CAD 25m or 4% through the courts. PIPEDA s.28 maximum and the Quebec individual AMP and repeat-offence doubling are consistent with the statutes as known but were not re-read (s.28 is not on the fetched page; P-39.1 not fetched).",
+   "url": "https://loi25simple.ca/loi-25/sanctions-et-amendes"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Bill C-36 AMPs greater of CAD 10m or 3%; offences CAD 25m or 5%",
+   "verdict": "confirmed",
+   "evidence": "DLA Piper: AMP 'the greater of $10,000,000 and 3% of the organization's gross global revenue'; fines 'the greater of $25,000,000 and 5% of global revenue on indictment'. Alberta and BC CAD 100,000 not checked.",
+   "url": "https://www.dlapiper.com/en/insights/publications/2026/06/canada-tables-bill-c36-the-protecting-privacy-and-consumer-data-act"
+  },
+  {
+   "field": "law.name",
+   "claim": "Bill C-36 tabled 15 June 2026, early stage",
+   "verdict": "confirmed",
+   "evidence": "DLA Piper: tabled and first reading on 15 June 2026; title 'Protecting Privacy and Consumer Data Act'.",
+   "url": "https://www.dlapiper.com/en/insights/publications/2026/06/canada-tables-bill-c36-the-protecting-privacy-and-consumer-data-act"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "C-36 would leave the OPC with the public-sector Privacy Act only",
+   "verdict": "unverifiable",
+   "evidence": "DLA Piper names the new Digital Safety and Data Protection Commission of Canada with a Privacy and Consumer Data Commissioner but does not address the OPC's residual role.",
+   "url": "https://www.dlapiper.com/en/insights/publications/2026/06/canada-tables-bill-c36-the-protecting-privacy-and-consumer-data-act"
+  },
+  {
+   "field": "appeal.inaction",
+   "claim": "If the OPC discontinues or declines, complainant can apply to Federal Court within one year",
+   "verdict": "corrected",
+   "evidence": "s.14(1) opens the Federal Court route after the report or a notice that the investigation was discontinued. A decision under s.12 not to investigate at all is not a discontinuance; OPC guidance links the s.14 route to the report or notice of discontinuance.",
+   "url": "https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda-complaints-and-enforcement-process/federal-court-applications-under-pipeda/",
+   "replacement": "If the OPC discontinues an investigation, the complainant can still apply to the Federal Court within one year of the notice of discontinuance (s.14). A decision not to investigate at all (s.12) does not open that route; judicial review of OPC conduct in the Federal Court is the general fallback."
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Quebec AMP contestation 30 days",
+   "verdict": "unverifiable",
+   "evidence": "P-39.1 not fetched; consistent with the Law 25 review-then-contest scheme as known.",
+   "url": ""
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not checked.",
+   "url": ""
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "Courts have explicitly said class actions are needed because the regulator is weak",
+   "verdict": "corrected",
+   "evidence": "Supported only by one Ontario certification decision (Haikola v Personal Insurance, 2019 ONSC 5982) per a secondary source; the plural overstates it.",
+   "url": "https://nnovation.com/court-agrees-class-actions-necessary-to-enforce-pipeda/",
+   "replacement": "An Ontario court has said class actions are needed to enforce PIPEDA because the regulator cannot award damages or fine (Haikola v Personal Insurance, 2019 ONSC 5982)."
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "court",
+   "verdict": "confirmed",
+   "evidence": "Federally the OPC has no fining power; money comes only from Federal Court damages and s.28 offence fines. Quebec's CAI is a provincial exception, noted in fines.imposed_by.",
+   "url": "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-3.html"
+  },
+  {
+   "field": "map.cap",
+   "claim": "fixed",
+   "verdict": "confirmed",
+   "evidence": "Federal offence fines are fixed (CAD 100,000). Quebec turnover-based caps are provincial.",
+   "url": "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-3.html"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "limited",
+   "verdict": "confirmed",
+   "evidence": "Damages only via Federal Court after an OPC complaint and report (s.14, s.16).",
+   "url": "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-3.html"
+  }
+ ],
+ "notes": "No outright errors in cases. Most consequential fix: appeal.inaction conflates a s.12 refusal to investigate with a discontinuance; only the latter opens s.14. Quebec statute P-39.1 was not fetched, so Quebec article numbers and the 30-day contestation deadline remain unconfirmed. The SCC judgments page refused WebFetch."
+}

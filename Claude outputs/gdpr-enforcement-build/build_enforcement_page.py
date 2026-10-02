@@ -71,29 +71,43 @@ def chip(table, key, prefix, show=False):
     return '<span class="ge-chip" style="background:%s;color:%s" title="%s">%s</span>' % (bg, fg, e(prefix), e(text))
 
 
+VIEWS = [("model", None), ("public", None), ("susp", None)]  # filled below, after the tables exist
+TILE_TITLE = "Tile map of the 30 EEA countries plus the United Kingdom and Switzerland, coloured by the selected question"
+EXTRA_TILES = []  # (label, href, col, row, aria) for tiles that link elsewhere
+CHIP_LABELS = ("Who fines", "Public bodies fined", "Payment during appeal")
+
+
 def tile_map():
     tw, gap = 52, 6
     cols = max(x for x, _ in GRID.values()) + 1
     rows = max(y for _, y in GRID.values()) + 1
     W, H = cols * (tw + gap), rows * (tw + gap)
     parts = ['<svg class="ge-tiles" viewBox="0 0 %d %d" role="img" aria-labelledby="ge-tiles-t">' % (W, H),
-             '<title id="ge-tiles-t">Tile map of the 30 EEA countries plus the United Kingdom and Switzerland, coloured by the selected question</title>']
+             '<title id="ge-tiles-t">%s</title>' % e(TILE_TITLE)]
+    tables = [MODELS, PUBLIC, SUSP]
     for code in ORDER:
         x, y = GRID[code]
-        m, p, s_ = S[code][0], S[code][1], S[code][2]
+        keys = S[code][0:3]
         name = C[code]["country"]
+        attrs = "".join(' data-%s="%s" data-%s-bg="%s" data-%s-fg="%s"' % (v, k, v, t[k][1], v, t[k][2])
+                        for (v, _), k, t in zip(VIEWS, keys, tables))
         parts.append(
-            '<a href="#ge-c-%s" class="ge-tile" data-code="%s" data-model="%s" data-public="%s" data-susp="%s" '
+            '<a href="#ge-c-%s" class="ge-tile" data-code="%s"%s '
             'aria-label="%s"><rect x="%d" y="%d" width="%d" height="%d" rx="7" fill="%s"></rect>'
             '<text x="%d" y="%d" fill="%s">%s</text></a>'
-            % (code, code, m, p, s_, e(name), x * (tw + gap), y * (tw + gap), tw, tw, MODELS[m][1],
-               x * (tw + gap) + tw // 2, y * (tw + gap) + tw // 2 + 6, MODELS[m][2], code.upper()))
+            % (code, code, attrs, e(name), x * (tw + gap), y * (tw + gap), tw, tw, tables[0][keys[0]][1],
+               x * (tw + gap) + tw // 2, y * (tw + gap) + tw // 2 + 6, tables[0][keys[0]][2], code.upper()))
+    for label, href, x, y, aria in EXTRA_TILES:
+        parts.append(
+            '<a href="%s" class="ge-tile ge-tile-out" aria-label="%s"><rect x="%d" y="%d" width="%d" height="%d" rx="7" fill="#d8e4f2"></rect>'
+            '<text x="%d" y="%d" fill="#10172e">%s</text></a>'
+            % (e(href), e(aria), x * (tw + gap), y * (tw + gap), tw, tw, x * (tw + gap) + tw // 2, y * (tw + gap) + tw // 2 + 6, e(label)))
     parts.append("</svg>")
     return "".join(parts)
 
 
-def legend(table, key):
-    return ('<ul class="ge-legend" data-view="%s">' % key +
+def legend(table, key, hidden=False):
+    return ('<ul class="ge-legend" data-view="%s"%s>' % (key, " hidden" if hidden else "") +
             "".join('<li><i style="background:%s"></i>%s</li>' % (bg, e(lbl)) for _, (lbl, bg, fg) in table.items()) +
             "</ul>")
 
@@ -114,6 +128,9 @@ def country_card(code):
     dpa, law, comp, proc, fines, app, priv = d["dpa"], d["law"], d["complaint"], d["procedure"], d["fines"], d["appeal"], d["private"]
     contrast = d["membership"].startswith("non-GDPR")
     mem = "Not under the GDPR, shown for contrast" if contrast else ("EEA member, GDPR applies through the EEA Agreement" if d["membership"] == "EEA" else "EU member state")
+    mem_key = "contrast" if contrast else d["membership"].lower()
+    if d.get("region"):
+        mem, mem_key = d["region"], re.sub(r"[^a-z]+", "-", d["region"].lower()).strip("-")
     abbr = dpa.get("abbr") or ""
     if abbr.lower().startswith("not confirmed"):
         abbr = ""
@@ -139,7 +156,7 @@ def country_card(code):
         '<div class="ge-plain"><h4>In plain words</h4><p>%s</p></div>' % para(d.get("plain")),
         '<h4>Route of a fine</h4>' + route(code),
         '<div class="ge-chips">%s%s%s</div>' % (
-            chip(MODELS, m, "Who fines"), chip(PUBLIC, p, "Public bodies fined", True), chip(SUSP, s_, "Payment during appeal", True)),
+            chip(MODELS, m, CHIP_LABELS[0]), chip(PUBLIC, p, CHIP_LABELS[1], True), chip(SUSP, s_, CHIP_LABELS[2], True)),
         '<div class="ge-grid">',
         '<section><h4>The authority</h4>' + dl([("Name", authority), ("How it is organised", para(dpa.get("structure"))),
                                                 ("Regional authorities", para(dpa.get("regional"))), ("National law", law_html)]) + "</section>",
@@ -170,7 +187,7 @@ def country_card(code):
             '<summary><span class="ge-cname">%s</span><span class="ge-cabbr">%s</span><span class="ge-cmem">%s</span>'
             '<span class="ge-cdots"><i style="background:%s" title="%s"></i><i style="background:%s" title="Public bodies: %s"></i><i style="background:%s" title="Payment during appeal: %s"></i></span></summary>'
             '<div class="ge-cbody">%s</div></details>'
-            % (code, "contrast" if contrast else d["membership"].lower(), m, e(search),
+            % (code, mem_key, m, e(search),
                e(d["country"]), e(head_abbr), e(mem),
                MODELS[m][1], e(MODELS[m][0]), PUBLIC[p][1], e(PUBLIC[p][0]), SUSP[s_][1], e(SUSP[s_][0]),
                "".join(body)))
@@ -281,9 +298,9 @@ RAIL = [("ge-short", "The short version"), ("ge-authority", "The authority track
 
 
 def rows3(items, heads):
-    return ('<div class="ge-tablewrap"><table class="ge-table"><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>'
+    return ('<div class="ge-tablewrap"><table class="ge-table ge-stack"><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>'
             % ("".join('<th scope="col">%s</th>' % e(h) for h in heads),
-               "".join("<tr><th scope=\"row\">%s</th>%s</tr>" % (e(r[0]), "".join("<td>%s</td>" % linkify(e(x), "gdpr", "html", NATIONAL) for x in r[1:])) for r in items)))
+               "".join("<tr><th scope=\"row\">%s</th>%s</tr>" % (e(r[0]), "".join('<td data-label="%s">%s</td>' % (e(h), linkify(e(x), "gdpr", "html", NATIONAL)) for h, x in zip(heads[1:], r[1:]))) for r in items)))
 
 
 def stats():
@@ -300,7 +317,7 @@ def main_html():
     pr_changes = "".join("<li>%s</li>" % para(x, "pr") for x in PR["changes"])
     out = []
     out.append('''<div class="ge">
-<p class="ge-intro">A GDPR fine is not a court judgment. In almost every EEA country the data protection authority investigates, decides and fines in one administrative decision, and a court becomes involved only if someone challenges that decision. Separately, and at the same time if they choose, individuals can sue the organisation for compensation, but a court in that track never fines. This page sets out the two tracks, how cross-border cases move between authorities and the EDPB, and then the route in each of the %d EU and %d EEA countries, with the United Kingdom and Switzerland for contrast.</p>
+<p class="ge-intro">A GDPR fine is not a court judgment. In almost every EEA country the data protection authority investigates, decides and fines in one administrative decision, and a court becomes involved only if someone challenges that decision. Separately, and at the same time if they choose, individuals can sue the organisation for compensation, but a court in that track never fines. This page sets out the two tracks, how cross-border cases move between authorities and the EDPB, and then the route in each of the %d EU and %d EEA countries, with the United Kingdom and Switzerland for contrast. For 23 jurisdictions outside Europe, from the United States to Australia, see <a href="privacy-enforcement-worldwide.html">privacy enforcement worldwide</a>.</p>
 <p class="ge-status">Researched on %s from national laws, authority websites and court reports, then checked a second time by an independent pass against the cited sources. Where a point could not be confirmed it says <em>not confirmed</em> rather than guessing. This maps procedure; it is not legal advice. Deadlines in particular should be read from the decision you are holding, which states its own appeal route.</p>
 ''' % (eu_n, eea_n, CHECKED))
 
@@ -357,7 +374,7 @@ def main_html():
 <button type="button" class="ge-btn" data-view="susp">Does an appeal hold payment?</button></div>
 <div class="ge-mapwrap" data-view="model">%s<div class="ge-legends">%s%s%s</div></div>
 <p class="ge-note">The classification is a simplification of the country text below, which is the authority. <em>Not confirmed</em> means the research found no source either way, not that the answer is no. The United Kingdom and Switzerland are outside the GDPR: Switzerland fines individuals through the criminal courts, and its authority has no fining power at all.</p>
-</section>''' % (tile_map(), legend(MODELS, "model"), legend(PUBLIC, "public"), legend(SUSP, "susp")))
+</section>''' % (tile_map(), legend(MODELS, "model"), legend(PUBLIC, "public", True), legend(SUSP, "susp", True)))
 
     out.append('''<section class="ge-block" id="ge-compare"><h2>Comparison</h2>
 <p class="ge-lead">One row per country. Select a country name for the full section.</p>%s</section>''' % compare_table())
@@ -387,7 +404,7 @@ def main_html():
 <li>Court cases move. Every outcome is dated; anything after %s is not reflected.</li>
 <li>The classifications on the map and in the comparison compress paragraphs into one label. Read the country section before relying on one.</li>
 </ul>
-<p class="ge-note">Related on this site: the <a href="gdpr-fines-analytics.html">GDPR Fines Analytics</a>, the <a href="power-bi.html">GDPR Fines Dashboard</a> and the <a href="gdpr-fine-calculator.html">GDPR Fine Calculator</a> for what the fines have been; the <a href="edpb-digest.html">EDPB Digest</a> for the binding decisions and guidelines cited here. The Regulation itself: %s.</p>
+<p class="ge-note">Related on this site: <a href="privacy-enforcement-worldwide.html">privacy enforcement worldwide</a> for 23 jurisdictions outside Europe, the <a href="gdpr-fines-analytics.html">GDPR Fines Analytics</a>, the <a href="power-bi.html">GDPR Fines Dashboard</a> and the <a href="gdpr-fine-calculator.html">GDPR Fine Calculator</a> for what the fines have been; the <a href="edpb-digest.html">EDPB Digest</a> for the binding decisions and guidelines cited here. The Regulation itself: %s.</p>
 </section></div>''' % (CORRECTIONS, CHECKED, link(GDPR, "Regulation (EU) 2016/679 on EUR-Lex")))
     html_out = "\n".join(out)
     # Lead and note paragraphs are hand-written with plain references; link them in one pass.

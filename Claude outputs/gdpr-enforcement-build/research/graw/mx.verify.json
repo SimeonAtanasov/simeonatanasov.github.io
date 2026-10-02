@@ -1,0 +1,128 @@
+{
+ "code": "mx",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Reform 20 Dec 2024; laws promulgated 20 March 2025; INAI files transferred under transitional art. 10",
+   "verdict": "corrected",
+   "evidence": "Statute PDF: DOF 20 March 2025, in force 21 March 2025. The transfer of INAI files to the Secretaría is in transitional article Décimo Tercero of the decree (within 20 working days), not article 10.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf",
+   "replacement": "The constitutional reform published on 20 December 2024 abolished the autonomous INAI, which was dissolved when the new transparency and data protection laws, published on 20 March 2025, entered into force on 21 March 2025. INAI's files passed to the Secretaría Anticorrupción y Buen Gobierno within 20 working days under the decree's thirteenth transitional article."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "No published fines under the 2025 law confirmed; no historical INAI fines confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not a case. INAI did impose published fines under the 2010 law, so 'no historical INAI fines could be confirmed' reflects the researcher's access, not the record. Recommend replacing with a documented INAI sanction or dropping the entry.",
+   "url": "https://www.garrigues.com/es_ES/noticia/mexico-nueva-ley-federal-proteccion-datos-personales-posesion-particulares-introduce"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "art. 2 fr. XV and transitional art. 10",
+   "verdict": "corrected",
+   "evidence": "Art. 2 fr. XV: 'Secretaría: Secretaría Anticorrupción y Buen Gobierno' confirmed. The transfer provision is the thirteenth transitional article, not article 10.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf",
+   "replacement": "A federal government ministry (secretaría) of the executive branch, not an independent authority. It took over private-sector data protection on 21 March 2025 when the constitutionally autonomous INAI was abolished following the constitutional reform published on 20 December 2024 (art. 2 fr. XV and the thirteenth transitional article of the 2025 decree)."
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "ARCO 20 days + 15 to implement (art. 31); protection request within 15 days or after deadline lapses (art. 40)",
+   "verdict": "confirmed",
+   "evidence": "Art. 31: 'plazo máximo de veinte días ... dentro de los quince días siguientes'. Art. 40: 'dentro de los quince días siguientes'; second paragraph allows filing once the controller's deadline has passed without answer.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "50 days extendable once (art. 42); one chance to correct within 5 days",
+   "verdict": "confirmed",
+   "evidence": "Art. 42: fifty days, extendable 'por una vez y hasta por un período igual'. Art. 44: one notice within 20 days, five days to remedy.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "No prescription rule found",
+   "verdict": "confirmed",
+   "evidence": "No prescription or caducidad provision located in the statute text.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Secretariat imposes itself; 100-160,000 UMA (fr. II-VII); 200-320,000 UMA (fr. VIII-XVIII); extra 100-320,000 for persistence; doubled for sensitive data; warning for fr. I",
+   "verdict": "confirmed",
+   "evidence": "Art. 56-57 (Secretaría opens and decides the sanctioning procedure); art. 59: ranges as stated, additional 100 to 320,000 UMA, sensitive data 'podrán incrementarse hasta por dos veces'; art. 59 fr. I apercibimiento. Note art. 59, not art. 56, sets the ranges; field cites art. 56 only for the power, which is fine.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Criminal: 3m-3y (art. 62), 6m-5y (art. 63), doubled for sensitive (art. 64); top fine about MXN 36m at 2025 UMA",
+   "verdict": "confirmed",
+   "evidence": "Arts. 62-64 quoted as stated. 320,000 x 2025 UMA (about MXN 113) = about MXN 36m; arithmetic consistent, UMA value not re-read.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "procedure.stages[3]",
+   "claim": "Sanctioning: 15 days for evidence, decision within 50 days extendable once",
+   "verdict": "confirmed",
+   "evidence": "Art. 57: 'término de quince días para que rinda pruebas'; decides 'dentro de los cincuenta días', extendable once.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Amparo before specialised judges (art. 51), replacing nullity before the Federal Administrative Court",
+   "verdict": "confirmed",
+   "evidence": "Art. 51: 'los particulares podrán promover juicio de amparo. Los juicios de amparo serán sustanciados por jueces y tribunales especializados.'",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Transitional art. 20: specialised courts within 120 days; suspended amparo deadlines for 180 days",
+   "verdict": "corrected",
+   "evidence": "Vigésimo transitorio: specialised district courts and collegiate circuit tribunals within 120 calendar days; procedural time limits suspended for 180 calendar days only for amparo cases 'que se encuentran en trámite' (pending).",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf",
+   "replacement": "Review (recurso de revisión) of amparo judgments to the collegiate circuit courts and, in some cases, the Supreme Court (not confirmed for the specialised courts). The twentieth transitional article required the judiciary to set up specialised district courts and collegiate circuit tribunals within 120 calendar days and suspended procedural time limits in pending data protection and transparency amparo cases for 180 calendar days."
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Amparo general 15 working days, not checked",
+   "verdict": "unverifiable",
+   "evidence": "Amparo Law not fetched.",
+   "url": ""
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not checked.",
+   "url": ""
+  },
+  {
+   "field": "private.courts",
+   "claim": "Art. 53 preserves compensation under general law",
+   "verdict": "confirmed",
+   "evidence": "Art. 53: titulares who suffer damage from a breach 'podrán ejercer los derechos que estimen pertinentes para efectos de la indemnización que proceda'.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator",
+   "verdict": "confirmed",
+   "evidence": "Arts. 56-57: the Secretaría opens and decides the sanctioning procedure itself.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "map.cap",
+   "claim": "fixed",
+   "verdict": "confirmed",
+   "evidence": "Art. 59 UMA ranges, not turnover.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "limited",
+   "verdict": "confirmed",
+   "evidence": "No statutory cause of action; art. 53 points to general civil liability. Borderline with 'yes' since any breach causing damage can found a civil claim, but 'limited' is defensible given no privacy-specific remedy.",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+  }
+ ],
+ "notes": "Most serious: cases[1] is not an enforcement case and wrongly implies INAI's historical fines are unconfirmable; replace with a documented INAI sanction or drop. Transitional article numbering in dpa.structure and cases[0] was wrong (article 13, not 10). gob.mx not checked."
+}

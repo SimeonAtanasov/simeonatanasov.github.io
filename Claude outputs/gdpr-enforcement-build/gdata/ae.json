@@ -1,0 +1,122 @@
+{
+ "code": "ae",
+ "country": "United Arab Emirates",
+ "membership": "World",
+ "region": "Middle East",
+ "dpa": {
+  "name_en": "UAE Data Office (federal); DIFC Commissioner of Data Protection; ADGM Office of Data Protection",
+  "name_native": "مكتب الإمارات للبيانات (UAE Data Office)",
+  "abbr": "UAE Data Office / DIFC Commissioner / ADGM ODP",
+  "url": "https://www.difc.com/business/registrars-and-commissioners/commissioner-of-data-protection",
+  "structure": "Three separate regimes. The federal UAE Data Office was created by Federal Decree-Law No. 44 of 2021 but is not yet fully operational, with transitional administrative support from the TDRA. The Dubai International Financial Centre (DIFC) and Abu Dhabi Global Market (ADGM) financial free zones each have their own data protection Commissioner, which is the operational enforcement in practice.",
+  "regional": "Federal PDPL does not apply in the DIFC and ADGM, nor to government data, health data and banking and credit data covered by their own laws. Sector regulators (Central Bank of the UAE, TDRA, health authorities) enforce sectoral confidentiality rules, and the Public Prosecution prosecutes privacy and data crimes under Federal Decree-Law No. 34 of 2021 on cybercrimes and the Penal Code."
+ },
+ "law": {
+  "name": "Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data (in force 2 January 2022; Executive Regulations still not issued as at September 2026, and compliance is due six months after they are issued under Art. 29); DIFC Data Protection Law No. 5 of 2020 (amended by DIFC Law No. 1 of 2025, effective 15 July 2025); ADGM Data Protection Regulations 2021",
+  "url": "https://uaelegislation.gov.ae/"
+ },
+ "complaint": {
+  "how": "Federal: the PDPL allows complaints to the UAE Data Office (Art. 24), but no operational complaint channel or procedure has been confirmed. DIFC and ADGM: complaints to the respective Commissioner through their websites, free of charge, in English.",
+  "contact_controller_first": "Not confirmed for any of the three regimes.",
+  "deadlines": "Federal: a grievance against a Data Office decision can be filed with its Director General within 30 days (Art. 25, secondary source). DIFC and ADGM complaint deadlines not confirmed.",
+  "complainant_status": "In DIFC the complainant can appeal a Commissioner decision to the DIFC Courts and, since July 2025, sue directly; in ADGM the complainant can seek compensation in the ADGM Courts."
+ },
+ "procedure": {
+  "stages": [
+   "Federal: complaint to the UAE Data Office, investigation, and administrative sanctions to be defined by Cabinet decision (Art. 26); not yet operating in practice",
+   "DIFC: complaint or own-initiative inquiry by the Commissioner, directions to remedy or restrict processing, and administrative fines",
+   "ADGM: complaint or investigation by the Commissioner of Data Protection, directions including temporary or permanent bans on processing, and fines",
+   "Appeals to the DIFC Courts or ADGM Courts respectively"
+  ],
+  "decision_maker": "Federal: the Cabinet on the proposal of the Data Office Director General (sanctions not yet defined). DIFC: the Commissioner of Data Protection. ADGM: the Commissioner of Data Protection.",
+  "limitation": "Not confirmed."
+ },
+ "fines": {
+  "imposed_by": "none-yet at federal level: Art. 26 of the PDPL leaves violations and administrative penalties to a Cabinet decision that had not been issued as at September 2026, so the federal regulator has no fine schedule to apply. In the free zones the Commissioners fine directly by decision without going to court: DIFC fines follow fixed amounts per contravention in Schedule 2 of the DP Law (reported up to USD 100,000 each), and ADGM fines can reach USD 28 million.",
+  "public_bodies": "Federal government data is excluded from the federal PDPL; public bodies in the free zones not confirmed.",
+  "quirks": "Criminal liability for privacy invasions and unlawful data disclosure exists under Federal Decree-Law No. 34 of 2021 on combating rumours and cybercrimes and the Penal Code, prosecuted by the Public Prosecution; specific articles and penalties were not confirmed this session."
+ },
+ "appeal": {
+  "court": "Federal: grievance to the Data Office Director General (Art. 25), then presumably the federal courts (not confirmed). DIFC: appeal to the DIFC Courts. ADGM: reference to the ADGM Courts.",
+  "deadline": "DIFC: 30 days from the Commissioner's decision (secondary). ADGM: within three months of the penalty notice (stated in ADGM penalty notices). Federal grievance: 30 days (secondary).",
+  "suspensive": "Not confirmed.",
+  "further": "DIFC Court of Appeal within the DIFC Courts; ADGM Court of Appeal within the ADGM Courts (not confirmed for data protection matters specifically).",
+  "inaction": "Not confirmed for any regime."
+ },
+ "private": {
+  "courts": "limited: under the federal PDPL there is no specific damages action and general civil law would apply (not confirmed). In the DIFC, since 15 July 2025 data subjects can sue controllers and processors directly in the DIFC Courts without first going to the Commissioner. In ADGM, data subjects can seek compensation in the ADGM Courts.",
+  "damages": "DIFC: compensation for material and non-material loss, including distress (secondary). ADGM: compensation as assessed by the court. No statutory damages.",
+  "collective": "Not confirmed; no class action regime identified."
+ },
+ "cases": [
+  {
+   "title": "ADGM Commissioner fines Okadoc Technologies",
+   "year": "2024",
+   "summary": "On 21 May 2024 the ADGM Commissioner of Data Protection fined Okadoc Technologies USD 20,000 (reduced to USD 16,000 for early payment) for failing to answer a data subject access request within two months, having no data protection policy and not cooperating with the Office of Data Protection (DPR 2021 ss.10, 22 and 29).",
+   "url": "https://www.adgm.com/documents/office-of-data-protection/regulatory-action/penalty-notice-1-2024-okado-technologies-limited-redacted.pdf"
+  },
+  {
+   "title": "ADGM action against VentureRock Global",
+   "year": "2023",
+   "summary": "On 23 June 2023 the ADGM Commissioner of Data Protection issued a Direction to VentureRock Global under s.54(1) of the Data Protection Regulations 2021 for breaching the security principle, citing poor cybersecurity practices, inadequate staff training and missing policies. It was a direction to remedy, not a fine.",
+   "url": "https://www.adgm.com/operating-in-adgm/office-of-data-protection/regulatory-actions"
+  },
+  {
+   "title": "Federal PDPL: no enforcement yet",
+   "year": "2026",
+   "summary": "More than four years after the federal PDPL took effect, the Executive Regulations and the Cabinet decision on penalties were still not on the UAE legislation portal as at 23 September 2026, so no federal fines can be imposed.",
+   "url": "https://itsecnow.com/regulators/pdpl-executive-regulations-2026"
+  }
+ ],
+ "quirks": [
+  "Three regimes in one country: the federal PDPL is on the books but not yet enforceable, while the DIFC and ADGM free zones have mature, GDPR-style regimes with their own Commissioners and common-law courts.",
+  "The federal compliance deadline only starts running six months after Executive Regulations that have not been issued.",
+  "ADGM's maximum fine (USD 28 million) is far higher than DIFC's per-contravention fines.",
+  "DIFC added a direct private right of action in July 2025, so individuals no longer need the Commissioner first.",
+  "Government data, health data and banking data are carved out of the federal law and handled by separate rules."
+ ],
+ "plain": "Where you complain depends on where the organisation sits. If it is in the DIFC or ADGM financial free zones, you complain to that zone's Data Protection Commissioner, who can fine it, and appeals go to the zone's own courts; in the DIFC you can also sue directly. Elsewhere in the UAE the federal law exists but its regulator is not yet fully running and no fines have been set, so in practice there is no federal privacy enforcement yet.",
+ "map": {
+  "who_penalises": "none-yet",
+  "cap": "none",
+  "private_action": "limited"
+ },
+ "confidence": "medium: the absence of federal Executive Regulations and penalties is consistent across sources, but DIFC and ADGM fine amounts, appeal deadlines and the reported ADGM cases come from secondary sources and could not be checked on the regulators' sites; map values describe the federal regime, while DIFC and ADGM would be regulator, fixed, yes.",
+ "sources": [
+  {
+   "title": "DIFC Data Protection",
+   "url": "https://www.difc.ae/business/operating/data-protection/",
+   "source_type": "primary"
+  },
+  {
+   "title": "UAE Legislation portal",
+   "url": "https://uaelegislation.gov.ae/",
+   "source_type": "primary"
+  },
+  {
+   "title": "Chambers Practice Guides: Data Protection and Privacy 2026, UAE trends and developments",
+   "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/uae/trends-and-developments",
+   "source_type": "secondary"
+  },
+  {
+   "title": "ITSecNow: UAE PDPL Executive Regulations 2026 explained",
+   "url": "https://itsecnow.com/regulators/pdpl-executive-regulations-2026",
+   "source_type": "secondary"
+  },
+  {
+   "title": "RecordingLaw: UAE data privacy laws (Federal PDPL, DIFC and ADGM)",
+   "url": "https://www.recordinglaw.com/world-laws/world-data-privacy-laws/uae-data-privacy-laws/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Multilaw: Data Protection Guide United Arab Emirates",
+   "url": "https://www.multilaw.com/Multilaw/Multilaw/Data_Protection_Laws_Guide/DataProtection_Guide_United_Arab_Emirates.aspx",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DY Legal Consultants: Data protection law UAE",
+   "url": "https://dylegalconsultants.com/data-protection-law-uae-pdpl-sector-rules-and-compliance-guide/",
+   "source_type": "secondary"
+  }
+ ]
+}

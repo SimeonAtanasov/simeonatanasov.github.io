@@ -1,0 +1,125 @@
+{
+ "code": "ke",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Oppo used complainant's photo on Instagram; enforcement notice 3 Nov 2022; first penalty notice 21 Dec 2022 for KES 5m under ss.62 and 63",
+   "verdict": "confirmed",
+   "evidence": "ODPC release: photo used on Instagram stories without consent; enforcement notice 3 November 2022; penalty notice 21 December 2022; KES 5,000,000 'pursuant to Section 62 and 63'.",
+   "url": "https://www.odpc.go.ke/wp-content/uploads/2024/02/Office-Of-The-Data-Protection-Commissioner-Issues-A-Penalty-Notice-Against-Oppo-Kenya.pdf"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "September 2023: Roma School KES 4.55m, Mulla Pride KES 2.975m, Casa Vera Lounge KES 1.85m; Mulla Pride petition dismissed by Justice Chacha Mwita in 2025 for bypassing s.64",
+   "verdict": "confirmed",
+   "evidence": "The Star, 26 September 2023 lists the three fines with these amounts (KNA page carries a wrong 21 December 2025 date stamp, so the September 2023 date is right). Kenyan Wall Street, 8 August 2025: Justice Chacha Mwita dismissed Mulla Pride's petition because s.64 provides a statutory appeal.",
+   "url": "https://the-star.co.ke/news/2023-09-26-mobile-lender-fined-millions-for-breach-of-borrowers-privacy"
+  },
+  {
+   "field": "cases[1].year",
+   "claim": "2023",
+   "verdict": "confirmed",
+   "evidence": "Fines announced 26 September 2023 (The Star; tech-ish 26 September 2023).",
+   "url": "https://tech-ish.com/2023/09/26/data-protection-penalties-precedence/"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "April 2023 penalty notices to Whitepath (about 150 complaints) and Regus Kenya, about USD 37,000 each; 2024 determination ODPC/COMP/1764/2024 ordering Whitepath to pay KES 450,000",
+   "verdict": "confirmed",
+   "evidence": "CIO Africa, 12 April 2023: Whitepath and Regus fined USD 37,369 each, 'equivalent to the maximum penalty under Section 63' (i.e. KES 5m); nearly 150 complaints against Whitepath. Determination ODPC/COMP/1764/2024: Whitepath Company Limited, compensation KES 450,000 under s.65. CIPIT dates both penalty notices 11 April 2023.",
+   "url": "https://cioafrica.co/odpc-fines-two-firms-for-breaching-data-laws/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Data Commissioner imposes fines directly by penalty notice (s.62)",
+   "verdict": "confirmed",
+   "evidence": "s.63: maximum penalty 'that may be imposed by the Data Commissioner in a penalty notice'.",
+   "url": "https://dataprotection.co.ke/law/section-63"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Cap: KES 5m or 1% of turnover, whichever is lower (s.63); s.58(3) offence up to KES 5m or 2 years; s.73 general penalty KES 3m or 10 years, forfeiture or stop orders",
+   "verdict": "confirmed",
+   "evidence": "s.63 'up to five million shillings, or in the case of an undertaking, up to one per centum of its annual turnover ... whichever is lower'. s.58: fine not exceeding five million shillings or imprisonment not exceeding two years. s.73: three million shillings or ten years; forfeiture and stop orders.",
+   "url": "https://dataprotection.co.ke/law/section-73"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Appeal to the High Court under s.64; 2025 High Court dismissal of lender's petition",
+   "verdict": "confirmed",
+   "evidence": "s.64: 'A person against whom any administrative action is taken by the Data Commissioner, including in enforcement and penalty notices, may appeal to the High Court.'",
+   "url": "https://dataprotection.co.ke/law/section-64"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "No deadline in s.64",
+   "verdict": "confirmed",
+   "evidence": "s.64 states no deadline.",
+   "url": "https://dataprotection.co.ke/law/section-64"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "No source found.",
+   "url": ""
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "ODPC must investigate and conclude within 90 days (s.56(5))",
+   "verdict": "confirmed",
+   "evidence": "s.56(5): 'A complaint made to the Data Commissioner shall be investigated and concluded within ninety days.'",
+   "url": "https://dataprotection.co.ke/law/section-56"
+  },
+  {
+   "field": "procedure.stages[2]",
+   "claim": "Enforcement notice with at least 21 days to comply (s.58)",
+   "verdict": "confirmed",
+   "evidence": "s.58: period 'which shall not be less than twenty-one days'.",
+   "url": "https://dataprotection.co.ke/law/section-58"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Ignoring an enforcement notice is an offence, up to 2 years (s.58(3))",
+   "verdict": "confirmed",
+   "evidence": "s.58: fine not exceeding KES 5m or imprisonment not exceeding two years, or both.",
+   "url": "https://dataprotection.co.ke/law/section-58"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "90-day statutory deadline",
+   "verdict": "confirmed",
+   "evidence": "s.56(5).",
+   "url": "https://dataprotection.co.ke/law/section-56"
+  },
+  {
+   "field": "private.damages",
+   "claim": "Tracker counts over 180 compensation determinations, median award about KES 350,000",
+   "verdict": "unverifiable",
+   "evidence": "The tracker's Whitepath page gives a median of KES 250,000 for the debt-collection category only; the overall count and KES 350,000 median were not seen. Consider dropping the figures or citing the tracker page that states them.",
+   "url": "https://dataprotection.co.ke/determinations/odpc-comp-1764-2024"
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator",
+   "verdict": "confirmed",
+   "evidence": "Data Commissioner imposes penalty notices itself (ss.62-63).",
+   "url": "https://dataprotection.co.ke/law/section-63"
+  },
+  {
+   "field": "map.cap",
+   "claim": "fixed",
+   "verdict": "confirmed",
+   "evidence": "Lower of KES 5m and 1% turnover; turnover can only reduce the cap, so 'fixed' is defensible (borderline under the GBRIEF wording 'linked to turnover').",
+   "url": "https://dataprotection.co.ke/law/section-63"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "yes",
+   "verdict": "confirmed",
+   "evidence": "s.65 general right to compensation for damage from a contravention; ODPC awards compensation (e.g. Whitepath KES 450,000).",
+   "url": "https://dataprotection.co.ke/determinations/odpc-comp-1764-2024"
+  }
+ ],
+ "notes": "No errors found in cases or structural claims. The KNA source page shows a misleading 21 December 2025 date; the fines date from September 2023, so the confidence note's doubt can be resolved and The Star (26 September 2023) added as a source. Mulla Pride's apps are spelled FairKash in the file, 'Falcrash' in The Star; not resolved. Whitepath/Regus amounts are KES 5m each if CIO Africa's 'maximum penalty' wording is right."
+}

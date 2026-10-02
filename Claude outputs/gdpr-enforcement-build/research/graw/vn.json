@@ -1,0 +1,115 @@
+{
+  "code": "vn",
+  "country": "Vietnam",
+  "membership": "World",
+  "region": "Asia-Pacific",
+  "dpa": {
+    "name_en": "Ministry of Public Security, Department of Cybersecurity and High-Tech Crime Prevention",
+    "name_native": "Bộ Công an, Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao",
+    "abbr": "MPS / A05",
+    "url": "https://bocongan.gov.vn",
+    "structure": "A police ministry department, not an independent authority. The MPS is the state management focal point for personal data protection (Article 36 PDPL); A05 receives impact assessments and transfer filings, runs the national personal data protection portal and investigates.",
+    "regional": "Provincial police units act under the MPS. The police also investigate the criminal offence of illegally trading or using personal data, and sector ministries keep their own rules."
+  },
+  "law": {
+    "name": "Law on Personal Data Protection No. 91/2025/QH15, adopted 26 June 2025, in force 1 January 2026; implementing Decree 356/2025/ND-CP (in force 1 January 2026, replacing Decree 13/2023/ND-CP of 17 April 2023, which applied from 1 July 2023); sanctions Decree 330/2026/ND-CP dated 19 August 2026",
+    "url": "https://english.luatvietnam.vn/dan-su/law-on-personal-data-protection-law-no-91-2025-qh15-405135-d1.html"
+  },
+  "complaint": {
+    "how": "Data subjects may file complaints and denunciations, sue and claim compensation (Article 4 PDPL). Violations can be reported to the MPS, including through the national personal data protection portal; general complaints follow the Law on Complaints and Law on Denunciations.",
+    "contact_controller_first": "Not confirmed as a requirement before going to the MPS.",
+    "deadlines": "Not confirmed for data protection complaints specifically.",
+    "complainant_status": "Not confirmed; under Vietnamese administrative law a denouncer is informed of the outcome but is not a party to the sanction proceedings."
+  },
+  "procedure": {
+    "stages": [
+      "Report, denunciation or own-initiative inspection by the MPS (A05 or provincial police), often triggered by an incident or a filed impact assessment.",
+      "Record of administrative violation drawn up by a competent officer.",
+      "Sanction decision under Decree 330/2026/ND-CP, with fines and remedial measures such as deletion of data or suspension of processing.",
+      "Where the conduct is a crime, transfer for criminal investigation and prosecution under the Penal Code."
+    ],
+    "decision_maker": "Competent officers of the MPS and police impose administrative fines by decision under the Law on Handling of Administrative Violations; the full list of competent officers in Decree 330 was not confirmed.",
+    "limitation": "1 year for administrative sanctions in cybersecurity and personal data protection (Decree 330/2026/ND-CP, Article 3(1))."
+  },
+  "fines": {
+    "imposed_by": "The MPS imposes fines itself by administrative decision since Decree 330/2026/ND-CP (dated 19 August 2026), so the map value is regulator. Maximums (Article 8 PDPL): 5% of the previous year's revenue for unlawful cross-border transfers, 10 times the proceeds for buying or selling personal data, and VND 3 billion for other violations by organisations, with individuals facing half; Decree 330 sets the higher of the percentage or VND 3 billion and lower bands for specific breaches (for example up to VND 70 million for consent failures).",
+    "public_bodies": "Not confirmed.",
+    "quirks": "Before Decree 330 there was no specific fining regime: Decree 13/2023 had obligations but no penalty schedule, and Decree 356/2025 is an implementing decree, not a sanctions decree. Criminal liability for illegal provision or use of information on networks (Penal Code Article 288) carries fines of VND 30 million to 1 billion or 6 months to 7 years' imprisonment per secondary sources. Small enterprises and start-ups get a five-year deferral of some assessment duties."
+  },
+  "appeal": {
+    "court": "A sanctioned party can file an administrative complaint with the official who issued the decision under the Law on Complaints, or sue in the People's Court under the Law on Administrative Procedure (the court level after the 2025 court reorganisation was not confirmed).",
+    "deadline": "Not confirmed for data protection decisions; general administrative law gives 1 year to sue, not confirmed specifically here.",
+    "suspensive": "Not confirmed; under general Vietnamese administrative law a complaint or lawsuit normally does not suspend execution.",
+    "further": "Appeal within the People's Court system; not confirmed in detail.",
+    "inaction": "Not confirmed."
+  },
+  "private": {
+    "courts": "Yes: Article 4 PDPL lets data subjects sue and claim compensation, and Article 8 says violators causing damage must compensate, in the ordinary People's Courts under the Civil Code.",
+    "damages": "Actual damages under the Civil Code rules on non-contractual liability; no statutory damages confirmed.",
+    "collective": "Not confirmed; Vietnam has no general class action procedure (not confirmed)."
+  },
+  "cases": [
+    {
+      "title": "Criminal crackdown on personal data trading, 2023 to 2025",
+      "year": "2023-2025",
+      "summary": "Authorities reported more than 30 criminal cases involving illegal purchase, sale and theft of personal data, with about 160 million data files unlawfully acquired from sectors including healthcare, banking and telecoms.",
+      "url": "https://vietnamlawmagazine.vn/businesses-face-tightened-personal-data-protection-requirements-79374.html"
+    },
+    {
+      "title": "Decree 330/2026/ND-CP sanctions regime",
+      "year": "2026",
+      "summary": "Issued 19 August 2026, it finally made the PDPL's fines enforceable; no published administrative fine under it was found as of October 2026.",
+      "url": "https://www.tilleke.com/insights/vietnam-issues-cybersecurity-and-personal-data-protection-sanctions-decree/"
+    }
+  ],
+  "quirks": [
+    "The data protection regulator is the police ministry's cybercrime department.",
+    "The headline 5% of revenue cap applies only to unlawful cross-border transfers; most other breaches are capped at VND 3 billion (about USD 115,000).",
+    "Buying and selling personal data is itself a sanctioned activity, punished at up to 10 times the proceeds.",
+    "For eight months in 2026 the law was in force but its fines could not be applied because the sanctions decree had not been issued."
+  ],
+  "plain": "A person can report a misuse of their data to the police ministry, which supervises data protection, or file a formal complaint or denunciation. The ministry can inspect and fine the company, and serious data trading is prosecuted as a crime. Separately, the person can sue in the People's Court for compensation.",
+  "map": {
+    "who_penalises": "regulator",
+    "cap": "turnover",
+    "private_action": "yes"
+  },
+  "confidence": "medium: the PDPL and Decree 330 are confirmed, but the list of officers competent to fine, the appeal deadline and the effective date of Decree 330 (reported as 19 August 2026) were not confirmed from the primary text.",
+  "sources": [
+    {
+      "title": "Law on Personal Data Protection No. 91/2025/QH15 (LuatVietnam English)",
+      "url": "https://english.luatvietnam.vn/dan-su/law-on-personal-data-protection-law-no-91-2025-qh15-405135-d1.html",
+      "source_type": "primary"
+    },
+    {
+      "title": "Decree 330/2026/ND-CP on sanctions in cybersecurity and personal data protection (LuatVietnam English)",
+      "url": "https://english.luatvietnam.vn/decree-no-330-2026-nd-cp-dated-august-19-2026-of-the-government-on-sanctioning-of-administrative-violations-in-the-fields-of-cybersecurity-and-perso-445214-doc1.html",
+      "source_type": "primary"
+    },
+    {
+      "title": "Tilleke & Gibbins: Vietnam issues cybersecurity and PDP sanctions decree",
+      "url": "https://www.tilleke.com/insights/vietnam-issues-cybersecurity-and-personal-data-protection-sanctions-decree/",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Viet An Law: Decree 330/2026/ND-CP penalties",
+      "url": "https://vietanlaw.com/decree-330-2026-nd-cp-on-administrative-penalties-for-personal-data-protection-violations-in-vietnam/",
+      "source_type": "secondary"
+    },
+    {
+      "title": "DLA Piper Data Protection Laws of the World: Vietnam",
+      "url": "https://www.dlapiperdataprotection.com/?t=law&c=VN",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Vietnam Law Magazine: tightened personal data protection requirements",
+      "url": "https://vietnamlawmagazine.vn/businesses-face-tightened-personal-data-protection-requirements-79374.html",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Vietnam Briefing: personal data protection law guide",
+      "url": "https://www.vietnam-briefing.com/doing-business-guide/vietnam/company-establishment/vietnam-personal-data-privacy-law",
+      "source_type": "secondary"
+    }
+  ]
+}

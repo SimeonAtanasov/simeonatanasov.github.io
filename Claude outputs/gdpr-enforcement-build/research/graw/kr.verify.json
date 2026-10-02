@@ -1,0 +1,92 @@
+{
+ "code": "kr",
+ "checked": [
+  {
+   "field": "law.name",
+   "claim": "Amendment dated 10 March 2026, main provisions in force 11 September 2026, up to 10% in aggravated cases",
+   "verdict": "confirmed",
+   "evidence": "IAPP: promulgated 10 March 2026, takes effect 11 September 2026, 10% turnover ceiling. Digital Today: revised March 2026, effective 11 September 2026. DLA Piper: effective 11 September 2026, 3% to 10% in specific circumstances.",
+   "url": "https://iapp.org/news/a/south-korea-overhauls-pipa-and-ties-fines-to-ceo-accountability"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "3% cap since 15 September 2023; 10% from 11 September 2026 for repeat wilful or grossly negligent violations within three years, 10 million or more data subjects, or failure to comply with a corrective order",
+   "verdict": "confirmed",
+   "evidence": "DLA Piper: 'raised from 3% to 10% of total revenue in specific circumstances, including: repeated violations involving willful misconduct or gross negligence within a three-year period; violations affecting 10 million or more data subjects; or failure to comply with a corrective order'. The KRW 2 billion no-turnover cap was not shown in sources fetched; consistent with my understanding of Art 64-2 and already hedged.",
+   "url": "https://www.dlapiperdataprotection.com/?t=enforcement&c=KR"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "June 2026, reportedly about KRW 624 billion, insider breach affecting about 34 million accounts and unlawful collection; Coupang to challenge",
+   "verdict": "corrected",
+   "evidence": "Korea Herald and UPI: decision 11 June 2026; total KRW 624.7 billion = KRW 423.6 billion for the breach (about 37.5 million users: 33.2 million members and 4.3 million others) + KRW 201.2 billion for collecting activity records of 11.17 million users without authorisation + KRW 248 million on Coupang Fulfillment Services. Breach by a former engineer misusing a signing key. Coupang said it would 'clarify the facts through legal procedures'. Kakao KRW 15.1 billion was in 2024 (Korea Herald SKT article: 'last year').",
+   "url": "https://www.upi.com/Top_News/World-News/2026/06/11/Coupang-fined-record-6247-billion-won-over-massive-data-breach-unauthorized-data-collection/6531781169687/",
+   "replacement": "On 11 June 2026 the PIPC imposed a record KRW 624.7 billion on Coupang: KRW 423.6 billion for an insider breach by a former engineer affecting about 37.5 million users, KRW 201.2 billion for collecting 11.17 million users' activity on other apps and websites without authorisation, and KRW 248 million on a subsidiary. Coupang said it would contest the decision through legal procedures. Earlier comparators include Kakao (KRW 15.1 billion, 2024)."
+  },
+  {
+   "field": "cases[2].url",
+   "claim": "CPO Magazine as case source",
+   "verdict": "corrected",
+   "evidence": "CPO Magazine gives a different date (15 June) and wrongly places the SK Telecom fine in 2026; a primary-press source is better.",
+   "url": "https://www.koreaherald.com/article/10769351",
+   "replacement": "https://www.koreaherald.com/article/10769351"
+  },
+  {
+   "field": "cases[0].summary",
+   "claim": "14 September 2022 KRW 69.2bn Google, KRW 30.8bn Meta; Seoul Administrative Court dismissed challenges 23 January 2025",
+   "verdict": "confirmed",
+   "evidence": "Digital Policy Alert: PIPC decision 14 September 2022, Seoul Administrative Court dismissed suits 23 January 2025. Korea Times: Google KRW 69.2 billion in 2022. Meta amount from TechCrunch, not refetched.",
+   "url": "https://digitalpolicyalert.org/event/26225-seoul-administrative-court-issued-ruling-upholding-personal-information-protection-commissions-fines-against-google-and-meta-for-data-privacy-violations"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "28 August 2025 KRW 134.8bn plus KRW 9.6m fine, about 23 million people, unencrypted keys; mediation KRW 300,000 to about 4,000 (rejected), KCA KRW 100,000 December 2025",
+   "verdict": "confirmed",
+   "evidence": "Korea Herald / Korea Times: 28 August 2025, KRW 134.8 billion and KRW 9.6 million, 23.2 million people, USIM keys unencrypted. Korea Herald 21 December 2025: KCA commission 100,000 won; November PIPC committee proposed 300,000 won to about 4,000 claimants, rejected by SK Telecom.",
+   "url": "https://www.koreaherald.com/article/10640846"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "90 days from receipt of the written decision",
+   "verdict": "confirmed",
+   "evidence": "Korea Times: SK Telecom has 90 days from receiving the written decision to file an administrative appeal or lawsuit.",
+   "url": "https://www.koreatimes.co.kr/business/tech-science/20250828/sk-telecom-fined-97-mil-over-april-data-breach"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Administrative appeal or Seoul Administrative Court",
+   "verdict": "confirmed",
+   "evidence": "Google/Meta challenges were heard by the Seoul Administrative Court.",
+   "url": "https://digitalpolicyalert.org/event/26225-seoul-administrative-court-issued-ruling-upholding-personal-information-protection-commissions-fines-against-google-and-meta-for-data-privacy-violations"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "KRW 30 million for breach of corrective order; criminal up to five years or KRW 50 million",
+   "verdict": "confirmed",
+   "evidence": "DLA Piper: breach of corrective order no more than KRW 30 million; unauthorised third-party disclosure up to 5 years or KRW 50 million.",
+   "url": "https://www.dlapiperdataprotection.com/?t=enforcement&c=KR"
+  },
+  {
+   "field": "private.damages",
+   "claim": "Punitive up to five times; statutory up to KRW 3 million",
+   "verdict": "confirmed",
+   "evidence": "DLA Piper: liability up to five times the damages for intentional or negligent breaches. Statutory damages figure consistent with Art 39-2; not refetched.",
+   "url": "https://www.dlapiperdataprotection.com/?t=enforcement&c=KR"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Mediation draft within 60 days (Art 44)",
+   "verdict": "unverifiable",
+   "evidence": "Statute text not fetched; consistent with my understanding of Art 44(1); file already hedges.",
+   "url": ""
+  },
+  {
+   "field": "map",
+   "claim": "who_penalises regulator, cap turnover, private_action yes",
+   "verdict": "confirmed",
+   "evidence": "PIPC surcharges by decision, turnover-based, Art 39 civil damages.",
+   "url": ""
+  }
+ ],
+ "notes": "Most serious problem: the Coupang case was soft and partly wrong (date given only as June, 'reportedly', about 34 million accounts). Primary press gives 11 June 2026, KRW 624.7 billion split into breach and unlawful-collection surcharges, about 37.5 million users. The 10% cap and its 11 September 2026 effect are confirmed by IAPP and DLA Piper; promulgation 10 March 2026 confirmed by IAPP."
+}

@@ -1,0 +1,110 @@
+{
+  "code": "th",
+  "country": "Thailand",
+  "membership": "World",
+  "region": "Asia-Pacific",
+  "dpa": {
+    "name_en": "Personal Data Protection Committee, supported by the Office of the Personal Data Protection Commission and expert committees",
+    "name_native": "คณะกรรมการคุ้มครองข้อมูลส่วนบุคคล (สำนักงานคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล)",
+    "abbr": "PDPC",
+    "url": "https://www.pdpc.or.th",
+    "structure": "A committee chaired by an appointed expert with ex officio government members, working within the remit of the Ministry of Digital Economy and Society, served by a government office. Complaints and fines are handled by expert committees appointed by the PDPC, which can order remedies and impose administrative fines.",
+    "regional": "No regional regulators. The police and public prosecutors handle the criminal offences; the PDPC runs a 'PDPC Eagle Eye' unit that works with police and other authorities on breaches and data leaks."
+  },
+  "law": {
+    "name": "Personal Data Protection Act B.E. 2562 (2019), published 27 May 2019, fully in force 1 June 2022 after two postponements",
+    "url": "https://www.pdpc.or.th"
+  },
+  "complaint": {
+    "how": "Complaint to the Office of the PDPC, which passes it to an expert committee; details of the form, fee and language were not confirmed.",
+    "contact_controller_first": "Not confirmed.",
+    "deadlines": "Not confirmed.",
+    "complainant_status": "Not confirmed; the expert committee can mediate between the parties or order the controller to act."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint, breach notification (72 hours) or own-initiative inquiry, including through the PDPC Eagle Eye unit.",
+      "Examination by an expert committee, which may mediate or reject the complaint.",
+      "Expert committee order to the controller or processor (for example to remedy security or stop processing) and administrative fine.",
+      "Separate criminal prosecution and civil claims in the courts."
+    ],
+    "decision_maker": "The expert committees decide complaints and impose administrative fines; the PDPC announces the outcomes.",
+    "limitation": "Not confirmed for administrative fines."
+  },
+  "fines": {
+    "imposed_by": "Expert committees under the PDPC impose administrative fines themselves (sections 82 to 90), so the map value is regulator. Fines are fixed amounts per violation in tiers up to THB 1 million, 3 million and 5 million (THB 5 million for the most serious, such as sensitive data breaches), but several violations can be stacked: a 2024 fine reached THB 7 million.",
+    "public_bodies": "Yes: in August 2025 a government agency and its software contractor were each fined over THB 150,000 after a breach of about 200,000 records.",
+    "quirks": "Criminal offences (section 79 onwards) cover unlawful use or disclosure of sensitive data likely to cause harm (up to 6 months and/or THB 500,000) or for unlawful gain (up to 1 year and/or THB 1 million), and directors or managers can be personally liable. Processors are fined directly and sometimes more heavily than controllers."
+  },
+  "appeal": {
+    "court": "Not confirmed from the statute; as administrative orders of state officials, expert committee orders and fines are generally challengeable in the Administrative Court.",
+    "deadline": "Not confirmed.",
+    "suspensive": "Not confirmed.",
+    "further": "Supreme Administrative Court (general route; not confirmed in a PDPA case).",
+    "inaction": "Not confirmed."
+  },
+  "private": {
+    "courts": "Yes: controllers and processors are liable in civil courts for damage caused by non-compliance unless they prove force majeure or the data subject's own act (section 77).",
+    "damages": "Actual damages plus punitive damages of up to twice the actual damages (section 78); limitation reported as 3 years from knowledge of the damage and the liable person or 10 years from the violation (not confirmed from the statute text).",
+    "collective": "Class actions are available under the Civil Procedure Code; no PDPA class action confirmed."
+  },
+  "cases": [
+    {
+      "title": "First PDPA fine: online retailer",
+      "year": "2024",
+      "summary": "On 21 August 2024 the expert committee fined a large online retailer THB 7 million for failing to appoint a DPO (s 41), weak security (s 37(1)) and failing to notify a breach linked to call-centre scams (s 37(4)), and ordered a security review within 7 days.",
+      "url": "https://www.nishimura.com/en/knowledge/publications/personal-data-protection-update"
+    },
+    {
+      "title": "August 2025 enforcement round",
+      "year": "2025",
+      "summary": "On 1 August 2025 the PDPC announced eight fines in five cases totalling about THB 14.5 million, including THB 7 million for an IT retailer, THB 3 million for a toy company's processor and fines on a government agency and a private hospital.",
+      "url": "https://www.legal500.com/intelligence/thailand/privacy/thailand's-pdpc-signals-tougher-enforcement-with-multi-million-baht-fines"
+    }
+  ],
+  "quirks": [
+    "Courts can add punitive damages of up to twice the actual loss, which no EU law provides.",
+    "Fines are fixed amounts per violation, but stacking several violations has produced a fine above the THB 5 million headline cap.",
+    "The regulator is a committee linked to a government ministry, with fining delegated to expert committees.",
+    "Enforcement started slowly: the first fine came more than two years after full entry into force, and some case details stay confidential."
+  ],
+  "plain": "You complain to the PDPC office, and an expert committee examines the case, may try to settle it, and can order the company to fix things and fine it. Serious misuse is also a crime handled by the police. You can sue the company in court for your loss, and the court can add up to double that amount as punishment.",
+  "map": {
+    "who_penalises": "regulator",
+    "cap": "fixed",
+    "private_action": "yes"
+  },
+  "confidence": "medium: the PDPA text and PDPC site were not fetched directly, so section numbers, the complaint procedure, the appeal route and the civil limitation period rely on secondary sources or general knowledge.",
+  "sources": [
+    {
+      "title": "Office of the Personal Data Protection Commission (Thailand)",
+      "url": "https://www.pdpc.or.th",
+      "source_type": "primary"
+    },
+    {
+      "title": "DLA Piper Data Protection Laws of the World: Thailand enforcement",
+      "url": "https://www.dlapiperdataprotection.com/index.html?t=enforcement&c=TH&c2=TH",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Legal 500 / Gala Law: Thailand's PDPC signals tougher enforcement",
+      "url": "https://www.legal500.com/intelligence/thailand/privacy/thailand's-pdpc-signals-tougher-enforcement-with-multi-million-baht-fines",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Nishimura & Asahi: Personal data protection update (2024 fine)",
+      "url": "https://www.nishimura.com/en/knowledge/publications/personal-data-protection-update",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Silk Legal: PDPA bares its teeth",
+      "url": "https://silklegal.com/pdpa-bares-its-teeth-slaps-a-hefty-fine-a-non-compliant-company/",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Japan-Thailand Law: Thai PDPA guide 2026",
+      "url": "https://japan-thailand-law.com/en/articles/thai-pdpa-guide-2026en/",
+      "source_type": "secondary"
+    }
+  ]
+}

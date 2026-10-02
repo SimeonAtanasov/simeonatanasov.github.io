@@ -1,0 +1,95 @@
+{
+  "code": "kr",
+  "country": "South Korea",
+  "membership": "World",
+  "region": "Asia-Pacific",
+  "dpa": {
+    "name_en": "Personal Information Protection Commission",
+    "name_native": "개인정보보호위원회",
+    "abbr": "PIPC",
+    "url": "https://www.pipc.go.kr/eng/",
+    "structure": "Central administrative agency under the Prime Minister with a chair, vice-chair and commissioners deciding as a collegial commission; since August 2020 it is the single privacy regulator for both public and private sectors.",
+    "regional": "No regional authorities. The Korea Internet and Security Agency (KISA) runs the Personal Information Infringement Report Center (phone 118) and supports investigations; the PIPC's Personal Information Dispute Mediation Committee handles individual and collective mediation; the Korea Consumer Agency's Consumer Dispute Settlement Commission also mediates mass claims; police and prosecutors handle criminal offences."
+  },
+  "law": {
+    "name": "Personal Information Protection Act (PIPA, 2011), with major amendments in force 15 September 2023 (turnover-based surcharge, single regime for online and offline) and an amendment dated 10 March 2026 whose main provisions took effect on 11 September 2026 (surcharge up to 10% in aggravated cases). Sector laws such as the Credit Information Act and Location Information Act also apply.",
+    "url": "https://elaw.klri.re.kr/eng_service/lawView.do?hseq=62389&lang=ENG"
+  },
+  "complaint": {
+    "how": "Individuals report infringements online to the Personal Information Infringement Report Center run by KISA (privacy.kisa.or.kr) or by calling 118, free of charge and in Korean (PIPA Article 62). For compensation they can instead apply to the Personal Information Dispute Mediation Committee.",
+    "contact_controller_first": "Not required for a report to the PIPC or KISA.",
+    "deadlines": "No statutory deadline for handling infringement reports was confirmed. The Dispute Mediation Committee must prepare a draft mediation within a fixed period (60 days under Article 44, extendable; not confirmed against the current text).",
+    "complainant_status": "The reporter is not a party to PIPC enforcement proceedings; in mediation the applicant is a party and decides whether to accept."
+  },
+  "procedure": {
+    "stages": [
+      "Report to KISA, breach notification, media reports or the PIPC's own initiative.",
+      "Fact-finding and investigation with requests for materials and on-site inspections (Article 63).",
+      "Plenary commission deliberation and decision: corrective recommendation or corrective order (Article 64), penalty surcharge (Article 64-2), administrative fine (Article 75), publication of the violation and the measures (Article 66).",
+      "Referral of criminal offences to investigative authorities and recommendation of disciplinary action against responsible officers (Article 65)."
+    ],
+    "decision_maker": "The PIPC plenary meeting decides surcharges and orders.",
+    "limitation": "Not confirmed."
+  },
+  "fines": {
+    "imposed_by": "The PIPC imposes penalty surcharges itself by administrative decision (map: regulator). Since 15 September 2023 the cap is 3% of total turnover, excluding revenue unrelated to the violation (Article 64-2), with a fixed cap (understood to be KRW 2 billion) where turnover is absent or hard to calculate. Since 11 September 2026 the cap rises to 10% of total turnover for repeated wilful or grossly negligent violations within three years, violations affecting 10 million or more data subjects, or failure to comply with a corrective order.",
+    "public_bodies": "Public institutions are subject to corrective orders, publication and administrative fines; whether surcharges can be imposed on central government bodies was not confirmed.",
+    "quirks": "Administrative fines (gwataeryo, Article 75) are separate from surcharges and capped in the tens of millions of won (for example up to KRW 30 million for breach of a corrective order). Criminal offences carry up to five years' imprisonment or KRW 50 million for unlawful provision of personal information to third parties."
+  },
+  "appeal": {
+    "court": "An administrative appeal under the Administrative Appeals Act, or an administrative lawsuit in the Seoul Administrative Court under the Administrative Litigation Act.",
+    "deadline": "90 days from receipt of the written decision.",
+    "suspensive": "Not suspensive by default; the company must apply to the court for a stay of execution.",
+    "further": "Seoul High Court on appeal, then the Supreme Court.",
+    "inaction": "Not confirmed. In practice individuals who are dissatisfied turn to dispute mediation or civil suits rather than challenging the PIPC."
+  },
+  "private": {
+    "courts": "Civil courts. Article 39 reverses the burden of proof: the controller must show it was not intentional or negligent.",
+    "damages": "Actual damages, punitive damages of up to five times the loss for intentional or negligent leaks (Article 39(3)), or statutory damages of up to KRW 3 million per person without proof of loss (Article 39-2).",
+    "collective": "Collective dispute mediation through the Dispute Mediation Committee (Article 49), whose accepted outcome has the effect of a court settlement; a group action (Article 51) can be brought by qualifying consumer or non-profit organisations, but only for an injunction and only after collective mediation fails. There is no damages class action, so victims bring mass joint lawsuits."
+  },
+  "cases": [
+    {
+      "title": "Google and Meta (behavioural advertising)",
+      "year": "2022, upheld 2025",
+      "summary": "On 14 September 2022 the PIPC fined Google KRW 69.2 billion and Meta KRW 30.8 billion for collecting behavioural data for personalised advertising without valid consent, and ordered them to fix their consent flows. The Seoul Administrative Court dismissed both companies' challenges on 23 January 2025.",
+      "url": "https://digitalpolicyalert.org/event/26225-seoul-administrative-court-issued-ruling-upholding-personal-information-protection-commissions-fines-against-google-and-meta-for-data-privacy-violations"
+    },
+    {
+      "title": "SK Telecom (USIM data breach)",
+      "year": "2025",
+      "summary": "On 28 August 2025 the PIPC imposed a record KRW 134.8 billion surcharge plus a KRW 9.6 million administrative fine after a cyberattack exposed data of about 23 million people, including unencrypted SIM authentication keys. In parallel, the PIPC mediation committee proposed KRW 300,000 each to about 4,000 claimants (rejected by SK Telecom) and the Korea Consumer Agency's commission proposed KRW 100,000 per user in December 2025.",
+      "url": "https://www.koreaherald.com/article/10563945"
+    },
+    {
+      "title": "Coupang (data breach)",
+      "year": "2026",
+      "summary": "In June 2026 the PIPC reportedly imposed about KRW 624 billion on Coupang over an insider breach affecting around 34 million accounts and unlawful collection of personal data; the company said it would challenge the amount. Earlier comparators include Kakao (KRW 15.1 billion, 2024).",
+      "url": "https://www.cpomagazine.com/cyber-security/korean-ecommerce-giant-hit-with-record-setting-fine-over-massive-data-breach/"
+    }
+  ],
+  "quirks": [
+    "Statutory damages of up to KRW 3 million per person and punitive damages of up to five times the loss exist, which is unusual in privacy law.",
+    "Mass mediation is a real alternative to litigation: mediation proposals in large breaches are priced per person and, if the company accepts, have the effect of a court settlement.",
+    "The surcharge base is total company turnover (minus unrelated revenue), not just the turnover of the service concerned, and from 11 September 2026 it can reach 10% in aggravated cases.",
+    "Breach of the law can lead to criminal prosecution of employees and officers, and the PIPC can recommend disciplinary action against responsible executives."
+  ],
+  "plain": "You report a privacy problem to the national privacy hotline or website, and the privacy commission may investigate and fine the company a share of its revenue, which the company can contest in the Seoul Administrative Court. Separately, you can ask the commission's mediation committee for compensation, alone or together with other victims, or sue the company yourself, where the law sets minimum damages of up to KRW 3 million without proof of loss.",
+  "map": {
+    "who_penalises": "regulator",
+    "cap": "turnover",
+    "private_action": "yes"
+  },
+  "confidence": "medium: the cases and the 2023 3% cap are well sourced, but the 10% cap in the March 2026 amendment rests on one secondary source, the Coupang amount is from press reports, and I could not read the statute text to confirm article numbers for mediation deadlines and the no-turnover cap.",
+  "sources": [
+    {"title": "PIPA English text (Korea Legislation Research Institute)", "url": "https://elaw.klri.re.kr/eng_service/lawView.do?hseq=62389&lang=ENG", "source_type": "primary"},
+    {"title": "PIPC English website", "url": "https://www.pipc.go.kr/eng/", "source_type": "primary"},
+    {"title": "DLA Piper Data Protection Laws of the World: South Korea enforcement and 2026 amendment", "url": "https://www.dlapiperdataprotection.com/?t=enforcement&c=KR", "source_type": "secondary"},
+    {"title": "TechCrunch: Google and Meta fined in South Korea, 14 September 2022", "url": "https://techcrunch.com/2022/09/14/google-meta-fined-71-8m-for-violating-privacy-law-in-south-korea", "source_type": "secondary"},
+    {"title": "Digital Policy Alert: Seoul Administrative Court upholds PIPC fines against Google and Meta", "url": "https://digitalpolicyalert.org/event/26225-seoul-administrative-court-issued-ruling-upholding-personal-information-protection-commissions-fines-against-google-and-meta-for-data-privacy-violations", "source_type": "secondary"},
+    {"title": "Korea Herald: SK Telecom hit with record privacy fine", "url": "https://www.koreaherald.com/article/10563945", "source_type": "secondary"},
+    {"title": "Korea Times: SK Telecom fined, comparison with Kakao and Google, 90-day appeal window", "url": "https://www.koreatimes.co.kr/business/tech-science/20250828/sk-telecom-fined-97-mil-over-april-data-breach", "source_type": "secondary"},
+    {"title": "Korea Herald: Korea Consumer Agency mediation decision on SK Telecom", "url": "https://www.koreaherald.com/article/10640846", "source_type": "secondary"},
+    {"title": "CPO Magazine: Coupang record fine", "url": "https://www.cpomagazine.com/cyber-security/korean-ecommerce-giant-hit-with-record-setting-fine-over-massive-data-breach/", "source_type": "secondary"}
+  ]
+}

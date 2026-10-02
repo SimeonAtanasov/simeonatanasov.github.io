@@ -2,20 +2,18 @@
    deep links to a country, and the on-this-page rail (same behaviour as the fine
    calculator's). No state is stored and nothing leaves the browser. */
 (function () {
-	var COLOURS = {
-		model: { admin: ['#4f8fd6', '#ffffff'], ordinary: ['#199e70', '#ffffff'], confirm: ['#b07cd8', '#ffffff'], court: ['#d95926', '#ffffff'] },
-		public: { yes: ['#4f8fd6', '#ffffff'], capped: ['#199e70', '#ffffff'], partly: ['#c9a227', '#10172e'], no: ['#d95926', '#ffffff'], unclear: ['#5c6684', '#ffffff'] },
-		susp: { yes: ['#199e70', '#ffffff'], partly: ['#c9a227', '#10172e'], no: ['#d95926', '#ffffff'], unclear: ['#5c6684', '#ffffff'] }
-	};
 	var wrap = document.querySelector('.ge-mapwrap');
-	var tiles = Array.prototype.slice.call(document.querySelectorAll('.ge-tile'));
+	var tiles = Array.prototype.slice.call(document.querySelectorAll('.ge-tile[data-code]'));
+	var legends = Array.prototype.slice.call(document.querySelectorAll('.ge-legend'));
+	/* each tile carries its colours per view (data-<view>-bg / -fg), so one script serves
+	   both the European and the worldwide page */
 	var paint = function (view) {
 		if (wrap) wrap.setAttribute('data-view', view);
 		tiles.forEach(function (t) {
-			var key = t.getAttribute('data-' + view), c = COLOURS[view][key] || ['#5c6684', '#ffffff'];
-			t.querySelector('rect').setAttribute('fill', c[0]);
-			t.querySelector('text').setAttribute('fill', c[1]);
+			t.querySelector('rect').setAttribute('fill', t.getAttribute('data-' + view + '-bg') || '#5c6684');
+			t.querySelector('text').setAttribute('fill', t.getAttribute('data-' + view + '-fg') || '#ffffff');
 		});
+		legends.forEach(function (l) { l.hidden = l.getAttribute('data-view') !== view; });
 	};
 	Array.prototype.slice.call(document.querySelectorAll('#ge-map .ge-btn[data-view]')).forEach(function (b, i, all) {
 		b.addEventListener('click', function () {

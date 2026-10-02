@@ -1,0 +1,90 @@
+{
+  "code": "jp",
+  "country": "Japan",
+  "membership": "World",
+  "region": "Asia-Pacific",
+  "dpa": {
+    "name_en": "Personal Information Protection Commission",
+    "name_native": "個人情報保護委員会",
+    "abbr": "PPC",
+    "url": "https://www.ppc.go.jp/en/",
+    "structure": "Independent administrative commission (chair and commissioners) attached to the Cabinet Office; since 2022 to 2023 it supervises both the private sector and public bodies under a single APPI.",
+    "regional": "No regional DPAs for the private sector. Other bodies matter in practice: the Ministry of Internal Affairs and Communications issues administrative guidance under the Telecommunications Business Act (as with LY Corporation in 2024), the Japan Fair Trade Commission handles platform conduct, accredited personal information protection organisations handle complaints for member businesses, and police and public prosecutors handle APPI offences."
+  },
+  "law": {
+    "name": "Act on the Protection of Personal Information (APPI, Act No. 57 of 2003), fully in force April 2005, with major amendments in force 2017, April 2022 (2020 amendment) and 2022 to 2023 (public sector integration). A further amendment introducing an administrative surcharge was passed by the Diet on 10 July 2026 and promulgated on 17 July 2026; it enters into force within two years of promulgation and was not yet in force on 2 October 2026.",
+    "url": "https://www.ppc.go.jp/personalinfo/legal/r8kaiseihogohou/"
+  },
+  "complaint": {
+    "how": "There is no formal complaint-and-decision procedure. Individuals can call the PPC's APPI consultation line, in Japanese, free of charge, and the PPC uses the information to decide whether to act; complaints can also go to an accredited personal information protection organisation if the business is a member.",
+    "contact_controller_first": "Not a legal precondition for contacting the PPC, but the system expects it: businesses must endeavour to handle complaints properly and promptly (APPI complaint-handling duty), and a court claim for disclosure, correction or cessation of use requires a prior request to the business.",
+    "deadlines": "No statutory deadline for the PPC to deal with a consultation or complaint was confirmed.",
+    "complainant_status": "The individual is an information source, not a party; the PPC does not issue a decision on the individual's complaint."
+  },
+  "procedure": {
+    "stages": [
+      "Information gathering from consultations, breach reports (mandatory since April 2022) or the PPC's own monitoring.",
+      "Request for reports and on-site inspection (APPI Article 146).",
+      "Guidance and advice (Article 147), the most common outcome, sometimes published.",
+      "Recommendation (Article 148(1)) to stop the violation or take corrective measures, usually with periodic progress reports.",
+      "Order (Article 148(2)) if a recommendation is not followed without justifiable grounds and serious infringement is imminent, or an emergency order (Article 148(3)); orders can be published. Breach of an order is a criminal offence referred for prosecution."
+    ],
+    "decision_maker": "The PPC as a collegial commission; criminal penalties are decided by the criminal courts after prosecution by public prosecutors.",
+    "limitation": "Not confirmed: no specific APPI limitation period for PPC action was found; criminal offences follow the general rules of the Code of Criminal Procedure."
+  },
+  "fines": {
+    "imposed_by": "Today the PPC cannot impose monetary penalties. Money penalties come only through criminal prosecution: breach of a PPC order carries up to one year's imprisonment or a fine up to JPY 1 million for individuals (Article 178) and a fine up to JPY 100 million for the company (Article 184); false reporting carries a fine up to JPY 500,000 (map: court). The 2026 amendment adds an administrative surcharge imposed by the PPC itself (new Articles 148-3 to 148-17), equal to the financial benefit from serious violations, not applying where 1,000 or fewer individuals are affected, where the business exercised reasonable care, or where harm is insignificant; it will start within two years of 17 July 2026.",
+    "public_bodies": "Administrative organs and local governments are covered by the APPI since the 2021 reform took effect, but the PPC's tools against them are requests for reports and recommendations rather than penalties (article numbers not confirmed).",
+    "quirks": "Unlawfully providing a personal information database for illicit gain is itself an offence (up to one year or JPY 500,000 for individuals, up to JPY 100 million for companies). The 2026 amendment also raises criminal maxima and adds offences such as obtaining personal information by fraud or violence (Articles 178 to 180 as amended; amounts not confirmed)."
+  },
+  "appeal": {
+    "court": "A PPC order is an administrative disposition: it can be challenged by a request for review under the Administrative Complaint Review Act or by a revocation suit in the district court under the Administrative Case Litigation Act. Whether guidance and recommendations are challengeable dispositions is doubtful (not confirmed).",
+    "deadline": "Generally three months for a request for review and six months for a revocation suit from knowledge of the disposition (general administrative law rules).",
+    "suspensive": "Not suspensive by default; a stay of execution must be requested separately.",
+    "further": "High court appeal and final appeal to the Supreme Court. No reported court challenge to a PPC order was found.",
+    "inaction": "No specific remedy: since there is no complaint decision, an individual cannot appeal PPC inaction and must instead sue the business directly."
+  },
+  "private": {
+    "courts": "District courts (summary courts for small claims). Individuals sue in tort under Civil Code Article 709 for privacy infringement, and can sue to enforce APPI rights to disclosure, correction and cessation of use after first making the request to the business.",
+    "damages": "Ordinary compensatory and consolation damages only; no statutory or punitive damages. Awards in data leak cases are typically small per person (for example the Benesse leak litigation; amounts not confirmed here).",
+    "collective": "No general privacy class action. Japan's consumer collective redress scheme is narrow; giving qualified consumer organisations injunction and damages claims for APPI breaches was discussed in the triennial review, but its adoption was not confirmed in the 2026 amendment."
+  },
+  "cases": [
+    {
+      "title": "Rikunabi (Recruit Career and Recruit)",
+      "year": "2019",
+      "summary": "On 4 December 2019 the PPC issued recommendations to Recruit Career and Recruit, and guidance to client companies, over a service that predicted the likelihood of job seekers declining offers from browsing data and supplied it to employers without valid consent, affecting 26,060 people. No fine was possible.",
+      "url": "https://www.ppc.go.jp/files/pdf/191204_houdou.pdf"
+    },
+    {
+      "title": "LY Corporation (LINE)",
+      "year": "2024",
+      "summary": "On 28 March 2024 the PPC issued a recommendation under Article 148(1) for failures in organisational security (Article 23) after a breach through systems shared with Naver affecting about 520,000 people, requiring progress reports through March 2025; it gave separate guidance under Article 147 over an exposure affecting about 2.52 million Yahoo Auction sellers. The telecoms ministry issued its own administrative guidance. No monetary penalty.",
+      "url": "https://www.ppc.go.jp/files/pdf/240328_houdou.pdf"
+    }
+  ],
+  "quirks": [
+    "Until the 2026 amendment takes effect (by July 2028 at the latest), Japan's privacy regulator has no fining power at all; enforcement is guidance, recommendation, order and, only after an order is breached, criminal prosecution.",
+    "Most enforcement is soft and reputational: published guidance and recommendations with progress reporting, and no fine even for large breaches such as LY Corporation.",
+    "The planned surcharge is calculated as the profit gained from the violation, not as a percentage of turnover, and excludes cases affecting 1,000 people or fewer.",
+    "The PPC does not resolve individual complaints; consultations feed its supervision, and redress for individuals is a matter for the civil courts."
+  ],
+  "plain": "If a company misuses your data, you can call the regulator's consultation line, but it will not decide your case; it may quietly guide the company, publicly recommend changes, or as a last resort order it to stop. Only if the company ignores an order can prosecutors take it to a criminal court for a fine. For compensation you sue the company yourself in the ordinary courts.",
+  "map": {
+    "who_penalises": "court",
+    "cap": "fixed",
+    "private_action": "yes"
+  },
+  "confidence": "medium: the 2026 amendment's passage and promulgation dates are confirmed from the PPC, but its exact entry-into-force date for the surcharge and its revised criminal amounts were not published in sources I could read, and current criminal amounts rest on secondary sources.",
+  "sources": [
+    {"title": "PPC: 2026 amendment to the APPI (passage 10 July 2026, promulgation 17 July 2026)", "url": "https://www.ppc.go.jp/personalinfo/legal/r8kaiseihogohou/", "source_type": "primary"},
+    {"title": "PPC: outline of measures to ensure effective enforcement (surcharge design)", "url": "https://www.ppc.go.jp/files/pdf/260109_outline.pdf", "source_type": "primary"},
+    {"title": "PPC press release on Recruit (Rikunabi), 4 December 2019", "url": "https://www.ppc.go.jp/files/pdf/191204_houdou.pdf", "source_type": "primary"},
+    {"title": "PPC press release on LY Corporation, 28 March 2024", "url": "https://www.ppc.go.jp/files/pdf/240328_houdou.pdf", "source_type": "primary"},
+    {"title": "LY Corporation: progress on measures under the PPC recommendation", "url": "https://www.lycorp.co.jp/en/privacy-security/recurrence-prevention/ppc/", "source_type": "primary"},
+    {"title": "PwC Japan: amendments to the APPI (passed 10 July 2026)", "url": "https://www.pwc.com/jp/en/knowledge/news/legal-news/legal-20260827-6.html", "source_type": "secondary"},
+    {"title": "Baker McKenzie: Japan APPI reform key changes (surcharge exemptions)", "url": "https://connectontech.bakermckenzie.com/japan-appi-reform-key-changes/", "source_type": "secondary"},
+    {"title": "One Asia Lawyers: overview of the APPI amendments (Articles 148-3 to 148-17)", "url": "https://oneasia.legal/en/7185", "source_type": "secondary"},
+    {"title": "DLA Piper Data Protection Laws of the World: Japan enforcement", "url": "https://www.dlapiperdataprotection.com/?t=enforcement&c=JP", "source_type": "secondary"}
+  ]
+}

@@ -59,7 +59,7 @@ def build_md():
     L = []
     L.append("# GDPR enforcement in Europe: study guide")
     L.append("")
-    L.append("How a complaint becomes a fine, where the courts come in, and the route in each EU and EEA country, with the United Kingdom and Switzerland for contrast. Researched on %s from national laws, authority websites and court reports, then checked by an independent pass against the cited sources. *Not confirmed* means no source was found either way. This maps procedure; it is not legal advice." % P.CHECKED)
+    L.append("How a complaint becomes a fine, where the courts come in, and the route in each EU and EEA country, with the United Kingdom and Switzerland for contrast; Part 11 adds 23 jurisdictions outside Europe. Researched on %s from national laws, authority websites and court reports, then checked by an independent pass against the cited sources. *Not confirmed* means no source was found either way. This maps procedure; it is not legal advice." % P.CHECKED)
     L.append("")
     L.append("Companion web page: https://www.simeonatanasov.com/gdpr-enforcement.html")
     L.append("")
@@ -68,6 +68,7 @@ def build_md():
     L.append("1. Read Part 1 until you can draw the two tracks from memory. Everything else hangs off it.")
     L.append("2. Learn the four fining models and the exceptions in Part 6 (memory aids), because exam and interview questions go straight to the exceptions.")
     L.append("3. Use Part 7 as reference, country by country, and test yourself with Part 9.")
+    L.append("4. Read Part 11 when the question is outside the GDPR: start with the four models, because who can impose a penalty differs more than how large it can be.")
     L.append("")
     L.append("## Part 1. The core idea: two tracks")
     L.append("")
@@ -234,9 +235,47 @@ def build_md():
     L.append("- Appeal deadlines and suspensive effect are the least certain fields, because many countries set them in general administrative procedure law.")
     L.append("- Court cases move. Everything after %s is not reflected. The web page carries the source list for every country." % P.CHECKED)
     L.append("")
+    L.extend(world_part())
     s = link_md("\n".join(L))
     assert EM not in s
     return s
+
+
+def world_part():
+    """Part 11: the 23 jurisdictions outside Europe, from the worldwide page's data. Importing the
+    world builder repoints the shared helpers, so this runs after the European parts are built."""
+    import build_world_page as WP
+    import summary_world as SW
+    L = ["## Part 11. Outside Europe", "",
+         "Companion page: https://www.simeonatanasov.com/privacy-enforcement-worldwide.html", "",
+         "Outside Europe the first question is who can impose a penalty at all. Four models:", ""]
+    for k, (title, text) in WP.MODEL_TEXT.items():
+        L.append("- **%s.** %s Here: %s." % (title, text, WP.names(lambda c, k=k: WP.S[c][0] == k)))
+    L += ["", "### What changes outside the GDPR", "", table(["Difference", "What it looks like", "Why it matters"], WP.DIFF), "",
+          "### Comparison", ""]
+    rows = []
+    for c in SW.ORDER:
+        d = WP.C[c]
+        m, p, s_, first, _ = WP.S[c]
+        rows.append((d["country"], d["dpa"].get("abbr") or d["dpa"]["name_en"], SW.MODELS[m][0], first, SW.PUBLIC[p][0], SW.SUSP[s_][0]))
+    L += [table(["Jurisdiction", "Regulator", "Who penalises", "First court", "Maximum penalty", "Private damages action"], rows), ""]
+    for c in SW.ORDER:
+        d = WP.C[c]
+        L += ["### %s" % d["country"], "", "*%s.* %s" % (d["region"], cap(d["plain"])), "",
+              "**Route of a penalty:** " + " -> ".join(SW.ROUTE[c]), ""]
+        L.append("- **Regulator:** %s (%s). %s" % (d["dpa"]["name_en"], d["dpa"]["name_native"], cap(d["dpa"].get("structure"))))
+        L.append("- **Law:** " + d["law"]["name"])
+        L.append("- **Who penalises:** " + cap(d["fines"].get("imposed_by")))
+        L.append("- **Public bodies:** " + cap(d["fines"].get("public_bodies")))
+        L.append("- **Appeal:** %s Deadline: %s Payment: %s" % (cap(d["appeal"].get("court")), cap(d["appeal"].get("deadline")), cap(d["appeal"].get("suspensive"))))
+        L.append("- **Suing directly:** %s %s" % (cap(d["private"].get("courts")), cap(d["private"].get("damages"))))
+        for cs in d.get("cases", []):
+            L.append("- **Case: %s (%s).** %s" % (cs.get("title"), cs.get("year"), cap(cs.get("summary"))))
+        for q in d.get("quirks", []):
+            if q:
+                L.append("- " + cap(q))
+        L.append("")
+    return L
 
 
 def link_md(text):
@@ -252,7 +291,7 @@ def link_md(text):
             continue
         if line.startswith("## Part "):
             n = int(line.split()[2].rstrip("."))
-            ctx = "card" if n in (6, 7) else (None if n == 10 else "gdpr")
+            ctx = "card" if n in (6, 7, 11) else (None if n == 10 else "gdpr")
         elif line.startswith("### The GDPR Procedural Regulation"):
             ctx = "pr"
         elif line.startswith("## Part 4") or (line.startswith("## ") and ctx == "pr"):

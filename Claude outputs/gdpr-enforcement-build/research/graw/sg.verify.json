@@ -1,0 +1,123 @@
+{
+  "code": "sg",
+  "checked": [
+    {
+      "field": "cases[0].summary",
+      "claim": "IHiS SGD 750,000 and SingHealth SGD 250,000, 2019, 1.5 million patients",
+      "verdict": "confirmed",
+      "evidence": "ComplyHQ: S$250,000 SingHealth + S$750,000 IHiS, 2019, 1.5 million patients. Matches the PDPC decision of January 2019 as widely reported. Secondary source only.",
+      "url": "https://complyhq.app/blog/pdpa-penalties-fines-singapore"
+    },
+    {
+      "field": "cases[1].summary",
+      "claim": "28 October 2025, SGD 315,000 reduced from 450,000, negligent breach, first decision to apply the 10% turnover cap framework",
+      "verdict": "corrected",
+      "evidence": "Drew & Napier: [2025] SGPDPC 6 issued 28 October 2025, starting penalty S$450,000, final S$315,000, breach of s 24 protection obligation; it was the highest penalty since the 2020 amendments raised the cap, not stated as the first to apply the 10% cap. Chambers calls it the second-largest PDPA penalty to date. 'Negligent' not confirmed.",
+      "url": "https://www.drewnapier.com/DrewNapier/media/DrewNapier/3Nov25_Personal-Data-Protection-Commission-Clarifies-Personal-Data-Protection-Act-Penalty-Framework-in-Marina-Bay-Sands-Decision.pdf",
+      "replacement": "On 28 October 2025 the PDPC imposed SGD 315,000 (from a starting figure of SGD 450,000, reduced for mitigation) for breach of the protection obligation (s 24) during a software migration; the second-largest PDPA penalty to date and the first decision to set out a five-step penalty method."
+    },
+    {
+      "field": "cases[2].title",
+      "claim": "Reed, Michael v Bellingham, Alex [2022] SGCA 60",
+      "verdict": "corrected",
+      "evidence": "At Court of Appeal level the appellant was Bellingham; the case is reported as Bellingham, Alex v Reed, Michael [2022] SGCA 60 (Reed v Bellingham was the High Court name, [2022] SGHC 87). Based on own knowledge of the law reports; the Chambers page refers to it as Reed v Bellingham.",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/singapore/trends-and-developments",
+      "replacement": "Bellingham, Alex v Reed, Michael [2022] SGCA 60"
+    },
+    {
+      "field": "cases[2].summary",
+      "claim": "CA held emotional distress is loss or damage; upheld injunction against former employee",
+      "verdict": "confirmed",
+      "evidence": "Chambers 2026 Singapore: CA held non-material harm is assessed case by case with a strict causal link; consistent with the holding that emotional distress can be loss or damage under s 48O and dismissal of the appeal against the injunction.",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/singapore/trends-and-developments"
+    },
+    {
+      "field": "fines.imposed_by",
+      "claim": "PDPC imposes penalties itself under s 48J; cap SGD 1m or 10% of Singapore turnover above SGD 10m; five-step method in Marina Bay Sands",
+      "verdict": "confirmed",
+      "evidence": "DLA Piper: up to 10% of annual turnover in Singapore where turnover exceeds SGD 10 million, or SGD 1 million. Drew & Napier confirms five-step method.",
+      "url": "https://www.dlapiperdataprotection.com/?t=enforcement&c=SG"
+    },
+    {
+      "field": "fines.public_bodies",
+      "claim": "PDPA does not apply to public agencies",
+      "verdict": "confirmed",
+      "evidence": "PDPA s 4(1)(c) excludes public agencies (own knowledge of the statute; consistent with all secondary sources).",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012"
+    },
+    {
+      "field": "appeal.court",
+      "claim": "First reconsideration, then Appeal Committee, then High Court",
+      "verdict": "corrected",
+      "evidence": "s 48N and s 48Q are alternatives: an application for reconsideration deems any appeal on the same decision withdrawn (s 48Q(3)), and the reconsideration result can itself be appealed (s 48Q(1)(c)). s 48R: appeal to the General Division of the High Court on a point of law or the amount of a financial penalty; complainants can also appeal (s 48R(2)(b)).",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr48N-,pr48O-,pr48Q-,pr48R-",
+      "replacement": "An aggrieved organisation or person, including the complainant, may either apply to the PDPC for reconsideration (s 48N) or appeal to an Appeal Committee of the Data Protection Appeal Panel (s 48Q); a reconsideration decision can itself be appealed, and applying for reconsideration withdraws any pending appeal (s 48Q(3)). Appeal Committee decisions go to the General Division of the High Court on a point of law or on the amount of a financial penalty (s 48R)."
+    },
+    {
+      "field": "appeal.deadline",
+      "claim": "28 days for reconsideration; appeal deadline reported as 28 days but not confirmed",
+      "verdict": "corrected",
+      "evidence": "The Act sets 'the prescribed period' for both (s 48N(4)(a), s 48Q(1)); Chambers 2026 says reconsideration requests or appeals are due within 28 days. The figure is in regulations not fetched.",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr48N-,pr48O-,pr48Q-,pr48R-",
+      "replacement": "The prescribed period, reported as 28 days, for both a reconsideration application (s 48N(4)) and an appeal to the Appeal Panel (s 48Q); the PDPC may extend the reconsideration period in exceptional circumstances (s 48N(5))."
+    },
+    {
+      "field": "appeal.suspensive",
+      "claim": "Not confirmed; secondary sources suggest only financial penalty suspended",
+      "verdict": "corrected",
+      "evidence": "s 48N(3) and s 48Q(4): unless the Commission or Appeal Committee decides otherwise, reconsideration or appeal does not suspend the direction or decision, except where it concerns a financial penalty.",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr48N-,pr48O-,pr48Q-,pr48R-",
+      "replacement": "No for directions, yes for penalties: unless the PDPC or the Appeal Committee decides otherwise, a reconsideration application or appeal does not suspend a direction, but one against a financial penalty does (ss 48N(3), 48Q(4))."
+    },
+    {
+      "field": "appeal.further",
+      "claim": "Further appeal to Court of Appeal",
+      "verdict": "confirmed",
+      "evidence": "s 48R(4): same further right of appeal as from High Court decisions in its original civil jurisdiction.",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr48N-,pr48O-,pr48Q-,pr48R-"
+    },
+    {
+      "field": "private.courts",
+      "claim": "s 48O right of action; must wait until PDPC decision is final",
+      "verdict": "confirmed",
+      "evidence": "s 48O(1) right of action for loss or damage directly from contravention of Parts 4 to 6B; s 48O(2) no action until the decision is final with no further right of appeal; s 48O(3) injunction, declaration, damages.",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr48N-,pr48O-,pr48Q-,pr48R-"
+    },
+    {
+      "field": "fines.quirks",
+      "claim": "Offences ss 48D to 48F, up to SGD 5,000 and/or 2 years",
+      "verdict": "unverifiable",
+      "evidence": "Statute sections not fetched; DLA Piper confirms the offences exist but not the amounts. The figures match my knowledge of the Act.",
+      "url": "https://www.dlapiperdataprotection.com/?t=enforcement&c=SG"
+    },
+    {
+      "field": "procedure.stages[0]",
+      "claim": "Breach notification within 3 calendar days",
+      "verdict": "unverifiable",
+      "evidence": "Not fetched; consistent with s 26D(1) as I know it.",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012"
+    },
+    {
+      "field": "map.who_penalises",
+      "claim": "regulator",
+      "verdict": "confirmed",
+      "evidence": "PDPC imposes financial penalties by direction under s 48J.",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr48N-,pr48O-,pr48Q-,pr48R-"
+    },
+    {
+      "field": "map.cap",
+      "claim": "turnover",
+      "verdict": "confirmed",
+      "evidence": "10% of Singapore turnover for organisations above SGD 10 million.",
+      "url": "https://www.dlapiperdataprotection.com/?t=enforcement&c=SG"
+    },
+    {
+      "field": "map.private_action",
+      "claim": "yes",
+      "verdict": "confirmed",
+      "evidence": "s 48O general statutory right of private action.",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr48N-,pr48O-,pr48Q-,pr48R-"
+    }
+  ],
+  "notes": "SSO refused WebFetch (403) but the statute text for ss 48N to 48R was read through the browser. Two consequential edits: complainant_status says 'seek reconsideration and appeal (ss 48N and 48Q)', which reads as sequential; they are alternatives (s 48Q(3)). procedure.stages[4] has the same issue and should read 'Reconsideration by the PDPC (s 48N) or appeal to the Data Protection Appeal Panel (s 48Q), then the High Court (s 48R).' appeal.further and private text say 'Reed v Bellingham'; if cases[2].title is changed, consider aligning. confidence line should drop the claim that appeal deadlines and suspensive effect rely on secondary sources."
+}

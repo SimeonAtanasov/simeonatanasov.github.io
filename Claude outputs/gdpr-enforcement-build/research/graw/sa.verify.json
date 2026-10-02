@@ -1,0 +1,113 @@
+{
+ "code": "sa",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "On 16 January 2026 SDAIA said its committees had issued 48 decisions covering unlawful processing, unauthorised disclosure, inadequate safeguards and unsolicited marketing; no names or amounts",
+   "verdict": "confirmed",
+   "evidence": "Profectus, citing Saudi Press Agency 16 January 2026 (ref N2489505): 48 decisions by the Committees for Reviewing Violations, four categories as stated; SDAIA 'did not disclose the specific penalty applied in any of the 48 decisions'. Secondary only; SPA not fetched.",
+   "url": "https://profectus.sa/resources/sdaia-enforcement-decisions"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Committees impose warnings or fines up to SAR 5m, doubled for repeat (Art. 36); Art. 35 crimes up to 2 years and/or SAR 3m imposed by courts",
+   "verdict": "confirmed",
+   "evidence": "Securiti: Art. 35 'imprisonment for up to two years and/or a fine not exceeding SAR 3 million'; Art. 36 'a warning notice or a fine not exceeding SAR 5 million', doubled for repeat offences, imposed by SDAIA's committees. Secondary only.",
+   "url": "https://securiti.ai/saudi-arabia-personal-data-protection-law/"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public entities subject to the PDPL; fining in practice not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not addressed in fetched sources.",
+   "url": ""
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Board of Grievances administrative judiciary",
+   "verdict": "unverifiable",
+   "evidence": "Fetched sources do not describe the appeal route; the claim is already hedged in the file.",
+   "url": "https://securiti.ai/saudi-arabia-personal-data-protection-law/"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "60 days from notification (secondary)",
+   "verdict": "unverifiable",
+   "evidence": "Not found in fetched sources; already hedged.",
+   "url": ""
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "No source found.",
+   "url": ""
+  },
+  {
+   "field": "complaint.how",
+   "claim": "Complaints go through the National Data Governance Platform",
+   "verdict": "confirmed",
+   "evidence": "DGP lists a 'Submit Personal Data Complaints' service (ReportsComplaints) and a breach notification service.",
+   "url": "https://dgp.sdaia.gov.sa/wps/portal/pdp/services/ReportsComplaints"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Breach notification to SDAIA within 72 hours",
+   "verdict": "confirmed",
+   "evidence": "Securiti: notify 'no later than 72 hours after first becoming aware' via the National Data Governance Platform.",
+   "url": "https://securiti.ai/saudi-arabia-personal-data-protection-law/"
+  },
+  {
+   "field": "law.name",
+   "claim": "In force 14 September 2023, fully enforceable since 14 September 2024",
+   "verdict": "confirmed",
+   "evidence": "Securiti: grace period 'ended on 14 September 2024'.",
+   "url": "https://securiti.ai/saudi-arabia-personal-data-protection-law/"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Disclosing sensitive data with intent to harm: up to 2 years",
+   "verdict": "confirmed",
+   "evidence": "Art. 35 as reported by Securiti.",
+   "url": "https://securiti.ai/saudi-arabia-personal-data-protection-law/"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Fixed fines up to SAR 5m, doubled for repeat",
+   "verdict": "confirmed",
+   "evidence": "Art. 36 as reported by Securiti and Profectus (SAR 10m for repeat).",
+   "url": "https://profectus.sa/resources/sdaia-enforcement-decisions"
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator",
+   "verdict": "confirmed",
+   "evidence": "SDAIA committees impose fines themselves.",
+   "url": "https://profectus.sa/resources/sdaia-enforcement-decisions"
+  },
+  {
+   "field": "map.cap",
+   "claim": "fixed",
+   "verdict": "confirmed",
+   "evidence": "SAR 5m per violation, not turnover-linked.",
+   "url": "https://securiti.ai/saudi-arabia-personal-data-protection-law/"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "limited",
+   "verdict": "corrected",
+   "evidence": "Art. 40 gives anyone who suffers damage from any PDPL violation a right to compensation before the competent court. That is a general damages right, which GBRIEF defines as 'yes' (Kenya's s.65 is rated 'yes' on the same basis); lack of case law does not make it narrow.",
+   "url": "https://securiti.ai/saudi-arabia-personal-data-protection-law/",
+   "replacement": "yes"
+  },
+  {
+   "field": "private.courts",
+   "claim": "limited: Art. 40 ... depends on proving damage",
+   "verdict": "corrected",
+   "evidence": "Same as map.private_action.",
+   "url": "https://securiti.ai/saudi-arabia-personal-data-protection-law/",
+   "replacement": "yes: Art. 40 lets anyone who suffers damage from a PDPL violation claim compensation before the competent court. Damage must be proved and there is no published case law."
+  }
+ ],
+ "notes": "No factual errors found, but every check rests on secondary sources (Profectus, Securiti); the PDPL text and Implementing Regulations were not retrieved, so Art. 38 confiscation, the 5-day response window and the appeal route and 60-day deadline remain unconfirmed. Securiti says the 48 decisions were issued 'in 2025', consistent with a January 2026 announcement. Main change: map.private_action should be 'yes' under the GBRIEF definition for consistency with Kenya."
+}

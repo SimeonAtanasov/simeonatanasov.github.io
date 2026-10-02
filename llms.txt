@@ -13,6 +13,7 @@
 - [Practical Privacy](https://www.simeonatanasov.com/practical-privacy.html): A practitioner-tested privacy playbook for eighteen recurring situations, from surveillance and offboarding to marketing and breach response.
 - [Practical AI Act Advice](https://www.simeonatanasov.com/practical-ai-act-advice.html): A working reference on the EU AI Act in thirteen topics: what applies to you, what you have to build, and what to check on other people's systems.
 - [GDPR Enforcement in Europe](https://www.simeonatanasov.com/gdpr-enforcement.html): How a GDPR complaint becomes a fine, where the courts come in, and the enforcement route in each of the 30 EEA countries, with the UK and Switzerland for contrast.
+- [Privacy Enforcement Worldwide](https://www.simeonatanasov.com/privacy-enforcement-worldwide.html): Who can fine for a privacy breach outside Europe, where the courts come in, and the enforcement route in 23 jurisdictions from the United States to Australia.
 
 ## Tools
 

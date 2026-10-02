@@ -1,0 +1,122 @@
+{
+  "code": "sg",
+  "country": "Singapore",
+  "membership": "World",
+  "region": "Asia-Pacific",
+  "dpa": {
+    "name_en": "Personal Data Protection Commission",
+    "name_native": "Personal Data Protection Commission",
+    "abbr": "PDPC",
+    "url": "https://www.pdpc.gov.sg",
+    "structure": "Statutory commission administered within the Info-communications Media Development Authority (IMDA), so it is a government body rather than an independent authority in the EU sense. It handles complaints, investigates, issues directions and imposes financial penalties itself, and also enforces the Do Not Call rules.",
+    "regional": "No regional regulators. Public agencies are outside the PDPA and are governed by the Public Sector (Governance) Act 2018 and internal government rules; sector regulators such as the Monetary Authority of Singapore impose their own data and technology risk requirements."
+  },
+  "law": {
+    "name": "Personal Data Protection Act 2012 (PDPA), data protection obligations in force 2 July 2014; amended by the Personal Data Protection (Amendment) Act 2020 (mandatory breach notification and offences from 1 February 2021; higher financial penalty cap of 10% of Singapore turnover from 1 October 2022)",
+    "url": "https://sso.agc.gov.sg/Act/PDPA2012"
+  },
+  "complaint": {
+    "how": "Online 'raise a data protection concern' form on the PDPC website, free of charge, in English. The PDPC assesses each concern and decides whether to facilitate a resolution, refer it to mediation, investigate or take no further action.",
+    "contact_controller_first": "Encouraged in practice: individuals are expected to raise the issue with the organisation first, and the PDPC may redirect concerns that have not been raised with the organisation. A strict statutory requirement was not confirmed.",
+    "deadlines": "Not confirmed: no statutory time limit for lodging a concern or for the PDPC to decide was found.",
+    "complainant_status": "The complainant is a source of information rather than a party; the investigation and any decision are between the PDPC and the organisation. A person aggrieved by a PDPC direction or decision can seek reconsideration and appeal (ss 48N and 48Q), and a final PDPC finding supports a private action under s 48O."
+  },
+  "procedure": {
+    "stages": [
+      "Concern lodged or PDPC starts its own investigation, often after a mandatory breach notification (Part 6A, 3 calendar days after assessing a notifiable breach).",
+      "Preliminary assessment: facilitation with the organisation, referral to mediation, or a formal investigation under s 48I.",
+      "Organisation may offer a voluntary undertaking (s 48L) or accept the expedited decision procedure by admitting the breach.",
+      "PDPC decision: finding of breach, directions (for example to fix security measures) and, where warranted, a financial penalty under s 48J; most decisions are published.",
+      "Reconsideration by the PDPC within 28 days (s 48N), then appeal to the Data Protection Appeal Panel (s 48Q), then the High Court (s 48R)."
+    ],
+    "decision_maker": "The Commission (in practice the Commissioner and deputy commissioners within IMDA) decides and imposes the penalty by administrative direction, without going to court.",
+    "limitation": "Not confirmed: no statutory limitation period for PDPC enforcement was found."
+  },
+  "fines": {
+    "imposed_by": "The PDPC imposes financial penalties itself by direction under s 48J, so the map value is regulator. Since 1 October 2022 the maximum is SGD 1 million or 10% of the organisation's annual turnover in Singapore where that turnover exceeds SGD 10 million, whichever is higher (turnover-based). Section 48J(6) lists the factors the PDPC must weigh, and the PDPC applied a five-step culpability and harm method in Marina Bay Sands (2025).",
+    "public_bodies": "No. The PDPA does not apply to public agencies; public officers face criminal offences under the Public Sector (Governance) Act 2018 instead.",
+    "quirks": "Individuals commit offences for knowing or reckless unauthorised disclosure, improper use and re-identification of personal data (ss 48D to 48F), with fines of up to SGD 5,000 and/or imprisonment of up to 2 years, prosecuted in the criminal courts. Directions to stop collecting, to destroy data or to comply with obligations are common, and penalty decisions are published by name."
+  },
+  "appeal": {
+    "court": "First an application to the PDPC for reconsideration (s 48N), then an appeal to an Appeal Committee drawn from the Data Protection Appeal Panel (s 48Q), then an appeal to the High Court on a point of law or on the amount of a financial penalty (s 48R).",
+    "deadline": "28 days for reconsideration (s 48N); the deadline for an appeal to the Appeal Panel was reported as 28 days but not confirmed from the statute text.",
+    "suspensive": "Not confirmed from the statute text; secondary sources suggest an appeal does not suspend directions other than the payment of a financial penalty.",
+    "further": "From the High Court a further appeal lies to the Court of Appeal, as in Reed v Bellingham (a private action case).",
+    "inaction": "Any organisation or individual aggrieved by a PDPC direction or decision can seek reconsideration and appeal under ss 48N and 48Q; there is no specific remedy for inaction other than judicial review in the High Court (not confirmed as used)."
+  },
+  "private": {
+    "courts": "Yes: s 48O gives a statutory right of private action for loss or damage suffered directly from a contravention of the main data protection obligations, heard in the ordinary civil courts (State Courts or High Court depending on value). Where the PDPC has already made a decision on the same matter, the action can only be brought once that decision is final after any appeal.",
+    "damages": "Damages, injunctions and declarations are available. In Reed v Bellingham [2022] SGCA 60 the Court of Appeal held that loss of control of data alone is not enough but emotional distress can count as loss; Piper v Singapore Kindness Movement [2025] SGHC 173 stressed a strict causal link. No statutory damages.",
+    "collective": "No dedicated class action regime; representative actions under the Rules of Court are possible in principle but no PDPA class action was confirmed."
+  },
+  "cases": [
+    {
+      "title": "SingHealth and Integrated Health Information Systems (IHiS)",
+      "year": "2019",
+      "summary": "After the 2018 cyberattack exposing data of about 1.5 million patients, the PDPC fined IHiS SGD 750,000 and SingHealth SGD 250,000, then the largest PDPA penalties (both under the old SGD 1 million cap).",
+      "url": "https://complyhq.app/blog/pdpa-penalties-fines-singapore"
+    },
+    {
+      "title": "Marina Bay Sands Pte Ltd [2025] SGPDPC 6",
+      "year": "2025",
+      "summary": "On 28 October 2025 the PDPC imposed SGD 315,000 (reduced from SGD 450,000 for mitigation) for a negligent breach of the protection obligation; the first decision to apply the 10% turnover cap framework and a published five-step penalty method.",
+      "url": "https://www.drewnapier.com/DrewNapier/media/DrewNapier/3Nov25_Personal-Data-Protection-Commission-Clarifies-Personal-Data-Protection-Act-Penalty-Framework-in-Marina-Bay-Sands-Decision.pdf"
+    },
+    {
+      "title": "Reed, Michael v Bellingham, Alex [2022] SGCA 60",
+      "year": "2022",
+      "summary": "The Court of Appeal confirmed that emotional distress is 'loss or damage' under the private action provision, opening the door to s 48O claims without financial loss; it upheld an injunction against a former employee's misuse of investor data.",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/singapore/trends-and-developments"
+    }
+  ],
+  "quirks": [
+    "The regulator sits inside a government agency (IMDA), and the whole public sector is outside the PDPA.",
+    "Penalties are linked to Singapore turnover only, not worldwide turnover, and actual fines remain modest: most are in the thousands or tens of thousands of dollars.",
+    "There is no general lawful-basis menu like Article 6 GDPR; consent, deemed consent and listed exceptions such as legitimate interests do that job.",
+    "Organisations can avoid a full investigation by offering a voluntary undertaking or by admitting liability for an expedited decision."
+  ],
+  "plain": "You first raise the problem with the organisation; if that fails you fill in the PDPC's online form. The PDPC may broker a fix or investigate, and if it finds a breach it can order changes and fine the organisation itself, publishing the decision. You can separately sue in court for your own loss, including distress.",
+  "map": {
+    "who_penalises": "regulator",
+    "cap": "turnover",
+    "private_action": "yes"
+  },
+  "confidence": "medium: the PDPA text on sso.agc.gov.sg could not be fetched (403), so appeal deadlines, suspensive effect and section numbers for the appeal route rely on secondary sources.",
+  "sources": [
+    {
+      "title": "Personal Data Protection Act 2012 (Singapore Statutes Online)",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012",
+      "source_type": "primary"
+    },
+    {
+      "title": "PDPC website (concerns, enforcement decisions)",
+      "url": "https://www.pdpc.gov.sg/",
+      "source_type": "primary"
+    },
+    {
+      "title": "Drew & Napier: PDPC clarifies penalty framework in Marina Bay Sands decision (Nov 2025)",
+      "url": "https://www.drewnapier.com/DrewNapier/media/DrewNapier/3Nov25_Personal-Data-Protection-Commission-Clarifies-Personal-Data-Protection-Act-Penalty-Framework-in-Marina-Bay-Sands-Decision.pdf",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Chambers Data Protection & Privacy 2026: Singapore trends and developments",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/singapore/trends-and-developments",
+      "source_type": "secondary"
+    },
+    {
+      "title": "CMS: higher financial penalties from 1 October 2022",
+      "url": "https://cms.law/en/sgp/legal-updates/organizations-face-risk-of-higher-financial-penalties-for-breaches-of-the-pdpa-from-1-october-2022",
+      "source_type": "secondary"
+    },
+    {
+      "title": "RPC: Fines for PDPA breaches (s 48J(6) factors)",
+      "url": "https://www.rpclegal.com/thinking/data-and-privacy/fines-for-pdpa-breaches-how-clear-is-the-crystal-ball/",
+      "source_type": "secondary"
+    },
+    {
+      "title": "ComplyHQ: PDPA penalties and fines (SingHealth/IHiS)",
+      "url": "https://complyhq.app/blog/pdpa-penalties-fines-singapore",
+      "source_type": "secondary"
+    }
+  ]
+}

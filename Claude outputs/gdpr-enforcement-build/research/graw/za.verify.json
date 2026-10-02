@@ -1,0 +1,106 @@
+{
+ "code": "za",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Enforcement notice 9 May 2023, 31 days, infringement notice and ZAR 5 million fine 3 July 2023, lapsed licences, High Court review September 2023",
+   "verdict": "confirmed",
+   "evidence": "Regulator statement (Polity): enforcement notice 9 May 2023, 31 days to comply (to 9 June), infringement notice 3 July 2023, R5 million; licences for Trend anti-virus, SIEM and intrusion detection. ITWeb: PAJA s.6 review launched 29 September 2023 to set aside both notices.",
+   "url": "https://www.polity.org.za/article/infringement-notice-and-r5-million-administrative-fine-issued-to-the-department-of-justice-and-constitutional-development-for-contravention-of-popia-2023-07-04"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Enforcement notice November 2024, infringement notice with ZAR 5 million fine 23 December 2024; full bench set aside both notices 12 December 2025 with costs; leave to appeal refused 3 June 2026",
+   "verdict": "confirmed",
+   "evidence": "Regulator media statement: enforcement notice 18 November 2024, compliance by 19 December, infringement notice R5 million on 23 December 2024. Werksmans: full bench upheld the department's appeal on 12 December 2025, set aside both notices, costs against the Regulator; exam numbers without names not personal information; leave to appeal refused 3 June 2026. IOL: full bench of the Pretoria High Court.",
+   "url": "https://werksmans.com/leave-to-appeal-refused-but-questions-remain-the-matric-results-privacy-dispute-and-the-meaning-of-personal-information-under-popia/"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "Lancet R100,000 paid, IEC R100,000, Blouberg R500,000 reduced to R250,000; Dis-Chem, TransUnion, SAPS closed with no fine",
+   "verdict": "unverifiable",
+   "evidence": "MJK tracker matches every figure (Blouberg reduced on court confirmation under s.109(5)), but it is a secondary tracker; the entry already says so. No Regulator statement fetched.",
+   "url": "https://mjkinc.co.za/popia/enforcement-tracker"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Up to 10 years for e.g. obstruction, breach of confidentiality, failure to comply with an enforcement notice",
+   "verdict": "corrected",
+   "evidence": "s.107: up to 10 years for ss.100, 103(1), 104(2), 105(1), 106(1),(3),(4) (obstruction, failure to comply with an enforcement notice, account number offences); up to 12 months for ss.59, 101, 102, 103(2), 104(1). Breach of confidentiality (s.101) is in the 12-month tier.",
+   "url": "https://popia.co.za/section-107-penalties/",
+   "replacement": "Fixed cap of ZAR 10 million per infringement notice, not turnover based (s.109). Separate criminal offences carry a fine or imprisonment of up to 10 years (for example obstructing the Regulator, failing to comply with an enforcement notice or misusing account numbers) or up to 12 months for lesser offences such as breach of confidentiality (s.107). Other sanctions are enforcement notices ordering specific steps, including a stop to processing (s.95)."
+  },
+  {
+   "field": "procedure.stages[2]",
+   "claim": "Urgent notice: compliance within 3 days",
+   "verdict": "corrected",
+   "evidence": "s.95(5): an urgent notice may not require compliance before the end of three days from service, so 3 days is a minimum, not a deadline.",
+   "url": "https://popia.co.za/section-95-enforcement-notice/",
+   "replacement": "Enforcement notice (s.95) requiring specified steps or a stop to processing within a set period (31 days in published cases); compliance is suspended during the 30-day appeal window and any appeal, unless the notice is marked urgent, in which case compliance can be required after no less than 3 days."
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Regulator issues infringement notice; infringer can elect trial; unpaid fine recoverable through courts",
+   "verdict": "confirmed",
+   "evidence": "s.109: Regulator delivers infringement notice, fine not exceeding R10 million; within 30 days pay, arrange instalments or elect to be tried in court, then handed to SAPS; certified statement filed with a court has the effect of a civil judgment.",
+   "url": "https://popia.co.za/section-109-administrative-fines/"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies can be fined; DoJ, DBE, IEC, Blouberg",
+   "verdict": "confirmed",
+   "evidence": "DoJ and DBE fines confirmed by Regulator statements; IEC and Blouberg by the MJK tracker.",
+   "url": "https://inforegulator.org.za/wp-content/uploads/2025/01/Media-Statement-Infringement-Notice-DBE.pdf"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "High Court having jurisdiction (s.97)",
+   "verdict": "confirmed",
+   "evidence": "s.97(1): appeal 'to the High Court having jurisdiction'.",
+   "url": "https://popia.co.za/section-97-right-of-appeal/"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "30 days for responsible party, 180 days for complainant",
+   "verdict": "confirmed",
+   "evidence": "s.97(1) 'within 30 days of receiving the notice'; s.97(2) 'within 180 days of receiving the result'.",
+   "url": "https://popia.co.za/section-97-right-of-appeal/"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Enforcement notice suspended pending appeal unless urgent",
+   "verdict": "confirmed",
+   "evidence": "s.95(3)-(4).",
+   "url": "https://popia.co.za/section-95-enforcement-notice/"
+  },
+  {
+   "field": "complaint.complainant_status",
+   "claim": "Complainant may appeal within 180 days (s.97(2))",
+   "verdict": "confirmed",
+   "evidence": "s.97(2).",
+   "url": "https://popia.co.za/section-97-right-of-appeal/"
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator",
+   "verdict": "confirmed",
+   "evidence": "s.109: the Regulator issues the infringement notice and fine itself; court only if the infringer elects trial.",
+   "url": "https://popia.co.za/section-109-administrative-fines/"
+  },
+  {
+   "field": "map.cap",
+   "claim": "fixed",
+   "verdict": "confirmed",
+   "evidence": "R10 million maximum per infringement notice.",
+   "url": "https://popia.co.za/section-109-administrative-fines/"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "yes",
+   "verdict": "confirmed",
+   "evidence": "s.99 civil action for damages for breach of conditions of lawful processing, generally available.",
+   "url": "https://popia.co.za/section-99-civil-remedies/"
+  }
+ ],
+ "notes": "Statutory text came from popia.co.za, a secondary consolidation; it matches POPIA as generally known. Both headline cases confirmed against Regulator statements and the Werksmans note. Outcome of the DoJ review still not found."
+}

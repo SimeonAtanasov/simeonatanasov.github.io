@@ -1,0 +1,178 @@
+{
+ "code": "za",
+ "country": "South Africa",
+ "membership": "World",
+ "region": "Africa",
+ "dpa": {
+  "name_en": "Information Regulator (South Africa)",
+  "name_native": "Information Regulator",
+  "abbr": "IR / InfoReg",
+  "url": "https://inforegulator.org.za",
+  "structure": "Independent statutory body established under POPIA, accountable to the National Assembly, with jurisdiction over both public and private sectors. It enforces POPIA and also the Promotion of Access to Information Act (PAIA). Investigated matters can be referred to its internal Enforcement Committee (s.92), which makes findings and recommendations before the Regulator decides.",
+  "regional": "No regional regulators. Criminal offences under POPIA are prosecuted through the South African Police Service and the ordinary criminal courts; Magistrates' Courts have jurisdiction to impose any POPIA penalty (s.108)."
+ },
+ "law": {
+  "name": "Protection of Personal Information Act 4 of 2013 (POPIA). Assented to 19 November 2013; main provisions commenced 1 July 2020 with a one-year grace period, so full compliance has been enforceable since 1 July 2021.",
+  "url": "https://popia.co.za/"
+ },
+ "complaint": {
+  "how": "Any person may complain to the Regulator 'in the prescribed manner and form' (s.74), using the form prescribed in the POPIA Regulations, lodged with the Regulator by email or its online channels. No fee was confirmed. Complaints may also be lodged against the determination of an adjudicator under an industry code of conduct (s.74(2)).",
+  "contact_controller_first": "POPIA does not require the complainant to approach the responsible party first. However, the Regulator may decide to take no action where the complainant has not exhausted a complaints procedure under an applicable code of conduct when it was reasonable to do so (s.77).",
+  "deadlines": "No fixed time limit for filing, but the Regulator may decline a complaint where so much time has passed that an investigation is 'no longer practicable or desirable' (s.77). No statutory deadline for the Regulator to decide was confirmed; it must inform both parties of its chosen course of action 'as soon as is reasonably practicable' (s.76).",
+  "complainant_status": "The complainant is informed of the outcome and may appeal to the High Court within 180 days of receiving the result of the investigation (s.97(2)). The Regulator must give reasons if it decides to take no action (s.77)."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint (s.74) or own-initiative investigation (s.76(2)); the Regulator may conduct a pre-investigation (s.79), act as conciliator, decide to take no action (s.77), or open a full investigation.",
+   "Optional referral to the Enforcement Committee (s.92), which makes findings and recommends action to the Regulator (s.93).",
+   "Enforcement notice (s.95) requiring specified steps or a stop to processing within a set period (31 days in published cases); compliance is suspended during the 30-day appeal window and any appeal, unless the notice is marked urgent, in which case compliance can be required after no less than 3 days.",
+   "Failure to comply with an enforcement notice is an offence; the Regulator may then serve an infringement notice with an administrative fine of up to ZAR 10 million (s.109).",
+   "Within 30 days the infringer pays, agrees instalments, or elects to be tried in court, in which case the matter goes to the South African Police Service for criminal prosecution (s.109)."
+  ],
+  "decision_maker": "The Information Regulator (its members), acting on recommendations of the Enforcement Committee where a matter was referred.",
+  "limitation": "No POPIA-specific limitation period confirmed; the Regulator has a discretion to decline stale complaints (s.77)."
+ },
+ "fines": {
+  "imposed_by": "The Regulator imposes the administrative fine itself by infringement notice (s.109), so 'regulator'. In practice fines have followed non-compliance with an enforcement notice rather than the original breach. The infringer can refuse and elect to be tried in court, which turns the matter into a criminal prosecution; an unpaid fine becomes recoverable through the courts.",
+  "public_bodies": "Yes. The first fines were imposed on national government departments (Justice and Constitutional Development, Basic Education), and fines have also been reported against the Electoral Commission and a local municipality.",
+  "quirks": "Fixed cap of ZAR 10 million per infringement notice, not turnover based (s.109). Separate criminal offences carry a fine or imprisonment of up to 10 years (for example obstructing the Regulator, failing to comply with an enforcement notice or misusing account numbers) or up to 12 months for lesser offences such as breach of confidentiality (s.107). Other sanctions are enforcement notices ordering specific steps, including a stop to processing (s.95)."
+ },
+ "appeal": {
+  "court": "The High Court having jurisdiction (s.97). On appeal the court may review findings of fact and may set aside or substitute the notice or decision if it was not in accordance with the law or the Regulator's discretion ought to have been exercised differently (s.98). Departments have also used review applications to challenge both notices.",
+  "deadline": "30 days from receipt of an information or enforcement notice for the responsible party (s.97(1)); 180 days from receiving the result for a complainant (s.97(2)).",
+  "suspensive": "Yes for enforcement notices: a notice need not be complied with until the appeal period ends and, if an appeal is brought, until it is determined or withdrawn, unless the Regulator declared the notice urgent (s.95(3)-(4)). For the fine itself, electing trial in court within 30 days stops it becoming recoverable (s.109).",
+  "further": "Ordinary appeal route from the High Court, with leave, to a full bench or the Supreme Court of Appeal, and then the Constitutional Court on constitutional matters.",
+  "inaction": "A complainant informed of the result of an investigation, or of a decision to take no action, may appeal to the High Court within 180 days (s.97(2)). Judicial review of administrative action is also available in principle."
+ },
+ "private": {
+  "courts": "Yes. A data subject, or the Regulator at the data subject's request, may sue the responsible party for damages in the civil courts (s.99), so 'yes' for private action.",
+  "damages": "Strict liability: damages are recoverable whether or not there was intent or negligence, subject to limited defences such as vis major, the plaintiff's consent or fault, compliance not being reasonably practicable, or a Regulator exemption (s.99). The court may award a just and equitable amount covering patrimonial and non-patrimonial loss, aggravated damages, interest and costs.",
+  "collective": "POPIA has no class action provision of its own. Where the Regulator sues for a data subject, awards go into a trust account and are paid to the data subject after costs (s.99). No POPIA-based class action outcome was confirmed."
+ },
+ "cases": [
+  {
+   "title": "Department of Justice and Constitutional Development, ZAR 5 million fine",
+   "year": "2023",
+   "summary": "After a 2021 ransomware attack, the Regulator found that the department had let its anti-virus, SIEM and intrusion detection licences lapse. It issued an enforcement notice on 9 May 2023 and, when the department did not comply within 31 days, the first POPIA infringement notice and a ZAR 5 million fine on 3 July 2023. The department launched a High Court review application in September 2023 to set aside both notices; no final judgment was confirmed.",
+   "url": "https://www.polity.org.za/article/infringement-notice-and-r5-million-administrative-fine-issued-to-the-department-of-justice-and-constitutional-development-for-contravention-of-popia-2023-07-04"
+  },
+  {
+   "title": "Department of Basic Education, matric results, ZAR 5 million fine set aside",
+   "year": "2024-2026",
+   "summary": "The Regulator ordered the department in November 2024 to stop publishing matric results in newspapers without learner consent and, on non-compliance, issued an infringement notice with a ZAR 5 million fine on 23 December 2024. A full bench of the Gauteng High Court, Pretoria, set aside both the enforcement and infringement notices on 12 December 2025, holding that examination numbers published without names are not personal information, and ordered the Regulator to pay costs. Leave to appeal was refused on 3 June 2026.",
+   "url": "https://werksmans.com/leave-to-appeal-refused-but-questions-remain-the-matric-results-privacy-dispute-and-the-meaning-of-personal-information-under-popia/"
+  },
+  {
+   "title": "Smaller fines: Lancet Laboratories, Electoral Commission, Blouberg Local Municipality",
+   "year": "2024-2026",
+   "summary": "Reported fines include ZAR 100,000 against Lancet Laboratories for failing to report security compromises (paid), ZAR 100,000 against the Electoral Commission, and ZAR 500,000 against Blouberg Local Municipality, reportedly reduced to ZAR 250,000 on court confirmation. Several other enforcement notices (Dis-Chem, TransUnion, SAPS) were closed after compliance with no fine. These come from a secondary tracker and were not checked against Regulator statements.",
+   "url": "https://mjkinc.co.za/popia/enforcement-tracker"
+  }
+ ],
+ "quirks": [
+  "Fines are in practice a second step: the Regulator first issues an enforcement notice and fines only for non-compliance with it, so the original breach alone has rarely led straight to a fine.",
+  "The fined party can refuse to pay and 'elect to be tried in court', which converts the matter into a criminal prosecution handled by the police and prosecutors (s.109).",
+  "An appeal against an enforcement notice automatically suspends it unless the Regulator marked it urgent (s.95(3)-(4)).",
+  "Civil damages are strict liability and the Regulator itself can sue on a data subject's behalf (s.99).",
+  "The Regulator's first big fine to be tested in court was set aside: the High Court held that exam numbers without names were not personal information."
+ ],
+ "plain": "You complain to the Information Regulator, which can mediate, investigate and then order the organisation to fix things through an enforcement notice. Only if the organisation ignores that order does a fine of up to ZAR 10 million usually follow, and the organisation can either pay or insist on a criminal trial. Either side can take the Regulator's decision to the High Court, and you can also sue the organisation for damages without having to prove it was at fault.",
+ "map": {
+  "who_penalises": "regulator",
+  "cap": "fixed",
+  "private_action": "yes"
+ },
+ "confidence": "medium: statutory provisions were read from a secondary consolidated text (popia.co.za) rather than the Government Gazette; I could not confirm the outcome of the Department of Justice review, the court that confirmed the Blouberg fine, or any infringement notice against the Democratic Alliance (none found in the sources checked).",
+ "sources": [
+  {
+   "title": "POPIA s.109 Administrative fines (consolidated text)",
+   "url": "https://popia.co.za/section-109-administrative-fines/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.97 Right of appeal",
+   "url": "https://popia.co.za/section-97-right-of-appeal/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.98 Consideration of appeal",
+   "url": "https://popia.co.za/section-98-consideration-of-appeal/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.99 Civil remedies",
+   "url": "https://popia.co.za/section-99-civil-remedies/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.95 Enforcement notice",
+   "url": "https://popia.co.za/section-95-enforcement-notice/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.107 Penalties",
+   "url": "https://popia.co.za/section-107-penalties/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.108 Magistrate's Court jurisdiction",
+   "url": "https://popia.co.za/section-108-magistrates-court-jurisdiction-to-impose-penalties/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.74 Complaints",
+   "url": "https://popia.co.za/section-74-complaints/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.76 Action on receipt of complaint",
+   "url": "https://popia.co.za/section-76-action-on-receipt-of-complaint/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.77 Regulator may decide to take no action",
+   "url": "https://popia.co.za/section-77-regulator-may-decide-to-take-no-action-on-complaint/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "POPIA s.92 Matters referred to Enforcement Committee",
+   "url": "https://popia.co.za/section-92-matters-referred-to-enforcement-committee/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Information Regulator media statement: infringement notice to DBE (Dec 2024)",
+   "url": "https://inforegulator.org.za/wp-content/uploads/2025/01/Media-Statement-Infringement-Notice-DBE.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "Information Regulator media statement: infringement notice to DoJ&CD (Jul 2023), reproduced by Polity",
+   "url": "https://www.polity.org.za/article/infringement-notice-and-r5-million-administrative-fine-issued-to-the-department-of-justice-and-constitutional-development-for-contravention-of-popia-2023-07-04",
+   "source_type": "primary"
+  },
+  {
+   "title": "ITWeb: Justice dept takes on InfoReg over R5m POPIA fine",
+   "url": "https://itweb.co.za/content/GxwQDM1DoYe7lPVo",
+   "source_type": "secondary"
+  },
+  {
+   "title": "IOL: High Court sets aside R5 million fine against DBE",
+   "url": "https://iol.co.za/news/education/2025-12-13-high-court-sets-aside-r5-million-fine-against-department-of-basic-education-over-matric-results-publication/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Werksmans: Leave to appeal refused in matric results privacy dispute",
+   "url": "https://werksmans.com/leave-to-appeal-refused-but-questions-remain-the-matric-results-privacy-dispute-and-the-meaning-of-personal-information-under-popia/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "MJK Inc POPIA enforcement tracker",
+   "url": "https://mjkinc.co.za/popia/enforcement-tracker",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Wikipedia: Protection of Personal Information Act, 2013 (commencement dates)",
+   "url": "https://en.wikipedia.org/wiki/Protection_of_Personal_Information_Act,_2013",
+   "source_type": "secondary"
+  }
+ ]
+}

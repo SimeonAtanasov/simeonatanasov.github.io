@@ -1,0 +1,78 @@
+{
+  "code": "sa",
+  "country": "Saudi Arabia",
+  "membership": "World",
+  "region": "Middle East",
+  "dpa": {
+    "name_en": "Saudi Data and Artificial Intelligence Authority",
+    "name_native": "الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)",
+    "abbr": "SDAIA",
+    "url": "https://sdaia.gov.sa/en/",
+    "structure": "Government authority reporting to the Prime Minister, designated as the competent authority under the PDPL. Enforcement decisions are taken by its Committees for Reviewing Violations; the National Data Management Office (NDMO) sits within SDAIA and the PDPL contemplated a possible later transfer of the role to it, which had not been announced as at 2026 (secondary).",
+    "regional": "No regional authorities. The Public Prosecution investigates and prosecutes the PDPL's criminal offences; sector regulators such as the Saudi Central Bank, the Communications, Space and Technology Commission and the National Cybersecurity Authority apply their own data rules."
+  },
+  "law": {
+    "name": "Personal Data Protection Law (Royal Decree M/19 of 1443H, amended by Royal Decree M/148 of 1444H) and its Implementing Regulations and Regulation on Personal Data Transfer; in force 14 September 2023 with a one-year grace period, fully enforceable since 14 September 2024",
+    "url": "https://dgp.sdaia.gov.sa/"
+  },
+  "complaint": {
+    "how": "Complaints and breach notifications go through SDAIA's National Data Governance Platform; no fee reported. Arabic is the working language; English availability not confirmed.",
+    "contact_controller_first": "Not confirmed as a formal requirement, though data subject rights must first be exercised against the controller.",
+    "deadlines": "The deadline for lodging complaints and SDAIA's handling deadline are set in the Implementing Regulations; exact periods not confirmed this session. Controllers must notify SDAIA of breaches within 72 hours.",
+    "complainant_status": "The complainant is not a party to the violation proceedings; damages must be claimed separately in court (Art. 40)."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint, breach notification or own-initiative inspection by SDAIA staff",
+      "Referral to a Committee for Reviewing Violations, which notifies the controller and hears its response (secondary sources report short response windows of about 5 days)",
+      "Committee decision: warning or fine of up to SAR 5 million, doubled for repeat violations (Art. 36), with possible publication at the violator's expense",
+      "Separately, the Public Prosecution investigates criminal offences under Art. 35 and prosecutes before the competent criminal court, which may also order confiscation of proceeds (Art. 38)"
+    ],
+    "decision_maker": "SDAIA's Committees for Reviewing Violations for administrative penalties; the competent criminal court for Art. 35 offences.",
+    "limitation": "Not confirmed."
+  },
+  "fines": {
+    "imposed_by": "regulator: SDAIA's Committees for Reviewing Violations impose warnings and fines themselves (Art. 36), up to SAR 5 million per violation, which may be doubled for a repeat violation. Criminal penalties under Art. 35 (disclosure or publication of sensitive data with intent to harm or for personal benefit: up to 2 years imprisonment and/or a fine up to SAR 3 million) are imposed by courts after Public Prosecution proceedings.",
+    "public_bodies": "Public entities are subject to the PDPL; whether committees fine public entities in practice was not confirmed.",
+    "quirks": "In January 2026 SDAIA announced that its committees had issued 48 enforcement decisions (covering processing without a legal basis, unauthorised disclosure, inadequate security and unsolicited marketing) but published no names, amounts or decision texts."
+  },
+  "appeal": {
+    "court": "The competent court, which for administrative decisions of government bodies is the administrative judiciary of the Board of Grievances (Diwan al-Mazalim); secondary sources state appeals go to the competent court.",
+    "deadline": "Reported as 60 days from notification of the committee decision (secondary source; consistent with Board of Grievances procedure but not confirmed from the PDPL text).",
+    "suspensive": "Not confirmed.",
+    "further": "Administrative Court of Appeal and the High Administrative Court within the Board of Grievances (not confirmed for PDPL cases specifically).",
+    "inaction": "Not confirmed; no specific route against SDAIA inaction was found."
+  },
+  "private": {
+    "courts": "limited: Art. 40 lets a person who suffers damage from a PDPL violation claim compensation before the competent court, but the right depends on proving damage and there is no published case law.",
+    "damages": "Compensation for material or moral damage as assessed by the court; no statutory damages.",
+    "collective": "No class action mechanism."
+  },
+  "cases": [
+    {
+      "title": "SDAIA announces 48 enforcement decisions",
+      "year": "2026",
+      "summary": "On 16 January 2026 SDAIA said its Committees for Reviewing Violations had issued 48 decisions confirming violations and imposing penalties, covering unlawful processing, unauthorised disclosure, inadequate safeguards and unsolicited marketing messages. No company names or amounts were published.",
+      "url": "https://profectus.sa/resources/sdaia-enforcement-decisions"
+    }
+  ],
+  "quirks": [
+    "Enforcement is opaque: decisions are announced in aggregate without names, amounts or reasoning.",
+    "The regulator is also the national data and AI agency, not a dedicated privacy authority.",
+    "Disclosing sensitive data with intent to harm is a crime with up to 2 years imprisonment, prosecuted by the Public Prosecution rather than the regulator.",
+    "Fines are fixed amounts per violation (up to SAR 5 million, doubled for repeat offences), not turnover-based."
+  ],
+  "plain": "You complain to SDAIA through its national data governance platform. A SDAIA violations committee investigates and can warn or fine the organisation directly, and the organisation can challenge that decision in the administrative courts of the Board of Grievances. Serious leaks of sensitive data can be prosecuted as crimes, and you can separately ask a court for compensation if you suffered damage.",
+  "map": {
+    "who_penalises": "regulator",
+    "cap": "fixed",
+    "private_action": "limited"
+  },
+  "confidence": "medium: the in-force dates, penalty ceilings and the 48-decision announcement are well reported, but primary sources could not be fetched this session, and the complaint deadlines, appeal deadline and court, and limitation periods are not confirmed.",
+  "sources": [
+    {"title": "SDAIA Data Governance Platform (PDPL and regulations)", "url": "https://dgp.sdaia.gov.sa/", "source_type": "primary"},
+    {"title": "Profectus: SDAIA's 48 enforcement decisions", "url": "https://profectus.sa/resources/sdaia-enforcement-decisions", "source_type": "secondary"},
+    {"title": "Securiti: Saudi Arabia PDPL overview", "url": "https://securiti.ai/saudi-arabia-personal-data-protection-law/", "source_type": "secondary"},
+    {"title": "Compliance Hub: Saudi PDPL enforcement 2026", "url": "https://compliancehub.wiki/saudi-pdpl-sdaia-active-enforcement-extraterritorial-scope-gulf-compliance-2026/", "source_type": "secondary"}
+  ]
+}

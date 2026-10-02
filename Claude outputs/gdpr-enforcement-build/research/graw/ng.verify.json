@@ -1,0 +1,116 @@
+{
+ "code": "ng",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "FCCPC fined Meta/WhatsApp USD 220m on 19 July 2024; Tribunal upheld on 25 April 2025, affirmed jurisdiction, awarded USD 35,000 costs, set aside one order",
+   "verdict": "confirmed",
+   "evidence": "FCCPC release, 25 April 2025: tribunal upheld the USD 220m penalty and the Commission's authority, awarded USD 35,000 investigation costs, set aside Order 7 as lacking sufficient legal basis; original fine 19 July 2024. 'Joint FCCPC and NDPC investigation' not seen in the fetched pages (Concurrences paywalled).",
+   "url": "https://fccpc.gov.ng/violations-tribunal-upholds-fccpcs-220-million-fine-against-meta-whatsapp/"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Investigation from April 2023; NGN 250m remedial fee demanded December 2023; NGN 555.8m fine August 2024, about 0.1% of 2023 gross revenue, 14 days, aggravated by lack of cooperation; bank denied breach; no court challenge confirmed",
+   "verdict": "confirmed",
+   "evidence": "Channels TV 21 August 2024: N555.8m, 0.1% of 2023 gross revenue, 14 days, investigation since April 2023, 'lack of cooperation and dismissive attitude'. Infusion Lawyers: December 2023 compliance order with NGN 250m remedial fee payable in 21 days. TheCable: bank says 'there was no data breach'.",
+   "url": "https://www.channelstv.com/2024/08/21/fidelity-bank-fined-n555-8m-by-ndpc-for-data-breach/"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "In October 2025 the parties announced an out-of-court settlement in advanced stages; final terms not confirmed",
+   "verdict": "corrected",
+   "evidence": "BarristerNG: on 3 November 2025 Justice James Omotosho of the Federal High Court, Abuja entered the settlement filed 31 October 2025 as the judgment of the court. Premium Times (26 April 2026), quoting the agreement: Nigeria would 'set aside the Final Orders' and release Meta from all claims; Meta gave general compliance commitments and pays the NDPC's legal fees.",
+   "url": "https://www.premiumtimesng.com/news/headlines/873350-exclusive-inside-nigerias-deal-to-write-off-32-8-million-fine-against-meta.html",
+   "replacement": "In February 2025 the NDPC fined Meta USD 32.8 million for behavioural advertising without consent and unlawful cross-border transfers. Meta challenged it in the Federal High Court, Abuja, and on 3 November 2025 Justice James Omotosho entered the parties' settlement as a consent judgment. According to the leaked agreement, the NDPC's final orders, including the fine, were set aside in exchange for general compliance commitments and payment of the NDPC's legal fees."
+  },
+  {
+   "field": "cases[2].title",
+   "claim": "NDPC v Meta, USD 32.8 million, settled in the Federal High Court",
+   "verdict": "corrected",
+   "evidence": "Fine set aside by consent judgment, 3 November 2025.",
+   "url": "https://barristerng.com/meta-and-federal-government-reach-truce-in-32-8-million-data-violation-case-as-court-formally-adopts-settlement/",
+   "replacement": "NDPC v Meta, USD 32.8 million, set aside by consent judgment"
+  },
+  {
+   "field": "cases[2].year",
+   "claim": "2025",
+   "verdict": "confirmed",
+   "evidence": "Fine February 2025, consent judgment 3 November 2025.",
+   "url": "https://barristerng.com/meta-and-federal-government-reach-truce-in-32-8-million-data-violation-case-as-court-formally-adopts-settlement/"
+  },
+  {
+   "field": "cases[2].url",
+   "claim": "techpoint.africa settlement article (October 2025, pre-judgment)",
+   "verdict": "corrected",
+   "evidence": "Techpoint predates the consent judgment; Premium Times reports the final terms.",
+   "url": "https://www.premiumtimesng.com/news/headlines/873350-exclusive-inside-nigerias-deal-to-write-off-32-8-million-fine-against-meta.html",
+   "replacement": "https://www.premiumtimesng.com/news/headlines/873350-exclusive-inside-nigerias-deal-to-write-off-32-8-million-fine-against-meta.html"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Meta's challenge heard by Justice Omotosho before the parties moved to settle in October 2025",
+   "verdict": "corrected",
+   "evidence": "Consent judgment entered 3 November 2025.",
+   "url": "https://barristerng.com/meta-and-federal-government-reach-truce-in-32-8-million-data-violation-case-as-court-formally-adopts-settlement/",
+   "replacement": "The Federal High Court, which has jurisdiction over actions against federal agencies; the NDPA provides for judicial review of Commission orders (reported as s.50, not confirmed from the statute text). Meta's challenge to the NDPC's USD 32.8 million fine was heard there by Justice James Omotosho, who entered the parties' settlement as a consent judgment on 3 November 2025."
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "NDPC demanded remedial fees before formal fines and settled its Meta case out of court",
+   "verdict": "corrected",
+   "evidence": "Fidelity remedial fee confirmed (Infusion Lawyers); Meta settlement set the fine aside (Premium Times).",
+   "url": "https://www.premiumtimesng.com/news/headlines/873350-exclusive-inside-nigerias-deal-to-write-off-32-8-million-fine-against-meta.html",
+   "replacement": "The NDPC openly negotiates: it has demanded 'remedial fees' before formal fines, and its USD 32.8 million Meta fine was set aside under a court-endorsed settlement in November 2025."
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Maximum is the greater of NGN 10m or 2% (major importance) and NGN 2m or 2% (others)",
+   "verdict": "unverifiable",
+   "evidence": "Channels TV reports penalties 'from N10 million to 2% of an organisation's gross earnings'; NDPA text not retrieved (NDPC site has no link to it), so the NGN 2m tier remains secondary.",
+   "url": "https://www.channelstv.com/2024/08/21/fidelity-bank-fined-n555-8m-by-ndpc-for-data-breach/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "NDPC imposes remedial fines itself by enforcement order (s.48)",
+   "verdict": "confirmed",
+   "evidence": "Fidelity Bank fine imposed directly by the NDPC with a 14-day payment deadline; section number not checked against statute text.",
+   "url": "https://www.channelstv.com/2024/08/21/fidelity-bank-fined-n555-8m-by-ndpc-for-data-breach/"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Not confirmed (30 days reported)",
+   "verdict": "unverifiable",
+   "evidence": "NDPA text not retrieved.",
+   "url": ""
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "No source found.",
+   "url": ""
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator",
+   "verdict": "confirmed",
+   "evidence": "NDPC fined Fidelity Bank and Meta by its own orders.",
+   "url": "https://www.channelstv.com/2024/08/21/fidelity-bank-fined-n555-8m-by-ndpc-for-data-breach/"
+  },
+  {
+   "field": "map.cap",
+   "claim": "turnover",
+   "verdict": "confirmed",
+   "evidence": "Greater of fixed sum and 2% of gross revenue; Fidelity fine expressed as 0.1% of revenue.",
+   "url": "https://www.channelstv.com/2024/08/21/fidelity-bank-fined-n555-8m-by-ndpc-for-data-breach/"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "yes",
+   "verdict": "unverifiable",
+   "evidence": "Damages right reported as s.51 in secondary sources only; plausible but statute text not retrieved.",
+   "url": ""
+  }
+ ],
+ "notes": "Most serious: cases[2] (and appeal.court, quirks[2]) describe the Meta NDPC case as an unfinished settlement; it ended with a consent judgment on 3 November 2025 that set the USD 32.8m fine aside. Payment or further appeal of the FCCPC USD 220m fine was not established; a TechCabal headline of 1 October 2026 says Meta is appealing a ruling on ad tracking (page refused WebFetch, 403), so cases[0]'s 'not confirmed' wording should stay. Nairametrics wrongly says no orders were set aside; the FCCPC's own release (Order 7 set aside) is preferred. NDPA statute text could not be fetched, so section numbers remain secondary."
+}

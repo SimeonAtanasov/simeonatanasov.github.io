@@ -1,0 +1,94 @@
+{
+  "code": "ca",
+  "country": "Canada",
+  "membership": "World",
+  "region": "Americas",
+  "dpa": {
+    "name_en": "Office of the Privacy Commissioner of Canada",
+    "name_native": "Office of the Privacy Commissioner of Canada / Commissariat à la protection de la vie privée du Canada",
+    "abbr": "OPC / CPVP",
+    "url": "https://www.priv.gc.ca",
+    "structure": "The Privacy Commissioner is an independent officer of Parliament working on an ombudsman model: it investigates and recommends but cannot fine or issue binding orders under PIPEDA. Bill C-36 (June 2026) would move private-sector enforcement to a new Digital Safety and Data Protection Commission, leaving the OPC with the public-sector Privacy Act only.",
+    "regional": "Quebec's Commission d'accès à l'information (CAI) enforces Law 25 and can impose administrative monetary penalties. Alberta and British Columbia have their own private-sector PIPA statutes enforced by provincial Information and Privacy Commissioners with order-making powers. The Competition Bureau and CRTC (anti-spam law) also act on data practices."
+  },
+  "law": {
+    "name": "Personal Information Protection and Electronic Documents Act (PIPEDA, 2000), in force for federally regulated and interprovincial commercial activity. Bill C-27 (Consumer Privacy Protection Act) died when Parliament was prorogued and dissolved in 2025; its successor, Bill C-36, the Protecting Privacy and Consumer Data Act, was tabled on 15 June 2026 and is at an early parliamentary stage. Quebec: Act respecting the protection of personal information in the private sector (CQLR c P-39.1) as amended by Law 25 (2021), phased in from September 2022 to September 2024, with the penalty regime in force since 22 September 2023.",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-3.html"
+  },
+  "complaint": {
+    "how": "Written complaint to the OPC (PIPEDA s.11), in English or French, free, usually through the OPC's online form. In Quebec, complaints go to the CAI, also free; disagreements over access or rectification go to the CAI's adjudicative function (P-39.1 s.42).",
+    "contact_controller_first": "The OPC expects individuals to raise the matter with the organisation first, and PIPEDA s.12(1) lets the Commissioner decline to investigate where the complainant ought first to exhaust grievance procedures that are reasonably available; this is a discretion, not an absolute bar.",
+    "deadlines": "The Commissioner must issue a report of findings within one year after the complaint is filed (s.13(1)), though in practice investigations often take longer; a court noted one that took nearly three years. The OPC may also decline complaints not filed within a reasonable time (s.12(1)).",
+    "complainant_status": "The complainant receives the report of findings and, unusually, is the person entitled to take the matter to Federal Court under s.14; the organisation cannot apply under s.14."
+  },
+  "procedure": {
+    "stages": [
+      "OPC: early resolution where possible, otherwise formal investigation by an investigator, with preliminary findings shared with the organisation.",
+      "Report of findings by the Commissioner, classified as well-founded, resolved, not well-founded, settled or discontinued, with non-binding recommendations; organisations may enter compliance agreements enforceable in Federal Court (s.17.1).",
+      "Federal Court application by the complainant (s.14) or the Commissioner (s.15) within one year of the report; the Court hears the matter afresh and can order corrections, publication and damages (s.16).",
+      "Quebec: CAI inspection or investigation, notice of non-compliance with an opportunity to respond, then an administrative monetary penalty imposed by a person designated by the CAI, or penal proceedings before the courts; the CAI can also issue orders."
+    ],
+    "decision_maker": "OPC Commissioner (non-binding findings); Federal Court (binding orders and damages). In Quebec, designated CAI officials (penalties) and the CAI (orders), with penal fines imposed by the Court of Québec on prosecution.",
+    "limitation": "Federal Court application: one year after the report or notice of discontinuance is sent, extendable by the Court (s.14). Limitation periods for Quebec penalties and prosecutions: not confirmed."
+  },
+  "fines": {
+    "imposed_by": "Federally, mapped as court: the OPC has no fining power; the only federal monetary sanctions are Federal Court damages and fines for PIPEDA offences such as obstructing the Commissioner or breaching breach-reporting duties, up to CAD 100,000 on indictment (s.28), imposed by criminal courts. Quebec is the exception: the CAI imposes administrative monetary penalties of up to CAD 50,000 for individuals and CAD 10 million or 2% of worldwide turnover for enterprises, and penal fines on prosecution reach CAD 25 million or 4% of worldwide turnover (doubled for repeat offences).",
+    "public_bodies": "PIPEDA does not apply to government institutions, which fall under the federal Privacy Act (OPC, no fines). Quebec's AMP regime is in the private-sector act; public bodies are governed by the separate Access Act, and whether AMPs apply to them is not confirmed.",
+    "quirks": "Bill C-36 would give the new Commission order-making power and AMPs of up to the greater of CAD 10 million or 3% of global revenue, with offence fines up to CAD 25 million or 5%, but it is not law. Alberta and BC commissioners issue binding orders, with offence fines up to CAD 100,000 (not confirmed against current statute text)."
+  },
+  "appeal": {
+    "court": "Federal: there is no appeal against an OPC finding as such; instead the complainant or Commissioner applies to the Federal Court for a fresh hearing (s.14-15). Quebec: CAI penalty decisions can be contested before the Court of Québec after a review request to the CAI.",
+    "deadline": "Federal Court s.14: one year after the report is sent. Quebec AMP contestation: commonly reported as 30 days, article number not confirmed.",
+    "suspensive": "Not confirmed.",
+    "further": "Federal Court decisions go to the Federal Court of Appeal and, with leave, the Supreme Court of Canada. Court of Québec decisions follow Quebec appeal routes to the Court of Appeal of Québec, then the Supreme Court of Canada with leave.",
+    "inaction": "If the OPC discontinues or declines a complaint, the complainant can still apply to the Federal Court within one year of the notice of discontinuance; otherwise judicial review of OPC conduct in the Federal Court is the general route."
+  },
+  "private": {
+    "courts": "Limited federally: PIPEDA has no free-standing right to sue; damages are available only through the Federal Court after an OPC complaint and report (s.14, s.16). Quebec gives a broader right: individuals can sue for damages in the ordinary Quebec courts, and Law 25 added punitive damages of at least CAD 1,000 for intentional or gross fault (P-39.1 s.93.1). Alberta and BC PIPA allow damages actions once a commissioner's order is final, and common law privacy torts exist in some provinces.",
+    "damages": "Federal Court PIPEDA awards are modest, for example CAD 5,000 in A.T. v Globe24h.com (2017 FC 114). Quebec punitive damages minimum CAD 1,000 per intentional or gross fault.",
+    "collective": "Provincial class actions are the main private enforcement route, often pleaded in contract, negligence or privacy torts rather than directly under PIPEDA, as courts have noted the OPC's weak powers (Haikola v Personal Insurance, 2019 ONSC 5982). Quebec has an active class action regime for data breaches."
+  },
+  "cases": [
+    {
+      "title": "Privacy Commissioner of Canada v Facebook (Cambridge Analytica)",
+      "year": "2019-2026",
+      "summary": "After a 2019 joint OPC and BC investigation found Facebook breached PIPEDA, the OPC applied to the Federal Court, which dismissed the case in April 2023; the Federal Court of Appeal reversed on 9 September 2024 (2024 FCA 140), holding Facebook failed to obtain meaningful consent and to safeguard data. The Supreme Court of Canada granted leave on 12 June 2025 and heard the appeal on 19 March 2026; no judgment had been confirmed at the time of research.",
+      "url": "https://www.bennettjones.com/Insights/Blogs/Privacy-Goes-to-the-Top-Court"
+    },
+    {
+      "title": "A.T. v Globe24h.com",
+      "year": "2017",
+      "summary": "On a complainant's s.14 application after an OPC report, the Federal Court ordered a Romanian website republishing Canadian court decisions to remove them and pay CAD 5,000 damages (2017 FC 114). It shows how the court, not the OPC, provides binding remedies.",
+      "url": "https://gowlingwlg.com/en/insights-resources/articles/2017/canada-s-federal-court-awards-damages-against-a-fo"
+    }
+  ],
+  "quirks": [
+    "The federal regulator cannot fine anyone or issue binding orders; its findings are recommendations, and enforcement depends on a Federal Court hearing that starts from scratch.",
+    "The right to go to court belongs to the complainant, not the company, and the court awards damages to the individual, so a complaint can end in compensation rather than a public fine.",
+    "Quebec, inside the same country, has a GDPR-style regime with turnover-based fines of up to 4% and punitive damages, so the outcome depends heavily on the province.",
+    "Federal reform has failed twice (Bill C-11 in 2021 and Bill C-27 in 2025); the third attempt, Bill C-36, would strip private-sector enforcement from the Privacy Commissioner and give it to a new government-appointed commission.",
+    "Courts have explicitly said class actions are needed because the regulator is weak."
+  ],
+  "plain": "You complain to the federal Privacy Commissioner, who investigates and publishes findings with recommendations, but cannot fine the company or force it to comply. If you are not satisfied, you can take the case to the Federal Court within a year, which can order changes and award you damages. In Quebec the provincial commission can fine companies directly, up to CAD 10 million or 2% of turnover, and you can also sue for damages, including punitive damages.",
+  "map": {
+    "who_penalises": "court",
+    "cap": "fixed",
+    "private_action": "limited"
+  },
+  "confidence": "medium: PIPEDA mechanics and the Facebook litigation are confirmed, but the Quebec statute (P-39.1) could not be fetched, so Quebec article numbers, the Court of Québec contestation deadline and limitation periods are unconfirmed, and whether the Supreme Court of Canada has ruled in Facebook since the March 2026 hearing could not be verified.",
+  "sources": [
+    {"title": "PIPEDA, ss.11-17 (Justice Laws)", "url": "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-3.html", "source_type": "primary"},
+    {"title": "OPC: Federal Court applications under PIPEDA", "url": "https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda-complaints-and-enforcement-process/federal-court-applications-under-pipeda/", "source_type": "primary"},
+    {"title": "OPC: Guide to the PIPEDA complaint process", "url": "https://www.priv.gc.ca/en/report-a-concern/guide/", "source_type": "primary"},
+    {"title": "OPC: Organizations' guide to complaint investigations under PIPEDA", "url": "https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda-complaints-and-enforcement-process/02_05_d_20/", "source_type": "primary"},
+    {"title": "DLA Piper: Canada tables Bill C-36 (June 2026)", "url": "https://www.dlapiper.com/en/insights/publications/2026/06/canada-tables-bill-c36-the-protecting-privacy-and-consumer-data-act", "source_type": "secondary"},
+    {"title": "Blakes: Third time's the charm? Bill C-36", "url": "https://www.blakes.com/insights/third-time-s-the-charm-canada-s-latest-approach-to-reform-the-federal-private-sector-privacy-framew/", "source_type": "secondary"},
+    {"title": "Teresa Scassa: Canada's new privacy reform bill (Bill C-36)", "url": "https://teresascassa.substack.com/p/canadas-new-privacy-reform-bill-bill", "source_type": "secondary"},
+    {"title": "Bennett Jones: Facebook-OPC case at the Supreme Court of Canada", "url": "https://www.bennettjones.com/Insights/Blogs/Privacy-Goes-to-the-Top-Court", "source_type": "secondary"},
+    {"title": "CIPPIC: appearance before the Supreme Court in Facebook v Privacy Commissioner", "url": "https://www.cippic.ca/news/cippic-appears-before-the-supreme-court-in-facebook-v-privacy-commissioner", "source_type": "secondary"},
+    {"title": "Gowling WLG: A.T. v Globe24h.com, 2017 FC 114", "url": "https://gowlingwlg.com/en/insights-resources/articles/2017/canada-s-federal-court-awards-damages-against-a-fo", "source_type": "secondary"},
+    {"title": "nNovation: Haikola v Personal Insurance, 2019 ONSC 5982", "url": "https://nnovation.com/court-agrees-class-actions-necessary-to-enforce-pipeda/", "source_type": "secondary"},
+    {"title": "Loi 25 simple: sanctions et amendes (AMP and penal maximums)", "url": "https://loi25simple.ca/loi-25/sanctions-et-amendes", "source_type": "secondary"},
+    {"title": "Web25: the CAI and Law 25 (AMP regime since 22 September 2023, P-39.1 s.42 and s.90.1)", "url": "https://web25.ca/blog/cai-loi-25-commission-acces-information", "source_type": "secondary"}
+  ]
+}

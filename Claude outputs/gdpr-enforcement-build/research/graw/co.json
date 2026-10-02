@@ -1,0 +1,87 @@
+{
+  "code": "co",
+  "country": "Colombia",
+  "membership": "World",
+  "region": "Americas",
+  "dpa": {
+    "name_en": "Superintendence of Industry and Commerce, Delegated Superintendence for Personal Data Protection",
+    "name_native": "Superintendencia de Industria y Comercio, Delegatura para la Protección de Datos Personales",
+    "abbr": "SIC",
+    "url": "https://www.sic.gov.co/",
+    "structure": "A technical superintendence attached to the Ministry of Commerce, Industry and Tourism, not a stand-alone independent authority. Within it, the Delegated Superintendent for Personal Data Protection (art. 19 Law 1581) supervises compliance, with a Directorate of Personal Data Protection Investigation handling cases at first instance. The SIC is also the consumer, competition and industrial property authority, and exercises judicial functions in some of those fields.",
+    "regional": "No regional authorities. The Financial Superintendence shares supervision of financial and credit data under Law 1266 of 2008; the Procurator General (Procuraduría) handles breaches by public authorities; judges protect habeas data through the constitutional tutela action."
+  },
+  "law": {
+    "name": "Statutory Law 1581 of 2012 on personal data protection (reviewed in advance by the Constitutional Court in judgment C-748 of 2011) and Decree 1377 of 2013, now compiled in Decree 1074 of 2015; Statutory Law 1266 of 2008 on financial and credit habeas data; constitutional right to habeas data in art. 15 of the Constitution.",
+    "url": "http://www.secretariasenado.gov.co/senado/basedoc/ley_1581_2012.html"
+  },
+  "complaint": {
+    "how": "By filing a complaint (denuncia or reclamo) with the SIC, online through its electronic portal or in writing, free of charge, in Spanish.",
+    "contact_controller_first": "Yes, mandatory: art. 16 Law 1581 makes prior exhaustion of the query or claim process with the controller a procedural requirement (requisito de procedibilidad). Controllers must answer queries within 10 working days (art. 14) and claims within 15 working days (art. 15), each extendable.",
+    "deadlines": "Not confirmed; no statutory deadline for the SIC to decide was confirmed.",
+    "complainant_status": "Not confirmed. The administrative sanctioning procedure runs between the SIC and the controller; the complainant's party rights were not confirmed."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint after the controller has failed to resolve the claim, or own-initiative inquiry; the SIC can request information and carry out inspections.",
+      "Preliminary inquiry and formal statement of charges (formulación de cargos) by the Directorate of Personal Data Protection Investigation.",
+      "Defence and evidence phase, then a first-instance decision imposing fines and orders (for example to delete data or stop a practice).",
+      "Appeal for reconsideration (reposición) to the Directorate, and appeal (apelación) to the Delegated Superintendent for Personal Data Protection.",
+      "The SIC can also issue administrative orders (órdenes administrativas) to bring processing into line, including to foreign platforms operating in Colombia."
+    ],
+    "decision_maker": "The Director of Personal Data Protection Investigation at first instance; the Delegated Superintendent for Personal Data Protection on appeal.",
+    "limitation": "Reported as 3 years from the conduct under the general administrative sanctions rule in art. 52 of the Administrative Procedure Code (CPACA); not confirmed against the text."
+  },
+  "fines": {
+    "imposed_by": "The SIC imposes fines itself by administrative decision (art. 23 Law 1581), so who_penalises is regulator. The maximum is 2,000 statutory monthly minimum wages (SMMLV) per sanction; national rules require such wage-linked amounts to be expressed in tax or basic value units, and the conversion now applied by the SIC was not confirmed.",
+    "public_bodies": "No fines on public authorities: under art. 23 Law 1581, where the infringer is a public authority the SIC refers the case to the Procurator General's Office for disciplinary action.",
+    "quirks": "Other sanctions are suspension of processing activities for up to 6 months, temporary closure of operations if the failings are not corrected, and immediate and definitive closure of operations involving sensitive data (art. 23). Graduation criteria in art. 24 include harm, benefit obtained, recidivism, obstruction and acknowledgement. Unauthorised access to or use of personal data is also a crime under art. 269F of the Criminal Code (Law 1273 of 2009), with 48 to 96 months' prison."
+  },
+  "appeal": {
+    "court": "After the internal appeals, judicial review is by the action for annulment and restoration of rights (nulidad y restablecimiento del derecho) before the contentious-administrative courts (Administrative Court of Cundinamarca or Council of State, depending on amount); not confirmed against a primary source.",
+    "deadline": "Internal appeals: reported as 10 working days after notification under the CPACA (not confirmed). Judicial review: reported as 4 months (not confirmed).",
+    "suspensive": "Not confirmed. Internal appeals are generally suspensive under the CPACA; filing a court action does not by itself suspend the decision.",
+    "further": "Second-instance appeal within the contentious-administrative jurisdiction, ending at the Council of State (Consejo de Estado).",
+    "inaction": "The data subject can bring a tutela action (art. 86 Constitution) before any judge for violation of the fundamental right to habeas data, decided within about 10 days; this is also the usual route against public bodies."
+  },
+  "private": {
+    "courts": "Tutela gives fast judicial orders to correct, update or delete data but not damages. Compensation is claimed in the ordinary civil courts under general civil liability rules, as Law 1581 creates no specific damages action, so private_action is limited.",
+    "damages": "No statutory damages.",
+    "collective": "Group actions (acciones de grupo) and popular actions under Law 472 of 1998 exist for collective harm; their use in data protection was not confirmed."
+  },
+  "cases": [
+    {
+      "title": "Comcel (Claro): 'Amigos que te premian' campaign",
+      "year": "2023",
+      "summary": "On 6 July 2023 the SIC fined Comcel (Claro) COP 1,306,289,600, then described as its highest data protection sanction, for collecting third parties' phone numbers through a referral campaign without prior, express and informed authorisation, aggravated by recidivism. It ordered Claro to stop using and delete the data; the decision was open to reconsideration and appeal within the SIC.",
+      "url": "https://sedeelectronica.sic.gov.co/noticias/superindustria-impone-la-sancion-mas-alta-por-el-indebido-tratamiento-de-datos-personales-claro-por-su-campana-amigos-que-te-premian"
+    },
+    {
+      "title": "2025 enforcement surge, including a biometric login fine",
+      "year": "2025",
+      "summary": "By August 2025 the SIC had opened 101 data protection investigations that year (83 in 2024, 55 in 2023) and imposed fines totalling COP 5,157 million, including COP 214.4 million on an e-commerce company that made account access conditional on facial biometric data, and COP 190.5 million plus a temporary suspension of processing on another company.",
+      "url": "https://sedeelectronica.sic.gov.co/noticias/por-violacion-las-normas-de-proteccion-de-datos-personales-la-superintendencia-de-industria-y-comercio-ha-iniciado-101-investigaciones-e"
+    }
+  ],
+  "quirks": [
+    "The data protection authority sits inside the trade and consumer superintendence, which also acts as a judge in consumer and competition disputes; it is not an independent DPA in the GDPR sense.",
+    "Complaining to the controller first is a legal precondition: the SIC will not process a complaint until the claim process with the controller is exhausted.",
+    "Fines are pegged to the national minimum wage (up to 2,000 monthly minimum wages), not turnover, and public bodies cannot be fined at all: they are referred to the Procurator General.",
+    "Constitutional tutela is a fast, free way for individuals to enforce habeas data before any judge, and the Constitutional Court's tutela case law has shaped Colombian data protection more than statute."
+  ],
+  "plain": "In Colombia you must first make a formal claim to the company, which has 15 working days to answer. If it does not fix the problem, you can complain free of charge to the Superintendence of Industry and Commerce, which can investigate, order the data deleted and fine the company up to 2,000 monthly minimum wages, with appeals first inside the SIC and then to the administrative courts. You can also ask any judge for a quick 'tutela' order protecting your data, but compensation needs a separate civil claim.",
+  "map": {
+    "who_penalises": "regulator",
+    "cap": "fixed",
+    "private_action": "limited"
+  },
+  "confidence": "medium: the statute text could not be fetched (Senate, SUIN and Función Pública portals blocked), so article contents rely on well-established knowledge and secondary sources, and the judicial review deadlines, internal appeal deadlines, limitation period and minimum-wage-to-UVB conversion are not confirmed.",
+  "sources": [
+    {"title": "Law 1581 of 2012 (Senate legal database)", "url": "http://www.secretariasenado.gov.co/senado/basedoc/ley_1581_2012.html", "source_type": "primary"},
+    {"title": "Law 1581 of 2012 (Función Pública Gestor Normativo)", "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981", "source_type": "primary"},
+    {"title": "SIC: highest sanction for improper data processing imposed on Claro ('Amigos que te premian')", "url": "https://sedeelectronica.sic.gov.co/noticias/superindustria-impone-la-sancion-mas-alta-por-el-indebido-tratamiento-de-datos-personales-claro-por-su-campana-amigos-que-te-premian", "source_type": "primary"},
+    {"title": "SIC: 101 investigations and COP 5,157 million in fines in 2025", "url": "https://sedeelectronica.sic.gov.co/noticias/por-violacion-las-normas-de-proteccion-de-datos-personales-la-superintendencia-de-industria-y-comercio-ha-iniciado-101-investigaciones-e", "source_type": "primary"},
+    {"title": "Universidad Externado: report on SIC 2025 enforcement figures", "url": "https://www.uexternado.edu.co/proteccion-de-datos/por-violacion-a-las-normas-de-proteccion-de-datos-personales-la-superintendencia-de-industria-y-comercio-ha-iniciado-101-investigaciones-e-impuesto-multas-por-5-157-millones-en-2025/", "source_type": "secondary"},
+    {"title": "DLA Piper Data Protection Laws of the World: Colombia enforcement", "url": "https://www.dlapiperdataprotection.com/index.html?t=enforcement&c=CO", "source_type": "secondary"}
+  ]
+}

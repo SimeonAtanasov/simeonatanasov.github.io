@@ -1,0 +1,89 @@
+{
+  "code": "ar",
+  "country": "Argentina",
+  "membership": "World",
+  "region": "Americas",
+  "dpa": {
+    "name_en": "Agency for Access to Public Information (National Directorate for Personal Data Protection)",
+    "name_native": "Agencia de Acceso a la Información Pública (Dirección Nacional de Protección de Datos Personales)",
+    "abbr": "AAIP",
+    "url": "https://www.argentina.gob.ar/aaip/datospersonales",
+    "structure": "A self-governing body created by the Access to Public Information Law 27.275 (2016) and given the data protection supervisory role in 2017, operating within the orbit of the Chief of Cabinet of Ministers. Data protection is handled by its National Directorate for Personal Data Protection; the AAIP also runs the national 'No Llame' do-not-call registry under Law 26.951.",
+    "regional": "Some provinces and the City of Buenos Aires have their own data protection rules and bodies; Law 25.326 invites provincial adherence and federal jurisdiction applies to national bodies and interjurisdictional networks (art. 44). Consumer authorities also act on related complaints."
+  },
+  "law": {
+    "name": "Personal Data Protection Law 25.326 of 2000 (Ley de Protección de los Datos Personales), regulated by Decree 1558/2001, with constitutional habeas data in art. 43 of the National Constitution. Sanctions are classified and graded by AAIP Resolution 126/2024 (published 24 May 2024, in force 1 June 2024). A replacement bill sent by the executive in 2023 (Message 87/2023) was never enacted.",
+    "url": "https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto"
+  },
+  "complaint": {
+    "how": "By filing a complaint (denuncia) for breach of Law 25.326 with the AAIP, online through the remote procedures platform, free of charge, in Spanish, attaching a copy of the original request to the controller and any reply.",
+    "contact_controller_first": "Yes in practice: the AAIP asks for proof that the right was first exercised with the controller. The controller must answer an access request within 10 calendar days (art. 14) and act on rectification, update or deletion within 5 working days.",
+    "deadlines": "Not confirmed; no published deadline for the AAIP to decide a complaint was found.",
+    "complainant_status": "Not confirmed. The sanctioning procedure is an administrative inquiry (sumario) between the AAIP and the controller; the complainant's party status was not confirmed."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint, or own-initiative action (for example the April 2026 investigation into debt collection calls by 5 ON LINE S.R.L.).",
+      "Administrative inquiry (sumario) under art. 31, section 3 of Decree 1558/2001, with notice of the charges and a right of defence.",
+      "Decision classifying the infringement as minor, serious or very serious and imposing sanctions under Resolution 126/2024.",
+      "Voluntary payment within 20 working days of notification reduces the fine by 50%.",
+      "Final sanctions are entered in a public register of infringers (sanciones firmes) on the AAIP website."
+    ],
+    "decision_maker": "The AAIP (head of the agency), acting through its National Directorate for Personal Data Protection.",
+    "limitation": "Not confirmed. Resolution 126/2024 counts recidivism over 3 years from notification of a prior sanction."
+  },
+  "fines": {
+    "imposed_by": "The AAIP imposes fines itself by administrative decision (art. 31 Law 25.326), so who_penalises is regulator. The statutory range is ARS 1,000 to ARS 100,000 per infringement; Resolution 126/2024 splits it into minor (ARS 1,000 to 80,000), serious (ARS 80,001 to 90,000) and very serious (ARS 90,001 to 100,000) bands, and caps accumulated fines for the same conduct at 500 times the band maximum (so at most ARS 50 million).",
+    "public_bodies": "Not confirmed. The law covers public and private databases, but whether the AAIP fines public bodies in practice was not confirmed.",
+    "quirks": "Other sanctions: warnings, suspension (1 to 30 days for serious, 31 to 365 days for very serious), closure or cancellation of the database, plus orders to comply and to train staff. The fine amounts were set in 2000 and never indexed, so with inflation they are very small in real terms. Criminal offences were added to the Penal Code by art. 32 (arts. 117 bis and 157 bis), with prison terms of up to 3 years for knowingly inserting false data or unlawfully accessing or disclosing data in a database."
+  },
+  "appeal": {
+    "court": "Not confirmed. Under general federal administrative law (Law 19.549) AAIP decisions can be challenged by administrative remedies and then before the federal contentious-administrative courts.",
+    "deadline": "Not confirmed.",
+    "suspensive": "Not confirmed.",
+    "further": "Not confirmed; ordinary federal appeals end at the National Supreme Court of Justice on federal or constitutional questions.",
+    "inaction": "The data subject does not need the AAIP: the habeas data action (art. 43 Constitution, arts. 33 to 43 Law 25.326) goes directly to a judge to obtain access, rectification, update, confidentiality or deletion."
+  },
+  "private": {
+    "courts": "Habeas data is a fast judicial action in which the judge orders the controller to report within a maximum of 5 working days and then rules on deletion, rectification or confidentiality (arts. 38 to 43). The competent judge can be at the plaintiff's or defendant's domicile or where the effects occur, with federal courts for national bodies and interjurisdictional networks (art. 36).",
+    "damages": "Habeas data does not award damages. Compensation for privacy harm is claimed separately in the civil courts under general civil liability rules, with no statutory damages (so private_action is limited).",
+    "collective": "Argentina's Supreme Court recognised collective actions for homogeneous individual rights in the Halabi case (2009), which concerned telecommunications data retention; collective claims are possible but there is no specific data protection class action statute (case details not confirmed against a primary source)."
+  },
+  "cases": [
+    {
+      "title": "Resolution 126/2024: new sanctions grading regime",
+      "year": "2024",
+      "summary": "The AAIP replaced its earlier sanctions rules (Disposition 7/2005 and AAIP Resolutions 12/18, 240/22, 243/19 and 244/22) with a three-tier classification, 15 grading criteria, a 50% discount for prompt payment and an accumulation cap of 500 times the band maximum.",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-126-2024-399750/texto"
+    },
+    {
+      "title": "5 ON LINE S.R.L.: debt collection investigation",
+      "year": "2026",
+      "summary": "In April 2026 the AAIP opened an investigation into a collection agency that allegedly contacted debtors' relatives, friends, co-workers and neighbours, and warned the creditor entities that share data with collectors that they remain jointly liable. The outcome was not confirmed.",
+      "url": "https://www.argentina.gob.ar/noticias/la-aaip-investiga-presuntos-incumplimientos-la-ley-ndeg-25326-en-gestiones-de-cobranza"
+    }
+  ],
+  "quirks": [
+    "Argentina has an EU adequacy decision (2003), yet its statutory fines remain capped at ARS 100,000 per infringement, an amount set in 2000 and eroded by inflation to a trivial figure; the 500-times accumulation cap is the only route to larger totals.",
+    "Habeas data is a constitutional judicial action, so individuals often bypass the regulator entirely and go straight to a judge for access or deletion.",
+    "The regulator shares its agency with freedom of information and the do-not-call registry, and much of its visible enforcement concerns 'No Llame' telemarketing complaints.",
+    "Modernisation has stalled: the 2023 GDPR-style reform bill was never enacted, so the 2000 law still applies."
+  ],
+  "plain": "In Argentina you first ask the organisation for your data or a correction; it has 10 days for access and 5 working days for corrections. If it fails, you can file a free online complaint with the Agency for Access to Public Information, which can investigate and impose warnings, suspensions or small fines, or you can go straight to a judge with a fast 'habeas data' action. Compensation has to be claimed separately in the civil courts.",
+  "map": {
+    "who_penalises": "regulator",
+    "cap": "fixed",
+    "private_action": "limited"
+  },
+  "confidence": "medium: the statute and Resolution 126/2024 were read on official portals, but the appeal route and deadlines, the complainant's procedural status, enforcement against public bodies, the sanctions register contents (PDF blocked) and the formal status of the 2023 reform bill could not be confirmed.",
+  "sources": [
+    {"title": "Law 25.326 (Argentina.gob.ar normativa)", "url": "https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto", "source_type": "primary"},
+    {"title": "AAIP Resolution 126/2024 (official text)", "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-126-2024-399750/texto", "source_type": "primary"},
+    {"title": "Boletín Oficial: AAIP Resolution 126/2024", "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/308122/20240524", "source_type": "primary"},
+    {"title": "AAIP: personal data protection", "url": "https://www.argentina.gob.ar/aaip/datospersonales", "source_type": "primary"},
+    {"title": "AAIP: your rights and how to complain", "url": "https://www.argentina.gob.ar/aaip/datospersonales/derechos", "source_type": "primary"},
+    {"title": "AAIP: register of those who do not comply (final sanctions)", "url": "https://www.argentina.gob.ar/quienes-no-cumplen-con-la-ley-de-proteccion-de-datos-personales-y-el-registro-no-llame", "source_type": "primary"},
+    {"title": "AAIP: data protection bill (Message 87/2023)", "url": "https://www.argentina.gob.ar/aaip/datospersonales/proyecto-ley-datos-personales", "source_type": "primary"},
+    {"title": "AAIP news: investigation into debt collection practices (April 2026)", "url": "https://www.argentina.gob.ar/noticias/la-aaip-investiga-presuntos-incumplimientos-la-ley-ndeg-25326-en-gestiones-de-cobranza", "source_type": "primary"}
+  ]
+}

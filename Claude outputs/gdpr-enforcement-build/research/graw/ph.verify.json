@@ -1,0 +1,147 @@
+{
+  "code": "ph",
+  "checked": [
+    {
+      "field": "cases[0].summary",
+      "claim": "NPC found COMELEC chairman Bautista criminally liable for negligence and recommended prosecution",
+      "verdict": "corrected",
+      "evidence": "NPC: decision dated 28 December 2016; COMELEC violated ss 11, 20 and 21; Bautista violated ss 11, 20, 21 and 22 in relation to s 26 (negligent access); over 75 million voter records exposed; NPC recommended criminal prosecution of Bautista and referred the hacking to DOJ under the Cybercrime Prevention Act.",
+      "url": "https://privacy.gov.ph/privacy-commission-finds-bautista-criminally-liable-for-comeleak-data-breach/",
+      "replacement": "In a decision dated 28 December 2016 on the breach of over 75 million voter records, the NPC found the Commission on Elections in breach of the Act and its chairman Andres Bautista criminally liable for negligent access (s 26), and recommended his prosecution to the Department of Justice."
+    },
+    {
+      "field": "cases[0].url",
+      "claim": "https://privacy.gov.ph/?s=COMELEC",
+      "verdict": "corrected",
+      "evidence": "A search URL; the specific NPC page exists.",
+      "url": "https://privacy.gov.ph/privacy-commission-finds-bautista-criminally-liable-for-comeleak-data-breach/",
+      "replacement": "https://privacy.gov.ph/privacy-commission-finds-bautista-criminally-liable-for-comeleak-data-breach/"
+    },
+    {
+      "field": "cases[1].summary",
+      "claim": "8 October 2025 order to stop collecting iris biometrics; consent bought with incentives not freely given; MR pending mid-2026",
+      "verdict": "corrected",
+      "evidence": "NPC: 8 October 2025, TFH must 'immediately stop all personal data processing activities related to the World App, Orb verification, and all associated systems'; paid scanning was undue influence so consent was not freely given. No mention of a motion for reconsideration.",
+      "url": "https://privacy.gov.ph/npc-issues-cease-and-desist-order-against-tools-for-humanity/",
+      "replacement": "On 8 October 2025 the NPC ordered Tools for Humanity to stop all personal data processing linked to World App and Orb iris verification in the Philippines, holding that consent obtained by paying people is not freely given."
+    },
+    {
+      "field": "cases[2].summary",
+      "claim": "BDO Unibank SS 21-023, outcome not confirmed",
+      "verdict": "unverifiable",
+      "evidence": "NPC decisions table lists 'In The Matter of The Alleged Personal Data Breach of BDO Unibank, Inc.' tagged ss 11, 20 and 30, but the outcome and any fine were not visible. A case with no known outcome adds little; consider replacing it with Pieceland Corporation v Manila New Life Church (NPC 19-528), upheld by the Court of Appeals on 14 December 2021.",
+      "url": "https://privacy.gov.ph/decisions-2/"
+    },
+    {
+      "field": "cases[2].year",
+      "claim": "not confirmed",
+      "verdict": "unverifiable",
+      "evidence": "Docket number SS 21-023 indicates the case was opened in 2021; decision date not seen.",
+      "url": "https://privacy.gov.ph/decisions-2/"
+    },
+    {
+      "field": "fines.imposed_by",
+      "claim": "Grave 0.5% to 3%, major 0.25% to 2%, other PHP 50,000 to 200,000, single act cap PHP 5 million",
+      "verdict": "confirmed",
+      "evidence": "Circular 2022-01: grave 0.5% to 3% and major 0.25% to 2% of annual gross income of the preceding year; other infractions PHP 50,000 to 200,000; total for a single act shall not exceed PHP 5,000,000.",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2022/08/NPC-CIRCULAR-NO.-2022-01-GUIDELINES-ON-ADMINISTRATIVE-FINES-dated-08-AUGUST-2022-w-SGD.pdf"
+    },
+    {
+      "field": "fines.public_bodies",
+      "claim": "Government agencies are PICs and not excluded",
+      "verdict": "confirmed",
+      "evidence": "Circular applies to PICs and PIPs as defined in the DPA, which includes government entities.",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2022/08/NPC-CIRCULAR-NO.-2022-01-GUIDELINES-ON-ADMINISTRATIVE-FINES-dated-08-AUGUST-2022-w-SGD.pdf"
+    },
+    {
+      "field": "appeal.suspensive",
+      "claim": "Immediately executory unless restrained; bond equal to fine",
+      "verdict": "confirmed",
+      "evidence": "Circular 2022-01: decision 'immediately executory unless otherwise restrained by the Court of Appeals or the Supreme Court'; cash or surety bond equal to the total fine to stay enforcement.",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2022/08/NPC-CIRCULAR-NO.-2022-01-GUIDELINES-ON-ADMINISTRATIVE-FINES-dated-08-AUGUST-2022-w-SGD.pdf"
+    },
+    {
+      "field": "appeal.court",
+      "claim": "Proper court, ordinarily Court of Appeals under Rule 43, not confirmed for NPC",
+      "verdict": "corrected",
+      "evidence": "NPC Rules Rule VIII s 7: appeal 'to the proper courts'. Circular 2022-01 names the Court of Appeals or Supreme Court as the courts that can restrain execution. NPC news: on 14 December 2021 the Court of Appeals denied Pieceland Corporation's petition for review of NPC Case 19-528.",
+      "url": "https://privacy.gov.ph/court-of-appeals-upholds-the-decision-of-the-national-privacy-commission/",
+      "replacement": "After a motion for reconsideration, an NPC decision is appealed 'to the proper courts' (2021 Rules of Procedure, Rule VIII s 7); in practice this is a petition for review to the Court of Appeals, which upheld the NPC in Pieceland Corporation v Manila New Life Church (14 December 2021)."
+    },
+    {
+      "field": "appeal.deadline",
+      "claim": "Not confirmed; Rule 43 appeals generally 15 days",
+      "verdict": "corrected",
+      "evidence": "NPC Rules: decisions become final and executory 15 calendar days from notice; one motion for reconsideration may be filed, which suspends the period. Rule 43 15-day period not in NPC text.",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2024/03/2021-Rules-of-Procedure-of-the-NPC-As-Amended.pdf",
+      "replacement": "NPC decisions become final 15 calendar days after notice unless one motion for reconsideration is filed within that period (2021 Rules of Procedure); a petition for review under Rule 43 is generally due within 15 days (not stated in NPC rules)."
+    },
+    {
+      "field": "procedure.limitation",
+      "claim": "Not confirmed",
+      "verdict": "corrected",
+      "evidence": "NPC Rules: 'The Commission adopts the periods of prescription for violations penalized by special acts as provided under Act 3326.'",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2024/03/2021-Rules-of-Procedure-of-the-NPC-As-Amended.pdf",
+      "replacement": "The NPC applies the prescription periods for offences under special laws in Act No. 3326, which vary with the penalty (2021 Rules of Procedure)."
+    },
+    {
+      "field": "complaint.deadlines",
+      "claim": "No filing deadline or NPC deadline confirmed",
+      "verdict": "corrected",
+      "evidence": "NPC Rules: Act 3326 prescription applies; Investigating Officer has 30 days after memoranda to submit the fact-finding report; Commission has 30 days to decide breach matters, no fixed deadline for other complaints.",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2024/03/2021-Rules-of-Procedure-of-the-NPC-As-Amended.pdf",
+      "replacement": "No specific filing deadline beyond the Act No. 3326 prescription periods the NPC applies. The investigating officer reports within 30 days of the last memoranda; the Commission must decide breach matters within 30 days, with no fixed deadline for other complaints."
+    },
+    {
+      "field": "complaint.contact_controller_first",
+      "claim": "Must inform organisation and wait 15 calendar days",
+      "verdict": "confirmed",
+      "evidence": "NPC complaints page and Rules: written notice to respondent, 15 calendar days from receipt to respond; proof must accompany the complaint.",
+      "url": "https://privacy.gov.ph/mechanics-for-complaints/"
+    },
+    {
+      "field": "law.name",
+      "claim": "Circular 2022-01 in force from 27 August 2022",
+      "verdict": "unverifiable",
+      "evidence": "Circular dated 8 August 2022, effective 15 days after newspaper publication; publication date not seen.",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2022/08/NPC-CIRCULAR-NO.-2022-01-GUIDELINES-ON-ADMINISTRATIVE-FINES-dated-08-AUGUST-2022-w-SGD.pdf"
+    },
+    {
+      "field": "fines.quirks",
+      "claim": "Criminal offences ss 25 to 33, 6 months to 7 years, PHP 100,000 to 5 million",
+      "verdict": "confirmed",
+      "evidence": "Range matches RA 10173 (s 27 improper disposal from 6 months and PHP 100,000; s 28 sensitive information up to 7 years; s 33 combination up to PHP 5 million). Checked against own knowledge of the statute, Lawphil not fetched.",
+      "url": "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html"
+    },
+    {
+      "field": "quirks[1]",
+      "claim": "Capped at PHP 5 million (about EUR 80,000) per act",
+      "verdict": "corrected",
+      "evidence": "PHP 5 million is roughly EUR 75,000 at 2026 rates; 'about EUR 80,000' is slightly high.",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2022/08/NPC-CIRCULAR-NO.-2022-01-GUIDELINES-ON-ADMINISTRATIVE-FINES-dated-08-AUGUST-2022-w-SGD.pdf",
+      "replacement": "Percentage-of-income fines exist but are capped at PHP 5 million (about EUR 75,000) per act."
+    },
+    {
+      "field": "map.who_penalises",
+      "claim": "regulator",
+      "verdict": "confirmed",
+      "evidence": "NPC imposes fines by its own decision under Circular 2022-01.",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2022/08/NPC-CIRCULAR-NO.-2022-01-GUIDELINES-ON-ADMINISTRATIVE-FINES-dated-08-AUGUST-2022-w-SGD.pdf"
+    },
+    {
+      "field": "map.cap",
+      "claim": "fixed",
+      "verdict": "confirmed",
+      "evidence": "Percentage bands exist but the binding single-act ceiling is a fixed PHP 5 million.",
+      "url": "https://privacy.gov.ph/wp-content/uploads/2022/08/NPC-CIRCULAR-NO.-2022-01-GUIDELINES-ON-ADMINISTRATIVE-FINES-dated-08-AUGUST-2022-w-SGD.pdf"
+    },
+    {
+      "field": "map.private_action",
+      "claim": "yes",
+      "verdict": "confirmed",
+      "evidence": "s 16(f) right to damages; NPC complaints page refers upheld cases to enforcement for civil damages.",
+      "url": "https://privacy.gov.ph/mechanics-for-complaints/"
+    }
+  ],
+  "notes": "Most serious: cases[1] says the World App order only stopped iris collection and asserts a pending motion for reconsideration no source supports; the order covers all related processing. cases[2] (BDO) has neither year nor outcome and should be replaced, for example with Pieceland v Manila New Life Church (CA affirmed NPC, 14 December 2021). procedure.stages[2] says the Commission decides 'en banc'; the Rules describe the Commission (Commissioner and two deputies) deciding, consistent but 'en banc' not seen. Nothing contradicts the Data Privacy Act."
+}

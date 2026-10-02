@@ -1,0 +1,97 @@
+{
+  "code": "au",
+  "country": "Australia",
+  "membership": "World",
+  "region": "Asia-Pacific",
+  "dpa": {
+    "name_en": "Office of the Australian Information Commissioner",
+    "name_native": "Office of the Australian Information Commissioner",
+    "abbr": "OAIC",
+    "url": "https://www.oaic.gov.au",
+    "structure": "Independent Commonwealth statutory agency headed by the Australian Information Commissioner, with a Privacy Commissioner. It handles complaints, runs investigations, makes determinations and brings civil penalty proceedings in the Federal Court.",
+    "regional": "States and territories have their own regulators for state public sector bodies (for example NSW and Victorian information commissioners). Sector schemes also matter in practice: external dispute resolution schemes for finance, telecoms and utilities must usually be used before the OAIC, and the ACCC enforces consumer law against misleading privacy claims."
+  },
+  "law": {
+    "name": "Privacy Act 1988 (Cth), with the 13 Australian Privacy Principles (APPs) and the Notifiable Data Breaches scheme (Part IIIC); amended by the Privacy Legislation Amendment (Enforcement and Other Measures) Act 2022 (higher penalties, in force 13 December 2022) and the Privacy and Other Legislation Amendment Act 2024 (in force 10 December 2024; statutory tort from 10 June 2025; automated decision transparency duties from 10 December 2026)",
+    "url": "https://www.legislation.gov.au/C2004A03712/latest"
+  },
+  "complaint": {
+    "how": "Online complaint form on the OAIC website, free of charge, in English. The complaint must name the entity, describe the issue with dates and impact, and include evidence of the earlier complaint to the entity.",
+    "contact_controller_first": "Yes. The individual must first complain to the organisation or agency and give it 30 days to respond; where an approved external dispute resolution scheme applies (banking, insurance, superannuation, telecoms, energy and water) that scheme should be used first.",
+    "deadlines": "The OAIC may decline a complaint made more than 12 months after the complainant became aware of the act (s 41). There is no statutory deadline for the OAIC; it states it is unlikely to substantially progress new complaints for around 6 to 12 months after lodgement.",
+    "complainant_status": "The complainant is a party to conciliation and to any s 52 determination, and can receive a compensation award. The OAIC can decline or stop investigating on discretionary grounds (s 41), for example where the matter is low impact or better dealt with by an EDR scheme."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint to the entity first, then complaint to the OAIC, or a Commissioner-initiated investigation (s 40(2)) often following a notifiable data breach",
+      "Preliminary inquiries and assessment; the OAIC may decline under s 41",
+      "Conciliation between complainant and entity, which resolves most complaints",
+      "Investigation, which may end in a determination under s 52 (declarations, orders to stop conduct, take steps or pay compensation) or an enforceable undertaking (s 33E)",
+      "For serious matters, civil penalty proceedings in the Federal Court; since December 2024 the OAIC can also issue infringement notices and compliance notices for specified lower-level breaches"
+    ],
+    "decision_maker": "The Information Commissioner decides complaints and determinations. Only the Federal Court (or Federal Circuit and Family Court) can order a civil penalty; infringement notices issued by the OAIC are a payable alternative that the entity can instead contest in court.",
+    "limitation": "Civil penalty proceedings must generally be brought within 6 years of the contravention under the Regulatory Powers (Standard Provisions) Act 2014 (not confirmed against the primary text this session)."
+  },
+  "fines": {
+    "imposed_by": "regulator-court: the OAIC investigates but cannot fine for serious breaches itself; it must apply to the Federal Court, which sets the civil penalty. For a serious interference with privacy (s 13G) the maximum for a body corporate is the greatest of AUD 50 million, three times the benefit obtained, or 30% of adjusted turnover during the breach period (since 13 December 2022). The 2024 Act added a mid-tier civil penalty for interferences that are not serious (s 13H) and an administrative tier (s 13K) for specified APP and privacy policy failures that the OAIC can enforce by infringement notice without going to court.",
+    "public_bodies": "Australian Government agencies are bound by the APPs and can be subject to determinations; whether civil penalties are pursued against Commonwealth agencies in practice was not confirmed. Most small businesses with annual turnover of AUD 3 million or less remain exempt.",
+    "quirks": "The infringement notice amounts and the s 13H maximum are set in penalty units; exact dollar figures were not confirmed from a primary source this session. The court counts contraventions per affected individual, so exposure in breach cases is cumulative. Doxxing became a criminal offence under the Criminal Code in 2024 (up to 6 or 7 years imprisonment depending on the offence, secondary source)."
+  },
+  "appeal": {
+    "court": "Civil penalties are set by the Federal Court, so a challenge is an appeal to the Full Federal Court and then, with special leave, the High Court. OAIC determinations and other administrative decisions are challenged by judicial review in the Federal Court or Federal Circuit and Family Court.",
+    "deadline": "Not confirmed for each route (court rules set the time limits).",
+    "suspensive": "Not confirmed. A s 52 determination against a private entity is not self-executing: the complainant or the OAIC must apply to the Federal Court to enforce it (s 55A), and the court hears the matter afresh.",
+    "further": "Full Federal Court, then High Court of Australia by special leave.",
+    "inaction": "There is no merits appeal against the OAIC's discretionary decision to decline or stop investigating; the remedy is judicial review on legal grounds, or since June 2025 suing directly under the statutory tort where its conditions are met."
+  },
+  "private": {
+    "courts": "Limited. There is no general right to sue for breach of the APPs; compensation comes mainly through OAIC conciliation and determinations. Since 10 June 2025 the Privacy Act (Schedule 2) gives individuals a statutory tort for serious invasions of privacy, intentional or reckless, in the Federal Court, Federal Circuit and Family Court or state and territory courts. The first cases were filed in 2025 (Groth v Herald and Weekly Times, settled; Kurraba Group v Williams, NSW District Court interlocutory injunction).",
+    "damages": "Under the tort, damages including for emotional distress, injunctions and other remedies; non-economic damages are capped (exact cap not confirmed). Under s 52 the OAIC can award compensation, including for injury to feelings.",
+    "collective": "Representative complaints can be made to the OAIC (s 38). Class actions under Part IVA of the Federal Court of Australia Act are active after major breaches, usually pleaded in contract, negligence or consumer law (for example against Medibank and Optus)."
+  },
+  "cases": [
+    {
+      "title": "Australian Information Commissioner v Australian Clinical Labs Ltd",
+      "year": "2025",
+      "summary": "First civil penalty ever ordered under the Privacy Act: on 9 October 2025 Justice Halley in the Federal Court ordered AUD 5.8 million (AUD 4.2 million for failing to protect data under APP 11.1, AUD 0.8 million each for late assessment under s 26WH(2) and late notification under s 26WK(2)) over the 2022 Medlab Pathology breach affecting over 223,000 people. The pre-2022 penalty maximums applied.",
+      "url": "https://www.oaic.gov.au/news/media-centre/australian-clinical-labs-ordered-to-pay-penalties-in-relation-to-medlab-pathology-data-breach-in-first-for-privacy-act"
+    },
+    {
+      "title": "Meta (Facebook) Cambridge Analytica settlement",
+      "year": "2024",
+      "summary": "Civil penalty proceedings filed in March 2020 ended on 17 December 2024 when Meta gave an enforceable undertaking to pay AUD 50 million into a compensation scheme for affected Australian users, and the Commissioner withdrew the case. The OAIC called it the largest payment ever dedicated to privacy concerns in Australia.",
+      "url": "https://www.oaic.gov.au/news/media-centre/landmark-settlement-of-$50m-from-meta-for-australian-users-impacted-by-cambridge-analytica-incident"
+    },
+    {
+      "title": "OAIC v Medibank and OAIC v Optus",
+      "year": "2024-2025",
+      "summary": "The OAIC filed Federal Court civil penalty proceedings against Medibank on 5 June 2024 (9.7 million people, APP 11.1, up to AUD 2.22 million per contravention) and against Optus on 8 August 2025 (about 9.5 million people). Both were pending as at the latest sources found; outcomes not confirmed.",
+      "url": "https://www.oaic.gov.au/news/media-centre/oaic-takes-civil-penalty-action-against-medibank"
+    }
+  ],
+  "quirks": [
+    "The regulator cannot fine for serious breaches: it must sue in the Federal Court, which is why only one civil penalty had been ordered by late 2025, more than a decade after civil penalties were introduced.",
+    "Penalties are counted per affected individual, so a single breach can be pleaded as hundreds of thousands or millions of contraventions.",
+    "Small businesses with turnover of AUD 3 million or less are largely outside the Privacy Act, and employee records held by private employers are exempt.",
+    "An OAIC determination ordering compensation is not directly enforceable; it needs a Federal Court order.",
+    "The new statutory tort is separate from the APPs: it covers serious intrusions and misuse of information by anyone, including individuals, with exemptions such as journalism."
+  ],
+  "plain": "You first complain to the organisation and wait 30 days, then you can complain free of charge to the OAIC, which usually tries to broker a settlement and can make a determination ordering compensation. For serious breaches the OAIC cannot fine directly: it has to take the company to the Federal Court, which decides the penalty. Since June 2025 you can also sue yourself for a serious invasion of privacy.",
+  "map": {
+    "who_penalises": "regulator-court",
+    "cap": "turnover",
+    "private_action": "limited"
+  },
+  "confidence": "medium-high: the main structure and cases come from OAIC releases, but the dollar amounts of infringement notices and the s 13H mid-tier cap, the 6-year limitation period and the status of the Medibank and Optus cases were not confirmed from primary sources.",
+  "sources": [
+    {"title": "OAIC: Australian Clinical Labs ordered to pay penalties (first for Privacy Act)", "url": "https://www.oaic.gov.au/news/media-centre/australian-clinical-labs-ordered-to-pay-penalties-in-relation-to-medlab-pathology-data-breach-in-first-for-privacy-act", "source_type": "primary"},
+    {"title": "OAIC: Landmark settlement of $50m from Meta", "url": "https://www.oaic.gov.au/news/media-centre/landmark-settlement-of-$50m-from-meta-for-australian-users-impacted-by-cambridge-analytica-incident", "source_type": "primary"},
+    {"title": "OAIC: Meta Platforms enforceable undertaking", "url": "https://www.oaic.gov.au/privacy/privacy-assessments-and-decisions/privacy-decisions/enforceable-undertakings/meta-platforms-inc-enforceable-undertaking", "source_type": "primary"},
+    {"title": "OAIC takes civil penalty action against Medibank", "url": "https://www.oaic.gov.au/news/media-centre/oaic-takes-civil-penalty-action-against-medibank", "source_type": "primary"},
+    {"title": "Privacy Act 1988 (Federal Register of Legislation)", "url": "https://www.legislation.gov.au/C2004A03712/latest", "source_type": "primary"},
+    {"title": "DMAW Lawyers: Optus faces OAIC legal action", "url": "https://dmawlawyers.com.au/insights/optus-faces-oaic-legal-action-following-2022-data-breach", "source_type": "secondary"},
+    {"title": "LK Law: Privacy in the Courts (statutory tort cases)", "url": "https://www.lk.law/2025/12/privacy-in-the-courts-privacy-litigation-and-enforcement-ramps-up/", "source_type": "secondary"},
+    {"title": "Wotton Kearney: Cyber, Privacy and Technology Report Issue 11 (POLA 2024 commencement dates)", "url": "https://www.wottonkearney.com/expertise/cyber-privacy-technology-report-issue-11/", "source_type": "secondary"},
+    {"title": "Captain Compliance: OAIC complaint handling", "url": "https://captaincompliance.com/education/oaic-overhauls-privacy-complaint-handling-australias-new-enforcement-first-approach/", "source_type": "secondary"}
+  ]
+}

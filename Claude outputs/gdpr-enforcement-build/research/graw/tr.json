@@ -1,0 +1,93 @@
+{
+  "code": "tr",
+  "country": "Turkey",
+  "membership": "World",
+  "region": "Middle East",
+  "dpa": {
+    "name_en": "Personal Data Protection Authority (decisions taken by the Personal Data Protection Board)",
+    "name_native": "Kişisel Verileri Koruma Kurumu (Kişisel Verileri Koruma Kurulu)",
+    "abbr": "KVKK",
+    "url": "https://www.kvkk.gov.tr/en",
+    "structure": "Public legal entity with administrative and financial autonomy, related to the Presidency. Its decision-making body is the nine-member Board (Kurul), which handles complaints, runs ex officio examinations and imposes administrative fines (Art. 22).",
+    "regional": "No regional authorities. Public prosecutors and criminal courts handle the data offences in the Turkish Penal Code (Arts. 135 to 140), and sector regulators (for example the ICT Authority for electronic communications and the banking regulator) apply their own confidentiality rules."
+  },
+  "law": {
+    "name": "Law No. 6698 on the Protection of Personal Data (2016), amended by Law No. 7499 published on 12 March 2024 (new rules on special category data and cross-border transfers, a new fine for failing to notify standard contracts, and fines to be challenged before administrative courts, in force 1 June 2024)",
+    "url": "https://www.kvkk.gov.tr/Icerik/6649/Personal-Data-Protection-Law"
+  },
+  "complaint": {
+    "how": "Written complaint to the Board, including through the Authority's online complaint system; no fee is reported. Complaints are in Turkish.",
+    "contact_controller_first": "Yes, mandatory. The data subject must first apply to the data controller (Art. 13), which has 30 days to answer free of charge; only then may they complain to the Board (Art. 14(2)).",
+    "deadlines": "The complaint must be lodged within 30 days of learning the controller's answer, and in any case within 60 days of the original application (Art. 14(1)). If the Board does not answer within 60 days of the complaint, the complaint is deemed refused (Art. 15(4)).",
+    "complainant_status": "The complainant receives the Board's answer but the Board's fine is an administrative sanction, not compensation; compensation claims under general law are reserved (Art. 14(3))."
+  },
+  "procedure": {
+    "stages": [
+      "Application to the data controller (Art. 13), or the Board learns of an alleged violation and acts ex officio (Art. 15(1))",
+      "Complaint to the Board within the Art. 14 deadlines",
+      "Examination: the controller must provide information and documents within 15 days and allow on-site inspection (Art. 15(3))",
+      "Board decision ordering the controller to remedy the violation within 30 days of notification (Art. 15(5)), possibly a public principle decision for widespread violations (Art. 15(6)), and an administrative fine (Art. 18)",
+      "Where damage would be difficult or impossible to remedy and the violation is clear, the Board may order processing or transfers abroad to stop (Art. 15(7))"
+    ],
+    "decision_maker": "The Personal Data Protection Board.",
+    "limitation": "General limitation periods of the Law on Misdemeanours No. 5326 apply to administrative fines (specific periods not confirmed this session)."
+  },
+  "fines": {
+    "imposed_by": "regulator: the Board imposes administrative fines itself by decision (Arts. 18 and 22). Fines are fixed bands per violation type, revalued every January; for 2026 the bands are about TRY 85,437 to 1,709,200 for breach of the duty to inform (Art. 10), TRY 256,357 to 17,092,242 for data security failures (Art. 12), TRY 427,263 to 17,092,242 for not complying with Board decisions, TRY 341,809 to 17,092,242 for registry (VERBIS) breaches, and about TRY 90,308 to 1,806,177 for failing to notify standard transfer contracts.",
+    "public_bodies": "Public institutions are not fined: where a violation occurs within a public institution or a professional organisation with public status, disciplinary proceedings are applied to the officials concerned on the Board's notice, and the result is reported to the Board (Art. 18).",
+    "quirks": "Criminal offences are prosecuted separately: Art. 17 applies Turkish Penal Code Arts. 135 to 140 (unlawful recording, unlawful disclosure or acquisition, failure to destroy data), and failure to erase or anonymise data is punishable under TPC Art. 138. The Board also publishes decision summaries that name sectors and sometimes companies."
+  },
+  "appeal": {
+    "court": "Since 1 June 2024, administrative courts (idare mahkemeleri), under Art. 18 as amended by Law No. 7499. Before that, objections to fines went to criminal judgeships of peace (sulh ceza hakimlikleri) under the Law on Misdemeanours.",
+    "deadline": "Not confirmed; the general time limit for annulment actions before administrative courts under the Administrative Procedure Law is 60 days from notification (not confirmed for this law specifically).",
+    "suspensive": "Not confirmed.",
+    "further": "Regional administrative courts and the Council of State (Danıştay) under ordinary administrative procedure; the Constitutional Court by individual application for rights violations.",
+    "inaction": "A complaint not answered within 60 days is deemed refused (Art. 15(4)); Board decisions on complaints are administrative acts that can be challenged before administrative courts."
+  },
+  "private": {
+    "courts": "Yes, through general law: KVKK creates no specific damages action, but Art. 14(3) reserves compensation for anyone whose personal rights are violated, so individuals can sue in the civil courts under the Turkish Code of Obligations and the Civil Code's personality rights provisions, without first going to the Board.",
+    "damages": "Material and moral (non-pecuniary) damages under general civil law; no statutory or minimum damages.",
+    "collective": "No class action mechanism; associations can bring limited collective claims under general procedure (not confirmed for data cases)."
+  },
+  "cases": [
+    {
+      "title": "Facebook (Meta) data breach fine",
+      "year": "2019",
+      "summary": "Widely reported Board decision fining Facebook TRY 1.65 million for a photo API bug affecting Turkish users and late breach notification. Amount and date not verified against the Authority's decision this session.",
+      "url": ""
+    },
+    {
+      "title": "Yemeksepeti breach fine",
+      "year": "2021",
+      "summary": "Widely reported Board decision fining the food delivery platform Yemeksepeti TRY 1.9 million for data security failures after a breach. Amount and date not verified against the Authority's decision this session.",
+      "url": ""
+    },
+    {
+      "title": "Law No. 7499: fines move to administrative courts",
+      "year": "2024",
+      "summary": "The March 2024 amendment changed the forum for challenging KVKK fines from criminal judgeships of peace to administrative courts from 1 June 2024, and added a new fine for failing to notify standard contracts for transfers abroad.",
+      "url": "https://www.erdem-erdem.av.tr/en/insights/administrative-fines-under-the-personal-data-protection-law-no-6698-updated"
+    }
+  ],
+  "quirks": [
+    "Fines are fixed bands in Turkish lira, revalued every year by the tax revaluation rate, so the statutory amounts in the 2016 text (TRY 5,000 to 1,000,000) are far below current figures; there is no turnover-based cap.",
+    "You cannot complain to the regulator without first applying to the controller, and the window to complain afterwards is short (30 days from the answer, at most 60 days from the application).",
+    "Public bodies are never fined: their officials face disciplinary proceedings instead.",
+    "Until June 2024 fines were challenged before criminal judgeships of peace, a single-judge criminal court, rather than administrative courts.",
+    "Data offences in the Penal Code carry prison sentences and run in parallel with the Board's administrative regime."
+  ],
+  "plain": "You first write to the company, which has 30 days to answer; if you are not satisfied you have a short window to complain to the KVKK Board. The Board investigates, can order the company to fix the problem and fine it directly, and the company can challenge the fine in an administrative court. Compensation for you is a separate claim in the civil courts.",
+  "map": {
+    "who_penalises": "regulator",
+    "cap": "fixed",
+    "private_action": "yes"
+  },
+  "confidence": "medium: the statutory procedure and appeal reform are well sourced, but the notable fines (Facebook 2019, Yemeksepeti 2021) and the deadline and suspensive effect of administrative court challenges were not verified from primary sources.",
+  "sources": [
+    {"title": "KVKK: Law No. 6698 (English translation)", "url": "https://www.kvkk.gov.tr/Icerik/6649/Personal-Data-Protection-Law", "source_type": "primary"},
+    {"title": "Prighter: Turkish KVKK legal text (consolidated English text incl. Art. 18 as amended)", "url": "https://prighter.com/resources/laws/turkish-kvkk/", "source_type": "secondary"},
+    {"title": "Erdem and Erdem: Administrative fines under Law No. 6698 updated", "url": "https://www.erdem-erdem.av.tr/en/insights/administrative-fines-under-the-personal-data-protection-law-no-6698-updated", "source_type": "secondary"},
+    {"title": "Köksal Partners: KVKK administrative fines 2026", "url": "https://www.koksalpartners.com/en/kvkk-cezalari", "source_type": "secondary"},
+    {"title": "Istanbul Attorneys: KVKK compliance for foreign companies (appeal route since 1 June 2024)", "url": "https://www.istanbulattorneys.com/post/kvkk-compliance-turkey-foreign-companies", "source_type": "secondary"}
+  ]
+}

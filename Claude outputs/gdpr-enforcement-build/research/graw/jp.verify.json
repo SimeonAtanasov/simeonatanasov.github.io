@@ -1,0 +1,78 @@
+{
+ "code": "jp",
+ "checked": [
+  {
+   "field": "law.name",
+   "claim": "Amendment passed 10 July 2026, promulgated 17 July 2026, in force within two years, not in force on 2 October 2026",
+   "verdict": "confirmed",
+   "evidence": "PPC page: 令和８年７月10日の国会において可決、成立し; 令和８年７月17日に公布. One Asia Lawyers and Baker McKenzie: effective within two years of promulgation. No entry-into-force date published.",
+   "url": "https://www.ppc.go.jp/personalinfo/legal/r8kaiseihogohou/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Current criminal penalties; surcharge under new Arts 148-3 to 148-17 equal to financial benefit, not applying where 1,000 or fewer affected, reasonable care, insignificant harm",
+   "verdict": "corrected",
+   "evidence": "One Asia: Arts 148-3 to 148-17, surcharge equivalent to the financial benefit from the violation, within two years. Baker McKenzie: amount equals consideration received; exemptions where fewer than 1,000 people affected, reasonable care, or insignificant harm as set by enforcement regulations; applies only to designated serious violations. Exact threshold wording not checked against the statute.",
+   "url": "https://connectontech.bakermckenzie.com/japan-appi-reform-key-changes/",
+   "replacement": "Today the PPC cannot impose monetary penalties. Money penalties come only through criminal prosecution: breach of a PPC order carries up to one year's imprisonment or a fine up to JPY 1 million for individuals (Article 178) and a fine up to JPY 100 million for the company (Article 184); false reporting carries a fine up to JPY 500,000 (map: court). The 2026 amendment adds an administrative surcharge imposed by the PPC itself (new Articles 148-3 to 148-17), equal to the financial benefit from certain designated serious violations, with exemptions for small-scale cases (reported as fewer than 1,000 individuals affected), reasonable care or insignificant harm; it will start within two years of 17 July 2026."
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Surcharge calculated as the profit gained, excludes cases affecting 1,000 or fewer",
+   "verdict": "corrected",
+   "evidence": "PPC outline: penalties 'equivalent to the pecuniary benefits obtained'; Baker McKenzie: 'consideration received', exemption below 1,000 individuals. 'Profit' overstates the precision; threshold wording unconfirmed.",
+   "url": "https://www.ppc.go.jp/files/pdf/260109_outline.pdf",
+   "replacement": "The planned surcharge equals the financial benefit obtained from the violation, not a percentage of turnover, and small-scale cases (reported as fewer than 1,000 people affected) are excluded."
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "No fining power until the amendment takes effect, by July 2028 at the latest",
+   "verdict": "confirmed",
+   "evidence": "Promulgated 17 July 2026, effective within two years (PPC, One Asia).",
+   "url": "https://oneasia.legal/en/7185"
+  },
+  {
+   "field": "cases[0].summary",
+   "claim": "4 December 2019 recommendations to Recruit Career and Recruit, guidance to clients, 26,060 people",
+   "verdict": "confirmed",
+   "evidence": "PPC release 4 December 2019: 勧告 to Recruit Co. and Recruit Career; 指導 to client companies; 26,060 individuals.",
+   "url": "https://www.ppc.go.jp/files/pdf/191204_houdou.pdf"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "28 March 2024 Art 148(1) recommendation, Art 23, about 520,000 people, reports to March 2025; Art 147 guidance on 2.52 million Yahoo Auction sellers",
+   "verdict": "confirmed",
+   "evidence": "PPC release 28 March 2024: recommendation (Art 148(1)) on LINE breach, about 520,000 affected; guidance (Art 147) on GUID exposure, about 2.52 million sellers; reports due through 31 March 2025.",
+   "url": "https://www.ppc.go.jp/files/pdf/240328_houdou.pdf"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Three months review, six months revocation suit",
+   "verdict": "confirmed",
+   "evidence": "General rules of the Administrative Complaint Review Act and Administrative Case Litigation Act; not refetched.",
+   "url": ""
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Request for review or revocation suit in district court",
+   "verdict": "confirmed",
+   "evidence": "General administrative law; consistent.",
+   "url": ""
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "2026 amendment raises criminal maxima and adds fraud or violence acquisition offence",
+   "verdict": "confirmed",
+   "evidence": "One Asia: increase in statutory maximum penalties, new offences for providing databases with intent to harm and for acquiring personal information by fraudulent means; amounts not stated.",
+   "url": "https://oneasia.legal/en/7185"
+  },
+  {
+   "field": "map",
+   "claim": "who_penalises court, cap fixed, private_action yes",
+   "verdict": "confirmed",
+   "evidence": "No PPC fining power until the amendment commences; criminal fines fixed; tort claims available.",
+   "url": ""
+  }
+ ],
+ "notes": "No serious problem. The July 2026 amendment dates are confirmed from the PPC itself. The only soft spot is the surcharge design detail (profit vs consideration, 1,000-person threshold wording), which rests on law firm summaries of the bill; softened. When the commencement cabinet order is issued the 'within two years' wording should be replaced with a date."
+}

@@ -1,0 +1,124 @@
+{
+ "code": "ae",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "USD 20,000 ADGM fine on 21 May 2024 for failing to comply with access requests; secondary, not verified on ADGM site",
+   "verdict": "corrected",
+   "evidence": "ADGM Penalty Notice 1 of 2024, 21 May 2024: USD 20,000 (USD 16,000 if paid early); failure to answer a DSAR within two months, no data protection policy, failure to cooperate; DPR 2021 ss.10, 22 and 29; may be referred to the ADGM Courts within three months.",
+   "url": "https://www.adgm.com/documents/office-of-data-protection/regulatory-action/penalty-notice-1-2024-okado-technologies-limited-redacted.pdf",
+   "replacement": "On 21 May 2024 the ADGM Commissioner of Data Protection fined Okadoc Technologies USD 20,000 (reduced to USD 16,000 for early payment) for failing to answer a data subject access request within two months, having no data protection policy and not cooperating with the Office of Data Protection (DPR 2021 ss.10, 22 and 29)."
+  },
+  {
+   "field": "cases[0].url",
+   "claim": "Chambers practice guide",
+   "verdict": "corrected",
+   "evidence": "Primary penalty notice is published by ADGM.",
+   "url": "https://www.adgm.com/documents/office-of-data-protection/regulatory-action/penalty-notice-1-2024-okado-technologies-limited-redacted.pdf",
+   "replacement": "https://www.adgm.com/documents/office-of-data-protection/regulatory-action/penalty-notice-1-2024-okado-technologies-limited-redacted.pdf"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "ADGM enforcement on 23 June 2023 for deficient cybersecurity and training; amount not confirmed",
+   "verdict": "corrected",
+   "evidence": "ADGM regulatory actions table: 23 June 2023, VentureRock Global Limited, Direction issued under s.54(1), Security Principle (DPR 2021). It was a direction, not a penalty notice, so there is no amount to find.",
+   "url": "https://www.adgm.com/operating-in-adgm/office-of-data-protection/regulatory-actions",
+   "replacement": "On 23 June 2023 the ADGM Commissioner of Data Protection issued a Direction to VentureRock Global under s.54(1) of the Data Protection Regulations 2021 for breaching the security principle, citing poor cybersecurity practices, inadequate staff training and missing policies. It was a direction to remedy, not a fine."
+  },
+  {
+   "field": "cases[1].url",
+   "claim": "Chambers practice guide",
+   "verdict": "corrected",
+   "evidence": "ADGM's own regulatory actions page lists the direction.",
+   "url": "https://www.adgm.com/operating-in-adgm/office-of-data-protection/regulatory-actions",
+   "replacement": "https://www.adgm.com/operating-in-adgm/office-of-data-protection/regulatory-actions"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "Executive Regulations and Cabinet penalties decision not on the legislation portal as at 23 September 2026",
+   "verdict": "confirmed",
+   "evidence": "ITSecNow, updated 23 September 2026: 'none are listed on the UAE legislation portal (checked 23 September 2026)'; no penalties decision either. Chambers (March 2026): Implementing Regulations 'have yet to be issued'. Secondary only; portal not checked directly.",
+   "url": "https://itsecnow.com/regulators/pdpl-executive-regulations-2026"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "DIFC 30 days; ADGM within three months of the penalty notice; federal grievance 30 days",
+   "verdict": "corrected",
+   "evidence": "ADGM three months confirmed by the Okadoc penalty notice ('may refer this Penalty Notice to the ADGM Courts for review within three months'). DIFC and federal 30 days not checked against primary text.",
+   "url": "https://www.adgm.com/documents/office-of-data-protection/regulatory-action/penalty-notice-1-2024-okado-technologies-limited-redacted.pdf",
+   "replacement": "DIFC: 30 days from the Commissioner's decision (secondary). ADGM: within three months of the penalty notice (stated in ADGM penalty notices). Federal grievance: 30 days (secondary)."
+  },
+  {
+   "field": "appeal.court",
+   "claim": "DIFC Courts; ADGM Courts; federal grievance to Director General",
+   "verdict": "confirmed",
+   "evidence": "Okadoc notice: referral to the ADGM Courts. DIFC and federal routes not checked against primary text.",
+   "url": "https://www.adgm.com/documents/office-of-data-protection/regulatory-action/penalty-notice-1-2024-okado-technologies-limited-redacted.pdf"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Okadoc notice says only that the early payment discount is lost if referred to court.",
+   "url": "https://www.adgm.com/documents/office-of-data-protection/regulatory-action/penalty-notice-1-2024-okado-technologies-limited-redacted.pdf"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Federal none-yet; DIFC fixed per-contravention amounts up to USD 100,000; ADGM up to USD 28m; Commissioners fine directly",
+   "verdict": "confirmed",
+   "evidence": "Chambers 2026: DIFC fines USD 10,000 to 100,000 under Schedule 2; ADGM maximum USD 28 million. ADGM Commissioner fined Okadoc by penalty notice without court involvement.",
+   "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/uae/trends-and-developments"
+  },
+  {
+   "field": "law.name",
+   "claim": "DIFC DP Law amended by DIFC Law No. 1 of 2025, effective 15 July 2025; PDPL Art. 29 six-month grace",
+   "verdict": "confirmed",
+   "evidence": "Chambers: DIFC amendments effective July 2025 with private right of action. ITSecNow: Art. 29 six months after Executive Regulations. Exact day 15 July not seen.",
+   "url": "https://itsecnow.com/regulators/pdpl-executive-regulations-2026"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "DIFC direct private right of action since July 2025",
+   "verdict": "confirmed",
+   "evidence": "Chambers: amendments effective July 2025 allow claims direct to court without prior Commissioner engagement.",
+   "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/uae/trends-and-developments"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "ADGM maximum fine USD 28 million",
+   "verdict": "confirmed",
+   "evidence": "Chambers 2026: ADGM maximum fine USD 28 million.",
+   "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/uae/trends-and-developments"
+  },
+  {
+   "field": "dpa.url",
+   "claim": "https://www.difc.ae/business/operating/data-protection/",
+   "verdict": "corrected",
+   "evidence": "URL now 302-redirects to difc.com Commissioner of Data Protection page.",
+   "url": "https://www.difc.com/business/registrars-and-commissioners/commissioner-of-data-protection",
+   "replacement": "https://www.difc.com/business/registrars-and-commissioners/commissioner-of-data-protection"
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "none-yet",
+   "verdict": "confirmed",
+   "evidence": "Correct for the federal PDPL (no Cabinet penalties decision). Note the DIFC and ADGM Commissioners do fine (Okadoc), so the map value understates enforcement in the free zones; the page should say so near the map.",
+   "url": "https://itsecnow.com/regulators/pdpl-executive-regulations-2026"
+  },
+  {
+   "field": "map.cap",
+   "claim": "none",
+   "verdict": "confirmed",
+   "evidence": "No federal penalty amounts exist yet.",
+   "url": "https://itsecnow.com/regulators/pdpl-executive-regulations-2026"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "limited",
+   "verdict": "confirmed",
+   "evidence": "No specific federal damages action; DIFC and ADGM routes exist.",
+   "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/uae/trends-and-developments"
+  }
+ ],
+ "notes": "Most serious: cases[1] presents VentureRock as a fine with an unknown amount; ADGM's own table shows it was a Direction under s.54(1), not a monetary penalty. Okadoc is now confirmed from the ADGM penalty notice, which also confirms the three-month ADGM appeal window. The DIFC source URL in dpa.url and sources[0] redirects to difc.com. Federal grievance (Art. 25) and DIFC 30-day deadlines remain secondary."
+}

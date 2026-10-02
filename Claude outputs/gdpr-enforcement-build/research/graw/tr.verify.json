@@ -1,0 +1,94 @@
+{
+ "code": "tr",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Board fined Facebook TRY 1.65 million for a photo API bug and late breach notification; unverified.",
+   "verdict": "corrected",
+   "evidence": "Euronews/Reuters, 10 May 2019: the Authority fined Facebook 1.65 million lira over the September 2018 photo API bug, which let third-party apps access photos of around 300,000 Turkish users for 12 days; the Authority said Facebook 'not intervening in time' showed deficient technical measures. No mention of late notification in this case. A separate October 2019 decision fined Facebook TRY 1.6 million over the 'View As' breach (280,959 users), including TRY 550,000 for failing to notify (Daily Sabah, 3 October 2019).",
+   "url": "https://www.euronews.com/2019/05/10/turkish-watchdog-says-it-fines-facebook-271000-for-data-breach",
+   "replacement": "In April 2019 (announced 10 May 2019) the Board fined Facebook TRY 1.65 million over a September 2018 photo API bug that let third-party apps access photos of around 300,000 Turkish users for 12 days, finding inadequate technical measures. In October 2019 it fined Facebook a further TRY 1.6 million over the 'View As' breach affecting 280,959 users, partly for failing to notify the Authority."
+  },
+  {
+   "field": "cases[0].url",
+   "claim": "(empty)",
+   "verdict": "corrected",
+   "evidence": "Reuters report republished by Euronews gives the amount, date and facts.",
+   "url": "https://www.euronews.com/2019/05/10/turkish-watchdog-says-it-fines-facebook-271000-for-data-breach",
+   "replacement": "https://www.euronews.com/2019/05/10/turkish-watchdog-says-it-fines-facebook-271000-for-data-breach"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Board fined Yemeksepeti TRY 1.9 million for data security failures after a breach; unverified.",
+   "verdict": "corrected",
+   "evidence": "Mondaq summary of Board Decision No. 2021/1324 of 23 December 2021: TRY 1.9 million under Art. 18(1)(b) for failing to take technical and administrative security measures; attackers exploited a web application vulnerability on 18 March 2021 and the breach went undetected for eight days; 21,504,083 users affected. Daily Sabah reported the fine on 7 February 2022.",
+   "url": "https://www.mondaq.com/turkey/data-protection/1179908/personal-data-protection-authority-decision-to-impose-an-administrative-fine-to-yemek-sepeti-for-failing-to-take-technical-and-administrative-measures-to-ensure-data-security",
+   "replacement": "By Decision No. 2021/1324 of 23 December 2021 the Board fined the food delivery platform Yemeksepeti TRY 1.9 million for inadequate technical and administrative security measures after a March 2021 breach of data on about 21.5 million users that went undetected for eight days."
+  },
+  {
+   "field": "cases[1].url",
+   "claim": "(empty)",
+   "verdict": "corrected",
+   "evidence": "Law firm summary of the Board decision with number and date.",
+   "url": "https://www.mondaq.com/turkey/data-protection/1179908/personal-data-protection-authority-decision-to-impose-an-administrative-fine-to-yemek-sepeti-for-failing-to-take-technical-and-administrative-measures-to-ensure-data-security",
+   "replacement": "https://www.mondaq.com/turkey/data-protection/1179908/personal-data-protection-authority-decision-to-impose-an-administrative-fine-to-yemek-sepeti-for-failing-to-take-technical-and-administrative-measures-to-ensure-data-security"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "Law 7499 moved fine challenges from criminal judgeships of peace to administrative courts from 1 June 2024 and added a standard contract notification fine.",
+   "verdict": "unverifiable",
+   "evidence": "Prighter consolidated text of Art. 18 confirms 'Administrative fines imposed by the Board may be appealed in administrative courts' and the Art. 9(5) fine band exists in the 2026 list. The 1 June 2024 date and 12 March 2024 publication were not shown in any fetched page (the cited Erdem and Erdem page is about 2026 fine amounts, not Law 7499); both match my understanding of Law 7499. KVKK site refused WebFetch (robots/timeout).",
+   "url": "https://prighter.com/resources/laws/turkish-kvkk/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "2026 fine bands: Art 10 TRY 85,437-1,709,200; Art 12 TRY 256,357-17,092,242; Board decisions TRY 427,263-17,092,242; VERBIS TRY 341,809-17,092,242; standard contracts TRY 90,308-1,806,177.",
+   "verdict": "confirmed",
+   "evidence": "Erdem and Erdem and Köksal Partners both give exactly these 2026 bands, from the Authority's announcement of 31 December 2025.",
+   "url": "https://www.erdem-erdem.av.tr/en/insights/administrative-fines-under-the-personal-data-protection-law-no-6698-updated"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Administrative courts since 1 June 2024 under Art. 18 as amended.",
+   "verdict": "confirmed",
+   "evidence": "Art. 18(3) as amended: 'Administrative fines imposed by the Board may be appealed in administrative courts.' (in-force date not shown on the page)",
+   "url": "https://prighter.com/resources/laws/turkish-kvkk/"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "30 days from the answer, at most 60 days from the application (Art. 14(1)); deemed refused after 60 days (Art. 15(4)).",
+   "verdict": "confirmed",
+   "evidence": "Art. 14: 'within thirty days as of he or she learns about the response of the data controller, or within sixty days as of the request date, in any case'; Art. 15(4): 'In case it is not responded in sixty days from the date of complaint the demand shall be deemed refused.'",
+   "url": "https://prighter.com/resources/laws/turkish-kvkk/"
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "Mandatory; controller has 30 days free of charge (Art. 13).",
+   "verdict": "confirmed",
+   "evidence": "Art. 13(2): conclude 'at the latest within thirty days and free of charge'; complaints require a prior request to the controller.",
+   "url": "https://prighter.com/resources/laws/turkish-kvkk/"
+  },
+  {
+   "field": "procedure.stages[2]",
+   "claim": "15 days to provide documents (Art. 15(3)); remedy within 30 days (Art. 15(5)).",
+   "verdict": "confirmed",
+   "evidence": "Art. 15(3) 'within fifteen days'; Art. 15(5) 'within thirty days at the latest'.",
+   "url": "https://prighter.com/resources/laws/turkish-kvkk/"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public institutions are not fined; disciplinary proceedings against officials (Art. 18).",
+   "verdict": "unverifiable",
+   "evidence": "Prighter summary did not quote this paragraph; it matches the well-known Art. 18(3)/(4) text. KVKK page refused fetch.",
+   "url": "https://prighter.com/resources/laws/turkish-kvkk/"
+  },
+  {
+   "field": "map",
+   "claim": "regulator / fixed / yes",
+   "verdict": "confirmed",
+   "evidence": "Board fines by decision (Art. 18), fixed revalued bands with no turnover link, civil compensation reserved by Art. 14(3) under general law.",
+   "url": "https://prighter.com/resources/laws/turkish-kvkk/"
+  }
+ ],
+ "notes": "Most serious: cases[0] said the April 2019 Facebook fine was partly for late breach notification; the reporting attributes the notification penalty to the separate October 2019 'View As' decision. Both missing URLs found. Also update `confidence` to drop the 'notable fines not verified' clause, and consider citing a source for Law 7499's dates (cases[2].url points to a 2026 fines page). appeal.deadline and suspensive remain not confirmed."
+}

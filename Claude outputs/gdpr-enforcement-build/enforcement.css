@@ -36,6 +36,12 @@
 .ge-flow-cross .ge-node-n { background: #b07cd8; }
 .ge-flow-cross { max-width: 760px; margin-bottom: 1.4em; }
 
+.ge-models { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.ge-model { padding: 14px 18px; border-radius: 8px; background: rgba(255,255,255,0.05); border-top: 4px solid #4f8fd6; min-width: 0; }
+.ge-model h3 { margin: 0 0 0.4em 0; font-size: 1em; }
+.ge-model p { font-size: 0.88em; line-height: 1.55; margin: 0 0 0.5em 0; }
+.ge-model-ex { opacity: 0.85; }
+@media screen and (max-width: 736px) { .ge-models { grid-template-columns: minmax(0, 1fr); } }
 .ge-steps { margin: 0 0 1em 0; padding-left: 1.4em; }
 .ge-steps li { list-style: decimal; margin-bottom: 0.8em; line-height: 1.6; font-size: 0.93em; }
 
@@ -66,10 +72,9 @@
 .ge-tile:hover rect, .ge-tile:focus rect { stroke: #fff; stroke-width: 2.5; }
 .ge-tile:focus { outline: none; }
 .ge-legends { flex: 0 1 260px; min-width: 0; }
-.ge-legend { list-style: none; margin: 0; padding: 0; display: none; }
-.ge-mapwrap[data-view="model"] .ge-legend[data-view="model"],
-.ge-mapwrap[data-view="public"] .ge-legend[data-view="public"],
-.ge-mapwrap[data-view="susp"] .ge-legend[data-view="susp"] { display: block; }
+.ge-legend { list-style: none; margin: 0; padding: 0; display: block; }
+.ge-legend[hidden] { display: none; }
+.ge-tile-out rect { stroke-dasharray: 4 3; stroke: #7fb2e5; stroke-width: 1.5; }
 .ge-legend li { list-style: none; display: flex; align-items: flex-start; gap: 0.6em; margin-bottom: 0.55em; font-size: 0.88em; line-height: 1.4; }
 .ge-legend i { flex: 0 0 auto; width: 1.1em; height: 1.1em; border-radius: 4px; margin-top: 0.1em; }
 
@@ -128,6 +133,10 @@
 	.ge-country > summary { padding: 0.7em 0.8em; }
 	.ge-cdots { margin-left: 0; }
 	.ge-table { font-size: 0.8em; }
+	.ge-stack thead { display: none; }
+	.ge-stack tr { display: block; padding: 0.6em 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
+	.ge-stack th, .ge-stack td { display: block; border: 0; padding: 0.15em 0; }
+	.ge-stack td::before { content: attr(data-label); display: block; opacity: 0.65; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.4em; }
 	.ge-compare thead { display: none; }
 	.ge-compare tr { display: block; padding: 0.6em 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
 	.ge-compare th, .ge-compare td { display: block; border: 0; padding: 0.15em 0; }

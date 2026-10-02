@@ -1,0 +1,97 @@
+{
+ "code": "co",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "6 July 2023, Comcel (Claro) fined COP 1,306,289,600, highest data protection sanction, referral campaign, recidivism, orders to stop and delete, internal appeals",
+   "verdict": "confirmed",
+   "evidence": "SIC press release: fine of COP 1,306,289,600 on 6 July 2023 for collecting referred persons' numbers without prior, express and informed authorisation; company already sanctioned for the same situation; ordered to stop using and delete the data; reconsideration before the Directorate and appeal before the Delegated Superintendent.",
+   "url": "https://sedeelectronica.sic.gov.co/noticias/superindustria-impone-la-sancion-mas-alta-por-el-indebido-tratamiento-de-datos-personales-claro-por-su-campana-amigos-que-te-premian"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "By August 2025: 101 investigations (83 in 2024, 55 in 2023), COP 5,157 million fines, COP 214.4 million biometric fine, COP 190.5 million plus suspension",
+   "verdict": "confirmed",
+   "evidence": "SIC news, 14 August 2025: 101 / 83 / 55 investigations; COP 5,157 million in 2025; COP 214.405 million (March 2025) on an e-commerce company conditioning account access on facial recognition; COP 190.547 million plus temporary suspension (August 2025).",
+   "url": "https://sedeelectronica.sic.gov.co/noticias/por-violacion-las-normas-de-proteccion-de-datos-personales-la-superintendencia-de-industria-y-comercio-ha-iniciado-101-investigaciones-e"
+  },
+  {
+   "field": "procedure.stages[3]",
+   "claim": "Reconsideration to the Directorate, appeal to the Delegated Superintendent",
+   "verdict": "confirmed",
+   "evidence": "Claro press release names both remedies and both bodies.",
+   "url": "https://sedeelectronica.sic.gov.co/noticias/superindustria-impone-la-sancion-mas-alta-por-el-indebido-tratamiento-de-datos-personales-claro-por-su-campana-amigos-que-te-premian"
+  },
+  {
+   "field": "procedure.decision_maker",
+   "claim": "Director of Personal Data Protection Investigation at first instance; Delegated Superintendent on appeal",
+   "verdict": "confirmed",
+   "evidence": "Claro press release: reconsideration before the Directorate of Personal Data Protection Investigation, appeal before the Delegated Superintendent for Personal Data Protection.",
+   "url": "https://sedeelectronica.sic.gov.co/noticias/superindustria-impone-la-sancion-mas-alta-por-el-indebido-tratamiento-de-datos-personales-claro-por-su-campana-amigos-que-te-premian"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "SIC fines by administrative decision, up to 2,000 monthly minimum wages (art. 23)",
+   "verdict": "confirmed",
+   "evidence": "SIC press releases show the SIC imposing fines itself. The 2,000 SMMLV ceiling in art. 23 Law 1581 could not be read in the statute (portals blocked) but matches the well-known text.",
+   "url": "https://sedeelectronica.sic.gov.co/noticias/superindustria-impone-la-sancion-mas-alta-por-el-indebido-tratamiento-de-datos-personales-claro-por-su-campana-amigos-que-te-premian"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public authorities are referred to the Procurator General (art. 23)",
+   "verdict": "unverifiable",
+   "evidence": "Statute portals refused (Senate site redirect loop, Función Pública robots.txt). Consistent with the art. 23 parágrafo as generally reported.",
+   "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "3 years under art. 52 CPACA (not confirmed)",
+   "verdict": "unverifiable",
+   "evidence": "Not fetched; consistent with the general 3-year rule for administrative sanctioning power in art. 52 CPACA.",
+   "url": ""
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Internal appeals 10 working days; judicial review 4 months (not confirmed)",
+   "verdict": "unverifiable",
+   "evidence": "Not fetched; consistent with CPACA art. 76 (10 days) and art. 164 (4 months for nulidad y restablecimiento).",
+   "url": ""
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Art. 269F Criminal Code: 48 to 96 months' prison",
+   "verdict": "unverifiable",
+   "evidence": "Not fetched; matches Law 1273 of 2009 as generally reported.",
+   "url": ""
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "Art. 16 requisito de procedibilidad; queries 10 working days, claims 15 working days",
+   "verdict": "unverifiable",
+   "evidence": "Statute not readable; consistent with arts. 14-16 Law 1581 as generally reported.",
+   "url": ""
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator",
+   "verdict": "confirmed",
+   "evidence": "SIC imposes fines by its own decision (press releases).",
+   "url": "https://sedeelectronica.sic.gov.co/noticias/superindustria-impone-la-sancion-mas-alta-por-el-indebido-tratamiento-de-datos-personales-claro-por-su-campana-amigos-que-te-premian"
+  },
+  {
+   "field": "map.cap",
+   "claim": "fixed",
+   "verdict": "confirmed",
+   "evidence": "Minimum-wage-linked fixed ceiling, not turnover.",
+   "url": "https://sedeelectronica.sic.gov.co/noticias/superindustria-impone-la-sancion-mas-alta-por-el-indebido-tratamiento-de-datos-personales-claro-por-su-campana-amigos-que-te-premian"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "limited",
+   "verdict": "confirmed",
+   "evidence": "Law 1581 has no damages action; tutela gives orders only; compensation via general civil liability. 'limited' fits the GBRIEF definition.",
+   "url": ""
+  }
+ ],
+ "notes": "Both case entries check out against SIC primary sources. The statute itself could not be read (secretariasenado.gov.co loops on redirect, funcionpublica.gov.co blocked by robots.txt), so article-level claims remain unverified but plausible. appeal.court should probably also mention the administrative judges (juzgados administrativos), since competence depends on the amount; left as is because unverified."
+}

@@ -1,0 +1,151 @@
+{
+ "code": "us",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "USD 5bn civil penalty for violating 2012 order, filed by DOJ in DDC, board-level privacy oversight",
+   "verdict": "confirmed",
+   "evidence": "FTC release 24 July 2019: DOJ filed complaint and stipulated order in US District Court for DC on behalf of FTC; 2012 order violated; independent privacy committee of the board.",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2019/07/ftc-imposes-5-billion-penalty-sweeping-new-privacy-restrictions-facebook"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Sephora USD 1.2m Aug 2022; Honda USD 632,500 March 2025; GM USD 12.75m May 2026, largest CCPA penalty, AG + CalPrivacy + county prosecutors",
+   "verdict": "confirmed",
+   "evidence": "AG release 24 Aug 2022: USD 1.2m, sale not disclosed, GPC ignored (release does not itself say 'first'). CPPA 12 Mar 2025: Board decision, USD 632,500, excessive information to exercise rights, choices not offered in an equal way. privacy.ca.gov 8 May 2026: USD 12.75m civil penalties, 'Largest CCPA penalty in California history to date', AG Bonta, CalPrivacy and the San Francisco, Los Angeles, Napa and Sonoma county DAs, subject to court approval.",
+   "url": "https://privacy.ca.gov/2026/05/when-it-comes-to-data-privacy-consumers-must-be-in-the-drivers-seat-attorney-general-bonta-partners-secure-12-75-million-general-motors-privacy-settlement/"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "Texas v Meta USD 1.4bn July 2024 (CUBI); Texas v Google USD 1.375bn May 2025 (location, incognito, biometrics)",
+   "verdict": "confirmed",
+   "evidence": "Texas AG release 9 May 2025: USD 1.375bn over geolocation, incognito searches and biometric data; refers to July 2024 USD 1.4bn Meta settlement over facial recognition data.",
+   "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-secures-historic-1375-billion-settlement-google-related-texans-data"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "CPPA administrative fines up to USD 2,500 / 7,500 per violation (minors under 16), AG same amounts in court (s.1798.199.90)",
+   "verdict": "confirmed",
+   "evidence": "s.1798.155(a): administrative fine up to USD 2,500 per violation or 7,500 per intentional violation or violations involving consumers known to be under 16, as adjusted under s.1798.199.95(d), in an action brought by the CPPA. s.1798.199.90(a): same civil penalties recovered in a civil action by the AG. CPI figures (2,663 / 7,988) not re-read here but consistent with the adjustment mechanism.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article="
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "FTC Act and CCPA do not cover government agencies",
+   "verdict": "confirmed",
+   "evidence": "CCPA obligations apply to a 'business' (for-profit entity); FTC Act s.5 targets persons, partnerships and corporations. Consistent with law.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article="
+  },
+  {
+   "field": "complaint.how",
+   "claim": "Sworn or unsworn complaints to CPPA (s.1798.199.45)",
+   "verdict": "confirmed",
+   "evidence": "s.1798.199.45(a): 'Upon the sworn complaint of any person or on its own initiative, the agency may investigate'. Unsworn complaints are accepted under the CPPA regulations, not the statute; acceptable as written.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article="
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "California's 30-day cure for regulators ended 1 Jan 2023; consumer breach claim needs 30 days' notice",
+   "verdict": "corrected",
+   "evidence": "s.1798.150(b) confirms 30 days' written notice before statutory damages claims. But s.1798.199.45(a) still lets the CPPA 'decide to provide a business with a time period to cure', so the cure is discretionary rather than abolished for the agency; the mandatory 30-day AG cure was what ended.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article=",
+   "replacement": "Not required by the FTC or CPPA. Some state laws require the regulator to give the business a notice and cure period before suing (for example Texas, Virginia, Utah); in California the mandatory 30-day cure ended on 1 January 2023, though the CPPA may still decide to give a business time to cure (s.1798.199.45(a)). A consumer bringing a CCPA data breach claim for statutory damages must first give 30 days' written notice (s.1798.150(b))."
+  },
+  {
+   "field": "complaint.complainant_status",
+   "claim": "Complainant is not a party and receives no binding decision",
+   "verdict": "corrected",
+   "evidence": "s.1798.199.45(b)(1): the agency 'shall notify in writing the person who made the complaint of the action, if any, the agency has taken or plans to take on the complaint, together with the reasons for that action or nonaction.'",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article=",
+   "replacement": "A complainant is not a party at the FTC, CPPA or state AG and receives no binding decision; the CPPA must, however, tell the complainant in writing what action it has taken or plans to take, and why (s.1798.199.45(b))."
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "CPPA five-year limit (s.1798.199.70); federal five years (28 U.S.C. 2462)",
+   "verdict": "confirmed",
+   "evidence": "s.1798.199.70: no administrative action 'commenced more than five years after the date on which the violation occurred'; commencement is service of the probable cause notice; tolled for fraudulent concealment.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article="
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "CPPA five years from violation",
+   "verdict": "confirmed",
+   "evidence": "s.1798.199.70 as above.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article="
+  },
+  {
+   "field": "procedure.stages[2]",
+   "claim": "Probable cause proceeding, ALJ hearing, Board decision (s.1798.199.50-.55)",
+   "verdict": "confirmed",
+   "evidence": "s.1798.199.50: 30 days' notice before probable cause finding; s.1798.199.55: hearing under the Administrative Procedure Act, order to cease and desist and pay administrative fine.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article="
+  },
+  {
+   "field": "appeal.court",
+   "claim": "CPPA decisions: petition for a writ of mandate in the Superior Court (s.1798.199.85)",
+   "verdict": "corrected",
+   "evidence": "s.1798.199.85 says only: 'Any decision of the agency with respect to a complaint or administrative fine shall be subject to judicial review in an action brought by an interested party ... and shall be subject to an abuse of discretion standard.' It does not name the writ or the court; writ of administrative mandate in Superior Court follows from the APA and Code of Civil Procedure, not this section.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article=",
+   "replacement": "FTC administrative orders: petition to a federal court of appeals (15 U.S.C. 45(c)). Federal court civil penalty judgments: ordinary federal appeals. CPPA decisions on a complaint or fine: judicial review in an action by an interested party, on an abuse of discretion standard (s.1798.199.85), in practice a petition for a writ of administrative mandate in the California Superior Court."
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "CPPA decisions: 30 days after the decision (s.1798.199.85)",
+   "verdict": "wrong",
+   "evidence": "s.1798.199.85 contains no time limit. A 30-day limit may apply through the Administrative Procedure Act (Gov. Code 11523), which was not checked in this session.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article=",
+   "replacement": "FTC orders: 60 days after service (15 U.S.C. 45(c)). CPPA decisions: s.1798.199.85 sets no time limit; the deadline under the general Administrative Procedure Act rules is not confirmed."
+  },
+  {
+   "field": "appeal.inaction",
+   "claim": "No mechanism to challenge an FTC, CPPA or AG decision not to act",
+   "verdict": "corrected",
+   "evidence": "s.1798.199.85 allows judicial review of 'any decision of the agency with respect to a complaint' by 'an interested party to the complaint'; whether a complainant qualifies to challenge a refusal to investigate is untested here, so the absolute claim overstates.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article=",
+   "replacement": "There is no practical mechanism to challenge an FTC or AG decision not to act on a complaint; prosecutorial discretion is not reviewable in practice. For the CPPA, s.1798.199.85 allows judicial review of any decision on a complaint by an interested party, but whether a complainant can use it against a decision not to investigate is not confirmed. The individual's main route is a private lawsuit where a statute allows one."
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not checked.",
+   "url": ""
+  },
+  {
+   "field": "private.damages",
+   "claim": "CCPA breach USD 100-750 per consumer per incident (CPI-adjusted 107-799); BIPA 1,000/5,000, 2024 amendment one violation per person",
+   "verdict": "confirmed",
+   "evidence": "s.1798.150(a)(1)(A): not less than USD 100 and not greater than 750 per consumer per incident or actual damages, adjusted under s.1798.199.95(d). BIPA figures and 2024 SB 2979 amendment consistent with statute as known; adjusted figures not re-read.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article="
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "AMG Capital (2021)",
+   "verdict": "confirmed",
+   "evidence": "AMG Capital Management v FTC, decided 22 April 2021: s.13(b) does not authorise equitable monetary relief.",
+   "url": "https://www.supremecourt.gov/opinions/20pdf/19-508_l6gn.pdf"
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator-court",
+   "verdict": "confirmed",
+   "evidence": "FTC and state AGs need a court for money; CPPA and HHS OCR fine administratively. Mixed; regulator-court reflects the federal and majority-state position and is justified in fines.imposed_by.",
+   "url": ""
+  },
+  {
+   "field": "map.cap",
+   "claim": "fixed",
+   "verdict": "confirmed",
+   "evidence": "Per-violation fixed maxima (s.1798.155, s.1798.199.90).",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article="
+  },
+  {
+   "field": "map.private_action",
+   "claim": "limited",
+   "verdict": "confirmed",
+   "evidence": "CCPA private action only for security breaches (s.1798.150); BIPA and sector statutes are specific. Matches the GBRIEF example.",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article="
+  }
+ ],
+ "notes": "Most serious: appeal.deadline attributes a 30-day writ deadline to s.1798.199.85, which contains no deadline and does not mention a writ. leginfo returned 503 for the single-section URL and WebFetch is blocked by robots.txt; the statute was read in the browser via the leginfo display-text page. Justia hit a bot check and was abandoned. Case figures all confirmed from primary sources."
+}

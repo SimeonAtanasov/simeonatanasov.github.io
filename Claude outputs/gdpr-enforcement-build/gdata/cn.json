@@ -1,0 +1,110 @@
+{
+ "code": "cn",
+ "country": "China",
+ "membership": "World",
+ "region": "Asia-Pacific",
+ "dpa": {
+  "name_en": "Cyberspace Administration of China",
+  "name_native": "国家互联网信息办公室",
+  "abbr": "CAC",
+  "url": "https://www.cac.gov.cn",
+  "structure": "Government office under the State Council (it shares its leadership with the Communist Party's Central Cyberspace Affairs Commission office); it is not an independent authority. Under PIPL Article 60 the CAC coordinates personal information protection, while relevant State Council departments supervise within their own sectors.",
+  "regional": "Provincial and municipal cyberspace administrations enforce locally. In practice the Ministry of Industry and Information Technology (MIIT, mobile app rectification campaigns), the State Administration for Market Regulation (SAMR, consumer protection), the Ministry of Public Security and local police (criminal cases), and sector regulators also enforce; procuratorates bring public interest litigation (PIPL Article 70)."
+ },
+ "law": {
+  "name": "Personal Information Protection Law of the PRC (PIPL), adopted 20 August 2021, in force 1 November 2021 (Article 74). It sits alongside the Cybersecurity Law 2017 (first amendment in force 1 January 2026), the Data Security Law 2021, the Network Data Security Management Regulations (in force 1 January 2025) and the Personal Information Protection Compliance Audit Measures (in force 1 May 2025).",
+  "url": "https://digichina.stanford.edu/work/translation-personal-information-protection-law-of-the-peoples-republic-of-china-effective-nov-1-2021/"
+ },
+ "complaint": {
+  "how": "Anyone may complain about or report unlawful processing to the departments with personal information protection duties (PIPL Article 65), in Chinese; in practice through the CAC's online illegal and harmful information reporting centre (12377) or MIIT complaint channels. No fee is charged as far as confirmed.",
+  "contact_controller_first": "Not required for a complaint or report to an authority. For a court action under Article 50, the individual first makes a rights request to the handler and may sue if it is rejected.",
+  "deadlines": "PIPL Article 65 only says the department shall handle complaints promptly and according to law and tell the complainant the outcome; no fixed statutory deadline for the regulator or for the complainant was confirmed.",
+  "complainant_status": "A complainant is a reporter, not a party: they are told the outcome (Article 65) but have no formal role in the penalty proceedings."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint, report, security review or sector-wide inspection campaign (for example MIIT app rectification campaigns).",
+   "Investigation with powers to question parties, inspect records and premises, and seal or seize equipment (PIPL Article 63).",
+   "Regulatory interview (yuetan) with the handler's legal representative or principal person in charge, and orders to rectify or to commission a compliance audit (Article 64).",
+   "Administrative penalty procedure under the Administrative Penalty Law: notice of proposed penalty, right to make representations and, for large fines, to request a hearing; then a written penalty decision. Violations are entered in credit records and published (Article 67)."
+  ],
+  "decision_maker": "The competent department (CAC or sector regulator) decides. Penalties in the serious tier of Article 66(2) may only be imposed by a department at provincial level or above.",
+  "limitation": "Under the Administrative Penalty Law (Article 36) the general limitation period is two years, extended to five years where the violation involves citizens' life, health or financial security and has harmful consequences."
+ },
+ "fines": {
+  "imposed_by": "The CAC and other competent departments impose fines themselves by administrative decision (map: regulator). Ordinary tier (Article 66(1)): rectification order, warning, confiscation of illegal gains, suspension of apps, and a fine up to CNY 1 million if the handler refuses to rectify, plus CNY 10,000 to 100,000 on directly responsible individuals. Serious tier (Article 66(2)): fine up to CNY 50 million or 5% of the previous year's turnover, suspension of business, revocation of licences, and CNY 100,000 to 1 million on responsible individuals, who can also be barred from serving as director, supervisor, senior manager or personal information protection officer.",
+  "public_bodies": "No fines on state organs: under PIPL Article 68 the superior authority orders rectification and the directly responsible officials are disciplined.",
+  "quirks": "Criminal liability runs in parallel: Criminal Law Article 253-1 (infringing citizens' personal information) carries up to three years' imprisonment, or three to seven years in particularly serious cases. Large cases are often decided under several laws at once (PIPL, Cybersecurity Law, Data Security Law), as in the Didi decision."
+ },
+ "appeal": {
+  "court": "A penalty decision can be challenged by administrative reconsideration (to the reviewing authority under the Administrative Reconsideration Law) or by administrative litigation in the people's courts under the Administrative Litigation Law.",
+  "deadline": "Generally 60 days to apply for reconsideration and six months to sue in court from the time the party knew of the decision (general administrative law rules; not confirmed for every CAC decision).",
+  "suspensive": "Generally not suspensive: the decision remains enforceable during reconsideration or litigation unless the authority or court orders a stay.",
+  "further": "Two-instance court system: first instance in an intermediate or basic people's court, appeal to the higher court. Contested administrative appeals against CAC penalties are rarely reported.",
+  "inaction": "Not confirmed. A complainant has no specific PIPL route to challenge a regulator's refusal to act; general administrative litigation for failure to perform a statutory duty may be possible in principle."
+ },
+ "private": {
+  "courts": "Individuals can sue handlers in the people's courts for infringement of personal information rights (PIPL Article 69, Civil Code Articles 1032 to 1039) and, under Article 50, for refusal of rights requests.",
+  "damages": "Fault is presumed: a handler that cannot prove it was not at fault must compensate, measured by the individual's loss or the handler's gain, or as the court determines (Article 69). No statutory minimum damages; awards reported so far are small.",
+  "collective": "Article 70 lets the people's procuratorates, consumer organisations designated by law and organisations designated by the CAC bring public interest litigation where many individuals' rights are infringed. Procuratorates are the most active claimants; there is no opt-out damages class action."
+ },
+ "cases": [
+  {
+   "title": "Didi Global",
+   "year": "2022",
+   "summary": "On 21 July 2022 the CAC fined Didi CNY 8.026 billion after a cybersecurity review, applying the Cybersecurity Law, Data Security Law, PIPL and Administrative Penalty Law together; chairman and CEO Cheng Wei and president Liu Qing were each fined CNY 1 million personally. No court challenge was reported.",
+   "url": "http://www.cac.gov.cn/2022-07/21/c_1660021534306352.htm"
+  },
+  {
+   "title": "Guo Bing v Hangzhou Safari Park (facial recognition)",
+   "year": "2019-2021",
+   "summary": "A park visitor sued over a switch to compulsory facial recognition for annual pass holders; the Hangzhou courts ordered deletion of his facial (and fingerprint) data and awarded modest compensation. It is the leading civil case on biometric data, decided under contract and personal information rules just before the PIPL took effect.",
+   "url": "https://www.chinadaily.com.cn/a/202104/09/WS60704822a31024ad0bab4980.html"
+  }
+ ],
+ "quirks": [
+  "The regulator is a government and Party body, not an independent authority, and enforcement is often campaign-based (mass app inspections, public naming lists) rather than complaint-driven.",
+  "Managers face personal fines and director bans under the PIPL itself, and serious misuse of personal data is a crime prosecuted by public security and procuratorates.",
+  "Procuratorates act as public interest claimants in civil courts, a role with no real GDPR equivalent.",
+  "There is no one-stop-shop: several ministries can sanction the same conduct, and decisions often cite several statutes at once."
+ ],
+ "plain": "You report a company to the cyberspace administration or the industry ministry, usually online, and you are told the result but play no further part. The authority investigates, may summon the company's bosses for a talk, order fixes, pull its app from stores or fine it, and in serious cases fine managers personally. You can also sue the company yourself, and prosecutors can sue on behalf of the public.",
+ "map": {
+  "who_penalises": "regulator",
+  "cap": "turnover",
+  "private_action": "yes"
+ },
+ "confidence": "medium: the PIPL structure and the Didi decision are confirmed from primary sources, but appeal deadlines rest on general administrative law and I could not confirm the content of the 2026 Cybersecurity Law amendment's penalty changes.",
+ "sources": [
+  {
+   "title": "PIPL translation (DigiChina, Stanford)",
+   "url": "https://digichina.stanford.edu/work/translation-personal-information-protection-law-of-the-peoples-republic-of-china-effective-nov-1-2021/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "CAC announcement of the Didi penalty, 21 July 2022",
+   "url": "http://www.cac.gov.cn/2022-07/21/c_1660021534306352.htm",
+   "source_type": "primary"
+  },
+  {
+   "title": "BCLP: Penalties and liabilities under China's data protection laws",
+   "url": "https://www.bclplaw.com/en-US/events-insights-news/part-4-of-5-penalties-and-liabilities-under-chinas-data-protection-laws.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Bloomberg Law: China PIPL FAQs (enforcing authorities and penalty tiers)",
+   "url": "https://pro.bloomberglaw.com/insights/privacy/china-personal-information-protection-law-pipl-faqs/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DLA Piper Data Protection Laws of the World: China (law and enforcement)",
+   "url": "https://www.dlapiperdataprotection.com/?t=enforcement&c=CN",
+   "source_type": "secondary"
+  },
+  {
+   "title": "PIPL Article 66 (XL Law and Consulting)",
+   "url": "https://pipl.xllawconsulting.com/personal-information-protection-law-of-the-peoples-republic-of-china-pipl/chapter-vii-legal-liability/article-66/",
+   "source_type": "secondary"
+  }
+ ]
+}

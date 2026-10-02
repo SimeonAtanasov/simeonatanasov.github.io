@@ -1,0 +1,117 @@
+{
+ "code": "il",
+ "checked": [
+  {
+   "field": "cases[0].title",
+   "claim": "First financial sanction under Amendment 13: National Insurance Institute employee",
+   "verdict": "corrected",
+   "evidence": "AI-Law calls it 'one of the first' under Amendment 13, but DPOAS describes the ILS 256,000 sanction on Meuhedet Health Fund of 21 July 2026 as 'the first sanction ever issued under Amendment 13'. The ILS 75,000 total (15 x ILS 5,000) also fits the pre-amendment administrative fine scale for individuals, so the regime is in doubt.",
+   "url": "https://www.ai-law.co.il/en/post/israel-s-privacy-protection-authority-steps-up-enforcement-first-fines-under-amendment-13",
+   "replacement": "Sanction on a National Insurance Institute employee"
+  },
+  {
+   "field": "cases[0].summary",
+   "claim": "ILS 75,000, August 2025, 15 instances, s 8(b), one of the first under Amendment 13.",
+   "verdict": "corrected",
+   "evidence": "AI-Law confirms ILS 75,000, August 2025, 15 violations (of 20 queries), s 8(b), use of data for purposes other than those collected for. Whether it was imposed under Amendment 13 is contradicted by DPOAS.",
+   "url": "https://www.ai-law.co.il/en/post/israel-s-privacy-protection-authority-steps-up-enforcement-first-fines-under-amendment-13",
+   "replacement": "A law firm reported that in August 2025 the PPA imposed ILS 75,000 on a National Insurance Institute employee for 15 instances of accessing personal data in the Institute's systems for non-professional purposes, in breach of s 8(b). Whether this was imposed under the new Amendment 13 regime is not confirmed; the PPA decision was not checked."
+  },
+  {
+   "field": "cases[1]",
+   "claim": "(no entry)",
+   "verdict": "corrected",
+   "evidence": "DPOAS: on 21 July 2026 the PPA imposed ILS 256,000 on Meuhedet Health Fund for failing to report a serious security event immediately (Data Security Regulations, reg 11(d)); it learned of unauthorised access to medical records in November 2025 but reported only on 27 January 2026; the figure is after statutory reductions. Single secondary source.",
+   "url": "https://dpoas.co.il/blog/israel-italy-privacy-fines-2026/",
+   "replacement": {
+    "title": "Meuhedet Health Fund: first reported Amendment 13 sanction",
+    "year": "2026",
+    "summary": "Reported as the first financial sanction under Amendment 13: on 21 July 2026 the PPA imposed ILS 256,000 on the Meuhedet Health Fund for failing to report a serious security event immediately under the Data Security Regulations, after it learned of unauthorised access to medical records in November 2025 but reported only in late January 2026. The amount reflects statutory reductions. From a consultancy summary, not the PPA decision.",
+    "url": "https://dpoas.co.il/blog/israel-italy-privacy-fines-2026/"
+   }
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Base around ILS 150,000, ILS 2 to 8 per data subject, doubled for very large databases, ceiling 5% of turnover; previously ILS 10,000 to 25,000.",
+   "verdict": "corrected",
+   "evidence": "DPOAS: base ILS 150,000 'doubled for databases of a million data subjects or more', 'ILS 2 to ILS 8 per individual', ceiling '5% of annual turnover'. Chambers 2026: 'ILS320,000 per cybersecurity violation', doubling for repeat violations within two years, 1% of the base per day for continuing violations. Baker McKenzie gives a different per-data-subject figure (up to ILS 100), apparently from a draft. Baker confirms the old range ILS 10,000 to 25,000. No primary text checked.",
+   "url": "https://dpoas.co.il/blog/amendment-13-complete-guide/",
+   "replacement": "regulator: since 14 August 2025 the PPA imposes financial sanctions itself, without going to court. Under Amendment 13 sanctions are calculated per violation from base amounts that vary by provision (secondary sources cite ILS 150,000 for key breaches and ILS 320,000 for some security breaches), scaled by the number of data subjects in the database and doubled for very large databases or repeat violations, with an overall ceiling reported as 5% of annual turnover. Secondary sources differ on the figures and the statute was not checked. Before Amendment 13 the PPA could only impose small fines (around ILS 10,000 to 25,000)."
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Not confirmed.",
+   "verdict": "corrected",
+   "evidence": "Chambers 2026: appeals 'must be filed with the magistrate's court within 45 days'.",
+   "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+   "replacement": "Magistrates' Court, according to a 2026 practice guide (not confirmed from the statute)."
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Not confirmed.",
+   "verdict": "corrected",
+   "evidence": "Chambers 2026: 'within 45 days'.",
+   "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+   "replacement": "45 days, according to a 2026 practice guide (not confirmed from the statute)."
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed.",
+   "verdict": "corrected",
+   "evidence": "Chambers 2026: appeals do not stay enforcement unless the PPA head agrees or the court orders it.",
+   "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+   "replacement": "No, unless the head of the PPA agrees or the court orders a stay, according to a 2026 practice guide (not confirmed from the statute)."
+  },
+  {
+   "field": "law.name",
+   "claim": "Amendment 13 published 14 August 2024, in force 14 August 2025.",
+   "verdict": "confirmed",
+   "evidence": "DPOAS: 'published in Sefer HaChukim 3287 on 14 August 2024', 'took effect exactly one year later, on 14 August 2025, per Section 74(a)'. Baker McKenzie also gives 14 August 2025.",
+   "url": "https://dpoas.co.il/blog/amendment-13-complete-guide/"
+  },
+  {
+   "field": "private.damages",
+   "claim": "s 29A about ILS 50,000 (index-linked about 65,000), doubled where intended to harm; Amendment 13 adds up to ILS 10,000 for some database breaches; not confirmed.",
+   "verdict": "confirmed",
+   "evidence": "Baker McKenzie: 'ILS 65,000' or double, and 'ILS 10,000' for database-related violations; Chambers cites up to ILS 100,000; Ius Laboris ILS 10,000. The field's hedging matches the spread of secondary sources.",
+   "url": "https://resourcehub.bakermckenzie.com/en/resources/global-data-and-cyber-handbook/emea/israel/topics/regulators-enforcement-priorities-and-penalties"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "s 5 up to 5 years; Amendment 13 database offences up to 3 years; reductions for DPO and self-reporting.",
+   "verdict": "confirmed",
+   "evidence": "Chambers: breach of confidentiality 'up to five years' imprisonment'; Baker: maximum term raised to 'three years'; DPOAS: DPO 'earns a 10% reduction', with self-reporting and remediation up to 70% in aggregate.",
+   "url": "https://resourcehub.bakermckenzie.com/en/resources/global-data-and-cyber-handbook/emea/israel/topics/regulators-enforcement-priorities-and-penalties"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Amendment 13 gave the PPA GDPR-style sanctions overnight.",
+   "verdict": "corrected",
+   "evidence": "Powers came into force on 14 August 2025, but the first reported Amendment 13 sanction (Meuhedet) came on 21 July 2026.",
+   "url": "https://dpoas.co.il/blog/israel-italy-privacy-fines-2026/",
+   "replacement": "Until August 2025 the regulator had almost no fining power; Amendment 13 gave it GDPR-style administrative sanctions, though the first reported sanction under the new regime came almost a year later."
+  },
+  {
+   "field": "map.cap",
+   "claim": "turnover",
+   "verdict": "unverifiable",
+   "evidence": "Only DPOAS (twice) states a 5% of annual turnover ceiling; Chambers, Baker and Gornitzky do not mention one. Keep 'turnover' only if a primary source confirms; otherwise 'fixed' (per-violation amounts) is the safer value.",
+   "url": "https://dpoas.co.il/blog/amendment-13-complete-guide/"
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator",
+   "verdict": "confirmed",
+   "evidence": "Baker and Chambers: the PPA imposes administrative fines directly since 14 August 2025.",
+   "url": "https://resourcehub.bakermckenzie.com/en/resources/global-data-and-cyber-handbook/emea/israel/topics/regulators-enforcement-priorities-and-penalties"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "yes",
+   "verdict": "confirmed",
+   "evidence": "Statutory damages without proof of harm (Baker, Chambers).",
+   "url": "https://resourcehub.bakermckenzie.com/en/resources/global-data-and-cyber-handbook/emea/israel/topics/regulators-enforcement-priorities-and-penalties"
+  }
+ ],
+ "notes": "Most serious: cases[0] was presented as the first Amendment 13 sanction, but a 2026 source names the ILS 256,000 Meuhedet Health Fund sanction of 21 July 2026 as the first; the NII ILS 75,000 case may be under the old regime. The gov.il PPA page returned only metadata to WebFetch (JS-rendered), so no primary confirmation of any figure; browser fallback not used. The cases[1] replacement is a full new object to append. Update `confidence` to reflect that the appeal route and deadline now have a secondary source. The 5% turnover ceiling rests on one consultancy source."
+}

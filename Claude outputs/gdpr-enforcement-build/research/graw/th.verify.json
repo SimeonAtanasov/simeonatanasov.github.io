@@ -1,0 +1,63 @@
+{
+ "code": "th",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "21 August 2024, THB 7m, large online retailer, ss 41, 37(1), 37(4), security review within 7 days.",
+   "verdict": "corrected",
+   "evidence": "Nishimura and Asahi: 21 August 2024, THB 7 million, major online shopping platform, s 41 (no DPO), s 37(1) (security), s 37(4) (breach notification), linked to call-centre scams; ordered a comprehensive security review and 'must submit a report on these improvements to the PDPC within 7 days after receipt of the order'. The 7 days is for the report, not the review.",
+   "url": "https://www.nishimura.com/en/knowledge/publications/personal-data-protection-update",
+   "replacement": "On 21 August 2024 the expert committee fined a large online shopping platform THB 7 million for failing to appoint a DPO (s 41), weak security (s 37(1)) and failing to notify a breach linked to call-centre scams (s 37(4)), and ordered a comprehensive security review, with a report to the PDPC within 7 days of the order."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "1 August 2025, eight fines in five cases, about THB 14.5m, THB 7m IT retailer, THB 3m toy company processor, government agency and private hospital.",
+   "verdict": "confirmed",
+   "evidence": "Legal 500: announced 1 August 2025, eight administrative fines across five cases totalling THB 14.5 million; IT retailer THB 7 million, toy company processor THB 3 million, hospital THB 1.2 million, government agency and contractor over THB 150,000 each.",
+   "url": "https://www.legal500.com/intelligence/thailand/privacy/thailand's-pdpc-signals-tougher-enforcement-with-multi-million-baht-fines"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Government agency and contractor each fined over THB 150,000 after a breach of about 200,000 records.",
+   "verdict": "confirmed",
+   "evidence": "Legal 500: 'over THB 150,000 each'; cyberattack affected approximately 200,000 individuals.",
+   "url": "https://www.legal500.com/intelligence/thailand/privacy/thailand's-pdpc-signals-tougher-enforcement-with-multi-million-baht-fines"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Tiers up to THB 1m, 3m, 5m; stacking produced THB 7m.",
+   "verdict": "confirmed",
+   "evidence": "Nishimura describes the THB 7 million as the maximum for the combination of breaches, consistent with s 82 (up to THB 1m, DPO) plus s 83 (up to THB 3m each, ss 37(1) and 37(4)). Section tiers not checked against the statute text.",
+   "url": "https://www.nishimura.com/en/knowledge/publications/personal-data-protection-update"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "First fine more than two years after full entry into force.",
+   "verdict": "confirmed",
+   "evidence": "Full force 1 June 2022; first fine 21 August 2024.",
+   "url": "https://www.nishimura.com/en/knowledge/publications/personal-data-protection-update"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "s 79 criminal penalties 6 months/THB 500,000 and 1 year/THB 1m; personal liability of directors.",
+   "verdict": "unverifiable",
+   "evidence": "No fetched page covered criminal penalties; figures match my understanding of s 79. pdpc.or.th not fetched.",
+   "url": ""
+  },
+  {
+   "field": "private.damages",
+   "claim": "Punitive damages up to twice actual (s 78); limitation 3 years / 10 years.",
+   "verdict": "unverifiable",
+   "evidence": "Not covered by fetched sources; consistent with s 78 as I understand it. The field already hedges the limitation.",
+   "url": ""
+  },
+  {
+   "field": "map",
+   "claim": "regulator / fixed / yes",
+   "verdict": "confirmed",
+   "evidence": "Expert committee imposes fines directly (Nishimura, Legal 500); fixed per-violation maxima; civil liability under s 77.",
+   "url": "https://www.nishimura.com/en/knowledge/publications/personal-data-protection-update"
+  }
+ ],
+ "notes": "Most serious: minor only. cases[0] said the security review was due within 7 days; the source says a report on the improvements is due within 7 days. 'Online retailer' is fine but the source says 'online shopping platform'. Appeal fields remain not confirmed; nothing found to fill them."
+}

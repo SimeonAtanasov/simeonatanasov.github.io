@@ -1,0 +1,106 @@
+{
+ "code": "ar",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Res. 126/2024 replaced Disposition 7/2005 and Resolutions 12/18, 240/22, 243/19 and 244/22; 15 grading criteria; 50% discount; 500x cap",
+   "verdict": "corrected",
+   "evidence": "Resolution 126/2024 art. 8 repeals four earlier instruments dated 2005, 2018 and 2022 (no 2019 instrument); Annex II point 6 lists sixteen grading factors; point 9: 50% reduction for payment within 20 administrative working days; point 7: 500 times the band maximum; in force 1 June 2024 (art. 7).",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-126-2024-399750/texto",
+   "replacement": "The AAIP replaced four earlier sanctions instruments (dating from 2005, 2018 and 2022) with a three-tier classification, 16 grading criteria, a 50% discount for payment within 20 working days and an accumulation cap of 500 times the band maximum, in force from 1 June 2024."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "April 2026 AAIP investigation into 5 ON LINE S.R.L.; creditors warned they remain liable",
+   "verdict": "confirmed",
+   "evidence": "AAIP news, 13 April 2026: investigation into 5 ON LINE S.R.L. for illegitimate processing of debtors' data; entities ceding collection management to third parties are not exempted from their obligations; possible fines, warnings, suspension, closure or cancellation.",
+   "url": "https://www.argentina.gob.ar/noticias/la-aaip-investiga-presuntos-incumplimientos-la-ley-ndeg-25326-en-gestiones-de-cobranza"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "ARS 1,000 to 100,000; bands minor 1,000-80,000, serious 80,001-90,000, very serious 90,001-100,000; accumulation cap 500 times band maximum",
+   "verdict": "confirmed",
+   "evidence": "Law 25.326 art. 31: 'mil pesos ($ 1.000.-) a cien mil pesos ($ 100.000.-)'. Res. 126/2024 Annex II points 1-3 and 7 match the bands and the 500x cap.",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-126-2024-399750/texto"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Suspension 1 to 30 days (serious) and 31 to 365 days (very serious); Penal Code arts. 117 bis and 157 bis with prison of up to 3 years for knowingly inserting false data or unlawfully accessing or disclosing data",
+   "verdict": "corrected",
+   "evidence": "Res. 126/2024: suspension of 30 days for serious, 31 to 365 days for very serious (the lower end of the serious range was not visible). Law 25.326 art. 32: knowingly inserting false data, 1 month to 2 years; knowingly supplying false information to third parties, 6 months to 3 years; art. 157 bis (unlawful access or disclosure) carries 1 month to 2 years. The 3-year maximum does not apply to inserting false data or unlawful access.",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto",
+   "replacement": "Other sanctions: warnings, suspension (up to 30 days for serious, 31 to 365 days for very serious), closure or cancellation of the database, plus orders to comply and to train staff. The fine amounts were set in 2000 and never indexed, so with inflation they are very small in real terms. Art. 32 added criminal offences to the Penal Code (arts. 117 bis and 157 bis): 1 month to 2 years' prison for knowingly inserting false data or unlawfully accessing or disclosing data in a database, and up to 3 years for knowingly supplying false information from a database to third parties."
+  },
+  {
+   "field": "procedure.stages[3]",
+   "claim": "Voluntary payment within 20 working days reduces the fine by 50%",
+   "verdict": "confirmed",
+   "evidence": "Res. 126/2024 Annex II point 9: 50% reduction for payment within 'VEINTE (20) días hábiles administrativos' of notification.",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-126-2024-399750/texto"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Not confirmed; recidivism counted over 3 years",
+   "verdict": "confirmed",
+   "evidence": "Res. 126/2024 Annex II point 8: recidivism within three years of notification of a prior sanction. No limitation period found.",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-126-2024-399750/texto"
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "AAIP requires proof of prior request; access 10 calendar days (art. 14), rectification etc. 5 working days",
+   "verdict": "confirmed",
+   "evidence": "Law 25.326 art. 14: 'diez días corridos'; art. 16: 'cinco días hábiles'. AAIP rights page: attach copy of the original request with proof of receipt and any reply.",
+   "url": "https://www.argentina.gob.ar/aaip/datospersonales/derechos"
+  },
+  {
+   "field": "private.courts",
+   "claim": "Habeas data: report within 5 working days; competent judge per art. 36",
+   "verdict": "confirmed",
+   "evidence": "Law 25.326 arts. 39-41: 'cinco días hábiles' for the report; art. 36: plaintiff's domicile, defendant's domicile or where the effects occur, federal courts for national databases and interjurisdictional networks.",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Federal contentious-administrative courts under Law 19.549 (not confirmed)",
+   "verdict": "unverifiable",
+   "evidence": "No source fetched states the appeal route against AAIP sanctions; the file already marks it not confirmed.",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto"
+  },
+  {
+   "field": "private.collective",
+   "claim": "Halabi (2009) recognised collective actions; concerned telecom data retention",
+   "verdict": "unverifiable",
+   "evidence": "Not fetched. Consistent with general knowledge: CSJN, Halabi, 24 February 2009, challenge to the telecom traffic data retention law 25.873.",
+   "url": ""
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "2023 GDPR-style bill never enacted",
+   "verdict": "unverifiable",
+   "evidence": "AAIP bill page confirms Message 87/2023 was sent to the Chamber of Deputies but says nothing on its fate. No evidence of enactment either.",
+   "url": "https://www.argentina.gob.ar/aaip/datospersonales/proyecto-ley-datos-personales"
+  },
+  {
+   "field": "map.who_penalises",
+   "claim": "regulator",
+   "verdict": "confirmed",
+   "evidence": "Art. 31 Law 25.326: the control body applies sanctions after an administrative inquiry.",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto"
+  },
+  {
+   "field": "map.cap",
+   "claim": "fixed",
+   "verdict": "confirmed",
+   "evidence": "Fixed peso range per infringement (art. 31), not turnover-linked.",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto"
+  },
+  {
+   "field": "map.private_action",
+   "claim": "limited",
+   "verdict": "confirmed",
+   "evidence": "Law 25.326 gives habeas data (no damages); compensation only under general civil liability, which fits 'limited' better than 'yes' under the GBRIEF definitions.",
+   "url": "https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto"
+  }
+ ],
+ "notes": "The statute and Res. 126/2024 were readable on argentina.gob.ar. law.name also states the 2023 bill 'was never enacted'; treat it as unverifiable like quirks[3]. The 'Resolution 126/2024' entry in cases[] is a rule change, not an enforcement case; consider moving it to law.name and keeping only real cases."
+}

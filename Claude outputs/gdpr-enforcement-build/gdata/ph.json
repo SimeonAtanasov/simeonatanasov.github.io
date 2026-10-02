@@ -1,0 +1,116 @@
+{
+ "code": "ph",
+ "country": "Philippines",
+ "membership": "World",
+ "region": "Asia-Pacific",
+ "dpa": {
+  "name_en": "National Privacy Commission",
+  "name_native": "Pambansang Komisyon sa Pagkapribado (National Privacy Commission)",
+  "abbr": "NPC",
+  "url": "https://privacy.gov.ph",
+  "structure": "Independent body attached to the Department of Information and Communications Technology for budget purposes, headed by a Privacy Commissioner and two deputies. It adjudicates complaints as a quasi-judicial body, runs own-motion (sua sponte) investigations and compliance checks, and imposes administrative fines.",
+  "regional": "No regional regulators. The Department of Justice prosecutes the criminal offences in the Data Privacy Act on NPC recommendation or direct complaint; sector regulators such as the central bank (BSP) supervise data security in finance."
+ },
+ "law": {
+  "name": "Data Privacy Act of 2012 (Republic Act No. 10173), with its 2016 Implementing Rules and Regulations; NPC Circular 2022-01 on administrative fines in force from 27 August 2022",
+  "url": "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html"
+ },
+ "complaint": {
+  "how": "Notarised complaints-assisted form or verified complaint with evidence and witness affidavits, filed with the NPC (online channels and email are offered); forms exist in English and Filipino. Applications for a temporary ban on processing can be filed alongside.",
+  "contact_controller_first": "Yes: the complainant must first inform the organisation in writing and may file only if it does not respond within 15 calendar days (or responds inadequately).",
+  "deadlines": "No specific filing deadline beyond the Act No. 3326 prescription periods the NPC applies. The investigating officer reports within 30 days of the last memoranda; the Commission must decide breach matters within 30 days, with no fixed deadline for other complaints.",
+  "complainant_status": "Full party: the complainant and respondent litigate before an investigating officer and the Commission, and the NPC can award damages, including nominal damages, to the complainant."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint after exhausting the 15-day step with the organisation, or NPC sua sponte investigation, breach notification or compliance check.",
+   "Evaluation by an investigating officer: dismissal or continuation; mediation is offered in suitable cases.",
+   "Adversarial proceedings with submissions, possibly e-hearings, then a decision by the Commission en banc.",
+   "Orders (compliance, cease and desist, temporary ban), administrative fines after notice and hearing, damages, and recommendation of criminal prosecution to the Department of Justice.",
+   "Motion for reconsideration to the NPC, then appeal to the courts."
+  ],
+  "decision_maker": "The Commission (Privacy Commissioner and deputies) decides and imposes fines by administrative decision.",
+  "limitation": "The NPC applies the prescription periods for offences under special laws in Act No. 3326, which vary with the penalty (2021 Rules of Procedure)."
+ },
+ "fines": {
+  "imposed_by": "The NPC imposes administrative fines itself under Circular 2022-01, so the map value is regulator. Grave infractions carry 0.5% to 3% and major infractions 0.25% to 2% of annual gross income, with fixed amounts of PHP 50,000 to 200,000 for other infractions, but the total for a single act may not exceed PHP 5 million, so the binding ceiling is a fixed amount (map value fixed).",
+  "public_bodies": "Government agencies are personal information controllers under the Act and are not excluded from Circular 2022-01; whether the NPC has fined one was not confirmed. The NPC has recommended prosecution of public officials (COMELEC).",
+  "quirks": "Criminal offences in sections 25 to 33 of the Act (unauthorised processing, negligent access, improper disposal, concealment of breaches, malicious disclosure) carry 6 months to 7 years' imprisonment and fines of PHP 100,000 to 5 million, prosecuted by the DOJ before the regular courts; responsible officers of companies can be jailed. The NPC also issues cease and desist orders and temporary bans."
+ },
+ "appeal": {
+  "court": "After a motion for reconsideration, an NPC decision is appealed 'to the proper courts' (2021 Rules of Procedure, Rule VIII s 7); in practice this is a petition for review to the Court of Appeals, which upheld the NPC in Pieceland Corporation v Manila New Life Church (14 December 2021).",
+  "deadline": "NPC decisions become final 15 calendar days after notice unless one motion for reconsideration is filed within that period (2021 Rules of Procedure); a petition for review under Rule 43 is generally due within 15 days (not stated in NPC rules).",
+  "suspensive": "No: decisions imposing fines are immediately executory unless restrained by a court, and an appellant must post a bond equal to the fine to stay enforcement (Circular 2022-01).",
+  "further": "Supreme Court on a petition for review (general route; not confirmed in an NPC case).",
+  "inaction": "A complainant whose complaint is dismissed may move for reconsideration and then appeal; no specific remedy for inaction confirmed."
+ },
+ "private": {
+  "courts": "Yes: data subjects have a statutory right to damages for inaccurate, incomplete, outdated, false, unlawfully obtained or unauthorised use of personal information (section 16(f)), claimable before the NPC or in the regular courts; the writ of habeas data is also available from the courts.",
+  "damages": "Actual, moral and nominal damages under general civil law; the NPC has awarded nominal damages in complaint decisions. No statutory damages.",
+  "collective": "Class actions are possible but rare according to secondary sources; not confirmed in a decided data privacy case."
+ },
+ "cases": [
+  {
+   "title": "COMELEC 'Comeleak' breach",
+   "year": "2016-2017",
+   "summary": "In a decision dated 28 December 2016 on the breach of over 75 million voter records, the NPC found the Commission on Elections in breach of the Act and its chairman Andres Bautista criminally liable for negligent access (s 26), and recommended his prosecution to the Department of Justice.",
+   "url": "https://privacy.gov.ph/privacy-commission-finds-bautista-criminally-liable-for-comeleak-data-breach/"
+  },
+  {
+   "title": "Cease and desist order against Tools for Humanity (World App)",
+   "year": "2025",
+   "summary": "On 8 October 2025 the NPC ordered Tools for Humanity to stop all personal data processing linked to World App and Orb iris verification in the Philippines, holding that consent obtained by paying people is not freely given.",
+   "url": "https://privacy.gov.ph/npc-issues-cease-and-desist-order-against-tools-for-humanity/"
+  }
+ ],
+ "quirks": [
+  "The NPC is a quasi-judicial tribunal: complaints are adversarial cases with captioned parties, and it can award damages to the complainant.",
+  "Percentage-of-income fines exist but are capped at PHP 5 million (about EUR 75,000) per act.",
+  "Many breaches are also crimes with prison terms for responsible officers, prosecuted by the Department of Justice.",
+  "A complainant must first write to the organisation and wait 15 days before filing."
+ ],
+ "plain": "You first write to the organisation and give it 15 days to fix the problem. If it does not, you file a sworn complaint with the National Privacy Commission, which hears both sides like a tribunal and can order changes, fine the organisation and award you damages. If a crime is involved it can refer the case to the Department of Justice for prosecution.",
+ "map": {
+  "who_penalises": "regulator",
+  "cap": "fixed",
+  "private_action": "yes"
+ },
+ "confidence": "medium: the exact appeal route and deadline, filing deadline and the outcome of the BDO case were not confirmed from NPC primary texts.",
+ "sources": [
+  {
+   "title": "Data Privacy Act of 2012, RA 10173 (Lawphil)",
+   "url": "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html",
+   "source_type": "primary"
+  },
+  {
+   "title": "NPC Circular 2022-01, Guidelines on Administrative Fines",
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/08/NPC-CIRCULAR-NO.-2022-01-GUIDELINES-ON-ADMINISTRATIVE-FINES-dated-08-AUGUST-2022-w-SGD.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "NPC: mechanics for complaints",
+   "url": "https://privacy.gov.ph/mechanics-for-complaints/",
+   "source_type": "primary"
+  },
+  {
+   "title": "NPC: decisions",
+   "url": "https://privacy.gov.ph/decisions-2/",
+   "source_type": "primary"
+  },
+  {
+   "title": "NPC: cease and desist order against Tools for Humanity",
+   "url": "https://privacy.gov.ph/npc-issues-cease-and-desist-order-against-tools-for-humanity/",
+   "source_type": "primary"
+  },
+  {
+   "title": "NPC site search: COMELEC",
+   "url": "https://privacy.gov.ph/?s=COMELEC",
+   "source_type": "primary"
+  },
+  {
+   "title": "Baker McKenzie Global Data and Cyber Handbook: Philippines",
+   "url": "https://resourcehub.bakermckenzie.com/en/resources/global-data-and-cyber-handbook/asia-pacific/philippines/topics/regulators-enforcement-priorities-and-penalties",
+   "source_type": "secondary"
+  }
+ ]
+}

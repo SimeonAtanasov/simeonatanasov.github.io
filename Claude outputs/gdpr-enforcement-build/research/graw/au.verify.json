@@ -1,0 +1,70 @@
+{
+ "code": "au",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "9 October 2025, Justice Halley, AUD 5.8m (4.2m + 0.8m + 0.8m), 223,000+ people, pre-2022 maximums.",
+   "verdict": "corrected",
+   "evidence": "OAIC: judgment 8 October 2025, Justice Halley, AUD 5.8 million: AUD 4.2 million for APP 11.1, AUD 800,000 each for assessment and notification failures, over 223,000 individuals, old maximum of AUD 2.22 million per contravention applied. Clayton Utz: [2025] FCA 1224, orders made by consent on agreed facts and an agreed penalty.",
+   "url": "https://www.oaic.gov.au/news/media-centre/australian-clinical-labs-ordered-to-pay-penalties-in-relation-to-medlab-pathology-data-breach-in-first-for-privacy-act",
+   "replacement": "First civil penalty ever ordered under the Privacy Act: on 8 October 2025 Justice Halley in the Federal Court ordered AUD 5.8 million by consent on agreed facts (AUD 4.2 million for failing to protect data under APP 11.1, AUD 0.8 million each for late assessment under s 26WH(2) and late notification under s 26WK(2)) over the 2022 Medlab Pathology breach affecting over 223,000 people ([2025] FCA 1224). The pre-2022 penalty maximums applied."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Filed March 2020, ended 17 December 2024 with AUD 50m enforceable undertaking, case withdrawn, 'largest payment'.",
+   "verdict": "confirmed",
+   "evidence": "OAIC 17 December 2024: AUD 50 million payment scheme under an enforceable undertaking, proceedings filed March 2020 and withdrawn; 'the largest ever payment dedicated to addressing concerns about the privacy of individuals in Australia'.",
+   "url": "https://www.oaic.gov.au/news/media-centre/landmark-settlement-of-$50m-from-meta-for-australian-users-impacted-by-cambridge-analytica-incident"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "Medibank filed 5 June 2024 (9.7m, APP 11.1, up to AUD 2.22m each); Optus filed 8 August 2025 (about 9.5m); both pending.",
+   "verdict": "confirmed",
+   "evidence": "OAIC releases confirm both filing dates, 9.7 million and about 9.5 million people and AUD 2.22 million per contravention. Clayton Utz (October 2025) says both proceedings 'still on foot'. No later outcome found in an October 2026 search; still pending as far as found.",
+   "url": "https://www.oaic.gov.au/news/media-centre/oaic-takes-civil-penalty-action-against-medibank"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Serious interference max: greatest of AUD 50m, 3x benefit or 30% adjusted turnover since 13 December 2022; court sets penalty.",
+   "verdict": "confirmed",
+   "evidence": "OAIC ACL release: new regime from 13 December 2022 allows up to AUD 50 million or 30% of turnover; penalties ordered by the Federal Court. 3x benefit limb consistent with s 13G but not shown on the page.",
+   "url": "https://www.oaic.gov.au/news/media-centre/australian-clinical-labs-ordered-to-pay-penalties-in-relation-to-medlab-pathology-data-breach-in-first-for-privacy-act"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Penalties counted per affected individual.",
+   "verdict": "confirmed",
+   "evidence": "ACL: 223,000+ contraventions of APP 11.1; Optus release: one contravention alleged per affected individual.",
+   "url": "https://www.oaic.gov.au/news/media-centre/australian-information-commissioner-takes-civil-penalty-action-against-optus"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Only one civil penalty ordered by late 2025.",
+   "verdict": "confirmed",
+   "evidence": "OAIC: ACL penalties are 'the first civil penalties ordered under the Privacy Act'.",
+   "url": "https://www.oaic.gov.au/news/media-centre/australian-clinical-labs-ordered-to-pay-penalties-in-relation-to-medlab-pathology-data-breach-in-first-for-privacy-act"
+  },
+  {
+   "field": "map",
+   "claim": "regulator-court / turnover / limited",
+   "verdict": "confirmed",
+   "evidence": "Federal Court sets civil penalties; maximum includes 30% of adjusted turnover; no general private right of action under the APPs, only the narrow statutory tort for serious invasions.",
+   "url": "https://www.oaic.gov.au/news/media-centre/australian-clinical-labs-ordered-to-pay-penalties-in-relation-to-medlab-pathology-data-breach-in-first-for-privacy-act"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "OAIC may decline a complaint made more than 12 months after awareness (s 41).",
+   "verdict": "unverifiable",
+   "evidence": "Legislation site not fetched; consistent with s 41(1)(c) as I understand it.",
+   "url": "https://www.legislation.gov.au/C2004A03712/latest"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "6 years under the Regulatory Powers Act.",
+   "verdict": "unverifiable",
+   "evidence": "Not checked against primary text; the field already says so.",
+   "url": ""
+  }
+ ],
+ "notes": "Most serious: ACL judgment date was 9 October; OAIC says 8 October 2025. Otherwise the cases hold up. Add [2025] FCA 1224 and the consent basis. Medibank and Optus still pending as far as an October 2026 search showed, but a reader should re-check before publication."
+}

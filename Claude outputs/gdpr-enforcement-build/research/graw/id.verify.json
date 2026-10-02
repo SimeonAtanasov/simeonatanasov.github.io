@@ -1,0 +1,114 @@
+{
+  "code": "id",
+  "checked": [
+    {
+      "field": "cases[0].summary",
+      "claim": "2023 Karanganyar District Court: four years and IDR 1 billion for data falsification, first conviction",
+      "verdict": "confirmed",
+      "evidence": "Chambers: Karanganyar District Court Decision No 5/Pid.Sus/2023/PN Krg dated 16 March 2023; four years' imprisonment and IDR 1 billion fine for data falsification; described as the first court decision.",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/indonesia/trends-and-developments"
+    },
+    {
+      "field": "cases[1].year",
+      "claim": "2024",
+      "verdict": "corrected",
+      "evidence": "Chambers: Decision No 151/PUU-XXII/2024 is dated 30 July 2025; '2024' is the registration year of the petition.",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/indonesia/trends-and-developments",
+      "replacement": "2025"
+    },
+    {
+      "field": "cases[1].summary",
+      "claim": "Court read 'and' in Article 53(1)(b) as 'and/or', widening DPO obligation",
+      "verdict": "corrected",
+      "evidence": "Chambers: ruling that the cumulative 'and' should be read as 'and/or', so only one triggering condition is needed. Decided 30 July 2025.",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/indonesia/trends-and-developments",
+      "replacement": "On 30 July 2025 the Constitutional Court read the cumulative 'and' in the data protection officer trigger (Article 53(1)) as 'and/or', so meeting one condition is enough, widening the DPO obligation."
+    },
+    {
+      "field": "cases[2].summary",
+      "claim": "Case 236/PUU-XXII/2024 pending as of September 2026; no administrative PDP fine imposed",
+      "verdict": "confirmed",
+      "evidence": "Nusantara DFDL on GR 33/2026: 'Constitutional Court Case MK 236/2024, which could compel the executive to act, remains pending.' Absence of agency confirmed by Nusantara, Chambers and DLA Piper.",
+      "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/"
+    },
+    {
+      "field": "law.name",
+      "claim": "GR 33/2026 signed 16 July 2026, in force 16 January 2027",
+      "verdict": "confirmed",
+      "evidence": "Nusantara DFDL: GR 33/2026 signed 16 July 2026, 'takes effect on 16 January 2027'. Secondary only; the regulation text itself was not fetched.",
+      "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/"
+    },
+    {
+      "field": "fines.imposed_by",
+      "claim": "No body can impose administrative fines; agency fines up to 2% of annual revenue (Article 57; GR 33/2026 Article 185)",
+      "verdict": "confirmed",
+      "evidence": "Nusantara: Article 185 GR 33/2026, fine up to 2% of annual revenue; supervisory authority does not yet exist. DLA Piper (updated 13 February 2026): agency not yet operational, draft Presidential Regulation at harmonisation stage.",
+      "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/"
+    },
+    {
+      "field": "fines.quirks",
+      "claim": "Law No. 1 of 2026 cut maximum fines to IDR 200 million and IDR 500 million; not confirmed from primary text",
+      "verdict": "corrected",
+      "evidence": "Two independent secondary sources agree. Chambers: fines capped at IDR 200 million (unlawful collection, disclosure, use) and IDR 500 million (forgery), prison terms unchanged. DLA Piper: Law No. 1 of 2026 effective 2 January 2026; collection and use up to 5 years, disclosure 4 years, false data 6 years; corporations up to 10 times.",
+      "url": "https://www.dlapiperdataprotection.com/?t=law&c=ID",
+      "replacement": "Criminal offences cover unlawful collection, disclosure and use of personal data and creating false personal data (Articles 67 and 68), with 4 to 6 years' imprisonment. Law No. 1 of 2026 (penalty adjustment for the new Criminal Code, in force 2 January 2026) cut the maximum fines from IDR 4 to 6 billion to IDR 200 million, or IDR 500 million for false data; corporations face up to ten times the fine plus measures such as licence revocation or dissolution (Article 70)."
+    },
+    {
+      "field": "appeal.deadline",
+      "claim": "Objection within 14 working days (GR 33/2026)",
+      "verdict": "confirmed",
+      "evidence": "Nusantara: objection within 14 working days of receiving an administrative sanction decision; appeal to PTUN remains available.",
+      "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/"
+    },
+    {
+      "field": "appeal.court",
+      "claim": "Objection to agency then PTUN; criminal District, High, Supreme Court",
+      "verdict": "confirmed",
+      "evidence": "Nusantara: appeal to the Pengadilan Tata Usaha Negara remains available as a further remedy.",
+      "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/"
+    },
+    {
+      "field": "appeal.suspensive",
+      "claim": "Not confirmed",
+      "verdict": "unverifiable",
+      "evidence": "Not addressed in fetched sources.",
+      "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/"
+    },
+    {
+      "field": "fines.public_bodies",
+      "claim": "Not confirmed",
+      "verdict": "unverifiable",
+      "evidence": "DLA Piper does not address it. Note: Article 57 PDP Law sanctions apply to controllers, which include public bodies, but whether fines can reach them is not confirmed.",
+      "url": "https://www.dlapiperdataprotection.com/?t=law&c=ID"
+    },
+    {
+      "field": "quirks[3]",
+      "claim": "GR 33/2026 enters into force 16 January 2027",
+      "verdict": "confirmed",
+      "evidence": "Nusantara: takes effect on 16 January 2027.",
+      "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/"
+    },
+    {
+      "field": "map.who_penalises",
+      "claim": "court",
+      "verdict": "confirmed",
+      "evidence": "No body can impose administrative fines; criminal courts do impose penalties (Karanganyar 2023), which fits 'court' better than 'none-yet'.",
+      "url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/indonesia/trends-and-developments"
+    },
+    {
+      "field": "map.cap",
+      "claim": "turnover",
+      "verdict": "confirmed",
+      "evidence": "Statutory administrative maximum is 2% of annual revenue, though not yet enforceable.",
+      "url": "https://www.dlapiperdataprotection.com/?t=law&c=ID"
+    },
+    {
+      "field": "map.private_action",
+      "claim": "yes",
+      "verdict": "confirmed",
+      "evidence": "Article 12 PDP Law right to sue for compensation, as reported by all sources; consistent with the statute.",
+      "url": "https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022"
+    }
+  ],
+  "notes": "Most serious: cases[1] dates the DPO Constitutional Court decision to 2024; it was decided 30 July 2025. Law No. 1 of 2026 is now corroborated by two secondary sources (Chambers, DLA Piper) with a 2 January 2026 effective date, so the 'not confirmed' hedge can go; confidence line should be updated accordingly. GR 33/2026 facts rest on one law-firm source (Nusantara DFDL); no primary text was fetched. Nothing contradicts the PDP Law itself."
+}
