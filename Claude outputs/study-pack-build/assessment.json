@@ -7974,6 +7974,1876 @@
    "Medium"
   ]
  ],
+ "FRIA_ANNEX_III": [
+  "1. Biometrics (remote identification, categorisation, emotion recognition)",
+  "2. Critical infrastructure (safety components)",
+  "3. Education and vocational training",
+  "4. Employment, workers' management and access to self-employment",
+  "5(a). Eligibility for public assistance benefits and services",
+  "5(b). Creditworthiness or credit scoring of natural persons (not fraud detection)",
+  "5(c). Risk assessment and pricing in life and health insurance",
+  "5(d). Emergency call evaluation, dispatch and patient triage",
+  "6. Law enforcement",
+  "7. Migration, asylum and border control",
+  "8. Administration of justice and democratic processes",
+  "Not an Annex III high-risk system",
+  "Not sure"
+ ],
+ "FRIA_DEPLOYER_TYPES": [
+  "Body governed by public law",
+  "Private entity providing public services",
+  "Other private entity"
+ ],
+ "FRIA_AFFECTED": [
+  "Job applicants or employees",
+  "Students or learners",
+  "Applicants for or recipients of public benefits",
+  "Consumers or customers",
+  "Patients or people seeking emergency help",
+  "Suspects, defendants or people in contact with law enforcement",
+  "Migrants, asylum seekers or travellers",
+  "Members of the public in a public space",
+  "Other"
+ ],
+ "FRIA_VULNERABLE": [
+  "Children",
+  "Elderly people",
+  "Persons with disabilities",
+  "People in financial hardship",
+  "People in a dependent position (employees, detainees, asylum seekers)",
+  "Minority or under-represented groups",
+  "Other"
+ ],
+ "FRIA_RIGHTS": [
+  "Human dignity (Art. 1)",
+  "Respect for private and family life (Art. 7)",
+  "Protection of personal data (Art. 8)",
+  "Freedom of expression and information (Art. 11)",
+  "Freedom of assembly and association (Art. 12)",
+  "Right to education (Art. 14)",
+  "Freedom to choose an occupation and right to work (Art. 15)",
+  "Right to asylum and protection on removal (Arts. 18 and 19)",
+  "Non-discrimination (Art. 21)",
+  "Equality between women and men (Art. 23)",
+  "Rights of the child (Art. 24)",
+  "Rights of the elderly (Art. 25)",
+  "Integration of persons with disabilities (Art. 26)",
+  "Fair and just working conditions (Art. 31)",
+  "Social security and social assistance (Art. 34)",
+  "Health care (Art. 35)",
+  "Consumer protection (Art. 38)",
+  "Right to good administration (Art. 41)",
+  "Right to an effective remedy and to a fair trial (Art. 47)",
+  "Presumption of innocence and right of defence (Art. 48)"
+ ],
+ "FRIA_SEVERITY": [
+  "Negligible - a minor, short-lived effect on the right that people overcome without difficulty",
+  "Limited - a real interference people can overcome with some difficulty",
+  "Significant - a serious interference that is hard to reverse or affects many people",
+  "Maximum - an irreversible interference, or one that denies access to an essential service, liberty or livelihood"
+ ],
+ "FRIA_LIKELIHOOD": [
+  "Negligible - it does not seem possible in this deployment",
+  "Limited - it seems unlikely in this deployment",
+  "Significant - it seems possible in this deployment",
+  "Maximum - it is expected to happen in this deployment"
+ ],
+ "FRIA_STEPS": [
+  {
+   "key": "scope",
+   "title": "Scope and applicability",
+   "intro": "Article 27 requires certain deployers of high-risk AI systems to assess the impact on fundamental rights before first use. The obligation sits with the deployer, not the provider, and applies with the other Annex III high-risk obligations, from 2 December 2027 (Regulation (EU) 2026/1744).",
+   "sources": [
+    {
+     "label": "EU AI Act, Article 27",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    }
+   ],
+   "questions": [
+    {
+     "id": "name",
+     "type": "text",
+     "label": "AI system and deployment name"
+    },
+    {
+     "id": "description",
+     "type": "textarea",
+     "label": "What the system does and the decision or process it supports"
+    },
+    {
+     "id": "deployerType",
+     "type": "select",
+     "label": "What kind of deployer are you?",
+     "options": [
+      "Body governed by public law",
+      "Private entity providing public services",
+      "Other private entity"
+     ]
+    },
+    {
+     "id": "annexIIIArea",
+     "type": "select",
+     "label": "Which Annex III area does the intended purpose fall under?",
+     "options": [
+      "1. Biometrics (remote identification, categorisation, emotion recognition)",
+      "2. Critical infrastructure (safety components)",
+      "3. Education and vocational training",
+      "4. Employment, workers' management and access to self-employment",
+      "5(a). Eligibility for public assistance benefits and services",
+      "5(b). Creditworthiness or credit scoring of natural persons (not fraud detection)",
+      "5(c). Risk assessment and pricing in life and health insurance",
+      "5(d). Emergency call evaluation, dispatch and patient triage",
+      "6. Law enforcement",
+      "7. Migration, asylum and border control",
+      "8. Administration of justice and democratic processes",
+      "Not an Annex III high-risk system",
+      "Not sure"
+     ]
+    },
+    {
+     "id": "provider",
+     "type": "text",
+     "label": "Provider of the system, and the version or release assessed"
+    },
+    {
+     "id": "firstUseDate",
+     "type": "date",
+     "label": "Planned date of first use"
+    }
+   ]
+  },
+  {
+   "key": "process",
+   "title": "Process, period and frequency",
+   "intro": "Article 27(1)(a) and (b): describe the deployer's process the system is used in, in line with its intended purpose, and how long and how often it is used.",
+   "questions": [
+    {
+     "id": "deployerProcess",
+     "type": "textarea",
+     "label": "Describe the process in which the system is used, who uses it, and what happens to its output"
+    },
+    {
+     "id": "intendedPurposeAligned",
+     "type": "select",
+     "label": "Is the use within the intended purpose stated in the provider's instructions for use?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No",
+      "Not sure"
+     ],
+     "note": {
+      "label": "Where does the use go beyond the stated purpose?",
+      "visibleIf": {
+       "__fn": "function (v) { return v === \"Partially\" || v === \"No\" || v === \"Not sure\"; }"
+      }
+     }
+    },
+    {
+     "id": "usePeriod",
+     "type": "text",
+     "label": "Period of use (for example a pilot of six months, or indefinite)"
+    },
+    {
+     "id": "useFrequency",
+     "type": "select",
+     "label": "How often is the system used on individuals?",
+     "options": [
+      "Occasionally",
+      "Regularly (daily or weekly)",
+      "Continuously or for every case"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "affected",
+   "title": "People affected",
+   "intro": "Article 27(1)(c): the categories of natural persons and groups likely to be affected by its use in this specific context.",
+   "questions": [
+    {
+     "id": "affectedCategories",
+     "type": "multiselect",
+     "label": "Who is affected by the system's output?",
+     "options": [
+      "Job applicants or employees",
+      "Students or learners",
+      "Applicants for or recipients of public benefits",
+      "Consumers or customers",
+      "Patients or people seeking emergency help",
+      "Suspects, defendants or people in contact with law enforcement",
+      "Migrants, asylum seekers or travellers",
+      "Members of the public in a public space",
+      "Other"
+     ],
+     "note": {
+      "label": "Specify",
+      "visibleIf": {
+       "__fn": "function (v) { return (v || []).indexOf(\"Other\") !== -1; }"
+      }
+     }
+    },
+    {
+     "id": "friaVulnerable",
+     "type": "multiselect",
+     "label": "Are any of them in a vulnerable situation? Leave blank if none.",
+     "options": [
+      "Children",
+      "Elderly people",
+      "Persons with disabilities",
+      "People in financial hardship",
+      "People in a dependent position (employees, detainees, asylum seekers)",
+      "Minority or under-represented groups",
+      "Other"
+     ],
+     "note": {
+      "label": "Specify",
+      "visibleIf": {
+       "__fn": "function (v) { return (v || []).indexOf(\"Other\") !== -1; }"
+      }
+     }
+    },
+    {
+     "id": "affectedScale",
+     "type": "select",
+     "label": "Roughly how many people are affected each year?",
+     "options": [
+      "Fewer than 100",
+      "100 to 10,000",
+      "10,000 to 1 million",
+      "More than 1 million"
+     ]
+    },
+    {
+     "id": "affectedAware",
+     "type": "select",
+     "label": "Are affected people told that a high-risk AI system is used in decisions about them (Article 26(11))?",
+     "options": [
+      "Yes",
+      "Planned",
+      "No"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "risks",
+   "title": "Risks of harm to rights",
+   "intro": "Article 27(1)(d): the specific risks of harm likely to affect those people, taking into account the information the provider gives under Article 13. Rate the worst credible case before any of the measures in the next steps.",
+   "questions": [
+    {
+     "id": "rightsAtRisk",
+     "type": "multiselect",
+     "label": "Which fundamental rights could the system interfere with?",
+     "options": [
+      "Human dignity (Art. 1)",
+      "Respect for private and family life (Art. 7)",
+      "Protection of personal data (Art. 8)",
+      "Freedom of expression and information (Art. 11)",
+      "Freedom of assembly and association (Art. 12)",
+      "Right to education (Art. 14)",
+      "Freedom to choose an occupation and right to work (Art. 15)",
+      "Right to asylum and protection on removal (Arts. 18 and 19)",
+      "Non-discrimination (Art. 21)",
+      "Equality between women and men (Art. 23)",
+      "Rights of the child (Art. 24)",
+      "Rights of the elderly (Art. 25)",
+      "Integration of persons with disabilities (Art. 26)",
+      "Fair and just working conditions (Art. 31)",
+      "Social security and social assistance (Art. 34)",
+      "Health care (Art. 35)",
+      "Consumer protection (Art. 38)",
+      "Right to good administration (Art. 41)",
+      "Right to an effective remedy and to a fair trial (Art. 47)",
+      "Presumption of innocence and right of defence (Art. 48)"
+     ]
+    },
+    {
+     "id": "harmsDescription",
+     "type": "textarea",
+     "label": "Describe the specific harms: what could go wrong, for whom, and how it would show up (a wrongful refusal, a biased score, an intrusive inference)"
+    },
+    {
+     "id": "providerInfoReviewed",
+     "type": "select",
+     "label": "Have the provider's instructions for use been reviewed, including known limitations, accuracy levels and foreseeable misuse?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    },
+    {
+     "id": "biasEvaluated",
+     "type": "select",
+     "label": "Has the output been checked for different error rates or outcomes across groups in your own population?",
+     "options": [
+      "Yes",
+      "Planned",
+      "No",
+      "Not possible with the data available"
+     ],
+     "note": {
+      "label": "What was found, or why it cannot be done?",
+      "visibleIf": {
+       "__fn": "function (v) { return !!v; }"
+      }
+     }
+    },
+    {
+     "id": "friaInherentSeverity",
+     "type": "select",
+     "label": "Inherent severity: how serious would the interference be?",
+     "options": [
+      "Negligible - a minor, short-lived effect on the right that people overcome without difficulty",
+      "Limited - a real interference people can overcome with some difficulty",
+      "Significant - a serious interference that is hard to reverse or affects many people",
+      "Maximum - an irreversible interference, or one that denies access to an essential service, liberty or livelihood"
+     ]
+    },
+    {
+     "id": "friaInherentLikelihood",
+     "type": "select",
+     "label": "Inherent likelihood: how likely is it in this deployment?",
+     "options": [
+      "Negligible - it does not seem possible in this deployment",
+      "Limited - it seems unlikely in this deployment",
+      "Significant - it seems possible in this deployment",
+      "Maximum - it is expected to happen in this deployment"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "oversight",
+   "title": "Human oversight",
+   "intro": "Article 27(1)(e): how the human oversight measures in the instructions for use are implemented. Article 26(2) requires the people assigned to have the competence, training, authority and support they need.",
+   "questions": [
+    {
+     "id": "oversightAssigned",
+     "type": "yesno",
+     "label": "Are named people or roles assigned to oversee the system's output?",
+     "note": {
+      "label": "Which roles?",
+      "visibleIf": {
+       "__fn": "function (v) { return v === \"Yes\"; }"
+      }
+     }
+    },
+    {
+     "id": "oversightCompetence",
+     "type": "select",
+     "label": "Do they have the competence, training and authority to disregard or override the output?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    },
+    {
+     "id": "oversightMode",
+     "type": "select",
+     "label": "When does a human act on an individual case?",
+     "options": [
+      "Before every decision takes effect",
+      "On flagged or contested cases only",
+      "After the fact, by sampling",
+      "No human review"
+     ]
+    },
+    {
+     "id": "automationBias",
+     "type": "select",
+     "label": "Are reviewers protected against automation bias (output shown with its confidence and limitations, a reason required to follow it in sensitive cases, workload that allows real review)?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "measures",
+   "title": "Measures, governance and complaints",
+   "intro": "Article 27(1)(f): the measures to take if the risks materialise, including internal governance and complaint mechanisms.",
+   "questions": [
+    {
+     "id": "mitigationMeasures",
+     "type": "textarea",
+     "label": "Which measures reduce the risks identified (thresholds, exclusions, second review, data quality checks, limits on scope)?"
+    },
+    {
+     "id": "materialiseMeasures",
+     "type": "textarea",
+     "label": "What happens if a risk materialises: who is told, how affected people are contacted, and how decisions are corrected?"
+    },
+    {
+     "id": "suspensionProcess",
+     "type": "select",
+     "label": "Is there a process to suspend use and inform the provider and the authority where the system presents a risk or a serious incident occurs (Article 26(5))?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    },
+    {
+     "id": "complaintMechanism",
+     "type": "select",
+     "label": "Can affected people complain or contest an outcome?",
+     "options": [
+      "Yes",
+      "Planned",
+      "No"
+     ]
+    },
+    {
+     "id": "explanationProcess",
+     "type": "select",
+     "label": "Can you give an affected person a clear explanation of the role the system played in a decision about them (Article 86)?",
+     "options": [
+      "Yes",
+      "Planned",
+      "No"
+     ]
+    },
+    {
+     "id": "friaGovernance",
+     "type": "text",
+     "label": "Who owns the FRIA and approves the deployment?"
+    },
+    {
+     "id": "friaResidualSeverity",
+     "type": "select",
+     "label": "Residual severity, with every measure above in place",
+     "options": [
+      "Negligible - a minor, short-lived effect on the right that people overcome without difficulty",
+      "Limited - a real interference people can overcome with some difficulty",
+      "Significant - a serious interference that is hard to reverse or affects many people",
+      "Maximum - an irreversible interference, or one that denies access to an essential service, liberty or livelihood"
+     ]
+    },
+    {
+     "id": "friaResidualLikelihood",
+     "type": "select",
+     "label": "Residual likelihood, with every measure above in place",
+     "options": [
+      "Negligible - it does not seem possible in this deployment",
+      "Limited - it seems unlikely in this deployment",
+      "Significant - it seems possible in this deployment",
+      "Maximum - it is expected to happen in this deployment"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "links",
+   "title": "DPIA link, notification and review",
+   "intro": "Article 27(4), as amended by Regulation (EU) 2026/1744: where a DPIA under Article 35 GDPR already covers some of these points, the FRIA can cross-refer to the relevant sections of it or incorporate them rather than repeating them. Article 27(3): the deployer notifies the market surveillance authority of the results using the AI Office template.",
+   "questions": [
+    {
+     "id": "friaDpia",
+     "type": "select",
+     "label": "Has a DPIA been carried out for the same processing?",
+     "options": [
+      "Yes",
+      "In progress",
+      "No",
+      "Not applicable (no personal data)"
+     ],
+     "note": {
+      "label": "Reference or date of the DPIA",
+      "visibleIf": {
+       "__fn": "function (v) { return v === \"Yes\" || v === \"In progress\"; }"
+      }
+     }
+    },
+    {
+     "id": "priorAssessmentReused",
+     "type": "select",
+     "label": "Does this assessment rely on an earlier FRIA or an impact assessment by the provider (Article 27(2))?",
+     "options": [
+      "No",
+      "Yes, and it still reflects this deployment",
+      "Yes, but the deployment has changed"
+     ]
+    },
+    {
+     "id": "authorityNotified",
+     "type": "select",
+     "label": "Has the market surveillance authority been notified of the results?",
+     "options": [
+      "Yes",
+      "Not yet",
+      "Exempt under Article 46(1)"
+     ]
+    },
+    {
+     "id": "friaReviewDate",
+     "type": "date",
+     "label": "Next review date, or when any element above changes"
+    }
+   ]
+  }
+ ],
+ "NIST_GAI_RISKS": [
+  "CBRN information or capabilities",
+  "Confabulation",
+  "Dangerous, violent or hateful content",
+  "Data privacy",
+  "Environmental impacts",
+  "Harmful bias and homogenization",
+  "Human-AI configuration",
+  "Information integrity",
+  "Information security",
+  "Intellectual property",
+  "Obscene, degrading and/or abusive content",
+  "Value chain and component integration"
+ ],
+ "OWASP_LLM": [
+  "LLM01 Prompt Injection",
+  "LLM02 Sensitive Information Disclosure",
+  "LLM03 Supply Chain",
+  "LLM04 Data and Model Poisoning",
+  "LLM05 Improper Output Handling",
+  "LLM06 Excessive Agency",
+  "LLM07 System Prompt Leakage",
+  "LLM08 Vector and Embedding Weaknesses",
+  "LLM09 Misinformation",
+  "LLM10 Unbounded Consumption"
+ ],
+ "GAI_PATTERNS": [
+  "Internal assistant or chat",
+  "Customer-facing chat or assistant",
+  "Search or question answering over our own documents (RAG)",
+  "Agent that calls tools or other systems",
+  "Content generation (text, images, audio, video)",
+  "Code generation"
+ ],
+ "GAI_PROMPT_DATA": [
+  "Personal data",
+  "Special category data",
+  "Confidential business information",
+  "Source code or credentials",
+  "None of these"
+ ],
+ "GAI_STEPS": [
+  {
+   "key": "profile",
+   "title": "System profile",
+   "intro": "Describe the generative AI system as it is deployed. The answers decide which of the later questions apply. For the EU AI Act classification of the same system, use the AI Risk Assessment; this tool covers the risks specific to generative models.",
+   "sources": [
+    {
+     "label": "NIST AI 600-1, Generative AI Profile",
+     "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+    },
+    {
+     "label": "OWASP Top 10 for LLM Applications",
+     "url": "https://genai.owasp.org/llm-top-10/"
+    },
+    {
+     "label": "MITRE ATLAS",
+     "url": "https://atlas.mitre.org/"
+    }
+   ],
+   "questions": [
+    {
+     "id": "name",
+     "type": "text",
+     "label": "System or use case name"
+    },
+    {
+     "id": "description",
+     "type": "textarea",
+     "label": "What it does, for whom, and what it is connected to"
+    },
+    {
+     "id": "gaiPatterns",
+     "type": "multiselect",
+     "label": "Which patterns describe it?",
+     "options": [
+      "Internal assistant or chat",
+      "Customer-facing chat or assistant",
+      "Search or question answering over our own documents (RAG)",
+      "Agent that calls tools or other systems",
+      "Content generation (text, images, audio, video)",
+      "Code generation"
+     ]
+    },
+    {
+     "id": "gaiModelSource",
+     "type": "select",
+     "label": "Where does the model come from?",
+     "options": [
+      "Third-party model through an API",
+      "Open-weight model we host",
+      "Third-party or open model we fine-tuned",
+      "Model we trained ourselves"
+     ]
+    },
+    {
+     "id": "gaiUsers",
+     "type": "select",
+     "label": "Who uses it?",
+     "options": [
+      "Staff only",
+      "Selected business partners",
+      "The public"
+     ]
+    },
+    {
+     "id": "gaiPromptData",
+     "type": "multiselect",
+     "label": "What can end up in prompts, retrieved context or outputs?",
+     "options": [
+      "Personal data",
+      "Special category data",
+      "Confidential business information",
+      "Source code or credentials",
+      "None of these"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "input",
+   "title": "Inputs and prompts",
+   "intro": "Prompt injection is the top item on the OWASP list: instructions hidden in user input or in content the system reads can override its own instructions.",
+   "questions": [
+    {
+     "id": "gaiUntrustedContent",
+     "type": "yesno",
+     "label": "Does the system read content it does not control (web pages, emails, uploaded files, third-party documents)?"
+    },
+    {
+     "id": "gaiInjectionTested",
+     "type": "select",
+     "label": "Has it been tested against direct and indirect prompt injection?",
+     "options": [
+      "Yes, before release and on every major change",
+      "Once",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiSystemPromptSecrets",
+     "type": "select",
+     "label": "Does the system prompt or configuration hold secrets, credentials, or access rules the model is trusted to enforce?",
+     "options": [
+      "No",
+      "Yes",
+      "Not sure"
+     ]
+    },
+    {
+     "id": "gaiInputFiltering",
+     "type": "select",
+     "label": "Are inputs screened before they reach the model (length limits, known attack patterns, content classification)?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "data",
+   "title": "Data, privacy and intellectual property",
+   "questions": [
+    {
+     "id": "gaiProviderUse",
+     "type": "select",
+     "label": "Can the model provider retain prompts or use them for training?",
+     "options": [
+      "No, contractually excluded",
+      "Retained for abuse monitoring only",
+      "Yes",
+      "Not sure",
+      "Not applicable (self-hosted)"
+     ]
+    },
+    {
+     "id": "gaiOutputLeakCheck",
+     "type": "select",
+     "label": "Are outputs checked for personal or confidential data before they are shown or stored?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiRagPermissions",
+     "type": "select",
+     "label": "Does retrieval respect each user's own access rights, so the assistant cannot surface a document the user could not open?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ],
+     "visibleIf": {
+      "__fn": "function gaiHasRag(a) { return (a.gaiPatterns || []).indexOf(GAI_PATTERNS[2]) !== -1; }"
+     }
+    },
+    {
+     "id": "gaiEmbeddingStore",
+     "type": "select",
+     "label": "Is the vector store protected like the source data (access control, encryption, deletion when the source is deleted)?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ],
+     "visibleIf": {
+      "__fn": "function gaiHasRag(a) { return (a.gaiPatterns || []).indexOf(GAI_PATTERNS[2]) !== -1; }"
+     }
+    },
+    {
+     "id": "gaiIpCheck",
+     "type": "select",
+     "label": "Are outputs used externally checked for third-party copyrighted material, and are the licence terms of the model and its training data understood?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No",
+      "Outputs are not used externally"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "output",
+   "title": "Outputs and accuracy",
+   "intro": "Confabulation (NIST) and misinformation (OWASP) are the same problem seen from two sides: fluent output that is wrong.",
+   "questions": [
+    {
+     "id": "gaiOutputHandling",
+     "type": "select",
+     "label": "Is model output passed to another system (rendered as HTML, run as code or SQL, used in an API call) without validation?",
+     "options": [
+      "No, it is validated or only shown as text",
+      "Yes",
+      "Not sure"
+     ]
+    },
+    {
+     "id": "gaiGrounding",
+     "type": "select",
+     "label": "Are answers grounded in sources and shown with citations or a confidence signal?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No",
+      "Not applicable"
+     ]
+    },
+    {
+     "id": "gaiHumanReview",
+     "type": "select",
+     "label": "Is output reviewed by a person before it is relied on for a decision or sent outside the organization?",
+     "options": [
+      "Always",
+      "For high-impact uses",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiContentFilters",
+     "type": "select",
+     "label": "Are there filters for violent, hateful, abusive, sexual and dangerous (including CBRN) content, in both prompts and outputs?",
+     "options": [
+      "Yes, tested",
+      "Yes, provider defaults only",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiDisclosure",
+     "type": "select",
+     "label": "Are people told when they interact with AI, and is synthetic content marked as such (EU AI Act Article 50)?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No",
+      "Not applicable"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "agency",
+   "title": "Agency, supply chain and consumption",
+   "questions": [
+    {
+     "id": "gaiToolPermissions",
+     "type": "select",
+     "label": "What can the system do through its tools?",
+     "options": [
+      "Nothing beyond producing text",
+      "Read-only access",
+      "Limited write actions",
+      "Broad write or transactional actions"
+     ],
+     "visibleIf": {
+      "__fn": "function gaiHasAgent(a) { return (a.gaiPatterns || []).indexOf(GAI_PATTERNS[3]) !== -1; }"
+     }
+    },
+    {
+     "id": "gaiApproval",
+     "type": "select",
+     "label": "Do high-impact actions need human approval?",
+     "options": [
+      "Yes",
+      "Some",
+      "No"
+     ],
+     "visibleIf": {
+      "__fn": "function (a) { return gaiHasAgent(a) && (a.gaiToolPermissions === \"Limited write actions\" || a.gaiToolPermissions === \"Broad write or transactional actions\"); }"
+     }
+    },
+    {
+     "id": "gaiProvenance",
+     "type": "select",
+     "label": "Are the model, its version and its third-party components documented (model card, licence, an AI bill of materials)?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiTrainingDataVetted",
+     "type": "select",
+     "label": "Is fine-tuning or training data vetted for poisoning, provenance and quality?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ],
+     "visibleIf": {
+      "__fn": "function (a) { return a.gaiModelSource === \"Third-party or open model we fine-tuned\" || a.gaiModelSource === \"Model we trained ourselves\"; }"
+     }
+    },
+    {
+     "id": "gaiRateLimits",
+     "type": "select",
+     "label": "Are there rate limits, token budgets and cost alerts?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "testing",
+   "title": "Testing, monitoring and people",
+   "questions": [
+    {
+     "id": "gaiRedTeam",
+     "type": "select",
+     "label": "Has the system been red-teamed or adversarially tested?",
+     "options": [
+      "Yes, including by people outside the build team",
+      "Yes, internally",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiThreatModel",
+     "type": "select",
+     "label": "Has a threat model been built against the MITRE ATLAS tactics and techniques?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiBiasEval",
+     "type": "select",
+     "label": "Have outputs been evaluated for harmful bias or stereotyping across groups?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiUserGuidance",
+     "type": "select",
+     "label": "Are users trained on the system's limits, so they do not over-rely on it?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiMonitoring",
+     "type": "select",
+     "label": "Are prompts and outputs logged and monitored, with a route for reporting and handling AI incidents?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    },
+    {
+     "id": "gaiEnergy",
+     "type": "select",
+     "label": "Is the energy use or carbon footprint of the system known?",
+     "options": [
+      "Yes",
+      "Estimated",
+      "No"
+     ]
+    }
+   ]
+  }
+ ],
+ "GAI_CHECKS": [
+  {
+   "q": "gaiInjectionTested",
+   "gaps": {
+    "No": "high",
+    "Once": "medium"
+   },
+   "nist": [
+    8
+   ],
+   "owasp": [
+    0
+   ],
+   "title": "Prompt injection not tested",
+   "detail": "Test against direct and indirect injection before release and on every change to the prompt, model or connected content."
+  },
+  {
+   "q": "gaiSystemPromptSecrets",
+   "gaps": {
+    "Yes": "high",
+    "Not sure": "medium"
+   },
+   "nist": [
+    8
+   ],
+   "owasp": [
+    6
+   ],
+   "title": "Secrets or rules in the system prompt",
+   "detail": "Assume the system prompt can be extracted. Move credentials out and enforce access rules outside the model."
+  },
+  {
+   "q": "gaiInputFiltering",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    8,
+    2
+   ],
+   "owasp": [
+    0
+   ],
+   "title": "Inputs not screened",
+   "detail": "Screen inputs for length, known attack patterns and harmful content before they reach the model."
+  },
+  {
+   "q": "gaiProviderUse",
+   "gaps": {
+    "Yes": "high",
+    "Not sure": "medium"
+   },
+   "nist": [
+    3,
+    11
+   ],
+   "owasp": [
+    1
+   ],
+   "title": "Provider may retain or train on prompts",
+   "detail": "Confirm the provider's terms and opt out of training, or keep personal and confidential data out of prompts."
+  },
+  {
+   "q": "gaiOutputLeakCheck",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    3
+   ],
+   "owasp": [
+    1
+   ],
+   "title": "Outputs not checked for leakage",
+   "detail": "Check outputs for personal and confidential data before they are shown, stored or sent on.",
+   "when": {
+    "__fn": "function (a) { return gaiPersonalData(a) || (a.gaiPromptData || []).indexOf(\"Confidential business information\") !== -1; }"
+   }
+  },
+  {
+   "q": "gaiRagPermissions",
+   "gaps": {
+    "No": "high",
+    "Partially": "medium"
+   },
+   "nist": [
+    3,
+    8
+   ],
+   "owasp": [
+    7,
+    1
+   ],
+   "title": "Retrieval ignores user permissions",
+   "detail": "Filter retrieved content by the asking user's own access rights, or the assistant becomes a way round them."
+  },
+  {
+   "q": "gaiEmbeddingStore",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    3,
+    8
+   ],
+   "owasp": [
+    7
+   ],
+   "title": "Vector store less protected than its source",
+   "detail": "Embeddings can be inverted to recover text. Protect the store like the source and delete entries when the source is deleted."
+  },
+  {
+   "q": "gaiIpCheck",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    9
+   ],
+   "owasp": [],
+   "title": "Intellectual property not checked",
+   "detail": "Check outputs used externally for third-party material and confirm the licence terms of the model."
+  },
+  {
+   "q": "gaiOutputHandling",
+   "gaps": {
+    "Yes": "high",
+    "Not sure": "medium"
+   },
+   "nist": [
+    8
+   ],
+   "owasp": [
+    4
+   ],
+   "title": "Output used without validation",
+   "detail": "Treat model output as untrusted input: encode before rendering, and never execute it without validation."
+  },
+  {
+   "q": "gaiGrounding",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    1,
+    7
+   ],
+   "owasp": [
+    8
+   ],
+   "title": "Answers not grounded",
+   "detail": "Ground answers in sources and show citations, so users can check what the model asserts."
+  },
+  {
+   "q": "gaiHumanReview",
+   "gaps": {
+    "No": "medium"
+   },
+   "nist": [
+    1,
+    6
+   ],
+   "owasp": [
+    8
+   ],
+   "title": "Output relied on without review",
+   "detail": "Require human review before output is used for a decision or leaves the organization."
+  },
+  {
+   "q": "gaiContentFilters",
+   "gaps": {
+    "No": "high",
+    "Yes, provider defaults only": "low"
+   },
+   "nist": [
+    0,
+    2,
+    10
+   ],
+   "owasp": [],
+   "title": "Harmful content not filtered",
+   "detail": "Add and test filters for violent, hateful, abusive, sexual and dangerous content in prompts and outputs.",
+   "sevIf": {
+    "__fn": "function (a, s) { return gaiPublicFacing(a) ? s : (s === \"high\" ? \"medium\" : s); }"
+   }
+  },
+  {
+   "q": "gaiDisclosure",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    7
+   ],
+   "owasp": [],
+   "title": "AI use or synthetic content not disclosed",
+   "detail": "Tell people when they interact with AI and mark synthetic content, as Article 50 of the EU AI Act requires where it applies."
+  },
+  {
+   "q": "gaiToolPermissions",
+   "gaps": {
+    "Broad write or transactional actions": "medium"
+   },
+   "nist": [
+    6
+   ],
+   "owasp": [
+    5
+   ],
+   "title": "Broad tool permissions",
+   "detail": "Scope each tool to the minimum the task needs."
+  },
+  {
+   "q": "gaiApproval",
+   "gaps": {
+    "No": "high",
+    "Some": "medium"
+   },
+   "nist": [
+    6
+   ],
+   "owasp": [
+    5
+   ],
+   "title": "High-impact actions without approval",
+   "detail": "Require a human to approve actions that change data, spend money or reach outside the organization."
+  },
+  {
+   "q": "gaiProvenance",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    11
+   ],
+   "owasp": [
+    2
+   ],
+   "title": "Model and components not documented",
+   "detail": "Record the model, version, licence and third-party components, so a vulnerable or withdrawn component can be found."
+  },
+  {
+   "q": "gaiTrainingDataVetted",
+   "gaps": {
+    "No": "high",
+    "Partially": "medium"
+   },
+   "nist": [
+    8,
+    11
+   ],
+   "owasp": [
+    3
+   ],
+   "title": "Training data not vetted",
+   "detail": "Vet fine-tuning and training data for provenance, quality and poisoning."
+  },
+  {
+   "q": "gaiRateLimits",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    4
+   ],
+   "owasp": [
+    9
+   ],
+   "title": "No limits on consumption",
+   "detail": "Set rate limits, token budgets and cost alerts against denial of service and runaway cost."
+  },
+  {
+   "q": "gaiRedTeam",
+   "gaps": {
+    "No": "medium"
+   },
+   "nist": [
+    0,
+    2,
+    8
+   ],
+   "owasp": [
+    0
+   ],
+   "title": "Not red-teamed",
+   "detail": "Run adversarial testing before release, ideally including people outside the build team.",
+   "sevIf": {
+    "__fn": "function (a, s) { return gaiPublicFacing(a) ? \"high\" : s; }"
+   }
+  },
+  {
+   "q": "gaiThreatModel",
+   "gaps": {
+    "No": "low",
+    "Partially": "low"
+   },
+   "nist": [
+    8
+   ],
+   "owasp": [],
+   "title": "No ATLAS threat model",
+   "detail": "Map the system against the MITRE ATLAS tactics to find attack paths the questionnaire does not cover."
+  },
+  {
+   "q": "gaiBiasEval",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    5
+   ],
+   "owasp": [],
+   "title": "Bias not evaluated",
+   "detail": "Evaluate outputs for harmful bias and stereotyping across the groups the system serves."
+  },
+  {
+   "q": "gaiUserGuidance",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    6,
+    1
+   ],
+   "owasp": [
+    8
+   ],
+   "title": "Users not trained on limits",
+   "detail": "Train users on what the system gets wrong, so they do not over-rely on it."
+  },
+  {
+   "q": "gaiMonitoring",
+   "gaps": {
+    "No": "medium",
+    "Partially": "low"
+   },
+   "nist": [
+    7,
+    8
+   ],
+   "owasp": [],
+   "title": "No monitoring or incident route",
+   "detail": "Log prompts and outputs within privacy limits, monitor for misuse, and give AI incidents a reporting route."
+  },
+  {
+   "q": "gaiEnergy",
+   "gaps": {
+    "No": "low"
+   },
+   "nist": [
+    4
+   ],
+   "owasp": [],
+   "title": "Energy use unknown",
+   "detail": "Estimate the energy use, especially for self-hosted or high-volume systems."
+  }
+ ],
+ "TIA_TECH_MEASURES": [
+  "Encryption at rest with keys held only by the exporter or in the EEA",
+  "Encryption in transit end to end",
+  "Pseudonymisation, with the additional information held only by the exporter",
+  "Split or multi-party processing, so no single importer can read the data",
+  "Data stays in the EEA; the importer has no access in the clear",
+  "None"
+ ],
+ "TIA_CONTRACT_MEASURES": [
+  "Obligation to notify the exporter of any access request, where legally permitted",
+  "Obligation to challenge requests and seek interim measures",
+  "Transparency on the laws and past requests the importer is subject to",
+  "Right for the exporter to suspend or terminate the transfer",
+  "None"
+ ],
+ "TIA_ORG_MEASURES": [
+  "Internal policy for handling public authority requests",
+  "Record of requests received and responses given",
+  "Transparency reports published by the importer",
+  "Data minimisation before transfer",
+  "None"
+ ],
+ "TIA_STEPS": [
+  {
+   "key": "map",
+   "title": "Step 1: Know your transfer",
+   "intro": "Map the transfer, including onward transfers and remote access. Remote access from a third country is a transfer. Check that the data transferred is adequate, relevant and limited to what is necessary.",
+   "sources": [
+    {
+     "label": "EDPB Recommendations 01/2020",
+     "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en"
+    }
+   ],
+   "questions": [
+    {
+     "id": "name",
+     "type": "text",
+     "label": "Transfer name (importer and service)"
+    },
+    {
+     "id": "tiaExporterRole",
+     "type": "select",
+     "label": "Your role as exporter",
+     "options": [
+      "Controller",
+      "Processor"
+     ]
+    },
+    {
+     "id": "tiaImporterRole",
+     "type": "select",
+     "label": "The importer's role",
+     "options": [
+      "Controller",
+      "Processor",
+      "Sub-processor"
+     ]
+    },
+    {
+     "id": "tiaCountries",
+     "type": "multiselect",
+     "label": "Destination countries, including where the data can be accessed from",
+     "options": [
+      "Global / worldwide (all countries)",
+      "Whole EU/EEA (all member states)",
+      "Whole European Union (EU) only",
+      "Whole EFTA (Iceland, Liechtenstein, Norway, Switzerland)",
+      "Whole United Kingdom",
+      "Whole North America (US & Canada)",
+      "Whole Latin America & the Caribbean",
+      "Whole Asia-Pacific (APAC)",
+      "Whole Middle East",
+      "Whole Africa",
+      "Afghanistan",
+      "Albania",
+      "Algeria",
+      "Andorra",
+      "Angola",
+      "Antigua and Barbuda",
+      "Argentina",
+      "Armenia",
+      "Australia",
+      "Austria",
+      "Azerbaijan",
+      "Bahamas",
+      "Bahrain",
+      "Bangladesh",
+      "Barbados",
+      "Belarus",
+      "Belgium",
+      "Belize",
+      "Benin",
+      "Bhutan",
+      "Bolivia",
+      "Bosnia and Herzegovina",
+      "Botswana",
+      "Brazil",
+      "Brunei",
+      "Bulgaria",
+      "Burkina Faso",
+      "Burundi",
+      "Cabo Verde",
+      "Cambodia",
+      "Cameroon",
+      "Canada",
+      "Central African Republic",
+      "Chad",
+      "Chile",
+      "China",
+      "Colombia",
+      "Comoros",
+      "Congo (Republic of the)",
+      "Congo (Democratic Republic of the)",
+      "Costa Rica",
+      "Croatia",
+      "Cuba",
+      "Cyprus",
+      "Czechia",
+      "Denmark",
+      "Djibouti",
+      "Dominica",
+      "Dominican Republic",
+      "Ecuador",
+      "Egypt",
+      "El Salvador",
+      "Equatorial Guinea",
+      "Eritrea",
+      "Estonia",
+      "Eswatini",
+      "Ethiopia",
+      "Fiji",
+      "Finland",
+      "France",
+      "Gabon",
+      "Gambia",
+      "Georgia",
+      "Germany",
+      "Ghana",
+      "Greece",
+      "Grenada",
+      "Guatemala",
+      "Guinea",
+      "Guinea-Bissau",
+      "Guyana",
+      "Haiti",
+      "Honduras",
+      "Hong Kong SAR",
+      "Hungary",
+      "Iceland",
+      "India",
+      "Indonesia",
+      "Iran",
+      "Iraq",
+      "Ireland",
+      "Israel",
+      "Italy",
+      "Jamaica",
+      "Japan",
+      "Jordan",
+      "Kazakhstan",
+      "Kenya",
+      "Kiribati",
+      "Kosovo",
+      "Kuwait",
+      "Kyrgyzstan",
+      "Laos",
+      "Latvia",
+      "Lebanon",
+      "Lesotho",
+      "Liberia",
+      "Libya",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Macau SAR",
+      "Madagascar",
+      "Malawi",
+      "Malaysia",
+      "Maldives",
+      "Mali",
+      "Malta",
+      "Marshall Islands",
+      "Mauritania",
+      "Mauritius",
+      "Mexico",
+      "Micronesia",
+      "Moldova",
+      "Monaco",
+      "Mongolia",
+      "Montenegro",
+      "Morocco",
+      "Mozambique",
+      "Myanmar",
+      "Namibia",
+      "Nauru",
+      "Nepal",
+      "Netherlands",
+      "New Zealand",
+      "Nicaragua",
+      "Niger",
+      "Nigeria",
+      "North Korea",
+      "North Macedonia",
+      "Norway",
+      "Oman",
+      "Pakistan",
+      "Palau",
+      "Palestine",
+      "Panama",
+      "Papua New Guinea",
+      "Paraguay",
+      "Peru",
+      "Philippines",
+      "Poland",
+      "Portugal",
+      "Qatar",
+      "Romania",
+      "Russia",
+      "Rwanda",
+      "Saint Kitts and Nevis",
+      "Saint Lucia",
+      "Saint Vincent and the Grenadines",
+      "Samoa",
+      "San Marino",
+      "Sao Tome and Principe",
+      "Saudi Arabia",
+      "Senegal",
+      "Serbia",
+      "Seychelles",
+      "Sierra Leone",
+      "Singapore",
+      "Slovakia",
+      "Slovenia",
+      "Solomon Islands",
+      "Somalia",
+      "South Africa",
+      "South Korea",
+      "South Sudan",
+      "Spain",
+      "Sri Lanka",
+      "Sudan",
+      "Suriname",
+      "Sweden",
+      "Switzerland",
+      "Syria",
+      "Taiwan",
+      "Tajikistan",
+      "Tanzania",
+      "Thailand",
+      "Timor-Leste",
+      "Togo",
+      "Tonga",
+      "Trinidad and Tobago",
+      "Tunisia",
+      "Turkey",
+      "Turkmenistan",
+      "Tuvalu",
+      "Uganda",
+      "Ukraine",
+      "United Arab Emirates",
+      "United Kingdom",
+      "United States",
+      "Uruguay",
+      "Uzbekistan",
+      "Vanuatu",
+      "Vatican City",
+      "Venezuela",
+      "Vietnam",
+      "Yemen",
+      "Zambia",
+      "Zimbabwe",
+      "Other"
+     ]
+    },
+    {
+     "id": "tiaData",
+     "type": "multiselect",
+     "label": "Categories of data transferred",
+     "options": [
+      "Basic identity and personal characteristics (name, date of birth, nationality)",
+      "Private contact information (home address, personal email, personal phone)",
+      "Business contact information (job title, work email, work phone, department)",
+      "Official identification (passport, national ID, tax or social security number)",
+      "Employment administration data (contract, working time, absence, leavers)",
+      "Compensation and benefits (salary, bonuses, pension, deductions)",
+      "Education, qualifications and training records",
+      "Work activities and performance (objectives, appraisals, disciplinary records)",
+      "Bank and card data (account details, payment card data)",
+      "Financial and credit data (credit checks, financial history)",
+      "Assigned company assets (devices, access badges, company car, fines)",
+      "Travel and expense data",
+      "Family relations and dependants",
+      "Location, movement or telematics data",
+      "Logs, recordings and monitoring data (CCTV, call recordings, system logs)",
+      "Technical identifiers, authentication and authorisation data",
+      "Social media and internet activity",
+      "Lifestyle and preferences",
+      "Workplace safety and incident data",
+      "Background checks (employment, education, criminal record)",
+      "Special category data (health, genetic, biometric data used to uniquely identify a person, racial or ethnic origin, religious or philosophical beliefs, political opinion, trade union membership, sex life or orientation)",
+      "Criminal offence data",
+      "Other"
+     ]
+    },
+    {
+     "id": "tiaFormat",
+     "type": "select",
+     "label": "How does the importer handle the data?",
+     "options": [
+      "Stores or processes it in the clear",
+      "Stores it encrypted, without the keys",
+      "Remote access only, for support or administration",
+      "Receives pseudonymised data only"
+     ]
+    },
+    {
+     "id": "tiaOnward",
+     "type": "yesno",
+     "label": "Will the importer transfer the data on to others (sub-processors, group companies)?",
+     "note": {
+      "label": "To whom and where?",
+      "visibleIf": {
+       "__fn": "function (v) { return v === \"Yes\"; }"
+      }
+     }
+    },
+    {
+     "id": "tiaMinimised",
+     "type": "select",
+     "label": "Is the data limited to what the importer needs?",
+     "options": [
+      "Yes",
+      "Partially",
+      "No"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "tool",
+   "title": "Step 2: Identify the transfer tool",
+   "intro": "An adequacy decision first; otherwise an Article 46 safeguard. The Article 49 derogations are for occasional and non-repetitive transfers and are interpreted strictly.",
+   "questions": [
+    {
+     "id": "tiaTool",
+     "type": "select",
+     "label": "Which tool does the transfer rely on?",
+     "options": [
+      "Adequacy decision",
+      "EU-US Data Privacy Framework (certified US recipient)",
+      "Standard contractual clauses (controller to processor)",
+      "Standard contractual clauses (controller to controller)",
+      "Binding corporate rules",
+      "Approved code of conduct",
+      "Approved certification mechanism",
+      "Approved ad hoc contractual clauses",
+      "UK international data transfer addendum",
+      "Derogation for a specific situation",
+      "None identified yet"
+     ]
+    },
+    {
+     "id": "tiaDpfScope",
+     "type": "select",
+     "label": "Does the recipient's Data Privacy Framework certification cover this type of data (for example HR data) and is it active?",
+     "options": [
+      "Yes",
+      "No",
+      "Not checked"
+     ],
+     "visibleIf": {
+      "__fn": "function (a) { return a.tiaTool === \"EU-US Data Privacy Framework (certified US recipient)\"; }"
+     }
+    },
+    {
+     "id": "tiaSccModule",
+     "type": "select",
+     "label": "Which module of the standard contractual clauses (Decision 2021/914)?",
+     "options": [
+      "Module 1: controller to controller",
+      "Module 2: controller to processor",
+      "Module 3: processor to processor",
+      "Module 4: processor to controller"
+     ],
+     "visibleIf": {
+      "__fn": "function (a) { return /^Standard contractual clauses/.test(a.tiaTool || \"\"); }"
+     }
+    },
+    {
+     "id": "tiaSccUnmodified",
+     "type": "select",
+     "label": "Are the clauses used without changes to their text?",
+     "options": [
+      "Yes",
+      "No",
+      "Not sure"
+     ],
+     "visibleIf": {
+      "__fn": "function (a) { return /^Standard contractual clauses/.test(a.tiaTool || \"\"); }"
+     }
+    },
+    {
+     "id": "tiaDerogationOccasional",
+     "type": "select",
+     "label": "Is the transfer occasional and non-repetitive?",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "visibleIf": {
+      "__fn": "function (a) { return a.tiaTool === \"Derogation for a specific situation\"; }"
+     }
+    }
+   ]
+  },
+  {
+   "key": "law",
+   "title": "Step 3: Assess the law and practice of the destination",
+   "intro": "Assess whether anything in the law or practice of the destination country may undermine the protection of the transfer tool, in the circumstances of this transfer. Use relevant, objective, reliable, verifiable and publicly available sources, and document them.",
+   "visibleIf": {
+    "__fn": "function tiaStepsNeeded(a) { return a.tiaTool !== \"Adequacy decision\" && a.tiaTool !== \"EU-US Data Privacy Framework (certified US recipient)\"; }"
+   },
+   "questions": [
+    {
+     "id": "tiaImporterTriggers",
+     "type": "multiselect",
+     "label": "Do any of these describe the importer? Each one points to surveillance laws that may apply to it.",
+     "options": [
+      "The supplier is a telecommunications carrier or internet service provider",
+      "The supplier provides a communications service (email, messaging, video)",
+      "The supplier provides cloud storage available to the general public",
+      "The supplier provides remote computing services (virtual machines, AI, financial processing)",
+      "The supplier can access communications between our users, or between us and our users",
+      "The supplier is wholly or partly state-owned",
+      "The supplier processes or stores financial or payment information",
+      "The supplier or its subcontractors store data in a country without an adequacy decision"
+     ]
+    },
+    {
+     "id": "tiaPublicAccessLaw",
+     "type": "select",
+     "label": "Does the destination's law allow public authorities to access the data beyond what is necessary and proportionate in a democratic society, without effective redress?",
+     "options": [
+      "No",
+      "Yes",
+      "Unclear"
+     ]
+    },
+    {
+     "id": "tiaImporterInScope",
+     "type": "select",
+     "label": "Is the importer, or the data, likely to fall in scope of those laws?",
+     "options": [
+      "No",
+      "Yes",
+      "Unclear"
+     ],
+     "visibleIf": {
+      "__fn": "function (a) { return a.tiaPublicAccessLaw === \"Yes\" || a.tiaPublicAccessLaw === \"Unclear\"; }"
+     }
+    },
+    {
+     "id": "tiaRequestsHistory",
+     "type": "select",
+     "label": "Has the importer received requests from public authorities for data of this kind?",
+     "options": [
+      "No, and it reports this transparently",
+      "Yes",
+      "Unknown"
+     ]
+    },
+    {
+     "id": "tiaSources",
+     "type": "textarea",
+     "label": "Sources used for this assessment (laws, case law, reports of authorities and NGOs, the importer's transparency reports)"
+    }
+   ]
+  },
+  {
+   "key": "measures",
+   "title": "Step 4: Supplementary measures",
+   "intro": "Where Step 3 finds a problem, identify measures that bring protection up to the EU standard. Contractual and organisational measures on their own will generally not stop a public authority accessing data in the clear; a technical measure is usually what makes the difference.",
+   "visibleIf": {
+    "__fn": "function tiaStepsNeeded(a) { return a.tiaTool !== \"Adequacy decision\" && a.tiaTool !== \"EU-US Data Privacy Framework (certified US recipient)\"; }"
+   },
+   "questions": [
+    {
+     "id": "tiaClearAccess",
+     "type": "select",
+     "label": "Does the importer need the data in the clear to provide the service?",
+     "options": [
+      "No",
+      "Yes"
+     ]
+    },
+    {
+     "id": "tiaTechMeasures",
+     "type": "multiselect",
+     "label": "Technical measures in place",
+     "options": [
+      "Encryption at rest with keys held only by the exporter or in the EEA",
+      "Encryption in transit end to end",
+      "Pseudonymisation, with the additional information held only by the exporter",
+      "Split or multi-party processing, so no single importer can read the data",
+      "Data stays in the EEA; the importer has no access in the clear",
+      "None"
+     ]
+    },
+    {
+     "id": "tiaContractMeasures",
+     "type": "multiselect",
+     "label": "Contractual measures in place",
+     "options": [
+      "Obligation to notify the exporter of any access request, where legally permitted",
+      "Obligation to challenge requests and seek interim measures",
+      "Transparency on the laws and past requests the importer is subject to",
+      "Right for the exporter to suspend or terminate the transfer",
+      "None"
+     ]
+    },
+    {
+     "id": "tiaOrgMeasures",
+     "type": "multiselect",
+     "label": "Organisational measures in place",
+     "options": [
+      "Internal policy for handling public authority requests",
+      "Record of requests received and responses given",
+      "Transparency reports published by the importer",
+      "Data minimisation before transfer",
+      "None"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "procedure",
+   "title": "Steps 5 and 6: Procedure and re-evaluation",
+   "intro": "Take any formal steps the supplementary measures require, and re-evaluate at appropriate intervals or when the law, the importer or the processing changes.",
+   "questions": [
+    {
+     "id": "tiaProcedure",
+     "type": "select",
+     "label": "Have the procedural steps been completed (clauses signed unmodified, BCRs approved, authority consulted where required)?",
+     "options": [
+      "Yes",
+      "In progress",
+      "No",
+      "None needed"
+     ]
+    },
+    {
+     "id": "tiaReviewDate",
+     "type": "date",
+     "label": "Next re-evaluation date"
+    },
+    {
+     "id": "tiaMonitoring",
+     "type": "select",
+     "label": "Is someone responsible for monitoring legal developments in the destination and changes at the importer?",
+     "options": [
+      "Yes",
+      "No"
+     ]
+    },
+    {
+     "id": "tiaConclusionNote",
+     "type": "textarea",
+     "label": "Your conclusion, in your own words"
+    }
+   ]
+  }
+ ],
  "MODULES": {
   "privacy": {
    "id": "privacy",
@@ -8010,6 +9880,24 @@
    "label": "Third-Party Security Assessment",
    "intro": "A detailed vendor security questionnaire across governance, people, assets, development, access, operations, cryptography, incident response, physical security, continuity and compliance - plus an AI/ML supplement - scored as inherent risk tempered by control maturity, with a full list of gaps to close.",
    "stepCount": 21
+  },
+  "fria": {
+   "id": "fria",
+   "label": "Fundamental Rights Impact Assessment",
+   "intro": "The EU AI Act Article 27 assessment for deployers of high-risk systems: who has to do one, the process and the people affected, the risks to their rights before and after mitigation, human oversight, complaints, and the link to the DPIA. Can start from a DPIA saved on this device.",
+   "stepCount": 7
+  },
+  "genai": {
+   "id": "genai",
+   "label": "Generative AI Risk Assessment",
+   "intro": "Prompts, data leakage, output handling, agency, supply chain and testing for a generative AI system, with the gaps mapped to the twelve risks of the NIST Generative AI Profile and the OWASP Top 10 for LLM Applications.",
+   "stepCount": 6
+  },
+  "tia": {
+   "id": "tia",
+   "label": "Transfer Impact Assessment",
+   "intro": "The six steps of EDPB Recommendations 01/2020 for a transfer outside the EEA: map the transfer, pick the tool, assess the destination's law and practice, choose supplementary measures, and set a re-evaluation date. Ends in a clear proceed, proceed with measures, or do not transfer.",
+   "stepCount": 5
   }
  }
 }

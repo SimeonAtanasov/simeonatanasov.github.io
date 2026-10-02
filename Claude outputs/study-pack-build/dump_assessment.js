@@ -1,6 +1,6 @@
 // Truncate assessment.js before its DOM access, then dump the data structures.
 const fs = require("fs");
-const SRC = "/home/claude/fix/assessment.js";
+const SRC = process.env.SRC || "/home/claude/fix/assessment.js";
 const lines = fs.readFileSync(SRC, "utf8").split("\n");
 
 let cut = lines.findIndex((l) => l.includes('var root = document.getElementById("paa-app")'));
@@ -22,7 +22,11 @@ const names = [
   "TPSA_DOMAINS", "TPSA_AI_DOMAINS", "TPSA_ALL_DOMAINS", "TPSA_ENGAGEMENT_TYPES",
   "TPSA_DATA_TYPES", "TPSA_USER_COUNTS", "TPSA_INTAKE_STEPS", "TPSA_STEPS",
   "TPSA_INHERENT_USER_SCORE", "TPSA_INHERENT_MAX", "TPSA_MATURITY_TIERS",
-  "TPSA_RESIDUAL_MATRIX", "MODULES",
+  "TPSA_RESIDUAL_MATRIX",
+  "FRIA_ANNEX_III", "FRIA_DEPLOYER_TYPES", "FRIA_AFFECTED", "FRIA_VULNERABLE", "FRIA_RIGHTS",
+  "FRIA_SEVERITY", "FRIA_LIKELIHOOD", "FRIA_STEPS", "NIST_GAI_RISKS", "OWASP_LLM", "GAI_PATTERNS",
+  "GAI_PROMPT_DATA", "GAI_STEPS", "GAI_CHECKS", "TIA_TECH_MEASURES", "TIA_CONTRACT_MEASURES",
+  "TIA_ORG_MEASURES", "TIA_STEPS", "MODULES",
 ];
 
 const head = lines.slice(0, cut).join("\n");
@@ -55,6 +59,6 @@ function clone(v, ancestors) {
   return o;
 }
 const out = JSON.stringify(clone(D, []), null, 1);
-fs.writeFileSync("/home/claude/pack/src/assessment.json", out);
+fs.writeFileSync(process.env.OUT || "/home/claude/pack/src/assessment.json", out);
 console.log("wrote", out.length, "bytes");
 for (const k of Object.keys(mods)) console.log(k, mods[k].label, mods[k].stepCount, "steps");

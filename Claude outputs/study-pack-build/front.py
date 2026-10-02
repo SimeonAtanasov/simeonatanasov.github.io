@@ -5,12 +5,12 @@ COVER = """
 <section class="cover">
   <p class="kicker">Study pack</p>
   <h1>Privacy, the AI Act<br>and the Assessments</h1>
-  <p class="sub">Practical Privacy &middot; Practical AI Act Advice &middot; six assessment tools &middot; the GDPR readiness model</p>
+  <p class="sub">Practical Privacy &middot; Practical AI Act Advice &middot; nine assessment tools &middot; the GDPR readiness model</p>
   <div class="coverstats">
     <div><span class="n">31</span><span class="l">reference topics</span></div>
-    <div><span class="n">338</span><span class="l">assessment questions</span></div>
+    <div><span class="n">431</span><span class="l">assessment questions</span></div>
     <div><span class="n">71</span><span class="l">readiness activities</span></div>
-    <div><span class="n">69</span><span class="l">self-test questions</span></div>
+    <div><span class="n">73</span><span class="l">self-test questions</span></div>
   </div>
   <p class="covernote">Printed for study. Everything here is reference material and none of it is legal advice.</p>
 </section>
@@ -20,7 +20,7 @@ HOWTO = """
 <h1 id="howto-h">How to use this pack</h1>
 
 <p class="lede">This is the whole body of material in one printable document: the two written references
-in full, every question the six assessment tools ask with the scoring model behind each one, and the
+in full, every question the nine assessment tools ask with the scoring model behind each one, and the
 complete readiness model. It is organised so it can be read straight through once and then used for
 retrieval practice afterwards, which is the part that actually makes it stick.</p>
 
@@ -49,7 +49,7 @@ If you cannot, you have not finished with that section.</p>
   high-risk classification, provider and deployer obligations, GPAI, conformity, governance and
   enforcement, then four practitioner sections on building a program, assessing risk, vetting vendors,
   literacy, and copyright. Same takeaway boxes.</li>
-  <li><strong>Part 3, the Assessment Suite.</strong> Six tools. Each one opens with a cheat sheet
+  <li><strong>Part 3, the Assessment Suite.</strong> Nine tools. Each one opens with a cheat sheet
   covering what it is for, its shape, what it returns, how the scoring works and where people get it
   wrong, followed by the full question bank step by step. Read the cheat sheet first: the questions only
   make sense once you know what the scoring does with the answers.</li>
@@ -84,7 +84,7 @@ whole card takes a quarter of an hour. Anything you fail twice at that spacing i
 single sheet of its own: a list of your own failures is a better revision aid than any summary written
 by someone else, including this one.</p>
 
-<p>The material also rewards use over revision. The fastest way to hold the six tools in memory is to
+<p>The material also rewards use over revision. The fastest way to hold the nine tools in memory is to
 run a real process through the Privacy Assessment, a real vendor through the Third-Party Security
 Assessment, and a real or invented incident through the ENISA formula. Ten minutes of that beats an
 hour of rereading.</p>
@@ -127,7 +127,7 @@ is the target once the material is in place.</p>
 <li><strong>Penalties:</strong> 7% or EUR 35m; 3% or EUR 15m; 1% or EUR 7.5m. Whichever is higher, except SMEs and small mid-caps (lower).</li>
 </ul>
 
-<h3 class="sub">The six tools, one line each</h3>
+<h3 class="sub">The nine tools, one line each</h3>
 <ul class="card">
 <li><strong>Privacy Assessment.</strong> Escalate-only level. Two Article 35(3) triggers make a DPIA mandatory; one makes it mandatory at High.</li>
 <li><strong>Full DPIA.</strong> Severity x likelihood through a 4 x 4 lookup, not a product. Nothing at Maximum severity falls below High. Three feared events: access, modification, disappearance.</li>
@@ -135,6 +135,9 @@ is the target once the material is in place.</p>
 <li><strong>AI Risk Assessment.</strong> Two independent levels: regulatory from the prohibited-use, Annex III and Annex I gates (Unsure returns Unresolved, never Limited), business from autonomy, data access, logging and guardrails as a triage score.</li>
 <li><strong>Incident &amp; Breach Severity.</strong> SE = (DPC x EI) + CB. DPC 1 to 4, EI 0.25 to 1, CB up to 1.5. Bands at 2, 3 and 4. Medium notifies the authority; High notifies individuals too.</li>
 <li><strong>Third-Party Security.</strong> Inherent risk out of 9 from intake alone, maturity from the control answers, residual from a lookup. Critical inherent never falls below Medium residual.</li>
+<li><strong>Fundamental Rights Impact Assessment.</strong> Required for public-law bodies and public-service providers on any Annex III system except critical infrastructure, and for every deployer under 5(b) credit and 5(c) insurance. Risk to rights uses the DPIA matrix. Can cross-refer to or incorporate a DPIA (Article 27(4) as amended), never replaced by one.</li>
+<li><strong>Generative AI Risk Assessment.</strong> 24 checks mapped to the 12 NIST GenAI risks and the OWASP LLM Top 10. Not assessed is not a pass. Public-facing systems escalate missing filters and red-teaming.</li>
+<li><strong>Transfer Impact Assessment.</strong> EDPB six steps. Adequacy or a confirmed DPF certification skips steps 3 and 4. Laws of concern plus clear-text access means do not transfer; only a technical measure changes that.</li>
 </ul>
 
 <h3 class="sub">The readiness model</h3>

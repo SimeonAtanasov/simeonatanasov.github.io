@@ -1,0 +1,16 @@
+2738c2738
+< 			intro: "Article 27(4): where a DPIA under Article 35 GDPR already covers some of these points, the FRIA complements it rather than repeating it. Article 27(3): the deployer notifies the market surveillance authority of the results using the AI Office template.",
+---
+> 			intro: "Article 27(4), as amended by Regulation (EU) 2026/1744: where a DPIA under Article 35 GDPR already covers some of these points, the FRIA can cross-refer to the relevant sections of it or incorporate them rather than repeating them. Article 27(3): the deployer notifies the market surveillance authority of the results using the AI Office template.",
+2772c2772
+< 		if (a.friaDpia === "No") factors.push({ title: "No DPIA alongside the FRIA", detail: "Where personal data is processed, an Annex III use will almost always need a DPIA. Article 27(4) lets the FRIA complement it rather than repeat it.", severity: "medium" });
+---
+> 		if (a.friaDpia === "No") factors.push({ title: "No DPIA alongside the FRIA", detail: "Where personal data is processed, an Annex III use will almost always need a DPIA. Article 27(4) lets the FRIA cross-refer to it or incorporate relevant parts of it rather than repeat them.", severity: "medium" });
+3273c3273
+< 	/* Article 27(4): a FRIA complements a DPIA for the same processing. When a
+---
+> 	/* Article 27(4): a FRIA may cross-refer to or incorporate a DPIA for the same processing. When a
+3293c3293
+< 		root.appendChild(el("p", {}, ["A DPIA is saved on this device. Under Article 27(4) the FRIA complements the DPIA for the same processing, so you can start from it: the name, description and harms carry over, and the DPIA is recorded as done."]));
+---
+> 		root.appendChild(el("p", {}, ["A DPIA is saved on this device. Under Article 27(4) the FRIA can cross-refer to or incorporate relevant parts of the DPIA for the same processing, so you can start from it: the name, description and harms carry over, and the DPIA is recorded as done."]));

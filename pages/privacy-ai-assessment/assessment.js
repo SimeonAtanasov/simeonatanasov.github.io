@@ -2735,7 +2735,7 @@
 		{
 			key: "links",
 			title: "DPIA link, notification and review",
-			intro: "Article 27(4): where a DPIA under Article 35 GDPR already covers some of these points, the FRIA complements it rather than repeating it. Article 27(3): the deployer notifies the market surveillance authority of the results using the AI Office template.",
+			intro: "Article 27(4), as amended by Regulation (EU) 2026/1744: where a DPIA under Article 35 GDPR already covers some of these points, the FRIA can cross-refer to the relevant sections of it or incorporate them rather than repeating them. Article 27(3): the deployer notifies the market surveillance authority of the results using the AI Office template.",
 			questions: [
 				{ id: "friaDpia", type: "select", label: "Has a DPIA been carried out for the same processing?", options: ["Yes", "In progress", "No", "Not applicable (no personal data)"],
 					note: { label: "Reference or date of the DPIA", visibleIf: function (v) { return v === "Yes" || v === "In progress"; } } },
@@ -2769,7 +2769,7 @@
 		if (a.suspensionProcess === "No") factors.push({ title: "No suspension and reporting process", detail: "Article 26(5) requires deployers to inform the provider and the authority and suspend use where the system presents a risk, and to report serious incidents.", severity: "medium" });
 		if (a.complaintMechanism === "No") factors.push({ title: "No complaint mechanism", detail: "Article 27(1)(f) names complaint mechanisms explicitly. Give affected people a way to contest an outcome.", severity: "high" });
 		if (a.explanationProcess === "No") factors.push({ title: "No way to explain decisions", detail: "Article 86 gives affected people a right to a clear and meaningful explanation of the system's role in decisions with legal or similarly significant effects.", severity: "medium" });
-		if (a.friaDpia === "No") factors.push({ title: "No DPIA alongside the FRIA", detail: "Where personal data is processed, an Annex III use will almost always need a DPIA. Article 27(4) lets the FRIA complement it rather than repeat it.", severity: "medium" });
+		if (a.friaDpia === "No") factors.push({ title: "No DPIA alongside the FRIA", detail: "Where personal data is processed, an Annex III use will almost always need a DPIA. Article 27(4) lets the FRIA cross-refer to it or incorporate relevant parts of it rather than repeat them.", severity: "medium" });
 		if (a.priorAssessmentReused === "Yes, but the deployment has changed") factors.push({ title: "Earlier assessment out of date", detail: "Article 27(2) requires the assessment to be updated where any of its elements has changed.", severity: "medium" });
 		if (app.status === "Required" && a.authorityNotified === "Not yet") factors.push({ title: "Authority not yet notified", detail: "Notify the market surveillance authority of the results, using the AI Office template, before first use (Article 27(3)).", severity: "medium" });
 		// RISK_MATRIX also produces "Very High", which LEVELS does not hold.
@@ -3270,7 +3270,7 @@
 		if (r.help) root.appendChild(el("p", { class: "paa-help" }, [r.help]));
 	}
 
-	/* Article 27(4): a FRIA complements a DPIA for the same processing. When a
+	/* Article 27(4): a FRIA may cross-refer to or incorporate a DPIA for the same processing. When a
 	 * DPIA is saved on this device, offer to start the FRIA from it. Returns
 	 * false when there is nothing to offer, so the caller starts as usual. */
 	function friaSeedFromDpia(entry) {
@@ -3290,7 +3290,7 @@
 		root.innerHTML = "";
 		root.className = "";
 		root.appendChild(el("h3", {}, [MODULES.fria.label]));
-		root.appendChild(el("p", {}, ["A DPIA is saved on this device. Under Article 27(4) the FRIA complements the DPIA for the same processing, so you can start from it: the name, description and harms carry over, and the DPIA is recorded as done."]));
+		root.appendChild(el("p", {}, ["A DPIA is saved on this device. Under Article 27(4) the FRIA can cross-refer to or incorporate relevant parts of the DPIA for the same processing, so you can start from it: the name, description and harms carry over, and the DPIA is recorded as done."]));
 		var table = el("table", { class: "paa-table" });
 		dpias.forEach(function (h) {
 			var b = el("button", { type: "button", class: "button alt small" }, ["Start from this DPIA"]);

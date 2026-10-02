@@ -1,0 +1,172 @@
+/* AI governance crosswalk. Prefix cw-. Sits on the html5up dark template, whose
+   rules for bare button and select have to be reset where we use them. */
+
+.cw-intro .cw-stats {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6em 1.6em;
+	margin: 0 0 1em;
+}
+	.cw-intro .cw-stats li { padding: 0; }
+	.cw-intro .cw-stats strong { color: #7fb2e5; font-size: 1.25em; margin-right: 0.25em; }
+
+.cw-caveat {
+	font-size: 0.85em;
+	border-left: solid 3px rgba(127, 178, 229, 0.6);
+	padding-left: 1em;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+/* Anchor targets sit under the sticky header otherwise (see site-context: 6rem). */
+.cw-card, .cw-theme, #cw-app, #cw-method { scroll-margin-top: 6rem; }
+
+/* Tabs and chips: the template gives every button a fixed 4.75em height,
+   uppercase and nowrap, so all of it is declared back here. */
+.cw-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+	margin: 1.5em 0 1.25em;
+}
+.cw-tab, .cw-chip {
+	height: auto;
+	line-height: 1.35;
+	white-space: normal;
+	text-transform: none;
+	letter-spacing: 0.02em;
+	font-size: 0.85em;
+	font-weight: bold;
+	box-shadow: none;
+	cursor: pointer;
+	min-width: 0;
+	width: auto;
+}
+.cw-tab {
+	padding: 0.7em 1.1em;
+	border-radius: 0.4em 0.4em 0 0;
+	background: transparent;
+	color: rgba(255, 255, 255, 0.65) !important;
+	border: solid 1px transparent !important;
+	border-bottom: none !important;
+}
+	.cw-tab:hover { color: #ffffff !important; background: rgba(255, 255, 255, 0.05); }
+	.cw-tab.is-on {
+		color: #ffffff !important;
+		background: rgba(127, 178, 229, 0.18);
+		border-color: rgba(127, 178, 229, 0.45) !important;
+	}
+
+.cw-filters { margin-bottom: 1em; }
+.cw-chips { display: flex; flex-wrap: wrap; gap: 0.4em; margin-bottom: 0.75em; }
+.cw-chip {
+	padding: 0.45em 0.95em;
+	border-radius: 2em;
+	background: transparent;
+	color: rgba(255, 255, 255, 0.8) !important;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3) !important;
+}
+	.cw-chip.is-on {
+		background: rgba(127, 178, 229, 0.3);
+		color: #ffffff !important;
+		box-shadow: inset 0 0 0 1px rgba(127, 178, 229, 0.9) !important;
+	}
+.cw-filter-row { display: flex; flex-wrap: wrap; gap: 0.6em; }
+	.cw-filter-row .cw-select { flex: 0 1 18em; min-width: 0; }
+	.cw-filter-row .cw-search { flex: 1 1 16em; min-width: 0; }
+
+.cw-count { font-size: 0.85em; color: rgba(255, 255, 255, 0.6); margin: 0 0 0.5em; }
+.cw-lede { color: rgba(255, 255, 255, 0.8); }
+
+.cw-theme {
+	margin: 1.75em 0 0.75em;
+	padding-bottom: 0.3em;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.12);
+	font-size: 1.05em;
+}
+.cw-cat { margin: 1.25em 0 0.5em; font-size: 0.95em; }
+
+.cw-card {
+	position: relative;
+	background: rgba(255, 255, 255, 0.04);
+	border: solid 1px rgba(255, 255, 255, 0.1);
+	border-radius: 0.5em;
+	padding: 1.1em 1.25em 0.9em;
+	margin: 0 0 1em;
+	transition: box-shadow 0.4s ease;
+}
+	.cw-card.cw-flash { box-shadow: 0 0 0 2px #7fb2e5; }
+	.cw-card h4 { font-size: 0.8em; letter-spacing: 0.08em; text-transform: uppercase; margin: 0.9em 0 0.4em; color: rgba(255, 255, 255, 0.6); }
+	.cw-card p { margin: 0 0 0.6em; }
+
+.cw-card-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4em 0.5em; margin-bottom: 0.6em; padding-right: 3em; }
+.cw-art {
+	font-weight: bold;
+	font-size: 0.85em;
+	padding: 0.15em 0.6em;
+	border-radius: 0.3em;
+	background: rgba(127, 178, 229, 0.2);
+	border-bottom: none;
+	color: #ffffff;
+}
+.cw-id { font-weight: bold; color: #7fb2e5; }
+.cw-item-title { font-weight: bold; }
+.cw-role, .cw-gap {
+	font-size: 0.72em;
+	font-weight: bold;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	padding: 0.2em 0.6em;
+	border-radius: 2em;
+	border: solid 1px rgba(255, 255, 255, 0.3);
+	white-space: nowrap;
+}
+.cw-role-provider { border-color: rgba(127, 178, 229, 0.8); }
+.cw-role-deployer { border-color: rgba(176, 222, 160, 0.8); }
+.cw-role-both { border-color: rgba(255, 255, 255, 0.6); }
+.cw-role-gpai { border-color: rgba(231, 190, 120, 0.85); }
+.cw-gap-none { background: rgba(232, 120, 120, 0.25); border-color: rgba(232, 120, 120, 0.8); }
+.cw-gap-partial { background: rgba(231, 190, 120, 0.18); border-color: rgba(231, 190, 120, 0.7); }
+
+.cw-obl { font-size: 1.02em; }
+.cw-art-titles { font-size: 0.82em; color: rgba(255, 255, 255, 0.6); }
+.cw-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 0 1.5em; }
+.cw-col { min-width: 0; }
+.cw-reflist { list-style: none; padding: 0; margin: 0 0 0.4em; }
+	.cw-reflist li { padding: 0; margin: 0 0 0.45em; font-size: 0.88em; line-height: 1.5; }
+.cw-ref-id { font-weight: bold; white-space: nowrap; }
+.cw-quote { color: rgba(255, 255, 255, 0.82); }
+.cw-none { font-style: italic; color: rgba(255, 255, 255, 0.5); font-size: 0.88em; }
+.cw-note { font-size: 0.86em; color: rgba(255, 255, 255, 0.78); border-top: dashed 1px rgba(255, 255, 255, 0.12); padding-top: 0.6em; margin-top: 0.4em; }
+.cw-tool { font-size: 0.86em; }
+.cw-inline-refs { font-size: 0.88em; }
+.cw-permalink {
+	position: absolute;
+	top: 1em;
+	right: 1.1em;
+	font-size: 0.75em;
+	opacity: 0.6;
+}
+	.cw-permalink:hover { opacity: 1; }
+
+.cw-table-wrap { overflow-x: auto; }
+.cw-table { width: 100%; font-size: 0.88em; }
+	.cw-table td, .cw-table th { vertical-align: top; padding: 0.45em 0.6em; }
+
+.cw-method { margin-top: 3em; font-size: 0.9em; }
+	.cw-method h2 { font-size: 1.2em; }
+	.cw-method li { margin-bottom: 0.6em; }
+
+@media screen and (max-width: 736px) {
+	.cw-cols { grid-template-columns: minmax(0, 1fr); }
+	.cw-card { padding: 1em 0.9em 0.8em; }
+	.cw-tab { flex: 1 1 45%; text-align: center; border-radius: 0.4em; border-bottom: solid 1px transparent !important; }
+	.cw-tabs { border-bottom: none; }
+}
+
+@media print {
+	.cw-tabs, .cw-filters, .cw-permalink { display: none; }
+	.cw-card { break-inside: avoid; }
+}

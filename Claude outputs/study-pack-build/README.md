@@ -1,6 +1,6 @@
 # Study pack build
 
-Generates `../privacy-ai-act-assessments-study-pack-v2.pdf` (145 pages, greyscale): the
+Generates `../privacy-ai-act-assessments-study-pack-v2.pdf` (159 pages since 3 October 2026, greyscale): the
 two advice pages plus an authored study layer and the two assessment tools, laid out for
 print.
 
@@ -16,7 +16,7 @@ sandbox, so the PDF could not be rebuilt from the repo.
 | `extract_pages.py` | Regenerates `pages.json` from the two HTML pages with BeautifulSoup. Set `SRC` to the folder holding them. |
 | `study_pp.py`, `study_aia.py`, `study_tools.py` | The authored study layer: key takeaways and self-test questions per section. Written by hand, not extracted. |
 | `front.py` | Cover, how to use, and the closing matter. |
-| `assessment.json`, `readiness.json` | The two assessment tools' content, dumped from the live pages by `dump_assessment.js` and `dump_readiness.js` (Playwright). |
+| `assessment.json`, `readiness.json` | The two assessment tools' content, dumped from the source by `dump_assessment.js` (node, `SRC=<assessment.js> OUT=<assessment.json> node dump_assessment.js`) and `dump_readiness.js`. |
 | `pack.css` | Print stylesheet, shared with the three digest PDF builders. |
 
 ## Rebuilding
@@ -47,3 +47,17 @@ See `../law-verification-2026-09-20.md`.
 British spelling in new material, no em dashes anywhere, no company, employer or product
 names. The extracted page text keeps the site's own American spelling, which is the
 existing style of those two pages; do not convert it.
+
+## 3 October 2026: three tools added to Part 3
+
+The Fundamental Rights Impact Assessment, the Generative AI Risk Assessment and the
+Transfer Impact Assessment were added to the site on 2 October 2026 (see the tool change
+log, TC-01 to TC-03). `assessment.json` was re-dumped from the new `assessment.js`; the
+entries for the six original tools came out byte-identical to the previous dump. Added: three
+cheat sheets and four self-test questions in `study_tools.py`, sources 20 (NIST AI 600-1)
+and 21 (MITRE ATLAS), three `MODULE_ORDER` rows and a `GAICHECKS` table in `build.py`,
+and the counts and review card lines in `front.py`. The Part 3 blurb now computes its
+step and question counts instead of hard-coding them. Rebuilt text compared with the
+previous PDF: Parts 1, 2 and 4 unchanged; the only removed lines are the edited counts,
+two reworded source entries and table of contents page numbers. Before-images of every
+file are in `../tool-baselines/2026-10-03-STUDY-01/`.

@@ -176,6 +176,9 @@ MODULE_ORDER = [
     ("ai", "AI_STEPS", "AI Risk Assessment"),
     ("incident", "INCIDENT_STEPS", "Incident & Breach Severity"),
     ("tpsa", "TPSA_STEPS", "Third-Party Security Assessment"),
+    ("fria", "FRIA_STEPS", "Fundamental Rights Impact Assessment"),
+    ("genai", "GAI_STEPS", "Generative AI Risk Assessment"),
+    ("tia", "TIA_STEPS", "Transfer Impact Assessment"),
 ]
 
 LONG_LISTS = {}
@@ -243,7 +246,7 @@ def cheatsheet_html(cs, extra=None, refs=None):
     h += "<p><span class=\"t\">What it returns</span> %s</p>" % inline(cs["output"])
     h += "<h4>How the scoring works</h4><ul>"
     for line in cs["logic"]:
-        if line in ("MATRIX", "RESIDUAL", "FORMULA"):
+        if line in ("MATRIX", "RESIDUAL", "FORMULA", "GAICHECKS"):
             h += "</ul>" + (extra or {}).get(line, "") + "<ul>"
             continue
         h += "<li>%s</li>" % inline(line)
@@ -281,11 +284,30 @@ def scale_table(title, pairs):
     return h
 
 
+NUMBER_WORDS = {6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten"}
+
+
+def gai_checks_table():
+    """The Generative AI Risk Assessment's check list as a table: gap answers and mappings."""
+    nist, owasp = A["NIST_GAI_RISKS"], A["OWASP_LLM"]
+    h = '<table style="font-size:8pt;width:100%"><thead><tr><th>finding</th><th>gap answers</th><th>NIST AI 600-1</th><th>OWASP</th></tr></thead><tbody>'
+    for c in A["GAI_CHECKS"]:
+        gaps = "; ".join("%s (%s)" % (k, v) for k, v in c["gaps"].items())
+        h += "<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
+            esc(c["title"]), esc(gaps),
+            esc(", ".join(nist[i] for i in c["nist"])) or "-",
+            esc(", ".join(owasp[i].split(" ")[0] for i in c["owasp"])) or "-")
+    h += "</tbody></table>"
+    return h
+
+
 def tools_part():
     h = '<section class="partopen" id="part3">'
     h += '<p class="partno">Part 3</p><h1 class="parttitle">The Assessment Suite</h1>'
     toc_entries.append((0, "part3", "Part 3. The Assessment Suite"))
-    h += '<div class="partblurb"><p>Six tools, 68 steps and 338 questions, with the scoring model that turns the answers into a verdict.</p></div>'
+    n_steps = sum(len(A[arr]) for _, arr, _ in MODULE_ORDER)
+    n_q = sum(len(s.get("questions") or []) for _, arr, _ in MODULE_ORDER for s in A[arr])
+    h += '<div class="partblurb"><p>%s tools, %d steps and %d questions, with the scoring model that turns the answers into a verdict.</p></div>' % (NUMBER_WORDS[len(MODULE_ORDER)], n_steps, n_q)
     h += "</section>"
     h += '<section class="intro">%s%s</section>' % (md(study_tools.SUITE_INTRO.split("\n\n")), refs_html((3, 7, 8, 9, 12, 14, 15, 19)))
 
@@ -302,6 +324,7 @@ def tools_part():
             "inherent \\ maturity",
         ),
         "FORMULA": '<p class="formula">SE = (DPC &times; EI) + CB</p>',
+        "GAICHECKS": gai_checks_table(),
     }
 
     for mid, arr, label in MODULE_ORDER:

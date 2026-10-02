@@ -1,17 +1,19 @@
-# Cheat sheets and self-tests for Part 3 (the six assessment tools)
+# Cheat sheets and self-tests for Part 3 (the nine assessment tools)
 # and Part 4 (the GDPR Readiness model). Authored, not extracted.
 
-SUITE_INTRO = """The six tools share one stepper, one country and region list of 209 entries, and one
+SUITE_INTRO = """The nine tools share one stepper, one country and region list of 209 entries, and one
 result format: a headline level, a list of factors that drove it, and an export. What differs is the
 model underneath. Read the cheat sheet for a tool before reading its question bank: the questions only
 make sense once you know what the scoring does with the answers.
 
-**How the six fit together.** The Privacy Assessment is the front door and the only one that routes to
+**How the nine fit together.** The Privacy Assessment is the front door and the only one that routes to
 another tool: it screens a process end to end and, on the Article 35(3) trigger count, hands over to the
 Full DPIA. The Legitimate Interest Test is the side door taken when the lawful basis is Article 6(1)(f),
 and the Privacy Assessment flags its absence as a factor. The AI Risk Assessment runs the EU AI Act
 screen over the same process when an AI system is involved. The Incident tool runs after the fact, on a
 breach rather than a plan. The Third-Party Security Assessment runs on a vendor rather than a process.
+
+**The three added in October 2026 extend the same routes.** The Transfer Impact Assessment picks up where the Privacy Assessment finds a transfer resting on standard contractual clauses or another Article 46 tool. The Fundamental Rights Impact Assessment follows the AI Risk Assessment when a deployer in scope of Article 27 uses a high-risk system, and can start from a saved DPIA. The Generative AI Risk Assessment sits beside the AI Risk Assessment: one classifies the system under the AI Act, the other screens the risks specific to generative models.
 
 **One design decision runs through three of them.** The DPIA, the Third-Party Security Assessment and
 the readiness model in Part 4 all combine two dimensions through an explicit lookup table rather than
@@ -128,6 +130,62 @@ CHEATSHEETS = {
    "Leaving controls unanswered does not lower the score, it withholds the maturity tier entirely and the residual band is reported as provisional.",
   ],
  },
+ "fria": {
+  "purpose": "The fundamental rights impact assessment that Article 27 of the AI Act requires from certain deployers of high-risk systems, before first use.",
+  "shape": "7 steps, 36 questions: scope and applicability, then the six elements of Article 27(1)(a) to (f) (process, period and frequency, people affected, risks of harm, human oversight, measures and complaints), then the DPIA link, reuse of an earlier assessment and notification.",
+  "output": "An applicability verdict (Required / Not required / Check / Not determined), an inherent and a residual risk level to rights, and a list of gaps against Articles 26, 27 and 86.",
+  "logic": [
+   "Applicability comes first and is a fixed rule. Annex III point 2, critical infrastructure, is excluded outright. Points 5(b), creditworthiness and credit scoring, and 5(c), life and health insurance pricing, are in scope for every deployer. Every other Annex III area is in scope only for bodies governed by public law and private entities providing public services. A system outside Annex III is not in scope; Not sure returns Check.",
+   "Risk to rights is rated on four-point severity and likelihood scales worded for rights rather than security, then combined through the same 4 x 4 lookup the Full DPIA uses, so the floors carry over: nothing at Maximum severity falls below High.",
+   "The lookup also returns Very High, which is shown with the High badge. A residual of High or Very High produces the finding not to deploy until the risk comes down or its acceptance is recorded at the right level.",
+   "High-severity gaps: use outside the intended purpose (Article 25(1)(c) can make the deployer a provider); no assigned human oversight (Article 26(2)); no human review of individual cases; no complaint mechanism (Article 27(1)(f)).",
+   "Medium-severity gaps include people not told a high-risk system is used (Article 26(11)), provider information not reviewed (Article 13), no check for unequal outcomes, no suspension and reporting process (Article 26(5)), no way to explain decisions (Article 86), no DPIA alongside, an earlier assessment out of date (Article 27(2)), and the authority not yet notified (Article 27(3)).",
+   "With a DPIA saved on the same device, the tool offers to start from it: name, description and harms carry over and the DPIA is recorded as done, which is Article 27(4) in practice.",
+  ],
+  "traps": [
+   "The FRIA belongs to the deployer, not the provider. A vendor's documentation feeds it (Article 13 information) but cannot discharge it.",
+   "Private deployers outside 5(b) and 5(c) are not in scope however sensitive the use. A private employer screening candidates with an Annex III point 4 system needs a DPIA, not a FRIA.",
+   "Article 27(4), as amended by Regulation (EU) 2026/1744, lets the FRIA cross-refer to the relevant sections of a DPIA or incorporate them, so nothing is assessed twice. It does not let a DPIA replace a FRIA: the rights beyond data protection still need their own assessment.",
+   "Article 46(1) exemptions from conformity assessment also exempt from notifying the authority, which is why the notification question has an exemption answer.",
+  ],
+ },
+ "genai": {
+  "purpose": "Screen a generative AI system for the risks specific to generative models, and map every gap to two published lists.",
+  "shape": "6 steps, 31 questions: system profile, inputs and prompts, data and intellectual property, outputs and accuracy, agency and supply chain, testing and monitoring. Questions on retrieval, tool permissions and training data appear only when the profile makes them relevant.",
+  "output": "An overall level (Low / Medium / High, or Not assessed), a coverage table for the twelve NIST Generative AI Profile risks, a coverage table for the OWASP Top 10 for LLM Applications 2025, and the findings ordered by severity.",
+  "logic": [
+   "Twenty-four checks drive everything. Each names one question, the answers that count as a gap with a severity, the NIST risks and the OWASP items it maps to, and optionally when it applies. The coverage tables are derived from the checks, not written separately:",
+   "GAICHECKS",
+   "A check counts only when its question is visible and answered. An item no answered check touches is Not assessed, which is not a pass; with nothing assessed at all, the result is Not assessed rather than Low.",
+   "The overall level is the highest gap severity. Public-facing systems escalate two gaps: missing content filters stay High, and a system that has not been red-teamed becomes High.",
+   "One extra finding sits outside the checks: personal data in prompts sent to a model provider whose terms do not exclude retention or training is treated as a processor relationship needing its own privacy assessment.",
+  ],
+  "traps": [
+   "Not assessed is the trap. A table full of Not assessed reads as clean at a glance and means the opposite.",
+   "The mapping of questions to NIST and OWASP items is the tool's own, made for triage. Neither list publishes a questionnaire.",
+   "CBRN information is screened only through content filters and red-teaming. A model that could provide such information needs specialist review the questionnaire cannot give.",
+   "This tool does not classify the system under the AI Act. Run the AI Risk Assessment on the same system for the prohibited and high-risk gates.",
+  ],
+ },
+ "tia": {
+  "purpose": "A transfer impact assessment following the six steps of EDPB Recommendations 01/2020.",
+  "shape": "5 screens, 26 questions: know your transfer (step 1), the transfer tool (step 2), the law and practice of the destination (step 3), supplementary measures (step 4), procedure and re-evaluation (steps 5 and 6). Steps 3 and 4 are hidden when the tool is an adequacy decision or the EU-US Data Privacy Framework.",
+  "output": "One of seven outcomes: No TIA needed, Check certification, Transfer can proceed, Proceed with supplementary measures, Do not transfer or suspend, Wrong transfer tool, Incomplete. Plus findings on onward transfers, minimisation, procedure and review.",
+  "logic": [
+   "Adequacy, or a Data Privacy Framework certification confirmed to be active and to cover the data, ends the assessment at No TIA needed. An unconfirmed certification returns Check certification.",
+   "A derogation used for a regular transfer returns Wrong transfer tool: Article 49 is for occasional and non-repetitive transfers.",
+   "For an Article 46 tool, step 3 decides. If the destination's law does not allow access beyond what is necessary and proportionate, or the importer is not in scope of it, the transfer can proceed.",
+   "If laws of concern apply and the importer needs the data in the clear, the outcome is Do not transfer or suspend, following the EDPB's use cases 6 and 7, where no effective technical measure was found. Contractual and organisational measures alone do not change that.",
+   "If laws of concern apply and a technical measure prevents access in the clear (encryption with keys held by the exporter, pseudonymisation with the additional information held by the exporter, split processing), the outcome is Proceed with supplementary measures. Without one, Do not transfer.",
+   "Unclear answers in step 3 are treated as a problem, not as a pass.",
+  ],
+  "traps": [
+   "Remote access from a third country is a transfer, including support and administration access.",
+   "Changing the text of the standard contractual clauses in a way that contradicts them means they are no longer standard contractual clauses.",
+   "Contractual measures cannot bind a public authority. They support a technical measure; they do not replace one.",
+   "Step 6 is a real step: a TIA without a re-evaluation date and an owner watching the destination goes stale silently.",
+  ],
+ },
 }
 
 SUITE_SELFTEST = [
@@ -167,6 +225,14 @@ SUITE_SELFTEST = [
   "It is the only answer removed from scoring rather than counted as zero, so it is the only one that can flatter the maturity average. Not in place is the honest answer when you are unsure."),
  ("What happens to the residual band if half the controls are left unanswered?",
   "The maturity tier is withheld and the residual band is reported as provisional, falling back to the inherent tier. Unanswered is not the same as good."),
+ ("Which deployers must carry out a fundamental rights impact assessment under Article 27, and which Annex III area is excluded?",
+  "Bodies governed by public law and private entities providing public services, for any Annex III system except point 2 (critical infrastructure); and every deployer of a system for creditworthiness or credit scoring (5(b)) or life and health insurance pricing (5(c)). A private employer using an Annex III point 4 system is not in scope."),
+ ("The Generative AI Risk Assessment shows Not assessed against eight of the twelve NIST risks. What does that tell you?",
+  "That none of the answered questions touches those risks, not that they are under control. Not assessed is not a pass; go back and answer the questions that apply."),
+ ("Under the Transfer Impact Assessment, an importer is subject to surveillance laws of concern and needs the data in the clear to provide its service. What is the outcome, and why do contractual measures not save it?",
+  "Do not transfer, or suspend. The EDPB found no effective technical measure where the importer needs the data in the clear (use cases 6 and 7), and contractual and organisational measures cannot bind a public authority, so they cannot close the gap alone."),
+ ("Which transfer tools skip steps 3 and 4 of the TIA, and what still has to be checked?",
+  "An adequacy decision, and the EU-US Data Privacy Framework for a certified recipient. For the DPF, check that the certification is active and covers the type of data; for a partial adequacy decision, that it covers the sector or recipient."),
 ]
 
 READINESS_CHEATSHEET = {
@@ -216,7 +282,7 @@ READINESS_SELFTEST = [
 PACK_SOURCES = [
  "Practical Privacy, site page (practical-privacy.html), as extracted on 19 September 2026.",
  "Practical AI Act Advice, site page (practical-ai-act-advice.html), as extracted on 19 September 2026.",
- "Privacy & AI Assessment tools, source file pages/privacy-ai-assessment/assessment.js (six tools, 68 steps, 338 questions), as extracted on 19 September 2026.",
+ "Privacy & AI Assessment tools, source file pages/privacy-ai-assessment/assessment.js (nine tools, 86 steps, 431 questions), as extracted on 19 September 2026, with the three added tools extracted on 2 October 2026.",
  "GDPR Readiness model, source files pages/gdpr-readiness/readiness-data.js and readiness.js (71 activities, 13 categories, 13 scope questions, 37 Articles), as extracted on 19 September 2026.",
  "Regulation (EU) 2016/679 (GDPR), Articles 5, 6, 9, 12, 14, 22, 28, 30, 33 to 36, 44 to 49: https://eur-lex.europa.eu/eli/reg/2016/679/oj",
  "Regulation (EU) 2024/1689 (AI Act) as amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI, in force 27 July 2026): https://eur-lex.europa.eu/eli/reg/2024/1689/oj and https://eur-lex.europa.eu/eli/reg/2026/1744/oj",
@@ -226,13 +292,15 @@ PACK_SOURCES = [
  "EDPB Guidelines 01/2021 on examples regarding personal data breach notification (v2.0, December 2021): the EDPB cross-check in the Incident tool: https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-012021-examples-regarding-personal-data-breach_en",
  "EDPB Guidelines 9/2022 on personal data breach notification under GDPR (v2.0, March 2023): awareness and the 72-hour clock: https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-92022-personal-data-breach-notification-under_en",
  "CNIL, Privacy Impact Assessment methodology and knowledge bases (EBIOS-based): the four-point severity and likelihood scales and the three feared events used by the Full DPIA: https://www.cnil.fr/en/privacy-impact-assessment-pia",
- "EDPB Recommendations 01/2020 on measures that supplement transfer tools (v2.0, June 2021): the transfer impact assessment factor in the Privacy Assessment: https://www.edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en",
+ "EDPB Recommendations 01/2020 on measures that supplement transfer tools (v2.0, June 2021): the transfer impact assessment factor in the Privacy Assessment and the six steps of the Transfer Impact Assessment: https://www.edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en",
  "ISO/IEC 27001:2022 and the Standardized Information Gathering (SIG) questionnaire: the domain structure the Third-Party Security Assessment follows: https://www.iso.org/standard/27001",
- "OWASP Top 10 for Large Language Model Applications (2025): the attack-resistance controls in the AI/ML supplement of the Third-Party Security Assessment: https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+ "OWASP Top 10 for Large Language Model Applications (2025): the attack-resistance controls in the AI/ML supplement of the Third-Party Security Assessment, and the coverage table of the Generative AI Risk Assessment: https://owasp.org/www-project-top-10-for-large-language-model-applications/",
  "EDPB Guidelines 05/2020 on consent under Regulation 2016/679 (May 2020): topic 10: https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en",
  "Article 29 Working Party, Guidelines on transparency, WP260 rev.01 (endorsed by the EDPB): topic 15 and the readiness transparency activities: https://ec.europa.eu/newsroom/article29/items/622227",
  "EDPB Guidelines 3/2019 on processing of personal data through video devices (v2.0, January 2020): topic 1: https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-32019-processing-personal-data-through-video_en",
  "Companion verification report, The site against the law, as of 19 September 2026 (site-verification-report-2026-09-19.pdf): what has changed since the pages were written, rated High to Low, with 90 sources.",
+ "NIST AI 600-1, Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (July 2024): the twelve risks in the Generative AI Risk Assessment: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+ "MITRE ATLAS, Adversarial Threat Landscape for Artificial-Intelligence Systems: the threat-modelling question in the Generative AI Risk Assessment: https://atlas.mitre.org/",
 ]
 
 # Reference numbers per cheat sheet (index into PACK_SOURCES, 1-based).
@@ -243,5 +311,8 @@ CHEATSHEET_REFS = {
  "ai": [3, 6],
  "incident": [3, 5, 9, 10, 11],
  "tpsa": [3, 14, 15],
+ "fria": [3, 6, 5],
+ "genai": [3, 20, 15, 21, 6],
+ "tia": [3, 13, 5],
  "readiness": [4, 5, 17],
 }

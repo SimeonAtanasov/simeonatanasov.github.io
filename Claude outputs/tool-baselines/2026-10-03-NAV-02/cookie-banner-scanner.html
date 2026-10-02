@@ -1,0 +1,1478 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Cookie Banner Scanner | Simeon Atanasov</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Run a cookie banner scan and export the results to Excel." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.scanner-shell {
+				display: grid;
+				gap: 1.5em;
+			}
+
+			.scanner-panel {
+				border: solid 1px rgba(255, 255, 255, 0.18);
+				border-radius: 8px;
+				min-width: 0;
+				padding: 1.5em;
+				background: rgba(255, 255, 255, 0.04);
+			}
+
+			.scanner-toolbar {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 0.75em;
+				margin-top: 1em;
+			}
+
+			.status-line {
+				min-height: 2em;
+				padding: 0.6em 0;
+				color: rgba(255, 255, 255, 0.75);
+			}
+
+			.retention-note {
+				color: rgba(255, 255, 255, 0.6);
+				font-size: 0.85em;
+				margin: 0 0 0.85em 0;
+			}
+
+			.scan-progress {
+				align-items: center;
+				display: flex;
+				gap: 0.75em;
+				margin: 0 0 0.75em 0;
+			}
+
+			.scan-progress.is-hidden {
+				display: none;
+			}
+
+			.scan-progress-track {
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 1em;
+				flex: 1 1 auto;
+				height: 0.6em;
+				overflow: hidden;
+			}
+
+			.scan-progress-bar {
+				background: linear-gradient(to right, #5e42a6, #b74e91);
+				border-radius: 1em;
+				height: 100%;
+				transition: width 0.3s ease;
+				width: 0;
+			}
+
+			.scan-progress-label {
+				color: rgba(255, 255, 255, 0.75);
+				flex: 0 0 auto;
+				font-size: 0.85em;
+				white-space: nowrap;
+			}
+
+			.results-meta {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75em;
+				margin-bottom: 1em;
+				color: rgba(255, 255, 255, 0.75);
+				font-size: 0.9em;
+			}
+
+			.results-meta span {
+				border: solid 1px rgba(255, 255, 255, 0.18);
+				border-radius: 8px;
+				padding: 0.4em 0.7em;
+				background: rgba(255, 255, 255, 0.04);
+			}
+
+			#resultsTable {
+				min-width: 980px;
+			}
+
+			#categoryTable {
+				min-width: 620px;
+			}
+
+			#categoryTable select {
+				background: rgba(255, 255, 255, 0.08);
+				border: solid 1px rgba(255, 255, 255, 0.25);
+				color: #ffffff;
+				font-size: 0.85em;
+				max-width: 20em;
+				padding: 0.25em 0.5em;
+			}
+
+			#categoryTable option {
+				background: #2a3860;
+				color: #ffffff;
+			}
+
+			.cookiepedia-link {
+				font-size: 0.75em;
+				margin-left: 0.65em;
+				white-space: nowrap;
+			}
+
+			#historyTable {
+				min-width: 760px;
+			}
+
+			#historyTable .history-actions {
+				white-space: nowrap;
+			}
+
+			#historyTable .history-actions button,
+			#historyTable .history-actions .button {
+				font-size: 0.55em;
+				height: 2.7em;
+				line-height: 2.7em;
+				margin: 0 0.3em 0.3em 0;
+				min-width: 0;
+				padding: 0 1em;
+			}
+
+			.history-status {
+				border-radius: 2em;
+				display: inline-block;
+				font-size: 0.75em;
+				font-weight: bold;
+				letter-spacing: 0.03em;
+				margin: 0 0.3em 0.3em 0;
+				padding: 0.3em 0.8em;
+				white-space: nowrap;
+			}
+
+			.history-status.is-original {
+				background: rgba(255, 255, 255, 0.1);
+				color: rgba(255, 255, 255, 0.65);
+			}
+
+			.history-status.is-changed {
+				background: rgba(240, 180, 41, 0.22);
+				color: #f0b429;
+			}
+
+			.history-status.is-stopped {
+				background: rgba(214, 75, 75, 0.18);
+				color: #e79a9a;
+			}
+
+			.history-status.is-expired {
+				background: rgba(255, 255, 255, 0.08);
+				color: rgba(255, 255, 255, 0.45);
+				font-style: italic;
+			}
+
+			.scanner-panel .table-wrapper {
+				max-width: 100%;
+				min-width: 0;
+			}
+
+			.risk-summary-grid {
+				display: grid;
+				gap: 0.75em;
+				grid-template-columns: 1fr;
+			}
+
+			.risk-block {
+				border-left: solid 4px var(--risk-color);
+				padding: 0.9em 1em;
+				background: rgba(255, 255, 255, 0.04);
+				min-width: 0;
+			}
+
+			.risk-block h3,
+			.risk-block p {
+				margin: 0;
+			}
+
+			.risk-block h3 {
+				color: var(--risk-color);
+				font-size: 1.1em;
+			}
+
+			.risk-block .risk-count {
+				font-size: 2em;
+				font-weight: bold;
+				line-height: 1.2;
+			}
+
+			.risk-block .risk-domains {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5em;
+				font-size: 0.85em;
+				line-height: 1.5;
+				word-break: break-word;
+			}
+
+			.risk-block .risk-domain-link {
+				background: var(--risk-background);
+				border: solid 1px var(--risk-color);
+				border-radius: 4px;
+				color: #ffffff;
+				display: block;
+				padding: 0.35em 0.5em;
+				text-decoration: none;
+			}
+
+			.risk-block .risk-domain-link:hover {
+				background: var(--risk-color);
+			}
+
+			.risk-donut-wrap {
+				align-items: center;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.5em;
+				margin: 0 0 1.25em 0;
+			}
+
+			.risk-donut {
+				flex: 0 0 auto;
+				height: 150px;
+				width: 150px;
+			}
+
+			.risk-donut-segment {
+				cursor: pointer;
+				stroke: none;
+			}
+
+			.risk-donut-segment:focus-visible {
+				outline: solid 2px #ffffff;
+				outline-offset: 2px;
+			}
+
+			.risk-donut-total-count {
+				fill: #ffffff;
+				font-size: 22px;
+				font-weight: bold;
+			}
+
+			.risk-donut-total-label {
+				fill: rgba(255, 255, 255, 0.6);
+				font-size: 8px;
+				letter-spacing: 0.03em;
+				text-transform: uppercase;
+			}
+
+			.risk-donut-legend {
+				display: grid;
+				flex: 1 1 220px;
+				gap: 0.45em;
+				list-style: none;
+				margin: 0;
+				min-width: 0;
+				padding: 0;
+			}
+
+			.risk-donut-legend li {
+				align-items: baseline;
+				display: flex;
+				gap: 0.5em;
+			}
+
+			.risk-donut-legend .risk-donut-swatch {
+				background: var(--risk-color);
+				border-radius: 2px;
+				flex: 0 0 auto;
+				height: 0.85em;
+				width: 0.85em;
+				transform: translateY(0.1em);
+			}
+
+			.risk-donut-legend .risk-donut-legend-label {
+				color: rgba(255, 255, 255, 0.85);
+			}
+
+			.risk-donut-legend .risk-donut-legend-value {
+				color: rgba(255, 255, 255, 0.6);
+				font-size: 0.9em;
+				white-space: nowrap;
+			}
+
+			.risk-donut-tooltip {
+				background: #1c2748;
+				border: solid 1px rgba(255, 255, 255, 0.24);
+				border-radius: 6px;
+				box-shadow: 0 0.75em 2em rgba(7, 14, 35, 0.35);
+				color: #ffffff;
+				font-size: 0.85em;
+				padding: 0.5em 0.75em;
+				pointer-events: none;
+				position: fixed;
+				white-space: nowrap;
+				z-index: 10002;
+			}
+
+			.risk-donut-tooltip[hidden] {
+				display: none;
+			}
+
+			.risk-donut-tooltip strong {
+				font-variant-numeric: tabular-nums;
+			}
+
+			#categoryTable tr.is-risk-target {
+				background: rgba(240, 180, 41, 0.2);
+				outline: solid 1px #f0b429;
+			}
+
+			#resultsTable td {
+				vertical-align: top;
+			}
+
+			#resultsTable .result-cell {
+				max-width: 26em;
+				white-space: normal;
+			}
+
+			.is-hidden {
+				display: none !important;
+			}
+
+			#stopButton {
+				background: rgba(214, 75, 75, 0.16);
+				border-color: rgba(214, 75, 75, 0.55);
+				color: #f0a3a3;
+			}
+
+			#stopButton:hover:not(:disabled) {
+				background: rgba(214, 75, 75, 0.3);
+				border-color: #d64b4b;
+				color: #ffffff;
+			}
+
+			#stopButton:disabled {
+				opacity: 0.6;
+			}
+
+			@media screen and (max-width: 736px) {
+				.scanner-panel {
+					padding: 1em;
+				}
+
+				.scanner-toolbar > * {
+					width: 100%;
+				}
+			}
+		</style>
+		<link rel="canonical" href="https://www.simeonatanasov.com/cookie-banner-scanner.html">
+		<!-- seo:start (generated by Claude outputs/seo-build/apply_seo.py) -->
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Simeon Atanasov">
+		<meta property="og:title" content="Cookie Banner Scanner | Simeon Atanasov">
+		<meta property="og:description" content="Run a cookie banner scan and export the results to Excel.">
+		<meta property="og:url" content="https://www.simeonatanasov.com/cookie-banner-scanner.html">
+		<meta property="og:image" content="https://www.simeonatanasov.com/images/automated-cookie-banner-scanner.jpg">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Cookie Banner Scanner | Simeon Atanasov">
+		<meta name="twitter:description" content="Run a cookie banner scan and export the results to Excel.">
+		<meta name="twitter:image" content="https://www.simeonatanasov.com/images/automated-cookie-banner-scanner.jpg">
+		<script type="application/ld+json">
+		{
+		 "@context": "https://schema.org",
+		 "url": "https://www.simeonatanasov.com/cookie-banner-scanner.html",
+		 "name": "Cookie Banner Scanner | Simeon Atanasov",
+		 "description": "Run a cookie banner scan and export the results to Excel.",
+		 "inLanguage": "en",
+		 "image": "https://www.simeonatanasov.com/images/automated-cookie-banner-scanner.jpg",
+		 "isPartOf": {
+		  "@id": "https://www.simeonatanasov.com/#website"
+		 },
+		 "author": {
+		  "@id": "https://www.simeonatanasov.com/#person"
+		 },
+		 "@type": "WebApplication",
+		 "applicationCategory": "BusinessApplication",
+		 "operatingSystem": "Any",
+		 "browserRequirements": "Requires JavaScript",
+		 "isAccessibleForFree": true,
+		 "offers": {
+		  "@type": "Offer",
+		  "price": "0",
+		  "priceCurrency": "EUR"
+		 }
+		}
+		</script>
+		<!-- seo:end -->
+		<!-- Progressive web app -->
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<meta name="theme-color" content="#2a3860" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="S" />
+		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" />
+		<script src="/assets/js/pwa.js" defer></script>
+	</head>
+	<body class="is-preload">
+		<header id="header">
+			<a href="index.html" class="title">Simeon Atanasov</a>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li class="assessment-menu"><a href="practical-privacy.html">Privacy</a><ul class="assessment-submenu"><li><a href="practical-privacy.html">Practical Privacy</a></li><li><a href="privacy-ai-assessment.html">Privacy &amp; AI Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-tia">Transfer Impact Assessment</a></li><li><a href="gdpr-readiness.html">GDPR Readiness</a></li><li><a href="edpb-digest.html">EDPB Digest</a></li><li><a href="gdpr-enforcement.html">GDPR Enforcement</a></li><li><a href="privacy-enforcement-worldwide.html">Enforcement Worldwide</a></li><li><a href="power-bi.html">GDPR Fines Dashboard</a></li><li><a href="gdpr-fines-analytics.html">GDPR Fines Analytics</a></li><li><a href="gdpr-fine-calculator.html">GDPR Fine Calculator</a></li><li><a href="risk-matrix-original.html">Risk Matrix</a></li></ul></li>
+					<li class="assessment-menu"><a href="practical-ai-act-advice.html">AI</a><ul class="assessment-submenu"><li><a href="practical-ai-act-advice.html">AI Act Advice</a></li><li><a href="ai-act-digest.html">AI Act Digest</a></li><li><a href="privacy-ai-assessment.html#tool-ai">AI Risk Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-genai">Generative AI Risk Assessment</a></li><li><a href="privacy-ai-assessment.html#tool-fria">Fundamental Rights Impact Assessment</a></li></ul></li>
+					<li class="assessment-menu"><a href="cookie-digest.html" class="active">Cookie Compliance</a><ul class="assessment-submenu"><li><a href="cookie-digest.html">Cookie Digest</a></li><li><a href="cookie-banner-scanner.html" class="active">Cookie Scanner</a></li></ul></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="wrapper">
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<h1 class="major">Cookie Banner Scanner</h1>
+						<p>Checks whether websites show a cookie banner before cookies are created. The scanner focuses on OneTrust detection, banner visibility, cookies observed, and the risk of cookies being dropped without a banner.</p>
+						<p><strong>Goals:</strong> Detect OneTrust as the primary consent banner, inspect cookies dropped during initial page load, highlight the highest-risk compliance scenario (no banner detected while cookies are dropped), and map observed cookies to category risk levels.</p>
+
+					<div class="scanner-shell">
+						<form id="scanForm" class="scanner-panel">
+							<div class="fields">
+								<div class="field">
+									<label for="urls">URLs</label>
+									<textarea id="urls" name="urls" rows="8" placeholder="https://www.example.com&#10;example.org"></textarea>
+								</div>
+							</div>
+							<div class="scanner-toolbar">
+								<button type="submit" id="runButton" class="primary">Run Scan</button>
+								<button type="button" id="stopButton" class="is-hidden">Stop Scan</button>
+								<a id="downloadButton" class="button disabled is-hidden" href="#" aria-disabled="true">Download Scan Excel</a>
+								<a id="categorizedDownloadButton" class="button disabled is-hidden" href="#" aria-disabled="true">Download Categorized Excel</a>
+							</div>
+							<div id="status" class="status-line" role="status">Ready.</div>
+							<div id="scanProgress" class="scan-progress is-hidden" role="progressbar" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0">
+								<div class="scan-progress-track"><div id="scanProgressBar" class="scan-progress-bar"></div></div>
+								<span id="scanProgressLabel" class="scan-progress-label"></span>
+							</div>
+						</form>
+
+						<section id="historyPanel" class="scanner-panel">
+							<p id="retentionNote" class="retention-note"></p>
+							<div class="results-meta">
+								<span id="historyCount">Saved scans: 0</span>
+							</div>
+							<div class="table-wrapper">
+								<table id="historyTable">
+									<thead></thead>
+									<tbody></tbody>
+								</table>
+							</div>
+							<div class="scanner-toolbar">
+								<button type="button" id="clearHistoryButton">Clear History</button>
+							</div>
+						</section>
+
+						<section id="resultsPanel" class="scanner-panel is-hidden" aria-live="polite">
+							<div class="results-meta">
+								<span id="jobStatus">Status: ready</span>
+								<span id="resultCount">Rows: 0</span>
+							</div>
+							<div class="table-wrapper">
+								<table id="resultsTable">
+									<thead></thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</section>
+
+						<section id="categoryPanel" class="scanner-panel is-hidden" aria-live="polite">
+							<div class="results-meta">
+								<span id="categoryCount">Categorized cookies: 0</span>
+							</div>
+							<div class="table-wrapper">
+								<table id="categoryTable">
+									<thead></thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</section>
+
+						<section id="riskPanel" class="scanner-panel is-hidden" aria-live="polite">
+							<div id="riskDonutWrap" class="risk-donut-wrap">
+								<svg id="riskDonut" class="risk-donut" viewBox="0 0 120 120" role="group" aria-label="Risk level breakdown"></svg>
+								<ul id="riskDonutLegend" class="risk-donut-legend"></ul>
+							</div>
+							<div class="results-meta">
+								<span id="riskSummary">Highest cookie risk by URL</span>
+							</div>
+							<div id="riskSummaryGrid" class="risk-summary-grid"></div>
+							<div class="scanner-toolbar">
+								<button type="button" id="downloadRiskChart" disabled>Download Risk Summary</button>
+							</div>
+						</section>
+						<div id="riskDonutTooltip" class="risk-donut-tooltip" role="tooltip" hidden></div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Simeon. All rights reserved.</li>
+					<li><a href="terms.html">Terms of use</a></li>
+					<li><a href="privacy-notice.html">Privacy notice</a></li>
+					<li><a href="cookie-notice.html">Cookie notice</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+		<script>
+			(function () {
+				const form = document.getElementById('scanForm');
+				const urlsInput = document.getElementById('urls');
+				const runButton = document.getElementById('runButton');
+				const stopButton = document.getElementById('stopButton');
+				const downloadButton = document.getElementById('downloadButton');
+				const categorizedDownloadButton = document.getElementById('categorizedDownloadButton');
+				const status = document.getElementById('status');
+				const scanProgress = document.getElementById('scanProgress');
+				const scanProgressBar = document.getElementById('scanProgressBar');
+				const scanProgressLabel = document.getElementById('scanProgressLabel');
+				const historyCount = document.getElementById('historyCount');
+				const retentionNote = document.getElementById('retentionNote');
+				const historyTable = document.getElementById('historyTable');
+				const clearHistoryButton = document.getElementById('clearHistoryButton');
+				const resultsPanel = document.getElementById('resultsPanel');
+				const jobStatus = document.getElementById('jobStatus');
+				const resultCount = document.getElementById('resultCount');
+				const table = document.getElementById('resultsTable');
+				const categoryPanel = document.getElementById('categoryPanel');
+				const categoryCount = document.getElementById('categoryCount');
+				const categoryTable = document.getElementById('categoryTable');
+				const riskPanel = document.getElementById('riskPanel');
+				const riskSummary = document.getElementById('riskSummary');
+				const riskSummaryGrid = document.getElementById('riskSummaryGrid');
+				const riskDonut = document.getElementById('riskDonut');
+				const riskDonutLegend = document.getElementById('riskDonutLegend');
+				const riskDonutTooltip = document.getElementById('riskDonutTooltip');
+				const downloadRiskChart = document.getElementById('downloadRiskChart');
+				const queryApi = new URLSearchParams(window.location.search).get('api');
+				const localHosts = ['localhost', '127.0.0.1'];
+				const defaultApiBase = localHosts.includes(window.location.hostname)
+					? 'http://localhost:3005'
+					: 'https://scan-banner-api.onrender.com';
+				const apiBase = (queryApi || defaultApiBase).replace(/\/$/, '');
+				const columns = [
+					'rowNumber',
+					'scannedAt',
+					'domain',
+					'finalUrl',
+					'result',
+					'onetrust',
+					'cookiesDropped',
+					'bannerTrigger',
+					'foundKeywords',
+					'dnsResolved',
+					'dnsError',
+					'TestScriptID',
+					'ProdScriptID'
+				];
+				const categoryColumns = ['rowNumber', 'domain', 'cookieName', 'category', 'riskLevel'];
+				const categoryOptions = [
+					'Strictly Necessary Technologies',
+					'Functional Technologies',
+					'Chatbot Technologies',
+					'Google Maps Technologies',
+					'Bing Technologies',
+					'Analytics Technologies',
+					'Performance Technologies',
+					'Performance Technologies / Analytics Technologies',
+					'Google Ads Technologies',
+					'Marketing Technologies',
+					'Social Media Technologies',
+					'YouTube Technologies',
+					'Unknown'
+				];
+				const historyColumns = ['scannedAt', 'urls', 'rows', 'status', 'actions'];
+				const historyStorageKey = 'cookie-banner-scanner-history';
+				const maxHistoryEntries = 20;
+				// Must match the server's JOB_TTL_MS (in days) - used only to word the
+				// retention note and to flag rows that are likely stale before the user
+				// clicks them. This list itself never expires on its own; it just sits
+				// in this browser's storage until cleared, so a row can easily outlive
+				// the server-side result it points to.
+				const resultRetentionDays = 1;
+				let pollTimer = null;
+				let currentRows = [];
+				// The scan currently loaded in the results panel, so edits (changing a
+				// cookie's category/risk level) know which history entry they belong to.
+				let activeEntry = null;
+				// The job (if any) the Stop button currently applies to.
+				let runningJobId = null;
+				let runningUrls = [];
+				let stopRequested = false;
+
+				function splitUrls(value) {
+					return value
+						.split(/[\s,]+/)
+						.map(item => item.trim())
+						.filter(Boolean);
+				}
+
+				function setBusy(isBusy) {
+					runButton.disabled = isBusy;
+					runButton.textContent = isBusy ? 'Running...' : 'Run Scan';
+					stopButton.classList.toggle('is-hidden', !isBusy);
+					stopButton.disabled = false;
+					stopButton.textContent = 'Stop Scan';
+					if (!isBusy) {
+						runningJobId = null;
+						stopRequested = false;
+					}
+				}
+
+				function updateScanProgress(current, total) {
+					const safeTotal = total > 0 ? total : 0;
+					const safeCurrent = Math.min(Math.max(current, 0), safeTotal || current);
+					scanProgress.classList.remove('is-hidden');
+					scanProgress.setAttribute('aria-valuemax', String(safeTotal || 1));
+					scanProgress.setAttribute('aria-valuenow', String(safeCurrent));
+					scanProgressBar.style.width = safeTotal ? `${Math.round((safeCurrent / safeTotal) * 100)}%` : '0%';
+					scanProgressLabel.textContent = safeTotal ? `${safeCurrent} of ${safeTotal}` : '';
+				}
+
+				function hideScanProgress() {
+					scanProgress.classList.add('is-hidden');
+					scanProgressBar.style.width = '0%';
+					scanProgressLabel.textContent = '';
+					scanProgress.setAttribute('aria-valuenow', '0');
+				}
+
+				function setDownloadButton(button, url) {
+					if (!url) {
+						button.classList.add('is-hidden', 'disabled');
+						button.setAttribute('aria-disabled', 'true');
+						button.removeAttribute('href');
+						return;
+					}
+
+					button.href = `${apiBase}${url}`;
+					button.classList.remove('is-hidden', 'disabled');
+					button.removeAttribute('aria-disabled');
+				}
+
+				function setDownloads(job) {
+					setDownloadButton(downloadButton, job.downloadUrl);
+					categorizedDownloadButton.href = '#';
+					categorizedDownloadButton.classList.remove('is-hidden', 'disabled');
+					categorizedDownloadButton.removeAttribute('aria-disabled');
+				}
+
+				function getHistory() {
+					try {
+						const history = JSON.parse(localStorage.getItem(historyStorageKey) || '[]');
+						return Array.isArray(history) ? history : [];
+					} catch (error) {
+						return [];
+					}
+				}
+
+				function renderHistory() {
+					const head = historyTable.querySelector('thead');
+					const body = historyTable.querySelector('tbody');
+					head.replaceChildren();
+					body.replaceChildren();
+					const headerRow = document.createElement('tr');
+					// The column keys are field names; the table is read by people.
+					const historyHeadings = {
+						scannedAt: 'Scanned',
+						urls: 'Sites scanned',
+						rows: 'Cookies found',
+						status: 'Status',
+						actions: ''
+					};
+					historyColumns.forEach(column => {
+						const th = document.createElement('th');
+						th.textContent = historyHeadings[column] !== undefined ? historyHeadings[column] : column;
+						headerRow.appendChild(th);
+					});
+					head.appendChild(headerRow);
+
+					const history = getHistory();
+					history.forEach(entry => {
+						const tr = document.createElement('tr');
+						const scannedAt = document.createElement('td');
+						scannedAt.textContent = new Date(entry.scannedAt).toLocaleString();
+						const urls = document.createElement('td');
+						urls.textContent = entry.urls.join(', ');
+						const rows = document.createElement('td');
+						const wasStoppedEarly = entry.scanStatus === 'stopped';
+						rows.textContent = wasStoppedEarly && entry.urlCount
+							? `${entry.resultCount} of ${entry.urlCount}`
+							: String(entry.resultCount);
+						const statusCell = document.createElement('td');
+						const statusBadge = document.createElement('span');
+						const isChanged = entry.status === 'changed';
+						statusBadge.className = `history-status ${isChanged ? 'is-changed' : 'is-original'}`;
+						statusBadge.textContent = isChanged ? 'Changed' : 'Original';
+						statusCell.appendChild(statusBadge);
+						if (wasStoppedEarly) {
+							const stoppedBadge = document.createElement('span');
+							stoppedBadge.className = 'history-status is-stopped';
+							stoppedBadge.textContent = 'Stopped early';
+							statusCell.appendChild(stoppedBadge);
+						}
+						// This list is stored in the browser and doesn't expire on its
+						// own, so a row can sit here well past the server's retention
+						// window. Flag it before the user clicks and gets a surprise
+						// "expired" error - this is a local-clock estimate only, so it
+						// can be off if resultRetentionDays doesn't match the server's
+						// actual JOB_TTL_MS. Skipped for 'changed' entries: those load
+						// from the local snapshot, not the server, so they don't expire.
+						const ageMs = Date.now() - new Date(entry.scannedAt).getTime();
+						if (!isChanged && Number.isFinite(ageMs) && ageMs > resultRetentionDays * 24 * 60 * 60 * 1000) {
+							const expiredBadge = document.createElement('span');
+							expiredBadge.className = 'history-status is-expired';
+							expiredBadge.textContent = 'Likely expired on server';
+							statusCell.appendChild(expiredBadge);
+						}
+						const actions = document.createElement('td');
+						actions.className = 'history-actions';
+						const rescan = document.createElement('button');
+						rescan.type = 'button';
+						rescan.textContent = 'Rescan';
+						rescan.addEventListener('click', () => {
+							urlsInput.value = entry.urls.join('\n');
+							form.requestSubmit();
+						});
+						actions.appendChild(rescan);
+						const view = document.createElement('button');
+						view.type = 'button';
+						view.textContent = 'View Results';
+						view.addEventListener('click', () => loadHistoryEntry(entry));
+						actions.appendChild(view);
+						const downloadActions = [{ label: 'Scan Excel', url: entry.downloadUrl, source: 'server' }];
+						if (isChanged) {
+							// The server's categorized export reflects the original
+							// categorization, not this entry's edited categories/risk
+							// levels, so build the Excel file client-side from the
+							// stored snapshot instead.
+							downloadActions.push({ label: 'Cookie Excel', source: 'snapshot' });
+						} else {
+							downloadActions.push({ label: 'Cookie Excel', url: entry.categorizedDownloadUrl, source: 'server' });
+						}
+						downloadActions.forEach(action => {
+							if (action.source === 'server' && !action.url) return;
+							const download = document.createElement('a');
+							download.className = 'button small';
+							download.href = '#';
+							download.textContent = action.label;
+							download.addEventListener('click', event => {
+								event.preventDefault();
+								if (action.source === 'snapshot') {
+									downloadSnapshotExcel(entry);
+								} else {
+									openHistoryDownload(entry, action.url);
+								}
+							});
+							actions.appendChild(download);
+						});
+						tr.append(scannedAt, urls, rows, statusCell, actions);
+						body.appendChild(tr);
+					});
+					historyCount.textContent = `Saved scans: ${history.length}`;
+				}
+
+				function saveHistory(job, urls) {
+					const entry = {
+						id: job.id,
+						sourceId: job.id,
+						status: 'original',
+						// 'stopped' when the Stop button cut the scan short, so History
+						// can flag it as partial rather than implying every URL was scanned.
+						scanStatus: job.status === 'stopped' ? 'stopped' : 'complete',
+						urlCount: job.urlCount || urls.length,
+						scannedAt: job.finishedAt || new Date().toISOString(),
+						urls,
+						resultCount: job.resultCount || 0,
+						downloadUrl: job.downloadUrl,
+						categorizedDownloadUrl: job.categorizedDownloadUrl
+					};
+					try {
+						const history = getHistory().filter(item => item.id !== entry.id);
+						history.unshift(entry);
+						localStorage.setItem(historyStorageKey, JSON.stringify(history.slice(0, maxHistoryEntries)));
+					} catch (error) {
+						status.textContent = 'Scan complete, but browser history could not be saved.';
+					}
+					activeEntry = entry;
+					renderHistory();
+				}
+
+				// Called whenever the user changes a cookie's category/risk level in
+				// the results view. Rather than losing that edit the next time History
+				// re-loads the original scan, it's kept as a companion "Changed" row
+				// (one per original scan - repeated edits update it in place) so both
+				// versions stay available side by side.
+				function recordCategoryChange() {
+					if (!activeEntry) return;
+					const sourceId = activeEntry.sourceId || activeEntry.id;
+					const changedId = `${sourceId}-changed`;
+					const entry = {
+						id: changedId,
+						sourceId,
+						status: 'changed',
+						scannedAt: new Date().toISOString(),
+						urls: activeEntry.urls,
+						resultCount: currentRows.length,
+						downloadUrl: activeEntry.downloadUrl,
+						categorizedDownloadUrl: null,
+						snapshotRows: JSON.parse(JSON.stringify(currentRows))
+					};
+					try {
+						const history = getHistory().filter(item => item.id !== changedId);
+						history.unshift(entry);
+						localStorage.setItem(historyStorageKey, JSON.stringify(history.slice(0, maxHistoryEntries)));
+					} catch (error) {
+						status.textContent = 'Changed, but the updated history entry could not be saved.';
+					}
+					renderHistory();
+				}
+
+				function removeHistoryEntry(id) {
+					try {
+						const history = getHistory().filter(entry => entry.id !== id);
+						localStorage.setItem(historyStorageKey, JSON.stringify(history));
+					} catch (error) {
+						return;
+					}
+					renderHistory();
+				}
+
+				async function openHistoryDownload(entry, path) {
+					const downloadWindow = window.open('', '_blank');
+					// A "changed" entry's id isn't a real server job - check the scan it
+					// was derived from instead.
+					const jobId = entry.sourceId || entry.id;
+					try {
+						const job = await apiFetch(`/api/scans/${jobId}`);
+						if (job.status !== 'complete' && job.status !== 'stopped') throw new Error('Scan not found.');
+						downloadWindow.location.href = `${apiBase}${path}`;
+					} catch (error) {
+						if (downloadWindow) downloadWindow.close();
+						removeHistoryEntry(entry.id);
+						status.textContent = 'This saved scan is no longer on the server (it expired, or the server restarted) - removed from history.';
+					}
+				}
+
+				async function loadHistoryEntry(entry) {
+					hideScanProgress();
+					if (entry.status === 'changed' && Array.isArray(entry.snapshotRows)) {
+						renderRows(entry.snapshotRows);
+						setDownloads({ downloadUrl: entry.downloadUrl });
+						activeEntry = { id: entry.sourceId || entry.id, sourceId: entry.sourceId || entry.id, urls: entry.urls, downloadUrl: entry.downloadUrl };
+						status.textContent = 'Loaded saved scan (with your changes).';
+						return;
+					}
+
+					const jobId = entry.sourceId || entry.id;
+					try {
+						const job = await apiFetch(`/api/scans/${jobId}`);
+						if (job.status !== 'complete' && job.status !== 'stopped') throw new Error('This saved scan is no longer available.');
+						await loadResults(job);
+						activeEntry = { id: entry.id, sourceId: jobId, urls: entry.urls, downloadUrl: job.downloadUrl, categorizedDownloadUrl: job.categorizedDownloadUrl };
+						status.textContent = 'Loaded saved scan.';
+					} catch (error) {
+						removeHistoryEntry(entry.id);
+						status.textContent = 'This saved scan is no longer on the server (it expired, or the server restarted) - removed from history.';
+					}
+				}
+
+				function sanitizeTableValue(value) {
+					if (value === null || value === undefined) return '';
+					return String(value)
+						.replace(/\uFFFD/g, '')
+						.replace(/[\u0080-\uFFFF]/g, '')
+						.replace(/\s+/g, ' ')
+						.trim();
+				}
+
+				function createUrlLink(value) {
+					const url = sanitizeTableValue(value);
+					try {
+						const parsed = new URL(url);
+						if (!['http:', 'https:'].includes(parsed.protocol)) return null;
+						const link = document.createElement('a');
+						link.href = parsed.href;
+						link.target = '_blank';
+						link.rel = 'noopener noreferrer';
+						link.textContent = url;
+						return link;
+					} catch (error) {
+						return null;
+					}
+				}
+
+				function renderRows(rows) {
+					currentRows = rows;
+					const head = table.querySelector('thead');
+					const body = table.querySelector('tbody');
+					head.replaceChildren();
+					body.replaceChildren();
+
+					const headerRow = document.createElement('tr');
+					columns.forEach(column => {
+						const th = document.createElement('th');
+						th.textContent = column;
+						headerRow.appendChild(th);
+					});
+					head.appendChild(headerRow);
+
+					rows.forEach(row => {
+						const tr = document.createElement('tr');
+						columns.forEach(column => {
+							const td = document.createElement('td');
+							if (column === 'result') td.className = 'result-cell';
+							const link = column === 'finalUrl' ? createUrlLink(row[column]) : null;
+							if (link) {
+								td.appendChild(link);
+							} else {
+								td.textContent = sanitizeTableValue(row[column]);
+							}
+							tr.appendChild(td);
+						});
+						body.appendChild(tr);
+					});
+
+					resultsPanel.classList.remove('is-hidden');
+					resultCount.textContent = `Rows: ${rows.length}`;
+					renderCategorizedCookies(rows);
+					renderRiskChart(rows);
+				}
+
+				function renderCategorizedCookies(rows) {
+					const head = categoryTable.querySelector('thead');
+					const body = categoryTable.querySelector('tbody');
+					head.replaceChildren();
+					body.replaceChildren();
+
+					const headerRow = document.createElement('tr');
+					categoryColumns.forEach(column => {
+						const th = document.createElement('th');
+						th.textContent = column;
+						headerRow.appendChild(th);
+					});
+					head.appendChild(headerRow);
+
+					const categoryRows = rows.flatMap((row, sourceRowIndex) => (row.categorizedCookies || []).map((cookie, cookieIndex) => ({
+						rowNumber: 0,
+						targetId: `cookie-${row.rowNumber}-${cookieIndex + 1}`,
+						sourceRowIndex,
+						cookieIndex,
+						domain: row.domain,
+						...cookie
+					})));
+
+					categoryRows.forEach((row, index) => {
+						row.rowNumber = index + 1;
+						const tr = document.createElement('tr');
+						tr.id = row.targetId;
+						categoryColumns.forEach(column => {
+							const td = document.createElement('td');
+							if (column === 'cookieName') {
+								td.textContent = sanitizeTableValue(row.cookieName);
+								if (row.category === 'Unknown') {
+									const cookiepediaLink = document.createElement('a');
+									cookiepediaLink.className = 'cookiepedia-link';
+									cookiepediaLink.href = `https://cookiepedia.co.uk/cookies/${encodeURIComponent(row.cookieName)}`;
+									cookiepediaLink.target = '_blank';
+									cookiepediaLink.rel = 'noopener noreferrer';
+									cookiepediaLink.textContent = 'Check Cookiepedia';
+									td.appendChild(cookiepediaLink);
+								}
+							} else if (column === 'category') {
+								const select = document.createElement('select');
+								categoryOptions.forEach(category => {
+									const option = document.createElement('option');
+									option.value = category;
+									option.textContent = category;
+									option.selected = category === row.category;
+									select.appendChild(option);
+								});
+								select.addEventListener('change', () => {
+									const cookie = currentRows[row.sourceRowIndex].categorizedCookies[row.cookieIndex];
+									cookie.category = select.value;
+									cookie.riskLevel = categoryRiskLevel(select.value);
+									renderCategorizedCookies(currentRows);
+									renderRiskChart(currentRows);
+									recordCategoryChange();
+								});
+								td.appendChild(select);
+							} else {
+								td.textContent = sanitizeTableValue(row[column]);
+							}
+							tr.appendChild(td);
+						});
+						body.appendChild(tr);
+					});
+
+					categoryPanel.classList.remove('is-hidden');
+					categoryCount.textContent = `Categorized cookies: ${categoryRows.length}`;
+				}
+
+				const SVG_NS = 'http://www.w3.org/2000/svg';
+
+				function polarToCartesian(cx, cy, r, angleDeg) {
+					const rad = (angleDeg - 90) * Math.PI / 180;
+					return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+				}
+
+				// One annular (donut) sector, traced outer-edge-forward then
+				// inner-edge-backward so it fills correctly regardless of span.
+				function donutSegmentPath(cx, cy, rOuter, rInner, startAngle, endAngle) {
+					const largeArc = endAngle - startAngle > 180 ? 1 : 0;
+					const outerStart = polarToCartesian(cx, cy, rOuter, startAngle);
+					const outerEnd = polarToCartesian(cx, cy, rOuter, endAngle);
+					const innerStart = polarToCartesian(cx, cy, rInner, startAngle);
+					const innerEnd = polarToCartesian(cx, cy, rInner, endAngle);
+					return [
+						`M ${outerStart.x} ${outerStart.y}`,
+						`A ${rOuter} ${rOuter} 0 ${largeArc} 1 ${outerEnd.x} ${outerEnd.y}`,
+						`L ${innerEnd.x} ${innerEnd.y}`,
+						`A ${rInner} ${rInner} 0 ${largeArc} 0 ${innerStart.x} ${innerStart.y}`,
+						'Z'
+					].join(' ');
+				}
+
+				// Donut of the same risk levels/colors as the grid below it - a
+				// glanceable summary, with the grid remaining the detailed,
+				// text-first breakdown (every count and domain also reachable
+				// without the chart, so nothing is color-only or hover-only).
+				function renderRiskDonut(highestRisks, levels) {
+					const total = highestRisks.length;
+					const cx = 60;
+					const cy = 60;
+					const rOuter = 54;
+					const rInner = 34;
+					const counted = levels
+						.map(level => ({ ...level, count: highestRisks.filter(row => row.riskRank === level.rank).length }))
+						.filter(level => level.count > 0);
+
+					riskDonut.replaceChildren();
+					riskDonutLegend.replaceChildren();
+
+					const chartTitle = document.createElementNS(SVG_NS, 'title');
+					chartTitle.textContent = `Risk level breakdown for ${total} assessed URL${total === 1 ? '' : 's'}`;
+					riskDonut.appendChild(chartTitle);
+
+					// A visible gap between slices (the "surface" spacer) only makes
+					// sense once there's more than one slice to separate.
+					const gapDeg = counted.length > 1 ? 3 : 0;
+					let cursor = 0;
+					counted.forEach(level => {
+						const span = (level.count / total) * 360;
+						const rawStart = cursor;
+						const rawEnd = cursor + span;
+						cursor = rawEnd;
+						const hasRoomForGap = rawEnd - rawStart > gapDeg;
+						const start = hasRoomForGap ? rawStart + gapDeg / 2 : rawStart;
+						const end = hasRoomForGap ? rawEnd - gapDeg / 2 : rawEnd;
+						const percent = Math.round((level.count / total) * 100);
+						const description = `${level.label}: ${level.count} of ${total} URL${total === 1 ? '' : 's'} (${percent}%)`;
+
+						const path = document.createElementNS(SVG_NS, 'path');
+						path.setAttribute('d', donutSegmentPath(cx, cy, rOuter, rInner, start, end));
+						path.setAttribute('fill', level.color);
+						path.setAttribute('tabindex', '0');
+						path.setAttribute('role', 'img');
+						path.setAttribute('aria-label', description);
+						path.classList.add('risk-donut-segment');
+						const segmentTitle = document.createElementNS(SVG_NS, 'title');
+						segmentTitle.textContent = description;
+						path.appendChild(segmentTitle);
+
+						const showTooltip = event => {
+							riskDonutTooltip.textContent = '';
+							const strong = document.createElement('strong');
+							strong.textContent = `${level.count} of ${total}`;
+							riskDonutTooltip.append(`${level.label}: `, strong, ` (${percent}%)`);
+							riskDonutTooltip.hidden = false;
+							if (event.type === 'focus') {
+								const rect = path.getBoundingClientRect();
+								riskDonutTooltip.style.left = `${rect.left + rect.width / 2}px`;
+								riskDonutTooltip.style.top = `${rect.top}px`;
+							} else {
+								riskDonutTooltip.style.left = `${event.clientX + 14}px`;
+								riskDonutTooltip.style.top = `${event.clientY + 14}px`;
+							}
+						};
+						const hideTooltip = () => { riskDonutTooltip.hidden = true; };
+						path.addEventListener('pointerenter', showTooltip);
+						path.addEventListener('pointermove', showTooltip);
+						path.addEventListener('pointerleave', hideTooltip);
+						path.addEventListener('focus', showTooltip);
+						path.addEventListener('blur', hideTooltip);
+						riskDonut.appendChild(path);
+					});
+
+					const totalCount = document.createElementNS(SVG_NS, 'text');
+					totalCount.setAttribute('x', String(cx));
+					totalCount.setAttribute('y', String(cy - 2));
+					totalCount.setAttribute('text-anchor', 'middle');
+					totalCount.setAttribute('class', 'risk-donut-total-count');
+					totalCount.textContent = String(total);
+					const totalLabel = document.createElementNS(SVG_NS, 'text');
+					totalLabel.setAttribute('x', String(cx));
+					totalLabel.setAttribute('y', String(cy + 12));
+					totalLabel.setAttribute('text-anchor', 'middle');
+					totalLabel.setAttribute('class', 'risk-donut-total-label');
+					totalLabel.textContent = total === 1 ? 'URL' : 'URLs';
+					riskDonut.append(totalCount, totalLabel);
+
+					counted.forEach(level => {
+						const percent = Math.round((level.count / total) * 100);
+						const item = document.createElement('li');
+						const swatch = document.createElement('span');
+						swatch.className = 'risk-donut-swatch';
+						swatch.style.setProperty('--risk-color', level.color);
+						const label = document.createElement('span');
+						label.className = 'risk-donut-legend-label';
+						label.textContent = level.label;
+						const value = document.createElement('span');
+						value.className = 'risk-donut-legend-value';
+						value.textContent = `${level.count} (${percent}%)`;
+						item.append(swatch, label, value);
+						riskDonutLegend.appendChild(item);
+					});
+				}
+
+				function riskRank(riskLevel) {
+					const match = String(riskLevel || '').match(/^(\d)/);
+					return match ? Number(match[1]) : 0;
+				}
+
+				function categoryRiskLevel(category) {
+					if (['Google Ads Technologies', 'Marketing Technologies', 'Social Media Technologies', 'YouTube Technologies', 'Unknown'].includes(category)) {
+						return '4-Very High';
+					}
+					if (['Analytics Technologies', 'Performance Technologies', 'Performance Technologies / Analytics Technologies'].includes(category)) {
+						return '3-High';
+					}
+					if (['Functional Technologies', 'Chatbot Technologies', 'Google Maps Technologies', 'Bing Technologies'].includes(category)) {
+						return '2-Medium';
+					}
+					return category === 'Strictly Necessary Technologies' ? '1-Low' : '';
+				}
+
+				function focusCategoryRow(targetId) {
+					const target = document.getElementById(targetId);
+					if (!target) return;
+					document.querySelectorAll('#categoryTable tr.is-risk-target').forEach(row => {
+						row.classList.remove('is-risk-target');
+					});
+					target.classList.add('is-risk-target');
+					target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+				}
+
+				function renderRiskChart(rows) {
+					const highestRisks = rows.map(row => {
+						const highestCookie = (row.categorizedCookies || []).reduce((highest, cookie, cookieIndex) =>
+							riskRank(cookie.riskLevel) > riskRank(highest.riskLevel)
+								? { riskLevel: cookie.riskLevel, cookieIndex }
+								: highest, { riskLevel: '', cookieIndex: -1 });
+						const highestRisk = highestCookie.riskLevel;
+						return {
+							domain: sanitizeTableValue(row.domain),
+							url: sanitizeTableValue(row.finalUrl),
+							riskLevel: highestRisk || 'No cookies observed',
+							riskRank: riskRank(highestRisk),
+							targetId: highestCookie.cookieIndex >= 0 ? `cookie-${row.rowNumber}-${highestCookie.cookieIndex + 1}` : ''
+						};
+					});
+
+					if (!highestRisks.length) {
+						riskPanel.classList.add('is-hidden');
+						downloadRiskChart.disabled = true;
+						return;
+					}
+
+					const levels = [
+						{ label: 'Very High', rank: 4, color: '#d64b4b', background: 'rgba(214, 75, 75, 0.55)' },
+						{ label: 'High', rank: 3, color: '#e47b32', background: 'rgba(228, 123, 50, 0.55)' },
+						{ label: 'Medium', rank: 2, color: '#f0b429', background: 'rgba(240, 180, 41, 0.55)' },
+						{ label: 'Low', rank: 1, color: '#4caf78', background: 'rgba(76, 175, 120, 0.55)' },
+						{ label: 'No cookies observed', rank: 0, color: '#8a98aa', background: 'rgba(138, 152, 170, 0.55)' }
+					];
+					renderRiskDonut(highestRisks, levels);
+					riskSummaryGrid.replaceChildren();
+					levels.forEach(level => {
+						const domains = highestRisks.filter(row => row.riskRank === level.rank);
+						const block = document.createElement('section');
+						block.className = 'risk-block';
+						block.style.setProperty('--risk-color', level.color);
+						block.style.setProperty('--risk-background', level.background);
+						const heading = document.createElement('h3');
+						heading.textContent = level.label;
+						const count = document.createElement('p');
+						count.className = 'risk-count';
+						count.textContent = domains.length;
+						const list = document.createElement('div');
+						list.className = 'risk-domains';
+						domains.forEach(domain => {
+							const link = document.createElement('a');
+							link.href = '#categoryPanel';
+							link.className = 'risk-domain-link';
+							link.textContent = domain.domain;
+							if (domain.targetId) {
+								link.addEventListener('click', event => {
+									event.preventDefault();
+									focusCategoryRow(domain.targetId);
+								});
+							}
+							list.appendChild(link);
+						});
+						block.append(heading, count, list);
+						riskSummaryGrid.appendChild(block);
+					});
+
+					riskPanel.classList.remove('is-hidden');
+					riskSummary.textContent = `URLs assessed: ${highestRisks.length}`;
+					downloadRiskChart.disabled = false;
+					downloadRiskChart.dataset.riskSummary = JSON.stringify(highestRisks);
+				}
+
+				function clearResults() {
+					table.querySelector('thead').replaceChildren();
+					table.querySelector('tbody').replaceChildren();
+					categoryTable.querySelector('thead').replaceChildren();
+					categoryTable.querySelector('tbody').replaceChildren();
+					riskSummaryGrid.replaceChildren();
+					riskDonut.replaceChildren();
+					riskDonutLegend.replaceChildren();
+					riskDonutTooltip.hidden = true;
+					jobStatus.textContent = 'Status: ready';
+					resultCount.textContent = 'Rows: 0';
+					categoryCount.textContent = 'Categorized cookies: 0';
+					riskSummary.textContent = 'Highest cookie risk by URL';
+					downloadRiskChart.dataset.riskSummary = '';
+				}
+
+				function categorizedWorkbookRows(rows) {
+					return rows.flatMap(row => (row.categorizedCookies || []).map((cookie, index) => ({
+						rowNumber: index + 1,
+						domain: row.domain,
+						cookieName: cookie.cookieName,
+						category: cookie.category,
+						riskLevel: cookie.riskLevel
+					})));
+				}
+
+				function exportCategorizedWorkbook(rows, filename) {
+					if (!rows.length) return;
+
+					if (typeof XLSX === 'undefined') {
+						status.textContent = 'Excel export library is unavailable. Please try again shortly.';
+						return;
+					}
+
+					const worksheet = XLSX.utils.json_to_sheet(rows);
+					const workbook = XLSX.utils.book_new();
+					XLSX.utils.book_append_sheet(workbook, worksheet, 'Categorized Cookies');
+					XLSX.writeFile(workbook, filename);
+				}
+
+				function downloadUpdatedCategorizedExcel(event) {
+					event.preventDefault();
+					exportCategorizedWorkbook(categorizedWorkbookRows(currentRows), 'categorized-cookies-updated.xlsx');
+				}
+
+				function downloadSnapshotExcel(entry) {
+					exportCategorizedWorkbook(categorizedWorkbookRows(entry.snapshotRows || []), 'categorized-cookies-changed.xlsx');
+				}
+
+				function readableScanError(error) {
+					if (error && error.message === 'Scan not found.') {
+						return 'Scanner service restarted before this scan finished. Please run the scan again.';
+					}
+					return error && error.message ? error.message : 'Scan failed.';
+				}
+
+				downloadRiskChart.addEventListener('click', () => {
+					const rows = JSON.parse(downloadRiskChart.dataset.riskSummary || '[]');
+					if (!rows.length) return;
+					const content = ['domain,highestRisk', ...rows.map(row => `"${row.domain.replace(/"/g, '""')}","${row.riskLevel}"`)].join('\n');
+					const link = document.createElement('a');
+					link.href = URL.createObjectURL(new Blob([content], { type: 'text/csv;charset=utf-8' }));
+					link.download = 'highest-cookie-risk-by-url.csv';
+					link.click();
+					URL.revokeObjectURL(link.href);
+				});
+
+				async function apiFetch(path, options, retries = 2) {
+					for (let attempt = 0; attempt <= retries; attempt++) {
+						try {
+							const response = await fetch(`${apiBase}${path}`, options);
+							const data = await response.json().catch(() => ({}));
+							if (!response.ok) {
+								throw new Error(data.error || `Request failed with ${response.status}`);
+							}
+							return data;
+						} catch (error) {
+							if (attempt === retries || error.message !== 'Failed to fetch') throw error;
+							status.textContent = `Connecting to scanner service (${attempt + 1}/${retries + 1}).`;
+							await new Promise(resolve => setTimeout(resolve, 5000));
+						}
+					}
+
+					throw new Error('Scanner service is unavailable. Please try again shortly.');
+				}
+
+				async function loadResults(job) {
+					const data = await apiFetch(job.resultsUrl);
+					renderRows(data.rows || []);
+					setDownloads(job);
+				}
+
+				async function pollJob(id, urls) {
+					const job = await apiFetch(`/api/scans/${id}`);
+					jobStatus.textContent = `Status: ${job.status}`;
+					resultCount.textContent = `Rows: ${job.resultCount || 0}`;
+
+					if (job.status === 'complete') {
+						clearInterval(pollTimer);
+						pollTimer = null;
+						status.textContent = 'Complete.';
+						hideScanProgress();
+						setBusy(false);
+						await loadResults(job);
+						saveHistory(job, urls);
+						return;
+					}
+
+					if (job.status === 'stopped') {
+						clearInterval(pollTimer);
+						pollTimer = null;
+						const total = job.progressTotal || job.urlCount || urls.length;
+						status.textContent = job.resultCount
+							? `Stopped after ${job.resultCount} of ${total}.`
+							: 'Stopped before any URL finished.';
+						hideScanProgress();
+						setBusy(false);
+						if (job.resultCount > 0) {
+							await loadResults(job);
+							saveHistory(job, urls);
+						}
+						return;
+					}
+
+					if (job.status === 'failed') {
+						clearInterval(pollTimer);
+						pollTimer = null;
+						status.textContent = job.error || 'Scan failed.';
+						hideScanProgress();
+						setBusy(false);
+						return;
+					}
+
+					if (job.status === 'queued') {
+						hideScanProgress();
+						status.textContent = `Queued. Position ${job.queuedPosition || 1}.`;
+						return;
+					}
+
+					const total = job.progressTotal || job.urlCount || urls.length;
+					const current = job.progressCurrent || 0;
+					if (stopRequested) {
+						status.textContent = total
+							? `Stopping - finishing URL ${current} of ${total}, then halting.`
+							: 'Stopping.';
+					} else {
+						status.textContent = total ? `Running scan (${current} of ${total}).` : 'Running scan.';
+					}
+					updateScanProgress(current, total);
+				}
+
+				form.addEventListener('submit', async event => {
+					event.preventDefault();
+					const urls = splitUrls(urlsInput.value);
+
+					if (!urls.length) {
+						status.textContent = 'Enter at least one URL.';
+						return;
+					}
+
+					clearInterval(pollTimer);
+					pollTimer = null;
+					setBusy(true);
+					setDownloadButton(downloadButton, null);
+					setDownloadButton(categorizedDownloadButton, null);
+					clearResults();
+					resultsPanel.classList.add('is-hidden');
+					categoryPanel.classList.add('is-hidden');
+					riskPanel.classList.add('is-hidden');
+					downloadRiskChart.disabled = true;
+					status.textContent = 'Starting scan.';
+					hideScanProgress();
+
+					try {
+						const job = await apiFetch('/api/scans', {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify({ urls })
+						});
+						jobStatus.textContent = `Status: ${job.status}`;
+						runningJobId = job.id;
+						runningUrls = urls;
+						await pollJob(job.id, urls);
+						pollTimer = setInterval(() => {
+							pollJob(job.id, urls).catch(error => {
+								clearInterval(pollTimer);
+								pollTimer = null;
+								status.textContent = readableScanError(error);
+								setBusy(false);
+							});
+						}, 3000);
+					} catch (error) {
+						status.textContent = readableScanError(error);
+						setBusy(false);
+					}
+				});
+
+				stopButton.addEventListener('click', async () => {
+					if (!runningJobId) return;
+					stopRequested = true;
+					stopButton.disabled = true;
+					stopButton.textContent = 'Stopping...';
+					status.textContent = 'Stopping - finishing the current URL, then halting.';
+					try {
+						await apiFetch(`/api/scans/${runningJobId}/stop`, { method: 'POST' });
+						// Poll right away instead of waiting for the next 3s tick, so a
+						// queued job (stopped instantly) reflects the change without delay.
+						await pollJob(runningJobId, runningUrls);
+					} catch (error) {
+						status.textContent = readableScanError(error);
+						stopButton.disabled = false;
+						stopButton.textContent = 'Stop Scan';
+					}
+				});
+
+				clearHistoryButton.addEventListener('click', () => {
+					localStorage.removeItem(historyStorageKey);
+					renderHistory();
+				});
+
+				categorizedDownloadButton.addEventListener('click', downloadUpdatedCategorizedExcel);
+
+				retentionNote.textContent = `Scan results normally stay on the server for up to ${resultRetentionDays} days, then are deleted automatically - though a server restart can clear them earlier too, so a very recent row can occasionally fail as well. This list, though, lives only in this browser's storage and does not expire on its own - it stays until you clear this browser's cookies/site data (or use a different browser), even long after ${resultRetentionDays} days. So a row can still show here after its result is already gone from the server; clicking it will say so and remove that row.`;
+				renderHistory();
+			})();
+		</script>
+	</body>
+</html>
