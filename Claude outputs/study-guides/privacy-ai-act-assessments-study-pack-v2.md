@@ -1,4 +1,9 @@
-<!-- Text version of privacy-ai-act-assessments-study-pack-v2.pdf, generated on 3 October 2026 from the same HTML the PDF is printed from (study-pack-build/pack.html). The PDF is the reference for layout. -->
+---
+title: "Privacy, AI Act and Assessments: a study pack"
+date: 2026-10-03
+source: "simeonatanasov.github.io/Claude outputs/study-guides/privacy-ai-act-assessments-study-pack-v2.pdf"
+tags: [study-guide]
+---
 
 Study pack
 
