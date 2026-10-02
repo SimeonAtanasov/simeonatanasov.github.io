@@ -160,18 +160,6 @@
 		height: 50vh;
 		padding: 1.5em;
 	}
-	/* Nine chips stacked in one column need more height than 50vh gives on a
-	   short screen, so the card with many tools wraps them into two columns. */
-	.spotlight-assessment .image-tools.image-tools-many {
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-content: center;
-	}
-
-		.spotlight-assessment .image-tools.image-tools-many .tool-chip {
-			flex: 1 1 calc(50% - 0.5em);
-			min-width: 0;
-		}
 }
 
 @media screen and (max-width: 480px) {
