@@ -39,6 +39,32 @@ def bg(d):
 
 MANUAL["bg"] = bg
 
+
+def it(d):
+    # External audit, 2 October 2026: one source dates the judgment 18 March, ANSA reported it on
+    # 20 March. Give the month and the report date rather than pick one.
+    for c in d["cases"]:
+        if "annulled it on 20 March 2026" in c["summary"]:
+            c["summary"] = c["summary"].replace("annulled it on 20 March 2026", "annulled it in March 2026 (reported 20 March 2026)")
+            break
+    else:
+        raise AssertionError("OpenAI summary not found")
+
+
+MANUAL["it"] = it
+
+
+def de(d):
+    # Checked 2 October 2026: the Bundestag and BfDI releases confirm the 25 June 2026 election and
+    # that the predecessor stayed until 30 September 2026, but no source states the start date.
+    old = "took office on 1 October 2026, succeeding Louisa Specht-Riemenschneider."
+    new = "succeeds Louisa Specht-Riemenschneider, who stayed in office until 30 September 2026."
+    assert old in d["dpa"]["structure"]
+    d["dpa"]["structure"] = d["dpa"]["structure"].replace(old, new)
+
+
+MANUAL["de"] = de
+
 n = 0
 for f in sorted(glob.glob(os.path.join(RAW, "*.json"))):
     if f.endswith(".verify.json"):

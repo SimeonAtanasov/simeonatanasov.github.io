@@ -8,6 +8,7 @@ Usage: python3 build_enforcement_page.py"""
 import json, os, re, html, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from summary import ORDER, MODELS, PUBLIC, SUSP, S, GRID
+from refs import linkify, RAD as RAD_URL, GDPR as GDPR_HTML
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "data")
@@ -17,6 +18,9 @@ EM = chr(0x2014)
 
 C = {c: json.load(open(os.path.join(DATA, c + ".json"), encoding="utf-8")) for c in ORDER}
 EU = json.load(open(os.path.join(DATA, "eu.json"), encoding="utf-8"))
+# National statutes named in the overview text, linked to the law in the country data.
+NATIONAL = {"LOPDGDD": C["es"]["law"]["url"], "Codice": C["it"]["law"]["url"], "Infotv.": C["hu"]["law"]["url"],
+            "Act 18/2018": C["sk"]["law"]["url"], "s.150(7)": C["ie"]["law"]["url"]}
 
 
 def e(s):
@@ -28,8 +32,8 @@ def cap(s):
     return s[:1].upper() + s[1:] if s else s
 
 
-def para(s):
-    return e(cap(s))
+def para(s, ctx="card"):
+    return linkify(e(cap(s)), ctx, "html", NATIONAL)
 
 
 def link(url, text):
@@ -50,7 +54,7 @@ def flow(nodes, cls=""):
     out = ['<ol class="ge-flow %s">' % cls]
     for i, (title, sub) in enumerate(nodes):
         out.append('<li class="ge-node"><span class="ge-node-n">%d</span><strong>%s</strong>%s</li>'
-                   % (i + 1, title, ('<span>%s</span>' % sub) if sub else ""))
+                   % (i + 1, title, ('<span>%s</span>' % linkify(sub, "gdpr", "html", NATIONAL)) if sub else ""))
     out.append("</ol>")
     return "".join(out)
 
@@ -192,7 +196,7 @@ def cjeu_table():
     rows = []
     for c in EU["cjeu"]:
         rows.append('<tr><th scope="row">%s<br><span class="ge-year">%s</span></th><td><strong>%s</strong><br>%s</td><td>%s</td></tr>'
-                    % (e(c["case"]), e(c["date"]), e(c["name"]), para(c["holding"]),
+                    % (linkify(e(c["case"]), "gdpr"), e(c["date"]), e(c["name"]), para(c["holding"], "gdpr"),
                        link(c["url"], "Judgment") if c.get("url", "").startswith("http") else ""))
     return ('<div class="ge-tablewrap"><table class="ge-table"><thead><tr><th scope="col">Case</th><th scope="col">What it settled</th>'
             '<th scope="col">Text</th></tr></thead><tbody>%s</tbody></table></div>' % "".join(rows))
@@ -202,7 +206,7 @@ def edpb_table():
     rows = []
     for b in EU["edpb_binding"]:
         rows.append("<tr><th scope=\"row\">%s</th><td>%s</td><td>%s</td><td>%s</td></tr>"
-                    % (e(b["title"]), e(b["year"]), para(b["effect"]),
+                    % (e(b["title"]), e(b["year"]), para(b["effect"], "gdpr"),
                        link(b["url"], "Decision") if b.get("url", "").startswith("http") else ""))
     return ('<div class="ge-tablewrap"><table class="ge-table"><thead><tr><th scope="col">Binding decision</th><th scope="col">Year</th>'
             '<th scope="col">Effect on the outcome</th><th scope="col">Text</th></tr></thead><tbody>%s</tbody></table></div>' % "".join(rows))
@@ -279,12 +283,12 @@ RAIL = [("ge-short", "The short version"), ("ge-authority", "The authority track
 def rows3(items, heads):
     return ('<div class="ge-tablewrap"><table class="ge-table"><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>'
             % ("".join('<th scope="col">%s</th>' % e(h) for h in heads),
-               "".join("<tr><th scope=\"row\">%s</th>%s</tr>" % (e(r[0]), "".join("<td>%s</td>" % e(x) for x in r[1:])) for r in items)))
+               "".join("<tr><th scope=\"row\">%s</th>%s</tr>" % (e(r[0]), "".join("<td>%s</td>" % linkify(e(x), "gdpr", "html", NATIONAL) for x in r[1:])) for r in items)))
 
 
 def stats():
     return '<ul class="ge-stats">' + "".join(
-        "<li>%s <span class=\"ge-src\">%s</span></li>" % (para(s_["figure"]), link(s_["url"], s_["source"]))
+        "<li>%s <span class=\"ge-src\">%s</span></li>" % (para(s_["figure"], "gdpr"), link(s_["url"], s_["source"]))
         for s_ in EU["stats"]) + "</ul>"
 
 
@@ -293,7 +297,7 @@ def main_html():
     eea_n = sum(1 for c in ORDER if C[c]["membership"] == "EEA")
     assert (eu_n, eea_n) == (27, 3), (eu_n, eea_n)
     cards = "".join(country_card(c) for c in ORDER)
-    pr_changes = "".join("<li>%s</li>" % para(x) for x in PR["changes"])
+    pr_changes = "".join("<li>%s</li>" % para(x, "pr") for x in PR["changes"])
     out = []
     out.append('''<div class="ge">
 <p class="ge-intro">A GDPR fine is not a court judgment. In almost every EEA country the data protection authority investigates, decides and fines in one administrative decision, and a court becomes involved only if someone challenges that decision. Separately, and at the same time if they choose, individuals can sue the organisation for compensation, but a court in that track never fines. This page sets out the two tracks, how cross-border cases move between authorities and the EDPB, and then the route in each of the %d EU and %d EEA countries, with the United Kingdom and Switzerland for contrast.</p>
@@ -313,7 +317,7 @@ def main_html():
 <ol class="ge-steps">%s</ol>
 <h3>Deadlines some authorities work to</h3>
 <p class="ge-note">Most national laws set no binding deadline for deciding a complaint. These are the ones confirmed in the research, plus the EU rule coming for cross-border cases.</p>%s
-</section>''' % ("".join('<li><strong>%s.</strong> %s</li>' % (e(t), e(x)) for t, x in STEPS),
+</section>''' % ("".join('<li><strong>%s.</strong> %s</li>' % (e(t), linkify(e(x), "gdpr", "html", NATIONAL)) for t, x in STEPS),
                  rows3(DEADLINES, ["Where", "Deadline", "Basis"])))
 
     out.append('''<section class="ge-block" id="ge-cross"><h2>Cross-border cases: the one-stop-shop</h2>
@@ -332,7 +336,7 @@ def main_html():
         ("EDPB settles disputes", "If the lead authority will not follow an objection, the EDPB adopts a binding decision by two-thirds majority (Art. 65)."),
         ("Final decision", "The lead authority adopts it, within one month of a binding decision; the complainant's authority notifies a rejection (Art. 60(8), Art. 65(6))."),
         ("Courts", "The decision is challenged in the lead authority's country. An EDPB binding decision can be challenged at the EU General Court (C-97/23 P)."),
-    ], "ge-flow-cross"), edpb_table(), e(PR["citation"]), e(PR["published"]), e(PR["in_force"]), e(cap(PR["applies_from"])),
+    ], "ge-flow-cross"), edpb_table(), e(PR["citation"]), e(PR["published"]), e(PR["in_force"]), para(PR["applies_from"], "pr"),
         pr_changes, (" " + link(PR["url"], "Text on EUR-Lex")) if PR.get("url") else ""))
 
     out.append('''<section class="ge-block" id="ge-courts"><h2>Where the courts come in</h2>
@@ -341,7 +345,7 @@ def main_html():
 </section>''' % rows3(COURTS, ["Who", "Against what", "Where", "Basis"]))
 
     out.append('''<section class="ge-block" id="ge-private"><h2>Suing the organisation directly</h2>
-<p class="ge-lead">Art. 79 gives every data subject an action against the controller or processor in court, without needing a complaint to the authority first, and Art. 82 a right to compensation for material or non-material damage. Art. 80 lets a not-for-profit body act on a person's behalf, and Member States may let it act without a mandate. The Representative Actions Directive (EU) 2020/1828 lists the GDPR in its Annex I, so qualified entities can bring collective actions for GDPR breaches under the national transposition. The CJEU has built the compensation rules over a run of judgments since 2023:</p>%s
+<p class="ge-lead">Art. 79 gives every data subject an action against the controller or processor in court, without needing a complaint to the authority first, and Art. 82 a right to compensation for material or non-material damage. Art. 80 lets a not-for-profit body act on a person's behalf, and Member States may let it act without a mandate. The <a href="__RAD__" target="_blank" rel="noopener noreferrer" class="ge-ref">Representative Actions Directive (EU) 2020/1828</a> lists the GDPR in its <a href="__RAD__#anx_I" target="_blank" rel="noopener noreferrer" class="ge-ref">Annex I</a>, so qualified entities can bring collective actions for GDPR breaches under the national transposition. The CJEU has built the compensation rules over a run of judgments since 2023:</p>%s
 <p class="ge-note">How much a court awards is national law, and awards for non-material damage alone are usually modest. Each country section notes the courts and any collective action route.</p>
 </section>''' % rows3(DAMAGES, ["Principle", "What it means", "Case"]))
 
@@ -385,7 +389,11 @@ def main_html():
 </ul>
 <p class="ge-note">Related on this site: the <a href="gdpr-fines-analytics.html">GDPR Fines Analytics</a>, the <a href="power-bi.html">GDPR Fines Dashboard</a> and the <a href="gdpr-fine-calculator.html">GDPR Fine Calculator</a> for what the fines have been; the <a href="edpb-digest.html">EDPB Digest</a> for the binding decisions and guidelines cited here. The Regulation itself: %s.</p>
 </section></div>''' % (CORRECTIONS, CHECKED, link(GDPR, "Regulation (EU) 2016/679 on EUR-Lex")))
-    return "\n".join(out)
+    html_out = "\n".join(out)
+    # Lead and note paragraphs are hand-written with plain references; link them in one pass.
+    html_out = re.sub(r'(<p class="ge-(?:lead|note)">)(.*?)(</p>)',
+                      lambda m: m.group(1) + linkify(m.group(2), "gdpr", "html", NATIONAL) + m.group(3), html_out, flags=re.S)
+    return html_out.replace("__RAD__", RAD_URL)
 
 
 CORRECTIONS = int(os.environ.get("GE_CORRECTIONS", "90"))

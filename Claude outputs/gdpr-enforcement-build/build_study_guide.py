@@ -41,7 +41,7 @@ QUIZ = [
     ("Which authority leads in a cross-border case?", "The authority of the main establishment of the controller or processor (Art. 56(1)). The complainant's own authority becomes a concerned authority."),
     ("What happens when a concerned authority objects and the lead authority disagrees?", "The EDPB adopts a binding decision under Art. 65, and the lead authority adopts its final decision within one month. That decision can now be challenged at the EU General Court (C-97/23 P, 10 February 2026)."),
     ("What is Regulation (EU) 2025/2518 and when does it bite?", "The GDPR Procedural Regulation, harmonising the cross-border procedure (admissibility, right to be heard, access to file, deadlines). In force 1 January 2026; it applies to complaints lodged and investigations opened more than 15 months later, so from about 2 April 2027."),
-    ("What deadline does the Procedural Regulation set for a lead authority's draft decision?", "15 months from confirming competence, extendable once by up to 12 months; 12 months under the simple cooperation procedure (Art. 12)."),
+    ("What deadline does the Procedural Regulation set for a lead authority's draft decision?", "15 months from confirming competence, extendable once by up to 12 months; 12 months under the simple cooperation procedure (Art. 12 Regulation (EU) 2025/2518)."),
     ("Is an authority obliged to fine every infringement it finds?", "No. It must act to remedy the infringement but chooses the measure; a fine is not compulsory where it is not appropriate, necessary or proportionate (C-768/21 Land Hessen)."),
     ("Can a company be fined without proof of fault?", "No. A fine requires an intentional or negligent infringement, but national law cannot require that a specific manager be identified (C-807/21 Deutsche Wohnen, C-683/21)."),
     ("Whose turnover sets the cap?", "That of the whole undertaking in the competition-law sense, including the parent group (C-383/23 ILVA)."),
@@ -234,9 +234,34 @@ def build_md():
     L.append("- Appeal deadlines and suspensive effect are the least certain fields, because many countries set them in general administrative procedure law.")
     L.append("- Court cases move. Everything after %s is not reflected. The web page carries the source list for every country." % P.CHECKED)
     L.append("")
-    s = "\n".join(L)
+    s = link_md("\n".join(L))
     assert EM not in s
     return s
+
+
+def link_md(text):
+    """Link legal references the same way the web page does. The context follows the part:
+    overview and EU parts read a bare article as GDPR, the Procedural Regulation bullets as
+    Regulation 2025/2518, and the comparison and country parts link only named instruments."""
+    from refs import linkify
+    ctx, in_code, out = None, False, []
+    for line in text.split("\n"):
+        if line.startswith("```"):
+            in_code = not in_code
+            out.append(line)
+            continue
+        if line.startswith("## Part "):
+            n = int(line.split()[2].rstrip("."))
+            ctx = "card" if n in (6, 7) else (None if n == 10 else "gdpr")
+        elif line.startswith("### The GDPR Procedural Regulation"):
+            ctx = "pr"
+        elif line.startswith("## Part 4") or (line.startswith("## ") and ctx == "pr"):
+            ctx = "gdpr"
+        if in_code or ctx is None or line.startswith("#") or line.startswith("Companion web page"):
+            out.append(line)
+        else:
+            out.append(linkify(line, ctx, "md", P.NATIONAL))
+    return "\n".join(out)
 
 
 CSS = """
