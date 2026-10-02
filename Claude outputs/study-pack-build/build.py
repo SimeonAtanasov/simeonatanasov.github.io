@@ -548,7 +548,9 @@ if __name__ == "__main__":
         head = re.sub(r"^(\d+)([a-z])", r"\1 \2", head, flags=re.M)
         mdp = os.path.join(outdir, "privacy-ai-act-assessments-study-pack.md")
         open(mdp, "w", encoding="utf-8").write(
-            "<!-- Text version of privacy-ai-act-assessments-study-pack-v2.pdf, generated from the same HTML the PDF is printed from (study-pack-build/pack.html). The PDF is the reference for layout. -->\n\n" + head + rest)
+            "---\ntitle: \"Privacy, AI Act and Assessments: a study pack\"\ndate: " + __import__("datetime").date.today().isoformat()
+            + "\nsource: \"simeonatanasov.github.io/Claude outputs/study-guides/privacy-ai-act-assessments-study-pack-v2.pdf\"\ntags: [study-guide]\n---\n\n"
+            + head + rest)
         print("md:", mdp, os.path.getsize(mdp), "bytes")
     else:
         print("md: skipped, pandoc not found")

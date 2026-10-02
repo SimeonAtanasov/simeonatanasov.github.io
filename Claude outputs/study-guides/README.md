@@ -9,11 +9,21 @@ Markdown text version (for search, diffing and reading anywhere). Gathered here 
 | Study pack: Practical Privacy, Practical AI Act Advice, the nine assessment tools, the GDPR Readiness model (161 pages, 74 self-test questions) | `privacy-ai-act-assessments-study-pack-v2.pdf` | `privacy-ai-act-assessments-study-pack-v2.md` | pandoc from the HTML the PDF is printed from; `build.py` writes both | `../study-pack-build/` |
 | GDPR enforcement study guide | `gdpr-enforcement-study-guide.pdf` | `gdpr-enforcement-study-guide.md` | the Markdown is the source; the PDF is printed from it | `../gdpr-enforcement-build/build_study_guide.py` |
 | How the GDPR fine calculator works | none | `gdpr-fine-calculator-explained.md` | written as Markdown | by hand |
-| AI Act Digest, 28 September 2026 (current) | `ai-act-digest-2026-09-28.pdf` | `ai-act-digest-2026-09-28.md` | converted from the PDF | `../ai-act-digest-build/build_aia_pdf.py` |
-| EDPB Digest, 28 September 2026 (current) | `edpb-digest-2026-09-28.pdf` | `edpb-digest-2026-09-28.md` | converted from the PDF | `../edpb-digest-build/build_digest_pdf.py` |
-| Cookie Compliance Digest, 19 September 2026 (current) | `cookie-compliance-digest-2026-09-19.pdf` | `cookie-compliance-digest-2026-09-19.md` | converted from the PDF | `../cookie-digest-build/build_cookie_pdf.py` |
+| AI Act Digest, 28 September 2026 (current) | `ai-act-digest-2026-09-28.pdf` | `ai-act-digest-2026-09-28.md` | Obsidian version with front matter (see below) | `../ai-act-digest-build/build_aia_pdf.py` |
+| EDPB Digest, 28 September 2026 (current) | `edpb-digest-2026-09-28.pdf` | `edpb-digest-2026-09-28.md` | Obsidian version with front matter (see below) | `../edpb-digest-build/build_digest_pdf.py` |
+| Cookie Compliance Digest, 19 September 2026 (current) | `cookie-compliance-digest-2026-09-19.pdf` | `cookie-compliance-digest-2026-09-19.md` | Obsidian version with front matter (see below) | `../cookie-digest-build/build_cookie_pdf.py` |
 | AI Act Digest, 19 September 2026 (superseded) | `../ai-act-digest-2026-09-19-v2.pdf` (could not be moved here: open in another application) | `ai-act-digest-2026-09-19-v2.md` | converted from the PDF | as above |
 | EDPB Digest, 19 September 2026 (superseded) | `edpb-digest-2026-09-19.pdf` | `edpb-digest-2026-09-19.md` | converted from the PDF | as above |
+
+## Obsidian copies
+
+The study pack, the GDPR enforcement guide, the fine calculator explainer and the three
+current digests are also kept in Simeon's Obsidian vault (`Documents\Obsidian Vault`, top
+level), byte-identical to the files here since 3 October 2026. The three current digests
+here are the vault's versions (cleaner than a PDF conversion, with `title`, `date`,
+`source` and `tags` front matter; checked against the PDF text: complete, differences are
+letter case of chip labels and running heads). The study pack carries the same front
+matter and `build.py` writes it. After any rebuild, copy the changed `.md` to the vault too.
 
 ## Converted from the PDF
 
