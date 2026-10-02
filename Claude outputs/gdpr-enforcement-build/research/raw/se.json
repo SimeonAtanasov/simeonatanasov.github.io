@@ -1,0 +1,90 @@
+{
+  "code": "se",
+  "country": "Sweden",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Swedish Authority for Privacy Protection",
+    "name_native": "Integritetsskyddsmyndigheten",
+    "abbr": "IMY",
+    "url": "https://www.imy.se",
+    "structure": "Single national authority, a government agency headed by a Director General (not a collegial body). Formerly called Datainspektionen (renamed 1 January 2021).",
+    "regional": "None; IMY covers the whole country, public and private sectors."
+  },
+  "law": {
+    "name": "Act (2018:218) containing supplementary provisions to the EU General Data Protection Regulation (dataskyddslagen), last amended by SFS 2025:256 (complaint handling, in force 1 May 2025) and SFS 2026:1589 (scope, in force 1 January 2027)",
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2018218-med-kompletterande-bestammelser_sfs-2018-218/"
+  },
+  "complaint": {
+    "how": "Through IMY's e-service, by email or by letter, free of charge; the web guidance is in Swedish and English. The complaint must concern the complainant's own data, name the organisation and give the complainant's contact details (no anonymous complaints).",
+    "contact_controller_first": "Recommended but not required: IMY advises contacting the organisation first and explaining what is wrong.",
+    "deadlines": "No time limit for complaining found. If IMY has not decided within three months whether to open supervision on a complaint, the data subject can request in writing an answer; IMY must answer or decide within two weeks, otherwise the request is deemed refused (6 kap. 8 § dataskyddslagen, from 1 May 2025).",
+    "complainant_status": "The complainant always receives a reply on what IMY has done and, if an inspection is carried out, a copy of the decision. Since the Supreme Administrative Court rulings of 17 November 2023 (cases 6193-22 and 3691-22), IMY decisions not to investigate a complaint, or to close a supervision case without the measures requested, are legally binding decisions the complainant can appeal (Art. 78(1) GDPR)."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint received and assessed; IMY decides whether to open supervision (tillsyn), with the three-month mechanism of 6 kap. 8 §",
+      "Supervision (inspection): written questions, document requests, possibly on-site inspection",
+      "Communication of findings and opportunity for the controller to comment, including on any proposed fine",
+      "Final decision: closure, corrective orders, reprimand and/or administrative fine (sanktionsavgift)"
+    ],
+    "decision_maker": "IMY as an agency; decisions are signed by the Director General or by staff under IMY's delegation rules (internal delegation not confirmed).",
+    "limitation": "A fine may not be decided unless the party has been given the opportunity to comment within five years of the day the infringement took place (6 kap. 2 § dataskyddslagen)."
+  },
+  "fines": {
+    "imposed_by": "IMY by administrative decision; no court confirmation step.",
+    "public_bodies": "Yes, public authorities can be fined, capped at SEK 5,000,000 for Art. 83(4) breaches and SEK 10,000,000 for Art. 83(5) and 83(6) breaches (6 kap. 2 § dataskyddslagen).",
+    "quirks": "The fine must be paid within 30 days of the decision gaining legal force (laga kraft), or a longer period set in the decision (6 kap. 2 §), so an appeal in practice defers payment. Fines are only available for Art. 83 GDPR breaches, plus Art. 10 GDPR (criminal data) breaches (6 kap. 1 and 3 §§). No criminal offences in the Act."
+  },
+  "appeal": {
+    "court": "IMY decisions under the GDPR and on fines may be appealed to the general administrative courts (7 kap. 3 § dataskyddslagen): in practice Förvaltningsrätten i Stockholm (Stockholm Administrative Court), as IMY sits in Stockholm, with IMY as respondent.",
+    "deadline": "Three weeks from the day the appellant received the decision (general rule of the Administrative Procedure Act, förvaltningslagen 2017:900, s. 44; not confirmed from the text in this research).",
+    "suspensive": "Payment is due only 30 days after the decision gains legal force (6 kap. 2 §), so the fine is not collected while an appeal is pending; corrective orders' suspensive effect not confirmed.",
+    "further": "Administrative Court of Appeal (kammarrätten), leave to appeal required (prövningstillstånd), then the Supreme Administrative Court (Högsta förvaltningsdomstolen, HFD), leave required.",
+    "inaction": "Since 1 May 2025: after three months without a position on a complaint, the data subject can demand an answer; a refusal, or no answer within two weeks, can be appealed to the administrative court (7 kap. 3 a §), which if it upholds the appeal orders IMY to tell the data subject promptly whether supervision will be opened (7 kap. 6 §). Decisions not to investigate are themselves appealable after the HFD rulings of November 2023."
+  },
+  "private": {
+    "courts": "Art. 82 compensation applies to breaches of the Act too (7 kap. 1 § dataskyddslagen); damages claims go to the general courts (tingsrätt). Data subjects can also appeal certain decisions of public authorities as controllers on rights requests (Arts. 12(5), 15-21) to the administrative courts (7 kap. 2 §).",
+    "damages": "Not confirmed; no Swedish damages amounts were verified in this research.",
+    "collective": "Sweden has a general Group Proceedings Act (lag 2002:599 om grupprättegång); the transposition route for the Representative Actions Directive and whether national law uses Art. 80(2) were not confirmed."
+  },
+  "cases": [
+    {
+      "title": "Google LLC: right to be forgotten, SEK 75 million reduced to SEK 50 million",
+      "year": "2020-2022",
+      "summary": "IMY fined Google SEK 75 million on 11 March 2020 over delisting handling and notifying webmasters. Förvaltningsrätten i Stockholm (case 7565-20) cut it to SEK 52 million; the kammarrätt (case 2232-21) reduced it to SEK 50 million; HFD refused leave on 20 December 2022 (case 7528-21), making SEK 50 million final.",
+      "url": "https://www.imy.se/tillsyner/google/"
+    },
+    {
+      "title": "Spotify: right of access, SEK 58 million reinstated on appeal",
+      "year": "2023-2025",
+      "summary": "IMY fined Spotify SEK 58 million on 12 June 2023 for unclear information in response to access requests. Förvaltningsrätten (case 13539-23, 28 June 2024) cut it to SEK 40 million; on 3 June 2025 the kammarrätt (case 4512-24) upheld IMY's appeal and reinstated SEK 58 million.",
+      "url": "https://www.imy.se/tillsyner/spotify-ratten-till-tillgang/"
+    },
+    {
+      "title": "HFD: complainants can appeal IMY decisions not to act",
+      "year": "2023",
+      "summary": "On 17 November 2023 the Supreme Administrative Court held (cases 6193-22 and 3691-22) that IMY decisions not to investigate a complaint, or to close supervision without the measures sought, are legally binding decisions appealable under Art. 78(1) GDPR, departing from RÅ 2010 ref. 29.",
+      "url": "https://www.cederquist.se/sv/artiklar/tva-domar-fran-hogsta-forvaltningsdomstolen-om-individers-ratt-att-overklaga-imys-beslut-cG9zdDo4OTg1/"
+    }
+  ],
+  "quirks": [
+    "Public authorities can be fined, but at fixed caps of SEK 5 million and SEK 10 million rather than turnover-based amounts.",
+    "Statutory three-month and two-week clock on complaint handling, with a court route against delay, since 1 May 2025 (SFS 2025:256).",
+    "Courts frequently adjust IMY fines in both directions: Google was reduced, Spotify was reduced then reinstated in full.",
+    "Swedish appeals to the kammarrätt and HFD need leave to appeal, so most cases end at the first or second instance.",
+    "Five-year limit: no fine unless the party was invited to comment within five years of the infringement."
+  ],
+  "plain": "You complain to IMY online, by email or by letter, free of charge, ideally after raising it with the organisation. If IMY does nothing within three months you can demand an answer and go to court if it refuses, and if IMY decides not to act you can appeal that decision too. Fined organisations, including public authorities (capped at SEK 10 million), appeal to the Stockholm Administrative Court and need permission to go higher, and they only pay once the decision is final.",
+  "confidence": "high for dataskyddslagen provisions, the 2025 complaint amendments and the Google and Spotify cases; medium for the three-week appeal deadline and Stockholm court venue, which come from general administrative law I did not re-read, and low for damages and collective actions.",
+  "sources": [
+    {"title": "Lag (2018:218) dataskyddslagen, Riksdagen", "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2018218-med-kompletterande-bestammelser_sfs-2018-218/", "source_type": "primary"},
+    {"title": "Lag (2018:218) on lagen.nu, including SFS 2025:256 amendments and Prop. 2024/25:88", "url": "https://lagen.nu/2018:218", "source_type": "secondary"},
+    {"title": "IMY: file a GDPR complaint", "url": "https://www.imy.se/en/individuals/forms-and-e-services/file-a-gdpr-complaint/", "source_type": "primary"},
+    {"title": "IMY supervision page: Google", "url": "https://www.imy.se/tillsyner/google/", "source_type": "primary"},
+    {"title": "IMY supervision page: Spotify", "url": "https://www.imy.se/tillsyner/spotify-ratten-till-tillgang/", "source_type": "primary"},
+    {"title": "Cederquist: two HFD judgments on appealing IMY decisions", "url": "https://www.cederquist.se/sv/artiklar/tva-domar-fran-hogsta-forvaltningsdomstolen-om-individers-ratt-att-overklaga-imys-beslut-cG9zdDo4OTg1/", "source_type": "secondary"},
+    {"title": "Techlaw: HFD on closing supervision without action", "url": "https://techlaw.se/sverige-hfd-anser-att-imys-beslut-att-avsluta-ett-tillsynsarende-utan-atgard-ar-overklagbart/", "source_type": "secondary"},
+    {"title": "Kammarrätten: SEK 50 million for Google", "url": "https://www.timedanowsky.se/kammarratten-50-miljoner-i-sanktionsavgift-for-google-efter-gdpr-overtradelse/", "source_type": "secondary"},
+    {"title": "Spotify must pay SEK 58 million", "url": "https://www.bginstitute.se/spotify-maste-betala-58-miljoner-i-sanktionsavgift-falls-for-bristande-transparens-enligt-gdpr/", "source_type": "secondary"}
+  ]
+}

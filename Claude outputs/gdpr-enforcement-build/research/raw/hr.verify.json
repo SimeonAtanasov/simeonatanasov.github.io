@@ -1,0 +1,91 @@
+{
+ "code": "hr",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "B2 Kapital EUR 2,265,000 (4 May 2023), anonymous tip-off with USB stick, 77,317 people; transparency, processor agreement, security",
+   "verdict": "confirmed",
+   "evidence": "AZOP (4 May 2023): EUR 2,265,000; anonymous report in December 2022 with a USB stick containing data of 77,317 people; violations: transparency, no processor contract, inadequate security (at least 132,652 data subjects affected overall).",
+   "url": "https://azop.hr/agenciji-za-naplatu-potrazivanja-izrecena-upravna-novcana-kazna-u-iznosu-od-226-milijuna-eura/"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "EOS Matrix EUR 5.47m (Oct 2023); disputes not finally resolved per 2026 press",
+   "verdict": "confirmed",
+   "evidence": "Telegram (5 Oct 2023): EUR 5.47m for security failures, non-debtors' data, health data, ~294 minors, call recordings. Dnevno (19 Sep 2026) quotes HNB: the administrative disputes 'još nisu pravomoćno okončani'.",
+   "url": "https://www.dnevno.hr/gospodarstvo-i-turizam/pitali-smo-nadlezne-zasto-tvrtka-smije-poslovati-nakon-kazne-od-547-milijuna-eura-evo-sto-su-nam-rekli-3421237/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "AZOP by administrative decision; unpaid fines enforced through the tax authority",
+   "verdict": "confirmed",
+   "evidence": "Art. 49: collection follows general tax procedure rules, limitation running from finality.",
+   "url": "https://www.zakon.hr/z/1023/Zakon-o-provedbi-Op%C4%87e-uredbe-o-za%C5%A1titi-podataka"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public authorities cannot be fined (Art. 47)",
+   "verdict": "confirmed",
+   "evidence": "Art. 47: administrative fines cannot be imposed on public authorities.",
+   "url": "https://www.zakon.hr/z/1023/Zakon-o-provedbi-Op%C4%87e-uredbe-o-za%C5%A1titi-podataka"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Fines rose sharply from 2023: EUR 8.27m in 28 fines (2023), EUR 6.73m in 13 fines (2025)",
+   "verdict": "corrected",
+   "evidence": "AZOP statistics: 2023, 28 fines, EUR 8,266,350; 2024, 38 fines, EUR 538,200; 2025, 13 fines, EUR 6,725,500. Figures right, but omitting 2024 makes 'rose sharply from 2023' misleading.",
+   "url": "https://azop.hr/upravne-novcane-kazne-3/",
+   "replacement": "AZOP fines jumped in 2023, driven by debt collection agencies: about EUR 8.27m in 28 fines in 2023, EUR 0.54m in 38 fines in 2024 and EUR 6.73m in 13 fines in 2025. The act also has misdemeanour provisions on confidentiality breaches by Agency staff."
+  },
+  {
+   "field": "appeal.court",
+   "claim": "No administrative appeal; administrative dispute before the administrative court (Art. 34)",
+   "verdict": "confirmed",
+   "evidence": "Art. 34: 'an appeal is not permitted, but a lawsuit may be initiated before the competent administrative court.'",
+   "url": "https://www.zakon.hr/z/1023/Zakon-o-provedbi-Op%C4%87e-uredbe-o-za%C5%A1titi-podataka"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "30 days (Art. 24 Administrative Disputes Act)",
+   "verdict": "confirmed",
+   "evidence": "Art. 24: 'Tužba se podnosi sudu u roku od 30 dana od dostave osporene pojedinačne odluke' (2010 text; later amendments not checked).",
+   "url": "https://sredisnjikatalogrh.gov.hr/srce-arhiva/263/55195/narodne-novine.nn.hr/clanci/sluzbeni/2010_02_20_483.html"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "As a rule no (Art. 26)",
+   "verdict": "confirmed",
+   "evidence": "Art. 26: 'Tužba nema odgodni učinak, osim kad je to zakonom propisano.' The 15-days-from-finality payment rule was not checked; already hedged.",
+   "url": "https://sredisnjikatalogrh.gov.hr/srce-arhiva/263/55195/narodne-novine.nn.hr/clanci/sluzbeni/2010_02_20_483.html"
+  },
+  {
+   "field": "appeal.further",
+   "claim": "High Administrative Court, 15 days (Art. 70, 2010 text)",
+   "verdict": "confirmed",
+   "evidence": "Art. 70: appeal within 15 days of service of the judgment. Post-2024 rules not checked, as the file says.",
+   "url": "https://sredisnjikatalogrh.gov.hr/srce-arhiva/263/55195/narodne-novine.nn.hr/clanci/sluzbeni/2010_02_20_483.html"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Director appointed for four years, at most two terms",
+   "verdict": "unverifiable",
+   "evidence": "Fetched summary of the act renders it as 'may be reappointed maximum twice', which could mean up to three terms; the Croatian wording needs a direct read. Current director not checked.",
+   "url": "https://www.zakon.hr/z/1023/Zakon-o-provedbi-Op%C4%87e-uredbe-o-za%C5%A1titi-podataka"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "No administrative appeal (Art. 34)",
+   "verdict": "confirmed",
+   "evidence": "As above.",
+   "url": "https://www.zakon.hr/z/1023/Zakon-o-provedbi-Op%C4%87e-uredbe-o-za%C5%A1titi-podataka"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Public authorities cannot be fined (Art. 47)",
+   "verdict": "confirmed",
+   "evidence": "As above.",
+   "url": "https://www.zakon.hr/z/1023/Zakon-o-provedbi-Op%C4%87e-uredbe-o-za%C5%A1titi-podataka"
+  }
+ ],
+ "notes": "No GDPR contradictions. Croatia's limitation for imposing fines remains open as stated. Inspection powers (seizure or sealing up to 15 days, Art. 36-40) confirmed. NN 59/2023 representative actions act not checked."
+}

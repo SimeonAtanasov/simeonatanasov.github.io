@@ -1,0 +1,111 @@
+{
+ "code": "de",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "BfDI EUR 9.55m; LG Bonn 29 OWi 1/20, 11 Nov 2020, cut to EUR 900,000, rejecting turnover-heavy calculation",
+   "verdict": "confirmed",
+   "evidence": "Judgment 29 OWi 1/20 of 11 Nov 2020: fine of EUR 9,550,000 replaced by 'Geldbuße von 900.000 Euro'; court applied Art. 83(2) criteria over the BfDI's turnover-based model.",
+   "url": "https://nrwe.justiz.nrw.de/lgs/bonn/lg_bonn/j2020/29_OWi_1_20_Urteil_20201111.html"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2019 / 2020",
+   "verdict": "confirmed",
+   "evidence": "Fine 2019, judgment 11 Nov 2020.",
+   "url": "https://nrwe.justiz.nrw.de/lgs/bonn/lg_bonn/j2020/29_OWi_1_20_Urteil_20201111.html"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "EUR 14.5m in 2019; quashed 2021; CJEU C-807/21 of 5 Dec 2023; LG Berlin I cut to EUR 900,000 on 9 June 2026, not final",
+   "verdict": "confirmed",
+   "evidence": "dr-datenschutz (17 June 2026): 'Am 09.06.2026 verkündete die 26. Große Strafkammer des Landgerichts Berlin I ... Das Bußgeld setzte die Kammer auf 900.000 Euro fest'; 'noch nicht rechtskräftig' (Rechtsbeschwerde possible). netzpolitik: 2019 fine of EUR 14.5m, LG quashed in 2021 for failing to name a responsible person.",
+   "url": "https://www.dr-datenschutz.de/deutsche-wohnen-dsgvo-bussgeld-drastisch-reduziert/"
+  },
+  {
+   "field": "cases[1].year",
+   "claim": "2019 to 2026",
+   "verdict": "confirmed",
+   "evidence": "As above.",
+   "url": "https://www.dr-datenschutz.de/deutsche-wohnen-dsgvo-bussgeld-drastisch-reduziert/"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Hennemann elected 25 June 2026, in office 1 Oct 2026, succeeding Specht-Riemenschneider",
+   "verdict": "confirmed",
+   "evidence": "BfDI press release 25 June 2026: elected by the Bundestag; term from 1 October 2026 after the predecessor's term ends 30 September 2026.",
+   "url": "https://www.bfdi.bund.de/SharedDocs/Pressemitteilungen/DE/2026/10_BfDI-Wahl-Hennemann.html"
+  },
+  {
+   "field": "dpa.regional",
+   "claim": "Bundesrat bill BT-Drs. 21/7732 of 26 August 2026 to put the DSK on a statutory footing with binding majority decisions and lead authorities; pending",
+   "verdict": "confirmed",
+   "evidence": "Drs. 21/7732 dated 26 August 2026, Bundesrat decision of 10 July 2026: DSK institutionalised with binding majority decisions; lead authority for cross-Land groups and research projects. hib of 27 August 2026 notes the Federal Government's reservations.",
+   "url": "https://dserver.bundestag.de/btd/21/077/2107732.pdf"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Authority issues fine notice; on objection Amtsgericht or Landgericht over EUR 100,000; prosecutor discontinues only with consent; OWiG s.17, 35, 36 disapplied",
+   "verdict": "confirmed",
+   "evidence": "s.41 BDSG: OWiG applies; Landgericht for fines over EUR 100,000; discontinuance requires the authority's consent.",
+   "url": "https://lxgesetze.de/gesetze/bdsg/41"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "No fines on federal public bodies (s.43(3) BDSG)",
+   "verdict": "confirmed",
+   "evidence": "s.43(3): no fines on authorities and other public bodies within the meaning of s.2(1) (federal public bodies).",
+   "url": "https://lxgesetze.de/gesetze/bdsg/43"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "s.43 national fines up to EUR 50,000 for consumer-credit information breaches; s.42 offences; Deutsche Wohnen C-807/21",
+   "verdict": "confirmed",
+   "evidence": "s.43(1)-(2): breaches of s.30 (consumer credit information) fined 'bis zu fünfzigtausend Euro'. s.42 not fetched; Deutsche Wohnen ruling confirmed via netzpolitik and LTO source.",
+   "url": "https://lxgesetze.de/gesetze/bdsg/43"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Fines: objection then Amtsgericht or Landgericht; orders: administrative court, no preliminary review (s.20 BDSG)",
+   "verdict": "confirmed",
+   "evidence": "s.20(1)-(2) BDSG: administrative courts for disputes with an authority, excluding fine proceedings, VwGO applies with modifications; s.41 for fines.",
+   "url": "https://lxgesetze.de/gesetze/bdsg/20"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Two weeks (s.67 OWiG); one month (s.74 VwGO)",
+   "verdict": "unverifiable",
+   "evidence": "gesetze-im-internet.de refused WebFetch (robots.txt). Both periods match the codes as I understand them; field already flags them as unconfirmed against a DPA source.",
+   "url": "https://www.gesetze-im-internet.de/bdsg_2018/"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Objection prevents finality; action suspensive unless immediate enforcement ordered, not allowed against public authorities (s.20(7))",
+   "verdict": "confirmed",
+   "evidence": "s.20(7) BDSG: authority may not order immediate enforcement under s.80(2) no. 4 VwGO against a public authority.",
+   "url": "https://lxgesetze.de/gesetze/bdsg/20"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Three years under s.31(2) no. 1 OWiG",
+   "verdict": "unverifiable",
+   "evidence": "gesetze-im-internet.de refused WebFetch (robots.txt). Matches the OWiG rule as I understand it; field already flags it as not confirmed.",
+   "url": "https://www.gesetze-im-internet.de/bdsg_2018/"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "DSK reform pending in the Bundestag as of October 2026",
+   "verdict": "confirmed",
+   "evidence": "Drs. 21/7732 introduced 26 August 2026; no adoption found.",
+   "url": "https://www.bundestag.de/presse/hib/kurzmeldungen-1206094"
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "Courts significantly reduced 1&1 and Deutsche Wohnen fines",
+   "verdict": "confirmed",
+   "evidence": "EUR 9.55m to EUR 900,000; EUR 14.5m to EUR 900,000 (not final).",
+   "url": "https://www.dr-datenschutz.de/deutsche-wohnen-dsgvo-bussgeld-drastisch-reduziert/"
+  }
+ ],
+ "notes": "No errors found. Note the Deutsche Wohnen reduction is not final (Rechtsbeschwerde to the Kammergericht possible), which the file already says. gesetze-im-internet.de blocks WebFetch, so OWiG/VwGO periods remain from general knowledge."
+}

@@ -1,0 +1,137 @@
+{
+ "code": "lt",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Regional Administrative Court dismissed Vinted's appeal against the fine on 23 May 2025",
+   "verdict": "corrected",
+   "evidence": "LRT (23 May 2025): the ruling concerned VDAI's February 2024 decisions finding Vinted mishandled erasure requests; 'Vinted has challenged the fine in court, but the case is on hold until the latest ruling on personal data handling becomes final.' 15min (14 Nov 2025): the Supreme Administrative Court referred questions to the CJEU in that case; the fine case remains suspended. LRT (6 May 2026): fine case still suspended, CJEU ruling not expected in 2026.",
+   "url": "https://www.lrt.lt/naujienos/verslas/4/2920022/bylos-del-vinted-veiklos-vis-dar-istrigusios-keturiu-saliu-ir-es-teismuose",
+   "replacement": "In July 2024 VDAI, as lead authority, fined the second-hand marketplace Vinted EUR 2,385,276 for mishandling erasure requests, unlawful 'shadow blocking' of users and accountability failures. Vinted's court challenge to the fine is suspended pending a parallel case on VDAI's February 2024 decisions finding the same breaches: the Regional Administrative Court dismissed that appeal on 23 May 2025, and in November 2025 the Supreme Administrative Court referred questions to the CJEU, still pending in 2026."
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2024-2025",
+   "verdict": "corrected",
+   "evidence": "Proceedings continue: CJEU reference made November 2025, still pending May 2026.",
+   "url": "https://www.lrt.lt/naujienos/verslas/4/2920022/bylos-del-vinted-veiklos-vis-dar-istrigusios-keturiu-saliu-ir-es-teismuose",
+   "replacement": "2024-2026"
+  },
+  {
+   "field": "cases[0].title",
+   "claim": "Vinted, EUR 2.385 million (appealed)",
+   "verdict": "confirmed",
+   "evidence": "VDAI and LRT both give EUR 2.385 million, imposed July 2024, challenged in court. Exact figure EUR 2,385,276 not seen in fetched sources.",
+   "url": "https://www.lrt.lt/en/news-in-english/19/2572196/vinted-improperly-handled-personal-data-lithuanian-court-rules"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "24 Feb 2021 fines EUR 12,000 (NVSC) and EUR 3,000 (developer); Vilnius Regional Administrative Court referral; CJEU Grand Chamber 5 Dec 2023 requires intentional or negligent infringement",
+   "verdict": "confirmed",
+   "evidence": "Judgment para. 21: 'By decision of 24 February 2021, the VDAI imposed an administrative fine of EUR 12000 on the NVSC' and EUR 3000 on ITSS as joint controller; Grand Chamber, 5 December 2023; referring court Vilniaus apygardos administracinis teismas; operative point 4 requires intentional or negligent infringement.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62021CJ0683"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "MisterTango EUR 61,500 in 2019 for excessive collection, data leak, no 72-hour notification; appeal outcome not confirmed",
+   "verdict": "confirmed",
+   "evidence": "VDAI summary: EUR 61,500 (2019); breaches of Arts 5, 32 and 33; over 9,000 screenshots publicly accessible 9-10 July 2018, breach not notified within 72 hours; decision 'may be appealed against to the court'.",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/2019%20Fine%20for%20Payment%20Initiation%20Services%20(private).pdf"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "VDAI itself, by administrative decision, no court confirmation",
+   "verdict": "confirmed",
+   "evidence": "Art. 32(2): fines imposed by the VDAI Director (or the Inspector of Journalist Ethics within its competence) or an authorised person; Art. 34 sets the administrative procedure.",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/Republic%20of%20Lithuania%20Law%20on%20legal%20protection%20of%20personal%20data%202018%20Non-Official%20Translation%2001_12_2021.pdf"
+  },
+  {
+   "field": "procedure.decision_maker",
+   "claim": "VDAI director or person authorised by the director (Art. 32(2))",
+   "verdict": "confirmed",
+   "evidence": "Art. 32(2): 'Director of the State Data Protection Inspectorate or an inspector of ethics of journalists by their competence or a person authorized.'",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/Republic%20of%20Lithuania%20Law%20on%20legal%20protection%20of%20personal%20data%202018%20Non-Official%20Translation%2001_12_2021.pdf"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "0.5% / EUR 30,000 for Art. 83(4); 1% / EUR 60,000 for Art. 83(5)-(6) (Art. 33)",
+   "verdict": "confirmed",
+   "evidence": "Art. 33(1): up to 0.5% of current-year budget or annual income, not more than EUR 30,000; Art. 33(2): up to 1%, capped at EUR 60,000.",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/Republic%20of%20Lithuania%20Law%20on%20legal%20protection%20of%20personal%20data%202018%20Non-Official%20Translation%2001_12_2021.pdf"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Regional Administrative Court; Vilnius Regional Administrative Court since merged into it, merger date not confirmed",
+   "verdict": "corrected",
+   "evidence": "Supreme Administrative Court and Lithuanian Bar notices: from 1 January 2024 the former Regional Administrative Court was merged into the Vilnius Regional Administrative Court, which was renamed 'Regionų administracinis teismas' (Regional Administrative Court), with chambers in Vilnius, Kaunas, Klaipėda, Šiauliai and Panevėžys.",
+   "url": "https://www.lvat.lt/naujienos/informacija-apie-2024-m.-administraciniu-teismu-reforma/1245",
+   "replacement": "Regional Administrative Court (Regionų administracinis teismas), which decided the Vinted appeal in May 2025. It was created on 1 January 2024 when the Vilnius Regional Administrative Court, which heard earlier VDAI cases, absorbed the former Regional Administrative Court and took its name."
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "One month from receipt of the decision (secondary source)",
+   "verdict": "corrected",
+   "evidence": "Supreme Administrative Court guidance: complaint within 1 month from publication of the act or delivery of the individual act to the interested party.",
+   "url": "https://www.lvat.lt/teismo-lankytojams/kaip-kreiptis-i-teisma/8-kreipimosi-i-teisma-terminai/620",
+   "replacement": "One month from delivery of the decision to the party (Law on Administrative Proceedings, as stated by the Supreme Administrative Court)."
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Supreme Administrative Court within 30 days of first-instance judgment",
+   "verdict": "confirmed",
+   "evidence": "LVAT: appeal 'per trisdešimt kalendorinių dienų nuo Regionų administracinio teismo sprendimo paskelbimo'; LRT on Vinted: appealable to the Supreme Administrative Court within 30 days.",
+   "url": "https://www.lvat.lt/teismo-lankytojams/kaip-kreiptis-i-teisma/8-kreipimosi-i-teisma-terminai/620"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "No source found. Note the Vinted fine case was suspended by the court pending a parallel case, which is a stay of proceedings, not suspensive effect of the appeal.",
+   "url": "https://www.lrt.lt/en/news-in-english/19/2572196/vinted-improperly-handled-personal-data-lithuanian-court-rules"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Two-year bar (Art. 27); receipt within three working days (Art. 26); examination within four months, extendable by two (Art. 30)",
+   "verdict": "confirmed",
+   "evidence": "Art. 27(1)(8): refused if more than 2 years have passed; Art. 26: written confirmation within three working days; Art. 30(2): within 4 months, extendable to a 6-month maximum.",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/Republic%20of%20Lithuania%20Law%20on%20legal%20protection%20of%20personal%20data%202018%20Non-Official%20Translation%2001_12_2021.pdf"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Fine only if no more than two years since the infringement (Art. 32(3))",
+   "verdict": "confirmed",
+   "evidence": "Art. 32(3): 'A decision on the imposition of an administrative fine may be adopted if no more than two years have elapsed from the date on which the infringement has been carried out.'",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/Republic%20of%20Lithuania%20Law%20on%20legal%20protection%20of%20personal%20data%202018%20Non-Official%20Translation%2001_12_2021.pdf"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Two-year bars on complaints (Art. 27) and fines (Art. 32(3))",
+   "verdict": "confirmed",
+   "evidence": "As above.",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/Republic%20of%20Lithuania%20Law%20on%20legal%20protection%20of%20personal%20data%202018%20Non-Official%20Translation%2001_12_2021.pdf"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Public bodies capped at EUR 30,000 / EUR 60,000 (Art. 33)",
+   "verdict": "confirmed",
+   "evidence": "Art. 33(1)-(2).",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/Republic%20of%20Lithuania%20Law%20on%20legal%20protection%20of%20personal%20data%202018%20Non-Official%20Translation%2001_12_2021.pdf"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "C-683/21 fault requirement originated in a Lithuanian case",
+   "verdict": "confirmed",
+   "evidence": "Reference from Vilniaus apygardos administracinis teismas, NVSC v VDAI.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62021CJ0683"
+  },
+  {
+   "field": "confidence",
+   "claim": "lists court merger date and Vinted Supreme Administrative Court outcome as unconfirmed",
+   "verdict": "corrected",
+   "evidence": "Merger date now confirmed (1 January 2024); Vinted is pending before the CJEU on a reference from the Supreme Administrative Court.",
+   "url": "https://www.lrt.lt/naujienos/verslas/4/2920022/bylos-del-vinted-veiklos-vis-dar-istrigusios-keturiu-saliu-ir-es-teismuose",
+   "replacement": "medium: core rules come from the official (non-official translation, 2021) text of the law, but later amendments and suspensive effect could not be confirmed, and the Vinted proceedings are still pending before the CJEU."
+  }
+ ],
+ "notes": "Most serious: cases[0] presented the 23 May 2025 ruling as upholding the fine; it concerned the February 2024 infringement decisions, and the fine challenge is suspended. Suggest adding sources: LRT 6 May 2026 (https://www.lrt.lt/naujienos/verslas/4/2920022/bylos-del-vinted-veiklos-vis-dar-istrigusios-keturiu-saliu-ir-es-teismuose) and LVAT court reform notice. Director appointment by the Government (dpa.structure) not checked: the fetched translation did not show the appointing body. No GDPR contradictions found."
+}

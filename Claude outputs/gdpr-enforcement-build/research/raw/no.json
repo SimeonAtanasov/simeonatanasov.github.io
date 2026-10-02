@@ -1,0 +1,89 @@
+{
+  "code": "no",
+  "country": "Norway",
+  "membership": "EEA",
+  "dpa": {
+    "name_en": "Norwegian Data Protection Authority",
+    "name_native": "Datatilsynet",
+    "abbr": "Datatilsynet",
+    "url": "https://www.datatilsynet.no/en/",
+    "structure": "Single national authority led by a director appointed by the King; an independent administrative body, administratively subordinate to the King and the ministry but not subject to instructions in individual cases (s. 20 Personal Data Act).",
+    "regional": "None. A separate second-tier body, the Privacy Appeals Board (Personvernnemnda), hears administrative appeals against Datatilsynet decisions (s. 22)."
+  },
+  "law": {
+    "name": "Personal Data Act (personopplysningsloven), Act of 15 June 2018 No. 38 (LOV-2018-06-15-38), which incorporates the GDPR into Norwegian law via the EEA Agreement",
+    "url": "https://lovdata.no/dokument/NLE/lov/2018-06-15-38"
+  },
+  "complaint": {
+    "how": "In writing, either via Datatilsynet's digital form (Norwegian only, requires BankID login) or by post to Datatilsynet, PO Box 458 Sentrum, 0105 Oslo. No fee mentioned. Complaint files may be subject to public access (freedom of information) requests.",
+    "contact_controller_first": "Recommended, not a statutory precondition: Datatilsynet asks people to contact the controller (or its DPO) before complaining and to attach that correspondence.",
+    "deadlines": "No statutory deadline for complaining or for Datatilsynet to decide found in the Personal Data Act; not confirmed.",
+    "complainant_status": "Not confirmed in the Act. In practice complainants (e.g. the Consumer Council in Grindr) take part in the case; the Privacy Appeals Board hears appeals from private individuals, businesses and public authorities."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint received and assessed by Datatilsynet",
+      "Investigation and correspondence with the controller",
+      "Advance notification of an intended decision (varsel) with an opportunity to comment (general Public Administration Act practice)",
+      "Decision (vedtak) by Datatilsynet, e.g. order, reprimand or infringement fine (overtredelsesgebyr)",
+      "Administrative appeal (klage) to the Privacy Appeals Board, which can review all aspects including discretion and make a new decision",
+      "Court action against the State over the Board's decision"
+    ],
+    "decision_maker": "Datatilsynet decides at first instance; the seven-member Privacy Appeals Board (chair and deputy chair legally qualified, four-year terms) decides appeals (s. 22). Datatilsynet decisions under GDPR Art. 56 and Chapter VII (one-stop-shop and consistency) cannot be appealed to the Board (s. 22).",
+    "limitation": "Power to impose an infringement fine lapses five years after the infringement ended (s. 28)."
+  },
+  "fines": {
+    "imposed_by": "Datatilsynet itself by administrative decision (or the Privacy Appeals Board on appeal). Payment is due four weeks after the decision becomes final (s. 27). Datatilsynet can also impose daily coercive fines (tvangsmulkt) to enforce orders (s. 29).",
+    "public_bodies": "Yes. Datatilsynet may fine public authorities and bodies under the GDPR Art. 83 rules (s. 26(2)); no separate lower cap found. Examples include Bergen and Oslo municipalities and NAV.",
+    "quirks": "s. 26 extends Art. 83(4) fines to breaches of GDPR Arts. 10 and 24. Compensation for non-economic loss is regulated in s. 30. Fines are in NOK."
+  },
+  "appeal": {
+    "court": "Datatilsynet decisions are first appealed administratively to the Privacy Appeals Board. The Board's decisions cannot be further appealed administratively, but the controller can sue the State in the ordinary courts, starting at the district court (tingrett, in practice Oslo tingrett). In fine cases the court can review all aspects and give judgment on the merits (s. 27).",
+    "deadline": "Appeal to the Board: three weeks under the general Public Administration Act rule (forvaltningsloven s. 29), not confirmed in a data protection specific source. Deadline for court action: not confirmed.",
+    "suspensive": "Payment falls due four weeks after the decision is final, i.e. after the Board has ruled (s. 27). Whether a court action suspends payment: not confirmed.",
+    "further": "District court, then Court of Appeal (lagmannsrett), then Supreme Court (Høyesterett) with leave. Courts may request advisory opinions from the EFTA Court (not the CJEU).",
+    "inaction": "Not confirmed. No specific Art. 78(2) mechanism found; a complainant would sue the State in the ordinary courts."
+  },
+  "private": {
+    "courts": "Ordinary civil courts (district court first instance) for Art. 79 and Art. 82 claims; s. 30 Personal Data Act allows compensation for non-economic loss as the court finds reasonable.",
+    "damages": "No leading Norwegian GDPR damages award confirmed.",
+    "collective": "Group actions under the Dispute Act chapter 35 (opt-in and opt-out). No not-for-profit body is specifically mandated for Art. 80 claims (White & Case). In 2023 the Supreme Court held that opt-out group members cannot be charged third-party litigation funding costs, which practitioners say weakens opt-out actions. Transposition of the Representative Actions Directive: not confirmed."
+  },
+  "cases": [
+    {
+      "title": "Grindr LLC (NOK 65 million)",
+      "year": "2021-2025",
+      "summary": "On a Consumer Council complaint, Datatilsynet fined Grindr NOK 65 million in December 2021 for sharing user data, including special-category data, with advertisers without valid consent. The Privacy Appeals Board upheld it in 2023, Oslo District Court dismissed Grindr's action on 1 July 2024 (23-160384TVI-TOSL/04), and Borgarting Court of Appeal upheld it on 21 October 2025. Grindr did not appeal further, so the fine became final in November 2025.",
+      "url": "https://www.hjort.no/lagmannsretten-opprettholder-gebyr-pa-65-miillioner-til-grindr/"
+    },
+    {
+      "title": "Bergen and Oslo municipalities",
+      "year": "not confirmed",
+      "summary": "Examples of fines on public bodies: Bergen municipality NOK 1.6 million for inadequate data security, Oslo municipality NOK 2 million for app security vulnerabilities.",
+      "url": "https://www.whitecase.com/insight-our-thinking/gdpr-guide-national-implementation-norway"
+    }
+  ],
+  "quirks": [
+    "Two-tier administrative system: Datatilsynet decides, then the independent Privacy Appeals Board (Personvernnemnda) fully re-hears appeals before any court is involved. Since 15 September 2025 the Board's secretariat and decisions are hosted by the Norwegian Civil Affairs Authority (sivilrett.no).",
+    "Cross-border one-stop-shop decisions (GDPR Art. 56, Chapter VII) bypass the Privacy Appeals Board.",
+    "GDPR applies via the EEA Agreement: Norwegian courts refer questions to the EFTA Court, not the CJEU, although CJEU case law is followed in practice.",
+    "Datatilsynet acts as party for the State in lawsuits about its supervisory work (s. 25)."
+  ],
+  "plain": "You complain to Datatilsynet in writing, ideally after raising the problem with the organisation first. If Datatilsynet fines or orders the organisation, either side can appeal to the Privacy Appeals Board, which looks at the whole case again. After that, the only route is a lawsuit against the State in the ordinary courts, which can go up to the Court of Appeal and, with permission, the Supreme Court.",
+  "confidence": "Medium-high: statute provisions come from a 2018 consolidated text (Lovdata blocked automated access), and the appeal and court deadlines and Art. 78(2) route could not be confirmed.",
+  "sources": [
+    {"title": "Personal Data Act 2018, consolidated text (Norwegian, 2018 version)", "url": "https://europam.eu/data/mechanisms/FOI/FOI%20Laws/Norway/10.%20Personal%20Data%20Act%20of%202018_NOR,%20consolidated,%20last%20amended%202018.pdf", "source_type": "primary"},
+    {"title": "Personal Data Act, English translation (Lovdata)", "url": "https://lovdata.no/dokument/NLE/lov/2018-06-15-38", "source_type": "primary"},
+    {"title": "Datatilsynet: How to complain", "url": "https://www.datatilsynet.no/en/about-us/contact-us/how-to-complain-to-the-norwegian-dpa/", "source_type": "primary"},
+    {"title": "Datatilsynet: Record fine in the Grindr case confirmed", "url": "https://www.datatilsynet.no/en/news/aktuelle-nyheter-2023/record-fine-grindr-confirmed/", "source_type": "primary"},
+    {"title": "Personvernnemnda home page", "url": "https://www.personvernnemnda.no/", "source_type": "primary"},
+    {"title": "Personvernnemnda: secretariat and members", "url": "https://www.personvernnemnda.no/sekretariat-og-medlemmer", "source_type": "primary"},
+    {"title": "Oslo tingrett judgment, Grindr v the State, 1 July 2024", "url": "https://www.datatilsynet.no/contentassets/3a0e9df9be4d4963afc72109123c6ad6/2024-07-01-dom.pdf", "source_type": "primary"},
+    {"title": "Hjort: Court of Appeal upholds Grindr fine", "url": "https://www.hjort.no/lagmannsretten-opprettholder-gebyr-pa-65-miillioner-til-grindr/", "source_type": "secondary"},
+    {"title": "Rett24: Grindr lost in the Court of Appeal (21 October 2025)", "url": "https://rett24.no/articles/sjekkeappen-grindr-tapte-i-lagmannsretten--datatilsynets-rekordbot-blir-staende", "source_type": "secondary"},
+    {"title": "Shifter: Grindr case finally decided (26 November 2025)", "url": "https://www.shifter.no/nyheter/grindr-saken-endelig-avgjort-ma-betale-65-millioner-i-gebyr/440211", "source_type": "secondary"},
+    {"title": "Rett24: Supreme Court on litigation funding in group actions (2023)", "url": "https://rett24.no/articles/smell-for-forbrukersoksmal--far-ikke-finansiere-advoatene-med-soksmalsinvestor", "source_type": "secondary"},
+    {"title": "White & Case: GDPR Guide to National Implementation, Norway", "url": "https://www.whitecase.com/insight-our-thinking/gdpr-guide-national-implementation-norway", "source_type": "secondary"},
+    {"title": "CMS Enforcement Tracker Report: Norway", "url": "https://cms.law/en/gbr/publication/gdpr-enforcement-tracker-report/norway", "source_type": "secondary"}
+  ]
+}

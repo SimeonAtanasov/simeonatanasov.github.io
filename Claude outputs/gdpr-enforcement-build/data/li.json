@@ -1,0 +1,95 @@
+{
+ "code": "li",
+ "country": "Liechtenstein",
+ "membership": "EEA",
+ "dpa": {
+  "name_en": "Data Protection Authority of Liechtenstein",
+  "name_native": "Datenschutzstelle",
+  "abbr": "DSS",
+  "url": "https://www.datenschutzstelle.li/",
+  "structure": "Single national authority headed by one person (Leiter/Leiterin), elected by the Landtag on the government's proposal for six years (Art. 12 DSG); other staff appointed by the government on the head's proposal (Art. 13). Current head Dr Marie-Louise Gächter, second term from 1 January 2026.",
+  "regional": "None."
+ },
+ "law": {
+  "name": "Data Protection Act (Datenschutzgesetz, DSG) of 4 October 2018, LGBl. 2018 Nr. 272, LR 235.1, in force 1 January 2019",
+  "url": "https://www.gesetze.li/konso/2018272000"
+ },
+ "complaint": {
+  "how": "In any form, written recommended, via the DSS online form or downloadable PDF form, by post (Kirchstrasse 8, Postfach 684, 9490 Vaduz), with a secure file transfer channel for sensitive documents. German. Free of charge, but abusive complaints can attract fees of up to CHF 500 per hour plus costs, or a refusal to act.",
+  "contact_controller_first": "Not required. The DSS tries to reach an amicable solution before formal proceedings.",
+  "deadlines": "No complaint deadline. The DSS informs the complainant of progress and outcome within a reasonable time; no fixed decision deadline confirmed.",
+  "complainant_status": "Yes: in formal proceedings the complainant and the controller are parties, and the complainant may be represented by a not-for-profit body under GDPR Art. 80. If the complainant does not appeal, they are an interested party in appeal proceedings and the DSS represents their interests."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint to the DSS",
+   "Attempt at amicable settlement with the controller",
+   "Formal proceedings under the general administrative procedure law (LVG)",
+   "Decision or order (Entscheidung/Verfügung) by the DSS",
+   "Separate fine proceedings: the DSS punishes infringements as an Übertretung with a fine (Art. 40 DSG)"
+  ],
+  "decision_maker": "The head of the DSS (single-head authority). Fines are imposed by the DSS itself (Art. 40(1) DSG).",
+  "limitation": "Not confirmed."
+ },
+ "fines": {
+  "imposed_by": "The DSS, which punishes infringements as an administrative offence (Übertretung) with a fine of up to CHF 11 million or 2% of worldwide turnover, or CHF 22 million or 4% for the more serious categories (Art. 40 DSG).",
+  "public_bodies": "No. Fines are not imposed on authorities and other public bodies (Art. 40(7) DSG).",
+  "quirks": "Caps are expressed in Swiss francs. Separate criminal offences for unauthorised obtaining of data (Art. 41) and breach of data secrecy (Art. 42), punishable by up to six months' imprisonment or up to 360 daily units, are handled by the criminal courts, not the DSS."
+ },
+ "appeal": {
+  "court": "First, an appeal to the Complaints Commission for Administrative Matters (Beschwerdekommission für Verwaltungsangelegenheiten, VBK) (Art. 20(1) DSG).",
+  "deadline": "Four weeks from service of the DSS decision (Art. 20(1)); four weeks from service of the VBK decision for the next step (Art. 20(2)).",
+  "suspensive": "Appeals appear to have suspensive effect under the general administrative procedure law, which the DSS may withdraw, except for decisions against public bodies, where it may not (Art. 20(3) DSG).",
+  "further": "Administrative Court (Verwaltungsgerichtshof, VGH) (Art. 20(2)), which the DSS describes as the final instance. Questions on EEA law can be referred to the EFTA Court for an advisory opinion.",
+  "inaction": "Not confirmed. No specific Art. 78(2) mechanism found in the DSG."
+ },
+ "private": {
+  "courts": "Civil courts; the DSG gives everyone a claim for damages against controllers and processors under GDPR Art. 82 (Art. 44 DSG). First-instance court not confirmed in the DSG text (ordinary first-instance civil court is the Landgericht).",
+  "damages": "No notable damages awards confirmed.",
+  "collective": "Not-for-profit bodies can represent complainants before the DSS (GDPR Art. 80). Court collective actions and Representative Actions Directive transposition: not confirmed."
+ },
+ "cases": [
+  {
+   "title": "Pending VBK case on turnover for fine calculation",
+   "year": "2025-2026",
+   "summary": "The DSS reports that purely national companies have in some cases tried to reduce the turnover used to calculate a fine through corporate or accounting arrangements, and that a corresponding case is pending before the VBK; the DSS relies on CJEU case law that the whole undertaking's turnover counts. Company and amount not published.",
+   "url": "https://www.datenschutzstelle.li/download_file/view/048395ed-b8e6-4403-8864-fc87464d0905/299"
+  }
+ ],
+ "quirks": [
+  "No fines on public bodies (Art. 40(7) DSG).",
+  "Fines are framed as penalties for an Übertretung imposed directly by the DSS, with caps in CHF rather than EUR.",
+  "Two-step review: the VBK (an administrative appeals commission) first, then the Administrative Court, each with a four-week deadline.",
+  "GDPR applies via the EEA Agreement; references go to the EFTA Court rather than the CJEU.",
+  "Very few published enforcement decisions; the annual activity report (Tätigkeitsbericht) is the main public record."
+ ],
+ "plain": "You complain to the Datenschutzstelle in any form, free of charge, and you become a party to the case. The authority first tries to settle things with the organisation and can then issue a decision or a fine, though public bodies cannot be fined. Anyone who disagrees has four weeks to appeal to an administrative appeals commission, then four more weeks to go to the Administrative Court.",
+ "confidence": "Medium: DSG provisions were read from the original 2018 version on gesetze.li (later amendments not checked), and no concrete fine amounts, the limitation period or suspensive effect could be confirmed.",
+ "sources": [
+  {
+   "title": "Datenschutzgesetz (DSG), LGBl. 2018 Nr. 272 (PDF, version 1)",
+   "url": "https://www.gesetze.li/konso/pdf/2018272000?version=1",
+   "source_type": "primary"
+  },
+  {
+   "title": "DSS: Beschwerderecht (right to complain)",
+   "url": "https://www.datenschutzstelle.li/datenschutz/themen-z/beschwerderecht",
+   "source_type": "primary"
+  },
+  {
+   "title": "DSS: Forms (complaint form)",
+   "url": "https://www.datenschutzstelle.li/services-und-downloads/formulare",
+   "source_type": "primary"
+  },
+  {
+   "title": "DSS: Activity reports",
+   "url": "https://www.datenschutzstelle.li/ueber-uns/taetigkeitsberichte",
+   "source_type": "primary"
+  },
+  {
+   "title": "DSS: Tätigkeitsbericht 2025",
+   "url": "https://www.datenschutzstelle.li/download_file/view/048395ed-b8e6-4403-8864-fc87464d0905/299",
+   "source_type": "primary"
+  }
+ ]
+}

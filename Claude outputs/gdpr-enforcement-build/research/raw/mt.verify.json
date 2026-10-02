@@ -1,0 +1,111 @@
+{
+ "code": "mt",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Tribunal held MFSA responsible; 12 November 2025 Court of Appeal dismissed all five grounds, burden on MFSA, costs; fine not confirmed",
+   "verdict": "confirmed",
+   "evidence": "MaltaToday (12 November 2025, judgment delivered Wednesday, i.e. 12 November 2025): Ellul and Schranz v MFSA; leak of licence cancellation to OffshoreAlert; all five MFSA grounds dismissed; 'The MFSA was under a clear obligation to demonstrate that the breach was not imputable to it. It failed to discharge that burden.'; MFSA to bear costs; no fine mentioned.",
+   "url": "https://www.maltatoday.com.mt/news/court_and_police/138151/court_of_appeal_reaffirms_mfsa_liability_in_data_leak_case_orders_regulator_to_shoulder_costs"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Healthcare provider fined EUR 20,000 total for Arts 5(1)(a), 6(1), 14, 16, 37(1)(c)",
+   "verdict": "confirmed",
+   "evidence": "IDPC decisions listing (2025): healthcare provider, breaches of Arts 5(1)(a), 6(1), 14, 16(1) and 37(1)(c), fines totalling EUR 20,000 across three violations. The PDF itself has no machine-readable text.",
+   "url": "https://idpc.org.mt/decisions/"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "Aziz v Jobsplus, Court of Appeal 28 February 2024, appeal null because two decisions challenged in one application",
+   "verdict": "confirmed",
+   "evidence": "Judgment: Court of Appeal (Inferior Jurisdiction), 28 February 2024, appeal from two Tribunal decisions (CDP/COMP/457/2022 and CDP/COMP/526/2022) in one application declared null; Cap. 12 'do[es] not envisage the possibility of filing one application containing more than one appeal from separate decisions.'",
+   "url": "https://ecourts.gov.mt/onlineservices/Judgements/PrintPdf?JudgementId=0&CaseJudgementId=144515"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Commissioner; civil debt; executive title once final (Art. 20)",
+   "verdict": "confirmed",
+   "evidence": "Art. 20: fines 'shall be due to the Commissioner as a civil debt' and constitute 'an executive title'.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "EUR 25,000 + EUR 25/day; EUR 50,000 + EUR 50/day (Art. 21)",
+   "verdict": "confirmed",
+   "evidence": "Art. 21 as stated.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Fine not applicable until appeals exhausted (Art. 28(3)); offences EUR 1,250-50,000 or six months (Art. 22)",
+   "verdict": "confirmed",
+   "evidence": "Art. 28: fine does not apply until remedies exhausted or time limits expired; Art. 22: fine 'one thousand, two hundred and fifty euro (€1,250) and not more than fifty thousand euro (€50,000) or to imprisonment for six months'.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Appeals Tribunal; chair advocate of 12 years' standing and two members (Art. 24)",
+   "verdict": "confirmed",
+   "evidence": "Art. 24 as stated (members represent data subject and controller interests).",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "20 days from service (Art. 26)",
+   "verdict": "confirmed",
+   "evidence": "Art. 26: 'within twenty days from the service of the said decision'.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Other effects not suspended; fine not applicable until appeals exhausted (Art. 28)",
+   "verdict": "confirmed",
+   "evidence": "Art. 28 as above.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Court of Appeal within 20 days of notification of Tribunal decision (Art. 29)",
+   "verdict": "confirmed",
+   "evidence": "Art. 29: 'within twenty days from the date on which the decision of the Tribunal was notified'. The Art. 41(6) COCP and 'questions of law' details were not checked.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "appeal.inaction",
+   "claim": "Art. 31: appeal to Tribunal where Commissioner fails to act under Art. 78(2)",
+   "verdict": "confirmed",
+   "evidence": "2020 consolidated text, Art. 31 as stated; later amendments not checked.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "private.courts",
+   "claim": "First Hall Civil Court, within 12 months of awareness (Art. 30)",
+   "verdict": "confirmed",
+   "evidence": "Art. 30: 'within a period of twelve months from the date when the data subject became aware' of the contravention.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "20 days to Tribunal and 20 days to Court of Appeal",
+   "verdict": "confirmed",
+   "evidence": "Arts 26 and 29.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "12-month limitation for direct court actions (Art. 30)",
+   "verdict": "confirmed",
+   "evidence": "Art. 30.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Commissioner appointed by the Prime Minister after consulting the Leader of the Opposition (Art. 11)",
+   "verdict": "confirmed",
+   "evidence": "Art. 11 verbatim.",
+   "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf"
+  }
+ ],
+ "notes": "No errors found. Everything checked against the 2020 consolidated Cap. 586; the 2021 and 2023 amendments were not checked, as the file itself flags. legislation.mt current text not fetched. No GDPR contradictions found."
+}

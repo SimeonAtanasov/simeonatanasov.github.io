@@ -1,0 +1,130 @@
+{
+ "code": "sk",
+ "checked": [
+  {
+   "field": "complaint.deadlines",
+   "claim": "Decide within 90 days, extendable up to a total of 180 days",
+   "verdict": "wrong",
+   "evidence": "Office page: 'Úrad rozhodne v konaní do 90 dní' and may extend 'najviac však o 180 dní', i.e. by up to 180 days, so up to 270 days in total. Liday Basaryova says the same ('najviac o 180 dní'). Three-year set-aside ground confirmed.",
+   "url": "https://dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/",
+   "replacement": "The Office may set aside a proposal if more than three years had passed since the event complained of when it was received. It must decide within 90 days of starting proceedings and may extend this in justified cases by up to 180 days (up to 270 days in total), per the Office's guidance; exact § not confirmed."
+  },
+  {
+   "field": "procedure.stages[3]",
+   "claim": "Decision within 90 days (extendable to 180)",
+   "verdict": "wrong",
+   "evidence": "Extension is by up to 180 days, not to 180.",
+   "url": "https://dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/",
+   "replacement": "First-instance decision: finding of breach, corrective measures and/or fine (§ 104), within 90 days (extendable by up to 180 days)"
+  },
+  {
+   "field": "plain",
+   "claim": "Office normally has 90 days (up to 180) to decide",
+   "verdict": "corrected",
+   "evidence": "Same error.",
+   "url": "https://dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/",
+   "replacement": "You send the Office a signed proposal (on paper, electronically or in person), showing you first tried to exercise your rights with the organisation and within three years of the problem. You become a party, and the Office normally has 90 days to decide, extendable by up to 180 more, and can fine companies and public bodies alike. Either side can appeal within 15 days to the Office's President and then take the case to the administrative courts, with a final cassation complaint to the Supreme Administrative Court."
+  },
+  {
+   "field": "cases[0].summary",
+   "claim": "EUR 40,000, decision 01339/2021-Os-10, psychodiagnostic testing on invalid consent; one of the highest Slovak fines in four years",
+   "verdict": "corrected",
+   "evidence": "Havel and Partners confirms the decision number and the consent problem; it does not describe it as one of the highest fines.",
+   "url": "https://www.havelpartners.sk/4-roky-s-gdpr-za-ake-porusenia-udeloval-uoou-najcastejsie-pokuty/",
+   "replacement": "The Office fined a private company EUR 40,000 (decision 01339/2021-Os-10) over psychodiagnostic testing of employees by its HR department, relying on consent that could not be freely given in an employment relationship."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Municipalities fined EUR 500 and EUR 700 for ID card numbers in published contracts, EUR 4,700 for parking system requiring national ID numbers",
+   "verdict": "corrected",
+   "evidence": "Havel and Partners: two municipalities fined EUR 500 and EUR 700 for publishing contracts without anonymising a party's identification number; a Bratislava city district fined EUR 4,700 for a parking registration system requiring identification numbers when name and date of birth would have sufficed. Years not stated in the fetched text.",
+   "url": "https://www.havelpartners.sk/4-roky-s-gdpr-za-ake-porusenia-udeloval-uoou-najcastejsie-pokuty/",
+   "replacement": "The Office fined two municipalities EUR 500 and EUR 700 for publishing contracts online without redacting a contracting party's identification number, and a Bratislava city district EUR 4,700 for a parking registration system requiring national ID numbers when name and date of birth would have sufficed, showing public bodies can be fined in Slovakia."
+  },
+  {
+   "field": "cases[1].year",
+   "claim": "2021-2022",
+   "verdict": "unverifiable",
+   "evidence": "Article title covers four years of GDPR (2018 to 2022); individual decision years not given in the fetched summary.",
+   "url": "https://www.havelpartners.sk/4-roky-s-gdpr-za-ake-porusenia-udeloval-uoou-najcastejsie-pokuty/"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Yes; municipalities fined EUR 500, EUR 700, EUR 4,700",
+   "verdict": "confirmed",
+   "evidence": "Havel and Partners, as above.",
+   "url": "https://www.havelpartners.sk/4-roky-s-gdpr-za-ake-porusenia-udeloval-uoou-najcastejsie-pokuty/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Office by decision (§ 104); procedural fines up to EUR 2,000 or EUR 10,000",
+   "verdict": "confirmed",
+   "evidence": "Podnikajte.sk: procedural fines up to EUR 2,000 for non-cooperation and up to EUR 10,000 for obstructing inspections (secondary).",
+   "url": "https://www.podnikajte.sk/zakonne-povinnosti-podnikatela/pokuty-podla-gdpr"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Two years from discovery, five from occurrence; procedural fines six months",
+   "verdict": "confirmed",
+   "evidence": "Podnikajte.sk states both periods and the six-month objective limit for poriadková pokuta (secondary).",
+   "url": "https://www.podnikajte.sk/zakonne-povinnosti-podnikatela/pokuty-podla-gdpr"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Rozklad 15 days; administrative action two months",
+   "verdict": "confirmed",
+   "evidence": "Liday Basaryova: 'Rozklad môžete podať v lehote 15 dní' and 'správnou žalobou ... v lehote dvoch mesiacov'. Office page also gives 15 days.",
+   "url": "https://www.lidaybasaryova.sk/en/konanie-o-ochrane-osobnych-udajov/"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Rozklad to the President, then Administrative Court in Bratislava",
+   "verdict": "unverifiable",
+   "evidence": "Rozklad confirmed; the court venue is not stated in any fetched source. Plausible given the Office's Bratislava seat.",
+   "url": "https://www.lidaybasaryova.sk/en/konanie-o-ochrane-osobnych-udajov/"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not stated in fetched sources. Worth checking § 185 Správny súdny poriadok, which gives automatic suspensive effect to actions in administrative punishment matters.",
+   "url": "https://www.lidaybasaryova.sk/en/konanie-o-ochrane-osobnych-udajov/"
+  },
+  {
+   "field": "complaint.how",
+   "claim": "Paper, authorised electronic, or oral; unsigned email confirmed within three working days; required contents",
+   "verdict": "confirmed",
+   "evidence": "Office page quotes match.",
+   "url": "https://dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/"
+  },
+  {
+   "field": "complaint.complainant_status",
+   "claim": "Navrhovateľ is a party; podnet senders told within 30 days",
+   "verdict": "confirmed",
+   "evidence": "Office page: podnet senders are not participants and are informed 'do 30 dní'.",
+   "url": "https://dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Proposals older than three years can be set aside",
+   "verdict": "confirmed",
+   "evidence": "Office page: 'uplynuli v deň jeho doručenia viac ako tri roky'.",
+   "url": "https://dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/"
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "Supreme Administrative Court; separate administrative courts replaced regional chambers in 2023",
+   "verdict": "unverifiable",
+   "evidence": "Consistent with the Slovak court reform (Supreme Administrative Court from 2021, administrative courts from June 2023) but not confirmed from a fetched source.",
+   "url": "https://dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Criminal offence under § 374 Criminal Code",
+   "verdict": "unverifiable",
+   "evidence": "epravo.sk source not fetched; § 374 matches the known offence of neoprávnené nakladanie s osobnými údajmi.",
+   "url": "https://www.epravo.sk/top/clanky/dsledky-porusenia-ochrany-osobnych-udajov-z-praktickeho-pohladu-4324.html"
+  }
+ ],
+ "notes": "Most serious: the decision deadline. The Office can extend by up to 180 days, giving up to 270 days, not 180 in total; the error appears in complaint.deadlines, procedure.stages[3] and plain. The 'one of the highest fines' claim in cases[0] is unsupported. No case with a court outcome was found; that gap remains."
+}

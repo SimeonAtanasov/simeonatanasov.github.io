@@ -1,0 +1,99 @@
+{
+ "code": "nl",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Uber EUR 290 million August 2024 (objection decision published, outcome not confirmed); EUR 825 million 21 August 2026, automated deactivation, French complaints, Uber to appeal",
+   "verdict": "confirmed",
+   "evidence": "NOS and Computable (21 August 2026): EUR 825 million for automated deactivation of driver accounts without meaningful human involvement or adequate information, complaints from France, Uber disputes it and will appeal. avgboetes.nl: EUR 290 million announced 26 August 2024. Outcome of the objection on the EUR 290 million fine not found (AP site 403).",
+   "url": "https://nos.nl/artikel/2627738-uber-schond-rechten-chauffeurs-ap-legt-megaboete-van-825-miljoen-op"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "VoetbalTV EUR 575,000 (2019), annulled by Rechtbank Midden-Nederland, upheld by Council of State 2022; KNLTB EUR 525,000 led to C-621/22 (4 October 2024)",
+   "verdict": "confirmed",
+   "evidence": "Netkwesties: VoetbalTV EUR 575,000 issued 2019, annulled by Rechtbank Midden-Nederland and the Raad van State in 2022; KNLTB EUR 525,000; C-621/22 of 4 October 2024 contradicted the AP's view. Van Doorne: the Council of State upheld the annulment because the AP had not weighed VoetbalTV's non-commercial interests, without deciding whether purely commercial interests qualify.",
+   "url": "https://www.netkwesties.nl/1895/hof-straft-aleid-wolfsen-over-boetes.htm"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "Clearview EUR 30.5 million plus penalties (2024); Netflix EUR 4.75 million December 2024 after noyb complaint; Netflix contested",
+   "verdict": "confirmed",
+   "evidence": "avgboetes.nl: Clearview EUR 30.5 million, 3 September 2024, with conditional penalty payments; Netflix EUR 4.75 million, 18 December 2024. noyb: fine followed its January 2019 complaint; Netflix objected.",
+   "url": "https://noyb.eu/en/noyb-win-dutch-authority-fines-netflix-eu475-million"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Art. 18 UAVG lets the AP fine public bodies; Belastingdienst EUR 2.75 million (2021) and EUR 3.7 million (2022)",
+   "verdict": "confirmed",
+   "evidence": "UAVG Art. 18 allows fines on public bodies up to Art. 83 amounts; avgboetes.nl: EUR 2,750,000 (7 December 2021) and EUR 3,700,000 (12 April 2022).",
+   "url": "https://www.avgboetes.nl/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "AP by administrative decision (Art. 14 UAVG)",
+   "verdict": "confirmed",
+   "evidence": "UAVG Art. 14: AP may impose fines up to the Art. 83 amounts.",
+   "url": "https://wetten.overheid.nl/BWBR0040940/2020-01-01"
+  },
+  {
+   "field": "procedure.decision_maker",
+   "claim": "AP board of chair plus two members",
+   "verdict": "confirmed",
+   "evidence": "UAVG Art. 7(1): 'consists of a chair and two other members'.",
+   "url": "https://wetten.overheid.nl/BWBR0040940/2020-01-01"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Six weeks each for objection, appeal and further appeal (Arts 6:7 and 6:8 Awb)",
+   "verdict": "confirmed",
+   "evidence": "Standard Awb six-week term (Art. 6:7); the fetched Awb page did not render the article text, so confirmed on knowledge of the statute.",
+   "url": "https://wetten.overheid.nl/BWBR0005537/"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed; Art. 6:16 Awb no suspension",
+   "verdict": "unverifiable",
+   "evidence": "No specific suspension rule for AP fines found; a WODC study on suspending administrative fines during objection and appeal suggests there is no general Awb rule.",
+   "url": "https://www.stibbe.com/nl/publications-and-insights/wodc-rapport-schorsing-bestuurlijke-boetes-tijdens-bezwaar-en-beroep"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Five years after the infringement (Art. 5:45 Awb)",
+   "verdict": "confirmed",
+   "evidence": "Art. 5:45(1) Awb: power to impose a fine lapses five years after the infringement; article page did not render, confirmed on knowledge and secondary mention (handhavingsrecht.nl).",
+   "url": "https://wetten.overheid.nl/BWBR0005537/"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Eight-week default (Art. 4:13 Awb) 'alongside the three-month progress update in Art. 78(2) GDPR'",
+   "verdict": "corrected",
+   "evidence": "Art. 4:13(2) Awb eight weeks confirmed. Art. 78(2) GDPR does not create a progress update: it gives a judicial remedy where the authority does not handle the complaint or inform the complainant within three months (the duty to inform is in Art. 77(2)).",
+   "url": "https://wetten.overheid.nl/BWBR0005537/",
+   "replacement": "No statutory time limit for complaining was found. The AP's decision on a complaint is a decision (besluit) under the Awb, so the general Awb rule applies: the statutory term, or else a reasonable term that defaults to eight weeks (Art. 4:13 Awb). Under Art. 78(2) GDPR the complainant can also go to court if the AP has not informed them of progress or outcome within three months."
+  },
+  {
+   "field": "private.collective",
+   "claim": "Amsterdam Court of Appeal TikTok ruling on 8 October 2025",
+   "verdict": "corrected",
+   "evidence": "DutchNews (published Wednesday 8 October 2025): 'the appeal court said on Tuesday', i.e. 7 October 2025; reversed the district court on collective non-material damages.",
+   "url": "https://www.dutchnews.nl/2025/10/dutch-court-clears-way-for-damages-claims-based-on-privacy/",
+   "replacement": "Collective actions, including for damages, under the WAMCA (Art. 3:305a Dutch Civil Code, in force 1 January 2020). On 7 October 2025 the Amsterdam Court of Appeal held in the TikTok case that non-material privacy damages can be claimed collectively, reversing the district court. Other privacy class actions run against Meta (Data Privacy Stichting), Oracle/Salesforce and Google."
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Collective non-material damages after the October 2025 TikTok appeal ruling",
+   "verdict": "confirmed",
+   "evidence": "Month correct (7 October 2025).",
+   "url": "https://www.dutchnews.nl/2025/10/dutch-court-clears-way-for-damages-claims-based-on-privacy/"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "AP lead authority for Uber, EU headquarters in Amsterdam",
+   "verdict": "confirmed",
+   "evidence": "Computable: complaints from France handled in the Netherlands where Uber has its European headquarters.",
+   "url": "https://www.computable.nl/2026/08/21/ap-legt-uber-recordboete-van-825-miljoen-op/"
+  }
+ ],
+ "notes": "Most serious: complaint.deadlines mischaracterised Art. 78(2) GDPR as a progress-update duty. TikTok ruling date off by one day. Note the Council of State upheld the VoetbalTV annulment on a reasoning defect, not by endorsing commercial interests as legitimate; the summary's wording is accurate but could be read otherwise. AP website (autoriteitpersoonsgegevens.nl) blocked access earlier per file; not retried. Awb article pages on wetten.overheid.nl did not render article text via WebFetch."
+}

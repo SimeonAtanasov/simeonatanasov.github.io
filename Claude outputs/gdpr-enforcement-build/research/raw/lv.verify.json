@@ -1,0 +1,138 @@
+{
+ "code": "lv",
+ "checked": [
+  {
+   "field": "cases[0].title",
+   "claim": "Tet (telecoms), EUR 1.6 million",
+   "verdict": "corrected",
+   "evidence": "DVI decision of 15 July 2022 states EUR 1,600,000 (EUR 3.2m halved). But Tet's own statement (30 Sept 2022) and LSM's report (21 May 2023) on the court ruling both put the contested fine at EUR 1.2 million. The 1.6m figure is not the amount that went to court.",
+   "url": "https://www.lsm.lv/raksts/zinas/latvija/21.05.2023-tiesa-atstaj-speka-tet-sodu-12-miljonu-eiro-par-datu-regulas-parkapsanu.a509585/",
+   "replacement": "Tet (telecoms), EUR 1.2 million (initially EUR 1.6 million)"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2022",
+   "verdict": "corrected",
+   "evidence": "Decision July 2022; Riga City Court upheld the fine in late April 2023; Tet appealed on 8 May 2023.",
+   "url": "https://www.lsm.lv/raksts/zinas/latvija/21.05.2023-tiesa-atstaj-speka-tet-sodu-12-miljonu-eiro-par-datu-regulas-parkapsanu.a509585/",
+   "replacement": "2022-2023"
+  },
+  {
+   "field": "cases[0].summary",
+   "claim": "DVI director's decision 15 July 2022 fined SIA Tet EUR 1.6m under Art. 83(5)(a) for Art. 5(1)(a) and (d) breaches; base 3.2m halved; court outcome not confirmed",
+   "verdict": "corrected",
+   "evidence": "DVI decision 15 July 2022: EUR 3.2m reduced by 50% ('conditional partial exemption') to EUR 1.6m; reasoning also cites Art. 5(1)(f) and Art. 6. Tet (30 Sept 2022) said it was suing to annul a EUR 1.2m fine over 2020 Tet+ sign-ups. LSM (21 May 2023): the Riga City Court upheld the EUR 1.2m fine in late April 2023; Tet appealed on 8 May 2023, so it was not final. The '1.6m' figure and 'court outcome not confirmed' are both wrong or out of date; how 1.6m became 1.2m was not established.",
+   "url": "https://www.lsm.lv/raksts/zinas/latvija/21.05.2023-tiesa-atstaj-speka-tet-sodu-12-miljonu-eiro-par-datu-regulas-parkapsanu.a509585/",
+   "replacement": "DVI decision of 15 July 2022 under Art. 83(5)(a) for breaches including Art. 5(1)(a) and (d): Tet+ streaming accounts were activated without verifying identity, then invoiced and passed to debt collectors. The decision set EUR 1.6 million (a EUR 3.2 million base halved); the fine Tet challenged in court was EUR 1.2 million. The Riga City Court upheld it in April 2023 and Tet appealed in May 2023; the final outcome was not confirmed."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Lursoft IT fined EUR 65,000 for publishing restricted Enterprise Register documents and keeping insolvency records too long; appealed as of February 2021",
+   "verdict": "confirmed",
+   "evidence": "DVI news of 9 February 2021: SIA Lursoft IT, EUR 65,000; published documents from the non-public part of the Enterprise Register; kept insolvency records longer than permitted; 'appealed the decision in court', so not final.",
+   "url": "https://www.dvi.gov.lv/lv/jaunums/datu-valsts-inspekcija-piemero-eur-65-000-naudas-sodu-par-visparigas-datu-aizsardzibas-regulas-noteikumu-parkapumiem"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "DVI itself in administrative offence proceedings under the Administrative Liability Law",
+   "verdict": "confirmed",
+   "evidence": "Tet decision cites Administratīvās atbildības likums alongside GDPR Art. 83 and is signed by the DVI director.",
+   "url": "https://www.dvi.gov.lv/lv/media/1874/download"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies not fined; officials warned or fined up to 200 fine units (EUR 1,000), DVI conducts proceedings (ss.38-39)",
+   "verdict": "confirmed",
+   "evidence": "PDPL ss.38-39: officials of public bodies face a warning or a fine up to 'two hundred units of fine'; the Inspectorate conducts the proceedings. Administrative Liability Law s.16(2): 'One unit of fine shall be EUR 5.'",
+   "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Criminal Law s.145, up to two years",
+   "verdict": "unverifiable",
+   "evidence": "Not checked; the cited LV portāls page was not fetched.",
+   "url": "https://lvportals.lv/e-konsultacijas/28400-personas-datu-apstrades-parkapumu-sekas-2023"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Fines: contest to director, then district (city) court; orders: administrative courts (s.24)",
+   "verdict": "confirmed",
+   "evidence": "Tet's challenge was heard at first instance by the Riga City Court (LSM), consistent with the district (city) court route. PDPL s.24 sends appeals against the director's administrative acts through the Administrative Procedure Law. The internal contest step was not confirmed from the statute text.",
+   "url": "https://www.lsm.lv/raksts/zinas/latvija/21.05.2023-tiesa-atstaj-speka-tet-sodu-12-miljonu-eiro-par-datu-regulas-parkapsanu.a509585/"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Appeal of a director's administrative act does not suspend it (s.24)",
+   "verdict": "confirmed",
+   "evidence": "PDPL s.24: 'Appeal of an administrative act of the Director of the Inspectorate shall not suspend operation of such act.' Fines: still unconfirmed (LSM notes the Tet ruling had not entered into force pending appeal, which suggests fines are not enforced until final, but this is not a statement of the rule).",
+   "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law"
+  },
+  {
+   "field": "appeal.further",
+   "claim": "District court then regional court, whose decision is final",
+   "verdict": "unverifiable",
+   "evidence": "The Ministry of Justice page was not fetched. Tet's May 2023 appeal against the Riga City Court ruling is consistent with a second instance.",
+   "url": "https://www.tm.gov.lv/lv/administrativas-atbildibas-likums"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Six months, extendable to one year, and to two years for hard facts or the cooperation/consistency mechanism (s.23.1)",
+   "verdict": "confirmed",
+   "evidence": "PDPL s.23.1: six months from initiation; up to one year; up to two years where facts are hard to establish or the consistency mechanism applies.",
+   "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Offence proceedings must start within one year of the offence or end of a continuing offence (s.118)",
+   "verdict": "confirmed",
+   "evidence": "Administrative Liability Law s.118(1): 'may be initiated not later than within one year from the day of committing the offence but in case of a continuous offence - from the day of termination of the offence.'",
+   "url": "https://likumi.lv/ta/en/en/id/303007-law-on-administrative-liability"
+  },
+  {
+   "field": "private.courts",
+   "claim": "Damages claims within five years (s.26)",
+   "verdict": "confirmed",
+   "evidence": "PDPL s.26: 'not later than five years after the day of infliction of the delict'.",
+   "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Director appointed by Cabinet after open competition for five years, renewable once; institution of direct administration under Cabinet supervision but staff decide independently",
+   "verdict": "corrected",
+   "evidence": "PDPL s.6: Cabinet appoints the director for five years 'upon recommendation of a commission', no more than two consecutive terms. s.3: 'The Inspectorate shall be independent'; the Cabinet exercises institutional supervision through the Minister for Justice, excluding decisions and internal matters. The field understates the statutory independence and omits the Minister for Justice.",
+   "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law",
+   "replacement": "Single authority headed by a director, not a collegial body. The Cabinet appoints the director on a selection commission's recommendation for five years, for at most two consecutive terms (Section 6 Personal Data Processing Law). The law declares DVI independent; the Cabinet exercises only institutional supervision through the Minister for Justice, which does not extend to DVI's decisions (Section 3)."
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Officials warned or fined up to 200 fine units (s.38)",
+   "verdict": "confirmed",
+   "evidence": "PDPL s.38.",
+   "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Six months, extendable to two years in cross-border cases (s.23.1)",
+   "verdict": "confirmed",
+   "evidence": "PDPL s.23.1 (two years also covers cases where facts are hard to establish).",
+   "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Director appointed by Cabinet and DVI under Cabinet supervision, unusual model",
+   "verdict": "corrected",
+   "evidence": "s.3 limits Cabinet supervision to institutional supervision via the Minister for Justice and excludes DVI's decisions; 'under Cabinet supervision' without that qualifier overstates it.",
+   "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law",
+   "replacement": "The director is appointed by the Cabinet, and DVI is subject to institutional supervision by the Minister for Justice that does not extend to its decisions (Section 3)."
+  },
+  {
+   "field": "plain",
+   "claim": "'You first ask the organisation to fix the problem' presented as a step",
+   "verdict": "corrected",
+   "evidence": "contact_controller_first itself says this is expected in practice but not a confirmed statutory condition; the plain text presents it as mandatory.",
+   "url": "https://www.dvi.gov.lv/lv/iesniegumu-paraugi",
+   "replacement": "You are expected to ask the organisation to fix the problem first, then send a signed complaint in Latvian to the Data State Inspectorate, attaching proof of your request. The Inspectorate investigates and should decide within six months; it can order changes or fine the organisation. A fined company challenges it first with the Inspectorate's director, then in an ordinary district court and finally a regional court."
+  }
+ ],
+ "notes": "Most serious problem: the Tet case gives the wrong headline amount and says the court outcome is unknown. Tet and LSM both report EUR 1.2 million as the fine under challenge. The Riga City Court upheld it in April 2023 and Tet appealed in May 2023. The 15 July 2022 document says EUR 1.6 million, so there may be a later amended decision or a director-level reduction; the link between the two figures was not established. The confidence line should drop 'court outcomes for Tet'. The Tet ruling at the Riga City Court also supports the claim that fines go to the ordinary courts. Not checked: Criminal Law s.145, the Ministry of Justice summary on finality, the complaint template page."
+}

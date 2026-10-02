@@ -1,0 +1,104 @@
+{
+ "code": "es",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Jan 2021 AEPD EUR 4m (Art 6) + EUR 2m (Arts 13-14); AN 19 May 2025 single EUR 2m via concurso medial; TS admitted AEPD cassation 29 Dec 2025 on Art 83(3)",
+   "verdict": "confirmed",
+   "evidence": "AEPD January 2021: EUR 4m Art 6, EUR 2m Arts 13-14. AN 19 May 2025 partially upheld CaixaBank's appeal and reduced to a single EUR 2m Art 6 penalty, finding concurso medial. TS admitted the AEPD's (Abogacia del Estado) cassation on 29 December 2025 on interpreting Art 83(3) GDPR for concurrent infringements.",
+   "url": "https://baylos.com/blog/sancion-a-caixabank-la-historia-interminable"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2021 (AEPD), 2025 (Audiencia Nacional), pending (Tribunal Supremo)",
+   "verdict": "confirmed",
+   "evidence": "Dates as above; no TS judgment reported in the sources.",
+   "url": "https://baylos.com/en/blog/2025/la-audiencia-nacional-reduce-a-2-millones-de-euros-la-multa-a-caixabank-por-infraccion-del-rgpd"
+  },
+  {
+   "field": "cases[0].title",
+   "claim": "EUR 6 million reduced to EUR 2 million by the Audiencia Nacional",
+   "verdict": "confirmed",
+   "evidence": "Total original fine EUR 6m; AN reduced to EUR 2m.",
+   "url": "https://baylos.com/en/blog/2025/la-audiencia-nacional-reduce-a-2-millones-de-euros-la-multa-a-caixabank-por-infraccion-del-rgpd"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "AEPD by resolution of its President, no court step",
+   "verdict": "confirmed",
+   "evidence": "Art 48 LOPDGDD: the Presidency 'dicta sus resoluciones'.",
+   "url": "https://www.iberley.es/legislacion/articulo-48-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "No fines for Art 77 bodies; declaration, corrective measures, disciplinary action, named reprimand in gazette, publication on AEPD site",
+   "verdict": "confirmed",
+   "evidence": "Art 77: no fines; declaration of infringement and corrective measures, possible disciplinary proceedings, reprimand naming the responsible post published in the State or regional gazette, publication of resolutions on the AEPD website.",
+   "url": "https://www.iberley.es/legislacion/articulo-77-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "AEPD resolutions end the administrative route; optional reposicion or direct appeal to Audiencia Nacional",
+   "verdict": "confirmed",
+   "evidence": "Art 48: acts of the Presidency 'ponen fin a la via administrativa, siendo recurribles, directamente, ante la Sala de lo Contencioso-administrativo de la Audiencia Nacional'. Optional reposicion follows from Ley 39/2015 for acts ending the administrative route.",
+   "url": "https://www.iberley.es/legislacion/articulo-48-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "One month reposicion (Art 124 Ley 39/2015); two months contentious (Art 46 LJCA)",
+   "verdict": "unverifiable",
+   "evidence": "Not opened in this check; both periods match the general statutory rules as far as known.",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Art 90.3 Ley 39/2015: enforceable only when no ordinary administrative appeal remains; suspension if contentious appeal announced",
+   "verdict": "unverifiable",
+   "evidence": "Not opened; consistent with Art 90.3 Ley 39/2015 as far as known, and the field already hedges.",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Admissibility within three months, deemed admitted (Art 65.5); six months rights (64.1); twelve months sanction (64.2) with caducidad; eighteen months preliminary investigation (67.2)",
+   "verdict": "confirmed",
+   "evidence": "Art 65: three months, proceeding continues if not notified. Art 64.1 six months; 64.2 'duracion maxima de doce meses a contar desde la fecha del acuerdo de inicio' with caducidad; 64 amended by Ley 11/2023 in force 10 May 2023. Art 67: 'no podran tener una duracion superior a dieciocho meses'. The previous nine- and twelve-month figures were not shown by the source but match the original 2018 text as far as known.",
+   "url": "https://www.iberley.es/legislacion/articulo-64-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Sanctions prescribe 1/2/3 years by amount (Art 78); infringements 3/2/1 years",
+   "verdict": "confirmed",
+   "evidence": "Art 78: up to EUR 40,000 one year; EUR 40,001 to 300,000 two years; over EUR 300,000 three years. Infringement periods (Arts 72-74) not re-opened but match the statute as far as known.",
+   "url": "https://www.iberley.es/legislacion/articulo-78-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Twelve months since 10 May 2023 (Ley 11/2023); caducidad on expiry",
+   "verdict": "confirmed",
+   "evidence": "Art 64.2 as above.",
+   "url": "https://www.iberley.es/legislacion/articulo-64-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Reductions of at least 20 percent each, 40 percent combined, many fines paid at 60 percent",
+   "verdict": "confirmed",
+   "evidence": "Art 85 Ley 39/2015 reductions of at least 20 percent each, cumulative, conditional on waiving administrative appeal. 'Many ... never reach court' is an editorial generalisation, acceptable.",
+   "url": "https://nosoloaytos.wordpress.com/2017/03/27/las-bonificaciones-por-pronto-pago-en-la-ley-392015/"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Public bodies cannot be fined (Art 77)",
+   "verdict": "confirmed",
+   "evidence": "Art 77 as above.",
+   "url": "https://www.iberley.es/legislacion/articulo-77-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd"
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "Since 2023 AEPD can close admitted complaint if controller shows corrective measures before investigation (Art 65.6)",
+   "verdict": "confirmed",
+   "evidence": "Art 65: once admitted, the AEPD 'podra resolver el archivo de la reclamacion' if the controller shows compliance measures and no investigation has begun.",
+   "url": "https://www.iberley.es/legislacion/articulo-65-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd"
+  }
+ ],
+ "notes": "No errors found. The CaixaBank chain is confirmed in every date and amount. Minor: the AEPD resolution procedure number (PS/00477/2019, as far as known) and exact January 2021 day were not shown by the source; 'January 2021' is safe. private.collective (RAD transposition status as of May 2026) was not checked; it is time-sensitive and should be re-dated before publication. No GDPR contradictions."
+}

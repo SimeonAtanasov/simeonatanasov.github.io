@@ -1,0 +1,105 @@
+{
+ "code": "hu",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "NAIH fined Digi HUF 100m (about EUR 248,000); CJEU C-77/21, 20 October 2022, test database compatible but not longer than needed",
+   "verdict": "confirmed",
+   "evidence": "Judgment of 20 October 2022 on a reference from the Fővárosi Törvényszék; fine of HUF 100,000,000 (approx. EUR 248,000); Art. 5(1)(b) does not preclude storing in a test database if compatible, Art. 5(1)(e) limits retention to what testing needs.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62021CJ0077"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2019-2022",
+   "verdict": "unverifiable",
+   "evidence": "CJEU judgment 2022 confirmed; start year of the NAIH procedure (2019 breach, 2020 decision) not checked against a primary source. Range is plausible.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62021CJ0077"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "C-132/21 on a Hungarian reference: Art. 77/78 and Art. 79 remedies can run in parallel, courts to ensure consistency",
+   "verdict": "confirmed",
+   "evidence": "Judgment of 12 January 2023, BE v NAIH, reference from the Fővárosi Törvényszék, on parallel exercise of Arts 77-79 remedies and procedural autonomy. Operative wording matches the known ruling.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0132"
+  },
+  {
+   "field": "appeal.inaction",
+   "claim": "C-132/21 decided 12 January 2023 on a Fővárosi Törvényszék reference",
+   "verdict": "confirmed",
+   "evidence": "EUR-Lex: judgment 12 January 2023, referring court Fővárosi Törvényszék.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0132"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "NAIH itself, by administrative decision",
+   "verdict": "confirmed",
+   "evidence": "NAIH imposed the HUF 100m Digi fine itself; challenge was by administrative action before the Fővárosi Törvényszék. Section number 61(1) not separately checked (English Infotv. page truncated).",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62021CJ0077"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "No internal appeal; administrative lawsuit before the Fővárosi Törvényszék, filed electronically with NAIH",
+   "verdict": "confirmed",
+   "evidence": "NAIH decision remedy clause: '30 napon belül a Fővárosi Törvényszékhez címzett keresetlevéllel ... közigazgatási perben megtámadhatók'; 'A keresetlevelet a Hatósághoz kell benyújtani, elektronikusan'.",
+   "url": "https://naih.hu/files/NAIH-2020-193-hatarozat.pdf"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "30 days from notification",
+   "verdict": "confirmed",
+   "evidence": "'a közléstől számított 30 napon belül' (NAIH/2020/193); NAIH procedure page also states 30 days.",
+   "url": "https://naih.hu/files/NAIH-2020-193-hatarozat.pdf"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "No suspensive effect (Kp. s.39(6)); disputed data not deleted pending; fee HUF 30,000; legal representation mandatory",
+   "verdict": "confirmed",
+   "evidence": "Decision quotes Kp. 39(6): 'halasztó hatálya nincs'; fee '30.000 Ft'; 'a jogi képviselet kötelező'. NAIH page: contested data cannot be deleted pending the outcome.",
+   "url": "https://naih.hu/files/NAIH-2020-193-hatarozat.pdf"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "150 days, excluding time to supply information and suspensions",
+   "verdict": "confirmed",
+   "evidence": "NAIH procedure page: decision within 150 days of receipt, excluding clarification time and suspension; if exceeded NAIH pays the applicant HUF 10,000 and bears procedural costs.",
+   "url": "https://www.naih.hu/adatkezeles-erintettjekent-fordulok-a-hatosaghoz/adatvedelmi-hatosagi-eljaras-gdpr"
+  },
+  {
+   "field": "complaint.how",
+   "claim": "Filing by portal, e-delivery or post to 1363 Budapest Pf. 9; not by email",
+   "verdict": "confirmed",
+   "evidence": "NAIH page: e-Papír portal, post to 1363 Budapest, Pf. 9, or in person at 1055 Budapest, Falk Miksa utca 9-11; 'eljárás emailben nem kezdeményezhető'. KR ID not checked.",
+   "url": "https://www.naih.hu/adatkezeles-erintettjekent-fordulok-a-hatosaghoz/adatvedelmi-hatosagi-eljaras-gdpr"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Infotv. s.75/A steers NAIH to a warning for first-time infringements",
+   "verdict": "confirmed",
+   "evidence": "Decision quotes s.75/A: on first infringement NAIH acts 'elsősorban az adatkezelő vagy adatfeldolgozó figyelmeztetésével', in line with GDPR Art. 58.",
+   "url": "https://naih.hu/files/NAIH-2020-193-hatarozat.pdf"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Appeals to Budapest-Capital Regional Court within 30 days, filed through NAIH, mandatory representation, no automatic suspension",
+   "verdict": "confirmed",
+   "evidence": "As appeal.court / appeal.suspensive above.",
+   "url": "https://naih.hu/files/NAIH-2020-193-hatarozat.pdf"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "150-day statutory deadline",
+   "verdict": "confirmed",
+   "evidence": "NAIH procedure page: 150 days.",
+   "url": "https://www.naih.hu/adatkezeles-erintettjekent-fordulok-a-hatosaghoz/adatvedelmi-hatosagi-eljaras-gdpr"
+  },
+  {
+   "field": "private.courts",
+   "claim": "Infotv. s.23 action; competent level of court not confirmed",
+   "verdict": "corrected",
+   "evidence": "English Infotv. s.23: 'The data subject may bring the action before the regional court having territorial jurisdiction over his domicile or place of residence, according to his choice.'",
+   "url": "https://njt.jog.gov.hu/jogszabaly/en/2011-112-00-00",
+   "replacement": "Data subjects can sue the controller under Infotv. s.23 before the regional court (törvényszék) for their domicile or place of residence, at their choice."
+  }
+ ],
+ "notes": "No errors found in the cases or structural fields. One gap filled: Infotv. s.23 names the regional court (törvényszék) for data subject actions, so private.courts and the confidence line can drop that caveat. The NAIH page also says that if NAIH misses the 150-day deadline it pays the applicant HUF 10,000; worth adding to complaint.deadlines or quirks. NAIH/2020/193 is signed by Dr Attila Péterfalvi as President (July 2020); the current President was not checked. The nine-year term in dpa.structure was not verified."
+}

@@ -1,0 +1,83 @@
+{
+  "code": "pt",
+  "country": "Portugal",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "National Data Protection Commission",
+    "name_native": "Comissão Nacional de Proteção de Dados",
+    "abbr": "CNPD",
+    "url": "https://www.cnpd.pt",
+    "structure": "Collegial body that decides by deliberation (deliberação); designated national supervisory authority by Art. 3 of Law 58/2019, with its organisation in Law 43/2004. Number of members (understood to be seven) not confirmed.",
+    "regional": "Single national authority, based in Lisbon; no regional DPAs."
+  },
+  "law": {
+    "name": "Law 58/2019 of 8 August (Lei n.º 58/2019), implementing the GDPR; CNPD organisation in Law 43/2004 of 18 August. The consolidated text on PGD Lisboa shows no amendments to Law 58/2019.",
+    "url": "https://pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3118&tabela=leis"
+  },
+  "complaint": {
+    "how": "Online forms on the CNPD website: a general form plus specific forms for unsolicited marketing (spam), biometric data and video surveillance. Postal and email contact also available (Av. D. Carlos I, 134, 1º, 1200-651 Lisboa; geral@cnpd.pt). No fee is mentioned; Portuguese is the working language.",
+    "contact_controller_first": "Not required according to the CNPD complaint page, which does not ask complainants to contact the organisation first.",
+    "deadlines": "No time limit for complaining and no statutory deadline for the CNPD to decide was found.",
+    "complainant_status": "Not confirmed. Fines follow the administrative offence (contraordenação) procedure, in which the complainant is normally not a party to the sanction proceedings."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint via online form, followed by preliminary analysis; the CNPD may ask for documents",
+      "Investigation and, if an offence is found, an administrative offence (contraordenação) procedure",
+      "Charge (acusação) with the right to be heard before a decision; a public body may only ask for the Art. 44(2) fine waiver after being charged (CNPD Deliberation 2019/495)",
+      "Final deliberation of the CNPD imposing a fine and/or corrective measures"
+    ],
+    "decision_maker": "The CNPD as a collegial body, by deliberation (e.g. Deliberation 1072/2022 on the INE census).",
+    "limitation": "Proceedings lapse three years after a very serious offence and two years after a serious one (Art. 40 Law 58/2019); imposed fines lapse after three years if over EUR 100,000 and two years otherwise (Art. 41). These short periods have cut fines on appeal (Lisbon municipality case)."
+  },
+  "fines": {
+    "imposed_by": "The CNPD itself, by deliberation in an administrative offence procedure. 60% of fine revenue goes to the State and 40% to the CNPD (Art. 42).",
+    "public_bodies": "Yes in principle: fines apply equally to public and private entities (Art. 44(1)), with no special cap. But public entities may ask for a waiver of fines for three years (Art. 44(2)); the CNPD decides case by case only after a charge (Deliberation 2019/495). Courts have confirmed fines on public bodies (Lisbon municipality).",
+    "quirks": "In Deliberation 2019/494 (3 September 2019) the CNPD announced it would disapply several provisions of Law 58/2019 as contrary to the GDPR, including parts of Art. 37 and Art. 38 (lower SME maxima) and Art. 39(1) and (3) (extra criteria and a prior-warning requirement). Law 58/2019 also creates criminal offences, e.g. incompatible use of data (Art. 46) and unauthorised access (Art. 47)."
+  },
+  "appeal": {
+    "court": "The administrative courts, not the criminal courts: Art. 34 Law 58/2019 gives them jurisdiction over all CNPD decisions, including fines. The Tribunal dos Conflitos confirmed this on 2 July 2024 (proc. 015/23), giving jurisdiction to the Lisbon Administrative Court rather than the Lisbon local criminal court.",
+    "deadline": "Not confirmed.",
+    "suspensive": "Not confirmed.",
+    "further": "Appeal to the Central Administrative Court South (Tribunal Central Administrativo Sul), as in the Lisbon municipality case; any further appeal to the Supreme Administrative Court not confirmed.",
+    "inaction": "Not confirmed. Presumably an action before the administrative courts under Art. 34 Law 58/2019, but no source specific to CNPD inaction was found."
+  },
+  "private": {
+    "courts": "Civil liability is governed by Art. 33 Law 58/2019; claims against public bodies go to the administrative courts. The court allocation for claims against private controllers was not confirmed in the text.",
+    "damages": "Not confirmed: no source on typical damages awards was found.",
+    "collective": "Not confirmed. Portugal has the popular action (ação popular, Law 83/95), and transposed the Representative Actions Directive, but its application to GDPR claims was not verified."
+  },
+  "cases": [
+    {
+      "title": "Lisbon municipality ('Russiagate'): EUR 1.25 million cut on appeal by limitation",
+      "year": "2021 to 2026",
+      "summary": "The CNPD fined Lisbon City Council EUR 1.25 million for sending personal data of anti-Putin protest organisers to the Russian embassy and other entities. On 1 August 2025 the Central Administrative Court South dismissed the council's appeal but, because many offences had become time-barred, the fine stood at EUR 738,000; a September 2026 ruling of the same court reportedly reduced it to EUR 463,700 after a further 42 offences were dismissed (from a party newspaper, not confirmed).",
+      "url": "https://www.dn.pt/sociedade/russiagate-camara-de-lisboa-perde-recurso-e-arrisca-pagar-738-mil-euros"
+    },
+    {
+      "title": "National Statistics Institute (INE), 2021 census: EUR 4.3 million",
+      "year": "2022",
+      "summary": "In Deliberation 1072/2022 (announced 12 December 2022) the CNPD fined INE EUR 4.3 million for unlawfully processing health and religion data, using Cloudflare without proper vetting, transferring data to the US, lacking a DPIA and failing to inform respondents. INE announced a court challenge; the outcome was not confirmed.",
+      "url": "https://eco.sapo.pt/2022/12/12/ine-multado-em-43-milhoes-de-euros-por-causa-do-censos-2021/"
+    }
+  ],
+  "quirks": [
+    "The CNPD openly disapplies parts of its own implementing law that it considers contrary to the GDPR (Deliberation 2019/494).",
+    "Public bodies can be fined with no cap, but may ask for a three-year waiver (Art. 44(2)), assessed case by case.",
+    "Very short limitation periods (two or three years from the offence, Art. 40) have reduced fines on appeal.",
+    "Since the Tribunal dos Conflitos ruling of 2 July 2024, challenges to CNPD fines go to the administrative courts, not the criminal courts."
+  ],
+  "plain": "You complain to the CNPD using an online form, without paying anything. If the CNPD finds a breach, it charges the organisation, hears its defence and then decides as a board whether to fine it. The organisation can challenge the fine in the administrative courts, where short time limits mean parts of a fine can lapse during a long appeal.",
+  "confidence": "medium: Law 58/2019 articles were confirmed from PGD Lisboa, but appeal deadlines, suspensive effect, CNPD inaction remedies, complainant status, collective-action rules and the September 2026 Lisbon ruling were not confirmed from primary sources.",
+  "sources": [
+    {"title": "Law 58/2019 (PGD Lisboa consolidated text)", "url": "https://pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3118&tabela=leis", "source_type": "primary"},
+    {"title": "CNPD: complaints page (participações)", "url": "https://www.cnpd.pt/cidadaos/participacoes/", "source_type": "primary"},
+    {"title": "CNPD Deliberation 2019/494 (disapplication of Law 58/2019 provisions)", "url": "https://www.cnpd.pt/umbraco/surface/cnpdDecision/download/121704", "source_type": "primary"},
+    {"title": "Garrigues: CNPD Deliberation 2019/495 on fine waivers for public entities", "url": "https://www.garrigues.com/pt/pt-PT/news/cnpd-aprova-deliberacao-interpretativa-sobre-dispensa-de-aplicacao-de-coimas-entidades-publicas", "source_type": "secondary"},
+    {"title": "Tribunal dos Conflitos, proc. 015/23, 2 July 2024 (DGSI)", "url": "https://www.dgsi.pt/jcon.nsf/35fbbbf22e1bb1e680256f8e003ea931/7338b4f0aecc6f8180258ac10042039a?OpenDocument=", "source_type": "primary"},
+    {"title": "CNPD decision history 2022 (Deliberation 1072/2022, INE)", "url": "https://www.cnpd.pt/decisoes/historico-de-decisoes/?year=2022&type=2", "source_type": "primary"},
+    {"title": "ECO: INE fined EUR 4.3 million over 2021 census", "url": "https://eco.sapo.pt/2022/12/12/ine-multado-em-43-milhoes-de-euros-por-causa-do-censos-2021/", "source_type": "secondary"},
+    {"title": "DN: Lisbon council loses appeal, EUR 738,000", "url": "https://www.dn.pt/sociedade/russiagate-camara-de-lisboa-perde-recurso-e-arrisca-pagar-738-mil-euros", "source_type": "secondary"},
+    {"title": "Avante: Lisbon council ordered to pay EUR 463,700 (September 2026)", "url": "https://avanteonline.wordpress.com/2026/09/10/camara-de-lisboa-condenada-a-pagar-463-mil-euros-no-caso-russiagate/", "source_type": "secondary"}
+  ]
+}

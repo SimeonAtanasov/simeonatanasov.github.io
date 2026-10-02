@@ -1,0 +1,133 @@
+{
+ "code": "it",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Garante fined OpenAI EUR 15m December 2024; Rome Tribunal suspended March 2025, annulled 20 March 2026; Cassazione appeal unknown",
+   "verdict": "confirmed",
+   "evidence": "ANSA 20 March 2026: Rome Tribunal annulled the EUR 15m fine imposed on 20 December 2024; the tribunal had suspended it in March 2025. No mention of a Cassazione appeal.",
+   "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/03/20/tribunale-roma-annulla-multa-da-15-milioni-di-euro-del-garante-privacy-a-openai_6560fadd-4099-451e-99a0-7fcbc9a285c1.html"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Milan Tribunal business section held admissible VZS representative action for non-material damage from 2018-2019 Facebook scraping; loss of control compensable if actually experienced",
+   "verdict": "confirmed",
+   "evidence": "Veltri: Tribunale di Milano, Sez. XIV civile specializzata in materia di impresa, 11 December 2025, VZS v Meta Platforms Ireland; about 533 million users; scraping 2018-2019; loss of control compensable without a seriousness threshold if concrete negative feelings are shown; basis d.lgs. 28/2023, Art. 140-ter Consumer Code, Art. 82 GDPR.",
+   "url": "https://www.veltri.legal/2026/06/15/azioni-rappresentative-gdpr-e-tutela-dei-consumatori-il-tribunale-di-milano-apre-lastrada-al-risarcimento-collettivo-per-la-perdita-di-controllo-dei-dati-personali-nota-atribunale/"
+  },
+  {
+   "field": "private.collective",
+   "claim": "Milan Tribunal 11 December 2025 admissible VZS collective action re 533 million users",
+   "verdict": "confirmed",
+   "evidence": "Same source: date, parties and user count match.",
+   "url": "https://www.veltri.legal/2026/06/15/azioni-rappresentative-gdpr-e-tutela-dei-consumatori-il-tribunale-di-milano-apre-lastrada-al-risarcimento-collettivo-per-la-perdita-di-controllo-dei-dati-personali-nota-atribunale/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "The Garante itself (Art. 166)",
+   "verdict": "confirmed",
+   "evidence": "Art. 166 sets the Garante's sanctioning procedure (notification, defence, decision).",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-iii/capo-i/art166.html"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies can be fined; no separate cap",
+   "verdict": "unverifiable",
+   "evidence": "Not checked against a source. It is consistent with the Codice, which sets no separate cap, and with the Garante's routine practice of fining public bodies.",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-iii/capo-i/art166.html"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Pay half within the appeal deadline (Art. 166(8)); 50% of revenue reinvested; Art. 167 offences up to 1.5 years, or 1 to 3 years for special categories and transfers",
+   "verdict": "confirmed",
+   "evidence": "Art. 166(8): comply and pay 'una somma pari alla metà della sanzione irrogata' before the appeal deadline; Art. 166(7): 50% of annual fine proceeds reassigned to the Garante. Art. 167(1) 'da sei mesi a un anno e sei mesi'; (2) and (3) 'da uno a tre anni'. All require intent to profit or harm and actual harm (nocumento).",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-iii/capo-ii/art167.html"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Ordinary Tribunale, single judge, where controller based or data subject resides, labour procedure",
+   "verdict": "confirmed",
+   "evidence": "Art. 10 d.lgs. 150/2011: labour procedure, 'il tribunale del luogo in cui il titolare del trattamento risiede o ha sede ovvero il tribunale del luogo di residenza dell'interessato'. The single-judge composition was not re-quoted.",
+   "url": "https://www.jurinote.it/doc/italia/decreto-legislativo/2011/150/10"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "30 days, or 60 if resident abroad",
+   "verdict": "confirmed",
+   "evidence": "Art. 10: 30 days from notification, 60 if resident abroad.",
+   "url": "https://www.jurinote.it/doc/italia/decreto-legislativo/2011/150/10"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "No automatic suspension; judge can suspend (Art. 5 d.lgs. 150/2011); Rome Tribunal suspended OpenAI fine March 2025",
+   "verdict": "confirmed",
+   "evidence": "ANSA confirms March 2025 suspension pending judgment. Art. 5 not separately fetched; it is the general suspension rule of d.lgs. 150/2011.",
+   "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/03/20/tribunale-roma-annulla-multa-da-15-milioni-di-euro-del-garante-privacy-a-openai_6560fadd-4099-451e-99a0-7fcbc9a285c1.html"
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Judgment not appealable on the merits; only Cassazione",
+   "verdict": "confirmed",
+   "evidence": "Art. 10: 'La sentenza che definisce il giudizio non è appellabile' (Cassazione remains under Art. 111 Constitution).",
+   "url": "https://www.jurinote.it/doc/italia/decreto-legislativo/2011/150/10"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Nine months, progress update within three, extendable to twelve (Art. 143)",
+   "verdict": "corrected",
+   "evidence": "Art. 143: decide 'entro nove mesi', inform within three months, twelve months for investigative needs; the time limit is also suspended for the duration of an Art. 60 GDPR cooperation procedure, which the field omits.",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-i/capo-i/art143.html",
+   "replacement": "The Garante must decide within nine months of filing and inform the complainant of progress within three months; extendable to twelve months for investigative needs, and suspended while an Art. 60 GDPR cooperation procedure runs (Art. 143 Codice). No time limit for complaining identified."
+  },
+  {
+   "field": "procedure.stages[3]",
+   "claim": "30-day written defence and right to a hearing (Art. 166(6))",
+   "verdict": "confirmed",
+   "evidence": "Art. 166(6): within thirty days the offender may send written defences and ask to be heard.",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-iii/capo-i/art166.html"
+  },
+  {
+   "field": "procedure.decision_maker",
+   "claim": "Collegio; Art. 166(9) separation of investigative and decision functions",
+   "verdict": "confirmed",
+   "evidence": "Art. 166(9) requires rules on separation between investigatory and decision-making functions.",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-iii/capo-i/art166.html"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Four members, two per chamber, seven-year non-renewable term; Scorza resigned January 2026; Stanzione, Cerrina Feroni, Ghiglia continue",
+   "verdict": "confirmed",
+   "evidence": "Art. 153: 'quattro componenti, eletti due dalla Camera ... e due dal Senato'; 'durata settennale e non sono rinnovabili'. Prima Online 19 Jan 2026: Scorza resigned; President Stanzione, Vice President Cerrina Feroni and Ghiglia said they would continue.",
+   "url": "https://www.primaonline.it/2026/01/19/462536/garante-privacy-il-collegio-va-avanti-dopo-le-dimissioni-di-scorza/"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Appeals to the civil Tribunale, no appeal on merits, straight to Cassazione",
+   "verdict": "confirmed",
+   "evidence": "Art. 10 d.lgs. 150/2011.",
+   "url": "https://www.jurinote.it/doc/italia/decreto-legislativo/2011/150/10"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Pay 50% within the appeal window (Art. 166(8))",
+   "verdict": "confirmed",
+   "evidence": "Art. 166(8).",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-iii/capo-i/art166.html"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Nine months, extendable to twelve (Art. 143)",
+   "verdict": "confirmed",
+   "evidence": "Art. 143. (Also suspended during Art. 60 cooperation; see complaint.deadlines.)",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-i/capo-i/art143.html"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Fines already paid reduce the criminal penalty (Art. 167(6))",
+   "verdict": "confirmed",
+   "evidence": "Art. 167(6): where the Garante's fine for the same act has been collected, 'la pena è diminuita'.",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-iii/capo-ii/art167.html"
+  }
+ ],
+ "notes": "No errors found in the cases. The only substantive addition: under Art. 143, the nine/twelve-month clock is suspended during Art. 60 cooperation, which matters for cross-border complaints. The plain-language text says 'twelve at most', which is misleading for those cases; consider adding 'unless the case involves other EU regulators'. Art. 167 offences also require actual harm to the data subject, not just intent. Brocardi and Jurinote are secondary sources; the Gazzetta Ufficiale link was not fetched."
+}

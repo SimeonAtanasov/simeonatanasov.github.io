@@ -1,0 +1,85 @@
+{
+ "code": "be",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Decision 21/2022 (2 Feb 2022) EUR 250,000; C-604/22 (7 March 2024); Market Court 14 May 2025 annulled and replaced, joint controller for TC String not OpenRTB, fine kept",
+   "verdict": "confirmed",
+   "evidence": "DPA: 'decision 21/2022 is annulled for procedural reasons' and the Court 'confirms the fine of 250,000 euros'; Freshfields: the Court 'exercised full jurisdiction to replace it'; joint controller for TC String, not for processing entirely within OpenRTB. C-604/22 dated 7 March 2024.",
+   "url": "https://www.freshfields.com/en/our-thinking/blogs/technology-quotient/brussels-market-court-clarifies-gdpr-roles-in-adtech-and-upholds-sanctions-agains-102kcx6"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2022-2025",
+   "verdict": "confirmed",
+   "evidence": "Decision 2 Feb 2022, Market Court 14 May 2025.",
+   "url": "https://www.dataprotectionauthority.be/citizen/the-market-court-rules-in-the-iab-europe-case"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Decision 79/2025 dated May 2025; Market Court referred 13 questions, announced 4 Dec 2025",
+   "verdict": "corrected",
+   "evidence": "DPA news page refused WebFetch (robots.txt timeout). Secondary sources: decision 79/2025 of 24 April 2025 (published around 13 May 2025) gave FPS Finance until 24 April 2026; reprimand and compliance order, no fine as public bodies are exempt; Belgian State appealed; Market Court interlocutory judgment of 26 November 2025 referred 13 questions, now CJEU C-804/25. The date in the file is the publication month, not the decision date.",
+   "url": "https://ppc.land/cjeu-takes-on-fatca-eus-top-court-to-rule-on-banking-data-sent-to-the-us/",
+   "replacement": "Decision 79/2025 (24 April 2025), on a complaint by the Belgian Accidental Americans Association and a member, found FATCA bank-data transfers to the US unlawful and ordered corrective measures within a year; no fine because of Art. 221 § 2. On appeal by the Belgian State, the Market Court referred 13 questions to the CJEU (judgment of 26 Nov 2025, announced 4 Dec 2025; C-804/25)."
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Litigation Chamber by administrative decision (Art. 100-101 LCA)",
+   "verdict": "confirmed",
+   "evidence": "Art. 100-101 give the chamber power to impose fines under Art. 83 GDPR.",
+   "url": "https://refli.be/fr/lex/2017031916"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Art. 221 § 2 exempts public authorities; upheld by Constitutional Court 3/2021 of 14 Jan 2021",
+   "verdict": "confirmed",
+   "evidence": "Judgment 3/2021 of 14 January 2021 rejected the annulment action; Art. 221 § 2: 'Article 83 ... does not apply to public authorities and their agents except if they are public legal entities offering goods or services on a market.' Narrow reading by the DPA (schools, social housing) not checked.",
+   "url": "https://etaamb.openjustice.be/fr/arret_n2021200338.html"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Market Court with full jurisdiction (Art. 108 § 2 LCA)",
+   "verdict": "confirmed",
+   "evidence": "Art. 108 routes appeals to the Market Court; IAB judgment shows it replacing the decision under full jurisdiction.",
+   "url": "https://refli.be/fr/lex/2017031916"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "30 days from notification; third parties 30 days from publication",
+   "verdict": "confirmed",
+   "evidence": "Art. 108: 30 days from notification; third parties with direct, personal and legitimate interest 30 days from publication on the website.",
+   "url": "https://refli.be/fr/lex/2017031916"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not suspensive; exception for deletion orders",
+   "verdict": "corrected",
+   "evidence": "Art. 108 § 1: decisions are provisionally enforceable except erasure orders, and the chamber may decide otherwise by specially reasoned decision. The second exception is missing.",
+   "url": "https://refli.be/fr/lex/2017031916",
+   "replacement": "No. Decisions are provisionally enforceable notwithstanding appeal, except deletion orders or where the Litigation Chamber decides otherwise in a specially reasoned decision (Art. 108 § 1 LCA)."
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Five-year limitation from commission, interrupted by investigative acts (Art. 105)",
+   "verdict": "confirmed",
+   "evidence": "Art. 105: facts time-barred five years after commission; investigation or prosecution acts interrupt and restart the period.",
+   "url": "https://refli.be/fr/lex/2017031916"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Five years, interrupted (Art. 105 LCA)",
+   "verdict": "confirmed",
+   "evidence": "As above.",
+   "url": "https://refli.be/fr/lex/2017031916"
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "Overhaul effective 1 June 2024 introduced five-year limitation",
+   "verdict": "unverifiable",
+   "evidence": "Five-year rule confirmed in the consolidated text; whether it was new in 2024 not confirmed.",
+   "url": "https://refli.be/fr/lex/2017031916"
+  }
+ ],
+ "notes": "No GDPR contradictions. Freshfields gives the FATCA decision date as 13 May 2025 while ppc.land gives 24 April 2025; the one-year deadline of 24 April 2026 supports 24 April 2025 as the decision date. If unsure, use '(April 2025)'. The private.* article numbers remain unverified as the file already says."
+}

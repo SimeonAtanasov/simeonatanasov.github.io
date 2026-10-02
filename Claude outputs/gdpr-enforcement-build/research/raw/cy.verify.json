@@ -1,0 +1,126 @@
+{
+ "code": "cy",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Feb 2020, three affiliated companies, Bradford Factor, EUR 82,000 total, cease and delete",
+   "verdict": "confirmed",
+   "evidence": "Decision dated 21 February 2020; three affiliated companies; total EUR 82,000; no legal basis under Arts 6(1) and 9; ordered to stop using the tool and delete data; investigation involved other EU SAs. No appeal mentioned.",
+   "url": "https://www.privacyminders.com/news/cyprus-commissioner-fines-scoring-sick-leaves/"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Feb 2024, three organisations, GA and Facebook Pixel, reprimands and orders, no fines",
+   "verdict": "confirmed",
+   "evidence": "Decisions February 2024 (published 17 June 2024); reprimands for Arts 5(2) and 44, orders to use DPF or Art. 46 safeguards; 'an administrative fine was not justified'.",
+   "url": "https://www.inplp.com/publications/cyprus-dpc-rulings-on-data-breaches-by-the-cyprus-football-association-cyprus-news-agency-and-arktinos-publications-ltd-for-using-google-analytics-and-facebook-pixel"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "17 June 2020, bank fined EUR 15,000 for lost insurance contract and late breach notification",
+   "verdict": "confirmed",
+   "evidence": "Decision 17 June 2020, EUR 15,000; loss of archived insurance contract deprived customer of access; failure to notify within 72 hours (Art. 33).",
+   "url": "https://www.mondaq.com/cyprus/data-protection/1051504/developments-on-penalties-imposed-on-financial-institutions-for-gdpr-violations-in-cyprus"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Appointed by Council of Ministers, Supreme Court judge qualifications, six years renewable once, removal only for incapacity (s. 19)",
+   "verdict": "confirmed",
+   "evidence": "s. 19: appointed by the Council of Ministers; qualifications of a Supreme Court judge; six-year term renewable once; dismissal only for mental or physical incapacity. 'On the proposal of the Minister' not specifically checked.",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Commissioner imposes fines under s. 32(1); unpaid fines recovered as civil debt (s. 32(2))",
+   "verdict": "unverifiable",
+   "evidence": "Fetched text confirmed s. 32 covers fines and the public-body cap; the civil-debt recovery wording in s. 32(2) was not returned. Commissioner fining is confirmed by the cases.",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies fineable, capped at EUR 200,000 for non-profit activities (s. 32(3)); EUR 46,500 fine on State Health Services Organisation",
+   "verdict": "confirmed",
+   "evidence": "s. 32: fine on a public authority or body ... 'may not exceed EUR 200,000'. The EUR 46,500 item could not be checked (DataGuidance page returned no article text); it is already flagged as unverified in the file.",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "s. 33 offences: 3 years/EUR 30,000; 1 year/EUR 10,000; 5 years/EUR 50,000 for national security",
+   "verdict": "confirmed",
+   "evidence": "s. 33: up to 3 years or EUR 30,000 or both; up to 1 year or EUR 10,000 or both for other listed offences; up to 5 years or EUR 50,000 where state interests are affected. Chief executive liability not checked.",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Commissioner must inform complainant within 30 days of progress or outcome",
+   "verdict": "corrected",
+   "evidence": "s. 24: examines the complaint and, 'where possible', informs the complainant in writing of its progress and outcome within 30 days. The 30 days is qualified, not absolute.",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html",
+   "replacement": "Section 24 requires the Commissioner to examine complaints and, where possible, inform the complainant in writing of the progress or outcome within 30 days; the Commissioner may decline to examine a complaint for public-interest reasons. No time limit for complaining found."
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Administrative Court, s. 28, recourse under Art. 146 of the Constitution",
+   "verdict": "confirmed",
+   "evidence": "s. 28: every natural or legal person has a right of recourse against a decision of the Commissioner before the Administrative Court.",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "75 days under Art. 146(3) of the Constitution",
+   "verdict": "unverifiable",
+   "evidence": "Not in the fetched sources. It matches the general constitutional rule (Art. 146(3), 75 days) as far as I know, and the file already flags it as a general rule.",
+   "url": ""
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "No automatic suspension; provisional order needed",
+   "verdict": "unverifiable",
+   "evidence": "No source fetched addresses this. Consistent with general Cypriot administrative law as far as I know.",
+   "url": ""
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Since 1 July 2023 appeals go to the new Court of Appeal; Supreme Court and Supreme Constitutional Court above",
+   "verdict": "confirmed",
+   "evidence": "Rule of Law Report 2023: Court of Appeal created 'to deal with appeals against all judgments issued at first instance', with an administrative division; Supreme Constitutional Court and Supreme Court at third instance.",
+   "url": "https://commission.europa.eu/system/files/2023-07/31_1_52612_coun_chap_cyprus_en.pdf"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Single commissioner, Supreme Court judge qualifications, six years renewable once",
+   "verdict": "confirmed",
+   "evidence": "s. 19 as above.",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Public authorities fineable up to EUR 200,000 for non-profit activities",
+   "verdict": "confirmed",
+   "evidence": "s. 32 cap as above.",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Criminal offences with prison up to five years",
+   "verdict": "confirmed",
+   "evidence": "s. 33 national security tier: up to 5 years.",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "2023 reform added Court of Appeal between Administrative Court and top courts",
+   "verdict": "confirmed",
+   "evidence": "Rule of Law Report 2023 as above.",
+   "url": "https://commission.europa.eu/system/files/2023-07/31_1_52612_coun_chap_cyprus_en.pdf"
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "Fines typically modest; no appealed fine with court outcome confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Consistent with the three cases found; not independently checked.",
+   "url": ""
+  }
+ ],
+ "notes": "The Commissioner's own site and the English PDF of Law 125(I)/2018 returned 403; checks used the Greek text on CyLaw. No plausibility problems found. The EUR 46,500 State Health Services Organisation fine remains unverified and should stay flagged or be dropped."
+}

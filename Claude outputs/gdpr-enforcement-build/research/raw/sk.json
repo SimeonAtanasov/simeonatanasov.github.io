@@ -1,0 +1,84 @@
+{
+  "code": "sk",
+  "country": "Slovakia",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Office for Personal Data Protection of the Slovak Republic",
+    "name_native": "Úrad na ochranu osobných údajov Slovenskej republiky",
+    "abbr": "ÚOOÚ SR",
+    "url": "https://dataprotection.gov.sk",
+    "structure": "Single national office headed by a President (predseda) with a Vice-President; not a collegial body. The President decides on appeals (rozklad) against the Office's first-instance decisions.",
+    "regional": "None; one national authority."
+  },
+  "law": {
+    "name": "Act No. 18/2018 Coll. on the Protection of Personal Data (zákon č. 18/2018 Z. z. o ochrane osobných údajov)",
+    "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2018/18/"
+  },
+  "complaint": {
+    "how": "A data subject files a proposal to start proceedings (návrh na začatie konania, § 100) in writing on paper, electronically with an authorised signature (e.g. via slovensko.sk), or orally on record at the Office; an unsigned email must be confirmed in paper or authorised electronic form within three working days. It must give the proposer's name, address and signature, identify the controller, describe the alleged breach and attach evidence. No fee mentioned. Third parties can only send a tip (podnet).",
+    "contact_controller_first": "Effectively yes for rights complaints: the proposal must include documents showing the data subject tried to exercise their rights with the controller, where relevant.",
+    "deadlines": "The Office may set aside a proposal if, among other grounds, more than three years have passed since the event complained of. It must decide within 90 days of starting proceedings, extendable in justified cases up to a total of 180 days with written notice to the parties (per the Office's guidance; exact § not confirmed).",
+    "complainant_status": "The data subject who files the proposal (navrhovateľ) is a party to the proceedings alongside the controller or processor. A third party filing a podnet is not a party and is only told how it was handled within 30 days."
+  },
+  "procedure": {
+    "stages": [
+      "Proposal (návrh) filed under § 100, or proceedings opened ex officio",
+      "Preliminary review: proposal may be set aside if manifestly unfounded, already before a court or criminal authority, the proposer fails to cooperate, or more than three years have passed",
+      "Investigation, possibly including an inspection (kontrola) and evidence from the controller",
+      "First-instance decision: finding of breach, corrective measures and/or fine (§ 104), within 90 days (extendable to 180)",
+      "Appeal (rozklad) within 15 days, decided by the President of the Office"
+    ],
+    "decision_maker": "Office departments decide at first instance; the President of the Office decides on rozklad.",
+    "limitation": "A fine can be imposed within two years of the Office discovering the breach and at most five years from when it occurred (secondary source; § number not confirmed). Procedural fines (poriadková pokuta, § 105) have a shorter objective limit of six months (secondary)."
+  },
+  "fines": {
+    "imposed_by": "The Office itself by administrative decision (§ 104 Act 18/2018), at GDPR Art. 83 levels; procedural fines for non-cooperation under § 105 (up to EUR 2,000, or EUR 10,000 for obstructing an inspection, per secondary sources). No court confirmation step.",
+    "public_bodies": "Yes. No exemption for public bodies was found and the Office has fined municipalities, e.g. EUR 500 and EUR 700 for publishing identity card numbers in published contracts and EUR 4,700 for a parking system requiring national ID numbers (2021-2022).",
+    "quirks": "Fines are typically a few thousand euros. Unlawful handling of personal data is also a criminal offence (§ 374 Criminal Code, neoprávnené nakladanie s osobnými údajmi)."
+  },
+  "appeal": {
+    "court": "First an internal appeal (rozklad) to the President of the Office. Then an administrative action under the Administrative Judicial Procedure Code (zákon 162/2015, Správny súdny poriadok) before the administrative courts; since the 2023 court reform these are the separate administrative courts, in practice the Administrative Court in Bratislava (Správny súd v Bratislave) for the Office's decisions (venue not confirmed from a primary source).",
+    "deadline": "Rozklad: 15 days from notification. Administrative action: two months from notification of the President's decision.",
+    "suspensive": "Not confirmed, either for the rozklad or for the administrative action.",
+    "further": "Cassation complaint (kasačná sťažnosť) to the Supreme Administrative Court of the Slovak Republic (Najvyšší správny súd SR).",
+    "inaction": "Not confirmed specifically for data protection; the general route is an action against inactivity of a public authority (žaloba proti nečinnosti) under the Administrative Judicial Procedure Code."
+  },
+  "private": {
+    "courts": "Civil courts, using the GDPR (Art. 82) together with the personality-rights protection of the Civil Code; court not confirmed beyond 'civil courts'.",
+    "damages": "Non-pecuniary damages require serious harm according to Supreme Court case law (4 Cdo 232/2010); a secondary source reports an award of about EUR 46,471 in a case over unlawful listing in a debtor register (9C/25/2012). GDPR-specific awards not confirmed.",
+    "collective": "Not confirmed: how Slovakia transposed the Representative Actions Directive and whether Art. 80(2) is used were not verified."
+  },
+  "cases": [
+    {
+      "title": "Psychodiagnostic testing without valid consent",
+      "year": "2021",
+      "summary": "The Office fined a private company EUR 40,000 (decision 01339/2021-Os-10) for psychodiagnostic processing of employees relying on consent that was not freely given; one of the highest Slovak fines in the GDPR's first four years.",
+      "url": "https://www.havelpartners.sk/4-roky-s-gdpr-za-ake-porusenia-udeloval-uoou-najcastejsie-pokuty/"
+    },
+    {
+      "title": "Municipalities fined for national ID numbers",
+      "year": "2021-2022",
+      "summary": "The Office fined municipal authorities EUR 500 and EUR 700 for publishing identity card numbers in contracts published online, and EUR 4,700 for a parking registration system requiring national ID numbers, showing public bodies can be fined in Slovakia.",
+      "url": "https://www.havelpartners.sk/4-roky-s-gdpr-za-ake-porusenia-udeloval-uoou-najcastejsie-pokuty/"
+    }
+  ],
+  "quirks": [
+    "Two-tier administrative review: a 15-day rozklad to the President of the Office must come before any court action.",
+    "Public bodies including municipalities can be and are fined.",
+    "Proposals older than three years from the event can be set aside, an unusual time bar on complaints.",
+    "Fines are modest in practice, typically a few thousand euros.",
+    "Administrative justice was reorganised: a Supreme Administrative Court operates as the top court for administrative cases, and separate first-instance administrative courts replaced the regional courts' administrative chambers in 2023."
+  ],
+  "plain": "You send the Office a signed proposal (on paper, electronically or in person), showing you first tried to exercise your rights with the organisation and within three years of the problem. You become a party, and the Office normally has 90 days (up to 180) to decide and can fine companies and public bodies alike. Either side can appeal within 15 days to the Office's President and then take the case to the administrative courts, with a final cassation complaint to the Supreme Administrative Court.",
+  "confidence": "medium: complaint rules come from the Office's own procedure page, but I could not open the full text of Act 18/2018 to confirm § numbers for deadlines, limitation, suspensive effect or the post-2023 court venue, and no appealed case with a court outcome was found.",
+  "sources": [
+    {"title": "ÚOOÚ SR: data protection proceedings (konanie o ochrane osobných údajov)", "url": "https://dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/", "source_type": "primary"},
+    {"title": "Act 18/2018 Coll. on Slov-Lex", "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2018/18/", "source_type": "primary"},
+    {"title": "Act 18/2018 on zakony.judikaty.info (confirms § 104 fines and § 105 procedural fines)", "url": "https://zakony.judikaty.info/predpis/zakon-18/2018", "source_type": "secondary"},
+    {"title": "Liday Basaryova: data protection proceedings (rozklad 15 days, court action two months)", "url": "https://www.lidaybasaryova.sk/en/konanie-o-ochrane-osobnych-udajov/", "source_type": "secondary"},
+    {"title": "Podnikajte.sk: GDPR fines in Slovakia (limitation periods)", "url": "https://www.podnikajte.sk/zakonne-povinnosti-podnikatela/pokuty-podla-gdpr", "source_type": "secondary"},
+    {"title": "epravo.sk: consequences of data protection breaches (criminal offence, damages case law)", "url": "https://www.epravo.sk/top/clanky/dsledky-porusenia-ochrany-osobnych-udajov-z-praktickeho-pohladu-4324.html", "source_type": "secondary"},
+    {"title": "Havel and Partners: four years of GDPR fines by ÚOOÚ", "url": "https://www.havelpartners.sk/4-roky-s-gdpr-za-ake-porusenia-udeloval-uoou-najcastejsie-pokuty/", "source_type": "secondary"},
+    {"title": "AHK Slowakei: fines of the Office (typical amounts)", "url": "https://slowakei.ahk.de/sk/newsletter-recht-steuern/ausgabe-5-24/pokuty-Uradu-na-ochranu-osobnych-udajov", "source_type": "secondary"}
+  ]
+}

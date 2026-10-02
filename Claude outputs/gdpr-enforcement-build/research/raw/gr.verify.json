@@ -1,0 +1,114 @@
+{
+ "code": "gr",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "EUR 150,000 on the General Secretariat of Information Systems (decisions 98/2013, 117/2014); CoS 339/2019 dismissed the Minister's action",
+   "verdict": "confirmed",
+   "evidence": "HDPA press release 27 March 2019: CoS 339/2019 rejected the challenge to decisions 98/2013 and 117/2014 imposing EUR 150,000 (the maximum then available) on the GSIS for unauthorised access affecting substantially all taxpayers. Pre-GDPR fine.",
+   "url": "https://www.dpa.gr/el/enimerwtiko/deltia/symboylio-tis-epikrateias-aperripse-tin-apo-912014-aitisi-akyrosis-toy-ypoyrgoy"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2019",
+   "verdict": "confirmed",
+   "evidence": "CoS judgment 2019 (fine 2013/2014).",
+   "url": "https://www.dpa.gr/el/enimerwtiko/deltia/symboylio-tis-epikrateias-aperripse-tin-apo-912014-aitisi-akyrosis-toy-ypoyrgoy"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "EUR 9.25m total, Jan 2022, breach affecting over 10 million subscribers; annulment actions heard May 2023; outcome not confirmed",
+   "verdict": "corrected",
+   "evidence": "Solomon (26 April 2023): fines 'ύψους 9,25 εκατ. ευρώ', January 2022, call data of over 10 million subscribers; companies paid but sought annulment; hearing 'scheduled' for 16 May 2023, so it is not confirmed that it was heard then. One WebSearch found no report of a judgment.",
+   "url": "https://wearesolomon.com/el/mag/format-el/reportaz/cosmote-ote-exasan-dedomena-deka-ekat-atomon-zitoun-akirosi-prostimon/",
+   "replacement": "HDPA fines totalling EUR 9.25 million (January 2022) after a 2020 breach of call data affecting over 10 million subscribers. The companies paid and brought annulment actions at the Council of State, scheduled for hearing on 16 May 2023; outcome not confirmed."
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "President and six members with alternates, single non-renewable six-year term (Art. 11)",
+   "verdict": "confirmed",
+   "evidence": "Law 4624/2019 Art. 11 (HDPA translation): President and six members, alternates, non-renewable six-year terms.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Inform complainant within a reasonable period (Art. 13)",
+   "verdict": "confirmed",
+   "evidence": "Art. 13: 'inform the complainant of the progress and the outcome of the investigation or inspection within a reasonable period'.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF"
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "Must first address the controller; HDPA may decline otherwise",
+   "verdict": "confirmed",
+   "evidence": "'Before you submit a complaint, you must appeal to the controller'; otherwise 'the DPA might not examine your complaint'.",
+   "url": "https://www.dpa.gr/en/individuals/complaint-to-the-hellenic-dpa"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "HDPA itself, administrative decision",
+   "verdict": "confirmed",
+   "evidence": "Art. 20(1) refers to 'decisions imposing penalties' issued by the Authority.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies fined up to EUR 10 million (Art. 39)",
+   "verdict": "confirmed",
+   "evidence": "Art. 39: public sector bodies up to 'ten million euros (EUR 10,000,000)'.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Art. 38 prison terms up to 10 years for the most serious unauthorised access or disclosure cases",
+   "verdict": "corrected",
+   "evidence": "Art. 38: basic offence up to one year (para 1); special categories at least one year and fine up to EUR 100,000 (para 3); up to ten years where the offender seeks unlawful gain or causes damage over EUR 120,000 (para 4); fine up to EUR 300,000 where democratic functioning or national security is endangered (para 5). The ten-year tier turns on gain or damage, not on seriousness of access.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF",
+   "replacement": "Criminal offences in Art. 38 Law 4624/2019: up to one year's prison for the basic offence, rising to up to ten years where the offender seeks unlawful gain or causes damage over EUR 120,000, and fines up to EUR 300,000 where democratic functioning or national security is endangered."
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Annulment action before the Council of State (Art. 20)",
+   "verdict": "confirmed",
+   "evidence": "Art. 20(1): regulatory and individual acts, 'including decisions imposing penalties, shall be challenged by way of action for annulment before the Council of State'. Art. 20(3) also lets competent Ministers challenge decisions.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Not confirmed; believed 60 days",
+   "verdict": "unverifiable",
+   "evidence": "Art. 20 sets no time limit; the general 60-day Council of State rule was not checked against a source.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not suspensive; separate suspension request believed possible but not confirmed",
+   "verdict": "corrected",
+   "evidence": "Art. 20(2): neither the time limit nor the filing has suspensive effect, but the court may suspend execution on request.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF",
+   "replacement": "No: neither the time limit for, nor the filing of, an annulment action suspends the decision, but the Council of State may suspend its execution on request (Art. 20(2) Law 4624/2019)."
+  },
+  {
+   "field": "private.courts",
+   "claim": "Civil courts where controller established or data subject resides (Art. 40)",
+   "verdict": "confirmed",
+   "evidence": "Art. 40 as summarised from the HDPA translation.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Public bodies fined, capped at EUR 10 million",
+   "verdict": "confirmed",
+   "evidence": "Art. 39.",
+   "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Pre-GDPR fines on public bodies upheld by CoS 339/2019",
+   "verdict": "confirmed",
+   "evidence": "See cases[0].",
+   "url": "https://www.dpa.gr/el/enimerwtiko/deltia/symboylio-tis-epikrateias-aperripse-tin-apo-912014-aitisi-akyrosis-toy-ypoyrgoy"
+  }
+ ],
+ "notes": "Most serious: fines.quirks misstated the trigger for the ten-year prison tier. appeal.suspensive can now state the court's suspension power. Cosmote/OTE outcome remains open; recheck before publication if possible. Note the email route: the HDPA accepts English emails only where portal access is not possible and the infringement occurred in Greece, which the file already says."
+}

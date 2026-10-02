@@ -1,0 +1,126 @@
+{
+ "code": "lu",
+ "country": "Luxembourg",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "National Commission for Data Protection",
+  "name_native": "Commission nationale pour la protection des données",
+  "abbr": "CNPD",
+  "url": "https://cnpd.public.lu/en.html",
+  "structure": "Collegial body: a college of four members, one of whom is president, plus four deputy members, appointed for six-year terms renewable once (Arts 16-17 Law of 1 August 2018). The college decides by majority, the president having the casting vote (Art. 36).",
+  "regional": "None. One national authority, based in Belvaux."
+ },
+ "law": {
+  "name": "Law of 1 August 2018 on the organisation of the National Commission for Data Protection and the general data protection framework (Loi du 1er août 2018 portant organisation de la CNPD et du régime général sur la protection des données)",
+  "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+ },
+ "complaint": {
+  "how": "Online complaint form on the CNPD website (recommended), or a printed form posted to CNPD, Service des réclamations, 15 boulevard du Jazz, L-4370 Belvaux (Art. 9 requires CNPD to provide a form). Form available in French, English and German. No fee mentioned.",
+  "contact_controller_first": "Expected but not strictly required: CNPD asks people to exercise their rights with the controller first, but accepts complaints where the controller has not answered or where approaching it is difficult or impossible.",
+  "deadlines": "No statutory deadline for CNPD to decide and no time limit for complaining were found in the 2018 law.",
+  "complainant_status": "Not confirmed. CNPD must inform the complainant that checks have taken place; whether the complainant is a party to the sanction proceedings was not confirmed."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint handling, where CNPD first tries to resolve the matter without coercive measures",
+   "Investigation opened by college vote, with one member designated head of investigation (chef d'enquête) (Art. 38)",
+   "Statement of objections (communication des griefs) from the head of investigation to the controller, with a chance to respond",
+   "Hearing before the restricted formation (formation restreinte)",
+   "Decision on corrective measures and fines by the restricted formation"
+  ],
+  "decision_maker": "The college sitting as a 'formation restreinte' without the member who led the investigation (Art. 41 bars the head of investigation from deliberating). For example, Decision 5FR/2023 was taken by the president and two commissioners.",
+  "limitation": "CNPD's powers lapse five years after the infringement ceased (Art. 53); fines lapse five years after the decision becomes final (Art. 54)."
+ },
+ "fines": {
+  "imposed_by": "CNPD itself, by administrative decision of the restricted formation. No court confirmation step.",
+  "public_bodies": "The State and municipalities (communes) cannot be fined (Art. 48). Other public-law bodies are not excluded by that wording.",
+  "quirks": "CNPD can impose periodic penalty payments of up to 5% of average daily turnover (Art. 49). Wilfully obstructing CNPD is a criminal offence punishable by eight days to one year of imprisonment and/or a fine of EUR 251 to 125,000 (Art. 51)."
+ },
+ "appeal": {
+  "court": "Administrative Tribunal (Tribunal administratif), which can review the merits and replace the decision (recours en réformation, Art. 55).",
+  "deadline": "Three months from notification of the decision; the appeal must be filed through a lawyer (avocat à la Cour), as stated in CNPD decisions.",
+  "suspensive": "Not automatically, as far as could be confirmed. In the Amazon case, effects of the decision were reported as suspended pending the further appeal, but the legal basis was not verified.",
+  "further": "Appeal to the Administrative Court (Cour administrative), the highest administrative jurisdiction; no further appeal. The appeal deadline is not confirmed by a source in this research (40 days is the general rule under the Law of 21 June 1999).",
+  "inaction": "Not confirmed. Presumably an action before the Administrative Tribunal, but no source located."
+ },
+ "private": {
+  "courts": "Ordinary civil courts (justice de paix or district court, depending on the value of the claim; thresholds not confirmed).",
+  "damages": "No notable national case law on damages amounts located.",
+  "collective": "Since 25 November 2025 the Law of 20 November 2025 (amending the Consumer Code, transposing Directive (EU) 2020/1828) allows collective actions (recours collectif) for consumers, explicitly covering professionals' GDPR breaches, and CNPD itself is a qualified entity able to bring them."
+ },
+ "cases": [
+  {
+   "title": "Amazon Europe Core: EUR 746 million fine (CNPD 2021, upheld by the Administrative Tribunal 2025)",
+   "year": "2021-2025",
+   "summary": "On 15 July 2021 CNPD fined Amazon Europe Core EUR 746 million for behavioural advertising based on legitimate interest without a valid legal basis, plus transparency and data subject rights failures, and ordered compliance. On 18 March 2025 the Administrative Tribunal dismissed Amazon's appeal and confirmed the fine and corrective measures; Amazon appealed further.",
+   "url": "https://2b-advice.com/en/2025/03/26/record-fine-against-amazon-administrative-court-confirms-cnpd-decision-of-746-million-euros/"
+  },
+  {
+   "title": "Amazon v CNPD: Administrative Court annuls the fine (case 52757C)",
+   "year": "2026",
+   "summary": "On 12 March 2026 the Administrative Court largely confirmed CNPD's findings of breach but annulled the EUR 746 million fine, because CNPD had not assessed whether Amazon acted intentionally or negligently (as the CJEU required in C-807/21 and C-683/21) and had not weighed alternatives to a fine. The case was sent back to CNPD, which said it would continue the case; the compliance order was moot as Amazon had already brought its practices into compliance. No further appeal exists.",
+   "url": "https://cnpd.public.lu/fr/actualites/national/2026/03/arret-ca-amazon-cnpd.html"
+  },
+  {
+   "title": "Decision 5FR/2023: complaint-based fine",
+   "year": "2023",
+   "summary": "A typical complaint-driven case: complaint March 2021, investigation opened July 2022, statement of objections January 2023, hearing April 2023, decision of 5 July 2023 imposing EUR 1,500. Shows the full procedure and the three-month appeal clause.",
+   "url": "https://cnpd.public.lu/content/dam/cnpd/fr/decisions-fr/2023/dcision-5fr-2023-sous-forme-anonymise.pdf"
+  }
+ ],
+ "quirks": [
+  "Lead authority for several large online platforms established in Luxembourg, including Amazon, so its decisions can have EU-wide reach.",
+  "Investigation and decision are separated inside the college: the commissioner who led the investigation cannot sit on the restricted formation (Art. 41).",
+  "The State and municipalities are immune from fines (Art. 48).",
+  "CNPD can itself bring consumer collective actions for GDPR breaches since November 2025."
+ ],
+ "plain": "You complain to the CNPD, preferably with its online form, ideally after first asking the company to fix things. If the CNPD opens an investigation, one commissioner investigates and sends the company a list of objections, and the other commissioners hear both sides and decide on any fine. The company can challenge the decision within three months at the Administrative Tribunal and then at the Administrative Court, as Amazon did, winning the annulment of its EUR 746 million fine in 2026 on fault grounds.",
+ "confidence": "medium-high: the law, procedure and Amazon timeline come from primary sources, but the Cour administrative appeal deadline, suspensive effect, Art. 78(2) route, complainant party status and the 2025 Tribunal case number were not confirmed; the 2018 law may have been amended since the English translation used.",
+ "sources": [
+  {
+   "title": "Law of 1 August 2018 on the organisation of the CNPD (English translation, CNPD)",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "CNPD: lodging a complaint",
+   "url": "https://cnpd.public.lu/en/particuliers/faire-valoir.html",
+   "source_type": "primary"
+  },
+  {
+   "title": "CNPD Decision 5FR/2023 (anonymised)",
+   "url": "https://cnpd.public.lu/content/dam/cnpd/fr/decisions-fr/2023/dcision-5fr-2023-sous-forme-anonymise.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "CNPD news on the Administrative Court judgment in Amazon (March 2026)",
+   "url": "https://cnpd.public.lu/fr/actualites/national/2026/03/arret-ca-amazon-cnpd.html",
+   "source_type": "primary"
+  },
+  {
+   "title": "Cour administrative, judgment no. 52757C (12 March 2026)",
+   "url": "https://ja.public.lu/50001-55000/52757C.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "CNPD news: CNPD can bring collective actions (February 2026)",
+   "url": "https://cnpd.public.lu/fr/actualites/national/2026/02/cnpd-recours-collectif.html",
+   "source_type": "primary"
+  },
+  {
+   "title": "PPC Land: Luxembourg court annuls Amazon's EUR 746M GDPR fine",
+   "url": "https://ppc.land/luxembourg-court-annuls-amazons-eu746m-gdpr-fine-sends-case-back-to-regulator/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Paperjam: la décision de la CNPD contre Amazon annulée",
+   "url": "https://paperjam.lu/article/amende-de-746-millions-la-decision-de-la-cnpd-contre-amazon-annulee",
+   "source_type": "secondary"
+  },
+  {
+   "title": "2B Advice: Administrative court confirms CNPD decision (March 2025)",
+   "url": "https://2b-advice.com/en/2025/03/26/record-fine-against-amazon-administrative-court-confirms-cnpd-decision-of-746-million-euros/",
+   "source_type": "secondary"
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "code": "si",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "22 Aug 2023, IP as minor offence authority, Arts 76 and 78 ZVOP-2, warnings plus EUR 4,000 on company and EUR 1,000 on responsible person, 8 days for request for judicial protection",
+   "verdict": "confirmed",
+   "evidence": "Decision 0603-23/2023/5 dated 22 August 2023; breaches of Arts 76(3), 76(4), 78(2) ZVOP-2 (penalised under Arts 100 and 103); EUR 4,000 on the legal entity, EUR 1,000 on the responsible person, two warnings each; 'Zahtevo je treba pisno napovedati v roku osmih (8) dni od prejema te odlocbe'.",
+   "url": "https://www.gdpr-guru.eu/blog/blog-5/post/0603-23-2023-5-odlocba-po-zp-1-stek-globa-in-opomin-76-in-78-clen-zvop-2-8751"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2023",
+   "verdict": "confirmed",
+   "evidence": "Decision dated 22 August 2023.",
+   "url": "https://www.gdpr-guru.eu/blog/blog-5/post/0603-23-2023-5-odlocba-po-zp-1-stek-globa-in-opomin-76-in-78-clen-zvop-2-8751"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "IP imposes fines as minor offence authority via odlocba o prekrsku; also on responsible person",
+   "verdict": "confirmed",
+   "evidence": "The decision is issued under ZP-1 by the IP and fines both the company and its responsible person.",
+   "url": "https://www.gdpr-guru.eu/blog/blog-5/post/0603-23-2023-5-odlocba-po-zp-1-stek-globa-in-opomin-76-in-78-clen-zvop-2-8751"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Art 13.a ZP-1: State and local communities not liable; responsible persons may be",
+   "verdict": "confirmed",
+   "evidence": "Art 13.a ZP-1: 'Republika Slovenija in samoupravne lokalne skupnosti ne odgovarjajo za prekrsek', while the law may make responsible persons within them liable.",
+   "url": "https://www.racunovodstvo.net/zakonodaja/zakon-o-prekrskih-zp-1"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Eight days for request for judicial protection; ZUS-1 30 days unverified",
+   "verdict": "confirmed",
+   "evidence": "Eight days confirmed from the decision's remedy clause. The 30-day ZUS-1 period for an administrative dispute was not opened here; it matches the general rule as far as known, and the field already flags it as unverified.",
+   "url": "https://www.gdpr-guru.eu/blog/blog-5/post/0603-23-2023-5-odlocba-po-zp-1-stek-globa-in-opomin-76-in-78-clen-zvop-2-8751"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Fines: request for judicial protection decided by local court; other decisions: administrative dispute before Upravno sodisce",
+   "verdict": "unverifiable",
+   "evidence": "The decision confirms the request for judicial protection route but the excerpt did not name the court; ZP-1 Art 114 text could not be extracted from the source. Plausible and consistent with ZP-1.",
+   "url": "https://www.racunovodstvo.net/zakonodaja/zakon-o-prekrskih-zp-1"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "ZP-1 Art 42(1) two years from commission; Art 44(1) execution two years from finality",
+   "verdict": "confirmed",
+   "evidence": "Art 42: 'dve leti od dneva, ko je bil prekrsek storjen'; Art 44: two years from finality, absolute maximum four years.",
+   "url": "https://www.racunovodstvo.net/zakonodaja/zakon-o-prekrskih-zp-1"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "IP decides within three months, extendable once by up to one month (Art 31 ZVOP-2)",
+   "verdict": "confirmed",
+   "evidence": "Art 31: 'najpozneje v roku treh mesecev po prejemu prijave'; may be extended by at most one month. No consequence for missing the deadline is stated.",
+   "url": "https://www.gdpr-guru.eu/blog/blog-5/post/zakon-o-varstvu-osebnih-podatkov-zvop-2-8338"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Fines challenged at local court within eight days",
+   "verdict": "confirmed",
+   "evidence": "Eight-day request for judicial protection confirmed in decision 0603-23/2023/5.",
+   "url": "https://www.gdpr-guru.eu/blog/blog-5/post/0603-23-2023-5-odlocba-po-zp-1-stek-globa-in-opomin-76-in-78-clen-zvop-2-8751"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "State and municipalities cannot be fined (Art 13.a ZP-1)",
+   "verdict": "confirmed",
+   "evidence": "Art 13.a ZP-1 as above.",
+   "url": "https://www.racunovodstvo.net/zakonodaja/zakon-o-prekrskih-zp-1"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Art 11 ZVOP-2 claims before the Administrative Court",
+   "verdict": "confirmed",
+   "evidence": "Art 11(4) ZVOP-2 refers to 'postopek pred upravnim sodiscem'; no prior exhaustion of other remedies required.",
+   "url": "https://www.gdpr-guru.eu/blog/blog-5/post/zakon-o-varstvu-osebnih-podatkov-zvop-2-8338"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "ZVOP-2 took effect 26 January 2023, almost five years of GDPR under ZVOP-1",
+   "verdict": "unverifiable",
+   "evidence": "In-force date not opened from a primary source (PISRS requires JavaScript). Arithmetic is right: May 2018 to January 2023 is about four years and eight months.",
+   "url": "https://pisrs.si/pregledPredpisa?id=ZAKO7959"
+  }
+ ],
+ "notes": "No errors found. The case, the ZP-1 structure and the ZVOP-2 complaint deadline all check out. Remaining gaps are those the file already flags (suspensive effect, ZUS-1 deadline, inaction). The fine decision states payment is due 15 days after the decision becomes final, which supports (but does not prove) that a request for judicial protection defers payment; appeal.suspensive could say so if softened. No GDPR contradictions."
+}

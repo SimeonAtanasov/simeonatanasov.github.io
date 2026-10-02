@@ -1,0 +1,116 @@
+{
+ "code": "lt",
+ "country": "Lithuania",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "State Data Protection Inspectorate",
+  "name_native": "Valstybinė duomenų apsaugos inspekcija",
+  "abbr": "VDAI",
+  "url": "https://vdai.lrv.lt/en/",
+  "structure": "Single authority headed by a director appointed by the Government, not a collegial body (Arts 8-10 Law on Legal Protection of Personal Data). Per the 2021 English translation the director is accountable to the Government and the Minister of Justice (Art. 9(3)).",
+  "regional": "No regional authorities, but a second supervisory authority exists: the Inspector of Journalist Ethics (Žurnalistų etikos inspektorius) supervises processing for journalistic, academic, artistic and literary purposes (Art. 7(2))."
+ },
+ "law": {
+  "name": "Law on Legal Protection of Personal Data (Asmens duomenų teisinės apsaugos įstatymas, ADTAĮ), No I-1374, as recast with effect from 16 July 2018",
+  "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/Republic%20of%20Lithuania%20Law%20on%20legal%20protection%20of%20personal%20data%202018%20Non-Official%20Translation%2001_12_2021.pdf"
+ },
+ "complaint": {
+  "how": "In person, by post or electronically (Art. 24(3)), including via the VDAI website. Data subjects and Art. 80(1) organisations may complain (Art. 24). No fee identified. Language assumed Lithuanian, not confirmed.",
+  "contact_controller_first": "Not required: Art. 27 contains no refusal ground for failing to approach the controller first.",
+  "deadlines": "Complaints are refused if more than two years have passed since the infringement (Art. 27). VDAI confirms receipt within three working days (Art. 26) and must examine a complaint within four months, extendable once by up to two months, six months maximum (Art. 30).",
+  "complainant_status": "The complainant receives a decision on the complaint, which can be appealed to court under the Law on Administrative Proceedings (Art. 31(5)). Formal party status in the separate fine procedure not confirmed."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint admissibility check (Art. 27 refusal grounds)",
+   "Examination of the complaint or own-initiative investigation (four months, extendable to six: Arts 21, 30)",
+   "Proposal to impose a fine sent to the controller, with at least 10 working days for written explanations (Art. 34(1))",
+   "Written or oral hearing procedure",
+   "Fine decision within 20 working days of the explanations deadline or of the hearing (Art. 34(9))"
+  ],
+  "decision_maker": "The VDAI director or a person authorised by the director (Art. 32(2)).",
+  "limitation": "A fine may be imposed only if no more than two years have passed since the infringement (Art. 32(3))."
+ },
+ "fines": {
+  "imposed_by": "VDAI itself, by administrative decision. No court confirmation step.",
+  "public_bodies": "Yes, but capped (Art. 33): for Art. 83(4) breaches up to 0.5% of the body's current-year budget or annual income, max EUR 30,000; for Art. 83(5)-(6) breaches up to 1%, max EUR 60,000.",
+  "quirks": "Two-year limitation on fines and on complaints. Separate journalism supervisor (Inspector of Journalist Ethics). The CJEU's fault requirement for GDPR fines (C-683/21) originated in a Lithuanian case."
+ },
+ "appeal": {
+  "court": "Regional Administrative Court (Regionų administracinis teismas), which decided the Vinted appeal in May 2025. It was created on 1 January 2024 when the Vilnius Regional Administrative Court, which heard earlier VDAI cases, absorbed the former Regional Administrative Court and took its name.",
+  "deadline": "One month from delivery of the decision to the party (Law on Administrative Proceedings, as stated by the Supreme Administrative Court).",
+  "suspensive": "Not confirmed.",
+  "further": "Appeal to the Supreme Administrative Court of Lithuania (Lietuvos vyriausiasis administracinis teismas) within 30 days of the first-instance judgment.",
+  "inaction": "Not confirmed. VDAI decisions on complaints are appealable to the administrative court (Art. 31(5)); a specific route for Art. 78(2) inaction was not located."
+ },
+ "private": {
+  "courts": "Ordinary civil courts under the Code of Civil Procedure (court level by claim value), not confirmed in detail.",
+  "damages": "No notable national case law on damages amounts located.",
+  "collective": "Not confirmed. The national law refers to Art. 80(1) organisations lodging complaints (Art. 24(4)) but has no further provisions; transposition of the Representative Actions Directive for GDPR claims not verified."
+ },
+ "cases": [
+  {
+   "title": "Vinted, EUR 2.385 million (appealed)",
+   "year": "2024-2026",
+   "summary": "In July 2024 VDAI, as lead authority, fined the second-hand marketplace Vinted EUR 2,385,276 for mishandling erasure requests, unlawful 'shadow blocking' of users and accountability failures. Vinted's court challenge to the fine is suspended pending a parallel case on VDAI's February 2024 decisions finding the same breaches: the Regional Administrative Court dismissed that appeal on 23 May 2025, and in November 2025 the Supreme Administrative Court referred questions to the CJEU, still pending in 2026.",
+   "url": "https://vdai.lrv.lt/lt/naujienos/teismas-atmete-uab-vinted-skunda-del-vdai-sprendimu/"
+  },
+  {
+   "title": "National Public Health Centre (KARANTINAS app), C-683/21",
+   "year": "2021-2023",
+   "summary": "On 24 February 2021 VDAI fined the National Public Health Centre EUR 12,000 and the app developer EUR 3,000 over the COVID-19 KARANTINAS app. The Vilnius Regional Administrative Court referred questions to the CJEU, which held on 5 December 2023 (Grand Chamber) that a fine requires intentional or negligent infringement.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0683"
+  },
+  {
+   "title": "Payment initiation service (MisterTango), EUR 61,500",
+   "year": "2019",
+   "summary": "One of VDAI's early GDPR fines: EUR 61,500 for excessive data collection, a data leak and failure to notify the breach within 72 hours. Appeal outcome not confirmed.",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/2019%20Fine%20for%20Payment%20Initiation%20Services%20(private).pdf"
+  }
+ ],
+ "quirks": [
+  "Strict two-year time bars: on complaints (Art. 27) and on imposing fines (Art. 32(3)).",
+  "Public bodies can be fined but only up to EUR 30,000 or EUR 60,000 and a percentage of their budget (Art. 33).",
+  "A formal 'proposal to impose a fine' with a right to written or oral explanations precedes every fine (Art. 34).",
+  "Journalistic processing is supervised by the Inspector of Journalist Ethics, not VDAI."
+ ],
+ "plain": "You can complain to the State Data Protection Inspectorate online, by post or in person, within two years of the problem, without first having to contact the organisation. The Inspectorate has up to six months to examine it and, before fining, must tell the organisation what it plans and let it respond. Anyone unhappy with the outcome can go to the Regional Administrative Court and then to the Supreme Administrative Court.",
+ "confidence": "medium: core rules come from the official (non-official translation, 2021) text of the law, but later amendments and suspensive effect could not be confirmed, and the Vinted proceedings are still pending before the CJEU.",
+ "sources": [
+  {
+   "title": "Law on Legal Protection of Personal Data, non-official translation (VDAI, 2021)",
+   "url": "https://vdai.lrv.lt/uploads/vdai/documents/files/Republic%20of%20Lithuania%20Law%20on%20legal%20protection%20of%20personal%20data%202018%20Non-Official%20Translation%2001_12_2021.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "VDAI website",
+   "url": "https://vdai.lrv.lt/en/",
+   "source_type": "primary"
+  },
+  {
+   "title": "VDAI decisions (fines)",
+   "url": "https://vdai.lrv.lt/en/decisions/",
+   "source_type": "primary"
+  },
+  {
+   "title": "VDAI news: court rejected Vinted's complaint (May 2025)",
+   "url": "https://vdai.lrv.lt/lt/naujienos/teismas-atmete-uab-vinted-skunda-del-vdai-sprendimu/",
+   "source_type": "primary"
+  },
+  {
+   "title": "LRT: Vinted improperly handled personal data, court rules",
+   "url": "https://www.lrt.lt/en/news-in-english/19/2572196/vinted-improperly-handled-personal-data-lithuanian-court-rules",
+   "source_type": "secondary"
+  },
+  {
+   "title": "CJEU C-683/21 Nacionalinis visuomenės sveikatos centras, 5 December 2023",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0683",
+   "source_type": "primary"
+  },
+  {
+   "title": "Veriva: BDAR baudos Lietuvoje 2026",
+   "url": "https://veriva.lt/blog/bdar-baudos-lietuvoje",
+   "source_type": "secondary"
+  }
+ ]
+}

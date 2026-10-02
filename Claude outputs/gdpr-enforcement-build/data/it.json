@@ -1,0 +1,135 @@
+{
+ "code": "it",
+ "country": "Italy",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Italian Data Protection Authority",
+  "name_native": "Garante per la protezione dei dati personali",
+  "abbr": "Garante (GPDP)",
+  "url": "https://www.garanteprivacy.it",
+  "structure": "Collegial body: a Collegio of four members, two elected by the Chamber of Deputies and two by the Senate, for a single non-renewable seven-year term, who elect a President; supported by an Ufficio (staff) (Art. 153 Codice). Member Guido Scorza resigned in January 2026 amid a media and prosecutorial controversy; the other three (Stanzione, Cerrina Feroni, Ghiglia) stated they would continue. Whether a replacement has since been elected was not confirmed.",
+  "regional": "Single national authority, no regional DPAs."
+ },
+ "law": {
+  "name": "Codice in materia di protezione dei dati personali, d.lgs. 196/2003 as amended by d.lgs. 101/2018 (Codice privacy); court procedure in Art. 10 d.lgs. 150/2011",
+  "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9042678"
+ },
+ "complaint": {
+  "how": "A reclamo (Art. 77 GDPR, Arts. 141-143 Codice) setting out the facts, the provisions allegedly breached, the measures requested and the controller's identity, signed by the data subject or a mandated third-sector body (Art. 142). Filing channels and any fee not confirmed from the Garante site.",
+  "contact_controller_first": "Not a requirement in Art. 142 Codice. Garante practice not confirmed.",
+  "deadlines": "The Garante must decide within nine months of filing and inform the complainant of progress within three months; extendable to twelve months for investigative needs, and suspended while an Art. 60 GDPR cooperation procedure runs (Art. 143 Codice). No time limit for complaining identified.",
+  "complainant_status": "Complainant receives the decision and can challenge it before the ordinary courts under Art. 152 Codice. Formal party status in the sanction proceedings not confirmed."
+ },
+ "procedure": {
+  "stages": [
+   "Reclamo filed; preliminary assessment (manifestly unfounded complaints are dismissed)",
+   "Investigation by the Ufficio, including inspections",
+   "Formal notification of alleged violations to the controller or processor (Art. 166(5))",
+   "Written defence within 30 days and right to request a hearing before the Garante (Art. 166(6))",
+   "Decision by the Collegio with corrective measures and/or fine (Art. 58 GDPR, Art. 143 Codice)"
+  ],
+  "decision_maker": "The Collegio of the Garante. Art. 166(9) requires its internal procedural rules to separate investigative and decision-making functions.",
+  "limitation": "not confirmed (Art. 166 refers to Law 689/1981 on administrative sanctions, but the applicable limitation period was not verified)."
+ },
+ "fines": {
+  "imposed_by": "The Garante itself, by administrative decision (Art. 166 Codice).",
+  "public_bodies": "Public bodies can be fined; no separate national cap was identified (not confirmed).",
+  "quirks": "Settlement for half: within the appeal deadline (30 days, or 60 if resident abroad) the offender can close the matter by complying with any orders and paying half the fine (Art. 166(8) Codice). 50% of fine revenue is reinvested in Garante activities. Criminal offences exist, e.g. unlawful processing with intent to profit or cause harm, up to 1.5 years or, for special categories and unlawful transfers, 1 to 3 years (Art. 167, plus Arts. 167-bis to 171)."
+ },
+ "appeal": {
+  "court": "Ordinary civil courts, not administrative courts: the Tribunale, sitting as a single judge, where the controller is based or the data subject resides (Art. 152 Codice, Art. 10 d.lgs. 150/2011, labour-law procedure).",
+  "deadline": "30 days from communication of the decision, or 60 days if the appellant resides abroad (Art. 10 d.lgs. 150/2011).",
+  "suspensive": "No automatic suspension; the judge can suspend enforceability (Art. 5 d.lgs. 150/2011). The Rome Tribunal suspended the OpenAI fine in March 2025.",
+  "further": "The Tribunale's judgment cannot be appealed on the merits; only an appeal to the Corte di Cassazione (Art. 10 d.lgs. 150/2011).",
+  "inaction": "Art. 152 Codice gives the ordinary courts jurisdiction over Art. 78 GDPR disputes; the specific procedure for an inaction claim was not confirmed."
+ },
+ "private": {
+  "courts": "Tribunale under Art. 152 Codice and Art. 10 d.lgs. 150/2011 (same single-judge procedure), which can award damages and protective orders. The Garante may file written observations.",
+  "damages": "Not confirmed beyond the collective case below.",
+  "collective": "Representative actions under d.lgs. 28/2023 (Arts. 140-ter ff. Consumer Code) cover GDPR via the annex. Milan Tribunal, 11 December 2025, declared admissible a collective damages action by Verbraucherzentrale Suedtirol against Meta over the Facebook scraping of 533 million users. Third-sector bodies can also represent data subjects (Art. 142, Art. 10 d.lgs. 150/2011)."
+ },
+ "cases": [
+  {
+   "title": "OpenAI (ChatGPT), EUR 15 million annulled",
+   "year": "2024-2026",
+   "summary": "Garante fined OpenAI EUR 15 million in December 2024. The Rome Tribunal suspended the fine in March 2025 and annulled it on 20 March 2026. Whether the Garante appealed to the Cassazione was not confirmed.",
+   "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/03/20/tribunale-roma-annulla-multa-da-15-milioni-di-euro-del-garante-privacy-a-openai_6560fadd-4099-451e-99a0-7fcbc9a285c1.html"
+  },
+  {
+   "title": "VZS v Meta Platforms Ireland (collective action)",
+   "year": "2025",
+   "summary": "Milan Tribunal business section held admissible a representative action for non-material damages from the 2018-2019 Facebook data scraping, treating loss of control over data as potentially compensable if actually experienced.",
+   "url": "https://www.veltri.legal/2026/06/15/azioni-rappresentative-gdpr-e-tutela-dei-consumatori-il-tribunale-di-milano-apre-lastrada-al-risarcimento-collettivo-per-la-perdita-di-controllo-dei-dati-personali-nota-atribunale/"
+  }
+ ],
+ "quirks": [
+  "Appeals against the DPA go to the ordinary civil Tribunale, not the administrative courts, with no appeal on the merits: straight to the Cassazione.",
+  "Pay-half option: comply and pay 50% within the appeal window to close the case (Art. 166(8) Codice).",
+  "Statutory nine-month deadline (extendable to twelve) for deciding complaints (Art. 143 Codice).",
+  "National criminal offences for unlawful processing sit alongside GDPR fines, and fines already paid reduce the criminal penalty (Art. 167(6))."
+ ],
+ "plain": "You send a written complaint to the Garante, which must decide within nine months (twelve at most). If it finds a breach, the four-member board can order changes and impose a fine; the company can pay half within the appeal window to settle. Either side can challenge the decision before the local civil court within 30 days, and after that only the Court of Cassation can review it.",
+ "confidence": "Medium-high: Codice and d.lgs. 150/2011 articles are confirmed; I could not confirm complaint channels and fees, the limitation period, whether Scorza's seat has been filled, or whether the OpenAI annulment is under Cassazione appeal.",
+ "sources": [
+  {
+   "title": "Codice privacy coordinated text (Garante)",
+   "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9042678",
+   "source_type": "primary"
+  },
+  {
+   "title": "Art. 142 Codice (Brocardi)",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-i/capo-i/art142.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 143 Codice (Brocardi)",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-i/capo-i/art143.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 152 Codice (Brocardi)",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-i/capo-ii/art152.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 153 Codice (Brocardi)",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-ii/capo-i/art153.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 166 Codice (Brocardi)",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-iii/capo-i/art166.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 167 Codice (Brocardi)",
+   "url": "https://www.brocardi.it/codice-della-privacy/parte-iii/titolo-iii/capo-ii/art167.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 10 d.lgs. 150/2011 (Jurinote)",
+   "url": "https://www.jurinote.it/doc/italia/decreto-legislativo/2011/150/10",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 10 d.lgs. 150/2011 (Gazzetta Ufficiale)",
+   "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.versione=1&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=011G0192&art.idArticolo=10&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2011-09-21&art.progressivo=0",
+   "source_type": "primary"
+  },
+  {
+   "title": "ANSA: Rome Tribunal annuls EUR 15m OpenAI fine (20 Mar 2026)",
+   "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/03/20/tribunale-roma-annulla-multa-da-15-milioni-di-euro-del-garante-privacy-a-openai_6560fadd-4099-451e-99a0-7fcbc9a285c1.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Prima Online: Garante board continues after Scorza resignation (19 Jan 2026)",
+   "url": "https://www.primaonline.it/2026/01/19/462536/garante-privacy-il-collegio-va-avanti-dopo-le-dimissioni-di-scorza/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Studio Legale Veltri: Milan Tribunal on representative actions and GDPR",
+   "url": "https://www.veltri.legal/2026/06/15/azioni-rappresentative-gdpr-e-tutela-dei-consumatori-il-tribunale-di-milano-apre-lastrada-al-risarcimento-collettivo-per-la-perdita-di-controllo-dei-dati-personali-nota-atribunale/",
+   "source_type": "secondary"
+  }
+ ]
+}

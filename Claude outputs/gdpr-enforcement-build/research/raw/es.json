@@ -1,0 +1,88 @@
+{
+  "code": "es",
+  "country": "Spain",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Spanish Data Protection Agency",
+    "name_native": "Agencia Española de Protección de Datos",
+    "abbr": "AEPD",
+    "url": "https://www.aepd.es",
+    "structure": "Single-head authority: a President, supported by an Adjunct, directs the AEPD and issues its resolutions; both are selected by public call, proposed by the Government and ratified by the Congress Justice Committee for a five-year term, renewable once (Art. 48 LOPDGDD). The Adjunct cannot exercise the Title VIII procedural functions.",
+    "regional": "Yes. Under Art. 57 LOPDGDD regional authorities supervise the public sector of their autonomous community, local entities in their territory and private bodies exercising public functions there: the Catalan Data Protection Authority (APDCAT), the Basque Data Protection Authority (AVPD) and the Andalusian Transparency and Data Protection Council (CTPDA). The AEPD covers the private sector and the State public sector everywhere."
+  },
+  "law": {
+    "name": "Organic Law 3/2018 of 5 December on the Protection of Personal Data and Guarantee of Digital Rights (LOPDGDD), significantly amended by Ley 11/2023 of 8 May (in force 10 May 2023)",
+    "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673"
+  },
+  "complaint": {
+    "how": "Free of charge, preferably online through the AEPD electronic office (sedeaepd.gob.es) using a digital certificate, DNIe or Cl@ve, or on paper through any public registry under Ley 39/2015. Submissions are in Spanish (or a co-official language under general administrative law).",
+    "contact_controller_first": "Required for rights complaints (access, erasure, rectification, objection, restriction, portability): the data subject must first send a request to the controller and attach it and any reply. Not required for other infringements. Before admitting a complaint the AEPD may also forward it to the controller's DPO, a code-of-conduct monitoring body or, where there is no DPO or ADR scheme, to the controller, who must reply within one month (Art. 65.4 LOPDGDD).",
+    "deadlines": "No statutory time limit for complaining, other than the limitation periods for infringements. The AEPD must notify the admissibility decision within three months; if it does not, the complaint is deemed admitted (Art. 65.5). Rights-exercise procedures must be decided within six months (Art. 64.1); sanction procedures within twelve months from the opening agreement (Art. 64.2, raised from nine months by Ley 11/2023), failing which the procedure lapses (caducidad). Preliminary investigations may last up to eighteen months (Art. 67.2, raised from twelve in 2023).",
+    "complainant_status": "The complainant is notified of admission or rejection and of the outcome; the extent of party status inside a sanction procedure (as opposed to a rights-exercise procedure) was not confirmed from primary sources."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint lodged; optional forwarding to DPO, code-of-conduct body or controller (one month to answer) before admissibility (Art. 65.4)",
+      "Admissibility decision within three months; rejection if outside data protection, manifestly unfounded or abusive; may be closed if the controller shows corrective measures and no investigation has started (Art. 65.2, 65.5, 65.6)",
+      "Optional preliminary investigation (actuaciones previas), up to eighteen months (Art. 67)",
+      "Opening agreement (acuerdo de inicio) of a sanction or warning procedure (Art. 68), which states the proposed fine and the available reductions",
+      "Instruction, proposed resolution and hearing; resolution signed by the President within twelve months (Art. 64.2) or six months for warning procedures (Art. 64.3)"
+    ],
+    "decision_maker": "The President of the AEPD issues the resolutions (Art. 48 LOPDGDD); the inspection and instruction work is done by the AEPD's investigative staff.",
+    "limitation": "Infringements: very serious (Art. 72) three years, serious (Art. 73) two years, minor (Art. 74) one year. Sanctions (Art. 78): fines up to EUR 40,000 prescribe in one year, EUR 40,001 to 300,000 in two years, over EUR 300,000 in three years."
+  },
+  "fines": {
+    "imposed_by": "The AEPD itself by administrative resolution of its President; no court confirmation step.",
+    "public_bodies": "No fines. For bodies listed in Art. 77 LOPDGDD (constitutional bodies, courts, State, regional and local administrations, public bodies, universities, public foundations, Bank of Spain, political groups in parliaments, etc.) the authority declares the infringement, orders corrective measures, may propose disciplinary action, and where officials ignored technical reports it issues a reprimand naming the post, published in the official gazette; the resolution is published on the AEPD website.",
+    "quirks": "Under Art. 85 Ley 39/2015, once a sanction procedure opens, acknowledging responsibility and paying voluntarily before the resolution each earn a reduction of at least 20 percent of the proposed fine, cumulative (so 40 percent in practice), conditional on waiving any administrative appeal against the sanction. Criminal liability for unlawful access or disclosure of personal data sits separately in the Criminal Code (Art. 197 Código Penal)."
+  },
+  "appeal": {
+    "court": "AEPD resolutions end the administrative route; an optional recurso de reposición can be filed with the AEPD itself, or the decision can be challenged directly before the Contentious-Administrative Chamber of the Audiencia Nacional (Art. 48 LOPDGDD).",
+    "deadline": "One month for the optional recurso de reposición (Art. 124 Ley 39/2015); two months for a contentious-administrative appeal (Art. 46 Ley 29/1998, LJCA).",
+    "suspensive": "Under Art. 90.3 Ley 39/2015 a sanction is enforceable only once no ordinary administrative appeal remains, and enforcement can be suspended if the party states it will bring a contentious-administrative appeal; detailed AEPD practice not confirmed.",
+    "further": "Cassation appeal to the Third Chamber of the Tribunal Supremo, subject to showing objective interest for case law (casación). In the CaixaBank case the Supreme Court admitted the AEPD's cassation appeal on 29 December 2025.",
+    "inaction": "A complaint not ruled on within three months is deemed admitted (Art. 65.5); rejection or archiving decisions of the AEPD can be challenged before the Audiencia Nacional. A specific Art. 78(2) mechanism beyond general administrative law was not confirmed."
+  },
+  "private": {
+    "courts": "Claims against a controller (Art. 79) and for compensation (Art. 82) go to the ordinary civil courts (Juzgados de Primera Instancia); claims against public administrations go to the contentious-administrative courts. Not confirmed from a primary source.",
+    "damages": "Not confirmed. Spanish damages case law in this field largely concerns inclusion in debtor files under the right to honour (LO 1/1982) before the Tribunal Supremo, with awards typically in the low thousands of euros; specific Art. 82 figures were not verified.",
+    "collective": "Spain has not transposed the Representative Actions Directive (EU) 2020/1828: the bill on collective actions was still pending in Parliament in May 2026 and the European Commission pressed Spain again in April 2026 (secondary). The GDPR is listed in Annex I of that Directive. Art. 80(1) mandated representation is available; national use of Art. 80(2) was not confirmed."
+  },
+  "cases": [
+    {
+      "title": "CaixaBank: EUR 6 million reduced to EUR 2 million by the Audiencia Nacional",
+      "year": "2021 (AEPD), 2025 (Audiencia Nacional), pending (Tribunal Supremo)",
+      "summary": "In January 2021 the AEPD fined CaixaBank EUR 4 million under Art. 6 GDPR (invalid consent for sharing data within the group for commercial purposes) and EUR 2 million under Arts. 13-14 (information). On 19 May 2025 the Audiencia Nacional treated the information failure as instrumental to the consent breach (concurso medial) and imposed a single EUR 2 million fine. On 29 December 2025 the Tribunal Supremo admitted the AEPD's cassation appeal on how Art. 83(3) GDPR applies to concurrent infringements.",
+      "url": "https://baylos.com/blog/sancion-a-caixabank-la-historia-interminable"
+    }
+  ],
+  "quirks": [
+    "The sanction procedure time limit is twelve months since 10 May 2023 (Ley 11/2023); older guides citing nine months are out of date. On expiry the procedure lapses (caducidad) and the file is archived (Art. 64.2).",
+    "Prompt-payment and acknowledgment discounts of at least 20 percent each (40 percent combined) are offered in the opening agreement, which is why many AEPD fines are paid at 60 percent and never reach court.",
+    "Public bodies cannot be fined (Art. 77 LOPDGDD); they receive a declaration of infringement, corrective orders and possible reprimands of named posts.",
+    "Four authorities: the AEPD plus regional authorities in Catalonia, the Basque Country and Andalusia for their regional public sectors (Art. 57 LOPDGDD).",
+    "Since 2023 the AEPD can close an admitted complaint if the controller shows it has taken corrective measures before any investigation starts (Art. 65.6), and can route complaints to ADR schemes, so many complaints end without a sanction procedure."
+  ],
+  "plain": "You complain to the AEPD online or on paper, for free; if it is about your rights (for example access), you must first have asked the company. The AEPD has three months to decide whether to take the case, may first pass it to the company to fix, and if it opens a sanction procedure it has twelve months to decide, with the company able to cut the fine by 40 percent by admitting fault and paying early. Companies can challenge a fine at the Audiencia Nacional in Madrid and then the Supreme Court, while public bodies are reprimanded rather than fined.",
+  "confidence": "high for LOPDGDD procedure, deadlines, limitation and Art. 77; medium for appeal suspensive effect, complainant party status and civil damages, which I could not confirm from primary text.",
+  "sources": [
+    {"title": "LOPDGDD consolidated text (BOE)", "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673", "source_type": "primary"},
+    {"title": "Art. 64 LOPDGDD (12-month limit, as amended by Ley 11/2023)", "url": "https://www.iberley.es/legislacion/articulo-64-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd", "source_type": "secondary"},
+    {"title": "Art. 65 LOPDGDD (admissibility, three months, forwarding to controller)", "url": "https://www.iberley.es/legislacion/articulo-65-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd", "source_type": "secondary"},
+    {"title": "Art. 72 LOPDGDD", "url": "https://www.iberley.es/legislacion/articulo-72-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd", "source_type": "secondary"},
+    {"title": "Art. 73 LOPDGDD", "url": "https://www.iberley.es/legislacion/articulo-73-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd", "source_type": "secondary"},
+    {"title": "Art. 74 LOPDGDD", "url": "https://www.iberley.es/legislacion/articulo-74-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd", "source_type": "secondary"},
+    {"title": "Art. 77 LOPDGDD (public bodies)", "url": "https://www.iberley.es/legislacion/articulo-77-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd", "source_type": "secondary"},
+    {"title": "Art. 78 LOPDGDD (prescription of sanctions)", "url": "https://www.iberley.es/legislacion/articulo-78-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd", "source_type": "secondary"},
+    {"title": "Art. 48 LOPDGDD (President, appeal to Audiencia Nacional)", "url": "https://www.iberley.es/legislacion/articulo-48-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd", "source_type": "secondary"},
+    {"title": "Art. 57 LOPDGDD (regional authorities)", "url": "https://www.iberley.es/legislacion/articulo-57-ley-organica-proteccion-datos-personales-garantia-derechos-digitales-lopdgdd", "source_type": "secondary"},
+    {"title": "Ley 39/2015 consolidated text (Arts. 85, 90, 124)", "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565", "source_type": "primary"},
+    {"title": "Art. 85 Ley 39/2015 reproduced (reductions of at least 20 percent)", "url": "https://nosoloaytos.wordpress.com/2017/03/27/las-bonificaciones-por-pronto-pago-en-la-ley-392015/", "source_type": "secondary"},
+    {"title": "Modification of the LOPDGDD by Ley 11/2023", "url": "https://vazquezlegal.eu/entra-en-vigor-la-modificacion-de-la-lopdgdd/", "source_type": "secondary"},
+    {"title": "AEPD electronic office", "url": "https://sedeaepd.gob.es/sede-electronica-web/", "source_type": "primary"},
+    {"title": "Guide to complaining to the AEPD (prior request, fees, channels)", "url": "https://managora.net/guias/proteccion-de-datos-rgpd-y-reclamar-ante-la-aepd", "source_type": "secondary"},
+    {"title": "Audiencia Nacional reduces CaixaBank fine to EUR 2 million", "url": "https://baylos.com/en/blog/2025/la-audiencia-nacional-reduce-a-2-millones-de-euros-la-multa-a-caixabank-por-infraccion-del-rgpd", "source_type": "secondary"},
+    {"title": "CaixaBank sanction: Supreme Court admits cassation", "url": "https://baylos.com/blog/sancion-a-caixabank-la-historia-interminable", "source_type": "secondary"},
+    {"title": "Status of Spain's transposition of Directive 2020/1828", "url": "https://crowd.legal/guias/accion-representativa-directiva-1828", "source_type": "secondary"}
+  ]
+}

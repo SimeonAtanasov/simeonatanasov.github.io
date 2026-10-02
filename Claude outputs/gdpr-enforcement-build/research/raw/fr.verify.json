@@ -1,0 +1,114 @@
+{
+ "code": "fr",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "EUR 50m in Jan 2019; CE rejected appeal 19 June 2020 (430810); CNIL competent as Google had no EU main establishment",
+   "verdict": "confirmed",
+   "evidence": "CE 430810, 19 June 2020: appeal rejected; fine imposed by deliberation SAN-2019-001 of 21 January 2019; Google Ireland had 'no decision-making power' over the processing, so Google LLC had no main establishment in the EU.",
+   "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2020-06-19/430810"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2019 / 2020",
+   "verdict": "confirmed",
+   "evidence": "CNIL decision 21 Jan 2019, CE decision 19 June 2020.",
+   "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2020-06-19/430810"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "3 Sept 2025, Google EUR 325m and Shein EUR 150m for trackers without consent, cookie walls and Gmail ads, under Art. 82 LIL",
+   "verdict": "corrected",
+   "evidence": "CNIL 3 Sept 2025: Google EUR 325m, Shein EUR 150m. Shein: Art. 82 only (trackers without consent). Google: Art. 82 for cookies at account creation (consent not freely given) and Art. L. 34-5 CPCE for ads in Gmail's Promotions and Social tabs without prior consent. The summary wrongly put the Gmail ads under Art. 82 and attributed all breaches to both companies.",
+   "url": "https://www.cnil.fr/fr/regulation-des-cookies-la-cnil-poursuit-le-plan-daction-initie-en-2019-et-prononce-deux-amendes",
+   "replacement": "On 3 September 2025 the CNIL fined Google EUR 325 million and Shein EUR 150 million. Both were sanctioned under Art. 82 Loi Informatique et Libertés for cookie consent failures; Google was also sanctioned under Art. L. 34-5 of the Postal and Electronic Communications Code for showing ads in Gmail without prior consent. Appeal status not confirmed."
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Restricted committee of a president and five members elected by the college; bureau members ineligible",
+   "verdict": "confirmed",
+   "evidence": "CNIL procedure page: the restricted committee comprises five college members plus a president, elected by their peers; rapporteur chosen from college members not on it. Bureau ineligibility not shown on the page.",
+   "url": "https://www.cnil.fr/fr/les-etapes-de-la-procedure-de-sanction-ordinaire"
+  },
+  {
+   "field": "procedure.stages[4]",
+   "claim": "One month to reply, one month for rapporteur, further reply possible",
+   "verdict": "confirmed",
+   "evidence": "'one month from the report notification'; rapporteur 'one month to respond', extensions on request.",
+   "url": "https://www.cnil.fr/fr/les-etapes-de-la-procedure-de-sanction-ordinaire"
+  },
+  {
+   "field": "procedure.stages[5]",
+   "claim": "Public hearing, closed on request",
+   "verdict": "confirmed",
+   "evidence": "Sessions public by default; closed hearing may be requested for public order or protected secrets.",
+   "url": "https://www.cnil.fr/fr/les-etapes-de-la-procedure-de-sanction-ordinaire"
+  },
+  {
+   "field": "procedure.stages[6]",
+   "claim": "Simplified procedure, Art. 22-1, decided by restricted committee president or designated member alone",
+   "verdict": "confirmed",
+   "evidence": "'Le président de la formation restreinte (ou le membre ... désigné par ce dernier) rend sa décision seul.' The organisation may ask to be heard, so 'normally without a hearing' is accurate.",
+   "url": "https://www.cnil.fr/fr/la-procedure-de-sanction-simplifiee"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "CNIL restricted committee, no court confirmation",
+   "verdict": "confirmed",
+   "evidence": "CNIL procedure pages and CE 430810 (direct challenge of the CNIL deliberation).",
+   "url": "https://www.cnil.fr/fr/les-etapes-de-la-procedure-de-sanction-ordinaire"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "No fines where processing is by the State (Art. 20 LIL)",
+   "verdict": "unverifiable",
+   "evidence": "Not shown on the CNIL pages fetched; Legifrance not fetched. Matches my understanding of Art. 20 III LIL.",
+   "url": "https://www.cnil.fr/fr/la-loi-informatique-et-libertes"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Simplified procedure caps EUR 20,000 and EUR 100/day, higher tier EUR 100,000 and EUR 500/day above EUR 50m turnover; decisions not published; Art. 226-16 ff up to five years and EUR 300,000",
+   "verdict": "confirmed",
+   "evidence": "CNIL simplified procedure page: EUR 20,000 / EUR 100 per day, and EUR 100,000 / EUR 500 per day for turnover above EUR 50 million; confirmed by a September 2026 law firm note. The enacting date of the higher tier and the non-publication rule were not shown on the pages fetched; criminal penalties not checked.",
+   "url": "https://www.cnil.fr/fr/la-procedure-de-sanction-simplifiee"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Conseil d'État, first and last instance, full jurisdiction",
+   "verdict": "confirmed",
+   "evidence": "CE decided Google LLC directly; law firm note: the judge 'may annul or reform the decision', reducing fines.",
+   "url": "https://kohenavocats.fr/2026/09/21/sanction-cnil-amende-injonction-publicite-recours-conseil-etat-2026/"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Two months from notification",
+   "verdict": "corrected",
+   "evidence": "CNIL: two months from notification of the deliberation. Law firm note: extended to four months for entities abroad (the two-month extension under Art. R. 421-7 Code de justice administrative). Readers outside France would act on the wrong deadline.",
+   "url": "https://www.cnil.fr/fr/les-etapes-de-la-procedure-de-sanction-ordinaire",
+   "replacement": "Two months from notification of the decision, extended by two months for organisations established outside France (Art. R. 421-7 Code de justice administrative)."
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not suspensive; référé-suspension possible; provision not confirmed",
+   "verdict": "corrected",
+   "evidence": "Law firm note: the appeal does not suspend the decision and the periodic penalty runs from the date fixed; suspension under Art. L. 521-1 CJA requires urgency and serious doubt as to legality. Secondary source only.",
+   "url": "https://kohenavocats.fr/2026/09/21/sanction-cnil-amende-injonction-publicite-recours-conseil-etat-2026/",
+   "replacement": "Not suspensive: the decision and any periodic penalty apply despite the appeal. The organisation can ask the Conseil d'État's interim relief judge for suspension (référé-suspension, Art. L. 521-1 Code de justice administrative), which requires urgency and serious doubt as to legality."
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Around 52 simplified-procedure decisions in 2025 per DLA Piper",
+   "verdict": "unverifiable",
+   "evidence": "DLA Piper page not fetched (script-rendered); no CNIL figure found.",
+   "url": "https://www.dlapiperdataprotection.com/index.html?t=enforcement&c=FR"
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "Cookie enforcement under Art. 82 lets the CNIL fine non-French companies without the one-stop-shop",
+   "verdict": "confirmed",
+   "evidence": "Google and Shein fined under Art. 82 LIL (and L. 34-5 CPCE for Google) by the CNIL.",
+   "url": "https://www.cnil.fr/fr/regulation-des-cookies-la-cnil-poursuit-le-plan-daction-initie-en-2019-et-prononce-deux-amendes"
+  }
+ ],
+ "notes": "cases[1] is the main error: the Gmail ads were sanctioned under the CPCE, not Art. 82 LIL, and the breaches were mixed between the two companies. The Assemblée nationale amendment CS1456 to the 'simplification de la vie économique' bill may be the source of the EUR 100,000 tier but its page did not render; the date stays unconfirmed. Complaint and private-enforcement fields were not checked (lower priority)."
+}

@@ -1,0 +1,128 @@
+{
+ "code": "pt",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "EUR 1.25m; TCAS 1 Aug 2025 dismissed appeal, EUR 738,000 after time-barred offences; Sept 2026 ruling cut it to EUR 463,700 after 42 more offences dismissed (party newspaper, not confirmed)",
+   "verdict": "corrected",
+   "evidence": "The cited 'Avante' page is not the PCP newspaper: it is a WordPress.com blog ('Avante Mundo'), and it is internally inconsistent (says the fine became final in January 2026, yet reports a September 2026 ruling). The reduction itself is confirmed by mainstream outlets: CNN Portugal (10 Sept 2026) reports the Central Administrative Court South set the fine at EUR 463,700 after partly upholding the council's appeals, with offences time-barred; the council's lawyer said appeal periods were still running but the council would not appeal. Same story in Renascença, Euronews, JN, Jornal Económico, Correio da Manhã. The '42 offences' figure appears only in the blog and is dropped. DN (5 Aug 2025) confirms the 1 August 2025 ruling: 46 offences time-barred, 65 remained, EUR 738,000. CNPD fine was January 2022.",
+   "url": "https://cnnportugal.iol.pt/russiagate/lisboa/multa-a-pagar-pela-camara-de-lisboa-no-processo-russiagate-desce-para-463-mil-euros/20260910/6aa2ce9cd34e53c759c719f8",
+   "replacement": "The CNPD fined Lisbon City Council EUR 1.25 million in January 2022 for sending personal data of anti-Putin protest organisers to the Russian embassy and other entities. On 1 August 2025 the Central Administrative Court South dismissed the council's appeal but, with 46 offences time-barred, the fine stood at EUR 738,000. In September 2026 the same court partly upheld the council's further appeals and set the fine at EUR 463,700 as more offences had lapsed; the council said it would not appeal further."
+  },
+  {
+   "field": "sources[8]",
+   "claim": "Avante: Lisbon council ordered to pay EUR 463,700 (September 2026), avanteonline.wordpress.com",
+   "verdict": "wrong",
+   "evidence": "Blog, not a newspaper; replace with a mainstream report.",
+   "url": "https://cnnportugal.iol.pt/russiagate/lisboa/multa-a-pagar-pela-camara-de-lisboa-no-processo-russiagate-desce-para-463-mil-euros/20260910/6aa2ce9cd34e53c759c719f8",
+   "replacement": {
+    "title": "CNN Portugal: Lisbon council fine in Russiagate case cut to EUR 463,700 (September 2026)",
+    "url": "https://cnnportugal.iol.pt/russiagate/lisboa/multa-a-pagar-pela-camara-de-lisboa-no-processo-russiagate-desce-para-463-mil-euros/20260910/6aa2ce9cd34e53c759c719f8",
+    "source_type": "secondary"
+   }
+  },
+  {
+   "field": "confidence",
+   "claim": "...the September 2026 Lisbon ruling were not confirmed from primary sources",
+   "verdict": "corrected",
+   "evidence": "The September 2026 ruling is now confirmed by several national outlets (still secondary).",
+   "url": "https://cnnportugal.iol.pt/russiagate/lisboa/multa-a-pagar-pela-camara-de-lisboa-no-processo-russiagate-desce-para-463-mil-euros/20260910/6aa2ce9cd34e53c759c719f8",
+   "replacement": "medium: Law 58/2019 articles were confirmed from PGD Lisboa, but appeal deadlines, suspensive effect, CNPD inaction remedies, complainant status and collective-action rules were not confirmed from primary sources; the Lisbon municipality rulings rest on press reports."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "INE EUR 4.3m, Deliberation 1072/2022 announced 12 Dec 2022, health/religion data, Cloudflare, US transfers, no DPIA, information failures; INE to challenge",
+   "verdict": "confirmed",
+   "evidence": "ECO: EUR 4.3m announced 12 December 2022 (deliberation of 2 November 2022), five infringements as listed; INE president said INE was preparing a judicial challenge.",
+   "url": "https://eco.sapo.pt/2022/12/12/ine-multado-em-43-milhoes-de-euros-por-causa-do-censos-2021/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "CNPD by deliberation; 60% State, 40% CNPD (Art. 42)",
+   "verdict": "confirmed",
+   "evidence": "Art. 42: 'reverte em 60 % para o Estado e em 40 % para a CNPD.'",
+   "url": "https://pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3118&tabela=leis"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies may ask for a three-year waiver (Art. 44(2)), decided case by case after a charge",
+   "verdict": "corrected",
+   "evidence": "Art. 44(2): public entities could ask for the waiver 'durante o prazo de três anos a contar da entrada em vigor da presente lei'. The law entered into force in August 2019, so the window closed in August 2022. The file presents it as a current option. Deliberation 2019/495 (3 Sept 2019) confirmed: request only after a charge, case by case.",
+   "url": "https://pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3118&tabela=leis",
+   "replacement": "Yes: fines apply equally to public and private entities (Art. 44(1)), with no special cap. Art. 44(2) let public entities ask for a waiver of fines only during the first three years after the law entered into force (until August 2022), and the CNPD considered requests only after a charge, case by case (Deliberation 2019/495). Courts have confirmed fines on public bodies (Lisbon municipality)."
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Public bodies can be fined with no cap, but may ask for a three-year waiver (Art. 44(2))",
+   "verdict": "wrong",
+   "evidence": "Same as fines.public_bodies: the waiver window expired in August 2022.",
+   "url": "https://pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3118&tabela=leis",
+   "replacement": "Public bodies can be fined with no cap; the three-year window in which they could ask for a fine waiver (Art. 44(2)) closed in August 2022."
+  },
+  {
+   "field": "procedure.stages[2]",
+   "claim": "A public body may only ask for the Art. 44(2) waiver after being charged",
+   "verdict": "corrected",
+   "evidence": "Accurate for 2019 to 2022 but the window has closed.",
+   "url": "https://www.garrigues.com/pt/pt-PT/news/cnpd-aprova-deliberacao-interpretativa-sobre-dispensa-de-aplicacao-de-coimas-entidades-publicas",
+   "replacement": "Charge (acusação) with the right to be heard before a decision; until August 2022 a public body could ask for the Art. 44(2) fine waiver only after being charged (CNPD Deliberation 2019/495)"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Arts. 40-41: proceedings lapse 3 years (very serious) / 2 years (serious); fines lapse 3 years if over EUR 100,000, else 2",
+   "verdict": "confirmed",
+   "evidence": "Arts. 40 and 41 quoted match. Reductions in the Lisbon case are confirmed as due to prescrição.",
+   "url": "https://pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3118&tabela=leis"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Deliberation 2019/494 (3 Sept 2019) disapplies parts of Arts. 37, 38, 39(1) and (3); criminal offences Arts. 46, 47",
+   "verdict": "confirmed",
+   "evidence": "CNPD deliberation of 3 Sept 2019 lists Art. 37(1)(a),(h),(k) and (2), Art. 38(1)(b) and (2), Art. 39(1) and (3), among others. Art. 46 and 47 headings match.",
+   "url": "https://www.cnpd.pt/umbraco/surface/cnpdDecision/download/121704"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Administrative courts under Art. 34; Tribunal dos Conflitos 2 July 2024, proc. 015/23, Lisbon Administrative Court",
+   "verdict": "confirmed",
+   "evidence": "DGSI: proc. 015/23, 02/07/2024, Tribunal Administrativo de Círculo de Lisboa competent under Art. 34(1)-(2) Law 58/2019, not the criminal courts.",
+   "url": "https://www.dgsi.pt/jcon.nsf/35fbbbf22e1bb1e680256f8e003ea931/7338b4f0aecc6f8180258ac10042039a?OpenDocument="
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Appeal to the Central Administrative Court South",
+   "verdict": "confirmed",
+   "evidence": "DN and CNN Portugal: Lisbon case decided by the Tribunal Central Administrativo Sul.",
+   "url": "https://cnnportugal.iol.pt/russiagate/lisboa/multa-a-pagar-pela-camara-de-lisboa-no-processo-russiagate-desce-para-463-mil-euros/20260910/6aa2ce9cd34e53c759c719f8"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Very short limitation periods (two or three years from the offence, Art. 40) have reduced fines on appeal",
+   "verdict": "confirmed",
+   "evidence": "Arts. 40-41; Lisbon case reductions due to prescription.",
+   "url": "https://pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3118&tabela=leis"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Since 2 July 2024 challenges go to administrative courts",
+   "verdict": "confirmed",
+   "evidence": "DGSI proc. 015/23.",
+   "url": "https://www.dgsi.pt/jcon.nsf/35fbbbf22e1bb1e680256f8e003ea931/7338b4f0aecc6f8180258ac10042039a?OpenDocument="
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not checked; no source in the file.",
+   "url": "https://pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3118&tabela=leis"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not checked; no source in the file.",
+   "url": "https://pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3118&tabela=leis"
+  }
+ ],
+ "notes": "The September 2026 Lisbon reduction is real (mainstream press, 10 Sept 2026) but the cited 'party newspaper' is a WordPress blog, not Avante!; replace the source. Separately, the file twice presents the Art. 44(2) public-sector fine waiver as currently available; it expired in August 2022. That is the more consequential error for readers. INE court outcome remains unconfirmed."
+}

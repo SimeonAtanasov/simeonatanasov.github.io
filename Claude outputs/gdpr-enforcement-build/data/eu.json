@@ -1,0 +1,533 @@
+{
+ "articles": [
+  {
+   "ref": "Art. 51",
+   "text": "Each Member State must provide for one or more independent public authorities responsible for monitoring the application of the GDPR, contributing to its consistent application and cooperating with each other and the Commission.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 52",
+   "text": "Each supervisory authority must act with complete independence, free from external influence, with its members neither seeking nor taking instructions, and with its own human, technical and financial resources.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 53-54",
+   "text": "Member States set the appointment procedure, qualifications, term and dismissal rules for authority members (Art. 53) and lay down by law the establishment and rules of each authority, including a duty of professional secrecy (Art. 54).",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 55",
+   "text": "Each supervisory authority is competent on the territory of its own Member State, with public-authority processing under Art. 6(1)(c) or (e) reserved to the authority of that Member State and courts acting in their judicial capacity excluded.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 56",
+   "text": "For cross-border processing, the authority of the main or single establishment of the controller or processor is the lead supervisory authority, while Art. 56(2) lets another authority handle a complaint or infringement that substantially affects only its own Member State unless the lead authority decides to take the case.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 57",
+   "text": "Lists each authority's tasks, including monitoring and enforcing the GDPR, handling complaints and informing the complainant of progress and outcome within a reasonable period, and conducting investigations; Art. 57(3)-(4) make this free for data subjects, with a fee or refusal possible only for manifestly unfounded or excessive requests.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 58(1)",
+   "text": "Investigative powers include ordering information, carrying out data protection audits, notifying alleged infringements, and obtaining access to all personal data, information and premises.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 58(2)",
+   "text": "Corrective powers comprise warnings, reprimands, orders to comply with data subject requests or bring processing into compliance, orders to communicate a breach, temporary or definitive limitations including a ban on processing, orders to rectify or erase, withdrawal of certification, administrative fines under Art. 83 (in addition to or instead of the other measures) and suspension of data flows to a third country.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 58(3)-(6)",
+   "text": "Authorisation and advisory powers, subject to appropriate safeguards including effective judicial remedy and due process (Art. 58(4)), plus the power to bring infringements to the attention of judicial authorities and engage in legal proceedings (Art. 58(5)); Member States may add further powers (Art. 58(6)).",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 59",
+   "text": "Each authority must draw up an annual activity report, which may include a list of types of infringement notified and measures taken, and make it available to the public, the Commission and the Board.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 60",
+   "text": "The lead authority must cooperate with the other concerned authorities to reach consensus, submit a draft decision without delay, and treat relevant and reasoned objections; if it does not follow them, it must refer the matter to the Art. 63 consistency mechanism, otherwise the draft becomes binding on all concerned authorities.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 61",
+   "text": "Authorities must provide each other mutual assistance, replying to a request without undue delay and no later than one month, failing which the requesting authority may adopt a provisional measure and the matter is treated as urgent under Art. 66.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 62",
+   "text": "Authorities may conduct joint operations, including joint investigations and enforcement measures; where the controller or processor has establishments in several Member States, or a significant number of data subjects in more than one Member State are likely to be substantially affected, an authority of each of those Member States is entitled to participate.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 63",
+   "text": "Establishes the consistency mechanism through which authorities cooperate with each other and, where relevant, the Commission, to contribute to consistent application of the GDPR.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 64",
+   "text": "The Board issues opinions where an authority intends to adopt certain measures (Art. 64(1)) and any authority, the Chair or the Commission may request an opinion on a matter of general application or with effects in more than one Member State (Art. 64(2)).",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 65",
+   "text": "The Board adopts a binding decision where a relevant and reasoned objection is not followed or rejected (65(1)(a)), where there are conflicting views on lead competence (65(1)(b)), or where an Art. 64 opinion is not requested or followed (65(1)(c)), by two-thirds majority within one month (extendable by one month, then simple majority within two further weeks), after which the lead or complaint-receiving authority adopts its final decision on that basis within one month.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 66",
+   "text": "In exceptional urgency a concerned authority may adopt provisional measures with legal effect on its territory for no more than three months, and may request an urgent opinion or urgent binding decision from the Board, which is adopted within two weeks by simple majority.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 68-70",
+   "text": "The European Data Protection Board is an EU body with legal personality (Art. 68), acts independently (Art. 69) and has the tasks listed in Art. 70, including monitoring correct application, issuing guidelines, recommendations and best practices, and adopting consistency opinions and binding decisions.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 77",
+   "text": "Every data subject has the right to lodge a complaint with a supervisory authority, in particular in the Member State of habitual residence, place of work or place of the alleged infringement, and that authority must inform the complainant of progress and outcome, including the possibility of a judicial remedy under Art. 78.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 78",
+   "text": "Every person has an effective judicial remedy against a legally binding decision of a supervisory authority concerning them (78(1)), and a data subject has one where the competent authority does not handle a complaint or does not inform them within three months on its progress or outcome (78(2)); proceedings are brought before the courts of the authority's Member State (78(3)).",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 79",
+   "text": "Each data subject has an effective judicial remedy against a controller or processor, without prejudice to administrative remedies, brought before the courts of the Member State of the controller's or processor's establishment or of the data subject's habitual residence (unless the controller is a public authority acting in the exercise of its public powers).",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 80",
+   "text": "A data subject may mandate a properly constituted not-for-profit body active in data protection to exercise Arts. 77, 78 and 79 (and Art. 82 where national law provides) on their behalf (80(1)), and Member States may allow such a body to lodge complaints and bring actions independently of any mandate (80(2)).",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 81",
+   "text": "A court aware of proceedings on the same subject matter concerning the same controller or processor pending in another Member State must contact that court; any court other than the court first seised may suspend its proceedings or, at first instance and on a party's application, decline jurisdiction if the court first seised has jurisdiction and its law permits consolidation.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 82",
+   "text": "Any person who has suffered material or non-material damage as a result of an infringement has the right to compensation from the controller or processor; a processor is liable only for breaching processor obligations or the controller's lawful instructions, liability is joint and several where several are involved, and exemption requires proof of not being in any way responsible for the event giving rise to the damage.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 83(1)-(3)",
+   "text": "Each authority must ensure fines are effective, proportionate and dissuasive in each individual case, deciding whether to fine and the amount by reference to the factors in Art. 83(2), with the total for linked infringements in the same processing not exceeding the cap for the gravest infringement (83(3)).",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 83(4)",
+   "text": "Infringements of, among others, Arts. 8, 11, 25-39, 42 and 43 are subject to fines of up to EUR 10 million or, for an undertaking, up to 2% of total worldwide annual turnover of the preceding financial year, whichever is higher.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 83(5)",
+   "text": "Infringements of the basic principles and lawful bases (Arts. 5, 6, 7, 9), data subject rights (Arts. 12-22), third-country transfers (Arts. 44-49), Member State obligations under Chapter IX, and non-compliance with an Art. 58(2) order or Art. 58(1) access obligation are subject to fines of up to EUR 20 million or 4% of total worldwide annual turnover, whichever is higher.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 83(6)",
+   "text": "Non-compliance with an order of the supervisory authority under Art. 58(2) is subject to the higher tier of up to EUR 20 million or 4% of worldwide annual turnover, whichever is higher.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 83(7)",
+   "text": "Each Member State may lay down rules on whether and to what extent administrative fines may be imposed on public authorities and bodies established in that Member State.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 83(8)",
+   "text": "The exercise of the power to fine must be subject to appropriate procedural safeguards under Union and Member State law, including effective judicial remedy and due process.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 83(9)",
+   "text": "Where a Member State's legal system does not provide for administrative fines (Denmark and Estonia, per Recital 151), the fine is initiated by the authority and imposed by competent national courts, with an effect equivalent to administrative fines.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Art. 84",
+   "text": "Member States must lay down rules on other penalties, in particular for infringements not subject to administrative fines, which must be effective, proportionate and dissuasive, and notify them to the Commission by 25 May 2018.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 129",
+   "text": "Authorities' powers must be exercised impartially, fairly and within a reasonable time, and each measure must be appropriate, necessary and proportionate, respecting the right of every person to be heard before an individual measure adversely affecting them is taken.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 141",
+   "text": "Every data subject should have the right to lodge a complaint with a single authority and to an effective judicial remedy where the authority does not act on a complaint, rejects or dismisses it, or fails to act where necessary; the authority should report progress and outcome within a reasonable period, and the investigation is subject to judicial review to the extent appropriate in the specific case.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 142",
+   "text": "Data subjects may mandate not-for-profit bodies to lodge complaints and seek compensation on their behalf, and Member States may allow such bodies to act independently of a mandate.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 143",
+   "text": "Natural or legal persons may bring an action for annulment of Board decisions before the Court of Justice under Art. 263 TFEU where directly and individually concerned, while decisions of national authorities are challenged before national courts, which may refer questions to the CJEU.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 144",
+   "text": "A court seised of proceedings against an authority's decision that has reason to believe related proceedings are pending in another Member State should contact that court and may suspend its proceedings.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 145",
+   "text": "For proceedings against a controller or processor, the plaintiff should be able to choose between the courts of the Member State of establishment and those of the data subject's residence, unless the controller is a public authority exercising public powers.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 146",
+   "text": "The controller or processor should compensate any damage suffered as a result of infringing processing, with the concept of damage interpreted broadly in the light of CJEU case law and data subjects receiving full and effective compensation.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 147",
+   "text": "Where the GDPR contains specific jurisdiction rules for proceedings against controllers or processors, general jurisdiction rules such as Regulation (EU) No 1215/2012 should not prejudice their application.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 148",
+   "text": "Penalties including fines should be imposed in addition to or instead of other measures, a reprimand may be issued instead of a fine for minor infringements or where a fine would be a disproportionate burden on a natural person, and due regard should be given to the factors such as nature, gravity, duration and intention.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 149",
+   "text": "Member States may lay down criminal penalties for GDPR infringements, but these should not breach the principle of ne bis in idem.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 150",
+   "text": "Where fines are imposed on an undertaking, an undertaking should be understood as an undertaking in accordance with Arts. 101 and 102 TFEU, and the consistency mechanism may be used to promote consistent application of fines.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+   "ref": "Recital 151",
+   "text": "The legal systems of Denmark and Estonia do not allow administrative fines, so the fining rules may be applied in Denmark as a fine imposed by courts as a criminal penalty and in Estonia through a misdemeanour procedure, with equivalent effect.",
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  }
+ ],
+ "procedural_regulation": {
+  "citation": "Regulation (EU) 2025/2518 of the European Parliament and of the Council of 26 November 2025 laying down additional procedural rules on the enforcement of Regulation (EU) 2016/679",
+  "published": "OJ L, 12 December 2025",
+  "in_force": "1 January 2026 (twentieth day following publication)",
+  "applies_from": "Under the transitional provisions (Art. 28), Chapters III and IV apply to ex officio investigations opened, and to complaints lodged, more than 15 months after entry into force, so in practice from 2 April 2027.",
+  "changes": [
+   "Scope: applies only to cross-border cases handled under the Art. 60 cooperation mechanism; purely domestic cases stay under national procedure.",
+   "Harmonised admissibility (Art. 4): a complaint is admissible if it contains a closed list of information (identity and contact details of the complainant, identification of the controller or processor, description of the alleged infringement); no additional information may be required; a common template is provided.",
+   "Early resolution / amicable settlement (Art. 5): complaints about Chapter III data subject rights may be closed where the infringement has been brought to an end, unless the complainant objects within four weeks.",
+   "Summary of key issues (Art. 10): in complex cases the lead authority drafts a summary of the main facts, scope, legal and factual issues and preliminary view on corrective measures within three months, and concerned authorities have four weeks to comment, so that disagreements surface early.",
+   "Investigation deadlines (Art. 12): the lead authority must submit a draft decision within 15 months of confirming its competence, extendable once by up to 12 months for complex cases, with 12 months under the simple cooperation procedure; the time limit is suspended where the lead authority refers a matter to the Board under Art. 11(6), until the Board adopts its binding decision.",
+   "Simple cooperation procedure for straightforward cases, avoiding the full summary of key issues step.",
+   "Rejection of complaints (Arts. 16-18): before a complaint is rejected in whole or in part the complainant must be informed of the reasons and given a time limit (three to six weeks) to make views known.",
+   "Preliminary findings and right to be heard (Art. 19): the parties under investigation receive preliminary findings setting out all facts, the evidence relied on and the full legal assessment, and have a time limit of no less than three and no more than six weeks to reply in writing or at a hearing.",
+   "Complainant participation (Art. 20): complainants receive the preliminary findings, subject to the rules on the file and confidential information (Arts. 24-25), and may submit written views within three to six weeks.",
+   "Access to the administrative file (Arts. 19(6), 24 and 25): parties under investigation get access to the file when preliminary findings are notified, subject to the protection of confidential information.",
+   "Art. 65 dispute resolution: the Regulation also sets rules on the content and handling of relevant and reasoned objections and on hearing parties before the Board adopts a binding decision."
+  ],
+  "url": "https://eur-lex.europa.eu/eli/reg/2025/2518/oj/eng"
+ },
+ "edpb_binding": [
+  {
+   "title": "Binding Decision 1/2020 (Twitter International, Irish SA)",
+   "year": 2020,
+   "effect": "First Art. 65 decision (9 November 2020); the EDPB required the DPC to reassess the fine, and the DPC imposed EUR 450,000 in December 2020.",
+   "url": "https://www.edpb.europa.eu/news/national-news/2020/irish-data-protection-commission-announces-decision-twitter-inquiry_en"
+  },
+  {
+   "title": "Binding Decision 1/2021 (WhatsApp Ireland, Irish SA)",
+   "year": 2021,
+   "effect": "Adopted 28 July 2021 after objections from eight concerned authorities; the DPC was required to reassess and increase its proposed fine and imposed EUR 225 million on 2 September 2021.",
+   "url": "https://www.dataprotection.ie/en/news-media/press-releases/data-protection-commission-announces-decision-whatsapp-inquiry"
+  },
+  {
+   "title": "Binding Decision 1/2022 (Accor SA, French SA)",
+   "year": 2022,
+   "effect": "Adopted 15 June 2022 under Art. 65(1)(a); the CNIL was required to reassess the fine (final fine EUR 600,000).",
+   "url": "https://www.edpb.europa.eu/documents/edpb-binding-decisions/decision-012022-on-the-dispute-arisen-on-the-draft-decision-of-the_en"
+  },
+  {
+   "title": "Binding Decision 2/2022 (Meta, Instagram child users, Irish SA)",
+   "year": 2022,
+   "effect": "Adopted 28 July 2022; required an additional Art. 6(1) infringement finding and reassessment of the fine; the DPC imposed EUR 405 million on 2 September 2022, including EUR 20 million for Art. 6(1).",
+   "url": "https://dataprotection.ie/en/news-media/press-releases/data-protection-commission-announces-decision-instagram-inquiry"
+  },
+  {
+   "title": "Binding Decisions 3/2022 and 4/2022 (Meta, Facebook and Instagram, Irish SA)",
+   "year": 2022,
+   "effect": "Adopted 5 December 2022; held that Meta could not rely on contract (Art. 6(1)(b)) for behavioural advertising, added fairness findings and directed higher fines; the DPC imposed EUR 210 million (Facebook) and EUR 180 million (Instagram), announced 4 January 2023.",
+   "url": "https://www.dataprotection.ie/en/news-media/data-protection-commission-announces-conclusion-two-inquiries-meta-ireland"
+  },
+  {
+   "title": "Binding Decision 5/2022 (WhatsApp Ireland, Irish SA)",
+   "year": 2022,
+   "effect": "Adopted 5 December 2022 on the WhatsApp service terms; led to a further DPC fine of EUR 5.5 million in January 2023.",
+   "url": "https://www.edpb.europa.eu/documents/edpb-binding-decisions/binding-decision-52022-on-the-dispute-submitted-by-the-irish-sa_en"
+  },
+  {
+   "title": "Binding Decision 1/2023 (Meta, Facebook EU-US transfers, Irish SA)",
+   "year": 2023,
+   "effect": "Adopted 13 April 2023; the EDPB determined that a fine must be imposed for the Art. 46(1) infringement, where the DPC had proposed none; the DPC imposed EUR 1.2 billion on 12 May 2023, the largest GDPR fine to date.",
+   "url": "https://www.dataprotection.ie/en/dpc-guidance/decisions/inquiry-concerning-data-transfers-eueea-us-meta-platforms-ireland-limited-its-facebook-service"
+  },
+  {
+   "title": "Binding Decision 2/2023 (TikTok Technology, Irish SA)",
+   "year": 2023,
+   "effect": "Adopted 2 August 2023; directed a new Art. 5(1)(a) fairness infringement (dark patterns, raised by the Berlin SA); the DPC imposed EUR 345 million on 1 September 2023.",
+   "url": "https://www.dataprotection.ie/en/news-media/press-releases/DPC-announces-345-million-euro-fine-of-TikTok"
+  },
+  {
+   "title": "Urgent Binding Decision 01/2023 under Art. 66(2) (Meta, behavioural advertising, requested by the Norwegian SA)",
+   "year": 2023,
+   "effect": "Adopted 27 October 2023; ordered final measures (an EEA-wide ban) on Meta's processing for behavioural advertising on the bases of contract and legitimate interest; not a fine decision.",
+   "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/urgent-binding-decision-board-art-66/urgent-binding-decision-012023_en"
+  },
+  {
+   "title": "Binding Decision 1/2026 (VRT, Belgian SA)",
+   "year": 2026,
+   "effect": "Adopted 28 May 2026; concerns whether a complaint should be dismissed as an abuse of the right to complain and of the Art. 80 mandate; no fine effect identified. No binding decisions were adopted in 2025.",
+   "url": "https://www.edpb.europa.eu/documents/edpb-binding-decisions/binding-decision-12026-on-the-dispute-submitted-by-the-belgian-sa_en"
+  },
+  {
+   "title": "Judicial review of binding decisions: C-97/23 P WhatsApp Ireland v EDPB",
+   "year": 2026,
+   "effect": "Grand Chamber, 10 February 2026: an Art. 65 binding decision is an act open to challenge before the EU courts and the addressee undertaking is directly concerned; the Court set aside the General Court's inadmissibility order (T-709/21) and referred the case back for a ruling on the merits.",
+   "url": "https://curia.europa.eu/site/upload/docs/application/pdf/2026-02/cp260011en.pdf"
+  }
+ ],
+ "cjeu": [
+  {
+   "case": "C-645/19",
+   "name": "Facebook Ireland and Others v Gegevensbeschermingsautoriteit",
+   "date": "15 June 2021 (Grand Chamber)",
+   "holding": "A non-lead authority may, in the situations where the GDPR gives it competence to adopt a decision (such as Art. 56(2) or Art. 66 urgency), bring an alleged infringement in cross-border processing before national courts, provided it respects the cooperation and consistency procedures; Art. 58(5) is directly effective.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0645"
+  },
+  {
+   "case": "C-132/21",
+   "name": "BE v Nemzeti Adatvédelmi és Információszabadság Hatóság",
+   "date": "12 January 2023",
+   "holding": "The remedies in Arts. 77 and 78(1) and in Art. 79(1) may be exercised concurrently and independently of each other, and Member States must organise them so as to avoid inconsistent decisions without undermining either remedy.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0132"
+  },
+  {
+   "case": "C-414/24",
+   "name": "Datenschutzbehörde and G S v Bundesministerin für Justiz and D GmbH",
+   "date": "18 June 2026",
+   "holding": "An authority may not reject a complaint under Art. 77(1) on the sole ground that court proceedings under Art. 79(1) on the same subject matter have already been brought, even where the court's decision is not yet final.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62024CJ0414"
+  },
+  {
+   "case": "C-807/21",
+   "name": "Deutsche Wohnen",
+   "date": "5 December 2023 (Grand Chamber)",
+   "holding": "A fine under Art. 83 may be imposed on a legal person only for an infringement committed intentionally or negligently (no strict liability), but national law may not require the infringement to be first attributed to an identified natural person; where the addressee is part of a group, the fine maximum is calculated on the undertaking's turnover in the competition-law sense.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0807"
+  },
+  {
+   "case": "C-683/21",
+   "name": "Nacionalinis visuomenės sveikatos centras",
+   "date": "5 December 2023 (Grand Chamber)",
+   "holding": "Fines require an intentional or negligent infringement, which covers a controller that could not have been unaware of the infringing nature of its conduct; a controller may be fined for processing carried out by a processor on its behalf, unless the processor processed the data for its own purposes or in a way incompatible with the framework or arrangements set by the controller.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0683"
+  },
+  {
+   "case": "C-383/23",
+   "name": "ILVA",
+   "date": "13 February 2025",
+   "holding": "The 'undertaking' in Art. 83(4)-(6) has its competition-law meaning, so the fine cap is calculated on the total worldwide turnover of the economic unit (including the parent group) and that turnover may also be taken into account when setting the amount of the fine.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0383"
+  },
+  {
+   "case": "C-768/21",
+   "name": "TR v Land Hessen",
+   "date": "26 September 2024",
+   "holding": "Where an authority finds an infringement it must act to remedy it, but it is not obliged to exercise a corrective power, in particular to impose a fine, if that is not appropriate, necessary or proportionate, for example where the controller has already taken remedial measures.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0768"
+  },
+  {
+   "case": "C-26/22 and C-64/22",
+   "name": "SCHUFA Holding (discharge from remaining debts)",
+   "date": "7 December 2023",
+   "holding": "A supervisory authority's decision on a complaint is a legally binding decision under Art. 78(1) and is subject to full judicial review on the merits, not limited to whether the authority dealt with the complaint at all.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0026"
+  },
+  {
+   "case": "C-416/23",
+   "name": "Österreichische Datenschutzbehörde v F R",
+   "date": "9 January 2025",
+   "holding": "Complaints are 'requests' under Art. 57(4); a high number of complaints alone does not make them excessive, the authority must show an abusive intention, and it may choose between charging a reasonable fee and refusing to act.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0416"
+  },
+  {
+   "case": "C-300/21",
+   "name": "Österreichische Post",
+   "date": "4 May 2023",
+   "holding": "A mere infringement does not by itself give a right to compensation; damage and a causal link must be shown, but there is no de minimis seriousness threshold, and the quantum is set by national law subject to equivalence and effectiveness.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0300"
+  },
+  {
+   "case": "C-340/21",
+   "name": "Natsionalna agentsia za prihodite",
+   "date": "14 December 2023",
+   "holding": "Unauthorised access by third parties does not by itself prove the controller's measures were inadequate; the controller bears the burden of proving their appropriateness; and fear of possible misuse of data after a breach can constitute non-material damage.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0340"
+  },
+  {
+   "case": "C-456/22",
+   "name": "Gemeinde Ummendorf",
+   "date": "14 December 2023",
+   "holding": "Art. 82 precludes national rules requiring non-material damage to reach a threshold of seriousness, though the claimant must still prove damage.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0456"
+  },
+  {
+   "case": "C-687/21",
+   "name": "MediaMarktSaturn Hagen-Iserlohn",
+   "date": "25 January 2024",
+   "holding": "Compensation is purely compensatory, not punitive; a purely hypothetical risk of misuse, where no third party actually accessed the data, does not give rise to compensation.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0687"
+  },
+  {
+   "case": "C-741/21",
+   "name": "juris",
+   "date": "11 April 2024",
+   "holding": "A controller cannot escape liability merely by blaming a person acting under its authority; the Art. 83 fining criteria need not be applied when setting Art. 82 compensation, nor must account be taken of several infringements affecting the claimant in the same processing operation.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0741"
+  },
+  {
+   "case": "C-590/22",
+   "name": "PS GbR",
+   "date": "20 June 2024",
+   "holding": "Fear that data have been disclosed to third parties can be non-material damage if proven; compensation must fully compensate the actual damage and has no deterrent or punitive function.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0590"
+  },
+  {
+   "case": "C-655/23",
+   "name": "Quirin Privatbank",
+   "date": "4 September 2025",
+   "holding": "Negative feelings such as fear or annoyance can be compensable non-material damage if proven; the GDPR itself does not provide a preventive injunction (national law may); an injunction does not reduce compensation; and the degree of the controller's fault may not be used to set the amount.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0655"
+  },
+  {
+   "case": "C-526/24",
+   "name": "Brillen Rottler",
+   "date": "19 March 2026",
+   "holding": "Even a first access request can be refused as excessive under Art. 12(5) where made with abusive intent; Art. 82 covers damage from an infringement of the access right, but damage must be proven and causation may be broken where the data subject's own conduct is the decisive cause.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62024CJ0526"
+  },
+  {
+   "case": "C-319/20",
+   "name": "Meta Platforms Ireland v Bundesverband der Verbraucherzentralen",
+   "date": "28 April 2022",
+   "holding": "Art. 80(2) allows Member States to let consumer associations bring representative actions against infringements without a mandate and independently of the infringement of specific data subjects' rights, including via consumer protection and unfair competition law.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0319"
+  },
+  {
+   "case": "C-757/22",
+   "name": "Meta Platforms Ireland v Bundesverband der Verbraucherzentralen (II)",
+   "date": "11 July 2024",
+   "holding": "An Art. 80(2) action may be based on a breach of the duty to inform data subjects of the purposes of processing and the recipients of their data at the latest at collection (Arts. 12(1) and 13(1)(c) and (e)), since such a breach is an infringement 'as a result of the processing'.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0757"
+  },
+  {
+   "case": "C-252/21",
+   "name": "Meta Platforms v Bundeskartellamt",
+   "date": "4 July 2023 (Grand Chamber)",
+   "holding": "A competition authority may find, incidentally to an abuse of dominance assessment, that processing breaches the GDPR, but must cooperate sincerely with and follow the decisions or case law of the competent data protection authorities.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0252"
+  }
+ ],
+ "rad": {
+  "citation": "Directive (EU) 2020/1828 of the European Parliament and of the Council of 25 November 2020 on representative actions for the protection of the collective interests of consumers and repealing Directive 2009/22/EC (OJ L 409, 4.12.2020, p. 1)",
+  "transposition": "Member States had to adopt and publish transposing measures by 25 December 2022 and apply them from 25 June 2023 (Art. 24(1)); they apply to representative actions brought on or after 25 June 2023.",
+  "gdpr_link": "Annex I lists Regulation (EU) 2016/679, so qualified entities can bring injunctive and redress representative actions for GDPR infringements that harm consumers' collective interests; Recital 15 states the directive is without prejudice to GDPR mechanisms such as Art. 80, which may still be used.",
+  "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020L1828"
+ },
+ "stats": [
+  {
+   "figure": "Data protection authorities collectively receive over 100,000 complaints per year (2022 highest: Germany 32,300, Italy 30,880, Spain 15,128).",
+   "source": "European Commission, Second report on the application of the GDPR, COM(2024) 357 final, 25 July 2024",
+   "url": "https://commission.europa.eu/publications/reports-application-gdpr_en"
+  },
+  {
+   "figure": "Almost 2,400 cross-border case entries registered in the Board's information system; lead authorities issued around 1,500 draft decisions, 990 of which resulted in final decisions finding an infringement (May 2018 to 3 November 2023).",
+   "source": "COM(2024) 357 final",
+   "url": "https://data.consilium.europa.eu/doc/document/ST-12583-2024-INIT/en/pdf"
+  },
+  {
+   "figure": "Authorities imposed over 6,680 fines totalling around EUR 4.2 billion (Ireland EUR 2.8 billion, Luxembourg EUR 746 million); nine Art. 65 dispute resolution binding decisions adopted.",
+   "source": "COM(2024) 357 final",
+   "url": "https://data.consilium.europa.eu/doc/document/ST-12583-2024-INIT/en/pdf"
+  },
+  {
+   "figure": "In 2025: 414 cross-border cases created in the EDPB case register; 1,299 Art. 60 one-stop-shop procedures triggered, 572 resulting in final decisions; national authorities issued about EUR 1.15 billion in fines; 29 Art. 64(1) opinions; no Art. 65 binding decisions.",
+   "source": "EDPB Annual Report 2025, published 9 April 2026",
+   "url": "https://www.edpb.europa.eu/news/edpb-annual-report-2025-supporting-stakeholders-through-guidance-and-dialogue_en"
+  },
+  {
+   "figure": "CMS GDPR Enforcement Tracker: about EUR 7.56 billion across 3,295 recorded fines (as at 2 October 2026); covers only publicly known fines, so it is a lower bound and not an official figure.",
+   "source": "CMS Enforcement Tracker",
+   "url": "https://www.enforcementtracker.com/?insights"
+  }
+ ],
+ "sources": [
+  "https://commission.europa.eu/publications/reports-application-gdpr_en",
+  "https://curia.europa.eu/site/upload/docs/application/pdf/2026-02/cp260011en.pdf",
+  "https://data.consilium.europa.eu/doc/document/ST-12583-2024-INIT/en/pdf",
+  "https://dataprotection.ie/en/news-media/press-releases/data-protection-commission-announces-decision-instagram-inquiry",
+  "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+  "https://eur-lex.europa.eu/eli/reg/2025/2518/oj/eng",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020L1828",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0645",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0319",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0132",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0252",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0300",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0340",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0683",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0687",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0741",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0768",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0807",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0026",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0456",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0590",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0757",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0383",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0416",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0655",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62024CJ0414",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62024CJ0526",
+  "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502518",
+  "https://futurium.ec.europa.eu/en/border-focal-point-network/news/new-eu-regulation-harmonises-cross-border-enforcement-data-protection-across-union",
+  "https://www.aoshearman.com/en/insights/ao-shearman-on-data/cjeu-clarifies-injunctive-relief-and-non-material-damages-under-the-gdpr",
+  "https://www.dataprotection.ie/en/dpc-guidance/decisions/inquiry-concerning-data-transfers-eueea-us-meta-platforms-ireland-limited-its-facebook-service",
+  "https://www.dataprotection.ie/en/news-media/data-protection-commission-announces-conclusion-two-inquiries-meta-ireland",
+  "https://www.dataprotection.ie/en/news-media/press-releases/DPC-announces-345-million-euro-fine-of-TikTok",
+  "https://www.dataprotection.ie/en/news-media/press-releases/data-protection-commission-announces-decision-whatsapp-inquiry",
+  "https://www.edpb.europa.eu/documents/edpb-binding-decisions/binding-decision-12026-on-the-dispute-submitted-by-the-belgian-sa_en",
+  "https://www.edpb.europa.eu/documents/edpb-binding-decisions/binding-decision-52022-on-the-dispute-submitted-by-the-irish-sa_en",
+  "https://www.edpb.europa.eu/documents/edpb-binding-decisions/decision-012022-on-the-dispute-arisen-on-the-draft-decision-of-the_en",
+  "https://www.edpb.europa.eu/news/edpb-annual-report-2025-supporting-stakeholders-through-guidance-and-dialogue_en",
+  "https://www.edpb.europa.eu/news/national-news/2020/irish-data-protection-commission-announces-decision-twitter-inquiry_en",
+  "https://www.edpb.europa.eu/our-work-tools/consistency-findings/binding-decisions_en",
+  "https://www.edpb.europa.eu/our-work-tools/our-documents/urgent-binding-decision-board-art-66/urgent-binding-decision-012023_en",
+  "https://www.enforcementtracker.com/?insights",
+  "https://www.gibsondunn.com/gibson-dunn-europe-data-protection-july-2026/"
+ ],
+ "confidence": "High for CJEU case numbers, dates and holdings (all 20 checked against EUR-Lex operative parts), Regulation 2025/2518 citation, dates and article numbers (checked against the OJ text), EDPB binding decision outcomes (DPC, CNIL and EDPB pages) and statistics (COM(2024) 357, EDPB 2025 report). Medium for the precise date of application of Regulation 2025/2518 (derived from the 15-month transitional rule in Art. 28) and for article summaries not individually spot-checked. Enforcement tracker totals change hourly."
+}

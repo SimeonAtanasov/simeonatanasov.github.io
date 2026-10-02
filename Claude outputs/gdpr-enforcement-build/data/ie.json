@@ -1,0 +1,161 @@
+{
+ "code": "ie",
+ "country": "Ireland",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Data Protection Commission",
+  "name_native": "An Coimisiún um Chosaint Sonraí",
+  "abbr": "DPC",
+  "url": "https://www.dataprotection.ie",
+  "structure": "Collegial commission of up to three commissioners (s.15 Data Protection Act 2018, terms of 4 to 5 years, renewable once). Des Hogan and Dale Sunderland were joined by Niamh Sweeney on 17 September 2025, completing the three-person Commission; recent large decisions are signed by all three.",
+  "regional": "Single national authority, no regional DPAs. Lead supervisory authority (Art. 56 GDPR) for many large technology companies with EU main establishments in Ireland, so its big cross-border decisions go through the Art. 60 / Art. 65 EDPB process."
+ },
+ "law": {
+  "name": "Data Protection Act 2018 (No. 7 of 2018), Part 6 (enforcement) incl. ss.108-150",
+  "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/revised/en/html"
+ },
+ "complaint": {
+  "how": "Online webform at forms.dataprotection.ie/contact, or by post to 6 Pembroke Row, Dublin 2. No fee identified. Language rules not confirmed (English is the working language in practice).",
+  "contact_controller_first": "Yes in practice: the DPC asks individuals to try to resolve the matter with the organisation first and says most issues are resolved that way. Not confirmed as a statutory precondition.",
+  "deadlines": "No statutory time limit for complaining and no statutory deadline for the DPC to decide were confirmed. The Act provides for amicable resolution of complaints (ss.108-109) before any inquiry.",
+  "complainant_status": "Complainant is informed of the outcome and, as a person affected by a legally binding decision of the Commission, may appeal it within 28 days (s.150). Fuller party rights inside an inquiry not confirmed."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint received and assessed; amicable resolution attempted where possible (ss.108-109)",
+   "Complaint handling or, for systemic issues, an inquiry (complaint-based or own-volition)",
+   "Draft decision; in cross-border cases shared with concerned authorities under Art. 60, with Art. 65 EDPB dispute resolution if objections are raised",
+   "Final decision with corrective powers and/or administrative fine (ss.111-116)",
+   "Appeal to court, or court confirmation of the fine if not appealed (ss.142-143)"
+  ],
+  "decision_maker": "The Commission (the commissioners). The Google decision of 21 September 2026 was taken by all three commissioners.",
+  "limitation": "not confirmed"
+ },
+ "fines": {
+  "imposed_by": "The DPC decides the fine, but it is not payable until confirmed by a court. If the controller does not appeal within 28 days, the DPC must apply to the Circuit Court for confirmation, which the court gives 'unless the Court sees good reason not to do so' (s.143). After confirmation the DPC issues a payment notice with 28 days to pay.",
+  "public_bodies": "Yes. A public authority or public body that is not acting as an undertaking can be fined up to EUR 1,000,000 (s.141(4)). Example: HSE fined EUR 645,000 on 2 September 2026.",
+  "quirks": "Because fines only become payable after court confirmation and most large fines are under appeal, the DPC reports roughly EUR 4.4 billion imposed but only about EUR 20 million collected. Certain conduct (e.g. electronic marketing breaches) is prosecuted as offences in the District Court."
+ },
+ "appeal": {
+  "court": "Appeal against a fine under s.142: Circuit Court if the fine does not exceed EUR 75,000, otherwise the High Court. Appeals against other legally binding decisions and notices under s.150: Circuit Court concurrently with the High Court.",
+  "deadline": "28 days from notice of the decision (s.142(1), s.150).",
+  "suspensive": "The fine is not payable until court confirmation, so it is effectively suspended pending appeal. Corrective orders are not automatically suspended; the court can grant a stay (TikTok obtained one in the High Court, upheld by the Supreme Court in April 2026, which held the stay test is one of national law).",
+  "further": "Circuit Court or High Court decision is final save for an appeal on a point of law to the High Court or Court of Appeal (s.150). Further appeal to the Supreme Court is possible with leave (as in TikTok, 2026). Judicial review in the High Court is also used (Meta lost a judicial review on 21 May 2026).",
+  "inaction": "Section 150(7) of the Data Protection Act 2018 lets a complainant appeal to the court if the DPC fails to meet the required timelines on a complaint; judicial review in the High Court remains available otherwise."
+ },
+ "private": {
+  "courts": "Data protection action under s.117: District Court, Circuit Court or High Court, each within its usual compensation limits, where the controller is established or the data subject habitually resides. Remedies: injunction, declaration, compensation.",
+  "damages": "Awards for non-material damage are modest: Kaminski v Ballymaguire Foods [2023] IECC 5 (Circuit Court, EUR 2,000 for CCTV footage used in training), MH v Child and Family Agency (Circuit Court, EUR 7,500, reported as highest Irish award). Whether PIAB authorisation is needed first (Dillon v Irish Life) was pending before the Supreme Court at last report.",
+  "collective": "Not-for-profit bodies mandated under Art. 80(1) may bring s.117 actions for data subjects. Whether GDPR is covered by Ireland's Representative Actions Directive transposition was not confirmed."
+ },
+ "cases": [
+  {
+   "title": "TikTok, EUR 530 million (data transfers to China and transparency)",
+   "year": "2025-2026",
+   "summary": "DPC decision of 30 April 2025 (EUR 485m transfers, EUR 45m transparency) plus a transfer suspension order. The High Court stayed it; the Supreme Court (30 April 2026) dismissed the DPC's appeal on the stay test. In June 2026 the High Court upheld the infringement findings but sent the suspension order back to the DPC. A separate judgment on the size of the fine was circulated to the parties at the end of June 2026; its outcome had not been published at last report.",
+   "url": "https://www.irishtimes.com/ireland/2026/06/30/data-protection-commission-reconsidering-tiktok-data-transfer-ban-after-court-ruling/"
+  },
+  {
+   "title": "Meta Platforms Ireland, EUR 1.2 billion (EU-US transfers)",
+   "year": "2023",
+   "summary": "Record GDPR fine of 12 May 2023 following an EDPB binding decision. Listed by the DPC as 'Pending Appeal', as are Meta's EUR 405m, 390m, 265m and 251m fines, WhatsApp's EUR 225m and LinkedIn's EUR 310m.",
+   "url": "https://www.dataprotection.ie/en/dpc-guidance/decisions/fines"
+  },
+  {
+   "title": "Google Ireland, EUR 403 million (location data)",
+   "year": "2026",
+   "summary": "Final decision of 21 September 2026 after an own-volition inquiry opened in February 2020 following consumer group complaints: lawfulness, transparency, accountability and retention failures in Location History, Web & App Activity and Location Accuracy. Six months to comply.",
+   "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location"
+  }
+ ],
+ "quirks": [
+  "Court confirmation step: every DPC fine needs either a court appeal outcome or a Circuit Court confirmation (s.143) before it can be collected.",
+  "Appeal forum depends on fine size: Circuit Court up to EUR 75,000, High Court above (s.142).",
+  "Public bodies not acting as undertakings are capped at EUR 1 million (s.141(4)).",
+  "As lead authority for much of big tech, many DPC decisions are shaped by EDPB Art. 65 binding decisions; in May 2026 the High Court confirmed a complaint-based inquiry can lead to system-wide corrective measures and fines (Meta judicial review)."
+ ],
+ "plain": "You complain to the DPC, usually after trying the company first, and the DPC tries to resolve it informally. Serious or systemic issues go to an inquiry, and for big tech firms other EU regulators get a say before the final decision. A fine only has to be paid once an Irish court has confirmed it, and most of the largest fines are still tied up in appeals.",
+ "confidence": "Medium-high: statutory points are primary-sourced; I could not confirm a limitation period, an Art. 78(2) inaction route, RAD coverage of GDPR, or the exact date of the 2026 High Court TikTok judgment.",
+ "sources": [
+  {
+   "title": "Data Protection Act 2018 (revised, updated to 16 July 2026)",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/revised/en/html",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPA 2018 s.141 (revised)",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/141/revised/en/html",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPA 2018 s.142 (revised)",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/142/revised/en/html",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPA 2018 s.143",
+   "url": "https://www.irishstatutebook.ie/eli/2018/act/7/section/143/enacted/en/html",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPA 2018 s.150 (revised)",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/150/revised/en/html",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPA 2018 s.117 (revised)",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/117/revised/en/html",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPC: Fines (payable only after court confirmation, appeal status)",
+   "url": "https://www.dataprotection.ie/en/dpc-guidance/decisions/fines",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPC: Raising a concern with the Commission",
+   "url": "https://www.dataprotection.ie/en/individuals/exercising-your-rights/raising-concern-commission",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPC welcomes appointment of 3rd Commissioner",
+   "url": "https://www.dataprotection.ie/en/dpc-welcomes-appointment-3rd-commissioner",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPC fines Google EUR 403 million (21 Sept 2026)",
+   "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPC final decision on HSE (EUR 645,000, 2 Sept 2026)",
+   "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-announces-final-decision-following-inquiry-health-service-executive-hse",
+   "source_type": "primary"
+  },
+  {
+   "title": "Irish Times: Supreme Court finds for TikTok (30 Apr 2026)",
+   "url": "https://www.irishtimes.com/crime-law/courts/2026/04/30/supreme-court-finds-for-tiktok-in-dispute-with-data-protection-commission/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Irish Times: DPC reconsidering TikTok transfer ban after court ruling (30 Jun 2026)",
+   "url": "https://www.irishtimes.com/ireland/2026/06/30/data-protection-commission-reconsidering-tiktok-data-transfer-ban-after-court-ruling/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Irish Times: Meta loses High Court challenge (21 May 2026)",
+   "url": "https://www.irishtimes.com/business/2026/05/21/meta-loses-challenge-to-possible-430m-fine-over-personal-data-processing-complaint/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Arthur Cox: Kaminski v Ballymaguire Foods",
+   "url": "https://www.arthurcox.com/knowledge/modest-compensation-for-gdpr-non-material-damage-claim-new-guidance-from-the-irish-courts/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Law Society Gazette: highest GDPR damages award",
+   "url": "https://www.lawsociety.ie/gazette/top-stories/2025/february/highest-gdpr-award-for-damages-in-irish-court/",
+   "source_type": "secondary"
+  }
+ ]
+}

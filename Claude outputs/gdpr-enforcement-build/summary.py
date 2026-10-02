@@ -1,0 +1,106 @@
+# -*- coding: utf-8 -*-
+"""Hand-classified comparison fields for the GDPR enforcement page and study guide.
+Each value is derived from the verified country JSON (fines.imposed_by, fines.public_bodies,
+appeal.court, appeal.suspensive, appeal.further). Change the JSON and this together."""
+
+ORDER = ["at", "be", "bg", "hr", "cy", "cz", "dk", "ee", "fi", "fr", "de", "gr", "hu", "ie",
+         "it", "lv", "lt", "lu", "mt", "nl", "pl", "pt", "ro", "sk", "si", "es", "se",
+         "is", "li", "no", "uk", "ch"]
+
+# model: who imposes the fine and which kind of court reviews it
+MODELS = {
+    "admin": ("DPA fines, administrative court or tribunal reviews", "#4f8fd6", "#ffffff"),
+    "ordinary": ("DPA fines, ordinary or criminal court reviews", "#199e70", "#ffffff"),
+    "confirm": ("DPA decides, a court must confirm the fine", "#b07cd8", "#ffffff"),
+    "court": ("A court imposes the fine", "#d95926", "#ffffff"),
+}
+PUBLIC = {
+    "yes": ("Yes, at the GDPR levels", "#4f8fd6", "#ffffff"),
+    "capped": ("Yes, with a national cap", "#199e70", "#ffffff"),
+    "partly": ("Some public bodies only", "#c9a227", "#10172e"),
+    "no": ("No", "#d95926", "#ffffff"),
+    "unclear": ("Not confirmed", "#5c6684", "#ffffff"),
+}
+SUSP = {
+    "yes": ("Yes, payment waits", "#199e70", "#ffffff"),
+    "partly": ("Partly or on request", "#c9a227", "#10172e"),
+    "no": ("No, unless a court orders it", "#d95926", "#ffffff"),
+    "unclear": ("Not confirmed", "#5c6684", "#ffffff"),
+}
+
+# (model, public, suspends, first court for a fine, route)
+S = {
+    "at": ("admin", "no", "yes", "Federal Administrative Court (BVwG)",
+           ["DSB penal decision", "Federal Administrative Court", "VwGH or VfGH"]),
+    "be": ("admin", "partly", "no", "Market Court (Brussels Court of Appeal)",
+           ["Litigation Chamber", "Market Court", "Court of Cassation"]),
+    "bg": ("ordinary", "yes", "yes", "District court (penal decree)",
+           ["CPDP penal decree", "District court", "Administrative court (cassation)"]),
+    "hr": ("admin", "no", "no", "Administrative court",
+           ["AZOP", "Administrative court", "High Administrative Court"]),
+    "cy": ("admin", "capped", "no", "Administrative Court",
+           ["Commissioner", "Administrative Court", "Court of Appeal"]),
+    "cz": ("admin", "no", "unclear", "Municipal Court in Prague",
+           ["ÚOOÚ", "President of the Office (rozklad)", "Municipal Court in Prague", "Supreme Administrative Court"]),
+    "dk": ("court", "capped", "yes", "District court (criminal case)",
+           ["Datatilsynet police report", "Police and prosecution", "District court", "High Court", "Supreme Court (leave)"]),
+    "ee": ("ordinary", "partly", "yes", "County court (misdemeanour)",
+           ["AKI misdemeanour decision", "County court", "Supreme Court"]),
+    "fi": ("admin", "no", "unclear", "Helsinki Administrative Court",
+           ["Sanctions Board", "Administrative Court", "Supreme Administrative Court (leave)"]),
+    "fr": ("admin", "partly", "no", "Conseil d'État (first and last instance)",
+           ["CNIL restricted committee", "Conseil d'État"]),
+    "de": ("ordinary", "no", "yes", "Amtsgericht, or Landgericht above EUR 100,000",
+           ["DPA fine notice", "Objection", "Amtsgericht or Landgericht", "Oberlandesgericht"]),
+    "gr": ("admin", "capped", "no", "Council of State (first and last instance)",
+           ["HDPA", "Council of State"]),
+    "hu": ("admin", "unclear", "no", "Budapest-Capital Regional Court",
+           ["NAIH", "Budapest-Capital Regional Court", "Kúria"]),
+    "ie": ("confirm", "capped", "yes", "Circuit Court (up to EUR 75,000) or High Court",
+           ["DPC decision", "Circuit Court or High Court (appeal or confirmation)", "Court of Appeal or Supreme Court"]),
+    "it": ("ordinary", "yes", "no", "Tribunale (ordinary civil court)",
+           ["Garante", "Tribunale", "Corte di Cassazione"]),
+    "lv": ("ordinary", "no", "unclear", "District (city) court",
+           ["DVI", "DVI director", "District court", "Regional court"]),
+    "lt": ("admin", "capped", "unclear", "Regional Administrative Court",
+           ["VDAI", "Regional Administrative Court", "Supreme Administrative Court"]),
+    "lu": ("admin", "partly", "unclear", "Administrative Tribunal",
+           ["CNPD restricted formation", "Administrative Tribunal", "Administrative Court"]),
+    "mt": ("admin", "capped", "yes", "Information and Data Protection Appeals Tribunal",
+           ["IDPC", "Appeals Tribunal", "Court of Appeal"]),
+    "nl": ("admin", "yes", "unclear", "District court (after objection)",
+           ["AP", "Objection to the AP", "District court", "Council of State"]),
+    "pl": ("admin", "capped", "yes", "Voivodeship Administrative Court, Warsaw",
+           ["President of UODO", "WSA Warsaw", "Supreme Administrative Court"]),
+    "pt": ("admin", "yes", "unclear", "Lisbon Administrative Court",
+           ["CNPD", "Administrative court", "Central Administrative Court South"]),
+    "ro": ("admin", "capped", "yes", "Tribunal, administrative section",
+           ["ANSPDCP sanction report", "Tribunal", "Court of Appeal"]),
+    "sk": ("admin", "yes", "unclear", "Administrative Court",
+           ["ÚOOÚ SR", "President of the Office (rozklad)", "Administrative Court", "Supreme Administrative Court"]),
+    "si": ("ordinary", "partly", "unclear", "Local court (minor offence)",
+           ["IP minor offence decision", "Local court"]),
+    "es": ("admin", "no", "partly", "Audiencia Nacional",
+           ["AEPD", "Optional reposición", "Audiencia Nacional", "Tribunal Supremo"]),
+    "se": ("admin", "capped", "yes", "Administrative Court in Stockholm",
+           ["IMY", "Administrative Court", "Administrative Court of Appeal (leave)", "HFD (leave)"]),
+    "is": ("ordinary", "yes", "unclear", "District court",
+           ["Persónuvernd", "District court", "Landsréttur", "Supreme Court"]),
+    "li": ("admin", "no", "yes", "Complaints Commission for Administrative Matters",
+           ["DSS", "Complaints Commission (VBK)", "Administrative Court"]),
+    "no": ("ordinary", "yes", "unclear", "Privacy Appeals Board, then district court",
+           ["Datatilsynet", "Privacy Appeals Board", "District court", "Court of Appeal", "Supreme Court (leave)"]),
+    "uk": ("admin", "yes", "yes", "First-tier Tribunal (Information Rights)",
+           ["Information Commission", "First-tier Tribunal", "Upper Tribunal", "Court of Appeal"]),
+    "ch": ("court", "no", "yes", "Cantonal criminal procedure",
+           ["FDPIC criminal complaint", "Cantonal prosecutor", "Criminal court"]),
+}
+
+# Tile map grid position (col, row)
+GRID = {"is": (0, 0), "no": (5, 0), "se": (6, 0), "fi": (7, 0),
+        "uk": (1, 1), "dk": (5, 1), "ee": (7, 1),
+        "ie": (0, 2), "nl": (4, 2), "de": (5, 2), "pl": (6, 2), "lv": (7, 2),
+        "be": (3, 3), "lu": (4, 3), "cz": (5, 3), "sk": (6, 3), "lt": (7, 3),
+        "pt": (0, 4), "es": (1, 4), "fr": (2, 4), "ch": (3, 4), "li": (4, 4), "at": (5, 4), "hu": (6, 4), "ro": (7, 4),
+        "it": (4, 5), "si": (5, 5), "hr": (6, 5), "bg": (7, 5),
+        "mt": (4, 6), "gr": (7, 6), "cy": (8, 6)}

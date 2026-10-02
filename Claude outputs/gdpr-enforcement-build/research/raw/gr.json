@@ -1,0 +1,78 @@
+{
+  "code": "gr",
+  "country": "Greece",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Hellenic Data Protection Authority",
+    "name_native": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+    "abbr": "HDPA (ΑΠΔΠΧ)",
+    "url": "https://www.dpa.gr",
+    "structure": "Independent public authority run as a collegial body: a President and six members, each with an alternate, serving a single non-renewable six-year term (Art. 11 Law 4624/2019).",
+    "regional": "Single national authority, no regional DPAs."
+  },
+  "law": {
+    "name": "Law 4624/2019 (Government Gazette A 137/29.08.2019), implementing the GDPR and transposing Directive 2016/680",
+    "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF"
+  },
+  "complaint": {
+    "how": "Through the HDPA online portal using Taxisnet credentials; those without access can email a complaint form (in English if the infringement occurred in Greece) to complaints@dpa.gr. No fee identified.",
+    "contact_controller_first": "Yes: the HDPA states that complainants must first address the controller, and may decline to examine a complaint if this was not done.",
+    "deadlines": "No time limit for complaining and no fixed decision deadline confirmed; the HDPA must inform the complainant of progress and outcome within a reasonable period (Art. 13 Law 4624/2019).",
+    "complainant_status": "not confirmed (the HDPA cannot award compensation; that requires a civil court)."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint via portal, checked for prior exercise of rights with the controller",
+      "Investigation or audit by Authority members or authorised staff (Art. 15(2))",
+      "Prior hearing of the persons concerned before any adverse measure (Art. 15)",
+      "Decision with warnings, compliance orders, processing limits or bans and/or Art. 83 fines (Art. 15)"
+    ],
+    "decision_maker": "The Authority as a collegial body (President and members); whether a given case is decided in plenary or in a chamber was not confirmed.",
+    "limitation": "not confirmed"
+  },
+  "fines": {
+    "imposed_by": "The HDPA itself, by administrative decision.",
+    "public_bodies": "Yes: public sector bodies can be fined up to EUR 10 million (Art. 39 Law 4624/2019).",
+    "quirks": "Criminal offences in Art. 38 Law 4624/2019, with prison terms up to 10 years for the most serious unauthorised access or disclosure cases."
+  },
+  "appeal": {
+    "court": "Action for annulment (αίτηση ακύρωσης) before the Council of State (Συμβούλιο της Επικρατείας), the supreme administrative court, against HDPA regulatory and individual acts (Art. 20 Law 4624/2019).",
+    "deadline": "not confirmed in Law 4624/2019 (believed to follow the general 60-day Council of State rule, not verified for this packet).",
+    "suspensive": "No: the time limit for, and filing of, an annulment action does not suspend the decision (Art. 20). A separate request for suspension is believed possible but was not confirmed.",
+    "further": "None: the Council of State is first and last instance.",
+    "inaction": "not confirmed"
+  },
+  "private": {
+    "courts": "Civil courts where the controller or processor is established or where the data subject habitually resides (Art. 40 Law 4624/2019).",
+    "damages": "not confirmed",
+    "collective": "Data subjects may mandate a not-for-profit body to lodge complaints on their behalf (Art. 41 Law 4624/2019). Court representation and Representative Actions Directive transposition coverage not confirmed."
+  },
+  "cases": [
+    {
+      "title": "Ministry of Finance v HDPA (taxpayer data breach)",
+      "year": "2019",
+      "summary": "The HDPA fined the General Secretariat of Information Systems EUR 150,000 for inadequate security after a breach affecting nearly all taxpayers (decisions 98/2013 and 117/2014). The Council of State (decision 339/2019) dismissed the Minister's annulment action.",
+      "url": "https://www.dpa.gr/el/enimerwtiko/deltia/symboylio-tis-epikrateias-aperripse-tin-apo-912014-aitisi-akyrosis-toy-ypoyrgoy"
+    },
+    {
+      "title": "Cosmote / OTE (2020 data breach)",
+      "year": "2022",
+      "summary": "HDPA fines totalling EUR 9.25 million (January 2022) after a breach affecting over 10 million subscribers. The companies brought annulment actions at the Council of State, heard in May 2023; outcome not confirmed.",
+      "url": "https://wearesolomon.com/el/mag/format-el/reportaz/cosmote-ote-exasan-dedomena-deka-ekat-atomon-zitoun-akirosi-prostimon/"
+    }
+  ],
+  "quirks": [
+    "Direct one-step judicial review: HDPA decisions go straight to the Council of State, with no lower court and no further appeal.",
+    "Public bodies can be fined, capped at EUR 10 million (Art. 39).",
+    "Complaints are filed through a Taxisnet-authenticated portal, and prior contact with the controller is expected.",
+    "Pre-GDPR, fines on public bodies were already upheld by the Council of State (339/2019)."
+  ],
+  "plain": "You first ask the organisation to fix the problem, then complain to the HDPA through its online portal. The seven-member Authority investigates, hears the organisation and can order changes or impose a fine. The organisation can ask the Council of State to annul the decision, but that does not pause it, and compensation has to be claimed separately in the civil courts.",
+  "confidence": "Medium: structure, fines and court route are confirmed from the HDPA's translation of Law 4624/2019; I could not confirm the annulment deadline, the limitation period, complainant party status, or the outcome of the OTE/Cosmote appeal.",
+  "sources": [
+    {"title": "Law 4624/2019, English translation by the HDPA", "url": "https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF", "source_type": "primary"},
+    {"title": "HDPA: Complaint to the Hellenic DPA", "url": "https://www.dpa.gr/en/individuals/complaint-to-the-hellenic-dpa", "source_type": "primary"},
+    {"title": "HDPA: Council of State dismissed the Minister of Finance's annulment action", "url": "https://www.dpa.gr/el/enimerwtiko/deltia/symboylio-tis-epikrateias-aperripse-tin-apo-912014-aitisi-akyrosis-toy-ypoyrgoy", "source_type": "primary"},
+    {"title": "Solomon: Cosmote/OTE seek annulment of fines (Apr 2023)", "url": "https://wearesolomon.com/el/mag/format-el/reportaz/cosmote-ote-exasan-dedomena-deka-ekat-atomon-zitoun-akirosi-prostimon/", "source_type": "secondary"}
+  ]
+}

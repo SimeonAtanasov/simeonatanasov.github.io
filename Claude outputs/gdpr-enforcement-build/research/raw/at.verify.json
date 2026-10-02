@@ -1,0 +1,106 @@
+{
+ "code": "at",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Post case history: BVwG 'annulled' 2020; VfGH 'dismissed a complaint' 9 Dec 2025; VwGH EUR 13m plus EUR 100,000 costs on 24 June 2026",
+   "verdict": "corrected",
+   "evidence": "Amounts, dates and case number confirmed (EUR 18m 23 Oct 2019, 2.2m people, EUR 16m 27 Dec 2024, EUR 13m and EUR 100,000 on 24 June 2026, Ro 2025/04/0007, VwGH 1 Feb 2024 Ra 2020/04/0187, ~66 months). Two wording errors: DSB says the VfGH 'lehnte mit Beschluss vom 9. Dezember 2025 die Behandlung der Beschwerde ab' (declined to hear it, not dismissed), and the BVwG 'stellte das Verwaltungsstrafverfahren zunächst ein' (discontinued the penal proceedings, rather than annulling on the merits). VwGH lists mitigation as preventive measures, cease-and-desist declarations and the ~66-month duration.",
+   "url": "https://dsb.gv.at/aktuelles/vwgh-bestaetigt-unrechtmaessige-verarbeitung-von-partei-affinitaeten-und-setzt-geldbusse-mit-eur-13-mio-fest",
+   "replacement": "DSB fined Post EUR 18m (23 Oct 2019) for calculating and selling party affinities for about 2.2 million people. BVwG discontinued the penal proceedings in 2020; VwGH set that aside on 1 Feb 2024 after CJEU Deutsche Wohnen; BVwG reimposed EUR 16m (27 Dec 2024); VfGH declined to hear a complaint (9 Dec 2025); VwGH finally fixed the fine at EUR 13m plus EUR 100,000 costs (24 June 2026, Ro 2025/04/0007), citing the 66-month duration, preventive measures and cease-and-desist declarations as mitigating."
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2019-2026",
+   "verdict": "confirmed",
+   "evidence": "DSB fine 23 Oct 2019; VwGH final ruling 24 June 2026.",
+   "url": "https://dsb.gv.at/aktuelles/vwgh-bestaetigt-unrechtmaessige-verarbeitung-von-partei-affinitaeten-und-setzt-geldbusse-mit-eur-13-mio-fest"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "CJEU C-300/21 (4 May 2023): infringement, damage and causation required; no seriousness threshold for non-material damage",
+   "verdict": "confirmed",
+   "evidence": "Matches the published judgment of 4 May 2023 (Österreichische Post, reference from the OGH). Curia page not fetched; checked against known holding.",
+   "url": "https://curia.europa.eu/juris/liste.jsf?num=C-300/21"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "DSB by Straferkenntnis; fines go to the federal state; enforceable through district courts (§ 30(4) DSG)",
+   "verdict": "confirmed",
+   "evidence": "§ 30(4): 'Die gemäß § 22 Abs. 5 verhängten Geldbußen fließen dem Bund zu'; final decisions are enforceable titles, enforced before the district courts.",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=30&Anlage=&Uebergangsrecht="
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "No fines on authorities, public bodies or public-law corporations (§ 30(5) DSG)",
+   "verdict": "confirmed",
+   "evidence": "§ 30(5): 'Gegen Behörden und öffentliche Stellen ... können keine Geldbußen verhängt werden.'",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=30&Anlage=&Uebergangsrecht="
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "VwGH held costs pegged at 10% of the fine contrary to Union law and 'capped' them at EUR 100,000",
+   "verdict": "corrected",
+   "evidence": "VwGH: the BVwG cost assessment of EUR 1.6m (10% of EUR 16m) 'contradicts Union law because it leads to a materially unjustifiable additional penalty'; VwGH set a proportionate EUR 100,000 instead. That is a fixed amount for this case, not a general cap. § 62 EUR 50,000 and § 63 not re-fetched; consistent with the DSG as known.",
+   "url": "https://www.vwgh.gv.at/medien/mitteilungen/ro2025-04-0007.html",
+   "replacement": "§ 62 DSG creates separate administrative offences (for example unlawful access, breach of confidentiality, unlawful image processing) punishable by up to EUR 50,000, aimed at individuals. § 63 DSG makes processing with intent to profit or cause harm a criminal offence tried by the criminal courts. In the Post case (2026) the VwGH held that procedural costs of 10% of the fine were contrary to Union law as an unjustified additional penalty and set them at EUR 100,000."
+  },
+  {
+   "field": "appeal.court",
+   "claim": "BVwG senate with presiding judge and two expert lay judges (§ 27 DSG)",
+   "verdict": "confirmed",
+   "evidence": "Consistent with § 27 DSG (senate with one lay judge each from the employer and employee side). Section page not re-fetched.",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=27&Anlage=&Uebergangsrecht="
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Four weeks (§ 7(4) VwGVG)",
+   "verdict": "confirmed",
+   "evidence": "Standard four-week appeal period under § 7(4) VwGVG; not re-fetched.",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008255&Paragraf=7"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Suspensive unless excluded (§ 13 VwGVG); cannot be excluded in penal matters (§ 41 VwGVG)",
+   "verdict": "confirmed",
+   "evidence": "§ 41 VwGVG: 'Die aufschiebende Wirkung der Beschwerde kann nicht ausgeschlossen werden.'",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008255&Paragraf=41"
+  },
+  {
+   "field": "appeal.inaction",
+   "claim": "Direct route to BVwG after three months (§ 24(8) DSG)",
+   "verdict": "confirmed",
+   "evidence": "§ 24(8): if the DSB does not deal with the complaint or inform within three months, the person may apply to the BVwG.",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=24&Anlage=&Uebergangsrecht="
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "One year from awareness, three years from the event (§ 24(4)); three-month information duty (§ 24(7)); § 24(10) exclusions",
+   "verdict": "confirmed",
+   "evidence": "§ 24(4), (7) and (10) match the summary.",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=24&Anlage=&Uebergangsrecht="
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Not confirmed; Post ran about 66 months",
+   "verdict": "unverifiable",
+   "evidence": "66-month duration confirmed by VwGH; no limitation rule found. Already hedged.",
+   "url": "https://www.vwgh.gv.at/medien/mitteilungen/ro2025-04-0007.html"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "One-year/three-year time bar, unusual in the EU",
+   "verdict": "confirmed",
+   "evidence": "§ 24(4) confirmed. Note Bulgaria has a comparable six-month/two-year bar, so 'unusual' rather than unique is right.",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=24&Anlage=&Uebergangsrecht="
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "Parliament has its own supervisory body since January 2025",
+   "verdict": "unverifiable",
+   "evidence": "OTS source not fetched within budget.",
+   "url": "https://www.ots.at/presseaussendung/OTS_20241003_OTS0127/parlamentarisches-datenschutzkomitee-nimmt-2025-die-arbeit-auf"
+  }
+ ],
+ "notes": "No GDPR contradictions. Fines going to the federal state is consistent with the GDPR. The VwGH press release also cites an earlier VwGH decision of 14 Dec 2021 (Ro 2021/04/0007) in the history; not needed in the summary. dpa.structure head (Matthias Schmidl) not checked."
+}

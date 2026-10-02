@@ -1,0 +1,91 @@
+{
+  "code": "de",
+  "country": "Germany",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Federal Commissioner for Data Protection and Freedom of Information, plus 16 Land (state) data protection authorities",
+    "name_native": "Die Bundesbeauftragte / Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit; Landesbeauftragte für Datenschutz der Länder",
+    "abbr": "BfDI (federal); e.g. BayLDA, BayLfD, HmbBfDI, BlnBDI, LfDI BW (Länder)",
+    "url": "https://www.bfdi.bund.de",
+    "structure": "Each authority is headed by a single commissioner (monocratic), not a college. Moritz Hennemann was elected BfDI by the Bundestag on 25 June 2026 and took office on 1 October 2026, succeeding Louisa Specht-Riemenschneider.",
+    "regional": "Federated system: the BfDI supervises federal public bodies and telecoms and postal service providers, while the Land authorities supervise private companies seated in their Land (s.40 BDSG) and their own Land public bodies. Bavaria is split: BayLDA (Ansbach) supervises the private sector and BayLfD (Munich) the Bavarian public sector. The authorities coordinate in the Datenschutzkonferenz (DSK), which has no statutory basis yet and whose resolutions are not legally binding; a Bundesrat bill to put the DSK on a statutory footing with binding majority decisions and lead authorities for multi-Land companies was tabled on 26 August 2026 (BT-Drs. 21/7732) and is pending."
+  },
+  "law": {
+    "name": "Bundesdatenschutzgesetz (BDSG) of 30 June 2017, in force 25 May 2018, plus 16 Land data protection acts for Land public bodies",
+    "url": "https://www.gesetze-im-internet.de/bdsg_2018/"
+  },
+  "complaint": {
+    "how": "Free complaint to the competent authority, usually the Land authority where the company is seated, by online form, post or email; most authorities offer online forms (BayLDA asks complainants to substantiate a violation of their own rights, otherwise the submission is treated as a request for a check). Complaints are normally submitted in German.",
+    "contact_controller_first": "Not a legal requirement; the BayLDA form does not make it a precondition, though for access-right complaints it asks for copies of the correspondence with the controller.",
+    "deadlines": "No national deadline for complaining confirmed. The authority must inform the complainant of progress or outcome within three months (Art. 77(2) and 78(2) GDPR); no German-specific decision deadline confirmed.",
+    "complainant_status": "The complainant is not a party to any fine proceedings, which run under the OWiG between the authority and the company. The complainant can sue the authority in the administrative courts over how the complaint was handled (s.20 BDSG)."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint received and competence checked (Land vs federal; cross-border cases go through the one-stop-shop)",
+      "Investigation: requests for information to the controller, hearing of the company",
+      "Corrective measures by administrative act (orders, bans, reprimands), challengeable in the administrative courts",
+      "Separately, fine proceedings under the Administrative Offences Act (OWiG, applied via s.41 BDSG): hearing of the company, then a fine notice (Bussgeldbescheid)",
+      "If the company lodges an objection (Einspruch), the authority may withdraw or maintain the notice; if maintained, the file goes via the public prosecutor to the criminal court"
+    ],
+    "decision_maker": "The head of each authority (BfDI or the Land commissioner) and their office; there is no collegial sanctions body.",
+    "limitation": "Not stated in the BDSG; as the OWiG applies (s.41(1) BDSG), the OWiG limitation rules apply, which give three years where the maximum fine exceeds EUR 15,000 (s.31(2) no.1 OWiG). Not confirmed from a primary DPA source."
+  },
+  "fines": {
+    "imposed_by": "The supervisory authority itself issues a fine notice under OWiG procedure. On objection, a court decides the matter afresh: the Amtsgericht, or the Landgericht if the fine exceeds EUR 100,000 (s.41(1) BDSG, modifying s.68 OWiG). The public prosecutor may only discontinue the case with the authority's consent (s.41(2) BDSG). OWiG s.17 (fine caps), s.35 and s.36 do not apply.",
+    "public_bodies": "No fines on federal authorities and other public bodies (s.43(3) BDSG). The Land acts govern Land and municipal bodies and generally also exclude them, but the exact rule per Land was not confirmed.",
+    "quirks": "Criminal offences in s.42 BDSG (up to three years' prison for knowingly transferring data of a large number of people for commercial purposes without authorisation; up to two years for unlawful processing for payment or to enrich oneself or harm others), prosecuted only on application by the data subject, controller, BfDI or the authority. s.43 BDSG adds national fines up to EUR 50,000 for consumer-credit information breaches. German law traditionally required attributing the offence to an identified manager (s.30 OWiG), but the CJEU held in Deutsche Wohnen (C-807/21, 5 December 2023) that a company can be fined directly, provided the infringement was intentional or negligent."
+  },
+  "appeal": {
+    "court": "Two tracks. Fines: objection (Einspruch) lodged with the authority, then via the public prosecutor to the Amtsgericht, or the Landgericht for fines over EUR 100,000 (s.41 BDSG). Orders and complaint decisions: action in the administrative court (Verwaltungsgericht) where the authority has its seat, with no preliminary administrative review (s.20 BDSG).",
+    "deadline": "Fine objection: two weeks from service (s.67 OWiG). Administrative court action: one month (s.74 VwGO). Both from the general procedural codes, not confirmed against a DPA source.",
+    "suspensive": "An objection prevents the fine from becoming final, so it is not payable until the court decides. An administrative court action against an order generally has suspensive effect unless the authority orders immediate enforcement, which it may not do against public authorities (s.20(7) BDSG).",
+    "further": "Fines: appeal on points of law (Rechtsbeschwerde) to the Oberlandesgericht (s.79 OWiG). Orders: Oberverwaltungsgericht on appeal, then Bundesverwaltungsgericht.",
+    "inaction": "Action in the administrative court under s.20 BDSG and Art. 78(2) GDPR. Following the CJEU's SCHUFA ruling (C-26/22 and C-64/22, 7 December 2023) on a referral from VG Wiesbaden, a DPA's decision on a complaint is subject to full judicial review, not merely a check that it was handled."
+  },
+  "private": {
+    "courts": "Civil courts (Amtsgericht or Landgericht depending on the amount in dispute); employees sue in the labour courts. s.44 BDSG lets the data subject sue at their habitual residence.",
+    "damages": "The Federal Court of Justice held on 18 November 2024 (VI ZR 10/24, Facebook scraping) that a mere short-term loss of control over data can be non-material damage under Art. 82, indicating around EUR 100 as an appropriate amount in that case.",
+    "collective": "Consumer associations can seek injunctions under the Injunctions Act (UKlaG), confirmed by the CJEU in Meta v vzbv (C-319/20, 2022). The Representative Actions Directive was transposed by the Consumer Rights Enforcement Act (VDuG) in 2023, allowing redress actions (Abhilfeklage) heard at first instance by the Oberlandesgericht."
+  },
+  "cases": [
+    {
+      "title": "1&1 Telecom (BfDI), reduced by LG Bonn",
+      "year": "2019 / 2020",
+      "summary": "The BfDI fined 1&1 EUR 9.55 million for weak caller authentication in its call centre (Art. 32 GDPR). On objection, the Landgericht Bonn (29 OWi 1/20, 11 November 2020) upheld the infringement but cut the fine to EUR 900,000, rejecting the authority's turnover-heavy calculation for a minor breach.",
+      "url": "https://nrwe.justiz.nrw.de/lgs/bonn/lg_bonn/j2020/29_OWi_1_20_Urteil_20201111.html"
+    },
+    {
+      "title": "Deutsche Wohnen (Berlin DPA)",
+      "year": "2019 to 2026",
+      "summary": "Berlin fined Deutsche Wohnen EUR 14.5 million in 2019 for retaining tenant data. LG Berlin quashed it in 2021 for not identifying a responsible manager; the Kammergericht referred the question and the CJEU ruled on 5 December 2023 (C-807/21) that companies can be fined directly if at fault. On remand, LG Berlin I reduced the fine to EUR 900,000 on 9 June 2026; reported as not yet final.",
+      "url": "https://www.dr-datenschutz.de/deutsche-wohnen-dsgvo-bussgeld-drastisch-reduziert/"
+    }
+  ],
+  "quirks": [
+    "Fines are treated as administrative offences under the OWiG, so a challenged fine ends up before a criminal court (Amtsgericht or Landgericht) via the public prosecutor, while orders go to administrative courts: two parallel court tracks.",
+    "Eighteen authorities: the BfDI, 16 Länder with Bavaria split into BayLDA (private) and BayLfD (public), so 17 Land-level authorities, plus separate supervisors for churches and public broadcasters. Which one is competent depends on the company's seat.",
+    "No fines on federal public bodies (s.43(3) BDSG).",
+    "The DSK coordinates positions (guidance, resolutions) but cannot bind its members; statutory reform was pending in the Bundestag as of October 2026.",
+    "German courts have significantly reduced several headline fines (1&1, Deutsche Wohnen), because the court re-decides the fine amount itself."
+  ],
+  "plain": "In Germany you complain, usually free and online, to the data protection authority of the federal state where the company is based (or to the federal commissioner for federal bodies and telecoms). The authority can order the company to fix things, and separately issue a fine notice; if the company objects, the case goes through the public prosecutor to an ordinary criminal court, which sets the fine itself. If you think the authority mishandled your complaint, you can take it to the administrative court.",
+  "confidence": "high on BDSG structure, s.41, s.43 and s.20 (quoted from the statute) and on the two cases; medium on OWiG limitation and appeal deadlines (taken from the general codes, not fetched) and on the Land-by-Land position on public-body fines, which was not checked.",
+  "sources": [
+    {"title": "s.41 BDSG full text (German)", "url": "https://lxgesetze.de/gesetze/bdsg/41", "source_type": "secondary"},
+    {"title": "s.43 BDSG full text (German)", "url": "https://lxgesetze.de/gesetze/bdsg/43", "source_type": "secondary"},
+    {"title": "s.20 BDSG full text (German)", "url": "https://lxgesetze.de/gesetze/bdsg/20", "source_type": "secondary"},
+    {"title": "BDSG official consolidated text", "url": "https://www.gesetze-im-internet.de/bdsg_2018/", "source_type": "primary"},
+    {"title": "BfDI press release: Bundestag elects Moritz Hennemann (2026)", "url": "https://www.bfdi.bund.de/SharedDocs/Pressemitteilungen/DE/2026/10_BfDI-Wahl-Hennemann.html", "source_type": "primary"},
+    {"title": "Bundesrat bill to amend the BDSG (DSK, lead authority), BT-Drs. 21/7732, 26 August 2026", "url": "https://dserver.bundestag.de/btd/21/077/2107732.pdf", "source_type": "primary"},
+    {"title": "Bundestag hib: Bundesrat will Bundesdatenschutzgesetz aendern (27 August 2026)", "url": "https://www.bundestag.de/presse/hib/kurzmeldungen-1206094", "source_type": "primary"},
+    {"title": "Datenschutzkonferenz website", "url": "https://www.datenschutzkonferenz-online.de/", "source_type": "primary"},
+    {"title": "BayLDA complaint page", "url": "https://www.lda.bayern.de/de/beschwerde.html", "source_type": "primary"},
+    {"title": "LG Bonn, 29 OWi 1/20, 11 November 2020 (1&1)", "url": "https://nrwe.justiz.nrw.de/lgs/bonn/lg_bonn/j2020/29_OWi_1_20_Urteil_20201111.html", "source_type": "primary"},
+    {"title": "Deutsche Wohnen: fine drastically reduced (June 2026)", "url": "https://www.dr-datenschutz.de/deutsche-wohnen-dsgvo-bussgeld-drastisch-reduziert/", "source_type": "secondary"},
+    {"title": "netzpolitik.org: Deutsche Wohnen case history (2024)", "url": "https://netzpolitik.org/2024/datenschutz-streit-um-millionen-bussgeld-gegen-deutsche-wohnen-geht-weiter/", "source_type": "secondary"},
+    {"title": "LTO on CJEU C-807/21 and C-683/21", "url": "https://www.lto.de/recht/nachrichten/n/eugh-C80721-C68321-deutsche-wohnen-dsgvo-bussgeld-kammergericht", "source_type": "secondary"},
+    {"title": "BGH press release on Facebook scraping, VI ZR 10/24 (18 November 2024)", "url": "https://www.bundesgerichtshof.de/SharedDocs/Pressemitteilungen/DE/2024/2024218.html", "source_type": "primary"},
+    {"title": "DLA Piper Data Protection Laws of the World: Germany enforcement", "url": "https://www.dlapiperdataprotection.com/index.html?t=enforcement&c=DE", "source_type": "secondary"}
+  ]
+}

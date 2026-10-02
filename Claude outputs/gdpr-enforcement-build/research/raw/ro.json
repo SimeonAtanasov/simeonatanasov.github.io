@@ -1,0 +1,82 @@
+{
+  "code": "ro",
+  "country": "Romania",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "National Supervisory Authority for Personal Data Processing",
+    "name_native": "Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal",
+    "abbr": "ANSPDCP",
+    "url": "https://www.dataprotection.ro",
+    "structure": "Headed by a President (single head, not a college), who approves investigations and decides sanctions directly or through delegated department heads; organised under Law 102/2005 as amended by Law 129/2018.",
+    "regional": "Single national authority based in Bucharest; no regional DPAs."
+  },
+  "law": {
+    "name": "Law 190/2018 on measures to implement the GDPR (Legea nr. 190/2018); ANSPDCP organisation and sanction procedure in Law 102/2005 (amended by Law 129/2018); contravention regime of Government Ordinance 2/2001 applies in the alternative",
+    "url": "https://www.dataprotectionromania.ro/legea-190-2018"
+  },
+  "complaint": {
+    "how": "Complaints go to ANSPDCP under its Complaint Resolution Procedure (Decision 133/2018) and must meet the petition rules of Government Ordinance 27/2002, including full identification, or they may be filed without action. Exact channels (online form, email, post) and any fee were not confirmed; the website is in Romanian, English and French.",
+    "contact_controller_first": "Yes: ANSPDCP asks people to contact the controller first and allow it up to one month to respond before complaining.",
+    "deadlines": "ANSPDCP must tell the complainant whether the complaint is admissible within at most 45 days of registration. No time limit for complaining was confirmed.",
+    "complainant_status": "Not confirmed whether the complainant is a party to the sanction proceedings."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint or ex officio action (including breach notifications); investigation approved by the President by written resolution (Decision 161/2018)",
+      "Investigation on site, at ANSPDCP's offices or in writing, announced or unannounced",
+      "Report of finding and sanctioning (proces-verbal de constatare și sancționare) setting out the infringements and measures",
+      "Sanction decision: control staff apply fines up to the equivalent of EUR 300,000; above that a decision of the President is required (Decision 161/2018, Art. 24(4))"
+    ],
+    "decision_maker": "The ANSPDCP President or delegated heads of control departments, with fines above EUR 300,000 reserved to the President.",
+    "limitation": "Three years from the infringement for applying a fine, according to a practitioner source; primary text not confirmed."
+  },
+  "fines": {
+    "imposed_by": "ANSPDCP itself, through a report of finding and sanctioning (an administrative contravention act), not a court. Main penalties are the warning and the fine (Art. 15 Law 190/2018).",
+    "public_bodies": "Yes, but with a warning first: ANSPDCP first issues a report with a remediation plan and a deadline of up to 90 days (Art. 13 Law 190/2018), and only then fines, capped at RON 10,000-100,000 or RON 10,000-200,000 depending on the GDPR provision breached (Art. 14).",
+    "quirks": "Fines are set in euro equivalent but are contravention fines under the general Romanian contravention regime (GO 2/2001). Individual fines are modest compared with other EU countries: in January to April 2026 ANSPDCP issued 25 fines totalling EUR 239,000."
+  },
+  "appeal": {
+    "court": "The administrative litigation section (secția de contencios administrativ) of the competent tribunal (tribunal), on a challenge (contestație) by the controller or processor (Decision 161/2018, Art. 28(1)).",
+    "deadline": "15 days from service of the report or decision.",
+    "suspensive": "Yes: the duty to pay the fine is suspended until the court rules (Decision 161/2018, Art. 28(2)).",
+    "further": "Appeal (recurs) to the Court of Appeal, whose ruling is final; e.g. Tribunalul Cluj then Curtea de Apel Cluj in Banca Transilvania. The Court of Appeal can refer questions to the CJEU, as the Bucharest Court of Appeal did in the avocatnet.ro (Inteligo Media) case.",
+    "inaction": "Not confirmed. Presumably an action under the administrative litigation law (Law 554/2004), but no source was found."
+  },
+  "private": {
+    "courts": "Not confirmed: the court competent for Art. 79 and Art. 82 GDPR claims was not found in Law 190/2018.",
+    "damages": "Not confirmed.",
+    "collective": "Not confirmed: the transposition of the Representative Actions Directive and its application to GDPR claims was not verified."
+  },
+  "cases": [
+    {
+      "title": "Banca Transilvania: EUR 100,000 upheld on final appeal",
+      "year": "2020 to 2022",
+      "summary": "On 26 November 2020 ANSPDCP fined the bank EUR 100,000 under Arts. 32 and 5(1)(f) GDPR after staff shared sensitive customer data via WhatsApp. Tribunalul Cluj and then Curtea de Apel Cluj (final ruling of 13 April 2022) upheld the fine, finding the bank could not prove its staff had actually been trained.",
+      "url": "https://dataprotection.ro/?lang=ro&page=Comunicat_Presa_14_04_2022"
+    },
+    {
+      "title": "Inteligo Media (avocatnet.ro): CJEU sides with the publisher",
+      "year": "2019 to 2025",
+      "summary": "ANSPDCP fined the publisher RON 42,714 (about EUR 9,000) in September 2019 over daily newsletters sent to free-account users. After challenges at Tribunalul București, the Bucharest Court of Appeal referred questions to the CJEU, which on 13 November 2025 found such newsletters can fall within the ePrivacy soft opt-in exception if conditions are met; the final national outcome was not confirmed.",
+      "url": "https://www.avocatnet.ro/articol_70750/avocatnetro-ca%C8%99tig%C4%83-la-CJUE-litigiul-cu-ANSPDCP-privind-amenda-din-2019.html"
+    }
+  ],
+  "quirks": [
+    "Sanctions use the general contravention model: a report of finding and sanctioning is drawn up by inspectors and challenged in court, rather than a formal decision by a board.",
+    "Public bodies get a warning and a remediation plan before any fine, and their fines are capped at RON 100,000 or 200,000 (Arts. 13-14 Law 190/2018).",
+    "Only 135 of 448 GDPR fines issued since 2019 were challenged in court, and ANSPDCP reports about 72 upheld (press release of 25 May 2026).",
+    "Challenges must be filed within a short 15-day window, and they suspend payment."
+  ],
+  "plain": "You first ask the organisation to fix the problem and give it a month; if that fails, you complain to ANSPDCP, which must tell you within 45 days whether it will take the case. Inspectors investigate and, if they find a breach, issue a written report that can include a warning or a fine. The organisation has 15 days to challenge the fine at the local tribunal, with a final appeal to the Court of Appeal.",
+  "confidence": "medium-low: the ANSPDCP website and official legislation portal were only partly accessible, so complaint channels, complainant party status, the three-year limitation, inaction remedies, private-action courts and collective actions were not confirmed from primary text.",
+  "sources": [
+    {"title": "Law 190/2018, Arts. 13-15 (dataprotectionromania.ro)", "url": "https://www.dataprotectionromania.ro/legea-190-2018", "source_type": "secondary"},
+    {"title": "ANSPDCP investigation procedure, Decision 161/2018 (dataprotectionromania.ro)", "url": "https://www.dataprotectionromania.ro/procedura-de-efectuare-a-investigatiilor", "source_type": "secondary"},
+    {"title": "JURIDICE.ro: ANSPDCP investigation procedure", "url": "https://www.juridice.ro/610743/anspdcp-procedura-de-efectuare-a-investigatiilor.html", "source_type": "secondary"},
+    {"title": "ANSPDCP: complaints page (Decision 133/2018)", "url": "https://www.dataprotection.ro/?page=Plangeri_pagina_principala", "source_type": "primary"},
+    {"title": "ANSPDCP press release, 14 April 2022: final ruling on EUR 100,000 fine", "url": "https://dataprotection.ro/?lang=ro&page=Comunicat_Presa_14_04_2022", "source_type": "primary"},
+    {"title": "ANSPDCP press release, 25 May 2026: eight years of GDPR", "url": "https://dataprotection.ro/?lang=ro&page=Comunicat_Presa_25_05_2026", "source_type": "primary"},
+    {"title": "avocatnet.ro: CJEU ruling in the ANSPDCP fine dispute", "url": "https://www.avocatnet.ro/articol_70750/avocatnetro-ca%C8%99tig%C4%83-la-CJUE-litigiul-cu-ANSPDCP-privind-amenda-din-2019.html", "source_type": "secondary"},
+    {"title": "avocatnet.ro: limitation period for ANSPDCP fines", "url": "https://www.avocatnet.ro/articol_49887/Care-e-termenul-in-care-pot-fi-aplicate-amenzile-ANSPDCP-%C8%99i-ce-trebuie-s%C4%83-%C8%99tii-despre-celelalte-sanc%C8%9Biuni-ce-pot-fi-aplicate-precum-%C8%99i-despre-contestarea-lor.html", "source_type": "secondary"}
+  ]
+}

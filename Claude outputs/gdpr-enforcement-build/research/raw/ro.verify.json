@@ -1,0 +1,121 @@
+{
+ "code": "ro",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Banca Transilvania EUR 100,000 on 26 Nov 2020, Arts. 32 and 5(1)(f), WhatsApp; Tribunalul Cluj then Curtea de Apel Cluj final 13 April 2022; no proof of training",
+   "verdict": "confirmed",
+   "evidence": "ANSPDCP press release: fine 26 Nov 2020, Arts. 32(1)-(2) and 5(1)(f); Tribunalul Cluj sentence 1309/2021 of 6 May 2021; Curtea de Apel Cluj decision 9/2022 of 13 April 2022; bank 'did not prove effective training' of the three employees.",
+   "url": "https://dataprotection.ro/?lang=ro&page=Comunicat_Presa_14_04_2022"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Inteligo Media RON 42,714 (about EUR 9,000), Sept 2019; Bucharest Court of Appeal referred; CJEU 13 Nov 2025 on soft opt-in",
+   "verdict": "confirmed",
+   "evidence": "avocatnet.ro: RON 42,714, about EUR 9,000, fine of 26 Sept 2019; referral by Curtea de Apel București; CJEU judgment 13 Nov 2025 placing newsletters to free-account users within Art. 13(2) ePrivacy.",
+   "url": "https://www.avocatnet.ro/articol_70750/avocatnetro-ca%C8%99tig%C4%83-la-CJUE-litigiul-cu-ANSPDCP-privind-amenda-din-2019.html"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "ANSPDCP via report of finding and sanctioning; main penalties warning and fine (Art. 15)",
+   "verdict": "confirmed",
+   "evidence": "Law 190/2018 Art. 15 amending Law 102/2005: 'avertismentul și amenda'; Decision 161/2018 Art. 24.",
+   "url": "https://www.dataprotectionromania.ro/legea-190-2018"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Warning plus remediation plan up to 90 days, then fines RON 10,000-100,000 or 10,000-200,000 (Arts. 13-14)",
+   "verdict": "confirmed",
+   "evidence": "Art. 14 amounts quoted match; the 90-day maximum is in Art. 2(1)(e) ('cel mult 90 de zile'), not Art. 13 itself.",
+   "url": "https://www.dataprotectionromania.ro/legea-190-2018"
+  },
+  {
+   "field": "procedure.stages[3]",
+   "claim": "Control staff fine up to EUR 300,000; above that a President's decision (Art. 24(4))",
+   "verdict": "confirmed",
+   "evidence": "Decision 161/2018 Art. 24: report of finding where fine does not exceed RON equivalent of EUR 300,000; above that 'prin decizie a președintelui ANSPDCP'.",
+   "url": "https://www.dataprotectionromania.ro/procedura-de-efectuare-a-investigatiilor"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Administrative litigation section of the competent tribunal (Art. 28(1))",
+   "verdict": "confirmed",
+   "evidence": "Art. 28: 'contestație la secția de contencios administrativ a tribunalului competent'.",
+   "url": "https://www.dataprotectionromania.ro/procedura-de-efectuare-a-investigatiilor"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "15 days from service",
+   "verdict": "confirmed",
+   "evidence": "Art. 28: 'în termen de 15 zile de la data înmânării, respectiv de la comunicării'.",
+   "url": "https://www.dataprotectionromania.ro/procedura-de-efectuare-a-investigatiilor"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Yes: payment suspended until the court rules",
+   "verdict": "corrected",
+   "evidence": "Art. 28(2): 'Introducerea contestației suspendă numai plata amenzii, până la pronunțarea unei hotărâri judecătorești definitive.' Only payment is suspended, and until a final judgment.",
+   "url": "https://www.dataprotectionromania.ro/procedura-de-efectuare-a-investigatiilor",
+   "replacement": "Partly: a challenge suspends only payment of the fine, until a final court judgment; other measures are not suspended (Decision 161/2018, Art. 28(2))."
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Recurs to the Court of Appeal, final",
+   "verdict": "confirmed",
+   "evidence": "Banca Transilvania: Tribunalul Cluj then Curtea de Apel Cluj, final.",
+   "url": "https://dataprotection.ro/?lang=ro&page=Comunicat_Presa_14_04_2022"
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "Yes: contact controller first and allow up to one month",
+   "verdict": "corrected",
+   "evidence": "Complaints page: you may complain if you addressed the controller to exercise GDPR rights and got no reply within one month (extendable by two). It is framed for rights requests, not as a general precondition.",
+   "url": "https://www.dataprotection.ro/?page=Plangeri_pagina_principala",
+   "replacement": "For rights requests, in effect yes: ANSPDCP's complaints page says you may complain if the controller has not answered within one month (exceptionally extendable by two months)."
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Admissibility answer within at most 45 days",
+   "verdict": "confirmed",
+   "evidence": "Complaints page: informs the complainant on admissibility 'în termen de cel mult 45 de zile' from registration.",
+   "url": "https://www.dataprotection.ro/?page=Plangeri_pagina_principala"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Three years from the infringement (practitioner source)",
+   "verdict": "confirmed",
+   "evidence": "avocatnet.ro: 'termen de prescripție de trei ani'. Still secondary; Decision 161/2018 sets none.",
+   "url": "https://www.avocatnet.ro/articol_49887/Care-e-termenul-in-care-pot-fi-aplicate-amenzile-ANSPDCP-%C8%99i-ce-trebuie-s%C4%83-%C8%99tii-despre-celelalte-sanc%C8%9Biuni-ce-pot-fi-aplicate-precum-%C8%99i-despre-contestarea-lor.html"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Jan-Apr 2026: 25 fines totalling EUR 239,000",
+   "verdict": "confirmed",
+   "evidence": "Press release 25 May 2026: 25 fines, RON 1,187,492 (about EUR 239,000).",
+   "url": "https://dataprotection.ro/?lang=ro&page=Comunicat_Presa_25_05_2026"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "135 of 448 fines challenged; about 72 upheld",
+   "verdict": "corrected",
+   "evidence": "Press release: 448 fines 2019 to May 2026, 135 challenged; of 96 concluded cases, 72 resolved in ANSPDCP's favour. '72 upheld' without the 96 base misleads.",
+   "url": "https://dataprotection.ro/?lang=ro&page=Comunicat_Presa_25_05_2026",
+   "replacement": "Only 135 of 448 GDPR fines issued from 2019 to May 2026 were challenged in court; of 96 concluded cases, 72 ended in ANSPDCP's favour (press release of 25 May 2026)."
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "15-day window; challenges suspend payment",
+   "verdict": "confirmed",
+   "evidence": "Art. 28 Decision 161/2018.",
+   "url": "https://www.dataprotectionromania.ro/procedura-de-efectuare-a-investigatiilor"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Public bodies: warning and remediation plan first, caps RON 100,000/200,000",
+   "verdict": "confirmed",
+   "evidence": "Arts. 13-14 Law 190/2018.",
+   "url": "https://www.dataprotectionromania.ro/legea-190-2018"
+  }
+ ],
+ "notes": "Solid file. Corrections are precision fixes: suspensive effect covers only payment of the fine, and the court statistic needs its denominator."
+}

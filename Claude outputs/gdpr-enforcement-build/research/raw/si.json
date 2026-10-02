@@ -1,0 +1,77 @@
+{
+  "code": "si",
+  "country": "Slovenia",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Information Commissioner of the Republic of Slovenia",
+    "name_native": "Informacijski pooblaščenec Republike Slovenije",
+    "abbr": "IP",
+    "url": "https://www.ip-rs.si",
+    "structure": "Single commissioner (monocratic), who is also the freedom of information appeal body; designated as the GDPR supervisory authority by Art. 54 ZVOP-2. Supervision is carried out by state data protection inspectors employed by the IP.",
+    "regional": "None; one national authority."
+  },
+  "law": {
+    "name": "Personal Data Protection Act (Zakon o varstvu osebnih podatkov, ZVOP-2), Uradni list RS No. 163/22, in force 26 January 2023, replacing ZVOP-1",
+    "url": "https://pisrs.si/pregledPredpisa?id=ZAKO7959"
+  },
+  "complaint": {
+    "how": "A report (prijava) by email to gp.ip@ip-rs.si or by post to Dunajska cesta 22, Ljubljana; the IP's form is recommended but not mandatory. No fee mentioned. Anyone may report breaches of the GDPR, ZVOP-2 or the criminal-justice data protection act (ZVOPOKD).",
+    "contact_controller_first": "Not required for a report. ZVOP-2 Art. 12 governs rights requests to controllers, and rights-related complaints are handled through the special complainant procedure.",
+    "deadlines": "A data subject who complains about the processing of their own data obtains the status of 'complainant with special position' (prijavitelj s posebnim položajem, Arts. 30-34 ZVOP-2); the IP must decide within three months of a complete complaint, extendable once by up to one month in complex cases (Art. 31). Ordinary reports have no statutory deadline ('as soon as possible').",
+    "complainant_status": "In the special complainant procedure the controller or processor is the party; the complainant is informed of the essential facts before the decision and of significant developments, may inspect the file within set limits and receives a decision stating whether a breach existed and which measures were ordered (Arts. 33-34). The complainant bears their own costs."
+  },
+  "procedure": {
+    "stages": [
+      "Report (prijava) or special-position complaint lodged with the IP",
+      "Inspection procedure by a state data protection inspector (inšpekcijski nadzor, Arts. 89-91 ZVOP-2), possibly with orders to remedy",
+      "For special-position complainants: decision within three months (plus one) on whether a breach existed and the measures ordered (Arts. 31-34)",
+      "Separate minor offence procedure (prekrškovni postopek) under the Minor Offences Act ZP-1 if a fine or warning (opomin) is to be imposed, usually by an expedited decision (odločba o prekršku)"
+    ],
+    "decision_maker": "Inspection measures and minor offence decisions are issued by the IP's state data protection inspectors as authorised officials; the IP is the minor offence authority (prekrškovni organ).",
+    "limitation": "No ZVOP-2-specific period confirmed. The general ZP-1 rule is that prosecution of a minor offence becomes time-barred two years after it was committed (Art. 42(1) ZP-1), and execution two years after the decision became final (Art. 44(1) ZP-1)."
+  },
+  "fines": {
+    "imposed_by": "The IP itself, but as a minor offence authority under ZP-1 rather than by an ordinary administrative decision: it issues a minor offence decision (odločba o prekršku) imposing a fine (globa) or a warning (opomin). GDPR Art. 83 fines are imposed in line with Art. 83 GDPR, and fines can also be imposed on the responsible person (odgovorna oseba) of a legal entity.",
+    "public_bodies": "Under Art. 13.a ZP-1 the Republic of Slovenia and self-governing local communities are not liable for minor offences, so the State and municipalities cannot be fined; responsible persons within them may be. Whether other public-law entities (public institutes, agencies) can be fined was not confirmed.",
+    "quirks": "Fines on individual responsible persons alongside the company are routine (e.g. EUR 4,000 on a company and EUR 1,000 on its responsible person in IP decision 0603-23/2023/5). ZVOP-2 replaced ZVOP-1's criminal-style penal provisions with GDPR-aligned fines; before ZVOP-2 took effect in January 2023 the IP's ability to impose GDPR Art. 83 fines was widely reported as absent (not confirmed from primary text). ZVOP-2 also contains national-only offences, e.g. on video surveillance (Arts. 76-78)."
+  },
+  "appeal": {
+    "court": "Fines: a request for judicial protection (zahteva za sodno varstvo) under ZP-1, lodged with the IP and decided by the local court (okrajno sodišče). Inspection and complaint decisions: no administrative appeal, but an administrative dispute (upravni spor) before the Administrative Court of the Republic of Slovenia (Upravno sodišče).",
+    "deadline": "Eight days from service of the minor offence decision for the request for judicial protection (ZP-1). Deadline for an administrative dispute not confirmed in this research (the general ZUS-1 period is 30 days, not verified).",
+    "suspensive": "Not confirmed.",
+    "further": "From the local court, further remedies under ZP-1 are limited (appeal to the higher court only in specified cases; extraordinary request for protection of legality); details not confirmed. From the Administrative Court: appeal or revision to the Supreme Court in limited cases, not confirmed.",
+    "inaction": "Not confirmed. Special-position complainants have a statutory three-month (plus one) deadline (Art. 31 ZVOP-2) and access to the Administrative Court; a secondary source states inaction is treated as a deemed rejection, which I could not verify."
+  },
+  "private": {
+    "courts": "Art. 11 ZVOP-2 gives a general right to judicial protection against a controller or processor (cessation of the breach, restoration and damages), heard by the Administrative Court as a human rights protection case, with the public excluded on request; the person need not first exhaust the IP route.",
+    "damages": "Not confirmed; no Slovenian damages amounts were verified.",
+    "collective": "Slovenia has a Collective Actions Act (Zakon o kolektivnih tožbah, ZKolT, 2017); whether it covers GDPR claims, how the Representative Actions Directive was transposed and whether Art. 80 representation is regulated in ZVOP-2 were not confirmed."
+  },
+  "cases": [
+    {
+      "title": "IP 0603-23/2023/5: workplace and CCTV video surveillance",
+      "year": "2023",
+      "summary": "On 22 August 2023 the IP, as minor offence authority, found breaches of Arts. 76 and 78 ZVOP-2 (inadequate CCTV notices and excessive workplace surveillance) and imposed warnings plus a EUR 4,000 fine on the company and EUR 1,000 on its responsible person, open to a request for judicial protection within eight days.",
+      "url": "https://www.gdpr-guru.eu/blog/blog-5/post/0603-23-2023-5-odlocba-po-zp-1-stek-globa-in-opomin-76-in-78-clen-zvop-2-8751"
+    }
+  ],
+  "quirks": [
+    "Fines run through the minor offences procedure (ZP-1), not through an administrative decision, so the challenge goes to the local court (okrajno sodišče) within eight days rather than to the Administrative Court.",
+    "The State and municipalities cannot be fined (Art. 13.a ZP-1), but individual responsible persons can.",
+    "Individuals sue controllers for GDPR breaches before the Administrative Court under Art. 11 ZVOP-2, an unusual venue for private-law disputes.",
+    "ZVOP-2 only took effect on 26 January 2023, so Slovenia operated almost five years of the GDPR under its old ZVOP-1.",
+    "The IP also handles freedom of information appeals, so data protection is one of two mandates."
+  ],
+  "plain": "You email or post a report to the Information Commissioner, free of charge. If it concerns your own data you get a special status: the Commissioner must decide within three months (four in complex cases) and keeps you informed. If a fine is warranted, the Commissioner runs a separate minor offence procedure, can fine both the company and its responsible manager, and the company has eight days to ask a local court to review it; the State and municipalities themselves cannot be fined.",
+  "confidence": "medium: the ZVOP-2 complaint provisions and ZP-1 rules are confirmed from secondary reproductions, but I could not open the official ZVOP-2 text (PISRS needs JavaScript) to confirm the penalty articles, administrative dispute deadline or inaction rule.",
+  "sources": [
+    {"title": "ZVOP-2 on PISRS (official legislation portal)", "url": "https://pisrs.si/pregledPredpisa?id=ZAKO7959", "source_type": "primary"},
+    {"title": "IP: key novelties of ZVOP-2", "url": "https://www.ip-rs.si/zakonodaja/zakon-o-varstvu-osebnih-podatkov/zvop-2", "source_type": "primary"},
+    {"title": "IP: filing a report (vložitev prijave)", "url": "https://www.ip-rs.si/varstvo-osebnih-podatkov/pravice-posameznika/vlo%C5%BEitev-prijave", "source_type": "primary"},
+    {"title": "IP: data protection overview", "url": "https://www.ip-rs.si/varstvo-osebnih-podatkov/", "source_type": "primary"},
+    {"title": "ZVOP-2 text reproduced (Arts. 11, 12, 30-34, 54-55)", "url": "https://www.gdpr-guru.eu/blog/blog-5/post/zakon-o-varstvu-osebnih-podatkov-zvop-2-8338", "source_type": "secondary"},
+    {"title": "IP minor offence decision 0603-23/2023/5", "url": "https://www.gdpr-guru.eu/blog/blog-5/post/0603-23-2023-5-odlocba-po-zp-1-stek-globa-in-opomin-76-in-78-clen-zvop-2-8751", "source_type": "secondary"},
+    {"title": "Minor Offences Act ZP-1 (Arts. 13.a, 42, 44, request for judicial protection)", "url": "https://www.racunovodstvo.net/zakonodaja/zakon-o-prekrskih-zp-1", "source_type": "secondary"},
+    {"title": "Minor Offences Act ZP-1 on PISRS", "url": "https://pisrs.si/pregledNpb?idPredpisa=ZAKO2537&idPredpisaChng=ZAKO5807", "source_type": "primary"}
+  ]
+}

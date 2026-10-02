@@ -1,0 +1,88 @@
+{
+  "code": "is",
+  "country": "Iceland",
+  "membership": "EEA",
+  "dpa": {
+    "name_en": "Icelandic Data Protection Authority",
+    "name_native": "Persónuvernd",
+    "abbr": "Persónuvernd",
+    "url": "https://island.is/s/personuvernd",
+    "structure": "Single national authority with a five-member board (stjórn) appointed by the minister for five years, chair and vice-chair qualified as district court judges, plus a director (forstjóri) appointed for five years (Art. 38 Act 90/2018). The board takes fining decisions (Art. 46).",
+    "regional": "None. The old personuvernd.is domain now redirects to the island.is government portal."
+  },
+  "law": {
+    "name": "Act No. 90/2018 on Data Protection and the Processing of Personal Data (lög nr. 90/2018 um persónuvernd og vinnslu persónuupplýsinga), in force 15 July 2018",
+    "url": "https://www.althingi.is/lagas/nuna/2018090.html"
+  },
+  "complaint": {
+    "how": "Any data subject or their representative may complain to Persónuvernd (Art. 39); a body, organisation or association meeting GDPR Art. 80 may also complain. Filing channel, language and fees: not confirmed (contact postur@personuvernd.is, Rauðarárstígur 10, 105 Reykjavík).",
+    "contact_controller_first": "Not confirmed.",
+    "deadlines": "No statutory deadline for complaining or deciding confirmed. Persónuvernd must inform the complainant of the outcome within a reasonable time and of the right to go to court (Art. 39).",
+    "complainant_status": "Not confirmed. Persónuvernd publishes rulings (úrskurðir) in complaint cases, which suggests the complainant participates, but party status was not verified."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint lodged with Persónuvernd",
+      "Investigation, with the controller asked for its position",
+      "Decision or ruling by Persónuvernd; corrective powers include warnings, compliance orders and suspension of transfers (Art. 42)",
+      "Fines decided by the board of Persónuvernd (Art. 46), with daily fines available to enforce orders (Art. 45)",
+      "Court action by a party before the ordinary courts"
+    ],
+    "decision_maker": "The board of Persónuvernd decides on administrative fines (Art. 46). Other decisions: not confirmed whether board or office.",
+    "limitation": "Power to impose administrative fines lapses five years after the conduct ended; the period is interrupted when an investigation begins (Art. 46)."
+  },
+  "fines": {
+    "imposed_by": "Persónuvernd's board by administrative decision; fine decisions are directly enforceable (aðfararhæfar), must be paid within one month and go to the State Treasury (Art. 46). Daily fines up to ISK 200,000 per day are possible (Art. 45).",
+    "public_bodies": "Yes. Fines may be imposed on individuals and legal persons, including government authorities and institutions (Art. 46(4)); the same ISK ranges apply (ISK 100,000 to 1.2 billion or 2% of turnover; up to ISK 2.4 billion or 4% for the more serious breaches).",
+    "quirks": "Caps are stated in ISK in the Act. Daily fines do not start to accrue until a court judgment is final if the daily-fine decision is taken to court (Art. 45(2)). The Act also contains a criminal penalties provision (Art. 48), details not confirmed."
+  },
+  "appeal": {
+    "court": "No administrative appeal: Persónuvernd's decisions cannot be referred to other authorities, but parties may take a dispute to the courts in the usual way (Art. 38(1)), starting at the district court (héraðsdómur, e.g. Reykjavík District Court).",
+    "deadline": "Not confirmed.",
+    "suspensive": "Not confirmed for fines, which are enforceable and payable within one month. Daily fines are suspended until a final judgment if challenged in court (Art. 45(2)).",
+    "further": "District court, then Court of Appeal (Landsréttur), then Supreme Court (Hæstiréttur); the Supreme Court can take a case directly from the district court (leapfrog), as in the Seesaw case. Courts may request advisory opinions from the EFTA Court.",
+    "inaction": "Not confirmed; no specific Art. 78(2) procedure found in Act 90/2018."
+  },
+  "private": {
+    "courts": "Ordinary district courts. The Act contains a compensation provision (Art. 51), text not confirmed.",
+    "damages": "No notable GDPR damages awards confirmed.",
+    "collective": "Organisations may lodge complaints with Persónuvernd on behalf of data subjects (Art. 39 referring to GDPR Art. 80). Court collective actions and Representative Actions Directive transposition: not confirmed."
+  },
+  "cases": [
+    {
+      "title": "Reykjavík City, Seesaw platform in schools (ISK 5 million)",
+      "year": "2022-2024",
+      "summary": "Persónuvernd fined Reykjavík City ISK 5 million on 3 May 2022 over use of the Seesaw platform in six schools. Reykjavík District Court ordered a refund in February 2024; the Supreme Court took the case directly (leave granted 16 April 2024) and on 9 December 2024 partly annulled the decisions, finding insufficient grounds and procedural flaws, so the State had to refund the fine. It was the first court test of fines under the 2018 Act.",
+      "url": "https://www.visir.is/g/20242661764d/rikid-tharf-ad-endur-greida-borginni-milljonir"
+    },
+    {
+      "title": "Ferðagjöf travel gift app (ISK 7.5 million and ISK 4 million)",
+      "year": "2021",
+      "summary": "On 23 November 2021 Persónuvernd fined the Ministry of Industries and Innovation ISK 7.5 million and the developer YAY ehf. ISK 4 million over excessive app permissions, lack of transparency, no processing agreement and missing data protection by design.",
+      "url": "https://island.is/s/personuvernd/urskurdir-akvardanir-og-alit/akvordun-um-sekt-vegna-ferdagjafar-stjornvalda"
+    },
+    {
+      "title": "Íslensk erfðagreining (deCODE genetics), COVID-era study",
+      "year": "2024-2025",
+      "summary": "The District Court found for Persónuvernd in a dispute over a COVID-era research study; the company appealed and the Supreme Court agreed to hear it in January 2025. Final outcome not confirmed.",
+      "url": "https://island.is/s/personuvernd/frett/arsskyrsla-personuverndar-2024"
+    }
+  ],
+  "quirks": [
+    "Decisions are final at administrative level: there is no appeal body, so the only route is the courts (Art. 38(1)).",
+    "Public bodies, including ministries and municipalities, can be and have been fined, with the same ISK caps as private entities.",
+    "GDPR applies via the EEA Agreement; references go to the EFTA Court rather than the CJEU.",
+    "The 2024 Supreme Court Seesaw judgment shows courts scrutinise Persónuvernd's compliance with general administrative law (right to be heard, proportionality) closely."
+  ],
+  "plain": "You complain to Persónuvernd, which investigates and can order the organisation to fix things or, through its board, fine it, including public bodies. There is no appeal body above Persónuvernd: whoever disagrees with its decision has to go to the ordinary courts, which can go all the way to the Supreme Court.",
+  "confidence": "Medium: the Act's text on fines and structure was confirmed, but the complaint channel, complainant party status, court deadlines and the criminal and compensation articles could not be read in full.",
+  "sources": [
+    {"title": "Act No. 90/2018 (Althingi consolidated text)", "url": "https://www.althingi.is/lagas/nuna/2018090.html", "source_type": "primary"},
+    {"title": "Persónuvernd: Seesaw fine decision, 3 May 2022", "url": "https://island.is/s/personuvernd/urskurdir-akvardanir-og-alit/notkun-seesaw-nemendakerfisins-i-grunnskolum-reykjavikur-sektarakvordun-1", "source_type": "primary"},
+    {"title": "Persónuvernd: Ferðagjöf fine decision, 23 November 2021", "url": "https://island.is/s/personuvernd/urskurdir-akvardanir-og-alit/akvordun-um-sekt-vegna-ferdagjafar-stjornvalda", "source_type": "primary"},
+    {"title": "Persónuvernd annual report 2024 (news item)", "url": "https://island.is/s/personuvernd/frett/arsskyrsla-personuverndar-2024", "source_type": "primary"},
+    {"title": "Persónuvernd information in English", "url": "https://www.personuvernd.is/information-in-english/", "source_type": "primary"},
+    {"title": "Vísir: Supreme Court takes Seesaw case directly (April 2024)", "url": "https://www.visir.is/g/20242557903d/deilur-personuverndar-og-borgarinnar-beint-til-haesta-rettar", "source_type": "secondary"},
+    {"title": "Vísir: State must refund the city (9 December 2024)", "url": "https://www.visir.is/g/20242661764d/rikid-tharf-ad-endur-greida-borginni-milljonir", "source_type": "secondary"}
+  ]
+}

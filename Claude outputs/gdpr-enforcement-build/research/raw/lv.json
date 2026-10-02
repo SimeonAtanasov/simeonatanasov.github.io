@@ -1,0 +1,83 @@
+{
+  "code": "lv",
+  "country": "Latvia",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Data State Inspectorate",
+    "name_native": "Datu valsts inspekcija",
+    "abbr": "DVI",
+    "url": "https://www.dvi.gov.lv/en",
+    "structure": "Single authority headed by a director, not a collegial body. The director is appointed by the Cabinet after an open competition for a five-year term, renewable once (Section 6 Personal Data Processing Law). Formally an institution of direct administration under Cabinet supervision, but its staff decide independently (Section 3).",
+    "regional": "None. One national authority in Riga."
+  },
+  "law": {
+    "name": "Personal Data Processing Law (Fizisko personu datu apstrādes likums), adopted 21 June 2018, in force 5 July 2018, amended 2019 and 2021. GDPR fine proceedings also run under the general Administrative Liability Law (Administratīvās atbildības likums).",
+    "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law"
+  },
+  "complaint": {
+    "how": "Written complaint on the DVI template, sent by email with a qualified e-signature to pasts@dvi.gov.lv, through the state e-address system (latvija.gov.lv), by post or in person at Elijas iela 17, Riga. In Latvian. No fee mentioned.",
+    "contact_controller_first": "Recommended and in practice expected: the DVI template asks for evidence of the prior request to the controller and any reply. Not a statutory admissibility condition as far as could be confirmed.",
+    "deadlines": "DVI must decide within six months of opening a case, extendable to one year for objective reasons and to two years where facts are hard to establish or the GDPR cooperation/consistency mechanism applies (Section 23.1 Personal Data Processing Law, added 2021). No time limit for complainants confirmed.",
+    "complainant_status": "Not confirmed. Complaints are handled under Latvian administrative law; whether the complainant is a party to the separate administrative offence (fine) proceedings could not be confirmed."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint received and case opened (or own-initiative inspection)",
+      "Investigation using DVI powers to request information and inspect premises (Section 5)",
+      "Administrative act ordering compliance and/or administrative offence proceedings leading to a fine under GDPR Art. 83",
+      "Contest of an official's decision within DVI to the director, then court appeal"
+    ],
+    "decision_maker": "DVI officials and the director. Published fine decisions (e.g. Tet, 2022) are issued by the DVI director under the Administrative Liability Law.",
+    "limitation": "Governed by the Administrative Liability Law: per the official English translation, Section 118 requires offence proceedings to be initiated within one year of the offence (or of the end of a continuing offence). Whether a longer period applies to GDPR fines not confirmed."
+  },
+  "fines": {
+    "imposed_by": "DVI itself, by decision in administrative offence proceedings under the Administrative Liability Law (the Tet decision cites that law alongside GDPR Art. 83).",
+    "public_bodies": "Public bodies themselves are not fined. Instead Section 38 Personal Data Processing Law lets DVI give officials of public-law entities a warning or a fine of up to 200 fine units (a fine unit is EUR 5 under the Administrative Liability Law, so up to EUR 1,000); DVI conducts these proceedings (Section 39).",
+    "quirks": "Fines on individual public officials rather than on the authority. Criminal Law Section 145 also criminalises unlawful activities with personal data causing substantial harm (up to two years' imprisonment, per LV portāls). DVI applies a published fine-calculation methodology."
+  },
+  "appeal": {
+    "court": "For fine decisions: contest within DVI to the director first, then appeal to a district (city) court (rajona (pilsētas) tiesa). For other DVI administrative acts (orders): appeal to the administrative courts under the Administrative Procedure Law (Section 24 Personal Data Processing Law).",
+    "deadline": "Not confirmed. Set by the Administrative Liability Law (fines) or the Administrative Procedure Law (one month for administrative acts is the general rule, not confirmed for DVI specifically).",
+    "suspensive": "For administrative acts of the director, no: Section 24 says an appeal does not suspend operation. For fine decisions, not confirmed.",
+    "further": "Fine cases: appeal from the district court to a regional court (apgabaltiesa), whose decision is final per the Ministry of Justice summary of the Administrative Liability Law. Administrative act cases: administrative regional court and Supreme Court (Senate) cassation, not confirmed for DVI cases.",
+    "inaction": "Not confirmed. Presumably an application to the administrative court against failure to act under the Administrative Procedure Law, but no source located."
+  },
+  "private": {
+    "courts": "Ordinary civil courts (district/city courts at first instance). Per the English translation of the Personal Data Processing Law, claims for harm from GDPR breaches must be brought within five years of the harm or of the end of a continuing breach (Section 26).",
+    "damages": "No notable national case law on damages amounts located.",
+    "collective": "Not confirmed. Latvia's transposition of the Representative Actions Directive (EU) 2020/1828 and its application to GDPR claims could not be verified."
+  },
+  "cases": [
+    {
+      "title": "Tet (telecoms), EUR 1.6 million",
+      "year": "2022",
+      "summary": "DVI director's decision of 15 July 2022 fined SIA Tet EUR 1,600,000 under Art. 83(5)(a) for breaches of Art. 5(1)(a) and (d), including invoicing and passing to debt collectors data of people whose identity was not verified. The base amount of EUR 3.2 million was reduced by 50%. Court outcome not confirmed.",
+      "url": "https://www.dvi.gov.lv/lv/media/1874/download"
+    },
+    {
+      "title": "Lursoft IT, EUR 65,000 (appealed)",
+      "year": "2020",
+      "summary": "Business-register data provider fined EUR 65,000 for publishing restricted Enterprise Register documents without a legal basis and keeping insolvency records longer than the Insolvency Law allows. DVI noted in February 2021 that the company had appealed, so the fine was not final; the court outcome was not confirmed.",
+      "url": "https://www.dvi.gov.lv/lv/jaunums/datu-valsts-inspekcija-piemero-eur-65-000-naudas-sodu-par-visparigas-datu-aizsardzibas-regulas-noteikumu-parkapumiem"
+    }
+  ],
+  "quirks": [
+    "Two tracks: DVI orders are administrative acts reviewed by the administrative courts, while fines are administrative offence decisions reviewed by the ordinary courts (district then regional court).",
+    "Public authorities cannot be fined as such; their officials can be warned or fined up to 200 fine units (Section 38).",
+    "Statutory decision deadline of six months, extendable to two years in cross-border cases (Section 23.1).",
+    "The director is appointed by the Cabinet and DVI sits under Cabinet supervision, an unusual model for an independent authority."
+  ],
+  "plain": "You first ask the organisation to fix the problem, then send a signed complaint in Latvian to the Data State Inspectorate, attaching proof of your request. The Inspectorate investigates and should decide within six months; it can order changes or fine the organisation. A fined company challenges it first with the Inspectorate's director, then in an ordinary district court and finally a regional court.",
+  "confidence": "medium: the split between administrative courts and ordinary courts is supported by the Tet decision and Ministry of Justice material, but appeal deadlines, suspensive effect for fines, complainant party status and court outcomes for Tet and Lursoft could not be confirmed.",
+  "sources": [
+    {"title": "Personal Data Processing Law (English translation, likumi.lv)", "url": "https://likumi.lv/ta/en/en/id/300099-personal-data-processing-law", "source_type": "primary"},
+    {"title": "Fizisko personu datu apstrādes likums (consolidated Latvian text)", "url": "https://likumi.lv/ta/id/300099-fizisko-personu-datu-apstrades-likums", "source_type": "primary"},
+    {"title": "Law on Administrative Liability (English translation)", "url": "https://likumi.lv/ta/en/en/id/303007-law-on-administrative-liability", "source_type": "primary"},
+    {"title": "Ministry of Justice: Administratīvās atbildības likums", "url": "https://www.tm.gov.lv/lv/administrativas-atbildibas-likums", "source_type": "primary"},
+    {"title": "DVI complaint templates and submission instructions", "url": "https://www.dvi.gov.lv/lv/iesniegumu-paraugi", "source_type": "primary"},
+    {"title": "DVI decision, SIA Tet, 15 July 2022", "url": "https://www.dvi.gov.lv/lv/media/1874/download", "source_type": "primary"},
+    {"title": "DVI news: EUR 65,000 fine (Lursoft IT)", "url": "https://www.dvi.gov.lv/lv/jaunums/datu-valsts-inspekcija-piemero-eur-65-000-naudas-sodu-par-visparigas-datu-aizsardzibas-regulas-noteikumu-parkapumiem", "source_type": "primary"},
+    {"title": "LV portāls: Personas datu apstrādes pārkāpumu sekas (2023)", "url": "https://lvportals.lv/e-konsultacijas/28400-personas-datu-apstrades-parkapumu-sekas-2023", "source_type": "secondary"},
+    {"title": "LV portāls: Datu subjekta rīcība prettiesiskas datu apstrādes gadījumā (2022)", "url": "https://lvportals.lv/e-konsultacijas/26727-datu-subjekta-riciba-prettiesiskas-datu-apstrades-gadijuma-2022", "source_type": "secondary"}
+  ]
+}

@@ -1,0 +1,106 @@
+{
+ "code": "no",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Fined Dec 2021; Board upheld 2023; Oslo tingrett 1 Jul 2024 (23-160384TVI-TOSL/04); Borgarting 21 Oct 2025; no further appeal, final Nov 2025",
+   "verdict": "confirmed",
+   "evidence": "Datatilsynet: 'in December 2021, a fine of NOK 65 million was imposed'. Oslo tingrett judgment dated 01.07.2024, case 23-160384TVI-TOSL/04, State acquitted, Personvernnemnda decision of 27 September 2023. Rett24 reports the Borgarting judgment on Tuesday 21 October 2025 (Hjort says 22 October; Rett24 published same day so 21 October preferred). Shifter: Grindr did not appeal by the deadline of 21 November 2025, fine stands.",
+   "url": "https://www.datatilsynet.no/contentassets/3a0e9df9be4d4963afc72109123c6ad6/2024-07-01-dom.pdf"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2021-2025",
+   "verdict": "confirmed",
+   "evidence": "As above.",
+   "url": "https://www.shifter.no/nyheter/grindr-saken-endelig-avgjort-ma-betale-65-millioner-i-gebyr/440211"
+  },
+  {
+   "field": "cases[1].year",
+   "claim": "not confirmed",
+   "verdict": "corrected",
+   "evidence": "Rett24 (3 May 2019): Datatilsynet gave advance notice (forhandsvarsel) of NOK 2 million to Oslo municipality's Education Agency over the Skolemelding app, 63,000 pupils; a later Nettavisen headline reports the NOK 2 million fine as imposed. White & Case describes the Bergen fine (school system, 35,000 pupils' credentials exposed). The Oslo notice is dated 3 May 2019; the date of the final Oslo decision and of the Bergen fine were not shown.",
+   "url": "https://rett24.no/articles/oslo-far-gdpr-smell-etter-aftenposten-avsloring",
+   "replacement": "2019 (Oslo notice of intended fine); Bergen year not confirmed"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Bergen NOK 1.6m for inadequate data security; Oslo NOK 2m for app vulnerabilities",
+   "verdict": "corrected",
+   "evidence": "White & Case: Bergen about EUR 163,000 because usernames and passwords of over 35,000 pupils were exposed; Oslo about EUR 207,000 'notification' for the school communication app affecting 63,000 pupils. The Oslo body was the municipality's Education Agency (Utdanningsetaten). Amounts consistent.",
+   "url": "https://www.whitecase.com/insight-our-thinking/gdpr-guide-national-implementation-norway",
+   "replacement": "Examples of fines on public bodies: Bergen municipality NOK 1.6 million after login credentials of over 35,000 pupils in its school IT system were exposed, and Oslo municipality's Education Agency NOK 2 million over a security flaw in the Skolemelding school app affecting some 63,000 pupils."
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Datatilsynet by decision; payment four weeks after final (s. 27); coercive fines (s. 29)",
+   "verdict": "confirmed",
+   "evidence": "s. 27: 'Oppfyllelsesfristen for et vedtak om overtredelsesgebyr er fire uker fra vedtaket er endelig'; s. 29 daily tvangsmulkt.",
+   "url": "https://europam.eu/data/mechanisms/FOI/FOI%20Laws/Norway/10.%20Personal%20Data%20Act%20of%202018_NOR,%20consolidated,%20last%20amended%202018.pdf"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public authorities can be fined under Art 83 rules (s. 26(2)); examples Bergen, Oslo, NAV",
+   "verdict": "confirmed",
+   "evidence": "s. 26: 'Datatilsynet kan ilegge offentlige myndigheter og organer overtredelsesgebyr etter reglene i personvernforordningen artikkel 83'. White & Case: 'The DPA may impose fines on public authorities'. NAV decision 2024 listed by CMS.",
+   "url": "https://europam.eu/data/mechanisms/FOI/FOI%20Laws/Norway/10.%20Personal%20Data%20Act%20of%202018_NOR,%20consolidated,%20last%20amended%202018.pdf"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Board, then suit against the State; Datatilsynet acts as party (s. 25)",
+   "verdict": "confirmed",
+   "evidence": "Grindr v Staten v/Personvernnemnda in Oslo tingrett illustrates the route; s. 25 makes Datatilsynet party for the State in suits on its supervisory work.",
+   "url": "https://www.datatilsynet.no/contentassets/3a0e9df9be4d4963afc72109123c6ad6/2024-07-01-dom.pdf"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Three weeks to the Board (fvl. s. 29); court deadline not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Lovdata blocks automated access. Three weeks matches forvaltningsloven s. 29 as far as known; the field already hedges. Shifter shows the ordinary civil appeal deadline running in the Grindr case (one month after judgment), not the deadline to sue.",
+   "url": "https://lovdata.no/dokument/NLE/lov/2018-06-15-38"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Payment due four weeks after final decision (s. 27)",
+   "verdict": "confirmed",
+   "evidence": "s. 27 as above.",
+   "url": "https://europam.eu/data/mechanisms/FOI/FOI%20Laws/Norway/10.%20Personal%20Data%20Act%20of%202018_NOR,%20consolidated,%20last%20amended%202018.pdf"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Five years after the infringement ended (s. 28)",
+   "verdict": "confirmed",
+   "evidence": "s. 28: 'Adgangen til a ilegge overtredelsesgebyr foreldes fem ar etter overtredelsen er opphort'.",
+   "url": "https://europam.eu/data/mechanisms/FOI/FOI%20Laws/Norway/10.%20Personal%20Data%20Act%20of%202018_NOR,%20consolidated,%20last%20amended%202018.pdf"
+  },
+  {
+   "field": "procedure.decision_maker",
+   "claim": "Seven-member Board, chair and deputy legally qualified, four-year terms; Art 56 and Ch VII decisions not appealable to it",
+   "verdict": "confirmed",
+   "evidence": "s. 22: seven members appointed by the King for four years, renewable once; leader and deputy must be lawyers; 'Datatilsynets vedtak etter personvernforordningen artikkel 56 og kapittel VII kan ikke paklages til Personvernnemnda'.",
+   "url": "https://europam.eu/data/mechanisms/FOI/FOI%20Laws/Norway/10.%20Personal%20Data%20Act%20of%202018_NOR,%20consolidated,%20last%20amended%202018.pdf"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Board secretariat hosted by Norwegian Civil Affairs Authority since 15 September 2025",
+   "verdict": "unverifiable",
+   "evidence": "Not checked in this pass.",
+   "url": "https://www.personvernnemnda.no/sekretariat-og-medlemmer"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "One-stop-shop decisions bypass the Board",
+   "verdict": "confirmed",
+   "evidence": "s. 22 as above.",
+   "url": "https://europam.eu/data/mechanisms/FOI/FOI%20Laws/Norway/10.%20Personal%20Data%20Act%20of%202018_NOR,%20consolidated,%20last%20amended%202018.pdf"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Datatilsynet acts as party for the State (s. 25)",
+   "verdict": "confirmed",
+   "evidence": "s. 25: 'Datatilsynet opptrer som part pa vegne av staten i soksmal som er knyttet til tilsynsvirksomheten'. Note the Grindr suit was styled against Staten v/Personvernnemnda, since the Board's decision was under review.",
+   "url": "https://europam.eu/data/mechanisms/FOI/FOI%20Laws/Norway/10.%20Personal%20Data%20Act%20of%202018_NOR,%20consolidated,%20last%20amended%202018.pdf"
+  }
+ ],
+ "notes": "Grindr chain confirmed in every date. Sources disagree on the Court of Appeal date (Rett24 21 October, Hjort 22 October 2025); 21 October kept. CMS's tracker gives wrong dates for Grindr (March 2024, August 2025) and should not be used as a source for this case. The statute text checked is the 2018 consolidated version; later amendments to ss. 22-30 were not checked because Lovdata blocks automated access. fines.quirks says s. 26 extends Art 83(4) fines to Arts 10 and 24: the extension to Arts 10 and 24 is confirmed, the tier (83(4)) was not shown by the extract."
+}

@@ -1,0 +1,96 @@
+{
+  "code": "ee",
+  "country": "Estonia",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Estonian Data Protection Inspectorate",
+    "name_native": "Andmekaitse Inspektsioon",
+    "abbr": "AKI",
+    "url": "https://www.aki.ee/en",
+    "structure": "Single authority headed by a Director General (not a collegial body). It is also the oversight body for public information (freedom of information) requests.",
+    "regional": "Single national authority."
+  },
+  "law": {
+    "name": "Personal Data Protection Act (Isikuandmete kaitse seadus, IKS), RT I, 04.01.2019, 11, as amended (including amendments in force 1 November 2023)",
+    "url": "https://www.riigiteataja.ee/en/eli/523012019001/consolide"
+  },
+  "complaint": {
+    "how": "Online via the state e-portal (saada.rik.ee) with ID-card, Mobile-ID or Smart-ID, or by digitally signed email to info@aki.ee using AKI's template. Primarily in Estonian. No fee.",
+    "contact_controller_first": "Yes. AKI generally will not open proceedings unless the complainant has first contacted the controller, and asks for evidence of that contact.",
+    "deadlines": "AKI aims to respond within 30 days, extendable by up to 60 days. No time limit for complaining was found.",
+    "complainant_status": "A complaint does not automatically open supervisory proceedings; if AKI opens formal proceedings on the complaint, the complainant becomes a party to them (AKI complaint page)."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint or own-initiative case; AKI may give guidance, refer the matter back to the controller with recommendations, or open supervisory proceedings",
+      "Supervisory (administrative) proceedings: AKI can issue a precept (ettekirjutus) ordering compliance, reprimands and other Art. 58(2) measures, backed by a penalty payment (sunniraha) if not obeyed",
+      "Separately, for a fine: AKI opens misdemeanour proceedings (väärteomenetlus) as an extrajudicial body under the Code of Misdemeanour Procedure",
+      "AKI issues a misdemeanour decision imposing the fine; the person has 15 days to file a complaint against it with the county court",
+      "County court reviews; its judgment can be taken to the Supreme Court (Riigikohus) by cassation"
+    ],
+    "decision_maker": "AKI itself, acting as extrajudicial body in misdemeanour proceedings (not a prosecutor). Courts only intervene if the fined party complains.",
+    "limitation": "Three years for data protection misdemeanours since the amendments in force 1 November 2023 (previously two years). Fines on two hospitals were cancelled because the old limitation period had expired."
+  },
+  "fines": {
+    "imposed_by": "AKI, through misdemeanour (quasi-criminal) proceedings rather than administrative fines, which Estonian law did not have (Recital 151). Since 1 November 2023 the general EUR 400,000 cap on misdemeanour fines for legal persons no longer applies to GDPR offences, so AKI can impose fines up to the Art. 83 maxima (EUR 20 million or 4% of worldwide turnover), and legal persons are liable without proof of a specific employee's guilt.",
+    "public_bodies": "Not confirmed. Public-sector hospitals have been fined (later cancelled on limitation grounds), but whether the state and local authorities themselves can be fined was not confirmed against the legal text.",
+    "quirks": "Fines are imposed in a misdemeanour procedure with criminal-law safeguards, which courts apply strictly: fines on Pere Sihtkapital and Asper Biogene fell because conduct predated the November 2023 liability rules. Penalty payments (sunniraha) to enforce precepts are a separate administrative tool. Estonia's 2020 Ministry of Justice concept for a general administrative fines regime (covering AKI, the Financial Supervision Authority and the Competition Authority) was never enacted; the 2025 competition law reform still has courts impose fines in misdemeanour proceedings."
+  },
+  "appeal": {
+    "court": "Misdemeanour fine: complaint to the county court (maakohus), e.g. Harju County Court in the Allium UPI case and Tartu County Court in Asper Biogene. Administrative decisions (precepts, penalty payments, reprimands): administrative court under the Code of Administrative Court Procedure.",
+    "deadline": "15 days for a complaint against AKI's misdemeanour decision (stated in AKI's Allium UPI announcement). 30 days to challenge administrative decisions in the administrative court, or 30 days for an objection (vaie) to AKI itself under the Administrative Procedure Act.",
+    "suspensive": "Yes in practice for fines: AKI states the misdemeanour decision is not enforceable while challenged, and the Allium fine remained unenforceable pending appeal. Not confirmed for precepts.",
+    "further": "County court judgment in a misdemeanour case goes by cassation to the Supreme Court (AKI cited a 30-day window in 2026); the Supreme Court may refuse to accept the case (as in Asper Biogene, August 2025). Administrative court cases go to the circuit court and then the Supreme Court.",
+    "inaction": "An objection (vaie) to AKI within 30 days, decided by AKI within 10 days (extendable by 30), or an action in the administrative court; the objection route is closed once the matter is in court."
+  },
+  "private": {
+    "courts": "Claims against private controllers go to the county courts (civil). Not confirmed: claims against public bodies may fall under the State Liability Act in the administrative courts.",
+    "damages": "No notable Estonian damages awards were confirmed in this research.",
+    "collective": "Not confirmed (Representative Actions Directive transposition and any Art. 80(2) use not checked)."
+  },
+  "cases": [
+    {
+      "title": "Allium UPI OÜ (Apotheka pharmacy loyalty programme): data breach",
+      "year": "2025-2026",
+      "summary": "On 5 September 2025 AKI fined Allium UPI EUR 3 million after attackers repeatedly downloaded data on over 750,000 people, including purchase histories revealing health information, enabled by shared admin credentials, no MFA and weak logging. On 2 September 2026 Harju County Court upheld the fine as justified; Allium announced an appeal to the Supreme Court, so the fine is not yet final.",
+      "url": "https://www.aki.ee/uudised/allium-upi-le-maaratud-3-miljoni-euro-suurune-trahv-oli-kohtu-hinnangul-pohjendatud"
+    },
+    {
+      "title": "Asper Biogene OÜ: genetic data leak and DPO conflict",
+      "year": "2025",
+      "summary": "AKI fined the genetic testing company EUR 85,000 in January 2025. Tartu County Court annulled it on 26-27 June 2025: the security failure predated the 1 November 2023 corporate liability rules, and the DPO conflict (sole board member as DPO) was discontinued on expediency grounds. The Supreme Court declined AKI's cassation appeal in August 2025.",
+      "url": "https://www.aki.ee/uudised/asper-biogene-andmeleket-puudutav-kohtuvaidlus-loppenud"
+    },
+    {
+      "title": "Bolt: reprimand in an Art. 60 cross-border case",
+      "year": "2025",
+      "summary": "On 30 May 2025 AKI reprimanded Bolt for transparency, legal basis and retention failures and closed proceedings after compliance, with no fine. The decision states it can be challenged within 30 days in an administrative court.",
+      "url": "https://www.edpb.europa.eu/system/files/2025-08/ee-sa-05-25-decisionpublic_.pdf"
+    }
+  ],
+  "quirks": [
+    "One of only two EU countries (with Denmark) without GDPR administrative fines: AKI fines through misdemeanour proceedings, and the fined party goes to the county court, not the administrative court.",
+    "Two parallel tracks: administrative supervision (precepts, penalty payments, appeal to the administrative court) and misdemeanour proceedings (fines, appeal to the county court and the Supreme Court).",
+    "Amendments in force 1 November 2023 lifted the EUR 400,000 misdemeanour cap for GDPR offences, extended limitation to three years and simplified corporate liability; before that, fines were tiny and several were annulled.",
+    "The EUR 3 million Allium UPI fine (2025) is Estonia's first million-euro data protection fine and the first big test of the new rules.",
+    "A general administrative fines act was proposed by the Ministry of Justice in 2020 but has not been adopted."
+  ],
+  "plain": "In Estonia you first ask the organisation to fix the problem, then complain to the Data Protection Inspectorate (AKI), usually online with your ID-card or Smart-ID. AKI can order the organisation to comply, but to fine it AKI has to run a separate misdemeanour case, a mini criminal procedure, and the organisation can take that fine to the county court within 15 days and then to the Supreme Court. Since late 2023 these fines can reach the full GDPR maximum.",
+  "confidence": "medium: complaint route, the misdemeanour mechanism, the 2023 changes and the Allium and Asper Biogene cases are sourced, but I could not read the IKS text itself (Riigi Teataja blocked), so section numbers, the public-body position, the exact cassation deadline and any current administrative fines bill are unconfirmed.",
+  "sources": [
+    {"title": "AKI: Complaint in a personal data matter", "url": "https://www.aki.ee/meist/vota-uhendust/kaebus-isikuandmete-kaitse-asjas", "source_type": "primary"},
+    {"title": "AKI: Filing an objection (vaie)", "url": "https://www.aki.ee/meist/vota-uhendust/vaide-esitamine", "source_type": "primary"},
+    {"title": "Personal Data Protection Act (Riigi Teataja, English)", "url": "https://www.riigiteataja.ee/en/eli/523012019001/consolide", "source_type": "primary"},
+    {"title": "AKI: Allium UPI left customer data unprotected, EUR 3 million fine (5 September 2025)", "url": "https://www.aki.ee/uudised/allium-upi-jattis-kliendiandmed-kaitseta-3-miljoni-euro-suurune-trahv", "source_type": "primary"},
+    {"title": "AKI: Court found EUR 3 million fine on Allium UPI justified (2 September 2026)", "url": "https://www.aki.ee/uudised/allium-upi-le-maaratud-3-miljoni-euro-suurune-trahv-oli-kohtu-hinnangul-pohjendatud", "source_type": "primary"},
+    {"title": "AKI: Asper Biogene court dispute has ended", "url": "https://www.aki.ee/uudised/asper-biogene-andmeleket-puudutav-kohtuvaidlus-loppenud", "source_type": "primary"},
+    {"title": "EDPB register: AKI decision on Bolt, 30 May 2025", "url": "https://www.edpb.europa.eu/system/files/2025-08/ee-sa-05-25-decisionpublic_.pdf", "source_type": "primary"},
+    {"title": "ERR: Court dismissed Allium's complaint against million fine", "url": "https://www.err.ee/1610126344/kohus-jattis-rahuldamata-alliumi-kaebuse-miljonitrahvi-tuhistamiseks", "source_type": "secondary"},
+    {"title": "ERR: AKI appeals Asper Biogene misdemeanour judgment to Supreme Court", "url": "https://www.err.ee/1609736538/andmekaitse-kaebab-asper-biogene-i-vaarteoasja-kohtuotsuse-riigikohtusse", "source_type": "secondary"},
+    {"title": "DLA Piper Data Protection Laws of the World: Estonia enforcement", "url": "https://www.dlapiperdataprotection.com/countries/estonia/enforcement.html", "source_type": "secondary"},
+    {"title": "Estonian Human Rights Centre: Human rights in Estonia 2026, privacy chapter", "url": "https://humanrights.ee/materjalid/inimoigused-eestis-2026/oigus-perekonna-ja-eraelu-puutumatusele/", "source_type": "secondary"},
+    {"title": "INPLP: Estonia wants to introduce administrative fines (July 2020)", "url": "https://www.inplp.com/publications/estonia-wants-to-introduce-administrative-fines-into-its-legal-system-to-allow-for-a-more-effective-response-to-data-protection-law-violations", "source_type": "secondary"},
+    {"title": "Grant Thornton Baltic: Prosecuting offenders will be easier (June 2020)", "url": "https://www.grantthornton.ee/en/insights1/prosecuting-offenders-will-be-easier-and-the-penalties-will-be-bigger-in-the-future/", "source_type": "secondary"},
+    {"title": "Antitrust Alliance: Estonia completes transposition of the ECN+ Directive (October 2025)", "url": "https://www.antitrust-alliance.org/estonia-completes-transposition-of-the-ecn-directive-october-2025/", "source_type": "secondary"}
+  ]
+}

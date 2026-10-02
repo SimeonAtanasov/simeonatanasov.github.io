@@ -1,0 +1,112 @@
+{
+ "code": "lu",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "CNPD fine 15 July 2021; Tribunal administratif dismissed appeal 18 March 2025; Amazon appealed further",
+   "verdict": "confirmed",
+   "evidence": "2B Advice: CNPD decision 15 July 2021, Administrative Tribunal 18 March 2025 dismissed Amazon's appeal; further appeal confirmed by the Cour administrative judgment of 12 March 2026.",
+   "url": "https://2b-advice.com/en/2025/03/26/record-fine-against-amazon-administrative-court-confirms-cnpd-decision-of-746-million-euros/"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "12 March 2026 Cour administrative annulled decision and fine for lack of fault analysis and alternatives; referred back; compliance order moot as Amazon switched to consent",
+   "verdict": "corrected",
+   "evidence": "CNPD: court 'quasi-intégralement validé l'approche de la CNPD' but annulled the fine; compliance order moot as Amazon had achieved 'mise en conformité effective' before the hearing; CNPD 'poursuivra l'instruction du dossier'. PPC Land: case 52757C, fault not analysed per Deutsche Wohnen and NVSC, full range of sanctions not evaluated, referred back. No source says Amazon switched to consent. Judgment PDF returned 403, so whether the whole decision or only the fine was annulled could not be read.",
+   "url": "https://cnpd.public.lu/fr/actualites/national/2026/03/arret-ca-amazon-cnpd.html",
+   "replacement": "On 12 March 2026 the Administrative Court largely confirmed CNPD's findings of breach but annulled the EUR 746 million fine, because CNPD had not assessed whether Amazon acted intentionally or negligently (as the CJEU required in C-807/21 and C-683/21) and had not weighed alternatives to a fine. The case was sent back to CNPD, which said it would continue the case; the compliance order was moot as Amazon had already brought its practices into compliance. No further appeal exists."
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "5FR/2023: complaint March 2021, investigation July 2022, objections January 2023, hearing April 2023, decision 5 July 2023, EUR 1,500, three-month appeal clause",
+   "verdict": "confirmed",
+   "evidence": "Decision: complaint 10 March 2021, investigation 1 July 2022, communication des griefs 25 January 2023, hearing 27 April 2023, decision 5 July 2023, EUR 1,500; recours en réformation within three months via an avocat à la Cour.",
+   "url": "https://cnpd.public.lu/content/dam/cnpd/fr/decisions-fr/2023/dcision-5fr-2023-sous-forme-anonymise.pdf"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "CNPD itself, no court confirmation",
+   "verdict": "confirmed",
+   "evidence": "Art. 48: 'The CNPD may impose administrative fines as set out in Article 83'.",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "State and municipalities cannot be fined (Art. 48)",
+   "verdict": "confirmed",
+   "evidence": "Art. 48: '... save against the State and municipalities.'",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Tribunal administratif, recours en réformation (Art. 55)",
+   "verdict": "confirmed",
+   "evidence": "Art. 55: appeal before the Administrative Tribunal, 'which rules on the merits of the case'.",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Three months, through an avocat à la Cour",
+   "verdict": "confirmed",
+   "evidence": "5FR/2023 appeal clause: 'dans les trois mois qui suivent sa notification ... par le biais d'un avocat à la Cour'.",
+   "url": "https://cnpd.public.lu/content/dam/cnpd/fr/decisions-fr/2023/dcision-5fr-2023-sous-forme-anonymise.pdf"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not automatically, as far as could be confirmed",
+   "verdict": "unverifiable",
+   "evidence": "No source located in this check.",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Cour administrative, 40 days general rule not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not checked against the Law of 21 June 1999; the 40-day figure matches general knowledge of Luxembourg administrative procedure.",
+   "url": "https://cnpd.public.lu/fr/actualites/national/2026/03/arret-ca-amazon-cnpd.html"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Five years after infringement ceased (Art. 53); fines lapse five years after decision final (Art. 54)",
+   "verdict": "confirmed",
+   "evidence": "Arts 53 and 54 set five-year periods for CNPD powers and for enforcing fines from finality; the 'ceased' wording was not seen verbatim.",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Periodic penalties up to 5% of average daily turnover (Art. 49); obstruction 8 days to 1 year and/or EUR 251-125,000 (Art. 51)",
+   "verdict": "confirmed",
+   "evidence": "Art. 49: 'not exceeding 5 % of the average daily turnover of the preceding business year'; Art. 51: 'imprisonment for a period of eight days to one year and a fine of 251 to 125 000 euros or one of these punishments alone.'",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Four members incl. president, four deputies, six-year terms renewable once; majority vote, president's casting vote",
+   "verdict": "confirmed",
+   "evidence": "Art. 16 and Art. 36 as quoted in the English translation.",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+  },
+  {
+   "field": "private.collective",
+   "claim": "Law of 20 November 2025, in force 25 November 2025, covers GDPR; CNPD qualified entity",
+   "verdict": "confirmed",
+   "evidence": "CNPD: 'Loi du 20 novembre 2025 portant modification du Code de la consommation', in force 25 November 2025; confers on CNPD 'en tant qu'entité qualifiée, la faculté d'intenter un recours collectif' for GDPR breaches.",
+   "url": "https://cnpd.public.lu/fr/actualites/national/2026/02/cnpd-recours-collectif.html"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Head of investigation cannot sit on the deciding formation (Art. 41)",
+   "verdict": "confirmed",
+   "evidence": "Art. 41: 'The head of the investigation cannot sit, nor deliberate when the college decides on the outcome of the investigation.'",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "State and municipalities immune from fines (Art. 48)",
+   "verdict": "confirmed",
+   "evidence": "Art. 48.",
+   "url": "https://cnpd.public.lu/dam-assets/fr/legislation/droit-lux/Act-of-1-August-2018-on-the-organisation-of-the-National-Data-Protection-Commission-and-the-general-data-protection-framework.pdf"
+  }
+ ],
+ "notes": "Most serious: cases[1] said Amazon 'switched to consent' and that the whole decision was annulled; sources only support annulment of the fine and that Amazon had brought itself into compliance. Cour administrative judgment PDF (ja.public.lu) refused WebFetch with 403. The 'plain' text ('winning the annulment of its EUR 746 million fine in 2026 on fault grounds') is consistent with the sources but omits the case being sent back to CNPD. No GDPR contradictions found."
+}

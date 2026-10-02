@@ -1,0 +1,131 @@
+{
+ "code": "cy",
+ "country": "Cyprus",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Commissioner for Personal Data Protection",
+  "name_native": "Επίτροπος Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+  "abbr": "not confirmed (no standard abbreviation found)",
+  "url": "https://www.dataprotection.gov.cy",
+  "structure": "Single commissioner supported by an Office. The Commissioner is appointed by the Council of Ministers on the proposal of the Minister, must be qualified for appointment as a Supreme Court judge, serves six years renewable once, and can only be removed for mental or physical incapacity (s. 19 Law 125(I)/2018).",
+  "regional": "Single national authority."
+ },
+ "law": {
+  "name": "Law providing for the protection of natural persons with regard to the processing of personal data and the free movement of such data, Law 125(I)/2018 (amended by Law 26(I)/2022)",
+  "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html"
+ },
+ "complaint": {
+  "how": "Not confirmed from the Commissioner's own pages (the site blocked automated access). Complaints are lodged with the Commissioner's Office, which must examine them under s. 24. Form, language and fee not confirmed.",
+  "contact_controller_first": "Not confirmed.",
+  "deadlines": "Section 24 requires the Commissioner to examine complaints and, where possible, inform the complainant in writing of the progress or outcome within 30 days; the Commissioner may decline to examine a complaint for public-interest reasons. No time limit for complaining found.",
+  "complainant_status": "Not confirmed. Bodies under Art. 80 can only complain with a data subject's mandate (no Art. 80(2) own-initiative complaints)."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint lodged and examined by the Office (s. 24)",
+   "Investigation using GDPR powers plus extra national powers, including unannounced access to premises and seizure with a warrant (s. 25)",
+   "Controller given the chance to respond before a decision (hearing; details not confirmed)",
+   "Decision by the Commissioner: reprimand, order, ban or administrative fine (s. 32)"
+  ],
+  "decision_maker": "The Commissioner personally signs decisions, including fines.",
+  "limitation": "Not confirmed."
+ },
+ "fines": {
+  "imposed_by": "The Commissioner, by administrative decision under Art. 83 GDPR (s. 32(1)). Unpaid fines are recovered as a civil debt owed to the Republic (s. 32(2)).",
+  "public_bodies": "Yes. A fine on a public authority or public body for non-profit activities may not exceed EUR 200,000 (s. 32(3)); commercial activities of public bodies are not capped by this rule. A EUR 46,500 fine on the State Health Services Organisation after a breach has been reported (secondary source, not verified).",
+  "quirks": "Section 33 creates criminal offences tried by the courts: up to 3 years' imprisonment and/or EUR 30,000 (e.g. failure to keep records, notify breaches, cooperate, unlawful transfers), up to 1 year and/or EUR 10,000 for other breaches, and up to 5 years and/or EUR 50,000 where national security is affected. Criminal liability can attach to the chief executive of an undertaking or head of a public authority."
+ },
+ "appeal": {
+  "court": "Administrative Court (Διοικητικό Δικαστήριο) (s. 28 Law 125(I)/2018), by a recourse for annulment under Art. 146 of the Constitution.",
+  "deadline": "75 days from publication or notification of the decision under Art. 146(3) of the Constitution (general rule; not confirmed in a data protection-specific source).",
+  "suspensive": "Not confirmed. A recourse does not automatically suspend an administrative act; a provisional order would have to be sought.",
+  "further": "Since 1 July 2023, appeals against first-instance judgments, including the Administrative Court's, go to the new Court of Appeal; above it sit the Supreme Court and the Supreme Constitutional Court.",
+  "inaction": "Not confirmed. A recourse under Art. 146 can in principle be brought against an omission of the administration, but no data protection-specific route was confirmed."
+ },
+ "private": {
+  "courts": "District Courts (civil) for claims against controllers and processors; the law recognises compensation for material and non-material damage under Art. 82.",
+  "damages": "No notable Cypriot damages awards were confirmed.",
+  "collective": "Not confirmed (Representative Actions Directive transposition not checked)."
+ },
+ "cases": [
+  {
+   "title": "Bradford Factor sick-leave scoring (three affiliated companies)",
+   "year": "2020",
+   "summary": "In February 2020 the Commissioner banned three affiliated companies from using an automated 'Bradford Factor' tool to score employees' sick leave, found no legal basis under Arts. 6 and 9 after consulting other EU authorities, and fined them a total of EUR 82,000 with orders to stop and delete the data. Whether it was appealed was not confirmed.",
+   "url": "https://www.privacyminders.com/news/cyprus-commissioner-fines-scoring-sick-leaves/"
+  },
+  {
+   "title": "Google Analytics and Facebook Pixel transfers (Cyprus Football Association, Cyprus News Agency, Arktinos Publications)",
+   "year": "2024",
+   "summary": "In February 2024 the Commissioner found that three organisations transferred data to the US through Google Analytics and Facebook Pixel without adequate Chapter V safeguards, issuing reprimands and compliance orders but no fines.",
+   "url": "https://www.inplp.com/publications/cyprus-dpc-rulings-on-data-breaches-by-the-cyprus-football-association-cyprus-news-agency-and-arktinos-publications-ltd-for-using-google-analytics-and-facebook-pixel"
+  },
+  {
+   "title": "Bank fined for losing a customer contract and late breach notification",
+   "year": "2020",
+   "summary": "On 17 June 2020 the Commissioner fined a Cypriot bank EUR 15,000 for losing a customer's insurance contract (defeating the right of access) and failing to notify the breach within 72 hours.",
+   "url": "https://www.mondaq.com/cyprus/data-protection/1051504/developments-on-penalties-imposed-on-financial-institutions-for-gdpr-violations-in-cyprus"
+  }
+ ],
+ "quirks": [
+  "Single commissioner, who must be qualified to be a Supreme Court judge, with a six-year term renewable once.",
+  "Public authorities can be fined, but only up to EUR 200,000 for non-profit activities.",
+  "The national law adds criminal offences with prison terms of up to five years, tried in the criminal courts, alongside the Commissioner's administrative fines.",
+  "The 2023 court reform added a Court of Appeal between the Administrative Court and the top courts, so data protection appeals now have an extra layer.",
+  "Fines are typically modest (tens of thousands of euros); no appealed fine with a court outcome was confirmed in this research."
+ ],
+ "plain": "In Cyprus you complain to the Commissioner for Personal Data Protection, who examines the complaint, can investigate the organisation and then issues a decision, which can include a fine. Anyone affected by the decision can challenge it before the Administrative Court, normally within 75 days, and since 2023 there is a further appeal to the Court of Appeal.",
+ "confidence": "low to medium: the law's sections on the Commissioner, fines, public bodies, offences and appeal court come from the official text, but the Commissioner's website blocked access, so the complaint method, contact-first rule, limitation, suspensive effect and any appealed fine with a court outcome are unconfirmed.",
+ "sources": [
+  {
+   "title": "Law 125(I)/2018 full text (CyLaw, Greek)",
+   "url": "https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html",
+   "source_type": "primary"
+  },
+  {
+   "title": "Law 125(I)/2018, unofficial English translation (Commissioner's Office)",
+   "url": "https://www.dataprotection.gov.cy/dataprotection/dataprotection.nsf/2B53605103DCE4A4C225826300362211/$file/Law%20125(I)%20of%202018%20ENG%20final.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "European Commission 2023 Rule of Law Report, country chapter Cyprus (court reform from 1 July 2023)",
+   "url": "https://commission.europa.eu/system/files/2023-07/31_1_52612_coun_chap_cyprus_en.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "Chrysostomides: GDPR Derogations Cyprus (Practical Law Q&A)",
+   "url": "https://www.chrysostomides.com/wp-content/uploads/2022/04/GDPR-Derogations-Cyprus.pdf",
+   "source_type": "secondary"
+  },
+  {
+   "title": "White and Case: GDPR Guide to National Implementation, Cyprus",
+   "url": "https://www.whitecase.com/insight-our-thinking/gdpr-guide-national-implementation-cyprus",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Legal 500: Cyprus Data Protection and Cybersecurity",
+   "url": "https://www.legal500.com/guides/chapter/cyprus-data-protection-cybersecurity/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Privacy Minders: Cyprus Commissioner fines companies for tool scoring sick leaves",
+   "url": "https://www.privacyminders.com/news/cyprus-commissioner-fines-scoring-sick-leaves/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "INPLP: Cyprus DPC rulings on Google Analytics and Facebook Pixel",
+   "url": "https://www.inplp.com/publications/cyprus-dpc-rulings-on-data-breaches-by-the-cyprus-football-association-cyprus-news-agency-and-arktinos-publications-ltd-for-using-google-analytics-and-facebook-pixel",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Mondaq: Penalties on financial institutions for GDPR violations in Cyprus",
+   "url": "https://www.mondaq.com/cyprus/data-protection/1051504/developments-on-penalties-imposed-on-financial-institutions-for-gdpr-violations-in-cyprus",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DataGuidance: Cyprus Commissioner fines State Health Services Organization EUR 46,500 (headline only)",
+   "url": "https://www.dataguidance.com/news/cyprus-commissioner-fines-state-health-services",
+   "source_type": "secondary"
+  }
+ ]
+}

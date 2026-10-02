@@ -1,0 +1,100 @@
+{
+ "code": "pl",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Morele.net: PLN 2.83m (2019), NSA annulled 9 Feb 2023 for lack of expertise, new decision Jan/Feb 2024 over PLN 3.8m, WSA upheld 16 Sep 2024",
+   "verdict": "corrected",
+   "evidence": "GDPR.pl: original fine over PLN 2.8m, 2.2m customers, NSA 9 Feb 2023 found UODO had not shown the expertise and should have used an expert; NowyMarketing: new PUODO decision dated 17 January 2024, WSA dismissed the complaint on 16 September 2024. Finality not stated. Only change: the decision date.",
+   "url": "https://nowymarketing.pl/uodo-wsa-oddalil-skarga-morele-net-kara-prawie-4-mln-zl-za-lamanie-rodo-utrzymana/",
+   "replacement": "UODO fined the online retailer PLN 2.83 million in 2019 over a 2018 breach affecting about 2.2 million customers; the WSA upheld it but on 9 February 2023 the NSA annulled both rulings, finding UODO had not shown it had the technical expertise to assess security without an expert. In a new decision of 17 January 2024 UODO imposed over PLN 3.8 million, which the WSA upheld on 16 September 2024 (finality not confirmed)."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Poczta Polska PLN 27m fine annulled by WSA; cassation filed on 1 June 2026",
+   "verdict": "corrected",
+   "evidence": "UODO page dated 1 June 2026 confirms the fine of over PLN 27 million imposed in 2025, about 30 million voters, WSA annulment and the Art. 6(3) argument (citing NSA II OSK 1630/21). It does not give the filing date of the cassation appeal; 1 June 2026 is the date of the announcement.",
+   "url": "https://uodo.gov.pl/pl/138/4409",
+   "replacement": "UODO fined the state postal operator over PLN 27 million in 2025 for processing data of about 30 million voters for the planned 2020 postal presidential election without a legal basis. The WSA in Warsaw annulled the decision, accepting a Prime Minister's decision as a legal basis; on 1 June 2026 the President of UODO announced a cassation appeal, arguing an individual administrative act cannot be a legal basis under Art. 6(3) GDPR."
+  },
+  {
+   "field": "cases[1].year",
+   "claim": "2025 to 2026",
+   "verdict": "confirmed",
+   "evidence": "UODO: fine imposed in 2025, cassation announced June 2026.",
+   "url": "https://uodo.gov.pl/pl/138/4409"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "Santander PLN 545,748, WSA upheld, NSA dismissed cassation 6 March 2026, possibility of access suffices",
+   "verdict": "confirmed",
+   "evidence": "UODO: PLN 545,748; former employee kept access to PUE ZUS; NSA 6 March 2026 upheld in full the earlier WSA judgment; 'the possibility of access matters, not whether unauthorised individuals actually reviewed the data'.",
+   "url": "https://uodo.gov.pl/pl/138/4096"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "President of UODO by decision; EUR converted at NBP average rate (Art. 103)",
+   "verdict": "confirmed",
+   "evidence": "Art. 102(1) and Art. 105 refer to the President imposing fines 'w drodze decyzji'; Art. 103 not fetched separately but consistent with the Act.",
+   "url": "https://standardyprawa.pl/akt/81/art/15321"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Caps PLN 100,000 and PLN 10,000 (Art. 102)",
+   "verdict": "confirmed",
+   "evidence": "Art. 102(1): up to PLN 100,000 for public finance sector units and research institutes; Art. 102(2): up to PLN 10,000 for certain other units. Scope of the 10,000 tier not checked.",
+   "url": "https://standardyprawa.pl/akt/81/art/15321"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Arts. 107-108 criminal offences (2 years, 3 for special categories); Art. 105 payment 14 days after appeal deadline or final judgment, deferral and instalments",
+   "verdict": "confirmed",
+   "evidence": "Art. 107(1)-(2), Art. 108(1)-(2) and Art. 105(1)-(2) quoted verbatim match.",
+   "url": "https://standardyprawa.pl/akt/81/art/15324"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "WSA Warsaw, complaint lodged through the President of UODO",
+   "verdict": "confirmed",
+   "evidence": "Art. 7(4) gives a complaint to the administrative court; the Morele.net and Poczta Polska cases went to the WSA in Warsaw. Filing through the authority matches Art. 54 PPSA.",
+   "url": "https://standardyprawa.pl/akt/81/art/15224"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "30 days (Art. 53(1) PPSA)",
+   "verdict": "confirmed",
+   "evidence": "Matches the general PPSA rule; consistent with Art. 7(4) of the Act. Not fetched from a primary PPSA text.",
+   "url": "https://standardyprawa.pl/akt/81/art/15224"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Effectively yes for fines via Art. 105(1)",
+   "verdict": "confirmed",
+   "evidence": "Art. 105(1): fine paid within 14 days from expiry of the time limit for a complaint or from the court ruling becoming final.",
+   "url": "https://standardyprawa.pl/akt/81/art/15324"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Five-year KPA limitation (Art. 189g) appears to apply since Art. 106 excludes only 189d-189f and 189k",
+   "verdict": "confirmed",
+   "evidence": "Art. 106 quoted: 'Przepisów art. 189d-189f i art. 189k [KPA] nie stosuje się.' The inference about Art. 189g is flagged as unconfirmed in the file, which is accurate.",
+   "url": "https://standardyprawa.pl/akt/81/art/15325"
+  },
+  {
+   "field": "procedure.stages[3]",
+   "claim": "Single-instance proceedings (Art. 7(2))",
+   "verdict": "confirmed",
+   "evidence": "Art. 7(2): 'Postępowanie przed Prezesem Urzędu jest jednoinstancyjne.'",
+   "url": "https://standardyprawa.pl/akt/81/art/15224"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Glovo PLN 5.9 million, March 2026; Bank Millennium NSA win",
+   "verdict": "corrected",
+   "evidence": "UODO: Restaurant Partner Polska (Glovo) fined PLN 5,898,064, announced 16 March 2026. Bank Millennium NSA win was not checked and has no source in the file.",
+   "url": "https://uodo.gov.pl/pl/138/4092",
+   "replacement": "Fines are not payable until court review is over (Art. 105), and courts have annulled high-profile fines (Morele.net, Poczta Polska), though UODO also wins at the NSA (Santander). Recent large fines include Glovo (PLN 5.9 million, March 2026)."
+  }
+ ],
+ "notes": "No serious problems. The Act's articles check out against standardyprawa.pl (secondary, but verbatim). Bank Millennium was dropped from quirks[3] because nothing in the file supports it; restore it if a source is found. dpa.structure names the current President; not checked."
+}

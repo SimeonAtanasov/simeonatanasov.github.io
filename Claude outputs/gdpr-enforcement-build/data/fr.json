@@ -1,0 +1,128 @@
+{
+ "code": "fr",
+ "country": "France",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "National Commission on Informatics and Liberty",
+  "name_native": "Commission nationale de l'informatique et des libertés",
+  "abbr": "CNIL",
+  "url": "https://www.cnil.fr",
+  "structure": "Independent administrative authority run by a college (collegial body) chaired by a president. Sanctions are decided by a separate restricted committee (formation restreinte) of a president and five other members elected by the college from among its members (Art. 9 Loi Informatique et Libertés); members of the bureau cannot sit on it.",
+  "regional": "Single national authority, no regional DPAs."
+ },
+ "law": {
+  "name": "Loi n. 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés (Loi Informatique et Libertés), as rewritten in 2018 to implement the GDPR, with implementing Decree n. 2019-536",
+  "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000886460"
+ },
+ "complaint": {
+  "how": "Free online complaint via the CNIL complaints service (account required, situation-specific forms) or by post to the Service des plaintes, 3 place de Fontenoy, 75007 Paris. Complaints must be in French and include the organisation's details and supporting evidence.",
+  "contact_controller_first": "Yes, in practice: the CNIL asks complainants first to exercise their rights with the organisation or its DPO and wait for the response period (one month, extendable by two) before complaining.",
+  "deadlines": "No time limit for complaining confirmed. The CNIL commits to give a status update within three months (in line with Art. 77(2) GDPR); no statutory decision deadline confirmed.",
+  "complainant_status": "The complainant is informed of the outcome but is not a party to the sanction procedure, which runs between the rapporteur and the organisation. A complainant can ask the CNIL to reconsider a closure (recours gracieux) within two months and then go to the Conseil d'État."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint handling by the complaints service, often by contacting the organisation to obtain compliance",
+   "Investigation (contrôle): on-site, online, documentary or by hearing",
+   "Corrective action by the CNIL president: e.g. formal notice (mise en demeure) or call to order",
+   "Sanction procedure opened by the president: a rapporteur (a college member not on the restricted committee) is appointed and serves a sanction report with proposed measures (Art. 20 and 22 Loi Informatique et Libertés)",
+   "Adversarial written phase: one month for the organisation to reply, one month for the rapporteur to respond, further reply possible",
+   "Public hearing before the restricted committee (closed on request for public order or secrecy), deliberation in private, decision including on publication",
+   "Since 2022, a simplified procedure for simple cases (Art. 22-1): the restricted committee's president or a designated member decides alone, normally without a hearing"
+  ],
+  "decision_maker": "The restricted committee (formation restreinte), or its president or a designated member alone under the simplified procedure.",
+  "limitation": "Not confirmed: no specific limitation period for GDPR infringements was found in the Loi Informatique et Libertés."
+ },
+ "fines": {
+  "imposed_by": "The CNIL itself, by administrative decision of the restricted committee; no court confirmation step.",
+  "public_bodies": "No fines (or periodic penalties) where the processing is carried out by the State (Art. 20 Loi Informatique et Libertés). Other public bodies, such as local authorities and public establishments, can be fined up to the GDPR maxima.",
+  "quirks": "Simplified procedure (Law n. 2022-52 of 24 January 2022 and Decree n. 2022-517 of 8 April 2022): fines capped at EUR 20,000 and periodic penalties at EUR 100 per day, and such decisions are not published; the CNIL's site currently also shows a higher tier of EUR 100,000 and EUR 500 per day for companies with turnover over EUR 50 million (date of that change not confirmed). Data protection crimes exist in the Criminal Code (Art. 226-16 ff), up to five years' prison and EUR 300,000 for individuals. The CNIL also fines cookie breaches under Art. 82 Loi Informatique et Libertés (ePrivacy), outside the GDPR one-stop-shop."
+ },
+ "appeal": {
+  "court": "Conseil d'État, directly, as first and last instance, in full jurisdiction (it can reduce the fine).",
+  "deadline": "Two months from notification of the decision, extended by two months for organisations established outside France (Art. R. 421-7 Code de justice administrative).",
+  "suspensive": "Not suspensive: the decision and any periodic penalty apply despite the appeal. The organisation can ask the Conseil d'État's interim relief judge for suspension (référé-suspension, Art. L. 521-1 Code de justice administrative), which requires urgency and serious doubt as to legality.",
+  "further": "None at national level: the Conseil d'État decides in first and last instance, but can refer questions to the CJEU.",
+  "inaction": "A complainant can challenge a closure or refusal to act before the Conseil d'État within two months, usually after a recourse to the CNIL. The intensity of review after the CJEU's SCHUFA ruling (C-26/22) was not confirmed."
+ },
+ "private": {
+  "courts": "Judicial court (tribunal judiciaire) for claims against private controllers; labour tribunal (conseil de prud'hommes) for employees; administrative courts for claims against public bodies.",
+  "damages": "Not confirmed: no leading French damages judgment located.",
+  "collective": "A data protection group action existed since 2016 (Art. 37 Loi Informatique et Libertés, extended to damages in 2018). Law n. 2025-391 of 30 April 2025 replaced the sector regimes with a single group action framework transposing the Representative Actions Directive, open to approved associations, representative unions (including for data protection), prosecutors and qualified entities from other Member States, applying to actions filed from 2 May 2025."
+ },
+ "cases": [
+  {
+   "title": "Google LLC, EUR 50 million, upheld by the Conseil d'État",
+   "year": "2019 / 2020",
+   "summary": "The restricted committee fined Google LLC EUR 50 million in January 2019 for lack of transparency and invalid consent for ad personalisation. The Conseil d'État rejected Google's appeal on 19 June 2020 (n. 430810), holding the CNIL competent because Google had no main establishment in the EU for that processing at the time.",
+   "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2020-06-19/430810"
+  },
+  {
+   "title": "Google and Shein cookie fines",
+   "year": "2025",
+   "summary": "On 3 September 2025 the CNIL fined Google EUR 325 million and Shein EUR 150 million. Both were sanctioned under Art. 82 Loi Informatique et Libertés for cookie consent failures; Google was also sanctioned under Art. L. 34-5 of the Postal and Electronic Communications Code for showing ads in Gmail without prior consent. Appeal status not confirmed.",
+   "url": "https://www.cnil.fr/fr/regulation-des-cookies-la-cnil-poursuit-le-plan-daction-initie-en-2019-et-prononce-deux-amendes"
+  }
+ ],
+ "quirks": [
+  "Sanctions are decided by a separate restricted committee, not by the CNIL president who opens the case, to separate prosecution from judgment.",
+  "Appeals go straight to the Conseil d'État, the supreme administrative court, with no lower court stage.",
+  "The simplified procedure since 2022 produces many small, unpublished sanctions (around 52 decisions in 2025 according to DLA Piper).",
+  "The State itself cannot be fined, but local authorities and other public bodies can.",
+  "Cookie enforcement under national ePrivacy rules (Art. 82) lets the CNIL fine non-French-established companies such as Google and Shein without the one-stop-shop."
+ ],
+ "plain": "In France you first ask the company to respect your rights, then, if that fails, you complain to the CNIL online in French, free of charge. The CNIL may resolve it informally, inspect the company, order it to comply or send the case to its restricted committee, which can fine; small cases go through a faster simplified procedure. The company can appeal the fine directly to the Conseil d'État within two months, and you can also go to that court if the CNIL closes your complaint.",
+ "confidence": "high on CNIL structure, procedure stages, simplified procedure and the two cases; medium on non-suspensive appeals and the State exemption wording (Legifrance blocked, taken via the CNIL's law page), and the EUR 100,000 simplified tier for large companies, whose enacting date I could not confirm.",
+ "sources": [
+  {
+   "title": "CNIL: Les etapes de la procedure de sanction ordinaire",
+   "url": "https://www.cnil.fr/fr/les-etapes-de-la-procedure-de-sanction-ordinaire",
+   "source_type": "primary"
+  },
+  {
+   "title": "CNIL: La procedure de sanction",
+   "url": "https://www.cnil.fr/fr/la-procedure-de-sanction",
+   "source_type": "primary"
+  },
+  {
+   "title": "CNIL: Reforme des procedures correctrices (12 April 2022)",
+   "url": "https://www.cnil.fr/fr/reforme-des-procedures-correctrices-de-la-cnil-vers-une-action-repressive-simplifiee",
+   "source_type": "primary"
+  },
+  {
+   "title": "CNIL: Adresser une plainte",
+   "url": "https://www.cnil.fr/fr/adresser-une-plainte",
+   "source_type": "primary"
+  },
+  {
+   "title": "CNIL: La loi Informatique et Libertes (consolidated text)",
+   "url": "https://www.cnil.fr/fr/la-loi-informatique-et-libertes",
+   "source_type": "primary"
+  },
+  {
+   "title": "Conseil d'État, 19 June 2020, Google LLC, n. 430810",
+   "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2020-06-19/430810",
+   "source_type": "primary"
+  },
+  {
+   "title": "CNIL: cookie fines on Google and Shein (3 September 2025)",
+   "url": "https://www.cnil.fr/fr/regulation-des-cookies-la-cnil-poursuit-le-plan-daction-initie-en-2019-et-prononce-deux-amendes",
+   "source_type": "primary"
+  },
+  {
+   "title": "A&O Shearman: class action reform, law of 30 April 2025",
+   "url": "https://www.aoshearman.com/fr-fr/insights/class-action-reform-key-changes-introduced-by-the-law-of-april-30-2025",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Legifrance: Law n. 2025-391, Art. 16",
+   "url": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000051539065",
+   "source_type": "primary"
+  },
+  {
+   "title": "DLA Piper Data Protection Laws of the World: France enforcement",
+   "url": "https://www.dlapiperdataprotection.com/index.html?t=enforcement&c=FR",
+   "source_type": "secondary"
+  }
+ ]
+}

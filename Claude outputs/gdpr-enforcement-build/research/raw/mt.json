@@ -1,0 +1,88 @@
+{
+  "code": "mt",
+  "country": "Malta",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Information and Data Protection Commissioner",
+    "name_native": "Kummissarju għall-Informazzjoni u l-Protezzjoni tad-Data",
+    "abbr": "IDPC",
+    "url": "https://idpc.org.mt/",
+    "structure": "Single commissioner, not a collegial body. The Commissioner is appointed by the Prime Minister after consulting the Leader of the Opposition (Art. 11 Data Protection Act). The office also handles freedom of information complaints.",
+    "regional": "None. One national authority."
+  },
+  "law": {
+    "name": "Data Protection Act, Chapter 586 of the Laws of Malta (Act XX of 2018), amended by Act XII of 2021 and Legal Notice 212 of 2023",
+    "url": "https://legislation.mt/eli/cap/586/eng"
+  },
+  "complaint": {
+    "how": "Online complaint form on the IDPC register portal. Complaints and supporting documents must be in Maltese or English (other documents need a translation). Anonymous complaints are not accepted. No fee mentioned.",
+    "contact_controller_first": "Not confirmed. The IDPC complaint page does not state it as a requirement.",
+    "deadlines": "The Act sets no deadline for the Commissioner to decide a complaint and no time limit for complaining, as far as could be confirmed.",
+    "complainant_status": "The Commissioner's decisions are legally binding, and the complainant becomes a party to any appeal before the Tribunal and the Court of Appeal and is expected to defend the case actively (IDPC complaint page)."
+  },
+  "procedure": {
+    "stages": [
+      "Complaint lodged through the online form",
+      "Investigation by the IDPC, including requests for submissions from the controller",
+      "Legally binding decision of the Commissioner, which may include corrective measures and an administrative fine",
+      "Appeal to the Information and Data Protection Appeals Tribunal, then the Court of Appeal"
+    ],
+    "decision_maker": "The Commissioner.",
+    "limitation": "Not confirmed. No limitation period for infringements was found in the Act."
+  },
+  "fines": {
+    "imposed_by": "The Commissioner, by administrative decision. The fine is a civil debt due to the Commissioner and becomes an executive title once the decision is final (Art. 20).",
+    "public_bodies": "Yes, with caps (Art. 21): up to EUR 25,000 per violation plus EUR 25 per day of continued breach for Art. 83(4) infringements, and up to EUR 50,000 per violation plus EUR 50 per day for Art. 83(5)-(6) infringements.",
+    "quirks": "A fine does not apply until the person fined has exhausted the appeals under Arts 26 and 29 (Art. 28(3)). Criminal offences (Art. 22): fine (multa) of EUR 1,250 to 50,000 or six months' imprisonment, e.g. for giving false information or not complying with the Commissioner's lawful requests."
+  },
+  "appeal": {
+    "court": "Information and Data Protection Appeals Tribunal (Art. 26): a chairperson who is an advocate of at least 12 years' standing and two members, appointed by the Minister (Art. 24). Grounds: material error of fact, material procedural error, error of law, or material illegality, unreasonableness or disproportionality.",
+    "deadline": "20 days from service of the Commissioner's decision (Art. 26).",
+    "suspensive": "Other effects of an appealed decision are not suspended unless the Tribunal or Court of Appeal orders otherwise, but an administrative fine does not apply until appeals are exhausted (Art. 28).",
+    "further": "Any party may appeal to the Court of Appeal, constituted under Art. 41(6) of the Code of Organization and Civil Procedure (inferior jurisdiction), within 20 days of notification of the Tribunal's decision (Art. 29). The IDPC describes this further appeal as on questions of law.",
+    "inaction": "Per the 2020 consolidated text of the Act, where the Commissioner fails to act as required by Art. 78(2) GDPR, the data subject may appeal to the Tribunal, which can order the Commissioner to handle the complaint (Art. 31)."
+  },
+  "private": {
+    "courts": "First Hall of the Civil Court, by an action for an effective judicial remedy against a controller or processor, to be brought within 12 months of the data subject becoming aware of the infringement (Art. 30).",
+    "damages": "The court may award material damages and moral (non-material) damages as it determines (Art. 30). No notable case law on amounts located.",
+    "collective": "Not confirmed. Whether Malta's collective proceedings rules or its transposition of the Representative Actions Directive cover GDPR claims could not be verified."
+  },
+  "cases": [
+    {
+      "title": "MFSA data leak (Ellul and Schranz): Tribunal and Court of Appeal",
+      "year": "2024-2025",
+      "summary": "The Appeals Tribunal held the Malta Financial Services Authority responsible for leaking a licence cancellation to a foreign website before it was officially announced. On 12 November 2025 the Court of Appeal dismissed all five MFSA grounds, holding that the MFSA had to show the breach was not imputable to it and failed to do so, and ordered it to pay costs. Whether a fine was imposed was not confirmed.",
+      "url": "https://www.maltatoday.com.mt/news/court_and_police/138151/court_of_appeal_reaffirms_mfsa_liability_in_data_leak_case_orders_regulator_to_shoulder_costs"
+    },
+    {
+      "title": "Healthcare provider, EUR 20,000",
+      "year": "2025",
+      "summary": "IDPC decision fining a healthcare provider a total of EUR 20,000 for breaches of Arts 5(1)(a), 6(1), 14, 16 and 37(1)(c) GDPR, split between lawfulness and transparency, rectification and failure to designate a DPO. Appeal status not confirmed.",
+      "url": "https://idpc.org.mt/wp-content/uploads/2025/04/0476_001.pdf"
+    },
+    {
+      "title": "Aziz v Jobsplus: Court of Appeal (Inferior Jurisdiction)",
+      "year": "2024",
+      "summary": "A complainant's appeal against two IDPC decisions, already rejected by the Tribunal, was declared null by the Court of Appeal on 28 February 2024 because two separate decisions had been challenged in one application. Illustrates the strict procedural route through the Tribunal and the Court of Appeal.",
+      "url": "https://ecourts.gov.mt/onlineservices/Judgements/PrintPdf?JudgementId=0&CaseJudgementId=144515"
+    }
+  ],
+  "quirks": [
+    "Fines are effectively suspended until all appeals are exhausted (Art. 28(3)), unlike other corrective measures.",
+    "Public authorities can be fined but only up to EUR 25,000 or EUR 50,000 per violation, plus small daily penalties (Art. 21).",
+    "Very short appeal windows: 20 days to the Tribunal and 20 days to the Court of Appeal.",
+    "Direct court actions against controllers have a short 12-month limitation from awareness (Art. 30)."
+  ],
+  "plain": "You complain online to the Information and Data Protection Commissioner in English or Maltese, and the Commissioner investigates and issues a binding decision, possibly with a fine. Either side has 20 days to appeal to a specialist Appeals Tribunal and then 20 days more to go to the Court of Appeal, and any fine is only payable once those appeals are over. If you want compensation, you sue the organisation in the civil court within a year of finding out.",
+  "confidence": "medium: core provisions are taken from the 2020 consolidated text of Cap. 586 hosted by the IDPC, which predates the 2021 and 2023 amendments, so article wording (especially Art. 31 on inaction) may have changed; infringement limitation periods, collective actions and the fine in the MFSA case were not confirmed.",
+  "sources": [
+    {"title": "Data Protection Act, Cap. 586 (legislation.mt)", "url": "https://legislation.mt/eli/cap/586/eng", "source_type": "primary"},
+    {"title": "Data Protection Act, Cap. 586 (2020 consolidated PDF, IDPC)", "url": "https://idpc.org.mt/wp-content/uploads/2020/07/CAP-586.pdf", "source_type": "primary"},
+    {"title": "IDPC: File a complaint", "url": "https://idpc.org.mt/file-a-complaint/", "source_type": "primary"},
+    {"title": "IDPC: Appeals Tribunal", "url": "https://idpc.org.mt/appeals-tribunal/", "source_type": "primary"},
+    {"title": "IDPC: Data protection decisions", "url": "https://idpc.org.mt/decisions/", "source_type": "primary"},
+    {"title": "Court of Appeal (Inferior Jurisdiction), Aziz v Jobsplus, 28 February 2024", "url": "https://ecourts.gov.mt/onlineservices/Judgements/PrintPdf?JudgementId=0&CaseJudgementId=144515", "source_type": "primary"},
+    {"title": "MaltaToday: Court of Appeal reaffirms MFSA liability in data leak case", "url": "https://www.maltatoday.com.mt/news/court_and_police/138151/court_of_appeal_reaffirms_mfsa_liability_in_data_leak_case_orders_regulator_to_shoulder_costs", "source_type": "secondary"},
+    {"title": "DLA Piper Data Protection Laws of the World: Malta", "url": "https://www.dlapiperdataprotection.com/index.html?t=law&c=MT", "source_type": "secondary"}
+  ]
+}

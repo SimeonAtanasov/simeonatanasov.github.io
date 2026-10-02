@@ -1,0 +1,98 @@
+{
+ "code": "bg",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "NAP fine BGN 5.1m (decree No. 004, 28 Aug 2019); Sofia District Court upheld 26 Oct 2023; Administrative Court Sofia City annulled 'on 26 February 2024' in a final ruling for limitation",
+   "verdict": "corrected",
+   "evidence": "Bgonair (article of 26 Feb 2024): penal decree No. 004 of 28 August 2019, BGN 5,100,000; Sofia District Court confirmed on 26 October 2023; annulled by the Administrative Court Sofia City for 'изтичане на абсолютна погасителна давност, която в случая е четири години и половина'. The article does not give the ruling date, only its own publication date. Svobodna Evropa: ~4 million living and ~1 million deceased people affected; limitation expired 15 January 2024.",
+   "url": "https://www.bgonair.bg/a/166-kriminalno/336404-sadat-okonchatelno-otmeni-globata-na-nap-ot-51-mln-lv-za-techa-na-lichni-danni",
+   "replacement": "After the July 2019 hack exposing data of about five million people, the CPDP fined the NAP BGN 5.1 million (penal decree No. 004, 28 August 2019). Sofia District Court upheld the fine (26 October 2023), but the Administrative Court Sofia City annulled it in a final ruling, reported on 26 February 2024, because the absolute limitation period had expired."
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2019-2024",
+   "verdict": "confirmed",
+   "evidence": "Breach and decree 2019; annulment reported February 2024.",
+   "url": "https://www.bgonair.bg/a/166-kriminalno/336404-sadat-okonchatelno-otmeni-globata-na-nap-ot-51-mln-lv-za-techa-na-lichni-danni"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "CJEU C-340/21 holdings",
+   "verdict": "confirmed",
+   "evidence": "Matches the judgment of 14 December 2023 (burden on controller to prove adequacy of measures; fear of misuse can be non-material damage). Curia page not fetched; checked against known holding.",
+   "url": "https://curia.europa.eu/juris/liste.jsf?num=C-340/21"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "CPDP by penal decree issued by the chair",
+   "verdict": "confirmed",
+   "evidence": "Bgonair: penal decree No. 004 issued by the CPDP chairman.",
+   "url": "https://www.bgonair.bg/a/166-kriminalno/336404-sadat-okonchatelno-otmeni-globata-na-nap-ot-51-mln-lv-za-techa-na-lichni-danni"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies can be fined; NAP fined BGN 5.1m in 2019",
+   "verdict": "confirmed",
+   "evidence": "NAP fine confirmed.",
+   "url": "https://www.bgonair.bg/a/166-kriminalno/336404-sadat-okonchatelno-otmeni-globata-na-nap-ot-51-mln-lv-za-techa-na-lichni-danni"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Two tracks: administrative court for complaint decisions (APC, Art. 38); district court for penal decrees (ZANN)",
+   "verdict": "confirmed",
+   "evidence": "Art. 38: decisions appealable under the Administrative Procedure Code; NAP decree was appealed to Sofia District Court then the Administrative Court Sofia City.",
+   "url": "https://lex.bg/laws/ldoc/2135426048"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "14 days for complaint decisions (Art. 38)",
+   "verdict": "confirmed",
+   "evidence": "Art. 38: appealable within 14 days of receipt. ZANN deadline left open as the file says.",
+   "url": "https://lex.bg/laws/ldoc/2135426048"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "No source checked; already hedged.",
+   "url": "https://lex.bg/laws/ldoc/2135426048"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Six months from knowledge, two years from infringement; three-month information duty (Art. 38)",
+   "verdict": "confirmed",
+   "evidence": "Art. 38: '6 месеца от узнаване на нарушението', no later than two years after commission; informing within 3 months.",
+   "url": "https://lex.bg/laws/ldoc/2135426048"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Court applied four and a half years absolute limitation (by reference to the Criminal Code); CPDP argued five",
+   "verdict": "confirmed",
+   "evidence": "Both sources give 4.5 years; Svobodna Evropa reports the CPDP argued five years (expiring 15 July 2024). The Criminal Code reference is not stated in the sources but is how ZANN computes absolute limitation.",
+   "url": "https://svobodnaevropa.bg/a/nap-globa-iztekla-davnost/32836051.html"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Chair and four members, five-year term renewable once",
+   "verdict": "confirmed",
+   "evidence": "Art. 6-7 as summarised from lex.bg.",
+   "url": "https://lex.bg/laws/ldoc/2135426048"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Six months / two years window",
+   "verdict": "confirmed",
+   "evidence": "Art. 38(1).",
+   "url": "https://lex.bg/laws/ldoc/2135426048"
+  },
+  {
+   "field": "law.name",
+   "claim": "Latest amendment State Gazette No. 84 of 6 October 2023",
+   "verdict": "confirmed",
+   "evidence": "Lex.bg: 'ДВ, бр. 84 от 6 Октомври 2023г'.",
+   "url": "https://lex.bg/laws/ldoc/2135426048"
+  }
+ ],
+ "notes": "No GDPR contradictions. Svobodna Evropa dates the district court ruling to early November 2023, bgonair to 26 October 2023; 26 October is likely the decision date and November the reporting. The Art. 39 'not while CPDP proceedings are pending' condition was not confirmed in the fetched summary of Art. 39; worth a direct look before publication since it also drives quirks[2] and the plain text."
+}

@@ -1,0 +1,129 @@
+{
+ "code": "se",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "IMY SEK 75m on 11 Mar 2020; FR 7565-20 to SEK 52m; KR 2232-21 to SEK 50m; HFD refused leave 20 Dec 2022 (7528-21)",
+   "verdict": "confirmed",
+   "evidence": "IMY page: decision 11 March 2020, SEK 75m; Forvaltningsratten 7565-20 reduced to SEK 52m; Kammarratten 2232-21 (30 November 2021) reduced to SEK 50m; HFD 7528-21, 20 December 2022, declined to hear the case.",
+   "url": "https://www.imy.se/tillsyner/google/"
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2020-2022",
+   "verdict": "confirmed",
+   "evidence": "Decision 2020, final 2022.",
+   "url": "https://www.imy.se/tillsyner/google/"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "IMY SEK 58m on 12 Jun 2023; FR 13539-23 (28 Jun 2024) to SEK 40m; KR 4512-24 (3 Jun 2025) reinstated SEK 58m",
+   "verdict": "confirmed",
+   "evidence": "IMY page gives these exact dates, case numbers and amounts: 'Kammarratten bifaller IMY:s overklagande och faststaller sanktionsavgiften till 58 miljoner kronor'.",
+   "url": "https://www.imy.se/tillsyner/spotify-ratten-till-tillgang/"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "HFD 17 Nov 2023, cases 6193-22 and 3691-22, decisions not to act appealable under Art 78(1), departing from RA 2010 ref. 29",
+   "verdict": "confirmed",
+   "evidence": "Cederquist: judgments of 17 November 2023 in 6193-22 and 3691-22; decisions meaning IMY will not do what a complaint requests are legally binding under Art 78.1; RA 2010 ref. 29 departed from.",
+   "url": "https://www.cederquist.se/sv/artiklar/tva-domar-fran-hogsta-forvaltningsdomstolen-om-individers-ratt-att-overklaga-imys-beslut-cG9zdDo4OTg1/"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "IMY by administrative decision",
+   "verdict": "confirmed",
+   "evidence": "6 kap. dataskyddslagen and Art 58 GDPR; fines collected after the decision gains legal force.",
+   "url": "https://lagen.nu/2018:218"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public authorities can be fined, caps SEK 5m and SEK 10m (6 kap. 2 §)",
+   "verdict": "confirmed",
+   "evidence": "6 kap. 2 §: 'Hogst 5 000 000 kronor' for Art 83.4, 'Hogst 10 000 000 kronor' for Art 83.5-83.6.",
+   "url": "https://lagen.nu/2018:218"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Payment within 30 days of legal force (6 kap. 2 §)",
+   "verdict": "corrected",
+   "evidence": "The 30-day payment rule is in 6 kap. 6 §, not 2 §: '30 dagar fran det att beslutet om att ta ut avgiften har fatt laga kraft'.",
+   "url": "https://lagen.nu/2018:218",
+   "replacement": "The fine must be paid within 30 days of the decision gaining legal force (laga kraft), or a longer period set in the decision (6 kap. 6 §), so an appeal in practice defers payment. Fines are only available for Art. 83 GDPR breaches, plus Art. 10 GDPR (criminal data) breaches (6 kap. 1 and 3 §§). No criminal offences in the Act."
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Five years, opportunity to comment (6 kap. 2 §)",
+   "verdict": "corrected",
+   "evidence": "The limitation is in 6 kap. 4 §: 'Fem ar fran den dag da overtradelsen agde rum'.",
+   "url": "https://lagen.nu/2018:218",
+   "replacement": "A fine may not be decided unless the party has been given the opportunity to comment within five years of the day the infringement took place (6 kap. 4 § dataskyddslagen)."
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Payment due 30 days after legal force (6 kap. 2 §)",
+   "verdict": "corrected",
+   "evidence": "Wrong section: payment rule is 6 kap. 6 §.",
+   "url": "https://lagen.nu/2018:218",
+   "replacement": "Payment is due only 30 days after the decision gains legal force (6 kap. 6 §), so the fine is not collected while an appeal is pending; corrective orders' suspensive effect not confirmed."
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Three weeks from receipt, FL s. 44, not confirmed",
+   "verdict": "corrected",
+   "evidence": "Forvaltningslagen 44 §: 'Ett overklagande av ett beslut ska ha kommit in till beslutsmyndigheten inom tre veckor fran den dag da den som overklagar fick del av beslutet'. The appeal is lodged with IMY, which forwards it.",
+   "url": "https://lagen.nu/2017:900",
+   "replacement": "Three weeks from the day the appellant received the decision, lodged with IMY, which forwards it to the court (förvaltningslagen 2017:900, s. 44)."
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Appeal to general administrative courts (7 kap. 3 §), in practice Forvaltningsratten i Stockholm",
+   "verdict": "confirmed",
+   "evidence": "7 kap. 3 § provides appeal to administrative court with leave for higher instances; the Google and Spotify cases were heard by Forvaltningsratten i Stockholm.",
+   "url": "https://lagen.nu/2018:218"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Three months, then written request, two weeks, otherwise deemed refused (6 kap. 8 §)",
+   "verdict": "unverifiable",
+   "evidence": "6 kap. 8 § (SFS 2025:256, in force 1 May 2025) confirmed for three months and two weeks; 7 kap. 3 a § allows appeal of a refusal. The 'deemed refused' wording was not seen in the extract.",
+   "url": "https://lagen.nu/2018:218"
+  },
+  {
+   "field": "appeal.inaction",
+   "claim": "7 kap. 3 a § and 6 § mechanism since 1 May 2025",
+   "verdict": "confirmed",
+   "evidence": "7 kap. 3 a § and 7 kap. 6 § new by SFS 2025:256 from 1 May 2025; court 'ska forelagga' IMY to respond promptly.",
+   "url": "https://lagen.nu/2018:218"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Caps SEK 5m and 10m",
+   "verdict": "confirmed",
+   "evidence": "6 kap. 2 §.",
+   "url": "https://lagen.nu/2018:218"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Three-month and two-week clock since 1 May 2025 (SFS 2025:256)",
+   "verdict": "confirmed",
+   "evidence": "6 kap. 8 § as above.",
+   "url": "https://lagen.nu/2018:218"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Google reduced; Spotify reduced then reinstated",
+   "verdict": "confirmed",
+   "evidence": "IMY case pages.",
+   "url": "https://www.imy.se/tillsyner/spotify-ratten-till-tillgang/"
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "Five-year limit",
+   "verdict": "confirmed",
+   "evidence": "6 kap. 4 §.",
+   "url": "https://lagen.nu/2018:218"
+  }
+ ],
+ "notes": "Cases are all correct. The main problem is section numbering: three fields cite 6 kap. 2 § for the payment rule and the five-year limit, which are in 6 kap. 6 § and 6 kap. 4 §. law.name amendment SFS 2026:1589 (1 kap. 3 §, in force 1 January 2027) is confirmed by lagen.nu."
+}

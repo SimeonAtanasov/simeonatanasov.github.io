@@ -1,0 +1,82 @@
+{
+  "code": "hu",
+  "country": "Hungary",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Hungarian National Authority for Data Protection and Freedom of Information",
+    "name_native": "Nemzeti Adatvédelmi és Információszabadság Hatóság",
+    "abbr": "NAIH",
+    "url": "https://naih.hu",
+    "structure": "Single-head authority: an autonomous state administration body led by a President appointed by the President of the Republic on the Prime Minister's proposal for nine years (renewable once), assisted by vice-presidents. Dr Attila Péterfalvi was its first President (nominated 2011); the current holder was not confirmed.",
+    "regional": "Single national authority, no regional DPAs. It also supervises freedom of information."
+  },
+  "law": {
+    "name": "Act CXII of 2011 on the Right of Informational Self-Determination and on Freedom of Information (Infotv.), read with Act CL of 2016 on General Public Administration Procedure (Ákr.) and Act I of 2017 on Administrative Court Procedure (Kp.)",
+    "url": "https://njt.jog.gov.hu/jogszabaly/en/2011-112-00-00"
+  },
+  "complaint": {
+    "how": "Two routes: a notification (bejelentés) triggering an informal investigation (vizsgálati eljárás), or a request (kérelem) by the data subject for a formal data protection authority procedure (adatvédelmi hatósági eljárás). Filing via the online case portal, government e-delivery (KR ID 429616918) or post (1363 Budapest, Pf. 9); procedures cannot be started by ordinary email. The request must identify the controller, the alleged breach, evidence and the remedy sought. No fee for data subjects.",
+    "contact_controller_first": "Not stated as a precondition for the formal authority procedure on NAIH's page. NAIH guidance indicates data subjects should first approach the controller; exact legal effect not confirmed.",
+    "deadlines": "NAIH must decide an authority procedure within 150 days (Infotv. s.60/A(1)), excluding time for the applicant to supply missing information and suspension periods. Time limit for complaining not confirmed.",
+    "complainant_status": "In a procedure started on request the data subject is a party (ügyfél) with full rights to make statements, be represented and inspect the file (Ákr. ss.5, 10, 13, 33)."
+  },
+  "procedure": {
+    "stages": [
+      "Notification (investigation) or request (authority procedure), or NAIH acts ex officio",
+      "Investigation and evidence gathering, with procedural fines for non-cooperation (Ákr. s.77)",
+      "Decision (határozat): warning, finding of infringement, orders to delete, rectify or grant access, processing bans, transfer suspension, administrative fine (Infotv. s.61)",
+      "Court review in an administrative lawsuit"
+    ],
+    "decision_maker": "NAIH, acting under the authority of its President (single-head authority, not a collegial body).",
+    "limitation": "not confirmed"
+  },
+  "fines": {
+    "imposed_by": "NAIH itself, by administrative decision (Infotv. s.61(1)).",
+    "public_bodies": "not confirmed (no specific national cap or exemption identified).",
+    "quirks": "Infotv. s.75/A steers NAIH towards a warning rather than a fine for first-time infringements, applying proportionality. NAIH publishes its decisions."
+  },
+  "appeal": {
+    "court": "No internal administrative appeal. The decision is challenged in an administrative lawsuit (közigazgatási per) before the Budapest-Capital Regional Court (Fővárosi Törvényszék), which has exclusive jurisdiction; the statement of claim is filed electronically with NAIH, which forwards it with the file.",
+    "deadline": "30 days from notification of the decision.",
+    "suspensive": "No suspensive effect (Kp. s.39(6)); interim relief can be sought from the court. Disputed data may not be deleted until the deadline expires or the court rules. Court fee HUF 30,000; legal representation mandatory.",
+    "further": "Further review (felülvizsgálat) by the Kúria under the Kp. (not confirmed from a primary source for this packet).",
+    "inaction": "not confirmed. CJEU C-132/21 (12 January 2023, on a reference from the Fővárosi Törvényszék) held that Art. 77/78 and Art. 79 remedies can be used concurrently and independently."
+  },
+  "private": {
+    "courts": "Data subjects can sue the controller in court under Infotv. s.23; the competent level of court was not confirmed.",
+    "damages": "not confirmed",
+    "collective": "not confirmed"
+  },
+  "cases": [
+    {
+      "title": "Digi Távközlési (data breach, test database)",
+      "year": "2019-2022",
+      "summary": "NAIH fined Digi HUF 100 million (about EUR 248,000). On appeal the Fővárosi Törvényszék referred questions to the CJEU, which held (C-77/21, 20 October 2022) that keeping data in a test database can be compatible with the original purpose but not for longer than needed for testing.",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62021CJ0077"
+    },
+    {
+      "title": "BE v NAIH (parallel remedies)",
+      "year": "2023",
+      "summary": "CJEU C-132/21 on a Hungarian reference: the administrative remedy against the DPA and the civil remedy against the controller can be pursued in parallel, with courts expected to ensure consistency.",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0132"
+    }
+  ],
+  "quirks": [
+    "Two-track system: a lighter, ombudsman-style investigation on notification versus a formal authority procedure on request, where the complainant is a full party.",
+    "Single President rather than a board decides; 150-day statutory deadline.",
+    "Appeals go directly to the Budapest-Capital Regional Court within 30 days, filed through NAIH, with mandatory legal representation and no automatic suspension.",
+    "Warning-first principle for first-time infringements (Infotv. s.75/A)."
+  ],
+  "plain": "You can either tip off NAIH, which may look into it informally, or formally ask it to open a case, in which case you become a party and it has 150 days to decide. NAIH can warn, order changes or fine. Anyone who disagrees has 30 days to sue in the Budapest court, using a lawyer, and the decision applies in the meantime unless the court suspends it.",
+  "confidence": "Medium: procedure, deadlines and court route come from NAIH's own pages and decisions; I could not confirm the limitation period, fines on public bodies, the Infotv. s.23 court level, damages practice, or collective redress.",
+  "sources": [
+    {"title": "Infotv. English translation (version 1 March 2024)", "url": "https://njt.jog.gov.hu/jogszabaly/en/2011-112-00-00", "source_type": "primary"},
+    {"title": "NAIH: Data protection authority procedure (GDPR)", "url": "https://www.naih.hu/adatkezeles-erintettjekent-fordulok-a-hatosaghoz/adatvedelmi-hatosagi-eljaras-gdpr", "source_type": "primary"},
+    {"title": "NAIH: Approaching the Authority as a data subject", "url": "https://naih.hu/adatkezeles-erintettjekent-fordulok-a-hatosaghoz", "source_type": "primary"},
+    {"title": "NAIH: Information on parties' rights and obligations", "url": "https://www.naih.hu/files/tajekoztatas_az_ugyfelet_megilleto_jogokrol_es_az_ugyfelet_terhelo_kotelezettsegekrol_infotv.pdf", "source_type": "primary"},
+    {"title": "NAIH decision NAIH/2020/193 (legal remedy clause, s.75/A)", "url": "https://naih.hu/files/NAIH-2020-193-hatarozat.pdf", "source_type": "primary"},
+    {"title": "NAIH: About the Authority", "url": "https://naih.hu/about-the-authority", "source_type": "primary"},
+    {"title": "CJEU C-77/21 Digi", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62021CJ0077", "source_type": "primary"},
+    {"title": "CJEU C-132/21 BE v NAIH", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0132", "source_type": "primary"}
+  ]
+}

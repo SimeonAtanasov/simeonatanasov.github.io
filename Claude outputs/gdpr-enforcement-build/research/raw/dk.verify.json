@@ -1,0 +1,136 @@
+{
+ "code": "dk",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Recommended DKK 1.5m (police report June 2019), Aarhus District Court DKK 100,000 Feb 2021, CJEU C-383/23 13 Feb 2025, Vestre Landsret 2 Sept 2025 raised to DKK 1.5m",
+   "verdict": "corrected",
+   "evidence": "Roesgaard, Littler and BDO: Vestre Landsret judgment 2 September 2025, DKK 1.5 million; recommendation DKK 1.5 million, police report June 2019 (11 June 2019 per Anker); about 385,000 customers. CJEU judgment 13 February 2025, C-383/23, referring court Vestre Landsret. District court DKK 100,000 in 2021 confirmed, but the month is not: one source gives 12 April 2021 and none confirms February. Soften to the year.",
+   "url": "https://roesgaard.dk/nyheder/vestre-landsret-idoemmer-ilva-as-en-boede-paa-15-mio-kr-for-brud-paa-gdpr",
+   "replacement": "Datatilsynet recommended DKK 1.5 million for keeping data on about 385,000 customers with no deletion deadlines (police report June 2019). Aarhus District Court fined DKK 100,000 in 2021 based on the subsidiary's turnover. On the prosecution's appeal, Vestre Landsret referred questions to the CJEU (C-383/23, judgment 13 February 2025: 'undertaking' means the whole group) and on 2 September 2025 raised the fine to DKK 1.5 million."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "12 Jan 2024 police report, at least DKK 15m, privacy by design, no DPIA, authentication flaw at March 2022 launch; still pending",
+   "verdict": "confirmed",
+   "evidence": "Datatilsynet 12 January 2024: at least DKK 15 million; no privacy by design, no DPIA, coding error in authentication exposed other users' digital post at launch on 22 March 2022; 'Sagen ... verserer fortsat hos domstolene'.",
+   "url": "https://www.datatilsynet.dk/afgoerelser/afgoerelser/2024/jan/netcompany-indstilles-til-boede"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "About 1,200 unencrypted laptops; recommended DKK 100,000-200,000 Jan 2024; ended 23 April 2024 with DKK 100,000",
+   "verdict": "confirmed",
+   "evidence": "Datatilsynet 11 January 2024: DKK 100,000 to 200,000; about 1,200 unencrypted laptops after theft of a work laptop; update: case ended 23 April 2024 with a DKK 100,000 fine.",
+   "url": "https://www.datatilsynet.dk/afgoerelser/afgoerelser/2024/jan/odsherred-kommune-indstilles-til-boede"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Council chair a High Court or Supreme Court judge plus seven members, four-year terms",
+   "verdict": "confirmed",
+   "evidence": "s. 27: chairman 'must be a high court judge or supreme court judge', seven additional members, four-year terms (reappointable twice).",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Courts impose fines; fine or up to six months' imprisonment; legal persons liable",
+   "verdict": "confirmed",
+   "evidence": "s. 41: 'fine or imprisonment for a term not exceeding six months'; legal persons criminally liable. Guidance date (January 2021) not rechecked.",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public authorities fineable; 2% up to DKK 8m, 4% up to DKK 16m",
+   "verdict": "confirmed",
+   "evidence": "s. 41: public authorities punishable 'irrespective of section 27(2) of the Criminal Code'. Rigsadvokat circular 2020: 2% of operating budget, max DKK 8 million, or 4%, max DKK 16 million. Odsherred DKK 100,000 April 2024 confirmed.",
+   "url": "https://www.retsinformation.dk/api/pdf/212861"
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Five years (s. 41(7))",
+   "verdict": "confirmed",
+   "evidence": "s. 41: limitation period 'five years'.",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf"
+  },
+  {
+   "field": "procedure.stages[4]",
+   "claim": "Regional state prosecutor must be consulted",
+   "verdict": "confirmed",
+   "evidence": "Rigsadvokat circular: police must submit the charging question, including the penalty claim, to the regional state prosecutor in all data protection cases.",
+   "url": "https://www.retsinformation.dk/api/pdf/212861"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Decisions challenged by civil action before ordinary courts (s. 30(2))",
+   "verdict": "corrected",
+   "evidence": "s. 30(1) confirmed (no administrative appeal). s. 30(2) is the Agency's own power to bring infringements before the courts (Art. 58(5) GDPR), not the route for challenging its decisions. Challenges rely on general judicial review of administrative decisions.",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf",
+   "replacement": "Datatilsynet decisions cannot be taken to another administrative authority (s. 30(1)); they can be challenged by a civil action before the ordinary courts under the general right to judicial review of administrative decisions. Fines are criminal judgments of the district court (byret)."
+  },
+  {
+   "field": "appeal.inaction",
+   "claim": "s. 30(2) allows data subjects to bring infringements before the courts",
+   "verdict": "wrong",
+   "evidence": "s. 30(2) gives the Agency, not data subjects, the power to bring GDPR and Act infringements before the courts.",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf",
+   "replacement": "No specific Danish mechanism for Art. 78(2) inaction was confirmed; a complainant would rely on a civil action before the ordinary courts."
+  },
+  {
+   "field": "private.courts",
+   "claim": "Ordinary civil courts under s. 30(2); compensation under s. 40 and Art. 82",
+   "verdict": "corrected",
+   "evidence": "s. 40 confirmed (compensation under Art. 82). s. 30(2) concerns the Agency's standing, not private claims.",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf",
+   "replacement": "Ordinary civil courts (district courts at first instance); compensation for material and non-material damage under s. 40 Data Protection Act and Art. 82 GDPR."
+  },
+  {
+   "field": "complaint.complainant_status",
+   "claim": "No administrative appeal (s. 30(1)); remedy is the courts",
+   "verdict": "confirmed",
+   "evidence": "s. 30(1): decisions 'may not be brought before any other administrative authority'.",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "No source fetched.",
+   "url": ""
+  },
+  {
+   "field": "appeal.further",
+   "claim": "District court, High Court, Supreme Court only with leave; ILVA path",
+   "verdict": "confirmed",
+   "evidence": "ILVA: Aarhus District Court, CJEU reference by Vestre Landsret, Vestre Landsret judgment 2025.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62023CJ0383"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "One of two EU countries (with Estonia) where the DPA cannot fine",
+   "verdict": "confirmed",
+   "evidence": "Consistent with s. 41 (criminal courts impose fines) and the Estonian misdemeanour model (see ee file).",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "No right of access to file once with police",
+   "verdict": "unverifiable",
+   "evidence": "Bødesager page confirms recommendations and pending/closed lists; the access point was not checked.",
+   "url": "https://www.datatilsynet.dk/afgoerelser/boedesager"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Five-year limitation (s. 41(7))",
+   "verdict": "confirmed",
+   "evidence": "s. 41 as above.",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf"
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "2025 ILVA appeal after CJEU ruling used group turnover",
+   "verdict": "confirmed",
+   "evidence": "CJEU C-383/23 and Vestre Landsret 2 September 2025.",
+   "url": "https://roesgaard.dk/nyheder/vestre-landsret-idoemmer-ilva-as-en-boede-paa-15-mio-kr-for-brud-paa-gdpr"
+  }
+ ],
+ "notes": "Most serious issue: s. 30(2) is misread in three fields as a data subject's or controller's route to court; it is the Agency's own standing to sue. Secondary: ILVA district court month unconfirmed (sources disagree), and the Vestre Landsret date also appears as 11 September in one secondary source, but three others give 2 September 2025, so 2 September stands. The CJEU judgment says about 350,000 former customers; Danish sources say 385,000; left as is."
+}

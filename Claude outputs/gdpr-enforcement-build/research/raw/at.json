@@ -1,0 +1,95 @@
+{
+  "code": "at",
+  "country": "Austria",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Austrian Data Protection Authority",
+    "name_native": "Österreichische Datenschutzbehörde",
+    "abbr": "DSB",
+    "url": "https://www.dsb.gv.at/",
+    "structure": "Monocratic authority headed by a single head (Leiter/in, § 20 DSG), independent and not bound by instructions but administratively attached to the Federal Ministry of Justice (§ 18 DSG). Head since 1 January 2024: Matthias Schmidl (secondary source).",
+    "regional": "No regional authorities. Since January 2025 a separate Parliamentary Data Protection Committee (Parlamentarisches Datenschutzkomitee, five members) supervises the National Council, Federal Council, Court of Audit and Ombudsman Board, following the CJEU ruling that the GDPR applies to parliamentary inquiry committees."
+  },
+  "law": {
+    "name": "Datenschutzgesetz (DSG), BGBl. I Nr. 165/1999 as amended (GDPR adaptation via Datenschutz-Anpassungsgesetz 2018; latest amendment noted in the official translation: BGBl. I Nr. 50/2025)",
+    "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597"
+  },
+  "complaint": {
+    "how": "Written complaint in German by e-mail (dsb@dsb.gv.at), post or the DSB online form; anonymous complaints are not accepted. § 24(2) DSG lists required content: the right infringed, the respondent, the facts, the grounds of unlawfulness, the request and timeliness information. Generally free of charge, but the DSB may charge a fee or refuse to act on manifestly unfounded or excessive complaints (Art. 57(4) GDPR).",
+    "contact_controller_first": "Not a general requirement, but for data subject rights (access, rectification, erasure etc.) the DSB expects a copy of the request made to the controller and any reply.",
+    "deadlines": "Complaint must be filed within one year of becoming aware of the incident and at most three years after it occurred (§ 24(4) DSG). The DSB must inform the complainant of progress or outcome within three months (§ 24(7) DSG); the decision period under § 73 AVG (length for the DSB not confirmed) is calculated excluding periods of suspension and of Art. 56, 60 and 63 GDPR cooperation procedures (§ 24(10) DSG).",
+    "complainant_status": "Complainant is a full party to the complaint proceedings (Beschwerdeverfahren), which end in a declaratory decision (Bescheid). Fine proceedings are separate administrative penal proceedings in which the complainant is not a party (secondary inference, not confirmed from primary text)."
+  },
+  "procedure": {
+    "stages": [
+      "Formal check of the complaint against § 24(2) DSG; improvement order if incomplete",
+      "Complaint forwarded to the respondent for a written statement; complainant given the opportunity to reply (Parteiengehör)",
+      "Further investigation if needed; if the respondent remedies the breach, the DSB can close the case informally (§ 24(6) DSG)",
+      "Decision (Bescheid) declaring whether a violation occurred and, where appropriate, ordering compliance",
+      "Separately, ex officio administrative penal proceedings (Verwaltungsstrafverfahren) under the VStG ending in a penal decision (Straferkenntnis) imposing a fine"
+    ],
+    "decision_maker": "The DSB itself (as a monocratic body, through its head and staff) issues both complaint decisions and fines.",
+    "limitation": "Not confirmed. General VStG limitation rules may apply to fine proceedings; the Austrian Post proceedings ran about 66 months without being time-barred."
+  },
+  "fines": {
+    "imposed_by": "The DSB by administrative penal decision (Straferkenntnis), with fines on legal persons governed by § 30(1)-(2) DSG. Fines go to the federal state and final decisions are enforceable through the district courts (§ 30(4) DSG).",
+    "public_bodies": "No fines on authorities, public bodies or public-law corporations (§ 30(5) DSG); corrective orders still apply.",
+    "quirks": "§ 62 DSG creates separate administrative offences (for example unlawful access, breach of confidentiality, unlawful image processing) punishable by up to EUR 50,000, aimed at individuals. § 63 DSG makes processing with intent to profit or cause harm a criminal offence tried by the criminal courts. The VwGH held in 2026 that procedural costs pegged at 10% of the fine were contrary to Union law and capped them at EUR 100,000 in the Post case."
+  },
+  "appeal": {
+    "court": "Federal Administrative Court (Bundesverwaltungsgericht, BVwG), sitting as a senate of a presiding judge and two expert lay judges nominated by the employer and employee chambers (§ 27 DSG).",
+    "deadline": "Four weeks from service of the decision (§ 7(4) VwGVG).",
+    "suspensive": "Yes. An appeal against an ordinary decision has suspensive effect unless the DSB excludes it for urgent reasons (§ 13 VwGVG); in administrative penal matters suspensive effect cannot be excluded (§ 41 VwGVG).",
+    "further": "Revision to the Supreme Administrative Court (Verwaltungsgerichtshof, VwGH) and/or complaint to the Constitutional Court (Verfassungsgerichtshof, VfGH).",
+    "inaction": "If the DSB does not deal with the complaint or does not inform the complainant of progress or outcome within three months, the data subject may go directly to the BVwG (§ 24(8) and § 27 DSG); a complaint for failure to decide (Säumnisbeschwerde) is also available."
+  },
+  "private": {
+    "courts": "Damages claims (material and non-material) under § 29 DSG and Art. 82 GDPR go to the civil Regional Court (Landesgericht) at first instance, at the claimant's domicile or the defendant's seat or establishment (§ 29(2) DSG). Art. 79 actions are civil actions before the ordinary courts. The DSB cannot award damages.",
+    "damages": "Leading reference: CJEU C-300/21 Österreichische Post (4 May 2023), on a reference from the Austrian Supreme Court (OGH): mere infringement is not enough, but there is no de minimis threshold for non-material damage. Typical national award levels not confirmed.",
+    "collective": "Data subjects can mandate a not-for-profit body to act for them (Art. 80(1) GDPR, implemented in § 28 DSG; noyb is based in Austria). The Representative Actions Directive was transposed by the Verbandsklagen-Richtlinie-Umsetzungs-Novelle (VRUN, BGBl. I Nr. 85/2024) introducing the Qualified Entities Act (QEG); representative actions go exclusively to the Commercial Court of Vienna (Handelsgericht Wien)."
+  },
+  "cases": [
+    {
+      "title": "Österreichische Post AG: political 'party affinity' scores",
+      "year": "2019-2026",
+      "summary": "DSB fined Post EUR 18m (23 Oct 2019) for calculating and selling party affinities for about 2.2 million people. BVwG annulled it in 2020; VwGH set that aside on 1 Feb 2024 after CJEU Deutsche Wohnen; BVwG reimposed EUR 16m (27 Dec 2024); VfGH dismissed a complaint (9 Dec 2025); VwGH finally fixed the fine at EUR 13m plus EUR 100,000 costs (24 June 2026, Ro 2025/04/0007), citing the 66-month duration and compliance measures as mitigating.",
+      "url": "https://www.vwgh.gv.at/medien/mitteilungen/ro2025-04-0007.html"
+    },
+    {
+      "title": "CJEU C-300/21 UI v Österreichische Post",
+      "year": "2023",
+      "summary": "On a reference from the OGH in a damages claim over the same party affinity processing, the CJEU held that Art. 82 GDPR requires an infringement, damage and causation, but that national law may not impose a seriousness threshold for non-material damage.",
+      "url": "https://curia.europa.eu/juris/liste.jsf?num=C-300/21"
+    }
+  ],
+  "quirks": [
+    "No fines at all on public authorities and public-law bodies (§ 30(5) DSG).",
+    "Complaint proceedings (declaratory Bescheid, complainant is a party) and fine proceedings (administrative penal procedure) run on separate tracks inside the same authority.",
+    "Hard one-year/three-year time bar on complaints (§ 24(4) DSG), unusual in the EU.",
+    "Appeals go to an administrative court senate with expert lay judges from the social partners (§ 27 DSG).",
+    "Parliament has its own supervisory body since January 2025, outside the DSB."
+  ],
+  "plain": "You write to the DSB in German, explaining which right was breached and by whom, within a year of finding out. The DSB asks the company for its side, lets you respond, and then issues a decision saying whether your rights were violated; any fine is handled in a separate penalty procedure, and fines cannot be imposed on public bodies. Either side can appeal to the Federal Administrative Court within four weeks, and if the DSB stays silent for three months you can go to that court yourself.",
+  "confidence": "high for statutory rules and the Post case (primary sources); medium on limitation periods for fines and on complainant status in penal proceedings, which I could not confirm from primary text.",
+  "sources": [
+    {"title": "Datenschutzgesetz (DSG), consolidated version, RIS", "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597", "source_type": "primary"},
+    {"title": "§ 24 DSG (complaint, deadlines, inaction)", "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=24&Anlage=&Uebergangsrecht=", "source_type": "primary"},
+    {"title": "§ 27 DSG (Federal Administrative Court senate)", "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=27&Anlage=&Uebergangsrecht=", "source_type": "primary"},
+    {"title": "§ 29 DSG (damages, Landesgericht)", "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=29&Anlage=&Uebergangsrecht=", "source_type": "primary"},
+    {"title": "§ 30 DSG (fines, public bodies)", "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=30&Anlage=&Uebergangsrecht=", "source_type": "primary"},
+    {"title": "§ 62 DSG (administrative offences)", "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&Artikel=2&Paragraf=62&Anlage=&Uebergangsrecht=", "source_type": "primary"},
+    {"title": "DSG English translation (RIS)", "url": "https://www.ris.bka.gv.at/Dokumente/Erv/ERV_1999_1_165/ERV_1999_1_165.pdf", "source_type": "primary"},
+    {"title": "VwGVG § 7 (appeal deadline)", "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008255&Paragraf=7", "source_type": "primary"},
+    {"title": "VwGVG § 13 (suspensive effect)", "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008255&Paragraf=13", "source_type": "primary"},
+    {"title": "VwGVG § 41 (suspensive effect in penal matters)", "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008255&Paragraf=41", "source_type": "primary"},
+    {"title": "DSB: Beschwerde (complaint page)", "url": "https://dsb.gv.at/eingabe-an-die-dsb/beschwerde", "source_type": "primary"},
+    {"title": "VwGH press release Ro 2025/04/0007 (24 June 2026)", "url": "https://www.vwgh.gv.at/medien/mitteilungen/ro2025-04-0007.html", "source_type": "primary"},
+    {"title": "DSB news: VwGH sets fine at EUR 13m", "url": "https://dsb.gv.at/aktuelles/vwgh-bestaetigt-unrechtmaessige-verarbeitung-von-partei-affinitaeten-und-setzt-geldbusse-mit-eur-13-mio-fest", "source_type": "primary"},
+    {"title": "Der Standard on VwGH ruling of 1 Feb 2024 (Post)", "url": "https://www.derstandard.at/consent/tcf/story/3000000216988/millionenstrafe-datenskandal-koennte-fuer-post-noch-einmal-sehr-teuer-werden", "source_type": "secondary"},
+    {"title": "OTS: Parliamentary Data Protection Committee starts 2025", "url": "https://www.ots.at/presseaussendung/OTS_20241003_OTS0127/parlamentarisches-datenschutzkomitee-nimmt-2025-die-arbeit-auf", "source_type": "primary"},
+    {"title": "Austria-Forum: Datenschutzbehörde (structure, head)", "url": "https://austria-forum.org/af/AustriaWiki/Datenschutzbeh%C3%B6rde", "source_type": "secondary"},
+    {"title": "WKO FAQ: Verbandsklage neu (Handelsgericht Wien)", "url": "https://www.wko.at/zivilrecht/verbandsklage-neu-faqs", "source_type": "secondary"},
+    {"title": "BGBl. I Nr. 85/2024 (VRUN)", "url": "https://www.ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2024_I_85/BGBLA_2024_I_85.pdfsig", "source_type": "primary"},
+    {"title": "CJEU C-300/21 Österreichische Post", "url": "https://curia.europa.eu/juris/liste.jsf?num=C-300/21", "source_type": "primary"}
+  ]
+}

@@ -1,0 +1,149 @@
+{
+ "code": "ee",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "5 Sept 2025 EUR 3m fine, over 750,000 people, shared admin credentials, no MFA, weak logging; Harju County Court upheld 2 Sept 2026; Allium announced Supreme Court appeal",
+   "verdict": "confirmed",
+   "evidence": "AKI 5 September 2025: EUR 3 million, over 750,000 people, no MFA, shared admin credentials, inadequate logging. AKI and ERR 2 September 2026: Harju County Court upheld the fine; ERR quotes Allium: 'otsus kaevatakse edasi riigikohtusse'. AKI: not yet final, 30 days to appeal.",
+   "url": "https://www.aki.ee/uudised/allium-upi-le-maaratud-3-miljoni-euro-suurune-trahv-oli-kohtu-hinnangul-pohjendatud"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "EUR 85,000 Jan 2025; Tartu County Court annulled 26-27 June 2025; Supreme Court declined cassation Aug 2025",
+   "verdict": "corrected",
+   "evidence": "AKI: fine EUR 85,000 January 2025; Tartu County Court ruled on 26 June 2025; security part terminated because it predated the corporate liability amendments; DPO part ended for lack of public interest given minor negligence; Supreme Court declined AKI's appeal in August 2025. The '26-27 June' range is not supported.",
+   "url": "https://www.aki.ee/uudised/asper-biogene-andmeleket-puudutav-kohtuvaidlus-loppenud",
+   "replacement": "AKI fined the genetic testing company EUR 85,000 in January 2025. Tartu County Court annulled it on 26 June 2025: the security failure predated the 1 November 2023 corporate liability rules, and the DPO conflict (sole board member as DPO) was discontinued on expediency grounds. The Supreme Court declined AKI's cassation appeal in August 2025."
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "30 May 2025 reprimand of Bolt, no fine, 30 days to administrative court",
+   "verdict": "confirmed",
+   "evidence": "Decision 30.05.2025: reprimand only; legal basis, transparency and retention failures; 'may be challenged within 30 days by submitting an appeal to an administrative court'.",
+   "url": "https://www.edpb.europa.eu/system/files/2025-08/ee-sa-05-25-decisionpublic_.pdf"
+  },
+  {
+   "field": "complaint.how",
+   "claim": "e-portal with ID-card, Mobile-ID or Smart-ID, or signed email using template",
+   "verdict": "confirmed",
+   "evidence": "AKI complaint page lists both channels; no fee mentioned.",
+   "url": "https://www.aki.ee/meist/vota-uhendust/kaebus-isikuandmete-kaitse-asjas"
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "Yes",
+   "verdict": "confirmed",
+   "evidence": "AKI expects the complainant to have first sought to protect their rights with the controller.",
+   "url": "https://www.aki.ee/meist/vota-uhendust/kaebus-isikuandmete-kaitse-asjas"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "30 days, extendable by up to 60 days",
+   "verdict": "confirmed",
+   "evidence": "'võimalusel 30 päeva jooksul', extendable by 60 days.",
+   "url": "https://www.aki.ee/meist/vota-uhendust/kaebus-isikuandmete-kaitse-asjas"
+  },
+  {
+   "field": "complaint.complainant_status",
+   "claim": "Complainant becomes a party if formal proceedings opened (AKI complaint page)",
+   "verdict": "corrected",
+   "evidence": "The cited page says a complaint does not automatically open proceedings or guarantee an outcome, but does not say the complainant becomes a party.",
+   "url": "https://www.aki.ee/meist/vota-uhendust/kaebus-isikuandmete-kaitse-asjas",
+   "replacement": "A complaint does not automatically open supervisory proceedings or guarantee a particular outcome (AKI complaint page). Whether the complainant becomes a party to any proceedings was not confirmed."
+  },
+  {
+   "field": "procedure.limitation",
+   "claim": "Three years since 1 Nov 2023 (previously two); two hospital fines cancelled on limitation",
+   "verdict": "confirmed",
+   "evidence": "DLA Piper: limitation extended from 2 to 3 years from 1 November 2023. Estonian Human Rights Centre 2026: fines on Ida-Tallinna Keskhaigla and Viljandi Haigla cancelled because of the short limitation period.",
+   "url": "https://www.dlapiperdataprotection.com/countries/estonia/enforcement.html"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "AKI through misdemeanour proceedings; EUR 400,000 cap lifted from 1 Nov 2023; corporate liability simplified",
+   "verdict": "confirmed",
+   "evidence": "DLA Piper: AKI imposes fines in misdemeanour proceedings up to EUR 20m or 4%; pre-amendment EUR 400,000 cap; 1 November 2023 changes on limitation, higher fines and legal person liability.",
+   "url": "https://www.dlapiperdataprotection.com/countries/estonia/enforcement.html"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Not confirmed whether state and local authorities can be fined",
+   "verdict": "corrected",
+   "evidence": "Estonian Human Rights Centre 2026: 'riigiasutusele andmekaitse trahvi määrata ei saa' (a state institution cannot be given a data protection fine). Hospital fines confirmed (Ida-Tallinna Keskhaigla, Viljandi Haigla).",
+   "url": "https://humanrights.ee/materjalid/inimoigused-eestis-2026/oigus-perekonna-ja-eraelu-puutumatusele/",
+   "replacement": "State agencies cannot be fined for data protection misdemeanours (Estonian Human Rights Centre, 2026). Public hospitals that are separate legal persons have been fined (Ida-Tallinna Keskhaigla, Viljandi Haigla; later cancelled on limitation grounds). The position of local authorities was not confirmed."
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Pere Sihtkapital and Asper Biogene fines fell on pre-Nov 2023 liability rules; 2020 concept never enacted; 2025 competition reform",
+   "verdict": "confirmed",
+   "evidence": "Human Rights Centre: Pere Sihtkapital and Asper Biogene fines annulled over legal person liability problems. The 2020 concept and 2025 competition reform parts were not rechecked.",
+   "url": "https://humanrights.ee/materjalid/inimoigused-eestis-2026/oigus-perekonna-ja-eraelu-puutumatusele/"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Fines: county court; administrative decisions: administrative court",
+   "verdict": "confirmed",
+   "evidence": "Allium: Harju County Court; Asper Biogene: Tartu County Court; Bolt decision: administrative court.",
+   "url": "https://www.edpb.europa.eu/system/files/2025-08/ee-sa-05-25-decisionpublic_.pdf"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "15 days against misdemeanour decision; 30 days administrative court or vaie",
+   "verdict": "confirmed",
+   "evidence": "AKI 5 September 2025: 15 days from receiving the decision. Bolt decision: 30 days to administrative court. Vaie page: 30 days.",
+   "url": "https://www.aki.ee/uudised/allium-upi-jattis-kliendiandmed-kaitseta-3-miljoni-euro-suurune-trahv"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Fine not enforceable while challenged",
+   "verdict": "confirmed",
+   "evidence": "AKI: the fine decision 'has not yet become legally enforceable' and can be contested; 2026 judgment not yet final.",
+   "url": "https://www.aki.ee/uudised/allium-upi-jattis-kliendiandmed-kaitseta-3-miljoni-euro-suurune-trahv"
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Cassation to Supreme Court, 30-day window cited in 2026; Asper Biogene not accepted Aug 2025",
+   "verdict": "confirmed",
+   "evidence": "AKI 2 September 2026: 30 days to appeal to the Riigikohus. Asper Biogene: Supreme Court declined in August 2025.",
+   "url": "https://www.aki.ee/uudised/allium-upi-le-maaratud-3-miljoni-euro-suurune-trahv-oli-kohtu-hinnangul-pohjendatud"
+  },
+  {
+   "field": "appeal.inaction",
+   "claim": "Vaie within 30 days, decided in 10 days extendable by 30; not available once in court",
+   "verdict": "confirmed",
+   "evidence": "Vaie page: 30 days; decided within 10 days, extendable by up to 30; cannot be filed if the same matter is in court.",
+   "url": "https://www.aki.ee/meist/vota-uhendust/vaide-esitamine"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "One of two EU countries without administrative fines; fines go to county court",
+   "verdict": "confirmed",
+   "evidence": "DLA Piper and court routes above.",
+   "url": "https://www.dlapiperdataprotection.com/countries/estonia/enforcement.html"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "1 Nov 2023 amendments lifted EUR 400,000 cap, three-year limitation, simplified corporate liability",
+   "verdict": "confirmed",
+   "evidence": "DLA Piper as above.",
+   "url": "https://www.dlapiperdataprotection.com/countries/estonia/enforcement.html"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "EUR 3m Allium fine is Estonia's first million-euro fine",
+   "verdict": "unverifiable",
+   "evidence": "DLA Piper calls it the largest fine; 'first million-euro' not stated but consistent with the pre-2023 EUR 400,000 cap.",
+   "url": "https://www.dlapiperdataprotection.com/countries/estonia/enforcement.html"
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "2020 administrative fines act proposed, not adopted",
+   "verdict": "unverifiable",
+   "evidence": "Not rechecked.",
+   "url": ""
+  }
+ ],
+ "notes": "Riigi Teataja (IKS text) not fetched, so section numbers remain unconfirmed. Most useful fix: the public-bodies field can now state that state agencies cannot be fined, per the Estonian Human Rights Centre 2026 report. ERR describes the 2023 changes as Penal Code amendments, consistent with the file."
+}

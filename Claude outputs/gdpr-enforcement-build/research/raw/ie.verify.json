@@ -1,0 +1,134 @@
+{
+ "code": "ie",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "TikTok: DPC decision 30 April 2025 (485m + 45m) plus suspension order; High Court stay; Supreme Court 30 April 2026 dismissed DPC appeal; mid-2026 High Court upheld findings, sent suspension order back; fine-size appeal undecided",
+   "verdict": "corrected",
+   "evidence": "DPC fines page dates the decision 30/04/2025, EUR 530m, Pending Appeal. Irish Times 30 Apr 2026: Supreme Court unanimously dismissed the DPC's appeal, stay test is one of national law. Acompli/Freevacy (published 11 June 2026): High Court judgment of 3 June 2026 largely upheld the Art. 46 and Art. 13 findings and directed the DPC to reconsider the suspension order; the court would consider the appeal on the amount separately. Irish Times 30 June 2026: a separate judgment on the fine amount had been circulated to the parties and would be published later. 'Mid-2026' is vague and 'still to be decided' is out of date.",
+   "url": "https://www.irishtimes.com/ireland/2026/06/30/data-protection-commission-reconsidering-tiktok-data-transfer-ban-after-court-ruling/",
+   "replacement": "DPC decision of 30 April 2025 (EUR 485m transfers, EUR 45m transparency) plus a transfer suspension order. The High Court stayed it; the Supreme Court (30 April 2026) dismissed the DPC's appeal on the stay test. In June 2026 the High Court upheld the infringement findings but sent the suspension order back to the DPC. A separate judgment on the size of the fine was circulated to the parties at the end of June 2026; its outcome had not been published at last report."
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "Meta EUR 1.2bn dated 12 May 2023, Pending Appeal, as are 405m, 390m, 265m, 251m, WhatsApp 225m, LinkedIn 310m",
+   "verdict": "confirmed",
+   "evidence": "DPC fines table: Meta EUR 1.2bn 12/05/2023 Pending Appeal; Instagram 405m 02/09/2022; Meta 390m 31/12/2022; 265m 25/11/2022; 251m Dec 2024; WhatsApp 225m 20/08/2021; LinkedIn 310m 22/10/2024, all Pending Appeal. (Decision dated 12 May 2023; publicly announced 22 May 2023.)",
+   "url": "https://www.dataprotection.ie/en/dpc-guidance/decisions/fines"
+  },
+  {
+   "field": "cases[2].summary",
+   "claim": "Google EUR 403m, 21 September 2026, own-volition inquiry opened February 2020 after consumer group complaints, Location History / Web & App Activity / Location Accuracy, six months to comply",
+   "verdict": "confirmed",
+   "evidence": "DPC release: decision 21 September 2026, EUR 403m, own-volition inquiry launched February 2020 following complaints from consumer organisations including BEUC; lawfulness, transparency, accountability and retention failures; 6 months to comply; decided by Hogan, Sunderland and Sweeney.",
+   "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location"
+  },
+  {
+   "field": "procedure.decision_maker",
+   "claim": "Google decision taken by all three commissioners",
+   "verdict": "confirmed",
+   "evidence": "Release names Dr Des Hogan, Dale Sunderland and Niamh Sweeney.",
+   "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Niamh Sweeney joined 17 September 2025, completing the three-person Commission",
+   "verdict": "confirmed",
+   "evidence": "DPC: appointment on 17 September 2025 'completes the DPC's three-person Commission'. Statutory term lengths in s.15 not checked.",
+   "url": "https://www.dataprotection.ie/en/dpc-welcomes-appointment-3rd-commissioner"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "DPC decides; not payable until court confirmation; Circuit Court confirms under s.143 unless good reason not to",
+   "verdict": "confirmed",
+   "evidence": "DPC: fines 'do not become payable until they are confirmed in Court'. s.143: Commission applies to the Circuit Court after the appeal period; court confirms 'unless the Court sees good reason not to do so'. The 28-day payment notice was not checked.",
+   "url": "https://www.irishstatutebook.ie/eli/2018/act/7/section/143/enacted/en/html"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies not acting as undertakings capped at EUR 1m (s.141(4)); HSE fined EUR 645,000 on 2 September 2026",
+   "verdict": "confirmed",
+   "evidence": "s.141(4): fine 'shall not exceed €1,000,000' for a public authority or body not acting as an undertaking. DPC release: HSE decision 2 September 2026, EUR 645,000 (insecure retention of paper records at external facilities).",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/141/revised/en/html"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "About EUR 4.4bn imposed, about EUR 20m collected",
+   "verdict": "confirmed",
+   "evidence": "DPC fines page: total imposed EUR 4,441,832,000 (as of 21/09/2026); approximately EUR 20 million collected. District Court prosecution point not checked.",
+   "url": "https://www.dataprotection.ie/en/dpc-guidance/decisions/fines"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Fines: Circuit Court up to EUR 75,000, otherwise High Court (s.142); other decisions: Circuit Court concurrently with High Court (s.150)",
+   "verdict": "confirmed",
+   "evidence": "s.142: Circuit Court where the fine 'does not exceed €75,000'. s.150: 'The Circuit Court shall, concurrently with the High Court, have jurisdiction'.",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/142/revised/en/html"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "28 days (s.142(1), s.150)",
+   "verdict": "confirmed",
+   "evidence": "s.142: 'within 28 days from the date on which notice of the decision concerned was given'; s.150: 28 days.",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/150/revised/en/html"
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Fine effectively suspended pending appeal; corrective orders not automatically suspended; TikTok stay upheld by Supreme Court April 2026, stay test is national law",
+   "verdict": "confirmed",
+   "evidence": "Irish Times 30 Apr 2026: unanimous Supreme Court dismissed DPC appeal; 'the legal test governing a stay on a decision of the DPC was properly one of national law'; stay granted by Mulcahy J in the High Court.",
+   "url": "https://www.irishtimes.com/crime-law/courts/2026/04/30/supreme-court-finds-for-tiktok-in-dispute-with-data-protection-commission/"
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Final save appeal on a point of law to High Court or Court of Appeal (s.150); Meta lost judicial review on 21 May 2026",
+   "verdict": "confirmed",
+   "evidence": "s.150: decision 'shall be final save that an appeal shall lie to the High Court or Court of Appeal ... on a point of law'. Irish Times 21 May 2026: Phelan J dismissed Meta's judicial review.",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/150/revised/en/html"
+  },
+  {
+   "field": "complaint.complainant_status",
+   "claim": "Person affected by a legally binding decision may appeal within 28 days (s.150)",
+   "verdict": "confirmed",
+   "evidence": "s.150(5): data subjects or other persons affected may appeal within 28 days. s.150(7) also lets a complainant appeal if the Commission fails to meet required timelines, which bears on appeal.inaction.",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/150/revised/en/html"
+  },
+  {
+   "field": "private.damages",
+   "claim": "Kaminski [2023] IECC 5, Circuit Court, EUR 2,000; MH v Child and Family Agency, Circuit Court, EUR 7,500, highest award; Dillon v Irish Life before Supreme Court",
+   "verdict": "confirmed",
+   "evidence": "Arthur Cox: Kaminski v Ballymaguire Foods [2023] IECC 5, Circuit Court, EUR 2,000 plus costs, workplace training video. Law Society Gazette (Feb 2025): MH v CFA, EUR 7,500, 'the highest award of damages under the GDPR in the Irish courts to date'; PIAB issue 'under review by the Supreme Court' in Dillon v Irish Life.",
+   "url": "https://www.lawsociety.ie/gazette/top-stories/2025/february/highest-gdpr-award-for-damages-in-irish-court/"
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Every fine needs a court appeal outcome or Circuit Court confirmation (s.143)",
+   "verdict": "confirmed",
+   "evidence": "s.143 and DPC fines page as above.",
+   "url": "https://www.irishstatutebook.ie/eli/2018/act/7/section/143/enacted/en/html"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Circuit Court up to EUR 75,000, High Court above",
+   "verdict": "confirmed",
+   "evidence": "s.142.",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/142/revised/en/html"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Public bodies capped at EUR 1 million",
+   "verdict": "corrected",
+   "evidence": "s.141(4) cap applies only to a public authority or body that is not acting as an undertaking; the quirk drops that qualifier.",
+   "url": "https://revisedacts.lawreform.ie/eli/2018/act/7/section/141/revised/en/html",
+   "replacement": "Public bodies not acting as undertakings are capped at EUR 1 million (s.141(4))."
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "May 2026 High Court confirmed a complaint-based inquiry can lead to system-wide corrective measures and fines (Meta judicial review)",
+   "verdict": "confirmed",
+   "evidence": "Irish Times 21 May 2026: complaint-based inquiries may lawfully address systemic issues and lead to 'system-wide corrective measures' including fines; possible fine EUR 360-430m.",
+   "url": "https://www.irishtimes.com/business/2026/05/21/meta-loses-challenge-to-possible-430m-fine-over-personal-data-processing-complaint/"
+  }
+ ],
+ "notes": "Most serious issue: the TikTok case summary is stale. The High Court ruled on the merits on 3 June 2026 (per Acompli; Freevacy published 11 June), and by 30 June a separate judgment on the fine amount had been circulated to the parties. The confidence line should drop 'the exact date of the 2026 High Court TikTok judgment'. s.150(7) lets a complainant appeal if the Commission fails to meet the required timelines. That is a statutory hook for appeal.inaction, which the file currently says is unconfirmed; worth stating. Minor: the Meta EUR 1.2bn decision is dated 12 May 2023 but was announced on 22 May 2023, which is the date most readers know. The DPC fines table, as WebFetch summarised it, also lists an HSE EUR 65,000 fine dated 18/08/2020, separate from the 2026 one; no conflict."
+}

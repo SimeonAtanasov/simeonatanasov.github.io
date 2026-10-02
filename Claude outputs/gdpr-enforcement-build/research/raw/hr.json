@@ -1,0 +1,82 @@
+{
+  "code": "hr",
+  "country": "Croatia",
+  "membership": "EU",
+  "dpa": {
+    "name_en": "Personal Data Protection Agency",
+    "name_native": "Agencija za zaštitu osobnih podataka",
+    "abbr": "AZOP",
+    "url": "https://azop.hr/",
+    "structure": "Single independent state body accountable to the Croatian Parliament, headed by a director (ravnatelj) and deputy director appointed by Parliament for four years, at most two terms. Current director: Zdravko Vukić.",
+    "regional": "No regional authorities."
+  },
+  "law": {
+    "name": "Act on the Implementation of the General Data Protection Regulation (Zakon o provedbi Opće uredbe o zaštiti podataka), Narodne novine 42/2018",
+    "url": "https://www.zakon.hr/z/1023/Zakon-o-provedbi-Op%C4%87e-uredbe-o-za%C5%A1titi-podataka"
+  },
+  "complaint": {
+    "how": "A 'request for establishing a violation of rights' (zahtjev za utvrđivanje povrede prava, Art. 34) can be made in person on the record, by post, by e-mail (azop@azop.hr), by fax or via the online form, in Croatian. It must include name, personal ID number (OIB), address, a chronological description and supporting documents. No fee mentioned.",
+    "contact_controller_first": "Yes in practice: AZOP asks data subjects to first exercise their rights with the controller in writing before filing.",
+    "deadlines": "No filing time limit found in the implementing act. AZOP decision deadline not confirmed (general administrative procedure rules presumably apply).",
+    "complainant_status": "The requester initiates an administrative procedure ending in a decision (rješenje) on whether a violation occurred, which the requester can challenge in court, so is treated as a party (Art. 34)."
+  },
+  "procedure": {
+    "stages": [
+      "Request received and checked; AZOP may ask the controller for a statement",
+      "Investigation, including announced or unannounced inspections with power to copy documents and temporarily seize or seal equipment for up to 15 days (Art. 36-40)",
+      "Decision (rješenje) establishing whether rights were violated, an administrative act with no internal appeal (Art. 34)",
+      "Separate decision imposing an administrative fine under Art. 83 GDPR where warranted; decisions in serious cases are published without anonymisation"
+    ],
+    "decision_maker": "The Agency, under its director.",
+    "limitation": "Not confirmed for the imposition of fines. Collection of fines follows general tax law, with the limitation period running from finality (Art. 49, per secondary summary)."
+  },
+  "fines": {
+    "imposed_by": "AZOP itself by administrative decision; unpaid fines are enforced through the tax authority.",
+    "public_bodies": "Public authorities cannot be fined (Art. 47).",
+    "quirks": "AZOP fines rose sharply from 2023, driven by debt collection agencies: about EUR 8.27m in 28 fines in 2023 and EUR 6.73m in 13 fines in 2025. The act also has misdemeanour provisions on confidentiality breaches by Agency staff."
+  },
+  "appeal": {
+    "court": "No administrative appeal; an administrative dispute (upravni spor) is brought before the competent administrative court (upravni sud) (Art. 34(4)).",
+    "deadline": "30 days from service of the decision (Art. 24 Administrative Disputes Act, NN 20/2010 as amended).",
+    "suspensive": "As a rule no: an action has no suspensive effect unless the law provides otherwise (Art. 26 Administrative Disputes Act); the implementing act sets payment within 15 days of finality, so payment may not be due until the decision is final (not confirmed).",
+    "further": "Appeal to the High Administrative Court (Visoki upravni sud), 15 days from the first-instance judgment under the 2010 text (Art. 70); the Act was amended in 2024 and current appeal rules were not re-checked.",
+    "inaction": "Not confirmed specifically; the general Administrative Disputes Act allows an action against administrative silence (failure to decide within the statutory period)."
+  },
+  "private": {
+    "courts": "Not confirmed: the implementing act does not designate a court for Art. 79 or Art. 82 claims, so ordinary civil courts apply under general rules.",
+    "damages": "Not confirmed: no notable Croatian damages awards found within the research budget.",
+    "collective": "Art. 41 lets data subjects mandate a non-profit body to complain and exercise Art. 77-79 and 82 rights on their behalf. The Representative Actions Directive was transposed by the Act on Representative Actions for the Protection of Collective Interests and Rights of Consumers (NN 59/2023)."
+  },
+  "cases": [
+    {
+      "title": "B2 Kapital (debt collection)",
+      "year": "2023",
+      "summary": "EUR 2,265,000 fine (4 May 2023) after an anonymous tip-off with a USB stick holding data on 77,317 people led to ex officio supervision; violations included lack of transparency, missing processor agreements and inadequate security.",
+      "url": "https://azop.hr/agenciji-za-naplatu-potrazivanja-izrecena-upravna-novcana-kazna-u-iznosu-od-226-milijuna-eura/"
+    },
+    {
+      "title": "EOS Matrix (debt collection)",
+      "year": "2023-2026",
+      "summary": "Record EUR 5.47m fine (October 2023) for inadequate security, processing non-debtors' and minors' data, health data and call recording without a clear legal basis. The company brought administrative disputes; press reporting in 2026 says they had not yet been finally resolved.",
+      "url": "https://www.telegram.hr/vijesti/eos-matrix-utjerivaci-dugova-kazna-azop/"
+    }
+  ],
+  "quirks": [
+    "No administrative appeal: AZOP decisions go straight to the administrative courts (Art. 34).",
+    "Public authorities cannot be fined (Art. 47).",
+    "Enforcement has concentrated on debt collection agencies, producing some of the largest fines in the region.",
+    "Unpaid fines are collected by the tax authority."
+  ],
+  "plain": "After first writing to the organisation, you ask AZOP to establish that your rights were violated, online, by e-mail or by post. AZOP investigates, can inspect the company's premises, and issues a decision; it can fine companies but not public authorities. There is no appeal inside the agency: either side can sue in the administrative court within 30 days, and from there go to the High Administrative Court.",
+  "confidence": "medium: the implementing act, complaint page and fines are confirmed, but I could not confirm AZOP's decision deadline, the limitation period for imposing fines, damages case law, or the current (2024-amended) appeal rules of the Administrative Disputes Act; court outcomes for the big fines are not yet known.",
+  "sources": [
+    {"title": "Zakon o provedbi Opće uredbe o zaštiti podataka (NN 42/2018)", "url": "https://www.zakon.hr/z/1023/Zakon-o-provedbi-Op%C4%87e-uredbe-o-za%C5%A1titi-podataka", "source_type": "primary"},
+    {"title": "AZOP: Zahtjev za utvrđivanje povrede prava", "url": "https://azop.hr/zahtjev-za-utvrdivanje-povrede-prava/", "source_type": "primary"},
+    {"title": "AZOP: Upravne novčane kazne (fine statistics)", "url": "https://azop.hr/upravne-novcane-kazne-3/", "source_type": "primary"},
+    {"title": "AZOP: EUR 2.26m fine on debt collection agency", "url": "https://azop.hr/agenciji-za-naplatu-potrazivanja-izrecena-upravna-novcana-kazna-u-iznosu-od-226-milijuna-eura/", "source_type": "primary"},
+    {"title": "Telegram.hr: EOS Matrix fined EUR 5.47m", "url": "https://www.telegram.hr/vijesti/eos-matrix-utjerivaci-dugova-kazna-azop/", "source_type": "secondary"},
+    {"title": "Dnevno.hr: EOS Matrix disputes not yet final", "url": "https://www.dnevno.hr/gospodarstvo-i-turizam/pitali-smo-nadlezne-zasto-tvrtka-smije-poslovati-nakon-kazne-od-547-milijuna-eura-evo-sto-su-nam-rekli-3421237/", "source_type": "secondary"},
+    {"title": "Zakon o upravnim sporovima, NN 20/2010 (original text)", "url": "https://sredisnjikatalogrh.gov.hr/srce-arhiva/263/55195/narodne-novine.nn.hr/clanci/sluzbeni/2010_02_20_483.html", "source_type": "primary"},
+    {"title": "Zakon o predstavničkim tužbama (NN 59/2023)", "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_998.html", "source_type": "primary"}
+  ]
+}

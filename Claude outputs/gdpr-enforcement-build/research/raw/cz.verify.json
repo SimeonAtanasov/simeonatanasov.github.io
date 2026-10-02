@@ -1,0 +1,119 @@
+{
+ "code": "cz",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "CZK 351m Avast fine announced 15 April 2024 as final; Municipal Court 30 Sept 2025 upheld infringements, annulled user count and fine, remanded",
+   "verdict": "confirmed",
+   "evidence": "ÚOOÚ 15 April 2024: CZK 351 million, about 100 million users, 'final and binding'. Court press release: judgment 30 September 2025, 5 A 56/2024, guilt on two infringements confirmed, the '100,000,000 users' finding and the fine annulled, case returned to ÚOOÚ to recalculate. Source says the data was pseudonymised, which matches 'insufficiently anonymised'.",
+   "url": "https://msp.gov.cz/documents/d/mestsky-soud-v-praze/tiskova-zprava-k-rozsudku-ze-dne-30-9-2025-sp-zn-5-a-56-2024"
+  },
+  {
+   "field": "cases[1].summary",
+   "claim": "CZK 30,000 fine on Arbitration Court for refusing files in FOI appeal; upheld 29 July 2026 (15 A 178/2025)",
+   "verdict": "confirmed",
+   "evidence": "Česká justice: ÚOOÚ fined the Arbitration Court CZK 30,000 for refusing to hand over full case files in an FOI appeal; Municipal Court in Prague upheld it on 29 July 2026, 15 A 178/2025, calling the fine 'the only available leverage'.",
+   "url": "https://www.ceska-justice.cz/2026/07/rozhodci-soud-pokuta-uoou/"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "President appointed by President of the Republic, five years, max two consecutive terms (s. 52); two Vice-Presidents elected and removed by the Senate (s. 53)",
+   "verdict": "confirmed",
+   "evidence": "Act: President 'appointed and removed by the President of the Republic on the proposal of the Senate', five years, maximum two consecutive terms; Vice-Presidents 'elected and removed by the Senate at the proposal of the President of the Office'.",
+   "url": "https://uoou.gov.cz/media/act-no-110-2019-coll.pdf"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "ÚOOÚ itself, by administrative decision",
+   "verdict": "confirmed",
+   "evidence": "Avast decision imposed by ÚOOÚ and confirmed on remonstrance.",
+   "url": "https://uoou.gov.cz/en/news/business-communication/czech-dpa-imposed-fine-of-351-million-czk-for-gdpr-infringement"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "No GDPR fines on Art. 83(7) bodies (s. 62); ÚOOÚ has however fined a public body (Arbitration Court) for obstruction",
+   "verdict": "corrected",
+   "evidence": "s. 62(5): 'The Office shall waive administrative punishment also with respect to controllers and processors set out in Art. 83(7)'. The second sentence overreaches: the Arbitration Court attached to the Economic Chamber is a permanent arbitration court, not obviously a public authority, and the fine was a procedural fine in an FOI appeal, not a data protection penalty. It should not be presented as an exception to s. 62.",
+   "url": "https://uoou.gov.cz/media/act-no-110-2019-coll.pdf",
+   "replacement": "No. The Office must refrain from imposing administrative penalties on the entities listed in Art. 83(7) GDPR, i.e. public authorities and bodies (s. 62(5) Act 110/2019). Corrective orders still apply. Separately, ÚOOÚ can impose procedural fines for non-cooperation in proceedings it handles: a CZK 30,000 fine on the Arbitration Court of the Economic Chamber in a freedom of information appeal was upheld by the Municipal Court in Prague on 29 July 2026."
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "s. 61 fines CZK 1m / CZK 5m via press or network; s. 63 up to CZK 10m for law enforcement processing",
+   "verdict": "confirmed",
+   "evidence": "Act: s. 61 up to CZK 1,000,000, or CZK 5,000,000 if via press, film, radio, television, publicly accessible computer network or similar; s. 63 up to CZK 10,000,000.",
+   "url": "https://uoou.gov.cz/media/act-no-110-2019-coll.pdf"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Remonstrance to the President, then Municipal Court in Prague (5 A 56/2024)",
+   "verdict": "confirmed",
+   "evidence": "Avast: final decision after remonstrance, then action decided by Municipal Court in Prague, 5 A 56/2024.",
+   "url": "https://msp.gov.cz/documents/d/mestsky-soud-v-praze/tiskova-zprava-k-rozsudku-ze-dne-30-9-2025-sp-zn-5-a-56-2024"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Not confirmed; general rule two months",
+   "verdict": "unverifiable",
+   "evidence": "No source fetched. Two months matches the general rule for an administrative action (s. 72 Code of Administrative Justice) as far as I know.",
+   "url": ""
+  },
+  {
+   "field": "appeal.suspensive",
+   "claim": "Not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "No source fetched.",
+   "url": ""
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Cassation complaint to Supreme Administrative Court; annulment sends case back",
+   "verdict": "confirmed",
+   "evidence": "Remand to ÚOOÚ confirmed in the Avast press release; NSS cassation is the standard route.",
+   "url": "https://msp.gov.cz/documents/d/mestsky-soud-v-praze/tiskova-zprava-k-rozsudku-ze-dne-30-9-2025-sp-zn-5-a-56-2024"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "30-day rule under s. 42 Administrative Procedure Code, application not confirmed",
+   "verdict": "unverifiable",
+   "evidence": "Not checked against a primary source; the file already hedges it.",
+   "url": ""
+  },
+  {
+   "field": "quirks[0]",
+   "claim": "Public authorities cannot be fined (s. 62)",
+   "verdict": "confirmed",
+   "evidence": "s. 62(5) as above.",
+   "url": "https://uoou.gov.cz/media/act-no-110-2019-coll.pdf"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Up to CZK 5 million for unlawful publication via press, broadcast or internet (s. 61)",
+   "verdict": "confirmed",
+   "evidence": "s. 61 as above.",
+   "url": "https://uoou.gov.cz/media/act-no-110-2019-coll.pdf"
+  },
+  {
+   "field": "quirks[2]",
+   "claim": "Remonstrance, then Municipal Court in Prague, then Supreme Administrative Court",
+   "verdict": "confirmed",
+   "evidence": "Avast procedural history.",
+   "url": "https://msp.gov.cz/documents/d/mestsky-soud-v-praze/tiskova-zprava-k-rozsudku-ze-dne-30-9-2025-sp-zn-5-a-56-2024"
+  },
+  {
+   "field": "quirks[3]",
+   "claim": "Complainants treated as initiative-givers, not parties",
+   "verdict": "unverifiable",
+   "evidence": "General administrative law point; already hedged in the file.",
+   "url": ""
+  },
+  {
+   "field": "quirks[4]",
+   "claim": "ÚOOÚ handles FOI appeals",
+   "verdict": "confirmed",
+   "evidence": "Arbitration Court case arose in an FOI appeal handled by ÚOOÚ.",
+   "url": "https://www.ceska-justice.cz/2026/07/rozhodci-soud-pokuta-uoou/"
+  }
+ ],
+ "notes": "No serious errors. Main fix: the Arbitration Court fine is a procedural fine in an FOI matter and should not be framed as ÚOOÚ fining 'a public body' next to the s. 62 exemption, which reads as a contradiction. Name of the court: it is the Arbitration Court attached to the Economic Chamber and Agricultural Chamber; 'Chamber of Commerce' is a loose rendering."
+}

@@ -1,0 +1,105 @@
+{
+ "code": "fi",
+ "checked": [
+  {
+   "field": "cases[0].summary",
+   "claim": "Nov 2024 EUR 2.4m fine; annulled 3 Nov 2025 under Art 6(1)(b), reprimand and orders upheld; appealable to the SAC",
+   "verdict": "corrected",
+   "evidence": "Yle 15 Nov 2024 reports the Sanctions Board's EUR 2.4 million fine. Court press release of 3 Nov 2025 (decision 6850/2025): fine annulled because processing was 'necessary for the performance of a contract'; reprimand, order to bring processing into line and the finding of insufficient information upheld. The press release says nothing about a further appeal, so 'was appealable to the Supreme Administrative Court' is not sourced.",
+   "url": "https://www.tuomioistuimet.fi/ajankohtaista/tiedotteet/helsingin-hallinto-oikeus-kumosi-posti-jakelu-oylle-omaposti-palvelun-tietosuojapuutteista-maaratyn-24-miljoonan-euron-seuraamusmaksun/",
+   "replacement": "In November 2024 the Sanctions Board fined Posti EUR 2.4 million for automatically creating OmaPosti electronic mailboxes for customers without a lawful basis and with poor information. On 3 November 2025 the Helsinki Administrative Court (decision 6850/2025) annulled the fine, finding the processing necessary for the contract (Art. 6(1)(b)), while upholding the reprimand, the order to bring processing into line and the finding that customers were not adequately informed. Whether a further appeal was lodged was not confirmed."
+  },
+  {
+   "field": "cases[0].year",
+   "claim": "2024 / 2025",
+   "verdict": "confirmed",
+   "evidence": "Fine reported 15 Nov 2024 (Yle); court decision 3 Nov 2025.",
+   "url": "https://yle.fi/a/74-20124822"
+  },
+  {
+   "field": "cases[0].title",
+   "claim": "Posti (OmaPosti), EUR 2.4 million, annulled by Helsinki Administrative Court",
+   "verdict": "confirmed",
+   "evidence": "Court press release title and content match.",
+   "url": "https://www.tuomioistuimet.fi/ajankohtaista/tiedotteet/helsingin-hallinto-oikeus-kumosi-posti-jakelu-oylle-omaposti-palvelun-tietosuojapuutteista-maaratyn-24-miljoonan-euron-seuraamusmaksun/"
+  },
+  {
+   "field": "dpa.structure",
+   "claim": "Anu Talus since 1 Nov 2020, reappointed from 1 Nov 2025; two Deputies; Government appointment for five years; Sanctions Board of Ombudsman plus two Deputies deciding by majority",
+   "verdict": "confirmed",
+   "evidence": "Office page: Talus 'has held the post since November 1st 2020', reappointed for a five-year term from 1 November 2025; two Deputies (Pihamaa, Hautala); appointed by the government for five years; the Ombudsman and Deputies form the Sanctions Board, chaired by the Ombudsman. The majority rule itself was not shown on the page.",
+   "url": "https://tietosuoja.fi/en/office-of-the-data-protection-ombudsman"
+  },
+  {
+   "field": "fines.imposed_by",
+   "claim": "Sanctions Board, administrative decision, no court confirmation step",
+   "verdict": "confirmed",
+   "evidence": "Office page: the Sanctions Board is 'tasked with imposing administrative fines'. Posti case shows fines are imposed directly and reviewed by the administrative court on appeal.",
+   "url": "https://tietosuoja.fi/en/office-of-the-data-protection-ombudsman"
+  },
+  {
+   "field": "fines.public_bodies",
+   "claim": "Public bodies and the two churches currently exempt; April 2026 bill would extend fines with maxima of EUR 500,000 or EUR 1,000,000, excluding courts, Parliament's offices and national security authorities, entry into force early 2027; adoption not confirmed",
+   "verdict": "confirmed",
+   "evidence": "Government press release 9 April 2026: fines to cover the public sector, lower maxima, not for 'tuomioistuimille, eduskunnan virastoille tai kansallista turvallisuutta hoitaville viranomaisille'. KT: intended to take effect at the beginning of 2027. Mondaq: 'up to EUR 500,000 or EUR 1,000,000' depending on the infringement. No source found on adoption. The current statutory exemption list could not be checked (Finlex English translation returned 404).",
+   "url": "https://valtioneuvosto.fi/-/1410853/tietosuojarikkomuksista-maarattavat-seuraamusmaksut-koskemaan-myos-julkista-sektoria"
+  },
+  {
+   "field": "fines.quirks",
+   "claim": "Criminal Code ch. 38 s. 9 data protection offence, fine or up to one year; prosecutor must consult the Ombudsman",
+   "verdict": "unverifiable",
+   "evidence": "No primary source fetched (Finlex not readable). Consistent with my understanding of the Criminal Code and s. 31 of the Data Protection Act.",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2018/1050"
+  },
+  {
+   "field": "appeal.court",
+   "claim": "Administrative Court; in practice Helsinki Administrative Court",
+   "verdict": "confirmed",
+   "evidence": "The Posti appeal against the Sanctions Board was decided by the Helsinki Administrative Court.",
+   "url": "https://www.tuomioistuimet.fi/ajankohtaista/tiedotteet/helsingin-hallinto-oikeus-kumosi-posti-jakelu-oylle-omaposti-palvelun-tietosuojapuutteista-maaratyn-24-miljoonan-euron-seuraamusmaksun/"
+  },
+  {
+   "field": "appeal.deadline",
+   "claim": "Not confirmed; general rule 30 days",
+   "verdict": "unverifiable",
+   "evidence": "No source reachable. The 30-day general rule matches the Act on Judicial Procedure in Administrative Matters (808/2019) as I understand it; the field already flags it as unconfirmed.",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2018/1050"
+  },
+  {
+   "field": "appeal.further",
+   "claim": "Supreme Administrative Court, only with leave",
+   "verdict": "unverifiable",
+   "evidence": "Not in any fetched source; consistent with the general leave-to-appeal rule under Act 808/2019.",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2018/1050"
+  },
+  {
+   "field": "complaint.contact_controller_first",
+   "claim": "Office asks people to contact the controller first",
+   "verdict": "confirmed",
+   "evidence": "'Contact the Data Protection Ombudsman only if the controller refuses your request on grounds you consider inadequate.'",
+   "url": "https://tietosuoja.fi/en/notification-to-the-data-protection-ombudsman"
+  },
+  {
+   "field": "complaint.deadlines",
+   "claim": "Target processing time one year, no statutory deadline confirmed",
+   "verdict": "confirmed",
+   "evidence": "Office aims to complete cases within 'one year'.",
+   "url": "https://tietosuoja.fi/en/notification-to-the-data-protection-ombudsman"
+  },
+  {
+   "field": "complaint.how",
+   "claim": "Anonymous notifications possible, no follow-up",
+   "verdict": "confirmed",
+   "evidence": "'You can also use the form to file an anonymous notification... leave the contact detail fields blank.'",
+   "url": "https://tietosuoja.fi/en/notification-to-the-data-protection-ombudsman"
+  },
+  {
+   "field": "quirks[1]",
+   "claim": "Public authorities and churches cannot currently be fined; 2026 bill would change this from early 2027 if adopted",
+   "verdict": "confirmed",
+   "evidence": "See fines.public_bodies.",
+   "url": "https://www.kt.fi/uutiset-ja-tiedotteet/2026/hallitus-esittaa-seuraamusmaksua-tietosuojarikkomuksesta-myos-julkiselle"
+  }
+ ],
+ "notes": "No GDPR contradictions found. Finlex English translation URL (en20181050) returned 404, so statute section numbers remain unchecked. Bill adoption status could not be confirmed with the WebSearch budget; recheck before publication if the site states it."
+}
