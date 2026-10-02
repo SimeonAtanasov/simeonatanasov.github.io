@@ -1,0 +1,1188 @@
+# GDPR enforcement in Europe: study guide
+
+How a complaint becomes a fine, where the courts come in, and the route in each EU and EEA country, with the United Kingdom and Switzerland for contrast. Researched on 2 October 2026 from national laws, authority websites and court reports, then checked by an independent pass against the cited sources. *Not confirmed* means no source was found either way. This maps procedure; it is not legal advice.
+
+Companion web page: https://www.simeonatanasov.com/gdpr-enforcement.html
+
+## How to use this guide
+
+1. Read Part 1 until you can draw the two tracks from memory. Everything else hangs off it.
+2. Learn the four fining models and the exceptions in Part 6 (memory aids), because exam and interview questions go straight to the exceptions.
+3. Use Part 7 as reference, country by country, and test yourself with Part 9.
+
+## Part 1. The core idea: two tracks
+
+**Track 1, the authority.** Ends in a fine paid to the state.
+
+1. **Something starts it.** A complaint (Art. 77) or the authority's own initiative: breach notification, press, sector audit.
+2. **The authority investigates.** Art. 58(1) powers. In cross-border cases the lead authority runs it.
+3. **The authority decides.** Findings, orders and, where it chooses, a fine (Art. 58(2), Art. 83). An administrative decision, not a judgment.
+4. **Someone may appeal.** The organisation or the complainant goes to a national court (Art. 78). Only now is a court involved.
+5. **The court may ask Luxembourg.** Preliminary reference to the CJEU (Art. 267 TFEU); EFTA Court advisory opinion for Norway, Iceland, Liechtenstein.
+
+**Track 2, the court directly.** Ends in compensation paid to the person.
+
+1. **A person or a representative body.** Acts with or without a complaint to the authority (Art. 79, Art. 80).
+2. **Sues the organisation.** Civil, sometimes administrative, court where the organisation is established or where the person lives (Art. 79(2)).
+3. **The court rules.** Compensation (Art. 82) and orders. Never a fine.
+
+```
+Complaint or own initiative
+        |
+Authority investigates  (lead authority + EDPB if cross-border)
+        |
+Decision + fine         <- the administrative phase ends here
+        |
+Appeal to national court (Art. 78)  ->  possible CJEU reference
+
+In parallel, at any time:
+Person -> court -> damages / orders (Art. 79, 82), never a fine
+```
+
+The tracks are independent and can run together (C-132/21). In practice they feed each other: a final infringement decision is strong evidence in a damages claim.
+
+### Seven questions people actually ask
+
+| Question | Answer | Basis |
+|---|---|---|
+| Who imposes a GDPR fine? | The data protection authority, by administrative decision. Two exceptions: in Denmark a court imposes it on a police report from the authority; in Estonia the authority fines through misdemeanour proceedings. In Ireland the authority decides but a court must confirm the fine before it is payable. | Art. 58(2)(i), Art. 83, Recital 151 |
+| Does there have to be a complaint? | No. Authorities open cases on their own initiative, from breach notifications, press reports and sector sweeps. A complaint is one trigger among several. | Art. 57(1)(h), Art. 58(1) |
+| Does the complainant receive the fine? | No. The fine goes to the state budget (in Portugal partly to the authority). A complainant who wants money has to sue for compensation. | National law; Art. 82 |
+| Is there a special court for GDPR complaints? | No. Complaints go to the authority. Its decisions are challenged in the ordinary court system of that country: an administrative court in most, a civil or criminal court in some, a specialist tribunal in a few. | Art. 78 |
+| When does the court phase start? | When the authority's decision is served and someone challenges it within the deadline, which runs from eight days (Slovenia) to three months (Luxembourg) across the countries below. | National procedural law |
+| Can a court fine in a damages case? | No. A civil court awards compensation and makes orders. Fining is the authority's power (or, in Denmark, the criminal court's). | Art. 79, Art. 82, Art. 83 |
+| Is the authority obliged to fine? | No. It must act on an infringement it finds, but chooses the corrective measure. A fine also needs intent or negligence; there is no strict liability. | C-768/21; C-807/21 |
+
+## Part 2. From complaint to fine: the authority track
+
+1. **The complaint.** Free of charge, usually through an online form, normally to the authority where the person lives or works or where the infringement happened. Several countries expect the person to have asked the organisation first, and Spain requires it for rights requests. The authority must tell the complainant how the complaint is progressing within three months, or the complainant can go to court (Art. 77(2), Art. 78(2)).
+2. **Admissibility and triage.** The authority checks the complaint falls within its remit and may pass it to the organisation for a response first (Spain gives the organisation a month). It may refuse a manifestly unfounded or excessive request, but a high number of complaints alone does not make them excessive (C-416/23). Many cases end here, settled or closed.
+3. **Investigation.** Requests for information, inspections and audits under Art. 58(1). Where the organisation has its main establishment in another country, the case goes to that country's authority as lead (see the next section).
+4. **Findings and the right to be heard.** The organisation receives the findings and replies before any decision. In several countries a separate body inside the authority decides on sanctions: the restricted committee in France, the restricted formation in Luxembourg, the Litigation Chamber in Belgium, the Sanctions Board in Finland.
+5. **Decision.** Findings, corrective orders under Art. 58(2), and a fine where the authority judges it effective, proportionate and dissuasive, weighed on the Art. 83(2) criteria and set against the turnover of the whole undertaking (C-383/23). The cap is 2% or EUR 10 million, or 4% or EUR 20 million, whichever is higher.
+6. **Publication and payment.** Most authorities publish decisions, often anonymised. When the fine falls due is national law: in many countries payment waits for the appeal, in others it does not (see the map).
+
+### Deadlines some authorities work to
+
+| Where | Deadline | Basis |
+|---|---|---|
+| Spain | Admissibility within 3 months; sanction procedure within 12 months of opening (raised from 9 by Ley 11/2023); preliminary investigation up to 18 months. | Art. 64, 65, 67 LOPDGDD |
+| Italy | 9 months, extendable to 12, paused while EU cooperation runs. | Art. 143 Codice |
+| Hungary | 150 days for a formal case; if missed, the authority pays the applicant HUF 10,000. | Infotv. s.60/A |
+| Slovakia | 90 days, extendable by up to 180 days. | Act 18/2018 |
+| Cross-border cases (from 2027) | Lead authority's draft decision within 15 months of confirming competence, extendable once by 12; 12 months in the simple procedure. | Art. 12 Regulation (EU) 2025/2518 |
+
+## Part 3. Cross-border cases: the one-stop-shop
+
+1. **Complaint to the local authority.** In the person's own language.
+2. **Lead authority takes the case.** Main establishment (Art. 56(1)); the local authority becomes concerned.
+3. **Draft decision circulated.** To every concerned authority (Art. 60(3)).
+4. **Objections.** Four weeks for a relevant and reasoned objection (Art. 60(4)).
+5. **EDPB settles disputes.** Binding decision by two-thirds majority (Art. 65).
+6. **Final decision.** Within one month of a binding decision; a rejection is notified by the complainant's authority (Art. 60(8), Art. 65(6)).
+7. **Courts.** In the lead authority's country; the EDPB decision itself at the EU General Court (C-97/23 P).
+
+### EDPB binding decisions that changed outcomes
+
+| Decision | Year | Effect |
+|---|---|---|
+| Binding Decision 1/2020 (Twitter International, Irish SA) | 2020 | First Art. 65 decision (9 November 2020); the EDPB required the DPC to reassess the fine, and the DPC imposed EUR 450,000 in December 2020. |
+| Binding Decision 1/2021 (WhatsApp Ireland, Irish SA) | 2021 | Adopted 28 July 2021 after objections from eight concerned authorities; the DPC was required to reassess and increase its proposed fine and imposed EUR 225 million on 2 September 2021. |
+| Binding Decision 1/2022 (Accor SA, French SA) | 2022 | Adopted 15 June 2022 under Art. 65(1)(a); the CNIL was required to reassess the fine (final fine EUR 600,000). |
+| Binding Decision 2/2022 (Meta, Instagram child users, Irish SA) | 2022 | Adopted 28 July 2022; required an additional Art. 6(1) infringement finding and reassessment of the fine; the DPC imposed EUR 405 million on 2 September 2022, including EUR 20 million for Art. 6(1). |
+| Binding Decisions 3/2022 and 4/2022 (Meta, Facebook and Instagram, Irish SA) | 2022 | Adopted 5 December 2022; held that Meta could not rely on contract (Art. 6(1)(b)) for behavioural advertising, added fairness findings and directed higher fines; the DPC imposed EUR 210 million (Facebook) and EUR 180 million (Instagram), announced 4 January 2023. |
+| Binding Decision 5/2022 (WhatsApp Ireland, Irish SA) | 2022 | Adopted 5 December 2022 on the WhatsApp service terms; led to a further DPC fine of EUR 5.5 million in January 2023. |
+| Binding Decision 1/2023 (Meta, Facebook EU-US transfers, Irish SA) | 2023 | Adopted 13 April 2023; the EDPB determined that a fine must be imposed for the Art. 46(1) infringement, where the DPC had proposed none; the DPC imposed EUR 1.2 billion on 12 May 2023, the largest GDPR fine to date. |
+| Binding Decision 2/2023 (TikTok Technology, Irish SA) | 2023 | Adopted 2 August 2023; directed a new Art. 5(1)(a) fairness infringement (dark patterns, raised by the Berlin SA); the DPC imposed EUR 345 million on 1 September 2023. |
+| Urgent Binding Decision 01/2023 under Art. 66(2) (Meta, behavioural advertising, requested by the Norwegian SA) | 2023 | Adopted 27 October 2023; ordered final measures (an EEA-wide ban) on Meta's processing for behavioural advertising on the bases of contract and legitimate interest; not a fine decision. |
+| Binding Decision 1/2026 (VRT, Belgian SA) | 2026 | Adopted 28 May 2026; concerns whether a complaint should be dismissed as an abuse of the right to complain and of the Art. 80 mandate; no fine effect identified. No binding decisions were adopted in 2025. |
+| Judicial review of binding decisions: C-97/23 P WhatsApp Ireland v EDPB | 2026 | Grand Chamber, 10 February 2026: an Art. 65 binding decision is an act open to challenge before the EU courts and the addressee undertaking is directly concerned; the Court set aside the General Court's inadmissibility order (T-709/21) and referred the case back for a ruling on the merits. |
+
+### The GDPR Procedural Regulation
+
+Regulation (EU) 2025/2518 of the European Parliament and of the Council of 26 November 2025 laying down additional procedural rules on the enforcement of Regulation (EU) 2016/679. Published OJ L, 12 December 2025; in force 1 January 2026 (twentieth day following publication). Under the transitional provisions (Art. 28), Chapters III and IV apply to ex officio investigations opened, and to complaints lodged, more than 15 months after entry into force, so in practice from 2 April 2027.
+
+- Scope: applies only to cross-border cases handled under the Art. 60 cooperation mechanism; purely domestic cases stay under national procedure.
+- Harmonised admissibility (Art. 4): a complaint is admissible if it contains a closed list of information (identity and contact details of the complainant, identification of the controller or processor, description of the alleged infringement); no additional information may be required; a common template is provided.
+- Early resolution / amicable settlement (Art. 5): complaints about Chapter III data subject rights may be closed where the infringement has been brought to an end, unless the complainant objects within four weeks.
+- Summary of key issues (Art. 10): in complex cases the lead authority drafts a summary of the main facts, scope, legal and factual issues and preliminary view on corrective measures within three months, and concerned authorities have four weeks to comment, so that disagreements surface early.
+- Investigation deadlines (Art. 12): the lead authority must submit a draft decision within 15 months of confirming its competence, extendable once by up to 12 months for complex cases, with 12 months under the simple cooperation procedure; the time limit is suspended where the lead authority refers a matter to the Board under Art. 11(6), until the Board adopts its binding decision.
+- Simple cooperation procedure for straightforward cases, avoiding the full summary of key issues step.
+- Rejection of complaints (Arts. 16-18): before a complaint is rejected in whole or in part the complainant must be informed of the reasons and given a time limit (three to six weeks) to make views known.
+- Preliminary findings and right to be heard (Art. 19): the parties under investigation receive preliminary findings setting out all facts, the evidence relied on and the full legal assessment, and have a time limit of no less than three and no more than six weeks to reply in writing or at a hearing.
+- Complainant participation (Art. 20): complainants receive the preliminary findings, subject to the rules on the file and confidential information (Arts. 24-25), and may submit written views within three to six weeks.
+- Access to the administrative file (Arts. 19(6), 24 and 25): parties under investigation get access to the file when preliminary findings are notified, subject to the protection of confidential information.
+- Art. 65 dispute resolution: the Regulation also sets rules on the content and handling of relevant and reasoned objections and on hearing parties before the Board adopts a binding decision.
+
+## Part 4. Where the courts come in
+
+There is no GDPR court. The authority's decision ends the administrative phase; each party then has a deadline to go to the court national law names.
+
+| Who | Against what | Where | Basis |
+|---|---|---|---|
+| The fined organisation | The authority's decision: the finding, the orders, the fine | The national court that hears challenges to that authority (see the comparison) | Art. 78(1) |
+| The complainant | A decision rejecting the complaint or upholding only part of it. The court reviews it in full on the merits. | The same court | Art. 78(1); C-26/22 and C-64/22 |
+| The complainant | Inaction: the authority does not handle the complaint or report back within three months | The same court; some countries have their own route (Ireland s.150(7), Sweden since May 2025, the UK First-tier Tribunal) | Art. 78(2) |
+| The organisation or an authority | An EDPB binding decision in a cross-border dispute | The EU General Court | Art. 263 TFEU; C-97/23 P, 10 February 2026 |
+| Any national court | A question about how the GDPR must be read | The CJEU by preliminary reference; for Norway, Iceland and Liechtenstein, an advisory opinion from the EFTA Court | Art. 267 TFEU |
+| The data subject | The organisation itself, without going through the authority | A civil (in some countries administrative) court where the organisation is established or where the person lives | Art. 79(2) |
+
+## Part 5. Suing the organisation directly
+
+Art. 79 gives an action against the controller or processor without a prior complaint; Art. 82 gives compensation for material or non-material damage; Art. 80 lets a not-for-profit body act for people, and without a mandate where national law allows. The Representative Actions Directive (EU) 2020/1828 lists the GDPR in Annex I, so qualified entities can bring collective actions for GDPR breaches under the national transposition (deadline 25 December 2022, applying from 25 June 2023).
+
+| Principle | What it means | Case |
+|---|---|---|
+| No damage, no compensation | An infringement alone does not give a right to compensation: damage and a causal link must be shown. | C-300/21 |
+| No seriousness threshold | National rules cannot require non-material damage to reach a minimum level of seriousness. | C-300/21; C-456/22 |
+| Fear can count | Fear of misuse of leaked data can be non-material damage, if the person proves it. A purely hypothetical risk is not enough. | C-340/21; C-687/21; C-590/22 |
+| Compensatory, not punitive | Damages compensate in full but have no deterrent function, and the Art. 83 fining criteria do not apply to them. | C-741/21; C-590/22 |
+| Burden on the controller | The controller must prove its security measures were appropriate; it cannot simply blame an employee. | C-340/21; C-741/21 |
+| Representative actions | Member States may let consumer associations sue without a mandate from individuals, including for breaches of the duty to inform. | C-319/20; C-757/22 |
+
+## Part 6. Comparison and memory aids
+
+| Country | Authority | Who fines | First court for a fine | Public bodies fined? | Appeal holds payment? |
+|---|---|---|---|---|---|
+| Austria | DSB | DPA fines, administrative court or tribunal reviews | Federal Administrative Court (BVwG) | No | Yes, payment waits |
+| Belgium | APD / GBA | DPA fines, administrative court or tribunal reviews | Market Court (Brussels Court of Appeal) | Some public bodies only | No, unless a court orders it |
+| Bulgaria | CPDP | DPA fines, ordinary or criminal court reviews | District court (penal decree) | Yes, at the GDPR levels | Yes, payment waits |
+| Croatia | AZOP | DPA fines, administrative court or tribunal reviews | Administrative court | No | No, unless a court orders it |
+| Cyprus | Commissioner for Personal Data Protection | DPA fines, administrative court or tribunal reviews | Administrative Court | Yes, with a national cap | No, unless a court orders it |
+| Czechia | ÚOOÚ | DPA fines, administrative court or tribunal reviews | Municipal Court in Prague | No | Not confirmed |
+| Denmark | Datatilsynet | A court imposes the fine | District court (criminal case) | Yes, with a national cap | Yes, payment waits |
+| Estonia | AKI | DPA fines, ordinary or criminal court reviews | County court (misdemeanour) | Some public bodies only | Yes, payment waits |
+| Finland | Office of the Data Protection Ombudsman | DPA fines, administrative court or tribunal reviews | Helsinki Administrative Court | No | Not confirmed |
+| France | CNIL | DPA fines, administrative court or tribunal reviews | Conseil d'État (first and last instance) | Some public bodies only | No, unless a court orders it |
+| Germany | BfDI | DPA fines, ordinary or criminal court reviews | Amtsgericht, or Landgericht above EUR 100,000 | No | Yes, payment waits |
+| Greece | HDPA | DPA fines, administrative court or tribunal reviews | Council of State (first and last instance) | Yes, with a national cap | No, unless a court orders it |
+| Hungary | NAIH | DPA fines, administrative court or tribunal reviews | Budapest-Capital Regional Court | Not confirmed | No, unless a court orders it |
+| Ireland | DPC | DPA decides, a court must confirm the fine | Circuit Court (up to EUR 75,000) or High Court | Yes, with a national cap | Yes, payment waits |
+| Italy | Garante | DPA fines, ordinary or criminal court reviews | Tribunale (ordinary civil court) | Yes, at the GDPR levels | No, unless a court orders it |
+| Latvia | DVI | DPA fines, ordinary or criminal court reviews | District (city) court | No | Not confirmed |
+| Lithuania | VDAI | DPA fines, administrative court or tribunal reviews | Regional Administrative Court | Yes, with a national cap | Not confirmed |
+| Luxembourg | CNPD | DPA fines, administrative court or tribunal reviews | Administrative Tribunal | Some public bodies only | Not confirmed |
+| Malta | IDPC | DPA fines, administrative court or tribunal reviews | Information and Data Protection Appeals Tribunal | Yes, with a national cap | Yes, payment waits |
+| Netherlands | AP | DPA fines, administrative court or tribunal reviews | District court (after objection) | Yes, at the GDPR levels | Not confirmed |
+| Poland | UODO | DPA fines, administrative court or tribunal reviews | Voivodeship Administrative Court, Warsaw | Yes, with a national cap | Yes, payment waits |
+| Portugal | CNPD | DPA fines, administrative court or tribunal reviews | Lisbon Administrative Court | Yes, at the GDPR levels | Not confirmed |
+| Romania | ANSPDCP | DPA fines, administrative court or tribunal reviews | Tribunal, administrative section | Yes, with a national cap | Yes, payment waits |
+| Slovakia | ÚOOÚ SR | DPA fines, administrative court or tribunal reviews | Administrative Court | Yes, at the GDPR levels | Not confirmed |
+| Slovenia | IP | DPA fines, ordinary or criminal court reviews | Local court (minor offence) | Some public bodies only | Not confirmed |
+| Spain | AEPD | DPA fines, administrative court or tribunal reviews | Audiencia Nacional | No | Partly or on request |
+| Sweden | IMY | DPA fines, administrative court or tribunal reviews | Administrative Court in Stockholm | Yes, with a national cap | Yes, payment waits |
+| Iceland | Persónuvernd | DPA fines, ordinary or criminal court reviews | District court | Yes, at the GDPR levels | Not confirmed |
+| Liechtenstein | DSS | DPA fines, administrative court or tribunal reviews | Complaints Commission for Administrative Matters | No | Yes, payment waits |
+| Norway | Datatilsynet | DPA fines, ordinary or criminal court reviews | Privacy Appeals Board, then district court | Yes, at the GDPR levels | Not confirmed |
+| United Kingdom | ICO | DPA fines, administrative court or tribunal reviews | First-tier Tribunal (Information Rights) | Yes, at the GDPR levels | Yes, payment waits |
+| Switzerland | FDPIC | A court imposes the fine | Cantonal criminal procedure | No | Yes, payment waits |
+
+**Memory aids.** These compress the country text; check it before relying on one.
+
+- **DPA fines, administrative court or tribunal reviews:** Austria, Belgium, Croatia, Cyprus, Czechia, Finland, France, Greece, Hungary, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Spain, Sweden, Liechtenstein, United Kingdom (non-GDPR).
+- **DPA fines, ordinary or criminal court reviews:** Bulgaria, Estonia, Germany, Italy, Latvia, Slovenia, Iceland, Norway.
+- **DPA decides, a court must confirm the fine:** Ireland.
+- **A court imposes the fine:** Denmark, Switzerland (non-GDPR).
+- **Public bodies, no:** Austria, Croatia, Czechia, Finland, Germany, Latvia, Spain, Liechtenstein, Switzerland (non-GDPR).
+- **Public bodies, yes, with a national cap:** Cyprus, Denmark, Greece, Ireland, Lithuania, Malta, Poland, Romania, Sweden.
+- **Public bodies, some public bodies only:** Belgium, Estonia, France, Luxembourg, Slovenia.
+- **One court level only:** France (Conseil d'État), Greece (Council of State).
+- **Internal review before court:** Netherlands (objection to the AP), Czechia and Slovakia (rozklad to the President), Latvia (DVI director), Norway (Privacy Appeals Board), Liechtenstein (Complaints Commission), Spain (optional reposición).
+- **Shortest appeal windows:** Slovenia 8 days (minor offence), Germany two weeks (objection), Bulgaria 14 days (complaint decisions), Estonia and Romania 15 days.
+
+## Part 7. Country by country
+
+### Austria
+
+*EU member.* You write to the DSB in German, explaining which right was breached and by whom, within a year of finding out. The DSB asks the company for its side, lets you respond, and then issues a decision saying whether your rights were violated; any fine is handled in a separate penalty procedure, and fines cannot be imposed on public bodies. Either side can appeal to the Federal Administrative Court within four weeks, and if the DSB stays silent for three months you can go to that court yourself.
+
+**Route of a fine:** DSB penal decision -> Federal Administrative Court -> VwGH or VfGH
+
+- **Authority:** Austrian Data Protection Authority (Österreichische Datenschutzbehörde). Monocratic authority headed by a single head (Leiter/in, § 20 DSG), independent and not bound by instructions but administratively attached to the Federal Ministry of Justice (§ 18 DSG). Head since 1 January 2024: Matthias Schmidl (secondary source).
+- **Law:** Datenschutzgesetz (DSG), BGBl. I Nr. 165/1999 as amended (GDPR adaptation via Datenschutz-Anpassungsgesetz 2018; latest amendment noted in the official translation: BGBl. I Nr. 50/2025)
+- **Complaint:** Written complaint in German by e-mail (dsb@dsb.gv.at), post or the DSB online form; anonymous complaints are not accepted. § 24(2) DSG lists required content: the right infringed, the respondent, the facts, the grounds of unlawfulness, the request and timeliness information. Generally free of charge, but the DSB may charge a fee or refuse to act on manifestly unfounded or excessive complaints (Art. 57(4) GDPR). Complaint must be filed within one year of becoming aware of the incident and at most three years after it occurred (§ 24(4) DSG). The DSB must inform the complainant of progress or outcome within three months (§ 24(7) DSG); the decision period under § 73 AVG (length for the DSB not confirmed) is calculated excluding periods of suspension and of Art. 56, 60 and 63 GDPR cooperation procedures (§ 24(10) DSG).
+- **Contact the organisation first?** Not a general requirement, but for data subject rights (access, rectification, erasure etc.) the DSB expects a copy of the request made to the controller and any reply.
+- **Who decides:** The DSB itself (as a monocratic body, through its head and staff) issues both complaint decisions and fines.
+- **Limitation:** Not confirmed. General VStG limitation rules may apply to fine proceedings; the Austrian Post proceedings ran about 66 months without being time-barred.
+- **Who fines:** The DSB by administrative penal decision (Straferkenntnis), with fines on legal persons governed by § 30(1)-(2) DSG. Fines go to the federal state and final decisions are enforceable through the district courts (§ 30(4) DSG).
+- **Public bodies:** No fines on authorities, public bodies or public-law corporations (§ 30(5) DSG); corrective orders still apply.
+- **National specifics:** § 62 DSG creates separate administrative offences (for example unlawful access, breach of confidentiality, unlawful image processing) punishable by up to EUR 50,000, aimed at individuals. § 63 DSG makes processing with intent to profit or cause harm a criminal offence tried by the criminal courts. In the Post case (2026) the VwGH held that procedural costs of 10% of the fine were contrary to Union law as an unjustified additional penalty and set them at EUR 100,000.
+- **Appeal:** Federal Administrative Court (Bundesverwaltungsgericht, BVwG), sitting as a senate of a presiding judge and two expert lay judges nominated by the employer and employee chambers (§ 27 DSG). Deadline: Four weeks from service of the decision (§ 7(4) VwGVG). Payment: Yes. An appeal against an ordinary decision has suspensive effect unless the DSB excludes it for urgent reasons (§ 13 VwGVG); in administrative penal matters suspensive effect cannot be excluded (§ 41 VwGVG).
+- **Further appeal:** Revision to the Supreme Administrative Court (Verwaltungsgerichtshof, VwGH) and/or complaint to the Constitutional Court (Verfassungsgerichtshof, VfGH).
+- **If the authority does nothing:** If the DSB does not deal with the complaint or does not inform the complainant of progress or outcome within three months, the data subject may go directly to the BVwG (§ 24(8) and § 27 DSG); a complaint for failure to decide (Säumnisbeschwerde) is also available.
+- **Suing directly:** Damages claims (material and non-material) under § 29 DSG and Art. 82 GDPR go to the civil Regional Court (Landesgericht) at first instance, at the claimant's domicile or the defendant's seat or establishment (§ 29(2) DSG). Art. 79 actions are civil actions before the ordinary courts. The DSB cannot award damages. Data subjects can mandate a not-for-profit body to act for them (Art. 80(1) GDPR, implemented in § 28 DSG; noyb is based in Austria). The Representative Actions Directive was transposed by the Verbandsklagen-Richtlinie-Umsetzungs-Novelle (VRUN, BGBl. I Nr. 85/2024) introducing the Qualified Entities Act (QEG); representative actions go exclusively to the Commercial Court of Vienna (Handelsgericht Wien).
+- **Case: Österreichische Post AG: political 'party affinity' scores (2019-2026).** DSB fined Post EUR 18m (23 Oct 2019) for calculating and selling party affinities for about 2.2 million people. BVwG discontinued the penal proceedings in 2020; VwGH set that aside on 1 Feb 2024 after CJEU Deutsche Wohnen; BVwG reimposed EUR 16m (27 Dec 2024); VfGH declined to hear a complaint (9 Dec 2025); VwGH finally fixed the fine at EUR 13m plus EUR 100,000 costs (24 June 2026, Ro 2025/04/0007), citing the 66-month duration, preventive measures and cease-and-desist declarations as mitigating.
+- **Case: CJEU C-300/21 UI v Österreichische Post (2023).** On a reference from the OGH in a damages claim over the same party affinity processing, the CJEU held that Art. 82 GDPR requires an infringement, damage and causation, but that national law may not impose a seriousness threshold for non-material damage.
+- No fines at all on public authorities and public-law bodies (§ 30(5) DSG).
+- Complaint proceedings (declaratory Bescheid, complainant is a party) and fine proceedings (administrative penal procedure) run on separate tracks inside the same authority.
+- Hard one-year/three-year time bar on complaints (§ 24(4) DSG), unusual in the EU.
+- Appeals go to an administrative court senate with expert lay judges from the social partners (§ 27 DSG).
+- Parliament has its own supervisory body since January 2025, outside the DSB.
+
+### Belgium
+
+*EU member.* You send a signed complaint in French, Dutch or German to the DPA's First Line Service, which checks it and may try mediation. If it goes further, the Litigation Chamber, a court-like body inside the DPA, decides whether to pursue it, hears both sides and can issue warnings, orders or fines, though public authorities cannot be fined. Either party can appeal within 30 days to the Market Court in Brussels, but the decision usually applies in the meantime.
+
+**Route of a fine:** Litigation Chamber -> Market Court -> Court of Cassation
+
+- **Authority:** Data Protection Authority (Autorité de protection des données (APD) / Gegevensbeschermingsautoriteit (GBA) / Datenschutzbehörde). Single federal authority with internal bodies: a Board of Directors (collegial), General Secretariat, First Line Service, Knowledge Centre, Inspection Service and Litigation Chamber (Chambre Contentieuse / Geschillenkamer), the last being the quasi-judicial body led by its director (Art. 33 LCA). The organic law was revised with effect from 1 June 2024.
+- **Law:** Loi du 3 décembre 2017 portant création de l'Autorité de protection des données (organic law, 'LCA'), revised version in force 1 June 2024; and Loi du 30 juillet 2018 relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel (GDPR implementing act).
+- **Complaint:** Dated and signed (manually or electronically) complaint in French, Dutch or German with a statement of facts, using the DPA form, submitted online or by post (Art. 60 LCA admissibility criteria). No fee mentioned on the DPA page. No time limit for filing found in the LCA; infringements are time-barred five years after they were committed, with interruption by investigative or prosecution acts (Art. 105 LCA, per consolidated text). No statutory decision deadline for the DPA found; the DPA warns that handling currently takes several months.
+- **Contact the organisation first?** Recommended rather than required: the DPA says it 'may be useful' to contact the controller first; for data subject rights, prior exercise of the right is in practice expected (not confirmed as a legal admissibility condition).
+- **Who decides:** Litigation Chamber, directed by the director of the Litigation Chamber (Art. 33 LCA).
+- **Limitation:** Five years from commission of the facts, interrupted by investigative or prosecution acts (Art. 105 LCA).
+- **Who fines:** The Litigation Chamber itself, by administrative decision (Art. 100(1) 13° and Art. 101 LCA). No court confirmation step.
+- **Public bodies:** Art. 83 GDPR does not apply to public authorities and their agents, except public-law legal persons offering goods or services on a market (Art. 221 § 2 Law of 30 July 2018). Upheld by the Constitutional Court (judgment 3/2021, 14 January 2021). The DPA reads 'public authority' narrowly (for example social housing companies and schools have been treated as fineable).
+- **National specifics:** The Litigation Chamber can propose a settlement (transaction) and impose penalty payments (astreintes). The 30 July 2018 Act also contains criminal offences (article numbers not verified here).
+- **Appeal:** Market Court (Cour des marchés / Marktenhof), a section of the Brussels Court of Appeal, with full jurisdiction to substitute its own decision (Art. 108 § 2 LCA). Deadline: 30 days from notification; third parties with a direct personal interest have 30 days from publication on the DPA website (Art. 108 § 3 LCA). Payment: No. Decisions are provisionally enforceable notwithstanding appeal, except deletion orders or where the Litigation Chamber decides otherwise in a specially reasoned decision (Art. 108 § 1 LCA).
+- **Further appeal:** Appeal in cassation to the Court of Cassation (general rule; not confirmed from LCA text).
+- **If the authority does nothing:** Not confirmed. No specific Art. 78(2) remedy found in the LCA; a complainant would likely have to rely on general administrative or civil remedies.
+- **Suing directly:** Ordinary civil courts. The 30 July 2018 Act also provides an injunction-style action (action en cessation) before the president of the court of first instance (article number not verified). Art. 80 representation by non-profit organisations is provided in the 30 July 2018 Act (article number not verified). Belgian class actions (Book XVII Code of Economic Law) and the Representative Actions Directive transposition were not confirmed for GDPR claims.
+- **Case: IAB Europe, Transparency and Consent Framework (2022-2025).** Decision 21/2022 (2 Feb 2022) fined IAB Europe EUR 250,000 and ordered a compliance plan. The Market Court referred questions (CJEU C-604/22, 7 March 2024: the TC String is personal data and IAB Europe can be a joint controller). On 14 May 2025 the Market Court annulled and replaced the decision, confirming joint controllership for TC String processing but not for downstream OpenRTB processing, and kept the EUR 250,000 fine.
+- **Case: FATCA transfers by the Federal Public Service Finance (2025).** Decision 79/2025 (24 April 2025), on a complaint by the Belgian Accidental Americans Association and a member, found FATCA bank-data transfers to the US unlawful and ordered corrective measures within a year; no fine because of Art. 221 § 2. On appeal by the Belgian State, the Market Court referred 13 questions to the CJEU (judgment of 26 Nov 2025, announced 4 Dec 2025; C-804/25).
+- The Litigation Chamber is a quasi-judicial body inside the DPA; it chooses which admissible complaints to pursue and can dismiss on opportunity grounds.
+- Public authorities cannot be fined (Art. 221 § 2 Law of 30 July 2018), upheld by the Constitutional Court in 2021.
+- Appeals go straight to the Market Court (Brussels Court of Appeal), which has full jurisdiction and frequently annuls on procedural grounds while confirming substance.
+- Complaints must be in French, Dutch or German; English is not an admissible language.
+- The organic law was overhauled with effect from 1 June 2024 (new governance, five-year limitation period).
+
+### Bulgaria
+
+*EU member.* You complain to the Commission in writing within six months of discovering the problem. The five-member Commission investigates and decides; if it fines the company, the chair issues a penalty decree that can be challenged in the local district court and then the administrative court. You can also sue the company directly in the administrative court, including for compensation, though not, it appears, while a complaint on the same issue is still pending.
+
+**Route of a fine:** CPDP penal decree -> District court -> Administrative court (cassation)
+
+- **Authority:** Commission for Personal Data Protection (Комисия за защита на личните данни (Komisia za zashtita na lichnite danni)). Collegial body: a chair and four members elected by the National Assembly for five years, renewable once (Art. 6-7 PDPA); it decides as a collegial body by majority of all members (Art. 6(2) PDPA). Penal decrees are issued by the chair.
+- **Law:** Personal Data Protection Act (Закон за защита на личните данни, ZZLD), State Gazette No. 1/2002, substantially amended for the GDPR in 2019; latest amendment noted: State Gazette No. 84 of 6 October 2023
+- **Complaint:** Complaint by letter, fax or electronic means; anonymous complaints are not examined (Art. 38a PDPA). Language presumably Bulgarian (not confirmed from DPA page). No fee found. The CPDP website could not be accessed during research. Complaint within six months of learning of the infringement and no later than two years after it occurred (Art. 38(1) PDPA). The CPDP must inform the complainant of progress within three months (Art. 38 PDPA); a binding decision deadline was not confirmed.
+- **Contact the organisation first?** Not confirmed as a requirement.
+- **Who decides:** The Commission sitting as a collegial body; penal decrees signed by the chair.
+- **Limitation:** General ZANN limitation rules apply to fines. In the National Revenue Agency case the Administrative Court Sofia City applied an absolute limitation period of four and a half years (by reference to the Criminal Code) and annulled the fine; the CPDP had argued for five years.
+- **Who fines:** The CPDP itself (penal decree issued by the chair), not a court.
+- **Public bodies:** Public bodies can be fined: the CPDP fined the National Revenue Agency BGN 5.1 million in 2019. No specific cap for public bodies was confirmed.
+- **National specifics:** Fines follow the domestic administrative-penalty procedure (ZANN), so appeals go to the criminal-side district courts rather than administrative courts. Bulgaria adopted the euro on 1 January 2026, so earlier fines are expressed in leva (BGN).
+- **Appeal:** Two tracks. (1) CPDP decisions on complaints: administrative court under the Administrative Procedure Code (Art. 38 PDPA); which administrative court is competent was not confirmed. (2) Penal decrees imposing fines: district court (районен съд, for example Sofia District Court) under ZANN. Deadline: 14 days for CPDP complaint decisions (Art. 38 PDPA). Deadline for penal decrees under ZANN not confirmed from a primary source. Payment: Not confirmed. Under ZANN a penal decree is enforced once it enters into force, so in practice payment is not due while it is under appeal (general rule, not confirmed from primary text).
+- **Further appeal:** Cassation: from the district court to the administrative court (final for penal decrees, as in the NAP case); from the first-instance administrative court to the Supreme Administrative Court for complaint decisions.
+- **If the authority does nothing:** Not confirmed. The three-month information duty in Art. 38 PDPA exists, but a specific Art. 78(2) action was not identified; general Administrative Procedure Code remedies against silent refusal may apply.
+- **Suing directly:** Distinctive route: under Art. 39 PDPA a data subject can bring a claim directly before the administrative court (under the Administrative Procedure Code) against a controller or processor, including a claim for compensation for damage, but not while CPDP proceedings on the same infringement are pending. The Representative Actions Directive was transposed through amendments to the Consumer Protection Act and the Civil Procedure Code (in force by early 2026, exact gazette not confirmed); regional courts have jurisdiction. Whether GDPR claims are covered was not confirmed from a primary source, although the Directive's Annex I lists the GDPR.
+- **Case: National Revenue Agency (NAP) data breach (2019-2024).** After the July 2019 hack exposing data of about five million people, the CPDP fined the NAP BGN 5.1 million (penal decree No. 004, 28 August 2019). Sofia District Court upheld the fine (26 October 2023), but the Administrative Court Sofia City annulled it in a final ruling, reported on 26 February 2024, because the absolute limitation period had expired.
+- **Case: CJEU C-340/21 VB v NAP (2023).** In a damages claim by an affected taxpayer, the CJEU held that a breach does not by itself prove inadequate security measures, that the controller bears the burden of proving their adequacy, and that fear of misuse can be compensable non-material damage.
+- Collegial five-member Commission elected by Parliament.
+- Fines follow the domestic administrative-penalty law (ZANN), with appeals to district courts and cassation to administrative courts, and short limitation periods that defeated the largest fine to date.
+- Data subjects can sue controllers directly in the administrative courts, including for damages (Art. 39 PDPA). The Act is reported to bar a court claim while CPDP proceedings on the same infringement are pending; check the current text before relying on it.
+- Strict complaint window: six months from knowledge, two years from the infringement (Art. 38(1) PDPA).
+- Judicial processing by courts and prosecutors is supervised by the Inspectorate to the Supreme Judicial Council, not the CPDP.
+
+### Croatia
+
+*EU member.* After first writing to the organisation, you ask AZOP to establish that your rights were violated, online, by e-mail or by post. AZOP investigates, can inspect the company's premises, and issues a decision; it can fine companies but not public authorities. There is no appeal inside the agency: either side can sue in the administrative court within 30 days, and from there go to the High Administrative Court.
+
+**Route of a fine:** AZOP -> Administrative court -> High Administrative Court
+
+- **Authority:** Personal Data Protection Agency (Agencija za zaštitu osobnih podataka). Single independent state body accountable to the Croatian Parliament, headed by a director (ravnatelj) and deputy director appointed by Parliament for four years, at most two terms. Current director: Zdravko Vukić.
+- **Law:** Act on the Implementation of the General Data Protection Regulation (Zakon o provedbi Opće uredbe o zaštiti podataka), Narodne novine 42/2018
+- **Complaint:** A 'request for establishing a violation of rights' (zahtjev za utvrđivanje povrede prava, Art. 34) can be made in person on the record, by post, by e-mail (azop@azop.hr), by fax or via the online form, in Croatian. It must include name, personal ID number (OIB), address, a chronological description and supporting documents. No fee mentioned. No filing time limit found in the implementing act. AZOP decision deadline not confirmed (general administrative procedure rules presumably apply).
+- **Contact the organisation first?** Yes in practice: AZOP asks data subjects to first exercise their rights with the controller in writing before filing.
+- **Who decides:** The Agency, under its director.
+- **Limitation:** Not confirmed for the imposition of fines. Collection of fines follows general tax law, with the limitation period running from finality (Art. 49, per secondary summary).
+- **Who fines:** AZOP itself by administrative decision; unpaid fines are enforced through the tax authority.
+- **Public bodies:** Public authorities cannot be fined (Art. 47).
+- **National specifics:** AZOP fines jumped in 2023, driven by debt collection agencies: about EUR 8.27m in 28 fines in 2023, EUR 0.54m in 38 fines in 2024 and EUR 6.73m in 13 fines in 2025. The act also has misdemeanour provisions on confidentiality breaches by Agency staff.
+- **Appeal:** No administrative appeal; an administrative dispute (upravni spor) is brought before the competent administrative court (upravni sud) (Art. 34(4)). Deadline: 30 days from service of the decision (Art. 24 Administrative Disputes Act, NN 20/2010 as amended). Payment: As a rule no: an action has no suspensive effect unless the law provides otherwise (Art. 26 Administrative Disputes Act); the implementing act sets payment within 15 days of finality, so payment may not be due until the decision is final (not confirmed).
+- **Further appeal:** Appeal to the High Administrative Court (Visoki upravni sud), 15 days from the first-instance judgment under the 2010 text (Art. 70); the Act was amended in 2024 and current appeal rules were not re-checked.
+- **If the authority does nothing:** Not confirmed specifically; the general Administrative Disputes Act allows an action against administrative silence (failure to decide within the statutory period).
+- **Suing directly:** Not confirmed: the implementing act does not designate a court for Art. 79 or Art. 82 claims, so ordinary civil courts apply under general rules. Art. 41 lets data subjects mandate a non-profit body to complain and exercise Art. 77-79 and 82 rights on their behalf. The Representative Actions Directive was transposed by the Act on Representative Actions for the Protection of Collective Interests and Rights of Consumers (NN 59/2023).
+- **Case: B2 Kapital (debt collection) (2023).** EUR 2,265,000 fine (4 May 2023) after an anonymous tip-off with a USB stick holding data on 77,317 people led to ex officio supervision; violations included lack of transparency, missing processor agreements and inadequate security.
+- **Case: EOS Matrix (debt collection) (2023-2026).** Record EUR 5.47m fine (October 2023) for inadequate security, processing non-debtors' and minors' data, health data and call recording without a clear legal basis. The company brought administrative disputes; press reporting in 2026 says they had not yet been finally resolved.
+- No administrative appeal: AZOP decisions go straight to the administrative courts (Art. 34).
+- Public authorities cannot be fined (Art. 47).
+- Enforcement has concentrated on debt collection agencies, producing some of the largest fines in the region.
+- Unpaid fines are collected by the tax authority.
+
+### Cyprus
+
+*EU member.* In Cyprus you complain to the Commissioner for Personal Data Protection, who examines the complaint, can investigate the organisation and then issues a decision, which can include a fine. Anyone affected by the decision can challenge it before the Administrative Court, normally within 75 days, and since 2023 there is a further appeal to the Court of Appeal.
+
+**Route of a fine:** Commissioner -> Administrative Court -> Court of Appeal
+
+- **Authority:** Commissioner for Personal Data Protection (Επίτροπος Προστασίας Δεδομένων Προσωπικού Χαρακτήρα). Single commissioner supported by an Office. The Commissioner is appointed by the Council of Ministers on the proposal of the Minister, must be qualified for appointment as a Supreme Court judge, serves six years renewable once, and can only be removed for mental or physical incapacity (s. 19 Law 125(I)/2018).
+- **Regional authorities:** Single national authority.
+- **Law:** Law providing for the protection of natural persons with regard to the processing of personal data and the free movement of such data, Law 125(I)/2018 (amended by Law 26(I)/2022)
+- **Complaint:** Not confirmed from the Commissioner's own pages (the site blocked automated access). Complaints are lodged with the Commissioner's Office, which must examine them under s. 24. Form, language and fee not confirmed. Section 24 requires the Commissioner to examine complaints and, where possible, inform the complainant in writing of the progress or outcome within 30 days; the Commissioner may decline to examine a complaint for public-interest reasons. No time limit for complaining found.
+- **Contact the organisation first?** Not confirmed.
+- **Who decides:** The Commissioner personally signs decisions, including fines.
+- **Limitation:** Not confirmed.
+- **Who fines:** The Commissioner, by administrative decision under Art. 83 GDPR (s. 32(1)). Unpaid fines are recovered as a civil debt owed to the Republic (s. 32(2)).
+- **Public bodies:** Yes. A fine on a public authority or public body for non-profit activities may not exceed EUR 200,000 (s. 32(3)); commercial activities of public bodies are not capped by this rule. A EUR 46,500 fine on the State Health Services Organisation after a breach has been reported (secondary source, not verified).
+- **National specifics:** Section 33 creates criminal offences tried by the courts: up to 3 years' imprisonment and/or EUR 30,000 (e.g. failure to keep records, notify breaches, cooperate, unlawful transfers), up to 1 year and/or EUR 10,000 for other breaches, and up to 5 years and/or EUR 50,000 where national security is affected. Criminal liability can attach to the chief executive of an undertaking or head of a public authority.
+- **Appeal:** Administrative Court (Διοικητικό Δικαστήριο) (s. 28 Law 125(I)/2018), by a recourse for annulment under Art. 146 of the Constitution. Deadline: 75 days from publication or notification of the decision under Art. 146(3) of the Constitution (general rule; not confirmed in a data protection-specific source). Payment: Not confirmed. A recourse does not automatically suspend an administrative act; a provisional order would have to be sought.
+- **Further appeal:** Since 1 July 2023, appeals against first-instance judgments, including the Administrative Court's, go to the new Court of Appeal; above it sit the Supreme Court and the Supreme Constitutional Court.
+- **If the authority does nothing:** Not confirmed. A recourse under Art. 146 can in principle be brought against an omission of the administration, but no data protection-specific route was confirmed.
+- **Suing directly:** District Courts (civil) for claims against controllers and processors; the law recognises compensation for material and non-material damage under Art. 82. Not confirmed (Representative Actions Directive transposition not checked).
+- **Case: Bradford Factor sick-leave scoring (three affiliated companies) (2020).** In February 2020 the Commissioner banned three affiliated companies from using an automated 'Bradford Factor' tool to score employees' sick leave, found no legal basis under Arts. 6 and 9 after consulting other EU authorities, and fined them a total of EUR 82,000 with orders to stop and delete the data. Whether it was appealed was not confirmed.
+- **Case: Google Analytics and Facebook Pixel transfers (Cyprus Football Association, Cyprus News Agency, Arktinos Publications) (2024).** In February 2024 the Commissioner found that three organisations transferred data to the US through Google Analytics and Facebook Pixel without adequate Chapter V safeguards, issuing reprimands and compliance orders but no fines.
+- **Case: Bank fined for losing a customer contract and late breach notification (2020).** On 17 June 2020 the Commissioner fined a Cypriot bank EUR 15,000 for losing a customer's insurance contract (defeating the right of access) and failing to notify the breach within 72 hours.
+- Single commissioner, who must be qualified to be a Supreme Court judge, with a six-year term renewable once.
+- Public authorities can be fined, but only up to EUR 200,000 for non-profit activities.
+- The national law adds criminal offences with prison terms of up to five years, tried in the criminal courts, alongside the Commissioner's administrative fines.
+- The 2023 court reform added a Court of Appeal between the Administrative Court and the top courts, so data protection appeals now have an extra layer.
+- Fines are typically modest (tens of thousands of euros); no appealed fine with a court outcome was confirmed in this research.
+
+### Czechia
+
+*EU member.* In Czechia you complain to the Office for Personal Data Protection (ÚOOÚ), which can investigate and fine a company itself, but cannot fine public authorities. A fined company first asks the Office's President to review the decision, then can sue in the Municipal Court in Prague and finally go to the Supreme Administrative Court; in the Avast case the court confirmed the breach but sent the CZK 351 million fine back for recalculation.
+
+**Route of a fine:** ÚOOÚ -> President of the Office (rozklad) -> Municipal Court in Prague -> Supreme Administrative Court
+
+- **Authority:** Office for Personal Data Protection (Úřad pro ochranu osobních údajů). Single authority headed by a President appointed by the President of the Republic for five years, at most two consecutive terms (s. 52 Act 110/2019), with two Vice-Presidents elected and removed by the Senate (s. 53). Not a collegial body.
+- **Regional authorities:** Single national authority.
+- **Law:** Act No. 110/2019 Coll., on the Processing of Personal Data (zákon o zpracování osobních údajů), in force 24 April 2019
+- **Complaint:** Not confirmed from a ÚOOÚ complaint page. The Office accepts submissions by data box (ID qkbaa2n), email (posta@uoou.gov.cz) or post to Pplk. Sochora 27, Prague 7. Language and fee not confirmed. Not confirmed for GDPR complaints. Under the general rule for an initiative (podnět) in s. 42 of the Administrative Procedure Code, the authority must tell the person within 30 days whether it opened proceedings; whether ÚOOÚ applies this to GDPR complaints was not confirmed.
+- **Contact the organisation first?** Not confirmed.
+- **Who decides:** The Office decides at first instance; the President of the Office decides the remonstrance (confirmed in the Avast case).
+- **Limitation:** Not confirmed (expected to follow the general Offences Act rules).
+- **Who fines:** ÚOOÚ itself, by administrative decision.
+- **Public bodies:** No. The Office must refrain from imposing administrative penalties on the entities listed in Art. 83(7) GDPR, i.e. public authorities and bodies (s. 62(5) Act 110/2019). Corrective orders still apply. Separately, ÚOOÚ can impose procedural fines for non-cooperation in proceedings it handles: a CZK 30,000 fine on the Arbitration Court of the Economic Chamber in a freedom of information appeal was upheld by the Municipal Court in Prague on 29 July 2026.
+- **National specifics:** Anyone, including private individuals, can be fined for unlawful disclosure of personal data: up to CZK 1,000,000, or CZK 5,000,000 if done through the press, broadcasting, a public computer network or similar (s. 61). Separate fines of up to CZK 10,000,000 apply for law enforcement processing (s. 63).
+- **Appeal:** First an internal remonstrance (rozklad) to the President of the Office, then an administrative action to the Municipal Court in Prague (Městský soud v Praze), as in the Avast case (5 A 56/2024). Deadline: Not confirmed from a primary source (the general rule is two months for an administrative action). Payment: Not confirmed.
+- **Further appeal:** Cassation complaint to the Supreme Administrative Court (Nejvyšší správní soud). A Municipal Court annulment sends the case back to ÚOOÚ for a new decision.
+- **If the authority does nothing:** Not confirmed for ÚOOÚ. Under general Czech law a person who only filed an initiative cannot bring an inaction action (party status required); commentators see an action against unlawful interference as the main remaining route.
+- **Suing directly:** Ordinary civil courts for Art. 79 and Art. 82 claims (court level not confirmed). Not confirmed. Czechia has adopted a collective proceedings act transposing the Representative Actions Directive, but its number, date and scope were not verified here.
+- **Case: Avast Software: sale of browsing data via Jumpshot (2024-2025).** ÚOOÚ fined Avast CZK 351 million (about EUR 13.9 million), its largest fine, announced 15 April 2024 as a final decision after remonstrance, for transferring insufficiently anonymised browsing histories of about 100 million users to Jumpshot and misleading users. On 30 September 2025 the Municipal Court in Prague (5 A 56/2024) upheld both infringements but annulled the decision on the number of affected users and the fine, sending it back to ÚOOÚ to reassess the penalty.
+- **Case: Arbitration Court of the Chamber of Commerce: fine for non-cooperation (2026).** ÚOOÚ fined the Arbitration Court CZK 30,000 for refusing to hand over case files in a freedom of information appeal it was handling. On 29 July 2026 the Municipal Court in Prague (15 A 178/2025) upheld the fine as exceptional but lawful. This was a freedom of information matter, not a GDPR infringement.
+- Public authorities and bodies cannot be fined under the GDPR: Czechia used Art. 83(7) to exclude them (s. 62).
+- Anyone who unlawfully publishes personal data can be fined up to CZK 5 million when it is done via the press, broadcast or the internet (s. 61), a national offence beyond the GDPR.
+- Two-step review: an internal remonstrance to the Office's President before any court, then the Municipal Court in Prague and the Supreme Administrative Court.
+- Complainants are generally treated as people giving an initiative rather than parties, which limits their ability to challenge how their complaint is handled (general administrative law, not confirmed for ÚOOÚ specifically).
+- ÚOOÚ also handles freedom of information appeals, which explains enforcement against bodies such as the Arbitration Court.
+
+### Denmark
+
+*EU member.* In Denmark you complain to Datatilsynet, usually online with MitID, after first raising the issue with the organisation. Datatilsynet can order the organisation to fix the problem, but it cannot fine anyone itself: if it thinks a fine is deserved, it reports the organisation to the police with a suggested amount, and a criminal court decides the actual fine. You cannot appeal Datatilsynet's decision to another authority, only to the courts.
+
+**Route of a fine:** Datatilsynet police report -> Police and prosecution -> District court -> High Court -> Supreme Court (leave)
+
+- **Authority:** Danish Data Protection Agency (Datatilsynet). Independent authority made up of a Data Council (Datarådet) and a secretariat headed by a director who runs day-to-day business (s. 27 Data Protection Act). The Council has a chair who must be a High Court or Supreme Court judge plus seven members on four-year terms.
+- **Regional authorities:** Single national authority. Greenland and the Faroe Islands have separate arrangements (not researched here).
+- **Law:** Data Protection Act (Databeskyttelsesloven), Act No. 502 of 23 May 2018, as amended
+- **Complaint:** Online form via MitID on virk.dk (English version available); email, post or phone if MitID is not available. No fee mentioned. Name and address are required and anonymous complaints are normally not processed; representation by power of attorney is allowed. No time limit for complaining and no statutory decision deadline found in the Act or on the complaint page (not confirmed).
+- **Contact the organisation first?** Yes. Datatilsynet asks complainants to contact the company, organisation or authority before submitting a complaint.
+- **Who decides:** Corrective decisions: Datatilsynet (Council for cases of principle, secretariat otherwise). Fines: the criminal courts, on charges brought by the prosecution service; Datatilsynet only recommends an amount.
+- **Limitation:** Five years for infringements of the GDPR, the Act or rules issued under it (s. 41(7)).
+- **Who fines:** Courts, not the DPA (Recital 151). GDPR infringements are criminal offences punishable by a fine or up to six months' imprisonment (s. 41(1)-(2)); courts must apply Art. 83(2) GDPR criteria (s. 41(3)). Legal persons are liable under Part 5 of the Criminal Code (s. 41(6)). Datatilsynet published fine-calculation guidance in January 2021, which is not binding on courts.
+- **Public bodies:** Yes, public authorities can be fined (s. 41(6)). Prosecution guidance (2020 circular, later amended) set caps of 2% of operating budget up to DKK 8 million, or 4% up to DKK 16 million for the higher tier. Many municipalities and regions have been fined, e.g. Odsherred Municipality DKK 100,000 in April 2024.
+- **National specifics:** Individuals can be prosecuted and face imprisonment of up to six months. Courts have often set fines far below Datatilsynet's recommendation, although the 2025 ILVA appeal judgment confirmed group turnover as the basis. No reform giving Datatilsynet administrative fining powers was found in the sources checked (not confirmed either way).
+- **Appeal:** Datatilsynet decisions cannot be taken to another administrative authority (s. 30(1)); they can be challenged by a civil action before the ordinary courts under the general right to judicial review of administrative decisions. Fines are criminal judgments of the district court (byret). Deadline: Not confirmed for civil challenges to Datatilsynet decisions (no special deadline in the Act). Criminal appeals follow the Administration of Justice Act (deadline not confirmed). Payment: Not confirmed. A criminal fine is not payable until the judgment is final.
+- **Further appeal:** Criminal fine cases: district court, then High Court (Vestre or Østre Landsret), then Supreme Court (Højesteret) only with leave. Example: ILVA went Aarhus District Court (2021), CJEU reference, Vestre Landsret (2025).
+- **If the authority does nothing:** No specific Danish mechanism for Art. 78(2) inaction was confirmed; a complainant would rely on a civil action before the ordinary courts.
+- **Suing directly:** Ordinary civil courts (district courts at first instance); compensation for material and non-material damage under s. 40 Data Protection Act and Art. 82 GDPR. Not confirmed. Denmark has a general group action procedure in the Administration of Justice Act; Art. 80(2) use and the Representative Actions Directive transposition were not checked.
+- **Case: ILVA A/S (IDdesign): storage without deletion deadlines (2021-2025).** Datatilsynet recommended DKK 1.5 million for keeping data on about 385,000 customers with no deletion deadlines (police report June 2019). Aarhus District Court fined DKK 100,000 in 2021 based on the subsidiary's turnover. On the prosecution's appeal, Vestre Landsret referred questions to the CJEU (C-383/23, judgment 13 February 2025: 'undertaking' means the whole group) and on 2 September 2025 raised the fine to DKK 1.5 million.
+- **Case: Netcompany (mit.dk digital post platform) (2024).** On 12 January 2024 Datatilsynet reported Netcompany to the police with a recommended fine of at least DKK 15 million for lack of privacy by design, no DPIA and an authentication flaw that exposed other users' digital post at launch in March 2022. Datatilsynet lists the case as still pending before the courts.
+- **Case: Odsherred Municipality: unencrypted laptops (2024).** Theft of an unencrypted work laptop revealed about 1,200 unencrypted laptops. Datatilsynet recommended DKK 100,000 to 200,000 in January 2024; the case ended on 23 April 2024 with a DKK 100,000 fine.
+- One of only two EU countries (with Estonia) where the DPA cannot fine: Datatilsynet investigates, reports to the police and recommends an amount, and a criminal court decides.
+- Datatilsynet's public 'fine cases' page (Bødesager) lists recommendations, but once a case is with the police there is generally no right of access to the file, so outcomes are often hard to trace.
+- Fines can hit public authorities, unlike several other Member States, with budget-based caps from prosecution guidance.
+- The five-year limitation period (s. 41(7)) is long compared with many administrative regimes.
+- Early court fines were a fraction of the recommendations; the 2025 ILVA appeal, after a CJEU ruling, pushed levels up by using group turnover.
+
+### Estonia
+
+*EU member.* In Estonia you first ask the organisation to fix the problem, then complain to the Data Protection Inspectorate (AKI), usually online with your ID-card or Smart-ID. AKI can order the organisation to comply, but to fine it AKI has to run a separate misdemeanour case, a mini criminal procedure, and the organisation can take that fine to the county court within 15 days and then to the Supreme Court. Since late 2023 these fines can reach the full GDPR maximum.
+
+**Route of a fine:** AKI misdemeanour decision -> County court -> Supreme Court
+
+- **Authority:** Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon). Single authority headed by a Director General (not a collegial body). It is also the oversight body for public information (freedom of information) requests.
+- **Regional authorities:** Single national authority.
+- **Law:** Personal Data Protection Act (Isikuandmete kaitse seadus, IKS), RT I, 04.01.2019, 11, as amended (including amendments in force 1 November 2023)
+- **Complaint:** Online via the state e-portal (saada.rik.ee) with ID-card, Mobile-ID or Smart-ID, or by digitally signed email to info@aki.ee using AKI's template. Primarily in Estonian. No fee. AKI aims to respond within 30 days, extendable by up to 60 days. No time limit for complaining was found.
+- **Contact the organisation first?** Yes. AKI generally will not open proceedings unless the complainant has first contacted the controller, and asks for evidence of that contact.
+- **Who decides:** AKI itself, acting as extrajudicial body in misdemeanour proceedings (not a prosecutor). Courts only intervene if the fined party complains.
+- **Limitation:** Three years for data protection misdemeanours since the amendments in force 1 November 2023 (previously two years). Fines on two hospitals were cancelled because the old limitation period had expired.
+- **Who fines:** AKI, through misdemeanour (quasi-criminal) proceedings rather than administrative fines, which Estonian law did not have (Recital 151). Since 1 November 2023 the general EUR 400,000 cap on misdemeanour fines for legal persons no longer applies to GDPR offences, so AKI can impose fines up to the Art. 83 maxima (EUR 20 million or 4% of worldwide turnover), and legal persons are liable without proof of a specific employee's guilt.
+- **Public bodies:** State agencies cannot be fined for data protection misdemeanours (Estonian Human Rights Centre, 2026). Public hospitals that are separate legal persons have been fined (Ida-Tallinna Keskhaigla, Viljandi Haigla; later cancelled on limitation grounds). The position of local authorities was not confirmed.
+- **National specifics:** Fines are imposed in a misdemeanour procedure with criminal-law safeguards, which courts apply strictly: fines on Pere Sihtkapital and Asper Biogene fell because conduct predated the November 2023 liability rules. Penalty payments (sunniraha) to enforce precepts are a separate administrative tool. Estonia's 2020 Ministry of Justice concept for a general administrative fines regime (covering AKI, the Financial Supervision Authority and the Competition Authority) was never enacted; the 2025 competition law reform still has courts impose fines in misdemeanour proceedings.
+- **Appeal:** Misdemeanour fine: complaint to the county court (maakohus), e.g. Harju County Court in the Allium UPI case and Tartu County Court in Asper Biogene. Administrative decisions (precepts, penalty payments, reprimands): administrative court under the Code of Administrative Court Procedure. Deadline: 15 days for a complaint against AKI's misdemeanour decision (stated in AKI's Allium UPI announcement). 30 days to challenge administrative decisions in the administrative court, or 30 days for an objection (vaie) to AKI itself under the Administrative Procedure Act. Payment: Yes in practice for fines: AKI states the misdemeanour decision is not enforceable while challenged, and the Allium fine remained unenforceable pending appeal. Not confirmed for precepts.
+- **Further appeal:** County court judgment in a misdemeanour case goes by cassation to the Supreme Court (AKI cited a 30-day window in 2026); the Supreme Court may refuse to accept the case (as in Asper Biogene, August 2025). Administrative court cases go to the circuit court and then the Supreme Court.
+- **If the authority does nothing:** An objection (vaie) to AKI within 30 days, decided by AKI within 10 days (extendable by 30), or an action in the administrative court; the objection route is closed once the matter is in court.
+- **Suing directly:** Claims against private controllers go to the county courts (civil). Not confirmed: claims against public bodies may fall under the State Liability Act in the administrative courts. Not confirmed (Representative Actions Directive transposition and any Art. 80(2) use not checked).
+- **Case: Allium UPI OÜ (Apotheka pharmacy loyalty programme): data breach (2025-2026).** On 5 September 2025 AKI fined Allium UPI EUR 3 million after attackers repeatedly downloaded data on over 750,000 people, including purchase histories revealing health information, enabled by shared admin credentials, no MFA and weak logging. On 2 September 2026 Harju County Court upheld the fine as justified; Allium announced an appeal to the Supreme Court, so the fine is not yet final.
+- **Case: Asper Biogene OÜ: genetic data leak and DPO conflict (2025).** AKI fined the genetic testing company EUR 85,000 in January 2025. Tartu County Court annulled it on 26 June 2025: the security failure predated the 1 November 2023 corporate liability rules, and the DPO conflict (sole board member as DPO) was discontinued on expediency grounds. The Supreme Court declined AKI's cassation appeal in August 2025.
+- **Case: Bolt: reprimand in an Art. 60 cross-border case (2025).** On 30 May 2025 AKI reprimanded Bolt for transparency, legal basis and retention failures and closed proceedings after compliance, with no fine. The decision states it can be challenged within 30 days in an administrative court.
+- One of only two EU countries (with Denmark) without GDPR administrative fines: AKI fines through misdemeanour proceedings, and the fined party goes to the county court, not the administrative court.
+- Two parallel tracks: administrative supervision (precepts, penalty payments, appeal to the administrative court) and misdemeanour proceedings (fines, appeal to the county court and the Supreme Court).
+- Amendments in force 1 November 2023 lifted the EUR 400,000 misdemeanour cap for GDPR offences, extended limitation to three years and simplified corporate liability; before that, fines were tiny and several were annulled.
+- The EUR 3 million Allium UPI fine (2025) is Estonia's first million-euro data protection fine and the first big test of the new rules.
+- A general administrative fines act was proposed by the Ministry of Justice in 2020 but has not been adopted.
+
+### Finland
+
+*EU member.* In Finland you first ask the organisation to fix the problem; if it refuses, you notify the Data Protection Ombudsman online, free, in Finnish, Swedish or English. The Ombudsman can reprimand or order the organisation to comply, and serious cases go to a three-member Sanctions Board that can fine private companies. Decisions can be appealed to the Administrative Court and, with permission, to the Supreme Administrative Court.
+
+**Route of a fine:** Sanctions Board -> Administrative Court -> Supreme Administrative Court (leave)
+
+- **Authority:** Office of the Data Protection Ombudsman (Tietosuojavaltuutetun toimisto (Finnish) / Dataombudsmannens byrå (Swedish)). Independent authority headed by a single Data Protection Ombudsman (Anu Talus, in office since 1 November 2020, reappointed from 1 November 2025) with two Deputy Ombudsmen, all appointed by the Government for five years. Fines are imposed by a Sanctions Board made up of the Ombudsman and the two Deputies, deciding by majority.
+- **Regional authorities:** Single national authority, no regional DPAs.
+- **Law:** Data Protection Act (Tietosuojalaki) 1050/2018, in force 1 January 2019
+- **Complaint:** Notification to the Ombudsman through the online form on tietosuoja.fi (an interactive questionnaire first checks whether the Office can help), or by email or post. The Office works in Finnish, Swedish and English. Anonymous notifications are possible but the complainant then receives no follow-up. No fee mentioned. No time limit for complaining confirmed. The Office's target processing time is one year; no statutory decision deadline confirmed.
+- **Contact the organisation first?** Yes: the Office asks people to contact the controller first and to turn to the Ombudsman only if the controller refuses the request on grounds they consider inadequate.
+- **Who decides:** Corrective decisions: the Ombudsman or a Deputy Ombudsman. Administrative fines: the Sanctions Board (Ombudsman plus two Deputies).
+- **Limitation:** Not confirmed.
+- **Who fines:** The Sanctions Board of the Office, by administrative decision; no court confirmation step.
+- **Public bodies:** Currently no fines on state authorities and state enterprises, municipal authorities, independent public institutions, Parliament's agencies, the Office of the President, or the Evangelical Lutheran and Orthodox Churches (Data Protection Act 1050/2018). Change pending: the Government submitted a bill in April 2026 to extend fines to public authorities with lower maxima than for the private sector (reported as EUR 500,000 or EUR 1,000,000 depending on severity), excluding courts, Parliament's offices and national security authorities, with proposed entry into force in early 2027. Adoption not confirmed as of October 2026.
+- **National specifics:** A data protection offence exists in the Criminal Code (Chapter 38, section 9), punishable by a fine or up to one year in prison; the prosecutor must consult the Ombudsman before charging. Separately, the Act on the Protection of Privacy in Working Life has its own penal provisions for employers.
+- **Appeal:** Administrative Court under the Act on Judicial Procedure in Administrative Matters (808/2019); appeals against the Office's decisions in practice go to the Helsinki Administrative Court. Deadline: Not confirmed from a primary source (the general rule for administrative appeals in Finland is 30 days from notification). Payment: Not confirmed.
+- **Further appeal:** Supreme Administrative Court (Korkein hallinto-oikeus), only with leave to appeal.
+- **If the authority does nothing:** Not confirmed: no specific Finnish mechanism for Art. 78(2) located.
+- **Suing directly:** District courts (käräjäoikeus) for claims against controllers under Art. 79 and 82; not confirmed from a primary source. Not confirmed. Finland's Class Action Act (444/2007) traditionally reserved group actions to the Consumer Ombudsman; how the Representative Actions Directive was transposed and whether it covers GDPR claims was not checked.
+- **Case: Posti (OmaPosti), EUR 2.4 million, annulled by Helsinki Administrative Court (2024 / 2025).** In November 2024 the Sanctions Board fined Posti EUR 2.4 million for automatically creating OmaPosti electronic mailboxes for customers without a lawful basis and with poor information. On 3 November 2025 the Helsinki Administrative Court (decision 6850/2025) annulled the fine, finding the processing necessary for the contract (Art. 6(1)(b)), while upholding the reprimand, the order to bring processing into line and the finding that customers were not adequately informed. Whether a further appeal was lodged was not confirmed.
+- Fines are decided by a three-person Sanctions Board, while ordinary decisions are taken by the Ombudsman or a Deputy alone.
+- Public authorities and the two national churches cannot currently be fined, but a 2026 Government bill would change this from early 2027 if adopted.
+- Complainants are expected to go to the controller first, and anonymous notifications are accepted.
+- Appeals run through the administrative courts, with leave required for the Supreme Administrative Court.
+
+### France
+
+*EU member.* In France you first ask the company to respect your rights, then, if that fails, you complain to the CNIL online in French, free of charge. The CNIL may resolve it informally, inspect the company, order it to comply or send the case to its restricted committee, which can fine; small cases go through a faster simplified procedure. The company can appeal the fine directly to the Conseil d'État within two months, and you can also go to that court if the CNIL closes your complaint.
+
+**Route of a fine:** CNIL restricted committee -> Conseil d'État
+
+- **Authority:** National Commission on Informatics and Liberty (Commission nationale de l'informatique et des libertés). Independent administrative authority run by a college (collegial body) chaired by a president. Sanctions are decided by a separate restricted committee (formation restreinte) of a president and five other members elected by the college from among its members (Art. 9 Loi Informatique et Libertés); members of the bureau cannot sit on it.
+- **Regional authorities:** Single national authority, no regional DPAs.
+- **Law:** Loi n. 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés (Loi Informatique et Libertés), as rewritten in 2018 to implement the GDPR, with implementing Decree n. 2019-536
+- **Complaint:** Free online complaint via the CNIL complaints service (account required, situation-specific forms) or by post to the Service des plaintes, 3 place de Fontenoy, 75007 Paris. Complaints must be in French and include the organisation's details and supporting evidence. No time limit for complaining confirmed. The CNIL commits to give a status update within three months (in line with Art. 77(2) GDPR); no statutory decision deadline confirmed.
+- **Contact the organisation first?** Yes, in practice: the CNIL asks complainants first to exercise their rights with the organisation or its DPO and wait for the response period (one month, extendable by two) before complaining.
+- **Who decides:** The restricted committee (formation restreinte), or its president or a designated member alone under the simplified procedure.
+- **Limitation:** Not confirmed: no specific limitation period for GDPR infringements was found in the Loi Informatique et Libertés.
+- **Who fines:** The CNIL itself, by administrative decision of the restricted committee; no court confirmation step.
+- **Public bodies:** No fines (or periodic penalties) where the processing is carried out by the State (Art. 20 Loi Informatique et Libertés). Other public bodies, such as local authorities and public establishments, can be fined up to the GDPR maxima.
+- **National specifics:** Simplified procedure (Law n. 2022-52 of 24 January 2022 and Decree n. 2022-517 of 8 April 2022): fines capped at EUR 20,000 and periodic penalties at EUR 100 per day, and such decisions are not published; the CNIL's site currently also shows a higher tier of EUR 100,000 and EUR 500 per day for companies with turnover over EUR 50 million (date of that change not confirmed). Data protection crimes exist in the Criminal Code (Art. 226-16 ff), up to five years' prison and EUR 300,000 for individuals. The CNIL also fines cookie breaches under Art. 82 Loi Informatique et Libertés (ePrivacy), outside the GDPR one-stop-shop.
+- **Appeal:** Conseil d'État, directly, as first and last instance, in full jurisdiction (it can reduce the fine). Deadline: Two months from notification of the decision, extended by two months for organisations established outside France (Art. R. 421-7 Code de justice administrative). Payment: Not suspensive: the decision and any periodic penalty apply despite the appeal. The organisation can ask the Conseil d'État's interim relief judge for suspension (référé-suspension, Art. L. 521-1 Code de justice administrative), which requires urgency and serious doubt as to legality.
+- **Further appeal:** None at national level: the Conseil d'État decides in first and last instance, but can refer questions to the CJEU.
+- **If the authority does nothing:** A complainant can challenge a closure or refusal to act before the Conseil d'État within two months, usually after a recourse to the CNIL. The intensity of review after the CJEU's SCHUFA ruling (C-26/22) was not confirmed.
+- **Suing directly:** Judicial court (tribunal judiciaire) for claims against private controllers; labour tribunal (conseil de prud'hommes) for employees; administrative courts for claims against public bodies. A data protection group action existed since 2016 (Art. 37 Loi Informatique et Libertés, extended to damages in 2018). Law n. 2025-391 of 30 April 2025 replaced the sector regimes with a single group action framework transposing the Representative Actions Directive, open to approved associations, representative unions (including for data protection), prosecutors and qualified entities from other Member States, applying to actions filed from 2 May 2025.
+- **Case: Google LLC, EUR 50 million, upheld by the Conseil d'État (2019 / 2020).** The restricted committee fined Google LLC EUR 50 million in January 2019 for lack of transparency and invalid consent for ad personalisation. The Conseil d'État rejected Google's appeal on 19 June 2020 (n. 430810), holding the CNIL competent because Google had no main establishment in the EU for that processing at the time.
+- **Case: Google and Shein cookie fines (2025).** On 3 September 2025 the CNIL fined Google EUR 325 million and Shein EUR 150 million. Both were sanctioned under Art. 82 Loi Informatique et Libertés for cookie consent failures; Google was also sanctioned under Art. L. 34-5 of the Postal and Electronic Communications Code for showing ads in Gmail without prior consent. Appeal status not confirmed.
+- Sanctions are decided by a separate restricted committee, not by the CNIL president who opens the case, to separate prosecution from judgment.
+- Appeals go straight to the Conseil d'État, the supreme administrative court, with no lower court stage.
+- The simplified procedure since 2022 produces many small, unpublished sanctions (around 52 decisions in 2025 according to DLA Piper).
+- The State itself cannot be fined, but local authorities and other public bodies can.
+- Cookie enforcement under national ePrivacy rules (Art. 82) lets the CNIL fine non-French-established companies such as Google and Shein without the one-stop-shop.
+
+### Germany
+
+*EU member.* In Germany you complain, usually free and online, to the data protection authority of the federal state where the company is based (or to the federal commissioner for federal bodies and telecoms). The authority can order the company to fix things, and separately issue a fine notice; if the company objects, the case goes through the public prosecutor to an ordinary criminal court, which sets the fine itself. If you think the authority mishandled your complaint, you can take it to the administrative court.
+
+**Route of a fine:** DPA fine notice -> Objection -> Amtsgericht or Landgericht -> Oberlandesgericht
+
+- **Authority:** Federal Commissioner for Data Protection and Freedom of Information, plus 16 Land (state) data protection authorities (Die Bundesbeauftragte / Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit; Landesbeauftragte für Datenschutz der Länder). Each authority is headed by a single commissioner (monocratic), not a college. Moritz Hennemann was elected BfDI by the Bundestag on 25 June 2026 and took office on 1 October 2026, succeeding Louisa Specht-Riemenschneider.
+- **Regional authorities:** Federated system: the BfDI supervises federal public bodies and telecoms and postal service providers, while the Land authorities supervise private companies seated in their Land (s.40 BDSG) and their own Land public bodies. Bavaria is split: BayLDA (Ansbach) supervises the private sector and BayLfD (Munich) the Bavarian public sector. The authorities coordinate in the Datenschutzkonferenz (DSK), which has no statutory basis yet and whose resolutions are not legally binding; a Bundesrat bill to put the DSK on a statutory footing with binding majority decisions and lead authorities for multi-Land companies was tabled on 26 August 2026 (BT-Drs. 21/7732) and is pending.
+- **Law:** Bundesdatenschutzgesetz (BDSG) of 30 June 2017, in force 25 May 2018, plus 16 Land data protection acts for Land public bodies
+- **Complaint:** Free complaint to the competent authority, usually the Land authority where the company is seated, by online form, post or email; most authorities offer online forms (BayLDA asks complainants to substantiate a violation of their own rights, otherwise the submission is treated as a request for a check). Complaints are normally submitted in German. No national deadline for complaining confirmed. The authority must inform the complainant of progress or outcome within three months (Art. 77(2) and 78(2) GDPR); no German-specific decision deadline confirmed.
+- **Contact the organisation first?** Not a legal requirement; the BayLDA form does not make it a precondition, though for access-right complaints it asks for copies of the correspondence with the controller.
+- **Who decides:** The head of each authority (BfDI or the Land commissioner) and their office; there is no collegial sanctions body.
+- **Limitation:** Not stated in the BDSG; as the OWiG applies (s.41(1) BDSG), the OWiG limitation rules apply, which give three years where the maximum fine exceeds EUR 15,000 (s.31(2) no.1 OWiG). Not confirmed from a primary DPA source.
+- **Who fines:** The supervisory authority itself issues a fine notice under OWiG procedure. On objection, a court decides the matter afresh: the Amtsgericht, or the Landgericht if the fine exceeds EUR 100,000 (s.41(1) BDSG, modifying s.68 OWiG). The public prosecutor may only discontinue the case with the authority's consent (s.41(2) BDSG). OWiG s.17 (fine caps), s.35 and s.36 do not apply.
+- **Public bodies:** No fines on federal authorities and other public bodies (s.43(3) BDSG). The Land acts govern Land and municipal bodies and generally also exclude them, but the exact rule per Land was not confirmed.
+- **National specifics:** Criminal offences in s.42 BDSG (up to three years' prison for knowingly transferring data of a large number of people for commercial purposes without authorisation; up to two years for unlawful processing for payment or to enrich oneself or harm others), prosecuted only on application by the data subject, controller, BfDI or the authority. s.43 BDSG adds national fines up to EUR 50,000 for consumer-credit information breaches. German law traditionally required attributing the offence to an identified manager (s.30 OWiG), but the CJEU held in Deutsche Wohnen (C-807/21, 5 December 2023) that a company can be fined directly, provided the infringement was intentional or negligent.
+- **Appeal:** Two tracks. Fines: objection (Einspruch) lodged with the authority, then via the public prosecutor to the Amtsgericht, or the Landgericht for fines over EUR 100,000 (s.41 BDSG). Orders and complaint decisions: action in the administrative court (Verwaltungsgericht) where the authority has its seat, with no preliminary administrative review (s.20 BDSG). Deadline: Fine objection: two weeks from service (s.67 OWiG). Administrative court action: one month (s.74 VwGO). Both from the general procedural codes, not confirmed against a DPA source. Payment: An objection prevents the fine from becoming final, so it is not payable until the court decides. An administrative court action against an order generally has suspensive effect unless the authority orders immediate enforcement, which it may not do against public authorities (s.20(7) BDSG).
+- **Further appeal:** Fines: appeal on points of law (Rechtsbeschwerde) to the Oberlandesgericht (s.79 OWiG). Orders: Oberverwaltungsgericht on appeal, then Bundesverwaltungsgericht.
+- **If the authority does nothing:** Action in the administrative court under s.20 BDSG and Art. 78(2) GDPR. Following the CJEU's SCHUFA ruling (C-26/22 and C-64/22, 7 December 2023) on a referral from VG Wiesbaden, a DPA's decision on a complaint is subject to full judicial review, not merely a check that it was handled.
+- **Suing directly:** Civil courts (Amtsgericht or Landgericht depending on the amount in dispute); employees sue in the labour courts. s.44 BDSG lets the data subject sue at their habitual residence. Consumer associations can seek injunctions under the Injunctions Act (UKlaG), confirmed by the CJEU in Meta v vzbv (C-319/20, 2022). The Representative Actions Directive was transposed by the Consumer Rights Enforcement Act (VDuG) in 2023, allowing redress actions (Abhilfeklage) heard at first instance by the Oberlandesgericht.
+- **Case: 1&1 Telecom (BfDI), reduced by LG Bonn (2019 / 2020).** The BfDI fined 1&1 EUR 9.55 million for weak caller authentication in its call centre (Art. 32 GDPR). On objection, the Landgericht Bonn (29 OWi 1/20, 11 November 2020) upheld the infringement but cut the fine to EUR 900,000, rejecting the authority's turnover-heavy calculation for a minor breach.
+- **Case: Deutsche Wohnen (Berlin DPA) (2019 to 2026).** Berlin fined Deutsche Wohnen EUR 14.5 million in 2019 for retaining tenant data. LG Berlin quashed it in 2021 for not identifying a responsible manager; the Kammergericht referred the question and the CJEU ruled on 5 December 2023 (C-807/21) that companies can be fined directly if at fault. On remand, LG Berlin I reduced the fine to EUR 900,000 on 9 June 2026; reported as not yet final.
+- Fines are treated as administrative offences under the OWiG, so a challenged fine ends up before a criminal court (Amtsgericht or Landgericht) via the public prosecutor, while orders go to administrative courts: two parallel court tracks.
+- Eighteen authorities: the BfDI, 16 Länder with Bavaria split into BayLDA (private) and BayLfD (public), so 17 Land-level authorities, plus separate supervisors for churches and public broadcasters. Which one is competent depends on the company's seat.
+- No fines on federal public bodies (s.43(3) BDSG).
+- The DSK coordinates positions (guidance, resolutions) but cannot bind its members; statutory reform was pending in the Bundestag as of October 2026.
+- German courts have significantly reduced several headline fines (1&1, Deutsche Wohnen), because the court re-decides the fine amount itself.
+
+### Greece
+
+*EU member.* You first ask the organisation to fix the problem, then complain to the HDPA through its online portal. The seven-member Authority investigates, hears the organisation and can order changes or impose a fine. The organisation can ask the Council of State to annul the decision, but that does not pause it, and compensation has to be claimed separately in the civil courts.
+
+**Route of a fine:** HDPA -> Council of State
+
+- **Authority:** Hellenic Data Protection Authority (Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα). Independent public authority run as a collegial body: a President and six members, each with an alternate, serving a single non-renewable six-year term (Art. 11 Law 4624/2019).
+- **Regional authorities:** Single national authority, no regional DPAs.
+- **Law:** Law 4624/2019 (Government Gazette A 137/29.08.2019), implementing the GDPR and transposing Directive 2016/680
+- **Complaint:** Through the HDPA online portal using Taxisnet credentials; those without access can email a complaint form (in English if the infringement occurred in Greece) to complaints@dpa.gr. No fee identified. No time limit for complaining and no fixed decision deadline confirmed; the HDPA must inform the complainant of progress and outcome within a reasonable period (Art. 13 Law 4624/2019).
+- **Contact the organisation first?** Yes: the HDPA states that complainants must first address the controller, and may decline to examine a complaint if this was not done.
+- **Who decides:** The Authority as a collegial body (President and members); whether a given case is decided in plenary or in a chamber was not confirmed.
+- **Limitation:** Not confirmed
+- **Who fines:** The HDPA itself, by administrative decision.
+- **Public bodies:** Yes: public sector bodies can be fined up to EUR 10 million (Art. 39 Law 4624/2019).
+- **National specifics:** Criminal offences in Art. 38 Law 4624/2019: up to one year's prison for the basic offence, rising to up to ten years where the offender seeks unlawful gain or causes damage over EUR 120,000, and fines up to EUR 300,000 where democratic functioning or national security is endangered.
+- **Appeal:** Action for annulment (αίτηση ακύρωσης) before the Council of State (Συμβούλιο της Επικρατείας), the supreme administrative court, against HDPA regulatory and individual acts (Art. 20 Law 4624/2019). Deadline: Not confirmed in Law 4624/2019 (believed to follow the general 60-day Council of State rule, not verified for this packet). Payment: No: neither the time limit for, nor the filing of, an annulment action suspends the decision, but the Council of State may suspend its execution on request (Art. 20(2) Law 4624/2019).
+- **Further appeal:** None: the Council of State is first and last instance.
+- **If the authority does nothing:** Not confirmed
+- **Suing directly:** Civil courts where the controller or processor is established or where the data subject habitually resides (Art. 40 Law 4624/2019). Data subjects may mandate a not-for-profit body to lodge complaints on their behalf (Art. 41 Law 4624/2019). Court representation and Representative Actions Directive transposition coverage not confirmed.
+- **Case: Ministry of Finance v HDPA (taxpayer data breach) (2019).** The HDPA fined the General Secretariat of Information Systems EUR 150,000 for inadequate security after a breach affecting nearly all taxpayers (decisions 98/2013 and 117/2014). The Council of State (decision 339/2019) dismissed the Minister's annulment action.
+- **Case: Cosmote / OTE (2020 data breach) (2022).** HDPA fines totalling EUR 9.25 million (January 2022) after a 2020 breach of call data affecting over 10 million subscribers. The companies paid and brought annulment actions at the Council of State, scheduled for hearing on 16 May 2023; outcome not confirmed.
+- Direct one-step judicial review: HDPA decisions go straight to the Council of State, with no lower court and no further appeal.
+- Public bodies can be fined, capped at EUR 10 million (Art. 39).
+- Complaints are filed through a Taxisnet-authenticated portal, and prior contact with the controller is expected.
+- Pre-GDPR, fines on public bodies were already upheld by the Council of State (339/2019).
+
+### Hungary
+
+*EU member.* You can either tip off NAIH, which may look into it informally, or formally ask it to open a case, in which case you become a party and it has 150 days to decide. NAIH can warn, order changes or fine. Anyone who disagrees has 30 days to sue in the Budapest court, using a lawyer, and the decision applies in the meantime unless the court suspends it.
+
+**Route of a fine:** NAIH -> Budapest-Capital Regional Court -> Kúria
+
+- **Authority:** Hungarian National Authority for Data Protection and Freedom of Information (Nemzeti Adatvédelmi és Információszabadság Hatóság). Single-head authority: an autonomous state administration body led by a President appointed by the President of the Republic on the Prime Minister's proposal for nine years (renewable once), assisted by vice-presidents. Dr Attila Péterfalvi was its first President (nominated 2011); the current holder was not confirmed.
+- **Regional authorities:** Single national authority, no regional DPAs. It also supervises freedom of information.
+- **Law:** Act CXII of 2011 on the Right of Informational Self-Determination and on Freedom of Information (Infotv.), read with Act CL of 2016 on General Public Administration Procedure (Ákr.) and Act I of 2017 on Administrative Court Procedure (Kp.)
+- **Complaint:** Two routes: a notification (bejelentés) triggering an informal investigation (vizsgálati eljárás), or a request (kérelem) by the data subject for a formal data protection authority procedure (adatvédelmi hatósági eljárás). Filing via the online case portal, government e-delivery (KR ID 429616918) or post (1363 Budapest, Pf. 9); procedures cannot be started by ordinary email. The request must identify the controller, the alleged breach, evidence and the remedy sought. No fee for data subjects. NAIH must decide an authority procedure within 150 days (Infotv. s.60/A(1)), excluding time for the applicant to supply missing information and suspension periods. Time limit for complaining not confirmed. If NAIH misses the 150-day deadline it must pay the applicant HUF 10,000.
+- **Contact the organisation first?** Not stated as a precondition for the formal authority procedure on NAIH's page. NAIH guidance indicates data subjects should first approach the controller; exact legal effect not confirmed.
+- **Who decides:** NAIH, acting under the authority of its President (single-head authority, not a collegial body).
+- **Limitation:** Not confirmed
+- **Who fines:** NAIH itself, by administrative decision (Infotv. s.61(1)).
+- **Public bodies:** Not confirmed (no specific national cap or exemption identified).
+- **National specifics:** Infotv. s.75/A steers NAIH towards a warning rather than a fine for first-time infringements, applying proportionality. NAIH publishes its decisions.
+- **Appeal:** No internal administrative appeal. The decision is challenged in an administrative lawsuit (közigazgatási per) before the Budapest-Capital Regional Court (Fővárosi Törvényszék), which has exclusive jurisdiction; the statement of claim is filed electronically with NAIH, which forwards it with the file. Deadline: 30 days from notification of the decision. Payment: No suspensive effect (Kp. s.39(6)); interim relief can be sought from the court. Disputed data may not be deleted until the deadline expires or the court rules. Court fee HUF 30,000; legal representation mandatory.
+- **Further appeal:** Further review (felülvizsgálat) by the Kúria under the Kp. (not confirmed from a primary source for this packet).
+- **If the authority does nothing:** Not confirmed. CJEU C-132/21 (12 January 2023, on a reference from the Fővárosi Törvényszék) held that Art. 77/78 and Art. 79 remedies can be used concurrently and independently.
+- **Suing directly:** Data subjects can sue the controller under Infotv. s.23 before the regional court (törvényszék) for their domicile or place of residence, at their choice. Not confirmed
+- **Case: Digi Távközlési (data breach, test database) (2019-2022).** NAIH fined Digi HUF 100 million (about EUR 248,000). On appeal the Fővárosi Törvényszék referred questions to the CJEU, which held (C-77/21, 20 October 2022) that keeping data in a test database can be compatible with the original purpose but not for longer than needed for testing.
+- **Case: BE v NAIH (parallel remedies) (2023).** CJEU C-132/21 on a Hungarian reference: the administrative remedy against the DPA and the civil remedy against the controller can be pursued in parallel, with courts expected to ensure consistency.
+- Two-track system: a lighter, ombudsman-style investigation on notification versus a formal authority procedure on request, where the complainant is a full party.
+- Single President rather than a board decides; 150-day statutory deadline.
+- Appeals go directly to the Budapest-Capital Regional Court within 30 days, filed through NAIH, with mandatory legal representation and no automatic suspension.
+- Warning-first principle for first-time infringements (Infotv. s.75/A).
+
+### Ireland
+
+*EU member.* You complain to the DPC, usually after trying the company first, and the DPC tries to resolve it informally. Serious or systemic issues go to an inquiry, and for big tech firms other EU regulators get a say before the final decision. A fine only has to be paid once an Irish court has confirmed it, and most of the largest fines are still tied up in appeals.
+
+**Route of a fine:** DPC decision -> Circuit Court or High Court (appeal or confirmation) -> Court of Appeal or Supreme Court
+
+- **Authority:** Data Protection Commission (An Coimisiún um Chosaint Sonraí). Collegial commission of up to three commissioners (s.15 Data Protection Act 2018, terms of 4 to 5 years, renewable once). Des Hogan and Dale Sunderland were joined by Niamh Sweeney on 17 September 2025, completing the three-person Commission; recent large decisions are signed by all three.
+- **Regional authorities:** Single national authority, no regional DPAs. Lead supervisory authority (Art. 56 GDPR) for many large technology companies with EU main establishments in Ireland, so its big cross-border decisions go through the Art. 60 / Art. 65 EDPB process.
+- **Law:** Data Protection Act 2018 (No. 7 of 2018), Part 6 (enforcement) incl. ss.108-150
+- **Complaint:** Online webform at forms.dataprotection.ie/contact, or by post to 6 Pembroke Row, Dublin 2. No fee identified. Language rules not confirmed (English is the working language in practice). No statutory time limit for complaining and no statutory deadline for the DPC to decide were confirmed. The Act provides for amicable resolution of complaints (ss.108-109) before any inquiry.
+- **Contact the organisation first?** Yes in practice: the DPC asks individuals to try to resolve the matter with the organisation first and says most issues are resolved that way. Not confirmed as a statutory precondition.
+- **Who decides:** The Commission (the commissioners). The Google decision of 21 September 2026 was taken by all three commissioners.
+- **Limitation:** Not confirmed
+- **Who fines:** The DPC decides the fine, but it is not payable until confirmed by a court. If the controller does not appeal within 28 days, the DPC must apply to the Circuit Court for confirmation, which the court gives 'unless the Court sees good reason not to do so' (s.143). After confirmation the DPC issues a payment notice with 28 days to pay.
+- **Public bodies:** Yes. A public authority or public body that is not acting as an undertaking can be fined up to EUR 1,000,000 (s.141(4)). Example: HSE fined EUR 645,000 on 2 September 2026.
+- **National specifics:** Because fines only become payable after court confirmation and most large fines are under appeal, the DPC reports roughly EUR 4.4 billion imposed but only about EUR 20 million collected. Certain conduct (e.g. electronic marketing breaches) is prosecuted as offences in the District Court.
+- **Appeal:** Appeal against a fine under s.142: Circuit Court if the fine does not exceed EUR 75,000, otherwise the High Court. Appeals against other legally binding decisions and notices under s.150: Circuit Court concurrently with the High Court. Deadline: 28 days from notice of the decision (s.142(1), s.150). Payment: The fine is not payable until court confirmation, so it is effectively suspended pending appeal. Corrective orders are not automatically suspended; the court can grant a stay (TikTok obtained one in the High Court, upheld by the Supreme Court in April 2026, which held the stay test is one of national law).
+- **Further appeal:** Circuit Court or High Court decision is final save for an appeal on a point of law to the High Court or Court of Appeal (s.150). Further appeal to the Supreme Court is possible with leave (as in TikTok, 2026). Judicial review in the High Court is also used (Meta lost a judicial review on 21 May 2026).
+- **If the authority does nothing:** Section 150(7) of the Data Protection Act 2018 lets a complainant appeal to the court if the DPC fails to meet the required timelines on a complaint; judicial review in the High Court remains available otherwise.
+- **Suing directly:** Data protection action under s.117: District Court, Circuit Court or High Court, each within its usual compensation limits, where the controller is established or the data subject habitually resides. Remedies: injunction, declaration, compensation. Not-for-profit bodies mandated under Art. 80(1) may bring s.117 actions for data subjects. Whether GDPR is covered by Ireland's Representative Actions Directive transposition was not confirmed.
+- **Case: TikTok, EUR 530 million (data transfers to China and transparency) (2025-2026).** DPC decision of 30 April 2025 (EUR 485m transfers, EUR 45m transparency) plus a transfer suspension order. The High Court stayed it; the Supreme Court (30 April 2026) dismissed the DPC's appeal on the stay test. In June 2026 the High Court upheld the infringement findings but sent the suspension order back to the DPC. A separate judgment on the size of the fine was circulated to the parties at the end of June 2026; its outcome had not been published at last report.
+- **Case: Meta Platforms Ireland, EUR 1.2 billion (EU-US transfers) (2023).** Record GDPR fine of 12 May 2023 following an EDPB binding decision. Listed by the DPC as 'Pending Appeal', as are Meta's EUR 405m, 390m, 265m and 251m fines, WhatsApp's EUR 225m and LinkedIn's EUR 310m.
+- **Case: Google Ireland, EUR 403 million (location data) (2026).** Final decision of 21 September 2026 after an own-volition inquiry opened in February 2020 following consumer group complaints: lawfulness, transparency, accountability and retention failures in Location History, Web & App Activity and Location Accuracy. Six months to comply.
+- Court confirmation step: every DPC fine needs either a court appeal outcome or a Circuit Court confirmation (s.143) before it can be collected.
+- Appeal forum depends on fine size: Circuit Court up to EUR 75,000, High Court above (s.142).
+- Public bodies not acting as undertakings are capped at EUR 1 million (s.141(4)).
+- As lead authority for much of big tech, many DPC decisions are shaped by EDPB Art. 65 binding decisions; in May 2026 the High Court confirmed a complaint-based inquiry can lead to system-wide corrective measures and fines (Meta judicial review).
+
+### Italy
+
+*EU member.* You send a written complaint to the Garante, which must decide within nine months (twelve at most). If it finds a breach, the four-member board can order changes and impose a fine; the company can pay half within the appeal window to settle. Either side can challenge the decision before the local civil court within 30 days, and after that only the Court of Cassation can review it.
+
+**Route of a fine:** Garante -> Tribunale -> Corte di Cassazione
+
+- **Authority:** Italian Data Protection Authority (Garante per la protezione dei dati personali). Collegial body: a Collegio of four members, two elected by the Chamber of Deputies and two by the Senate, for a single non-renewable seven-year term, who elect a President; supported by an Ufficio (staff) (Art. 153 Codice). Member Guido Scorza resigned in January 2026 amid a media and prosecutorial controversy; the other three (Stanzione, Cerrina Feroni, Ghiglia) stated they would continue. Whether a replacement has since been elected was not confirmed.
+- **Regional authorities:** Single national authority, no regional DPAs.
+- **Law:** Codice in materia di protezione dei dati personali, d.lgs. 196/2003 as amended by d.lgs. 101/2018 (Codice privacy); court procedure in Art. 10 d.lgs. 150/2011
+- **Complaint:** A reclamo (Art. 77 GDPR, Arts. 141-143 Codice) setting out the facts, the provisions allegedly breached, the measures requested and the controller's identity, signed by the data subject or a mandated third-sector body (Art. 142). Filing channels and any fee not confirmed from the Garante site. The Garante must decide within nine months of filing and inform the complainant of progress within three months; extendable to twelve months for investigative needs, and suspended while an Art. 60 GDPR cooperation procedure runs (Art. 143 Codice). No time limit for complaining identified.
+- **Contact the organisation first?** Not a requirement in Art. 142 Codice. Garante practice not confirmed.
+- **Who decides:** The Collegio of the Garante. Art. 166(9) requires its internal procedural rules to separate investigative and decision-making functions.
+- **Limitation:** Not confirmed (Art. 166 refers to Law 689/1981 on administrative sanctions, but the applicable limitation period was not verified).
+- **Who fines:** The Garante itself, by administrative decision (Art. 166 Codice).
+- **Public bodies:** Public bodies can be fined; no separate national cap was identified (not confirmed).
+- **National specifics:** Settlement for half: within the appeal deadline (30 days, or 60 if resident abroad) the offender can close the matter by complying with any orders and paying half the fine (Art. 166(8) Codice). 50% of fine revenue is reinvested in Garante activities. Criminal offences exist, e.g. unlawful processing with intent to profit or cause harm, up to 1.5 years or, for special categories and unlawful transfers, 1 to 3 years (Art. 167, plus Arts. 167-bis to 171).
+- **Appeal:** Ordinary civil courts, not administrative courts: the Tribunale, sitting as a single judge, where the controller is based or the data subject resides (Art. 152 Codice, Art. 10 d.lgs. 150/2011, labour-law procedure). Deadline: 30 days from communication of the decision, or 60 days if the appellant resides abroad (Art. 10 d.lgs. 150/2011). Payment: No automatic suspension; the judge can suspend enforceability (Art. 5 d.lgs. 150/2011). The Rome Tribunal suspended the OpenAI fine in March 2025.
+- **Further appeal:** The Tribunale's judgment cannot be appealed on the merits; only an appeal to the Corte di Cassazione (Art. 10 d.lgs. 150/2011).
+- **If the authority does nothing:** Art. 152 Codice gives the ordinary courts jurisdiction over Art. 78 GDPR disputes; the specific procedure for an inaction claim was not confirmed.
+- **Suing directly:** Tribunale under Art. 152 Codice and Art. 10 d.lgs. 150/2011 (same single-judge procedure), which can award damages and protective orders. The Garante may file written observations. Representative actions under d.lgs. 28/2023 (Arts. 140-ter ff. Consumer Code) cover GDPR via the annex. Milan Tribunal, 11 December 2025, declared admissible a collective damages action by Verbraucherzentrale Suedtirol against Meta over the Facebook scraping of 533 million users. Third-sector bodies can also represent data subjects (Art. 142, Art. 10 d.lgs. 150/2011).
+- **Case: OpenAI (ChatGPT), EUR 15 million annulled (2024-2026).** Garante fined OpenAI EUR 15 million in December 2024. The Rome Tribunal suspended the fine in March 2025 and annulled it on 20 March 2026. Whether the Garante appealed to the Cassazione was not confirmed.
+- **Case: VZS v Meta Platforms Ireland (collective action) (2025).** Milan Tribunal business section held admissible a representative action for non-material damages from the 2018-2019 Facebook data scraping, treating loss of control over data as potentially compensable if actually experienced.
+- Appeals against the DPA go to the ordinary civil Tribunale, not the administrative courts, with no appeal on the merits: straight to the Cassazione.
+- Pay-half option: comply and pay 50% within the appeal window to close the case (Art. 166(8) Codice).
+- Statutory nine-month deadline (extendable to twelve) for deciding complaints (Art. 143 Codice).
+- National criminal offences for unlawful processing sit alongside GDPR fines, and fines already paid reduce the criminal penalty (Art. 167(6)).
+
+### Latvia
+
+*EU member.* You are expected to ask the organisation to fix the problem first, then send a signed complaint in Latvian to the Data State Inspectorate, attaching proof of your request. The Inspectorate investigates and should decide within six months; it can order changes or fine the organisation. A fined company challenges it first with the Inspectorate's director, then in an ordinary district court and finally a regional court.
+
+**Route of a fine:** DVI -> DVI director -> District court -> Regional court
+
+- **Authority:** Data State Inspectorate (Datu valsts inspekcija). Single authority headed by a director, not a collegial body. The Cabinet appoints the director on a selection commission's recommendation for five years, for at most two consecutive terms (Section 6 Personal Data Processing Law). The law declares DVI independent; the Cabinet exercises only institutional supervision through the Minister for Justice, which does not extend to DVI's decisions (Section 3).
+- **Law:** Personal Data Processing Law (Fizisko personu datu apstrādes likums), adopted 21 June 2018, in force 5 July 2018, amended 2019 and 2021. GDPR fine proceedings also run under the general Administrative Liability Law (Administratīvās atbildības likums).
+- **Complaint:** Written complaint on the DVI template, sent by email with a qualified e-signature to pasts@dvi.gov.lv, through the state e-address system (latvija.gov.lv), by post or in person at Elijas iela 17, Riga. In Latvian. No fee mentioned. DVI must decide within six months of opening a case, extendable to one year for objective reasons and to two years where facts are hard to establish or the GDPR cooperation/consistency mechanism applies (Section 23.1 Personal Data Processing Law, added 2021). No time limit for complainants confirmed.
+- **Contact the organisation first?** Recommended and in practice expected: the DVI template asks for evidence of the prior request to the controller and any reply. Not a statutory admissibility condition as far as could be confirmed.
+- **Who decides:** DVI officials and the director. Published fine decisions (e.g. Tet, 2022) are issued by the DVI director under the Administrative Liability Law.
+- **Limitation:** Governed by the Administrative Liability Law: per the official English translation, Section 118 requires offence proceedings to be initiated within one year of the offence (or of the end of a continuing offence). Whether a longer period applies to GDPR fines not confirmed.
+- **Who fines:** DVI itself, by decision in administrative offence proceedings under the Administrative Liability Law (the Tet decision cites that law alongside GDPR Art. 83).
+- **Public bodies:** Public bodies themselves are not fined. Instead Section 38 Personal Data Processing Law lets DVI give officials of public-law entities a warning or a fine of up to 200 fine units (a fine unit is EUR 5 under the Administrative Liability Law, so up to EUR 1,000); DVI conducts these proceedings (Section 39).
+- **National specifics:** Fines on individual public officials rather than on the authority. Criminal Law Section 145 also criminalises unlawful activities with personal data causing substantial harm (up to two years' imprisonment, per LV portāls). DVI applies a published fine-calculation methodology.
+- **Appeal:** For fine decisions: contest within DVI to the director first, then appeal to a district (city) court (rajona (pilsētas) tiesa). For other DVI administrative acts (orders): appeal to the administrative courts under the Administrative Procedure Law (Section 24 Personal Data Processing Law). Deadline: Not confirmed. Set by the Administrative Liability Law (fines) or the Administrative Procedure Law (one month for administrative acts is the general rule, not confirmed for DVI specifically). Payment: For administrative acts of the director, no: Section 24 says an appeal does not suspend operation. For fine decisions, not confirmed.
+- **Further appeal:** Fine cases: appeal from the district court to a regional court (apgabaltiesa), whose decision is final per the Ministry of Justice summary of the Administrative Liability Law. Administrative act cases: administrative regional court and Supreme Court (Senate) cassation, not confirmed for DVI cases.
+- **If the authority does nothing:** Not confirmed. Presumably an application to the administrative court against failure to act under the Administrative Procedure Law, but no source located.
+- **Suing directly:** Ordinary civil courts (district/city courts at first instance). Per the English translation of the Personal Data Processing Law, claims for harm from GDPR breaches must be brought within five years of the harm or of the end of a continuing breach (Section 26). Not confirmed. Latvia's transposition of the Representative Actions Directive (EU) 2020/1828 and its application to GDPR claims could not be verified.
+- **Case: Tet (telecoms), EUR 1.2 million (initially EUR 1.6 million) (2022-2023).** DVI decision of 15 July 2022 under Art. 83(5)(a) for breaches including Art. 5(1)(a) and (d): Tet+ streaming accounts were activated without verifying identity, then invoiced and passed to debt collectors. The decision set EUR 1.6 million (a EUR 3.2 million base halved); the fine Tet challenged in court was EUR 1.2 million. The Riga City Court upheld it in April 2023 and Tet appealed in May 2023; the final outcome was not confirmed.
+- **Case: Lursoft IT, EUR 65,000 (appealed) (2020).** Business-register data provider fined EUR 65,000 for publishing restricted Enterprise Register documents without a legal basis and keeping insolvency records longer than the Insolvency Law allows. DVI noted in February 2021 that the company had appealed, so the fine was not final; the court outcome was not confirmed.
+- Two tracks: DVI orders are administrative acts reviewed by the administrative courts, while fines are administrative offence decisions reviewed by the ordinary courts (district then regional court).
+- Public authorities cannot be fined as such; their officials can be warned or fined up to 200 fine units (Section 38).
+- Statutory decision deadline of six months, extendable to two years in cross-border cases (Section 23.1).
+- The director is appointed by the Cabinet, and DVI is subject to institutional supervision by the Minister for Justice that does not extend to its decisions (Section 3).
+
+### Lithuania
+
+*EU member.* You can complain to the State Data Protection Inspectorate online, by post or in person, within two years of the problem, without first having to contact the organisation. The Inspectorate has up to six months to examine it and, before fining, must tell the organisation what it plans and let it respond. Anyone unhappy with the outcome can go to the Regional Administrative Court and then to the Supreme Administrative Court.
+
+**Route of a fine:** VDAI -> Regional Administrative Court -> Supreme Administrative Court
+
+- **Authority:** State Data Protection Inspectorate (Valstybinė duomenų apsaugos inspekcija). Single authority headed by a director appointed by the Government, not a collegial body (Arts 8-10 Law on Legal Protection of Personal Data). Per the 2021 English translation the director is accountable to the Government and the Minister of Justice (Art. 9(3)).
+- **Law:** Law on Legal Protection of Personal Data (Asmens duomenų teisinės apsaugos įstatymas, ADTAĮ), No I-1374, as recast with effect from 16 July 2018
+- **Complaint:** In person, by post or electronically (Art. 24(3)), including via the VDAI website. Data subjects and Art. 80(1) organisations may complain (Art. 24). No fee identified. Language assumed Lithuanian, not confirmed. Complaints are refused if more than two years have passed since the infringement (Art. 27). VDAI confirms receipt within three working days (Art. 26) and must examine a complaint within four months, extendable once by up to two months, six months maximum (Art. 30).
+- **Contact the organisation first?** Not required: Art. 27 contains no refusal ground for failing to approach the controller first.
+- **Who decides:** The VDAI director or a person authorised by the director (Art. 32(2)).
+- **Limitation:** A fine may be imposed only if no more than two years have passed since the infringement (Art. 32(3)).
+- **Who fines:** VDAI itself, by administrative decision. No court confirmation step.
+- **Public bodies:** Yes, but capped (Art. 33): for Art. 83(4) breaches up to 0.5% of the body's current-year budget or annual income, max EUR 30,000; for Art. 83(5)-(6) breaches up to 1%, max EUR 60,000.
+- **National specifics:** Two-year limitation on fines and on complaints. Separate journalism supervisor (Inspector of Journalist Ethics). The CJEU's fault requirement for GDPR fines (C-683/21) originated in a Lithuanian case.
+- **Appeal:** Regional Administrative Court (Regionų administracinis teismas), which decided the Vinted appeal in May 2025. It was created on 1 January 2024 when the Vilnius Regional Administrative Court, which heard earlier VDAI cases, absorbed the former Regional Administrative Court and took its name. Deadline: One month from delivery of the decision to the party (Law on Administrative Proceedings, as stated by the Supreme Administrative Court). Payment: Not confirmed.
+- **Further appeal:** Appeal to the Supreme Administrative Court of Lithuania (Lietuvos vyriausiasis administracinis teismas) within 30 days of the first-instance judgment.
+- **If the authority does nothing:** Not confirmed. VDAI decisions on complaints are appealable to the administrative court (Art. 31(5)); a specific route for Art. 78(2) inaction was not located.
+- **Suing directly:** Ordinary civil courts under the Code of Civil Procedure (court level by claim value), not confirmed in detail. Not confirmed. The national law refers to Art. 80(1) organisations lodging complaints (Art. 24(4)) but has no further provisions; transposition of the Representative Actions Directive for GDPR claims not verified.
+- **Case: Vinted, EUR 2.385 million (appealed) (2024-2026).** In July 2024 VDAI, as lead authority, fined the second-hand marketplace Vinted EUR 2,385,276 for mishandling erasure requests, unlawful 'shadow blocking' of users and accountability failures. Vinted's court challenge to the fine is suspended pending a parallel case on VDAI's February 2024 decisions finding the same breaches: the Regional Administrative Court dismissed that appeal on 23 May 2025, and in November 2025 the Supreme Administrative Court referred questions to the CJEU, still pending in 2026.
+- **Case: National Public Health Centre (KARANTINAS app), C-683/21 (2021-2023).** On 24 February 2021 VDAI fined the National Public Health Centre EUR 12,000 and the app developer EUR 3,000 over the COVID-19 KARANTINAS app. The Vilnius Regional Administrative Court referred questions to the CJEU, which held on 5 December 2023 (Grand Chamber) that a fine requires intentional or negligent infringement.
+- **Case: Payment initiation service (MisterTango), EUR 61,500 (2019).** One of VDAI's early GDPR fines: EUR 61,500 for excessive data collection, a data leak and failure to notify the breach within 72 hours. Appeal outcome not confirmed.
+- Strict two-year time bars: on complaints (Art. 27) and on imposing fines (Art. 32(3)).
+- Public bodies can be fined but only up to EUR 30,000 or EUR 60,000 and a percentage of their budget (Art. 33).
+- A formal 'proposal to impose a fine' with a right to written or oral explanations precedes every fine (Art. 34).
+- Journalistic processing is supervised by the Inspector of Journalist Ethics, not VDAI.
+
+### Luxembourg
+
+*EU member.* You complain to the CNPD, preferably with its online form, ideally after first asking the company to fix things. If the CNPD opens an investigation, one commissioner investigates and sends the company a list of objections, and the other commissioners hear both sides and decide on any fine. The company can challenge the decision within three months at the Administrative Tribunal and then at the Administrative Court, as Amazon did, winning the annulment of its EUR 746 million fine in 2026 on fault grounds.
+
+**Route of a fine:** CNPD restricted formation -> Administrative Tribunal -> Administrative Court
+
+- **Authority:** National Commission for Data Protection (Commission nationale pour la protection des données). Collegial body: a college of four members, one of whom is president, plus four deputy members, appointed for six-year terms renewable once (Arts 16-17 Law of 1 August 2018). The college decides by majority, the president having the casting vote (Art. 36).
+- **Law:** Law of 1 August 2018 on the organisation of the National Commission for Data Protection and the general data protection framework (Loi du 1er août 2018 portant organisation de la CNPD et du régime général sur la protection des données)
+- **Complaint:** Online complaint form on the CNPD website (recommended), or a printed form posted to CNPD, Service des réclamations, 15 boulevard du Jazz, L-4370 Belvaux (Art. 9 requires CNPD to provide a form). Form available in French, English and German. No fee mentioned. No statutory deadline for CNPD to decide and no time limit for complaining were found in the 2018 law.
+- **Contact the organisation first?** Expected but not strictly required: CNPD asks people to exercise their rights with the controller first, but accepts complaints where the controller has not answered or where approaching it is difficult or impossible.
+- **Who decides:** The college sitting as a 'formation restreinte' without the member who led the investigation (Art. 41 bars the head of investigation from deliberating). For example, Decision 5FR/2023 was taken by the president and two commissioners.
+- **Limitation:** CNPD's powers lapse five years after the infringement ceased (Art. 53); fines lapse five years after the decision becomes final (Art. 54).
+- **Who fines:** CNPD itself, by administrative decision of the restricted formation. No court confirmation step.
+- **Public bodies:** The State and municipalities (communes) cannot be fined (Art. 48). Other public-law bodies are not excluded by that wording.
+- **National specifics:** CNPD can impose periodic penalty payments of up to 5% of average daily turnover (Art. 49). Wilfully obstructing CNPD is a criminal offence punishable by eight days to one year of imprisonment and/or a fine of EUR 251 to 125,000 (Art. 51).
+- **Appeal:** Administrative Tribunal (Tribunal administratif), which can review the merits and replace the decision (recours en réformation, Art. 55). Deadline: Three months from notification of the decision; the appeal must be filed through a lawyer (avocat à la Cour), as stated in CNPD decisions. Payment: Not automatically, as far as could be confirmed. In the Amazon case, effects of the decision were reported as suspended pending the further appeal, but the legal basis was not verified.
+- **Further appeal:** Appeal to the Administrative Court (Cour administrative), the highest administrative jurisdiction; no further appeal. The appeal deadline is not confirmed by a source in this research (40 days is the general rule under the Law of 21 June 1999).
+- **If the authority does nothing:** Not confirmed. Presumably an action before the Administrative Tribunal, but no source located.
+- **Suing directly:** Ordinary civil courts (justice de paix or district court, depending on the value of the claim; thresholds not confirmed). Since 25 November 2025 the Law of 20 November 2025 (amending the Consumer Code, transposing Directive (EU) 2020/1828) allows collective actions (recours collectif) for consumers, explicitly covering professionals' GDPR breaches, and CNPD itself is a qualified entity able to bring them.
+- **Case: Amazon Europe Core: EUR 746 million fine (CNPD 2021, upheld by the Administrative Tribunal 2025) (2021-2025).** On 15 July 2021 CNPD fined Amazon Europe Core EUR 746 million for behavioural advertising based on legitimate interest without a valid legal basis, plus transparency and data subject rights failures, and ordered compliance. On 18 March 2025 the Administrative Tribunal dismissed Amazon's appeal and confirmed the fine and corrective measures; Amazon appealed further.
+- **Case: Amazon v CNPD: Administrative Court annuls the fine (case 52757C) (2026).** On 12 March 2026 the Administrative Court largely confirmed CNPD's findings of breach but annulled the EUR 746 million fine, because CNPD had not assessed whether Amazon acted intentionally or negligently (as the CJEU required in C-807/21 and C-683/21) and had not weighed alternatives to a fine. The case was sent back to CNPD, which said it would continue the case; the compliance order was moot as Amazon had already brought its practices into compliance. No further appeal exists.
+- **Case: Decision 5FR/2023: complaint-based fine (2023).** A typical complaint-driven case: complaint March 2021, investigation opened July 2022, statement of objections January 2023, hearing April 2023, decision of 5 July 2023 imposing EUR 1,500. Shows the full procedure and the three-month appeal clause.
+- Lead authority for several large online platforms established in Luxembourg, including Amazon, so its decisions can have EU-wide reach.
+- Investigation and decision are separated inside the college: the commissioner who led the investigation cannot sit on the restricted formation (Art. 41).
+- The State and municipalities are immune from fines (Art. 48).
+- CNPD can itself bring consumer collective actions for GDPR breaches since November 2025.
+
+### Malta
+
+*EU member.* You complain online to the Information and Data Protection Commissioner in English or Maltese, and the Commissioner investigates and issues a binding decision, possibly with a fine. Either side has 20 days to appeal to a specialist Appeals Tribunal and then 20 days more to go to the Court of Appeal, and any fine is only payable once those appeals are over. If you want compensation, you sue the organisation in the civil court within a year of finding out.
+
+**Route of a fine:** IDPC -> Appeals Tribunal -> Court of Appeal
+
+- **Authority:** Information and Data Protection Commissioner (Kummissarju għall-Informazzjoni u l-Protezzjoni tad-Data). Single commissioner, not a collegial body. The Commissioner is appointed by the Prime Minister after consulting the Leader of the Opposition (Art. 11 Data Protection Act). The office also handles freedom of information complaints.
+- **Law:** Data Protection Act, Chapter 586 of the Laws of Malta (Act XX of 2018), amended by Act XII of 2021 and Legal Notice 212 of 2023
+- **Complaint:** Online complaint form on the IDPC register portal. Complaints and supporting documents must be in Maltese or English (other documents need a translation). Anonymous complaints are not accepted. No fee mentioned. The Act sets no deadline for the Commissioner to decide a complaint and no time limit for complaining, as far as could be confirmed.
+- **Contact the organisation first?** Not confirmed. The IDPC complaint page does not state it as a requirement.
+- **Who decides:** The Commissioner.
+- **Limitation:** Not confirmed. No limitation period for infringements was found in the Act.
+- **Who fines:** The Commissioner, by administrative decision. The fine is a civil debt due to the Commissioner and becomes an executive title once the decision is final (Art. 20).
+- **Public bodies:** Yes, with caps (Art. 21): up to EUR 25,000 per violation plus EUR 25 per day of continued breach for Art. 83(4) infringements, and up to EUR 50,000 per violation plus EUR 50 per day for Art. 83(5)-(6) infringements.
+- **National specifics:** A fine does not apply until the person fined has exhausted the appeals under Arts 26 and 29 (Art. 28(3)). Criminal offences (Art. 22): fine (multa) of EUR 1,250 to 50,000 or six months' imprisonment, e.g. for giving false information or not complying with the Commissioner's lawful requests.
+- **Appeal:** Information and Data Protection Appeals Tribunal (Art. 26): a chairperson who is an advocate of at least 12 years' standing and two members, appointed by the Minister (Art. 24). Grounds: material error of fact, material procedural error, error of law, or material illegality, unreasonableness or disproportionality. Deadline: 20 days from service of the Commissioner's decision (Art. 26). Payment: Other effects of an appealed decision are not suspended unless the Tribunal or Court of Appeal orders otherwise, but an administrative fine does not apply until appeals are exhausted (Art. 28).
+- **Further appeal:** Any party may appeal to the Court of Appeal, constituted under Art. 41(6) of the Code of Organization and Civil Procedure (inferior jurisdiction), within 20 days of notification of the Tribunal's decision (Art. 29). The IDPC describes this further appeal as on questions of law.
+- **If the authority does nothing:** Per the 2020 consolidated text of the Act, where the Commissioner fails to act as required by Art. 78(2) GDPR, the data subject may appeal to the Tribunal, which can order the Commissioner to handle the complaint (Art. 31).
+- **Suing directly:** First Hall of the Civil Court, by an action for an effective judicial remedy against a controller or processor, to be brought within 12 months of the data subject becoming aware of the infringement (Art. 30). Not confirmed. Whether Malta's collective proceedings rules or its transposition of the Representative Actions Directive cover GDPR claims could not be verified.
+- **Case: MFSA data leak (Ellul and Schranz): Tribunal and Court of Appeal (2024-2025).** The Appeals Tribunal held the Malta Financial Services Authority responsible for leaking a licence cancellation to a foreign website before it was officially announced. On 12 November 2025 the Court of Appeal dismissed all five MFSA grounds, holding that the MFSA had to show the breach was not imputable to it and failed to do so, and ordered it to pay costs. Whether a fine was imposed was not confirmed.
+- **Case: Healthcare provider, EUR 20,000 (2025).** IDPC decision fining a healthcare provider a total of EUR 20,000 for breaches of Arts 5(1)(a), 6(1), 14, 16 and 37(1)(c) GDPR, split between lawfulness and transparency, rectification and failure to designate a DPO. Appeal status not confirmed.
+- **Case: Aziz v Jobsplus: Court of Appeal (Inferior Jurisdiction) (2024).** A complainant's appeal against two IDPC decisions, already rejected by the Tribunal, was declared null by the Court of Appeal on 28 February 2024 because two separate decisions had been challenged in one application. Illustrates the strict procedural route through the Tribunal and the Court of Appeal.
+- Fines are effectively suspended until all appeals are exhausted (Art. 28(3)), unlike other corrective measures.
+- Public authorities can be fined but only up to EUR 25,000 or EUR 50,000 per violation, plus small daily penalties (Art. 21).
+- Very short appeal windows: 20 days to the Tribunal and 20 days to the Court of Appeal.
+- Direct court actions against controllers have a short 12-month limitation from awareness (Art. 30).
+
+### Netherlands
+
+*EU member.* You complain to the Dutch AP, usually online. If the AP fines a company, the company must first ask the AP itself to reconsider (an objection) within six weeks, and only then go to a district court and, finally, to the Council of State. If you are unhappy with how the AP handled your complaint, the same objection-then-court route is open to you, and for damages you go to the civil courts, alone or through a collective action foundation.
+
+**Route of a fine:** AP -> Objection to the AP -> District court -> Council of State
+
+- **Authority:** Dutch Data Protection Authority (Autoriteit Persoonsgegevens). Collegial board: the AP consists of a chair and two other members (Art. 7(1) UAVG). Designated as the GDPR supervisory authority by Art. 6 UAVG.
+- **Regional authorities:** Single national authority; no regional DPAs.
+- **Law:** Uitvoeringswet Algemene verordening gegevensbescherming (UAVG, GDPR Implementation Act), in force 25 May 2018, read with the General Administrative Law Act (Algemene wet bestuursrecht, Awb) for all procedure
+- **Complaint:** Complaints go to the AP via the complaint form on its website; no fee. Language options and any requirement beyond the form were not confirmed (the AP website blocked automated access). No statutory time limit for complaining was found. The AP's decision on a complaint is a decision (besluit) under the Awb, so the general Awb rule applies: the statutory term, or else a reasonable term that defaults to eight weeks (Art. 4:13 Awb). Under Art. 78(2) GDPR the complainant can also go to court if the AP has not informed them of progress or outcome within three months.
+- **Contact the organisation first?** Not confirmed from a primary source. In practice the AP expects people to exercise their rights with the organisation first, but no statutory precondition was found in the UAVG.
+- **Who decides:** The AP board (chair plus two members) takes sanction decisions; fine levels follow the AP Fining Policy Rules 2023 (Boetebeleidsregels AP 2023, Staatscourant 2023, 34541).
+- **Limitation:** General Awb rule: the power to impose an administrative fine lapses five years after the infringement (Art. 5:45 Awb). Not checked against the current consolidated Awb text.
+- **Who fines:** The AP itself, by administrative decision (Art. 14 UAVG), up to the GDPR maxima. No court confirmation step.
+- **Public bodies:** Yes. Art. 18 UAVG lets the AP fine public authorities and bodies up to the same maxima as in Art. 83(4)-(6) GDPR. The Tax Administration (Belastingdienst) was fined EUR 2.75 million (2021) and EUR 3.7 million (2022).
+- **National specifics:** Fines are often combined with orders subject to penalty payments (last onder dwangsom). After the Clearview decision the AP said it was examining whether directors could be held personally liable; outcome not confirmed.
+- **Appeal:** First, objection (bezwaar) to the AP itself within six weeks (Art. 6:7 Awb). Then appeal (beroep) to a district court (rechtbank), administrative law section; territorial competence follows Art. 8:7 Awb (in practice e.g. Rechtbank Midden-Nederland for VoetbalTV, Rechtbank Amsterdam for KNLTB). The objection stage can be skipped by direct appeal (rechtstreeks beroep) if the AP agrees (Art. 7:1a Awb). Deadline: Six weeks for objection, six weeks for appeal to the rechtbank, six weeks for further appeal (Arts. 6:7 and 6:8 Awb). Payment: Not confirmed. The general Awb rule is that objection and appeal do not suspend a decision (Art. 6:16 Awb); whether a specific rule defers payment of AP fines could not be verified.
+- **Further appeal:** Further appeal (hoger beroep) to the Administrative Jurisdiction Division of the Council of State (Afdeling bestuursrechtspraak van de Raad van State, ABRvS), which is final; it can refer questions to the CJEU.
+- **If the authority does nothing:** Under the Awb, if the AP fails to decide on time, the complainant sends a notice of default (ingebrekestelling) and can then appeal to the rechtbank against failure to decide in time (Arts. 6:2 and 6:12 Awb).
+- **Suing directly:** Against private controllers, a data subject can petition the district court (rechtbank) within six weeks of the controller's decision on a rights request, without a lawyer (Art. 35 UAVG). Decisions by public bodies on such requests are decisions under the Awb (Art. 34 UAVG) and go through objection and administrative appeal. Damages claims under Art. 82 GDPR go to the civil courts. Collective actions, including for damages, under the WAMCA (Art. 3:305a Dutch Civil Code, in force 1 January 2020). On 7 October 2025 the Amsterdam Court of Appeal held in the TikTok case that non-material privacy damages can be claimed collectively, reversing the district court. Other privacy class actions run against Meta (Data Privacy Stichting), Oracle/Salesforce and Google.
+- **Case: Uber, EUR 290 million (transfers to the US) and EUR 825 million (automated driver deactivation) (2024 and 2026).** In August 2024 the AP fined Uber EUR 290 million for transferring European drivers' data to the US without adequate safeguards; Uber objected and the AP has published a decision on objection (outcome not confirmed). On 21 August 2026 the AP fined Uber EUR 825 million for deactivating driver accounts by automated means without meaningful human involvement or adequate information, after complaints originating in France; Uber said it would appeal.
+- **Case: VoetbalTV, EUR 575,000 annulled in court (2019 to 2022).** The AP fined VoetbalTV EUR 575,000 in 2019, taking the view that a purely commercial interest can never be a legitimate interest. Rechtbank Midden-Nederland annulled the fine and the Council of State upheld the annulment in 2022; the KNLTB case (EUR 525,000) later produced CJEU C-621/22 (4 October 2024) confirming that commercial interests can be legitimate.
+- **Case: Clearview AI (EUR 30.5 million) and Netflix (EUR 4.75 million) (2024).** In 2024 the AP fined Clearview AI EUR 30.5 million plus penalty payments for its facial recognition database, and in December 2024 fined Netflix EUR 4.75 million for inadequate transparency, following a noyb complaint. Netflix contested the decision; the court outcome was not confirmed.
+- Mandatory internal objection (bezwaar) to the AP before the court, unless both sides agree to direct appeal; the AP's 'decision on objection' is what the court reviews.
+- Three-tier route: AP objection, district court, then the Council of State as final instance.
+- The WAMCA makes the Netherlands a preferred venue for privacy class actions against large platforms, including collective non-material damages after the October 2025 TikTok appeal ruling.
+- Since 2024 the AP has become one of the EU's heaviest fining authorities as lead authority for Uber, which has its EU headquarters in Amsterdam.
+
+### Poland
+
+*EU member.* You complain to the Polish DPA (UODO) on paper or through the government's ePUAP portal, usually after first asking the company yourself. The President of UODO decides in a single step; anyone unhappy with the decision, including you, can go to the administrative court in Warsaw within 30 days and then to the Supreme Administrative Court. For compensation you sue the company in the regional civil court.
+
+**Route of a fine:** President of UODO -> WSA Warsaw -> Supreme Administrative Court
+
+- **Authority:** Personal Data Protection Office (headed by the President of the Personal Data Protection Office) (Urząd Ochrony Danych Osobowych (Prezes Urzędu Ochrony Danych Osobowych)). Monocratic: the President of the Office (Prezes UODO) is the supervisory authority and decides personally; the Office is the supporting administration. The current President is Mirosław Wróblewski.
+- **Regional authorities:** Single national authority based in Warsaw; no regional DPAs.
+- **Law:** Act of 10 May 2018 on the protection of personal data (ustawa o ochronie danych osobowych), Dz.U. 2018 poz. 1000; consolidated text Dz.U. 2019 poz. 1781, with further amendments in 2026 (Dz.U. 2026 poz. 252, 548, 1003; content of these amendments not confirmed)
+- **Complaint:** On paper at or by post to UODO, ul. Stanisława Moniuszki 1A, 00-014 Warszawa, or electronically via the ePUAP e-government platform. No fee is mentioned. Proceedings are in Polish under the Code of Administrative Procedure (KPA). No time limit for complaining was found. The KPA's general deadlines (one month, two months for complex cases, Art. 35 KPA) apply in principle, but complaint proceedings commonly take much longer (not confirmed from a primary source).
+- **Contact the organisation first?** Yes, for rights requests: UODO states that its power to order a controller to grant a request requires that the person first made the request directly to the controller, which has one month (extendable by two) to respond. UODO recommends attaching correspondence with the controller.
+- **Who decides:** The President of UODO, personally, by administrative decision.
+- **Limitation:** Art. 106 of the Act excludes Arts. 189d-189f and 189k KPA but not Art. 189g, so the KPA's general five-year limitation for administrative fines appears to apply (not confirmed by case law or UODO statement).
+- **Who fines:** The President of UODO by administrative decision. Euro amounts in Art. 83 GDPR are converted into PLN at the National Bank of Poland average rate (Art. 103).
+- **Public bodies:** Yes, but capped: up to PLN 100,000 for public finance sector units and research institutes, and up to PLN 10,000 for certain other public entities (Art. 102). The PLN 10,000 tier is understood to cover state and local cultural institutions (not confirmed in the fetched text).
+- **National specifics:** Criminal offences in the Act: unlawful processing (up to two years' imprisonment, three for special-category data, Art. 107) and obstructing an inspection or withholding fine-base data (up to two years, Art. 108). Fines are payable only 14 days after the deadline to go to court expires or the court judgment becomes final, and the President may defer or allow instalments (Art. 105).
+- **Appeal:** Voivodeship Administrative Court in Warsaw (Wojewódzki Sąd Administracyjny w Warszawie, WSA), by complaint (skarga) lodged through the President of UODO. Deadline: 30 days from service of the decision (Art. 53(1) of the Law on proceedings before administrative courts, PPSA). Payment: Effectively yes for fines: payment falls due 14 days after the appeal deadline expires or the court ruling becomes final (Art. 105(1) of the Act).
+- **Further appeal:** Cassation appeal (skarga kasacyjna) to the Supreme Administrative Court (Naczelny Sąd Administracyjny, NSA), within 30 days of service of the WSA judgment with reasons (Art. 177 PPSA). Both the company and the President of UODO can file. The NSA can annul and send the case back, as in Morele.net.
+- **If the authority does nothing:** A complainant can first send a reminder (ponaglenie, Art. 37 KPA) and then file a complaint against inaction or excessive length (skarga na bezczynność / przewlekłość) to the WSA in Warsaw (Art. 53(2b) PPSA). Not confirmed from a UODO page.
+- **Suing directly:** Claims under Arts. 79 and 82 GDPR go to the regional court (sąd okręgowy) as court of first instance regardless of value (Art. 93 of the Act); the Civil Code applies to matters the GDPR does not regulate (Art. 92). Not confirmed. Poland has a group proceedings act (Act of 17 December 2009 on pursuing claims in group proceedings); whether and how the Representative Actions Directive transposition covers GDPR claims was not verified.
+- **Case: Morele.net: fine annulled by the NSA, reissued higher, upheld by the WSA (2019 to 2024).** UODO fined the online retailer PLN 2.83 million in 2019 over a 2018 breach affecting about 2.2 million customers; the WSA upheld it but on 9 February 2023 the NSA annulled both rulings, finding UODO had not shown it had the technical expertise to assess security without an expert. In a new decision of 17 January 2024 UODO imposed over PLN 3.8 million, which the WSA upheld on 16 September 2024 (finality not confirmed).
+- **Case: Poczta Polska: PLN 27 million fine annulled by the WSA, UODO appeals to the NSA (2025 to 2026).** UODO fined the state postal operator over PLN 27 million in 2025 for processing data of about 30 million voters for the planned 2020 postal presidential election without a legal basis. The WSA in Warsaw annulled the decision, accepting a Prime Minister's decision as a legal basis; on 1 June 2026 the President of UODO announced a cassation appeal, arguing an individual administrative act cannot be a legal basis under Art. 6(3) GDPR.
+- **Case: Santander Bank Polska: PLN 545,748 fine upheld by the NSA (2026).** UODO fined the bank for failing to notify employees of a breach involving access to their data on the social insurance (ZUS) portal. The WSA upheld the decision and on 6 March 2026 the NSA dismissed the bank's cassation appeal, holding that the possibility of unauthorised access, not proof of actual access, triggers the Art. 34 GDPR duty.
+- Single-instance procedure (Art. 7(2)): there is no request for reconsideration, so the only remedy is the WSA in Warsaw.
+- Public bodies can be fined but only up to PLN 100,000 (or PLN 10,000 for some entities), under Art. 102.
+- Criminal offences for unlawful processing and for obstructing inspections sit alongside the administrative fines (Arts. 107-108).
+- Fines are not payable until court review is over (Art. 105), and courts have annulled high-profile fines (Morele.net, Poczta Polska), though UODO also wins at the NSA (Santander). Recent large fines include Glovo (PLN 5.9 million, March 2026).
+
+### Portugal
+
+*EU member.* You complain to the CNPD using an online form, without paying anything. If the CNPD finds a breach, it charges the organisation, hears its defence and then decides as a board whether to fine it. The organisation can challenge the fine in the administrative courts, where short time limits mean parts of a fine can lapse during a long appeal.
+
+**Route of a fine:** CNPD -> Administrative court -> Central Administrative Court South
+
+- **Authority:** National Data Protection Commission (Comissão Nacional de Proteção de Dados). Collegial body that decides by deliberation (deliberação); designated national supervisory authority by Art. 3 of Law 58/2019, with its organisation in Law 43/2004. Number of members (understood to be seven) not confirmed.
+- **Regional authorities:** Single national authority, based in Lisbon; no regional DPAs.
+- **Law:** Law 58/2019 of 8 August (Lei n.º 58/2019), implementing the GDPR; CNPD organisation in Law 43/2004 of 18 August. The consolidated text on PGD Lisboa shows no amendments to Law 58/2019.
+- **Complaint:** Online forms on the CNPD website: a general form plus specific forms for unsolicited marketing (spam), biometric data and video surveillance. Postal and email contact also available (Av. D. Carlos I, 134, 1º, 1200-651 Lisboa; geral@cnpd.pt). No fee is mentioned; Portuguese is the working language. No time limit for complaining and no statutory deadline for the CNPD to decide was found.
+- **Contact the organisation first?** Not required according to the CNPD complaint page, which does not ask complainants to contact the organisation first.
+- **Who decides:** The CNPD as a collegial body, by deliberation (e.g. Deliberation 1072/2022 on the INE census).
+- **Limitation:** Proceedings lapse three years after a very serious offence and two years after a serious one (Art. 40 Law 58/2019); imposed fines lapse after three years if over EUR 100,000 and two years otherwise (Art. 41). These short periods have cut fines on appeal (Lisbon municipality case).
+- **Who fines:** The CNPD itself, by deliberation in an administrative offence procedure. 60% of fine revenue goes to the State and 40% to the CNPD (Art. 42).
+- **Public bodies:** Yes: fines apply equally to public and private entities (Art. 44(1)), with no special cap. Art. 44(2) let public entities ask for a waiver of fines only during the first three years after the law entered into force (until August 2022), and the CNPD considered requests only after a charge, case by case (Deliberation 2019/495). Courts have confirmed fines on public bodies (Lisbon municipality).
+- **National specifics:** In Deliberation 2019/494 (3 September 2019) the CNPD announced it would disapply several provisions of Law 58/2019 as contrary to the GDPR, including parts of Art. 37 and Art. 38 (lower SME maxima) and Art. 39(1) and (3) (extra criteria and a prior-warning requirement). Law 58/2019 also creates criminal offences, e.g. incompatible use of data (Art. 46) and unauthorised access (Art. 47).
+- **Appeal:** The administrative courts, not the criminal courts: Art. 34 Law 58/2019 gives them jurisdiction over all CNPD decisions, including fines. The Tribunal dos Conflitos confirmed this on 2 July 2024 (proc. 015/23), giving jurisdiction to the Lisbon Administrative Court rather than the Lisbon local criminal court. Deadline: Not confirmed. Payment: Not confirmed.
+- **Further appeal:** Appeal to the Central Administrative Court South (Tribunal Central Administrativo Sul), as in the Lisbon municipality case; any further appeal to the Supreme Administrative Court not confirmed.
+- **If the authority does nothing:** Not confirmed. Presumably an action before the administrative courts under Art. 34 Law 58/2019, but no source specific to CNPD inaction was found.
+- **Suing directly:** Civil liability is governed by Art. 33 Law 58/2019; claims against public bodies go to the administrative courts. The court allocation for claims against private controllers was not confirmed in the text. Not confirmed. Portugal has the popular action (ação popular, Law 83/95), and transposed the Representative Actions Directive, but its application to GDPR claims was not verified.
+- **Case: Lisbon municipality ('Russiagate'): EUR 1.25 million cut on appeal by limitation (2021 to 2026).** The CNPD fined Lisbon City Council EUR 1.25 million in January 2022 for sending personal data of anti-Putin protest organisers to the Russian embassy and other entities. On 1 August 2025 the Central Administrative Court South dismissed the council's appeal but, with 46 offences time-barred, the fine stood at EUR 738,000. In September 2026 the same court partly upheld the council's further appeals and set the fine at EUR 463,700 as more offences had lapsed; the council said it would not appeal further.
+- **Case: National Statistics Institute (INE), 2021 census: EUR 4.3 million (2022).** In Deliberation 1072/2022 (announced 12 December 2022) the CNPD fined INE EUR 4.3 million for unlawfully processing health and religion data, using Cloudflare without proper vetting, transferring data to the US, lacking a DPIA and failing to inform respondents. INE announced a court challenge; the outcome was not confirmed.
+- The CNPD openly disapplies parts of its own implementing law that it considers contrary to the GDPR (Deliberation 2019/494).
+- Public bodies can be fined with no cap; the three-year window in which they could ask for a fine waiver (Art. 44(2)) closed in August 2022.
+- Very short limitation periods (two or three years from the offence, Art. 40) have reduced fines on appeal.
+- Since the Tribunal dos Conflitos ruling of 2 July 2024, challenges to CNPD fines go to the administrative courts, not the criminal courts.
+
+### Romania
+
+*EU member.* You first ask the organisation to fix the problem and give it a month; if that fails, you complain to ANSPDCP, which must tell you within 45 days whether it will take the case. Inspectors investigate and, if they find a breach, issue a written report that can include a warning or a fine. The organisation has 15 days to challenge the fine at the local tribunal, with a final appeal to the Court of Appeal.
+
+**Route of a fine:** ANSPDCP sanction report -> Tribunal -> Court of Appeal
+
+- **Authority:** National Supervisory Authority for Personal Data Processing (Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal). Headed by a President (single head, not a college), who approves investigations and decides sanctions directly or through delegated department heads; organised under Law 102/2005 as amended by Law 129/2018.
+- **Regional authorities:** Single national authority based in Bucharest; no regional DPAs.
+- **Law:** Law 190/2018 on measures to implement the GDPR (Legea nr. 190/2018); ANSPDCP organisation and sanction procedure in Law 102/2005 (amended by Law 129/2018); contravention regime of Government Ordinance 2/2001 applies in the alternative
+- **Complaint:** Complaints go to ANSPDCP under its Complaint Resolution Procedure (Decision 133/2018) and must meet the petition rules of Government Ordinance 27/2002, including full identification, or they may be filed without action. Exact channels (online form, email, post) and any fee were not confirmed; the website is in Romanian, English and French. ANSPDCP must tell the complainant whether the complaint is admissible within at most 45 days of registration. No time limit for complaining was confirmed.
+- **Contact the organisation first?** For rights requests, in effect yes: ANSPDCP's complaints page says you may complain if the controller has not answered within one month (exceptionally extendable by two months).
+- **Who decides:** The ANSPDCP President or delegated heads of control departments, with fines above EUR 300,000 reserved to the President.
+- **Limitation:** Three years from the infringement for applying a fine, according to a practitioner source; primary text not confirmed.
+- **Who fines:** ANSPDCP itself, through a report of finding and sanctioning (an administrative contravention act), not a court. Main penalties are the warning and the fine (Art. 15 Law 190/2018).
+- **Public bodies:** Yes, but with a warning first: ANSPDCP first issues a report with a remediation plan and a deadline of up to 90 days (Art. 13 Law 190/2018), and only then fines, capped at RON 10,000-100,000 or RON 10,000-200,000 depending on the GDPR provision breached (Art. 14).
+- **National specifics:** Fines are set in euro equivalent but are contravention fines under the general Romanian contravention regime (GO 2/2001). Individual fines are modest compared with other EU countries: in January to April 2026 ANSPDCP issued 25 fines totalling EUR 239,000.
+- **Appeal:** The administrative litigation section (secția de contencios administrativ) of the competent tribunal (tribunal), on a challenge (contestație) by the controller or processor (Decision 161/2018, Art. 28(1)). Deadline: 15 days from service of the report or decision. Payment: Partly: a challenge suspends only payment of the fine, until a final court judgment; other measures are not suspended (Decision 161/2018, Art. 28(2)).
+- **Further appeal:** Appeal (recurs) to the Court of Appeal, whose ruling is final; e.g. Tribunalul Cluj then Curtea de Apel Cluj in Banca Transilvania. The Court of Appeal can refer questions to the CJEU, as the Bucharest Court of Appeal did in the avocatnet.ro (Inteligo Media) case.
+- **If the authority does nothing:** Not confirmed. Presumably an action under the administrative litigation law (Law 554/2004), but no source was found.
+- **Suing directly:** Not confirmed: the court competent for Art. 79 and Art. 82 GDPR claims was not found in Law 190/2018. Not confirmed: the transposition of the Representative Actions Directive and its application to GDPR claims was not verified.
+- **Case: Banca Transilvania: EUR 100,000 upheld on final appeal (2020 to 2022).** On 26 November 2020 ANSPDCP fined the bank EUR 100,000 under Arts. 32 and 5(1)(f) GDPR after staff shared sensitive customer data via WhatsApp. Tribunalul Cluj and then Curtea de Apel Cluj (final ruling of 13 April 2022) upheld the fine, finding the bank could not prove its staff had actually been trained.
+- **Case: Inteligo Media (avocatnet.ro): CJEU sides with the publisher (2019 to 2025).** ANSPDCP fined the publisher RON 42,714 (about EUR 9,000) in September 2019 over daily newsletters sent to free-account users. After challenges at Tribunalul București, the Bucharest Court of Appeal referred questions to the CJEU, which on 13 November 2025 found such newsletters can fall within the ePrivacy soft opt-in exception if conditions are met; the final national outcome was not confirmed.
+- Sanctions use the general contravention model: a report of finding and sanctioning is drawn up by inspectors and challenged in court, rather than a formal decision by a board.
+- Public bodies get a warning and a remediation plan before any fine, and their fines are capped at RON 100,000 or 200,000 (Arts. 13-14 Law 190/2018).
+- Only 135 of 448 GDPR fines issued from 2019 to May 2026 were challenged in court; of 96 concluded cases, 72 ended in ANSPDCP's favour (press release of 25 May 2026).
+- Challenges must be filed within a short 15-day window, and they suspend payment.
+
+### Slovakia
+
+*EU member.* You send the Office a signed proposal (on paper, electronically or in person), showing you first tried to exercise your rights with the organisation and within three years of the problem. You become a party, and the Office normally has 90 days to decide, extendable by up to 180 more, and can fine companies and public bodies alike. Either side can appeal within 15 days to the Office's President and then take the case to the administrative courts, with a final cassation complaint to the Supreme Administrative Court.
+
+**Route of a fine:** ÚOOÚ SR -> President of the Office (rozklad) -> Administrative Court -> Supreme Administrative Court
+
+- **Authority:** Office for Personal Data Protection of the Slovak Republic (Úrad na ochranu osobných údajov Slovenskej republiky). Single national office headed by a President (predseda) with a Vice-President; not a collegial body. The President decides on appeals (rozklad) against the Office's first-instance decisions.
+- **Law:** Act No. 18/2018 Coll. on the Protection of Personal Data (zákon č. 18/2018 Z. z. o ochrane osobných údajov)
+- **Complaint:** A data subject files a proposal to start proceedings (návrh na začatie konania, § 100) in writing on paper, electronically with an authorised signature (e.g. via slovensko.sk), or orally on record at the Office; an unsigned email must be confirmed in paper or authorised electronic form within three working days. It must give the proposer's name, address and signature, identify the controller, describe the alleged breach and attach evidence. No fee mentioned. Third parties can only send a tip (podnet). The Office may set aside a proposal if more than three years had passed since the event complained of when it was received. It must decide within 90 days of starting proceedings and may extend this in justified cases by up to 180 days (up to 270 days in total), per the Office's guidance; exact § not confirmed.
+- **Contact the organisation first?** Effectively yes for rights complaints: the proposal must include documents showing the data subject tried to exercise their rights with the controller, where relevant.
+- **Who decides:** Office departments decide at first instance; the President of the Office decides on rozklad.
+- **Limitation:** A fine can be imposed within two years of the Office discovering the breach and at most five years from when it occurred (secondary source; § number not confirmed). Procedural fines (poriadková pokuta, § 105) have a shorter objective limit of six months (secondary).
+- **Who fines:** The Office itself by administrative decision (§ 104 Act 18/2018), at GDPR Art. 83 levels; procedural fines for non-cooperation under § 105 (up to EUR 2,000, or EUR 10,000 for obstructing an inspection, per secondary sources). No court confirmation step.
+- **Public bodies:** Yes. No exemption for public bodies was found and the Office has fined municipalities, e.g. EUR 500 and EUR 700 for publishing identity card numbers in published contracts and EUR 4,700 for a parking system requiring national ID numbers (2021-2022).
+- **National specifics:** Fines are typically a few thousand euros. Unlawful handling of personal data is also a criminal offence (§ 374 Criminal Code, neoprávnené nakladanie s osobnými údajmi).
+- **Appeal:** First an internal appeal (rozklad) to the President of the Office. Then an administrative action under the Administrative Judicial Procedure Code (zákon 162/2015, Správny súdny poriadok) before the administrative courts; since the 2023 court reform these are the separate administrative courts, in practice the Administrative Court in Bratislava (Správny súd v Bratislave) for the Office's decisions (venue not confirmed from a primary source). Deadline: Rozklad: 15 days from notification. Administrative action: two months from notification of the President's decision. Payment: Not confirmed, either for the rozklad or for the administrative action.
+- **Further appeal:** Cassation complaint (kasačná sťažnosť) to the Supreme Administrative Court of the Slovak Republic (Najvyšší správny súd SR).
+- **If the authority does nothing:** Not confirmed specifically for data protection; the general route is an action against inactivity of a public authority (žaloba proti nečinnosti) under the Administrative Judicial Procedure Code.
+- **Suing directly:** Civil courts, using the GDPR (Art. 82) together with the personality-rights protection of the Civil Code; court not confirmed beyond 'civil courts'. Not confirmed: how Slovakia transposed the Representative Actions Directive and whether Art. 80(2) is used were not verified.
+- **Case: Psychodiagnostic testing without valid consent (2021).** The Office fined a private company EUR 40,000 (decision 01339/2021-Os-10) over psychodiagnostic testing of employees by its HR department, relying on consent that could not be freely given in an employment relationship.
+- **Case: Municipalities fined for national ID numbers (2021-2022).** The Office fined two municipalities EUR 500 and EUR 700 for publishing contracts online without redacting a contracting party's identification number, and a Bratislava city district EUR 4,700 for a parking registration system requiring national ID numbers when name and date of birth would have sufficed, showing public bodies can be fined in Slovakia.
+- Two-tier administrative review: a 15-day rozklad to the President of the Office must come before any court action.
+- Public bodies including municipalities can be and are fined.
+- Proposals older than three years from the event can be set aside, an unusual time bar on complaints.
+- Fines are modest in practice, typically a few thousand euros.
+- Administrative justice was reorganised: a Supreme Administrative Court operates as the top court for administrative cases, and separate first-instance administrative courts replaced the regional courts' administrative chambers in 2023.
+
+### Slovenia
+
+*EU member.* You email or post a report to the Information Commissioner, free of charge. If it concerns your own data you get a special status: the Commissioner must decide within three months (four in complex cases) and keeps you informed. If a fine is warranted, the Commissioner runs a separate minor offence procedure, can fine both the company and its responsible manager, and the company has eight days to ask a local court to review it; the State and municipalities themselves cannot be fined.
+
+**Route of a fine:** IP minor offence decision -> Local court
+
+- **Authority:** Information Commissioner of the Republic of Slovenia (Informacijski pooblaščenec Republike Slovenije). Single commissioner (monocratic), who is also the freedom of information appeal body; designated as the GDPR supervisory authority by Art. 54 ZVOP-2. Supervision is carried out by state data protection inspectors employed by the IP.
+- **Law:** Personal Data Protection Act (Zakon o varstvu osebnih podatkov, ZVOP-2), Uradni list RS No. 163/22, in force 26 January 2023, replacing ZVOP-1
+- **Complaint:** A report (prijava) by email to gp.ip@ip-rs.si or by post to Dunajska cesta 22, Ljubljana; the IP's form is recommended but not mandatory. No fee mentioned. Anyone may report breaches of the GDPR, ZVOP-2 or the criminal-justice data protection act (ZVOPOKD). A data subject who complains about the processing of their own data obtains the status of 'complainant with special position' (prijavitelj s posebnim položajem, Arts. 30-34 ZVOP-2); the IP must decide within three months of a complete complaint, extendable once by up to one month in complex cases (Art. 31). Ordinary reports have no statutory deadline ('as soon as possible').
+- **Contact the organisation first?** Not required for a report. ZVOP-2 Art. 12 governs rights requests to controllers, and rights-related complaints are handled through the special complainant procedure.
+- **Who decides:** Inspection measures and minor offence decisions are issued by the IP's state data protection inspectors as authorised officials; the IP is the minor offence authority (prekrškovni organ).
+- **Limitation:** No ZVOP-2-specific period confirmed. The general ZP-1 rule is that prosecution of a minor offence becomes time-barred two years after it was committed (Art. 42(1) ZP-1), and execution two years after the decision became final (Art. 44(1) ZP-1).
+- **Who fines:** The IP itself, but as a minor offence authority under ZP-1 rather than by an ordinary administrative decision: it issues a minor offence decision (odločba o prekršku) imposing a fine (globa) or a warning (opomin). GDPR Art. 83 fines are imposed in line with Art. 83 GDPR, and fines can also be imposed on the responsible person (odgovorna oseba) of a legal entity.
+- **Public bodies:** Under Art. 13.a ZP-1 the Republic of Slovenia and self-governing local communities are not liable for minor offences, so the State and municipalities cannot be fined; responsible persons within them may be. Whether other public-law entities (public institutes, agencies) can be fined was not confirmed.
+- **National specifics:** Fines on individual responsible persons alongside the company are routine (e.g. EUR 4,000 on a company and EUR 1,000 on its responsible person in IP decision 0603-23/2023/5). ZVOP-2 replaced ZVOP-1's criminal-style penal provisions with GDPR-aligned fines; before ZVOP-2 took effect in January 2023 the IP's ability to impose GDPR Art. 83 fines was widely reported as absent (not confirmed from primary text). ZVOP-2 also contains national-only offences, e.g. on video surveillance (Arts. 76-78).
+- **Appeal:** Fines: a request for judicial protection (zahteva za sodno varstvo) under ZP-1, lodged with the IP and decided by the local court (okrajno sodišče). Inspection and complaint decisions: no administrative appeal, but an administrative dispute (upravni spor) before the Administrative Court of the Republic of Slovenia (Upravno sodišče). Deadline: Eight days from service of the minor offence decision for the request for judicial protection (ZP-1). Deadline for an administrative dispute not confirmed in this research (the general ZUS-1 period is 30 days, not verified). Payment: Not confirmed.
+- **Further appeal:** From the local court, further remedies under ZP-1 are limited (appeal to the higher court only in specified cases; extraordinary request for protection of legality); details not confirmed. From the Administrative Court: appeal or revision to the Supreme Court in limited cases, not confirmed.
+- **If the authority does nothing:** Not confirmed. Special-position complainants have a statutory three-month (plus one) deadline (Art. 31 ZVOP-2) and access to the Administrative Court; a secondary source states inaction is treated as a deemed rejection, which I could not verify.
+- **Suing directly:** Art. 11 ZVOP-2 gives a general right to judicial protection against a controller or processor (cessation of the breach, restoration and damages), heard by the Administrative Court as a human rights protection case, with the public excluded on request; the person need not first exhaust the IP route. Slovenia has a Collective Actions Act (Zakon o kolektivnih tožbah, ZKolT, 2017); whether it covers GDPR claims, how the Representative Actions Directive was transposed and whether Art. 80 representation is regulated in ZVOP-2 were not confirmed.
+- **Case: IP 0603-23/2023/5: workplace and CCTV video surveillance (2023).** On 22 August 2023 the IP, as minor offence authority, found breaches of Arts. 76 and 78 ZVOP-2 (inadequate CCTV notices and excessive workplace surveillance) and imposed warnings plus a EUR 4,000 fine on the company and EUR 1,000 on its responsible person, open to a request for judicial protection within eight days.
+- Fines run through the minor offences procedure (ZP-1), not through an administrative decision, so the challenge goes to the local court (okrajno sodišče) within eight days rather than to the Administrative Court.
+- The State and municipalities cannot be fined (Art. 13.a ZP-1), but individual responsible persons can.
+- Individuals sue controllers for GDPR breaches before the Administrative Court under Art. 11 ZVOP-2, an unusual venue for private-law disputes.
+- ZVOP-2 only took effect on 26 January 2023, so Slovenia operated almost five years of the GDPR under its old ZVOP-1.
+- The IP also handles freedom of information appeals, so data protection is one of two mandates.
+
+### Spain
+
+*EU member.* You complain to the AEPD online or on paper, for free; if it is about your rights (for example access), you must first have asked the company. The AEPD has three months to decide whether to take the case, may first pass it to the company to fix, and if it opens a sanction procedure it has twelve months to decide, with the company able to cut the fine by 40 percent by admitting fault and paying early. Companies can challenge a fine at the Audiencia Nacional in Madrid and then the Supreme Court, while public bodies are reprimanded rather than fined.
+
+**Route of a fine:** AEPD -> Optional reposición -> Audiencia Nacional -> Tribunal Supremo
+
+- **Authority:** Spanish Data Protection Agency (Agencia Española de Protección de Datos). Single-head authority: a President, supported by an Adjunct, directs the AEPD and issues its resolutions; both are selected by public call, proposed by the Government and ratified by the Congress Justice Committee for a five-year term, renewable once (Art. 48 LOPDGDD). The Adjunct cannot exercise the Title VIII procedural functions.
+- **Regional authorities:** Yes. Under Art. 57 LOPDGDD regional authorities supervise the public sector of their autonomous community, local entities in their territory and private bodies exercising public functions there: the Catalan Data Protection Authority (APDCAT), the Basque Data Protection Authority (AVPD) and the Andalusian Transparency and Data Protection Council (CTPDA). The AEPD covers the private sector and the State public sector everywhere.
+- **Law:** Organic Law 3/2018 of 5 December on the Protection of Personal Data and Guarantee of Digital Rights (LOPDGDD), significantly amended by Ley 11/2023 of 8 May (in force 10 May 2023)
+- **Complaint:** Free of charge, preferably online through the AEPD electronic office (sedeaepd.gob.es) using a digital certificate, DNIe or Cl@ve, or on paper through any public registry under Ley 39/2015. Submissions are in Spanish (or a co-official language under general administrative law). No statutory time limit for complaining, other than the limitation periods for infringements. The AEPD must notify the admissibility decision within three months; if it does not, the complaint is deemed admitted (Art. 65.5). Rights-exercise procedures must be decided within six months (Art. 64.1); sanction procedures within twelve months from the opening agreement (Art. 64.2, raised from nine months by Ley 11/2023), failing which the procedure lapses (caducidad). Preliminary investigations may last up to eighteen months (Art. 67.2, raised from twelve in 2023).
+- **Contact the organisation first?** Required for rights complaints (access, erasure, rectification, objection, restriction, portability): the data subject must first send a request to the controller and attach it and any reply. Not required for other infringements. Before admitting a complaint the AEPD may also forward it to the controller's DPO, a code-of-conduct monitoring body or, where there is no DPO or ADR scheme, to the controller, who must reply within one month (Art. 65.4 LOPDGDD).
+- **Who decides:** The President of the AEPD issues the resolutions (Art. 48 LOPDGDD); the inspection and instruction work is done by the AEPD's investigative staff.
+- **Limitation:** Infringements: very serious (Art. 72) three years, serious (Art. 73) two years, minor (Art. 74) one year. Sanctions (Art. 78): fines up to EUR 40,000 prescribe in one year, EUR 40,001 to 300,000 in two years, over EUR 300,000 in three years.
+- **Who fines:** The AEPD itself by administrative resolution of its President; no court confirmation step.
+- **Public bodies:** No fines. For bodies listed in Art. 77 LOPDGDD (constitutional bodies, courts, State, regional and local administrations, public bodies, universities, public foundations, Bank of Spain, political groups in parliaments, etc.) the authority declares the infringement, orders corrective measures, may propose disciplinary action, and where officials ignored technical reports it issues a reprimand naming the post, published in the official gazette; the resolution is published on the AEPD website.
+- **National specifics:** Under Art. 85 Ley 39/2015, once a sanction procedure opens, acknowledging responsibility and paying voluntarily before the resolution each earn a reduction of at least 20 percent of the proposed fine, cumulative (so 40 percent in practice), conditional on waiving any administrative appeal against the sanction. Criminal liability for unlawful access or disclosure of personal data sits separately in the Criminal Code (Art. 197 Código Penal).
+- **Appeal:** AEPD resolutions end the administrative route; an optional recurso de reposición can be filed with the AEPD itself, or the decision can be challenged directly before the Contentious-Administrative Chamber of the Audiencia Nacional (Art. 48 LOPDGDD). Deadline: One month for the optional recurso de reposición (Art. 124 Ley 39/2015); two months for a contentious-administrative appeal (Art. 46 Ley 29/1998, LJCA). Payment: Under Art. 90.3 Ley 39/2015 a sanction is enforceable only once no ordinary administrative appeal remains, and enforcement can be suspended if the party states it will bring a contentious-administrative appeal; detailed AEPD practice not confirmed.
+- **Further appeal:** Cassation appeal to the Third Chamber of the Tribunal Supremo, subject to showing objective interest for case law (casación). In the CaixaBank case the Supreme Court admitted the AEPD's cassation appeal on 29 December 2025.
+- **If the authority does nothing:** A complaint not ruled on within three months is deemed admitted (Art. 65.5); rejection or archiving decisions of the AEPD can be challenged before the Audiencia Nacional. A specific Art. 78(2) mechanism beyond general administrative law was not confirmed.
+- **Suing directly:** Claims against a controller (Art. 79) and for compensation (Art. 82) go to the ordinary civil courts (Juzgados de Primera Instancia); claims against public administrations go to the contentious-administrative courts. Not confirmed from a primary source. Spain has not transposed the Representative Actions Directive (EU) 2020/1828: the bill on collective actions was still pending in Parliament in May 2026 and the European Commission pressed Spain again in April 2026 (secondary). The GDPR is listed in Annex I of that Directive. Art. 80(1) mandated representation is available; national use of Art. 80(2) was not confirmed.
+- **Case: CaixaBank: EUR 6 million reduced to EUR 2 million by the Audiencia Nacional (2021 (AEPD), 2025 (Audiencia Nacional), pending (Tribunal Supremo)).** In January 2021 the AEPD fined CaixaBank EUR 4 million under Art. 6 GDPR (invalid consent for sharing data within the group for commercial purposes) and EUR 2 million under Arts. 13-14 (information). On 19 May 2025 the Audiencia Nacional treated the information failure as instrumental to the consent breach (concurso medial) and imposed a single EUR 2 million fine. On 29 December 2025 the Tribunal Supremo admitted the AEPD's cassation appeal on how Art. 83(3) GDPR applies to concurrent infringements.
+- The sanction procedure time limit is twelve months since 10 May 2023 (Ley 11/2023); older guides citing nine months are out of date. On expiry the procedure lapses (caducidad) and the file is archived (Art. 64.2).
+- Prompt-payment and acknowledgment discounts of at least 20 percent each (40 percent combined) are offered in the opening agreement, which is why many AEPD fines are paid at 60 percent and never reach court.
+- Public bodies cannot be fined (Art. 77 LOPDGDD); they receive a declaration of infringement, corrective orders and possible reprimands of named posts.
+- Four authorities: the AEPD plus regional authorities in Catalonia, the Basque Country and Andalusia for their regional public sectors (Art. 57 LOPDGDD).
+- Since 2023 the AEPD can close an admitted complaint if the controller shows it has taken corrective measures before any investigation starts (Art. 65.6), and can route complaints to ADR schemes, so many complaints end without a sanction procedure.
+
+### Sweden
+
+*EU member.* You complain to IMY online, by email or by letter, free of charge, ideally after raising it with the organisation. If IMY does nothing within three months you can demand an answer and go to court if it refuses, and if IMY decides not to act you can appeal that decision too. Fined organisations, including public authorities (capped at SEK 10 million), appeal to the Stockholm Administrative Court and need permission to go higher, and they only pay once the decision is final.
+
+**Route of a fine:** IMY -> Administrative Court -> Administrative Court of Appeal (leave) -> HFD (leave)
+
+- **Authority:** Swedish Authority for Privacy Protection (Integritetsskyddsmyndigheten). Single national authority, a government agency headed by a Director General (not a collegial body). Formerly called Datainspektionen (renamed 1 January 2021).
+- **Law:** Act (2018:218) containing supplementary provisions to the EU General Data Protection Regulation (dataskyddslagen), last amended by SFS 2025:256 (complaint handling, in force 1 May 2025) and SFS 2026:1589 (scope, in force 1 January 2027)
+- **Complaint:** Through IMY's e-service, by email or by letter, free of charge; the web guidance is in Swedish and English. The complaint must concern the complainant's own data, name the organisation and give the complainant's contact details (no anonymous complaints). No time limit for complaining found. If IMY has not decided within three months whether to open supervision on a complaint, the data subject can request in writing an answer; IMY must answer or decide within two weeks, otherwise the request is deemed refused (6 kap. 8 § dataskyddslagen, from 1 May 2025).
+- **Contact the organisation first?** Recommended but not required: IMY advises contacting the organisation first and explaining what is wrong.
+- **Who decides:** IMY as an agency; decisions are signed by the Director General or by staff under IMY's delegation rules (internal delegation not confirmed).
+- **Limitation:** A fine may not be decided unless the party has been given the opportunity to comment within five years of the day the infringement took place (6 kap. 4 § dataskyddslagen).
+- **Who fines:** IMY by administrative decision; no court confirmation step.
+- **Public bodies:** Yes, public authorities can be fined, capped at SEK 5,000,000 for Art. 83(4) breaches and SEK 10,000,000 for Art. 83(5) and 83(6) breaches (6 kap. 2 § dataskyddslagen).
+- **National specifics:** The fine must be paid within 30 days of the decision gaining legal force (laga kraft), or a longer period set in the decision (6 kap. 6 §), so an appeal in practice defers payment. Fines are only available for Art. 83 GDPR breaches, plus Art. 10 GDPR (criminal data) breaches (6 kap. 1 and 3 §§). No criminal offences in the Act.
+- **Appeal:** IMY decisions under the GDPR and on fines may be appealed to the general administrative courts (7 kap. 3 § dataskyddslagen): in practice Förvaltningsrätten i Stockholm (Stockholm Administrative Court), as IMY sits in Stockholm, with IMY as respondent. Deadline: Three weeks from the day the appellant received the decision, lodged with IMY, which forwards it to the court (förvaltningslagen 2017:900, s. 44). Payment: Payment is due only 30 days after the decision gains legal force (6 kap. 6 §), so the fine is not collected while an appeal is pending; corrective orders' suspensive effect not confirmed.
+- **Further appeal:** Administrative Court of Appeal (kammarrätten), leave to appeal required (prövningstillstånd), then the Supreme Administrative Court (Högsta förvaltningsdomstolen, HFD), leave required.
+- **If the authority does nothing:** Since 1 May 2025: after three months without a position on a complaint, the data subject can demand an answer; a refusal, or no answer within two weeks, can be appealed to the administrative court (7 kap. 3 a §), which if it upholds the appeal orders IMY to tell the data subject promptly whether supervision will be opened (7 kap. 6 §). Decisions not to investigate are themselves appealable after the HFD rulings of November 2023.
+- **Suing directly:** Art. 82 compensation applies to breaches of the Act too (7 kap. 1 § dataskyddslagen); damages claims go to the general courts (tingsrätt). Data subjects can also appeal certain decisions of public authorities as controllers on rights requests (Arts. 12(5), 15-21) to the administrative courts (7 kap. 2 §). Sweden has a general Group Proceedings Act (lag 2002:599 om grupprättegång); the transposition route for the Representative Actions Directive and whether national law uses Art. 80(2) were not confirmed.
+- **Case: Google LLC: right to be forgotten, SEK 75 million reduced to SEK 50 million (2020-2022).** IMY fined Google SEK 75 million on 11 March 2020 over delisting handling and notifying webmasters. Förvaltningsrätten i Stockholm (case 7565-20) cut it to SEK 52 million; the kammarrätt (case 2232-21) reduced it to SEK 50 million; HFD refused leave on 20 December 2022 (case 7528-21), making SEK 50 million final.
+- **Case: Spotify: right of access, SEK 58 million reinstated on appeal (2023-2025).** IMY fined Spotify SEK 58 million on 12 June 2023 for unclear information in response to access requests. Förvaltningsrätten (case 13539-23, 28 June 2024) cut it to SEK 40 million; on 3 June 2025 the kammarrätt (case 4512-24) upheld IMY's appeal and reinstated SEK 58 million.
+- **Case: HFD: complainants can appeal IMY decisions not to act (2023).** On 17 November 2023 the Supreme Administrative Court held (cases 6193-22 and 3691-22) that IMY decisions not to investigate a complaint, or to close supervision without the measures sought, are legally binding decisions appealable under Art. 78(1) GDPR, departing from RÅ 2010 ref. 29.
+- Public authorities can be fined, but at fixed caps of SEK 5 million and SEK 10 million rather than turnover-based amounts.
+- Statutory three-month and two-week clock on complaint handling, with a court route against delay, since 1 May 2025 (SFS 2025:256).
+- Courts frequently adjust IMY fines in both directions: Google was reduced, Spotify was reduced then reinstated in full.
+- Swedish appeals to the kammarrätt and HFD need leave to appeal, so most cases end at the first or second instance.
+- Five-year limit: no fine unless the party was invited to comment within five years of the infringement.
+
+### Iceland
+
+*EEA member.* You complain to Persónuvernd, which investigates and can order the organisation to fix things or, through its board, fine it, including public bodies. There is no appeal body above Persónuvernd: whoever disagrees with its decision has to go to the ordinary courts, which can go all the way to the Supreme Court.
+
+**Route of a fine:** Persónuvernd -> District court -> Landsréttur -> Supreme Court
+
+- **Authority:** Icelandic Data Protection Authority (Persónuvernd). Single national authority with a five-member board (stjórn) appointed by the minister for five years, chair and vice-chair qualified as district court judges, plus a director (forstjóri) appointed for five years (Art. 38 Act 90/2018). The board takes fining decisions (Art. 46).
+- **Law:** Act No. 90/2018 on Data Protection and the Processing of Personal Data (lög nr. 90/2018 um persónuvernd og vinnslu persónuupplýsinga), in force 15 July 2018
+- **Complaint:** Any data subject or their representative may complain to Persónuvernd (Art. 39); a body, organisation or association meeting GDPR Art. 80 may also complain. Filing channel, language and fees: not confirmed (contact postur@personuvernd.is, Rauðarárstígur 10, 105 Reykjavík). No statutory deadline for complaining or deciding confirmed. Persónuvernd must inform the complainant of the outcome within a reasonable time and of the right to go to court (Art. 39).
+- **Contact the organisation first?** Not confirmed.
+- **Who decides:** The board of Persónuvernd decides on administrative fines (Art. 46). Other decisions: not confirmed whether board or office.
+- **Limitation:** Power to impose administrative fines lapses five years after the conduct ended; the period is interrupted when an investigation begins (Art. 46).
+- **Who fines:** Persónuvernd's board by administrative decision; fine decisions are directly enforceable (aðfararhæfar), must be paid within one month and go to the State Treasury (Art. 46). Daily fines up to ISK 200,000 per day are possible (Art. 45).
+- **Public bodies:** Yes. Fines may be imposed on individuals and legal persons, including government authorities and institutions (Art. 46(4)); the same ISK ranges apply (ISK 100,000 to 1.2 billion or 2% of turnover; up to ISK 2.4 billion or 4% for the more serious breaches).
+- **National specifics:** Caps are stated in ISK in the Act. Daily fines do not start to accrue until a court judgment is final if the daily-fine decision is taken to court (Art. 45(2)). The Act also contains a criminal penalties provision (Art. 48), details not confirmed.
+- **Appeal:** No administrative appeal: Persónuvernd's decisions cannot be referred to other authorities, but parties may take a dispute to the courts in the usual way (Art. 38(1)), starting at the district court (héraðsdómur, e.g. Reykjavík District Court). Deadline: Not confirmed. Payment: Not confirmed for fines, which are enforceable and payable within one month. Daily fines are suspended until a final judgment if challenged in court (Art. 45(2)).
+- **Further appeal:** District court, then Court of Appeal (Landsréttur), then Supreme Court (Hæstiréttur); the Supreme Court can take a case directly from the district court (leapfrog), as in the Seesaw case. Courts may request advisory opinions from the EFTA Court.
+- **If the authority does nothing:** Not confirmed; no specific Art. 78(2) procedure found in Act 90/2018.
+- **Suing directly:** Ordinary district courts. The Act contains a compensation provision (Art. 51), text not confirmed. Organisations may lodge complaints with Persónuvernd on behalf of data subjects (Art. 39 referring to GDPR Art. 80). Court collective actions and Representative Actions Directive transposition: not confirmed.
+- **Case: Reykjavík City, Seesaw platform in schools (ISK 5 million) (2022-2024).** Persónuvernd fined Reykjavík City ISK 5 million on 3 May 2022 over use of the Seesaw platform in schools. Reykjavík District Court ordered a refund in February 2024 for breach of administrative procedure; the Supreme Court took the case directly (reported 16 April 2024) and on 9 December 2024 partly upheld the infringement findings but annulled the fine for insufficient grounds and procedural flaws, so the State had to refund it with interest.
+- **Case: Ferðagjöf travel gift app (ISK 7.5 million and ISK 4 million) (2021).** On 23 November 2021 Persónuvernd fined the Ministry of Industries and Innovation ISK 7.5 million and the developer YAY ehf. ISK 4 million over excessive app permissions, lack of transparency, no processing agreement and missing data protection by design.
+- **Case: Íslensk erfðagreining (deCODE genetics), COVID-era study (2021-2025).** Persónuvernd found on 23 November 2021 that deCODE's processing in a COVID-era research study breached data protection law (no fine). Reykjavík District Court annulled the decision in March 2023, the Court of Appeal (Landsréttur) reversed that in November 2024, and on 5 November 2025 the Supreme Court (case 6/2025) annulled Persónuvernd's decision and ordered it to pay the company's costs.
+- Decisions are final at administrative level: there is no appeal body, so the only route is the courts (Art. 38(1)).
+- Public bodies, including ministries and municipalities, can be and have been fined, with the same ISK caps as private entities.
+- GDPR applies via the EEA Agreement; references go to the EFTA Court rather than the CJEU.
+- The 2024 Supreme Court Seesaw judgment shows courts scrutinise Persónuvernd's compliance with general administrative law (right to be heard, proportionality) closely.
+
+### Liechtenstein
+
+*EEA member.* You complain to the Datenschutzstelle in any form, free of charge, and you become a party to the case. The authority first tries to settle things with the organisation and can then issue a decision or a fine, though public bodies cannot be fined. Anyone who disagrees has four weeks to appeal to an administrative appeals commission, then four more weeks to go to the Administrative Court.
+
+**Route of a fine:** DSS -> Complaints Commission (VBK) -> Administrative Court
+
+- **Authority:** Data Protection Authority of Liechtenstein (Datenschutzstelle). Single national authority headed by one person (Leiter/Leiterin), elected by the Landtag on the government's proposal for six years (Art. 12 DSG); other staff appointed by the government on the head's proposal (Art. 13). Current head Dr Marie-Louise Gächter, second term from 1 January 2026.
+- **Law:** Data Protection Act (Datenschutzgesetz, DSG) of 4 October 2018, LGBl. 2018 Nr. 272, LR 235.1, in force 1 January 2019
+- **Complaint:** In any form, written recommended, via the DSS online form or downloadable PDF form, by post (Kirchstrasse 8, Postfach 684, 9490 Vaduz), with a secure file transfer channel for sensitive documents. German. Free of charge, but abusive complaints can attract fees of up to CHF 500 per hour plus costs, or a refusal to act. No complaint deadline. The DSS informs the complainant of progress and outcome within a reasonable time; no fixed decision deadline confirmed.
+- **Contact the organisation first?** Not required. The DSS tries to reach an amicable solution before formal proceedings.
+- **Who decides:** The head of the DSS (single-head authority). Fines are imposed by the DSS itself (Art. 40(1) DSG).
+- **Limitation:** Not confirmed.
+- **Who fines:** The DSS, which punishes infringements as an administrative offence (Übertretung) with a fine of up to CHF 11 million or 2% of worldwide turnover, or CHF 22 million or 4% for the more serious categories (Art. 40 DSG).
+- **Public bodies:** No. Fines are not imposed on authorities and other public bodies (Art. 40(7) DSG).
+- **National specifics:** Caps are expressed in Swiss francs. Separate criminal offences for unauthorised obtaining of data (Art. 41) and breach of data secrecy (Art. 42), punishable by up to six months' imprisonment or up to 360 daily units, are handled by the criminal courts, not the DSS.
+- **Appeal:** First, an appeal to the Complaints Commission for Administrative Matters (Beschwerdekommission für Verwaltungsangelegenheiten, VBK) (Art. 20(1) DSG). Deadline: Four weeks from service of the DSS decision (Art. 20(1)); four weeks from service of the VBK decision for the next step (Art. 20(2)). Payment: Appeals appear to have suspensive effect under the general administrative procedure law, which the DSS may withdraw, except for decisions against public bodies, where it may not (Art. 20(3) DSG).
+- **Further appeal:** Administrative Court (Verwaltungsgerichtshof, VGH) (Art. 20(2)), which the DSS describes as the final instance. Questions on EEA law can be referred to the EFTA Court for an advisory opinion.
+- **If the authority does nothing:** Not confirmed. No specific Art. 78(2) mechanism found in the DSG.
+- **Suing directly:** Civil courts; the DSG gives everyone a claim for damages against controllers and processors under GDPR Art. 82 (Art. 44 DSG). First-instance court not confirmed in the DSG text (ordinary first-instance civil court is the Landgericht). Not-for-profit bodies can represent complainants before the DSS (GDPR Art. 80). Court collective actions and Representative Actions Directive transposition: not confirmed.
+- **Case: Pending VBK case on turnover for fine calculation (2025-2026).** The DSS reports that purely national companies have in some cases tried to reduce the turnover used to calculate a fine through corporate or accounting arrangements, and that a corresponding case is pending before the VBK; the DSS relies on CJEU case law that the whole undertaking's turnover counts. Company and amount not published.
+- No fines on public bodies (Art. 40(7) DSG).
+- Fines are framed as penalties for an Übertretung imposed directly by the DSS, with caps in CHF rather than EUR.
+- Two-step review: the VBK (an administrative appeals commission) first, then the Administrative Court, each with a four-week deadline.
+- GDPR applies via the EEA Agreement; references go to the EFTA Court rather than the CJEU.
+- Very few published enforcement decisions; the annual activity report (Tätigkeitsbericht) is the main public record.
+
+### Norway
+
+*EEA member.* You complain to Datatilsynet in writing, ideally after raising the problem with the organisation first. If Datatilsynet fines or orders the organisation, either side can appeal to the Privacy Appeals Board, which looks at the whole case again. After that, the only route is a lawsuit against the State in the ordinary courts, which can go up to the Court of Appeal and, with permission, the Supreme Court.
+
+**Route of a fine:** Datatilsynet -> Privacy Appeals Board -> District court -> Court of Appeal -> Supreme Court (leave)
+
+- **Authority:** Norwegian Data Protection Authority (Datatilsynet). Single national authority led by a director appointed by the King; an independent administrative body, administratively subordinate to the King and the ministry but not subject to instructions in individual cases (s. 20 Personal Data Act).
+- **Law:** Personal Data Act (personopplysningsloven), Act of 15 June 2018 No. 38 (LOV-2018-06-15-38), which incorporates the GDPR into Norwegian law via the EEA Agreement
+- **Complaint:** In writing, either via Datatilsynet's digital form (Norwegian only, requires BankID login) or by post to Datatilsynet, PO Box 458 Sentrum, 0105 Oslo. No fee mentioned. Complaint files may be subject to public access (freedom of information) requests. No statutory deadline for complaining or for Datatilsynet to decide found in the Personal Data Act; not confirmed.
+- **Contact the organisation first?** Recommended, not a statutory precondition: Datatilsynet asks people to contact the controller (or its DPO) before complaining and to attach that correspondence.
+- **Who decides:** Datatilsynet decides at first instance; the seven-member Privacy Appeals Board (chair and deputy chair legally qualified, four-year terms) decides appeals (s. 22). Datatilsynet decisions under GDPR Art. 56 and Chapter VII (one-stop-shop and consistency) cannot be appealed to the Board (s. 22).
+- **Limitation:** Power to impose an infringement fine lapses five years after the infringement ended (s. 28).
+- **Who fines:** Datatilsynet itself by administrative decision (or the Privacy Appeals Board on appeal). Payment is due four weeks after the decision becomes final (s. 27). Datatilsynet can also impose daily coercive fines (tvangsmulkt) to enforce orders (s. 29).
+- **Public bodies:** Yes. Datatilsynet may fine public authorities and bodies under the GDPR Art. 83 rules (s. 26(2)); no separate lower cap found. Examples include Bergen and Oslo municipalities and NAV.
+- **National specifics:** S. 26 extends Art. 83(4) fines to breaches of GDPR Arts. 10 and 24. Compensation for non-economic loss is regulated in s. 30. Fines are in NOK.
+- **Appeal:** Datatilsynet decisions are first appealed administratively to the Privacy Appeals Board. The Board's decisions cannot be further appealed administratively, but the controller can sue the State in the ordinary courts, starting at the district court (tingrett, in practice Oslo tingrett). In fine cases the court can review all aspects and give judgment on the merits (s. 27). Deadline: Appeal to the Board: three weeks under the general Public Administration Act rule (forvaltningsloven s. 29), not confirmed in a data protection specific source. Deadline for court action: not confirmed. Payment: Payment falls due four weeks after the decision is final, i.e. after the Board has ruled (s. 27). Whether a court action suspends payment: not confirmed.
+- **Further appeal:** District court, then Court of Appeal (lagmannsrett), then Supreme Court (Høyesterett) with leave. Courts may request advisory opinions from the EFTA Court (not the CJEU).
+- **If the authority does nothing:** Not confirmed. No specific Art. 78(2) mechanism found; a complainant would sue the State in the ordinary courts.
+- **Suing directly:** Ordinary civil courts (district court first instance) for Art. 79 and Art. 82 claims; s. 30 Personal Data Act allows compensation for non-economic loss as the court finds reasonable. Group actions under the Dispute Act chapter 35 (opt-in and opt-out). No not-for-profit body is specifically mandated for Art. 80 claims (White & Case). In 2023 the Supreme Court held that opt-out group members cannot be charged third-party litigation funding costs, which practitioners say weakens opt-out actions. Transposition of the Representative Actions Directive: not confirmed.
+- **Case: Grindr LLC (NOK 65 million) (2021-2025).** On a Consumer Council complaint, Datatilsynet fined Grindr NOK 65 million in December 2021 for sharing user data, including special-category data, with advertisers without valid consent. The Privacy Appeals Board upheld it in 2023, Oslo District Court dismissed Grindr's action on 1 July 2024 (23-160384TVI-TOSL/04), and Borgarting Court of Appeal upheld it on 21 October 2025. Grindr did not appeal further, so the fine became final in November 2025.
+- **Case: Bergen and Oslo municipalities (2019 (Oslo notice of intended fine); Bergen year not confirmed).** Examples of fines on public bodies: Bergen municipality NOK 1.6 million after login credentials of over 35,000 pupils in its school IT system were exposed, and Oslo municipality's Education Agency NOK 2 million over a security flaw in the Skolemelding school app affecting some 63,000 pupils.
+- Two-tier administrative system: Datatilsynet decides, then the independent Privacy Appeals Board (Personvernnemnda) fully re-hears appeals before any court is involved. Since 15 September 2025 the Board's secretariat and decisions are hosted by the Norwegian Civil Affairs Authority (sivilrett.no).
+- Cross-border one-stop-shop decisions (GDPR Art. 56, Chapter VII) bypass the Privacy Appeals Board.
+- GDPR applies via the EEA Agreement: Norwegian courts refer questions to the EFTA Court, not the CJEU, although CJEU case law is followed in practice.
+- Datatilsynet acts as party for the State in lawsuits about its supervisory work (s. 25).
+
+### United Kingdom
+
+*Not under the GDPR, shown for contrast.* You are expected to complain to the organisation first, which must acknowledge you within 30 days; if that fails you complain to the ICO, which gives you an outcome but does not award compensation. If the ICO fines a company, the company can appeal to a specialist tribunal and does not have to pay until the appeal is over. For compensation you sue the organisation in the ordinary civil courts yourself.
+
+**Route of a fine:** Information Commission -> First-tier Tribunal -> Upper Tribunal -> Court of Appeal
+
+- **Authority:** Information Commission (until 29 September 2026: Information Commissioner, operating as the Information Commissioner's Office) (Information Commission). Since 30 September 2026 a body corporate with a board, the Information Commission (DPA 2018 s. 114A, inserted by DUAA 2025 s. 117), which took over all functions of the abolished office of Information Commissioner, a single-person corporation sole (DUAA ss. 118-119, commenced by SI 2026/1015). Acts and proceedings of the Commissioner continue in the name of the Commission.
+- **Regional authorities:** Single UK-wide regulator covering England, Wales, Scotland and Northern Ireland.
+- **Law:** UK GDPR (retained Regulation (EU) 2016/679 as amended), Data Protection Act 2018 (c. 12), as amended by the Data (Use and Access) Act 2025 (c. 18), commenced in stages from August 2025 to September 2026
+- **Complaint:** Online via the ICO complaint form (the regulator must provide a form that can be completed electronically and by other means, DPA 2018 s. 165(3)); free. Since 19 June 2026 complaints run under DPA 2018 ss. 164A and 165 rather than UK GDPR Art. 77. No statutory deadline for complaining confirmed. The regulator must take appropriate steps and inform the complainant of progress or outcome; if it fails to do so within three months (and each later three months), the complainant can seek a Tribunal order (s. 166).
+- **Contact the organisation first?** Recommended, not a statutory precondition. Since 19 June 2026 (DUAA 2025 s. 103) data subjects have a statutory right to complain to the controller (DPA 2018 s. 164A), which must facilitate complaints, acknowledge them within 30 days and respond without undue delay. The ICO tells people to raise the concern with the organisation first.
+- **Who decides:** Formerly the Information Commissioner; from 30 September 2026 the Information Commission. Internal delegation of penalty decisions under the new board structure: not confirmed.
+- **Limitation:** No general limitation period for penalties confirmed; the procedural time limit is the six-month (or as soon as reasonably practicable) window between notice of intent and penalty notice.
+- **Who fines:** The regulator itself by monetary penalty notice (DPA 2018 s. 155), up to £17.5 million or 4% of worldwide turnover (s. 157). DUAA 2025 also raised PECR fines to the same level.
+- **Public bodies:** Yes, public bodies can be fined at the same caps. Since 2022 the ICO's public sector approach favours reprimands and reduced fines: PSNI was fined £750,000 in October 2024 instead of £5.6 million.
+- **National specifics:** Separate criminal offences under DPA 2018 (e.g. s. 170 unlawfully obtaining personal data, s. 171 re-identification, s. 173 altering records to prevent disclosure), prosecuted by the ICO in England and Wales. Payment must be allowed at least 28 days (Sch. 16 para. 6).
+- **Appeal:** First-tier Tribunal (General Regulatory Chamber, Information Rights jurisdiction) (DPA 2018 s. 162), which can review the merits and substitute its own decision. Deadline: 28 days from the date the penalty notice or other decision was sent (Tribunal Procedure (First-tier Tribunal) (General Regulatory Chamber) Rules 2009, rule 22(1)(b)). Payment: Yes in effect: the regulator cannot take recovery action until the appeal period has expired and any appeal has been decided or otherwise ended (Sch. 16 para. 9).
+- **Further appeal:** Upper Tribunal (Administrative Appeals Chamber) on a point of law with permission, then Court of Appeal (Court of Session in Scotland) and Supreme Court.
+- **If the authority does nothing:** Application to the First-tier Tribunal for an order to progress the complaint (s. 166) if the regulator fails to take appropriate steps or to update the complainant within three months; this is procedural only and does not let the Tribunal re-decide the complaint's merits.
+- **Suing directly:** County Court or High Court in England and Wales (Court of Session or sheriff court in Scotland) for compliance orders (s. 167) and compensation including distress (s. 168). Art. 80(1) style representation by not-for-profit bodies (s. 187); Art. 80(2) independent representative actions were not adopted. Opt-out claims depend on the CPR 19.8 representative action, narrowed by Lloyd v Google. The EU Representative Actions Directive does not apply.
+- **Case: Clearview AI Inc (£7.5 million) (2022-2025).** The ICO fined Clearview £7.5 million in May 2022. The First-tier Tribunal allowed Clearview's appeal in October 2023 for lack of jurisdiction, but on 6 October 2025 the Upper Tribunal ([2025] UKUT 319 (AAC)) held the processing was within UK GDPR scope as behavioural monitoring under Art. 3(2)(b) and remitted the case to the First-tier Tribunal on the merits. A further appeal to the Court of Appeal was reported as likely; outcome not confirmed.
+- **Case: Police Service of Northern Ireland (£750,000) (2024).** Fine of 3 October 2024 after a freedom of information response exposed details of all 9,483 officers and staff in a hidden spreadsheet tab. Under the public sector approach the fine was cut from £5.6 million.
+- Not under the EU GDPR since Brexit: the UK GDPR and DPA 2018 apply, with the UK's own adequacy-based transfer regime; CJEU rulings after 2020 are not binding.
+- From 19 June 2026 controllers must run a complaints process and acknowledge complaints within 30 days (DPA 2018 s. 164A); the ICO expects people to use it before complaining to the regulator.
+- From 30 September 2026 the Information Commissioner was replaced by a board-led Information Commission; the ICO name and website continue.
+- Fines on public bodies are possible but routinely reduced or replaced by reprimands under the public sector approach.
+- Appeals go to a specialist tribunal, not an ordinary court, and payment is effectively stayed while an appeal is pending.
+
+### Switzerland
+
+*Not under the GDPR, shown for contrast.* You report the problem to the federal commissioner, who can investigate and order the company to change or stop what it is doing, but you are not a party and the commissioner cannot fine anyone. Fines exist only as criminal penalties, up to CHF 250,000 on the person responsible inside the company, and are handled by the cantonal prosecutor, usually only if someone files a criminal complaint. For compensation you sue in the civil courts.
+
+**Route of a fine:** FDPIC criminal complaint -> Cantonal prosecutor -> Criminal court
+
+- **Authority:** Federal Data Protection and Information Commissioner (Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (DE); Préposé fédéral à la protection des données et à la transparence (FR)). Single commissioner elected by the United Federal Assembly (Art. 43 FADP) for a four-year term, renewable twice (Art. 44).
+- **Regional authorities:** The FDPIC supervises federal bodies and private persons. Cantonal and communal public bodies are supervised by cantonal data protection authorities under cantonal law (not covered here).
+- **Law:** Federal Act on Data Protection (revised FADP, nDSG) of 25 September 2020, SR 235.1, in force 1 September 2023, with the Data Protection Ordinance (DPO, SR 235.11). Switzerland is not bound by the GDPR, though the GDPR can apply extraterritorially to Swiss companies.
+- **Complaint:** A 'report' (Anzeige) via the FDPIC online reporting portals, with separate forms for affected data subjects and for third parties or anonymous reporters; available in German, French, Italian and English. Fee: not confirmed. No statutory deadlines for reporting or for the FDPIC to act.
+- **Contact the organisation first?** Not confirmed as a requirement. The FDPIC may first contact the controller to remind it of its obligations or ask for a response before opening an investigation.
+- **Who decides:** The FDPIC (single commissioner) issues rulings. Fines are decided only in cantonal criminal proceedings, never by the FDPIC.
+- **Limitation:** Criminal prosecution under the FADP is time-barred after five years (Art. 66).
+- **Who fines:** Cantonal prosecution authorities and criminal courts (Art. 65), not the FDPIC, which has no fining power. The FDPIC may file a criminal complaint and act as private claimant (Art. 65(2)). Fines up to CHF 250,000 on the responsible natural persons who act wilfully (intent required, negligence not punishable).
+- **Public bodies:** No. The criminal provisions target private persons; federal bodies cannot be fined and are dealt with by FDPIC rulings only.
+- **National specifics:** Offences: breach of information, access and cooperation duties (Art. 60, on complaint), breach of duties of care such as unlawful foreign disclosure, processor engagement or minimum security (Art. 61, on complaint), breach of professional confidentiality (Art. 62), wilful disregard of an FDPIC ruling or appeal decision (Art. 63). Where identifying the individual would be disproportionate and the fine would not exceed CHF 50,000, the business itself may be ordered to pay (Art. 64).
+- **Appeal:** Federal Administrative Court (Bundesverwaltungsgericht) for FDPIC rulings, under the APA (Art. 52 FADP). Criminal fines are challenged in the cantonal criminal procedure. Deadline: 30 days under the general APA rule (Art. 50 APA), not confirmed in an FADP-specific source. Payment: Under the general APA rule an appeal has suspensive effect unless withdrawn (Art. 55 APA), not confirmed in an FADP-specific source.
+- **Further appeal:** Federal Supreme Court (Bundesgericht). The FDPIC itself may appeal decisions of the Federal Administrative Court (Art. 52(3)).
+- **If the authority does nothing:** No equivalent of GDPR Art. 78(2): reporters are not parties and have no formal remedy against FDPIC inaction (not confirmed whether a supervisory complaint is available).
+- **Suing directly:** Cantonal civil courts, through the personality protection actions of the Civil Code (Arts. 28 ff.) as specified by Art. 32 FADP: injunctions, rectification, prohibition of processing, deletion, and damages or satisfaction. No class actions for damages. Associations can seek injunctive relief only (Civil Procedure Code Art. 89, not confirmed in this packet). The EU Representative Actions Directive does not apply; status of Swiss collective redress reform not confirmed.
+- **Case: Inkasso-Team AG (Federal Administrative Court A-3891/2025) (2026).** On 22 June 2026 the Federal Administrative Court upheld an FDPIC finding that publishing alleged debtors' personal data online to locate them and warn third parties breached personality rights and could not be justified. The judgment is final and the website was taken offline.
+- **Case: Digitec Galaxus AG (old FADP) (2020-2024).** Under the old FADP, an investigation opened in March 2020 found profiling and intra-group data sharing breached data protection principles, but the FDPIC could only issue recommendations; the company disagreed yet said it would comply. It illustrates why the 2023 revision gave the FDPIC binding ruling powers.
+- No administrative fines at all: sanctions are criminal fines up to CHF 250,000 aimed at the responsible individuals (managers, employees), imposed by cantonal prosecutors; the company itself can be ordered to pay only up to CHF 50,000 where identifying the individual would be disproportionate (Art. 64).
+- Only wilful breaches are punishable, and the main offences (Arts. 60 and 61) are prosecuted only on complaint.
+- The FDPIC issues binding rulings since 1 September 2023 but cannot fine; it can file criminal complaints and join proceedings as private claimant.
+- Complainants are not parties to FDPIC proceedings, unlike in most GDPR countries.
+- The EU has adequacy for Switzerland, but the GDPR does not apply as such; the GDPR may still bind Swiss firms that target EU residents.
+
+## Part 8. CJEU judgments that shape enforcement
+
+| Case | Date | Name | What it settled |
+|---|---|---|---|
+| C-645/19 | 15 June 2021 (Grand Chamber) | Facebook Ireland and Others v Gegevensbeschermingsautoriteit | A non-lead authority may, in the situations where the GDPR gives it competence to adopt a decision (such as Art. 56(2) or Art. 66 urgency), bring an alleged infringement in cross-border processing before national courts, provided it respects the cooperation and consistency procedures; Art. 58(5) is directly effective. |
+| C-132/21 | 12 January 2023 | BE v Nemzeti Adatvédelmi és Információszabadság Hatóság | The remedies in Arts. 77 and 78(1) and in Art. 79(1) may be exercised concurrently and independently of each other, and Member States must organise them so as to avoid inconsistent decisions without undermining either remedy. |
+| C-414/24 | 18 June 2026 | Datenschutzbehörde and G S v Bundesministerin für Justiz and D GmbH | An authority may not reject a complaint under Art. 77(1) on the sole ground that court proceedings under Art. 79(1) on the same subject matter have already been brought, even where the court's decision is not yet final. |
+| C-807/21 | 5 December 2023 (Grand Chamber) | Deutsche Wohnen | A fine under Art. 83 may be imposed on a legal person only for an infringement committed intentionally or negligently (no strict liability), but national law may not require the infringement to be first attributed to an identified natural person; where the addressee is part of a group, the fine maximum is calculated on the undertaking's turnover in the competition-law sense. |
+| C-683/21 | 5 December 2023 (Grand Chamber) | Nacionalinis visuomenės sveikatos centras | Fines require an intentional or negligent infringement, which covers a controller that could not have been unaware of the infringing nature of its conduct; a controller may be fined for processing carried out by a processor on its behalf, unless the processor processed the data for its own purposes or in a way incompatible with the framework or arrangements set by the controller. |
+| C-383/23 | 13 February 2025 | ILVA | The 'undertaking' in Art. 83(4)-(6) has its competition-law meaning, so the fine cap is calculated on the total worldwide turnover of the economic unit (including the parent group) and that turnover may also be taken into account when setting the amount of the fine. |
+| C-768/21 | 26 September 2024 | TR v Land Hessen | Where an authority finds an infringement it must act to remedy it, but it is not obliged to exercise a corrective power, in particular to impose a fine, if that is not appropriate, necessary or proportionate, for example where the controller has already taken remedial measures. |
+| C-26/22 and C-64/22 | 7 December 2023 | SCHUFA Holding (discharge from remaining debts) | A supervisory authority's decision on a complaint is a legally binding decision under Art. 78(1) and is subject to full judicial review on the merits, not limited to whether the authority dealt with the complaint at all. |
+| C-416/23 | 9 January 2025 | Österreichische Datenschutzbehörde v F R | Complaints are 'requests' under Art. 57(4); a high number of complaints alone does not make them excessive, the authority must show an abusive intention, and it may choose between charging a reasonable fee and refusing to act. |
+| C-300/21 | 4 May 2023 | Österreichische Post | A mere infringement does not by itself give a right to compensation; damage and a causal link must be shown, but there is no de minimis seriousness threshold, and the quantum is set by national law subject to equivalence and effectiveness. |
+| C-340/21 | 14 December 2023 | Natsionalna agentsia za prihodite | Unauthorised access by third parties does not by itself prove the controller's measures were inadequate; the controller bears the burden of proving their appropriateness; and fear of possible misuse of data after a breach can constitute non-material damage. |
+| C-456/22 | 14 December 2023 | Gemeinde Ummendorf | Art. 82 precludes national rules requiring non-material damage to reach a threshold of seriousness, though the claimant must still prove damage. |
+| C-687/21 | 25 January 2024 | MediaMarktSaturn Hagen-Iserlohn | Compensation is purely compensatory, not punitive; a purely hypothetical risk of misuse, where no third party actually accessed the data, does not give rise to compensation. |
+| C-741/21 | 11 April 2024 | juris | A controller cannot escape liability merely by blaming a person acting under its authority; the Art. 83 fining criteria need not be applied when setting Art. 82 compensation, nor must account be taken of several infringements affecting the claimant in the same processing operation. |
+| C-590/22 | 20 June 2024 | PS GbR | Fear that data have been disclosed to third parties can be non-material damage if proven; compensation must fully compensate the actual damage and has no deterrent or punitive function. |
+| C-655/23 | 4 September 2025 | Quirin Privatbank | Negative feelings such as fear or annoyance can be compensable non-material damage if proven; the GDPR itself does not provide a preventive injunction (national law may); an injunction does not reduce compensation; and the degree of the controller's fault may not be used to set the amount. |
+| C-526/24 | 19 March 2026 | Brillen Rottler | Even a first access request can be refused as excessive under Art. 12(5) where made with abusive intent; Art. 82 covers damage from an infringement of the access right, but damage must be proven and causation may be broken where the data subject's own conduct is the decisive cause. |
+| C-319/20 | 28 April 2022 | Meta Platforms Ireland v Bundesverband der Verbraucherzentralen | Art. 80(2) allows Member States to let consumer associations bring representative actions against infringements without a mandate and independently of the infringement of specific data subjects' rights, including via consumer protection and unfair competition law. |
+| C-757/22 | 11 July 2024 | Meta Platforms Ireland v Bundesverband der Verbraucherzentralen (II) | An Art. 80(2) action may be based on a breach of the duty to inform data subjects of the purposes of processing and the recipients of their data at the latest at collection (Arts. 12(1) and 13(1)(c) and (e)), since such a breach is an infringement 'as a result of the processing'. |
+| C-252/21 | 4 July 2023 (Grand Chamber) | Meta Platforms v Bundeskartellamt | A competition authority may find, incidentally to an abuse of dominance assessment, that processing breaches the GDPR, but must cooperate sincerely with and follow the decisions or case law of the competent data protection authorities. |
+
+### The numbers
+
+- Data protection authorities collectively receive over 100,000 complaints per year (2022 highest: Germany 32,300, Italy 30,880, Spain 15,128). (European Commission, Second report on the application of the GDPR, COM(2024) 357 final, 25 July 2024)
+- Almost 2,400 cross-border case entries registered in the Board's information system; lead authorities issued around 1,500 draft decisions, 990 of which resulted in final decisions finding an infringement (May 2018 to 3 November 2023). (COM(2024) 357 final)
+- Authorities imposed over 6,680 fines totalling around EUR 4.2 billion (Ireland EUR 2.8 billion, Luxembourg EUR 746 million); nine Art. 65 dispute resolution binding decisions adopted. (COM(2024) 357 final)
+- In 2025: 414 cross-border cases created in the EDPB case register; 1,299 Art. 60 one-stop-shop procedures triggered, 572 resulting in final decisions; national authorities issued about EUR 1.15 billion in fines; 29 Art. 64(1) opinions; no Art. 65 binding decisions. (EDPB Annual Report 2025, published 9 April 2026)
+- CMS GDPR Enforcement Tracker: about EUR 7.56 billion across 3,295 recorded fines (as at 2 October 2026); covers only publicly known fines, so it is a lower bound and not an official figure. (CMS Enforcement Tracker)
+
+## Part 9. Test yourself
+
+**1. Who imposes a GDPR fine in most EEA countries?**
+
+> The data protection authority itself, by administrative decision (Art. 58(2)(i), Art. 83). A court is involved only if the decision is challenged.
+
+**2. Name the two countries Recital 151 deals with, and how each fines.**
+
+> Denmark: the authority reports to the police, the prosecution charges, and a district court imposes the fine. Estonia: the authority fines through misdemeanour proceedings, challenged in the county court.
+
+**3. What is special about a fine from the Irish DPC?**
+
+> It is not payable until a court confirms it. If there is no appeal within 28 days the DPC must apply to the Circuit Court for confirmation (s.143 Data Protection Act 2018); appeals go to the Circuit Court up to EUR 75,000, otherwise the High Court.
+
+**4. Does a complainant receive any part of the fine?**
+
+> No. Fines go to the state (in Portugal 40 percent goes to the authority). Money for the person comes only from a compensation claim under Art. 82.
+
+**5. Can a person complain to the authority and sue in court at the same time?**
+
+> Yes. C-132/21 Nemzeti: Art. 77/78 and Art. 79 remedies are concurrent and independent. C-414/24: an authority cannot reject a complaint only because court proceedings were brought.
+
+**6. What can a complainant do if the authority does nothing?**
+
+> Go to court under Art. 78(2) if the authority does not handle the complaint or report back within three months. Some countries add their own route, for example Ireland s.150(7) and Sweden since May 2025.
+
+**7. Which authority leads in a cross-border case?**
+
+> The authority of the main establishment of the controller or processor (Art. 56(1)). The complainant's own authority becomes a concerned authority.
+
+**8. What happens when a concerned authority objects and the lead authority disagrees?**
+
+> The EDPB adopts a binding decision under Art. 65, and the lead authority adopts its final decision within one month. That decision can now be challenged at the EU General Court (C-97/23 P, 10 February 2026).
+
+**9. What is Regulation (EU) 2025/2518 and when does it bite?**
+
+> The GDPR Procedural Regulation, harmonising the cross-border procedure (admissibility, right to be heard, access to file, deadlines). In force 1 January 2026; it applies to complaints lodged and investigations opened more than 15 months later, so from about 2 April 2027.
+
+**10. What deadline does the Procedural Regulation set for a lead authority's draft decision?**
+
+> 15 months from confirming competence, extendable once by up to 12 months; 12 months under the simple cooperation procedure (Art. 12).
+
+**11. Is an authority obliged to fine every infringement it finds?**
+
+> No. It must act to remedy the infringement but chooses the measure; a fine is not compulsory where it is not appropriate, necessary or proportionate (C-768/21 Land Hessen).
+
+**12. Can a company be fined without proof of fault?**
+
+> No. A fine requires an intentional or negligent infringement, but national law cannot require that a specific manager be identified (C-807/21 Deutsche Wohnen, C-683/21).
+
+**13. Whose turnover sets the cap?**
+
+> That of the whole undertaking in the competition-law sense, including the parent group (C-383/23 ILVA).
+
+**14. Name four countries where public bodies cannot be fined at all.**
+
+> Any four of: Austria, Croatia, Czechia, Finland, Germany, Latvia, Spain, Liechtenstein.
+
+**15. Name four countries that fine public bodies but with a national cap.**
+
+> Any four of: Cyprus, Denmark, Greece, Ireland, Lithuania, Malta, Poland, Romania, Sweden.
+
+**16. In which two countries is the supreme administrative court both the first and the last instance for a fine?**
+
+> France (Conseil d'État) and Greece (Council of State).
+
+**17. Which kind of court hears an appeal against a Garante fine in Italy?**
+
+> The ordinary civil court, the Tribunale, within 30 days (60 if abroad); then only the Corte di Cassazione.
+
+**18. Where does a company appeal an AEPD fine, and how can it reduce the fine before that?**
+
+> Before the Audiencia Nacional (after an optional reposición); acknowledging liability and paying voluntarily each earn at least 20 percent off the proposed fine, conditional on waiving an administrative appeal.
+
+**19. Does an infringement on its own give a right to compensation?**
+
+> No. Damage and causation must be shown (C-300/21), though there is no seriousness threshold (C-456/22) and proven fear of misuse can count (C-340/21).
+
+**20. How does Switzerland differ?**
+
+> It is outside the GDPR. Under the revised FADP the FDPIC cannot fine; fines up to CHF 250,000 are criminal, imposed by cantonal authorities on the responsible individuals for wilful breaches.
+
+## Part 10. Method and limits
+
+- Each country was researched from its implementing act, the authority's pages and published decisions; law firm and press sources were used to locate facts. A second, independent pass re-read the cited sources and corrected 90 points.
+- Several official law portals refuse automated reading, so some article numbers rest on consolidated copies or translations.
+- Appeal deadlines and suspensive effect are the least certain fields, because many countries set them in general administrative procedure law.
+- Court cases move. Everything after 2 October 2026 is not reflected. The web page carries the source list for every country.
