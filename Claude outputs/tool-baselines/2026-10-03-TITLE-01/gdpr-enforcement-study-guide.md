@@ -1,4 +1,4 @@
-# GDPR and privacy enforcement, Europe and worldwide: study guide
+# GDPR enforcement in Europe: study guide
 
 How a complaint becomes a fine, where the courts come in, and the route in each EU and EEA country, with the United Kingdom and Switzerland for contrast; Part 11 adds 23 jurisdictions outside Europe. Researched on 2 October 2026 from national laws, authority websites and court reports, then checked by an independent pass against the cited sources. *Not confirmed* means no source was found either way. This maps procedure; it is not legal advice.
 

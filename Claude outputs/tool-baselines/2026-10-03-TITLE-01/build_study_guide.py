@@ -57,7 +57,7 @@ QUIZ = [
 
 def build_md():
     L = []
-    L.append("# GDPR and privacy enforcement, Europe and worldwide: study guide")
+    L.append("# GDPR enforcement in Europe: study guide")
     L.append("")
     L.append("How a complaint becomes a fine, where the courts come in, and the route in each EU and EEA country, with the United Kingdom and Switzerland for contrast; Part 11 adds 23 jurisdictions outside Europe. Researched on %s from national laws, authority websites and court reports, then checked by an independent pass against the cited sources. *Not confirmed* means no source was found either way. This maps procedure; it is not legal advice." % P.CHECKED)
     L.append("")
@@ -333,7 +333,7 @@ async def pdf(html_path, pdf_path):
         await pg.pdf(path=pdf_path, format="A4", print_background=True,
                      margin={"top": "16mm", "bottom": "18mm", "left": "15mm", "right": "15mm"},
                      display_header_footer=True, header_template="<span></span>",
-                     footer_template='<div style="font-size:8px;width:100%;text-align:center;color:#777">GDPR and privacy enforcement, Europe and worldwide: study guide, ' + P.CHECKED + ' <span style="float:right;margin-right:15mm" class="pageNumber"></span></div>')
+                     footer_template='<div style="font-size:8px;width:100%;text-align:center;color:#777">GDPR enforcement in Europe: study guide, ' + P.CHECKED + ' <span style="float:right;margin-right:15mm" class="pageNumber"></span></div>')
         await b.close()
 
 
@@ -344,7 +344,7 @@ if __name__ == "__main__":
     open(mdp, "w", encoding="utf-8", newline="\n").write(md)
     htmlp = os.path.join(OUT, "gdpr-enforcement-study-guide.html")
     body = subprocess.run(["pandoc", "-f", "gfm", "-t", "html5", mdp], capture_output=True, text=True, check=True).stdout
-    open(htmlp, "w", encoding="utf-8").write('<!doctype html><html lang="en"><head><meta charset="utf-8"><title>GDPR and privacy enforcement, Europe and worldwide: study guide</title><style>%s</style></head><body>%s</body></html>' % (CSS, body))
+    open(htmlp, "w", encoding="utf-8").write('<!doctype html><html lang="en"><head><meta charset="utf-8"><title>GDPR enforcement in Europe: study guide</title><style>%s</style></head><body>%s</body></html>' % (CSS, body))
     pdfp = os.path.join(OUT, "gdpr-enforcement-study-guide.pdf")
     asyncio.run(pdf(htmlp, pdfp))
     print(mdp, len(md.encode("utf-8")), "bytes;", pdfp, os.path.getsize(pdfp), "bytes")
