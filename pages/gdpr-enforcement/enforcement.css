@@ -56,7 +56,7 @@
 .ge-year { font-weight: normal; opacity: 0.7; font-size: 0.92em; }
 .ge-src { font-size: 0.82em; opacity: 0.75; }
 
-.ge-chip { display: inline-block; padding: 0.15em 0.6em; border-radius: 999px; font-size: 0.82em; line-height: 1.5; font-weight: bold; margin: 0 0.35em 0.35em 0; white-space: normal; }
+.ge-chip { display: inline-block; padding: 0.3em 0.65em; border-radius: 6px; font-size: 0.82em; line-height: 1.5; font-weight: bold; margin: 0 0.35em 0.35em 0; white-space: normal; }
 .ge-chips { margin: 0.6em 0 1em 0; }
 
 /* -------------------------------------------------------------- buttons --- */
