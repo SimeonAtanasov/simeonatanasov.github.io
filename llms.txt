@@ -18,7 +18,7 @@
 
 ## Tools
 
-- [Privacy & AI Risk Assessments](https://www.simeonatanasov.com/privacy-ai-assessment.html): Free privacy and AI governance assessments: privacy check, full DPIA, legitimate interest test, AI Act risk, breach severity, third-party security, fundamental rights impact, generative AI risk and transfer impact.
+- [Privacy & AI Risk Assessments](https://www.simeonatanasov.com/privacy-ai-assessment.html): Free privacy and AI governance assessments: privacy check, full DPIA, legitimate interest test, AI Act risk, breach severity, third-party security, fundamental rights impact, generative AI risk, transfer impact, and an AI assessment pathway that runs the AI tools as one with an impact level and framework coverage.
 - [GDPR Readiness Assessment](https://www.simeonatanasov.com/gdpr-readiness.html): An accountability-based GDPR readiness assessment: record the privacy activities you perform and see which GDPR Articles they evidence.
 - [GDPR Fine Calculator](https://www.simeonatanasov.com/gdpr-fine-calculator.html): Benchmark a possible GDPR fine against published enforcement decisions: see what comparable organisations paid and the statutory ceiling.
 - [GDPR Fines Analytics](https://www.simeonatanasov.com/gdpr-fines-analytics.html): Build your own chart of published GDPR fines by country, sector, authority, Article or year, then download it as PNG or CSV.

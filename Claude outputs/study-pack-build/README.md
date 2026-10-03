@@ -1,6 +1,6 @@
 # Study pack build
 
-Generates `../study-guides/privacy-ai-act-assessments-study-pack-v2.pdf` (161 pages since 3 October 2026, greyscale): the
+Generates `../study-guides/privacy-ai-act-assessments-study-pack-v2.pdf` (174 pages since 3 October 2026, greyscale): the
 two advice pages plus an authored study layer and the two assessment tools, laid out for
 print.
 
@@ -68,3 +68,19 @@ file are in `../tool-baselines/2026-10-03-STUDY-01/`.
 Since 3 October 2026 `build.py` also writes `privacy-ai-act-assessments-study-pack.md`
 beside the PDF, converted by pandoc from `pack.html` (skipped if pandoc is missing). Copy it
 to `../study-guides/` with the `-v2` name, next to the PDF.
+
+## 3 October 2026: the AI Assessment Pathway added to Part 3 (STUDY-02)
+
+`dump_assessment.js` now also dumps the pathway's arrays (`AIPATH_STEPS`, the framework map,
+the tier factors and the vocabularies); every entry for the nine earlier tools came out
+identical to the previous dump. `build.py` has a tenth `MODULE_ORDER` row, a `TIER` table
+read from `aipath_tier.json` (written by `../ai-pathway-build/guide_data.js` from the shipped
+code, so the points are never retyped) and prints the pathway's visibility conditions from
+`study_tools.AIPATH_CONDITIONS` and `AIPATH_STEP_CONDITIONS` instead of the function source,
+which only calls helpers. `study_tools.py`: the pathway cheat sheet, four self-test questions
+(78 in all), the suite intro, source 3 updated and sources 23 to 26 (NIST AI RMF 1.0, ISO/IEC
+42001, the Singapore framework, the Canadian AIA) added. `front.py`: ten tools, 534
+questions, 78 self-test questions, a review card line. Rebuilt from unchanged inputs first:
+text identical to the 161-page PDF. After: 174 pages; text removed is only the counts, the
+reflowed suite intro and the table of contents page numbers. Before-images in
+`../tool-baselines/2026-10-03-STUDY-02/`.

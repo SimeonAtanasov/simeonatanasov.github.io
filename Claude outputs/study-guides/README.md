@@ -6,7 +6,8 @@ Markdown text version (for search, diffing and reading anywhere). Gathered here 
 
 | Guide | PDF | Markdown | How the Markdown is made | Built by |
 | --- | --- | --- | --- | --- |
-| Study pack: Practical Privacy, Practical AI Act Advice, the nine assessment tools, the GDPR Readiness model (161 pages, 74 self-test questions) | `privacy-ai-act-assessments-study-pack-v2.pdf` | `privacy-ai-act-assessments-study-pack-v2.md` | pandoc from the HTML the PDF is printed from; `build.py` writes both | `../study-pack-build/` |
+| Study pack: Practical Privacy, Practical AI Act Advice, the ten assessment tools, the GDPR Readiness model (174 pages, 78 self-test questions) | `privacy-ai-act-assessments-study-pack-v2.pdf` | `privacy-ai-act-assessments-study-pack-v2.md` | pandoc from the HTML the PDF is printed from; `build.py` writes both | `../study-pack-build/` |
+| AI Assessment Pathway study guide (30 pages, 15 practice questions) | `ai-assessment-pathway-guide.pdf` | `ai-assessment-pathway-guide.md` | the Markdown is the source; the PDF is printed from it by the same script | `../ai-pathway-build/build_guide.py` |
 | GDPR and privacy enforcement, Europe and worldwide (study guide; Part 11 covers 23 jurisdictions outside Europe) | `gdpr-enforcement-study-guide.pdf` | `gdpr-enforcement-study-guide.md` | the Markdown is the source; the PDF is printed from it | `../gdpr-enforcement-build/build_study_guide.py` |
 | How the GDPR fine calculator works | none | `gdpr-fine-calculator-explained.md` | written as Markdown | by hand |
 | AI Act Digest, 28 September 2026 (current) | `ai-act-digest-2026-09-28.pdf` | `ai-act-digest-2026-09-28.md` | Obsidian version with front matter (see below) | `../ai-act-digest-build/build_aia_pdf.py` |

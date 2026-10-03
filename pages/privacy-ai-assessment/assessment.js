@@ -3377,6 +3377,1246 @@
 	var ADDED_MODULE_IDS = ["fria", "tia", "genai"];
 
 	/* =================================================================
+	 *  ADDED 2026-10-03 (tool change log TC-08): AI ASSESSMENT PATHWAY.
+	 *  One entry point for assessing an AI system. A shared intake runs
+	 *  once, a scored impact level (I to IV) sets how deep each part goes,
+	 *  and trigger answers open only the modules that apply. Questions are
+	 *  reused by id from the AI Risk, Generative AI and FRIA tools, so the
+	 *  answers carry into the FRIA and DPIA handovers. Nothing above this
+	 *  block is changed; it reads the shared vocabularies and the step and
+	 *  check arrays of the other tools and edits none of them.
+	 * ================================================================= */
+
+	var NIST_AI_RMF_URL = "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf";
+	var ISO_42001_URL = "https://www.iso.org/standard/42001";
+	var ISO_42005_URL = "https://www.iso.org/standard/42005";
+	var SG_GENAI_URL = "https://aiverifyfoundation.sg/resources/mgf-gen-ai/";
+	var CANADA_AIA_URL = "https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai/algorithmic-impact-assessment.html";
+
+	/* ---------------- Mapping layer ----------------
+	 * Each question the pathway asks (or derives) is mapped to NIST AI RMF 1.0
+	 * subcategories, ISO/IEC 42001 clauses and Annex A controls (numbers and
+	 * titles only), and the nine dimensions of the Singapore Model AI
+	 * Governance Framework for Generative AI. NIST AI 600-1 and OWASP come from
+	 * GAI_CHECKS, unchanged. The mapping is this tool's own. A row that no
+	 * answered question touches is "Not assessed", never a pass. */
+
+	var SG_DIMENSIONS = [
+		"Accountability",
+		"Data",
+		"Trusted Development and Deployment",
+		"Incident Reporting",
+		"Testing and Assurance",
+		"Security",
+		"Content Provenance",
+		"Safety and Alignment R&D",
+		"AI for Public Good"
+	];
+
+	// Generated from ai-crosswalk-build/nist_ai_rmf.json and iso42001.json by
+	// Claude outputs/ai-pathway-build/build_aipath.py: only the ids mapped below.
+	var AIPATH_NIST_TEXT = {
+		"GOVERN 1.1": "Legal and regulatory requirements involving AI are understood, managed, and documented.",
+		"GOVERN 1.5": "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and organizational roles and responsibilities clearly defined, including determining the frequency of periodic review.",
+		"GOVERN 1.6": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities.",
+		"GOVERN 2.1": "Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization.",
+		"GOVERN 2.2": "The organization's personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements.",
+		"GOVERN 2.3": "Executive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment.",
+		"GOVERN 3.2": "Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems.",
+		"GOVERN 4.2": "Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly.",
+		"GOVERN 5.1": "Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks.",
+		"GOVERN 6.1": "Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third-party's intellectual property or other rights.",
+		"MANAGE 1.1": "A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed.",
+		"MANAGE 1.3": "Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting.",
+		"MANAGE 1.4": "Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented.",
+		"MANAGE 2.3": "Procedures are followed to respond to and recover from a previously unknown risk when it is identified.",
+		"MANAGE 2.4": "Mechanisms are in place and applied, and responsibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use.",
+		"MANAGE 3.2": "Pre-trained models which are used for development are monitored as part of AI system regular monitoring and maintenance.",
+		"MANAGE 4.1": "Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management.",
+		"MANAGE 4.2": "Measurable activities for continual improvements are integrated into AI system updates and include regular engagement with interested parties, including relevant AI actors.",
+		"MANAGE 4.3": "Incidents and errors are communicated to relevant AI actors, including affected communities. Processes for tracking, responding to, and recovering from incidents and errors are followed and documented.",
+		"MAP 1.1": "Intended purposes, potentially beneficial uses, context-specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and documented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative impacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics.",
+		"MAP 2.1": "The specific tasks and methods used to implement the tasks that the AI system will support are defined (e.g., classifiers, generative models, recommenders).",
+		"MAP 2.2": "Information about the AI system's knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making decisions and taking subsequent actions.",
+		"MAP 2.3": "Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation.",
+		"MAP 3.2": "Potential costs, including non-monetary costs, which result from expected or realized AI errors or system functionality and trustworthiness – as connected to organizational risk tolerance – are examined and documented.",
+		"MAP 3.3": "Targeted application scope is specified and documented based on the system's capability, established context, and AI system categorization.",
+		"MAP 3.4": "Processes for operator and practitioner proficiency with AI system performance and trustworthiness – and relevant technical standards and certifications – are defined, assessed, and documented.",
+		"MAP 3.5": "Processes for human oversight are defined, assessed, and documented in accordance with organizational policies from the GOVERN function.",
+		"MAP 4.1": "Approaches for mapping AI technology and legal risks of its components – including the use of third-party data or software – are in place, followed, and documented, as are risks of infringement of a third party's intellectual property or other rights.",
+		"MAP 4.2": "Internal risk controls for components of the AI system, including third-party AI technologies, are identified and documented.",
+		"MAP 5.1": "Likelihood and magnitude of each identified impact (both potentially beneficial and harmful) based on expected use, past uses of AI systems in similar contexts, public incident reports, feedback from those external to the team that developed or deployed the AI system, or other data are identified and documented.",
+		"MEASURE 1.3": "Internal experts who did not serve as front-line developers for the system and/or independent assessors are involved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance.",
+		"MEASURE 2.10": "Privacy risk of the AI system – as identified in the MAP function – is examined and documented.",
+		"MEASURE 2.11": "Fairness and bias – as identified in the MAP function – are evaluated and results are documented.",
+		"MEASURE 2.12": "Environmental impact and sustainability of AI model training and management activities – as identified in the MAP function – are assessed and documented.",
+		"MEASURE 2.4": "The functionality and behavior of the AI system and its components – as identified in the MAP function – are monitored when in production.",
+		"MEASURE 2.5": "The AI system to be deployed is demonstrated to be valid and reliable. Limitations of the generalizability beyond the conditions under which the technology was developed are documented.",
+		"MEASURE 2.6": "The AI system is evaluated regularly for safety risks – as identified in the MAP function. The AI system to be deployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics reflect system reliability and robustness, real-time monitoring, and response times for AI system failures.",
+		"MEASURE 2.7": "AI system security and resilience – as identified in the MAP function – are evaluated and documented.",
+		"MEASURE 2.8": "Risks associated with transparency and accountability – as identified in the MAP function – are examined and documented.",
+		"MEASURE 2.9": "The AI model is explained, validated, and documented, and AI system output is interpreted within its context – as identified in the MAP function – to inform responsible use and governance.",
+		"MEASURE 3.1": "Approaches, personnel, and documentation are in place to regularly identify and track existing, unanticipated, and emergent AI risks based on factors such as intended and actual performance in deployed contexts.",
+		"MEASURE 3.3": "Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics."
+	};
+	var AIPATH_ISO_TITLES = {
+		"4.1": "Understanding the organization and its context",
+		"5.3": "Roles, responsibilities and authorities",
+		"6.1.2": "AI risk assessment",
+		"6.1.3": "AI risk treatment",
+		"6.1.4": "AI system impact assessment",
+		"6.3": "Planning of changes",
+		"7.2": "Competence",
+		"7.3": "Awareness",
+		"7.4": "Communication",
+		"7.5": "Documented information",
+		"8.2": "AI risk assessment",
+		"8.3": "AI risk treatment",
+		"8.4": "AI system impact assessment",
+		"9.1": "Monitoring, measurement, analysis and evaluation",
+		"A.10.2": "Allocating responsibilities",
+		"A.10.3": "Suppliers",
+		"A.3.2": "AI roles and responsibilities",
+		"A.4.6": "Human resources",
+		"A.5.2": "AI system impact assessment process",
+		"A.5.4": "Assessing AI system impact on individuals or groups of individuals",
+		"A.5.5": "Assessing societal impacts of AI systems",
+		"A.6.2.4": "AI system verification and validation",
+		"A.6.2.5": "AI system deployment",
+		"A.6.2.6": "AI system operation and monitoring",
+		"A.6.2.7": "AI system technical documentation",
+		"A.6.2.8": "AI system recording of event logs",
+		"A.7.2": "Data for development and enhancement of AI system",
+		"A.7.3": "Acquisition of data",
+		"A.7.4": "Quality of data for AI systems",
+		"A.7.5": "Data provenance",
+		"A.8.2": "System documentation and information for users",
+		"A.8.4": "Communication of incidents",
+		"A.8.5": "Information for interested parties",
+		"A.9.2": "Processes for responsible use of AI systems",
+		"A.9.4": "Intended use of the AI system"
+	};
+
+	// id: [NIST AI RMF subcategories], [ISO/IEC 42001 clauses and controls], [Singapore dimension indexes]
+	var AIPATH_FRAMEWORK_MAP = {
+		// Intake
+		description: [["MAP 1.1", "MAP 2.1"], ["A.9.4"], []],
+		lifecycle: [["GOVERN 1.6"], ["A.6.2.5"], []],
+		provider: [["GOVERN 6.1", "MAP 4.1"], ["A.10.3"], [0]],
+		annexIIIArea: [["GOVERN 1.1", "MAP 1.1", "MAP 3.3"], ["4.1"], []],
+		affectedCategories: [["MAP 1.1", "MAP 5.1"], ["A.5.4"], []],
+		friaVulnerable: [["MAP 5.1"], ["A.5.4"], []],
+		affectedScale: [["MAP 5.1"], ["6.1.4"], []],
+		aipDecisionEffect: [["MAP 3.3", "MAP 5.1"], ["6.1.4"], []],
+		aipReversibility: [["MAP 5.1"], ["6.1.4"], []],
+		gaiUsers: [["MAP 1.1"], ["A.9.4"], []],
+		gaiPromptData: [["MEASURE 2.10"], ["A.7.2"], [1]],
+		autonomyLevel: [["GOVERN 3.2", "MAP 3.5"], ["A.9.2"], []],
+		oversightMode: [["GOVERN 3.2", "MAP 3.5"], ["A.9.2"], [0]],
+		// Triggers
+		aipGenerates: [["MAP 2.1"], [], []],
+		aipFoundationModel: [["MAP 2.1", "MAP 4.1"], [], []],
+		aipFreePrompts: [["MAP 2.1"], [], []],
+		aipEu: [["GOVERN 1.1"], ["4.1"], []],
+		// Core
+		loggingInPlace: [["MEASURE 2.4", "MANAGE 4.1"], ["A.6.2.8"], [0]],
+		multiAgent: [["MAP 4.1"], ["A.10.3"], []],
+		multiAgentDocumented: [["GOVERN 1.6", "MAP 4.1"], ["A.10.3"], [0]],
+		broadDataAccess: [["MEASURE 2.7"], [], [5]],
+		thirdPartyData: [["GOVERN 6.1", "MAP 4.1"], ["A.7.3", "A.7.5"], [1]],
+		gaiProviderUse: [["GOVERN 6.1", "MEASURE 2.10"], ["A.10.3"], [1]],
+		businessCriticalData: [["MAP 4.2"], [], [5]],
+		competitorExposure: [["MEASURE 2.7"], [], [5]],
+		biasEvaluated: [["MEASURE 2.11"], ["A.5.4", "A.7.4"], [4]],
+		oversightAssigned: [["GOVERN 2.1", "GOVERN 3.2", "MAP 3.5"], ["A.3.2", "A.9.2"], [0]],
+		oversightCompetence: [["GOVERN 2.2", "MAP 3.4"], ["7.2"], [0]],
+		automationBias: [["MAP 3.5", "MEASURE 2.9"], ["A.9.2"], []],
+		gaiUserGuidance: [["GOVERN 2.2", "MAP 3.4"], ["7.2", "7.3", "A.4.6"], []],
+		// Impact
+		rightsAtRisk: [["MAP 5.1"], ["A.5.4"], []],
+		harmsDescription: [["MAP 3.2", "MAP 5.1"], ["6.1.4", "8.4", "A.5.4"], []],
+		providerInfoReviewed: [["GOVERN 6.1", "MAP 2.2"], ["A.8.2"], []],
+		friaInherentSeverity: [["MAP 5.1"], ["8.4", "A.5.2"], []],
+		friaInherentLikelihood: [["MAP 5.1"], ["8.4", "A.5.2"], []],
+		mitigationMeasures: [["MANAGE 1.3"], ["6.1.3", "8.3"], []],
+		friaResidualSeverity: [["MANAGE 1.4"], ["8.3"], []],
+		friaResidualLikelihood: [["MANAGE 1.4"], ["8.3"], []],
+		materialiseMeasures: [["MANAGE 2.3", "MANAGE 4.3"], ["A.8.4"], [3]],
+		complaintMechanism: [["GOVERN 5.1", "MEASURE 3.3"], ["A.8.5"], [0]],
+		explanationProcess: [["MEASURE 2.8", "MEASURE 2.9"], ["A.8.5"], []],
+		aipSocietalImpact: [["MAP 5.1"], ["A.5.5"], [8]],
+		// Generative AI (NIST AI 600-1 and OWASP come from GAI_CHECKS)
+		gaiPatterns: [["MAP 2.1"], [], []],
+		gaiModelSource: [["MAP 4.1"], ["A.10.3"], [0]],
+		gaiUntrustedContent: [["MAP 4.1"], [], [5]],
+		gaiInjectionTested: [["MEASURE 2.7"], ["A.6.2.4"], [4, 5]],
+		gaiSystemPromptSecrets: [["MEASURE 2.7"], [], [5]],
+		gaiInputFiltering: [["MANAGE 1.3", "MEASURE 2.7"], [], [5]],
+		gaiOutputLeakCheck: [["MEASURE 2.10"], [], [1]],
+		gaiRagPermissions: [["MEASURE 2.7", "MEASURE 2.10"], [], [1, 5]],
+		gaiEmbeddingStore: [["MEASURE 2.7"], [], [5]],
+		gaiIpCheck: [["GOVERN 6.1", "MAP 4.1"], [], [1]],
+		gaiOutputHandling: [["MEASURE 2.7"], ["A.6.2.4"], [5]],
+		gaiGrounding: [["MEASURE 2.5", "MEASURE 2.9"], [], [2]],
+		gaiHumanReview: [["MAP 3.5"], ["A.9.2"], []],
+		gaiContentFilters: [["MANAGE 1.3", "MEASURE 2.6"], [], [2]],
+		gaiDisclosure: [["MEASURE 2.8"], ["A.8.2"], [6]],
+		gaiToolPermissions: [["GOVERN 3.2", "MAP 3.5"], ["A.9.2"], [2]],
+		gaiApproval: [["MAP 3.5"], ["A.9.2"], [0]],
+		gaiProvenance: [["MANAGE 3.2", "MAP 4.1"], ["A.6.2.7", "A.10.3"], [2]],
+		gaiTrainingDataVetted: [["MAP 2.3", "MEASURE 2.7"], ["A.7.4", "A.7.5"], [1]],
+		gaiRateLimits: [["MEASURE 2.7"], [], [5]],
+		gaiRedTeam: [["MEASURE 1.3", "MEASURE 2.7"], ["A.6.2.4"], [4]],
+		gaiThreatModel: [["MAP 4.2", "MEASURE 2.7"], [], [5]],
+		gaiBiasEval: [["MEASURE 2.11"], [], [4]],
+		gaiMonitoring: [["MANAGE 4.1", "MANAGE 4.3", "MEASURE 2.4"], ["A.6.2.6", "A.8.4"], [3]],
+		gaiEnergy: [["MEASURE 2.12"], [], [8]],
+		// AI Act module
+		aiaRole: [["GOVERN 2.1", "GOVERN 6.1"], ["A.10.2"], [0]],
+		deployerType: [["GOVERN 1.1"], [], []],
+		intendedPurposeAligned: [["MAP 1.1", "MAP 3.3"], ["A.9.4"], []],
+		prohibitedUse: [["GOVERN 1.1", "MANAGE 1.1"], ["4.1", "A.9.4"], []],
+		highRiskAnnexI: [["GOVERN 1.1", "MAP 3.3"], ["4.1"], []],
+		aiaArt63: [["GOVERN 1.1", "MAP 3.3"], ["4.1"], []],
+		aiaProfiling: [["GOVERN 1.1", "MAP 3.3"], ["4.1"], []],
+		aiaArt63Documented: [["GOVERN 1.1", "GOVERN 1.6"], ["7.5"], [0]],
+		affectedAware: [["GOVERN 5.1", "MEASURE 2.8"], ["A.8.5"], [0]],
+		aiaInteracts: [["GOVERN 1.1", "MEASURE 2.8"], ["A.8.2"], []],
+		aiaEmotion: [["GOVERN 1.1", "MEASURE 2.8"], ["7.4", "A.8.5"], []],
+		aiaDeepfake: [["GOVERN 1.1", "MEASURE 2.8"], ["7.4", "A.8.5"], [6]],
+		aiaTransparencyDone: [["MEASURE 2.8"], ["A.8.2", "A.8.5"], [6]],
+		aiaGpaiSystemic: [["GOVERN 1.1"], [], []],
+		aiaGpaiOpenSource: [["GOVERN 1.1"], [], []],
+		aiaGpaiOutsideEu: [["GOVERN 1.1"], [], [0]],
+		aiaGpaiRep: [["GOVERN 1.1"], [], [0]],
+		aiaGpaiDocs: [["MAP 2.2"], ["A.6.2.7", "A.8.2"], [2]],
+		aiaGpaiCopyright: [["GOVERN 6.1"], ["A.7.5"], [1]],
+		aiaGpaiSummary: [["MAP 2.2"], ["A.7.5"], [1, 2]],
+		aiaGpaiEval: [["MEASURE 1.3", "MEASURE 2.6"], ["A.6.2.4"], [4, 7]],
+		aiaGpaiIncidents: [["MANAGE 4.3"], ["A.8.4"], [3]],
+		aiaGpaiCyber: [["MEASURE 2.7"], [], [5]],
+		// Governance
+		aipSystemOwner: [["GOVERN 2.1"], ["5.3", "A.3.2"], [0]],
+		aipAssessor: [["GOVERN 2.1", "MEASURE 1.3"], ["6.1.2", "8.2", "A.3.2"], []],
+		aipApprover: [["GOVERN 2.3"], ["5.3"], [0]],
+		aipDecision: [["MANAGE 1.1"], ["6.1.3", "8.3"], []],
+		aipConditions: [["MANAGE 1.3"], ["8.3"], []],
+		aipEvidence: [["GOVERN 4.2"], ["7.5"], []],
+		aipReviewDate: [["GOVERN 1.5", "MEASURE 3.1"], ["8.2", "9.1"], []],
+		aipReassessTriggers: [["GOVERN 1.5", "MANAGE 4.2"], ["6.3", "8.2"], []],
+		legalReview: [["GOVERN 1.1"], ["4.1"], []],
+		suspensionProcess: [["MANAGE 2.4", "MANAGE 4.3"], ["A.8.4"], [3]]
+	};
+
+	function aipathAnswered(v) {
+		if (v === undefined || v === null || v === "") return false;
+		if (Array.isArray(v)) return v.length > 0;
+		return true;
+	}
+
+	/* Coverage per framework. `asked` is the set of question ids the pathway
+	 * showed (or derived) for this assessment; `qSev` maps a question id to the
+	 * worst severity of the findings tied to it. A row is a gap if any mapped
+	 * question carries a finding, addressed if at least one mapped question was
+	 * answered with none, and not assessed otherwise. */
+	function aipathCoverage(d, asked, qSev) {
+		var SEV = ["low", "medium", "high"];
+		function blank() { return { gap: null, ok: 0 }; }
+		var nist = {}, iso = {}, sg = SG_DIMENSIONS.map(blank);
+		Object.keys(AIPATH_FRAMEWORK_MAP).forEach(function (q) {
+			var m = AIPATH_FRAMEWORK_MAP[q];
+			m[0].forEach(function (id) { if (!nist[id]) nist[id] = blank(); });
+			m[1].forEach(function (id) { if (!iso[id]) iso[id] = blank(); });
+			if (!asked[q] || !aipathAnswered(d[q])) return;
+			var sev = qSev[q] || null;
+			function mark(s) {
+				if (sev) { if (!s.gap || SEV.indexOf(sev) > SEV.indexOf(s.gap)) s.gap = sev; }
+				else s.ok++;
+			}
+			m[0].forEach(function (id) { mark(nist[id]); });
+			m[1].forEach(function (id) { mark(iso[id]); });
+			m[2].forEach(function (i) { mark(sg[i]); });
+		});
+		function status(s) { return s.gap ? "Gap (" + s.gap + ")" : (s.ok ? "Addressed" : "Not assessed"); }
+		function nistKey(id) {
+			var p = id.split(" "), f = ["GOVERN", "MAP", "MEASURE", "MANAGE"].indexOf(p[0]);
+			var n = p[1].split(".");
+			return f * 10000 + parseInt(n[0], 10) * 100 + parseInt(n[1], 10);
+		}
+		function isoKey(id) {
+			var annex = id.indexOf("A.") === 0 ? 1 : 0;
+			var n = id.replace("A.", "").split(".").map(function (x) { return parseInt(x, 10); });
+			return annex * 1e6 + n[0] * 1e4 + (n[1] || 0) * 1e2 + (n[2] || 0);
+		}
+		var nistRows = Object.keys(nist).sort(function (x, y) { return nistKey(x) - nistKey(y); })
+			.map(function (id) { return [id, AIPATH_NIST_TEXT[id] || "", status(nist[id])]; });
+		var isoRows = Object.keys(iso).sort(function (x, y) { return isoKey(x) - isoKey(y); })
+			.map(function (id) { return [id, AIPATH_ISO_TITLES[id] || "", status(iso[id])]; });
+		var sgRows = SG_DIMENSIONS.map(function (n, i) { return [n, status(sg[i])]; });
+		function count(rows, col) {
+			var c = { gap: 0, ok: 0, na: 0 };
+			rows.forEach(function (r) { var s = r[col]; if (s.indexOf("Gap") === 0) c.gap++; else if (s === "Addressed") c.ok++; else c.na++; });
+			return c;
+		}
+		return { nist: nistRows, iso: isoRows, sg: sgRows, nistCount: count(nistRows, 2), isoCount: count(isoRows, 2), sgCount: count(sgRows, 1) };
+	}
+
+	/* ---------------- Impact level (tier) ----------------
+	 * Method after the Government of Canada Algorithmic Impact Assessment: a
+	 * raw score from weighted answers, expressed as a share of the maximum and
+	 * banded into four levels (I up to 25 percent, II up to 50, III up to 75, IV
+	 * above). The factors and weights are this tool's own, and every factor is
+	 * read from an intake answer, so the tier needs no extra questions. Unlike
+	 * the AIA there is no mitigation deduction: the level is set before the
+	 * mitigations are asked, and they show in the residual rating instead. Two
+	 * floors: a use in an Annex III area, or a system that makes significant
+	 * decisions on its own, is never below level III. */
+
+	var AIP_DECISION_EFFECTS = [
+		"No decisions about people",
+		"Supports decisions with minor effects on people",
+		"Supports decisions with legal or similarly significant effects on people",
+		"Makes decisions with legal or similarly significant effects on its own",
+		"Not sure"
+	];
+	var AIP_REVERSIBILITY = [
+		"Easily, and quickly",
+		"With effort, or after some time",
+		"Not, or only with great difficulty",
+		"Not applicable: its output has no effect on people",
+		"Not sure"
+	];
+	var AIP_SCALES = ["Fewer than 100", "100 to 10,000", "10,000 to 1 million", "More than 1 million"];
+	var AIP_OVERSIGHT_MODES = ["Before every decision takes effect", "On flagged or contested cases only", "After the fact, by sampling", "No human review"];
+	var AIP_AUTONOMY = ["None - a human approves every action", "Low-impact actions only", "Broad autonomous action"];
+	var AIP_USERS = ["Staff only", "Selected business partners", "The public"];
+	var AIP_DATA = GAI_PROMPT_DATA;
+
+	// Annex III areas with the deepest intrusion into liberty, identity or legal status.
+	function aipSectorPoints(area) {
+		if (!area) return null;
+		if (area === "Not an Annex III high-risk system") return 0;
+		if (area === "Not sure") return 2;
+		if (/^(1\.|6\.|7\.|8\.)/.test(area)) return 4;
+		return 3;
+	}
+	function aipIsAnnexIII(a) {
+		var area = a.annexIIIArea || "";
+		return !!area && area !== "Not an Annex III high-risk system" && area !== "Not sure";
+	}
+
+	var AIPATH_TIER_FACTORS = [
+		{ key: "decision", label: "Effect of the output on people", q: "aipDecisionEffect", max: 4,
+			points: function (a) { var i = AIP_DECISION_EFFECTS.indexOf(a.aipDecisionEffect); return i < 0 ? null : [0, 1, 3, 4, 3][i]; } },
+		{ key: "reversibility", label: "Reversibility of a wrong output", q: "aipReversibility", max: 4,
+			points: function (a) { var i = AIP_REVERSIBILITY.indexOf(a.aipReversibility); return i < 0 ? null : [0, 2, 4, 0, 2][i]; } },
+		{ key: "scale", label: "Number of people affected each year", q: "affectedScale", max: 3,
+			points: function (a) { var i = AIP_SCALES.indexOf(a.affectedScale); return i < 0 ? null : i; } },
+		{ key: "vulnerable", label: "People in a vulnerable situation", q: "friaVulnerable", max: 3,
+			points: function (a) {
+				// Left blank means none, as the question says, so blank is not "missing".
+				var v = a.friaVulnerable;
+				if (!Array.isArray(v) || !v.length) return 0;
+				return v.indexOf("Children") !== -1 ? 3 : 2;
+			} },
+		{ key: "autonomy", label: "Actions taken without human approval", q: "autonomyLevel", max: 3,
+			points: function (a) { var i = AIP_AUTONOMY.indexOf(a.autonomyLevel); return i < 0 ? null : [0, 1, 3][i]; } },
+		{ key: "review", label: "When a human acts on an individual case", q: "oversightMode", max: 3,
+			points: function (a) { var i = AIP_OVERSIGHT_MODES.indexOf(a.oversightMode); return i < 0 ? null : i; } },
+		{ key: "sector", label: "Use area (Annex III)", q: "annexIIIArea", max: 4,
+			points: function (a) { return aipSectorPoints(a.annexIIIArea); } },
+		{ key: "exposure", label: "Who uses it", q: "gaiUsers", max: 2,
+			points: function (a) { var i = AIP_USERS.indexOf(a.gaiUsers); return i < 0 ? null : i; } },
+		{ key: "data", label: "Sensitivity of the data", q: "gaiPromptData", max: 3,
+			points: function (a) {
+				var d = a.gaiPromptData;
+				if (!Array.isArray(d) || !d.length) return null;
+				if (d.indexOf("Special category data") !== -1) return 3;
+				if (d.indexOf("Personal data") !== -1) return 2;
+				if (d.indexOf("Confidential business information") !== -1 || d.indexOf("Source code or credentials") !== -1) return 1;
+				return 0;
+			} }
+	];
+	var AIPATH_TIER_BANDS = [25, 50, 75]; // upper bounds in percent for levels I, II, III
+	var AIPATH_LEVEL_NAMES = ["I", "II", "III", "IV"];
+	var AIPATH_LEVEL_TEXT = [
+		"Little to no impact: effects on people are brief and easily reversed.",
+		"Moderate impact: effects are likely reversible and short-term.",
+		"High impact: effects are difficult to reverse and may be ongoing.",
+		"Very high impact: effects may be irreversible and lasting."
+	];
+
+	function aipathTier(a) {
+		var max = 0, raw = 0, missing = [], parts = [];
+		AIPATH_TIER_FACTORS.forEach(function (f) {
+			max += f.max;
+			var p = f.points(a);
+			if (p === null) { missing.push(f.label); p = 0; }
+			raw += p;
+			parts.push({ key: f.key, label: f.label, points: p, max: f.max });
+		});
+		var pct = Math.round((raw / max) * 100);
+		var idx = pct <= AIPATH_TIER_BANDS[0] ? 0 : (pct <= AIPATH_TIER_BANDS[1] ? 1 : (pct <= AIPATH_TIER_BANDS[2] ? 2 : 3));
+		var floors = [];
+		if (aipIsAnnexIII(a)) floors.push("Use in an Annex III area");
+		if (a.aipDecisionEffect === AIP_DECISION_EFFECTS[3]) floors.push("Makes significant decisions on its own");
+		var scored = idx;
+		if (floors.length && idx < 2) idx = 2;
+		return {
+			index: idx, level: AIPATH_LEVEL_NAMES[idx], scoredLevel: AIPATH_LEVEL_NAMES[scored],
+			raw: raw, max: max, pct: pct, parts: parts, floors: floors, missing: missing,
+			full: idx >= 2, text: AIPATH_LEVEL_TEXT[idx]
+		};
+	}
+	// Depth rule used by visibleIf: questions marked III+ show only at levels III and IV.
+	function aipFull(a) { return aipathTier(a).full; }
+
+	/* ---------------- Steps ----------------
+	 * Reused questions are copied from the other tools' step arrays by id, with
+	 * a pathway label where the original wording is specific to that tool. The
+	 * originals are never modified. */
+
+	function aipFind(steps, id) {
+		for (var i = 0; i < steps.length; i++) {
+			for (var j = 0; j < steps[i].questions.length; j++) {
+				if (steps[i].questions[j].id === id) return steps[i].questions[j];
+			}
+		}
+		throw new Error("aipath: question not found: " + id);
+	}
+	function aipReuse(steps, id, over) {
+		var src = aipFind(steps, id), copy = {};
+		Object.keys(src).forEach(function (k) { copy[k] = src[k]; });
+		Object.keys(over || {}).forEach(function (k) { copy[k] = over[k]; });
+		return copy;
+	}
+
+	function aipGenAiOn(a) { return a.aipGenerates === "Yes" || a.aipFoundationModel === "Yes" || a.aipFreePrompts === "Yes"; }
+	function aipEuOn(a) { return a.aipEu === "Yes" || a.aipEu === "Not sure"; }
+	function aipDecides(a) { var i = AIP_DECISION_EFFECTS.indexOf(a.aipDecisionEffect); return i > 0; }
+	function aipSignificant(a) { var i = AIP_DECISION_EFFECTS.indexOf(a.aipDecisionEffect); return i >= 2; }
+	function aipPublic(a) { return a.gaiUsers === "The public" || (a.gaiPatterns || []).indexOf(GAI_PATTERNS[1]) !== -1; }
+	function aipChat(a) { var p = a.gaiPatterns || []; return p.indexOf(GAI_PATTERNS[0]) !== -1 || p.indexOf(GAI_PATTERNS[1]) !== -1; }
+	function aipPersonal(a) { return gaiPersonalData(a); }
+	function aipProhibited(a) { return a.prohibitedUse === "Yes"; }
+
+	var AIA_ROLES = [
+		"Provider of the AI system",
+		"Deployer",
+		"Importer",
+		"Distributor",
+		"Product manufacturer (the AI system is placed on the market with our product, under our name)",
+		"Provider of a general-purpose AI model"
+	];
+	function aipHasRole(a, i) { return (a.aiaRole || []).indexOf(AIA_ROLES[i]) !== -1; }
+	function aipProviderRole(a) { return aipHasRole(a, 0) || aipHasRole(a, 4); }
+	function aipDeployer(a) { return aipHasRole(a, 1); }
+	function aipGpai(a) { return aipHasRole(a, 5); }
+
+	var AIA_ART63 = [
+		"No, none of them applies",
+		"It performs a narrow procedural task",
+		"It improves the result of a previously completed human activity",
+		"It detects decision-making patterns or deviations from earlier patterns, and does not replace or influence the earlier human assessment without proper human review",
+		"It performs a preparatory task to an assessment relevant to an Annex III use",
+		"Not sure"
+	];
+	function aipArt63Claimed(a) { var i = AIA_ART63.indexOf(a.aiaArt63); return i >= 1 && i <= 4; }
+	function aipArt63Exempt(a) { return aipIsAnnexIII(a) && aipArt63Claimed(a) && a.aiaProfiling === "No"; }
+	function aipHighRiskIII(a) { return aipIsAnnexIII(a) && !aipArt63Exempt(a); }
+	function aipHighRisk(a) { return aipHighRiskIII(a) || a.highRiskAnnexI === "Yes"; }
+
+	var AIA_GPAI_SYSTEMIC = ["No", "Yes: cumulative training compute above 10^25 FLOP (presumed)", "Yes: designated by the Commission", "Not sure"];
+	function aipSystemic(a) { var i = AIA_GPAI_SYSTEMIC.indexOf(a.aiaGpaiSystemic); return i >= 1; }
+	function aipOpenSource(a) { return a.aiaGpaiOpenSource === "Yes"; }
+	var AIA_DEEPFAKE = ["No", "Deep fakes", "Text published to inform the public on matters of public interest", "Both"];
+	function aipInteracts(a) { return a.aiaInteracts === "Yes" || aipChat(a); }
+	function aipTransparencyApplies(a) {
+		return aipInteracts(a) || a.aipGenerates === "Yes" || a.aiaEmotion === "Yes" || (!!a.aiaDeepfake && a.aiaDeepfake !== "No");
+	}
+	function aipGenAiDepth(a) { return aipFull(a) || aipPublic(a); }
+
+	var AIP_YPN = ["Yes", "Partially", "No"];
+	var AIP_DECISIONS = ["Approve", "Approve with conditions", "Reject", "Not yet decided"];
+	var AIP_REASSESS = [
+		"A new model, or a new version of the model",
+		"A new purpose, or new groups of users or affected people",
+		"A new data source, or a change to the training data",
+		"Use in a new country or jurisdiction",
+		"An incident, a complaint or a near miss",
+		"Performance or accuracy drifting from what was measured",
+		"A change in the law or in regulatory guidance"
+	];
+
+	var AIP_GROUP_LABEL = { intake: "Intake", triggers: "Triggers", core: "Core", impact: "Impact", genai: "GenAI", aiact: "AI Act", governance: "Governance" };
+
+	var AIP_INTAKE_STEPS = [
+		{
+			key: "aip-system", group: "intake",
+			title: "The system and its use",
+			intro: "One intake for the whole pathway. Every question below is asked once; the later steps read these answers, and the impact level (I to IV) is worked out from them.",
+			questions: [
+				aipReuse(AI_STEPS, "name", { label: "AI system or use case name" }),
+				aipReuse(AI_STEPS, "description", { label: "What it does: its purpose, the decision or task it supports, who uses it and where" }),
+				aipReuse(AI_STEPS, "lifecycle"),
+				aipReuse(FRIA_STEPS, "provider", { label: "Vendor and model: who provides the system or the model it runs on, and which version or release is assessed" }),
+				aipReuse(FRIA_STEPS, "firstUseDate", { label: "Date of first use (planned or actual)" }),
+				aipReuse(FRIA_STEPS, "annexIIIArea", { label: "Use area: does the intended purpose fall in one of the high-risk areas of Annex III of the EU AI Act? Answer this even outside the EU; the area also sets the sector factor of the impact level." })
+			]
+		},
+		{
+			key: "aip-people", group: "intake",
+			title: "People and data",
+			questions: [
+				aipReuse(FRIA_STEPS, "affectedCategories", { label: "Who is affected by the system's output?" }),
+				aipReuse(FRIA_STEPS, "friaVulnerable"),
+				aipReuse(FRIA_STEPS, "affectedScale"),
+				{ id: "aipDecisionEffect", type: "select", label: "Does the output make or support decisions about people?", options: AIP_DECISION_EFFECTS },
+				{ id: "aipReversibility", type: "select", label: "If an output is wrong, can its effect on a person be reversed?", options: AIP_REVERSIBILITY },
+				aipReuse(GAI_STEPS, "gaiUsers"),
+				aipReuse(GAI_STEPS, "gaiPromptData", { label: "What data does the system take in, retrieve or produce?" })
+			]
+		},
+		{
+			key: "aip-control", group: "intake",
+			title: "Autonomy and human review",
+			questions: [
+				aipReuse(AI_STEPS, "autonomyLevel"),
+				aipReuse(FRIA_STEPS, "oversightMode", { label: "When does a human act on an individual case or output before it takes effect?" })
+			]
+		}
+	];
+
+	var AIP_TRIGGER_STEP = {
+		key: "aip-triggers", group: "triggers",
+		title: "What applies",
+		intro: "These answers open the modules that apply. The generative AI module opens if any of the first three is Yes; the AI Act module opens if the fourth is Yes or Not sure. Two more triggers come from the intake without a question: personal data (from the data question) opens the DPIA handover, and output that reaches people without review (from the review question) raises the findings on oversight.",
+		questions: [
+			{ id: "aipGenerates", type: "yesno", label: "Does it generate text, images, audio, video or code?" },
+			{ id: "aipFoundationModel", type: "yesno", label: "Is it built on, or does it call, a foundation or general-purpose model?" },
+			{ id: "aipFreePrompts", type: "yesno", label: "Can users give it free-form prompts?" },
+			{ id: "aipEu", type: "select", label: "Is it placed on the EU market or put into service in the EU, used in the EU, or is its output used in the EU (EU AI Act Article 2(1))?", options: ["Yes", "No", "Not sure"] }
+		]
+	};
+
+	var AIP_CORE_STEPS = [
+		{
+			key: "aip-core-oversight", group: "core",
+			title: "Core: oversight, fairness and logging",
+			intro: "Questions every AI system answers. Some show only at impact levels III and IV; the level is worked out from the intake and shown with the result.",
+			questions: [
+				aipReuse(FRIA_STEPS, "oversightAssigned", { label: "Are named people or roles assigned to oversee the system and its output?" }),
+				aipReuse(FRIA_STEPS, "oversightCompetence", { visibleIf: function (a) { return a.oversightAssigned === "Yes"; } }),
+				aipReuse(FRIA_STEPS, "automationBias", { visibleIf: function (a) { return aipDecides(a) && aipFull(a); } }),
+				aipReuse(GAI_STEPS, "gaiUserGuidance", { label: "Are the people who use or oversee the system trained on its limits, so they do not over-rely on it? (This is also the AI literacy measure of EU AI Act Article 4.)" }),
+				aipReuse(FRIA_STEPS, "biasEvaluated", { label: "Has the output been checked for different error rates or outcomes across groups of the people it affects?", visibleIf: aipDecides }),
+				aipReuse(AI_STEPS, "loggingInPlace", { label: "Are the system's actions and data access logged, auditable and attributable to a responsible owner?" })
+			]
+		},
+		{
+			key: "aip-core-data", group: "core",
+			title: "Core: data, access and third parties",
+			questions: [
+				aipReuse(AI_STEPS, "thirdPartyData"),
+				aipReuse(GAI_STEPS, "gaiProviderUse", { label: "Can the provider of the system or model retain your inputs or use them for training?" }),
+				aipReuse(AI_STEPS, "broadDataAccess"),
+				aipReuse(AI_STEPS, "multiAgent"),
+				aipReuse(AI_STEPS, "multiAgentDocumented"),
+				aipReuse(AI_STEPS, "businessCriticalData", { visibleIf: aipFull }),
+				aipReuse(AI_STEPS, "competitorExposure", { visibleIf: aipFull })
+			]
+		}
+	];
+
+	var AIP_IMPACT_STEP = {
+		key: "aip-impact", group: "impact",
+		title: "Impact on people",
+		intro: "The effects of the system on the people and groups it reaches, rated before and after the measures, on the same severity and likelihood matrix as the Full DPIA and the FRIA. Short at levels I and II, full at III and IV. The method follows ISO/IEC 42005:2025 (AI system impact assessment). These answers use the FRIA's own questions, so they carry into a FRIA if you start one from the result.",
+		sources: [{ label: "ISO/IEC 42005:2025 (method guidance)", url: ISO_42005_URL }, { label: "EU AI Act, Article 27", url: AIA_ART27_URL }],
+		questions: [
+			aipReuse(FRIA_STEPS, "harmsDescription", { label: "Describe the specific harms: what could go wrong, for whom, and how it would show up (a wrong answer relied on, a biased score, an intrusive inference, an unsafe action)" }),
+			aipReuse(FRIA_STEPS, "rightsAtRisk", { visibleIf: aipFull }),
+			{ id: "aipSocietalImpact", type: "textarea", label: "Effects beyond individuals: on groups, communities, society or the environment", visibleIf: aipFull },
+			aipReuse(FRIA_STEPS, "providerInfoReviewed", { label: "Have the provider's instructions, documentation or model card been reviewed, including known limitations, accuracy levels and foreseeable misuse?", visibleIf: aipFull }),
+			aipReuse(FRIA_STEPS, "friaInherentSeverity", { label: "Inherent severity: how serious would the worst credible harm be, before any measures?" }),
+			aipReuse(FRIA_STEPS, "friaInherentLikelihood", { label: "Inherent likelihood: how likely is it, before any measures?" }),
+			aipReuse(FRIA_STEPS, "mitigationMeasures"),
+			aipReuse(FRIA_STEPS, "materialiseMeasures", { visibleIf: aipFull }),
+			aipReuse(FRIA_STEPS, "complaintMechanism", { visibleIf: function (a) { return aipFull(a) && aipDecides(a); } }),
+			aipReuse(FRIA_STEPS, "explanationProcess", { label: "Can you give an affected person a clear explanation of the role the system played in a decision about them?", visibleIf: function (a) { return aipFull(a) && aipDecides(a); } }),
+			aipReuse(FRIA_STEPS, "friaResidualSeverity"),
+			aipReuse(FRIA_STEPS, "friaResidualLikelihood")
+		]
+	};
+
+	// GenAI module: the Generative AI tool's steps without what the pathway has
+	// already asked. Five questions follow the depth rule, except for systems
+	// the public uses, where they always show.
+	var AIP_GENAI_SKIP = { name: 1, description: 1, gaiUsers: 1, gaiPromptData: 1, gaiProviderUse: 1, gaiHumanReview: 1, gaiUserGuidance: 1 };
+	var AIP_GENAI_DEPTH = { gaiInputFiltering: 1, gaiEmbeddingStore: 1, gaiRateLimits: 1, gaiThreatModel: 1, gaiEnergy: 1 };
+	var AIP_GENAI_STEPS = GAI_STEPS.map(function (s) {
+		var copy = {
+			key: "aip-gai-" + s.key, group: "genai",
+			title: "Generative AI: " + (s.key === "profile" ? "patterns and model" : s.title.charAt(0).toLowerCase() + s.title.slice(1)),
+			visibleIf: aipGenAiOn,
+			questions: []
+		};
+		if (s.key === "profile") {
+			copy.intro = "Opened because the system generates content, runs on a foundation model or takes free-form prompts. Risks specific to generative models, mapped to the twelve risks of NIST AI 600-1 and the OWASP Top 10 for LLM Applications. Questions the intake or the core steps already asked are not repeated.";
+			copy.sources = s.sources;
+		} else if (s.intro) {
+			copy.intro = s.intro;
+		}
+		s.questions.forEach(function (q) {
+			if (AIP_GENAI_SKIP[q.id]) return;
+			var over = {};
+			if (AIP_GENAI_DEPTH[q.id]) {
+				over.visibleIf = q.visibleIf
+					? (function (orig) { return function (a) { return orig(a) && aipGenAiDepth(a); }; })(q.visibleIf)
+					: aipGenAiDepth;
+			}
+			if (q.id === "gaiDisclosure") {
+				over.visibleIf = function (a) { return !aipEuOn(a); };
+				over.label = "Are people told when they interact with AI, and is synthetic content marked as such?";
+			}
+			copy.questions.push(aipReuse(GAI_STEPS, q.id, over));
+		});
+		return copy;
+	});
+
+	var AIP_AIACT_STEPS = [
+		{
+			key: "aip-aia-role", group: "aiact",
+			title: "EU AI Act: role and prohibited practices",
+			visibleIf: aipEuOn,
+			intro: "Opened because the system is placed on the EU market, used in the EU, or its output is used there (Article 2(1)). A provider develops an AI system or model, or has it developed, and places it on the market or puts it into service under its own name; a deployer uses it under its authority (Article 3). One organisation can hold several roles. Article 2 also excludes some uses: military, defence and national security, scientific research, testing before placing on the market, purely personal use, and free and open-source systems unless they are high-risk or caught by Article 5 or 50.",
+			sources: [{ label: "AI Act Digest, Article 2", url: "ai-act-digest.html#art-2" }, { label: "AI Act Digest, Article 5", url: "ai-act-digest.html#art-5" }],
+			questions: [
+				{ id: "aiaRole", type: "multiselect", label: "What is your role for this system?", options: AIA_ROLES },
+				aipReuse(FRIA_STEPS, "deployerType", { visibleIf: aipDeployer }),
+				aipReuse(FRIA_STEPS, "intendedPurposeAligned", { visibleIf: aipDeployer }),
+				aipReuse(AI_STEPS, "prohibitedUse")
+			]
+		},
+		{
+			key: "aip-aia-highrisk", group: "aiact",
+			title: "EU AI Act: high-risk classification",
+			visibleIf: function (a) { return aipEuOn(a) && !aipProhibited(a); },
+			intro: "Two routes to high risk (Article 6): a product, or a safety component of a product, under the Annex I legislation that requires third-party conformity assessment; and the Annex III uses, which the intake already asked about. An Annex III system is not high-risk where one of the four conditions of Article 6(3) applies, unless it profiles natural persons, in which case it always is. High-risk rules apply from 2 December 2027 (Annex III) and 2 August 2028 (Annex I), under Regulation (EU) 2026/1744.",
+			sources: [{ label: "AI Act Digest, Article 6", url: "ai-act-digest.html#art-6" }],
+			questions: [
+				aipReuse(AI_STEPS, "highRiskAnnexI"),
+				{ id: "aiaArt63", type: "select", label: "Does one of the Article 6(3) conditions apply, so that the system does not pose a significant risk of harm?", options: AIA_ART63, visibleIf: aipIsAnnexIII },
+				{ id: "aiaProfiling", type: "yesno", label: "Does the system profile natural persons?", visibleIf: function (a) { return aipIsAnnexIII(a) && aipArt63Claimed(a); } },
+				{ id: "aiaArt63Documented", type: "yesno", label: "Is the Article 6(3) assessment documented before the system is placed on the market, and the system registered under Article 49(2)?", visibleIf: function (a) { return aipArt63Exempt(a) && aipProviderRole(a); } },
+				aipReuse(FRIA_STEPS, "affectedAware", { visibleIf: function (a) { return aipDeployer(a) && aipHighRiskIII(a) && aipDecides(a); } })
+			]
+		},
+		{
+			key: "aip-aia-gpai", group: "aiact",
+			title: "EU AI Act: general-purpose AI model",
+			visibleIf: function (a) { return aipEuOn(a) && !aipProhibited(a) && aipGpai(a); },
+			intro: "Duties of providers of general-purpose AI models (Articles 51 to 55), applying since 2 August 2025; models already on the market before then comply by 2 August 2027 (Article 111(3)). A model is presumed to have systemic risk above 10^25 floating point operations of cumulative training compute, or the Commission designates it (Article 51).",
+			sources: [{ label: "AI Act Digest, Article 53", url: "ai-act-digest.html#art-53" }, { label: "AI Act Digest, Article 55", url: "ai-act-digest.html#art-55" }],
+			questions: [
+				{ id: "aiaGpaiSystemic", type: "select", label: "Does the model have systemic risk?", options: AIA_GPAI_SYSTEMIC },
+				{ id: "aiaGpaiOpenSource", type: "yesno", label: "Is it released under a free and open-source licence, with its weights, architecture and usage information public (Article 53(2))?" },
+				{ id: "aiaGpaiOutsideEu", type: "yesno", label: "Is the model provider established outside the EU?" },
+				{ id: "aiaGpaiDocs", type: "select", label: "Is the Annex XI technical documentation kept, and the Annex XII information available to downstream providers (Article 53(1)(a) and (b))?", options: AIP_YPN,
+					visibleIf: function (a) { return !aipOpenSource(a) || aipSystemic(a); } },
+				{ id: "aiaGpaiCopyright", type: "select", label: "Is there a policy to comply with EU copyright law, including rights reservations under Article 4(3) of Directive (EU) 2019/790 (Article 53(1)(c))?", options: AIP_YPN },
+				{ id: "aiaGpaiSummary", type: "select", label: "Is a sufficiently detailed summary of the training content published, on the AI Office template (Article 53(1)(d))?", options: AIP_YPN },
+				{ id: "aiaGpaiRep", type: "yesno", label: "Is an authorised representative established in the Union appointed by written mandate (Article 54)?",
+					visibleIf: function (a) { return a.aiaGpaiOutsideEu === "Yes" && (!aipOpenSource(a) || aipSystemic(a)); } },
+				{ id: "aiaGpaiEval", type: "select", label: "Systemic risk: is the model evaluated with standardised protocols, including adversarial testing, and are systemic risks assessed and mitigated (Article 55(1)(a) and (b))?", options: AIP_YPN, visibleIf: aipSystemic },
+				{ id: "aiaGpaiIncidents", type: "select", label: "Systemic risk: are serious incidents tracked, documented and reported to the AI Office without undue delay (Article 55(1)(c))?", options: AIP_YPN, visibleIf: aipSystemic },
+				{ id: "aiaGpaiCyber", type: "select", label: "Systemic risk: is the model and its physical infrastructure adequately protected (Article 55(1)(d))?", options: AIP_YPN, visibleIf: aipSystemic }
+			]
+		},
+		{
+			key: "aip-aia-transparency", group: "aiact",
+			title: "EU AI Act: transparency (Article 50)",
+			visibleIf: function (a) { return aipEuOn(a) && !aipProhibited(a); },
+			intro: "Article 50 applies from 2 August 2026, whatever the risk level. Providers design systems that interact with people so they know it is AI, unless that is obvious, and mark synthetic audio, image, video and text in a machine-readable way (generators already on the market before 2 August 2026 have until 2 December 2026 for the marking, Article 111(4)). Deployers inform people exposed to emotion recognition or biometric categorisation, and disclose deep fakes and AI-generated text published to inform the public on matters of public interest. Whether the system generates content was asked in the triggers.",
+			sources: [{ label: "AI Act Digest, Article 50", url: "ai-act-digest.html#art-50" }],
+			questions: [
+				{ id: "aiaInteracts", type: "yesno", label: "Is it intended to interact directly with people (a chatbot, a voice assistant, an agent that writes to people)?", visibleIf: function (a) { return !aipChat(a); } },
+				{ id: "aiaEmotion", type: "yesno", label: "Does it recognise emotions or sort people into categories from biometric data?" },
+				{ id: "aiaDeepfake", type: "select", label: "Is it used to produce deep fakes (image, audio or video resembling real people, objects, places or events), or text published to inform the public on matters of public interest?", options: AIA_DEEPFAKE,
+					visibleIf: function (a) { return a.aipGenerates === "Yes"; } },
+				{ id: "aiaTransparencyDone", type: "select", label: "Are the transparency measures that apply in place: disclosure at the first interaction, machine-readable marking, information to people exposed, deep fake disclosure?", options: AIP_YPN,
+					visibleIf: aipTransparencyApplies }
+			]
+		}
+	];
+
+	var AIP_GOVERNANCE_STEP = {
+		key: "aip-governance", group: "governance",
+		title: "Governance and decision",
+		intro: "Who owns the system, who assessed it, who decides, and when it is looked at again. ISO/IEC 42001 asks for the same records (clauses 6.1.2, 6.1.4 and 8.2 to 8.4), as does the NIST AI RMF Govern function; both are voluntary.",
+		questions: [
+			{ id: "aipSystemOwner", type: "text", label: "System owner (name or role)" },
+			{ id: "aipAssessor", type: "text", label: "Assessor (name or role)" },
+			{ id: "aipApprover", type: "text", label: "Approver (name or role)" },
+			{ id: "aipDecision", type: "select", label: "Decision", options: AIP_DECISIONS },
+			{ id: "aipConditions", type: "textarea", label: "Conditions of the approval, each with an owner and a date", visibleIf: function (a) { return a.aipDecision === AIP_DECISIONS[1]; } },
+			{ id: "aipEvidence", type: "textarea", label: "Evidence references: test reports, model cards, contracts, earlier assessments", visibleIf: aipFull },
+			aipReuse(AI_STEPS, "legalReview"),
+			aipReuse(FRIA_STEPS, "suspensionProcess", { label: "Is there a process to suspend use, and to report to the provider and any authority, where the system presents a risk or a serious incident occurs?", visibleIf: aipFull }),
+			{ id: "aipReviewDate", type: "date", label: "Next review date" },
+			{ id: "aipReassessTriggers", type: "multiselect", label: "Events that trigger a reassessment before that date", options: AIP_REASSESS }
+		]
+	};
+
+	var AIPATH_STEPS = AIP_INTAKE_STEPS
+		.concat([AIP_TRIGGER_STEP])
+		.concat(AIP_CORE_STEPS)
+		.concat([AIP_IMPACT_STEP])
+		.concat(AIP_GENAI_STEPS)
+		.concat(AIP_AIACT_STEPS)
+		.concat([AIP_GOVERNANCE_STEP]);
+
+	/* ---------------- Answers seen by the result ----------------
+	 * aipathAsked: the question ids the pathway showed for these answers.
+	 * aipathDerive: a copy of the answers with every hidden answer removed (a
+	 * stale answer to a question that is no longer shown never produces a
+	 * finding) and with the values the standalone result functions expect under
+	 * their own ids, taken from the question the pathway asked instead. */
+
+	function aipathAsked(a) {
+		var asked = {};
+		AIPATH_STEPS.forEach(function (s) {
+			if (s.visibleIf && !s.visibleIf(a)) return;
+			s.questions.forEach(function (q) { if (!q.visibleIf || q.visibleIf(a)) asked[q.id] = true; });
+		});
+		if (aipGenAiOn(a)) {
+			if (asked.oversightMode) asked.gaiHumanReview = true;
+			if (aipEuOn(a) && !aipProhibited(a)) asked.gaiDisclosure = true;
+		}
+		if (aipEuOn(a) && !aipProhibited(a) && aipChat(a)) asked.aiaInteracts = true;
+		return asked;
+	}
+
+	function aipathDerive(a) {
+		var asked = aipathAsked(a), d = {};
+		var pathIds = {};
+		AIPATH_STEPS.forEach(function (s) { s.questions.forEach(function (q) { pathIds[q.id] = true; }); });
+		Object.keys(a).forEach(function (k) {
+			var base = /Note$/.test(k) && pathIds[k.slice(0, -4)] ? k.slice(0, -4) : k;
+			if (pathIds[base] && !asked[base]) return;
+			d[k] = a[k];
+		});
+		// AI Risk Assessment ids
+		if (d.annexIIIArea) d.highRiskAnnexIII = aipIsAnnexIII(d) ? "Yes" : (d.annexIIIArea === "Not sure" ? "Unsure" : "No");
+		if (d.oversightAssigned) d.humanOversight = d.oversightAssigned;
+		if (d.gaiProviderUse) d.providerTraining = d.gaiProviderUse === "Yes" ? "Yes" : (d.gaiProviderUse === "Not sure" ? "Unsure" : "No");
+		d.ownersAssigned = d.aipSystemOwner ? "Yes" : "No";
+		d.auditFrequency = d.aipReviewDate ? "Yes" : "No";
+		// Generative AI ids
+		if (asked.gaiHumanReview && d.oversightMode) {
+			d.gaiHumanReview = { "Before every decision takes effect": "Always", "On flagged or contested cases only": "For high-impact uses" }[d.oversightMode] || "No";
+		}
+		if (asked.gaiDisclosure) {
+			if (aipTransparencyApplies(d)) { if (d.aiaTransparencyDone) d.gaiDisclosure = d.aiaTransparencyDone; else delete d.gaiDisclosure; }
+			else d.gaiDisclosure = "Not applicable";
+		}
+		if (asked.aiaInteracts && aipChat(d)) d.aiaInteracts = "Yes";
+		return d;
+	}
+
+	/* ---------------- Findings ----------------
+	 * Every finding carries the question ids it rests on (qs, the first is the
+	 * one it belongs to) and the part of the pathway that owns it. */
+
+	var AIP_SEV = ["low", "medium", "high"];
+	function aipF(title, detail, severity, qs) { return { title: title, detail: detail, severity: severity, qs: qs }; }
+
+	// aiResult findings the pathway keeps, with the questions behind them. Its
+	// regulatory findings are replaced by the AI Act module.
+	var AIP_AI_FACTOR_QS = {
+		"Broad autonomy without logging": ["loggingInPlace", "autonomyLevel"],
+		"Undocumented multi-agent chain": ["multiAgentDocumented", "multiAgent"],
+		"Broad access to sensitive systems/data": ["broadDataAccess"],
+		"Business-critical data without full oversight": ["businessCriticalData", "loggingInPlace", "oversightAssigned"],
+		"Possible competitor/external exposure": ["competitorExposure"],
+		"Provider trains on your data": ["gaiProviderUse"],
+		"Unclear if provider trains on your data": ["gaiProviderUse"],
+		"No legal/compliance review on record": ["legalReview"],
+		"No recurring audit cadence defined": ["aipReviewDate"]
+	};
+
+	function aipathOwnFindings(d, tier) {
+		var f = [];
+		var sig = aipSignificant(d);
+		// Core
+		if (d.oversightAssigned === "No") f.push(aipF("No assigned human oversight", "Name the people or roles who oversee the system, with the competence, training and authority to disregard or override its output.", sig ? "high" : "medium", ["oversightAssigned"]));
+		if (d.oversightCompetence === "No" || d.oversightCompetence === "Partially") f.push(aipF("Oversight without full competence or authority", "Oversight only counts if the people assigned understand the output and can disregard or override it.", "medium", ["oversightCompetence"]));
+		if (d.automationBias === "No") f.push(aipF("Automation bias not addressed", "Show the output with its confidence and limits, require a reason to follow it in sensitive cases, and keep the workload low enough for real review.", "medium", ["automationBias"]));
+		if (d.gaiUserGuidance === "No" || d.gaiUserGuidance === "Partially") f.push(aipF("Users not trained on the system's limits", "Train the people who use or oversee the system on what it gets wrong, so they do not over-rely on it.", d.gaiUserGuidance === "No" ? "medium" : "low", ["gaiUserGuidance"]));
+		if (d.biasEvaluated === "No" || d.biasEvaluated === "Not possible with the data available") f.push(aipF("No check for unequal outcomes", "Without error rates or outcomes compared across groups, a discrimination risk cannot be rated with confidence. Where the data does not allow it, record why and what is done instead.", sig ? "high" : "medium", ["biasEvaluated"]));
+		if (d.loggingInPlace === "No") f.push(aipF("Actions and data access not logged", "Log what the system does and reads, attributable to an owner, so incidents can be traced and decisions reconstructed.", "medium", ["loggingInPlace"]));
+		if (d.thirdPartyData === "Yes" && !d.thirdPartyDataNote) f.push(aipF("Third-party data without a provenance record", "Record where the training or input data comes from, under what licence or lawful access, and how its quality was checked.", "low", ["thirdPartyData"]));
+		if (d.oversightMode === "No human review" && sig) f.push(aipF("Significant decisions without human review", "Decisions with legal or similarly significant effects reach people with no human acting on them. Add review before they take effect; where personal data is involved, Article 22 GDPR applies as well.", "high", ["oversightMode", "aipDecisionEffect"]));
+		else if (tier.full && sig && d.oversightMode && d.oversightMode !== AIP_OVERSIGHT_MODES[0]) f.push(aipF("No human makes the final decision", "At impact level III and above a person should make the final decision on each case before it takes effect, as the Canadian Directive on Automated Decision-Making requires from its level III.", "medium", ["oversightMode", "aipDecisionEffect"]));
+		// Impact
+		var inh = riskLevelFor(FRIA_SEVERITY.indexOf(d.friaInherentSeverity), FRIA_LIKELIHOOD.indexOf(d.friaInherentLikelihood));
+		var res = riskLevelFor(FRIA_SEVERITY.indexOf(d.friaResidualSeverity), FRIA_LIKELIHOOD.indexOf(d.friaResidualLikelihood));
+		var ORDER = ["Low", "Medium", "High", "Very High"];
+		if (!d.harmsDescription) f.push(aipF("Harms not described", "Describe what could go wrong, for whom, and how it would show up. The ratings below mean little without it.", "medium", ["harmsDescription"]));
+		if (!inh) f.push(aipF("Inherent risk not rated", "Rate severity and likelihood before measures, so the effect of the measures can be shown.", "low", ["friaInherentSeverity"]));
+		if (inh && !res) f.push(aipF("Residual risk not rated", "Rate severity and likelihood with every measure in place.", "low", ["friaResidualSeverity"]));
+		if (inh && res && ORDER.indexOf(res) > ORDER.indexOf(inh)) f.push(aipF("Residual above inherent", "The residual rating is higher than the inherent one. Check both ratings.", "medium", ["friaResidualSeverity", "friaInherentSeverity"]));
+		if (res === "High" || res === "Very High") f.push(aipF("High residual risk to people", "Do not deploy until further measures bring the risk down, or the decision to accept it is taken and recorded at the right level.", "high", ["friaResidualSeverity", "friaResidualLikelihood"]));
+		if (inh && inh !== "Low" && !d.mitigationMeasures) f.push(aipF("No measures recorded", "The inherent risk is " + inh.toLowerCase() + " and no measure is recorded against it.", "medium", ["mitigationMeasures"]));
+		if (tier.full) {
+			if (!(d.rightsAtRisk || []).length) f.push(aipF("No rights identified", "Record which fundamental rights the system could interfere with, even where the risk is low.", "medium", ["rightsAtRisk"]));
+			if (d.providerInfoReviewed === "No" || d.providerInfoReviewed === "Partially") f.push(aipF("Provider information not fully reviewed", "Read the provider's instructions, documentation or model card for known limitations, accuracy and foreseeable misuse before rating the risk.", "medium", ["providerInfoReviewed"]));
+			if (!d.materialiseMeasures) f.push(aipF("No plan for when a risk materialises", "Say who is told, how affected people are contacted, and how decisions are corrected.", "medium", ["materialiseMeasures"]));
+			if (!d.aipSocietalImpact) f.push(aipF("Effects beyond individuals not considered", "ISO/IEC 42005 asks for effects on groups, society and the environment as well as on individuals.", "low", ["aipSocietalImpact"]));
+		}
+		if (d.complaintMechanism === "No") f.push(aipF("No way to complain or contest", "Give affected people a way to contest an outcome.", sig ? "high" : "medium", ["complaintMechanism"]));
+		if (d.explanationProcess === "No") f.push(aipF("No way to explain decisions", "Be able to tell an affected person what role the system played in a decision about them and the main elements of that decision.", "medium", ["explanationProcess"]));
+		// Governance
+		if (!d.aipSystemOwner) f.push(aipF("No system owner", "Name the person or role accountable for the system across its life.", "medium", ["aipSystemOwner"]));
+		if (!d.aipApprover) f.push(aipF("No approver named", tier.index === 3 ? "At impact level IV the decision belongs at the most senior level that owns the risk (NIST AI RMF GOVERN 2.3)." : "Name who takes the decision to deploy.", tier.index === 3 ? "high" : "medium", ["aipApprover"]));
+		if (d.aipDecision === AIP_DECISIONS[2]) f.push(aipF("Decision: reject", "The assessment ends in a decision not to deploy. Record the reasons and what would have to change.", "high", ["aipDecision"]));
+		else if (d.aipDecision === AIP_DECISIONS[3] || !d.aipDecision) f.push(aipF("No decision recorded", "Record the decision: approve, approve with conditions, or reject.", "low", ["aipDecision"]));
+		else if (d.aipDecision === AIP_DECISIONS[1] && !d.aipConditions) f.push(aipF("Conditions not recorded", "An approval with conditions needs the conditions, each with an owner and a date.", "medium", ["aipConditions", "aipDecision"]));
+		if (!(d.aipReassessTriggers || []).length) f.push(aipF("No reassessment triggers", "Name the events that bring the assessment back before the review date: a new model, a new purpose, a new data source, an incident.", "low", ["aipReassessTriggers"]));
+		if (d.suspensionProcess === "No") f.push(aipF("No route to suspend and report", "Decide who can stop the system, and how the provider and any authority are told, before it is needed.", "medium", ["suspensionProcess"]));
+		else if (d.suspensionProcess === "Partially") f.push(aipF("Suspension and reporting route incomplete", "Complete the route to stop the system and report a risk or a serious incident.", "low", ["suspensionProcess"]));
+		if (tier.full && !d.aipEvidence) f.push(aipF("No evidence referenced", "List the test reports, model cards, contracts and earlier assessments the answers rest on.", "low", ["aipEvidence"]));
+		return f;
+	}
+
+	/* ---------------- EU AI Act module result ----------------
+	 * Classification and the obligations for each role held, each linked to its
+	 * crosswalk row and its AI Act Digest article. Closes the gap aiResult()
+	 * states: Article 50 and the general-purpose AI model duties are screened. */
+
+	var AIP_HR_III = "2 December 2027 (Annex III)";
+	var AIP_HR_I = "2 August 2028 (Annex I)";
+	function aipStatus(v) {
+		if (v === "Yes") return "In place";
+		if (v === "Partially") return "Partly";
+		if (v === "No") return "Gap";
+		return "Not assessed";
+	}
+
+	function aiActResult(a) {
+		var ob = [], f = [];
+		function add(title, role, applies, art, row, status) { ob.push({ title: title, role: role, applies: applies, art: art, row: row || null, status: status || "Applies" }); }
+		var roles = a.aiaRole || [];
+		if (!roles.length) f.push(aipF("Role not set", "Pick the role or roles you hold for this system; the obligations depend on it.", "medium", ["aiaRole"]));
+
+		// Article 4 applies to every provider and deployer.
+		add("AI literacy: support it among staff and others who operate the system on your behalf", "Provider and deployer", "2 February 2025", "art-4", "r01", aipStatus(a.gaiUserGuidance));
+
+		if (a.prohibitedUse === "Yes") {
+			add("Prohibited practice: do not place on the market, put into service or use", "Everyone", "2 February 2025 (points (ba) and (bb) from 2 December 2026)", "art-5", "r02", "Gap");
+			f.push(aipF("Prohibited practice", "The use appears to fall under Article 5. Stop development or use and escalate to legal. The rest of the AI Act module is not shown.", "high", ["prohibitedUse"]));
+			return { classification: "Prohibited", obligations: ob, findings: f };
+		}
+		add("Screen the use against the prohibited practices", "Everyone", "2 February 2025 (points (ba) and (bb) from 2 December 2026)", "art-5", "r02", a.prohibitedUse === "No" ? "In place" : "Not assessed");
+		var unresolved = false;
+		if (a.prohibitedUse === "Unsure") { unresolved = true; f.push(aipF("Prohibited-use status unclear", "Confirm with legal whether the use falls under Article 5 before going further. Until then the classification is unresolved.", "high", ["prohibitedUse"])); }
+
+		var iii = aipIsAnnexIII(a), hrIII = aipHighRiskIII(a), hrI = a.highRiskAnnexI === "Yes";
+		if (a.annexIIIArea === "Not sure") { unresolved = true; f.push(aipF("Annex III status unclear", "Confirm whether the intended purpose falls under an Annex III use; the high-risk obligations depend on it.", "medium", ["annexIIIArea"])); }
+		if (a.highRiskAnnexI === "Unsure") { unresolved = true; f.push(aipF("Annex I status unclear", "Confirm whether the product falls under Annex I legislation that requires third-party conformity assessment.", "medium", ["highRiskAnnexI"])); }
+		if (iii && a.aiaArt63 === "Not sure") { unresolved = true; f.push(aipF("Article 6(3) not settled", "Decide whether one of the four conditions applies and document it, or treat the system as high-risk.", "medium", ["aiaArt63"])); }
+		if (iii && aipArt63Claimed(a) && a.aiaProfiling === "Yes") f.push(aipF("Article 6(3) not available: the system profiles people", "An Annex III system that profiles natural persons is always high-risk, whatever condition of Article 6(3) applies.", "high", ["aiaProfiling", "aiaArt63"]));
+		if (aipArt63Exempt(a) && aipProviderRole(a)) {
+			add("Document the Article 6(3) assessment before placing on the market and register under Article 49(2)", "Provider", AIP_HR_III, "art-6", "r03", a.aiaArt63Documented === "Yes" ? "In place" : (a.aiaArt63Documented === "No" ? "Gap" : "Not assessed"));
+			if (a.aiaArt63Documented === "No") f.push(aipF("Article 6(3) reliance not documented", "A provider relying on Article 6(3) documents the assessment before placing the system on the market and registers it (Articles 6(4) and 49(2)).", "medium", ["aiaArt63Documented"]));
+		}
+
+		var classification = hrIII && hrI ? "High-risk (Annex I and III)" : (hrIII ? "High-risk (Annex III)" : (hrI ? "High-risk (Annex I)" : "Not high-risk"));
+		if (unresolved && classification === "Not high-risk") classification = "Unresolved";
+		var hrDate = hrIII && !hrI ? AIP_HR_III : (hrI && !hrIII ? AIP_HR_I : AIP_HR_III + "; " + AIP_HR_I);
+
+		if (hrIII || hrI) {
+			if (aipProviderRole(a)) {
+				add("Classify against both high-risk routes and record it", "Provider", hrDate, "art-6", "r03");
+				add("Risk management system across the lifecycle", "Provider", hrDate, "art-9", "r05");
+				add("Data and data governance for training, validation and testing", "Provider", hrDate, "art-10", "r06");
+				add("Annex IV technical documentation, kept for ten years", "Provider", hrDate, "art-11", "r07");
+				add("Automatic event logging, logs kept at least six months", "Provider", hrDate, "art-12", "r08");
+				add("Transparency and instructions for use for deployers", "Provider", hrDate, "art-13", "r09");
+				add("Human oversight designed in", "Provider", hrDate, "art-14", "r10", aipStatus(a.oversightAssigned === "Yes" && a.oversightCompetence === "Yes" ? "Yes" : (a.oversightAssigned ? (a.oversightAssigned === "No" ? "No" : "Partially") : "")));
+				add("Accuracy, robustness and cybersecurity", "Provider", hrDate, "art-15", "r11");
+				add("Quality management system", "Provider", hrDate, "art-17", "r12");
+				add("Conformity assessment, EU declaration, CE marking, registration", "Provider", hrDate, "art-43", "r13");
+				add("Post-market monitoring", "Provider", hrDate, "art-72", "r14");
+				add("Corrective action and serious incident reporting", "Provider", hrDate, "art-73", "r15");
+				add("Name and contact on the system, accessibility", "Provider", hrDate, "art-16", "r27");
+			}
+			if (aipDeployer(a)) {
+				add("Use according to the instructions for use, with assigned human oversight", "Deployer", hrDate, "art-26", "r16", aipStatus(a.oversightAssigned === "Yes" ? (a.oversightCompetence === "Yes" ? "Yes" : "Partially") : a.oversightAssigned));
+				add("Input data relevant and representative, where you control it", "Deployer", hrDate, "art-26", "r17");
+				add("Monitor, report risks and serious incidents, suspend use; keep logs six months", "Deployer", hrDate, "art-26", "r18", aipStatus(a.suspensionProcess));
+				add("Inform workers' representatives before use at work, and inform people subject to decisions", "Deployer", hrDate, "art-26", "r19", aipStatus(a.affectedAware === "Planned" ? "Partially" : a.affectedAware));
+				if (a.deployerType === "Body governed by public law") add("Register the use in the EU database", "Deployer (public authority)", hrDate, "art-49", "r20");
+				if (hrIII) {
+					var fa = friaApplicability(a);
+					if (fa.status === "Required" || fa.status === "Check") add("Fundamental rights impact assessment before first use" + (fa.status === "Check" ? " (check applicability)" : ""), "Deployer", AIP_HR_III, "art-27", "r21", "Not assessed");
+					if (aipDecides(a)) add("Explain the role of the system in individual decisions on request", "Deployer", AIP_HR_III, "art-86", "r22", aipStatus(a.explanationProcess === "Planned" ? "Partially" : a.explanationProcess));
+				}
+				if (a.affectedAware === "No") f.push(aipF("People are not told", "Deployers of Annex III systems that make or assist decisions about people must tell them they are subject to the system (Article 26(11)).", "medium", ["affectedAware"]));
+			}
+			if (aipHasRole(a, 2)) add("Importer: verify conformity assessment, documentation and marking before placing on the market", "Importer", hrDate, "art-23", null);
+			if (aipHasRole(a, 3)) add("Distributor: verify marking, declaration and instructions before making available", "Distributor", hrDate, "art-24", null);
+			if (aipDeployer(a) || aipHasRole(a, 2) || aipHasRole(a, 3)) add("Know when you become the provider (name, substantial modification, change of purpose)", "Deployer, importer, distributor", hrDate, "art-25", "r04");
+		}
+		if (aipDeployer(a) && a.intendedPurposeAligned === "No") f.push(aipF("Use outside the intended purpose", "Using a system outside the intended purpose in the provider's instructions can make you its provider under Article 25(1), with the full provider obligations if it is or becomes high-risk.", "high", ["intendedPurposeAligned"]));
+		else if (aipDeployer(a) && (a.intendedPurposeAligned === "Partially" || a.intendedPurposeAligned === "Not sure")) f.push(aipF("Intended purpose not confirmed", "Check the use against the provider's instructions for use.", "medium", ["intendedPurposeAligned"]));
+
+		// Article 50
+		var tStatus = aipStatus(a.aiaTransparencyDone);
+		var tAny = false;
+		if (aipProviderRole(a) && aipInteracts(a)) { tAny = true; add("Tell people they are interacting with an AI system, unless obvious", "Provider", "2 August 2026", "art-50", "r23", tStatus); }
+		if (aipProviderRole(a) && a.aipGenerates === "Yes") { tAny = true; add("Mark synthetic audio, image, video or text in a machine-readable way", "Provider", "2 August 2026; generators on the market before then by 2 December 2026", "art-50", "r23", tStatus); }
+		if (aipDeployer(a) && a.aiaEmotion === "Yes") { tAny = true; add("Inform people exposed to emotion recognition or biometric categorisation", "Deployer", "2 August 2026", "art-50", "r24", tStatus); }
+		if (aipDeployer(a) && (a.aiaDeepfake === AIA_DEEPFAKE[1] || a.aiaDeepfake === AIA_DEEPFAKE[3])) { tAny = true; add("Disclose deep fakes", "Deployer", "2 August 2026", "art-50", "r24", tStatus); }
+		if (aipDeployer(a) && (a.aiaDeepfake === AIA_DEEPFAKE[2] || a.aiaDeepfake === AIA_DEEPFAKE[3])) { tAny = true; add("Disclose AI-generated text published on matters of public interest, unless under editorial responsibility", "Deployer", "2 August 2026", "art-50", "r24", tStatus); }
+		if (tAny && a.aiaTransparencyDone === "No") f.push(aipF("Transparency duties not met", "The Article 50 duties that apply to your role are not in place. They apply from 2 August 2026.", "medium", ["aiaTransparencyDone"]));
+		else if (tAny && a.aiaTransparencyDone === "Partially") f.push(aipF("Transparency duties partly met", "Complete the Article 50 measures that apply to your role.", "low", ["aiaTransparencyDone"]));
+
+		// General-purpose AI models
+		if (aipGpai(a)) {
+			var gpDate = "2 August 2025; models on the market before then by 2 August 2027";
+			var exempt = aipOpenSource(a) && !aipSystemic(a);
+			if (aipSystemic(a)) add("Notify the Commission within two weeks of meeting the systemic risk threshold", "GPAI model provider", "2 August 2025", "art-52", "r28");
+			if (a.aiaGpaiSystemic === "Not sure") f.push(aipF("Systemic risk status unclear", "Track cumulative training compute against the 10^25 FLOP presumption and check for a Commission designation.", "medium", ["aiaGpaiSystemic"]));
+			if (!exempt) add("Technical documentation (Annex XI) and information for downstream providers (Annex XII)", "GPAI model provider", gpDate, "art-53", "r25", aipStatus(a.aiaGpaiDocs));
+			add("Copyright policy, including rights reservations", "GPAI model provider", gpDate, "art-53", "r25", aipStatus(a.aiaGpaiCopyright));
+			add("Public summary of training content on the AI Office template", "GPAI model provider", gpDate, "art-53", "r25", aipStatus(a.aiaGpaiSummary));
+			if (a.aiaGpaiOutsideEu === "Yes" && !exempt) add("Authorised representative in the Union", "GPAI model provider", gpDate, "art-54", "r25", a.aiaGpaiRep === "Yes" ? "In place" : (a.aiaGpaiRep === "No" ? "Gap" : "Not assessed"));
+			if (aipSystemic(a)) {
+				add("Model evaluation including adversarial testing; assess and mitigate systemic risks", "GPAI model provider", gpDate, "art-55", "r26", aipStatus(a.aiaGpaiEval));
+				add("Track and report serious incidents to the AI Office", "GPAI model provider", gpDate, "art-55", "r26", aipStatus(a.aiaGpaiIncidents));
+				add("Cybersecurity for the model and its infrastructure", "GPAI model provider", gpDate, "art-55", "r26", aipStatus(a.aiaGpaiCyber));
+			}
+			[["aiaGpaiDocs", "Model documentation incomplete", "Keep the Annex XI documentation and give downstream providers the Annex XII information."],
+			 ["aiaGpaiCopyright", "Copyright policy missing or partial", "Adopt a policy to comply with EU copyright law, including machine-readable rights reservations."],
+			 ["aiaGpaiSummary", "Training content summary missing or partial", "Publish the summary of training content on the AI Office template."],
+			 ["aiaGpaiEval", "Systemic risk evaluation missing or partial", "Evaluate the model with standardised protocols, including adversarial testing, and mitigate systemic risks."],
+			 ["aiaGpaiIncidents", "Serious incident reporting missing or partial", "Track, document and report serious incidents to the AI Office without undue delay."],
+			 ["aiaGpaiCyber", "Model cybersecurity missing or partial", "Protect the model and its physical infrastructure adequately."]].forEach(function (g) {
+				if (g[0] === "aiaGpaiDocs" && exempt) return;
+				if (/Eval|Incidents|Cyber/.test(g[0]) && !aipSystemic(a)) return;
+				if (a[g[0]] === "No") f.push(aipF(g[1], g[2], "high", [g[0]]));
+				else if (a[g[0]] === "Partially") f.push(aipF(g[1], g[2], "medium", [g[0]]));
+			});
+			if (a.aiaGpaiOutsideEu === "Yes" && !exempt && a.aiaGpaiRep === "No") f.push(aipF("No authorised representative in the Union", "A provider established outside the EU appoints one by written mandate before placing the model on the market (Article 54).", "high", ["aiaGpaiRep"]));
+		}
+		if (a.gaiUserGuidance === "No") f.push(aipF("AI literacy not supported", "Article 4 asks providers and deployers to take measures to support AI literacy among the people who operate the system for them.", "medium", ["gaiUserGuidance"]));
+		return { classification: classification, obligations: ob, findings: f };
+	}
+
+	/* ---------------- Pathway result ----------------
+	 * One register: the findings of the AI Risk Assessment (business factors),
+	 * the Generative AI Risk Assessment, the AI Act module and the pathway's own
+	 * core, impact and governance checks. Findings on the same question merge
+	 * into one line, kept at the higher severity, tagged with its owner and any
+	 * other part that raised it, and listed against every framework entry its
+	 * questions map to. */
+
+	var AIP_Q_GROUP = (function () {
+		var g = {};
+		AIPATH_STEPS.forEach(function (s) { s.questions.forEach(function (q) { g[q.id] = s.group; }); });
+		g.gaiHumanReview = "core";
+		return g;
+	})();
+	function aipTag(q, a) {
+		var grp = AIP_Q_GROUP[q] || "core";
+		if (q === "gaiDisclosure") grp = aipEuOn(a) ? "aiact" : "genai";
+		if (grp === "intake" || grp === "triggers") grp = "core";
+		return AIP_GROUP_LABEL[grp];
+	}
+
+	function aipathResult(a) {
+		var tier = aipathTier(a);
+		var d = aipathDerive(a);
+		var asked = aipathAsked(a);
+		var gen = aipGenAiOn(d), eu = aipEuOn(d);
+		var raw = [];
+
+		aiResult(d).factors.forEach(function (x) {
+			var qs = AIP_AI_FACTOR_QS[x.title];
+			if (qs) raw.push({ title: x.title, detail: x.detail, severity: x.severity, qs: qs, by: "Core" });
+		});
+		var g = null;
+		if (gen) {
+			g = gaiResult(d);
+			(g.factors || []).forEach(function (x) {
+				var qs = null;
+				GAI_CHECKS.forEach(function (c) { if (c.title === x.title) qs = [c.q]; });
+				if (x.title === "Personal data sent to a model provider") qs = ["gaiProviderUse", "gaiPromptData"];
+				if (qs) raw.push({ title: x.title, detail: x.detail, severity: x.severity, qs: qs, by: "GenAI", gai: true });
+			});
+		}
+		aipathOwnFindings(d, tier).forEach(function (x) { x.by = aipTag(x.qs[0], d); raw.push(x); });
+		var act = null;
+		if (eu) {
+			act = aiActResult(d);
+			act.findings.forEach(function (x) { x.by = "AI Act"; raw.push(x); });
+		}
+
+		// Merge on the question each finding belongs to.
+		var byQ = {}, order = [];
+		raw.forEach(function (x) {
+			var k = x.qs[0];
+			var cur = byQ[k];
+			if (!cur) {
+				byQ[k] = { title: x.title, detail: x.detail, severity: x.severity, qs: x.qs.slice(), tag: aipTag(k, d), also: [], gai: !!x.gai };
+				if (x.by !== byQ[k].tag) byQ[k].also.push(x.by);
+				order.push(k);
+				return;
+			}
+			if (AIP_SEV.indexOf(x.severity) > AIP_SEV.indexOf(cur.severity)) { cur.title = x.title; cur.detail = x.detail; cur.severity = x.severity; }
+			x.qs.forEach(function (q) { if (cur.qs.indexOf(q) === -1) cur.qs.push(q); });
+			if (x.by !== cur.tag && cur.also.indexOf(x.by) === -1) cur.also.push(x.by);
+			if (x.gai) cur.gai = true;
+		});
+		var findings = order.map(function (k) { return byQ[k]; });
+		findings.sort(function (x, y) { return AIP_SEV.indexOf(y.severity) - AIP_SEV.indexOf(x.severity); });
+
+		var qSev = {};
+		findings.forEach(function (x) {
+			x.qs.forEach(function (q) { if (!qSev[q] || AIP_SEV.indexOf(x.severity) > AIP_SEV.indexOf(qSev[q])) qSev[q] = x.severity; });
+			var nist = [], iso = [], sg = [], gai = [], owasp = [];
+			x.qs.forEach(function (q) {
+				var m = AIPATH_FRAMEWORK_MAP[q];
+				if (m) {
+					m[0].forEach(function (i) { if (nist.indexOf(i) === -1) nist.push(i); });
+					m[1].forEach(function (i) { if (iso.indexOf(i) === -1) iso.push(i); });
+					if (gen) m[2].forEach(function (i) { if (sg.indexOf(SG_DIMENSIONS[i]) === -1) sg.push(SG_DIMENSIONS[i]); });
+				}
+				if (gen) GAI_CHECKS.forEach(function (c) {
+					if (c.q !== q) return;
+					c.nist.forEach(function (i) { if (gai.indexOf(NIST_GAI_RISKS[i]) === -1) gai.push(NIST_GAI_RISKS[i]); });
+					c.owasp.forEach(function (i) { var o = OWASP_LLM[i].split(" ")[0]; if (owasp.indexOf(o) === -1) owasp.push(o); });
+				});
+			});
+			x.refs = { nist: nist, iso: iso, sg: sg, gai: gai, owasp: owasp };
+		});
+
+		var cov = aipathCoverage(d, asked, qSev);
+		var worst = findings.length ? findings[0].severity : null;
+		var overall = worst === "high" ? "High" : (worst === "medium" ? "Medium" : "Low");
+		var classification = act ? act.classification : (eu ? "Not screened" : "Not in scope (no EU nexus)");
+		var modules = ["Core", "Impact"];
+		if (gen) modules.push("GenAI");
+		if (eu) modules.push("AI Act");
+		modules.push("Governance");
+
+		var friaStatus = null;
+		if (eu && act && act.classification !== "Prohibited" && aipDeployer(d) && aipHighRiskIII(d)) {
+			var fa = friaApplicability(d);
+			if (fa.status === "Required" || fa.status === "Check") friaStatus = fa;
+		}
+		var dpia = aipPersonal(d);
+
+		var prohibited = classification === "Prohibited";
+		var badgeLevel = prohibited ? "High" : overall;
+		var verdict = prohibited
+			? "The use appears to be a prohibited practice under Article 5 of the EU AI Act. Stop and escalate before anything else on this page."
+			: (overall === "High"
+				? "At least one finding is serious enough to resolve before deployment or wider rollout."
+				: (overall === "Medium" ? "No blocking finding, but several controls are missing or partial. Plan them with owners and dates." : "No significant finding from your answers. Reassess on the events listed in governance."));
+		var level = "Level " + tier.level;
+		return {
+			aipath: true,
+			badgeLevel: badgeLevel,
+			badgeText: prohibited ? "Prohibited practice" : (overall + " risk"),
+			verdictDetail: verdict,
+			tier: tier,
+			overall: overall,
+			classification: classification,
+			modules: modules,
+			findings: findings,
+			factors: findings.map(function (x) { return { title: x.title, detail: x.detail, severity: x.severity }; }),
+			obligations: act ? act.obligations : [],
+			coverage: cov,
+			gaiTables: g && g.tables ? g.tables : [],
+			handovers: { dpia: dpia, fria: friaStatus ? friaStatus.status : null, friaDetail: friaStatus ? friaStatus.detail : "" },
+			stats: [
+				["Impact level", tier.level + (tier.missing.length ? " (provisional)" : ""), tier.pct + " percent of the maximum score"],
+				["Highest finding", overall, findings.length + " finding" + (findings.length === 1 ? "" : "s")],
+				["EU AI Act", classification, eu ? (act ? act.obligations.length + " obligations listed" : "") : "module not opened"],
+				["Modules opened", String(modules.length), modules.join(", ")]
+			],
+			tables: [],
+			help: "",
+			historyLabel: level + " - " + (prohibited ? "Prohibited" : overall + " risk") + " - AI Act: " + classification,
+			level: overall
+		};
+	}
+
+	/* ---------------- Handovers ----------------
+	 * The FRIA and the DPIA stay separate tools. The FRIA seed is mostly a copy:
+	 * the impact, oversight and intake questions use the FRIA's own ids. */
+
+	function aipathSeedFria(a) {
+		var d = aipathDerive(a), seed = {};
+		FRIA_STEPS.forEach(function (s) {
+			s.questions.forEach(function (q) {
+				if (d[q.id] !== undefined) seed[q.id] = Array.isArray(d[q.id]) ? d[q.id].slice() : d[q.id];
+				if (d[q.id + "Note"] !== undefined) seed[q.id + "Note"] = d[q.id + "Note"];
+			});
+		});
+		if (d.description) seed.deployerProcess = d.description;
+		if (d.aipApprover) seed.friaGovernance = d.aipApprover;
+		if (d.aipReviewDate) seed.friaReviewDate = d.aipReviewDate;
+		seed.friaDpia = aipPersonal(d) ? "In progress" : "Not applicable (no personal data)";
+		return seed;
+	}
+
+	function aipathSeedDpia(a) {
+		var d = aipathDerive(a);
+		var t = [DPIA_TRIGGERS[7]];
+		if (aipDecides(d)) t.unshift(DPIA_TRIGGERS[0]);
+		if (d.aipDecisionEffect === AIP_DECISION_EFFECTS[3] || (aipSignificant(d) && d.oversightMode === "No human review")) t.splice(t.indexOf(DPIA_TRIGGERS[7]), 0, DPIA_TRIGGERS[1]);
+		var data = d.gaiPromptData || [];
+		if (data.indexOf("Special category data") !== -1) t.push(DPIA_TRIGGERS[3]);
+		if (AIP_SCALES.indexOf(d.affectedScale) >= 2) t.push(DPIA_TRIGGERS[4]);
+		if ((d.friaVulnerable || []).length) t.push(DPIA_TRIGGERS[6]);
+		var order = DPIA_TRIGGERS.slice();
+		t.sort(function (x, y) { return order.indexOf(x) - order.indexOf(y); });
+		var seed = {
+			name: d.name || "",
+			description: d.description || "",
+			dpiaTriggers: t,
+			specialCategory: data.indexOf("Special category data") !== -1 ? "Yes" : "No"
+		};
+		if (d.firstUseDate) seed.goLiveDate = d.firstUseDate;
+		if (d.gaiModelSource === "Third-party model through an API") seed.processorsInvolved = "Yes";
+		if (d.harmsDescription) seed.harmsDetail = d.harmsDescription;
+		if (d.aipReviewDate) seed.reviewDate = d.aipReviewDate;
+		return seed;
+	}
+
+	/* ---------------- Rendering ---------------- */
+
+	function aipTable(head, rows) {
+		var tbl = el("table", { class: "paa-table" });
+		tbl.appendChild(el("tr", {}, head.map(function (h) { return el("th", {}, [h]); })));
+		rows.forEach(function (r) { tbl.appendChild(el("tr", {}, r.map(function (c) { return el("td", {}, [c]); }))); });
+		return tbl;
+	}
+	function aipLink(href, text) {
+		var ext = /^https?:/.test(href);
+		return ext ? el("a", { href: href, target: "_blank", rel: "noopener noreferrer" }, [text]) : el("a", { href: href }, [text]);
+	}
+
+	function renderAipathResult(r, answers) {
+		root.appendChild(el("div", { class: "paa-result-head" }, [
+			el("span", { class: "paa-badge " + badgeClass(r.badgeLevel) }, [r.badgeText]),
+			el("span", { class: "paa-badge " + badgeClass(r.tier.index >= 2 ? "High" : (r.tier.index === 1 ? "Medium" : "Low")) }, ["Impact level " + r.tier.level]),
+			el("span", {}, ["EU AI Act: " + r.classification])
+		]));
+		root.appendChild(el("p", { class: "paa-hero-meaning" }, [r.verdictDetail]));
+		root.appendChild(el("div", { class: "paa-stats" }, r.stats.map(function (s) { return statTile(s[0], s[1], s[2]); })));
+
+		// Handovers
+		if (r.handovers.fria) {
+			var fBox = el("div", { class: "paa-callout sev-high" }, [
+				el("strong", {}, ["A fundamental rights impact assessment is " + (r.handovers.fria === "Required" ? "required" : "possibly required") + ". "]),
+				r.handovers.friaDetail + " The FRIA picks up from here: the intake, oversight and impact answers carry over under the same questions, and it asks only what is left (period and frequency of use, reuse of earlier assessments, notification)."
+			]);
+			var toFria = el("button", { class: "button" }, ["Continue to the FRIA"]);
+			toFria.addEventListener("click", function () { startModule("fria", aipathSeedFria(answers)); });
+			fBox.appendChild(el("div", { class: "paa-callout-action" }, [toFria]));
+			root.appendChild(fBox);
+		}
+		if (r.handovers.dpia) {
+			var dBox = el("div", { class: "paa-callout sev-medium" }, [
+				el("strong", {}, ["Personal data is involved. "]),
+				"Whether a DPIA is required turns on the Article 35(3) criteria, which the Full DPIA asks first. Name, description, date, harms, special category data, processors and the criteria these answers already imply carry over. Severity and likelihood are left for you to rate there, because the DPIA rates harm from the processing, not the interference with rights rated here."
+			]);
+			var toDpia = el("button", { class: "button" }, ["Continue to the Full DPIA"]);
+			toDpia.addEventListener("click", function () { startModule("dpia", aipathSeedDpia(answers)); });
+			dBox.appendChild(el("div", { class: "paa-callout-action" }, [toDpia]));
+			root.appendChild(dBox);
+		}
+
+		// Register
+		var list = el("div", {});
+		if (!r.findings.length) list.appendChild(el("p", { class: "paa-no-factors" }, ["No findings from your answers."]));
+		r.findings.forEach(function (x) {
+			var refs = [];
+			if (x.refs.nist.length) refs.push("NIST AI RMF " + x.refs.nist.join(", "));
+			if (x.refs.gai.length) refs.push("NIST AI 600-1: " + x.refs.gai.join(", "));
+			if (x.refs.owasp.length) refs.push("OWASP " + x.refs.owasp.join(", "));
+			if (x.refs.iso.length) refs.push("ISO/IEC 42001 " + x.refs.iso.join(", "));
+			if (x.refs.sg.length) refs.push("Singapore: " + x.refs.sg.join(", "));
+			list.appendChild(el("div", { class: "paa-factor sev-" + x.severity }, [
+				el("p", {}, [el("strong", {}, ["[" + x.tag + (x.also.length ? ", also " + x.also.join(", ") : "") + "] " + x.title + ": "]), x.detail]),
+				refs.length ? el("p", { class: "paa-help" }, [refs.join(" | ")]) : null
+			]));
+		});
+		root.appendChild(el("div", { class: "paa-result-item" }, [el("h4", {}, ["Risk register (" + r.findings.length + ")"]), list]));
+
+		// Obligations
+		if (r.obligations.length) {
+			// Two columns, so the table fits a phone: role, date and links sit under the title.
+			var otbl = el("table", { class: "paa-table" });
+			otbl.appendChild(el("tr", {}, ["Obligation", "Status"].map(function (h) { return el("th", {}, [h]); })));
+			r.obligations.forEach(function (o) {
+				var meta = el("p", { class: "paa-help" }, [o.role + ". Applies from " + o.applies + ". "]);
+				meta.appendChild(aipLink("ai-act-digest.html#" + o.art, "Art. " + o.art.replace("art-", "")));
+				if (o.row) { meta.appendChild(document.createTextNode(" | ")); meta.appendChild(aipLink("ai-governance-crosswalk.html#cw-" + o.row, "Crosswalk")); }
+				otbl.appendChild(el("tr", {}, [el("td", {}, [el("strong", {}, [o.title]), meta]), el("td", {}, [o.status])]));
+			});
+			root.appendChild(el("div", { class: "paa-result-item" }, [
+				el("h4", {}, ["EU AI Act obligations for your role"]), otbl,
+				el("p", { class: "paa-help" }, ["Dates follow the Regulation as amended by Regulation (EU) 2026/1744. \"Applies\" means the obligation is listed for your role and risk level with no question on it here; \"Not assessed\" means its question was not answered."])
+			]));
+		}
+
+		// Impact level
+		var t = r.tier;
+		var trows = t.parts.map(function (p) { return [p.label, p.points + " of " + p.max]; });
+		var tnote = "Raw score " + t.raw + " of " + t.max + " (" + t.pct + " percent): level " + t.scoredLevel + " on the bands I up to 25, II up to 50, III up to 75, IV above." +
+			(t.floors.length && t.scoredLevel !== t.level ? " Raised to level " + t.level + " by the floor: " + t.floors.join("; ") + "." : "") +
+			(t.missing.length ? " Provisional: not answered, counted as zero: " + t.missing.join(", ") + "." : "") + " " + t.text;
+		root.appendChild(el("div", { class: "paa-result-item" }, [
+			el("h4", {}, ["Impact level " + t.level]), aipTable(["Factor", "Points"], trows), el("p", { class: "paa-help" }, [tnote])
+		]));
+
+		// Framework coverage
+		var c = r.coverage;
+		function covNote(n) { return n.gap + " with a gap, " + n.ok + " addressed, " + n.na + " not assessed"; }
+		root.appendChild(el("div", { class: "paa-result-item" }, [
+			el("h4", {}, ["Coverage: NIST AI RMF 1.0 (" + covNote(c.nistCount) + ")"]), aipTable(["Subcategory", "Text", "Status"], c.nist)
+		]));
+		r.gaiTables.forEach(function (gt) {
+			root.appendChild(el("div", { class: "paa-result-item" }, [el("h4", {}, ["Coverage: " + gt.title.replace(/^Coverage against the /, "")]), aipTable(["Item", "Status"], gt.rows)]));
+		});
+		root.appendChild(el("div", { class: "paa-result-item" }, [
+			el("h4", {}, ["Coverage: ISO/IEC 42001, voluntary (" + covNote(c.isoCount) + ")"]), aipTable(["Clause or control", "Title", "Status"], c.iso)
+		]));
+		if (r.gaiTables.length) {
+			root.appendChild(el("div", { class: "paa-result-item" }, [
+				el("h4", {}, ["Coverage: Singapore Model AI Governance Framework for Generative AI (" + covNote(c.sgCount) + ")"]), aipTable(["Dimension", "Status"], c.sg)
+			]));
+		}
+
+		var help = el("p", { class: "paa-help" }, [
+			"How to read this. The mapping of questions to framework entries is this tool's own, made for triage. \"Not assessed\" means no question you answered touches that entry; it is not a pass. \"Addressed\" means the questions on it were answered without a finding, not that the framework is met. ISO/IEC 42001 and ISO/IEC 42005 are voluntary standards, cited by number and title only; the Singapore framework is guidance, not law, and its dimensions on safety research and public good are mostly for governments and model developers. The impact level follows the method of the ",
+			aipLink(CANADA_AIA_URL, "Canadian Algorithmic Impact Assessment"),
+			" with this tool's own factors and weights and no mitigation deduction. Sources: ",
+			aipLink(NIST_AI_RMF_URL, "NIST AI RMF 1.0"), ", ",
+			aipLink(NIST_AI_600_1_URL, "NIST AI 600-1"), ", ",
+			aipLink(ISO_42001_URL, "ISO/IEC 42001"), ", ",
+			aipLink(ISO_42005_URL, "ISO/IEC 42005"), ", ",
+			aipLink(SG_GENAI_URL, "Singapore Model AI Governance Framework for Generative AI"), ". This is decision support, not a legal determination, a DPIA, a FRIA or a conformity assessment."
+		]);
+		root.appendChild(help);
+	}
+
+	/* =================================================================
 	 *  Generic step-based engine
 	 * ================================================================= */
 	var MODULES = {
@@ -3399,6 +4639,9 @@
 		tia: { id: "tia", label: "Transfer Impact Assessment", steps: TIA_STEPS, compute: tiaResult,
 			intro: "The six steps of EDPB Recommendations 01/2020 for a transfer outside the EEA: map the transfer, pick the tool, assess the destination's law and practice, choose supplementary measures, and set a re-evaluation date. Ends in a clear proceed, proceed with measures, or do not transfer." }
 	};
+	// TC-08: added after the literal so no existing line changes.
+	MODULES.aipath = { id: "aipath", label: "AI Assessment Pathway", steps: AIPATH_STEPS, compute: aipathResult,
+		intro: "One entry point for assessing an AI system. A shared intake runs once, an impact level from I to IV sets how deep the rest goes, and the generative AI and EU AI Act modules open only when they apply. Ends in one risk register mapped to NIST AI RMF, NIST AI 600-1, ISO/IEC 42001 and the Singapore generative AI framework, the AI Act obligations for your role, and handovers to the DPIA and the FRIA." };
 
 	var state = { moduleId: null, stepIndex: 0, answers: {} };
 	// Set right after a JSON restore, read once by renderLanding and cleared -
@@ -4700,6 +5943,11 @@
 			entry = { moduleId: "tpsa", name: name, date: new Date().toISOString(),
 				resultLabel: "Residual: " + result.residual + (result.residualProvisional ? " (provisional)" : "") + " - maturity " + result.maturity.tier,
 				answers: state.answers, result: result };
+			saveHistory(entry);
+		} else if (state.moduleId === "aipath") {
+			renderAipathResult(result, state.answers);
+			entry = { moduleId: "aipath", name: name, date: new Date().toISOString(),
+				resultLabel: result.historyLabel, answers: state.answers, result: result };
 			saveHistory(entry);
 		} else if (ADDED_MODULE_IDS.indexOf(state.moduleId) !== -1) {
 			renderAddedResult(result);

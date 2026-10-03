@@ -1,0 +1,1539 @@
+[
+ {
+  "id": "classic-ml",
+  "name": "Demand forecasting model (classic ML, internal)",
+  "level": "I",
+  "pct": 10,
+  "shown": 48,
+  "modules": [
+   "Core",
+   "Impact",
+   "AI Act",
+   "Governance"
+  ],
+  "cls": "Not high-risk",
+  "obligations": [
+   {
+    "title": "AI literacy: support it among staff and others who operate the system on your behalf",
+    "role": "Provider and deployer",
+    "applies": "2 February 2025",
+    "art": "art-4",
+    "row": "r01",
+    "status": "Partly"
+   },
+   {
+    "title": "Screen the use against the prohibited practices",
+    "role": "Everyone",
+    "applies": "2 February 2025 (points (ba) and (bb) from 2 December 2026)",
+    "art": "art-5",
+    "row": "r02",
+    "status": "In place"
+   }
+  ],
+  "findings": [
+   {
+    "sev": "low",
+    "tag": "Core",
+    "also": [],
+    "title": "Users not trained on the system's limits"
+   }
+  ],
+  "fria": null,
+  "dpia": false,
+  "answers": {
+   "name": "Demand forecasting model (classic ML, internal)",
+   "description": "Scenario system",
+   "lifecycle": "Production",
+   "provider": "Vendor X, v2",
+   "firstUseDate": "2027-01-15",
+   "affectedCategories": [],
+   "oversightAssigned": "Yes",
+   "oversightCompetence": "Yes",
+   "automationBias": "Partially",
+   "gaiUserGuidance": "Partially",
+   "biasEvaluated": "Planned",
+   "loggingInPlace": "Yes",
+   "thirdPartyData": "No",
+   "gaiProviderUse": "No, contractually excluded",
+   "broadDataAccess": "No",
+   "multiAgent": "No",
+   "businessCriticalData": "No",
+   "competitorExposure": "No",
+   "harmsDescription": "Wrong output relied on.",
+   "friaInherentSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaInherentLikelihood": "Significant - it seems possible in this deployment",
+   "mitigationMeasures": "Review and thresholds.",
+   "friaResidualSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaResidualLikelihood": "Limited - it seems unlikely in this deployment",
+   "rightsAtRisk": [
+    "Protection of personal data (Art. 8)"
+   ],
+   "aipSocietalImpact": "None identified.",
+   "providerInfoReviewed": "Yes",
+   "materialiseMeasures": "Incident process.",
+   "complaintMechanism": "Yes",
+   "explanationProcess": "Planned",
+   "aipSystemOwner": "Product owner",
+   "aipAssessor": "Risk lead",
+   "aipApprover": "Head of unit",
+   "aipDecision": "Approve with conditions",
+   "aipConditions": "Bias test by Q1",
+   "aipEvidence": "Test report 12",
+   "legalReview": "Yes",
+   "suspensionProcess": "Yes",
+   "aipReviewDate": "2027-06-30",
+   "aipReassessTriggers": [
+    "A new model, or a new version of the model"
+   ],
+   "aiaRole": [
+    "Deployer"
+   ],
+   "prohibitedUse": "No",
+   "highRiskAnnexI": "No",
+   "aiaEmotion": "No",
+   "aiaInteracts": "No",
+   "aipDecisionEffect": "No decisions about people",
+   "aipReversibility": "Not applicable: its output has no effect on people",
+   "affectedScale": "Fewer than 100",
+   "friaVulnerable": [],
+   "autonomyLevel": "Low-impact actions only",
+   "oversightMode": "On flagged or contested cases only",
+   "annexIIIArea": "Not an Annex III high-risk system",
+   "gaiUsers": "Staff only",
+   "gaiPromptData": [
+    "Confidential business information"
+   ],
+   "aipEu": "Yes",
+   "aipGenerates": "No",
+   "aipFoundationModel": "No",
+   "aipFreePrompts": "No"
+  }
+ },
+ {
+  "id": "internal-genai",
+  "name": "Internal assistant over company documents (RAG)",
+  "level": "I",
+  "pct": 10,
+  "shown": 64,
+  "modules": [
+   "Core",
+   "Impact",
+   "GenAI",
+   "AI Act",
+   "Governance"
+  ],
+  "cls": "Not high-risk",
+  "obligations": [
+   {
+    "title": "AI literacy: support it among staff and others who operate the system on your behalf",
+    "role": "Provider and deployer",
+    "applies": "2 February 2025",
+    "art": "art-4",
+    "row": "r01",
+    "status": "Partly"
+   },
+   {
+    "title": "Screen the use against the prohibited practices",
+    "role": "Everyone",
+    "applies": "2 February 2025 (points (ba) and (bb) from 2 December 2026)",
+    "art": "art-5",
+    "row": "r02",
+    "status": "In place"
+   }
+  ],
+  "findings": [
+   {
+    "sev": "medium",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Prompt injection not tested"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Outputs not checked for leakage"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Harmful content not filtered"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Model and components not documented"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Bias not evaluated"
+   },
+   {
+    "sev": "low",
+    "tag": "Core",
+    "also": [
+     "GenAI"
+    ],
+    "title": "Users not trained on limits"
+   }
+  ],
+  "fria": null,
+  "dpia": true,
+  "answers": {
+   "name": "Internal assistant over company documents (RAG)",
+   "description": "Scenario system",
+   "lifecycle": "Production",
+   "provider": "Vendor X, v2",
+   "firstUseDate": "2027-01-15",
+   "affectedCategories": [
+    "Job applicants or employees"
+   ],
+   "oversightAssigned": "Yes",
+   "oversightCompetence": "Yes",
+   "automationBias": "Partially",
+   "gaiUserGuidance": "Partially",
+   "biasEvaluated": "Planned",
+   "loggingInPlace": "Yes",
+   "thirdPartyData": "No",
+   "gaiProviderUse": "No, contractually excluded",
+   "broadDataAccess": "No",
+   "multiAgent": "No",
+   "businessCriticalData": "No",
+   "competitorExposure": "No",
+   "harmsDescription": "Wrong output relied on.",
+   "friaInherentSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaInherentLikelihood": "Significant - it seems possible in this deployment",
+   "mitigationMeasures": "Review and thresholds.",
+   "friaResidualSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaResidualLikelihood": "Limited - it seems unlikely in this deployment",
+   "rightsAtRisk": [
+    "Protection of personal data (Art. 8)"
+   ],
+   "aipSocietalImpact": "None identified.",
+   "providerInfoReviewed": "Yes",
+   "materialiseMeasures": "Incident process.",
+   "complaintMechanism": "Yes",
+   "explanationProcess": "Planned",
+   "aipSystemOwner": "Product owner",
+   "aipAssessor": "Risk lead",
+   "aipApprover": "Head of unit",
+   "aipDecision": "Approve with conditions",
+   "aipConditions": "Bias test by Q1",
+   "aipEvidence": "Test report 12",
+   "legalReview": "Yes",
+   "suspensionProcess": "Yes",
+   "aipReviewDate": "2027-06-30",
+   "aipReassessTriggers": [
+    "A new model, or a new version of the model"
+   ],
+   "gaiModelSource": "Third-party model through an API",
+   "gaiUntrustedContent": "Yes",
+   "gaiInjectionTested": "Once",
+   "gaiSystemPromptSecrets": "No",
+   "gaiInputFiltering": "Partially",
+   "gaiOutputLeakCheck": "Partially",
+   "gaiRagPermissions": "Yes",
+   "gaiEmbeddingStore": "Yes",
+   "gaiIpCheck": "Outputs are not used externally",
+   "gaiOutputHandling": "No, it is validated or only shown as text",
+   "gaiGrounding": "Yes",
+   "gaiContentFilters": "Yes, provider defaults only",
+   "gaiDisclosure": "Yes",
+   "gaiProvenance": "Partially",
+   "gaiRateLimits": "Yes",
+   "gaiRedTeam": "Yes, internally",
+   "gaiThreatModel": "No",
+   "gaiBiasEval": "Partially",
+   "gaiMonitoring": "Yes",
+   "gaiEnergy": "No",
+   "gaiPatterns": [
+    "Internal assistant or chat",
+    "Search or question answering over our own documents (RAG)"
+   ],
+   "aiaRole": [
+    "Deployer"
+   ],
+   "prohibitedUse": "No",
+   "highRiskAnnexI": "No",
+   "aiaEmotion": "No",
+   "aiaDeepfake": "No",
+   "aiaTransparencyDone": "Yes",
+   "aipDecisionEffect": "No decisions about people",
+   "aipReversibility": "Easily, and quickly",
+   "affectedScale": "100 to 10,000",
+   "friaVulnerable": [],
+   "autonomyLevel": "None - a human approves every action",
+   "oversightMode": "Before every decision takes effect",
+   "annexIIIArea": "Not an Annex III high-risk system",
+   "gaiUsers": "Staff only",
+   "gaiPromptData": [
+    "Personal data",
+    "Confidential business information"
+   ],
+   "aipEu": "Yes",
+   "aipGenerates": "Yes",
+   "aipFoundationModel": "Yes",
+   "aipFreePrompts": "Yes"
+  }
+ },
+ {
+  "id": "public-chatbot-eu",
+  "name": "Customer service chatbot for the public, EU",
+  "level": "II",
+  "pct": 48,
+  "shown": 68,
+  "modules": [
+   "Core",
+   "Impact",
+   "GenAI",
+   "AI Act",
+   "Governance"
+  ],
+  "cls": "Not high-risk",
+  "obligations": [
+   {
+    "title": "AI literacy: support it among staff and others who operate the system on your behalf",
+    "role": "Provider and deployer",
+    "applies": "2 February 2025",
+    "art": "art-4",
+    "row": "r01",
+    "status": "Partly"
+   },
+   {
+    "title": "Screen the use against the prohibited practices",
+    "role": "Everyone",
+    "applies": "2 February 2025 (points (ba) and (bb) from 2 December 2026)",
+    "art": "art-5",
+    "row": "r02",
+    "status": "In place"
+   },
+   {
+    "title": "Tell people they are interacting with an AI system, unless obvious",
+    "role": "Provider",
+    "applies": "2 August 2026",
+    "art": "art-50",
+    "row": "r23",
+    "status": "Partly"
+   },
+   {
+    "title": "Mark synthetic audio, image, video or text in a machine-readable way",
+    "role": "Provider",
+    "applies": "2 August 2026; generators on the market before then by 2 December 2026",
+    "art": "art-50",
+    "row": "r23",
+    "status": "Partly"
+   }
+  ],
+  "findings": [
+   {
+    "sev": "high",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Not red-teamed"
+   },
+   {
+    "sev": "medium",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Prompt injection not tested"
+   },
+   {
+    "sev": "medium",
+    "tag": "Core",
+    "also": [
+     "GenAI"
+    ],
+    "title": "Output relied on without review"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Inputs not screened"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Outputs not checked for leakage"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Harmful content not filtered"
+   },
+   {
+    "sev": "low",
+    "tag": "AI Act",
+    "also": [
+     "GenAI"
+    ],
+    "title": "AI use or synthetic content not disclosed"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Model and components not documented"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "No ATLAS threat model"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Bias not evaluated"
+   },
+   {
+    "sev": "low",
+    "tag": "Core",
+    "also": [
+     "GenAI"
+    ],
+    "title": "Users not trained on limits"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Energy use unknown"
+   },
+   {
+    "sev": "low",
+    "tag": "AI Act",
+    "also": [],
+    "title": "Transparency duties partly met"
+   }
+  ],
+  "fria": null,
+  "dpia": true,
+  "answers": {
+   "name": "Customer service chatbot for the public, EU",
+   "description": "Scenario system",
+   "lifecycle": "Production",
+   "provider": "Vendor X, v2",
+   "firstUseDate": "2027-01-15",
+   "affectedCategories": [
+    "Consumers or customers"
+   ],
+   "oversightAssigned": "Yes",
+   "oversightCompetence": "Yes",
+   "automationBias": "Partially",
+   "gaiUserGuidance": "Partially",
+   "biasEvaluated": "Planned",
+   "loggingInPlace": "Yes",
+   "thirdPartyData": "No",
+   "gaiProviderUse": "No, contractually excluded",
+   "broadDataAccess": "No",
+   "multiAgent": "No",
+   "businessCriticalData": "No",
+   "competitorExposure": "No",
+   "harmsDescription": "Wrong output relied on.",
+   "friaInherentSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaInherentLikelihood": "Significant - it seems possible in this deployment",
+   "mitigationMeasures": "Review and thresholds.",
+   "friaResidualSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaResidualLikelihood": "Limited - it seems unlikely in this deployment",
+   "rightsAtRisk": [
+    "Protection of personal data (Art. 8)"
+   ],
+   "aipSocietalImpact": "None identified.",
+   "providerInfoReviewed": "Yes",
+   "materialiseMeasures": "Incident process.",
+   "complaintMechanism": "Yes",
+   "explanationProcess": "Planned",
+   "aipSystemOwner": "Product owner",
+   "aipAssessor": "Risk lead",
+   "aipApprover": "Head of unit",
+   "aipDecision": "Approve with conditions",
+   "aipConditions": "Bias test by Q1",
+   "aipEvidence": "Test report 12",
+   "legalReview": "Yes",
+   "suspensionProcess": "Yes",
+   "aipReviewDate": "2027-06-30",
+   "aipReassessTriggers": [
+    "A new model, or a new version of the model"
+   ],
+   "gaiModelSource": "Third-party model through an API",
+   "gaiUntrustedContent": "Yes",
+   "gaiInjectionTested": "Once",
+   "gaiSystemPromptSecrets": "No",
+   "gaiInputFiltering": "Partially",
+   "gaiOutputLeakCheck": "Partially",
+   "gaiRagPermissions": "Yes",
+   "gaiEmbeddingStore": "Yes",
+   "gaiIpCheck": "Outputs are not used externally",
+   "gaiOutputHandling": "No, it is validated or only shown as text",
+   "gaiGrounding": "Yes",
+   "gaiContentFilters": "Yes, provider defaults only",
+   "gaiDisclosure": "Yes",
+   "gaiProvenance": "Partially",
+   "gaiRateLimits": "Yes",
+   "gaiRedTeam": "No",
+   "gaiThreatModel": "No",
+   "gaiBiasEval": "Partially",
+   "gaiMonitoring": "Yes",
+   "gaiEnergy": "No",
+   "gaiPatterns": [
+    "Customer-facing chat or assistant"
+   ],
+   "aiaRole": [
+    "Provider of the AI system",
+    "Deployer"
+   ],
+   "prohibitedUse": "No",
+   "highRiskAnnexI": "No",
+   "aiaEmotion": "No",
+   "aiaDeepfake": "No",
+   "aiaTransparencyDone": "Partially",
+   "aipDecisionEffect": "Supports decisions with minor effects on people",
+   "aipReversibility": "With effort, or after some time",
+   "affectedScale": "More than 1 million",
+   "friaVulnerable": [],
+   "autonomyLevel": "Low-impact actions only",
+   "oversightMode": "No human review",
+   "annexIIIArea": "Not an Annex III high-risk system",
+   "gaiUsers": "The public",
+   "gaiPromptData": [
+    "Personal data"
+   ],
+   "aipEu": "Yes",
+   "aipGenerates": "Yes",
+   "aipFoundationModel": "Yes",
+   "aipFreePrompts": "Yes"
+  }
+ },
+ {
+  "id": "genai-hiring",
+  "name": "LLM screening of job applications",
+  "level": "III",
+  "pct": 52,
+  "shown": 82,
+  "modules": [
+   "Core",
+   "Impact",
+   "GenAI",
+   "AI Act",
+   "Governance"
+  ],
+  "cls": "High-risk (Annex III)",
+  "obligations": [
+   {
+    "title": "AI literacy: support it among staff and others who operate the system on your behalf",
+    "role": "Provider and deployer",
+    "applies": "2 February 2025",
+    "art": "art-4",
+    "row": "r01",
+    "status": "Partly"
+   },
+   {
+    "title": "Screen the use against the prohibited practices",
+    "role": "Everyone",
+    "applies": "2 February 2025 (points (ba) and (bb) from 2 December 2026)",
+    "art": "art-5",
+    "row": "r02",
+    "status": "In place"
+   },
+   {
+    "title": "Use according to the instructions for use, with assigned human oversight",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-26",
+    "row": "r16",
+    "status": "In place"
+   },
+   {
+    "title": "Input data relevant and representative, where you control it",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-26",
+    "row": "r17",
+    "status": "Applies"
+   },
+   {
+    "title": "Monitor, report risks and serious incidents, suspend use; keep logs six months",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-26",
+    "row": "r18",
+    "status": "In place"
+   },
+   {
+    "title": "Inform workers' representatives before use at work, and inform people subject to decisions",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-26",
+    "row": "r19",
+    "status": "Partly"
+   },
+   {
+    "title": "Explain the role of the system in individual decisions on request",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-86",
+    "row": "r22",
+    "status": "Partly"
+   },
+   {
+    "title": "Know when you become the provider (name, substantial modification, change of purpose)",
+    "role": "Deployer, importer, distributor",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-25",
+    "row": "r04",
+    "status": "Applies"
+   }
+  ],
+  "findings": [
+   {
+    "sev": "high",
+    "tag": "Core",
+    "also": [],
+    "title": "No check for unequal outcomes"
+   },
+   {
+    "sev": "medium",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Prompt injection not tested"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Inputs not screened"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Outputs not checked for leakage"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Harmful content not filtered"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Model and components not documented"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "No ATLAS threat model"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Bias not evaluated"
+   },
+   {
+    "sev": "low",
+    "tag": "Core",
+    "also": [
+     "GenAI"
+    ],
+    "title": "Users not trained on limits"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Energy use unknown"
+   }
+  ],
+  "fria": null,
+  "dpia": true,
+  "answers": {
+   "name": "LLM screening of job applications",
+   "description": "Scenario system",
+   "lifecycle": "Production",
+   "provider": "Vendor X, v2",
+   "firstUseDate": "2027-01-15",
+   "affectedCategories": [
+    "Job applicants or employees"
+   ],
+   "oversightAssigned": "Yes",
+   "oversightCompetence": "Yes",
+   "automationBias": "Partially",
+   "gaiUserGuidance": "Partially",
+   "biasEvaluated": "No",
+   "loggingInPlace": "Yes",
+   "thirdPartyData": "No",
+   "gaiProviderUse": "No, contractually excluded",
+   "broadDataAccess": "No",
+   "multiAgent": "No",
+   "businessCriticalData": "No",
+   "competitorExposure": "No",
+   "harmsDescription": "Wrong output relied on.",
+   "friaInherentSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaInherentLikelihood": "Significant - it seems possible in this deployment",
+   "mitigationMeasures": "Review and thresholds.",
+   "friaResidualSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaResidualLikelihood": "Limited - it seems unlikely in this deployment",
+   "rightsAtRisk": [
+    "Protection of personal data (Art. 8)"
+   ],
+   "aipSocietalImpact": "None identified.",
+   "providerInfoReviewed": "Yes",
+   "materialiseMeasures": "Incident process.",
+   "complaintMechanism": "Yes",
+   "explanationProcess": "Planned",
+   "aipSystemOwner": "Product owner",
+   "aipAssessor": "Risk lead",
+   "aipApprover": "Head of unit",
+   "aipDecision": "Approve with conditions",
+   "aipConditions": "Bias test by Q1",
+   "aipEvidence": "Test report 12",
+   "legalReview": "Yes",
+   "suspensionProcess": "Yes",
+   "aipReviewDate": "2027-06-30",
+   "aipReassessTriggers": [
+    "A new model, or a new version of the model"
+   ],
+   "gaiModelSource": "Third-party model through an API",
+   "gaiUntrustedContent": "Yes",
+   "gaiInjectionTested": "Once",
+   "gaiSystemPromptSecrets": "No",
+   "gaiInputFiltering": "Partially",
+   "gaiOutputLeakCheck": "Partially",
+   "gaiRagPermissions": "Yes",
+   "gaiEmbeddingStore": "Yes",
+   "gaiIpCheck": "Outputs are not used externally",
+   "gaiOutputHandling": "No, it is validated or only shown as text",
+   "gaiGrounding": "Yes",
+   "gaiContentFilters": "Yes, provider defaults only",
+   "gaiDisclosure": "Yes",
+   "gaiProvenance": "Partially",
+   "gaiRateLimits": "Yes",
+   "gaiRedTeam": "Yes, internally",
+   "gaiThreatModel": "No",
+   "gaiBiasEval": "Partially",
+   "gaiMonitoring": "Yes",
+   "gaiEnergy": "No",
+   "gaiPatterns": [
+    "Content generation (text, images, audio, video)"
+   ],
+   "aiaRole": [
+    "Deployer"
+   ],
+   "deployerType": "Other private entity",
+   "intendedPurposeAligned": "Yes",
+   "prohibitedUse": "No",
+   "highRiskAnnexI": "No",
+   "aiaArt63": "No, none of them applies",
+   "affectedAware": "Planned",
+   "aiaEmotion": "No",
+   "aiaInteracts": "No",
+   "aiaDeepfake": "No",
+   "aiaTransparencyDone": "Yes",
+   "aipDecisionEffect": "Supports decisions with legal or similarly significant effects on people",
+   "aipReversibility": "Not, or only with great difficulty",
+   "affectedScale": "10,000 to 1 million",
+   "friaVulnerable": [],
+   "autonomyLevel": "Low-impact actions only",
+   "oversightMode": "Before every decision takes effect",
+   "annexIIIArea": "4. Employment, workers' management and access to self-employment",
+   "gaiUsers": "Staff only",
+   "gaiPromptData": [
+    "Personal data"
+   ],
+   "aipEu": "Yes",
+   "aipGenerates": "Yes",
+   "aipFoundationModel": "Yes",
+   "aipFreePrompts": "No"
+  }
+ },
+ {
+  "id": "public-body-fria",
+  "name": "Benefit eligibility scoring by a public body",
+  "level": "III",
+  "pct": 62,
+  "shown": 62,
+  "modules": [
+   "Core",
+   "Impact",
+   "AI Act",
+   "Governance"
+  ],
+  "cls": "High-risk (Annex III)",
+  "obligations": [
+   {
+    "title": "AI literacy: support it among staff and others who operate the system on your behalf",
+    "role": "Provider and deployer",
+    "applies": "2 February 2025",
+    "art": "art-4",
+    "row": "r01",
+    "status": "Partly"
+   },
+   {
+    "title": "Screen the use against the prohibited practices",
+    "role": "Everyone",
+    "applies": "2 February 2025 (points (ba) and (bb) from 2 December 2026)",
+    "art": "art-5",
+    "row": "r02",
+    "status": "In place"
+   },
+   {
+    "title": "Use according to the instructions for use, with assigned human oversight",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-26",
+    "row": "r16",
+    "status": "In place"
+   },
+   {
+    "title": "Input data relevant and representative, where you control it",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-26",
+    "row": "r17",
+    "status": "Applies"
+   },
+   {
+    "title": "Monitor, report risks and serious incidents, suspend use; keep logs six months",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-26",
+    "row": "r18",
+    "status": "In place"
+   },
+   {
+    "title": "Inform workers' representatives before use at work, and inform people subject to decisions",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-26",
+    "row": "r19",
+    "status": "In place"
+   },
+   {
+    "title": "Register the use in the EU database",
+    "role": "Deployer (public authority)",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-49",
+    "row": "r20",
+    "status": "Applies"
+   },
+   {
+    "title": "Fundamental rights impact assessment before first use",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-27",
+    "row": "r21",
+    "status": "Not assessed"
+   },
+   {
+    "title": "Explain the role of the system in individual decisions on request",
+    "role": "Deployer",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-86",
+    "row": "r22",
+    "status": "Partly"
+   },
+   {
+    "title": "Know when you become the provider (name, substantial modification, change of purpose)",
+    "role": "Deployer, importer, distributor",
+    "applies": "2 December 2027 (Annex III)",
+    "art": "art-25",
+    "row": "r04",
+    "status": "Applies"
+   }
+  ],
+  "findings": [
+   {
+    "sev": "medium",
+    "tag": "Core",
+    "also": [],
+    "title": "No human makes the final decision"
+   },
+   {
+    "sev": "low",
+    "tag": "Core",
+    "also": [],
+    "title": "Users not trained on the system's limits"
+   }
+  ],
+  "fria": "Required",
+  "dpia": true,
+  "answers": {
+   "name": "Benefit eligibility scoring by a public body",
+   "description": "Scenario system",
+   "lifecycle": "Production",
+   "provider": "Vendor X, v2",
+   "firstUseDate": "2027-01-15",
+   "affectedCategories": [
+    "Applicants for or recipients of public benefits"
+   ],
+   "oversightAssigned": "Yes",
+   "oversightCompetence": "Yes",
+   "automationBias": "Partially",
+   "gaiUserGuidance": "Partially",
+   "biasEvaluated": "Planned",
+   "loggingInPlace": "Yes",
+   "thirdPartyData": "No",
+   "gaiProviderUse": "No, contractually excluded",
+   "broadDataAccess": "No",
+   "multiAgent": "No",
+   "businessCriticalData": "No",
+   "competitorExposure": "No",
+   "harmsDescription": "Wrong output relied on.",
+   "friaInherentSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaInherentLikelihood": "Significant - it seems possible in this deployment",
+   "mitigationMeasures": "Review and thresholds.",
+   "friaResidualSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaResidualLikelihood": "Limited - it seems unlikely in this deployment",
+   "rightsAtRisk": [
+    "Protection of personal data (Art. 8)"
+   ],
+   "aipSocietalImpact": "None identified.",
+   "providerInfoReviewed": "Yes",
+   "materialiseMeasures": "Incident process.",
+   "complaintMechanism": "Yes",
+   "explanationProcess": "Planned",
+   "aipSystemOwner": "Product owner",
+   "aipAssessor": "Risk lead",
+   "aipApprover": "Head of unit",
+   "aipDecision": "Approve with conditions",
+   "aipConditions": "Bias test by Q1",
+   "aipEvidence": "Test report 12",
+   "legalReview": "Yes",
+   "suspensionProcess": "Yes",
+   "aipReviewDate": "2027-06-30",
+   "aipReassessTriggers": [
+    "A new model, or a new version of the model"
+   ],
+   "aiaRole": [
+    "Deployer"
+   ],
+   "deployerType": "Body governed by public law",
+   "intendedPurposeAligned": "Yes",
+   "prohibitedUse": "No",
+   "highRiskAnnexI": "No",
+   "aiaArt63": "No, none of them applies",
+   "affectedAware": "Yes",
+   "aiaEmotion": "No",
+   "aiaInteracts": "No",
+   "aipDecisionEffect": "Supports decisions with legal or similarly significant effects on people",
+   "aipReversibility": "With effort, or after some time",
+   "affectedScale": "More than 1 million",
+   "friaVulnerable": [
+    "People in financial hardship",
+    "Persons with disabilities"
+   ],
+   "autonomyLevel": "Low-impact actions only",
+   "oversightMode": "On flagged or contested cases only",
+   "annexIIIArea": "5(a). Eligibility for public assistance benefits and services",
+   "gaiUsers": "Staff only",
+   "gaiPromptData": [
+    "Personal data",
+    "Special category data"
+   ],
+   "aipEu": "Yes",
+   "aipGenerates": "No",
+   "aipFoundationModel": "No",
+   "aipFreePrompts": "No"
+  }
+ },
+ {
+  "id": "gpai-provider",
+  "name": "Provider of a general-purpose model offered by API",
+  "level": "II",
+  "pct": 31,
+  "shown": 77,
+  "modules": [
+   "Core",
+   "Impact",
+   "GenAI",
+   "AI Act",
+   "Governance"
+  ],
+  "cls": "Not high-risk",
+  "obligations": [
+   {
+    "title": "AI literacy: support it among staff and others who operate the system on your behalf",
+    "role": "Provider and deployer",
+    "applies": "2 February 2025",
+    "art": "art-4",
+    "row": "r01",
+    "status": "Partly"
+   },
+   {
+    "title": "Screen the use against the prohibited practices",
+    "role": "Everyone",
+    "applies": "2 February 2025 (points (ba) and (bb) from 2 December 2026)",
+    "art": "art-5",
+    "row": "r02",
+    "status": "In place"
+   },
+   {
+    "title": "Tell people they are interacting with an AI system, unless obvious",
+    "role": "Provider",
+    "applies": "2 August 2026",
+    "art": "art-50",
+    "row": "r23",
+    "status": "Partly"
+   },
+   {
+    "title": "Mark synthetic audio, image, video or text in a machine-readable way",
+    "role": "Provider",
+    "applies": "2 August 2026; generators on the market before then by 2 December 2026",
+    "art": "art-50",
+    "row": "r23",
+    "status": "Partly"
+   },
+   {
+    "title": "Notify the Commission within two weeks of meeting the systemic risk threshold",
+    "role": "GPAI model provider",
+    "applies": "2 August 2025",
+    "art": "art-52",
+    "row": "r28",
+    "status": "Applies"
+   },
+   {
+    "title": "Technical documentation (Annex XI) and information for downstream providers (Annex XII)",
+    "role": "GPAI model provider",
+    "applies": "2 August 2025; models on the market before then by 2 August 2027",
+    "art": "art-53",
+    "row": "r25",
+    "status": "In place"
+   },
+   {
+    "title": "Copyright policy, including rights reservations",
+    "role": "GPAI model provider",
+    "applies": "2 August 2025; models on the market before then by 2 August 2027",
+    "art": "art-53",
+    "row": "r25",
+    "status": "Partly"
+   },
+   {
+    "title": "Public summary of training content on the AI Office template",
+    "role": "GPAI model provider",
+    "applies": "2 August 2025; models on the market before then by 2 August 2027",
+    "art": "art-53",
+    "row": "r25",
+    "status": "Gap"
+   },
+   {
+    "title": "Authorised representative in the Union",
+    "role": "GPAI model provider",
+    "applies": "2 August 2025; models on the market before then by 2 August 2027",
+    "art": "art-54",
+    "row": "r25",
+    "status": "In place"
+   },
+   {
+    "title": "Model evaluation including adversarial testing; assess and mitigate systemic risks",
+    "role": "GPAI model provider",
+    "applies": "2 August 2025; models on the market before then by 2 August 2027",
+    "art": "art-55",
+    "row": "r26",
+    "status": "In place"
+   },
+   {
+    "title": "Track and report serious incidents to the AI Office",
+    "role": "GPAI model provider",
+    "applies": "2 August 2025; models on the market before then by 2 August 2027",
+    "art": "art-55",
+    "row": "r26",
+    "status": "Partly"
+   },
+   {
+    "title": "Cybersecurity for the model and its infrastructure",
+    "role": "GPAI model provider",
+    "applies": "2 August 2025; models on the market before then by 2 August 2027",
+    "art": "art-55",
+    "row": "r26",
+    "status": "In place"
+   }
+  ],
+  "findings": [
+   {
+    "sev": "high",
+    "tag": "AI Act",
+    "also": [],
+    "title": "Training content summary missing or partial"
+   },
+   {
+    "sev": "medium",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Prompt injection not tested"
+   },
+   {
+    "sev": "medium",
+    "tag": "Core",
+    "also": [
+     "GenAI"
+    ],
+    "title": "Output relied on without review"
+   },
+   {
+    "sev": "medium",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Training data not vetted"
+   },
+   {
+    "sev": "medium",
+    "tag": "AI Act",
+    "also": [],
+    "title": "Copyright policy missing or partial"
+   },
+   {
+    "sev": "medium",
+    "tag": "AI Act",
+    "also": [],
+    "title": "Serious incident reporting missing or partial"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Inputs not screened"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Outputs not checked for leakage"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Harmful content not filtered"
+   },
+   {
+    "sev": "low",
+    "tag": "AI Act",
+    "also": [
+     "GenAI"
+    ],
+    "title": "AI use or synthetic content not disclosed"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Model and components not documented"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "No ATLAS threat model"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Bias not evaluated"
+   },
+   {
+    "sev": "low",
+    "tag": "Core",
+    "also": [
+     "GenAI"
+    ],
+    "title": "Users not trained on limits"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Energy use unknown"
+   },
+   {
+    "sev": "low",
+    "tag": "AI Act",
+    "also": [],
+    "title": "Transparency duties partly met"
+   }
+  ],
+  "fria": null,
+  "dpia": true,
+  "answers": {
+   "name": "Provider of a general-purpose model offered by API",
+   "description": "Scenario system",
+   "lifecycle": "Production",
+   "provider": "Vendor X, v2",
+   "firstUseDate": "2027-01-15",
+   "affectedCategories": [
+    "Consumers or customers"
+   ],
+   "oversightAssigned": "Yes",
+   "oversightCompetence": "Yes",
+   "automationBias": "Partially",
+   "gaiUserGuidance": "Partially",
+   "biasEvaluated": "Planned",
+   "loggingInPlace": "Yes",
+   "thirdPartyData": "No",
+   "gaiProviderUse": "No, contractually excluded",
+   "broadDataAccess": "No",
+   "multiAgent": "No",
+   "businessCriticalData": "No",
+   "competitorExposure": "No",
+   "harmsDescription": "Wrong output relied on.",
+   "friaInherentSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaInherentLikelihood": "Significant - it seems possible in this deployment",
+   "mitigationMeasures": "Review and thresholds.",
+   "friaResidualSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaResidualLikelihood": "Limited - it seems unlikely in this deployment",
+   "rightsAtRisk": [
+    "Protection of personal data (Art. 8)"
+   ],
+   "aipSocietalImpact": "None identified.",
+   "providerInfoReviewed": "Yes",
+   "materialiseMeasures": "Incident process.",
+   "complaintMechanism": "Yes",
+   "explanationProcess": "Planned",
+   "aipSystemOwner": "Product owner",
+   "aipAssessor": "Risk lead",
+   "aipApprover": "Head of unit",
+   "aipDecision": "Approve with conditions",
+   "aipConditions": "Bias test by Q1",
+   "aipEvidence": "Test report 12",
+   "legalReview": "Yes",
+   "suspensionProcess": "Yes",
+   "aipReviewDate": "2027-06-30",
+   "aipReassessTriggers": [
+    "A new model, or a new version of the model"
+   ],
+   "gaiModelSource": "Model we trained ourselves",
+   "gaiUntrustedContent": "Yes",
+   "gaiInjectionTested": "Once",
+   "gaiSystemPromptSecrets": "No",
+   "gaiInputFiltering": "Partially",
+   "gaiOutputLeakCheck": "Partially",
+   "gaiRagPermissions": "Yes",
+   "gaiEmbeddingStore": "Yes",
+   "gaiIpCheck": "Outputs are not used externally",
+   "gaiOutputHandling": "No, it is validated or only shown as text",
+   "gaiGrounding": "Yes",
+   "gaiContentFilters": "Yes, provider defaults only",
+   "gaiDisclosure": "Yes",
+   "gaiProvenance": "Partially",
+   "gaiRateLimits": "Yes",
+   "gaiRedTeam": "Yes, internally",
+   "gaiThreatModel": "No",
+   "gaiBiasEval": "Partially",
+   "gaiMonitoring": "Yes",
+   "gaiEnergy": "No",
+   "gaiPatterns": [
+    "Content generation (text, images, audio, video)",
+    "Code generation"
+   ],
+   "gaiTrainingDataVetted": "Partially",
+   "aiaRole": [
+    "Provider of a general-purpose AI model",
+    "Provider of the AI system"
+   ],
+   "prohibitedUse": "No",
+   "highRiskAnnexI": "No",
+   "aiaGpaiSystemic": "Yes: cumulative training compute above 10^25 FLOP (presumed)",
+   "aiaGpaiOpenSource": "No",
+   "aiaGpaiOutsideEu": "Yes",
+   "aiaGpaiDocs": "Yes",
+   "aiaGpaiCopyright": "Partially",
+   "aiaGpaiSummary": "No",
+   "aiaGpaiRep": "Yes",
+   "aiaGpaiEval": "Yes",
+   "aiaGpaiIncidents": "Partially",
+   "aiaGpaiCyber": "Yes",
+   "aiaInteracts": "Yes",
+   "aiaEmotion": "No",
+   "aiaDeepfake": "No",
+   "aiaTransparencyDone": "Partially",
+   "aipDecisionEffect": "No decisions about people",
+   "aipReversibility": "Not applicable: its output has no effect on people",
+   "affectedScale": "More than 1 million",
+   "friaVulnerable": [],
+   "autonomyLevel": "None - a human approves every action",
+   "oversightMode": "After the fact, by sampling",
+   "annexIIIArea": "Not an Annex III high-risk system",
+   "gaiUsers": "The public",
+   "gaiPromptData": [
+    "Personal data"
+   ],
+   "aipEu": "Yes",
+   "aipGenerates": "Yes",
+   "aipFoundationModel": "Yes",
+   "aipFreePrompts": "Yes"
+  }
+ },
+ {
+  "id": "prohibited",
+  "name": "Emotion recognition of staff in the workplace",
+  "level": "III",
+  "pct": 62,
+  "shown": 57,
+  "modules": [
+   "Core",
+   "Impact",
+   "AI Act",
+   "Governance"
+  ],
+  "cls": "Prohibited",
+  "obligations": [
+   {
+    "title": "AI literacy: support it among staff and others who operate the system on your behalf",
+    "role": "Provider and deployer",
+    "applies": "2 February 2025",
+    "art": "art-4",
+    "row": "r01",
+    "status": "Partly"
+   },
+   {
+    "title": "Prohibited practice: do not place on the market, put into service or use",
+    "role": "Everyone",
+    "applies": "2 February 2025 (points (ba) and (bb) from 2 December 2026)",
+    "art": "art-5",
+    "row": "r02",
+    "status": "Gap"
+   }
+  ],
+  "findings": [
+   {
+    "sev": "high",
+    "tag": "AI Act",
+    "also": [],
+    "title": "Prohibited practice"
+   },
+   {
+    "sev": "medium",
+    "tag": "Core",
+    "also": [],
+    "title": "No human makes the final decision"
+   },
+   {
+    "sev": "low",
+    "tag": "Core",
+    "also": [],
+    "title": "Users not trained on the system's limits"
+   }
+  ],
+  "fria": null,
+  "dpia": true,
+  "answers": {
+   "name": "Emotion recognition of staff in the workplace",
+   "description": "Scenario system",
+   "lifecycle": "Production",
+   "provider": "Vendor X, v2",
+   "firstUseDate": "2027-01-15",
+   "affectedCategories": [
+    "Job applicants or employees"
+   ],
+   "oversightAssigned": "Yes",
+   "oversightCompetence": "Yes",
+   "automationBias": "Partially",
+   "gaiUserGuidance": "Partially",
+   "biasEvaluated": "Planned",
+   "loggingInPlace": "Yes",
+   "thirdPartyData": "No",
+   "gaiProviderUse": "No, contractually excluded",
+   "broadDataAccess": "No",
+   "multiAgent": "No",
+   "businessCriticalData": "No",
+   "competitorExposure": "No",
+   "harmsDescription": "Wrong output relied on.",
+   "friaInherentSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaInherentLikelihood": "Significant - it seems possible in this deployment",
+   "mitigationMeasures": "Review and thresholds.",
+   "friaResidualSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaResidualLikelihood": "Limited - it seems unlikely in this deployment",
+   "rightsAtRisk": [
+    "Protection of personal data (Art. 8)"
+   ],
+   "aipSocietalImpact": "None identified.",
+   "providerInfoReviewed": "Yes",
+   "materialiseMeasures": "Incident process.",
+   "complaintMechanism": "Yes",
+   "explanationProcess": "Planned",
+   "aipSystemOwner": "Product owner",
+   "aipAssessor": "Risk lead",
+   "aipApprover": "Head of unit",
+   "aipDecision": "Approve with conditions",
+   "aipConditions": "Bias test by Q1",
+   "aipEvidence": "Test report 12",
+   "legalReview": "Yes",
+   "suspensionProcess": "Yes",
+   "aipReviewDate": "2027-06-30",
+   "aipReassessTriggers": [
+    "A new model, or a new version of the model"
+   ],
+   "aiaRole": [
+    "Deployer"
+   ],
+   "deployerType": "Other private entity",
+   "intendedPurposeAligned": "Yes",
+   "prohibitedUse": "Yes",
+   "aipDecisionEffect": "Supports decisions with legal or similarly significant effects on people",
+   "aipReversibility": "With effort, or after some time",
+   "affectedScale": "100 to 10,000",
+   "friaVulnerable": [
+    "People in a dependent position (employees, detainees, asylum seekers)"
+   ],
+   "autonomyLevel": "Low-impact actions only",
+   "oversightMode": "After the fact, by sampling",
+   "annexIIIArea": "1. Biometrics (remote identification, categorisation, emotion recognition)",
+   "gaiUsers": "Staff only",
+   "gaiPromptData": [
+    "Personal data",
+    "Special category data"
+   ],
+   "aipEu": "Yes",
+   "aipGenerates": "No",
+   "aipFoundationModel": "No",
+   "aipFreePrompts": "No"
+  }
+ },
+ {
+  "id": "no-eu",
+  "name": "Coding assistant used only outside the EU",
+  "level": "I",
+  "pct": 7,
+  "shown": 56,
+  "modules": [
+   "Core",
+   "Impact",
+   "GenAI",
+   "Governance"
+  ],
+  "cls": "Not in scope (no EU nexus)",
+  "obligations": [],
+  "findings": [
+   {
+    "sev": "medium",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Prompt injection not tested"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Harmful content not filtered"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Model and components not documented"
+   },
+   {
+    "sev": "low",
+    "tag": "GenAI",
+    "also": [],
+    "title": "Bias not evaluated"
+   },
+   {
+    "sev": "low",
+    "tag": "Core",
+    "also": [
+     "GenAI"
+    ],
+    "title": "Users not trained on limits"
+   }
+  ],
+  "fria": null,
+  "dpia": false,
+  "answers": {
+   "name": "Coding assistant used only outside the EU",
+   "description": "Scenario system",
+   "lifecycle": "Production",
+   "provider": "Vendor X, v2",
+   "firstUseDate": "2027-01-15",
+   "affectedCategories": [],
+   "oversightAssigned": "Yes",
+   "oversightCompetence": "Yes",
+   "automationBias": "Partially",
+   "gaiUserGuidance": "Partially",
+   "biasEvaluated": "Planned",
+   "loggingInPlace": "Yes",
+   "thirdPartyData": "No",
+   "gaiProviderUse": "No, contractually excluded",
+   "broadDataAccess": "No",
+   "multiAgent": "No",
+   "businessCriticalData": "No",
+   "competitorExposure": "No",
+   "harmsDescription": "Wrong output relied on.",
+   "friaInherentSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaInherentLikelihood": "Significant - it seems possible in this deployment",
+   "mitigationMeasures": "Review and thresholds.",
+   "friaResidualSeverity": "Limited - a real interference people can overcome with some difficulty",
+   "friaResidualLikelihood": "Limited - it seems unlikely in this deployment",
+   "rightsAtRisk": [
+    "Protection of personal data (Art. 8)"
+   ],
+   "aipSocietalImpact": "None identified.",
+   "providerInfoReviewed": "Yes",
+   "materialiseMeasures": "Incident process.",
+   "complaintMechanism": "Yes",
+   "explanationProcess": "Planned",
+   "aipSystemOwner": "Product owner",
+   "aipAssessor": "Risk lead",
+   "aipApprover": "Head of unit",
+   "aipDecision": "Approve with conditions",
+   "aipConditions": "Bias test by Q1",
+   "aipEvidence": "Test report 12",
+   "legalReview": "Yes",
+   "suspensionProcess": "Yes",
+   "aipReviewDate": "2027-06-30",
+   "aipReassessTriggers": [
+    "A new model, or a new version of the model"
+   ],
+   "gaiModelSource": "Third-party model through an API",
+   "gaiUntrustedContent": "Yes",
+   "gaiInjectionTested": "Once",
+   "gaiSystemPromptSecrets": "No",
+   "gaiInputFiltering": "Partially",
+   "gaiOutputLeakCheck": "Partially",
+   "gaiRagPermissions": "Yes",
+   "gaiEmbeddingStore": "Yes",
+   "gaiIpCheck": "Outputs are not used externally",
+   "gaiOutputHandling": "No, it is validated or only shown as text",
+   "gaiGrounding": "Yes",
+   "gaiContentFilters": "Yes, provider defaults only",
+   "gaiDisclosure": "Yes",
+   "gaiProvenance": "Partially",
+   "gaiRateLimits": "Yes",
+   "gaiRedTeam": "Yes, internally",
+   "gaiThreatModel": "No",
+   "gaiBiasEval": "Partially",
+   "gaiMonitoring": "Yes",
+   "gaiEnergy": "No",
+   "gaiPatterns": [
+    "Code generation"
+   ],
+   "aipDecisionEffect": "No decisions about people",
+   "aipReversibility": "Not applicable: its output has no effect on people",
+   "affectedScale": "100 to 10,000",
+   "friaVulnerable": [],
+   "autonomyLevel": "None - a human approves every action",
+   "oversightMode": "Before every decision takes effect",
+   "annexIIIArea": "Not an Annex III high-risk system",
+   "gaiUsers": "Staff only",
+   "gaiPromptData": [
+    "Source code or credentials"
+   ],
+   "aipEu": "No",
+   "aipGenerates": "Yes",
+   "aipFoundationModel": "Yes",
+   "aipFreePrompts": "Yes"
+  }
+ }
+]

@@ -1,0 +1,132 @@
+question ids: 101 duplicates: none
+unmapped: none
+blank: tier I provisional missing 8 findings 8
+
+classic-ml: level I (10%), shown 48 questions, modules Core,Impact,AI Act,Governance, AI Act Not high-risk, obligations 2, findings 1 (worst Low), FRIA null, DPIA false
+   ob: AI literacy: support it among staff and others who operate the system on your behalf [Provider and deployer] 2 February 2025 -> Partly
+   ob: Screen the use against the prohibited practices [Everyone] 2 February 2025 (points (ba) and (bb) from 2 December 2026) -> In place
+   low    [Core] Users not trained on the system's limits (gaiUserGuidance)
+   coverage NIST {"gap":2,"ok":25,"na":15} ISO {"gap":3,"ok":25,"na":7} SG {"gap":0,"ok":3,"na":6}; 600-1 tables 0
+
+internal-genai: level I (10%), shown 64 questions, modules Core,Impact,GenAI,AI Act,Governance, AI Act Not high-risk, obligations 2, findings 6 (worst Medium), FRIA null, DPIA true
+   ob: AI literacy: support it among staff and others who operate the system on your behalf [Provider and deployer] 2 February 2025 -> Partly
+   ob: Screen the use against the prohibited practices [Everyone] 2 February 2025 (points (ba) and (bb) from 2 December 2026) -> In place
+   medium [GenAI] Prompt injection not tested (gaiInjectionTested)
+   low    [GenAI] Outputs not checked for leakage (gaiOutputLeakCheck)
+   low    [GenAI] Harmful content not filtered (gaiContentFilters)
+   low    [GenAI] Model and components not documented (gaiProvenance)
+   low    [GenAI] Bias not evaluated (gaiBiasEval)
+   low    [Core, also GenAI] Users not trained on limits (gaiUserGuidance)
+   coverage NIST {"gap":9,"ok":24,"na":9} ISO {"gap":6,"ok":26,"na":3} SG {"gap":4,"ok":3,"na":2}; 600-1 tables 2
+   DPIA seed triggers: 1 Innovative use, or a
+
+public-chatbot-eu: level II (48%), shown 68 questions, modules Core,Impact,GenAI,AI Act,Governance, AI Act Not high-risk, obligations 4, findings 13 (worst High), FRIA null, DPIA true
+   ob: AI literacy: support it among staff and others who operate the system on your behalf [Provider and deployer] 2 February 2025 -> Partly
+   ob: Screen the use against the prohibited practices [Everyone] 2 February 2025 (points (ba) and (bb) from 2 December 2026) -> In place
+   ob: Tell people they are interacting with an AI system, unless obvious [Provider] 2 August 2026 -> Partly
+   ob: Mark synthetic audio, image, video or text in a machine-readable way [Provider] 2 August 2026; generators on the market before then by 2 December 2026 -> Partly
+   high   [GenAI] Not red-teamed (gaiRedTeam)
+   medium [GenAI] Prompt injection not tested (gaiInjectionTested)
+   medium [Core, also GenAI] Output relied on without review (gaiHumanReview)
+   low    [GenAI] Inputs not screened (gaiInputFiltering)
+   low    [GenAI] Outputs not checked for leakage (gaiOutputLeakCheck)
+   low    [GenAI] Harmful content not filtered (gaiContentFilters)
+   low    [AI Act, also GenAI] AI use or synthetic content not disclosed (gaiDisclosure)
+   low    [GenAI] Model and components not documented (gaiProvenance)
+   low    [GenAI] No ATLAS threat model (gaiThreatModel)
+   low    [GenAI] Bias not evaluated (gaiBiasEval)
+   low    [Core, also GenAI] Users not trained on limits (gaiUserGuidance)
+   low    [GenAI] Energy use unknown (gaiEnergy)
+   low    [AI Act] Transparency duties partly met (aiaTransparencyDone)
+   coverage NIST {"gap":14,"ok":21,"na":7} ISO {"gap":9,"ok":24,"na":2} SG {"gap":6,"ok":2,"na":1}; 600-1 tables 2
+   DPIA seed triggers: 3 Evaluation, scoring, / Large-scale processi / Innovative use, or a
+
+genai-hiring: level III (52%), shown 82 questions, modules Core,Impact,GenAI,AI Act,Governance, AI Act High-risk (Annex III), obligations 8, findings 10 (worst High), FRIA null, DPIA true
+   ob: AI literacy: support it among staff and others who operate the system on your behalf [Provider and deployer] 2 February 2025 -> Partly
+   ob: Screen the use against the prohibited practices [Everyone] 2 February 2025 (points (ba) and (bb) from 2 December 2026) -> In place
+   ob: Use according to the instructions for use, with assigned human oversight [Deployer] 2 December 2027 (Annex III) -> In place
+   ob: Input data relevant and representative, where you control it [Deployer] 2 December 2027 (Annex III) -> Applies
+   ob: Monitor, report risks and serious incidents, suspend use; keep logs six months [Deployer] 2 December 2027 (Annex III) -> In place
+   ob: Inform workers' representatives before use at work, and inform people subject to decisions [Deployer] 2 December 2027 (Annex III) -> Partly
+   ob: Explain the role of the system in individual decisions on request [Deployer] 2 December 2027 (Annex III) -> Partly
+   ob: Know when you become the provider (name, substantial modification, change of purpose) [Deployer, importer, distributor] 2 December 2027 (Annex III) -> Applies
+   high   [Core] No check for unequal outcomes (biasEvaluated)
+   medium [GenAI] Prompt injection not tested (gaiInjectionTested)
+   low    [GenAI] Inputs not screened (gaiInputFiltering)
+   low    [GenAI] Outputs not checked for leakage (gaiOutputLeakCheck)
+   low    [GenAI] Harmful content not filtered (gaiContentFilters)
+   low    [GenAI] Model and components not documented (gaiProvenance)
+   low    [GenAI] No ATLAS threat model (gaiThreatModel)
+   low    [GenAI] Bias not evaluated (gaiBiasEval)
+   low    [Core, also GenAI] Users not trained on limits (gaiUserGuidance)
+   low    [GenAI] Energy use unknown (gaiEnergy)
+   coverage NIST {"gap":11,"ok":30,"na":1} ISO {"gap":8,"ok":27,"na":0} SG {"gap":5,"ok":3,"na":1}; 600-1 tables 2
+   DPIA seed triggers: 3 Evaluation, scoring, / Large-scale processi / Innovative use, or a
+
+public-body-fria: level III (62%), shown 62 questions, modules Core,Impact,AI Act,Governance, AI Act High-risk (Annex III), obligations 10, findings 2 (worst Medium), FRIA Required, DPIA true
+   ob: AI literacy: support it among staff and others who operate the system on your behalf [Provider and deployer] 2 February 2025 -> Partly
+   ob: Screen the use against the prohibited practices [Everyone] 2 February 2025 (points (ba) and (bb) from 2 December 2026) -> In place
+   ob: Use according to the instructions for use, with assigned human oversight [Deployer] 2 December 2027 (Annex III) -> In place
+   ob: Input data relevant and representative, where you control it [Deployer] 2 December 2027 (Annex III) -> Applies
+   ob: Monitor, report risks and serious incidents, suspend use; keep logs six months [Deployer] 2 December 2027 (Annex III) -> In place
+   ob: Inform workers' representatives before use at work, and inform people subject to decisions [Deployer] 2 December 2027 (Annex III) -> In place
+   ob: Register the use in the EU database [Deployer (public authority)] 2 December 2027 (Annex III) -> Applies
+   ob: Fundamental rights impact assessment before first use [Deployer] 2 December 2027 (Annex III) -> Not assessed
+   ob: Explain the role of the system in individual decisions on request [Deployer] 2 December 2027 (Annex III) -> Partly
+   ob: Know when you become the provider (name, substantial modification, change of purpose) [Deployer, importer, distributor] 2 December 2027 (Annex III) -> Applies
+   medium [Core] No human makes the final decision (oversightMode,aipDecisionEffect)
+   low    [Core] Users not trained on the system's limits (gaiUserGuidance)
+   coverage NIST {"gap":6,"ok":31,"na":5} ISO {"gap":5,"ok":27,"na":3} SG {"gap":1,"ok":5,"na":3}; 600-1 tables 0
+   FRIA seed keys: 32 name,description,deployerType,annexIIIArea,provider,firstUseDate,intendedPurposeAligned,affectedCategories,friaVulnerable,affectedScale,affectedAware,rightsAtRisk,harmsDescription,providerInfoReviewed,biasEvaluated,friaInherentSeverity,friaInherentLikelihood,oversightAssigned,oversightCompetence,oversightMode,automationBias,mitigationMeasures,materialiseMeasures,suspensionProcess,complaintMechanism,explanationProcess,friaResidualSeverity,friaResidualLikelihood,deployerProcess,friaGovernance,friaReviewDate,friaDpia
+   DPIA seed triggers: 5 Evaluation, scoring, / Special category dat / Large-scale processi / Data concerning vuln / Innovative use, or a
+
+gpai-provider: level II (31%), shown 77 questions, modules Core,Impact,GenAI,AI Act,Governance, AI Act Not high-risk, obligations 12, findings 16 (worst High), FRIA null, DPIA true
+   ob: AI literacy: support it among staff and others who operate the system on your behalf [Provider and deployer] 2 February 2025 -> Partly
+   ob: Screen the use against the prohibited practices [Everyone] 2 February 2025 (points (ba) and (bb) from 2 December 2026) -> In place
+   ob: Tell people they are interacting with an AI system, unless obvious [Provider] 2 August 2026 -> Partly
+   ob: Mark synthetic audio, image, video or text in a machine-readable way [Provider] 2 August 2026; generators on the market before then by 2 December 2026 -> Partly
+   ob: Notify the Commission within two weeks of meeting the systemic risk threshold [GPAI model provider] 2 August 2025 -> Applies
+   ob: Technical documentation (Annex XI) and information for downstream providers (Annex XII) [GPAI model provider] 2 August 2025; models on the market before then by 2 August 2027 -> In place
+   ob: Copyright policy, including rights reservations [GPAI model provider] 2 August 2025; models on the market before then by 2 August 2027 -> Partly
+   ob: Public summary of training content on the AI Office template [GPAI model provider] 2 August 2025; models on the market before then by 2 August 2027 -> Gap
+   ob: Authorised representative in the Union [GPAI model provider] 2 August 2025; models on the market before then by 2 August 2027 -> In place
+   ob: Model evaluation including adversarial testing; assess and mitigate systemic risks [GPAI model provider] 2 August 2025; models on the market before then by 2 August 2027 -> In place
+   ob: Track and report serious incidents to the AI Office [GPAI model provider] 2 August 2025; models on the market before then by 2 August 2027 -> Partly
+   ob: Cybersecurity for the model and its infrastructure [GPAI model provider] 2 August 2025; models on the market before then by 2 August 2027 -> In place
+   high   [AI Act] Training content summary missing or partial (aiaGpaiSummary)
+   medium [GenAI] Prompt injection not tested (gaiInjectionTested)
+   medium [Core, also GenAI] Output relied on without review (gaiHumanReview)
+   medium [GenAI] Training data not vetted (gaiTrainingDataVetted)
+   medium [AI Act] Copyright policy missing or partial (aiaGpaiCopyright)
+   medium [AI Act] Serious incident reporting missing or partial (aiaGpaiIncidents)
+   low    [GenAI] Inputs not screened (gaiInputFiltering)
+   low    [GenAI] Outputs not checked for leakage (gaiOutputLeakCheck)
+   low    [GenAI] Harmful content not filtered (gaiContentFilters)
+   low    [AI Act, also GenAI] AI use or synthetic content not disclosed (gaiDisclosure)
+   low    [GenAI] Model and components not documented (gaiProvenance)
+   low    [GenAI] No ATLAS threat model (gaiThreatModel)
+   low    [GenAI] Bias not evaluated (gaiBiasEval)
+   low    [Core, also GenAI] Users not trained on limits (gaiUserGuidance)
+   low    [GenAI] Energy use unknown (gaiEnergy)
+   low    [AI Act] Transparency duties partly met (aiaTransparencyDone)
+   coverage NIST {"gap":17,"ok":20,"na":5} ISO {"gap":12,"ok":21,"na":2} SG {"gap":7,"ok":2,"na":0}; 600-1 tables 2
+   DPIA seed triggers: 2 Large-scale processi / Innovative use, or a
+
+prohibited: level III (62%), shown 57 questions, modules Core,Impact,AI Act,Governance, AI Act Prohibited, obligations 2, findings 3 (worst High), FRIA null, DPIA true
+   ob: AI literacy: support it among staff and others who operate the system on your behalf [Provider and deployer] 2 February 2025 -> Partly
+   ob: Prohibited practice: do not place on the market, put into service or use [Everyone] 2 February 2025 (points (ba) and (bb) from 2 December 2026) -> Gap
+   high   [AI Act] Prohibited practice (prohibitedUse)
+   medium [Core] No human makes the final decision (oversightMode,aipDecisionEffect)
+   low    [Core] Users not trained on the system's limits (gaiUserGuidance)
+   coverage NIST {"gap":8,"ok":29,"na":5} ISO {"gap":7,"ok":24,"na":4} SG {"gap":1,"ok":5,"na":3}; 600-1 tables 0
+   DPIA seed triggers: 4 Evaluation, scoring, / Special category dat / Data concerning vuln / Innovative use, or a
+
+no-eu: level I (7%), shown 56 questions, modules Core,Impact,GenAI,Governance, AI Act Not in scope (no EU nexus), obligations 0, findings 5 (worst Medium), FRIA null, DPIA false
+   medium [GenAI] Prompt injection not tested (gaiInjectionTested)
+   low    [GenAI] Harmful content not filtered (gaiContentFilters)
+   low    [GenAI] Model and components not documented (gaiProvenance)
+   low    [GenAI] Bias not evaluated (gaiBiasEval)
+   low    [Core, also GenAI] Users not trained on limits (gaiUserGuidance)
+   coverage NIST {"gap":8,"ok":24,"na":10} ISO {"gap":6,"ok":22,"na":7} SG {"gap":3,"ok":3,"na":3}; 600-1 tables 2
+
+ALL CHECKS PASS

@@ -1,0 +1,16 @@
+classic-ml         raw  3/29 =  10%  scored I   final I   expect I  floors: -  missing: 0
+   decision 0/4, reversibility 0/4, scale 0/3, vulnerable 0/3, autonomy 1/3, review 1/3, sector 0/4, exposure 0/2, data 1/3
+internal-genai     raw  3/29 =  10%  scored I   final I   expect I or II  floors: -  missing: 0
+   decision 0/4, reversibility 0/4, scale 1/3, vulnerable 0/3, autonomy 0/3, review 0/3, sector 0/4, exposure 0/2, data 2/3
+public-chatbot-eu  raw 14/29 =  48%  scored II  final II  expect II or III  floors: -  missing: 0
+   decision 1/4, reversibility 2/4, scale 3/3, vulnerable 0/3, autonomy 1/3, review 3/3, sector 0/4, exposure 2/2, data 2/3
+genai-hiring       raw 15/29 =  52%  scored III final III expect III  floors: Use in an Annex III area  missing: 0
+   decision 3/4, reversibility 4/4, scale 2/3, vulnerable 0/3, autonomy 1/3, review 0/3, sector 3/4, exposure 0/2, data 2/3
+public-body-fria   raw 18/29 =  62%  scored III final III expect III or IV  floors: Use in an Annex III area  missing: 0
+   decision 3/4, reversibility 2/4, scale 3/3, vulnerable 2/3, autonomy 1/3, review 1/3, sector 3/4, exposure 0/2, data 3/3
+gpai-provider      raw  9/29 =  31%  scored II  final II  expect II  floors: -  missing: 0
+   decision 0/4, reversibility 0/4, scale 3/3, vulnerable 0/3, autonomy 0/3, review 2/3, sector 0/4, exposure 2/2, data 2/3
+prohibited         raw 18/29 =  62%  scored III final III expect III or IV (module ends at Art. 5)  floors: Use in an Annex III area  missing: 0
+   decision 3/4, reversibility 2/4, scale 1/3, vulnerable 2/3, autonomy 1/3, review 2/3, sector 4/4, exposure 0/2, data 3/3
+no-eu              raw  2/29 =   7%  scored I   final I   expect I  floors: -  missing: 0
+   decision 0/4, reversibility 0/4, scale 1/3, vulnerable 0/3, autonomy 0/3, review 0/3, sector 0/4, exposure 0/2, data 1/3

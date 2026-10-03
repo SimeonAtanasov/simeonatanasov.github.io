@@ -1,0 +1,274 @@
+[
+ {
+  "key": "decision",
+  "label": "Effect of the output on people",
+  "q": "aipDecisionEffect",
+  "max": 4,
+  "points": [
+   [
+    "No decisions about people",
+    0
+   ],
+   [
+    "Supports decisions with minor effects on people",
+    1
+   ],
+   [
+    "Supports decisions with legal or similarly significant effects on people",
+    3
+   ],
+   [
+    "Makes decisions with legal or similarly significant effects on its own",
+    4
+   ],
+   [
+    "Not sure",
+    3
+   ]
+  ]
+ },
+ {
+  "key": "reversibility",
+  "label": "Reversibility of a wrong output",
+  "q": "aipReversibility",
+  "max": 4,
+  "points": [
+   [
+    "Easily, and quickly",
+    0
+   ],
+   [
+    "With effort, or after some time",
+    2
+   ],
+   [
+    "Not, or only with great difficulty",
+    4
+   ],
+   [
+    "Not applicable: its output has no effect on people",
+    0
+   ],
+   [
+    "Not sure",
+    2
+   ]
+  ]
+ },
+ {
+  "key": "scale",
+  "label": "Number of people affected each year",
+  "q": "affectedScale",
+  "max": 3,
+  "points": [
+   [
+    "Fewer than 100",
+    0
+   ],
+   [
+    "100 to 10,000",
+    1
+   ],
+   [
+    "10,000 to 1 million",
+    2
+   ],
+   [
+    "More than 1 million",
+    3
+   ]
+  ]
+ },
+ {
+  "key": "vulnerable",
+  "label": "People in a vulnerable situation",
+  "q": "friaVulnerable",
+  "max": 3,
+  "points": [
+   [
+    "none (left blank)",
+    0
+   ],
+   [
+    "Children",
+    3
+   ],
+   [
+    "Elderly people",
+    2
+   ],
+   [
+    "Persons with disabilities",
+    2
+   ],
+   [
+    "People in financial hardship",
+    2
+   ],
+   [
+    "People in a dependent position (employees, detainees, asylum seekers)",
+    2
+   ],
+   [
+    "Minority or under-represented groups",
+    2
+   ],
+   [
+    "Other",
+    2
+   ]
+  ]
+ },
+ {
+  "key": "autonomy",
+  "label": "Actions taken without human approval",
+  "q": "autonomyLevel",
+  "max": 3,
+  "points": [
+   [
+    "None - a human approves every action",
+    0
+   ],
+   [
+    "Low-impact actions only",
+    1
+   ],
+   [
+    "Broad autonomous action",
+    3
+   ]
+  ]
+ },
+ {
+  "key": "review",
+  "label": "When a human acts on an individual case",
+  "q": "oversightMode",
+  "max": 3,
+  "points": [
+   [
+    "Before every decision takes effect",
+    0
+   ],
+   [
+    "On flagged or contested cases only",
+    1
+   ],
+   [
+    "After the fact, by sampling",
+    2
+   ],
+   [
+    "No human review",
+    3
+   ]
+  ]
+ },
+ {
+  "key": "sector",
+  "label": "Use area (Annex III)",
+  "q": "annexIIIArea",
+  "max": 4,
+  "points": [
+   [
+    "1. Biometrics (remote identification, categorisation, emotion recognition)",
+    4
+   ],
+   [
+    "2. Critical infrastructure (safety components)",
+    3
+   ],
+   [
+    "3. Education and vocational training",
+    3
+   ],
+   [
+    "4. Employment, workers' management and access to self-employment",
+    3
+   ],
+   [
+    "5(a). Eligibility for public assistance benefits and services",
+    3
+   ],
+   [
+    "5(b). Creditworthiness or credit scoring of natural persons (not fraud detection)",
+    3
+   ],
+   [
+    "5(c). Risk assessment and pricing in life and health insurance",
+    3
+   ],
+   [
+    "5(d). Emergency call evaluation, dispatch and patient triage",
+    3
+   ],
+   [
+    "6. Law enforcement",
+    4
+   ],
+   [
+    "7. Migration, asylum and border control",
+    4
+   ],
+   [
+    "8. Administration of justice and democratic processes",
+    4
+   ],
+   [
+    "Not an Annex III high-risk system",
+    0
+   ],
+   [
+    "Not sure",
+    2
+   ]
+  ]
+ },
+ {
+  "key": "exposure",
+  "label": "Who uses it",
+  "q": "gaiUsers",
+  "max": 2,
+  "points": [
+   [
+    "Staff only",
+    0
+   ],
+   [
+    "Selected business partners",
+    1
+   ],
+   [
+    "The public",
+    2
+   ]
+  ]
+ },
+ {
+  "key": "data",
+  "label": "Sensitivity of the data",
+  "q": "gaiPromptData",
+  "max": 3,
+  "points": [
+   [
+    "Personal data",
+    2
+   ],
+   [
+    "Special category data",
+    3
+   ],
+   [
+    "Confidential business information",
+    1
+   ],
+   [
+    "Source code or credentials",
+    1
+   ],
+   [
+    "None of these",
+    0
+   ]
+  ]
+ }
+]

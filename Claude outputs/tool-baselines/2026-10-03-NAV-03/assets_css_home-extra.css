@@ -1,0 +1,217 @@
+/* Homepage extras: quick-jump chips overlaid on the Privacy & AI Risk
+   Assessment spotlight card's image, so a visitor can go straight to one
+   specific tool or reference section instead of always landing on the
+   assessment overview. */
+
+.spotlight-assessment {
+	position: relative;
+}
+
+#sidebar .portfolio-menu {
+	/* Only pin down positioning here - don't zero the li's own margin.
+	   At the medium/tablet top-bar breakpoint, item spacing comes entirely
+	   from #sidebar nav > ul > li's left margin (main.css); overriding it
+	   to 0 for just this item collapsed the gap between "Intro" and
+	   "Portfolio" so they touched with no space between them. */
+	position: relative;
+}
+
+/* The submenu is moved out of #sidebar (see assets/js/portfolio-menu.js)
+   so it isn't clipped by the sidebar's own scroll container: a fixed
+   #sidebar with overflow-y:auto computes overflow-x as auto rather than
+   visible even when overflow-x:visible is forced, so anything positioned
+   outside the sidebar's box while still nested inside it gets clipped.
+   Once detached to <body>, plain position:fixed with JS-computed
+   coordinates floats it next to the trigger without that restriction -
+   to the right of the sidebar on wide desktop, or dropped down below the
+   Portfolio item on the medium/tablet top-bar layout. Hidden by default;
+   JS toggles .is-active on desktop and tablet widths only (not mobile). */
+.portfolio-submenu {
+	background: #25355f;
+	border: solid 1px rgba(255, 255, 255, 0.24);
+	border-radius: 6px;
+	box-shadow: 0 0.75em 2em rgba(7, 14, 35, 0.35);
+	display: none;
+	list-style: none;
+	margin: 0;
+	min-width: 16em;
+	padding: 0.65em;
+	position: fixed;
+	z-index: 10001;
+}
+
+.portfolio-submenu.is-active {
+	display: block;
+}
+
+.portfolio-submenu li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: static;
+	width: 100%;
+}
+
+.portfolio-submenu a {
+	border: 0;
+	color: rgba(255, 255, 255, 0.72);
+	display: block;
+	font-size: 0.6em;
+	letter-spacing: 0.08em;
+	line-height: 1.3;
+	padding: 0.55em 0.7em;
+	text-transform: none;
+}
+
+.portfolio-submenu a:hover {
+	background: rgba(127, 178, 229, 0.24);
+	border-radius: 4px;
+	color: #ffffff;
+}
+
+/* Group headings inside the submenu (Privacy, AI, Cookie Compliance, Other):
+   plain text, not links, so they neither hover nor navigate. */
+.portfolio-submenu .portfolio-group {
+	color: #7fb2e5;
+	font-size: 0.5em;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	margin-top: 0.6em;
+	padding: 0.6em 1.1em 0.2em 1.1em;
+	text-transform: uppercase;
+}
+
+.portfolio-submenu .portfolio-group:first-child {
+	margin-top: 0;
+}
+
+/* Belt-and-braces: the JS also gates showing the menu to desktop and
+   medium/tablet widths, but force it hidden below that too, so mobile -
+   where #sidebar is hidden entirely in favor of its own nav - can never
+   end up with a stray hover menu. */
+@media screen and (max-width: 736px) {
+	.portfolio-submenu {
+		display: none !important;
+	}
+}
+
+#one.spotlights > section > .content .button {
+	background: rgba(152, 205, 245, 0.28);
+	border-color: rgba(214, 238, 255, 0.65);
+	color: #ffffff;
+}
+
+	#one.spotlights > section > .content .button:hover {
+		background: rgba(181, 222, 250, 0.46);
+		border-color: #ffffff;
+	}
+
+.spotlight-assessment .image-tools {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 25em;
+	height: 100%;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	gap: 0.5em;
+	padding: 2em;
+	box-sizing: border-box;
+	pointer-events: none;
+}
+
+	.spotlight-assessment .image-tools .tool-chip {
+		pointer-events: auto;
+		display: block;
+		text-align: center;
+		color: #ffffff;
+		/* 0.55 alpha was enough over a flat tile. Over artwork it is not: the
+		   digests image peaks at full white behind the chips, and at 0.55 the
+		   text fell to about 4.2:1 there, under the 4.5:1 floor, with the glow
+		   showing through and making the label hard to pick out even where the
+		   number held. At 0.85 the worst case is about 12:1 at every point of
+		   both images, and the blur takes the detail out of what is left. */
+		background: rgba(8, 14, 36, 0.85);
+		-webkit-backdrop-filter: blur(6px);
+		backdrop-filter: blur(6px);
+		border: solid 1px rgba(255, 255, 255, 0.45);
+		border-radius: 2em;
+		box-shadow: 0 0.35em 1.1em rgba(4, 8, 22, 0.45);
+		font-size: 0.72em;
+		font-weight: bold;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 0.65em 1em;
+		transition: background-color 0.2s ease, border-color 0.2s ease;
+	}
+
+		.spotlight-assessment .image-tools .tool-chip:hover {
+			background: rgba(127, 178, 229, 0.55);
+			border-color: rgba(255, 255, 255, 0.75);
+		}
+
+@media screen and (max-width: 980px) {
+	.spotlight-assessment .image-tools {
+		width: 100%;
+		height: 50vh;
+		padding: 1.5em;
+	}
+	/* Nine chips stacked in one column need more height than 50vh gives on a
+	   short screen, so the card with many tools wraps them into two columns. */
+	.spotlight-assessment .image-tools.image-tools-many {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+	}
+
+		.spotlight-assessment .image-tools.image-tools-many .tool-chip {
+			flex: 1 1 calc(50% - 0.5em);
+			min-width: 0;
+		}
+}
+
+@media screen and (max-width: 480px) {
+	.spotlight-assessment .image-tools {
+		gap: 0.4em;
+		padding: 1em;
+	}
+
+		.spotlight-assessment .image-tools .tool-chip {
+			font-size: 0.68em;
+			padding: 0.55em 0.75em;
+		}
+}
+
+/* The Power BI tile is a composite: the wordmark runs almost the full width of
+   the square and the dashboard sits under it, so a cover crop cuts something at
+   every width. At 1600px the slot is 433 x 573 and keeps only the central 76%
+   of the width, which takes the ends off the wordmark; at 900px it is 900 x 500
+   and keeps the central 56% of the height, which slices the wordmark through
+   the middle. Contain it instead.
+   rest of the panel: images/power-bi-tile.png is trimmed to its two content
+   blocks, and no background colour is set, so what is left of the slot is the
+   card's own background rather than a white slab. No !important is needed:
+   home-extra.css loads after
+   main.css and this selector outranks the template's
+   .spotlights > section > .image. */
+#one.spotlights > section.spotlight-power-bi > .image {
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* The avatar is a portrait rather than a link now, so #sidebar nav a no longer
+   styles it. These four declarations are the ones from that rule that set its
+   box; without them the nav below it moves. The font-size matters more than it
+   looks: the padding is in em, so at the inherited size it is several times
+   larger than it was. Measured at 1600px, the avatar and the nav items below it
+   land within 2px of where the anchor put them. */
+#sidebar nav .image.avatar {
+	display: block;
+	font-size: 0.6em;
+	line-height: 1.75;
+	padding: 1.35em 0;
+}
