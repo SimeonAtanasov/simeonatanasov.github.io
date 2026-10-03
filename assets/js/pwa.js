@@ -127,6 +127,27 @@
 	   which reads as a second row and collapses the header on the desktop. */
 	var sidebarList = document.querySelector('#sidebar nav > ul');
 	var sidebarItem = sidebarList ? sidebarList.appendChild(makeItem()) : null;
+
+	/* The sidebar links come in as a cascade: main.js drops is-preload on load
+	   and each item waits its own transition-delay (main.css, nth-child). Note
+	   when that happens, so an Install app item shown later can still take its
+	   slot in the cascade, after Get in touch, instead of starting at once. */
+	var cascadeStart = null;
+	if (document.body && document.body.classList.contains('is-preload') && window.MutationObserver) {
+		var preloadWatch = new MutationObserver(function () {
+			if (!document.body.classList.contains('is-preload')) {
+				cascadeStart = performance.now();
+				preloadWatch.disconnect();
+			}
+		});
+		preloadWatch.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+	}
+
+	function cascadeDelay() {
+		if (cascadeStart === null || !sidebarItem) return 0;
+		var slot = parseFloat(getComputedStyle(sidebarItem).transitionDelay) || 0;
+		return Math.max(0, cascadeStart + slot * 1000 - performance.now());
+	}
 	var headerList = document.querySelector('#header nav > ul');
 	var headerItem = null;
 
@@ -141,13 +162,16 @@
 		/* The sidebar links slide in once, when main.js drops is-preload on load.
 		   Chromium usually fires beforeinstallprompt after that, and an item going
 		   from display: none to shown gets no transition, so it would just pop in.
-		   Replay the same slide (translateY 2em, 0.75s) as a one-off animation. */
+		   Replay the same slide (translateY 2em, 0.75s) as a one-off animation,
+		   delayed to the item's own slot in the cascade if that is still ahead. */
 		if (on && !was && sidebarItem && document.body && !document.body.classList.contains('is-preload')) {
 			sidebarItem.classList.remove('ia-enter');
 			void sidebarItem.offsetWidth;
+			sidebarItem.style.animationDelay = Math.round(cascadeDelay()) + 'ms';
 			sidebarItem.classList.add('ia-enter');
 			sidebarItem.addEventListener('animationend', function done() {
 				sidebarItem.classList.remove('ia-enter');
+				sidebarItem.style.animationDelay = '';
 				sidebarItem.removeEventListener('animationend', done);
 			});
 		}
