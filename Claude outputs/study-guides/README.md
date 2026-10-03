@@ -18,13 +18,14 @@ Markdown text version (for search, diffing and reading anywhere). Gathered here 
 
 ## Obsidian copies
 
-The study pack, the GDPR enforcement guide, the fine calculator explainer and the three
-current digests are also kept in Simeon's Obsidian vault (`Documents\Obsidian Vault`, top
-level), byte-identical to the files here since 3 October 2026. The three current digests
+The study pack, the AI Assessment Pathway guide, the GDPR enforcement guide, the fine
+calculator explainer and the three current digests are also kept in Simeon's Obsidian vault
+(`Documents\Obsidian Vault`): the Markdown at the top level, the PDFs in `910_Attachments/`
+(since VAULT-02), byte-identical to the files here since 3 October 2026. The three current digests
 here are the vault's versions (cleaner than a PDF conversion, with `title`, `date`,
 `source` and `tags` front matter; checked against the PDF text: complete, differences are
 letter case of chip labels and running heads). The study pack carries the same front
-matter and `build.py` writes it. After any rebuild, copy the changed `.md` to the vault too.
+matter and `build.py` writes it. After any rebuild, copy the changed `.md` and `.pdf` to the vault too.
 
 ## Converted from the PDF
 
