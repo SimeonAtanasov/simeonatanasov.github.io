@@ -98,9 +98,6 @@
 	style.textContent =
 		'html:not(.can-install) a[href="#install-app"] { display: none !important; }' +
 		'html:not(.can-install) li:has(> a[href="#install-app"]) { display: none !important; }' +
-		'@keyframes ia-enter { 0% { opacity: 0; transform: translateY(2em); } 20% { opacity: 1; } 100% { opacity: 1; transform: translateY(0); } }' +
-		'#sidebar nav > ul > li.ia-enter { animation: ia-enter 0.75s ease both; }' +
-		'@media (prefers-reduced-motion: reduce) { #sidebar nav > ul > li.ia-enter { animation: none; } }' +
 		'.ia-card { position: fixed; left: 50%; bottom: 1.25em; transform: translateX(-50%); z-index: 10050; width: min(26em, calc(100vw - 2em)); box-sizing: border-box; background: #2a3860; color: #fff; border: 1px solid rgba(255,255,255,0.25); border-radius: 0.6em; padding: 1.1em 1.2em 1em; box-shadow: 0 0.5em 2em rgba(0,0,0,0.45); font-size: 0.9em; line-height: 1.5; }' +
 		'.ia-card[hidden] { display: none; }' +
 		'.ia-card h2 { margin: 0 2em 0.5em 0; font-size: 1.05em; color: #fff; letter-spacing: 0.02em; text-transform: none; }' +
@@ -126,7 +123,7 @@
 	   counts rows by each item's top edge, and a display: none item reports 0,
 	   which reads as a second row and collapses the header on the desktop. */
 	var sidebarList = document.querySelector('#sidebar nav > ul');
-	var sidebarItem = sidebarList ? sidebarList.appendChild(makeItem()) : null;
+	if (sidebarList) sidebarList.appendChild(makeItem());
 	var headerList = document.querySelector('#header nav > ul');
 	var headerItem = null;
 
@@ -137,19 +134,6 @@
 		if (headerList) {
 			if (on && !headerItem) headerItem = headerList.appendChild(makeItem());
 			if (!on && headerItem) { headerItem.parentNode.removeChild(headerItem); headerItem = null; }
-		}
-		/* The sidebar links slide in once, when main.js drops is-preload on load.
-		   Chromium usually fires beforeinstallprompt after that, and an item going
-		   from display: none to shown gets no transition, so it would just pop in.
-		   Replay the same slide (translateY 2em, 0.75s) as a one-off animation. */
-		if (on && !was && sidebarItem && document.body && !document.body.classList.contains('is-preload')) {
-			sidebarItem.classList.remove('ia-enter');
-			void sidebarItem.offsetWidth;
-			sidebarItem.classList.add('ia-enter');
-			sidebarItem.addEventListener('animationend', function done() {
-				sidebarItem.classList.remove('ia-enter');
-				sidebarItem.removeEventListener('animationend', done);
-			});
 		}
 		if (was !== on) {
 			try { window.dispatchEvent(new Event('resize')); } catch (e) { /* old browsers */ }
