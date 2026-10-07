@@ -501,12 +501,3 @@
 	/* keep the page from scrolling behind the full-screen panel */
 	html.sa-open, html.sa-open body { overflow: hidden; }
 }
-
-/* SA-05: on short screens the suggestions, chips and filters took all the
-   height and left .sa-results at zero, so the answers could not be reached.
-   The whole panel now scrolls, with the title bar pinned at the top. */
-.sa-panel { overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
-.sa-panel > * { flex-shrink: 0; }
-.sa-head { position: sticky; top: 0; z-index: 2; }
-.sa-results { flex: 1 0 auto; overflow: visible; }
-.sa-foot { margin-top: auto; }
