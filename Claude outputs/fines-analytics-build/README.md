@@ -31,6 +31,18 @@ EUR 7,159,322,834, decisions to 3 Sept 2026).
 - "Accomodation" is spelled correctly.
 - Countries are title cased.
 
+## Pseudonymisation
+
+The tracker names some fined natural persons in the controller field: individuals, sole
+traders and partnerships named after their partners. `pseudonymise.json` maps each of
+those names to a role label ("Private individual", "Physician", "Sole trader", ...) and
+`build_analytics_data.py` applies it to every row, so a rebuild stays clean. Officials
+fined in a public role keep their names. Limited companies are legal persons and are not
+in the map. When the tracker adds cases, check the new controller names and extend the
+JSON before publishing. The same labels were applied to the `company` and `company_key`
+columns of `fines_master_v3.csv` and `v4.csv` (change PII-01, 7 Oct 2026, baseline in
+`tool-baselines/2026-10-07-PII-01/`).
+
 ## Chart library
 
 `pages/gdpr-fines-analytics/chart.umd.min.js` is Chart.js 4.5.1 (MIT), self-hosted so

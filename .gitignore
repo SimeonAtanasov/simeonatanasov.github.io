@@ -39,3 +39,7 @@ desktop.ini
 # two lines if you move them out.
 # *.psd
 # *.tif
+
+# PII-01 baseline: the pre-change data still names fined individuals. Kept on disk
+# for revert, never committed.
+Claude outputs/tool-baselines/2026-10-07-PII-01/

@@ -6,7 +6,7 @@ GDPR Articles are re-derived with the same rule the fine calculator uses: each
 (GDPR / GPDR / GDRP / DSGVO / RGPD) or, once bracketed content is stripped, holds
 no word of three or more letters. A word like that means another statute.
 """
-import json, re, sys, collections, datetime
+import json, os, re, sys, collections, datetime
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else "raw.json"
 OUT = sys.argv[2] if len(sys.argv) > 2 else "analytics-data.js"
@@ -36,6 +36,16 @@ TYPE_FIX = {
     "Lack of appointment of data protection officer": "Insufficient involvement or appointment of a DPO",
 }
 
+# PII-01 (2026-10-07): natural persons named in the controller field are replaced
+# with a role label from pseudonymise.json. Officials fined in a public role keep
+# their names. Add new cases to the JSON, not here.
+PSEUDONYMISE = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                           "pseudonymise.json"), encoding="utf-8"))
+
+def controller(p):
+    p = (p or "").strip()
+    return PSEUDONYMISE.get(p, p)
+
 def title_country(c):
     small = {"of", "and", "the"}
     return " ".join(w.lower() if (i and w.lower() in small) else w.capitalize() for i, w in enumerate(c.split()))
@@ -60,7 +70,7 @@ for r in rows:
         idx(sectors, SECTOR_FIX.get(r.get("s"), r.get("s") or "Not assigned")),
         idx(types, TYPE_FIX.get(r.get("t"), r.get("t") or "Unknown")),
         arts,
-        (r.get("p") or "").strip(),
+        controller(r.get("p")),
     ])
 
 def lst(d): return [k for k, _ in sorted(d.items(), key=lambda kv: kv[1])]
