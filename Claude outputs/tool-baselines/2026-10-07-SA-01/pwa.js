@@ -55,34 +55,6 @@
 })();
 
 /*
-	Loads the site assistant on every page, the same way as the consent layer
-	and for the same reason: one edit here covers the whole site. The pair is
-	assets/css/assistant.css and assets/js/assistant.js; the search index it
-	fetches on first use is assets/assistant/index.json, built by
-	Claude outputs/assistant-build/build_index.py. Nothing the visitor types
-	leaves the browser. See claude/site-assistant.md.
-*/
-(function () {
-
-	if (window.__saInjected) return;
-	window.__saInjected = true;
-
-	var head = document.head || document.getElementsByTagName('head')[0];
-	if (!head) return;
-
-	var link = document.createElement('link');
-	link.rel = 'stylesheet';
-	link.href = '/assets/css/assistant.css';
-	head.appendChild(link);
-
-	var script = document.createElement('script');
-	script.src = '/assets/js/assistant.js';
-	script.defer = true;
-	head.appendChild(script);
-
-})();
-
-/*
 	Install app, on demand.
 
 	Adds an "Install app" entry to the site menu: the last item of the header

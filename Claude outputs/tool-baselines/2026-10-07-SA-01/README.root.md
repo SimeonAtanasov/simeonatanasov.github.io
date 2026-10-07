@@ -3,7 +3,7 @@
 Personal portfolio and privacy reference site, published through GitHub Pages at
 `https://www.simeonatanasov.com`. This file is the map: what each page is, where its
 code lives, what sits in `Claude outputs/`, and how to rebuild the generated pages.
-Last updated 7 October 2026.
+Last updated 27 September 2026.
 
 ## Pages
 
@@ -94,8 +94,7 @@ is stale and unreferenced; the live manifest is the root one.
 
 `pwa.js` does one more job since 24 September 2026: it injects the consent pair into the
 head of every page. That is why the consent layer needed no per-page script tag. A page
-added without the PWA block therefore gets no cookie banner. Since 7 October 2026 it
-injects the site assistant pair the same way (see Site assistant below).
+added without the PWA block therefore gets no cookie banner.
 
 ### Consent layer
 
@@ -133,29 +132,6 @@ The banner and the preference centre each link to `cookie-notice.html` and
 
 `window.CookieConsent` exposes `isAllowed(id)`, `accepted()`, `groups()`, `acceptAll()`,
 `rejectAll()`, `showPreferences()`, `onChange(fn)` and `reset()`.
-
-### Site assistant
-
-`assets/js/assistant.js` and `assets/css/assistant.css`, added 7 October 2026, loaded on
-every page by `pwa.js` like the consent pair. An "Ask" launcher at the bottom right (placed
-at runtime above whatever Top or Contents button the page already has, and hidden while the
-cookie banner is up) opens a panel that searches the whole site: the three digests, the two
-advice pages, the explanation and question bank of each assessment tool, the readiness
-activities, the crosswalk rows, the enforcement sections and country cards, the fine
-calculator explainer, the two notices, a tool catalogue and a short FAQ. Every result deep
-links to the entry it came from; a "Which assessment do I need?" chooser recommends a tool.
-
-Everything runs in the browser. The index, `assets/assistant/index.json` (about 2 MB, 490 KB
-compressed, fetched when the panel first opens), is built by
-`Claude outputs/assistant-build/build_index.py` from the digest JSON, the study guides and
-the page data files; the ranking is BM25 over Porter-stemmed tokens with the question
-expanded by a synonym and abbreviation table that ships inside the index. Nothing the
-visitor types leaves the page and nothing is stored. No language model is involved: a
-distilled on-device model was measured and scored lower than this (see the build folder's
-README). **Rebuild the index after any digest rebuild, advice page edit, study pack rebuild
-or tool change**, or the assistant keeps showing the old text. Both files are in the
-`sw.js` precache; `VERSION` went to `v8` when they shipped. The script also opens a closed
-`<details>` that a deep link points into, on every page, on load and on hash change.
 
 ## Claude outputs/
 
@@ -204,7 +180,6 @@ the rerun order for the apply scripts across all four digest data files is in
 | `gdpr-enforcement-build/` | Builds `gdpr-enforcement.html` and its CSS and JS. `data/` holds one verified JSON per country plus `eu.json`; `summary.py` holds the hand classifications behind the map and comparison (keep it in step with the JSON); `header.html` is the site header the builder embeds, so update it with any nav change; `build_enforcement_page.py` writes to `out/`. `research/` keeps the research brief, the verification brief and the raw and verify JSON, `apply_verify.py` replays the corrections. `build_study_guide.py` writes the study guide, kept at `Claude outputs/gdpr-enforcement-study-guide.md` and `.pdf`. | You want to update a country, refresh the page after the law moves, or rebuild the study guide. |
 | `ai-pathway-build/` | Build, test and documentation files of the AI Assessment Pathway (TC-08, NAV-03, 3 October 2026): the five source parts and `build_aipath.py` that assembles the block, `patch_assessment.py` that inserts it into `assessment.js`, `wire_nav03.py` for the nav and home page, the scenario, regression, UI, home card and export tests, the overlap matrix, source notes and tier review, and `build_guide.py` with `guide_data.js` for the study guide. README inside. | You change the pathway, rerun its tests, or rebuild its study guide. |
 | `ai-crosswalk-build/` | Builds `ai-governance-crosswalk.html` and its data file: `rows.py` (the mapping, hand-written), NIST and ISO reference data, a copy of the AI Act digest data, the page template, the app script and styles, and the independent review of the first draft. See its README. |
-| `assistant-build/` | Builds `assets/assistant/index.json`, the site assistant's search index (SA-01, 7 October 2026): `build_index.py` (chunking rules per source, the tool catalogue, the FAQ and the synonym table), `dump_js_data.js` (evaluates the readiness and crosswalk data scripts), `porter.py` and `search_text.py` (the tokenizer, mirrored by `assistant.js`), `eval_bm25.py` and `eval_retrieval.py` (the retrieval measurements that decided against shipping a model), `test_tokenizer.js` (JS against Python parity and the ranker check), `test_ui.js` (Playwright run over eight pages at three widths), `patch_site.py` (the SA-01 edits to `pwa.js`, `sw.js` and this file). README inside. | You changed any content the assistant searches and need to rebuild the index, or want to know why there is no model behind it. |
 | `study-guides/` | Since 3 October 2026, every study guide and print digest in one place, each as a PDF and a Markdown text version: the study pack, the GDPR enforcement study guide, the fine calculator explainer (Markdown only), and the AI Act, EDPB and cookie digests (current and superseded). Its own README lists every file, how each Markdown version is made, and which script builds it. `ai-act-digest-2026-09-19-v2.pdf` could not be moved (the file was open in another application) and is still one level up; its Markdown is in the folder. |
 | `tool-baselines/` | Before-images of files changed in existing tools, one folder per change (`<date>-<change id>`), with diffs where useful. The record that goes with them is the tool change log in the project docs. Copy a folder back to revert. |
 | `risk-matrix-desktop.png`, `risk-matrix-phone.png` | Screenshots from the risk matrix layout work. The home tile the site uses is `images/risk-matrix-tile.png` (1000 x 1000, matrix centred at mid size); `images/risk-matrix-desktop.png`, `risk-matrix-phone.png` and `risk-matrix-tile2.png` are earlier attempts no page references. | Reference only. |
@@ -248,9 +223,6 @@ order after a rebuild) and, one per pass, `source-verification-2026-09.md`,
   Both are `.js` or `.css`, so the service worker serves them stale while revalidate, and
   without a bump a returning visitor runs the previous copy for one more visit. With the
   consent layer that visit has no banner and a blank gap where a gated embed should be.
-- The site assistant pair (`assets/js/assistant.js`, `assets/css/assistant.css`) is loaded
-  by `pwa.js` as well, so the same bump rule applies to it, and its index
-  (`assets/assistant/index.json`) must be rebuilt after any content change it covers.
 - The header nav collapses by JS measurement in `main.js`, not by a pixel breakpoint.
 - The generated pages (three digests, two advice pages) are written by builders whose header
   template predates the current four-item nav: after any rebuild, copy the current header block
