@@ -144,6 +144,12 @@ advice pages, the explanation and question bank of each assessment tool, the rea
 activities, the crosswalk rows, the enforcement sections and country cards, the fine
 calculator explainer, the two notices, a tool catalogue and a short FAQ. Every result deep
 links to the entry it came from; a "Which assessment do I need?" chooser recommends a tool.
+From the second character typed, five suggested questions appear under the box and change
+with every keystroke (`assets/assistant/questions.json`, 8,523 questions each tied to the
+passage that answers it, ranked by plausibility; the written layer lives in
+`Claude outputs/assistant-build/questions_written.json`, and questions real visitors asked go
+in `questions_asked.json` there, where they outrank the rest); choosing one pins its answer
+first.
 
 Everything runs in the browser. The index, `assets/assistant/index.json` (about 2 MB, 490 KB
 compressed, fetched when the panel first opens), is built by
@@ -154,7 +160,7 @@ visitor types leaves the page and nothing is stored. No language model is involv
 distilled on-device model was measured and scored lower than this (see the build folder's
 README). **Rebuild the index after any digest rebuild, advice page edit, study pack rebuild
 or tool change**, or the assistant keeps showing the old text. Both files are in the
-`sw.js` precache; `VERSION` went to `v8` when they shipped. The script also opens a closed
+`sw.js` precache; `VERSION` went to `v8` when they shipped and `v9` with the question bank. The script also opens a closed
 `<details>` that a deep link points into, on every page, on load and on hash change.
 
 ## Claude outputs/

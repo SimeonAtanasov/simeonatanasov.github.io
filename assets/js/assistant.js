@@ -7,7 +7,10 @@
 	built by Claude outputs/assistant-build/build_index.py) is fetched the
 	first time the panel opens; the ranking is BM25 over Porter-stemmed
 	tokens, with the question expanded by a synonym and abbreviation table
-	that ships inside the index. Nothing the visitor types leaves the page.
+	that ships inside the index. A question bank (questions.json, about
+	7,000 questions each tied to the passage that answers it, ranked by
+	plausibility) feeds the five suggestions shown while the visitor types.
+	Nothing the visitor types leaves the page.
 
 	Loaded on every page by assets/js/pwa.js, like the consent layer, so a
 	page added without the PWA block gets no assistant either.
@@ -27,6 +30,8 @@
 	window.__saLoaded = true;
 
 	var INDEX_URL = '/assets/assistant/index.json';
+	var QUESTIONS_URL = '/assets/assistant/questions.json';
+	var SUGGESTIONS = 5;
 	var RESULTS = 8;
 	var CANDIDATES = 60;
 	var K1 = 1.2, B = 0.5, TITLE_WEIGHT = 3, EXPANSION_WEIGHT = 0.5, BIGRAM_BONUS = 0.1;
@@ -200,19 +205,103 @@
 		return { results: out, terms: Object.keys(seen), base: base };
 	}
 
+	var questions = null;   // [{t: text, d: doc index, s: score, k: tokens}]
+	var docById = null;
+
+	function buildQuestions(data) {
+		docById = Object.create(null);
+		for (var i = 0; i < docs.length; i++) docById[docs[i].id] = i;
+		questions = [];
+		var rows = (data && data.q) || [];
+		for (var j = 0; j < rows.length; j++) {
+			var d = docById[rows[j][1]];
+			if (d === undefined) continue;   // the two files can be one build apart
+			questions.push({ t: rows[j][0], d: d, s: rows[j][2], k: tokenize(rows[j][0]), l: rows[j][0].toLowerCase() });
+		}
+	}
+
 	function load() {
 		if (loading) return loading;
-		loading = fetch(INDEX_URL, { credentials: 'omit' }).then(function (r) {
+		var indexReq = fetch(INDEX_URL, { credentials: 'omit' }).then(function (r) {
 			if (!r.ok) throw new Error('index ' + r.status);
 			return r.json();
-		}).then(function (data) {
+		});
+		/* the question bank is optional: without it the panel still searches */
+		var questionsReq = fetch(QUESTIONS_URL, { credentials: 'omit' }).then(function (r) {
+			return r.ok ? r.json() : null;
+		}).catch(function () { return null; });
+		loading = Promise.all([indexReq, questionsReq]).then(function (both) {
 			var t0 = performance.now();
-			buildIndex(data);
+			buildIndex(both[0]);
+			buildQuestions(both[1]);
 			index.buildMs = Math.round(performance.now() - t0);
 			return index;
 		});
 		loading.catch(function () { loading = null; });
 		return loading;
+	}
+
+	/* The suggestions for what has been typed so far: every typed word must
+	   match a question word (earlier words by stem, the last one as a prefix,
+	   since it is still being typed), ranked by the question's plausibility
+	   score plus how much of the question the typed words cover. Short inputs
+	   that are only stop words fall back to a plain prefix on the question. */
+	function suggest(text) {
+		if (!questions || !questions.length) return [];
+		var raw = text.toLowerCase().replace(/['\u2019]/g, '').match(wordRe) || [];
+		if (!raw.length) return [];
+		var last = raw[raw.length - 1];
+		var syn = (index && index.synonyms) || {};
+		function alts(word) {
+			var exp = syn[word] || syn[stem(word)];
+			return exp ? tokenize(exp) : [];
+		}
+		var words = [];   // [stem, [alternative stems]] for every typed word but the last
+		for (var i = 0; i < raw.length - 1; i++) if (!STOP[raw[i]] && raw[i].length > 1) words.push([stem(raw[i]), alts(raw[i])]);
+		var lastStem = stem(last), lastAlts = alts(last);
+		var lastIsStop = !!STOP[last] || last.length < 2;
+		var lower = text.toLowerCase().replace(/\s+/g, ' ').trim();
+		var first = raw[0] + ' ';
+		var hits = [];
+		/* a word matched through its synonym expansion counts half: the
+		   expansions of an abbreviation are ordinary words that many
+		   questions contain */
+		for (var q = 0; q < questions.length; q++) {
+			var item = questions[q], ok = true, covered = 0, direct = 0;
+			for (var w = 0; w < words.length && ok; w++) {
+				if (item.k.indexOf(words[w][0]) >= 0) { covered++; direct++; continue; }
+				var found = false;
+				for (var a = 0; a < words[w][1].length && !found; a++) found = item.k.indexOf(words[w][1][a]) >= 0;
+				if (found) covered += 0.5; else ok = false;
+			}
+			if (!ok) continue;
+			if (!lastIsStop) {
+				var lastHit = 0;
+				for (var k = 0; k < item.k.length && !lastHit; k++) {
+					if (item.k[k].indexOf(lastStem) === 0 || item.k[k].indexOf(last) === 0) lastHit = 1;
+				}
+				if (!lastHit) {
+					for (var k2 = 0; k2 < item.k.length && !lastHit; k2++) if (lastAlts.indexOf(item.k[k2]) >= 0) lastHit = 0.5;
+				}
+				if (!lastHit) continue;
+				covered += lastHit;
+				if (lastHit === 1) direct++;
+			}
+			var typed = words.length + (lastIsStop ? 0 : 1);
+			var starts = item.l.indexOf(lower) === 0;
+			if (!typed && !starts) continue;
+			var score = item.s + 0.4 * (item.k.length ? covered / item.k.length : 0) + 0.3 * (typed ? direct / typed : 0) + (starts ? 0.3 : 0) + (item.l.indexOf(first) === 0 ? 0.1 : 0);
+			hits.push({ item: item, score: score });
+		}
+		hits.sort(function (a, b) { return b.score - a.score; });
+		var out = [], seenDoc = {};
+		for (var h = 0; h < hits.length && out.length < SUGGESTIONS; h++) {
+			var dd = hits[h].item.d;
+			if (seenDoc[dd]) continue;   // one suggestion per answer passage
+			seenDoc[dd] = true;
+			out.push(hits[h].item);
+		}
+		return out;
 	}
 
 	/* ------------------------------------------------------------- UI */
@@ -283,7 +372,8 @@
 		return e;
 	}
 
-	var launcher, panel, input, results, prompts, status, filterRow, intro, lastQuery = '', lastFilter = '', lastFocus = null;
+	var launcher, panel, input, results, prompts, status, filterRow, intro, suggestBox, lastQuery = '', lastFilter = '', lastFocus = null;
+	var activeSuggestion = -1, suggestTimer = null, pinnedDoc = -1;
 
 	function build() {
 		launcher = el('button', { type: 'button', class: 'sa-launch', 'aria-haspopup': 'dialog', 'aria-expanded': 'false', 'aria-controls': 'sa-panel' }, [
@@ -307,7 +397,36 @@
 		var go = el('button', { type: 'submit', class: 'sa-go', text: 'Search' });
 		form.appendChild(input);
 		form.appendChild(go);
-		form.addEventListener('submit', function (e) { e.preventDefault(); run(input.value, ''); });
+		form.addEventListener('submit', function (e) {
+			e.preventDefault();
+			if (activeSuggestion >= 0 && suggestBox.children[activeSuggestion]) { pick(suggestBox.children[activeSuggestion]); return; }
+			hideSuggestions();
+			pinnedDoc = -1;
+			run(input.value, '');
+		});
+		suggestBox = el('ul', { class: 'sa-suggest', id: 'sa-suggest', role: 'listbox', 'aria-label': 'Suggested questions', hidden: '' });
+		input.setAttribute('role', 'combobox');
+		input.setAttribute('aria-autocomplete', 'list');
+		input.setAttribute('aria-controls', 'sa-suggest');
+		input.setAttribute('aria-expanded', 'false');
+		input.addEventListener('input', function () {
+			clearTimeout(suggestTimer);
+			suggestTimer = setTimeout(showSuggestions, 60);
+		});
+		input.addEventListener('keydown', function (e) {
+			if (suggestBox.hidden) return;
+			var n = suggestBox.children.length;
+			if (e.key === 'ArrowDown') { e.preventDefault(); setActive((activeSuggestion + 1) % n); }
+			else if (e.key === 'ArrowUp') { e.preventDefault(); setActive((activeSuggestion - 1 + n) % n); }
+			else if (e.key === 'Escape' || e.key === 'Esc') { e.preventDefault(); e.stopPropagation(); hideSuggestions(); }
+		});
+		input.addEventListener('blur', function () { setTimeout(hideSuggestions, 150); });
+		input.addEventListener('focus', function () { if (input.value.length >= 2) showSuggestions(); });
+		suggestBox.addEventListener('mousedown', function (e) { e.preventDefault(); });
+		suggestBox.addEventListener('click', function (e) {
+			var li = e.target && e.target.closest ? e.target.closest('li') : null;
+			if (li) pick(li);
+		});
 		prompts = el('div', { class: 'sa-prompts', 'aria-label': 'Suggestions' });
 		filterRow = el('div', { class: 'sa-filters', hidden: '' });
 		status = el('p', { class: 'sa-status', 'aria-live': 'polite' });
@@ -316,6 +435,7 @@
 		panel.appendChild(head);
 		panel.appendChild(intro);
 		panel.appendChild(form);
+		panel.appendChild(suggestBox);
 		panel.appendChild(prompts);
 		panel.appendChild(filterRow);
 		panel.appendChild(status);
@@ -348,6 +468,50 @@
 		}
 	}
 
+	function showSuggestions() {
+		var text = input.value.trim();
+		if (text.length < 2 || !questions) { hideSuggestions(); if (text.length >= 2 && !questions) load().then(showSuggestions); return; }
+		var list = suggest(text);
+		suggestBox.innerHTML = '';
+		if (!list.length) { hideSuggestions(); return; }
+		list.forEach(function (item, i) {
+			var li = el('li', { role: 'option', id: 'sa-opt-' + i, 'aria-selected': 'false', 'data-doc': String(item.d) }, [
+				el('span', { class: 'sa-suggest-q', text: item.t }),
+				el('span', { class: 'sa-suggest-p', text: docs[item.d].p })
+			]);
+			suggestBox.appendChild(li);
+		});
+		suggestBox.hidden = false;
+		input.setAttribute('aria-expanded', 'true');
+		activeSuggestion = -1;
+		input.removeAttribute('aria-activedescendant');
+	}
+
+	function hideSuggestions() {
+		suggestBox.hidden = true;
+		input.setAttribute('aria-expanded', 'false');
+		input.removeAttribute('aria-activedescendant');
+		activeSuggestion = -1;
+	}
+
+	function setActive(i) {
+		var items = suggestBox.children;
+		for (var k = 0; k < items.length; k++) {
+			items[k].setAttribute('aria-selected', k === i ? 'true' : 'false');
+			items[k].classList.toggle('is-active', k === i);
+		}
+		activeSuggestion = i;
+		if (items[i]) input.setAttribute('aria-activedescendant', items[i].id);
+	}
+
+	function pick(li) {
+		var text = li.querySelector('.sa-suggest-q').textContent;
+		input.value = text;
+		pinnedDoc = parseInt(li.getAttribute('data-doc'), 10);
+		hideSuggestions();
+		run(text, '');
+	}
+
 	function renderPrompts() {
 		prompts.innerHTML = '';
 		var list = PAGE_PROMPTS[pageKey()] || PAGE_PROMPTS['default'];
@@ -356,7 +520,7 @@
 			var b = el('button', { type: 'button', class: 'sa-chip' + (label === FINDER_LABEL ? ' sa-chip-finder' : ''), text: label });
 			b.addEventListener('click', function () {
 				if (label === FINDER_LABEL) finder(TOOL_FINDER, []);
-				else { input.value = label; run(label, ''); }
+				else { input.value = label; pinnedDoc = -1; hideSuggestions(); run(label, ''); }
 			});
 			prompts.appendChild(b);
 		});
@@ -399,7 +563,7 @@
 		if (!docs) {
 			status.textContent = 'Loading the index…';
 			load().then(function () {
-				status.textContent = 'Ready: ' + docs.length.toLocaleString() + ' entries. Type a question, or pick a suggestion.';
+				status.textContent = 'Ready: ' + docs.length.toLocaleString() + ' entries' + (questions && questions.length ? ' and ' + questions.length.toLocaleString() + ' questions' : '') + '. Start typing, or pick a suggestion.';
 				if (lastQuery) run(lastQuery, lastFilter);
 			}).catch(function () {
 				status.textContent = 'The index could not be loaded. Check the connection and try again.';
@@ -484,9 +648,14 @@
 			});
 			filterRow.hidden = false;
 		}
-		var shown = r.results.slice(0, RESULTS);
-		status.textContent = (r.results.length >= CANDIDATES ? 'Top ' + shown.length + ' of many matches' : shown.length + ' of ' + r.results.length + ' matches') + (lastFilter ? ' in ' + lastFilter : '') + ', ' + ms + ' ms.';
-		shown.forEach(function (x) { results.appendChild(card(x.doc, r.terms)); });
+		var list = r.results;
+		if (pinnedDoc >= 0 && docs[pinnedDoc] && (!lastFilter || docs[pinnedDoc].p === lastFilter)) {
+			list = [{ doc: docs[pinnedDoc], pinned: true }].concat(r.results.filter(function (x) { return x.doc !== docs[pinnedDoc]; }));
+		}
+		var shown = list.slice(0, RESULTS);
+		status.textContent = (list.length >= CANDIDATES ? 'Top ' + shown.length + ' of many matches' : shown.length + ' of ' + list.length + ' matches') + (lastFilter ? ' in ' + lastFilter : '') + ', ' + ms + ' ms.';
+		shown.forEach(function (x) { results.appendChild(card(x.doc, r.terms, x.pinned)); });
+		r.results = list;
 		if (r.results.length > RESULTS) {
 			var more = el('button', { type: 'button', class: 'sa-more', text: 'Show more results' });
 			more.addEventListener('click', function () {
@@ -504,7 +673,7 @@
 		return path === here || ('/' + path) === location.pathname;
 	}
 
-	function card(d, terms) {
+	function card(d, terms, pinned) {
 		var a = el('a', { class: 'sa-title', href: '/' + d.u, html: snippet(d.t, terms, true) });
 		a.addEventListener('click', function (e) {
 			if (samePage(d.u) && d.u.indexOf('#') > 0) {
@@ -513,7 +682,7 @@
 				jumpTo(d.u.split('#')[1]);
 			}
 		});
-		var meta = el('p', { class: 'sa-meta' }, [el('span', { class: 'sa-page', text: d.p }), d.m ? el('span', { class: 'sa-m', text: d.m }) : null]);
+		var meta = el('p', { class: 'sa-meta' }, [pinned ? el('span', { class: 'sa-best', text: 'Answer' }) : null, el('span', { class: 'sa-page', text: d.p }), d.m ? el('span', { class: 'sa-m', text: d.m }) : null]);
 		var body = el('p', { class: 'sa-text', html: snippet(d.x, terms, false) });
 		var art = el('article', { class: 'sa-card' }, [meta, a, body]);
 		if (d.x.length > 320) {
@@ -639,5 +808,5 @@
 	if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
 	else boot();
 
-	window.siteAssistant = { open: function () { if (panel) open(); }, search: function (q) { return search(q, ''); }, load: load, tokenize: tokenize, _build: buildIndex };
+	window.siteAssistant = { open: function () { if (panel) open(); }, search: function (q) { return search(q, ''); }, suggest: suggest, load: load, tokenize: tokenize, _build: buildIndex, _buildQuestions: buildQuestions };
 })();

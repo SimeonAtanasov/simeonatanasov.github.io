@@ -225,6 +225,52 @@
 	outline-offset: 2px;
 }
 
+/* ---------------------------------------------------- suggestions */
+
+.sa-suggest {
+	list-style: none;
+	margin: -0.2em 1.1em 0.4em;
+	padding: 0.2em 0;
+	background: var(--sa-surface);
+	border: 1px solid var(--sa-line);
+	border-radius: 0.4em;
+	box-shadow: 0 0.3em 1em rgba(20, 28, 48, 0.12);
+	max-height: 24em;
+	overflow-y: auto;
+}
+
+.sa-suggest[hidden] { display: none; }
+
+.sa-suggest li {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 0.6em;
+	margin: 0;
+	padding: 0.4em 0.75em;
+	font-size: 0.95em;
+	line-height: 1.35;
+	cursor: pointer;
+}
+
+.sa-suggest li + li { border-top: 1px solid var(--sa-surface-2); }
+.sa-suggest li:hover, .sa-suggest li.is-active { background: var(--sa-surface-2); }
+.sa-suggest li.is-active .sa-suggest-q { color: var(--sa-accent); }
+.sa-suggest-q { flex: 1 1 auto; color: var(--sa-ink); }
+.sa-suggest-p { flex: 0 0 auto; font-size: 0.78em; color: var(--sa-ink-soft); white-space: nowrap; }
+
+.sa-best {
+	display: inline-block;
+	padding: 0.05em 0.55em;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	color: #ffffff;
+	background: var(--sa-accent);
+	border-radius: 2em;
+}
+
 .sa-prompts {
 	display: flex;
 	flex-wrap: wrap;
@@ -443,6 +489,7 @@
 
 	.sa-form { flex-wrap: wrap; }
 	.sa-go { flex: 1 1 100%; }
+	.sa-suggest li { flex-wrap: wrap; }
 }
 
 @media screen and (max-width: 736px) {

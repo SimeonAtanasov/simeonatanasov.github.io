@@ -1,0 +1,4 @@
+{
+ "_about": "Questions real visitors asked, in their words, each with the id of the chunk that answers it (ids are in work/chunks.json after a build). They rank above every generated question. Add a line whenever someone asks you something the site answers; keep the wording they used, under 90 characters, British spelling, no em dashes. Rebuild the index afterwards.",
+ "items": []
+}

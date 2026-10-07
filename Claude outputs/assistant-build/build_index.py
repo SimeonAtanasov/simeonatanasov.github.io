@@ -4,6 +4,10 @@ Builds the search index behind the site assistant (assets/assistant/).
 
 Two stages, both offline:
 
+  0. Questions. A bank of suggested questions, one chunk each, from templates
+     here plus questions_written.json (see build_questions); written to
+     assets/assistant/questions.json for the live suggestions in the panel.
+
   1. Chunks. Every digest entry, advice section, assessment tool explanation
      and question step, readiness activity, crosswalk row, enforcement section
      and country card, calculator section and site notice becomes one record
@@ -510,6 +514,13 @@ SYNONYMS = {
     "difference": "compare versus differ between",
     "versus": "compare difference between",
     "vs": "versus compare difference between",
+    "usa": "united states american federal",
+    "us": "united states american",
+    "uk": "united kingdom british ico",
+    "eea": "european economic area eu",
+    "eu": "european union eea",
+    "swiss": "switzerland",
+    "dutch": "netherlands",
     "website": "site web page",
     "websites": "site web page",
     "site": "website web page",
@@ -746,12 +757,16 @@ def advice(repo, out):
         for item in sec["items"]:
             title = "%s. %s" % (item["num"], item["title"])
             url = pagefile + "#" + item["id"]
-            # group blocks into pieces of about 1400 characters at block boundaries
+            # group blocks into pieces of about 1400 characters at block boundaries;
+            # a single block longer than that is split at sentence boundaries first,
+            # so no piece ever exceeds the cap and gets split a second time
             pieces, cur = [], ""
+            blocks = []
             for b in item["blocks"]:
                 b = clean(b)
-                if not b:
-                    continue
+                if b:
+                    blocks.extend(split_text(b, cap=1400))
+            for b in blocks:
                 if cur and len(cur) + len(b) > 1400:
                     pieces.append(cur)
                     cur = b
@@ -1024,6 +1039,207 @@ def catalogue(out):
         out.add(f["id"], "faq", "About this site", f["title"], f["url"], f["text"])
 
 
+
+# --------------------------------------------------------------------------
+# Question bank: the suggestions shown while the visitor types.
+# Three layers: questions real visitors asked, from questions_asked.json
+# (they outrank everything else); written questions from
+# questions_written.json (keyed by chunk id; a chunk that disappears drops
+# its questions, a new chunk gets templates only until questions are written
+# for it); and template questions generated here from each chunk's fields.
+# Every question maps to one chunk and carries a plausibility score used to
+# rank the suggestions.
+# --------------------------------------------------------------------------
+
+KIND_PRIOR = {
+    "faq": 0.9, "page": 0.95, "tool": 0.9, "pp": 0.85, "aiaadv": 0.85, "aia": 0.8, "calc": 0.7,
+    "readiness": 0.65, "cookie": 0.65, "aiadoc": 0.6, "enforce": 0.6, "world": 0.5, "crosswalk": 0.5,
+    "notice": 0.5, "toolstep": 0.4, "edpb": 0.6,
+}
+TEMPLATE_WEIGHT = 0.8
+
+TOOL_NAMES = {v: k for k, v in TOOL_ANCHORS.items()}
+
+
+def template_questions(chunks):
+    """Patterned questions from the chunk fields. Returns [(question, chunk id)]."""
+    out = []
+    seen_jur = set()
+    seen_country = set()
+    for c in chunks:
+        k, cid, t = c["k"], c["id"], c["t"]
+        if k == "aia":
+            m = re.match(r"^(Article \S+|Annex [IVXLC]+):\s*(.*?)(?: \(amended by Regulation 2026/1744\))?$", t)
+            if not m:
+                continue
+            num, title = m.group(1), m.group(2)
+            if cid.endswith("-omnibus"):
+                out.append(("How did the Omnibus change %s of the AI Act?" % num, cid))
+            elif num.startswith("Article"):
+                out.append(("What does %s of the AI Act say?" % num, cid))
+                out.append(("When does %s of the AI Act apply?" % num, cid))
+                if len(title) <= 55:
+                    out.append(("What does the AI Act say on %s?" % title.lower(), cid))
+            else:
+                out.append(("What is in %s of the AI Act?" % num, cid))
+        elif k == "aiadoc":
+            if len(t) <= 70:
+                out.append(("What does the %s say?" % t if not t.lower().startswith(("guidelines", "commission", "regulation", "code", "q&a", "questions")) else "What does %s say?" % t, cid))
+        elif k == "edpb":
+            if len(t) <= 72 and re.match(r"^(Guidelines|Recommendations|Opinion|Binding Decision|Statement)", t):
+                out.append(("What do the EDPB %s say?" % t if t.startswith(("Guidelines", "Recommendations")) else "What does EDPB %s say?" % t, cid))
+        elif k == "cookie":
+            jur = (c.get("m") or "").split(" \u00b7 ")[0].strip()
+            if jur and jur not in seen_jur and jur not in ("EU",):
+                seen_jur.add(jur)
+                out.append(("What are the cookie consent rules in %s?" % jur, cid))
+                out.append(("Which cookie laws and decisions apply in %s?" % jur, cid))
+        elif k == "tool":
+            m = re.match(r"^tool-([a-z]+)-(about|scoring|pitfalls)$", cid)
+            if m and m.group(1) in TOOL_NAMES:
+                name = TOOL_NAMES[m.group(1)]
+                if m.group(2) == "about":
+                    out.append(("What is the %s for?" % name, cid))
+                    out.append(("How does the %s work?" % name, cid))
+                elif m.group(2) == "scoring":
+                    out.append(("How is the %s scored?" % name, cid))
+                    out.append(("How is the %s result worked out?" % name, cid))
+                else:
+                    out.append(("Where do people go wrong in the %s?" % name, cid))
+        elif k == "toolstep":
+            m = re.match(r"^(.*?), (Step \d+ of \d+): (.*?)(?: \(\d+/\d+\))?$", t)
+            if m:
+                out.append(("What does %s of the %s ask?" % (m.group(2), m.group(1)), cid))
+        elif k == "readiness" and cid.startswith("readiness-act-"):
+            m = re.match(r"^[A-Z]\d+ (.*)$", t)
+            if m and len(m.group(1)) <= 80:
+                stmt = m.group(1)
+                stmt = stmt[0].lower() + stmt[1:]
+                out.append(("Do we %s?" % stmt, cid))
+        elif k == "crosswalk":
+            m = re.match(r"^AI Act obligation \d+: (Article \S+) ", t)
+            if m:
+                out.append(("How does %s map to ISO/IEC 42001 and NIST AI RMF?" % m.group(1), cid))
+        elif k in ("enforce", "world"):
+            m = re.match(r"^([^:]+): (.*)$", t)
+            if not m:
+                continue
+            country, part = m.group(1), m.group(2)
+            part = re.sub(r" \(\d+/\d+\)$", "", part)
+            if country in ("The short version", "Comparison", "Method and limits"):
+                continue
+            key = (country, part)
+            if key in seen_country:
+                continue
+            seen_country.add(key)
+            if part == "enforcement in plain words":
+                out.append(("How does privacy enforcement work in %s?" % country, cid))
+                out.append(("Who enforces data protection law in %s?" % country, cid))
+            elif part == "appeals":
+                out.append(("How do I appeal a data protection fine in %s?" % country, cid))
+            elif part == "fines":
+                out.append(("How are data protection fines imposed in %s?" % country, cid))
+            elif part == "complaining":
+                out.append(("How do I complain to the data protection authority in %s?" % country, cid))
+            elif part == "suing the organisation directly":
+                out.append(("Can I sue for damages for a privacy breach in %s?" % country, cid))
+            elif part == "cases worth knowing":
+                out.append(("Which privacy enforcement cases matter in %s?" % country, cid))
+        elif k == "faq":
+            out.append((t if t.endswith("?") else t + "?", cid))
+        elif k == "page":
+            out.append(("What is the %s?" % t, cid))
+            out.append(("When should I use the %s?" % t, cid))
+    return [(q, cid) for q, cid in out if len(q) <= 90]
+
+
+ASKED_WEIGHT = 1.3   # questions real visitors asked outrank everything generated
+
+
+def build_questions(chunks, written_path, out_path, asked_path=None):
+    by_id = {c["id"]: c for c in chunks}
+    written = {}
+    if os.path.exists(written_path):
+        with open(written_path, encoding="utf-8") as f:
+            written = json.load(f)
+    rows = []  # (question, cid, weight)
+    asked_ids = set()
+    if asked_path and os.path.exists(asked_path):
+        with open(asked_path, encoding="utf-8") as f:
+            asked = json.load(f)
+        for item in asked.get("items", []):
+            cid = item.get("id")
+            q = (item.get("q") or "").strip()
+            if cid in by_id and q:
+                rows.append((q, cid, ASKED_WEIGHT))
+                asked_ids.add(cid)
+            elif q:
+                print("WARNING: asked question points at an unknown chunk id: %s (%s)" % (cid, q))
+    for cid, qs in written.items():
+        if cid in by_id:
+            for q in qs:
+                rows.append((q, cid, 1.0))
+    missing_written = [c["id"] for c in chunks if c["id"] not in written]
+    for q, cid in template_questions(chunks):
+        rows.append((q, cid, TEMPLATE_WEIGHT))
+
+    def prior(cid, weight=1.0):
+        if weight == ASKED_WEIGHT:
+            return 1.0   # a real question ranks by its own weight, not the passage kind
+        c = by_id[cid]
+        p = KIND_PRIOR.get(c["k"], 0.5)
+        if c["k"] == "edpb" and len(c["x"]) < 220:
+            p = 0.25
+        if c["k"] == "aia" and cid.endswith("-omnibus"):
+            p = 0.5
+        if cid == "faq-assistant":
+            p = 0.55   # questions about the assistant itself should not lead the list
+        return p
+
+    # generality: questions made of words that many other questions use rank
+    # higher than ones built on rare names, so the first suggestions for a short
+    # input are the broad ones
+    from collections import Counter
+    import math
+    df = Counter()
+    toks_per = []
+    for q, cid, w in rows:
+        toks = set(tokenize_simple(q))
+        toks_per.append(toks)
+        for t in toks:
+            df[t] += 1
+    n = len(rows)
+    maxlog = math.log(1 + n)
+    scored = {}
+    for (q, cid, w), toks in zip(rows, toks_per):
+        gen = sum(math.log(1 + df[t]) for t in toks) / (len(toks) * maxlog) if toks else 0.5
+        score = prior(cid, w) * w * (0.7 + 0.3 * gen)
+        key = re.sub(r"[^a-z0-9 ]", "", q.lower())
+        if key in scored and scored[key][2] >= score:
+            continue
+        scored[key] = (q, cid, score)
+    # ties broken by text, so the file is identical whichever Python builds it
+    bank = sorted(scored.values(), key=lambda r: (-round(r[2], 3), r[0]))
+    out = {
+        "built": date.today().isoformat(),
+        "count": len(bank),
+        "q": [[q, cid, round(s, 3)] for q, cid, s in bank],
+    }
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
+    print("questions: %d (%d asked, %d written, %d template, %d duplicates dropped, %d chunks without written questions)" % (
+        len(bank), sum(1 for r in rows if r[2] == ASKED_WEIGHT), sum(1 for r in rows if r[2] == 1.0),
+        sum(1 for r in rows if r[2] == TEMPLATE_WEIGHT), len(rows) - len(bank), len(missing_written)))
+    return out
+
+
+_STOP = set("a an and are as at be been being but by can could do does for from has have how i if in into is it its me my of on or our should that the their them then there these they this to us was we were what when where which who why will with would you your about also any just more most not no only other some such than too very s t".split())
+
+
+def tokenize_simple(text):
+    return [w for w in re.findall(r"[a-z0-9]+", text.lower()) if len(w) > 1 and w not in _STOP]
+
+
 # --------------------------------------------------------------------------
 # Embeddings
 # --------------------------------------------------------------------------
@@ -1185,6 +1401,10 @@ def main():
     with open(os.path.join(out_dir, "index.json"), "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, separators=(",", ":"))
     print("index.json: %d bytes" % os.path.getsize(os.path.join(out_dir, "index.json")))
+
+    build_questions(chunks, os.path.join(HERE, "questions_written.json"), os.path.join(out_dir, "questions.json"),
+                    os.path.join(HERE, "questions_asked.json"))
+    print("questions.json: %d bytes" % os.path.getsize(os.path.join(out_dir, "questions.json")))
 
     if args.embed:
         meta = embed_all(chunks, args.model, args.dims, args.work, out_dir)
