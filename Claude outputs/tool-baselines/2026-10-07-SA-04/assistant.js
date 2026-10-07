@@ -34,7 +34,6 @@
 	var SUGGESTIONS = 5;
 	var RESULTS = 8;
 	var CANDIDATES = 60;
-	var LIVE_DELAY = 250;   // ms after the last keystroke before the results refresh
 	var K1 = 1.2, B = 0.5, TITLE_WEIGHT = 3, EXPANSION_WEIGHT = 0.5, BIGRAM_BONUS = 0.1;
 
 	/* ------------------------------------------------------------ text */
@@ -206,26 +205,6 @@
 		return { results: out, terms: Object.keys(seen), base: base };
 	}
 
-	/* SA-04: while the last word is still being typed it is usually not a word
-	   yet ("germ"), so live results complete it to the most frequent word on
-	   the site that starts with it. The word list is built once, on first use. */
-	var vocab = null;
-	function completeLast(q) {
-		if (!docs || /\s$/.test(q)) return q;
-		var m = q.toLowerCase().match(/([a-z0-9]+)$/);
-		if (!m || m[1].length < 2 || STOP[m[1]] || postings[stem(m[1])]) return q;
-		if (!vocab) {
-			vocab = Object.create(null);
-			for (var i = 0; i < docs.length; i++) {
-				var ws = (docs[i].t + ' ' + docs[i].x).toLowerCase().match(wordRe) || [];
-				for (var j = 0; j < ws.length; j++) vocab[ws[j]] = (vocab[ws[j]] || 0) + 1;
-			}
-		}
-		var w = m[1], best = null, bestN = 0;
-		for (var v in vocab) if (vocab[v] > bestN && v.length > w.length && v.indexOf(w) === 0) { best = v; bestN = vocab[v]; }
-		return best ? q.slice(0, q.length - w.length) + best : q;
-	}
-
 	var questions = null;   // [{t: text, d: doc index, s: score, k: tokens}]
 	var docById = null;
 
@@ -311,18 +290,10 @@
 			var typed = words.length + (lastIsStop ? 0 : 1);
 			var starts = item.l.indexOf(lower) === 0;
 			if (!typed && !starts) continue;
-			var score = item.s + 0.4 * (item.k.length ? covered / item.k.length : 0) + 0.5 * (typed ? direct / typed : 0) + (starts ? 0.3 : 0) + (item.l.indexOf(first) === 0 ? 0.1 : 0);
-			hits.push({ item: item, score: score, exact: direct === typed });
+			var score = item.s + 0.4 * (item.k.length ? covered / item.k.length : 0) + 0.3 * (typed ? direct / typed : 0) + (starts ? 0.3 : 0) + (item.l.indexOf(first) === 0 ? 0.1 : 0);
+			hits.push({ item: item, score: score });
 		}
 		hits.sort(function (a, b) { return b.score - a.score; });
-		/* SA-04: when enough answers contain every typed word as written, drop the
-		   ones that only match through a synonym, so "deployer obligation" no
-		   longer offers notified bodies. Counted per answer passage. */
-		var exactDocs = {}, exactCount = 0;
-		for (var e = 0; e < hits.length && exactCount < SUGGESTIONS; e++) {
-			if (hits[e].exact && !exactDocs[hits[e].item.d]) { exactDocs[hits[e].item.d] = true; exactCount++; }
-		}
-		if (exactCount >= SUGGESTIONS) hits = hits.filter(function (x) { return x.exact; });
 		var out = [], seenDoc = {};
 		for (var h = 0; h < hits.length && out.length < SUGGESTIONS; h++) {
 			var dd = hits[h].item.d;
@@ -402,7 +373,7 @@
 	}
 
 	var launcher, panel, input, results, prompts, status, filterRow, intro, suggestBox, lastQuery = '', lastFilter = '', lastFocus = null;
-	var activeSuggestion = -1, suggestTimer = null, liveTimer = null, pinnedDoc = -1;
+	var activeSuggestion = -1, suggestTimer = null, pinnedDoc = -1;
 
 	function build() {
 		launcher = el('button', { type: 'button', class: 'sa-launch', 'aria-haspopup': 'dialog', 'aria-expanded': 'false', 'aria-controls': 'sa-panel' }, [
@@ -428,7 +399,6 @@
 		form.appendChild(go);
 		form.addEventListener('submit', function (e) {
 			e.preventDefault();
-			clearTimeout(liveTimer);
 			if (activeSuggestion >= 0 && suggestBox.children[activeSuggestion]) { pick(suggestBox.children[activeSuggestion]); return; }
 			hideSuggestions();
 			pinnedDoc = -1;
@@ -440,11 +410,8 @@
 		input.setAttribute('aria-controls', 'sa-suggest');
 		input.setAttribute('aria-expanded', 'false');
 		input.addEventListener('input', function () {
-			pinnedDoc = -1;   // a picked answer no longer applies once the text changes
 			clearTimeout(suggestTimer);
 			suggestTimer = setTimeout(showSuggestions, 60);
-			clearTimeout(liveTimer);
-			liveTimer = setTimeout(liveSearch, LIVE_DELAY);
 		});
 		input.addEventListener('keydown', function (e) {
 			if (suggestBox.hidden) return;
@@ -537,16 +504,7 @@
 		if (items[i]) input.setAttribute('aria-activedescendant', items[i].id);
 	}
 
-	/* SA-04: results follow the typing, without pressing Search. Three
-	   characters at least, so one or two letters do not flood the list. */
-	function liveSearch() {
-		var q = input.value.trim();
-		if (q.length >= 3) run(completeLast(q), '');
-		else if (lastQuery) run('', '');
-	}
-
 	function pick(li) {
-		clearTimeout(liveTimer);
 		var text = li.querySelector('.sa-suggest-q').textContent;
 		input.value = text;
 		pinnedDoc = parseInt(li.getAttribute('data-doc'), 10);
@@ -561,7 +519,6 @@
 		list.forEach(function (label) {
 			var b = el('button', { type: 'button', class: 'sa-chip' + (label === FINDER_LABEL ? ' sa-chip-finder' : ''), text: label });
 			b.addEventListener('click', function () {
-				clearTimeout(liveTimer);
 				if (label === FINDER_LABEL) finder(TOOL_FINDER, []);
 				else { input.value = label; pinnedDoc = -1; hideSuggestions(); run(label, ''); }
 			});

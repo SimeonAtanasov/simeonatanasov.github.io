@@ -160,9 +160,7 @@
 	margin: 0;
 }
 
-/* SA-04: the template's input[type="text"] rule outranks a bare class and drew
-   the box white on white; the extra selector parts win without !important. */
-.sa-panel input.sa-input {
+.sa-input {
 	flex: 1 1 auto;
 	min-width: 0;
 	box-sizing: border-box;
@@ -179,7 +177,7 @@
 	box-shadow: none;
 }
 
-.sa-panel input.sa-input:focus { outline: 2px solid var(--sa-accent); outline-offset: 1px; border-color: var(--sa-accent); }
+.sa-input:focus { outline: 2px solid var(--sa-accent); outline-offset: 1px; border-color: var(--sa-accent); }
 .sa-input::placeholder { color: #8a9198; opacity: 1; }
 
 .sa-go,
@@ -229,10 +227,7 @@
 
 /* ---------------------------------------------------- suggestions */
 
-/* SA-04: the panel is a column flex box and .sa-results grows to its content,
-   so without this the list was squeezed to one row once results were showing. */
 .sa-suggest {
-	flex: 0 0 auto;
 	list-style: none;
 	margin: -0.2em 1.1em 0.4em;
 	padding: 0.2em 0;
