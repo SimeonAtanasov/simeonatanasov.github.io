@@ -54,12 +54,6 @@ self.addEventListener('install', function (event) {
 			return Promise.all(PRECACHE.map(function (url) {
 				return cache.add(new Request(url, { cache: 'reload' })).catch(function () {});
 			}));
-		}).then(function () {
-			/* SA-06: take over as soon as the new version is installed, so one
-			   reload gets it. Without this it waited until every tab of the site
-			   was closed. Open pages are not reloaded and saved answers live in
-			   localStorage, which a version change never touches. */
-			return self.skipWaiting();
 		})
 	);
 });
