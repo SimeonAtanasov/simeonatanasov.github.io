@@ -828,7 +828,7 @@
 	var PREVIEW_CSS = [
 		'#header { display: none !important; }',
 		'html { scroll-behavior: auto !important; }',
-		'.sa-pv-target { outline: 3px solid #f2c94c !important; outline-offset: 5px; border-radius: 3px; }'
+		'.sa-pv-target { outline: 2px solid #f2c94c !important; outline-offset: 4px; border-radius: 3px; }'
 	].join('\n');
 
 	function previewAllowed() {
