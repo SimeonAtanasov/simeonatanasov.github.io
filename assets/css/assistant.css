@@ -490,7 +490,7 @@
 		font-size: 0.85rem;
 	}
 
-	.sa-open .sa-launch { display: none; }
+	.sa-panel-open .sa-launch { display: none; }
 
 	.sa-form { flex-wrap: wrap; }
 	.sa-go { flex: 1 1 100%; }
@@ -499,7 +499,9 @@
 
 @media screen and (max-width: 736px) {
 	/* keep the page from scrolling behind the full-screen panel */
-	html.sa-open, html.sa-open body { overflow: hidden; }
+	/* SA-08: the page class was sa-open, which also matched the .sa-open button
+	   rule above and gave the whole page its padding and background */
+	html.sa-panel-open, html.sa-panel-open body { overflow: hidden; }
 }
 
 /* SA-05: on short screens the suggestions, chips and filters took all the

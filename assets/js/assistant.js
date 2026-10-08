@@ -608,7 +608,7 @@
 		panel.hidden = false;
 		launcher.setAttribute('aria-expanded', 'true');
 		launcher.classList.add('is-open');
-		document.documentElement.classList.add('sa-open');
+		document.documentElement.classList.add('sa-panel-open');
 		input.focus();
 		if (!docs) {
 			status.textContent = 'Loading the index…';
@@ -626,7 +626,7 @@
 		panel.hidden = true;
 		launcher.setAttribute('aria-expanded', 'false');
 		launcher.classList.remove('is-open');
-		document.documentElement.classList.remove('sa-open');
+		document.documentElement.classList.remove('sa-panel-open');
 		if (lastFocus && lastFocus.focus) lastFocus.focus(); else launcher.focus();
 	}
 
