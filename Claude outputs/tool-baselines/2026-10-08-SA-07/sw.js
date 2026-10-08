@@ -27,7 +27,7 @@
 	gap rather than a placeholder. Retiring the caches avoids that one visit.
 */
 
-var VERSION = 'v12';
+var VERSION = 'v11';
 var PAGE_CACHE = 'pages-' + VERSION;
 var ASSET_CACHE = 'assets-' + VERSION;
 var OFFLINE_URL = '/offline.html';

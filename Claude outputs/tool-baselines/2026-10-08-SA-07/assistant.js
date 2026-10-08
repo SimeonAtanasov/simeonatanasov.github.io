@@ -26,10 +26,6 @@
 (function () {
 	'use strict';
 
-	/* SA-07: a page loaded inside the Ask panel's preview window gets no
-	   assistant of its own; the parent page drives it. */
-	try { if (window.frameElement && window.frameElement.className.indexOf('sa-preview-frame') >= 0) return; } catch (e) {}
-
 	if (window.__saLoaded) return;
 	window.__saLoaded = true;
 
@@ -482,12 +478,9 @@
 		renderPrompts();
 
 		document.addEventListener('keydown', function (e) {
-			if ((e.key === 'Escape' || e.key === 'Esc') && !panel.hidden) {
-				if (preview && !preview.hidden) hidePreview(); else close();
-			}
+			if ((e.key === 'Escape' || e.key === 'Esc') && !panel.hidden) close();
 		});
 		window.addEventListener('resize', placeLauncher);
-		window.addEventListener('resize', function () { if (preview && !preview.hidden) { if (previewAllowed()) placePreview(); else hidePreview(); } });
 		placeLauncher();
 
 		/* The cookie banner sits across the bottom of the viewport until the
@@ -622,7 +615,6 @@
 	}
 
 	function close() {
-		hidePreview();
 		panel.hidden = true;
 		launcher.setAttribute('aria-expanded', 'false');
 		launcher.classList.remove('is-open');
@@ -671,7 +663,6 @@
 		query = (query || '').trim();
 		lastQuery = query;
 		lastFilter = filter || '';
-		hidePreview();
 		results.innerHTML = '';
 		filterRow.hidden = true;
 		if (!query) { status.textContent = ''; return; }
@@ -737,11 +728,6 @@
 		var meta = el('p', { class: 'sa-meta' }, [pinned ? el('span', { class: 'sa-best', text: 'Answer' }) : null, el('span', { class: 'sa-page', text: d.p }), d.m ? el('span', { class: 'sa-m', text: d.m }) : null]);
 		var body = el('p', { class: 'sa-text', html: snippet(d.x, terms, false) });
 		var art = el('article', { class: 'sa-card' }, [meta, a, body]);
-		/* SA-07: on a desktop with room beside the panel, resting on a result
-		   opens its page in the preview window */
-		art.addEventListener('mouseenter', function () { schedulePreview(d, art); });
-		art.addEventListener('mouseleave', function () { clearTimeout(pvTimer); });
-		a.addEventListener('focus', function () { schedulePreview(d, art); });
 		if (d.x.length > 320) {
 			var toggle = el('button', { type: 'button', class: 'sa-toggle', text: 'Show all' });
 			toggle.addEventListener('click', function () {
@@ -755,7 +741,6 @@
 	}
 
 	function finder(node, trail) {
-		hidePreview();
 		intro.hidden = true;
 		results.innerHTML = '';
 		filterRow.hidden = true;
@@ -806,181 +791,6 @@
 		again.addEventListener('click', function () { finder(TOOL_FINDER, []); });
 		box.appendChild(again);
 		results.appendChild(box);
-	}
-
-
-	/* ------------------------------------------------ preview (SA-07) */
-
-	/* Resting the pointer on a result for a moment opens the page it comes
-	   from in a window to the left of the panel, scrolled to the passage,
-	   which is outlined. The window stays while the visitor scrolls or reads
-	   in it and switches when another result is hovered; its bar carries
-	   "Go to this section", "Open page" and a close button. Desktop only: it
-	   needs a fine pointer with hover and room beside the panel. The page is
-	   the site's own, loaded same origin in an iframe, so nothing new is
-	   requested from anywhere else. Up to PREVIEW_KEEP pages stay loaded, so
-	   moving between results on the same page does not reload it. */
-	var PREVIEW_DELAY = 260, PREVIEW_MIN_W = 440, PREVIEW_MAX_W = 820, PREVIEW_KEEP = 3, PREVIEW_GAP = 12;
-	var preview = null, pvBody, pvLabel, pvTitle, pvSection, pvPage, pvLoading;
-	var pvFrames = [], pvCurrent = null, pvTimer = null, pvCard = null, pvDoc = null;
-	var pvMedia = window.matchMedia ? window.matchMedia('(hover: hover) and (pointer: fine)') : null;
-
-	var PREVIEW_CSS = [
-		'#header { display: none !important; }',
-		'html { scroll-behavior: auto !important; }',
-		'.sa-pv-target { outline: 3px solid #f2c94c !important; outline-offset: 5px; border-radius: 3px; }'
-	].join('\n');
-
-	function previewAllowed() {
-		if (!pvMedia || !pvMedia.matches || !panel || panel.hidden) return false;
-		return panel.getBoundingClientRect().left - PREVIEW_GAP - 16 >= PREVIEW_MIN_W;
-	}
-
-	function buildPreview() {
-		preview = el('section', { class: 'sa-preview', 'aria-label': 'Page preview', hidden: '' });
-		pvLabel = el('span', { class: 'sa-page' });
-		pvTitle = el('span', { class: 'sa-pv-title' });
-		pvSection = el('a', { class: 'sa-pv-btn sa-pv-main', href: '#', text: 'Go to this section' });
-		pvPage = el('a', { class: 'sa-pv-btn', href: '#', text: 'Open page' });
-		var x = el('button', { type: 'button', class: 'sa-close sa-pv-close', 'aria-label': 'Close preview', html: '&times;' });
-		x.addEventListener('click', hidePreview);
-		pvSection.addEventListener('click', function (e) {
-			if (pvDoc && samePage(pvDoc.u) && pvDoc.u.indexOf('#') > 0) {
-				e.preventDefault();
-				var id = pvDoc.u.split('#')[1];
-				close();
-				jumpTo(id);
-			}
-		});
-		pvPage.addEventListener('click', function (e) {
-			if (pvDoc && samePage(pvDoc.u)) { e.preventDefault(); close(); window.scrollTo(0, 0); }
-		});
-		var head = el('div', { class: 'sa-pv-head' }, [
-			el('div', { class: 'sa-pv-label' }, [pvLabel, pvTitle]),
-			el('div', { class: 'sa-pv-actions' }, [pvSection, pvPage, x])
-		]);
-		pvLoading = el('p', { class: 'sa-pv-loading', text: 'Loading the page…' });
-		pvBody = el('div', { class: 'sa-pv-body' }, [pvLoading]);
-		preview.appendChild(head);
-		preview.appendChild(pvBody);
-		/* keep the pointer's way from the panel to the preview from switching it */
-		preview.addEventListener('mouseenter', function () { clearTimeout(pvTimer); });
-		document.body.appendChild(preview);
-	}
-
-	function placePreview() {
-		var r = panel.getBoundingClientRect();
-		var w = Math.min(PREVIEW_MAX_W, r.left - PREVIEW_GAP - 16);
-		var bottom = Math.max(0, window.innerHeight - r.bottom);
-		var h = Math.min(window.innerHeight - bottom - 16, Math.max(r.height, window.innerHeight * 0.84));
-		preview.style.right = (window.innerWidth - r.left + PREVIEW_GAP) + 'px';
-		preview.style.bottom = bottom + 'px';
-		preview.style.width = w + 'px';
-		preview.style.height = h + 'px';
-	}
-
-	function schedulePreview(d, art) {
-		clearTimeout(pvTimer);
-		if (!previewAllowed()) return;
-		if (pvDoc === d && preview && !preview.hidden) return;
-		pvTimer = setTimeout(function () { showPreview(d, art); }, PREVIEW_DELAY);
-	}
-
-	function showPreview(d, art) {
-		if (!previewAllowed()) return;
-		if (!preview) buildPreview();
-		var parts = d.u.split('#'), path = parts[0], hash = parts[1] || '';
-		pvDoc = d;
-		if (pvCard) pvCard.classList.remove('is-previewed');
-		pvCard = art;
-		if (art) art.classList.add('is-previewed');
-		pvLabel.textContent = d.p;
-		pvTitle.textContent = d.t;
-		pvSection.href = '/' + d.u;
-		pvSection.hidden = !hash;
-		pvPage.href = '/' + path;
-		placePreview();
-		preview.hidden = false;
-
-		var entry = null;
-		for (var i = 0; i < pvFrames.length; i++) if (pvFrames[i].path === path) entry = pvFrames[i];
-		if (!entry) {
-			var frame = el('iframe', { class: 'sa-preview-frame', title: 'Preview: ' + d.p, src: '/' + d.u });
-			entry = { path: path, frame: frame, ready: false, hash: hash };
-			frame.addEventListener('load', function () { frameLoaded(entry); });
-			pvBody.appendChild(frame);
-			pvFrames.push(entry);
-			while (pvFrames.length > PREVIEW_KEEP) {
-				var old = null;
-				for (var k = 0; k < pvFrames.length && !old; k++) if (pvFrames[k] !== entry) old = pvFrames[k];
-				pvFrames.splice(pvFrames.indexOf(old), 1);
-				old.frame.remove();
-			}
-		}
-		entry.hash = hash;
-		pvCurrent = entry;
-		for (var j = 0; j < pvFrames.length; j++) pvFrames[j].frame.classList.toggle('is-on', pvFrames[j] === entry && entry.ready);
-		pvLoading.hidden = entry.ready;
-		if (entry.ready) scrollFrame(entry, false);
-	}
-
-	function frameLoaded(entry) {
-		var doc, win;
-		try { doc = entry.frame.contentDocument; win = entry.frame.contentWindow; } catch (e) { doc = null; }
-		if (!doc || !doc.body) return;
-		/* a later load is a link the visitor followed inside the preview:
-		   tidy that page too, but leave its scroll position alone */
-		var first = !entry.ready;
-		entry.ready = true;
-		try { entry.path = win.location.pathname.replace(/^\//, '') || 'index.html'; } catch (e) {}
-		var style = doc.createElement('style');
-		style.textContent = PREVIEW_CSS;
-		(doc.head || doc.documentElement).appendChild(style);
-		/* floating controls (Top, rail, Contents, Prev / Next, the consent
-		   banner) are no use in a small window and cover the text */
-		var all = doc.body.getElementsByTagName('*');
-		for (var i = 0; i < all.length; i++) {
-			if (win.getComputedStyle(all[i]).position === 'fixed') all[i].style.setProperty('display', 'none', 'important');
-		}
-		if (first && pvCurrent === entry) {
-			entry.frame.classList.add('is-on');
-			pvLoading.hidden = true;
-			scrollFrame(entry, true);
-		}
-	}
-
-	function scrollFrame(entry, first) {
-		var doc, win;
-		try { doc = entry.frame.contentDocument; win = entry.frame.contentWindow; } catch (e) { return; }
-		if (!doc) return;
-		var prev = doc.querySelectorAll('.sa-pv-target');
-		for (var i = 0; i < prev.length; i++) prev[i].classList.remove('sa-pv-target');
-		var target = entry.hash ? doc.getElementById(entry.hash) : null;
-		if (!target) {
-			/* not an element: a hash the page's own script routes (a tool) */
-			if (entry.hash && !first) { try { win.location.hash = entry.hash; } catch (e) {} }
-			else if (!entry.hash) win.scrollTo(0, 0);
-			return;
-		}
-		var p = target.parentNode;
-		while (p && p !== doc.body) {
-			if (p.tagName === 'DETAILS' && !p.open) p.open = true;
-			p = p.parentNode;
-		}
-		target.classList.add('sa-pv-target');
-		function go() { win.scrollTo(0, Math.max(0, target.getBoundingClientRect().top + win.pageYOffset - 16)); }
-		go();
-		/* opened details and late fonts move things; settle once more */
-		setTimeout(go, first ? 400 : 120);
-	}
-
-	function hidePreview() {
-		clearTimeout(pvTimer);
-		if (!preview || preview.hidden) return;
-		preview.hidden = true;
-		pvDoc = null;
-		if (pvCard) pvCard.classList.remove('is-previewed');
-		pvCard = null;
 	}
 
 	/* ------------------------------------------------- deep links */
