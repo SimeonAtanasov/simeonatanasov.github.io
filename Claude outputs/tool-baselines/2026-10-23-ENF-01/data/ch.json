@@ -1,0 +1,106 @@
+{
+ "code": "ch",
+ "country": "Switzerland",
+ "membership": "non-GDPR (contrast)",
+ "dpa": {
+  "name_en": "Federal Data Protection and Information Commissioner",
+  "name_native": "Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (DE); Préposé fédéral à la protection des données et à la transparence (FR)",
+  "abbr": "FDPIC (EDÖB / PFPDT)",
+  "url": "https://www.edoeb.admin.ch/en",
+  "structure": "Single commissioner elected by the United Federal Assembly (Art. 43 FADP) for a four-year term, renewable twice (Art. 44).",
+  "regional": "The FDPIC supervises federal bodies and private persons. Cantonal and communal public bodies are supervised by cantonal data protection authorities under cantonal law (not covered here)."
+ },
+ "law": {
+  "name": "Federal Act on Data Protection (revised FADP, nDSG) of 25 September 2020, SR 235.1, in force 1 September 2023, with the Data Protection Ordinance (DPO, SR 235.11). Switzerland is not bound by the GDPR, though the GDPR can apply extraterritorially to Swiss companies.",
+  "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en"
+ },
+ "complaint": {
+  "how": "A 'report' (Anzeige) via the FDPIC online reporting portals, with separate forms for affected data subjects and for third parties or anonymous reporters; available in German, French, Italian and English. Fee: not confirmed.",
+  "contact_controller_first": "Not confirmed as a requirement. The FDPIC may first contact the controller to remind it of its obligations or ask for a response before opening an investigation.",
+  "deadlines": "No statutory deadlines for reporting or for the FDPIC to act.",
+  "complainant_status": "Not a party. The only party is the federal body or private person under investigation (Art. 52(2) FADP). Data subjects who reported are told of the steps taken and the outcome; third-party reporters are not informed."
+ },
+ "procedure": {
+  "stages": [
+   "Report to the FDPIC (or own-initiative case)",
+   "Informal preliminary enquiries, with voluntary cooperation",
+   "Formal investigation opened ex officio or on a report where there are sufficient indications of a breach (Art. 49); minor breaches may be left aside",
+   "Investigation under the Federal Act on Administrative Procedure (APA), with the investigated party's right to be heard and to inspect files, and powers to order access, questioning of witnesses and expert reports (Art. 50)",
+   "Binding ruling (Verfügung) ordering processing to be modified, suspended or terminated, or data deleted (Art. 51)"
+  ],
+  "decision_maker": "The FDPIC (single commissioner) issues rulings. Fines are decided only in cantonal criminal proceedings, never by the FDPIC.",
+  "limitation": "Criminal prosecution under the FADP is time-barred after five years (Art. 66)."
+ },
+ "fines": {
+  "imposed_by": "Cantonal prosecution authorities and criminal courts (Art. 65), not the FDPIC, which has no fining power. The FDPIC may file a criminal complaint and act as private claimant (Art. 65(2)). Fines up to CHF 250,000 on the responsible natural persons who act wilfully (intent required, negligence not punishable).",
+  "public_bodies": "No. The criminal provisions target private persons; federal bodies cannot be fined and are dealt with by FDPIC rulings only.",
+  "quirks": "Offences: breach of information, access and cooperation duties (Art. 60, on complaint), breach of duties of care such as unlawful foreign disclosure, processor engagement or minimum security (Art. 61, on complaint), breach of professional confidentiality (Art. 62), wilful disregard of an FDPIC ruling or appeal decision (Art. 63). Where identifying the individual would be disproportionate and the fine would not exceed CHF 50,000, the business itself may be ordered to pay (Art. 64)."
+ },
+ "appeal": {
+  "court": "Federal Administrative Court (Bundesverwaltungsgericht) for FDPIC rulings, under the APA (Art. 52 FADP). Criminal fines are challenged in the cantonal criminal procedure.",
+  "deadline": "30 days under the general APA rule (Art. 50 APA), not confirmed in an FADP-specific source.",
+  "suspensive": "Under the general APA rule an appeal has suspensive effect unless withdrawn (Art. 55 APA), not confirmed in an FADP-specific source.",
+  "further": "Federal Supreme Court (Bundesgericht). The FDPIC itself may appeal decisions of the Federal Administrative Court (Art. 52(3)).",
+  "inaction": "No equivalent of GDPR Art. 78(2): reporters are not parties and have no formal remedy against FDPIC inaction (not confirmed whether a supervisory complaint is available)."
+ },
+ "private": {
+  "courts": "Cantonal civil courts, through the personality protection actions of the Civil Code (Arts. 28 ff.) as specified by Art. 32 FADP: injunctions, rectification, prohibition of processing, deletion, and damages or satisfaction.",
+  "damages": "No notable FADP damages awards confirmed.",
+  "collective": "No class actions for damages. Associations can seek injunctive relief only (Civil Procedure Code Art. 89, not confirmed in this packet). The EU Representative Actions Directive does not apply; status of Swiss collective redress reform not confirmed."
+ },
+ "cases": [
+  {
+   "title": "Inkasso-Team AG (Federal Administrative Court A-3891/2025)",
+   "year": "2026",
+   "summary": "On 22 June 2026 the Federal Administrative Court upheld an FDPIC finding that publishing alleged debtors' personal data online to locate them and warn third parties breached personality rights and could not be justified. The judgment is final and the website was taken offline.",
+   "url": "https://www.edoeb.admin.ch/en/fac-confirms-practice-fdpic"
+  },
+  {
+   "title": "Digitec Galaxus AG (old FADP)",
+   "year": "2020-2024",
+   "summary": "Under the old FADP, an investigation opened in March 2020 found profiling and intra-group data sharing breached data protection principles, but the FDPIC could only issue recommendations; the company disagreed yet said it would comply. It illustrates why the 2023 revision gave the FDPIC binding ruling powers.",
+   "url": "https://haerting.ch/en/insights/edoeb-kritisiert-digitec-galaxus-ag-gegen-verletzung-der-datenschutzrechtlichen-grundprinzipien/"
+  }
+ ],
+ "quirks": [
+  "No administrative fines at all: sanctions are criminal fines up to CHF 250,000 aimed at the responsible individuals (managers, employees), imposed by cantonal prosecutors; the company itself can be ordered to pay only up to CHF 50,000 where identifying the individual would be disproportionate (Art. 64).",
+  "Only wilful breaches are punishable, and the main offences (Arts. 60 and 61) are prosecuted only on complaint.",
+  "The FDPIC issues binding rulings since 1 September 2023 but cannot fine; it can file criminal complaints and join proceedings as private claimant.",
+  "Complainants are not parties to FDPIC proceedings, unlike in most GDPR countries.",
+  "The EU has adequacy for Switzerland, but the GDPR does not apply as such; the GDPR may still bind Swiss firms that target EU residents."
+ ],
+ "plain": "You report the problem to the federal commissioner, who can investigate and order the company to change or stop what it is doing, but you are not a party and the commissioner cannot fine anyone. Fines exist only as criminal penalties, up to CHF 250,000 on the person responsible inside the company, and are handled by the cantonal prosecutor, usually only if someone files a criminal complaint. For compensation you sue in the civil courts.",
+ "confidence": "High on the FADP provisions (read from the official Fedlex text) and FDPIC procedure; appeal deadline and suspensive effect rely on general APA rules not checked in this packet, and no concrete criminal fine under the revised FADP was confirmed.",
+ "sources": [
+  {
+   "title": "Federal Act on Data Protection (FADP), SR 235.1, English PDF (Fedlex)",
+   "url": "https://www.fedlex.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/491/20230901/en/pdf-a/fedlex-data-admin-ch-eli-cc-2022-491-20230901-en-pdf-a.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "FDPIC factsheet: Investigation of violations of data protection regulations (October 2024)",
+   "url": "https://www.edoeb.admin.ch/dam/en/sd-web/ekJsT3lqvU35/Merkblatt%20Untersuchung%20von%20Verst%C3%B6ssen%20gegen%20Datenschutzvorschriften_Oktober%202024_EN.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "FDPIC: Report of a data protection violation by third parties",
+   "url": "https://www.edoeb.admin.ch/en/report-of-violation-of-data-protection-regulations-for-third-parties",
+   "source_type": "primary"
+  },
+  {
+   "title": "FDPIC: Reporting portals",
+   "url": "https://www.edoeb.admin.ch/en/reporting-portals",
+   "source_type": "primary"
+  },
+  {
+   "title": "FDPIC: Federal Administrative Court confirms practice of the FDPIC (Inkasso-Team AG)",
+   "url": "https://www.edoeb.admin.ch/en/fac-confirms-practice-fdpic",
+   "source_type": "primary"
+  },
+  {
+   "title": "Härting: FDPIC criticises Digitec Galaxus AG",
+   "url": "https://haerting.ch/en/insights/edoeb-kritisiert-digitec-galaxus-ag-gegen-verletzung-der-datenschutzrechtlichen-grundprinzipien/",
+   "source_type": "secondary"
+  }
+ ]
+}

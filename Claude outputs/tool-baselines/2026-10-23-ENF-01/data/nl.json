@@ -1,0 +1,146 @@
+{
+ "code": "nl",
+ "country": "Netherlands",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Dutch Data Protection Authority",
+  "name_native": "Autoriteit Persoonsgegevens",
+  "abbr": "AP",
+  "url": "https://www.autoriteitpersoonsgegevens.nl",
+  "structure": "Collegial board: the AP consists of a chair and two other members (Art. 7(1) UAVG). Designated as the GDPR supervisory authority by Art. 6 UAVG.",
+  "regional": "Single national authority; no regional DPAs."
+ },
+ "law": {
+  "name": "Uitvoeringswet Algemene verordening gegevensbescherming (UAVG, GDPR Implementation Act), in force 25 May 2018, read with the General Administrative Law Act (Algemene wet bestuursrecht, Awb) for all procedure",
+  "url": "https://wetten.overheid.nl/BWBR0040940/"
+ },
+ "complaint": {
+  "how": "Complaints go to the AP via the complaint form on its website; no fee. Language options and any requirement beyond the form were not confirmed (the AP website blocked automated access).",
+  "contact_controller_first": "Not confirmed from a primary source. In practice the AP expects people to exercise their rights with the organisation first, but no statutory precondition was found in the UAVG.",
+  "deadlines": "No statutory time limit for complaining was found. The AP's decision on a complaint is a decision (besluit) under the Awb, so the general Awb rule applies: the statutory term, or else a reasonable term that defaults to eight weeks (Art. 4:13 Awb). Under Art. 78(2) GDPR the complainant can also go to court if the AP has not informed them of progress or outcome within three months.",
+  "complainant_status": "The complainant is an interested party (belanghebbende) under the Awb and can object to and appeal the AP's handling of the complaint, but is not a party to fine proceedings as such (not confirmed in detail)."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint or ex officio signal, triaged and prioritised by the AP (it does not investigate every complaint)",
+   "Investigation by AP staff, ending in a report (rapport) of findings",
+   "Notice of intention to fine (voornemen) and an opportunity to give a view (zienswijze) under the Awb",
+   "Fine decision (boetebesluit) and/or order subject to a penalty payment (last onder dwangsom) under Arts. 14 and 16 UAVG",
+   "Objection (bezwaar) to the AP itself, decided by a decision on objection (besluit op bezwaar), before any court appeal"
+  ],
+  "decision_maker": "The AP board (chair plus two members) takes sanction decisions; fine levels follow the AP Fining Policy Rules 2023 (Boetebeleidsregels AP 2023, Staatscourant 2023, 34541).",
+  "limitation": "General Awb rule: the power to impose an administrative fine lapses five years after the infringement (Art. 5:45 Awb). Not checked against the current consolidated Awb text."
+ },
+ "fines": {
+  "imposed_by": "The AP itself, by administrative decision (Art. 14 UAVG), up to the GDPR maxima. No court confirmation step.",
+  "public_bodies": "Yes. Art. 18 UAVG lets the AP fine public authorities and bodies up to the same maxima as in Art. 83(4)-(6) GDPR. The Tax Administration (Belastingdienst) was fined EUR 2.75 million (2021) and EUR 3.7 million (2022).",
+  "quirks": "Fines are often combined with orders subject to penalty payments (last onder dwangsom). After the Clearview decision the AP said it was examining whether directors could be held personally liable; outcome not confirmed."
+ },
+ "appeal": {
+  "court": "First, objection (bezwaar) to the AP itself within six weeks (Art. 6:7 Awb). Then appeal (beroep) to a district court (rechtbank), administrative law section; territorial competence follows Art. 8:7 Awb (in practice e.g. Rechtbank Midden-Nederland for VoetbalTV, Rechtbank Amsterdam for KNLTB). The objection stage can be skipped by direct appeal (rechtstreeks beroep) if the AP agrees (Art. 7:1a Awb).",
+  "deadline": "Six weeks for objection, six weeks for appeal to the rechtbank, six weeks for further appeal (Arts. 6:7 and 6:8 Awb).",
+  "suspensive": "Not confirmed. The general Awb rule is that objection and appeal do not suspend a decision (Art. 6:16 Awb); whether a specific rule defers payment of AP fines could not be verified.",
+  "further": "Further appeal (hoger beroep) to the Administrative Jurisdiction Division of the Council of State (Afdeling bestuursrechtspraak van de Raad van State, ABRvS), which is final; it can refer questions to the CJEU.",
+  "inaction": "Under the Awb, if the AP fails to decide on time, the complainant sends a notice of default (ingebrekestelling) and can then appeal to the rechtbank against failure to decide in time (Arts. 6:2 and 6:12 Awb)."
+ },
+ "private": {
+  "courts": "Against private controllers, a data subject can petition the district court (rechtbank) within six weeks of the controller's decision on a rights request, without a lawyer (Art. 35 UAVG). Decisions by public bodies on such requests are decisions under the Awb (Art. 34 UAVG) and go through objection and administrative appeal. Damages claims under Art. 82 GDPR go to the civil courts.",
+  "damages": "No confirmed figures for typical individual awards were found from a primary source.",
+  "collective": "Collective actions, including for damages, under the WAMCA (Art. 3:305a Dutch Civil Code, in force 1 January 2020). On 7 October 2025 the Amsterdam Court of Appeal held in the TikTok case that non-material privacy damages can be claimed collectively, reversing the district court. Other privacy class actions run against Meta (Data Privacy Stichting), Oracle/Salesforce and Google."
+ },
+ "cases": [
+  {
+   "title": "Uber, EUR 290 million (transfers to the US) and EUR 825 million (automated driver deactivation)",
+   "year": "2024 and 2026",
+   "summary": "In August 2024 the AP fined Uber EUR 290 million for transferring European drivers' data to the US without adequate safeguards; Uber objected and the AP has published a decision on objection (outcome not confirmed). On 21 August 2026 the AP fined Uber EUR 825 million for deactivating driver accounts by automated means without meaningful human involvement or adequate information, after complaints originating in France; Uber said it would appeal.",
+   "url": "https://nos.nl/artikel/2627738-uber-schond-rechten-chauffeurs-ap-legt-megaboete-van-825-miljoen-op"
+  },
+  {
+   "title": "VoetbalTV, EUR 575,000 annulled in court",
+   "year": "2019 to 2022",
+   "summary": "The AP fined VoetbalTV EUR 575,000 in 2019, taking the view that a purely commercial interest can never be a legitimate interest. Rechtbank Midden-Nederland annulled the fine and the Council of State upheld the annulment in 2022; the KNLTB case (EUR 525,000) later produced CJEU C-621/22 (4 October 2024) confirming that commercial interests can be legitimate.",
+   "url": "https://www.vandoorne.com/artikelen/voetbaltv-uitspraak-van-raad-van-state-doet-eigenzinnige-normuitleg-van-autoriteit-persoonsgegevens-wel-de-das-om/"
+  },
+  {
+   "title": "Clearview AI (EUR 30.5 million) and Netflix (EUR 4.75 million)",
+   "year": "2024",
+   "summary": "In 2024 the AP fined Clearview AI EUR 30.5 million plus penalty payments for its facial recognition database, and in December 2024 fined Netflix EUR 4.75 million for inadequate transparency, following a noyb complaint. Netflix contested the decision; the court outcome was not confirmed.",
+   "url": "https://noyb.eu/en/noyb-win-dutch-authority-fines-netflix-eu475-million"
+  }
+ ],
+ "quirks": [
+  "Mandatory internal objection (bezwaar) to the AP before the court, unless both sides agree to direct appeal; the AP's 'decision on objection' is what the court reviews.",
+  "Three-tier route: AP objection, district court, then the Council of State as final instance.",
+  "The WAMCA makes the Netherlands a preferred venue for privacy class actions against large platforms, including collective non-material damages after the October 2025 TikTok appeal ruling.",
+  "Since 2024 the AP has become one of the EU's heaviest fining authorities as lead authority for Uber, which has its EU headquarters in Amsterdam."
+ ],
+ "plain": "You complain to the Dutch AP, usually online. If the AP fines a company, the company must first ask the AP itself to reconsider (an objection) within six weeks, and only then go to a district court and, finally, to the Council of State. If you are unhappy with how the AP handled your complaint, the same objection-then-court route is open to you, and for damages you go to the civil courts, alone or through a collective action foundation.",
+ "confidence": "medium: the AP website returned 403 errors, so complaint-form details, the outcome of Uber's objection to the EUR 290 million fine, whether objection suspends payment, and the five-year limitation were not confirmed from primary text.",
+ "sources": [
+  {
+   "title": "UAVG (wetten.overheid.nl, BWBR0040940)",
+   "url": "https://wetten.overheid.nl/BWBR0040940/2020-01-01",
+   "source_type": "primary"
+  },
+  {
+   "title": "UAVG Art. 18, fines on public bodies (wetboek.org)",
+   "url": "https://wetboek.org/uavg/18",
+   "source_type": "secondary"
+  },
+  {
+   "title": "UAVG Art. 35, petition to the court (wetboek.org)",
+   "url": "https://wetboek.org/uavg/35",
+   "source_type": "secondary"
+  },
+  {
+   "title": "AP Fining Policy Rules 2023 (Staatscourant 2023, 34541)",
+   "url": "https://zoek.officielebekendmakingen.nl/stcrt-2023-34541.html",
+   "source_type": "primary"
+  },
+  {
+   "title": "AP: Besluit op bezwaar boete Uber (not retrievable, 403)",
+   "url": "https://autoriteitpersoonsgegevens.nl/documenten/besluit-op-bezwaar-boete-uber",
+   "source_type": "primary"
+  },
+  {
+   "title": "NOS: AP fines Uber EUR 825 million (21 August 2026)",
+   "url": "https://nos.nl/artikel/2627738-uber-schond-rechten-chauffeurs-ap-legt-megaboete-van-825-miljoen-op",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Computable: AP legt Uber recordboete van 825 miljoen op",
+   "url": "https://www.computable.nl/2026/08/21/ap-legt-uber-recordboete-van-825-miljoen-op/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Netkwesties: VoetbalTV and KNLTB fines in court",
+   "url": "https://www.netkwesties.nl/1895/hof-straft-aleid-wolfsen-over-boetes.htm",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Van Doorne: VoetbalTV ruling of the Council of State",
+   "url": "https://www.vandoorne.com/artikelen/voetbaltv-uitspraak-van-raad-van-state-doet-eigenzinnige-normuitleg-van-autoriteit-persoonsgegevens-wel-de-das-om/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "avgboetes.nl: overview of Dutch GDPR fines",
+   "url": "https://www.avgboetes.nl/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "noyb: Dutch authority fines Netflix EUR 4.75 million",
+   "url": "https://noyb.eu/en/noyb-win-dutch-authority-fines-netflix-eu475-million",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DutchNews: Amsterdam appeal court on collective privacy damages (TikTok, October 2025)",
+   "url": "https://www.dutchnews.nl/2025/10/dutch-court-clears-way-for-damages-claims-based-on-privacy/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Epiq: Netherlands class actions, WAMCA and GDPR (2026)",
+   "url": "https://www.epiqglobal.com/en-us/resource-center/articles/netherlands-class-actions-wamca-gdpr-2026",
+   "source_type": "secondary"
+  }
+ ]
+}

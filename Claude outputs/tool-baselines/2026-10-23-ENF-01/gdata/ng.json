@@ -1,0 +1,135 @@
+{
+ "code": "ng",
+ "country": "Nigeria",
+ "membership": "World",
+ "region": "Africa",
+ "dpa": {
+  "name_en": "Nigeria Data Protection Commission",
+  "name_native": "Nigeria Data Protection Commission",
+  "abbr": "NDPC",
+  "url": "https://ndpc.gov.ng",
+  "structure": "Federal commission established by the Nigeria Data Protection Act 2023, succeeding the Nigeria Data Protection Bureau; headed by a National Commissioner. It investigates, issues compliance and enforcement orders and imposes remedial sanctions itself.",
+  "regional": "No regional regulators. In practice the Federal Competition and Consumer Protection Commission (FCCPC) also enforces privacy as a consumer protection matter under the Federal Competition and Consumer Protection Act 2018 and imposed the largest privacy-related fine (Meta, USD 220 million); sector regulators such as the Central Bank also set data rules."
+ },
+ "law": {
+  "name": "Nigeria Data Protection Act 2023 (NDPA), signed and in force June 2023, which replaced the Nigeria Data Protection Regulation 2019 (NDPR) as the main framework; detailed by the NDPA General Application and Implementation Directive (GAID) 2025, reported as issued in March 2025 and effective 19 September 2025.",
+  "url": "https://ndpc.gov.ng"
+ },
+ "complaint": {
+  "how": "A data subject aggrieved by a controller's or processor's conduct may complain to the NDPC (NDPA s.46, as described in secondary sources); the Commission may also act on its own initiative. Complaint form, fee and language were not confirmed.",
+  "contact_controller_first": "Not confirmed.",
+  "deadlines": "Not confirmed.",
+  "complainant_status": "Not confirmed beyond the right to complain and to seek judicial review or damages in court."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint or own-initiative investigation (NDPA s.46); in the Fidelity Bank case the NDPC sent an investigation notice and held a pre-action meeting with the bank.",
+   "Compliance order (s.47) requiring the controller to remedy the breach, which may include a remedial fee or payment.",
+   "Enforcement order and sanction (s.48), including a remedial fine set by reference to annual gross revenue, typically with a 14-day payment deadline in published cases."
+  ],
+  "decision_maker": "The Nigeria Data Protection Commission.",
+  "limitation": "Not confirmed."
+ },
+ "fines": {
+  "imposed_by": "The NDPC imposes remedial fines itself by enforcement order (s.48), so 'regulator'. The FCCPC separately imposes administrative penalties under consumer and competition law, reviewable by the Competition and Consumer Protection Tribunal.",
+  "public_bodies": "The NDPA applies to public and private controllers, but whether the NDPC has fined a public body was not confirmed.",
+  "quirks": "The maximum is the greater of a fixed sum and 2% of annual gross revenue in the preceding financial year: NGN 10 million or 2% for data controllers and processors of major importance, and (per secondary sources) NGN 2 million or 2% for others, so the cap is turnover based. The NDPC has also used negotiated 'remedial fees'. Criminal offences exist for failing to comply with Commission orders, but the penalty details were not confirmed from the statute text."
+ },
+ "appeal": {
+  "court": "The Federal High Court, which has jurisdiction over actions against federal agencies; the NDPA provides for judicial review of Commission orders (reported as s.50, not confirmed from the statute text). Meta's challenge to the NDPC's USD 32.8 million fine was heard there by Justice James Omotosho, who entered the parties' settlement as a consent judgment on 3 November 2025.",
+  "deadline": "Not confirmed (reported in secondary sources as 30 days for judicial review, not verified).",
+  "suspensive": "Not confirmed.",
+  "further": "Court of Appeal and Supreme Court under the ordinary hierarchy. For FCCPC penalties the route is the Competition and Consumer Protection Tribunal, with further appeal to the Court of Appeal.",
+  "inaction": "Not confirmed; judicial review at the Federal High Court is the general route for challenging a federal agency's decision or inaction."
+ },
+ "private": {
+  "courts": "Yes: the NDPA gives a data subject who suffers injury, loss or harm from a breach a right to recover damages in civil proceedings (reported as s.51), and fundamental rights enforcement actions for the constitutional right to privacy are common in Nigeria, so 'yes'. The statute text of this section was not confirmed directly.",
+  "damages": "Not confirmed; no statutory damages amount was confirmed.",
+  "collective": "Representative actions are possible under court rules and civil society groups such as SERAP have threatened litigation on behalf of users, but no collective privacy damages outcome was confirmed."
+ },
+ "cases": [
+  {
+   "title": "FCCPC v Meta Platforms and WhatsApp, USD 220 million",
+   "year": "2024-2025",
+   "summary": "After a joint FCCPC and NDPC investigation into Meta's privacy policies, the FCCPC (the consumer and competition authority, not the NDPC) fined Meta and WhatsApp USD 220 million on 19 July 2024 for exploitative and discriminatory data practices. On 25 April 2025 the Competition and Consumer Protection Tribunal upheld the fine, affirmed the FCCPC's jurisdiction and found Meta's privacy policy offended Nigerian law, awarded the FCCPC USD 35,000 investigation costs, and set aside one order. Whether the fine has been paid or further appealed was not confirmed.",
+   "url": "https://fccpc.gov.ng/violations-tribunal-upholds-fccpcs-220-million-fine-against-meta-whatsapp/"
+  },
+  {
+   "title": "NDPC v Fidelity Bank, NGN 555.8 million",
+   "year": "2024",
+   "summary": "The NDPC opened an investigation in April 2023 into inadequate security and data handling at Fidelity Bank, demanded a NGN 250 million remedial fee in December 2023 and, in August 2024, imposed a NGN 555.8 million fine, about 0.1% of the bank's 2023 gross revenue, payable within 14 days and aggravated by lack of cooperation. The bank publicly denied any breach; no court challenge was confirmed.",
+   "url": "https://www.channelstv.com/2024/08/21/fidelity-bank-fined-n555-8m-by-ndpc-for-data-breach/"
+  },
+  {
+   "title": "NDPC v Meta, USD 32.8 million, set aside by consent judgment",
+   "year": "2025",
+   "summary": "In February 2025 the NDPC fined Meta USD 32.8 million for behavioural advertising without consent and unlawful cross-border transfers. Meta challenged it in the Federal High Court, Abuja, and on 3 November 2025 Justice James Omotosho entered the parties' settlement as a consent judgment. According to the leaked agreement, the NDPC's final orders, including the fine, were set aside in exchange for general compliance commitments and payment of the NDPC's legal fees.",
+   "url": "https://www.premiumtimesng.com/news/headlines/873350-exclusive-inside-nigerias-deal-to-write-off-32-8-million-fine-against-meta.html"
+  }
+ ],
+ "quirks": [
+  "The largest privacy fine in Nigeria came from the consumer and competition authority (FCCPC), not the data protection regulator, and was reviewed by a specialist tribunal rather than a court.",
+  "The fine formula is the greater of a fixed sum and 2% of gross revenue, so there is effectively no upper ceiling for large firms.",
+  "The NDPC openly negotiates: it has demanded 'remedial fees' before formal fines, and its USD 32.8 million Meta fine was set aside under a court-endorsed settlement in November 2025.",
+  "Much of the operational detail of the NDPA sits in a regulator-issued directive (the GAID 2025) rather than in the Act."
+ ],
+ "plain": "You complain to the Nigeria Data Protection Commission, which can investigate, order the company to fix the problem and impose a fine linked to its revenue. A company that disagrees goes to the Federal High Court, and you can also sue for damages yourself. Separately, the consumer protection authority can fine companies for unfair data practices, with appeals to a specialist tribunal.",
+ "map": {
+  "who_penalises": "regulator",
+  "cap": "turnover",
+  "private_action": "yes"
+ },
+ "confidence": "low to medium: I could not retrieve the NDPA 2023 or the GAID 2025 text, so section numbers (s.46-s.51), the NGN 2 million standard tier, the judicial review deadline, the GAID dates and the criminal penalties come from secondary sources or are unconfirmed; the case facts are sourced.",
+ "sources": [
+  {
+   "title": "FCCPC: Tribunal upholds FCCPC's USD 220 million fine against Meta/WhatsApp",
+   "url": "https://fccpc.gov.ng/violations-tribunal-upholds-fccpcs-220-million-fine-against-meta-whatsapp/",
+   "source_type": "primary"
+  },
+  {
+   "title": "Nairametrics: Tribunal orders Meta to pay fine and USD 35,000 in 60 days",
+   "url": "https://nairametrics.com/2025/04/25/tribunal-orders-meta-whatsapp-to-pay-fccpc-220-million-fine-35000-in-60-days-for-discriminatory-practices/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Concurrences: FCCPC imposes USD 220m fine on WhatsApp/Meta",
+   "url": "https://www.concurrences.com/en/bulletin/news-issues/july-2024/the-nigerian-competition-authority-imposes-a-220m-fine-on-an-instant-messaging",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Techpoint Africa: Meta, NDPC agree out-of-court settlement of USD 32.8 million fine",
+   "url": "https://techpoint.africa/news/meta-ndpc-settlement-fine/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Channels TV: Fidelity Bank fined N555.8m by NDPC",
+   "url": "https://www.channelstv.com/2024/08/21/fidelity-bank-fined-n555-8m-by-ndpc-for-data-breach/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Infusion Lawyers: NDPC's N555.8 million fine against Fidelity Bank",
+   "url": "https://infusionlawyers.com/2024/08/31/ndpcs-555-8-million-fine-against-fidelity-bank-over-alleged-data-privacy-violation-insights-and-lessons/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "TheCable: Fidelity Bank disputes NDPC's allegations",
+   "url": "https://www.thecable.ng/n555m-fine-fidelity-bank-disputes-ndpcs-allegations-says-no-extant-law-was-breached/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Arise TV: NDPC seeks amicable resolution with Meta",
+   "url": "https://www.arise.tv/ndpc-seeks-amicable-resolution-with-meta-over-220-million-data-breach-fine/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "SERAP: Pay USD 220m fine, compensate victims or face legal action",
+   "url": "https://serap-nigeria.org/2025/04/27/privacy-rights-pay-220m-fine-compensate-victims-or-face-legal-action-serap-tells-zuckerberg-meta/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Nigeria Data Protection Commission website",
+   "url": "https://ndpc.gov.ng",
+   "source_type": "primary"
+  }
+ ]
+}

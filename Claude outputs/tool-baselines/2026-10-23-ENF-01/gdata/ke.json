@@ -1,0 +1,172 @@
+{
+ "code": "ke",
+ "country": "Kenya",
+ "membership": "World",
+ "region": "Africa",
+ "dpa": {
+  "name_en": "Office of the Data Protection Commissioner",
+  "name_native": "Office of the Data Protection Commissioner",
+  "abbr": "ODPC",
+  "url": "https://www.odpc.go.ke",
+  "structure": "State office headed by the Data Commissioner, created by the Data Protection Act 2019. It registers controllers and processors, determines complaints, issues enforcement and penalty notices, and orders compensation to complainants in its determinations.",
+  "regional": "No regional regulators. Criminal offences under the Act are tried in the ordinary criminal courts; the High Court also hears constitutional privacy petitions under Article 31 of the Constitution."
+ },
+ "law": {
+  "name": "Data Protection Act, 2019 (Act No. 24 of 2019), commenced 25 November 2019; supported by the Data Protection (Complaints Handling Procedure and Enforcement) Regulations, 2021 and the other 2021 regulations. No major amendment to the enforcement chapter was confirmed.",
+  "url": "https://new.kenyalaw.org/akn/ke/act/2019/24/eng@2022-12-31"
+ },
+ "complaint": {
+  "how": "A data subject aggrieved by a decision of any person under the Act may lodge a complaint with the Data Commissioner orally or in writing; oral complaints are recorded in writing by the Office (s.56). The detailed form and channels are set by the Complaints Handling Procedure and Enforcement Regulations 2021; no fee was confirmed.",
+  "contact_controller_first": "Not required by s.56 as far as confirmed; whether the 2021 Regulations require prior contact with the controller was not confirmed.",
+  "deadlines": "The ODPC must investigate and conclude a complaint within 90 days (s.56(5)). No time limit for filing was confirmed.",
+  "complainant_status": "The complainant is a party to the determination and can be awarded compensation by the ODPC itself (s.65). Protections apply to natural persons, not companies, according to ODPC determinations."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint (s.56) or own-initiative inquiry; the ODPC notifies the respondent and investigates, gathering its own evidence rather than relying only on the parties' submissions (s.57).",
+   "Determination within 90 days, which may find liability, order remedial action and award compensation to the complainant (s.65).",
+   "Enforcement notice specifying the contravention and remedial measures, with at least 21 days to comply and a statement of the right of appeal (s.58).",
+   "Penalty notice if the ODPC is satisfied the person has failed or is failing as described in s.58, with the amount set by reference to listed aggravating and mitigating factors (s.62, s.63)."
+  ],
+  "decision_maker": "The Data Commissioner.",
+  "limitation": "Not confirmed."
+ },
+ "fines": {
+  "imposed_by": "The Data Commissioner imposes administrative fines directly by penalty notice (s.62), so 'regulator'. Penalty notices have typically followed failure to comply with an enforcement notice.",
+  "public_bodies": "The Act applies to public bodies as controllers, but whether the ODPC has fined a public body was not confirmed.",
+  "quirks": "The cap is up to KES 5 million or, for an undertaking, 1% of the previous year's annual turnover, whichever is lower (s.63), so the turnover figure can only reduce the maximum, which is why the cap is classed as 'fixed'. Separately, ignoring an enforcement notice is a criminal offence (fine up to KES 5 million or up to 2 years' imprisonment, s.58(3)), and the general penalty for other offences is a fine up to KES 3 million or up to 10 years' imprisonment, plus forfeiture or stop orders (s.73)."
+ },
+ "appeal": {
+  "court": "The High Court: a person against whom any administrative action is taken by the Data Commissioner, including enforcement and penalty notices, may appeal to it (s.64). In 2025 the High Court dismissed a lender's constitutional petition against its penalty because it had bypassed this statutory appeal.",
+  "deadline": "No deadline is stated in s.64; a specific deadline in the regulations was not confirmed.",
+  "suspensive": "Not confirmed.",
+  "further": "Court of Appeal and then the Supreme Court under the ordinary hierarchy. The High Court has held it will interfere with the ODPC's assessment of compensation only if it was arrived at injudiciously (Muthoni v Solpia, as reported).",
+  "inaction": "The complainant can appeal an adverse determination to the High Court under s.64 or, where there is no decision, seek judicial review; a constitutional petition is possible but courts expect the statutory route to be used first."
+ },
+ "private": {
+  "courts": "Yes. A person who suffers damage by a contravention is entitled to compensation from the controller or processor (s.65); this is usually obtained through an ODPC complaint, and civil claims or constitutional petitions in the High Court are also possible, so 'yes'.",
+  "damages": "Damage includes financial loss and non-financial damage, including distress (s.65). The ODPC itself awards compensation in its determinations: an independent tracker counts over 180 determinations with compensation orders and a median award of about KES 350,000 (for example KES 450,000 against Whitepath in 2024).",
+  "collective": "No class action mechanism in the Act was confirmed; representative constitutional petitions under the Constitution are possible in principle but no data protection outcome was confirmed."
+ },
+ "cases": [
+  {
+   "title": "Oppo Kenya, KES 5 million (first penalty notice)",
+   "year": "2022",
+   "summary": "Oppo used a complainant's photo on its Instagram account without consent. After it failed to comply with an enforcement notice of 3 November 2022, the ODPC issued its first penalty notice on 21 December 2022 for KES 5 million, the statutory maximum, under ss.62 and 63.",
+   "url": "https://www.odpc.go.ke/wp-content/uploads/2024/02/Office-Of-The-Data-Protection-Commissioner-Issues-A-Penalty-Notice-Against-Oppo-Kenya.pdf"
+  },
+  {
+   "title": "Roma School, Mulla Pride and Casa Vera Lounge, KES 9.375 million in total",
+   "year": "2023",
+   "summary": "In September 2023 the ODPC fined Roma School KES 4.55 million for posting pupils' pictures without parental consent, digital lender Mulla Pride (KeCredit and FairKash apps) KES 2.975 million for using contacts to send threatening messages, and Casa Vera Lounge KES 1.85 million for posting a customer's image without consent. Mulla Pride challenged its penalty by constitutional petition; in 2025 the High Court (Justice Chacha Mwita) dismissed it because the lender should have used the statutory appeal under s.64.",
+   "url": "https://www.kenyanews.go.ke/odpc-issues-penalty-notices-totaling-sh-9375000/"
+  },
+  {
+   "title": "Whitepath Company and Regus Kenya penalty notices; Whitepath compensation order",
+   "year": "2023-2024",
+   "summary": "In April 2023 the ODPC issued penalty notices to digital lender Whitepath (about 150 complaints of accessing borrowers' phone contacts and sending unsolicited messages) and Regus Kenya (repeated spam), reported at about USD 37,000 each. In a separate 2024 determination (ODPC/COMP/1764/2024) the ODPC ordered Whitepath to pay a complainant KES 450,000 compensation under s.65.",
+   "url": "https://cioafrica.co/odpc-fines-two-firms-for-breaching-data-laws/"
+  }
+ ],
+ "quirks": [
+  "The regulator itself orders the company to pay compensation to the individual complainant, something EU DPAs cannot do; this is the most common outcome of ODPC determinations.",
+  "The fine cap is the lower of KES 5 million and 1% of turnover, so large companies face a small fixed ceiling while small companies may face less.",
+  "The ODPC must conclude complaints within 90 days by statute (s.56(5)).",
+  "Ignoring an enforcement notice is a criminal offence with up to 2 years' imprisonment, separate from the administrative penalty (s.58(3)).",
+  "Courts insist on the statutory appeal to the High Court under s.64; constitutional petitions that bypass it have been dismissed."
+ ],
+ "plain": "You complain to the Data Commissioner, in writing or even orally, and the Office must decide within 90 days. If it finds a breach it can order the company to fix it, order it to pay you compensation directly, and fine it up to KES 5 million if it ignores the order. Either side can appeal to the High Court.",
+ "map": {
+  "who_penalises": "regulator",
+  "cap": "fixed",
+  "private_action": "yes"
+ },
+ "confidence": "medium: statutory text was read through an independent tracker quoting Kenya Law rather than the Gazette; I could not confirm the appeal deadline, whether an appeal suspends a penalty, the exact Whitepath and Regus penalty amounts in KES, or the date of the Roma School notices beyond secondary reports (one government news page dates them December 2025, others September 2023).",
+ "sources": [
+  {
+   "title": "Data Protection Act 2019, Kenya Law consolidated text",
+   "url": "https://new.kenyalaw.org/akn/ke/act/2019/24/eng@2022-12-31",
+   "source_type": "primary"
+  },
+  {
+   "title": "dataprotection.co.ke: s.56 Complaints",
+   "url": "https://dataprotection.co.ke/law/section-56",
+   "source_type": "secondary"
+  },
+  {
+   "title": "dataprotection.co.ke: s.58 Enforcement notices",
+   "url": "https://dataprotection.co.ke/law/section-58",
+   "source_type": "secondary"
+  },
+  {
+   "title": "dataprotection.co.ke: s.62 Penalty notices",
+   "url": "https://dataprotection.co.ke/law/section-62",
+   "source_type": "secondary"
+  },
+  {
+   "title": "dataprotection.co.ke: s.63 Administrative fines",
+   "url": "https://dataprotection.co.ke/law/section-63",
+   "source_type": "secondary"
+  },
+  {
+   "title": "dataprotection.co.ke: s.64 Right of appeal",
+   "url": "https://dataprotection.co.ke/law/section-64",
+   "source_type": "secondary"
+  },
+  {
+   "title": "dataprotection.co.ke: s.65 Compensation",
+   "url": "https://dataprotection.co.ke/law/section-65",
+   "source_type": "secondary"
+  },
+  {
+   "title": "dataprotection.co.ke: s.73 General penalty",
+   "url": "https://dataprotection.co.ke/law/section-73",
+   "source_type": "secondary"
+  },
+  {
+   "title": "ODPC/COMP/1764/2024 Whitepath Company Limited",
+   "url": "https://dataprotection.co.ke/determinations/odpc-comp-1764-2024",
+   "source_type": "secondary"
+  },
+  {
+   "title": "ODPC: penalty notice against Oppo Kenya",
+   "url": "https://www.odpc.go.ke/wp-content/uploads/2024/02/Office-Of-The-Data-Protection-Commissioner-Issues-A-Penalty-Notice-Against-Oppo-Kenya.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "Kenya News Agency: ODPC issues penalty notices totalling Sh 9,375,000",
+   "url": "https://www.kenyanews.go.ke/odpc-issues-penalty-notices-totaling-sh-9375000/",
+   "source_type": "primary"
+  },
+  {
+   "title": "CIO Africa: ODPC fines two firms (Whitepath, Regus)",
+   "url": "https://cioafrica.co/odpc-fines-two-firms-for-breaching-data-laws/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "CIPIT case law library: penalty notices",
+   "url": "https://caselawlibrary.cipit.org/notices/detail/penalty-notices",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Kenyan Wall Street: Court dismisses digital lender's suit over KSh 2.98mn fine",
+   "url": "https://kenyanwallstreet.com/court-dismisses-digital-lenders-suit-over-ksh-2-98mn-data-protection-fine/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Mutie Advocates: High Court deference to ODPC damages awards (Muthoni v Solpia)",
+   "url": "https://mutie-advocates.com/the-high-court-has-no-power-to-interfere-with-the-odpcs-discretion-in-awarding-damages-unless-the-award-was-arrived-at-injudiciously/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Bowmans: ODPC decisions in the determination of complaints",
+   "url": "https://bowmanslaw.com/insights/kenya-the-office-of-the-data-protection-commissioner-issues-decisions-in-the-determination-of-complaints/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "ALN: Kenya's evolving data protection framework",
+   "url": "https://aln.africa/insight/when-yes-means-no-a-look-at-kenyas-evolving-data-protection-framework/",
+   "source_type": "secondary"
+  }
+ ]
+}

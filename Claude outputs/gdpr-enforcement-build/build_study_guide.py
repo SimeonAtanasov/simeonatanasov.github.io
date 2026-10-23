@@ -233,7 +233,7 @@ def build_md():
     L.append("- Each country was researched from its implementing act, the authority's pages and published decisions; law firm and press sources were used to locate facts. A second, independent pass re-read the cited sources and corrected %d points." % P.CORRECTIONS)
     L.append("- Several official law portals refuse automated reading, so some article numbers rest on consolidated copies or translations.")
     L.append("- Appeal deadlines and suspensive effect are the least certain fields, because many countries set them in general administrative procedure law.")
-    L.append("- Court cases move. Everything after %s is not reflected. The web page carries the source list for every country." % P.CHECKED)
+    L.append("- Court cases move. Pending cases, bills and officeholders were rechecked on %s; anything after that is not reflected. The web page carries the source list for every country." % P.RECHECKED)
     L.append("")
     L.extend(world_part())
     s = link_md("\n".join(L))

@@ -12,7 +12,7 @@
   "regional": "States and territories have their own regulators for state public sector bodies (for example NSW and Victorian information commissioners). Sector schemes also matter in practice: external dispute resolution schemes for finance, telecoms and utilities must usually be used before the OAIC, and the ACCC enforces consumer law against misleading privacy claims."
  },
  "law": {
-  "name": "Privacy Act 1988 (Cth), with the 13 Australian Privacy Principles (APPs) and the Notifiable Data Breaches scheme (Part IIIC); amended by the Privacy Legislation Amendment (Enforcement and Other Measures) Act 2022 (higher penalties, in force 13 December 2022) and the Privacy and Other Legislation Amendment Act 2024 (in force 10 December 2024; statutory tort from 10 June 2025; automated decision transparency duties from 10 December 2026)",
+  "name": "Privacy Act 1988 (Cth), with the 13 Australian Privacy Principles (APPs) and the Notifiable Data Breaches scheme (Part IIIC); amended by the Privacy Legislation Amendment (Enforcement and Other Measures) Act 2022 (higher penalties, in force 13 December 2022) and the Privacy and Other Legislation Amendment Act 2024 (in force 10 December 2024; statutory tort from 10 June 2025; automated decision transparency duties from 10 December 2026). A tranche 2 exposure draft, the Privacy Amendment (Personal Data Protection) Bill 2026, was released for consultation on 31 August 2026 (closing 18 September 2026); it leaves out a direct right of action and changes to the small business exemption, and had not been introduced to Parliament by October 2026",
   "url": "https://www.legislation.gov.au/C2004A03712/latest"
  },
  "complaint": {
@@ -65,7 +65,7 @@
   {
    "title": "OAIC v Medibank and OAIC v Optus",
    "year": "2024-2025",
-   "summary": "The OAIC filed Federal Court civil penalty proceedings against Medibank on 5 June 2024 (9.7 million people, APP 11.1, up to AUD 2.22 million per contravention) and against Optus on 8 August 2025 (about 9.5 million people). Both were pending as at the latest sources found; outcomes not confirmed.",
+   "summary": "The OAIC filed Federal Court civil penalty proceedings against Medibank on 5 June 2024 (9.7 million people, APP 11.1, up to AUD 2.22 million per contravention) and against Optus on 8 August 2025 (about 9.5 million people). Both were still pending in October 2026; outcomes not confirmed.",
    "url": "https://www.oaic.gov.au/news/media-centre/oaic-takes-civil-penalty-action-against-medibank"
   }
  ],

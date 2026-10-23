@@ -40,7 +40,7 @@
   "deadline": "Objection within 14 working days of the sanction decision (GR 33/2026, in force 16 January 2027); court deadlines not confirmed.",
   "suspensive": "Not confirmed.",
   "further": "State Administrative High Court and Supreme Court on cassation (general administrative law route; not confirmed specifically for PDP cases).",
-  "inaction": "A Constitutional Court petition (case 236/PUU-XXII/2024) seeking to compel the government to set up the agency was pending as of September 2026. No other remedy for regulator inaction confirmed."
+  "inaction": "A Constitutional Court petition (case 236/PUU-XXIV/2026, registered June 2026) asks the Court to require the agency to be set up within two years; it was heard on 27 July 2026 and no decision was found as of October 2026. An earlier petition (153/PUU-XXIV/2026) was declared inadmissible on 17 June 2026. No other remedy for regulator inaction confirmed."
  },
  "private": {
   "courts": "Yes: data subjects have a right to sue and receive compensation for breaches (Article 12), through the District Courts, arbitration or other dispute resolution (Article 64), and general tort liability under the Civil Code also applies.",
@@ -61,10 +61,10 @@
    "url": "https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022"
   },
   {
-   "title": "Constitutional Court case 236/PUU-XXII/2024 on the missing agency",
+   "title": "Constitutional Court case 236/PUU-XXIV/2026 on the missing agency",
    "year": "pending (2026)",
-   "summary": "A petition that could push the executive to establish the supervisory agency remained pending as of September 2026; no administrative PDP fine has been imposed anywhere because the agency does not exist.",
-   "url": "https://www.nusantaradfdl.com/insights/indonesia-personal-data-protection-law-gr-33-2026/"
+   "summary": "A petition registered in June 2026 asks the Court to require the supervisory agency to be set up within two years; at the 27 July 2026 hearing the government said the draft Presidential Regulation had gone to the President on 20 May 2026, and no decision was found as of October 2026; no administrative PDP fine has been imposed anywhere because the agency does not exist.",
+   "url": "https://en.mkri.id/news/details/2026-07-27/Personal_Data_Protection_Agency_Under_Discussion"
   }
  ],
  "quirks": [

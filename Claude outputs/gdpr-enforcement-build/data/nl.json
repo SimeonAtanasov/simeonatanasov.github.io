@@ -34,7 +34,7 @@
  "fines": {
   "imposed_by": "The AP itself, by administrative decision (Art. 14 UAVG), up to the GDPR maxima. No court confirmation step.",
   "public_bodies": "Yes. Art. 18 UAVG lets the AP fine public authorities and bodies up to the same maxima as in Art. 83(4)-(6) GDPR. The Tax Administration (Belastingdienst) was fined EUR 2.75 million (2021) and EUR 3.7 million (2022).",
-  "quirks": "Fines are often combined with orders subject to penalty payments (last onder dwangsom). After the Clearview decision the AP said it was examining whether directors could be held personally liable; outcome not confirmed."
+  "quirks": "Fines are often combined with orders subject to penalty payments (last onder dwangsom). Since 1 September 2026 the AP must publish its sanction decisions, not earlier than ten working days after notifying the offender and not while an interim relief request is pending (Art. 21b UAVG, inserted by the Verzamelwet gegevensbescherming, Stb. 2026, 154). After the Clearview decision the AP said it was examining whether directors could be held personally liable; outcome not confirmed."
  },
  "appeal": {
   "court": "First, objection (bezwaar) to the AP itself within six weeks (Art. 6:7 Awb). Then appeal (beroep) to a district court (rechtbank), administrative law section; territorial competence follows Art. 8:7 Awb (in practice e.g. Rechtbank Midden-Nederland for VoetbalTV, Rechtbank Amsterdam for KNLTB). The objection stage can be skipped by direct appeal (rechtstreeks beroep) if the AP agrees (Art. 7:1a Awb).",

@@ -228,7 +228,7 @@ CHECKER_JS = r"""
 					items.push(item('art-72', 'Articles 72 and 73', 'post-market monitoring and serious incident reporting'));
 					items.push(item('annex-4', 'Annex IV', 'technical documentation'));
 					if (role === 'manufacturer') items.push(item('art-25', 'Article 25(3)', 'the product manufacturer takes on the provider obligations'));
-					steps.push('Map the system against Articles 8 to 15 now and plan the conformity assessment; harmonised standards are still in preparation (see Standards in Part 2).');
+					steps.push('Map the system against Articles 8 to 15 now and plan the conformity assessment; the first harmonised standard, EN 18286 on quality management, was cited on 14 October 2026 and the others are still in preparation (see Standards in Part 2).');
 				} else if (role === 'deployer') {
 					items.push(item('art-26', 'Article 26', 'deployer obligations: instructions, human oversight, input data, monitoring, logs, worker information, informing affected persons'));
 					if (A.fria === 'yes') items.push(item('art-27', 'Article 27', 'fundamental rights impact assessment before first use'));

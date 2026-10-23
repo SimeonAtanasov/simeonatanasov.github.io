@@ -147,13 +147,13 @@ def main_html(corrections):
 <ul class="ge-quirks">
 <li>Many statute portals refuse automated reading, so some section numbers rest on consolidated copies or secondary summaries. The source lists say which.</li>
 <li>Appeal deadlines and whether an appeal holds payment are the least certain fields, as on the European page.</li>
-<li>Laws in transition are described as they stood on %s. Anything after that date is not reflected.</li>
+<li>Laws in transition, pending cases and bills were rechecked on %s. Anything after that date is not reflected.</li>
 <li>The map and the comparison compress paragraphs into one label. Read the section before relying on one.</li>
 </ul>
 <p class="ge-note">Related on this site: <a href="gdpr-enforcement.html">GDPR enforcement in Europe</a> for the EEA, the <a href="cookie-digest.html">Cookie Compliance Digest</a> for cookie and tracking rules in these jurisdictions, and the <a href="practical-privacy.html">Practical Privacy</a> playbook.</p>
 </section></div>''' % (len(W.ORDER), CHECKED, models_block(), diff, P.tile_map(), P.legend(W.MODELS, "model"),
                        P.legend(W.PUBLIC, "public", True), P.legend(W.SUSP, "susp", True), compare(), region_btns, cards,
-                       corrections, CHECKED)
+                       corrections, P.RECHECKED)
 
 
 DESC = "Who can fine for a privacy breach outside Europe, where the courts come in, and the enforcement route in 23 jurisdictions from the United States to Australia."

@@ -1,0 +1,95 @@
+{
+ "code": "mx",
+ "country": "Mexico",
+ "membership": "World",
+ "region": "Americas",
+ "dpa": {
+  "name_en": "Anti-Corruption and Good Government Secretariat",
+  "name_native": "Secretaría Anticorrupción y Buen Gobierno",
+  "abbr": "SABG",
+  "url": "https://www.gob.mx/buengobierno",
+  "structure": "A federal government ministry (secretaría) of the executive branch, not an independent authority. It took over private-sector data protection on 21 March 2025 when the constitutionally autonomous INAI was abolished following the constitutional reform published on 20 December 2024 (art. 2 fr. XV and the thirteenth transitional article of the 2025 decree).",
+  "regional": "No regional authorities for the private sector. Public-sector data protection is governed by a separate general law (the 2025 General Law on Protection of Personal Data Held by Obligated Subjects) and federal public-sector transparency functions passed to 'Transparencia para el Pueblo'; its enforcement details were not confirmed. Consumer (Profeco) and financial (Condusef) authorities run do-not-call style registries and handle related complaints."
+ },
+ "law": {
+  "name": "Ley Federal de Protección de Datos Personales en Posesión de los Particulares (Federal Law on Protection of Personal Data Held by Private Parties), published in the Diario Oficial de la Federación on 20 March 2025 and in force 21 March 2025, replacing the 2010 law. The executive had 90 days to adapt the implementing regulation; whether a new regulation has been issued was not confirmed.",
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+ },
+ "complaint": {
+  "how": "By filing a request for protection of rights (solicitud de protección de derechos) with the Secretariat, which may supply deficiencies in the complaint without altering the facts. Fee and language details were not confirmed; Spanish is the working language.",
+  "contact_controller_first": "Yes. The data subject must first submit an ARCO request (access, rectification, cancellation, objection) to the controller, which has 20 days to answer and 15 more to implement (art. 31). The protection request is filed within 15 days of the controller's answer, or after the answer deadline expires if there is none (art. 40).",
+  "deadlines": "The Secretariat must decide within 50 days of the request, extendable once for an equal period (art. 42). If the request is incomplete the complainant gets one chance to correct it within 5 days.",
+  "complainant_status": "The data subject is a party to the protection-of-rights procedure, which is adversarial: the controller has 15 days to respond and submit evidence, and the Secretariat can attempt conciliation and record a binding agreement."
+ },
+ "procedure": {
+  "stages": [
+   "ARCO request to the controller (20 days to answer, art. 31).",
+   "Protection-of-rights procedure before the Secretariat (arts. 40 to 50): admission, controller response within 15 days, possible conciliation, decision within 50 days confirming, revoking or modifying the controller's answer or ordering delivery of the data.",
+   "Verification procedure (art. 54), opened on the Secretariat's own initiative or at a party's request, to check compliance generally.",
+   "Sanctioning procedure (arts. 56 to 57): the controller has 15 days to submit evidence and arguments; decision within 50 days, extendable once.",
+   "Publication of decisions in redacted public versions (art. 52)."
+  ],
+  "decision_maker": "The Secretaría Anticorrupción y Buen Gobierno (the internal unit that decides was not confirmed).",
+  "limitation": "Not confirmed; no prescription rule for enforcement was found in the 2025 law."
+ },
+ "fines": {
+  "imposed_by": "The Secretariat imposes sanctions itself by administrative decision (art. 56), so who_penalises is regulator. Fines are fixed ranges in UMA (Unidad de Medida y Actualización): 100 to 160,000 UMA for the infractions in art. 58 fr. II to VII, 200 to 320,000 UMA for fr. VIII to XVIII, and an additional 100 to 320,000 UMA for persistent infringement (art. 59); amounts may be doubled for sensitive data. The first infraction (failing to answer an ARCO request) is met with a warning (apercibimiento).",
+  "public_bodies": "No: the federal law covers private parties only. Public bodies fall under the separate general law for obligated subjects, where breaches lead to administrative responsibility of officials rather than fines on the body (not confirmed in detail).",
+  "quirks": "Fine criteria include the nature of the data, whether the refusal was obviously unfounded, intent, the offender's economic capacity and recidivism. Criminal offences exist: 3 months to 3 years' prison for an authorised person who causes a security breach for profit (art. 62), 6 months to 5 years for processing data through deceit for profit (art. 63), doubled for sensitive data (art. 64). At 2025 UMA values the top ordinary fine is roughly MXN 36 million (value not confirmed against INEGI)."
+ },
+ "appeal": {
+  "court": "Constitutional amparo before specialised federal district judges and circuit tribunals (art. 51: 'Contra las resoluciones de la Secretaría, los particulares podrán promover juicio de amparo'). This replaced the former route of nullity proceedings before the Federal Administrative Court.",
+  "deadline": "Not confirmed; the general Amparo Law time limit is reported as 15 working days but was not checked for this regime.",
+  "suspensive": "Not confirmed; suspension would depend on the amparo court granting a suspension order.",
+  "further": "Review (recurso de revisión) of amparo judgments to the collegiate circuit courts and, in some cases, the Supreme Court (not confirmed for the specialised courts). The twentieth transitional article required the judiciary to set up specialised district courts and collegiate circuit tribunals within 120 calendar days and suspended procedural time limits in pending data protection and transparency amparo cases for 180 calendar days.",
+  "inaction": "Not confirmed. Because the regulator is a ministry, inaction would in principle be challenged by amparo; the law sets no specific remedy."
+ },
+ "private": {
+  "courts": "Limited: art. 53 preserves the data subject's right to seek compensation under the applicable civil or criminal law, so damages claims go to the ordinary civil courts under general civil liability (moral damage) rules rather than a specific privacy-law cause of action.",
+  "damages": "No statutory damages; compensation under general civil law rules.",
+  "collective": "Federal collective actions exist under the Federal Code of Civil Procedure, mainly for consumer and environmental matters; their use for data protection was not confirmed."
+ },
+ "cases": [
+  {
+   "title": "Abolition of INAI and transfer of data protection to a ministry",
+   "year": "2024-2025",
+   "summary": "The constitutional reform published on 20 December 2024 abolished the autonomous INAI, which was dissolved when the new transparency and data protection laws, published on 20 March 2025, entered into force on 21 March 2025. INAI's files passed to the Secretaría Anticorrupción y Buen Gobierno within 20 working days under the decree's thirteenth transitional article.",
+   "url": "https://en.wikipedia.org/wiki/National_Institute_of_Transparency_for_Access_to_Information_and_Personal_Data_Protection"
+  }
+ ],
+ "quirks": [
+  "The data protection regulator is now an ordinary government ministry focused on anti-corruption, not an independent authority; this is a sharp departure from the GDPR independence model.",
+  "Challenges to the regulator's decisions go straight to constitutional amparo before specialised federal judges, rather than to an administrative court.",
+  "Fines are set in UMA units, a reference value updated yearly, and are fixed ranges, not turnover-based; they can be doubled where sensitive data is involved.",
+  "The complaint route is tightly time-limited: the data subject has only 15 days after the controller's answer to go to the regulator."
+ ],
+ "plain": "In Mexico you must first send your request to the company, which has 20 days to reply. If you are unhappy, you have 15 days to file a complaint with the federal Anti-Corruption and Good Government Secretariat, which tries to settle the matter and otherwise decides within about 50 days and can fine the company. Either side can then challenge the decision through a constitutional amparo before specialised federal judges, and compensation must be claimed separately in the civil courts.",
+ "map": {
+  "who_penalises": "regulator",
+  "cap": "fixed",
+  "private_action": "limited"
+ },
+ "confidence": "medium: the statute text was read directly, but the Secretariat's complaint portal, any new implementing regulation, the Secretariat's website URL (gob.mx/buengobierno returned 403), any post-2025 sanctions, the amparo deadlines and public-sector enforcement details could not be confirmed.",
+ "sources": [
+  {
+   "title": "Ley Federal de Protección de Datos Personales en Posesión de los Particulares (Chamber of Deputies, DOF 20 March 2025)",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "Garrigues: Mexico's new federal data protection law eliminates INAI",
+   "url": "https://www.garrigues.com/es_ES/noticia/mexico-nueva-ley-federal-proteccion-datos-personales-posesion-particulares-introduce",
+   "source_type": "secondary"
+  },
+  {
+   "title": "EY Mexico: Entry into force of the new LFPDPPP",
+   "url": "https://www.ey.com/es_mx/technical/tax/boletines-fiscales/nueva-ley-federal-proteccion-datos-personal-posesion-particulares",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Wikipedia: National Institute of Transparency for Access to Information and Personal Data Protection",
+   "url": "https://en.wikipedia.org/wiki/National_Institute_of_Transparency_for_Access_to_Information_and_Personal_Data_Protection",
+   "source_type": "secondary"
+  }
+ ]
+}

@@ -7,7 +7,7 @@
   "name_native": "Die Bundesbeauftragte / Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit; Landesbeauftragte für Datenschutz der Länder",
   "abbr": "BfDI (federal); e.g. BayLDA, BayLfD, HmbBfDI, BlnBDI, LfDI BW (Länder)",
   "url": "https://www.bfdi.bund.de",
-  "structure": "Each authority is headed by a single commissioner (monocratic), not a college. Moritz Hennemann was elected BfDI by the Bundestag on 25 June 2026 and succeeds Louisa Specht-Riemenschneider, who stayed in office until 30 September 2026.",
+  "structure": "Each authority is headed by a single commissioner (monocratic), not a college. Moritz Hennemann, elected by the Bundestag on 25 June 2026, has been BfDI since 1 October 2026, succeeding Louisa Specht-Riemenschneider.",
   "regional": "Federated system: the BfDI supervises federal public bodies and telecoms and postal service providers, while the Land authorities supervise private companies seated in their Land (s.40 BDSG) and their own Land public bodies. Bavaria is split: BayLDA (Ansbach) supervises the private sector and BayLfD (Munich) the Bavarian public sector. The authorities coordinate in the Datenschutzkonferenz (DSK), which has no statutory basis yet and whose resolutions are not legally binding; a Bundesrat bill to put the DSK on a statutory footing with binding majority decisions and lead authorities for multi-Land companies was tabled on 26 August 2026 (BT-Drs. 21/7732) and is pending."
  },
  "law": {
@@ -58,7 +58,7 @@
   {
    "title": "Deutsche Wohnen (Berlin DPA)",
    "year": "2019 to 2026",
-   "summary": "Berlin fined Deutsche Wohnen EUR 14.5 million in 2019 for retaining tenant data. LG Berlin quashed it in 2021 for not identifying a responsible manager; the Kammergericht referred the question and the CJEU ruled on 5 December 2023 (C-807/21) that companies can be fined directly if at fault. On remand, LG Berlin I reduced the fine to EUR 900,000 on 9 June 2026; reported as not yet final.",
+   "summary": "Berlin fined Deutsche Wohnen EUR 14.5 million in 2019 for retaining tenant data. LG Berlin quashed it in 2021 for not identifying a responsible manager; the Kammergericht referred the question and the CJEU ruled on 5 December 2023 (C-807/21) that companies can be fined directly if at fault. On remand, LG Berlin I reduced the fine to EUR 900,000 on 9 June 2026 (526 OWi LG 1/20); the court stated the judgment was not yet final and open to Rechtsbeschwerde, and no later outcome was found as of October 2026.",
    "url": "https://www.dr-datenschutz.de/deutsche-wohnen-dsgvo-bussgeld-drastisch-reduziert/"
   }
  ],

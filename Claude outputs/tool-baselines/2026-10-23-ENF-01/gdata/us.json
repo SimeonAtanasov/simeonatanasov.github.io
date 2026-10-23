@@ -1,0 +1,152 @@
+{
+ "code": "us",
+ "country": "United States",
+ "membership": "World",
+ "region": "Americas",
+ "dpa": {
+  "name_en": "Federal Trade Commission (federal); California Privacy Protection Agency (California)",
+  "name_native": "Federal Trade Commission; California Privacy Protection Agency (now branded CalPrivacy)",
+  "abbr": "FTC; CPPA (CalPrivacy)",
+  "url": "https://www.ftc.gov",
+  "structure": "There is no federal data protection authority and no federal comprehensive privacy law. The FTC, an independent federal agency, polices privacy under Section 5 of the FTC Act (unfair or deceptive practices) and sector rules such as COPPA; California's CPPA, now branding itself CalPrivacy, is the only dedicated state privacy agency, governed by a five-member board with its own Enforcement Division.",
+  "regional": "State attorneys general enforce the comprehensive state privacy laws (around 20 states, most AG-only) and state consumer protection and biometric laws; the California AG shares CCPA enforcement with the CPPA, and county district attorneys and city attorneys have joined California cases. Sector regulators include HHS Office for Civil Rights (HIPAA), the FTC, CFPB and banking regulators (GLBA), and the FCC (telecoms)."
+ },
+ "law": {
+  "name": "No federal comprehensive law. Federal: FTC Act s.5 (15 U.S.C. 45), COPPA (1998), HIPAA (1996) and its Privacy Rule, Gramm-Leach-Bliley Act (1999). State: California Consumer Privacy Act 2018 as amended by the California Privacy Rights Act 2020 (Cal. Civ. Code 1798.100 et seq., CPRA amendments operative 1 January 2023, CPPA enforcement from July 2023), around 20 other state comprehensive laws phased in 2023-2026, Illinois Biometric Information Privacy Act 2008 (740 ILCS 14), Texas Capture or Use of Biometric Identifier Act (CUBI). A federal comprehensive bill (the American Privacy Rights Act draft, 2024) stalled.",
+  "url": "https://cppa.ca.gov/"
+ },
+ "complaint": {
+  "how": "Federal: individuals can report to the FTC online (ReportFraud.ftc.gov), free, but the FTC does not resolve individual complaints and uses them as intelligence for its own cases. California: sworn or unsworn complaints can be filed online with the CPPA (Cal. Civ. Code 1798.199.45) or with the AG, free of charge; other states take consumer complaints through the AG's consumer protection division.",
+  "contact_controller_first": "Not required by the FTC or CPPA. Some state laws require the regulator to give the business a notice and cure period before suing (for example Texas, Virginia, Utah); in California the mandatory 30-day cure ended on 1 January 2023, though the CPPA may still decide to give a business time to cure (s.1798.199.45(a)). A consumer bringing a CCPA data breach claim for statutory damages must first give 30 days' written notice (s.1798.150(b)).",
+  "deadlines": "No statutory deadline for the FTC or CPPA to act on a complaint. The CPPA must bring administrative action within five years of the violation (s.1798.199.70); federal civil penalty actions are generally subject to the five-year limit in 28 U.S.C. 2462.",
+  "complainant_status": "A complainant is not a party at the FTC, CPPA or state AG and receives no binding decision; the CPPA must, however, tell the complainant in writing what action it has taken or plans to take, and why (s.1798.199.45(b))."
+ },
+ "procedure": {
+  "stages": [
+   "FTC: investigation (civil investigative demands), then either a negotiated consent order (administrative, binding for 20 years typically) or litigation in an administrative Part 3 proceeding or in federal district court.",
+   "FTC money: after AMG Capital (2021) the FTC cannot obtain restitution or disgorgement under s.13(b); civil penalties are available only for violating an existing order or a trade regulation rule or specific statute such as COPPA, and are sought in federal court, normally by the Department of Justice on referral.",
+   "CPPA: Enforcement Division investigation, probable cause proceeding, then an administrative hearing before an administrative law judge and a decision by the CPPA Board (s.1798.199.50-.55); most cases end in a stipulated final order approved by the Board.",
+   "California AG and other state AGs: investigation, notice (and cure where the state law provides), then a civil lawsuit in state court, usually resolved by a court-approved settlement and injunction."
+  ],
+  "decision_maker": "FTC Commissioners (consent orders, administrative decisions) and federal courts (civil penalties); the CPPA Board (administrative fines); state courts in AG actions.",
+  "limitation": "CPPA: five years from the violation (s.1798.199.70). Federal civil penalties: five years (28 U.S.C. 2462). State laws vary; not confirmed for each state."
+ },
+ "fines": {
+  "imposed_by": "Mixed, so mapped as regulator-court: the FTC cannot fine for a first violation of Section 5 and must go to federal court (via DOJ) for civil penalties for order or rule violations, and state AGs must sue in court; the CPPA is the exception, imposing administrative fines itself of up to USD 2,500 per violation or USD 7,500 per intentional violation or violation involving minors under 16 (s.1798.155, CPI-adjusted to USD 2,663 and USD 7,988 from January 2025). The AG can recover the same amounts as civil penalties in court (s.1798.199.90).",
+  "public_bodies": "Generally no: the FTC Act and the CCPA cover businesses, not government agencies. Federal agencies are governed by the Privacy Act of 1974, enforced by individual lawsuits, not fines; HIPAA covered entities can include public hospitals.",
+  "quirks": "Caps are per violation, so totals scale with the number of consumers or transactions rather than turnover. HIPAA civil money penalties are imposed administratively by HHS OCR, and criminal HIPAA offences are prosecuted by DOJ. Other sanctions include long-running consent orders with independent assessments, data and algorithm deletion orders, and bans on certain data uses."
+ },
+ "appeal": {
+  "court": "FTC administrative orders: petition to a federal court of appeals (15 U.S.C. 45(c)). Federal court civil penalty judgments: ordinary federal appeals. CPPA decisions on a complaint or fine: judicial review in an action by an interested party, on an abuse of discretion standard (s.1798.199.85), in practice a petition for a writ of administrative mandate in the California Superior Court.",
+  "deadline": "FTC orders: 60 days after service (15 U.S.C. 45(c)). CPPA decisions: s.1798.199.85 sets no time limit; the deadline under the general Administrative Procedure Act rules is not confirmed.",
+  "suspensive": "Not confirmed as a general rule; for FTC administrative orders, a cease and desist order becomes final only after the time for review expires or review concludes.",
+  "further": "Federal: federal court of appeals, then a petition for certiorari to the US Supreme Court. California: Court of Appeal, then the California Supreme Court.",
+  "inaction": "There is no practical mechanism to challenge an FTC or AG decision not to act on a complaint; prosecutorial discretion is not reviewable in practice. For the CPPA, s.1798.199.85 allows judicial review of any decision on a complaint by an interested party, but whether a complainant can use it against a decision not to investigate is not confirmed. The individual's main route is a private lawsuit where a statute allows one."
+ },
+ "private": {
+  "courts": "Limited: there is no general private right of action under the FTC Act or most state comprehensive laws. The CCPA allows consumers to sue only for data breaches caused by a failure to maintain reasonable security (s.1798.150). Specific statutes give broad private rights, most importantly Illinois BIPA (740 ILCS 14/20), plus federal laws such as the Video Privacy Protection Act and Telephone Consumer Protection Act, and common law privacy torts.",
+  "damages": "CCPA breach claims: statutory damages of USD 100 to 750 per consumer per incident or actual damages if greater (CPI-adjusted to USD 107 to 799). BIPA: USD 1,000 per negligent violation and USD 5,000 per intentional or reckless violation, or actual damages if greater; a 2024 amendment limits recovery to one violation per person rather than per scan.",
+  "collective": "Class actions are routine and are the main private enforcement tool; BIPA class actions have produced settlements such as Facebook's USD 650 million (2021). Arbitration clauses with class waivers often block them."
+ },
+ "cases": [
+  {
+   "title": "FTC v Facebook (USD 5 billion)",
+   "year": "2019",
+   "summary": "Facebook paid a USD 5 billion civil penalty for violating its 2012 FTC privacy order, filed by the Department of Justice in the US District Court for the District of Columbia, together with a new order imposing board-level privacy oversight. The penalty was possible only because an earlier order had been breached.",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2019/07/ftc-imposes-5-billion-penalty-sweeping-new-privacy-restrictions-facebook"
+  },
+  {
+   "title": "California AG v Sephora; CPPA v American Honda; General Motors",
+   "year": "2022-2026",
+   "summary": "The California AG's first CCPA settlement fined Sephora USD 1.2 million in August 2022 for selling data and ignoring Global Privacy Control. The CPPA's first major administrative decision fined Honda USD 632,500 in March 2025 for excessive verification and asymmetric opt-out choices, and the largest CCPA penalty so far is USD 12.75 million against General Motors (May 2026) obtained jointly by the AG, CalPrivacy and county prosecutors.",
+   "url": "https://cppa.ca.gov/announcements/2025/20250312.html"
+  },
+  {
+   "title": "Texas v Meta and Texas v Google (biometrics)",
+   "year": "2024-2025",
+   "summary": "Texas's AG settled with Meta for USD 1.4 billion in July 2024 over facial recognition under the state biometric statute (CUBI) and consumer protection law, and with Google for USD 1.375 billion in May 2025 over location, incognito and biometric data. Both were court lawsuits settled, not regulator fines.",
+   "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-secures-historic-1375-billion-settlement-google-related-texans-data"
+  }
+ ],
+ "quirks": [
+  "There is no federal comprehensive privacy law and no federal data protection authority; protection is a patchwork of a consumer protection agency, sector laws and state laws.",
+  "The FTC cannot fine a company for a first privacy violation under Section 5: it first obtains an order, and money comes only if that order is later broken (or under specific statutes such as COPPA), as the Supreme Court confirmed in AMG Capital Management v FTC (2021) for restitution.",
+  "Much of the real money comes from private class actions and state AG lawsuits, not regulators; a single Illinois statute (BIPA) has generated settlements larger than most European fines.",
+  "Several state laws give businesses a right to be warned and to cure before they can be penalised, and enforcement is spread across 50 AGs with different laws.",
+  "Penalties are per violation, not per percentage of turnover, so totals depend on how many consumers or transactions are counted."
+ ],
+ "plain": "If you complain to the FTC or a state attorney general, your complaint feeds their investigations but nobody issues you a decision, and they usually settle with the company in a consent order or court settlement. Money penalties normally need a court, except in California, where the privacy agency (CalPrivacy) can fine companies itself and companies can challenge the fine in the state Superior Court. To get compensation yourself you generally need a specific law that lets you sue, such as Illinois's biometric law or California's data breach provision, usually through a class action.",
+ "map": {
+  "who_penalises": "regulator-court",
+  "cap": "fixed",
+  "private_action": "limited"
+ },
+ "confidence": "medium: core federal and California rules are confirmed from regulator and court sources, but the CCPA statute text (ss.1798.155, 1798.150, 1798.199.70, 1798.199.85) could not be fetched and the per-state count, cure periods and the CPPA judicial review deadline are from secondary or recalled sources.",
+ "sources": [
+  {
+   "title": "FTC press release: FTC imposes USD 5 billion penalty on Facebook (24 July 2019)",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2019/07/ftc-imposes-5-billion-penalty-sweeping-new-privacy-restrictions-facebook",
+   "source_type": "primary"
+  },
+  {
+   "title": "FTC case page: Facebook, Inc., In the Matter of",
+   "url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/092-3184-182-3109-c-4365-facebook-inc-matter",
+   "source_type": "primary"
+  },
+  {
+   "title": "AMG Capital Management, LLC v FTC, US Supreme Court, 22 April 2021",
+   "url": "https://www.supremecourt.gov/opinions/20pdf/19-508_l6gn.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "CPPA announcement: Honda decision, USD 632,500 (12 March 2025)",
+   "url": "https://cppa.ca.gov/announcements/2025/20250312.html",
+   "source_type": "primary"
+  },
+  {
+   "title": "CPPA announcement: data broker decisions (8 January 2026)",
+   "url": "https://cppa.ca.gov/announcements/2026/20260108.html",
+   "source_type": "primary"
+  },
+  {
+   "title": "CalPrivacy: action against Virginia data broker, lists GM, Tractor Supply, Honda (September 2026)",
+   "url": "https://privacy.ca.gov/2026/09/calprivacy-continues-enforcement-blitz-with-action-against-virginia-data-broker/",
+   "source_type": "primary"
+  },
+  {
+   "title": "CalPrivacy: second data broker enforcement action, GM USD 12.75m with AG (August 2026)",
+   "url": "https://privacy.ca.gov/2026/08/calprivacy-announces-second-data-broker-enforcement-action-in-less-than-a-week/",
+   "source_type": "primary"
+  },
+  {
+   "title": "California AG: Sephora settlement (24 August 2022)",
+   "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-announces-settlement-sephora-part-ongoing-enforcement",
+   "source_type": "primary"
+  },
+  {
+   "title": "Texas AG: USD 1.375 billion settlement with Google (May 2025)",
+   "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-secures-historic-1375-billion-settlement-google-related-texans-data",
+   "source_type": "primary"
+  },
+  {
+   "title": "Biometric Update: Texas AG settlement with Google",
+   "url": "https://www.biometricupdate.com/202505/texas-ag-secures-record-breaking-privacy-settlement-with-google",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Paul Weiss: California privacy updates Q1 2026 (Disney, PlayOn, Ford)",
+   "url": "https://www.paulweiss.com/insights/client-memos/california-privacy-updates-q1-2026",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Clym: CCPA fines in 2026 (CPI-adjusted amounts, end of cure period)",
+   "url": "https://www.clym.io/blog/ccpa-penalties-and-fines-what-businesses-need-to-know",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Reflectiz: biggest CCPA fines list",
+   "url": "https://www.reflectiz.com/blog/biggest-ccpa-fines/",
+   "source_type": "secondary"
+  }
+ ]
+}

@@ -1,0 +1,105 @@
+{
+ "code": "bg",
+ "country": "Bulgaria",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Commission for Personal Data Protection",
+  "name_native": "Комисия за защита на личните данни (Komisia za zashtita na lichnite danni)",
+  "abbr": "CPDP (KZLD)",
+  "url": "https://www.cpdp.bg/",
+  "structure": "Collegial body: a chair and four members elected by the National Assembly for five years, renewable once (Art. 6-7 PDPA); it decides as a collegial body by majority of all members (Art. 6(2) PDPA). Penal decrees are issued by the chair.",
+  "regional": "No regional authorities. Processing by courts, prosecutors and investigating authorities in their judicial capacity is supervised by the Inspectorate to the Supreme Judicial Council, which handles complaints under the same rules (Art. 38b PDPA)."
+ },
+ "law": {
+  "name": "Personal Data Protection Act (Закон за защита на личните данни, ZZLD), State Gazette No. 1/2002, substantially amended for the GDPR in 2019; latest amendment noted: State Gazette No. 84 of 6 October 2023",
+  "url": "https://lex.bg/laws/ldoc/2135426048"
+ },
+ "complaint": {
+  "how": "Complaint by letter, fax or electronic means; anonymous complaints are not examined (Art. 38a PDPA). Language presumably Bulgarian (not confirmed from DPA page). No fee found. The CPDP website could not be accessed during research.",
+  "contact_controller_first": "Not confirmed as a requirement.",
+  "deadlines": "Complaint within six months of learning of the infringement and no later than two years after it occurred (Art. 38(1) PDPA). The CPDP must inform the complainant of progress within three months (Art. 38 PDPA); a binding decision deadline was not confirmed.",
+  "complainant_status": "Complainant is a party: the CPDP decides on the complaint by a decision that the parties can appeal (Art. 38 PDPA)."
+ },
+ "procedure": {
+  "stages": [
+   "Admissibility check (time limits, identification of complainant, competence)",
+   "Exchange of positions with the controller and investigation, possibly an inspection",
+   "Collegial decision of the Commission on the merits, applying Art. 58(2) GDPR corrective measures and/or administrative penalties (Art. 38 PDPA)",
+   "Where a fine is imposed, a penal decree (наказателно постановление) issued by the chair under the Administrative Violations and Sanctions Act (ZANN)"
+  ],
+  "decision_maker": "The Commission sitting as a collegial body; penal decrees signed by the chair.",
+  "limitation": "General ZANN limitation rules apply to fines. In the National Revenue Agency case the Administrative Court Sofia City applied an absolute limitation period of four and a half years (by reference to the Criminal Code) and annulled the fine; the CPDP had argued for five years."
+ },
+ "fines": {
+  "imposed_by": "The CPDP itself (penal decree issued by the chair), not a court.",
+  "public_bodies": "Public bodies can be fined: the CPDP fined the National Revenue Agency BGN 5.1 million in 2019. No specific cap for public bodies was confirmed.",
+  "quirks": "Fines follow the domestic administrative-penalty procedure (ZANN), so appeals go to the criminal-side district courts rather than administrative courts. Bulgaria adopted the euro on 1 January 2026, so earlier fines are expressed in leva (BGN)."
+ },
+ "appeal": {
+  "court": "Two tracks. (1) CPDP decisions on complaints: administrative court under the Administrative Procedure Code (Art. 38 PDPA); which administrative court is competent was not confirmed. (2) Penal decrees imposing fines: district court (районен съд, for example Sofia District Court) under ZANN.",
+  "deadline": "14 days for CPDP complaint decisions (Art. 38 PDPA). Deadline for penal decrees under ZANN not confirmed from a primary source.",
+  "suspensive": "Not confirmed. Under ZANN a penal decree is enforced once it enters into force, so in practice payment is not due while it is under appeal (general rule, not confirmed from primary text).",
+  "further": "Cassation: from the district court to the administrative court (final for penal decrees, as in the NAP case); from the first-instance administrative court to the Supreme Administrative Court for complaint decisions.",
+  "inaction": "Not confirmed. The three-month information duty in Art. 38 PDPA exists, but a specific Art. 78(2) action was not identified; general Administrative Procedure Code remedies against silent refusal may apply."
+ },
+ "private": {
+  "courts": "Distinctive route: under Art. 39 PDPA a data subject can bring a claim directly before the administrative court (under the Administrative Procedure Code) against a controller or processor, including a claim for compensation for damage, but not while CPDP proceedings on the same infringement are pending.",
+  "damages": "Leading reference: CJEU C-340/21 VB v Natsionalna agentsia za prihodite (14 December 2023), on a reference from the Supreme Administrative Court after the 2019 NAP breach: fear of possible misuse of data can itself be non-material damage. National award levels not confirmed.",
+  "collective": "The Representative Actions Directive was transposed through amendments to the Consumer Protection Act and the Civil Procedure Code (in force by early 2026, exact gazette not confirmed); regional courts have jurisdiction. Whether GDPR claims are covered was not confirmed from a primary source, although the Directive's Annex I lists the GDPR."
+ },
+ "cases": [
+  {
+   "title": "National Revenue Agency (NAP) data breach",
+   "year": "2019-2024",
+   "summary": "After the July 2019 hack exposing data of about five million people, the CPDP fined the NAP BGN 5.1 million (penal decree No. 004, 28 August 2019). Sofia District Court upheld the fine (26 October 2023), but the Administrative Court Sofia City annulled it in a final ruling, reported on 26 February 2024, because the absolute limitation period had expired.",
+   "url": "https://www.bgonair.bg/a/166-kriminalno/336404-sadat-okonchatelno-otmeni-globata-na-nap-ot-51-mln-lv-za-techa-na-lichni-danni"
+  },
+  {
+   "title": "CJEU C-340/21 VB v NAP",
+   "year": "2023",
+   "summary": "In a damages claim by an affected taxpayer, the CJEU held that a breach does not by itself prove inadequate security measures, that the controller bears the burden of proving their adequacy, and that fear of misuse can be compensable non-material damage.",
+   "url": "https://curia.europa.eu/juris/liste.jsf?num=C-340/21"
+  }
+ ],
+ "quirks": [
+  "Collegial five-member Commission elected by Parliament.",
+  "Fines follow the domestic administrative-penalty law (ZANN), with appeals to district courts and cassation to administrative courts, and short limitation periods that defeated the largest fine to date.",
+  "Data subjects can sue controllers directly in the administrative courts, including for damages (Art. 39 PDPA). The Act is reported to bar a court claim while CPDP proceedings on the same infringement are pending; check the current text before relying on it.",
+  "Strict complaint window: six months from knowledge, two years from the infringement (Art. 38(1) PDPA).",
+  "Judicial processing by courts and prosecutors is supervised by the Inspectorate to the Supreme Judicial Council, not the CPDP."
+ ],
+ "plain": "You complain to the Commission in writing within six months of discovering the problem. The five-member Commission investigates and decides; if it fines the company, the chair issues a penalty decree that can be challenged in the local district court and then the administrative court. You can also sue the company directly in the administrative court, including for compensation, though not, it appears, while a complaint on the same issue is still pending.",
+ "confidence": "medium: the PDPA provisions and the NAP case are confirmed, but the CPDP website was unreachable and I could not confirm the penal decree appeal deadline, the competent administrative court for complaint decisions, or the Art. 78(2) inaction route.",
+ "sources": [
+  {
+   "title": "Personal Data Protection Act (Lex.bg consolidated text)",
+   "url": "https://lex.bg/laws/ldoc/2135426048",
+   "source_type": "secondary"
+  },
+  {
+   "title": "CPDP website (not reachable during research)",
+   "url": "https://www.cpdp.bg/",
+   "source_type": "primary"
+  },
+  {
+   "title": "Bgonair: court finally annuls NAP fine (26 Feb 2024)",
+   "url": "https://www.bgonair.bg/a/166-kriminalno/336404-sadat-okonchatelno-otmeni-globata-na-nap-ot-51-mln-lv-za-techa-na-lichni-danni",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Svobodna Evropa: NAP fine time-barred",
+   "url": "https://svobodnaevropa.bg/a/nap-globa-iztekla-davnost/32836051.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "CJEU C-340/21 VB v Natsionalna agentsia za prihodite",
+   "url": "https://curia.europa.eu/juris/liste.jsf?num=C-340/21",
+   "source_type": "primary"
+  },
+  {
+   "title": "Kinstellar: RAD implementation in Bulgaria",
+   "url": "https://www.kinstellar.com/news-and-insights/detail/4206/new-rules-for-collective-consumer-claims-implementation-of-the-eu-representative-actions-directive-in-bulgaria",
+   "source_type": "secondary"
+  }
+ ]
+}

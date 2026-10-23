@@ -45,14 +45,14 @@
  },
  "private": {
   "courts": "Data protection action under s.117: District Court, Circuit Court or High Court, each within its usual compensation limits, where the controller is established or the data subject habitually resides. Remedies: injunction, declaration, compensation.",
-  "damages": "Awards for non-material damage are modest: Kaminski v Ballymaguire Foods [2023] IECC 5 (Circuit Court, EUR 2,000 for CCTV footage used in training), MH v Child and Family Agency (Circuit Court, EUR 7,500, reported as highest Irish award). Whether PIAB authorisation is needed first (Dillon v Irish Life) was pending before the Supreme Court at last report.",
+  "damages": "Awards for non-material damage are modest: Kaminski v Ballymaguire Foods [2023] IECC 5 (Circuit Court, EUR 2,000 for CCTV footage used in training), MH v Child and Family Agency (Circuit Court, EUR 7,500, reported as highest Irish award). In Dillon v Irish Life [2025] IESC 37 (July 2025) the Supreme Court held that claims for distress, upset or anxiety short of a recognised psychiatric injury are not personal injuries claims, so they need no Injuries Resolution Board (formerly PIAB) authorisation, though only modest awards should be expected.",
   "collective": "Not-for-profit bodies mandated under Art. 80(1) may bring s.117 actions for data subjects. Whether GDPR is covered by Ireland's Representative Actions Directive transposition was not confirmed."
  },
  "cases": [
   {
    "title": "TikTok, EUR 530 million (data transfers to China and transparency)",
    "year": "2025-2026",
-   "summary": "DPC decision of 30 April 2025 (EUR 485m transfers, EUR 45m transparency) plus a transfer suspension order. The High Court stayed it; the Supreme Court (30 April 2026) dismissed the DPC's appeal on the stay test. In June 2026 the High Court upheld the infringement findings but sent the suspension order back to the DPC. A separate judgment on the size of the fine was circulated to the parties at the end of June 2026; its outcome had not been published at last report.",
+   "summary": "DPC decision of 30 April 2025 (EUR 485m transfers, EUR 45m transparency) plus a transfer suspension order. The High Court stayed it; the Supreme Court (30 April 2026) dismissed the DPC's appeal on the stay test. On 3 June 2026 the High Court ([2026] IEHC 347) upheld the infringement findings but sent the suspension order back to the DPC. In a separate judgment of 30 June 2026 ([2026] IEHC 419) it referred four questions on how the fine should be calculated under Art. 83 to the CJEU, which opened the case in September 2026, so the amount of the fine is not yet settled.",
    "url": "https://www.irishtimes.com/ireland/2026/06/30/data-protection-commission-reconsidering-tiktok-data-transfer-ban-after-court-ruling/"
   },
   {
@@ -75,7 +75,7 @@
   "As lead authority for much of big tech, many DPC decisions are shaped by EDPB Art. 65 binding decisions; in May 2026 the High Court confirmed a complaint-based inquiry can lead to system-wide corrective measures and fines (Meta judicial review)."
  ],
  "plain": "You complain to the DPC, usually after trying the company first, and the DPC tries to resolve it informally. Serious or systemic issues go to an inquiry, and for big tech firms other EU regulators get a say before the final decision. A fine only has to be paid once an Irish court has confirmed it, and most of the largest fines are still tied up in appeals.",
- "confidence": "Medium-high: statutory points are primary-sourced; I could not confirm a limitation period, an Art. 78(2) inaction route, RAD coverage of GDPR, or the exact date of the 2026 High Court TikTok judgment.",
+ "confidence": "Medium-high: statutory points are primary-sourced; I could not confirm a limitation period, an Art. 78(2) inaction route, RAD coverage of GDPR, and the CJEU case number for the 2026 TikTok fine-calculation reference was not found.",
  "sources": [
   {
    "title": "Data Protection Act 2018 (revised, updated to 16 July 2026)",

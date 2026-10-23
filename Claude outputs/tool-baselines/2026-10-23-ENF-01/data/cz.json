@@ -1,0 +1,126 @@
+{
+ "code": "cz",
+ "country": "Czechia",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Office for Personal Data Protection",
+  "name_native": "Úřad pro ochranu osobních údajů",
+  "abbr": "ÚOOÚ",
+  "url": "https://uoou.gov.cz/en",
+  "structure": "Single authority headed by a President appointed by the President of the Republic for five years, at most two consecutive terms (s. 52 Act 110/2019), with two Vice-Presidents elected and removed by the Senate (s. 53). Not a collegial body.",
+  "regional": "Single national authority."
+ },
+ "law": {
+  "name": "Act No. 110/2019 Coll., on the Processing of Personal Data (zákon o zpracování osobních údajů), in force 24 April 2019",
+  "url": "https://uoou.gov.cz/en/legislation/act-no-1102019-coll"
+ },
+ "complaint": {
+  "how": "Not confirmed from a ÚOOÚ complaint page. The Office accepts submissions by data box (ID qkbaa2n), email (posta@uoou.gov.cz) or post to Pplk. Sochora 27, Prague 7. Language and fee not confirmed.",
+  "contact_controller_first": "Not confirmed.",
+  "deadlines": "Not confirmed for GDPR complaints. Under the general rule for an initiative (podnět) in s. 42 of the Administrative Procedure Code, the authority must tell the person within 30 days whether it opened proceedings; whether ÚOOÚ applies this to GDPR complaints was not confirmed.",
+  "complainant_status": "Not confirmed for ÚOOÚ specifically. Under general Czech administrative law, a person filing an initiative (podnět) is not a party to the resulting proceedings and has limited remedies."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint or own-initiative inspection by ÚOOÚ",
+   "Administrative offence proceedings under the Offences Act and Administrative Procedure Code (application not confirmed against the text)",
+   "First-instance decision of the Office, which can include a fine",
+   "Remonstrance (rozklad) decided by the President of the Office, after which the decision is final",
+   "Administrative action to the Municipal Court in Prague, then cassation complaint to the Supreme Administrative Court"
+  ],
+  "decision_maker": "The Office decides at first instance; the President of the Office decides the remonstrance (confirmed in the Avast case).",
+  "limitation": "Not confirmed (expected to follow the general Offences Act rules)."
+ },
+ "fines": {
+  "imposed_by": "ÚOOÚ itself, by administrative decision.",
+  "public_bodies": "No. The Office must refrain from imposing administrative penalties on the entities listed in Art. 83(7) GDPR, i.e. public authorities and bodies (s. 62(5) Act 110/2019). Corrective orders still apply. Separately, ÚOOÚ can impose procedural fines for non-cooperation in proceedings it handles: a CZK 30,000 fine on the Arbitration Court of the Economic Chamber in a freedom of information appeal was upheld by the Municipal Court in Prague on 29 July 2026.",
+  "quirks": "Anyone, including private individuals, can be fined for unlawful disclosure of personal data: up to CZK 1,000,000, or CZK 5,000,000 if done through the press, broadcasting, a public computer network or similar (s. 61). Separate fines of up to CZK 10,000,000 apply for law enforcement processing (s. 63)."
+ },
+ "appeal": {
+  "court": "First an internal remonstrance (rozklad) to the President of the Office, then an administrative action to the Municipal Court in Prague (Městský soud v Praze), as in the Avast case (5 A 56/2024).",
+  "deadline": "Not confirmed from a primary source (the general rule is two months for an administrative action).",
+  "suspensive": "Not confirmed.",
+  "further": "Cassation complaint to the Supreme Administrative Court (Nejvyšší správní soud). A Municipal Court annulment sends the case back to ÚOOÚ for a new decision.",
+  "inaction": "Not confirmed for ÚOOÚ. Under general Czech law a person who only filed an initiative cannot bring an inaction action (party status required); commentators see an action against unlawful interference as the main remaining route."
+ },
+ "private": {
+  "courts": "Ordinary civil courts for Art. 79 and Art. 82 claims (court level not confirmed).",
+  "damages": "No notable Czech damages awards were confirmed in this research.",
+  "collective": "Not confirmed. Czechia has adopted a collective proceedings act transposing the Representative Actions Directive, but its number, date and scope were not verified here."
+ },
+ "cases": [
+  {
+   "title": "Avast Software: sale of browsing data via Jumpshot",
+   "year": "2024-2025",
+   "summary": "ÚOOÚ fined Avast CZK 351 million (about EUR 13.9 million), its largest fine, announced 15 April 2024 as a final decision after remonstrance, for transferring insufficiently anonymised browsing histories of about 100 million users to Jumpshot and misleading users. On 30 September 2025 the Municipal Court in Prague (5 A 56/2024) upheld both infringements but annulled the decision on the number of affected users and the fine, sending it back to ÚOOÚ to reassess the penalty.",
+   "url": "https://msp.gov.cz/documents/d/mestsky-soud-v-praze/tiskova-zprava-k-rozsudku-ze-dne-30-9-2025-sp-zn-5-a-56-2024"
+  },
+  {
+   "title": "Arbitration Court of the Chamber of Commerce: fine for non-cooperation",
+   "year": "2026",
+   "summary": "ÚOOÚ fined the Arbitration Court CZK 30,000 for refusing to hand over case files in a freedom of information appeal it was handling. On 29 July 2026 the Municipal Court in Prague (15 A 178/2025) upheld the fine as exceptional but lawful. This was a freedom of information matter, not a GDPR infringement.",
+   "url": "https://www.ceska-justice.cz/2026/07/rozhodci-soud-pokuta-uoou/"
+  }
+ ],
+ "quirks": [
+  "Public authorities and bodies cannot be fined under the GDPR: Czechia used Art. 83(7) to exclude them (s. 62).",
+  "Anyone who unlawfully publishes personal data can be fined up to CZK 5 million when it is done via the press, broadcast or the internet (s. 61), a national offence beyond the GDPR.",
+  "Two-step review: an internal remonstrance to the Office's President before any court, then the Municipal Court in Prague and the Supreme Administrative Court.",
+  "Complainants are generally treated as people giving an initiative rather than parties, which limits their ability to challenge how their complaint is handled (general administrative law, not confirmed for ÚOOÚ specifically).",
+  "ÚOOÚ also handles freedom of information appeals, which explains enforcement against bodies such as the Arbitration Court."
+ ],
+ "plain": "In Czechia you complain to the Office for Personal Data Protection (ÚOOÚ), which can investigate and fine a company itself, but cannot fine public authorities. A fined company first asks the Office's President to review the decision, then can sue in the Municipal Court in Prague and finally go to the Supreme Administrative Court; in the Avast case the court confirmed the breach but sent the CZK 351 million fine back for recalculation.",
+ "confidence": "medium: the Act's provisions on the President, public bodies and national offences and the Avast court outcome are sourced, but I could not access a ÚOOÚ complaint page or the Czech legal databases, so complaint deadlines, complainant status, appeal deadlines, limitation and collective actions are unconfirmed.",
+ "sources": [
+  {
+   "title": "Act No. 110/2019 Coll. (English translation, ÚOOÚ)",
+   "url": "https://uoou.gov.cz/media/act-no-110-2019-coll.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "ÚOOÚ: Legislation page for Act No. 110/2019 Coll.",
+   "url": "https://uoou.gov.cz/en/legislation/act-no-1102019-coll",
+   "source_type": "primary"
+  },
+  {
+   "title": "ÚOOÚ: Contact",
+   "url": "https://uoou.gov.cz/en/contact",
+   "source_type": "primary"
+  },
+  {
+   "title": "ÚOOÚ: Czech DPA imposed fine of 351 million CZK for GDPR infringement (15 April 2024)",
+   "url": "https://uoou.gov.cz/en/news/business-communication/czech-dpa-imposed-fine-of-351-million-czk-for-gdpr-infringement",
+   "source_type": "primary"
+  },
+  {
+   "title": "Municipal Court in Prague: press release on judgment of 30 September 2025, 5 A 56/2024 (Avast)",
+   "url": "https://msp.gov.cz/documents/d/mestsky-soud-v-praze/tiskova-zprava-k-rozsudku-ze-dne-30-9-2025-sp-zn-5-a-56-2024",
+   "source_type": "primary"
+  },
+  {
+   "title": "Municipal Court in Prague: judgment 5 A 56/2024-206",
+   "url": "https://msp.gov.cz/documents/d/mestsky-soud-v-praze/5a_56_2024_57",
+   "source_type": "primary"
+  },
+  {
+   "title": "Česká justice: court upholds ÚOOÚ fine on the Arbitration Court (July 2026)",
+   "url": "https://www.ceska-justice.cz/2026/07/rozhodci-soud-pokuta-uoou/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "ČTK / České noviny: Avast disagrees with CZK 351 million fine",
+   "url": "https://www.ceskenoviny.cz/zpravy/avast-dostal-pokutu-351-milionu-kc-za-neopravnene-zpracovani-osobnich-udaju/2506072",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Ochrana údajů: Court annulled record GDPR fine for Avast",
+   "url": "https://www.ochranaudaju.cz/zpravy/soud-zrusil-rekordni-pokutu-za-poruseni-gdpr-pro-avast",
+   "source_type": "secondary"
+  },
+  {
+   "title": "epravo.cz: Procedural options of an unsuccessful initiator under s. 42 Administrative Procedure Code (2019)",
+   "url": "https://www.epravo.cz/top/clanky/zamysleni-nad-procesnimi-moznostmi-neuspesneho-podatele-podnetu-dle-42-spravniho-radu-110350.html",
+   "source_type": "secondary"
+  }
+ ]
+}

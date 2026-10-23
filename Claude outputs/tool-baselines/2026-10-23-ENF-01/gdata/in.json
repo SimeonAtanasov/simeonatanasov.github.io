@@ -1,0 +1,115 @@
+{
+ "code": "in",
+ "country": "India",
+ "membership": "World",
+ "region": "Asia-Pacific",
+ "dpa": {
+  "name_en": "Data Protection Board of India",
+  "name_native": "भारतीय डेटा संरक्षण बोर्ड",
+  "abbr": "DPBI",
+  "url": "not confirmed",
+  "structure": "Statutory board established by the central government (DPDP Act section 18) on 13 November 2025, with four members under the DPDP Rules, seated in the National Capital Region and designed as a digital office; section 28 says it functions as an independent body, but members are appointed by the central government. It adjudicates complaints and penalties rather than issuing guidance; rule-making stays with the Ministry of Electronics and Information Technology (MeitY).",
+  "regional": "No state authorities. Until 13 May 2027, section 43A of the IT Act 2000 and the 2011 SPDI Rules remain the operative privacy regime, with compensation claims before IT Act adjudicating officers; CERT-In enforces cyber incident reporting, and sector regulators (for example the Reserve Bank of India) impose data rules on their sectors."
+ },
+ "law": {
+  "name": "Digital Personal Data Protection Act 2023 (DPDP Act) and DPDP Rules 2025 (notified 13 November 2025, G.S.R. 846(E)). Phased commencement: from 13 November 2025 sections 1(2), 2, 18 to 26, 35, 38 to 43 and 44(1) and (3) (definitions, Board set-up, RTI and TRAI Act amendments) and Rules 1, 2 and 17 to 21; from 13 November 2026 section 6(9) and 27(1)(d) (consent manager registration and the Board's powers over consent managers) and Rule 4; from 13 May 2027 the substantive duties and enforcement (sections 3 to 17, the rest of 27, 28 to 34, 36, 37, 44(2)) and Rules 3, 5 to 16, 22 and 23. A January 2026 MeitY consultation on compressing the timeline to 12 months was reported, but no change has been notified.",
+  "url": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf"
+ },
+ "complaint": {
+  "how": "From 13 May 2027, a data principal complains to the Board online through a portal and mobile app (the Board is a digital office); any fee was not confirmed. A data principal who files a false or frivolous complaint breaches their own duties (section 15) and risks a penalty of up to INR 10,000.",
+  "contact_controller_first": "Yes: under section 13(3) the data principal must first exhaust the grievance redress mechanism of the data fiduciary or consent manager; the Rules give fiduciaries up to 90 days to respond to grievances (secondary source).",
+  "deadlines": "No statutory deadline for the Board to decide a complaint was confirmed. As of 2 October 2026 the Board exists but the substantive duties and its complaint and inquiry powers (section 27 except 27(1)(d), and section 28) are not yet in force; some commentators say complaints can already be filed, which is hard to reconcile with the commencement notification.",
+  "complainant_status": "The complainant is a party to a Board proceeding conducted under principles of natural justice (section 28), but penalties go to the Consolidated Fund of India, not to the complainant."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint by a data principal, breach intimation by a data fiduciary, reference from the central or a state government, or a court direction (section 27).",
+   "Board determines whether there are sufficient grounds to inquire; it may close the matter or proceed (section 28), with the powers of a civil court to summon and examine.",
+   "During or instead of inquiry: direction to attempt mediation (section 31) or acceptance of a voluntary undertaking, which ordinarily bars further proceedings on its contents (section 32); urgent remedial directions are possible.",
+   "After a hearing, a penalty order (section 33) taking account of factors such as nature, gravity, duration and mitigation. Repeat penalised fiduciaries can be referred to the central government for blocking (section 37)."
+  ],
+  "decision_maker": "The Data Protection Board of India (chairperson and members).",
+  "limitation": "Not confirmed."
+ },
+ "fines": {
+  "imposed_by": "Once section 33 commences on 13 May 2027, the Board imposes monetary penalties itself by order, per the Schedule: up to INR 250 crore for failing to take reasonable security safeguards, INR 200 crore for failing to notify a breach and for children's data violations, INR 150 crore for significant data fiduciary obligations, INR 50 crore for other breaches, and INR 10,000 for data principals. Until then no body can penalise under the DPDP Act (map: none-yet), apart from Board powers over consent managers from 13 November 2026.",
+  "public_bodies": "Not confirmed whether penalties apply to government bodies in practice: the State acting as a data fiduciary is within the Act, but the central government can exempt its instrumentalities wholly or partly by notification (section 17(2)).",
+  "quirks": "The maximums are fixed amounts per breach category, not turnover-based. The DPDP Act creates no criminal offences; penalties are civil."
+ },
+ "appeal": {
+  "court": "The Telecom Disputes Settlement and Appellate Tribunal (TDSAT) as Appellate Tribunal (section 29).",
+  "deadline": "60 days from receipt of the Board's order, with power to condone delay for sufficient cause; the Tribunal is to endeavour to dispose of appeals within six months.",
+  "suspensive": "Not confirmed.",
+  "further": "Further appeal to the Supreme Court (via the TRAI Act framework; not confirmed against the text).",
+  "inaction": "No route under the Act; a person could seek a writ in a High Court under Article 226 of the Constitution against the Board as a public authority."
+ },
+ "private": {
+  "courts": "Section 39 bars civil courts from any matter the Board is empowered to determine, so there is no private damages action under the DPDP Act once it is in force. Until 13 May 2027, section 43A of the IT Act allows compensation claims against a body corporate negligent in protecting sensitive personal data (before adjudicating officers or civil courts depending on value); section 44(2) omits 43A from that date.",
+  "damages": "None under the DPDP Act: penalties go to the government and the Board cannot award compensation to data principals.",
+  "collective": "No class action mechanism under the Act. Public interest litigation in the High Courts and Supreme Court on the constitutional right to privacy remains available against the State."
+ },
+ "cases": [
+  {
+   "title": "No Board decisions yet",
+   "year": "2025-2026",
+   "summary": "The Board was constituted on 13 November 2025 but its inquiry and penalty powers start on 13 May 2027, so no DPDP penalty has been imposed as of 2 October 2026.",
+   "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc20251117695301.pdf"
+  },
+  {
+   "title": "Phased commencement notification",
+   "year": "2025",
+   "summary": "Commencement notification (G.S.R. 843(E)) and DPDP Rules (G.S.R. 846(E)) of 13 November 2025 set the 12- and 18-month phases, and on 13 May 2027 section 43A of the IT Act will be omitted, ending the only existing statutory compensation route for data protection failures.",
+   "url": "https://www.mondaq.com/india/privacy-protection/1759134/indias-digital-personal-data-protection-act-and-the-dpdp-rules-2025-phased-commencement-core-obligations-and-a-board-ready-compliance-strategy"
+  }
+ ],
+ "quirks": [
+  "On 2 October 2026 India has a data protection board but almost no law for it to enforce: substantive duties and penalties start on 13 May 2027.",
+  "Individuals cannot obtain compensation under the DPDP Act, civil courts are barred, and the existing compensation route under IT Act section 43A disappears when the Act fully commences.",
+  "Data principals have duties too, and can be fined up to INR 10,000 for false or frivolous complaints.",
+  "Appeals go to the telecoms tribunal (TDSAT), not to a general court, and penalties are fixed caps per breach type rather than a percentage of turnover."
+ ],
+ "plain": "From May 2027, if a company mishandles your data you must first complain to the company; if that fails, you can complain online to the Data Protection Board, which can investigate, broker a settlement or fine the company up to INR 250 crore, with appeals going to the telecoms tribunal. You will not get compensation from the Board and cannot sue in a civil court under this law. Until May 2027 the Board exists but the rules it would enforce are not yet in force.",
+ "map": {
+  "who_penalises": "none-yet",
+  "cap": "fixed",
+  "private_action": "limited"
+ },
+ "confidence": "medium: the commencement phases and Act text are confirmed from MeitY, PIB and two consistent law firm notes, but I could not confirm the Board's website, its members, whether it is already accepting complaints, the further appeal route to the Supreme Court or the suspensive effect of appeals.",
+ "sources": [
+  {
+   "title": "Digital Personal Data Protection Act 2023 (MeitY)",
+   "url": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "PIB: DPDP Rules 2025 notified (Board, penalties, TDSAT, online complaints)",
+   "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc20251117695301.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "Mondaq: DPDP Act and Rules phased commencement (section-level dates)",
+   "url": "https://www.mondaq.com/india/privacy-protection/1759134/indias-digital-personal-data-protection-act-and-the-dpdp-rules-2025-phased-commencement-core-obligations-and-a-board-ready-compliance-strategy",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Shardul Amarchand Mangaldas: enforcement of the DPDP Act and notification of the Rules",
+   "url": "https://www.amsshardul.com/insight/enforcement-of-the-dpdp-act-and-notification-of-the-dpdp-rules/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "ProtectComply: DPDP Rules timeline (rule numbers, G.S.R. numbers, January 2026 consultation)",
+   "url": "https://protectcomply.com/blog/dpdp-rules-2025-timeline",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DLA Piper Data Protection Laws of the World: India (IT Act regime until May 2027)",
+   "url": "https://www.dlapiperdataprotection.com/?t=law&c=IN",
+   "source_type": "secondary"
+  },
+  {
+   "title": "TCSA: DPDP Rules implementation roadmap (90-day grievance period)",
+   "url": "https://www.tcsa.in/resources/dpdp-rules-2025-implementation-roadmap",
+   "source_type": "secondary"
+  }
+ ]
+}

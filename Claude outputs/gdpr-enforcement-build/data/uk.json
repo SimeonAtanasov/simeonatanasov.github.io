@@ -51,8 +51,8 @@
  "cases": [
   {
    "title": "Clearview AI Inc (£7.5 million)",
-   "year": "2022-2025",
-   "summary": "The ICO fined Clearview £7.5 million in May 2022. The First-tier Tribunal allowed Clearview's appeal in October 2023 for lack of jurisdiction, but on 6 October 2025 the Upper Tribunal ([2025] UKUT 319 (AAC)) held the processing was within UK GDPR scope as behavioural monitoring under Art. 3(2)(b) and remitted the case to the First-tier Tribunal on the merits. A further appeal to the Court of Appeal was reported as likely; outcome not confirmed.",
+   "year": "2022-2026",
+   "summary": "The ICO fined Clearview £7.5 million in May 2022. The First-tier Tribunal allowed Clearview's appeal in October 2023 for lack of jurisdiction, but on 6 October 2025 the Upper Tribunal ([2025] UKUT 319 (AAC)) held the processing was within UK GDPR scope as behavioural monitoring under Art. 3(2)(b) and remitted the case to the First-tier Tribunal on the merits. Clearview appealed to the Court of Appeal (CA-2026-000226), with Privacy International intervening; the appeal, still on the preliminary question of jurisdiction, was heard on 19 to 21 October 2026 and judgment is awaited.",
    "url": "https://www.dacbeachcroft.com/en/What-we-think/Ico-v-clearview-ai-upper-tribunal-upholds-ico-appeal"
   },
   {
@@ -70,7 +70,7 @@
   "Appeals go to a specialist tribunal, not an ordinary court, and payment is effectively stayed while an appeal is pending."
  ],
  "plain": "You are expected to complain to the organisation first, which must acknowledge you within 30 days; if that fails you complain to the ICO, which gives you an outcome but does not award compensation. If the ICO fines a company, the company can appeal to a specialist tribunal and does not have to pay until the appeal is over. For compensation you sue the organisation in the ordinary civil courts yourself.",
- "confidence": "Medium-high: statutory provisions and the September 2026 Information Commission change were confirmed on legislation.gov.uk, but the Tribunal's 28-day deadline, internal decision-making under the new board and the Clearview onward appeal were not verified.",
+ "confidence": "Medium-high: statutory provisions and the September 2026 Information Commission change were confirmed on legislation.gov.uk, but the Tribunal's 28-day deadline and internal decision-making under the new board were not verified; the Clearview Court of Appeal judgment was pending as of 23 October 2026.",
  "sources": [
   {
    "title": "DPA 2018 s. 165 (complaints to the Commission)",

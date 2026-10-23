@@ -1,0 +1,146 @@
+{
+ "code": "uk",
+ "country": "United Kingdom",
+ "membership": "non-GDPR (contrast)",
+ "dpa": {
+  "name_en": "Information Commission (until 29 September 2026: Information Commissioner, operating as the Information Commissioner's Office)",
+  "name_native": "Information Commission",
+  "abbr": "ICO",
+  "url": "https://ico.org.uk/",
+  "structure": "Since 30 September 2026 a body corporate with a board, the Information Commission (DPA 2018 s. 114A, inserted by DUAA 2025 s. 117), which took over all functions of the abolished office of Information Commissioner, a single-person corporation sole (DUAA ss. 118-119, commenced by SI 2026/1015). Acts and proceedings of the Commissioner continue in the name of the Commission.",
+  "regional": "Single UK-wide regulator covering England, Wales, Scotland and Northern Ireland."
+ },
+ "law": {
+  "name": "UK GDPR (retained Regulation (EU) 2016/679 as amended), Data Protection Act 2018 (c. 12), as amended by the Data (Use and Access) Act 2025 (c. 18), commenced in stages from August 2025 to September 2026",
+  "url": "https://www.legislation.gov.uk/ukpga/2018/12/contents"
+ },
+ "complaint": {
+  "how": "Online via the ICO complaint form (the regulator must provide a form that can be completed electronically and by other means, DPA 2018 s. 165(3)); free. Since 19 June 2026 complaints run under DPA 2018 ss. 164A and 165 rather than UK GDPR Art. 77.",
+  "contact_controller_first": "Recommended, not a statutory precondition. Since 19 June 2026 (DUAA 2025 s. 103) data subjects have a statutory right to complain to the controller (DPA 2018 s. 164A), which must facilitate complaints, acknowledge them within 30 days and respond without undue delay. The ICO tells people to raise the concern with the organisation first.",
+  "deadlines": "No statutory deadline for complaining confirmed. The regulator must take appropriate steps and inform the complainant of progress or outcome; if it fails to do so within three months (and each later three months), the complainant can seek a Tribunal order (s. 166).",
+  "complainant_status": "Not a party to any enforcement action. The complainant receives an 'outcome' after the ICO applies its complaints framework, and can only use s. 166 for procedural failures."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint first to the controller (s. 164A), then to the ICO (s. 165)",
+   "Assessment against the ICO data protection complaints framework and outcome to the complainant",
+   "Investigation, possibly with information, assessment or (since 2026) interview notices",
+   "Notice of intent to fine, with at least 21 days for written representations (Sch. 16 para. 3)",
+   "Penalty notice, or notice of a decision not to fine, within six months of the notice of intent or as soon as reasonably practicable after (Sch. 16 para. 4)"
+  ],
+  "decision_maker": "Formerly the Information Commissioner; from 30 September 2026 the Information Commission. Internal delegation of penalty decisions under the new board structure: not confirmed.",
+  "limitation": "No general limitation period for penalties confirmed; the procedural time limit is the six-month (or as soon as reasonably practicable) window between notice of intent and penalty notice."
+ },
+ "fines": {
+  "imposed_by": "The regulator itself by monetary penalty notice (DPA 2018 s. 155), up to £17.5 million or 4% of worldwide turnover (s. 157). DUAA 2025 also raised PECR fines to the same level.",
+  "public_bodies": "Yes, public bodies can be fined at the same caps. Since 2022 the ICO's public sector approach favours reprimands and reduced fines: PSNI was fined £750,000 in October 2024 instead of £5.6 million.",
+  "quirks": "Separate criminal offences under DPA 2018 (e.g. s. 170 unlawfully obtaining personal data, s. 171 re-identification, s. 173 altering records to prevent disclosure), prosecuted by the ICO in England and Wales. Payment must be allowed at least 28 days (Sch. 16 para. 6)."
+ },
+ "appeal": {
+  "court": "First-tier Tribunal (General Regulatory Chamber, Information Rights jurisdiction) (DPA 2018 s. 162), which can review the merits and substitute its own decision.",
+  "deadline": "28 days from the date the penalty notice or other decision was sent (Tribunal Procedure (First-tier Tribunal) (General Regulatory Chamber) Rules 2009, rule 22(1)(b)).",
+  "suspensive": "Yes in effect: the regulator cannot take recovery action until the appeal period has expired and any appeal has been decided or otherwise ended (Sch. 16 para. 9).",
+  "further": "Upper Tribunal (Administrative Appeals Chamber) on a point of law with permission, then Court of Appeal (Court of Session in Scotland) and Supreme Court.",
+  "inaction": "Application to the First-tier Tribunal for an order to progress the complaint (s. 166) if the regulator fails to take appropriate steps or to update the complainant within three months; this is procedural only and does not let the Tribunal re-decide the complaint's merits."
+ },
+ "private": {
+  "courts": "County Court or High Court in England and Wales (Court of Session or sheriff court in Scotland) for compliance orders (s. 167) and compensation including distress (s. 168).",
+  "damages": "Lloyd v Google [2021] UKSC 50 held that 'loss of control' damages cannot be claimed uniformly in an opt-out representative action without proof of individual damage or distress, which effectively ended opt-out data damages class actions.",
+  "collective": "Art. 80(1) style representation by not-for-profit bodies (s. 187); Art. 80(2) independent representative actions were not adopted. Opt-out claims depend on the CPR 19.8 representative action, narrowed by Lloyd v Google. The EU Representative Actions Directive does not apply."
+ },
+ "cases": [
+  {
+   "title": "Clearview AI Inc (£7.5 million)",
+   "year": "2022-2025",
+   "summary": "The ICO fined Clearview £7.5 million in May 2022. The First-tier Tribunal allowed Clearview's appeal in October 2023 for lack of jurisdiction, but on 6 October 2025 the Upper Tribunal ([2025] UKUT 319 (AAC)) held the processing was within UK GDPR scope as behavioural monitoring under Art. 3(2)(b) and remitted the case to the First-tier Tribunal on the merits. A further appeal to the Court of Appeal was reported as likely; outcome not confirmed.",
+   "url": "https://www.dacbeachcroft.com/en/What-we-think/Ico-v-clearview-ai-upper-tribunal-upholds-ico-appeal"
+  },
+  {
+   "title": "Police Service of Northern Ireland (£750,000)",
+   "year": "2024",
+   "summary": "Fine of 3 October 2024 after a freedom of information response exposed details of all 9,483 officers and staff in a hidden spreadsheet tab. Under the public sector approach the fine was cut from £5.6 million.",
+   "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/10/what-price-privacy-poor-psni-procedures-culminate-in-750k-fine/"
+  }
+ ],
+ "quirks": [
+  "Not under the EU GDPR since Brexit: the UK GDPR and DPA 2018 apply, with the UK's own adequacy-based transfer regime; CJEU rulings after 2020 are not binding.",
+  "From 19 June 2026 controllers must run a complaints process and acknowledge complaints within 30 days (DPA 2018 s. 164A); the ICO expects people to use it before complaining to the regulator.",
+  "From 30 September 2026 the Information Commissioner was replaced by a board-led Information Commission; the ICO name and website continue.",
+  "Fines on public bodies are possible but routinely reduced or replaced by reprimands under the public sector approach.",
+  "Appeals go to a specialist tribunal, not an ordinary court, and payment is effectively stayed while an appeal is pending."
+ ],
+ "plain": "You are expected to complain to the organisation first, which must acknowledge you within 30 days; if that fails you complain to the ICO, which gives you an outcome but does not award compensation. If the ICO fines a company, the company can appeal to a specialist tribunal and does not have to pay until the appeal is over. For compensation you sue the organisation in the ordinary civil courts yourself.",
+ "confidence": "Medium-high: statutory provisions and the September 2026 Information Commission change were confirmed on legislation.gov.uk, but the Tribunal's 28-day deadline, internal decision-making under the new board and the Clearview onward appeal were not verified.",
+ "sources": [
+  {
+   "title": "DPA 2018 s. 165 (complaints to the Commission)",
+   "url": "https://www.legislation.gov.uk/ukpga/2018/12/section/165",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPA 2018 s. 166 (orders to progress complaints)",
+   "url": "https://www.legislation.gov.uk/ukpga/2018/12/section/166",
+   "source_type": "primary"
+  },
+  {
+   "title": "DPA 2018 Schedule 16 (penalties procedure)",
+   "url": "https://www.legislation.gov.uk/ukpga/2018/12/schedule/16",
+   "source_type": "primary"
+  },
+  {
+   "title": "DUAA 2025 s. 103 (complaints to controllers)",
+   "url": "https://www.legislation.gov.uk/ukpga/2025/18/section/103/data.xht?view=snippet&wrap=true",
+   "source_type": "primary"
+  },
+  {
+   "title": "DUAA 2025 Schedule 10 (complaints amendments)",
+   "url": "https://www.legislation.gov.uk/ukpga/2025/18/schedule/10",
+   "source_type": "primary"
+  },
+  {
+   "title": "DUAA 2025 Part 6 (Information Commission)",
+   "url": "https://www.legislation.gov.uk/ukpga/2025/18/part/6",
+   "source_type": "primary"
+  },
+  {
+   "title": "SI 2026/1015, DUAA (Commencement No. 9) Regulations 2026",
+   "url": "https://www.legislation.gov.uk/uksi/2026/1015/made",
+   "source_type": "primary"
+  },
+  {
+   "title": "ICO: Data protection complaints",
+   "url": "https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/",
+   "source_type": "primary"
+  },
+  {
+   "title": "ICO: PSNI £750k fine (3 October 2024)",
+   "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/10/what-price-privacy-poor-psni-procedures-culminate-in-750k-fine/",
+   "source_type": "primary"
+  },
+  {
+   "title": "ICLR: Information Commissioner v Clearview AI Inc [2025] UKUT 319 (AAC)",
+   "url": "https://www.iclr.co.uk/document/2025036946/2025ukut319aac_TNA/html",
+   "source_type": "primary"
+  },
+  {
+   "title": "UK Supreme Court: Lloyd v Google LLC [2021] UKSC 50",
+   "url": "https://www.supremecourt.uk/cases/uksc-2019-0213",
+   "source_type": "primary"
+  },
+  {
+   "title": "DAC Beachcroft: ICO v Clearview AI, Upper Tribunal",
+   "url": "https://www.dacbeachcroft.com/en/What-we-think/Ico-v-clearview-ai-upper-tribunal-upholds-ico-appeal",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DLA Piper: new complaints handling rules from 19 June 2026",
+   "url": "https://privacymatters.dlapiper.com/2026/06/uk-new-complaints-handling-rules-under-duaa-take-effect-on-19-june-2026-are-you-ready/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "RPC: DUAA commencement update (spring 2026)",
+   "url": "https://www.rpclegal.com/snapshots/data-protection/spring-2026/the-data-use-and-access-act-2025-commencement-update/",
+   "source_type": "secondary"
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "code": "be",
+ "country": "Belgium",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Data Protection Authority",
+  "name_native": "Autorité de protection des données (APD) / Gegevensbeschermingsautoriteit (GBA) / Datenschutzbehörde",
+  "abbr": "APD / GBA (DPA)",
+  "url": "https://www.dataprotectionauthority.be/",
+  "structure": "Single federal authority with internal bodies: a Board of Directors (collegial), General Secretariat, First Line Service, Knowledge Centre, Inspection Service and Litigation Chamber (Chambre Contentieuse / Geschillenkamer), the last being the quasi-judicial body led by its director (Art. 33 LCA). The organic law was revised with effect from 1 June 2024.",
+  "regional": "No regional general DPAs. Separate supervisory bodies exist for specific sectors (for example police information via the Supervisory Body for Police Information, COC), not researched in detail here."
+ },
+ "law": {
+  "name": "Loi du 3 décembre 2017 portant création de l'Autorité de protection des données (organic law, 'LCA'), revised version in force 1 June 2024; and Loi du 30 juillet 2018 relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel (GDPR implementing act).",
+  "url": "https://www.autoriteprotectiondonnees.be/publications/loi-organique-de-l-apd.pdf"
+ },
+ "complaint": {
+  "how": "Dated and signed (manually or electronically) complaint in French, Dutch or German with a statement of facts, using the DPA form, submitted online or by post (Art. 60 LCA admissibility criteria). No fee mentioned on the DPA page.",
+  "contact_controller_first": "Recommended rather than required: the DPA says it 'may be useful' to contact the controller first; for data subject rights, prior exercise of the right is in practice expected (not confirmed as a legal admissibility condition).",
+  "deadlines": "No time limit for filing found in the LCA; infringements are time-barred five years after they were committed, with interruption by investigative or prosecution acts (Art. 105 LCA, per consolidated text). No statutory decision deadline for the DPA found; the DPA warns that handling currently takes several months.",
+  "complainant_status": "The complainant is a party before the Litigation Chamber: parties receive the file and can submit pleadings and be heard (Art. 98-99 LCA)."
+ },
+ "procedure": {
+  "stages": [
+   "First Line Service checks admissibility (Art. 60-61 LCA) and may attempt mediation where it sees fit (Art. 22 LCA)",
+   "Admissible complaint passed to the Litigation Chamber, which decides whether and how to handle it (it can dismiss on opportunity grounds)",
+   "Optional referral to the Inspection Service for investigation",
+   "Litigation Chamber either takes a light-track decision (dismissal, warning, proposal of a settlement, Art. 95 LCA) or opens proceedings on the merits",
+   "Written exchange of pleadings and optional hearing (Art. 98-99 LCA)",
+   "Decision on the merits with corrective measures, penalty payments or administrative fines (Art. 100-101 LCA), published on the DPA website"
+  ],
+  "decision_maker": "Litigation Chamber, directed by the director of the Litigation Chamber (Art. 33 LCA).",
+  "limitation": "Five years from commission of the facts, interrupted by investigative or prosecution acts (Art. 105 LCA)."
+ },
+ "fines": {
+  "imposed_by": "The Litigation Chamber itself, by administrative decision (Art. 100(1) 13° and Art. 101 LCA). No court confirmation step.",
+  "public_bodies": "Art. 83 GDPR does not apply to public authorities and their agents, except public-law legal persons offering goods or services on a market (Art. 221 § 2 Law of 30 July 2018). Upheld by the Constitutional Court (judgment 3/2021, 14 January 2021). The DPA reads 'public authority' narrowly (for example social housing companies and schools have been treated as fineable).",
+  "quirks": "The Litigation Chamber can propose a settlement (transaction) and impose penalty payments (astreintes). The 30 July 2018 Act also contains criminal offences (article numbers not verified here)."
+ },
+ "appeal": {
+  "court": "Market Court (Cour des marchés / Marktenhof), a section of the Brussels Court of Appeal, with full jurisdiction to substitute its own decision (Art. 108 § 2 LCA).",
+  "deadline": "30 days from notification; third parties with a direct personal interest have 30 days from publication on the DPA website (Art. 108 § 3 LCA).",
+  "suspensive": "No. Decisions are provisionally enforceable notwithstanding appeal, except deletion orders or where the Litigation Chamber decides otherwise in a specially reasoned decision (Art. 108 § 1 LCA).",
+  "further": "Appeal in cassation to the Court of Cassation (general rule; not confirmed from LCA text).",
+  "inaction": "Not confirmed. No specific Art. 78(2) remedy found in the LCA; a complainant would likely have to rely on general administrative or civil remedies."
+ },
+ "private": {
+  "courts": "Ordinary civil courts. The 30 July 2018 Act also provides an injunction-style action (action en cessation) before the president of the court of first instance (article number not verified).",
+  "damages": "Not confirmed: no notable Belgian damages awards found within the research budget.",
+  "collective": "Art. 80 representation by non-profit organisations is provided in the 30 July 2018 Act (article number not verified). Belgian class actions (Book XVII Code of Economic Law) and the Representative Actions Directive transposition were not confirmed for GDPR claims."
+ },
+ "cases": [
+  {
+   "title": "IAB Europe, Transparency and Consent Framework",
+   "year": "2022-2025",
+   "summary": "Decision 21/2022 (2 Feb 2022) fined IAB Europe EUR 250,000 and ordered a compliance plan. The Market Court referred questions (CJEU C-604/22, 7 March 2024: the TC String is personal data and IAB Europe can be a joint controller). On 14 May 2025 the Market Court annulled and replaced the decision, confirming joint controllership for TC String processing but not for downstream OpenRTB processing, and kept the EUR 250,000 fine.",
+   "url": "https://www.dataprotectionauthority.be/citizen/the-market-court-rules-in-the-iab-europe-case"
+  },
+  {
+   "title": "FATCA transfers by the Federal Public Service Finance",
+   "year": "2025",
+   "summary": "Decision 79/2025 (24 April 2025), on a complaint by the Belgian Accidental Americans Association and a member, found FATCA bank-data transfers to the US unlawful and ordered corrective measures within a year; no fine because of Art. 221 § 2. On appeal by the Belgian State, the Market Court referred 13 questions to the CJEU (judgment of 26 Nov 2025, announced 4 Dec 2025; C-804/25).",
+   "url": "https://www.dataprotectionauthority.be/professional/news/2025/12/04/fatca-the-market-court-refers-13-preliminary-questions-to-the-cjeu"
+  }
+ ],
+ "quirks": [
+  "The Litigation Chamber is a quasi-judicial body inside the DPA; it chooses which admissible complaints to pursue and can dismiss on opportunity grounds.",
+  "Public authorities cannot be fined (Art. 221 § 2 Law of 30 July 2018), upheld by the Constitutional Court in 2021.",
+  "Appeals go straight to the Market Court (Brussels Court of Appeal), which has full jurisdiction and frequently annuls on procedural grounds while confirming substance.",
+  "Complaints must be in French, Dutch or German; English is not an admissible language.",
+  "The organic law was overhauled with effect from 1 June 2024 (new governance, five-year limitation period)."
+ ],
+ "plain": "You send a signed complaint in French, Dutch or German to the DPA's First Line Service, which checks it and may try mediation. If it goes further, the Litigation Chamber, a court-like body inside the DPA, decides whether to pursue it, hears both sides and can issue warnings, orders or fines, though public authorities cannot be fined. Either party can appeal within 30 days to the Market Court in Brussels, but the decision usually applies in the meantime.",
+ "confidence": "medium: structure, appeal and leading cases are confirmed from DPA and statutory sources, but I could not read the 30 July 2018 Act directly (blocked) and did not confirm the Art. 78(2) inaction route, collective action rules or damages case law.",
+ "sources": [
+  {
+   "title": "APD: Introduire une plainte",
+   "url": "https://www.autoriteprotectiondonnees.be/citoyen/agir/introduire-une-plainte",
+   "source_type": "primary"
+  },
+  {
+   "title": "APD: revised organic law (in force 1 June 2024)",
+   "url": "https://www.autoriteprotectiondonnees.be/publications/loi-organique-de-l-apd.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "Loi du 3 décembre 2017, consolidated (Refli)",
+   "url": "https://refli.be/fr/lex/2017031916",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Constitutional Court judgment 3/2021 on Art. 221 § 2",
+   "url": "https://etaamb.openjustice.be/fr/arret_n2021200338.html",
+   "source_type": "primary"
+  },
+  {
+   "title": "UVCW: public authorities exempt from GDPR fines",
+   "url": "https://www.uvcw.be/data/actus/art-5105",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DPA: The Market Court rules in the IAB Europe case",
+   "url": "https://www.dataprotectionauthority.be/citizen/the-market-court-rules-in-the-iab-europe-case",
+   "source_type": "primary"
+  },
+  {
+   "title": "Freshfields: Market Court on IAB Europe roles",
+   "url": "https://www.freshfields.com/en/our-thinking/blogs/technology-quotient/brussels-market-court-clarifies-gdpr-roles-in-adtech-and-upholds-sanctions-agains-102kcx6",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DPA: FATCA, Market Court refers 13 questions to the CJEU",
+   "url": "https://www.dataprotectionauthority.be/professional/news/2025/12/04/fatca-the-market-court-refers-13-preliminary-questions-to-the-cjeu",
+   "source_type": "primary"
+  },
+  {
+   "title": "Freshfields: Belgian DPA's new FATCA ruling",
+   "url": "https://www.freshfields.com/en/our-thinking/blogs/technology-quotient/belgian-dpas-new-fatca-ruling-adds-pressure-on-eu-us-data-transfers-102kaz6",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Mayer Brown: CJEU to examine FATCA transfers",
+   "url": "https://www.mayerbrown.com/en/insights/publications/2025/12/eu-court-of-justice-to-examine-gdpr-compliance-of-fatca-related-bank-data-transfers",
+   "source_type": "secondary"
+  },
+  {
+   "title": "CJEU C-604/22 IAB Europe",
+   "url": "https://curia.europa.eu/juris/liste.jsf?num=C-604/22",
+   "source_type": "primary"
+  }
+ ]
+}

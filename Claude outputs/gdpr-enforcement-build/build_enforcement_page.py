@@ -14,6 +14,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "data")
 OUT = os.path.join(HERE, "out")
 CHECKED = "2 October 2026"
+RECHECKED = "23 October 2026"  # pending cases, bills and officeholders rechecked (research/apply_2026_10_23.py)
 EM = chr(0x2014)
 
 C = {c: json.load(open(os.path.join(DATA, c + ".json"), encoding="utf-8")) for c in ORDER}
@@ -261,7 +262,7 @@ STEPS = [
     ("Admissibility and triage", "The authority checks the complaint falls within its remit and may pass it to the organisation for a response first (Spain gives the organisation a month). It may refuse a manifestly unfounded or excessive request, but a high number of complaints alone does not make them excessive (C-416/23). Many cases end here, settled or closed."),
     ("Investigation", "Requests for information, inspections and audits under Art. 58(1). Where the organisation has its main establishment in another country, the case goes to that country's authority as lead (see the next section)."),
     ("Findings and the right to be heard", "The organisation receives the findings and replies before any decision. In several countries a separate body inside the authority decides on sanctions: the restricted committee in France, the restricted formation in Luxembourg, the Litigation Chamber in Belgium, the Sanctions Board in Finland."),
-    ("Decision", "Findings, corrective orders under Art. 58(2), and a fine where the authority judges it effective, proportionate and dissuasive, weighed on the Art. 83(2) criteria and set against the turnover of the whole undertaking (C-383/23). The cap is 2% or EUR 10 million, or 4% or EUR 20 million, whichever is higher."),
+    ("Decision", "Findings, corrective orders under Art. 58(2), and a fine where the authority judges it effective, proportionate and dissuasive, weighed on the Art. 83(2) criteria and set against the turnover of the whole undertaking (C-383/23). The cap is 2% or EUR 10 million, or 4% or EUR 20 million, whichever is higher. EDPB Guidelines 04/2022 set the method for the amount; Guidelines 04/2026, at consultation until 13 November 2026, add a five-step test for whether to fine at all, with a strong presumption of a fine for any infringement that is not minor."),
     ("Publication and payment", "Most authorities publish decisions, often anonymised. When the fine falls due is national law: in many countries payment waits for the appeal, in others it does not (see the map)."),
 ]
 
@@ -401,11 +402,11 @@ def main_html():
 <ul class="ge-quirks">
 <li>Several official law portals refuse automated reading (Lovdata, Legifrance, Finlex, Riigi Teataja, several others), so some article numbers rest on consolidated copies or translations. The source lists say which.</li>
 <li>Appeal deadlines and whether an appeal holds payment are the least certain fields, because many countries set them in general administrative procedure law rather than the data protection act. Where that is the basis, the text says so.</li>
-<li>Court cases move. Every outcome is dated; anything after %s is not reflected.</li>
+<li>Court cases move. Every outcome is dated; pending cases, bills and officeholders were rechecked on %s, and anything after that date is not reflected.</li>
 <li>The classifications on the map and in the comparison compress paragraphs into one label. Read the country section before relying on one.</li>
 </ul>
 <p class="ge-note">Related on this site: <a href="privacy-enforcement-worldwide.html">privacy enforcement worldwide</a> for 23 jurisdictions outside Europe, the <a href="gdpr-fines-analytics.html">GDPR Fines Analytics</a>, the <a href="power-bi.html">GDPR Fines Dashboard</a> and the <a href="gdpr-fine-calculator.html">GDPR Fine Calculator</a> for what the fines have been; the <a href="edpb-digest.html">EDPB Digest</a> for the binding decisions and guidelines cited here. The Regulation itself: %s.</p>
-</section></div>''' % (CORRECTIONS, CHECKED, link(GDPR, "Regulation (EU) 2016/679 on EUR-Lex")))
+</section></div>''' % (CORRECTIONS, RECHECKED, link(GDPR, "Regulation (EU) 2016/679 on EUR-Lex")))
     html_out = "\n".join(out)
     # Lead and note paragraphs are hand-written with plain references; link them in one pass.
     html_out = re.sub(r'(<p class="ge-(?:lead|note)">)(.*?)(</p>)',

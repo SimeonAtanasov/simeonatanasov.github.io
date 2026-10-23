@@ -1,0 +1,176 @@
+{
+ "code": "pl",
+ "country": "Poland",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Personal Data Protection Office (headed by the President of the Personal Data Protection Office)",
+  "name_native": "Urząd Ochrony Danych Osobowych (Prezes Urzędu Ochrony Danych Osobowych)",
+  "abbr": "UODO (PUODO for the President)",
+  "url": "https://uodo.gov.pl",
+  "structure": "Monocratic: the President of the Office (Prezes UODO) is the supervisory authority and decides personally; the Office is the supporting administration. The current President is Mirosław Wróblewski.",
+  "regional": "Single national authority based in Warsaw; no regional DPAs."
+ },
+ "law": {
+  "name": "Act of 10 May 2018 on the protection of personal data (ustawa o ochronie danych osobowych), Dz.U. 2018 poz. 1000; consolidated text Dz.U. 2019 poz. 1781, with further amendments in 2026 (Dz.U. 2026 poz. 252, 548, 1003; content of these amendments not confirmed)",
+  "url": "https://standardyprawa.pl/akt/81"
+ },
+ "complaint": {
+  "how": "On paper at or by post to UODO, ul. Stanisława Moniuszki 1A, 00-014 Warszawa, or electronically via the ePUAP e-government platform. No fee is mentioned. Proceedings are in Polish under the Code of Administrative Procedure (KPA).",
+  "contact_controller_first": "Yes, for rights requests: UODO states that its power to order a controller to grant a request requires that the person first made the request directly to the controller, which has one month (extendable by two) to respond. UODO recommends attaching correspondence with the controller.",
+  "deadlines": "No time limit for complaining was found. The KPA's general deadlines (one month, two months for complex cases, Art. 35 KPA) apply in principle, but complaint proceedings commonly take much longer (not confirmed from a primary source).",
+  "complainant_status": "The complainant is a party to the administrative proceedings under the KPA (Art. 7(1) of the Act applies the KPA) and can challenge the President's decision in the administrative court."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint or ex officio action; administrative proceedings under the KPA (Art. 7(1) of the Act)",
+   "Fact-finding, possibly including an inspection (kontrola) under Chapter 9 of the Act",
+   "In fine proceedings, the entity must supply turnover data within 30 days on request, otherwise the President estimates the fine base (Art. 101a)",
+   "Single decision of the President: proceedings are single-instance (Art. 7(2)), so there is no internal appeal or request for reconsideration",
+   "Procedural orders (postanowienia) cannot be appealed internally but can be challenged in the administrative court (Art. 7(3)-(4))"
+  ],
+  "decision_maker": "The President of UODO, personally, by administrative decision.",
+  "limitation": "Art. 106 of the Act excludes Arts. 189d-189f and 189k KPA but not Art. 189g, so the KPA's general five-year limitation for administrative fines appears to apply (not confirmed by case law or UODO statement)."
+ },
+ "fines": {
+  "imposed_by": "The President of UODO by administrative decision. Euro amounts in Art. 83 GDPR are converted into PLN at the National Bank of Poland average rate (Art. 103).",
+  "public_bodies": "Yes, but capped: up to PLN 100,000 for public finance sector units and research institutes, and up to PLN 10,000 for certain other public entities (Art. 102). The PLN 10,000 tier is understood to cover state and local cultural institutions (not confirmed in the fetched text).",
+  "quirks": "Criminal offences in the Act: unlawful processing (up to two years' imprisonment, three for special-category data, Art. 107) and obstructing an inspection or withholding fine-base data (up to two years, Art. 108). Fines are payable only 14 days after the deadline to go to court expires or the court judgment becomes final, and the President may defer or allow instalments (Art. 105)."
+ },
+ "appeal": {
+  "court": "Voivodeship Administrative Court in Warsaw (Wojewódzki Sąd Administracyjny w Warszawie, WSA), by complaint (skarga) lodged through the President of UODO.",
+  "deadline": "30 days from service of the decision (Art. 53(1) of the Law on proceedings before administrative courts, PPSA).",
+  "suspensive": "Effectively yes for fines: payment falls due 14 days after the appeal deadline expires or the court ruling becomes final (Art. 105(1) of the Act).",
+  "further": "Cassation appeal (skarga kasacyjna) to the Supreme Administrative Court (Naczelny Sąd Administracyjny, NSA), within 30 days of service of the WSA judgment with reasons (Art. 177 PPSA). Both the company and the President of UODO can file. The NSA can annul and send the case back, as in Morele.net.",
+  "inaction": "A complainant can first send a reminder (ponaglenie, Art. 37 KPA) and then file a complaint against inaction or excessive length (skarga na bezczynność / przewlekłość) to the WSA in Warsaw (Art. 53(2b) PPSA). Not confirmed from a UODO page."
+ },
+ "private": {
+  "courts": "Claims under Arts. 79 and 82 GDPR go to the regional court (sąd okręgowy) as court of first instance regardless of value (Art. 93 of the Act); the Civil Code applies to matters the GDPR does not regulate (Art. 92).",
+  "damages": "Not confirmed: no primary source on typical damages amounts was found.",
+  "collective": "Not confirmed. Poland has a group proceedings act (Act of 17 December 2009 on pursuing claims in group proceedings); whether and how the Representative Actions Directive transposition covers GDPR claims was not verified."
+ },
+ "cases": [
+  {
+   "title": "Morele.net: fine annulled by the NSA, reissued higher, upheld by the WSA",
+   "year": "2019 to 2024",
+   "summary": "UODO fined the online retailer PLN 2.83 million in 2019 over a 2018 breach affecting about 2.2 million customers; the WSA upheld it but on 9 February 2023 the NSA annulled both rulings, finding UODO had not shown it had the technical expertise to assess security without an expert. In a new decision of 17 January 2024 UODO imposed over PLN 3.8 million, which the WSA upheld on 16 September 2024 (finality not confirmed).",
+   "url": "https://gdpr.pl/morele-net-ponownie-ukarana-kara-wzrosla-do-ponad-38-miliona-zlotych"
+  },
+  {
+   "title": "Poczta Polska: PLN 27 million fine annulled by the WSA, UODO appeals to the NSA",
+   "year": "2025 to 2026",
+   "summary": "UODO fined the state postal operator over PLN 27 million in 2025 for processing data of about 30 million voters for the planned 2020 postal presidential election without a legal basis. The WSA in Warsaw annulled the decision, accepting a Prime Minister's decision as a legal basis; on 1 June 2026 the President of UODO announced a cassation appeal, arguing an individual administrative act cannot be a legal basis under Art. 6(3) GDPR.",
+   "url": "https://uodo.gov.pl/pl/138/4409"
+  },
+  {
+   "title": "Santander Bank Polska: PLN 545,748 fine upheld by the NSA",
+   "year": "2026",
+   "summary": "UODO fined the bank for failing to notify employees of a breach involving access to their data on the social insurance (ZUS) portal. The WSA upheld the decision and on 6 March 2026 the NSA dismissed the bank's cassation appeal, holding that the possibility of unauthorised access, not proof of actual access, triggers the Art. 34 GDPR duty.",
+   "url": "https://uodo.gov.pl/pl/138/4096"
+  }
+ ],
+ "quirks": [
+  "Single-instance procedure (Art. 7(2)): there is no request for reconsideration, so the only remedy is the WSA in Warsaw.",
+  "Public bodies can be fined but only up to PLN 100,000 (or PLN 10,000 for some entities), under Art. 102.",
+  "Criminal offences for unlawful processing and for obstructing inspections sit alongside the administrative fines (Arts. 107-108).",
+  "Fines are not payable until court review is over (Art. 105), and courts have annulled high-profile fines (Morele.net, Poczta Polska), though UODO also wins at the NSA (Santander). Recent large fines include Glovo (PLN 5.9 million, March 2026)."
+ ],
+ "plain": "You complain to the Polish DPA (UODO) on paper or through the government's ePUAP portal, usually after first asking the company yourself. The President of UODO decides in a single step; anyone unhappy with the decision, including you, can go to the administrative court in Warsaw within 30 days and then to the Supreme Administrative Court. For compensation you sue the company in the regional civil court.",
+ "confidence": "medium: the Act's key articles were confirmed from a secondary statute portal (the official ISAP and Sejm sites block automated access), but the 2026 amendments, the five-year limitation, the PLN 10,000 tier's scope, the collective-action position and complaint processing times were not confirmed.",
+ "sources": [
+  {
+   "title": "Act of 10 May 2018 on personal data protection, consolidated text with 2026 amendments (standardyprawa.pl)",
+   "url": "https://standardyprawa.pl/akt/81",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 7 (single-instance, KPA)",
+   "url": "https://standardyprawa.pl/akt/81/art/15224",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 92 (Civil Code applies to Arts. 79/82 claims)",
+   "url": "https://standardyprawa.pl/akt/81/art/15310",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 93 (regional court competent)",
+   "url": "https://standardyprawa.pl/akt/81/art/15311",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 101a (fine-base data)",
+   "url": "https://standardyprawa.pl/akt/81/art/15320",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 102 (public sector caps)",
+   "url": "https://standardyprawa.pl/akt/81/art/15321",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 103 (EUR to PLN conversion)",
+   "url": "https://standardyprawa.pl/akt/81/art/15322",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 105 (payment of fines)",
+   "url": "https://standardyprawa.pl/akt/81/art/15324",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 106 (KPA provisions excluded)",
+   "url": "https://standardyprawa.pl/akt/81/art/15325",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 107 (criminal offence)",
+   "url": "https://standardyprawa.pl/akt/81/art/15326",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Art. 108 (obstructing inspection)",
+   "url": "https://standardyprawa.pl/akt/81/art/15327",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Original Act, Dz.U. 2018 poz. 1000 (ISAP PDF)",
+   "url": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20180001000/T/D20181000L.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "UODO: Masz prawo złożyć skargę do Prezesa UODO",
+   "url": "https://uodo.gov.pl/pl/138/155",
+   "source_type": "primary"
+  },
+  {
+   "title": "UODO: cassation appeal in the Poczta Polska case",
+   "url": "https://uodo.gov.pl/pl/138/4409",
+   "source_type": "primary"
+  },
+  {
+   "title": "UODO: NSA upholds Santander Bank Polska fine",
+   "url": "https://uodo.gov.pl/pl/138/4096",
+   "source_type": "primary"
+  },
+  {
+   "title": "UODO: Glovo fine (March 2026)",
+   "url": "https://uodo.gov.pl/pl/138/4092",
+   "source_type": "primary"
+  },
+  {
+   "title": "Dziennik.pl: NSA annuls Morele.net fine (February 2023)",
+   "url": "https://technologia.dziennik.pl/aktualnosci/artykuly/8657934,morelenet-wyciek-danych-kara-uchylenie-nsa.html",
+   "source_type": "secondary"
+  },
+  {
+   "title": "GDPR.pl: Morele.net fined again, over PLN 3.8 million",
+   "url": "https://gdpr.pl/morele-net-ponownie-ukarana-kara-wzrosla-do-ponad-38-miliona-zlotych",
+   "source_type": "secondary"
+  },
+  {
+   "title": "NowyMarketing: WSA dismisses Morele.net complaint (September 2024)",
+   "url": "https://nowymarketing.pl/uodo-wsa-oddalil-skarga-morele-net-kara-prawie-4-mln-zl-za-lamanie-rodo-utrzymana/",
+   "source_type": "secondary"
+  }
+ ]
+}

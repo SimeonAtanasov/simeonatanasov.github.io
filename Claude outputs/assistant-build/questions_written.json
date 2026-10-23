@@ -1374,7 +1374,8 @@
   "How is AI Act supervision organised in Ireland?",
   "Who is the AI Act single point of contact in Ireland?",
   "Which authorities are notifying authorities for AI in Ireland?",
-  "Will Ireland set up a National AI Office?"
+  "What does the AI Office of Ireland do?",
+  "What is Ireland's Regulation of Artificial Intelligence Act 2026?"
  ],
  "aia-doc-51": [
   "How is AI Act supervision organised in the Netherlands?",
@@ -1384,7 +1385,8 @@
  "aia-doc-52": [
   "Which authority is the AI Act single point of contact in France?",
   "Has France adopted its AI Act implementing law?",
-  "How will French AI competences be split between DGCCRF and CNIL?"
+  "How will French AI competences be split between DGCCRF and CNIL?",
+  "What role does the CNIL have under the AI Act in France?"
  ],
  "aia-doc-53": [
   "Is there a free AI Act explorer that shows the Omnibus amendments?",
@@ -1418,6 +1420,11 @@
   "How much notice must users get before their data is used for AI training?",
   "Do I need a DPIA to train a new AI model?",
   "Does a human appeal take a decision outside Article 22 GDPR?"
+ ],
+ "aia-doc-59": [
+  "Which harmonised standards are cited under the AI Act?",
+  "Does EN 18286 give a presumption of conformity for the quality management system?",
+  "What is Commission Implementing Decision (EU) 2026/2274?"
  ],
  "aiaadv-aia-assessing-ai-risk-questions-worth-asking-1": [
   "What questions should I ask before deploying a new AI system?",
@@ -2474,1356 +2481,1363 @@
   "Can the same peer data give very different answers depending on the method?"
  ],
  "ck-d001": [
+  "What does the Council's Digital Omnibus mandate say about cookies?",
+  "Which cookies would be exempt from consent under the Council position?",
+  "How long must a site wait before asking for cookie consent again under the Council mandate?",
+  "Does the Council keep the browser consent signal from the Digital Omnibus?"
+ ],
+ "ck-d002": [
   "Is the EDPB preparing guidelines on consent or pay?",
   "What does the EDPB work programme 2026-2027 say about consent or pay?",
   "Should publishers with paid ad-free tiers expect a general EDPB position?"
  ],
- "ck-d002": [
+ "ck-d003": [
   "What did the EDPB and EDPS say about the Digital Omnibus and cookies?",
   "Does Article 88a of the Digital Omnibus bar repeat consent requests after a refusal?",
   "Why do the EDPB and EDPS object to narrowing the definition of personal data?"
  ],
- "ck-d003": [
+ "ck-d004": [
   "Can an online shop force customers to create an account to buy?",
   "What do EDPB Recommendations 2/2025 say about guest checkout?",
   "Can loyalty or order tracking justify mandatory accounts under legitimate interest?"
  ],
- "ck-d004": [
+ "ck-d005": [
   "What are Articles 88a and 88b in the Digital Omnibus proposal?",
   "Will browsers have to offer machine-readable consent signals under the Digital Omnibus?",
   "How long before I can ask for cookie consent again after a refusal under the Omnibus?",
-  "Where does the Digital Omnibus proposal stand as of September 2026?"
+  "Where does the Digital Omnibus proposal stand now?"
  ],
- "ck-d005": [
+ "ck-d006": [
   "Can I email a newsletter to free account sign-ups without separate consent?",
   "What did the CJEU decide in case C-654/23 on the soft opt-in?",
   "Does the Article 13(2) soft opt-in cover freemium sign-ups?"
  ],
- "ck-d006": [
+ "ck-d007": [
   "What do the EDPB and Commission say about the DMA and GDPR interplay?",
   "How does a gatekeeper meet Article 5(2) DMA and GDPR consent together?",
   "Have the joint DMA and GDPR guidelines been finalised?"
  ],
- "ck-d007": [
+ "ck-d008": [
   "What is the Digital Fairness Act and does it cover dark patterns?",
   "When will the Commission propose the Digital Fairness Act?",
   "Will the Digital Fairness Act address cookie consent fatigue?"
  ],
- "ck-d008": [
+ "ck-d009": [
   "Why did the Commission fine a gatekeeper 200 million euro under the DMA?",
   "Is consent or pay allowed under Article 5(2) DMA?",
   "What was the first EU-level enforcement of consent or pay?"
  ],
- "ck-d009": [
+ "ck-d010": [
   "Was the ePrivacy Regulation proposal withdrawn?",
   "Is the ePrivacy Directive still the operative cookie law?",
   "When did the Commission withdraw the ePrivacy Regulation proposal?"
  ],
- "ck-d010": [
+ "ck-d011": [
   "What do EDPB Guidelines 2/2023 say about Article 5(3) ePrivacy?",
   "Does server-side tagging need consent under Article 5(3) ePrivacy?",
   "Do tracking pixels and fingerprinting fall under the ePrivacy cookie rule?",
   "Does IP-based tracking count as access to terminal equipment?"
  ],
- "ck-d011": [
+ "ck-d012": [
   "What does EDPB Opinion 08/2024 say about consent or pay?",
   "Can a large platform offer only ads or a fee and get valid consent?",
   "Should a pay-or-consent site offer a free, less intrusive ad option?"
  ],
- "ck-d012": [
+ "ck-d013": [
   "Is the TC String personal data?",
   "Is the TCF operator a joint controller with its members?",
   "What did the CJEU decide in case C-604/22 on the TCF?"
  ],
- "ck-d013": [
+ "ck-d014": [
   "What does Article 25 of the Digital Services Act say about dark patterns?",
   "Does the DSA ban profiling-based advertising to minors?",
   "What is the maximum fine under the Digital Services Act?"
  ],
- "ck-d014": [
+ "ck-d015": [
   "What did the EDPB say about the Commission cookie pledge principles?",
   "Can a voluntary cookie pledge override legal consent obligations?",
   "Is a paid alternative to tracking enough for freely given consent?"
  ],
- "ck-d015": [
+ "ck-d016": [
   "What was the European Commission cookie pledge?",
   "Was the EU cookie pledge ever signed?",
   "What principles did the draft cookie pledge set for repeat consent requests?"
  ],
- "ck-d016": [
+ "ck-d017": [
   "What did the CJEU rule in the Bundeskartellamt case C-252/21?",
   "Can a competition authority examine GDPR compliance?",
   "Does a dominant position make consent invalid?",
   "Can contract or legitimate interest justify off-site tracking for ad personalisation?"
  ],
- "ck-d017": [
+ "ck-d018": [
   "What does Article 5(2) DMA require before gatekeepers combine personal data?",
   "How often can a gatekeeper ask again for refused consent under the DMA?",
   "What are the fines for breaching Article 5(2) DMA?"
  ],
- "ck-d018": [
+ "ck-d019": [
   "What are the six families of deceptive design in EDPB Guidelines 03/2022?",
   "Can I use the EDPB deceptive design guidelines to audit a cookie banner?",
   "Do the EDPB deceptive design guidelines apply beyond social media?"
  ],
- "ck-d019": [
+ "ck-d020": [
   "What did the EDPB Cookie Banner Taskforce conclude about reject buttons?",
   "Can legitimate interest justify a cookie under Article 5(3)?",
   "Are pre-ticked boxes valid consent for cookies?",
   "Must operators keep the list of essential cookies up to date?"
  ],
- "ck-d020": [
+ "ck-d021": [
   "How many cookie banner complaints did noyb file in August 2021?",
   "Which authority received most of the noyb cookie banner complaints?",
   "Can a cookie banner complaint from 2021 still lead to a decision today?"
  ],
- "ck-d021": [
+ "ck-d022": [
   "What was the noyb cookie banner campaign of May 2021?",
   "How many banners lacked a first-layer reject option in the noyb scan?",
   "How long did sites have to fix banners after a noyb draft complaint?"
  ],
- "ck-d022": [
+ "ck-d023": [
   "Am I a joint controller if I embed a social media pixel on my site?",
   "What do EDPB Guidelines 8/2020 say about targeting social media users?",
   "Can legitimate interest justify cross-site tracking for social media targeting?"
  ],
- "ck-d023": [
+ "ck-d024": [
   "Who has to prove consent according to case C-61/19?",
   "Is a pre-ticked box in a contract valid evidence of consent?",
   "Should the refusal path be no longer than the acceptance path?"
  ],
- "ck-d024": [
+ "ck-d025": [
   "What do EDPB Guidelines 05/2020 say about cookie walls?",
   "Is scrolling through a page valid consent under the GDPR?",
   "Can access to a website be conditioned on accepting cookies?",
   "Which EDPB guidance replaced WP259 on consent?"
  ],
- "ck-d025": [
+ "ck-d026": [
   "Is a pre-ticked checkbox valid cookie consent under case C-673/17?",
   "What must a cookie banner disclose about cookie duration and third parties?",
   "Does the active opt-in rule apply if the cookie data is not personal?"
  ],
- "ck-d026": [
+ "ck-d027": [
   "Is a website operator a joint controller for an embedded social plug-in?",
   "What did the CJEU decide in case C-40/17 on third-party plug-ins?",
   "Must third-party tags be gated behind consent?"
  ],
- "ck-d027": [
+ "ck-d028": [
   "Can legitimate interest replace consent for cookies under Article 5(3)?",
   "What does EDPB Opinion 5/2019 say about ePrivacy and the GDPR?",
   "Does the GDPR one-stop-shop apply to cookie rule enforcement?"
  ],
- "ck-d028": [
+ "ck-d029": [
   "How does the GDPR define consent in Article 4(11)?",
   "Are cookie identifiers and IP addresses personal data under Recital 30?",
   "Does the GDPR apply to non-EU controllers that monitor people in the EU?",
   "Does Article 25 privacy by default apply to cookie banner settings?"
  ],
- "ck-d029": [
+ "ck-d030": [
   "Is a dynamic IP address personal data under case C-582/14?",
   "Can a website log IP addresses for security under legitimate interest?",
   "Do server logs with IP addresses need a legal basis and retention period?"
  ],
- "ck-d030": [
+ "ck-d031": [
   "What does Article 5(3) of the ePrivacy Directive require for cookies?",
   "What is the soft opt-in under Article 13(2) of the ePrivacy Directive?",
   "Which cookies are exempt from consent under the ePrivacy Directive?",
   "Does the ePrivacy Directive apply to sites based outside the EU?"
  ],
- "ck-d031": [
+ "ck-d032": [
   "What did the EDPB decide about the noyb banner complaint against the Belgian broadcaster?",
   "Can a DPA dismiss an NGO-backed cookie banner complaint as abuse of rights?",
   "What is an Article 65 EDPB binding decision on a cookie banner complaint?"
  ],
- "ck-d032": [
+ "ck-d033": [
   "Must accept and reject buttons have equal prominence in Austria?",
   "What did the Austrian court decide about the public broadcaster banner?",
   "Is a coloured Accept button deceptive design according to Austrian courts?"
  ],
- "ck-d033": [
+ "ck-d034": [
   "Do tracking pixels in emails need consent under the CNIL recommendation?",
   "When are email open-tracking pixels exempt from consent in France?",
   "How must senders let recipients withdraw consent to email pixels?",
   "What is CNIL Deliberation 2026-042?"
  ],
- "ck-d034": [
+ "ck-d035": [
   "Why did the CNIL fine a retailer 3.5 million euros over loyalty member data?",
   "Can I upload customer emails to a social network for ads without a legal basis?",
   "Do customer-matching uploads need a legal basis separate from the banner?"
  ],
- "ck-d035": [
+ "ck-d036": [
   "What was the CNIL 1.5 million euro cookie fine of November 2025?",
   "Can cookies be read after consent has been withdrawn?",
   "Does the CNIL fine subsidiaries and mid-sized companies for cookies?"
  ],
- "ck-d036": [
+ "ck-d037": [
   "What did the Dutch AP do about misleading cookie banners in 2025?",
   "Does a Dutch AP warning come before a formal investigation?",
   "Do I need a cookie banner if my site uses no tracking at all?"
  ],
- "ck-d037": [
+ "ck-d038": [
   "Which was the first consent management service recognised under the EinwV?",
   "What must a German site do when it integrates a recognised consent service?",
   "What must a German site tell users who have no stored consent settings?"
  ],
- "ck-d038": [
+ "ck-d039": [
   "What was the CNIL 325 million euro cookie fine of September 2025?",
   "Do adverts shown between emails in a mailbox need prior consent in France?",
   "Do cookies set during account creation need valid consent?"
  ],
- "ck-d039": [
+ "ck-d040": [
   "What was the CNIL 150 million euro cookie fine of September 2025?",
   "Must withdrawing cookie consent stop reading existing cookies too?",
   "Does a banner have to name the advertising purpose and third parties?"
  ],
- "ck-d040": [
+ "ck-d041": [
   "Is pay or okay valid in Austria if consent is not granular?",
   "Does consent or pay require separate consent per purpose?",
   "Is the Austrian pay or okay ruling under appeal?"
  ],
- "ck-d041": [
+ "ck-d042": [
   "What is the Danish guidance on cookies and similar technologies?",
   "Does the Danish cookie order require consent before placing cookies?",
   "How should Danish sites treat statistics cookies?"
  ],
- "ck-d042": [
+ "ck-d043": [
   "What did the Brussels Market Court decide about the TCF?",
   "Is the TCF operator a controller for OpenRTB processing?",
   "Does the TCF alone make publishers GDPR compliant?",
   "Was the 250,000 euro fine over the TCF upheld?"
  ],
- "ck-d043": [
+ "ck-d044": [
   "What did the Swedish IMY decide about cookie banner withdrawal?",
   "Which Swedish authority supervises cookie rules, IMY or PTS?",
   "Can I rely on legitimate interest for cookie data without a balancing test?"
  ],
- "ck-d044": [
+ "ck-d045": [
   "What does the CNIL recommendation on mobile applications cover?",
   "Who is responsible for consent in a mobile app SDK under CNIL rules?",
   "When was the CNIL mobile applications recommendation amended?"
  ],
- "ck-d045": [
+ "ck-d046": [
   "What did the Dutch DPA find in its five cookie banner investigations?",
   "How many Dutch websites will the AP check systematically?",
   "Will the Dutch AP warn before fining a cookie banner?"
  ],
- "ck-d046": [
+ "ck-d047": [
   "What is the German Einwilligungsverwaltungsverordnung?",
   "Is integrating a recognised consent management service mandatory in Germany?",
   "Who is responsible for GDPR consent validity under the EinwV?"
  ],
- "ck-d047": [
+ "ck-d048": [
   "Is a reject all button mandatory on the first layer in Germany?",
   "What did the Hannover administrative court rule on cookie banners?",
   "Can repeating a cookie banner to pressure users invalidate consent?"
  ],
- "ck-d048": [
+ "ck-d049": [
   "What is the position of the Polish UODO on cookie consent?",
   "Are cookie walls compatible with the GDPR according to the Polish DPA?",
   "What does UODO bulletin 03/2025 say about pre-ticked boxes?"
  ],
- "ck-d049": [
+ "ck-d050": [
   "What does Article 22.2 of the Spanish LSSI say about cookies?",
   "Can browser settings be used to give cookie consent in Spain?",
   "How serious is a cookie infringement under the LSSI?",
   "Does the LSSI apply to non-EU providers targeting Spain?"
  ],
- "ck-d050": [
+ "ck-d051": [
   "What did the CNIL say in its December 2024 formal notices on cookie banners?",
   "Can a smaller or paler refuse button breach cookie rules in France?",
   "How long did publishers have to fix banners after CNIL formal notices?"
  ],
- "ck-d051": [
+ "ck-d052": [
   "What did the Garante find after the Guardia di Finanza cookie inspections?",
   "Does an e-commerce site need a cookie policy listing cookie categories in Italy?",
   "Is a banner with OK and No grazie buttons enough without a cookie policy?"
  ],
- "ck-d052": [
+ "ck-d053": [
   "What does section 25 TDDDG say about cookies?",
   "Was the TTDSG renamed the TDDDG?",
   "Does section 25 TDDDG apply when no personal data is involved?",
   "Which terminal storage is exempt under section 25(2) TDDDG?"
  ],
- "ck-d053": [
+ "ck-d054": [
   "What does the AEPD cookie guide say about reject buttons?",
   "How often must cookie consent be renewed in Spain?",
   "Are cookie walls lawful in Spain?",
   "Does the AEPD guide apply EDPB Opinion 08/2024 on pay or consent?"
  ],
- "ck-d054": [
+ "ck-d055": [
   "What did the BayLDA find in its automated cookie banner checks?",
   "Do German authorities test for a first-layer reject option automatically?",
   "How many Bavarian websites and apps did the BayLDA check?"
  ],
- "ck-d055": [
+ "ck-d056": [
   "Does an X button meaning Accept and close count as a reject option?",
   "What did OLG Koeln decide in 6 U 80/23 on cookie banners?",
   "Can competitors or associations seek injunctions over asymmetric cookie banners?"
  ],
- "ck-d056": [
+ "ck-d057": [
   "Why was a 10 million euro CNIL fine issued for ignoring cookie refusals?",
   "Can I tie withdrawal of cookie consent to loss of email access?",
   "Must cookie refusals be honoured technically and not just displayed?"
  ],
- "ck-d057": [
+ "ck-d058": [
   "What did the AEPD say about the EDPB deceptive design guidelines in 2023?",
   "When did Spanish sites need to comply with the updated AEPD cookie guide?",
   "Can access be conditioned on cookie consent in Spain if another route exists?"
  ],
- "ck-d058": [
+ "ck-d059": [
   "Why did the CNIL fine an adtech vendor 40 million euros for retargeting?",
   "Must an adtech vendor audit partner consent rather than rely on contracts?",
   "Are pseudonymous identifiers tied to browsing data personal data in France?",
   "Does stopping personalised ads satisfy an erasure request?"
  ],
- "ck-d059": [
+ "ck-d060": [
   "When are Pur-Abo consent or pay models accepted in Germany?",
   "What does the DSK decision say about pay or okay models?",
   "Does consent in a Pur-Abo model need to be granular per purpose?"
  ],
- "ck-d060": [
+ "ck-d061": [
   "What are the four Datatilsynet criteria for lawful cookie walls?",
   "Do statistics cookies need separate consent behind a cookie wall in Denmark?",
   "Must the paid alternative to a cookie wall be reasonably priced in Denmark?"
  ],
- "ck-d061": [
+ "ck-d062": [
   "Why was an online shop fined 10,000 euros by the AEPD for cookies?",
   "Can a small shop be fined for _fbp and _gcl_au cookies set before consent?",
   "Is observing third-party cookies before choice enough for a Spanish sanction?"
  ],
- "ck-d062": [
+ "ck-d063": [
   "Why did the CNIL fine a video app 5 million euros over its cookie banner?",
   "Is it allowed to accept cookies in one click but refuse in several?",
   "Do sites with young audiences get leniency on banner symmetry in France?"
  ],
- "ck-d063": [
+ "ck-d064": [
   "Why did the CNIL fine a search engine 60 million euros over cookies?",
   "Does a cookie used for both fraud detection and advertising need consent?",
   "Is a first-layer reject button required on a search engine in France?"
  ],
- "ck-d064": [
+ "ck-d065": [
   "What does the DSK OH Telemedien guidance say about section 25 TTDSG?",
   "Is reach measurement strictly necessary under the German DSK guidance?",
   "Can legitimate interest replace consent under section 25 TDDDG?"
  ],
- "ck-d065": [
+ "ck-d066": [
   "Why did the Belgian DPA fine a media group 50,000 euros over cookies?",
   "What did the Belgian DPA find in its cookie sweep of 20 press sites?",
   "Can statistics cookies be treated as exempt from consent in Belgium?"
  ],
- "ck-d066": [
+ "ck-d067": [
   "What are the CNIL evaluation criteria for cookie walls and paywalls?",
   "How should a publisher justify the price of a paid cookie wall alternative in France?",
   "Can the paid path of a cookie wall carry advertising trackers in France?"
  ],
- "ck-d067": [
+ "ck-d068": [
   "What did the Belgian DPA decide about the TCF in decision 21/2022?",
   "How much was the TCF operator fined by the Belgian DPA?",
   "Was Belgian DPA decision 21/2022 annulled?"
  ],
- "ck-d068": [
+ "ck-d069": [
   "Was the CNIL competent to fine without going through the Irish lead authority?",
   "Does the one-stop-shop apply to ePrivacy cookie enforcement?",
   "Why was a 100 million euro cookie fine held proportionate?"
  ],
- "ck-d069": [
+ "ck-d070": [
   "Is loading Google Fonts from Google servers a GDPR infringement?",
   "What damages did the Munich court award for font loading and IP transfer?",
   "Does a cookie banner cover the IP transfer from embedded fonts or maps?"
  ],
- "ck-d070": [
+ "ck-d071": [
   "What did the Austrian DSB decide on Google Analytics and US transfers?",
   "Why were SCCs not enough for Google Analytics transfers to the US?",
   "Does the EU-US Data Privacy Framework change the Google Analytics analysis?"
  ],
- "ck-d071": [
+ "ck-d072": [
   "Do Czech websites need opt-in consent for cookies since 2022?",
   "Is staying on the site valid cookie consent in the Czech Republic?",
   "Which cookies are exempt from consent under the Czech Electronic Communications Act?"
  ],
- "ck-d072": [
+ "ck-d073": [
   "What was the CNIL 150 million euro cookie fine of December 2021?",
   "Must refusing cookies be as simple as accepting them?",
   "Do I need a reject all button on the first cookie layer in France?",
   "What happened to the CNIL injunction once a reject all button was added?"
  ],
- "ck-d073": [
+ "ck-d074": [
   "What did CNIL deliberation SAN-2021-024 decide about the refusal path?",
   "Can a cookie banner make refusing harder than accepting in France?",
   "What penalty applied if a refusal mechanism was not as simple as acceptance?"
  ],
- "ck-d074": [
+ "ck-d075": [
   "What are the CNPD cookie guidelines in Luxembourg?",
   "Which cookies need no consent under Luxembourg guidance?",
   "Do non-essential cookies need prior informed consent in Luxembourg?"
  ],
- "ck-d075": [
+ "ck-d076": [
   "Who is the competent authority for cookie consent in Finland?",
   "Can cookie consent in Finland be given through browser settings?",
   "Is legitimate interest a valid basis for storing cookies in Finland?",
   "Which cookies are exempt from consent under the Traficom guidance?"
  ],
- "ck-d076": [
+ "ck-d077": [
   "Is scrolling valid consent under the Italian Garante cookie guidelines?",
   "Are cookie walls allowed in Italy?",
   "How often can a cookie banner be shown again in Italy?",
   "What happens when a user closes the banner with the X in Italy?"
  ],
- "ck-d077": [
+ "ck-d078": [
   "What did the AEPD fine Iberia for in PS/00032/2020?",
   "Can a cookie banner without a reject button be fined in Spain?",
   "What is the maximum fine for a leve infringement of article 22.2 LSSI?"
  ],
- "ck-d078": [
+ "ck-d079": [
   "What was the CNIL SAN-2020-012 cookie fine of 100 million euros for?",
   "Can the CNIL act directly against non-French controllers on cookies?",
   "Do cookie rules fall under the GDPR one-stop shop?",
   "Did the Conseil d'Etat uphold CNIL decision SAN-2020-012?"
  ],
- "ck-d079": [
+ "ck-d080": [
   "What was the CNIL SAN-2020-013 fine of 35 million euros for?",
   "Do landing pages reached from ad links need a cookie banner?",
   "Is a banner text such as offer and improve our services enough information?"
  ],
- "ck-d080": [
+ "ck-d081": [
   "What do the CNIL cookie guidelines of 2020 require for consent?",
   "Is continued browsing consent under article 82 of the French Data Protection Act?",
   "Do I need to keep proof of cookie consent in France?",
   "Which trackers are exempt from consent under CNIL deliberation 2020-091?"
  ],
- "ck-d081": [
+ "ck-d082": [
   "What should the first layer of a cookie banner contain according to the CNIL?",
   "How often can a French site re-ask for cookie consent?",
   "Must a refusal be remembered on a cookie banner in France?"
  ],
- "ck-d082": [
+ "ck-d083": [
   "Are cookie walls banned in France?",
   "Why did the Conseil d'Etat annul the CNIL ban on cookie walls?",
   "What did Conseil d'Etat decision 434684 say about cookie walls?",
   "When can I operate a cookie wall in France?"
  ],
- "ck-d083": [
+ "ck-d084": [
   "Is a pre-ticked checkbox valid cookie consent in Germany?",
   "What did the BGH decide in I ZR 7/16?",
   "When was cookie consent codified in section 25 TTDSG?",
   "What ended the German opt-out reading for advertising cookies?"
  ],
- "ck-d084": [
+ "ck-d085": [
   "Are pre-ticked boxes valid cookie consent in Ireland?",
   "How often should cookie consent be re-affirmed in Ireland?",
   "Do analytics cookies need consent under the Irish DPC guidance?",
   "Which cookies are exempt from consent under Regulation 5(3) in Ireland?"
  ],
- "ck-d085": [
+ "ck-d086": [
   "What did the Irish DPC cookie sweep find on websites?",
   "Which sectors did the DPC survey for cookie compliance?",
   "Is the DPC cookie report still the operative standard in Ireland?"
  ],
- "ck-d086": [
+ "ck-d087": [
   "Does refusing cookies need the same number of clicks as accepting in Greece?",
   "Does third-party analytics need prior consent under Greek rules?",
   "How long must a cookie refusal be stored compared to an acceptance in Greece?",
   "What do the Hellenic DPA Recommendations 1/2020 say about trackers?"
  ],
- "ck-d087": [
+ "ck-d088": [
   "Who supervises the Danish cookie order?",
   "Does the Danish cookie order apply if no personal data is processed?",
   "Which storage is exempt from consent under the Danish cookie order?"
  ],
- "ck-d088": [
+ "ck-d089": [
   "What happens to the Information Commissioner on 30 September 2026?",
   "Do privacy notices need updating for the Information Commission?",
   "Does the move to the Information Commission change PECR obligations?"
  ],
- "ck-d089": [
+ "ck-d090": [
   "Could contextual advertising run without consent under PECR in future?",
   "Is the ICO advice on low-risk online advertising already law?",
   "Do I still need consent for behavioural advertising in the UK?"
  ],
- "ck-d090": [
+ "ck-d091": [
   "What does the final ICO guidance on storage and access technologies cover?",
   "How does the statistical exception work under PECR?",
   "Can I rely on legitimate interests for non-exempt cookies in the UK?",
   "Does the ICO guidance cover tracking pixels and device fingerprinting?"
  ],
- "ck-d091": [
+ "ck-d092": [
   "What does PECR regulation 6 prohibit?",
   "Does PECR regulation 6 cover fingerprinting and pixels?",
   "Which exceptions appear in Schedule A1 to PECR?",
   "Does PECR regulation 6 bind only controllers?"
  ],
- "ck-d092": [
+ "ck-d093": [
   "Which paragraph of Schedule A1 covers statistical analytics cookies?",
   "Can browser settings signify consent under Schedule A1 to PECR?",
   "What conditions apply to the PECR statistical and appearance exceptions?",
   "Can statistical data be disclosed to third parties under the PECR exception?"
  ],
- "ck-d093": [
+ "ck-d094": [
   "What is the maximum fine for breaching PECR regulation 6 now?",
   "Does the UK GDPR fine ceiling apply to cookie breaches?",
   "What enforcement powers apply to PECR cookie breaches since February 2026?"
  ],
- "ck-d094": [
+ "ck-d095": [
   "When did the PECR changes in the Data (Use and Access) Act come into force?",
   "From what date can the statistical and appearance exceptions be relied on?",
   "What does SI 2026/82 bring into force?"
  ],
- "ck-d095": [
+ "ck-d096": [
   "What counts as valid consent under PECR in the UK?",
   "Does withdrawing consent have to be as easy as giving it under UK GDPR?",
   "What does Article 7 UK GDPR require on consent records?"
  ],
- "ck-d096": [
+ "ck-d097": [
   "How many of the top 1,000 UK websites passed the ICO cookie checks?",
   "What three checks did the ICO use in its cookie compliance campaign?",
   "Will the ICO re-test websites for cookie compliance?"
  ],
- "ck-d097": [
+ "ck-d098": [
   "Why did the CMA end the Privacy Sandbox commitments in October 2025?",
   "Should I plan for third-party cookies to persist for UK users?",
   "Are Privacy Sandbox APIs a mandatory replacement for third-party cookies?"
  ],
- "ck-d098": [
+ "ck-d099": [
   "What did the ICO consult on for the statistical and appearance exceptions?",
   "When did the ICO consultation on the new storage and access chapter close?",
   "Should I cite the draft ICO chapter or the final guidance?"
  ],
- "ck-d099": [
+ "ck-d100": [
   "What was the ICO draft guidance on storage and access technologies?",
   "Are pixels and fingerprinting in scope of the ICO draft guidance?",
   "Is the strictly necessary exception judged from the user's perspective in the UK?"
  ],
- "ck-d100": [
+ "ck-d101": [
   "Is consent or pay allowed under UK data protection law?",
   "What four factors does the ICO use to assess consent or pay?",
   "Do I need a DPIA before launching a consent or pay model?",
   "What age rules apply to consent or pay for children in the UK?"
  ],
- "ck-d101": [
+ "ck-d102": [
   "What is the ICO 2025 online tracking strategy?",
   "How many top UK websites had the ICO assessed before its 2025 strategy?",
   "What should I audit to meet ICO expectations on cookie banners?"
  ],
- "ck-d102": [
+ "ck-d103": [
   "Why did the ICO reprimand an operator over advertising cookies before consent?",
   "Can ad tech tags fire before a visitor accepts or rejects cookies in the UK?",
   "How should I verify tag sequencing on first page load?"
  ],
- "ck-d103": [
+ "ck-d104": [
   "What did the ICO and CMA say about harmful design in cookie choices?",
   "Can lacking an equal reject all button break UK data protection law?",
   "Which design practices does the ICO and CMA joint paper call harmful?"
  ],
- "ck-d104": [
+ "ck-d105": [
   "What commitments did the CMA accept on the Privacy Sandbox in February 2022?",
   "When did the CMA release the Privacy Sandbox commitments?",
   "Was third-party cookie removal dropped after the CMA commitments?"
  ],
- "ck-d105": [
+ "ck-d106": [
   "What did the 2019 ICO cookies guidance say about analytics cookies?",
   "Is the 2019 ICO cookie guidance still current?",
   "Are cookie walls acceptable under the 2019 ICO guidance?"
  ],
- "ck-d106": [
+ "ck-d107": [
   "What is the noyb complaint against a pay or okay model in Norway?",
   "What consent rate does noyb allege for the pay or okay model?",
   "Has Datatilsynet decided on pay or okay for news sites yet?"
  ],
- "ck-d107": [
+ "ck-d108": [
   "What is the FDPIC factsheet on cookies for internet users?",
   "Does the FDPIC cookie factsheet create obligations for operators?",
   "How should I test the refusal path on Swiss-facing sites?"
  ],
- "ck-d108": [
+ "ck-d109": [
   "When is express consent required for cookies in Switzerland?",
   "Do non-essential cookies need consent or an opt-out in Switzerland?",
   "What fine applies to cookie breaches under Article 45c TCA?",
   "Are cookie paywalls allowed in Switzerland?"
  ],
- "ck-d109": [
+ "ck-d110": [
   "What are the ten Datatilsynet rules for a valid cookie banner?",
   "Can refusing cookies take extra clicks in Norway?",
   "Can other GDPR legal bases replace consent for cookie data in Norway?"
  ],
- "ck-d110": [
+ "ck-d111": [
   "What does section 3-15 of the Norwegian ekomloven require for cookies?",
   "Do browser settings count as cookie consent in Norway?",
   "Who supervises cookies in Norway, Nkom or Datatilsynet?",
   "When did the new Norwegian Electronic Communications Act take effect?"
  ],
- "ck-d111": [
+ "ck-d112": [
   "Which Norwegian provision replaced section 2-7b on browser default settings?",
   "Does the Norwegian cookie rule apply to foreign website operators?",
   "How should I change my banner for Norwegian traffic after 1 January 2025?"
  ],
- "ck-d112": [
+ "ck-d113": [
   "Does Datatilsynet accept browser settings as cookie consent?",
   "Do both ekomloven and the GDPR apply to cookies in Norway?",
   "Is the Datatilsynet cookie page up to date on section 3-15?"
  ],
- "ck-d113": [
+ "ck-d114": [
   "Which cookies need explicit consent under the KVKK cookie guideline?",
   "Can first party analytics cookies be used without consent in Turkey?",
   "What should a cookie banner in Turkey include?",
   "Do cookie-based transfers abroad fall under Article 9 of Law 6698?"
  ],
- "ck-d114": [
+ "ck-d115": [
   "When did the revised Swiss FADP enter into force?",
   "When is express consent needed under the Swiss FADP?",
   "What is the maximum criminal fine under Article 60 of the Swiss FADP?",
   "Does tracking need consent under the Swiss FADP?"
  ],
- "ck-d115": [
+ "ck-d116": [
   "What was Turkish Board decision 2020/173 about?",
   "What fine did the Turkish Board impose for cookies without explicit consent?",
   "Is cookie consent in Turkey an opt-in regime?"
  ],
- "ck-d116": [
+ "ck-d117": [
   "What does Article 45c of the Swiss Telecommunications Act require for cookies?",
   "Is cookie refusal a mandatory opt-out control in Switzerland?",
   "What is the fine under Article 53 TCA for cookie breaches?"
  ],
- "ck-d117": [
-  "What does California SB 690 change for pen register claims?",
-  "When would SB 690 take effect if the Governor signs it?",
-  "Does SB 690 affect wiretap claims under CIPA section 631?"
- ],
  "ck-d118": [
+  "What does California SB 690 change for pen register claims?",
+  "When does SB 690 take effect?",
+  "Does SB 690 affect wiretap claims under CIPA section 631?",
+  "Has California SB 690 been signed into law?"
+ ],
+ "ck-d119": [
   "Does collecting an IP address alone state a pen register claim under CIPA?",
   "Can section 638.51 apply to internet communications?",
   "Is the Court of Appeal opinion on CIPA section 638.51 final?"
  ],
- "ck-d119": [
+ "ck-d120": [
   "What does the California Delete Act require data brokers to do?",
   "How often must data brokers access the deletion mechanism?",
   "What should I do with an unverifiable deletion request under the Delete Act?"
  ],
- "ck-d120": [
+ "ck-d121": [
   "What did the Ninth Circuit decide on the California Age-Appropriate Design Code?",
   "Was the dark patterns prohibition in AB 2273 blocked by the Ninth Circuit?",
   "Does AB 2273 apply to services likely to be accessed by children?"
  ],
- "ck-d121": [
+ "ck-d122": [
   "Can a business require email verification before processing a CCPA opt-out?",
   "What did the CPPA say about friction in the opt-out process?",
   "How much was the CPPA penalty for requiring verification of opt-outs?"
  ],
- "ck-d122": [
+ "ck-d123": [
   "Can a site force users to accept tracking before they use it under the CCPA?",
   "Can I point users to industry opt-out pages instead of my own CCPA opt-out?",
   "What was the CPPA fine over forced tracking and industry opt-out pages?"
  ],
- "ck-d123": [
+ "ck-d124": [
   "Must a CCPA opt-out apply across all linked devices and services?",
   "How much was the largest CCPA settlement over opt-outs and GPC?",
   "Does a Global Privacy Control signal need to apply to a logged-in account?",
   "Do connected TV apps need an in-app opt-out under the CCPA?"
  ],
- "ck-d124": [
+ "ck-d125": [
   "What fines did the CPPA impose for failing to register as a data broker?",
   "Who must register as a data broker under the Delete Act?",
   "Can an audience or identity partner count as a data broker?"
  ],
- "ck-d125": [
+ "ck-d126": [
   "What changed in the CCPA regulations effective 1 January 2026?",
   "Must a banner display opt-out preference signal status under section 7025(c)(6)?",
   "When are CCPA risk assessments due to the agency?",
   "When do ADMT obligations start under the CCPA regulations?"
  ],
- "ck-d126": [
+ "ck-d127": [
   "What is the California DROP platform for data broker deletion?",
   "When do data brokers have to start processing DROP requests?",
   "What is the fine for failing to process a DROP request?",
   "How often must data brokers retrieve DROP deletion requests?"
  ],
- "ck-d127": [
+ "ck-d128": [
   "Does CIPA section 631 apply to session replay and chat tools?",
   "Can later consent cure a CIPA wiretapping claim?",
   "What is a pen register claim under CIPA section 638.51?",
   "Who can sue under section 637.2 of the California Penal Code?"
  ],
- "ck-d128": [
+ "ck-d129": [
   "Do mobile games need an in-app opt-out under the CCPA?",
   "Is opt-in required to sell data of users aged 13 to 15 in California?",
   "How much was the CCPA settlement over a mobile games opt-out failure?"
  ],
- "ck-d129": [
+ "ck-d130": [
   "What does California AB 566 require of browsers?",
   "When does the California Opt Me Out Act become operative?",
   "Does AB 566 apply to website operators?"
  ],
- "ck-d130": [
+ "ck-d131": [
   "Must a Do Not Sell webform stop tracking tags as well as cookies?",
   "What penalties did the CPPA impose over ignored opt-out preference signals?",
   "Do job applicants need a CCPA notice?"
  ],
- "ck-d131": [
+ "ck-d132": [
   "Does CIPA section 631 apply to third-party chat software on a website?",
   "Does a vendor need to actually read messages for a CIPA claim to succeed?",
   "Does the CIPA reference to telephone wires cover internet communications?"
  ],
- "ck-d132": [
+ "ck-d133": [
   "Can article titles that reveal a diagnosis be sent to advertisers?",
   "What was the first CCPA purpose limitation enforcement about?",
   "What happens if a consent banner does not actually disable tracking cookies?"
  ],
- "ck-d133": [
+ "ck-d134": [
   "Is a business responsible for its consent management vendor's failures under the CCPA?",
   "Why did a misconfigured privacy portal lead to a CPPA penalty of $345,178?",
   "How often should I test banner and tag suppression?"
  ],
- "ck-d134": [
+ "ck-d135": [
   "What was the first CPPA enforcement order about?",
   "Does the CCPA require Reject All to be as prominent as Accept All?",
   "Can I require identity verification before honouring an opt-out?",
   "What does regulation section 7004 say about symmetry in choice?"
  ],
- "ck-d135": [
+ "ck-d136": [
   "What link must a business show on its homepage under the CCPA?",
   "Can I omit the Do Not Sell or Share link if I honour opt-out signals?",
   "What are the CCPA fines per violation?",
   "What age requires opt-in consent before selling data under the CCPA?"
  ],
- "ck-d136": [
+ "ck-d137": [
   "What does section 7004 of the CCPA regulations say about dark patterns?",
   "Which CCPA regulation sections govern the Do Not Sell or Share link?",
   "Are the 2023 CCPA regulations still current?"
  ],
- "ck-d137": [
+ "ck-d138": [
   "Must a business process opt-out preference signals under CCPA section 7025?",
   "When can a business drop the Do Not Sell or Share link?",
   "Does a CCPA opt-out signal apply to pseudonymous profiles?",
   "Is displaying opt-out signal status mandatory under section 7025(c)(6)?"
  ],
- "ck-d138": [
+ "ck-d139": [
   "Is allowing third-party tracking software on a site a sale under the CCPA?",
   "What was the first public CCPA settlement about?",
   "Must Global Privacy Control be treated as an opt-out from the first page load?"
  ],
- "ck-d139": [
+ "ck-d140": [
   "Does consent given after session replay starts defeat a CIPA claim?",
   "Does CIPA section 631(a) require the consent of all parties?",
   "When should session replay scripts load relative to consent?"
  ],
- "ck-d140": [
+ "ck-d141": [
   "How does Section 5 of the FTC Act apply to cookie disclosures?",
   "Does the FTC need a state privacy law to act on tracking pixels?",
   "Who is exempt from Section 5 of the FTC Act?"
  ],
- "ck-d141": [
+ "ck-d142": [
   "Can a data broker sell sensitive location data without consent in the US?",
   "What did the FTC order on sale of sensitive location data require?",
   "Is precise location collected through SDKs sensitive data?"
  ],
- "ck-d142": [
+ "ck-d143": [
   "Can I collect personal information to verify age under COPPA?",
   "What conditions apply under the FTC policy statement on age verification?",
   "How long does the FTC COPPA age verification statement remain in effect?"
  ],
- "ck-d143": [
+ "ck-d144": [
   "Who counts as a consumer under the Video Privacy Protection Act?",
   "Is the Supreme Court reviewing the VPPA consumer definition?",
   "Can I send video titles with user identifiers to advertising platforms?"
  ],
- "ck-d144": [
+ "ck-d145": [
   "Do session replay claims have Article III standing in the Ninth Circuit?",
   "Is recording mouse movements and clicks a harm for standing purposes?",
   "Which data should I mask in session replay tools?"
  ],
- "ck-d145": [
+ "ck-d146": [
   "Is a tracking pixel sending a social ID and video title PII under the VPPA?",
   "What is the ordinary person standard under the Video Privacy Protection Act?",
   "Is there a circuit split on what counts as PII under the VPPA?"
  ],
- "ck-d146": [
+ "ck-d147": [
   "What changed in the 2025 COPPA rule amendments?",
   "Do I need separate parental consent for targeted advertising to children?",
   "When is the compliance date for the amended COPPA rule?",
   "Does the amended COPPA rule require age screening on mixed audience sites?"
  ],
- "ck-d147": [
+ "ck-d148": [
   "Do tracking technologies on HIPAA covered entity websites disclose PHI?",
   "Is information entered on an unauthenticated appointment scheduler PHI?",
   "What part of the HHS online tracking bulletin was vacated?"
  ],
- "ck-d148": [
+ "ck-d149": [
   "What changed in the FTC Health Breach Notification Rule in 2024?",
   "Is sharing health data with an advertising pixel a notifiable breach?",
   "When must the FTC be notified of a health data breach?"
  ],
- "ck-d149": [
+ "ck-d150": [
   "Why did the FTC and HHS warn hospitals about tracking technologies?",
   "Which tags should I inventory on health appointment pages?",
   "Which laws did the FTC and HHS cite for tracking pixels on health sites?"
  ],
- "ck-d150": [
+ "ck-d151": [
   "Can a fertility app share health data through advertising SDKs?",
   "What penalty did the FTC impose over a fertility app sharing health data?",
   "Should I audit mobile SDKs as I audit web pixels?"
  ],
- "ck-d151": [
+ "ck-d152": [
   "Can an online counselling platform share intake answers with advertisers?",
   "What did the FTC order require on sharing health data for advertising?",
   "How much did the FTC consent order require in consumer refunds?"
  ],
- "ck-d152": [
+ "ck-d153": [
   "What was the first FTC Health Breach Notification Rule action about?",
   "Is a pixel disclosure of prescription data a reportable breach?",
   "How much was the civil penalty in the first Health Breach Notification Rule case?"
  ],
- "ck-d153": [
+ "ck-d154": [
   "What four categories of dark patterns does the FTC staff report identify?",
   "Can the FTC dark patterns report serve as a banner design checklist?",
   "Does closing a pop-up count as consent under FTC guidance?"
  ],
- "ck-d154": [
+ "ck-d155": [
   "What changed in the Connecticut Data Privacy Act from 1 July 2026?",
   "What is the new applicability threshold under Connecticut SB 1295?",
   "Must Connecticut controllers honour opt-out preference signals?",
   "Can I target ads to teenagers aged 13 to 17 in Connecticut?"
  ],
- "ck-d155": [
+ "ck-d156": [
   "When does the Indiana Consumer Data Protection Act take effect?",
   "Does Indiana require honouring a universal opt-out signal?",
   "What are the cure period and penalties under the Indiana privacy law?",
   "Which businesses are covered by the Indiana Act?"
  ],
- "ck-d156": [
+ "ck-d157": [
   "What rights does the Kentucky Consumer Data Protection Act give consumers?",
   "Does Kentucky require universal opt-out signal support?",
   "What are the applicability thresholds under the Kentucky privacy law?",
   "Who enforces the Kentucky Consumer Data Protection Act?"
  ],
- "ck-d157": [
+ "ck-d158": [
   "Is there a cure period under the Rhode Island privacy law?",
   "Does Rhode Island require a universal opt-out mechanism?",
   "How is an opt-out exercised under Rhode Island chapter 6-48.1?",
   "Can consumers sue under the Rhode Island privacy act?"
  ],
- "ck-d158": [
+ "ck-d159": [
   "Must Maryland controllers honour opt-out preference signals?",
   "Can I sell sensitive data in Maryland?",
   "Can I show targeted ads to teenagers aged 13 to 17 in Maryland?",
   "When did the Maryland Online Data Privacy Act take effect?"
  ],
- "ck-d159": [
+ "ck-d160": [
   "What is the joint investigative sweep on Global Privacy Control?",
   "Which states announced the Global Privacy Control sweep?",
   "How can I check that GPC works across all subdomains?"
  ],
- "ck-d160": [
+ "ck-d161": [
   "When must Minnesota controllers honour opt-out preference signals?",
   "What is the cure period under the Minnesota Consumer Data Privacy Act?",
   "What thresholds apply under the Minnesota data privacy law?",
   "Does Minnesota give a right to question profiling results?"
  ],
- "ck-d161": [
+ "ck-d162": [
   "Does the Tennessee Information Protection Act require honouring universal opt-out signals?",
   "What is the NIST Privacy Framework affirmative defence in Tennessee?",
   "Which businesses are covered by the Tennessee privacy law?",
   "What penalties apply under the Tennessee Information Protection Act?"
  ],
- "ck-d162": [
+ "ck-d163": [
   "Do I have to honour Global Privacy Control for New Jersey visitors?",
   "When did the New Jersey Data Privacy Act universal opt-out duty start?",
   "Is there a cure period under the New Jersey Data Privacy Act?",
   "What are the applicability thresholds under the New Jersey privacy law?"
  ],
- "ck-d163": [
+ "ck-d164": [
   "When must Delaware controllers accept opt-out preference signals?",
   "What are the applicability thresholds in the Delaware Personal Data Privacy Act?",
   "Do the Delaware privacy thresholds change in 2027?"
  ],
- "ck-d164": [
+ "ck-d165": [
   "Do I need to recognise Global Privacy Control in New Hampshire?",
   "Is there a cure period under the New Hampshire privacy law?",
   "Who enforces RSA 507-H in New Hampshire?"
  ],
- "ck-d165": [
+ "ck-d166": [
   "Does the Nebraska Data Privacy Act have a volume threshold?",
   "Must I honour browser opt-out signals for Nebraska visitors?",
   "Does the Nebraska privacy law have a cure period?"
  ],
- "ck-d166": [
+ "ck-d167": [
   "Does Iowa require businesses to honour universal opt-out signals?",
   "Is consent needed for sensitive data under the Iowa privacy law?",
   "How long is the cure period under the Iowa Consumer Data Protection Act?"
  ],
- "ck-d167": [
+ "ck-d168": [
   "When did Montana start requiring opt-out preference signals?",
   "Is there still a cure period under the Montana Consumer Data Privacy Act?",
   "How should GPC be handled for Montana visitors?"
  ],
- "ck-d168": [
+ "ck-d169": [
   "Why did tags keep firing after visitors opted out on New York websites?",
   "What did the New York Attorney General say about Accept All buttons?",
   "What does the New York AG guide on website privacy controls recommend?"
  ],
- "ck-d169": [
+ "ck-d170": [
   "Is Global Privacy Control the only recognised opt-out mechanism in Colorado?",
   "How should GPC be implemented under the Colorado Privacy Act Rules?",
   "What does Rule 5.07 of the Colorado Privacy Act Rules require?",
   "Does a GPC signal apply to a logged-in account in Colorado?"
  ],
- "ck-d170": [
+ "ck-d171": [
   "Does the Texas Data Privacy and Security Act apply regardless of company size?",
   "When must Texas controllers honour browser opt-out signals?",
   "What penalties apply under the Texas Data Privacy and Security Act?"
  ],
- "ck-d171": [
+ "ck-d172": [
   "Is there still a cure period under the Oregon Consumer Privacy Act?",
   "When must I honour opt-out signals in Oregon?",
   "Which businesses does the Oregon Consumer Privacy Act cover?"
  ],
- "ck-d172": [
+ "ck-d173": [
   "Do I need consent for tracking pixels on health pages in Washington?",
   "Can individuals sue under the Washington My Health My Data Act?",
   "Do inferences count as consumer health data under the My Health My Data Act?",
   "Is geofencing around health clinics banned in Washington?"
  ],
- "ck-d173": [
+ "ck-d174": [
   "What does the Washington AG say about the consumer health data policy link?",
   "When do My Health My Data Act duties apply to small businesses?",
   "Is a pregnancy prediction score consumer health data in Washington?"
  ],
- "ck-d174": [
+ "ck-d175": [
   "Does the Utah Consumer Privacy Act require consent for sensitive data?",
   "Do I need to honour universal opt-out signals in Utah?",
   "Which companies are covered by the Utah Consumer Privacy Act?"
  ],
- "ck-d175": [
+ "ck-d176": [
   "When did the Colorado universal opt-out mechanism duty begin?",
   "Does GPC in Colorado cover targeted advertising or only sale?",
   "Is the cure period still available under the Colorado Privacy Act?"
  ],
- "ck-d176": [
+ "ck-d177": [
   "Must Connecticut controllers honour GPC without a confirmation step?",
   "What penalties apply under the Connecticut Data Privacy Act?",
   "When did opt-out preference signals become mandatory in Connecticut?",
   "Was the Connecticut Data Privacy Act amended in 2026?"
  ],
- "ck-d177": [
+ "ck-d178": [
   "Does Virginia require honouring universal opt-out signals?",
   "Is consent needed for sensitive data under the Virginia CDPA?",
   "What are the cure period and penalties under the Virginia privacy law?"
  ],
- "ck-d178": [
+ "ck-d179": [
   "What would Australia's tranche 2 privacy reforms change about consent?",
   "Is the Australian Personal Data Protection Bill 2026 law yet?",
   "Would Australia make precise geolocation tracking data sensitive?",
   "Would consent be needed before trading personal information in Australia?"
  ],
- "ck-d179": [
+ "ck-d180": [
   "What is Canada's Bill C-36 and does it replace PIPEDA?",
   "What penalties would Bill C-36 introduce in Canada?",
   "Should I change my consent flows because of Bill C-36?"
  ],
- "ck-d180": [
+ "ck-d181": [
   "What is personally referable information under the Japanese APPI guidelines?",
   "How do I decide whether a tag recipient needs consent confirmed in Japan?",
   "What do the PPC general guidelines say about Article 31 confirmation?"
  ],
- "ck-d181": [
+ "ck-d182": [
   "What did the Australian Commissioner decide about pixels on health websites?",
   "Which APPs were breached by health providers using tracking pixels?",
   "Is data sent straight to an ad platform treated as collected in Australia?"
  ],
- "ck-d182": [
+ "ck-d183": [
   "Who would the Australian Children's Online Privacy Code apply to?",
   "What would the draft Children's Code say about marketing to children?",
   "When must the Children's Online Privacy Code be registered in Australia?"
  ],
- "ck-d183": [
+ "ck-d184": [
   "Does Vietnam require a do-not-track option on websites?",
   "What fines does the Vietnam Personal Data Protection Law set?",
   "Is silence valid consent in Vietnam?",
   "When did Vietnam's Personal Data Protection Law take effect?"
  ],
- "ck-d184": [
+ "ck-d185": [
   "When do the Indian DPDP Rules on consent notices come into force?",
   "What do the DPDP Rules say about Consent Managers?",
   "When is verifiable parental consent required under the DPDP Rules?"
  ],
- "ck-d185": [
+ "ck-d186": [
   "What does Amendment 13 to the Israeli privacy law change?",
   "Do cookie notices in Israel need the statutory disclosure items?",
   "What powers does the Israeli Privacy Protection Authority have now?"
  ],
- "ck-d186": [
+ "ck-d187": [
   "How does the Japanese PPC Q&A treat cookies and advertising identifiers?",
   "What form must recipient consent take under Article 31 of the APPI?",
   "How can a business confirm and record recipient consent in Japan?"
  ],
- "ck-d187": [
+ "ck-d188": [
   "Which Australian Privacy Principles matter for cookies and pixels?",
   "Do I need express consent to collect sensitive information under APP 3.3?",
   "Which organisations count as APP entities in Australia?"
  ],
- "ck-d188": [
+ "ck-d189": [
   "Is tacit consent allowed under the new Mexican data protection law?",
   "Which authority supervises data protection in Mexico after 2025?",
   "Do I still need to disclose cookies in a Mexican privacy notice?"
  ],
- "ck-d189": [
+ "ck-d190": [
   "Do cookie identifiers count as personal information under PIPEDA?",
   "What does section 6.1 of PIPEDA say about valid consent?",
   "Does PIPEDA apply to foreign websites?"
  ],
- "ck-d190": [
+ "ck-d191": [
   "Can a business repeat a consent request after refusal in China?",
   "What does Article 42 require for personalised recommendation switches in China?",
   "When is separate consent needed for sensitive information in China?",
   "What do the Network Data Security Regulations say about children under 14?"
  ],
- "ck-d191": [
+ "ck-d192": [
   "What did the first tranche of Australian Privacy Act reform introduce?",
   "When must Australian privacy policies disclose automated decision-making?",
   "Is there a statutory tort for serious privacy invasions in Australia?"
  ],
- "ck-d192": [
+ "ck-d193": [
   "What does the OAIC require before deploying a tracking pixel?",
   "Do I need a privacy impact assessment for a third-party pixel in Australia?",
   "Can tracking pixels be placed site-wide under Australian guidance?"
  ],
- "ck-d193": [
+ "ck-d194": [
   "Does Indonesia require explicit consent for advertising cookies?",
   "What fines apply under Indonesia's Personal Data Protection Law?",
   "Has Indonesia's data protection authority been established yet?"
  ],
- "ck-d194": [
+ "ck-d195": [
   "How do I run a legitimate interest balancing test under the LGPD?",
   "Can I use legitimate interest for cookies in Brazil?",
   "Can legitimate interest be used for sensitive data under the LGPD?"
  ],
- "ck-d195": [
+ "ck-d196": [
   "What are the criteria for valid consent in Quebec?",
   "When is consent not free under the Quebec CAI guidelines?",
   "Do the Quebec guidelines require equal accept and refuse paths?"
  ],
- "ck-d196": [
+ "ck-d197": [
   "Must tracking technologies be off by default in Quebec?",
   "What does section 8.1 of the Quebec private sector Act require?",
   "Do cookies fall under the default confidentiality settings rule in Quebec?"
  ],
- "ck-d197": [
+ "ck-d198": [
   "What did the 2023 PIPA amendment change for cookies in South Korea?",
   "How high can a PIPA penalty surcharge go in South Korea?",
   "Do I need separate consent for marketing under the Korean PIPA?"
  ],
- "ck-d198": [
+ "ck-d199": [
   "Does the Saudi PDPL require consent for advertising cookies?",
   "What fines apply under the Saudi Personal Data Protection Law?",
   "What do the Saudi Implementing Regulations say about direct marketing?"
  ],
- "ck-d199": [
+ "ck-d200": [
   "Can I target advertising at children under India's DPDP Act?",
   "What penalties does the DPDP Act set for data fiduciaries?",
   "What makes consent valid under section 6 of the DPDP Act?"
  ],
- "ck-d200": [
+ "ck-d201": [
   "What is the external transmission rule in Japan?",
   "Which websites does the Japanese external transmission rule cover?",
   "What must a Japanese external transmission notice state?"
  ],
- "ck-d201": [
+ "ck-d202": [
   "What are the Nigerian penalties for controllers of major importance?",
   "Who bears the burden of proof for consent in Nigeria?",
   "What does the Nigerian 2025 implementation directive say about cookie notices?"
  ],
- "ck-d202": [
+ "ck-d203": [
   "Can children's data be processed without parental consent in Brazil?",
   "Can I run behavioural advertising cookies on child-directed services in Brazil?",
   "What does ANPD Statement 1 of 2023 say about the best interest of the child?"
  ],
- "ck-d203": [
+ "ck-d204": [
   "What does Article 31 of the Japanese APPI require for cookie identifiers?",
   "Must I verify consent before sending identifiers to an ad platform in Japan?",
   "When did APPI rules on personally referable information take effect?"
  ],
- "ck-d204": [
+ "ck-d205": [
   "Does APP 7 cover targeted online advertising in Australia?",
   "What opt-out must I offer under Australian direct marketing rules?",
   "Are Spam Act communications covered by APP 7?"
  ],
- "ck-d205": [
+ "ck-d206": [
   "Can access to a service be conditioned on advertising consent in South Korea?",
   "What did the Korean PIPC decide about Meta in March 2023?",
   "Are cookie walls allowed in South Korea?"
  ],
- "ck-d206": [
+ "ck-d207": [
   "How does the ANPD calculate sanctions under the LGPD?",
   "What are the aggravating and mitigating factors for LGPD fines?",
   "What is the maximum LGPD fine per infraction?"
  ],
- "ck-d207": [
+ "ck-d208": [
   "What does the ANPD cookies guide say about banners?",
   "Which cookies need consent under the Brazilian ANPD guide?",
   "Is a reject button required on a cookie banner in Brazil?",
   "Can legitimate interest justify advertising cookies in Brazil?"
  ],
- "ck-d208": [
+ "ck-d209": [
   "How much did the Korean PIPC fine Google and Meta in 2022?",
   "What was wrong with the consent screens used by Google and Meta in Korea?",
   "Do I need separate consent for cross-site behavioural data in South Korea?"
  ],
- "ck-d209": [
+ "ck-d210": [
   "What happened to Canada's Bill C-27?",
   "Is the Consumer Privacy Protection Act in force in Canada?",
   "Should I reference the CPPA or Bill C-36 in my privacy programme?"
  ],
- "ck-d210": [
+ "ck-d211": [
   "What did Canadian commissioners find about app location tracking?",
   "Can a tracking statement that differs from the code invalidate consent?",
   "What remedies were ordered in the Canadian location tracking investigation?"
  ],
- "ck-d211": [
+ "ck-d212": [
   "What does section 19 of the Thai PDPA require for consent?",
   "What fines apply under Thailand's Personal Data Protection Act?",
   "Must cookie consent be requested separately from other matters in Thailand?"
  ],
- "ck-d212": [
+ "ck-d213": [
   "Must I offer a switch to turn off personalised recommendations in China?",
   "Can users delete their user tags under Chinese algorithm rules?",
   "What do the Chinese algorithmic recommendation rules say about price differences?"
  ],
- "ck-d213": [
+ "ck-d214": [
   "Does the UAE data protection law apply in the financial free zones?",
   "What consent standard applies under UAE Federal Decree-Law 45 of 2021?",
   "Have UAE executive regulations on data protection been issued?"
  ],
- "ck-d214": [
+ "ck-d215": [
   "Does the Chinese PIPL have a legitimate interest basis?",
   "What is the maximum fine under Article 66 of the PIPL?",
   "What does PIPL Article 24 require for personalised advertising?",
   "When must consent be refreshed under the PIPL?"
  ],
- "ck-d215": [
+ "ck-d216": [
   "What did the ACCC digital advertising services inquiry conclude?",
   "What did the ACCC recommend on ad tech transparency?",
   "Does the ACCC digital advertising report affect consent practices?"
  ],
- "ck-d216": [
+ "ck-d217": [
   "Do I need consent for electronic direct marketing under POPIA?",
   "What is the maximum administrative fine under POPIA?",
   "Can I rely on legitimate interest for analytics cookies in South Africa?"
  ],
- "ck-d217": [
+ "ck-d218": [
   "Can a Chinese app refuse service if users decline non-necessary data?",
   "What is necessary personal information for common mobile apps in China?",
   "How should SDKs be mapped to the necessary information list in China?"
  ],
- "ck-d218": [
+ "ck-d219": [
   "What is deemed consent by notification under the Singapore PDPA?",
   "Can I use legitimate interests for direct marketing in Singapore?",
   "What financial penalties apply under the Singapore PDPA?"
  ],
- "ck-d219": [
+ "ck-d220": [
   "Do cookies need consent under the Singapore PDPC guidelines?",
   "Are IP addresses personal data in Singapore?",
   "Do I need consent for behavioural targeting in Singapore?"
  ],
- "ck-d220": [
+ "ck-d221": [
   "What is GB/T 35273-2020 and who relies on it in China?",
   "Does the Chinese standard require separate consent for each business function?",
   "How does GB/T 35273 treat third-party SDK data collection?"
  ],
- "ck-d221": [
+ "ck-d222": [
   "What counts as illegal collection of personal information by apps in China?",
   "Must a Chinese app privacy policy be reachable within four clicks?",
   "Which Chinese authorities issued the app illegal collection measures?"
  ],
- "ck-d222": [
+ "ck-d223": [
   "Can I send direct marketing in Kenya without consent?",
   "What penalties apply under the Kenya Data Protection Act?",
   "What opt-out route do the Kenyan regulations require for marketing?"
  ],
- "ck-d223": [
+ "ck-d224": [
   "What are the legal bases under Article 7 of the LGPD?",
   "Who has the burden of proof for consent under the LGPD?",
   "What are the maximum fines under the LGPD?"
  ],
- "ck-d224": [
+ "ck-d225": [
   "What are the seven principles of meaningful consent in Canada?",
   "When is express consent required under Canadian consent guidelines?",
   "Do Canadian regulators expect just-in-time consent prompts?"
  ],
- "ck-d225": [
+ "ck-d226": [
   "What do Articles 22 and 41 of the Chinese Cybersecurity Law require?",
   "Does the Chinese Cybersecurity Law require published collection rules?",
   "Who inspects apps for undisclosed data collection in China?"
  ],
- "ck-d226": [
+ "ck-d227": [
   "What does the Korean guideline on online customised advertising require?",
   "Can I collect behavioural information from services for children under 14 in Korea?",
   "Who must disclose behavioural data collection in South Korea?"
  ],
- "ck-d227": [
+ "ck-d228": [
   "Can authorisation by silence be valid under Colombian data protection law?",
   "What fines can the Colombian SIC impose?",
   "What does Law 1581 of 2012 require before collecting data?"
  ],
- "ck-d228": [
+ "ck-d229": [
   "Can cookie consent be bundled under the Philippines Data Privacy Act?",
   "What does the Philippine NPC say about implied consent?",
   "How easy must withdrawal of consent be in the Philippines?"
  ],
- "ck-d229": [
+ "ck-d230": [
   "When is opt-out consent acceptable for behavioural advertising in Canada?",
   "Can I use device fingerprinting for advertising in Canada?",
   "Can children be tracked for behavioural advertising in Canada?"
  ],
- "ck-d230": [
+ "ck-d231": [
   "Is consent required for cookies under Argentine Law 25.326?",
   "Can people ask to be removed from advertising databases in Argentina?",
   "Are fines under the Argentine data protection law high?"
  ],
- "ck-d231": [
+ "ck-d232": [
   "What does California AB 566 require from browser developers?",
   "When does California AB 566 take effect?",
   "Must businesses already honour opt-out preference signals in California?"
  ],
- "ck-d232": [
+ "ck-d233": [
   "What does the W3C Global Privacy Control specification define?",
   "How do I detect a GPC signal on my website?",
   "Is Global Privacy Control legally binding?"
  ],
- "ck-d233": [
+ "ck-d234": [
   "What is the IAB Multi-State Privacy Agreement?",
   "What is the US National Approach in the MSPA?",
   "Is the MSPA a law?"
  ],
- "ck-d234": [
+ "ck-d235": [
   "What obligations do the IAB TCF Policies place on CMPs?",
   "Are the TCF Policies legally binding?",
   "What must publishers do under the TCF Policies?"
  ],
- "ck-d235": [
+ "ck-d236": [
   "What did the Brussels Market Court decide on the TCF in January 2026?",
   "Does the Market Court ruling change TCF v2.2 requirements?",
   "Is IAB Europe a joint controller for OpenRTB processing?"
  ],
- "ck-d236": [
+ "ck-d237": [
   "What did Meta commit to under the DMA on personalised advertising?",
   "Am I still responsible for consent when using the Meta Pixel in the EU?",
   "What happened to Meta's consent-or-pay model under the DMA?"
  ],
- "ck-d237": [
+ "ck-d238": [
   "Which Privacy Sandbox APIs has Google retired?",
   "Should I remove Privacy Sandbox purposes from my consent flow?",
   "What happens to CHIPS and FedCM after the Sandbox retirement?"
  ],
- "ck-d238": [
+ "ck-d239": [
   "How does recognition of consent management services work in Germany?",
   "What is section 26 TDDDG about?",
   "Does BfDI recognition make stored consent valid for my site?"
  ],
- "ck-d239": [
+ "ck-d240": [
   "What is the disclosedVendors segment in TCF v2.3?",
   "What was the TCF v2.3 deadline for CMPs and vendors?",
   "Do old TC Strings stay valid after TCF v2.3?"
  ],
- "ck-d240": [
+ "ck-d241": [
   "Does Microsoft Advertising require consent mode for UET?",
   "How do I map my CMP to ad_storage for Microsoft UET?",
   "When did the Microsoft Advertising consent signal requirement start?"
  ],
- "ck-d241": [
+ "ck-d242": [
   "Will Chrome introduce a prompt for third-party cookies?",
   "Do I still need a consent banner for third-party cookies in Chrome?",
   "What is IP Protection in Chrome Incognito?"
  ],
- "ck-d242": [
+ "ck-d243": [
   "Which browsers support Global Privacy Control?",
   "Which US states treated GPC as a binding opt-out in January 2025?",
   "Is the GPC reference site legally authoritative?"
  ],
- "ck-d243": [
+ "ck-d244": [
   "Does the Connecticut Attorney General treat GPC as a binding opt-out?",
   "Can GPC override loyalty programme membership in Connecticut?",
   "Did Connecticut, California and Colorado announce a joint privacy sweep?"
  ],
- "ck-d244": [
+ "ck-d245": [
   "What does the Google EU user consent policy require?",
   "Which countries does the Google EU user consent policy cover?",
   "Do advertisers with EEA traffic need to send consent signals to Google?"
  ],
- "ck-d245": [
+ "ck-d246": [
   "Did Google abandon third-party cookie deprecation in Chrome?",
   "Is Google's July 2024 cookie reversal still current?",
   "Does Chrome keeping third-party cookies make consent moot?"
  ],
- "ck-d246": [
+ "ck-d247": [
   "What is Google consent mode v2?",
   "What are ad_user_data and ad_personalization in consent mode?",
   "What is the difference between basic and advanced consent mode?",
   "Is advanced consent mode a legal exemption for cookieless pings?"
  ],
- "ck-d247": [
+ "ck-d248": [
   "What is the EDPB Website Auditing Tool?",
   "Is there a free tool to audit cookies and third-party requests on a site?",
   "Does the EDPB website tool represent an official EDPB position?"
  ],
- "ck-d248": [
+ "ck-d249": [
   "Do I need a Google-certified CMP to serve ads in the EEA?",
   "What happens to ad traffic without a Google-certified CMP?",
   "Does Google CMP certification prove TCF compliance?"
  ],
- "ck-d249": [
+ "ck-d250": [
   "Is the IAB US Privacy String still supported for CCPA opt-outs?",
   "What replaces the usprivacy string now that it is deprecated?",
   "Why can the US Privacy String not carry Virginia and Colorado opt-out signals?"
  ],
- "ck-d250": [
+ "ck-d251": [
   "What changed in TCF v2.2 for legitimate interest and advertising purposes?",
   "Must a CMP show the total number of vendors on the first layer under TCF v2.2?",
   "Is TCF v2.2 still current or has v2.3 superseded it?",
   "Is the IAB Europe TCF law or just an industry standard?"
  ],
- "ck-d251": [
+ "ck-d252": [
   "What does a TC String contain and which segments does it have?",
   "How can I test that my CMP exposes the TCF CMP API correctly?",
   "Which version of the Global Vendor List applies since TCF v2.2?"
  ],
- "ck-d252": [
+ "ck-d253": [
   "How does IAB Europe validate a CMP before it gets a CMP ID?",
   "What happens if a CMP tampers with the TC String?",
   "Is there a CMP Validator extension to check my own consent banner?",
   "How long do I have to fix a TCF policy breach before suspension?"
  ],
- "ck-d253": [
+ "ck-d254": [
   "What is the Global Privacy Platform and what does the GPP string carry?",
   "Should I use GPP instead of the deprecated US Privacy String?",
   "Does GPP record whether a Global Privacy Control signal was received?",
   "What is the GPP US National section with section ID 7?"
  ],
- "ck-d254": [
+ "ck-d255": [
   "Does Firefox block third-party cookies by default?",
   "Is Global Privacy Control switched on by default in Firefox?",
   "Must a site treat a Firefox GPC signal as an opt-out?"
  ],
- "ck-d255": [
+ "ck-d256": [
   "Do I need Apple ATT permission before reading the advertising identifier in an iOS app?",
   "What counts as tracking under Apple App Tracking Transparency?",
   "Does ATT permission replace ePrivacy consent for a mobile app?",
   "Can an iOS app block features if the user refuses tracking?"
  ],
- "ck-d256": [
+ "ck-d257": [
   "Does Brave block cookies and trackers by default?",
   "Is Global Privacy Control on by default in Brave?",
   "How must a business treat a Sec-GPC 1 signal from a Brave visitor?"
  ],
- "ck-d257": [
+ "ck-d258": [
   "What is ISO/IEC 29184 on online privacy notices and consent?",
   "Does ISO/IEC 29184 replace the GDPR Article 7 consent conditions?",
   "What consent records should a CMP keep according to ISO/IEC 29184?"
  ],
- "ck-d258": [
+ "ck-d259": [
   "How long does Safari keep script-written cookies and storage under ITP?",
   "Does Safari block third-party cookies by default?",
   "Are server-set first-party cookies capped at seven days in Safari?",
   "Why do returning Safari users vanish from my analytics after seven days?"
  ],
- "ck-d259": [
+ "ck-d260": [
   "Do I have to honour the Do Not Track header on my website?",
   "What happened to the W3C Do Not Track standard?",
   "Is Global Privacy Control the successor to Do Not Track?"
@@ -4506,1945 +4520,1983 @@
   "What happens when someone objects to processing based on legitimate interests?"
  ],
  "ed-d066": [
-  "How long can PNR data be retained after the Court of Justice judgment in C-817/19?"
+  "What does the EDPB say about smart glasses?",
+  "Does the household exemption cover recording people with smart glasses?",
+  "Is consent obtained after recording a bystander valid?",
+  "How should smart glasses signal to bystanders that they are recording?"
  ],
  "ed-d067": [
+  "How long can PNR data be retained after the Court of Justice judgment in C-817/19?"
+ ],
+ "ed-d068": [
   "What principles must age assurance respect?",
   "Can an age gate use an over or under threshold signal instead of a date of birth?",
   "What does EDPB Statement 1/2025 say about age assurance?"
  ],
- "ed-d068": [
+ "ed-d069": [
   "What did the EDPB say about the Court of Justice PNR judgment C-817/19 in 2022?"
  ],
- "ed-d069": [
+ "ed-d070": [
   "Could exporters rely on the 2022 EU-US agreement in principle for transfers to the US?",
   "What did the EDPB say about the Trans-Atlantic Data Privacy Framework in 2022?",
   "What replaced the 2022 agreement in principle for EU-US transfers?"
  ],
- "ed-d070": [
+ "ed-d071": [
   "Do international agreements with transfers from before the GDPR need to be reviewed?",
   "Which agreements concluded before 24 May 2016 must be aligned with Chapter V?",
   "What should public bodies check in older international agreements involving transfers?"
  ],
- "ed-d071": [
+ "ed-d072": [
   "How did the bridging period for UK transfers work after Brexit?"
  ],
- "ed-d072": [
+ "ed-d073": [
   "What did the EDPB say about the end of the Brexit transition period in December 2020?"
  ],
- "ed-d073": [
+ "ed-d074": [
   "Do KYC and anti-money-laundering monitoring need a clear legal basis under the GDPR?"
  ],
- "ed-d074": [
+ "ed-d075": [
   "What did the EDPB say about the Schrems II ruling in July 2020?",
   "Are standard contractual clauses still valid after Schrems II?",
   "Must exporters assess destination country law before relying on SCCs?",
   "Can supervisory authorities suspend transfers after the Privacy Shield was invalidated?"
  ],
- "ed-d075": [
+ "ed-d076": [
   "What did the EDPB say about interoperability of Covid-19 contact tracing apps?"
  ],
- "ed-d076": [
+ "ed-d077": [
   "What did the EDPB say about personal data when reopening borders after Covid-19?"
  ],
- "ed-d077": [
+ "ed-d078": [
   "Can Member States restrict data subject rights during a state of emergency?"
  ],
- "ed-d078": [
+ "ed-d079": [
   "Does the GDPR stand in the way of measures against Covid-19 by employers?"
  ],
- "ed-d079": [
+ "ed-d080": [
   "What privacy risks does the EDPB see when mergers combine sensitive personal data?"
  ],
- "ed-d080": [
+ "ed-d081": [
   "Can political parties profile and target voters under the GDPR?",
   "Is data on political opinions special category data?",
   "Do voters have to be told why they receive a targeted campaign message?",
   "What does EDPB Statement 2/2019 say about political campaigns?"
  ],
- "ed-d081": [
+ "ed-d082": [
   "How does economic concentration affect data protection according to the EDPB?"
  ],
- "ed-d082": [
+ "ed-d083": [
+  "Has the EDPB given an opinion on the Michelin Group controller binding corporate rules?",
+  "Who approves the controller binding corporate rules of Michelin Group?"
+ ],
+ "ed-d084": [
+  "Has the EDPB given an opinion on the Snowflake Group controller binding corporate rules?",
+  "Who approves the controller binding corporate rules of Snowflake Group?"
+ ],
+ "ed-d085": [
+  "Has the EDPB given an opinion on the Snowflake Group processor binding corporate rules?",
+  "Who approves the processor binding corporate rules of Snowflake Group?"
+ ],
+ "ed-d086": [
+  "Has the EDPB given an opinion on the HCL Tech Group controller binding corporate rules?",
+  "Who approves the controller binding corporate rules of HCL Tech Group?"
+ ],
+ "ed-d087": [
+  "Has the EDPB given an opinion on the HCL Tech Group processor binding corporate rules?",
+  "Who approves the processor binding corporate rules of HCL Tech Group?"
+ ],
+ "ed-d088": [
+  "Has the EDPB given an opinion on the DSM Firmenich Group controller binding corporate rules?",
+  "Who approves the controller binding corporate rules of DSM Firmenich Group?"
+ ],
+ "ed-d089": [
+  "Has the EDPB given an opinion on the TGS Group controller binding corporate rules?",
+  "Who approves the controller binding corporate rules of TGS Group?"
+ ],
+ "ed-d090": [
   "What does EDPB Opinion 20/2026 say about a Dutch authority controller BCR decision?",
   "Which Dutch controller BCRs received a favourable EDPB opinion in July 2026?"
  ],
- "ed-d083": [
+ "ed-d091": [
   "What does EDPB Opinion 21/2026 say about an Irish authority controller BCR decision?",
   "Did the EDPB give a favourable opinion on an Irish controller BCR in July 2026?"
  ],
- "ed-d084": [
+ "ed-d092": [
   "What is EDPB Opinion 18/2026 on controller binding corporate rules?",
   "Which Dutch controller BCRs did the EDPB review in June 2026?"
  ],
- "ed-d085": [
+ "ed-d093": [
   "What is EDPB Opinion 19/2026 on processor binding corporate rules?",
   "Which Dutch processor BCRs received a favourable EDPB opinion in June 2026?"
  ],
- "ed-d086": [
+ "ed-d094": [
   "What does EDPB Opinion 16/2026 say about controller binding corporate rules?",
   "Which Dutch controller BCRs did the EDPB review in May 2026?"
  ],
- "ed-d087": [
+ "ed-d095": [
   "What does EDPB Opinion 17/2026 say about processor binding corporate rules?",
   "Which Dutch processor BCRs did the EDPB review in May 2026?"
  ],
- "ed-d088": [
+ "ed-d096": [
   "What does EDPB Opinion 10/2026 say about controller binding corporate rules?",
   "Which Dutch controller BCRs did the EDPB review in April 2026?"
  ],
- "ed-d089": [
+ "ed-d097": [
   "Which Belgian controller BCRs got a favourable EDPB opinion in April 2026?",
   "What does EDPB Opinion 11/2026 say about the Belgian authority's BCR draft?"
  ],
- "ed-d090": [
+ "ed-d098": [
   "Who gives the final approval of controller BCRs after an EDPB Article 64 opinion?",
   "Was EDPB Opinion 12/2026 on the Spanish BCR draft decision favourable?"
  ],
- "ed-d091": [
+ "ed-d099": [
   "Did the Dutch authority get EDPB backing for controller BCRs in April 2026?",
   "Who should pay attention to EDPB Opinion 9/2026 on controller BCRs?"
  ],
- "ed-d092": [
+ "ed-d100": [
   "Did the EDPB assess Europrivacy as a European Data Protection Seal?",
   "What does EDPB Opinion 14/2026 say about Europrivacy under Article 42(5)?",
   "Is a European Data Protection Seal valid across the EEA?"
  ],
- "ed-d093": [
+ "ed-d101": [
   "Can certification be used as a transfer tool instead of SCCs?",
   "Which certification was the first approved as a tool for transfers under Article 46?",
   "What does EDPB Opinion 15/2026 say about Europrivacy and transfers?"
  ],
- "ed-d094": [
+ "ed-d102": [
   "How does the EDPB review accreditation requirements for certification bodies?",
   "What did EDPB Opinion 13/2026 say about the Finnish accreditation requirements?",
   "Which guidelines are accreditation requirements for certification bodies checked against?"
  ],
- "ed-d095": [
+ "ed-d103": [
   "Which Dutch controller BCRs got a favourable EDPB opinion in March 2026?",
   "When did the EDPB adopt Opinion 7/2026 on controller BCRs?"
  ],
- "ed-d096": [
+ "ed-d104": [
   "Which GDPR article requires an EDPB opinion on draft BCR decisions?",
   "What did EDPB Opinion 8/2026 conclude on the Dutch controller BCR draft?"
  ],
- "ed-d097": [
+ "ed-d105": [
   "Did the EDPB support a Dutch controller BCR decision in February 2026?",
   "Is EDPB Opinion 06/2026 relevant to organisations outside the group it covers?"
  ],
- "ed-d098": [
+ "ed-d106": [
   "Which Dutch processor BCRs got a favourable EDPB opinion in February 2026?",
   "What does EDPB Opinion 5/2026 say about processor BCRs?"
  ],
- "ed-d099": [
+ "ed-d107": [
   "What happens after a favourable EDPB opinion on a Dutch BCR draft decision?",
   "What is EDPB Opinion 1/2026 about?"
  ],
- "ed-d100": [
+ "ed-d108": [
   "Was EDPB Opinion 2/2026 on a Dutch controller BCR draft favourable?",
   "Does EDPB Opinion 2/2026 mean the Dutch authority can approve the BCRs?"
  ],
- "ed-d101": [
+ "ed-d109": [
   "Who decides on final approval of Dutch controller BCRs after the EDPB opinion?",
   "What did EDPB Opinion 3/2026 conclude?"
  ],
- "ed-d102": [
+ "ed-d110": [
   "Who is affected by EDPB Opinion 4/2026 on controller BCRs?",
   "Was there a favourable EDPB opinion on Dutch controller BCRs in February 2026?"
  ],
- "ed-d103": [
+ "ed-d111": [
   "Which Dutch controller BCRs did the EDPB review in December 2025?",
   "What does EDPB Opinion 29/2025 say about controller BCRs?"
  ],
- "ed-d104": [
+ "ed-d112": [
   "What did the EDPB say about Dutch processor BCRs in December 2025?",
   "Is EDPB Opinion 30/2025 about processor or controller BCRs?"
  ],
- "ed-d105": [
+ "ed-d113": [
   "Did EDPB Opinion 31/2025 clear the way for Dutch approval of controller BCRs?",
   "Who must pay attention to Opinion 31/2025 on controller BCRs?"
  ],
- "ed-d106": [
+ "ed-d114": [
   "Which Irish controller BCRs got a favourable EDPB opinion in December 2025?",
   "What does EDPB Opinion 32/2025 mean for the Irish authority's BCR decision?"
  ],
- "ed-d107": [
+ "ed-d115": [
   "Was a favourable EDPB opinion given on Irish processor BCRs in December 2025?",
   "Who gives final approval after EDPB Opinion 33/2025 on processor BCRs?"
  ],
- "ed-d108": [
+ "ed-d116": [
   "Did the EDPB give an opinion on Greek national certification criteria?",
   "Does EDPB Opinion 34/2025 matter if a supplier holds that certification?"
  ],
- "ed-d109": [
+ "ed-d117": [
   "Which French controller BCRs got a favourable EDPB opinion in October 2025?",
   "What did EDPB Opinion 23/2025 conclude on the French BCR draft decision?"
  ],
- "ed-d110": [
+ "ed-d118": [
   "Has the EDPB given an opinion on Polish controller BCRs?",
   "Is EDPB Opinion 24/2025 favourable on the Polish authority's BCR draft?"
  ],
- "ed-d111": [
+ "ed-d119": [
   "Did a Polish processor BCR draft decision get a favourable EDPB opinion?",
   "Who gives final approval after EDPB Opinion 25/2025?"
  ],
- "ed-d112": [
+ "ed-d120": [
   "Which Irish controller BCRs did the EDPB review in September 2025?",
   "Who does EDPB Opinion 17/2025 on controller BCRs matter to?"
  ],
- "ed-d113": [
+ "ed-d121": [
   "Was the EDPB opinion on Irish processor BCRs in September 2025 favourable?",
   "What does EDPB Opinion 18/2025 cover?"
  ],
- "ed-d114": [
+ "ed-d122": [
   "Did the EDPB back a Luxembourg controller BCR draft decision in 2025?",
   "What does EDPB Opinion 19/2025 say about final approval of the BCRs?"
  ],
- "ed-d115": [
+ "ed-d123": [
   "Which Luxembourg processor BCRs received a favourable EDPB opinion?",
   "What did EDPB Opinion 20/2025 conclude on processor BCRs?"
  ],
- "ed-d116": [
+ "ed-d124": [
   "Did the EDPB issue an opinion on a Norwegian authority BCR draft in 2025?",
   "What does EDPB Opinion 21/2025 conclude on controller BCRs?"
  ],
- "ed-d117": [
+ "ed-d125": [
   "Which Luxembourg controller BCRs got a favourable EDPB opinion in September 2025?",
   "Is EDPB Opinion 22/2025 relevant to my own data transfers?"
  ],
- "ed-d118": [
+ "ed-d126": [
   "What did the EDPB conclude on Dutch controller BCRs in July 2025?",
   "Who gives final approval of the BCRs covered by EDPB Opinion 13/2025?"
  ],
- "ed-d119": [
+ "ed-d127": [
   "Did the EDPB review Austrian national certification criteria in 2025?",
   "What does EDPB Opinion 15/2025 say about Article 42(5) certification criteria?"
  ],
- "ed-d120": [
+ "ed-d128": [
   "Has the EDPB opined on North Rhine Westphalia certification criteria?",
   "Does EDPB Opinion 16/2025 matter if my supplier holds that certification?"
  ],
- "ed-d121": [
+ "ed-d129": [
   "When did the EDPB adopt Opinion 14/2025 on Norwegian controller BCRs?",
   "Did the Norwegian authority's BCR draft get a favourable EDPB opinion in July 2025?"
  ],
- "ed-d122": [
+ "ed-d130": [
   "Which Dutch controller BCRs were favourably reviewed by the EDPB in June 2025?",
   "What does EDPB Opinion 11/2025 mean for the Dutch authority?"
  ],
- "ed-d123": [
+ "ed-d131": [
   "Is EDPB Opinion 12/2025 a favourable opinion on controller BCRs?",
   "Who should read an EDPB opinion about one group's controller BCRs?"
  ],
- "ed-d124": [
+ "ed-d132": [
   "Which French controller BCRs got a favourable EDPB opinion in May 2025?",
   "What does EDPB Opinion 10/2025 say about the French authority's draft decision?"
  ],
- "ed-d125": [
+ "ed-d133": [
   "Did the EDPB give a favourable opinion on Norwegian controller BCRs in May 2025?",
   "What is EDPB Opinion 8/2025 about?"
  ],
- "ed-d126": [
+ "ed-d134": [
   "Was there an EDPB opinion on French processor BCRs in May 2025?",
   "Who gives final approval of the processor BCRs in EDPB Opinion 9/2025?"
  ],
- "ed-d127": [
+ "ed-d135": [
   "Did the EDPB give an opinion on French GDPR certification criteria in 2025?",
   "What does EDPB Opinion 3/2025 say about certification criteria under Article 42(5)?"
  ],
- "ed-d128": [
+ "ed-d136": [
   "Which Finnish controller BCRs got a favourable EDPB opinion in April 2025?",
   "What did EDPB Opinion 4/2025 conclude on the Finnish authority's draft decision?"
  ],
- "ed-d129": [
+ "ed-d137": [
   "Did the EDPB support Finnish processor BCRs in April 2025?",
   "Is EDPB Opinion 5/2025 about controller or processor BCRs?"
  ],
- "ed-d130": [
+ "ed-d138": [
   "Has the EDPB reviewed Swedish controller BCRs under Article 64(1)(f)?",
   "What does EDPB Opinion 2/2025 conclude on the Swedish authority's draft decision?"
  ],
- "ed-d131": [
+ "ed-d139": [
   "Which French controller BCRs did the EDPB review in January 2025?",
   "What does EDPB Opinion 01/2025 mean for organisations transferring data in that group?"
  ],
- "ed-d132": [
+ "ed-d140": [
   "Is an AI model trained on personal data anonymous under the GDPR?",
   "Can I rely on legitimate interest to develop or deploy an AI model?",
   "Does unlawful processing during AI training affect later deployment?",
   "Do I need to document anonymity testing and a LIA for an AI model?"
  ],
- "ed-d133": [
+ "ed-d141": [
   "Which Hesse controller BCRs got an EDPB opinion in December 2024?",
   "What did EDPB Opinion 24/2024 conclude on the Hesse authority's BCR draft?"
  ],
- "ed-d134": [
+ "ed-d142": [
   "Did the EDPB give a favourable opinion on Hesse processor BCRs in December 2024?",
   "What does EDPB Opinion 25/2024 mean for final approval of processor BCRs?"
  ],
- "ed-d135": [
+ "ed-d143": [
   "Did the EDPB review the Bremen catalogue of certification criteria for IT processing?",
   "Which GDPR article covers national certification criteria from the Bremen authority?"
  ],
- "ed-d136": [
+ "ed-d144": [
   "What does EDPB Opinion 27/2024 say about a European Data Protection Seal?",
   "Does a European Data Protection Seal under Article 42(5) apply across the EEA?"
  ],
- "ed-d137": [
+ "ed-d145": [
   "Which Irish controller BCRs got a favourable EDPB opinion in November 2024?",
   "What does EDPB Opinion 23/2024 say about the Irish authority's draft decision?"
  ],
- "ed-d138": [
+ "ed-d146": [
   "What details must a controller hold on every processor and sub-processor?",
   "Does a sub-processor contract need identical wording to the processor contract?",
   "Must a controller systematically review its processors' sub-processing contracts?",
   "What does EDPB Opinion 22/2024 say about transfers by sub-processors?"
  ],
- "ed-d139": [
+ "ed-d147": [
   "Which North Rhine-Westphalian controller BCRs got an EDPB opinion in September 2024?",
   "Was EDPB Opinion 20/2024 favourable on the NRW authority's BCR draft?"
  ],
- "ed-d140": [
+ "ed-d148": [
   "Did the EDPB give a favourable opinion on French processor BCRs in September 2024?",
   "What does EDPB Opinion 21/2024 conclude?"
  ],
- "ed-d141": [
+ "ed-d149": [
   "Did the EDPB review Austrian certification criteria in July 2024?",
   "What does EDPB Opinion 18/2024 mean if a supplier holds that certification?"
  ],
- "ed-d142": [
+ "ed-d150": [
   "What did the EDPB say about EuroPrise as a European Data Protection Seal?",
   "Does EDPB Opinion 19/2024 matter if my supplier holds EuroPrise certification?"
  ],
- "ed-d143": [
+ "ed-d151": [
   "Which Estonian processor BCRs got a favourable EDPB opinion in July 2024?",
   "What does EDPB Opinion 14/2024 say about the Estonian authority's draft decision?"
  ],
- "ed-d144": [
+ "ed-d152": [
   "Did the Spanish authority's processor BCR draft get a favourable EDPB opinion?",
   "Who gives final approval after EDPB Opinion 15/2024?"
  ],
- "ed-d145": [
+ "ed-d153": [
   "Which Spanish controller BCRs did the EDPB review in July 2024?",
   "What did EDPB Opinion 16/2024 conclude on controller BCRs?"
  ],
- "ed-d146": [
+ "ed-d154": [
   "Was EDPB Opinion 17/2024 on Spanish controller BCRs favourable?",
   "Who is EDPB Opinion 17/2024 relevant to?"
  ],
- "ed-d147": [
+ "ed-d155": [
   "Is there an EDPB opinion on a code of conduct for clinical research providers?",
   "Is it mandatory to follow the clinical research code of conduct?",
   "What does Article 40(7) cover in EDPB Opinion 12/2024?"
  ],
- "ed-d148": [
+ "ed-d156": [
   "Which Liechtenstein controller BCRs got a favourable EDPB opinion in June 2024?",
   "What does EDPB Opinion 13/2024 conclude on the Liechtenstein authority's draft?"
  ],
- "ed-d149": [
+ "ed-d157": [
   "What did the EDPB say about Swedish accreditation requirements for certification bodies?",
   "Who adopts the final accreditation requirements after EDPB Opinion 10/2024?"
  ],
- "ed-d150": [
+ "ed-d158": [
   "Which Romanian processor BCRs got a favourable EDPB opinion in May 2024?",
   "What does EDPB Opinion 9/2024 say about processor BCRs?"
  ],
- "ed-d151": [
+ "ed-d159": [
   "Can airports use facial recognition to speed up passenger flow under the GDPR?",
   "Where must the biometric template be stored for airport facial recognition?",
   "Can airlines store passenger face templates in the cloud?",
   "What does EDPB Opinion 11/2024 say about Articles 5(1)(e), 25 and 32?"
  ],
- "ed-d152": [
+ "ed-d160": [
   "Has the EDPB reviewed cloud service data protection certification criteria?",
   "What does EDPB Opinion 7/2024 say about the North Rhine Westphalia criteria?"
  ],
- "ed-d153": [
+ "ed-d161": [
   "Can a country exempt processing operations from a DPIA under Article 35(5)?",
   "What did the EDPB say about the Latvian list of processing exempt from a DPIA?",
   "Which criteria must a national DPIA exemption list stay consistent with?"
  ],
- "ed-d154": [
+ "ed-d162": [
   "Is consent or pay valid consent for behavioural advertising on large platforms?",
   "Do large platforms have to offer a free alternative without behavioural advertising?",
   "What must platforms assess when offering a consent or pay model?",
   "What does EDPB Opinion 08/2024 say about contextual advertising?"
  ],
- "ed-d155": [
+ "ed-d163": [
   "Which Spanish controller BCRs got a favourable EDPB opinion in March 2024?",
   "What does EDPB Opinion 05/2024 conclude on the Spanish draft decision?"
  ],
- "ed-d156": [
+ "ed-d164": [
   "How is a controller's main establishment in the EU determined?",
   "Does the one-stop-shop apply if no EU establishment takes the decisions?",
   "Does the place of central administration always count as the main establishment?",
   "What does EDPB Opinion 04/2024 say about Article 4(16)(a)?"
  ],
- "ed-d157": [
+ "ed-d165": [
   "Which Spanish controller BCRs did the EDPB look at in February 2024?",
   "What did EDPB Opinion 2/2024 conclude?"
  ],
- "ed-d158": [
+ "ed-d166": [
   "Did the EDPB give a favourable opinion on Irish processor BCRs in February 2024?",
   "What does EDPB Opinion 3/2024 say about processor BCRs?"
  ],
- "ed-d159": [
+ "ed-d167": [
   "Which Dutch processor BCRs got a favourable EDPB opinion in January 2024?",
   "What does EDPB Opinion 01/2024 say about final approval of processor BCRs?"
  ],
- "ed-d160": [
+ "ed-d168": [
   "Did the EDPB back Dutch controller BCRs in December 2023?",
   "What does EDPB Opinion 36/2023 conclude on the Dutch authority's draft?"
  ],
- "ed-d161": [
+ "ed-d169": [
   "What did the EDPB say about Luxembourg accreditation of certification bodies?",
   "Which article covers accreditation requirements in EDPB Opinion 37/2023?"
  ],
- "ed-d162": [
+ "ed-d170": [
   "Has the EDPB reviewed Slovenian accreditation requirements for certification bodies?",
   "Who is EDPB Opinion 38/2023 on accreditation requirements relevant to?"
  ],
- "ed-d163": [
+ "ed-d171": [
   "Which Hesse controller BCRs got a favourable EDPB opinion in December 2023?",
   "What does EDPB Opinion 33/2023 say about the Hesse authority's draft decision?"
  ],
- "ed-d164": [
+ "ed-d172": [
   "Was there a favourable EDPB opinion on Hesse processor BCRs in December 2023?",
   "What did EDPB Opinion 34/2023 conclude?"
  ],
- "ed-d165": [
+ "ed-d173": [
   "Which Danish controller BCRs got a favourable EDPB opinion in 2023?",
   "What does EDPB Opinion 35/2023 mean for the Danish authority?"
  ],
- "ed-d166": [
+ "ed-d174": [
   "Which Romanian processor BCRs did the EDPB review in November 2023?",
   "What does EDPB Opinion 26/2023 conclude on processor BCRs?"
  ],
- "ed-d167": [
+ "ed-d175": [
   "Did the EDPB issue a favourable opinion on French processor BCRs in November 2023?",
   "Who gives final approval after EDPB Opinion 27/2023?"
  ],
- "ed-d168": [
+ "ed-d176": [
   "Which French controller BCRs got a favourable EDPB opinion in November 2023?",
   "What is EDPB Opinion 28/2023 about?"
  ],
- "ed-d169": [
+ "ed-d177": [
   "Was EDPB Opinion 29/2023 on French controller BCRs favourable?",
   "Who should pay attention to EDPB Opinion 29/2023?"
  ],
- "ed-d170": [
+ "ed-d178": [
   "What did the EDPB say about French processor BCRs in November 2023?",
   "What does EDPB Opinion 30/2023 conclude on the French authority's draft decision?"
  ],
- "ed-d171": [
+ "ed-d179": [
   "Is there a favourable EDPB opinion on French controller BCRs from 28 November 2023?",
   "Who gives final approval of the BCRs in EDPB Opinion 31/2023?"
  ],
- "ed-d172": [
+ "ed-d180": [
   "Did the EDPB give a favourable view of French processor BCRs on 28 November 2023?",
   "What does EDPB Opinion 32/2023 say about processor BCRs?"
  ],
- "ed-d173": [
+ "ed-d181": [
   "Which Dutch controller BCRs got a favourable EDPB opinion in November 2023?",
   "What does EDPB Opinion 19/2023 conclude?"
  ],
- "ed-d174": [
+ "ed-d182": [
   "Was a Dutch controller BCR draft favourably reviewed by the EDPB on 16 November 2023?",
   "Who does EDPB Opinion 20/2023 matter to?"
  ],
- "ed-d175": [
+ "ed-d183": [
   "Which Belgian processor BCRs got a favourable EDPB opinion in 2023?",
   "What does EDPB Opinion 21/2023 say about the Belgian authority's draft decision?"
  ],
- "ed-d176": [
+ "ed-d184": [
   "Is there an EDPB opinion on controller BCRs for employee data?",
   "What does EDPB Opinion 22/2023 conclude on the Belgian authority's draft?"
  ],
- "ed-d177": [
+ "ed-d185": [
   "What did EDPB Opinion 23/2023 conclude on a Belgian controller BCR draft?",
   "Did the EDPB give a favourable opinion on a Belgian controller BCR in November 2023?"
  ],
- "ed-d178": [
+ "ed-d186": [
   "What is EDPB Opinion 24/2023 on the French controller BCR draft about?",
   "Which French controller binding corporate rules did the Board review in November 2023?"
  ],
- "ed-d179": [
+ "ed-d187": [
   "Who gives the final approval after EDPB Opinion 25/2023 on Dutch controller BCRs?",
   "Has the EDPB issued a favourable opinion on Dutch controller BCRs under Article 64(1)(f)?"
  ],
- "ed-d180": [
+ "ed-d188": [
   "What does EDPB Opinion 18/2023 say about Belgian processor BCRs?",
   "Is a Belgian processor BCR final once the EDPB gives a favourable opinion?"
  ],
- "ed-d181": [
+ "ed-d189": [
   "What was EDPB Opinion 16/2023 on the Irish controller BCR draft?",
   "Which Irish controller BCRs got an EDPB opinion in September 2023?"
  ],
- "ed-d182": [
+ "ed-d190": [
   "What does EDPB Opinion 17/2023 say about Irish processor BCRs?",
   "Who should care about an EDPB opinion on processor BCRs from the Irish authority?"
  ],
- "ed-d183": [
+ "ed-d191": [
   "What did the EDPB say about Dutch certification criteria under Article 42(5)?",
   "Should I check EDPB Opinion 15/2023 if a supplier holds a Dutch certification?"
  ],
- "ed-d184": [
+ "ed-d192": [
   "What does EDPB Opinion 14/2023 on the Danish controller BCR draft say?",
   "Was a Danish controller BCR draft endorsed by the EDPB in July 2023?"
  ],
- "ed-d185": [
+ "ed-d193": [
   "What did the EDPB say about code monitoring body accreditation in Sweden?",
   "Who is the Swedish code monitoring body accreditation opinion relevant to?"
  ],
- "ed-d186": [
+ "ed-d194": [
   "What did the EDPB say about accreditation of certification bodies in Cyprus?",
   "Which guidelines were the Cypriot certification body requirements checked against?"
  ],
- "ed-d187": [
+ "ed-d195": [
   "Is there an EDPB opinion on accrediting certification bodies in Croatia?",
   "Who is the Croatian certification body accreditation opinion relevant to?"
  ],
- "ed-d188": [
+ "ed-d196": [
   "What did the EDPB conclude in Opinion 10/2023 on Spanish controller BCRs?",
   "Did the Spanish authority get a favourable EDPB opinion on controller BCRs in June 2023?"
  ],
- "ed-d189": [
+ "ed-d197": [
   "What is EDPB Opinion 9/2023 on the Italian controller BCR draft?",
   "Has the EDPB issued an opinion on Italian controller BCRs under Article 64(1)(f)?"
  ],
- "ed-d190": [
+ "ed-d198": [
   "What did EDPB Opinion 7/2023 say about the Irish controller BCR draft?",
   "Which Irish controller BCR draft was reviewed by the Board in May 2023?"
  ],
- "ed-d191": [
+ "ed-d199": [
   "What is EDPB Opinion 8/2023 on Irish processor binding corporate rules?",
   "Was there a May 2023 EDPB opinion on processor BCRs from Ireland?"
  ],
- "ed-d192": [
+ "ed-d200": [
   "What does EDPB Opinion 6/2023 say about Danish controller BCRs?",
   "Did the Danish authority controller BCR draft get a favourable opinion in March 2023?"
  ],
- "ed-d193": [
+ "ed-d201": [
   "Is there an EDPB opinion on code of conduct monitoring body accreditation in Latvia?",
   "Which guidelines were the Latvian monitoring body requirements checked against?"
  ],
- "ed-d194": [
+ "ed-d202": [
   "What does EDPB Opinion 03/2023 say about code monitoring bodies in Romania?",
   "Who are the Romanian draft accreditation requirements for monitoring bodies aimed at?"
  ],
- "ed-d195": [
+ "ed-d203": [
   "What did the EDPB opine on Croatian accreditation requirements for code monitoring bodies?",
   "Who adopts the final monitoring body accreditation requirements in Croatia?"
  ],
- "ed-d196": [
+ "ed-d204": [
   "What is EDPB Opinion 4/2023 on certification body accreditation in Malta?",
   "Who adopts the final certification body accreditation requirements in Malta?"
  ],
- "ed-d197": [
+ "ed-d205": [
   "What did the EDPB decide in Opinion 32/2022 on the Danish controller BCR draft?",
   "Which Danish controller BCRs were reviewed by the Board in December 2022?"
  ],
- "ed-d198": [
+ "ed-d206": [
   "What does EDPB Opinion 30/2022 say about Slovak controller BCRs?",
   "Did the EDPB support the Slovak authority controller BCR draft in November 2022?"
  ],
- "ed-d199": [
+ "ed-d207": [
   "What is EDPB Opinion 31/2022 on Slovak processor BCRs about?",
   "Is there an EDPB opinion on processor BCRs from the Slovak supervisory authority?"
  ],
- "ed-d200": [
+ "ed-d208": [
   "What does EDPB Opinion 29/2022 on the Danish controller BCR draft conclude?",
   "Which Danish controller BCRs got a favourable Board opinion on 18 November 2022?"
  ],
- "ed-d201": [
+ "ed-d209": [
   "What did EDPB Opinion 28/2022 decide on Europrivacy certification criteria?",
   "Can Europrivacy certification be relied on across the EEA?",
   "What is a European Data Protection Seal under Article 42(5)?"
  ],
- "ed-d202": [
+ "ed-d210": [
   "What did the EDPB say in Opinion 27/2022 about French processor BCRs?",
   "Was there an October 2022 EDPB opinion on processor BCRs from the French authority?"
  ],
- "ed-d203": [
+ "ed-d211": [
   "What did the EDPB say about controller BCRs from the Bavarian private sector authority?",
   "Which German authority draft on controller BCRs was covered by Opinion 26/2022?"
  ],
- "ed-d204": [
+ "ed-d212": [
   "What did the EDPB say about EuroPriSe certification criteria for processors?",
   "Is there an EDPB opinion on certifying processing operations carried out by processors?"
  ],
- "ed-d205": [
+ "ed-d213": [
   "What is EDPB Opinion 22/2022 on Liechtenstein controller BCRs?",
   "Has the EDPB reviewed controller binding corporate rules from Liechtenstein?"
  ],
- "ed-d206": [
+ "ed-d214": [
   "What does EDPB Opinion 23/2022 say about Swedish controller BCRs?",
   "Was a Swedish controller BCR draft given a favourable opinion in September 2022?"
  ],
- "ed-d207": [
+ "ed-d215": [
   "What is EDPB Opinion 24/2022 on Swedish processor BCRs?",
   "Who is affected by the Swedish processor BCR opinion of September 2022?"
  ],
- "ed-d208": [
+ "ed-d216": [
   "What did the EDPB say in Opinion 18/2022 on Baden-Württemberg controller BCRs?",
   "Did the Baden-Württemberg authority get a favourable EDPB opinion in August 2022?"
  ],
- "ed-d209": [
+ "ed-d217": [
   "What does EDPB Opinion 19/2022 on Baden-Württemberg controller BCRs say?",
   "Did the Baden-Württemberg authority seek an Article 64 opinion for controller BCRs?"
  ],
- "ed-d210": [
+ "ed-d218": [
   "What does EDPB Opinion 20/2022 say about Irish controller BCRs?",
   "Which Irish controller BCR draft got a Board opinion on 26 August 2022?"
  ],
- "ed-d211": [
+ "ed-d219": [
   "What is EDPB Opinion 21/2022 on Irish processor BCRs?",
   "Did the EDPB issue a favourable opinion on Irish processor BCRs in August 2022?"
  ],
- "ed-d212": [
+ "ed-d220": [
   "What did EDPB Opinion 17/2022 conclude on Spanish controller BCRs?",
   "Which Spanish controller BCR draft was reviewed by the Board in August 2022?"
  ],
- "ed-d213": [
+ "ed-d221": [
   "What did the EDPB opine on Polish accreditation requirements for certification bodies?",
   "Who adopts the final certification body requirements in Poland after the opinion?"
  ],
- "ed-d214": [
+ "ed-d222": [
   "Is there an EDPB opinion on French accreditation requirements for certification bodies?",
   "Which guidelines were the French certification body requirements checked against?"
  ],
- "ed-d215": [
+ "ed-d223": [
   "What is EDPB Opinion 13/2022 on certification body accreditation in Bulgaria?",
   "Which Bulgarian certification body requirements did the Board review in July 2022?"
  ],
- "ed-d216": [
+ "ed-d224": [
   "Did the EDPB review Bulgarian code of conduct monitoring body requirements in 2022?",
   "What is EDPB Opinion 14/2022 on Bulgaria about?"
  ],
- "ed-d217": [
+ "ed-d225": [
   "What did the EDPB say about draft monitoring body requirements in Luxembourg?",
   "Which opinion covers code monitoring body accreditation in Luxembourg, July 2022?"
  ],
- "ed-d218": [
+ "ed-d226": [
   "What is EDPB Opinion 16/2022 on code monitoring bodies in Slovenia?",
   "Who adopts the final monitoring body requirements for codes of conduct in Slovenia?"
  ],
- "ed-d219": [
+ "ed-d227": [
   "What did the EDPB say about controller BCRs from the Hesse supervisory authority?",
   "What is EDPB Opinion 10/2022 on the Hesse BCR draft about?"
  ],
- "ed-d220": [
+ "ed-d228": [
   "What does EDPB Opinion 08/2022 say about Danish controller BCRs?",
   "Which Danish controller BCR draft was reviewed by the Board in May 2022?"
  ],
- "ed-d221": [
+ "ed-d229": [
   "What is EDPB Opinion 09/2022 on Danish processor BCRs?",
   "Is there a May 2022 EDPB opinion on processor BCRs from Denmark?"
  ],
- "ed-d222": [
+ "ed-d230": [
   "What did EDPB Opinion 05/2022 conclude on Danish controller BCRs?",
   "Which Danish controller BCRs got a favourable opinion in April 2022?"
  ],
- "ed-d223": [
+ "ed-d231": [
   "What does EDPB Opinion 06/2022 say about Irish controller BCRs?",
   "Was an Irish controller BCR draft endorsed by the Board in April 2022?"
  ],
- "ed-d224": [
+ "ed-d232": [
   "What is EDPB Opinion 07/2022 on Hungarian controller BCRs?",
   "Has the EDPB given an opinion on controller BCRs from the Hungarian authority?"
  ],
- "ed-d225": [
+ "ed-d233": [
   "What does EDPB Opinion 04/2022 on Danish controller BCRs conclude?",
   "Did the Board give a favourable opinion on a Danish controller BCR draft in March 2022?"
  ],
- "ed-d226": [
+ "ed-d234": [
   "What did the EDPB say about the Luxembourg GDPR-CARPA certification criteria?",
   "Is EDPB Opinion 1/2022 relevant if my supplier holds GDPR-CARPA certification?"
  ],
- "ed-d227": [
+ "ed-d235": [
   "What did EDPB Opinion 02/2022 say about French controller BCRs?",
   "Which French controller BCR draft was reviewed by the Board in February 2022?"
  ],
- "ed-d228": [
+ "ed-d236": [
   "What is EDPB Opinion 03/2022 on French processor BCRs?",
   "Is there a February 2022 EDPB opinion on processor BCRs from France?"
  ],
- "ed-d229": [
+ "ed-d237": [
   "Can a supervisory authority order erasure without a data subject request?",
   "Is Article 58(2)(g) GDPR a legal basis for ex officio erasure orders?",
   "What did EDPB Opinion 39/2021 conclude about ex officio erasure?"
  ],
- "ed-d230": [
+ "ed-d238": [
   "What did the EDPB say about Belgian accreditation requirements for certification bodies?",
   "Who is EDPB Opinion 35/2021 on Belgium relevant to?"
  ],
- "ed-d231": [
+ "ed-d239": [
   "Has the EDPB commented on accreditation requirements for certification bodies in Norway?",
   "What is EDPB Opinion 36/2021 under Article 43(3) about?"
  ],
- "ed-d232": [
+ "ed-d240": [
   "Is there a 2021 EDPB opinion on code monitoring body requirements in Malta?",
   "Which GDPR article underlies EDPB Opinion 37/2021 on Malta?"
  ],
- "ed-d233": [
+ "ed-d241": [
   "What did the EDPB opine on certification body accreditation requirements in Latvia?",
   "Which opinion from November 2021 covers certification body accreditation in Latvia?"
  ],
- "ed-d234": [
+ "ed-d242": [
   "What does EDPB Opinion 33/2021 say about Belgian controller BCRs?",
   "Which Belgian controller BCR drafts did the Board review in October 2021?"
  ],
- "ed-d235": [
+ "ed-d243": [
   "What is EDPB Opinion 34/2021 on Belgian controller binding corporate rules?",
   "Did the Belgian authority get a favourable EDPB opinion on controller BCRs in 2021?"
  ],
- "ed-d236": [
+ "ed-d244": [
   "What did EDPB Opinion 26/2021 say about North Rhine-Westphalia controller BCRs?",
   "Has the EDPB reviewed controller BCRs from a German state authority such as NRW?"
  ],
- "ed-d237": [
+ "ed-d245": [
   "What is EDPB Opinion 27/2021 on North Rhine-Westphalia processor BCRs?",
   "Is there an August 2021 EDPB opinion on processor BCRs from a German authority?"
  ],
- "ed-d238": [
+ "ed-d246": [
   "What does EDPB Opinion 28/2021 say about Belgian controller BCRs?",
   "Which Belgian controller BCRs were covered by a Board opinion in August 2021?"
  ],
- "ed-d239": [
+ "ed-d247": [
   "What is EDPB Opinion 29/2021 on Belgian processor binding corporate rules?",
   "Was there a favourable EDPB opinion on Belgian processor BCRs in August 2021?"
  ],
- "ed-d240": [
+ "ed-d248": [
   "What did EDPB Opinion 30/2021 conclude on Spanish controller BCRs?",
   "Which Spanish controller BCR draft got a Board opinion in August 2021?"
  ],
- "ed-d241": [
+ "ed-d249": [
   "What does EDPB Opinion 31/2021 say about Spanish processor BCRs?",
   "Who is affected by a favourable opinion on Spanish processor BCRs?"
  ],
- "ed-d242": [
+ "ed-d250": [
   "What did the EDPB say about Czech accreditation requirements for code monitoring bodies?",
   "Who is the July 2021 Czech monitoring body opinion relevant to?"
  ],
- "ed-d243": [
+ "ed-d251": [
   "Has the EDPB opined on monitoring body accreditation requirements in Slovakia?",
   "Which guidelines did Opinion 24/2021 check the Slovak draft against?"
  ],
- "ed-d244": [
+ "ed-d252": [
   "What does EDPB Opinion 25/2021 say about certification bodies in Lithuania?",
   "Which guidelines did the Board use to check Lithuanian accreditation requirements?"
  ],
- "ed-d245": [
+ "ed-d253": [
   "What is EDPB Opinion 21/2021 on French controller BCRs?",
   "Which French controller BCR draft did the Board review in July 2021?"
  ],
- "ed-d246": [
+ "ed-d254": [
   "What does EDPB Opinion 22/2021 say about French processor BCRs?",
   "Did the EDPB issue a favourable opinion on French processor BCRs in July 2021?"
  ],
- "ed-d247": [
+ "ed-d255": [
   "Has the EDPB commented on Hungarian accreditation requirements for certification bodies?",
   "What is EDPB Opinion 19/2021 on Hungary about?"
  ],
- "ed-d248": [
+ "ed-d256": [
   "What did the EDPB say about the EU code of conduct for cloud service providers?",
   "Is adherence to the cloud services code of conduct mandatory?",
   "Which Article 40(7) opinion covers the Belgian draft decision on a cloud code?"
  ],
- "ed-d249": [
+ "ed-d257": [
   "What did the EDPB say about the cloud infrastructure code of conduct?",
   "Is following the cloud infrastructure code of conduct voluntary?"
  ],
- "ed-d250": [
+ "ed-d258": [
   "Does the Lithuanian controller to processor template satisfy Article 28(3)?",
   "Are Article 28(8) clauses the same as Chapter V transfer SCCs?",
   "What did the EDPB say about the draft Lithuanian standard contractual clauses?"
  ],
- "ed-d251": [
+ "ed-d259": [
   "What is EDPB Opinion 10/2021 on Hungarian code monitoring body requirements?",
   "Who in Hungary is the monitoring body accreditation opinion relevant to?"
  ],
- "ed-d252": [
+ "ed-d260": [
   "Did the EDPB opine on Norwegian accreditation requirements for monitoring bodies?",
   "Which Article 41(3) draft from Norway did the Board assess in March 2021?"
  ],
- "ed-d253": [
+ "ed-d261": [
   "What did the EDPB say about certification body accreditation in Portugal?",
   "Which certification bodies does the March 2021 Portuguese opinion concern?"
  ],
- "ed-d254": [
+ "ed-d262": [
   "Is there an EDPB opinion on Romanian accreditation requirements for certification bodies?",
   "What is EDPB Opinion 13/2021 on Romania about?"
  ],
- "ed-d255": [
+ "ed-d263": [
   "What did EDPB Opinion 06/2021 say about Spanish processor BCRs?",
   "Is there a February 2021 EDPB opinion on processor BCRs from Spain?"
  ],
- "ed-d256": [
+ "ed-d264": [
   "What is EDPB Opinion 07/2021 on Spanish controller BCRs?",
   "Which Spanish controller BCRs got an opinion on 16 February 2021?"
  ],
- "ed-d257": [
+ "ed-d265": [
   "What does EDPB Opinion 08/2021 say about Baden-Wurttemberg processor BCRs?",
   "Has the EDPB given a favourable opinion on a German processor BCR draft in 2021?"
  ],
- "ed-d258": [
+ "ed-d266": [
   "What is EDPB Opinion 09/2021 on Baden-Wurttemberg controller BCRs?",
   "Which German controller BCR draft was reviewed by the Board in February 2021?"
  ],
- "ed-d259": [
+ "ed-d267": [
   "What must an administrative arrangement under Article 46(3)(b) contain for transfers?",
   "Who can use an administrative arrangement for data transfers under Article 46(3)(b)?",
   "What did the EDPB say about the H3C and PCAOB transfer arrangement?"
  ],
- "ed-d260": [
+ "ed-d268": [
   "What did EDPB Opinion 01/2021 conclude on Danish controller BCRs?",
   "Which Danish controller BCR draft was reviewed in January 2021?"
  ],
- "ed-d261": [
+ "ed-d269": [
   "What does EDPB Opinion 02/2021 say about Swedish controller BCRs?",
   "Has the EDPB reviewed controller BCRs from the Swedish authority in 2021?"
  ],
- "ed-d262": [
+ "ed-d270": [
   "What is EDPB Opinion 03/2021 on Belgian controller BCRs?",
   "Which Belgian controller BCR draft got a Board opinion in January 2021?"
  ],
- "ed-d263": [
+ "ed-d271": [
   "What does EDPB Opinion 04/2021 say about Belgian processor BCRs?",
   "Was there a January 2021 EDPB opinion on processor BCRs from Belgium?"
  ],
- "ed-d264": [
+ "ed-d272": [
   "What did EDPB Opinion 32/2020 say about Dutch controller BCRs?",
   "Which Dutch controller BCR draft got a favourable opinion in December 2020?"
  ],
- "ed-d265": [
+ "ed-d273": [
   "Has the EDPB reviewed the Danish draft approval of controller BCRs for Coloplast?",
   "Is the Coloplast Group BCR approval final once the EDPB gives a favourable opinion?",
   "What is EDPB Opinion 27/2020 about?"
  ],
- "ed-d266": [
+ "ed-d274": [
   "Did the EDPB give a favourable opinion on the Spanish draft for Iberdrola BCRs?",
   "Who gives the final approval of the Iberdrola Group controller BCRs?",
   "What does EDPB Opinion 28/2020 cover?"
  ],
- "ed-d267": [
+ "ed-d275": [
   "What did the EDPB say about the Lower Saxony authority BCR draft for Novelis?",
   "Does the Novelis Group BCR opinion matter to organisations outside the group?",
   "What is EDPB Opinion 29/2020 on the Novelis Group about?"
  ],
- "ed-d268": [
+ "ed-d276": [
   "Has the EDPB reviewed the Danish accreditation requirements for certification bodies?",
   "What does EDPB Opinion 26/2020 say about Article 43(3) accreditation in Denmark?"
  ],
- "ed-d269": [
+ "ed-d277": [
   "Did the EDPB opine on the Austrian accreditation requirements for certification bodies?",
   "What is EDPB Opinion 30/2020 on the Austrian Article 43(3) requirements?"
  ],
- "ed-d270": [
+ "ed-d278": [
   "Has the EDPB reviewed the Polish accreditation requirements for code monitoring bodies?",
   "What does EDPB Opinion 31/2020 on Poland cover?"
  ],
- "ed-d271": [
+ "ed-d279": [
   "Who adopts the final requirements for code of conduct monitoring bodies in Denmark?",
   "What does EDPB Opinion 19/2020 say about Danish monitoring bodies?"
  ],
- "ed-d272": [
+ "ed-d280": [
   "Which guidelines were used to check the Dutch certification body requirements?",
   "What does EDPB Opinion 21/2020 on the Netherlands cover?"
  ],
- "ed-d273": [
+ "ed-d281": [
   "Has the EDPB opined on the Greek draft requirements for accrediting certification bodies?",
   "What does EDPB Opinion 22/2020 on Greece cover?"
  ],
- "ed-d274": [
+ "ed-d282": [
   "Who adopts the final accreditation requirements for certification bodies in Italy?",
   "What does EDPB Opinion 23/2020 on Italy cover?"
  ],
- "ed-d275": [
+ "ed-d283": [
   "Did the Swedish authority get a favourable EDPB opinion on the Tetra Pak BCRs?",
   "Which GDPR article covers the EDPB opinion on BCR drafts like the Tetra Pak one?",
   "What is EDPB Opinion 25/2020 about?"
  ],
- "ed-d276": [
+ "ed-d284": [
   "Has the EDPB reviewed the Norwegian draft decision on the Jotun BCRs?",
   "When did the EDPB adopt its opinion on the Jotun controller BCRs?",
   "What does EDPB Opinion 24/2020 say about Jotun?"
  ],
- "ed-d277": [
+ "ed-d285": [
   "Which guidelines was the Dutch draft for monitoring body accreditation checked against?",
   "What is EDPB Opinion 18/2020 about?"
  ],
- "ed-d278": [
+ "ed-d286": [
   "Has Greece sent monitoring body accreditation requirements to the EDPB?",
   "What does EDPB Opinion 20/2020 on Greece cover?"
  ],
- "ed-d279": [
+ "ed-d287": [
   "Did the EDPB opine on German accreditation requirements for code monitoring bodies?",
   "What is EDPB Opinion 10/2020 on Germany about?"
  ],
- "ed-d280": [
+ "ed-d288": [
   "Who must meet the Irish accreditation requirements for code of conduct monitoring bodies?",
   "What does EDPB Opinion 11/2020 on Ireland cover?"
  ],
- "ed-d281": [
+ "ed-d289": [
   "Is there an EDPB opinion on the Finnish code of conduct monitoring body requirements?",
   "What does EDPB Opinion 12/2020 on Finland cover?"
  ],
- "ed-d282": [
+ "ed-d290": [
   "How does the EDPB check Italian draft requirements for code monitoring bodies?",
   "What is EDPB Opinion 13/2020 on Italy about?"
  ],
- "ed-d283": [
+ "ed-d291": [
   "Is there an EDPB opinion on Irish accreditation requirements for certification bodies?",
   "What is EDPB Opinion 14/2020 about?"
  ],
- "ed-d284": [
+ "ed-d292": [
   "What did the EDPB opine on German accreditation requirements for certification bodies?",
   "What is EDPB Opinion 15/2020 under Article 43(3) about?"
  ],
- "ed-d285": [
+ "ed-d293": [
   "Which EDPB opinion covers Czech accreditation requirements for certification bodies?",
   "What does EDPB Opinion 16/2020 say about the Czech Republic?"
  ],
- "ed-d286": [
+ "ed-d294": [
   "Do national Article 28(8) clauses like the Slovenian ones satisfy Article 28(3)?",
   "Are the Article 28(8) standard clauses the same as the transfer SCCs?",
   "What is EDPB Opinion 17/2020 on the SI SA draft clauses?"
  ],
- "ed-d287": [
+ "ed-d295": [
   "Has the EDPB reviewed the French list of processing exempt from a DPIA?",
   "How should national lists of processing exempt from a DPIA be drafted under Article 35(5)?",
   "What does EDPB Opinion 7/2020 on the French DPIA exemption list say?"
  ],
- "ed-d288": [
+ "ed-d296": [
   "Was the EDPB opinion on the Reinsurance Group of America controller BCRs favourable?",
   "Which authority prepared the draft decision on the Reinsurance Group of America BCRs?",
   "What is EDPB Opinion 8/2020 on controller BCRs?"
  ],
- "ed-d289": [
+ "ed-d297": [
   "Have processor BCRs from Reinsurance Group of America been reviewed by the EDPB?",
   "What did the EDPB conclude on the Irish draft for processor BCRs under Article 64(1)(f)?",
   "What does EDPB Opinion 9/2020 cover?"
  ],
- "ed-d290": [
+ "ed-d298": [
   "Did the EDPB review the UK draft accreditation requirements for certification bodies?",
   "What does EDPB Opinion 4/2020 on the United Kingdom cover?"
  ],
- "ed-d291": [
+ "ed-d299": [
   "Has Luxembourg submitted accreditation requirements for certification bodies to the EDPB?",
   "What is EDPB Opinion 5/2020 on Luxembourg about?"
  ],
- "ed-d292": [
+ "ed-d300": [
   "What did the EDPB say about the Fujikura Automotive Europe Group BCRs?",
   "Which Spanish draft decision on controller BCRs did the EDPB review in January 2020?",
   "What is EDPB Opinion 6/2020 on the FAE Group about?"
  ],
- "ed-d293": [
+ "ed-d301": [
   "Has the EDPB reviewed the Spanish accreditation requirements for code monitoring bodies?",
   "What does EDPB Opinion 1/2020 on the Spanish authority cover?"
  ],
- "ed-d294": [
+ "ed-d302": [
   "Which opinion covers the Belgian accreditation requirements for code monitoring bodies?",
   "What is EDPB Opinion 2/2020 on Belgium about?"
  ],
- "ed-d295": [
+ "ed-d303": [
   "Did the EDPB review the French draft accreditation requirements for monitoring bodies?",
   "What does EDPB Opinion 3/2020 on France cover?"
  ],
- "ed-d296": [
+ "ed-d304": [
   "Has the EDPB opined on UK accreditation requirements for code monitoring bodies?",
   "What is EDPB Opinion 17/2019 about?"
  ],
- "ed-d297": [
+ "ed-d305": [
   "Did the Belgian draft on the ExxonMobil BCRs receive a favourable EDPB opinion?",
   "Who gives final approval to the ExxonMobil Corporation controller BCRs?",
   "What is EDPB Opinion 16/2019 about?"
  ],
- "ed-d298": [
+ "ed-d306": [
   "Did the EDPB back the UK draft approval of the Equinix BCRs?",
   "Which UK draft decision on controller BCRs did the EDPB review in October 2019?",
   "What does EDPB Opinion 15/2019 say about Equinix?"
  ],
- "ed-d299": [
+ "ed-d307": [
   "Do I need to check the Cyprus national DPIA list if I operate there?",
   "What did EDPB Opinion 10/2019 ask of the Cypriot Article 35(4) list?"
  ],
- "ed-d300": [
+ "ed-d308": [
   "Does the Czech Republic have a DPIA exemption list that the EDPB reviewed?",
   "What is EDPB Opinion 11/2019 on Article 35(5) about?"
  ],
- "ed-d301": [
+ "ed-d309": [
   "Has the EDPB opined on the Spanish list of processing exempt from a DPIA?",
   "What does EDPB Opinion 12/2019 say about the Spanish Article 35(5) list?"
  ],
- "ed-d302": [
+ "ed-d310": [
   "What did the EDPB ask for in the 2019 French DPIA exemption list opinion?",
   "What is EDPB Opinion 13/2019 about?"
  ],
- "ed-d303": [
+ "ed-d311": [
   "Which Danish controller to processor clauses did the EDPB review under Article 28(8)?",
   "Are the Danish Article 28(8) clauses usable as Chapter V transfer SCCs?",
   "What is EDPB Opinion 14/2019 on Denmark about?"
  ],
- "ed-d304": [
+ "ed-d312": [
   "Which authority stays competent if the main establishment changes during a procedure?",
   "What is EDPB Opinion 8/2019 about?"
  ],
- "ed-d305": [
+ "ed-d313": [
   "Which opinion covers the Austrian accreditation requirements for code monitoring bodies?",
   "What does EDPB Opinion 9/2019 on Austria cover?"
  ],
- "ed-d306": [
+ "ed-d314": [
   "Does the ePrivacy Directive or the GDPR apply to placing cookies?",
   "Can a DPA enforce the ePrivacy rules on cookies?",
   "What does EDPB Opinion 5/2019 say about ePrivacy and the GDPR?",
   "Will DPAs weigh cookie consent failures when assessing GDPR lawfulness?"
  ],
- "ed-d307": [
+ "ed-d315": [
   "Does Spain have a national list of processing operations that require a DPIA?",
   "What does EDPB Opinion 6/2019 say about the Spanish DPIA list?"
  ],
- "ed-d308": [
+ "ed-d316": [
   "Has the EDPB reviewed the Icelandic list of processing that requires a DPIA?",
   "What is EDPB Opinion 7/2019 on Iceland about?"
  ],
- "ed-d309": [
+ "ed-d317": [
   "Can public bodies transfer data on an administrative arrangement under Article 46(3)(b)?",
   "What must an administrative arrangement contain for transfers between public bodies?",
   "What did EDPB Opinion 4/2019 say about financial supervisory authority transfers?"
  ],
- "ed-d310": [
+ "ed-d318": [
   "What did the EDPB ask of the Liechtenstein DPIA list under Article 35(4)?",
   "What does EDPB Opinion 01/2019 on Liechtenstein cover?"
  ],
- "ed-d311": [
+ "ed-d319": [
   "Is there a Norwegian list of processing operations requiring a DPIA?",
   "What is EDPB Opinion 2/2019 on Norway about?"
  ],
- "ed-d312": [
+ "ed-d320": [
   "What safeguards does the draft administrative arrangement for financial supervisors offer?",
   "Is the arrangement between EEA and non-EEA financial authorities legally binding?",
   "Which transfers rely on the draft arrangement annexed to EDPB Opinion 4/2019?"
  ],
- "ed-d313": [
+ "ed-d321": [
   "Do I need to check the Danish DPIA list if I process data in Denmark?",
   "Which EDPB opinion covers the Denmark Article 35(4) DPIA list?"
  ],
- "ed-d314": [
+ "ed-d322": [
   "What did the EDPB ask of the Croatian DPIA list on the WP248 criteria?",
   "What does EDPB Opinion 25/2018 on Croatia cover?"
  ],
- "ed-d315": [
+ "ed-d323": [
   "Did Luxembourg submit a draft list of processing requiring a DPIA to the EDPB?",
   "What is EDPB Opinion 26/2018 about?"
  ],
- "ed-d316": [
+ "ed-d324": [
   "Has the EDPB reviewed the Slovenian list of processing requiring a DPIA?",
   "What does EDPB Opinion 27/2018 on Slovenia say?"
  ],
- "ed-d317": [
+ "ed-d325": [
   "Do I need to check the Austrian national DPIA list if I operate there?",
   "What is EDPB Opinion 1/2018 on the Austrian DPIA list?"
  ],
- "ed-d318": [
+ "ed-d326": [
   "What did the EDPB ask for in the Hungarian DPIA list under Article 35(4)?",
   "What does EDPB Opinion 10/2018 on Hungary cover?"
  ],
- "ed-d319": [
+ "ed-d327": [
   "Is there an Irish national list of processing operations requiring a DPIA?",
   "What is EDPB Opinion 11/2018 on Ireland about?"
  ],
- "ed-d320": [
+ "ed-d328": [
   "Should I check the final Italian DPIA list if I operate in Italy?",
   "What does EDPB Opinion 12/2018 say about Italy?"
  ],
- "ed-d321": [
+ "ed-d329": [
   "Has the EDPB reviewed the Lithuanian draft list of DPIA-triggering processing?",
   "What is EDPB Opinion 13/2018 on Lithuania about?"
  ],
- "ed-d322": [
+ "ed-d330": [
   "How should the Latvian DPIA list align with the WP248 criteria?",
   "What does EDPB Opinion 14/2018 on Latvia cover?"
  ],
- "ed-d323": [
+ "ed-d331": [
   "Does Malta have a national list of processing requiring a DPIA?",
   "What is EDPB Opinion 15/2018 on Malta about?"
  ],
- "ed-d324": [
+ "ed-d332": [
   "Do I need to check the final Dutch DPIA list if I operate in the Netherlands?",
   "What does EDPB Opinion 16/2018 say about the Netherlands?"
  ],
- "ed-d325": [
+ "ed-d333": [
   "Has the EDPB given an opinion on the Polish DPIA list under Article 35(4)?",
   "What is EDPB Opinion 17/2018 on the Polish list about?"
  ],
- "ed-d326": [
+ "ed-d334": [
   "What did the EDPB ask of the Portuguese list of processing requiring a DPIA?",
   "What does EDPB Opinion 18/2018 on Portugal cover?"
  ],
- "ed-d327": [
+ "ed-d335": [
   "Why did the EDPB ask Romania to align its DPIA list with the WP248 criteria?",
   "What is EDPB Opinion 19/2018 on Romania about?"
  ],
- "ed-d328": [
+ "ed-d336": [
   "Do I need to check the Belgian DPIA list if I process data in Belgium?",
   "What does EDPB Opinion 2/2018 on Belgium say about DPIAs?"
  ],
- "ed-d329": [
+ "ed-d337": [
   "Did Sweden submit a draft list of processing requiring a DPIA to the EDPB?",
   "What is EDPB Opinion 20/2018 on Sweden about?"
  ],
- "ed-d330": [
+ "ed-d338": [
   "Is there a Slovak list of processing operations that require a DPIA?",
   "What does EDPB Opinion 21/2018 on Slovakia cover?"
  ],
- "ed-d331": [
+ "ed-d339": [
   "Did the EDPB review the UK draft list of processing requiring a DPIA?",
   "What is EDPB Opinion 22/2018 on the United Kingdom about?"
  ],
- "ed-d332": [
+ "ed-d340": [
   "Which EDPB opinion reviewed the Bulgarian DPIA list under Article 35(4)?",
   "What does EDPB Opinion 3/2018 say about Bulgaria?"
  ],
- "ed-d333": [
+ "ed-d341": [
   "Should I check the Czech national DPIA list if I operate there?",
   "What is EDPB Opinion 4/2018 on the Czech list about?"
  ],
- "ed-d334": [
+ "ed-d342": [
   "Has the EDPB reviewed the German list of processing requiring a DPIA?",
   "What does EDPB Opinion 5/2018 on Germany cover?"
  ],
- "ed-d335": [
+ "ed-d343": [
   "What did the EDPB ask of the Estonian DPIA list under Article 35(4)?",
   "What is EDPB Opinion 6/2018 on Estonia about?"
  ],
- "ed-d336": [
+ "ed-d344": [
   "Do I need to check the Greek national DPIA list if I operate there?",
   "What does EDPB Opinion 7/2018 on Greece say?"
  ],
- "ed-d337": [
+ "ed-d345": [
   "Has Finland submitted a DPIA list for EDPB review under Article 35(4)?",
   "What is EDPB Opinion 8/2018 on Finland about?"
  ],
- "ed-d338": [
+ "ed-d346": [
   "Does France have a national list of processing operations requiring a DPIA?",
   "What does EDPB Opinion 9/2018 on France cover?"
  ],
- "ed-d339": [
+ "ed-d347": [
   "When can a DPA reject a complaint as an abuse of the right to complain?",
   "What did EDPB Binding Decision 1/2026 on the VRT dispute decide?"
  ],
- "ed-d340": [
+ "ed-d348": [
   "Can behavioural advertising rely on contract or legitimate interests under the GDPR?",
   "What did the EDPB order against Meta in Urgent Binding Decision 01/2023?",
   "Which legal basis should I design for behavioural advertising?",
   "Did the switch to legitimate interests in April 2023 give Meta a valid legal basis?"
  ],
- "ed-d341": [
+ "ed-d349": [
   "Can children accounts be public by default under the GDPR?",
   "Can nudging children towards public accounts breach the fairness principle?",
   "What did EDPB Binding Decision 2/2023 find on TikTok?",
   "How should I audit defaults and consent flows for child users?"
  ],
- "ed-d342": [
+ "ed-d350": [
   "What happens if a TIA concludes that supplementary measures are ineffective?",
   "Why were SCCs not enough for the Meta transfers to the United States?",
   "What did EDPB Binding Decision 1/2023 decide on Facebook data transfers?",
   "Did the EDPB tell the Irish authority to fine Meta for the US transfers?"
  ],
- "ed-d343": [
+ "ed-d351": [
   "Can contract be the legal basis for behavioural advertising on Facebook?",
   "What did EDPB Binding Decision 3/2022 find on the take-it-or-leave-it choice?",
   "Can I cite Article 6(1)(b) for behavioural advertising?",
   "How long did Meta have to comply with the Facebook binding decision?"
  ],
- "ed-d344": [
+ "ed-d352": [
   "Can Instagram rely on the contract basis for behavioural advertising?",
   "What did EDPB Binding Decision 4/2022 say about the Instagram Terms of Use?",
   "How does the Instagram binding decision relate to the Facebook one?"
  ],
- "ed-d345": [
+ "ed-d353": [
   "Can I use contract as the legal basis for service improvement or analytics?",
   "What did EDPB Binding Decision 5/2022 decide on WhatsApp and Article 6(1)(b)?",
   "When is processing objectively necessary for a contract under Article 6(1)(b)?",
   "Did Binding Decision 5/2022 order WhatsApp to fix its privacy policy?"
  ],
- "ed-d346": [
+ "ed-d354": [
   "What did the EDPB decide on Instagram default settings for children?",
   "How big was the Instagram fine in the children data case?",
   "Which guidance covers default settings for children after the Instagram decision?"
  ],
- "ed-d347": [
+ "ed-d355": [
   "What did the EDPB decide in the Accor case with the French authority?"
  ],
- "ed-d348": [
+ "ed-d356": [
   "How granular must a legitimate interests description be in a privacy notice?",
   "Are lossy hashes of phone numbers of non-users personal data?",
   "What did EDPB Binding Decision 1/2021 on WhatsApp decide?",
   "Did the EDPB raise the fine in the WhatsApp transparency case?"
  ],
- "ed-d349": [
+ "ed-d357": [
   "Did the EDPB grant the Hamburg authority urgent request on WhatsApp data sharing?"
  ],
- "ed-d350": [
+ "ed-d358": [
   "Which was the first Article 65 binding decision adopted by the EDPB?",
   "Which EDPB guidelines cover the 72-hour breach notification clock?"
  ],
- "ed-d351": [
+ "ed-d359": [
   "Do the EDPB and EDPS support one entry point for breach and NIS 2 reports?",
   "What does EDPB-EDPS Joint Opinion 4/2026 say about the Cybersecurity Act 2?",
   "What safeguards did the EDPB ask for on ransomware incident reporting?",
   "How should NIS 2 operators plan for incident and breach reporting?"
  ],
- "ed-d352": [
+ "ed-d360": [
   "What did the EDPB and EDPS say about the proposed European Biotech Act?"
  ],
- "ed-d353": [
+ "ed-d361": [
   "What is the EDPB-EDPS position on the GDPR Digital Omnibus proposal?",
   "Will the breach notification deadline change from 72 to 96 hours?",
   "Does the Digital Omnibus narrow the definition of personal data?",
   "Can legitimate interest be relied on for AI under the Digital Omnibus?"
  ],
- "ed-d354": [
+ "ed-d362": [
   "Have the high-risk AI Act deadlines been postponed under the Digital Omnibus on AI?",
   "When would Annex III high-risk AI obligations apply if the AI Omnibus is adopted?",
   "Can special category data be used for bias detection in AI systems?",
   "What did EDPB-EDPS Joint Opinion 1/2026 say about AI literacy obligations?"
  ],
- "ed-d355": [
+ "ed-d363": [
   "Will the Article 30(5) records exemption rise from 250 to 750 employees?",
   "Would small mid-caps still need records of processing under the Article 30(5) proposal?",
   "What does the EDPB say about the SME simplification proposal for Article 30(5)?",
   "Does the 250-employee rule for records of processing still apply today?"
  ],
- "ed-d356": [
+ "ed-d364": [
   "What privacy safeguards did the EDPB and EDPS ask for in the digital euro proposal?"
  ],
- "ed-d357": [
+ "ed-d365": [
   "What did the EDPB say about the proposed GDPR cross-border procedural regulation?"
  ],
- "ed-d358": [
+ "ed-d366": [
   "Did the EDPB consider the child sexual abuse detection orders proportionate?"
  ],
- "ed-d359": [
+ "ed-d367": [
   "What did the EDPB say about secondary use of health data under the EHDS?"
  ],
- "ed-d360": [
+ "ed-d368": [
   "Does the GDPR still apply to personal data in Data Act product data?"
  ],
- "ed-d361": [
+ "ed-d369": [
   "What was EDPB-EDPS Joint Opinion 1/2022 on the Covid-19 certificate extension?"
  ],
- "ed-d362": [
+ "ed-d370": [
   "What did the EDPB and EDPS say about the AI Act proposal in 2021?",
   "Did the EDPB ask for a ban on social scoring by private actors?",
   "Which AI uses did the EDPB want banned in publicly accessible spaces?",
   "Is EDPB-EDPS Joint Opinion 5/2021 on the AI Act still relevant today?"
  ],
- "ed-d363": [
+ "ed-d371": [
   "What did the EDPB say about the EU tobacco traceability system?"
  ],
- "ed-d364": [
+ "ed-d372": [
   "Did the EDPB want a central EU database for Covid-19 vaccination certificates?"
  ],
- "ed-d365": [
+ "ed-d373": [
   "What did the EDPB and EDPS say about the Data Governance Act proposal?"
  ],
- "ed-d366": [
+ "ed-d374": [
   "What did the EDPB say about the Commission SCCs for Article 28 processing agreements?",
   "Who should choose the auditor under the Article 28 clauses, controller or processor?",
   "How should the Article 28 standard clauses handle processors outside the EU?",
   "Should cost allocation clauses stay in the Article 28 standard clauses?"
  ],
- "ed-d367": [
+ "ed-d375": [
   "What did Joint Opinion 2/2021 say about the Article 46 SCCs for transfers?",
   "Can a TIA rely on there being no past government access requests?",
   "Do the SCCs cover importers already subject to the GDPR under Article 3(2)?",
   "Who carries out the transfer impact assessment under the SCCs?"
  ],
- "ed-d368": [
+ "ed-d376": [
   "What was the EDPB-EDPS opinion on the eHealth Digital Service Infrastructure?"
  ],
- "ed-d369": [
+ "ed-d377": [
   "Is consent to take part in a clinical trial the GDPR lawful basis?"
  ],
- "ed-d370": [
+ "ed-d378": [
   "What did the EDPB say about European Production and Preservation Orders for e-evidence?"
  ],
- "ed-d371": [
+ "ed-d379": [
   "What did the EDPB ChatGPT Taskforce conclude about lawful basis for training data?",
   "Can terms of service shift GDPR responsibility to users of a generative AI service?",
   "Does the one-stop-shop apply once an AI provider has an EU establishment?",
   "Does web scraping for AI training need a lawful basis under the GDPR?"
  ],
- "ed-d372": [
+ "ed-d380": [
   "What did the 101 Taskforce conclude about transfers under the invalidated Privacy Shield?",
   "Is encryption enough as a supplementary measure if the importer holds the keys?",
   "Is a website operator that uses a US analytics tool a controller?",
   "Does the 101 Taskforce report still matter after the EU-US adequacy decision?"
  ],
- "ed-d373": [
+ "ed-d381": [
   "What did the EDPB Cookie Banner Taskforce conclude about reject buttons?",
   "Are pre-ticked boxes valid for cookie consent?",
   "Is a reject link in small text as valid as an accept button on a cookie banner?",
   "Does a breach of Article 5(3) ePrivacy affect later GDPR processing?"
  ],
- "ed-d374": [
+ "ed-d382": [
   "What were the main failures in the EDPB coordinated action on the right to erasure?",
   "Can I use Article 17(3) exceptions to refuse erasure without a case-by-case assessment?",
   "Do I need a method for erasure in back-ups?",
   "Can anonymisation replace deletion when handling an erasure request?"
  ],
- "ed-d375": [
+ "ed-d383": [
   "What did the EDPB coordinated action find on the right of access?",
   "What are common mistakes when handling data subject access requests?",
   "Are excessive identity checks allowed before answering an access request?",
   "Which EDPB guidelines cover the right of access?"
  ],
- "ed-d376": [
+ "ed-d384": [
   "What did the coordinated enforcement action on DPOs find?",
   "What problems did regulators find with DPO independence and reporting lines?",
   "How many supervisory authorities took part in the EDPB DPO enforcement action?",
   "What should I check about my DPO designation and resourcing?"
  ],
- "ed-d377": [
+ "ed-d385": [
   "What did the EDPB find on public bodies using cloud services?"
  ],
- "ed-d378": [
+ "ed-d386": [
   "How does the Coordinated Enforcement Framework choose an annual joint action?"
  ],
- "ed-d379": [
+ "ed-d387": [
   "Is there a template for cooperation agreements between DPAs and other regulators?"
  ],
- "ed-d380": [
+ "ed-d388": [
   "Do I need to check the Data Privacy Framework List before each transfer to the US?",
   "What happens if a US importer loses its DPF certification?",
   "What must I confirm before sending HR data to a DPF-certified US company?",
   "Do I still need an Article 28 agreement with a DPF-certified processor?"
  ],
- "ed-d381": [
+ "ed-d389": [
   "How do I complain about a DPF-certified US company?",
   "How long does a DPF-certified company have to respond to a complaint?",
   "What rights do individuals have when their data goes to a DPF-certified US company?"
  ],
- "ed-d382": [
+ "ed-d390": [
   "Is there an EDPB template form to complain about a DPF-certified US company?"
  ],
- "ed-d383": [
+ "ed-d391": [
   "Is the July 2024 EU-US Data Privacy Framework FAQ for businesses still current?",
   "How do transfers to certified US organisations work under the adequacy decision?"
  ],
- "ed-d384": [
+ "ed-d392": [
   "Which EU-US Data Privacy Framework FAQ for individuals is the current version?",
   "What rights do individuals have under the EU-US Data Privacy Framework?"
  ],
- "ed-d385": [
+ "ed-d393": [
   "How can an EU individual complain about US national security access to their data?",
   "What is the deadline to appeal to the Data Protection Review Court?",
   "Does the DPF redress mechanism apply if I used SCCs for the transfer?",
   "Should privacy notices mention the US national security redress mechanism?"
  ],
- "ed-d386": [
+ "ed-d394": [
   "Can I rely on the EU-US adequacy decision without SCCs?",
   "Do transfers to non-certified US recipients still need SCCs or BCRs?",
   "How often is the EU-US Data Privacy Framework adequacy decision reviewed?",
   "Can individuals complain about US intelligence access without proving collection?"
  ],
- "ed-d387": [
+ "ed-d395": [
   "Is there a harmonised complaint form and acknowledgement of receipt for DPAs?"
  ],
- "ed-d388": [
+ "ed-d396": [
   "What safeguards are needed before EEA authorities share data with third-country DPAs?"
  ],
- "ed-d389": [
+ "ed-d397": [
   "Where can I find a plain explanation of the GDPR one-stop-shop?"
  ],
- "ed-d390": [
+ "ed-d398": [
   "What did the EDPB tell the Commission about the GDPR and health research?"
  ],
- "ed-d391": [
+ "ed-d399": [
   "Until when were UK transfers not treated as third-country transfers under the EU-UK TCA?",
   "What should exporters have done during the EU-UK interim period?",
   "Do groups with the ICO as BCR lead authority need a new EEA lead?"
  ],
- "ed-d392": [
+ "ed-d400": [
   "Do transfers to the UK need SCCs or BCRs from 1 January 2021?",
   "Which EDPB note on UK transfers replaced the December 2020 one?",
   "Can Article 49 derogations be used for transfers to the UK?"
  ],
- "ed-d393": [
+ "ed-d401": [
   "Where can I find FAQs on the GDPR Article 65 dispute resolution procedure?"
  ],
- "ed-d394": [
+ "ed-d402": [
   "What happened to the Privacy Shield after the Schrems II judgment?",
   "Are SCCs still valid after Case C-311/18?",
   "Can I rely on Article 49 derogations for regular transfers?",
   "What must an exporter do if it finds no adequate safeguards in the destination country?"
  ],
- "ed-d395": [
+ "ed-d403": [
   "How do BCR groups with the ICO as lead authority move to an EEA lead authority?"
  ],
- "ed-d396": [
+ "ed-d404": [
   "Is there an EDPB leaflet on GDPR rights for individuals?"
  ],
- "ed-d397": [
+ "ed-d405": [
   "What did the EDPB advise for BCRs where the ICO was lead authority?"
  ],
- "ed-d398": [
+ "ed-d406": [
   "What did the EDPB say about transfers to the UK in a no-deal Brexit?"
  ],
- "ed-d399": [
+ "ed-d407": [
   "Does the Article 30(5) exemption for under 250 employees always apply?",
   "Do small organisations need records of processing activities?",
   "Are the three Article 30(5) conditions alternative or cumulative?",
   "Must a small company that regularly processes employee data keep a record?"
  ],
- "ed-d400": [
+ "ed-d408": [
+  "What is the EDPB expert report The connected gaze about?",
+  "How do bystanders feel about smart glasses recording them?"
+ ],
+ "ed-d409": [
   "What do one-stop-shop decisions show about right to object and erasure failures?",
   "Do DPAs usually fine controllers for ignoring erasure requests?",
   "How many one-stop-shop decisions on erasure and objection were reviewed?"
  ],
- "ed-d401": [
+ "ed-d410": [
   "What does the 2025 report on the EDPB Support Pool of Experts cover?"
  ],
- "ed-d402": [
+ "ed-d411": [
   "How do DPAs apply the three-step legitimate interest test?",
   "Is a vague interest like measuring content performance enough for legitimate interest?",
   "Can I use legitimate interest retroactively for data collected without a legal basis?",
   "Do I have to document the legitimate interest assessment before processing starts?"
  ],
- "ed-d403": [
+ "ed-d412": [
   "How risky are data brokers under the GDPR according to the EDPB study?",
   "What types of data brokers does the EDPB study identify?",
   "What should I check before buying third-party or enriched data?",
   "How many data brokers were found operating in Belgium?"
  ],
- "ed-d404": [
+ "ed-d413": [
   "What does the EDPB report say about international enforcement cooperation?"
  ],
- "ed-d405": [
+ "ed-d414": [
   "How does the digital euro offline token mode protect privacy?"
  ],
- "ed-d406": [
+ "ed-d415": [
   "Is there free training on securing AI systems that process personal data?",
   "What does the Fundamentals of Secure AI Systems training cover?",
   "Is the Fundamentals of Secure AI Systems training an official EDPB position?",
   "Which ISO standard does the secure AI training use to map privacy risks?"
  ],
- "ed-d407": [
+ "ed-d416": [
   "Is there self-study training for DPOs on AI Act and GDPR obligations?",
   "How long is the Law and Compliance in AI Security and Data Protection module?",
   "Which case studies does the DPO training module on AI use?"
  ],
- "ed-d408": [
+ "ed-d417": [
   "How do I assess the privacy risks of a large language model?",
   "Is there a template for an LLM risk assessment or DPIA?",
   "Which use cases does the EDPB report on LLM privacy risks cover?",
   "Is the report on LLM privacy risks an official EDPB position?"
  ],
- "ed-d409": [
+ "ed-d418": [
   "What does the 2024 report on the EDPB Support Pool of Experts cover?"
  ],
- "ed-d410": [
+ "ed-d419": [
   "How can supervisory authorities evaluate algorithmic bias in AI systems?",
   "How should data subject rights be implemented in AI systems?",
   "How can deployers prepare for a supervisory authority review of AI bias?"
  ],
- "ed-d411": [
+ "ed-d420": [
   "Are activity logs tied to a unique identifier personal data for access requests?",
   "Can I ask for official identity documents before answering an access request?",
   "Why do controllers miss the one month deadline for access requests?",
   "Must a copy for an access request reflect the data held at the time of the request?"
  ],
- "ed-d412": [
+ "ed-d421": [
   "Is there a checklist for auditing algorithms for GDPR compliance?",
   "What are Algo-scores and AI leaflets?",
   "Is the EDPB AI Auditing material an official EDPB position?"
  ],
- "ed-d413": [
+ "ed-d422": [
   "What data protection risks do OCR and named entity recognition carry?",
   "Which risk catalogue helps with a DPIA on document digitisation or redaction tools?",
   "How are likelihood and severity assessed for OCR and NER systems?"
  ],
- "ed-d414": [
+ "ed-d423": [
   "Is there training material for data protection officers in the health or education sector?",
   "In which language is the Croatian DPO training material?"
  ],
- "ed-d415": [
+ "ed-d424": [
   "What does the first report on the EDPB Support Pool of Experts cover?"
  ],
- "ed-d416": [
+ "ed-d425": [
   "Is there a methodology for auditing messaging services for data protection?"
  ],
- "ed-d417": [
+ "ed-d426": [
   "How are GDPR decisions enforced against organisations outside the EEA?"
  ],
- "ed-d418": [
+ "ed-d427": [
   "Is there a free tool to audit a website for cookie and tracker compliance?",
   "Can I use the EDPB website auditing tool on my own website?",
   "What does the EDPB website auditing tool check for cookies and trackers?",
   "What licence does the EDPB website auditing tool use?"
  ],
- "ed-d419": [
+ "ed-d428": [
   "Does a data breach prove that security measures were inappropriate?",
   "Must each breach be notified separately even if the breaches are linked?",
   "Which breaches must be notified under Article 33(1)?",
   "How detailed must breach documentation under Article 33(5) be?"
  ],
- "ed-d420": [
+ "ed-d429": [
   "Is there a call for experts to join the EDPB Support Pool of Experts?"
  ],
- "ed-d421": [
+ "ed-d430": [
   "What are the terms of reference of the EDPB Support Pool of Experts?"
  ],
- "ed-d422": [
+ "ed-d431": [
   "Does secondary use of personal data for research need a new legal basis?",
   "Does the GDPR define scientific research?",
   "How do Member States differ on secondary use of data for scientific research?",
   "Which lawful bases do countries use for scientific research?"
  ],
- "ed-d423": [
+ "ed-d432": [
   "What does the external study say about enforcing Article 3(2) GDPR outside the EEA?"
  ],
- "ed-d424": [
+ "ed-d433": [
   "Which national administrative rules slow cooperation between supervisory authorities?"
  ],
- "ed-d425": [
+ "ed-d434": [
   "What does the EDPB study say about government access to data in Brazil?",
   "Does the Brazilian LGPD cover national security and criminal prosecution?",
   "Can I cite the Brazil government access study in a transfer impact assessment?",
   "Is the EDPB Brazil government access study an adequacy finding?"
  ],
- "ed-d426": [
+ "ed-d435": [
   "What does the EDPB study say about government access to data in Mexico and Turkey?",
   "Does Turkey exempt law enforcement and intelligence from its data protection law?",
   "Which source can I use for a transfer impact assessment on Mexico or Turkey?"
  ],
- "ed-d427": [
+ "ed-d436": [
   "What does the EDPB study say about government access to data in China, India and Russia?",
   "Can I use the government access study in a TIA for transfers to China?",
   "Are there effective limits on Russian intelligence access to personal data?",
   "What remedies do data subjects have against state access in China, India and Russia?"
  ],
- "ed-d428": [
+ "ed-d437": [
   "What safeguards does Article 89(1) GDPR require for scientific research processing?"
  ],
- "ed-d429": [
+ "ed-d438": [
   "How do anti-money-laundering rules interact with the GDPR?"
  ],
- "ed-d430": [
+ "ed-d439": [
   "What are the data protection risks of big data in insurance?"
  ],
- "ed-d431": [
+ "ed-d440": [
   "Does Brazil have an EU adequacy decision?",
   "Can I transfer personal data to Brazil under the adequacy decision?",
   "What concerns did the EDPB raise about the Brazilian LGPD?",
   "When was the Brazil adequacy decision adopted?"
  ],
- "ed-d432": [
+ "ed-d441": [
   "Is the UK GDPR adequacy decision being renewed until 2031?",
   "Can I keep transferring personal data to the UK under adequacy?",
   "What concerns did the EDPB raise about the Data (Use and Access) Act 2025?",
   "Which UK points should exporters monitor after Opinion 26/2025?"
  ],
- "ed-d433": [
+ "ed-d442": [
   "Does the UK have adequacy under the Law Enforcement Directive until 2031?",
   "What did the EDPB flag about the Data (Use and Access) Act for law enforcement data?",
   "Can law enforcement authorities keep sharing data with UK counterparts?"
  ],
- "ed-d434": [
+ "ed-d443": [
   "Why was the UK adequacy decision extended for six months in 2025?",
   "Until when was the UK adequacy decision extended in 2025?",
   "Is the six-month UK adequacy extension still in force?"
  ],
- "ed-d435": [
+ "ed-d444": [
   "Does the European Patent Organisation have an EU adequacy decision?",
   "Can I send personal data to the EPO without SCCs?",
   "What clarifications did the EDPB ask for on the EPO data protection rules?"
  ],
- "ed-d436": [
+ "ed-d445": [
   "What concerns did the EDPB have about the EU-US Data Privacy Framework?",
   "What does Executive Order 14086 change for US signals intelligence?",
   "Did the EDPB ask for adequacy to depend on updated US intelligence policies?",
   "When was the EU-US adequacy decision adopted?"
  ],
- "ed-d437": [
+ "ed-d446": [
   "What did the EDPB say about the Korea adequacy decision?",
   "Is there a general right to withdraw consent under the Korean PIPA?",
   "What should exporters relying on the Korea adequacy decision watch?"
  ],
- "ed-d438": [
+ "ed-d447": [
   "What concerns did the EDPB raise about UK adequacy in 2021?",
   "Why does the UK adequacy decision have a four-year sunset clause?",
   "Did the EDPB flag the UK immigration exemption in the adequacy opinion?"
  ],
- "ed-d439": [
+ "ed-d448": [
   "What did the EDPB say about UK law enforcement adequacy under the LED in 2021?",
   "Did the EDPB raise the UK-US CLOUD Act agreement in the LED opinion?",
   "Do the UK law enforcement adequacy findings matter for private companies?"
  ],
- "ed-d440": [
+ "ed-d449": [
   "What did the EDPB say about the Japan adequacy decision?",
   "How often did the EDPB recommend reviewing the Japan adequacy decision?",
   "What are the onward transfer concerns with the Japan adequacy decision?"
  ],
- "ed-d441": [
+ "ed-d450": [
   "What does the EDPB Annual Report 2025 cover?"
  ],
- "ed-d442": [
+ "ed-d451": [
   "What did stakeholders tell the EDPB about the political advertising regulation?",
   "Do platforms often wrongly claim to be processors in political advertising?",
   "Which aspects of the TTPA do stakeholders find unclear?",
   "Are EDPB guidelines on targeting political advertisements still to come?"
  ],
- "ed-d443": [
+ "ed-d452": [
   "What did the EDPB tell the Commission about the proposed US ESTA changes?",
   "Would EEA travellers have to give social media history under the ESTA proposal?"
  ],
- "ed-d444": [
+ "ed-d453": [
   "What did stakeholders ask the EDPB for on judging whether data is identifiable?",
   "How do I assess re-identification risk when sharing pseudonymised data?",
   "Whose perspective decides if pseudonymised data is personal data?",
   "What came out of the EDPB stakeholder event on anonymisation of 12 December 2025?"
  ],
- "ed-d445": [
+ "ed-d454": [
   "What did the EDPB say about spyware abuse against journalists and NGOs?",
   "Who enforces the rules on spyware abuse in individual cases?"
  ],
- "ed-d446": [
+ "ed-d455": [
   "Will the EDPB publish official templates to help with GDPR compliance?",
   "Is the EDPB producing a template for legitimate interest assessments?",
   "Which templates did respondents ask the EDPB for in its public consultation?",
   "Should SMEs wait for EDPB templates before building new internal forms?"
  ],
- "ed-d447": [
+ "ed-d456": [
   "Which guidelines will the EDPB issue in 2026 and 2027?",
   "What is the EDPB 2026 coordinated enforcement action about?",
   "Is the EDPB updating its DPO guidelines and its fining guidelines?",
   "Will the EDPB publish guidelines on consent or pay models?"
  ],
- "ed-d448": [
+ "ed-d457": [
   "Do the Data Act model contractual terms give a lawful basis under the GDPR?",
   "What does EDPB Statement 4/2025 say about personal data in shared datasets?"
  ],
- "ed-d449": [
+ "ed-d458": [
   "What is the EDPB Helsinki Statement?",
   "Is the EDPB planning more support for small organisations?"
  ],
- "ed-d450": [
+ "ed-d459": [
   "What does the EDPB Annual Report 2024 cover?"
  ],
- "ed-d451": [
+ "ed-d460": [
   "What did the EDPB say about the Commission second report on the GDPR?",
   "Which EDPB statement calls for consistency between the GDPR and newer digital laws?"
  ],
- "ed-d452": [
+ "ed-d461": [
   "What did the EDPB conclude in its first review of the EU-US Data Privacy Framework?",
   "When does the EDPB recommend the next Data Privacy Framework review?",
   "What does the EDPB want the Commission to keep monitoring under the DPF?"
  ],
- "ed-d453": [
+ "ed-d462": [
   "What is the EDPB position on weakening encryption for law enforcement access?",
   "What did the EDPB say about the High-Level Group on access to data?"
  ],
- "ed-d454": [
+ "ed-d463": [
   "What was planned in the EDPB Work Programme 2024-2025?"
  ],
- "ed-d455": [
+ "ed-d464": [
   "Which regulation sets additional procedural rules for cross-border GDPR enforcement?",
   "Did the EDPB support harmonised deadlines in cross-border GDPR enforcement?"
  ],
- "ed-d456": [
+ "ed-d465": [
   "Should data protection authorities be market surveillance authorities under the AI Act?",
   "Which high-risk AI systems does Article 74(8) of the AI Act cover?",
   "Is there coordination between the AI Office and DPAs on GPAI models?",
   "What does EDPB Statement 3/2024 say about the role of DPAs in the AI Act?"
  ],
- "ed-d457": [
+ "ed-d466": [
   "What did the EDPB say about the financial data access and payments package?",
   "Does the EDPB want permission kept separate from the GDPR legal bases?"
  ],
- "ed-d458": [
+ "ed-d467": [
   "What does the EDPB Annual Report 2023 cover?"
  ],
- "ed-d459": [
+ "ed-d468": [
   "What are the priorities in the EDPB Strategy 2024-2027?"
  ],
- "ed-d460": [
+ "ed-d469": [
   "Is general scanning of private communications proportionate according to the EDPB?",
   "What is EDPB Statement 1/2024 on the child sexual abuse Regulation?"
  ],
- "ed-d461": [
+ "ed-d470": [
   "What was the EDPB 2023 contribution to the Article 97 GDPR report?"
  ],
- "ed-d462": [
+ "ed-d471": [
   "What did the EDPB say in its first review of the Japan adequacy decision?",
   "How often is the Japan adequacy decision reviewed?"
  ],
- "ed-d463": [
+ "ed-d472": [
   "What does the EDPB Annual Report 2022 cover?"
  ],
- "ed-d464": [
+ "ed-d473": [
   "What was planned in the EDPB Work Programme 2023-2024?"
  ],
- "ed-d465": [
+ "ed-d474": [
   "What privacy design choices did the EDPB ask for in a digital euro?",
   "Does the EDPB want a privacy threshold for digital euro transactions?"
  ],
- "ed-d466": [
+ "ed-d475": [
   "What is EDPB Statement 03/2022 on the European Police Cooperation Code?"
  ],
- "ed-d467": [
+ "ed-d476": [
   "Is there an EDPB survey of DPA staff and budget across Member States?"
  ],
- "ed-d468": [
+ "ed-d477": [
   "Do I need to redo my transfer impact assessment for transfers to Russia?",
   "What did the EDPB say about data transfers to the Russian Federation in 2022?"
  ],
- "ed-d469": [
+ "ed-d478": [
   "What was the EDPB response to the Commission consultation on a digital euro?"
  ],
- "ed-d470": [
+ "ed-d479": [
   "What does the EDPB Annual Report 2021 cover?"
  ],
- "ed-d471": [
+ "ed-d480": [
   "What did the EDPB commit to on cooperation in strategic cross-border cases?"
  ],
- "ed-d472": [
+ "ed-d481": [
   "What was the EDPB 2021 contribution to the Law Enforcement Directive evaluation?"
  ],
- "ed-d473": [
+ "ed-d482": [
   "Did the EDPB ask that the DSA, DMA and Data Act stay consistent with the GDPR?",
   "What did the EDPB say about the Digital Services Package and Data Strategy?"
  ],
- "ed-d474": [
+ "ed-d483": [
   "Is there an EDPB overview of authority resources and enforcement actions from 2021?"
  ],
- "ed-d475": [
+ "ed-d484": [
   "What does the EDPB Annual Report 2020 cover?"
  ],
- "ed-d476": [
+ "ed-d485": [
   "What did the EDPB say about data intermediation and altruism in the Data Governance Act?",
   "Which EDPB statement covers the Data Governance Act?"
  ],
- "ed-d477": [
+ "ed-d486": [
   "How does the EDPB view direct cross-border access under the Budapest Convention?"
  ],
- "ed-d478": [
+ "ed-d487": [
   "What was planned in the EDPB Work Programme 2021-2022?"
  ],
- "ed-d479": [
+ "ed-d488": [
   "What is the EDPB position on cookie walls in the ePrivacy Regulation?",
   "Does the EDPB support general retention of traffic and location data?",
   "Does the EDPB accept further processing of metadata on a compatibility test?",
   "What did EDPB Statement 03/2021 say about the Council mandate on ePrivacy?"
  ],
- "ed-d480": [
+ "ed-d489": [
   "What did EDPB Statement 02/2021 say about the Budapest Convention second protocol?"
  ],
- "ed-d481": [
+ "ed-d490": [
   "What are the priorities in the EDPB Strategy 2021-2023?"
  ],
- "ed-d482": [
+ "ed-d491": [
   "Is the ePrivacy Regulation still going to be adopted?",
   "Which EDPB statement covers the future role of supervisory authorities under ePrivacy?"
  ],
- "ed-d483": [
+ "ed-d492": [
   "What does the EDPB Annual Report 2019 cover?"
  ],
- "ed-d484": [
+ "ed-d493": [
   "What did the EDPB reply to an Italian company about a withdrawn opinion request?"
  ],
- "ed-d485": [
+ "ed-d494": [
   "What was the EDPB 2020 contribution to the first evaluation of the GDPR?"
  ],
- "ed-d486": [
+ "ed-d495": [
   "What was the third annual joint review of the EU-US Privacy Shield?",
   "When was the EU-US Privacy Shield invalidated?"
  ],
- "ed-d487": [
+ "ed-d496": [
   "What does the EDPB Annual Report 2018 cover?"
  ],
- "ed-d488": [
+ "ed-d497": [
   "When was the ePrivacy Regulation proposal formally withdrawn?",
   "Did the EDPB urge the adoption of the ePrivacy Regulation in 2019?"
  ],
- "ed-d489": [
+ "ed-d498": [
   "What did the EDPB report to the LIBE committee on the first nine months of GDPR?"
  ],
- "ed-d490": [
+ "ed-d499": [
   "What did EDPB Statement 01/2019 say about FATCA?",
   "Are there data protection issues in sending account data to the US tax authority?"
  ],
- "ed-d491": [
+ "ed-d500": [
   "What was planned in the EDPB Work Programme 2019-2020?"
  ],
- "ed-d492": [
+ "ed-d501": [
   "What did the second annual joint review of the EU-US Privacy Shield cover?"
  ],
- "ed-d493": [
+ "ed-d502": [
   "Has the Commission withdrawn the ePrivacy Regulation proposal?",
   "What did the EDPB say in 2018 about the revision of the ePrivacy Regulation?"
  ],
- "ed-d494": [
+ "ed-d503": [
   "What did the EDPB say about search data sharing under Article 6(11) DMA?",
   "Should search query and click data shared with rival search engines be anonymised?",
   "What safeguards does the EDPB want against re-identification in DMA data sharing?"
  ],
- "ed-d495": [
+ "ed-d504": [
   "What was the EDPB 2026 contribution to the Law Enforcement Directive evaluation?"
  ],
- "ed-d496": [
+ "ed-d505": [
   "What did the EDPB tell the EBA about AML/CFT customer due diligence data?",
   "Does the EDPB want data minimisation in customer due diligence under AML rules?"
  ],
- "ed-d497": [
+ "ed-d506": [
   "What did the EDPB say about the DSA Article 28 guidelines on minors?",
   "What are the EDPB comments on age assurance and advertising to children?"
  ],
- "ed-d498": [
+ "ed-d507": [
   "How do data protection and competition law interact according to the EDPB?",
   "Can a competition authority assess GDPR compliance in an abuse of dominance case?",
   "What does the EDPB recommend for cooperation between DPAs and competition authorities?",
   "Will both regulators review the consent practices of dominant firms?"
  ],
- "ed-d499": [
+ "ed-d508": [
   "What is the joint EDPB-EDPS contribution on DMA Article 15 profiling descriptions?"
  ],
- "ed-d500": [
+ "ed-d509": [
   "What was the EDPB 2019 contribution on the Budapest Convention second protocol?"
  ],
- "ed-d501": [
+ "ed-d510": [
   "Did the EDPB submit a pleading to the CJEU in Schrems II, Case C-311/18?",
   "Where does the EDPB set out the consequences of Schrems II?"
  ],
- "ed-d502": [
+ "ed-d511": [
   "What are the rules of procedure for the DPF informal panel of EU DPAs, version 2.0?"
  ],
- "ed-d503": [
+ "ed-d512": [
   "Which EDPB procedure covers Article 46(3)(a) clauses and Article 46(2)(d) SCCs?"
  ],
- "ed-d504": [
+ "ed-d513": [
   "Do the 2025 EDPB best practices for Plenary meetings bind controllers or processors?"
  ],
- "ed-d505": [
+ "ed-d514": [
   "What is Internal EDPB Document 3/2019 on Article 64(2) GDPR, version 2?"
  ],
- "ed-d506": [
+ "ed-d515": [
   "Which EDPB document sets the cooperation procedure for approving Binding Corporate Rules?"
  ],
- "ed-d507": [
+ "ed-d516": [
   "What is the EDPB process guide for selecting and handling strategic cases?"
  ],
- "ed-d508": [
+ "ed-d517": [
   "Is there a template complaint form for commercial complaints under the EU-US DPF?"
  ],
- "ed-d509": [
+ "ed-d518": [
   "What are the rules of procedure for the DPF informal panel of EU DPAs?"
  ],
- "ed-d510": [
+ "ed-d519": [
   "Which rules govern the DPF redress mechanism for national security purposes?"
  ],
- "ed-d511": [
+ "ed-d520": [
   "Is there a template complaint form for the ODNI Civil Liberties Protection Officer?"
  ],
- "ed-d512": [
+ "ed-d521": [
   "Do the 2023 EDPB best practices for Plenary meetings bind controllers or processors?"
  ],
- "ed-d513": [
+ "ed-d522": [
   "What is the EDPB decision on records management?"
  ],
- "ed-d514": [
+ "ed-d523": [
   "Which EDPB document covers opinions on national certification criteria and Seals?"
  ],
- "ed-d515": [
+ "ed-d524": [
   "What is the EDPB document on selecting cases of strategic importance?"
  ],
- "ed-d516": [
+ "ed-d525": [
   "What are the EDPB Rules of Procedure version 8 from April 2022?"
  ],
- "ed-d517": [
+ "ed-d526": [
   "Which EDPB document covers complaints against bodies acting under Article 6(1)(c) or (e)?"
  ],
- "ed-d518": [
+ "ed-d527": [
   "Which EDPB document sets territorial competence criteria for Article 5(3) ePrivacy?"
  ],
- "ed-d519": [
+ "ed-d528": [
   "What is EDPB Internal Document 3/2021 on binding decisions under Article 65(1)(a)?"
  ],
- "ed-d520": [
+ "ed-d529": [
   "Which EDPB internal document covers authority duties on alleged GDPR infringements?"
  ],
- "ed-d521": [
+ "ed-d530": [
   "Which EDPB internal document covers joint operations under Article 62 GDPR?"
  ],
- "ed-d522": [
+ "ed-d531": [
   "How did the EDPB handle cooperation cases after the Brexit transition period ended?"
  ],
- "ed-d523": [
+ "ed-d532": [
   "What are the terms of reference of the EDPB Support Pool of Experts?"
  ],
- "ed-d524": [
+ "ed-d533": [
   "Which EDPB document covers admissibility and vetting of complaints?"
  ],
- "ed-d525": [
+ "ed-d534": [
   "What is the EDPB procedure for informal Codes of Conduct sessions?"
  ],
- "ed-d526": [
+ "ed-d535": [
   "What are the EDPB Rules of Procedure version 7 from October 2020?"
  ],
- "ed-d527": [
+ "ed-d536": [
   "Does EDPB guidance on its Plenary minutes create obligations for controllers?"
  ],
- "ed-d528": [
+ "ed-d537": [
   "How are complaints about infringements that continued after 25 May 2018 handled?"
  ],
- "ed-d529": [
+ "ed-d538": [
   "What was the EDPB mandate on geolocation and tracing tools for COVID-19?"
  ],
- "ed-d530": [
+ "ed-d539": [
   "What was the EDPB mandate on health data for research during COVID-19?"
  ],
- "ed-d531": [
+ "ed-d540": [
   "What is EDPB Internal Document 1/2020 on Article 64.1 GDPR opinions?"
  ],
- "ed-d532": [
+ "ed-d541": [
   "When was version 6 of the EDPB Rules of Procedure adopted?"
  ],
- "ed-d533": [
+ "ed-d542": [
   "How does the EDPB approve certification criteria for the European Data Protection Seal?"
  ],
- "ed-d534": [
+ "ed-d543": [
   "What are the CSC Rules of Procedure of the EDPB?"
  ],
- "ed-d535": [
+ "ed-d544": [
   "Do the EDPB Rules of Procedure version 5 create duties for controllers?"
  ],
- "ed-d536": [
+ "ed-d545": [
   "Which EDPB Rules of Procedure were adopted in November 2019?"
  ],
- "ed-d537": [
+ "ed-d546": [
   "What is the EDPB procedure for opinions on certification body accreditation requirements?"
  ],
- "ed-d538": [
+ "ed-d547": [
   "What is EDPB Internal Document 3/2019 on Article 64(2) GDPR?"
  ],
- "ed-d539": [
+ "ed-d548": [
   "What is version 3 of the EDPB Rules of Procedure?"
  ],
- "ed-d540": [
+ "ed-d549": [
   "What are the EDPB proposals for common strategic priorities for supervision?"
  ],
- "ed-d541": [
+ "ed-d550": [
   "How does the EDPB handle cases with only local impacts under Article 56.2 GDPR?"
  ],
- "ed-d542": [
+ "ed-d551": [
   "Which EDPB Rules of Procedure came out in November 2018?"
  ],
- "ed-d543": [
+ "ed-d552": [
   "What is the EDPB Memorandum of Understanding of May 2018?"
  ],
- "ed-d544": [
+ "ed-d553": [
   "Which Rules of Procedure applied to the EDPB from 25 May 2018?"
  ],
  "enforce-ge-authority-1": [
@@ -10468,11 +10520,15 @@
   "What is the time limit for civil penalty proceedings in Australia?",
   "Can the OAIC issue infringement notices?"
  ],
- "world-ge-c-au-route-of-a-fine-and-the-authority": [
+ "world-ge-c-au-route-of-a-fine-and-the-authority-1": [
   "Which authority enforces the Privacy Act in Australia?",
   "Which privacy law amendments took effect in Australia in 2024?",
   "When does the statutory privacy tort start in Australia?",
   "Must I use an external dispute resolution scheme before the OAIC?"
+ ],
+ "world-ge-c-au-route-of-a-fine-and-the-authority-2": [
+  "What is in Australia's tranche 2 privacy reform exposure draft?",
+  "Will Australia's tranche 2 privacy reform add a direct right of action?"
  ],
  "world-ge-c-au-suing-the-organisation-directly": [
   "Can I sue for breach of the Australian Privacy Principles?",

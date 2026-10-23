@@ -185,7 +185,7 @@ def build():
         for a in items:
             b.append(art_entry(a))
         b.append("</section>")
-    b.append('<section class="partdiv"><h1>Part 2: guidance and implementation</h1><p class="lede">%d documents around the Act as of %s, with one report added on 28 September 2026, grouped by kind and listed alphabetically within each group.</p></section>' % (len(CORPUS), DATE))
+    b.append('<section class="partdiv"><h1>Part 2: guidance and implementation</h1><p class="lede">%d documents around the Act as of %s, with documents added on 28 September and 23 October 2026, grouped by kind and listed alphabetically within each group.</p></section>' % (len(CORPUS), DATE))
     for g in CORPUS_GROUPS:
         items = sorted([c for c in CORPUS if c["group"] == g], key=lambda c: c["title"])
         if not items:
@@ -211,6 +211,6 @@ def build():
 if __name__ == "__main__":
     p = build()
     from weasyprint import HTML
-    out = os.environ.get("PDFOUT", "/mnt/user-data/outputs/ai-act-digest-2026-09-28.pdf")
+    out = os.environ.get("PDFOUT", "/mnt/user-data/outputs/ai-act-digest-2026-10-23.pdf")
     HTML(p).write_pdf(out)
     print("pdf", out, os.path.getsize(out), "em dashes:", open(p, encoding="utf-8").read().count("\u2014"))

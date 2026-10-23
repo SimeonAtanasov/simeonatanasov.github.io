@@ -1,0 +1,123 @@
+{
+ "code": "fi",
+ "country": "Finland",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Office of the Data Protection Ombudsman",
+  "name_native": "Tietosuojavaltuutetun toimisto (Finnish) / Dataombudsmannens byrå (Swedish)",
+  "abbr": "not confirmed (no standard abbreviation; sometimes 'Tietosuojavaltuutettu')",
+  "url": "https://tietosuoja.fi/en",
+  "structure": "Independent authority headed by a single Data Protection Ombudsman (Anu Talus, in office since 1 November 2020, reappointed from 1 November 2025) with two Deputy Ombudsmen, all appointed by the Government for five years. Fines are imposed by a Sanctions Board made up of the Ombudsman and the two Deputies, deciding by majority.",
+  "regional": "Single national authority, no regional DPAs."
+ },
+ "law": {
+  "name": "Data Protection Act (Tietosuojalaki) 1050/2018, in force 1 January 2019",
+  "url": "https://www.finlex.fi/fi/lainsaadanto/2018/1050"
+ },
+ "complaint": {
+  "how": "Notification to the Ombudsman through the online form on tietosuoja.fi (an interactive questionnaire first checks whether the Office can help), or by email or post. The Office works in Finnish, Swedish and English. Anonymous notifications are possible but the complainant then receives no follow-up. No fee mentioned.",
+  "contact_controller_first": "Yes: the Office asks people to contact the controller first and to turn to the Ombudsman only if the controller refuses the request on grounds they consider inadequate.",
+  "deadlines": "No time limit for complaining confirmed. The Office's target processing time is one year; no statutory decision deadline confirmed.",
+  "complainant_status": "Not confirmed. The complainant is kept informed (unless anonymous); whether they are formally a party able to appeal the decision was not confirmed from a primary source."
+ },
+ "procedure": {
+  "stages": [
+   "Notification screened for competence and whether the controller was contacted first",
+   "Investigation by the Office, including requests for information from the controller",
+   "Decision by the Ombudsman or a Deputy: e.g. reprimand, order to comply, order to bring processing into line",
+   "In serious cases, referral to the Sanctions Board, which decides on an administrative fine by majority"
+  ],
+  "decision_maker": "Corrective decisions: the Ombudsman or a Deputy Ombudsman. Administrative fines: the Sanctions Board (Ombudsman plus two Deputies).",
+  "limitation": "Not confirmed."
+ },
+ "fines": {
+  "imposed_by": "The Sanctions Board of the Office, by administrative decision; no court confirmation step.",
+  "public_bodies": "Currently no fines on state authorities and state enterprises, municipal authorities, independent public institutions, Parliament's agencies, the Office of the President, or the Evangelical Lutheran and Orthodox Churches (Data Protection Act 1050/2018). Change pending: the Government submitted a bill in April 2026 to extend fines to public authorities with lower maxima than for the private sector (reported as EUR 500,000 or EUR 1,000,000 depending on severity), excluding courts, Parliament's offices and national security authorities, with proposed entry into force in early 2027. Adoption not confirmed as of October 2026.",
+  "quirks": "A data protection offence exists in the Criminal Code (Chapter 38, section 9), punishable by a fine or up to one year in prison; the prosecutor must consult the Ombudsman before charging. Separately, the Act on the Protection of Privacy in Working Life has its own penal provisions for employers."
+ },
+ "appeal": {
+  "court": "Administrative Court under the Act on Judicial Procedure in Administrative Matters (808/2019); appeals against the Office's decisions in practice go to the Helsinki Administrative Court.",
+  "deadline": "Not confirmed from a primary source (the general rule for administrative appeals in Finland is 30 days from notification).",
+  "suspensive": "Not confirmed.",
+  "further": "Supreme Administrative Court (Korkein hallinto-oikeus), only with leave to appeal.",
+  "inaction": "Not confirmed: no specific Finnish mechanism for Art. 78(2) located."
+ },
+ "private": {
+  "courts": "District courts (käräjäoikeus) for claims against controllers under Art. 79 and 82; not confirmed from a primary source.",
+  "damages": "Not confirmed: no leading Finnish Art. 82 judgment located.",
+  "collective": "Not confirmed. Finland's Class Action Act (444/2007) traditionally reserved group actions to the Consumer Ombudsman; how the Representative Actions Directive was transposed and whether it covers GDPR claims was not checked."
+ },
+ "cases": [
+  {
+   "title": "Posti (OmaPosti), EUR 2.4 million, annulled by Helsinki Administrative Court",
+   "year": "2024 / 2025",
+   "summary": "In November 2024 the Sanctions Board fined Posti EUR 2.4 million for automatically creating OmaPosti electronic mailboxes for customers without a lawful basis and with poor information. On 3 November 2025 the Helsinki Administrative Court (decision 6850/2025) annulled the fine, finding the processing necessary for the contract (Art. 6(1)(b)), while upholding the reprimand, the order to bring processing into line and the finding that customers were not adequately informed. Whether a further appeal was lodged was not confirmed.",
+   "url": "https://www.tuomioistuimet.fi/ajankohtaista/tiedotteet/helsingin-hallinto-oikeus-kumosi-posti-jakelu-oylle-omaposti-palvelun-tietosuojapuutteista-maaratyn-24-miljoonan-euron-seuraamusmaksun/"
+  }
+ ],
+ "quirks": [
+  "Fines are decided by a three-person Sanctions Board, while ordinary decisions are taken by the Ombudsman or a Deputy alone.",
+  "Public authorities and the two national churches cannot currently be fined, but a 2026 Government bill would change this from early 2027 if adopted.",
+  "Complainants are expected to go to the controller first, and anonymous notifications are accepted.",
+  "Appeals run through the administrative courts, with leave required for the Supreme Administrative Court."
+ ],
+ "plain": "In Finland you first ask the organisation to fix the problem; if it refuses, you notify the Data Protection Ombudsman online, free, in Finnish, Swedish or English. The Ombudsman can reprimand or order the organisation to comply, and serious cases go to a three-member Sanctions Board that can fine private companies. Decisions can be appealed to the Administrative Court and, with permission, to the Supreme Administrative Court.",
+ "confidence": "medium: structure, Sanctions Board, public-body exemption and the Posti case are confirmed, but I could not read the statute itself (Finlex renders client-side), so section numbers, appeal deadline, suspensive effect, limitation, complainant status and the status of the 2026 public-sector bill are not confirmed.",
+ "sources": [
+  {
+   "title": "Office of the Data Protection Ombudsman: about the Office",
+   "url": "https://tietosuoja.fi/en/office-of-the-data-protection-ombudsman",
+   "source_type": "primary"
+  },
+  {
+   "title": "Office of the Data Protection Ombudsman: notification to the Ombudsman",
+   "url": "https://tietosuoja.fi/en/notification-to-the-data-protection-ombudsman",
+   "source_type": "primary"
+  },
+  {
+   "title": "Data Protection Act 1050/2018 (Finlex)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2018/1050",
+   "source_type": "primary"
+  },
+  {
+   "title": "Finnish Government press release: fines to cover public sector (9 April 2026)",
+   "url": "https://valtioneuvosto.fi/-/1410853/tietosuojarikkomuksista-maarattavat-seuraamusmaksut-koskemaan-myos-julkista-sektoria",
+   "source_type": "primary"
+  },
+  {
+   "title": "KT: Government proposes fines for public sector (20 April 2026)",
+   "url": "https://www.kt.fi/uutiset-ja-tiedotteet/2026/hallitus-esittaa-seuraamusmaksua-tietosuojarikkomuksesta-myos-julkiselle",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Mondaq: Significant amendments to the Data Protection Act",
+   "url": "https://www.mondaq.com/data-protection/1785856/significant-amendments-to-the-data-protection-act",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Helsinki Administrative Court annuls Posti fine (3 November 2025)",
+   "url": "https://www.tuomioistuimet.fi/ajankohtaista/tiedotteet/helsingin-hallinto-oikeus-kumosi-posti-jakelu-oylle-omaposti-palvelun-tietosuojapuutteista-maaratyn-24-miljoonan-euron-seuraamusmaksun/",
+   "source_type": "primary"
+  },
+  {
+   "title": "Yle: Posti fined EUR 2.4 million (2024)",
+   "url": "https://yle.fi/a/74-20124822",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Yle: Court annuls Posti fine",
+   "url": "https://yle.fi/a/74-20191818",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DLA Piper Data Protection Laws of the World: Finland enforcement",
+   "url": "https://www.dlapiperdataprotection.com/index.html?t=enforcement&c=FI",
+   "source_type": "secondary"
+  },
+  {
+   "title": "White & Case: GDPR national implementation, Finland",
+   "url": "https://www.whitecase.com/insight-our-thinking/gdpr-guide-national-implementation-finland",
+   "source_type": "secondary"
+  }
+ ]
+}

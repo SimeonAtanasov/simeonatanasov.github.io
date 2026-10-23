@@ -9,7 +9,7 @@ sys.path.insert(0, HERE)
 from digest_nav import toc_html, results_html, jump_html, top_button, nav_js, nav_css
 E = json.load(open(os.path.join(HERE, "all_merged.json"), encoding="utf-8"))
 esc = lambda s: html.escape(s, quote=True)
-DATE = "19 September 2026"
+DATE = "19 September 2026, updated 23 October 2026"
 
 EU_MS = {"France", "Germany", "Spain", "Italy", "Belgium", "Netherlands", "Ireland", "Denmark", "Austria", "Sweden", "Finland", "Poland", "Luxembourg", "Greece", "Czech Republic", "Portugal", "Croatia", "Romania"}
 OTHER_EU = {"Switzerland", "Norway", "Turkey", "Iceland", "Liechtenstein", "Serbia", "Ukraine"}
@@ -343,7 +343,7 @@ if __name__ == "__main__":
     page = HEAD % (len(E), len(jurs)) + build_body() + TAIL % (nav_js("ck", "documents") + JS)
     CSS_OUT = CSS + nav_css("ck", "cookie-digest")
     page = page.replace("\r\n", "\n")
-    outdir = "/mnt/user-data/outputs/site"
+    outdir = os.environ.get("OUTDIR", "/mnt/user-data/outputs/site")
     os.makedirs(outdir + "/pages/cookie-digest", exist_ok=True)
     open(outdir + "/cookie-digest.html", "w", encoding="utf-8", newline="\n").write(page)
     open(outdir + "/pages/cookie-digest/cookie-digest.css", "w", encoding="utf-8", newline="\n").write(CSS_OUT)

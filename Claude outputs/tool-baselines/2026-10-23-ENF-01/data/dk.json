@@ -1,0 +1,143 @@
+{
+ "code": "dk",
+ "country": "Denmark",
+ "membership": "EU",
+ "dpa": {
+  "name_en": "Danish Data Protection Agency",
+  "name_native": "Datatilsynet",
+  "abbr": "Datatilsynet",
+  "url": "https://www.datatilsynet.dk/english",
+  "structure": "Independent authority made up of a Data Council (Datarådet) and a secretariat headed by a director who runs day-to-day business (s. 27 Data Protection Act). The Council has a chair who must be a High Court or Supreme Court judge plus seven members on four-year terms.",
+  "regional": "Single national authority. Greenland and the Faroe Islands have separate arrangements (not researched here)."
+ },
+ "law": {
+  "name": "Data Protection Act (Databeskyttelsesloven), Act No. 502 of 23 May 2018, as amended",
+  "url": "https://www.retsinformation.dk/eli/lta/2018/502"
+ },
+ "complaint": {
+  "how": "Online form via MitID on virk.dk (English version available); email, post or phone if MitID is not available. No fee mentioned. Name and address are required and anonymous complaints are normally not processed; representation by power of attorney is allowed.",
+  "contact_controller_first": "Yes. Datatilsynet asks complainants to contact the company, organisation or authority before submitting a complaint.",
+  "deadlines": "No time limit for complaining and no statutory decision deadline found in the Act or on the complaint page (not confirmed).",
+  "complainant_status": "Not confirmed. Datatilsynet decisions cannot be appealed to another administrative authority (s. 30(1)); the complainant's remedy is the courts."
+ },
+ "procedure": {
+  "stages": [
+   "Complaint, own-initiative case or breach notification is assessed by Datatilsynet",
+   "Investigation, including inspections without a court order",
+   "Decision with corrective measures (orders, bans, reprimands) adopted by Datatilsynet itself",
+   "Where a fine is warranted: Datatilsynet files a police report (politianmeldelse) with a recommended fine amount",
+   "Police and prosecution decide whether to charge; the regional state prosecutor must be consulted in data protection cases and Datatilsynet is heard",
+   "Criminal trial in the district court (byret); the company may alternatively accept a fine notice (bødeforelæg) once fine levels are settled in case law"
+  ],
+  "decision_maker": "Corrective decisions: Datatilsynet (Council for cases of principle, secretariat otherwise). Fines: the criminal courts, on charges brought by the prosecution service; Datatilsynet only recommends an amount.",
+  "limitation": "Five years for infringements of the GDPR, the Act or rules issued under it (s. 41(7))."
+ },
+ "fines": {
+  "imposed_by": "Courts, not the DPA (Recital 151). GDPR infringements are criminal offences punishable by a fine or up to six months' imprisonment (s. 41(1)-(2)); courts must apply Art. 83(2) GDPR criteria (s. 41(3)). Legal persons are liable under Part 5 of the Criminal Code (s. 41(6)). Datatilsynet published fine-calculation guidance in January 2021, which is not binding on courts.",
+  "public_bodies": "Yes, public authorities can be fined (s. 41(6)). Prosecution guidance (2020 circular, later amended) set caps of 2% of operating budget up to DKK 8 million, or 4% up to DKK 16 million for the higher tier. Many municipalities and regions have been fined, e.g. Odsherred Municipality DKK 100,000 in April 2024.",
+  "quirks": "Individuals can be prosecuted and face imprisonment of up to six months. Courts have often set fines far below Datatilsynet's recommendation, although the 2025 ILVA appeal judgment confirmed group turnover as the basis. No reform giving Datatilsynet administrative fining powers was found in the sources checked (not confirmed either way)."
+ },
+ "appeal": {
+  "court": "Datatilsynet decisions cannot be taken to another administrative authority (s. 30(1)); they can be challenged by a civil action before the ordinary courts under the general right to judicial review of administrative decisions. Fines are criminal judgments of the district court (byret).",
+  "deadline": "Not confirmed for civil challenges to Datatilsynet decisions (no special deadline in the Act). Criminal appeals follow the Administration of Justice Act (deadline not confirmed).",
+  "suspensive": "Not confirmed. A criminal fine is not payable until the judgment is final.",
+  "further": "Criminal fine cases: district court, then High Court (Vestre or Østre Landsret), then Supreme Court (Højesteret) only with leave. Example: ILVA went Aarhus District Court (2021), CJEU reference, Vestre Landsret (2025).",
+  "inaction": "No specific Danish mechanism for Art. 78(2) inaction was confirmed; a complainant would rely on a civil action before the ordinary courts."
+ },
+ "private": {
+  "courts": "Ordinary civil courts (district courts at first instance); compensation for material and non-material damage under s. 40 Data Protection Act and Art. 82 GDPR.",
+  "damages": "No notable Danish damages awards were confirmed in this research.",
+  "collective": "Not confirmed. Denmark has a general group action procedure in the Administration of Justice Act; Art. 80(2) use and the Representative Actions Directive transposition were not checked."
+ },
+ "cases": [
+  {
+   "title": "ILVA A/S (IDdesign): storage without deletion deadlines",
+   "year": "2021-2025",
+   "summary": "Datatilsynet recommended DKK 1.5 million for keeping data on about 385,000 customers with no deletion deadlines (police report June 2019). Aarhus District Court fined DKK 100,000 in 2021 based on the subsidiary's turnover. On the prosecution's appeal, Vestre Landsret referred questions to the CJEU (C-383/23, judgment 13 February 2025: 'undertaking' means the whole group) and on 2 September 2025 raised the fine to DKK 1.5 million.",
+   "url": "https://roesgaard.dk/nyheder/vestre-landsret-idoemmer-ilva-as-en-boede-paa-15-mio-kr-for-brud-paa-gdpr"
+  },
+  {
+   "title": "Netcompany (mit.dk digital post platform)",
+   "year": "2024",
+   "summary": "On 12 January 2024 Datatilsynet reported Netcompany to the police with a recommended fine of at least DKK 15 million for lack of privacy by design, no DPIA and an authentication flaw that exposed other users' digital post at launch in March 2022. Datatilsynet lists the case as still pending before the courts.",
+   "url": "https://www.datatilsynet.dk/afgoerelser/afgoerelser/2024/jan/netcompany-indstilles-til-boede"
+  },
+  {
+   "title": "Odsherred Municipality: unencrypted laptops",
+   "year": "2024",
+   "summary": "Theft of an unencrypted work laptop revealed about 1,200 unencrypted laptops. Datatilsynet recommended DKK 100,000 to 200,000 in January 2024; the case ended on 23 April 2024 with a DKK 100,000 fine.",
+   "url": "https://www.datatilsynet.dk/afgoerelser/afgoerelser/2024/jan/odsherred-kommune-indstilles-til-boede"
+  }
+ ],
+ "quirks": [
+  "One of only two EU countries (with Estonia) where the DPA cannot fine: Datatilsynet investigates, reports to the police and recommends an amount, and a criminal court decides.",
+  "Datatilsynet's public 'fine cases' page (Bødesager) lists recommendations, but once a case is with the police there is generally no right of access to the file, so outcomes are often hard to trace.",
+  "Fines can hit public authorities, unlike several other Member States, with budget-based caps from prosecution guidance.",
+  "The five-year limitation period (s. 41(7)) is long compared with many administrative regimes.",
+  "Early court fines were a fraction of the recommendations; the 2025 ILVA appeal, after a CJEU ruling, pushed levels up by using group turnover."
+ ],
+ "plain": "In Denmark you complain to Datatilsynet, usually online with MitID, after first raising the issue with the organisation. Datatilsynet can order the organisation to fix the problem, but it cannot fine anyone itself: if it thinks a fine is deserved, it reports the organisation to the police with a suggested amount, and a criminal court decides the actual fine. You cannot appeal Datatilsynet's decision to another authority, only to the courts.",
+ "confidence": "medium: Act provisions, the fine mechanism and the ILVA, Netcompany and Odsherred cases are sourced, but I could not confirm appeal deadlines, the current version of the public-body caps, collective action rules or any 2025-2026 reform proposal.",
+ "sources": [
+  {
+   "title": "Danish Data Protection Act No. 502 of 23 May 2018 (English translation, Datatilsynet)",
+   "url": "https://cdn.datatilsynet.dk/datatilsynet/media/7753/danish-data-protection-act.pdf",
+   "source_type": "primary"
+  },
+  {
+   "title": "LOV nr 502 af 23/05/2018 (Retsinformation)",
+   "url": "https://www.retsinformation.dk/eli/lta/2018/502",
+   "source_type": "primary"
+  },
+  {
+   "title": "Datatilsynet: File a complaint",
+   "url": "https://www.datatilsynet.dk/english/file-a-complaint",
+   "source_type": "primary"
+  },
+  {
+   "title": "Datatilsynet: Bødesager (fine cases)",
+   "url": "https://www.datatilsynet.dk/afgoerelser/boedesager",
+   "source_type": "primary"
+  },
+  {
+   "title": "Rigsadvokatmeddelelse on data protection, CIR1H nr 9061 af 05/02/2020 (historic version)",
+   "url": "https://www.retsinformation.dk/api/pdf/212861",
+   "source_type": "primary"
+  },
+  {
+   "title": "Datatilsynet: Netcompany indstilles til bøde",
+   "url": "https://www.datatilsynet.dk/afgoerelser/afgoerelser/2024/jan/netcompany-indstilles-til-boede",
+   "source_type": "primary"
+  },
+  {
+   "title": "Datatilsynet: Odsherred Kommune indstilles til bøde",
+   "url": "https://www.datatilsynet.dk/afgoerelser/afgoerelser/2024/jan/odsherred-kommune-indstilles-til-boede",
+   "source_type": "primary"
+  },
+  {
+   "title": "CJEU C-383/23 ILVA, judgment of 13 February 2025",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62023CJ0383",
+   "source_type": "primary"
+  },
+  {
+   "title": "Roesgaard: Vestre Landsret idømmer ILVA A/S en bøde på 1,5 mio. kr.",
+   "url": "https://roesgaard.dk/nyheder/vestre-landsret-idoemmer-ilva-as-en-boede-paa-15-mio-kr-for-brud-paa-gdpr",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Hjulmand Kaptajn: ILVA får tidoblet GDPR-bøde",
+   "url": "https://www.hjulmandkaptain.dk/viden/nyheder/ilva-faar-tidoblet-gdpr-boede-hele-koncernens-omsaetning-blev-taget-med/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "Clemens: GDPR-bøde, bødesager i Danmark",
+   "url": "https://clemenslaw.dk/en/aktuelt/gdpr-boede/",
+   "source_type": "secondary"
+  },
+  {
+   "title": "DLA Piper: GDPR bøder i Danmark",
+   "url": "https://denmark.dlapiper.com/da/fagomraade/gdpr-boeder-i-danmark",
+   "source_type": "secondary"
+  }
+ ]
+}

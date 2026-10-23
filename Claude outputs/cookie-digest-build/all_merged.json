@@ -1345,11 +1345,27 @@
   "date": "19 November 2025",
   "url": "https://data.consilium.europa.eu/doc/document/ST-15698-2025-INIT/en/pdf",
   "status": "proposed",
-  "takeaway": "The proposal moves the rules on storing and accessing personal data on terminal equipment from Article 5(3) ePrivacy into a new GDPR Article 88a, which keeps consent as the default, exempts transmission, requested services, aggregated first-party audience measurement and security, and bars a fresh consent request for the same purpose for at least six months after a refusal. A new Article 88b obliges controllers to honour automated, machine-readable consent and refusal signals once standards exist, applying from 24 months after entry into force, and requires browser providers other than SMEs to offer the feature from 48 months after entry into force. As of September 2026 the file remains in committee with no Council general approach and no trilogue.",
+  "takeaway": "The proposal moves the rules on storing and accessing personal data on terminal equipment from Article 5(3) ePrivacy into a new GDPR Article 88a, which keeps consent as the default, exempts transmission, requested services, aggregated first-party audience measurement and security, and bars a fresh consent request for the same purpose for at least six months after a refusal. A new Article 88b obliges controllers to honour automated, machine-readable consent and refusal signals once standards exist, applying from 24 months after entry into force, and requires browser providers other than SMEs to offer the feature from 48 months after entry into force. The Council's negotiating mandate of 21 October 2026 deletes both articles and keeps the rule in the ePrivacy Directive (see the separate entry); the Parliament has not yet adopted its position, so trilogues have not started.",
   "topics": [
    "browser-signals",
    "analytics-exemption",
    "consent"
+  ],
+  "source": "primary",
+  "cluster": "eu"
+ },
+ {
+  "title": "Council mandate on the Digital Omnibus, 2025/0360(COD), Council document 14756/26: cookie rules kept in ePrivacy Article 5(3)",
+  "jurisdiction": "EU",
+  "type": "proposal",
+  "date": "21 October 2026",
+  "url": "https://data.consilium.europa.eu/doc/document/ST-14756-2026-INIT/en/pdf",
+  "status": "proposed",
+  "takeaway": "The Council's negotiating position, agreed in Coreper on 21 October 2026, deletes the proposed GDPR Articles 88a and 88b and rewrites Article 5(3) of the ePrivacy Directive instead: storing or reading information on a device still needs consent to the GDPR standard, unless solely related to and strictly necessary for one of six purposes, namely transmission, a service the user explicitly requested, anonymous aggregated first-party audience measurement, media audience measurement under Article 24 of the European Media Freedom Act, security, and measuring contextual advertising without profiling. Refusal must take a single click, and after a refusal no new request for the same purpose may be made for at least four months. The browser-signal duty is gone, GDPR supervisory authorities would enforce the rule, and Member States would apply it 24 months after adoption. A negotiating text, not law: trilogues start once the Parliament has its position.",
+  "topics": [
+   "analytics-exemption",
+   "consent",
+   "browser-signals"
   ],
   "source": "primary",
   "cluster": "eu"
@@ -2366,10 +2382,10 @@
   "title": "W3C Global Privacy Control (GPC) specification, Working Draft",
   "jurisdiction": "Standards",
   "type": "standard",
-  "date": "17 September 2026",
+  "date": "24 September 2026",
   "url": "https://www.w3.org/TR/gpc/",
   "status": "proposed",
-  "takeaway": "The Global Privacy Control specification, a W3C Working Draft of 17 September 2026 from the Privacy Working Group (First Public Working Draft 21 November 2024), defines a Sec-GPC request header with the value 1, a navigator.globalPrivacyControl boolean, and an optional /.well-known/gpc.json resource by which a site declares that it honours the signal. The signal expresses a request not to sell or share personal data and has legal effect only where a law gives it one; the draft notes that at least four US states recognise it. A draft is not law; read the header and the DOM property and treat them as opt-out requests wherever a state law applies.",
+  "takeaway": "The Global Privacy Control specification, a W3C Working Draft of 24 September 2026 from the Privacy Working Group (First Public Working Draft 21 November 2024), defines a Sec-GPC request header with the value 1, a navigator.globalPrivacyControl boolean, and an optional /.well-known/gpc.json resource by which a site declares that it honours the signal. The signal expresses a request not to sell or share personal data and has legal effect only where a law gives it one; the draft notes that at least four US states recognise it. A draft is not law; read the header and the DOM property and treat them as opt-out requests wherever a state law applies.",
   "topics": [
    "opt-out-signals",
    "browser-signals"
@@ -3369,13 +3385,13 @@
   "cluster": "us"
  },
  {
-  "title": "SB 690 (2025-2026), amendment of Cal. Penal Code 637.2 for pen register and trap and trace claims against websites and apps",
+  "title": "SB 690 (2025-2026), Chapter 976, Statutes of 2026: amendment of Cal. Penal Code 637.2 for pen register and trap and trace claims against websites and apps",
   "jurisdiction": "California",
-  "type": "proposal",
-  "date": "4 September 2026",
+  "type": "legislation",
+  "date": "30 September 2026",
   "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB690",
-  "status": "proposed",
-  "takeaway": "SB 690 passed the Assembly 66 to 0 on 28 August 2026, the Senate concurred 39 to 0, and the enrolled bill went to the Governor on 4 September 2026. As enrolled it amends only section 637.2 to remove the private right of action for section 638.51 pen register and trap and trace claims arising from website, online application and mobile application conduct, vests enforcement in the Attorney General, applies to pending claims commenced on or after 1 January 2025 and would operate from 1 January 2027. Sections 631 and 632 are untouched. Keep prior-consent gating for session replay, chat and pixels; the wiretap theory survives whatever the Governor decides.",
+  "status": "applies from a future date",
+  "takeaway": "Approved by the Governor on 30 September 2026 as Chapter 976, Statutes of 2026, SB 690 amends only section 637.2: an action against a private actor for a section 638.51 pen register or trap and trace violation arising from conduct on an internet website, online application or mobile application may be brought only by the Attorney General. The change reaches pending claims in actions commenced within two years before it operates, and as a non-urgency statute it operates from 1 January 2027. Sections 631 and 632 are untouched, so wiretap and eavesdropping claims over pixels, chat and session replay stay open to private plaintiffs. Keep prior-consent gating for those tools; SB 690 removes one theory, not the risk.",
   "topics": [
    "pixels-wiretap",
    "enforcement"

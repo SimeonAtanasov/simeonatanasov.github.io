@@ -8,7 +8,7 @@
   "name_native": "Agência Nacional de Proteção de Dados (formerly Autoridade Nacional de Proteção de Dados)",
   "abbr": "ANPD",
   "url": "https://www.gov.br/anpd/",
-  "structure": "Federal regulatory agency (special autonomous body) linked to the Ministry of Justice and Public Security, with functional, technical, decision-making, administrative and financial autonomy, run by a Board of Directors (Conselho Diretor). Provisional Measure 1.317 of 17/18 September 2025 converted it from an authority into a regulatory agency under Law 13.848/2019 and gave it supervision of the Digital Statute of Children and Adolescents (Law 15.211/2025); Congress approved the conversion on 24 February 2026, and the number of the resulting law was not confirmed.",
+  "structure": "Federal regulatory agency (special autonomous body) linked to the Ministry of Justice and Public Security, with functional, technical, decision-making, administrative and financial autonomy, run by a Board of Directors (Conselho Diretor). Provisional Measure 1.317 of 17/18 September 2025 converted it from an authority into a regulatory agency under Law 13.848/2019 and gave it supervision of the Digital Statute of Children and Adolescents (Law 15.211/2025); Congress approved the conversion on 24 February 2026 and it became Law 15.352 of 25 February 2026.",
   "regional": "No regional data protection authorities. In practice consumer bodies (state and municipal Procons and the federal National Consumer Secretariat, Senacon) and public prosecutors (Ministério Público) also act on privacy failures under the Consumer Defence Code and through public civil actions."
  },
  "law": {
@@ -81,7 +81,7 @@
   "cap": "turnover",
   "private_action": "yes"
  },
- "confidence": "medium: the planalto.gov.br statute text and gov.br ANPD pages could not be fetched, so article-level details on the complaint and appeal procedure (prior-contact requirement, 10-day appeal, suspensive effect, limitation) and the number of the law converting MP 1.317/2025 are not confirmed against primary text.",
+ "confidence": "medium: the planalto.gov.br statute text and gov.br ANPD pages could not be fetched, so article-level details on the complaint and appeal procedure (prior-contact requirement, 10-day appeal, suspensive effect, limitation) are not confirmed against primary text; the conversion law (Law 15.352/2026) is confirmed on planalto.gov.br.",
  "sources": [
   {
    "title": "LGPD, Law 13.709/2018 (Planalto)",

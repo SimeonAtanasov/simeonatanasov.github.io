@@ -527,7 +527,7 @@
   ],
   "date": "22 May 2023",
   "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation",
-  "takeaway": "Commission Implementing Decision C(2023)3215 of 22 May 2023 asked CEN and CENELEC for harmonised standards in ten areas: risk management, governance and quality of datasets, record keeping, transparency, human oversight, accuracy, robustness, cybersecurity, quality management and conformity assessment. Decision C(2025)3871 amended it after the original 30 April 2025 delivery date passed. Standards remain voluntary but, once cited in the Official Journal under Article 40, give a presumption of conformity with Chapter III Section 2, with Article 41 common specifications as the fallback. The first deliverable, prEN 18286 on quality management systems, entered public enquiry on 30 October 2025, so track OJ citations before relying on any standard.",
+  "takeaway": "Commission Implementing Decision C(2023)3215 of 22 May 2023 asked CEN and CENELEC for harmonised standards in ten areas: risk management, governance and quality of datasets, record keeping, transparency, human oversight, accuracy, robustness, cybersecurity, quality management and conformity assessment. Decision C(2025)3871 amended it after the original 30 April 2025 delivery date passed. Standards remain voluntary but, once cited in the Official Journal under Article 40, give a presumption of conformity with Chapter III Section 2, with Article 41 common specifications as the fallback. The first deliverable, EN 18286:2026 on quality management systems, was cited in the Official Journal by Implementing Decision (EU) 2026/2274 on 14 October 2026; the other areas have no cited standard yet, so check the OJ before relying on any of them.",
   "topics": [
    "standards",
    "conformity"
@@ -547,7 +547,7 @@
   ],
   "date": "9 July 2026",
   "url": "https://jtc21.eu/significant-milestone-for-european-ai-standardization/",
-  "takeaway": "The joint technical committee's news feed is the primary status source for the harmonised standards. Milestones: technical report CEN/CLC/TR 18115:2024 on data governance and quality published 6 November 2024; a technical report on conformity assessment published 18 December 2024; prEN 18286 'Quality management system for EU AI Act regulatory purposes' reached enquiry on 10 November 2025; further drafts opened for public enquiry on 9 April 2026 and 8 May 2026; and on 9 July 2026 JTC 21 said publication of EN 18286 was expected in July 2026, with prEN 18228, prEN 18282, prEN 18229-1 and prEN 18288 still in public hearing. A published EN gives no presumption of conformity until cited in the Official Journal, so monitor both.",
+  "takeaway": "The joint technical committee's news feed is the primary status source for the harmonised standards. Milestones: technical report CEN/CLC/TR 18115:2024 on data governance and quality published 6 November 2024; a technical report on conformity assessment published 18 December 2024; prEN 18286 'Quality management system for EU AI Act regulatory purposes' reached enquiry on 10 November 2025; further drafts opened for public enquiry on 9 April 2026 and 8 May 2026; and on 9 July 2026 JTC 21 expected EN 18286 to be published that month, with prEN 18228, prEN 18282, prEN 18229-1 and prEN 18288 still in public hearing. EN 18286:2026 was cited in the Official Journal on 14 October 2026 by Implementing Decision (EU) 2026/2274; the others give no presumption of conformity until they are published and cited, so monitor both.",
   "topics": [
    "standards",
    "conformity"
@@ -980,7 +980,7 @@
  },
  {
   "id": "doc-50",
-  "title": "Ireland: S.I. No. 366 of 2025 and the designated competent authorities",
+  "title": "Ireland: Regulation of Artificial Intelligence Act 2026, the AI Office of Ireland and S.I. No. 366 of 2025",
   "issuer": "Government of Ireland",
   "type": "national-law",
   "status": "in force",
@@ -989,9 +989,9 @@
    "Art 28",
    "Art 77"
   ],
-  "date": "17 June 2026",
-  "url": "https://artificialintelligenceact.eu/national-implementation-plans/",
-  "takeaway": "Ireland implemented a decentralised model through Statutory Instrument No. 366 of 2025, designating 15 sectoral market surveillance authorities with the Minister for Enterprise, Tourism and Employment as single point of contact and four notifying authorities: that Minister, the Minister for Transport, the Health Products Regulatory Authority and the Commission for Communications Regulation. Nine fundamental rights authorities appear in the Commission's consolidated list, and a National AI Office is expected to be established by 2 August 2026 as the central coordinating authority and new single point of contact. Operators established in Ireland, including many GPAI providers, should map each of their systems to the relevant sectoral regulator.",
+  "date": "21 July 2026",
+  "url": "https://data.oireachtas.ie/ie/oireachtas/act/2026/31/eng/enacted/a3126.pdf",
+  "takeaway": "The Regulation of Artificial Intelligence Act 2026 (No. 31 of 2026), commenced on 31 July 2026 by S.I. No. 403 of 2026 with the same day as establishment day under S.I. No. 404, sets up the AI Office of Ireland (Oifig IS na hÉireann) as the single point of contact under Article 70(2), coordinator of the competent authorities, keeper of a register of prohibited practices and serious incidents, and operator of regulatory sandboxes. Market surveillance authorities remain those designated by S.I. No. 366 of 2025, a decentralised set of sectoral regulators, and the Act gives them contravention and prohibition notices and an adjudication process ending in administrative fines confirmed by the High Court. Operators established in Ireland, including many GPAI providers, should map each system to its sectoral regulator and use the AI Office as the entry point.",
   "topics": [
    "governance",
    "enforcement"
@@ -1020,7 +1020,7 @@
  },
  {
   "id": "doc-52",
-  "title": "France: DGCCRF as coordinating authority and single point of contact under a pending legislative proposal",
+  "title": "France: CNIL, ACPR, ANFR and DGCCRF roles under the EU law adaptation bill (Senate first reading, February 2026)",
   "issuer": "Government of France",
   "type": "national-law",
   "status": "draft",
@@ -1028,9 +1028,9 @@
    "Art 70",
    "Art 77"
   ],
-  "date": "17 June 2026",
-  "url": "https://artificialintelligenceact.eu/national-implementation-plans/",
-  "takeaway": "France has published a legislative proposal, not yet adopted as of June 2026, for a decentralised model that broadens the scope of existing market surveillance and notifying authorities to cover AI, with the Directorate-General for Competition, Consumer Affairs and Fraud Control (DGCCRF) acting as coordinating market surveillance authority and single point of contact; the tracker records the position as partial clarity. Three fundamental rights authorities appear in the Commission's consolidated list. Operators in France should track the bill for the penalty regime and the final split of competences between DGCCRF, CNIL and sector regulators.",
+  "date": "18 February 2026",
+  "url": "https://www.senat.fr/enseance/2025-2026/348/Amdt_442.html",
+  "takeaway": "France is implementing the Act through its general bill adapting French law to EU law, passed by the Senate at first reading under the accelerated procedure with government amendments of 12 and 18 February 2026. The CNIL becomes market surveillance authority for most prohibited practices (social scoring jointly with the DGCCRF), for emotion recognition and biometric categorisation transparency, and for Annex III biometrics, employment, law enforcement, migration and border control; the ACPR takes creditworthiness and insurance pricing, the ANFR radio equipment, and an ordinance within six months of promulgation is to settle the Article 77 authorities and sandboxes. The DGCCRF remains the coordinating authority and single point of contact on the Commission's list. Not yet law: check the bill's passage through the Assemblée nationale.",
   "topics": [
    "governance",
    "enforcement"
@@ -1152,6 +1152,26 @@
   "topics": [
    "data",
    "transparency"
+  ],
+  "source": "page"
+ },
+ {
+  "id": "doc-59",
+  "title": "Commission Implementing Decision (EU) 2026/2274 citing EN 18286:2026, the first harmonised standard for high-risk AI systems",
+  "issuer": "European Commission",
+  "type": "standards",
+  "status": "in force",
+  "articles": [
+   "Art 40",
+   "Art 17",
+   "Art 72"
+  ],
+  "date": "12 October 2026",
+  "url": "https://eur-lex.europa.eu/eli/dec_impl/2026/2274/oj",
+  "takeaway": "Implementing Decision (EU) 2026/2274 of 12 October 2026, in force on its publication in the Official Journal on 14 October 2026, cites EN 18286:2026, Artificial intelligence - Quality management system for EU AI Act regulatory purposes, the first harmonised standard under the Act. Under Article 40 a provider of a high-risk AI system whose quality management system conforms to it is presumed to meet the requirements the standard covers, which recital 3 describes as quality management systems for providers including post-market monitoring, so Article 17 and the processes behind Article 72. Use is voluntary and the presumption reaches no further than the standard: it says nothing about the system's own conformity with Articles 8 to 15. Map an Article 17 system to EN 18286 and watch the Official Journal for the other standards requested.",
+  "topics": [
+   "standards",
+   "conformity"
   ],
   "source": "page"
  }
