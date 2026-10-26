@@ -1,0 +1,735 @@
+<!DOCTYPE HTML>
+<!--
+	Tile animation preview for the home page spotlights.
+	Standalone: nothing on the live site links here and nothing here is linked
+	from the site. It loads the real main.css and home-extra.css and the real
+	tile images, rebuilds section #one from index.html, and replays the
+	template's own scroll-in behaviour so option A matches the live page.
+	Every option animates transform or opacity only.
+	Blocks between "opt:X" and "/opt:X" markers are what adopting option X
+	would add to the site; "opt:base" is the layer stack every option needs.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Tile Animation Preview</title>
+<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="stylesheet" href="../assets/css/home-extra.css" />
+<style>
+/* ===== Preview chrome (not part of any option) ===== */
+.pv-bar {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 10003;
+	background: rgba(22, 18, 44, 0.96);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+	box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.35);
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.4;
+	padding: 10px 16px 8px 16px;
+}
+.pv-bar.is-collapsed .pv-row { margin-bottom: 0; }
+.pv-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 12px;
+	margin: 0 0 6px 0;
+}
+.pv-title {
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	margin-right: 4px;
+	white-space: nowrap;
+}
+.pv-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	align-items: center;
+}
+.pv-group-label {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 12px;
+	margin-right: 2px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+/* The template styles every button (fixed height, uppercase, wide tracking,
+   !important border and colour, a white :after flash), so the preview's own
+   buttons reset each of those. */
+#pv-bar button.pv-btn {
+	height: auto;
+	line-height: 1.2;
+	padding: 6px 10px;
+	font-size: 13px;
+	font-weight: normal;
+	letter-spacing: 0;
+	text-transform: none;
+	white-space: nowrap;
+	border-radius: 6px;
+	border: 1px solid rgba(255, 255, 255, 0.25) !important;
+	border-color: rgba(255, 255, 255, 0.25) !important;
+	background: rgba(255, 255, 255, 0.06);
+	color: rgba(255, 255, 255, 0.85) !important;
+	box-shadow: none;
+	min-width: 0;
+	width: auto;
+}
+#pv-bar button.pv-btn:after { content: none; }
+#pv-bar button.pv-btn:hover { background: rgba(255, 255, 255, 0.14); }
+#pv-bar button.pv-btn:focus-visible { outline: 2px solid #7fb2e5; outline-offset: 2px; }
+#pv-bar button.pv-btn[aria-pressed="true"],
+#pv-bar button.pv-btn[aria-checked="true"] {
+	background: #5e7fd1;
+	border-color: #b9ccff !important;
+	color: #fff !important;
+}
+#pv-bar button.pv-btn b { font-weight: bold; margin-right: 3px; }
+#pv-bar select.pv-select {
+	display: none;
+	height: auto;
+	line-height: 1.2;
+	padding: 6px 28px 6px 8px;
+	font-size: 14px;
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 6px;
+	max-width: 100%;
+}
+#pv-bar select.pv-select option { color: #000; }
+.pv-desc {
+	margin: 2px 0 0 0;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 13px;
+}
+.pv-notice {
+	margin: 6px 0 0 0;
+	padding: 6px 10px;
+	border-radius: 6px;
+	background: rgba(255, 196, 0, 0.16);
+	border: 1px solid rgba(255, 196, 0, 0.5);
+	font-size: 13px;
+}
+.pv-notice[hidden], .pv-desc[hidden] { display: none; }
+.pv-collapse-only { display: none; }
+@media screen and (max-width: 736px) {
+	.pv-bar { padding: 8px 12px 6px 12px; font-size: 13px; }
+	.pv-modes-buttons { display: none !important; }
+	#pv-bar select.pv-select { display: inline-block; flex: 1 1 0; min-width: 0; width: auto; }
+	.pv-bar > .pv-row:first-child { flex-wrap: nowrap; }
+	.pv-title { display: none; }
+	.pv-collapse-only { display: inline-block; }
+	.pv-bar.is-collapsed .pv-more { display: none; }
+	#pv-bar button.pv-btn { padding: 5px 8px; font-size: 12px; }
+}
+#pv-intro .inner { padding-top: 2.5em; padding-bottom: 1.5em; }
+#pv-intro p { margin-bottom: 0.5em; }
+#pv-tail { min-height: 70vh; }
+
+/* File name, size and sharpness label in the corner of each tile. */
+.pv-label {
+	position: absolute;
+	right: 8px;
+	bottom: 8px;
+	z-index: 3;
+	max-width: calc(100% - 16px);
+	padding: 4px 7px;
+	border-radius: 5px;
+	background: rgba(8, 10, 24, 0.82);
+	color: #fff;
+	font: 11px/1.35 Consolas, "Courier New", monospace;
+	letter-spacing: 0;
+	pointer-events: none;
+	white-space: normal;
+}
+.pv-label .pv-ok { color: #8fe3a2; }
+.pv-label .pv-warn { color: #ffd166; }
+.pv-label .pv-bad { color: #ff8a80; font-weight: bold; }
+body.pv-nolabels .pv-label { display: none; }
+
+/* Images only: hide the text but keep its box, so the image slot keeps the
+   size and crop it has on the live page. */
+body.pv-imgonly #one > section > .content { visibility: hidden; }
+
+/* Alternate sides: not how the live page is laid out (every tile has its image
+   on the left), offered for comparison only. */
+@media screen and (min-width: 981px) {
+	body.pv-alt #one.spotlights > section:nth-child(even) { flex-direction: row-reverse; }
+	body.pv-alt #one > section.spotlight-assessment:nth-child(even) > .image-tools { left: auto; right: 0; }
+}
+
+/* Replay: put every entry state back without animating the way out. */
+body.pv-reset #one *, body.pv-reset #one *:before { transition: none !important; }
+
+/* opt:base */
+#one.spotlights > section > .image { overflow: hidden; isolation: isolate; }
+#one.spotlights > section > .image:before { z-index: 1; }
+.pv-clip, .pv-unclip, .pv-par, .pv-zoom, .pv-pic {
+	position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block;
+}
+.pv-clip { overflow: hidden; z-index: 0; }
+.pv-pic { background-size: cover; background-repeat: no-repeat; }
+#one > section.spotlight-power-bi .pv-pic { background-size: contain; }
+.pv-gray { opacity: 0; filter: grayscale(1) brightness(0.72); }
+/* /opt:base */
+
+/* opt:B */
+body.pv-mode-b .pv-zoom {
+	animation: pv-kb var(--pv-kb, 12.5s) ease-in-out infinite alternate;
+	will-change: transform;
+}
+body.pv-mode-b #one > section:nth-child(even) .pv-zoom { animation-direction: alternate-reverse; }
+@keyframes pv-kb {
+	from { transform: scale(1.04) translate3d(-1.5%, 1%, 0); }
+	to { transform: scale(1.14) translate3d(1.5%, -1.5%, 0); }
+}
+/* /opt:B */
+
+/* opt:C */
+body.pv-mode-c .pv-zoom { transition: transform var(--pv-hover, 400ms) ease; }
+@media (hover: hover) {
+	body.pv-mode-c #one > section:hover .pv-zoom { transform: scale(1.06); }
+}
+body.pv-mode-c #one > section:focus-within .pv-zoom { transform: scale(1.06); }
+/* /opt:C */
+
+/* opt:D */
+body.pv-mode-d .pv-clip {
+	opacity: 0;
+	transform: translate3d(0, 8%, 0);
+	transition: opacity var(--pv-entry, 900ms) ease-out, transform var(--pv-entry, 900ms) cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+body.pv-mode-d #one > section.pv-in .pv-clip { opacity: 1; transform: none; }
+/* /opt:D */
+
+/* opt:E */
+body.pv-mode-e .pv-clip, body.pv-mode-e .pv-unclip {
+	transition: transform var(--pv-entry, 900ms) cubic-bezier(0.7, 0, 0.2, 1);
+}
+body.pv-mode-e .pv-clip { transform: translate3d(-100%, 0, 0); }
+body.pv-mode-e .pv-unclip { transform: translate3d(100%, 0, 0); }
+body.pv-mode-e.pv-alt #one > section:nth-child(even) .pv-clip { transform: translate3d(100%, 0, 0); }
+body.pv-mode-e.pv-alt #one > section:nth-child(even) .pv-unclip { transform: translate3d(-100%, 0, 0); }
+@media screen and (max-width: 980px) {
+	body.pv-mode-e .pv-clip, body.pv-mode-e.pv-alt #one > section:nth-child(even) .pv-clip { transform: translate3d(0, -100%, 0); }
+	body.pv-mode-e .pv-unclip, body.pv-mode-e.pv-alt #one > section:nth-child(even) .pv-unclip { transform: translate3d(0, 100%, 0); }
+}
+body.pv-mode-e #one > section.pv-in .pv-clip,
+body.pv-mode-e #one > section.pv-in .pv-unclip { transform: none !important; }
+/* /opt:E */
+
+/* opt:F */
+body.pv-mode-f .pv-par { top: -14%; bottom: -14%; will-change: transform; }
+/* /opt:F */
+
+/* opt:G */
+body.pv-mode-g .pv-gray { opacity: 1; transition: opacity var(--pv-hover, 400ms) ease; }
+@media (hover: hover) {
+	body.pv-mode-g #one > section:hover .pv-gray { opacity: 0; }
+}
+body.pv-mode-g #one > section:focus-within .pv-gray { opacity: 0; }
+/* Touch screens have no hover, so colour returns while the tile is mid-screen. */
+@media (hover: none) {
+	body.pv-mode-g #one > section.pv-center .pv-gray { opacity: 0; }
+}
+/* /opt:G */
+
+/* opt:H */
+body.pv-mode-h .pv-clip {
+	opacity: 0;
+	transform: translate3d(0, 8%, 0);
+	transition: opacity var(--pv-entry, 900ms) ease-out, transform var(--pv-entry, 900ms) cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+body.pv-mode-h #one > section.pv-in .pv-clip { opacity: 1; transform: none; }
+body.pv-mode-h .pv-zoom { transition: transform var(--pv-hover, 400ms) ease; }
+@media (hover: hover) {
+	body.pv-mode-h #one > section:hover .pv-zoom { transform: scale(1.06); }
+}
+body.pv-mode-h #one > section:focus-within .pv-zoom { transform: scale(1.06); }
+/* /opt:H */
+
+/* opt:RM  Reduced motion fallback, shared by every option. Real setting:
+   the media query; simulated: body.pv-rm. Nothing moves; entries become a
+   short opacity fade and the colour swap in G stays, since it is not motion. */
+body.pv-rm .pv-zoom, body.pv-rm .pv-par { animation: none !important; transform: none !important; }
+body.pv-rm .pv-clip, body.pv-rm .pv-unclip { transform: none !important; transition: opacity 200ms linear !important; }
+body.pv-rm.pv-mode-e .pv-clip { opacity: 0; }
+body.pv-rm.pv-mode-e #one > section.pv-in .pv-clip { opacity: 1; }
+body.pv-rm #one > section > .content > .inner { transform: none !important; }
+/* /opt:RM */
+/* opt:AST  Live Asteroids tile: an inline vector redraw of pic02.jpg whose
+   pieces move. Transform and opacity only. Entry plays once when the tile
+   first scrolls into view (.pv-in) and runs straight into one play cycle;
+   after that the cycle runs on hover or focus, and on touch screens once
+   each time the tile reaches mid-screen. Hits work as in the game: the first
+   contact removes the asteroid and that bullet at once, +10, no explosion,
+   and the other bullets fly on until they leave the screen. Every bullet flies
+   straight out along the heading the ship had when it fired it, so each trail
+   bullet keeps to its own ray from the ship's centre. Paths and hit times are
+   worked out by the build script from the game's rules, not placed by hand. */
+.ast-scene { position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; background: #060808; }
+.ast { position: absolute; width: 100%; height: 100%; display: block; }
+.ast circle { transform-box: fill-box; transform-origin: center; }
+.ast .ast-ship, .ast .ast-ship-rot { transform-box: view-box; transform-origin: 0 0; }
+.ast-ship-rot { transform: rotate(-66.9deg); }
+.ast-star { fill: #fff; opacity: 0.75; }
+.ast-shot { opacity: 0; }
+.ast-hud { position: absolute; left: 5%; top: 4%; display: flex; flex-direction: column; color: #fff;
+	font: 12px/1.45 Arial, Helvetica, sans-serif; letter-spacing: 0; text-transform: none; pointer-events: none; }
+.ast-hud b { font-weight: normal; display: inline-block; }
+
+/* entry, once */
+.ast-scene .ast-rock, .ast-scene .ast-ship, .ast-scene .ast-trail, .ast-scene .ast-hud, .ast-scene .ast-stars { opacity: 0; }
+section.pv-in .ast-scene .ast-stars { animation: ast-fade calc(var(--ast-e) * 0.6) ease-out both; }
+section.pv-in .ast-scene .ast-rock { animation: ast-rock-in calc(var(--ast-e) * 0.55) cubic-bezier(.2,.8,.3,1.2) calc(var(--e) * var(--ast-e) * 0.07) both; }
+section.pv-in .ast-scene .ast-ship { animation: ast-ship-in calc(var(--ast-e) * 0.6) cubic-bezier(.2,.8,.2,1) calc(var(--ast-e) * 0.3) both; }
+section.pv-in .ast-scene .ast-trail { animation: ast-fade calc(var(--ast-e) * 0.12) linear calc(var(--ast-e) * (0.72 + var(--e) * 0.07)) both; }
+section.pv-in .ast-scene .ast-hud { animation: ast-fade calc(var(--ast-e) * 0.3) ease-out calc(var(--ast-e) * 1.05) both; }
+@keyframes ast-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ast-rock-in { from { opacity: 0; transform: scale(0.4); } to { opacity: 1; transform: none; } }
+@keyframes ast-ship-in { from { opacity: 0; transform: translate(-70px, 60px); } to { opacity: 1; transform: none; } }
+
+/* after the entry: hold the opening frame, so ending a play cycle does not restart the entry */
+#one .ast-scene.ast-ready .ast-rock, #one .ast-scene.ast-ready .ast-ship, #one .ast-scene.ast-ready .ast-trail,
+#one .ast-scene.ast-ready .ast-hud, #one .ast-scene.ast-ready .ast-stars { animation: none; opacity: 1; }
+
+/* play cycle */
+#one .ast-scene.ast-play .ast-ship-rot { animation: ast-aim var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-star:nth-child(3n) { animation: ast-twinkle calc(var(--ast-t) * 0.5) ease-in-out calc(var(--d) * 0.4s) 2 alternate; }
+@keyframes ast-twinkle { from { opacity: 0.75; } to { opacity: 0.15; } }
+#one .ast-scene.ast-play .ast-t0 { animation: ast-b-t0 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-t1 { animation: ast-b-t1 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-t2 { animation: ast-b-t2 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-t3 { animation: ast-b-t3 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-t4 { animation: ast-b-t4 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-s0 { animation: ast-b-s0 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-s1 { animation: ast-b-s1 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-s2 { animation: ast-b-s2 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-r1 { animation: ast-gone-1 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-r3 { animation: ast-gone-3 var(--ast-t) linear both; }
+#one .ast-scene.ast-play .ast-r2 { animation: ast-gone-2 var(--ast-t) linear both; }
+@keyframes ast-b-t0 { 0%, 2.0% { opacity: 1; transform: none; } 15.5% { opacity: 1; transform: translate(27.0px, -159.8px); } 15.6%, 86% { opacity: 0; transform: translate(27.0px, -159.8px); } 87% { opacity: 0; transform: none; } 100% { opacity: 1; transform: none; } }
+@keyframes ast-b-t1 { 0%, 2.0% { opacity: 1; transform: none; } 17.5% { opacity: 1; transform: translate(41.1px, -181.5px); } 17.6%, 86% { opacity: 0; transform: translate(41.1px, -181.5px); } 87% { opacity: 0; transform: none; } 100% { opacity: 1; transform: none; } }
+@keyframes ast-b-t2 { 0%, 2.0% { opacity: 1; transform: none; } 19.5% { opacity: 1; transform: translate(57.0px, -202.5px); } 19.6%, 86% { opacity: 0; transform: translate(57.0px, -202.5px); } 87% { opacity: 0; transform: none; } 100% { opacity: 1; transform: none; } }
+@keyframes ast-b-t3 { 0%, 2.0% { opacity: 1; transform: none; } 21.5% { opacity: 1; transform: translate(73.5px, -222.7px); } 21.6%, 86% { opacity: 0; transform: translate(73.5px, -222.7px); } 87% { opacity: 0; transform: none; } 100% { opacity: 1; transform: none; } }
+@keyframes ast-b-t4 { 0%, 2.0% { opacity: 1; transform: none; } 15.8% { opacity: 1; transform: translate(57.4px, -155.0px); } 15.9%, 86% { opacity: 0; transform: translate(57.4px, -155.0px); } 87% { opacity: 0; transform: none; } 100% { opacity: 1; transform: none; } }
+@keyframes ast-b-s0 { 0%, 26.9% { opacity: 0; transform: none; } 27.0% { opacity: 1; transform: none; } 29.9% { opacity: 1; transform: translate(25.9px, -24.0px); } 30.0%, 100% { opacity: 0; transform: translate(25.9px, -24.0px); } }
+@keyframes ast-b-s1 { 0%, 30.9% { opacity: 0; transform: none; } 31.0% { opacity: 1; transform: none; } 38.2% { opacity: 1; transform: translate(63.4px, -58.7px); } 38.3%, 100% { opacity: 0; transform: translate(63.4px, -58.7px); } }
+@keyframes ast-b-s2 { 0%, 34.9% { opacity: 0; transform: none; } 35.0% { opacity: 1; transform: none; } 67.9% { opacity: 1; transform: translate(289.7px, -268.5px); } 68.0%, 100% { opacity: 0; transform: translate(289.7px, -268.5px); } }
+@keyframes ast-gone-1 { 0%, 15.8% { opacity: 1; transform: none; } 15.9%, 84% { opacity: 0; transform: scale(0.4); } 94%, 100% { opacity: 1; transform: none; } }
+@keyframes ast-gone-3 { 0%, 29.9% { opacity: 1; transform: none; } 30.0%, 84% { opacity: 0; transform: scale(0.4); } 94%, 100% { opacity: 1; transform: none; } }
+@keyframes ast-gone-2 { 0%, 38.2% { opacity: 1; transform: none; } 38.3%, 84% { opacity: 0; transform: scale(0.4); } 94%, 100% { opacity: 1; transform: none; } }
+@keyframes ast-aim { 0%, 22.0% { transform: rotate(-66.9deg); } 25.0%, 84.0% { transform: rotate(-42.8deg); } 88.0%, 100% { transform: rotate(-66.9deg); } }
+
+/* reduced motion: the still frame, no entry and no play */
+body.pv-rm .ast-scene *, body.pv-rm .ast-scene { animation: none !important; }
+body.pv-rm .ast-scene .ast-rock, body.pv-rm .ast-scene .ast-ship, body.pv-rm .ast-scene .ast-trail,
+body.pv-rm .ast-scene .ast-hud, body.pv-rm .ast-scene .ast-stars { opacity: 1; }
+body.pv-rm .ast-scene .ast-star { opacity: 0.75; }
+/* preview only: the photo toggle */
+body:not(.pv-live) .ast-scene { display: none; }
+body.pv-live #one > section .pv-zoom:has(.ast-scene) > .pv-pic { visibility: hidden; }
+/* /opt:AST */
+</style>
+</head>
+<body class="pv-mode-a">
+
+	<!-- Sidebar, reduced to its links so the page keeps the live layout width -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><span class="image avatar"><img src="../images/avatar.png" alt="Profile photo" /></span></li>
+					<li><a href="../index.html#intro">Intro</a></li>
+					<li><a href="#one">Portfolio</a></li>
+					<li><a href="../index.html#two">Career &amp; Education</a></li>
+					<li><a href="../index.html#three">Get in touch</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<div id="wrapper">
+
+		<div id="pv-bar" class="pv-bar" role="region" aria-label="Animation preview controls">
+			<div class="pv-row">
+				<span class="pv-title">Tile animation preview</span>
+				<div class="pv-group pv-modes-buttons" role="group" aria-label="Animation">
+					<button type="button" class="pv-btn" data-mode="a"><b>A</b>None</button>
+					<button type="button" class="pv-btn" data-mode="b"><b>B</b>Ken Burns</button>
+					<button type="button" class="pv-btn" data-mode="c"><b>C</b>Hover zoom</button>
+					<button type="button" class="pv-btn" data-mode="d"><b>D</b>Fade up</button>
+					<button type="button" class="pv-btn" data-mode="e"><b>E</b>Edge reveal</button>
+					<button type="button" class="pv-btn" data-mode="f"><b>F</b>Parallax</button>
+					<button type="button" class="pv-btn" data-mode="g"><b>G</b>Colour on hover</button>
+					<button type="button" class="pv-btn" data-mode="h"><b>H</b>Fade up + hover zoom</button>
+				</div>
+				<select id="pv-mode-select" class="pv-select" aria-label="Animation">
+					<option value="a">A. None (live site)</option>
+					<option value="b">B. Ken Burns</option>
+					<option value="c">C. Hover zoom</option>
+					<option value="d">D. Fade up on entry</option>
+					<option value="e">E. Edge reveal on entry</option>
+					<option value="f">F. Parallax</option>
+					<option value="g">G. Colour on hover</option>
+					<option value="h">H. Fade up + hover zoom</option>
+				</select>
+				<button type="button" class="pv-btn pv-collapse-only" id="pv-collapse" aria-expanded="true">Less</button>
+			</div>
+			<div class="pv-more">
+				<div class="pv-row">
+					<div class="pv-group" role="group" aria-label="Speed">
+						<span class="pv-group-label">Speed</span>
+						<button type="button" class="pv-btn" data-speed="slow">Slow</button>
+						<button type="button" class="pv-btn" data-speed="normal">Normal</button>
+						<button type="button" class="pv-btn" data-speed="fast">Fast</button>
+					</div>
+					<div class="pv-group" role="group" aria-label="View">
+						<button type="button" class="pv-btn" role="switch" aria-checked="true" data-toggle="live">Live Asteroids tile</button>
+						<button type="button" class="pv-btn" role="switch" aria-checked="false" data-toggle="imgonly">Images only</button>
+						<button type="button" class="pv-btn" role="switch" aria-checked="true" data-toggle="labels">Labels</button>
+						<button type="button" class="pv-btn" role="switch" aria-checked="false" data-toggle="alt">Alternate sides</button>
+						<button type="button" class="pv-btn" role="switch" aria-checked="false" data-toggle="rm">Simulate reduced motion</button>
+						<button type="button" class="pv-btn" id="pv-replay">Replay entry</button>
+					</div>
+				</div>
+				<p class="pv-desc" id="pv-desc"></p>
+			</div>
+			<p class="pv-notice" id="pv-rm-notice" hidden></p>
+		</div>
+
+		<section id="pv-intro" class="wrapper style1">
+			<div class="inner">
+				<h2>Portfolio tiles: animation preview</h2>
+				<p>The nine tiles below use the live stylesheet, the live images and the live copy. Pick an option above; it applies to all nine. The label in each corner gives the file, its pixel size, how much of it the slot shows, and how far it is enlarged at this width and screen density at the peak of the current effect: green is sharp, amber may look soft, red will look soft.</p>
+			</div>
+		</section>
+
+<!--SPOTLIGHTS-->
+
+		<section id="pv-tail" class="wrapper style3">
+			<div class="inner">
+				<h2>End of the tiles</h2>
+				<p>Scroll space so the last tile can reach the middle of the screen, which is where the template activates it.</p>
+			</div>
+		</section>
+
+	</div>
+
+<template data-hits="0.1577,0.2994,0.3820" id="ast-template"><span class="ast-scene"><svg class="ast" viewBox="-231 0 900 438" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect x="-231" y="0" width="900" height="438" fill="#060808"/><g class="ast-stars"><circle class="ast-star" cx="61.9" cy="68.9" r="1.5" style="--d:0.12"/><circle class="ast-star" cx="505.6" cy="44.5" r="1.2" style="--d:0.14"/><circle class="ast-star" cx="225.6" cy="20.1" r="1" style="--d:1.05"/><circle class="ast-star" cx="-12.3" cy="241.0" r="0.7" style="--d:2.07"/><circle class="ast-star" cx="-116.6" cy="100.0" r="1.5" style="--d:1.46"/><circle class="ast-star" cx="-171.8" cy="255.8" r="0.7" style="--d:2.44"/><circle class="ast-star" cx="-185.4" cy="373.1" r="1" style="--d:1.05"/><circle class="ast-star" cx="255.3" cy="249.5" r="1.2" style="--d:2.04"/><circle class="ast-star" cx="-65.8" cy="254.1" r="1.5" style="--d:0.47"/><circle class="ast-star" cx="-140.1" cy="310.2" r="1.2" style="--d:0.15"/><circle class="ast-star" cx="-43.3" cy="296.6" r="1" style="--d:1.94"/><circle class="ast-star" cx="188.3" cy="401.1" r="1" style="--d:0.75"/><circle class="ast-star" cx="481.6" cy="304.6" r="0.8" style="--d:0.2"/><circle class="ast-star" cx="40.8" cy="216.9" r="1" style="--d:1.82"/><circle class="ast-star" cx="29.8" cy="425.5" r="0.7" style="--d:1.28"/><circle class="ast-star" cx="-79.9" cy="151.1" r="1" style="--d:1.05"/><circle class="ast-star" cx="631.1" cy="37.4" r="1.2" style="--d:1.43"/><circle class="ast-star" cx="553.9" cy="138.9" r="1.5" style="--d:0.88"/><circle class="ast-star" cx="216.0" cy="346.7" r="0.7" style="--d:2.1"/><circle class="ast-star" cx="615.7" cy="207.9" r="1.5" style="--d:0.16"/><circle class="ast-star" cx="425.2" cy="137.1" r="1.2" style="--d:2.48"/><circle class="ast-star" cx="506.2" cy="126.4" r="1" style="--d:2.22"/><circle class="ast-star" cx="82.5" cy="408.5" r="1" style="--d:0.42"/><circle class="ast-star" cx="-122.6" cy="29.4" r="1" style="--d:0.32"/><circle class="ast-star" cx="-6.1" cy="172.1" r="1" style="--d:0.2"/><circle class="ast-star" cx="173.7" cy="240.3" r="0.8" style="--d:2.05"/><circle class="ast-star" cx="543.7" cy="123.7" r="1" style="--d:2.47"/><circle class="ast-star" cx="382.0" cy="167.6" r="0.8" style="--d:0.38"/><circle class="ast-star" cx="-69.8" cy="103.7" r="0.8" style="--d:0.03"/><circle class="ast-star" cx="514.3" cy="82.4" r="1" style="--d:0.01"/><circle class="ast-star" cx="146.7" cy="162.8" r="1.2" style="--d:0.8"/><circle class="ast-star" cx="-115.1" cy="373.5" r="1.2" style="--d:1.64"/><circle class="ast-star" cx="432.9" cy="200.4" r="1.5" style="--d:1.99"/><circle class="ast-star" cx="123.0" cy="175.6" r="0.7" style="--d:1.2"/><circle class="ast-star" cx="130.2" cy="86.0" r="0.8" style="--d:1.1"/><circle class="ast-star" cx="-128.9" cy="262.3" r="0.7" style="--d:0.0"/><circle class="ast-star" cx="-92.1" cy="47.6" r="1" style="--d:1.53"/><circle class="ast-star" cx="-164.3" cy="93.4" r="1" style="--d:0.37"/><circle class="ast-star" cx="-2.0" cy="153.4" r="1" style="--d:1.19"/><circle class="ast-star" cx="-124.1" cy="213.9" r="1" style="--d:1.2"/><circle class="ast-star" cx="51.2" cy="66.0" r="1.5" style="--d:0.86"/><circle class="ast-star" cx="9.2" cy="360.4" r="0.8" style="--d:1.29"/><circle class="ast-star" cx="-43.9" cy="413.4" r="1" style="--d:0.37"/><circle class="ast-star" cx="257.5" cy="15.6" r="1.2" style="--d:0.75"/><circle class="ast-star" cx="346.5" cy="43.1" r="1" style="--d:1.3"/><circle class="ast-star" cx="583.2" cy="156.9" r="0.8" style="--d:1.33"/><circle class="ast-star" cx="467.9" cy="145.8" r="0.8" style="--d:1.53"/><circle class="ast-star" cx="476.3" cy="330.1" r="0.8" style="--d:2.02"/><circle class="ast-star" cx="503.0" cy="322.1" r="0.8" style="--d:0.5"/><circle class="ast-star" cx="212.6" cy="318.3" r="0.7" style="--d:1.98"/><circle class="ast-star" cx="194.2" cy="87.3" r="1.2" style="--d:2.39"/><circle class="ast-star" cx="171.9" cy="406.9" r="1" style="--d:2.39"/><circle class="ast-star" cx="98.3" cy="98.8" r="0.8" style="--d:1.18"/><circle class="ast-star" cx="74.3" cy="211.5" r="1.2" style="--d:2.1"/><circle class="ast-star" cx="200.7" cy="284.8" r="1.5" style="--d:0.21"/><circle class="ast-star" cx="362.2" cy="395.2" r="1.5" style="--d:1.88"/><circle class="ast-star" cx="199.4" cy="80.8" r="1.5" style="--d:0.83"/><circle class="ast-star" cx="487.3" cy="421.8" r="1" style="--d:1.16"/><circle class="ast-star" cx="436.1" cy="40.5" r="0.8" style="--d:0.43"/><circle class="ast-star" cx="-113.7" cy="69.0" r="1" style="--d:2.02"/><circle class="ast-star" cx="-96.6" cy="359.4" r="1" style="--d:1.64"/><circle class="ast-star" cx="85.6" cy="239.9" r="0.8" style="--d:0.05"/><circle class="ast-star" cx="486.0" cy="316.3" r="0.7" style="--d:1.32"/><circle class="ast-star" cx="605.8" cy="190.5" r="0.8" style="--d:2.07"/><circle class="ast-star" cx="-38.8" cy="112.3" r="1" style="--d:1.25"/><circle class="ast-star" cx="454.2" cy="144.2" r="1.2" style="--d:1.05"/><circle class="ast-star" cx="-110.1" cy="395.3" r="1" style="--d:2.24"/><circle class="ast-star" cx="363.9" cy="354.5" r="1.2" style="--d:1.05"/><circle class="ast-star" cx="591.6" cy="219.7" r="1.2" style="--d:0.38"/><circle class="ast-star" cx="228.4" cy="379.3" r="0.8" style="--d:1.52"/><circle class="ast-star" cx="465.2" cy="68.4" r="0.8" style="--d:1.18"/><circle class="ast-star" cx="419.9" cy="243.3" r="1" style="--d:1.71"/><circle class="ast-star" cx="246.4" cy="211.5" r="0.7" style="--d:2.21"/><circle class="ast-star" cx="-176.3" cy="86.3" r="0.7" style="--d:1.93"/><circle class="ast-star" cx="225.9" cy="245.5" r="0.7" style="--d:1.11"/><circle class="ast-star" cx="319.4" cy="221.4" r="1.2" style="--d:0.5"/><circle class="ast-star" cx="20.2" cy="222.5" r="1" style="--d:1.27"/><circle class="ast-star" cx="-6.1" cy="229.0" r="1" style="--d:2.31"/><circle class="ast-star" cx="569.3" cy="91.1" r="1" style="--d:0.34"/><circle class="ast-star" cx="-118.5" cy="194.1" r="0.7" style="--d:1.68"/><circle class="ast-star" cx="155.1" cy="95.5" r="1" style="--d:1.96"/><circle class="ast-star" cx="573.1" cy="70.4" r="1.5" style="--d:1.61"/><circle class="ast-star" cx="99.6" cy="112.8" r="0.8" style="--d:2.42"/><circle class="ast-star" cx="-31.1" cy="413.6" r="1" style="--d:2.21"/><circle class="ast-star" cx="-81.8" cy="291.2" r="0.8" style="--d:0.4"/><circle class="ast-star" cx="157.9" cy="225.7" r="1" style="--d:1.05"/><circle class="ast-star" cx="91.1" cy="43.6" r="1" style="--d:0.05"/><circle class="ast-star" cx="267.2" cy="193.4" r="0.7" style="--d:0.96"/><circle class="ast-star" cx="234.6" cy="131.0" r="0.7" style="--d:0.28"/><circle class="ast-star" cx="592.3" cy="102.3" r="0.7" style="--d:0.21"/></g><circle class="ast-rock ast-r0" cx="142.0" cy="85.1" r="40.2" fill="#5c00cc" style="--e:0"/><circle class="ast-rock ast-r1" cx="267.4" cy="78.2" r="31.5" fill="#5c00cc" style="--e:1"/><circle class="ast-rock ast-r2" cx="263.6" cy="178.8" r="28.4" fill="#5c00cc" style="--e:2"/><circle class="ast-rock ast-r3" cx="219.0" cy="218.4" r="19.9" fill="#5c00cc" style="--e:3"/><circle class="ast-rock ast-r4" cx="21.8" cy="302.3" r="28.4" fill="#5c00cc" style="--e:4"/><circle class="ast-rock ast-r5" cx="177.0" cy="391.3" r="30.5" fill="#5c00cc" style="--e:5"/><circle class="ast-rock ast-r6" cx="348.9" cy="397.4" r="33.4" fill="#5c00cc" style="--e:6"/><circle class="ast-rock ast-r7" cx="-150" cy="120" r="34" fill="#5c00cc" style="--e:0"/><circle class="ast-rock ast-r8" cx="-95" cy="365" r="26" fill="#5c00cc" style="--e:1"/><circle class="ast-rock ast-r9" cx="-205" cy="250" r="18" fill="#5c00cc" style="--e:2"/><circle class="ast-rock ast-r10" cx="520" cy="92" r="38" fill="#5c00cc" style="--e:3"/><circle class="ast-rock ast-r11" cx="600" cy="262" r="24" fill="#5c00cc" style="--e:4"/><circle class="ast-rock ast-r12" cx="470" cy="300" r="16" fill="#5c00cc" style="--e:5"/><circle class="ast-rock ast-r13" cx="575" cy="405" r="27" fill="#5c00cc" style="--e:6"/><circle class="ast-trail ast-t0" cx="180.1" cy="149.8" r="3.8" fill="#ff0009" style="--e:4"/><circle class="ast-trail ast-t1" cx="182.3" cy="171.5" r="3.8" fill="#24a907" style="--e:3"/><circle class="ast-trail ast-t2" cx="182.0" cy="192.5" r="3.8" fill="#1a38fa" style="--e:2"/><circle class="ast-trail ast-t3" cx="179.3" cy="212.7" r="3.8" fill="#fa0704" style="--e:1"/><circle class="ast-trail ast-t4" cx="174.7" cy="231.8" r="3.8" fill="#20ac00" style="--e:0"/><circle class="ast-shot ast-s0" cx="175.8" cy="258.5" r="3.8" fill="#ff0009"/><circle class="ast-shot ast-s1" cx="175.8" cy="258.5" r="3.8" fill="#24a907"/><circle class="ast-shot ast-s2" cx="175.8" cy="258.5" r="3.8" fill="#1a38fa"/><g transform="translate(159.1 273.9) scale(0.757)"><g class="ast-ship"><g class="ast-ship-rot"><circle r="5" fill="#ff0808"/><path d="M30 0 L-10 -10 L-7 0 L-10 10 Z" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></g></g></g></svg><span class="ast-hud"><span>Score: <b class="ast-score">90</b></span><span>Highest Score: 390</span></span></span></template>
+<script>
+(function () {
+	"use strict";
+
+	var body = document.body;
+	var bar = document.getElementById("pv-bar");
+	var sections = Array.prototype.slice.call(document.querySelectorAll("#one > section"));
+	var sysRM = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
+	var canHover = window.matchMedia ? window.matchMedia("(hover: hover)").matches : true;
+
+	var DESC = {
+		a: "A. The live page today: no effect on the picture itself. The template's own purple veil fades off each image and the text slides in when the tile reaches mid-screen, once.",
+		b: "B. Slow Ken Burns: each picture drifts and zooms between 104% and 114%, alternating direction tile by tile. Runs continuously.",
+		c: "C. Hover or keyboard focus zooms the picture to 106%. Nothing happens on touch screens.",
+		d: "D. Each picture fades in and rises 8% of its slot the first time it scrolls into view.",
+		e: "E. Each picture is uncovered from its outer edge the first time it scrolls into view (from the top when the tiles stack). Transform only, no clip-path.",
+		f: "F. Parallax: the picture moves slower than the tile as you scroll. The picture layer is 128% of the slot's height so its edges never show.",
+		g: "G. Pictures sit in dimmed greyscale and return to full colour on hover or focus; on touch screens, while the tile is mid-screen.",
+		h: "H. D on entry plus C on hover: fade and rise once, then zoom to 106% on hover or focus.",
+		live: " Asteroids tile: live redraw, plays once on load, then on hover. Game rules: each bullet flies along the heading it was fired on, and an asteroid disappears on the first bullet that touches it."
+	};
+	var SPEED = {
+		slow:   { kb: "15s",   hover: "600ms", entry: "1400ms", par: 0.06, ast: "7s",   aste: "2.2s" },
+		normal: { kb: "12.5s", hover: "400ms", entry: "900ms",  par: 0.10, ast: "5.5s", aste: "1.6s" },
+		fast:   { kb: "10s",   hover: "250ms", entry: "550ms",  par: 0.14, ast: "4s",   aste: "1.1s" }
+	};
+	var state = { live: true, mode: "a", speed: "normal", imgonly: false, labels: true, alt: false, rm: !!(sysRM && sysRM.matches) };
+
+	// Read state from the URL so a given view can be linked or screenshotted.
+	(function readUrl() {
+		var q = new URLSearchParams(location.search);
+		if (q.get("mode") && DESC[q.get("mode")]) state.mode = q.get("mode");
+		if (q.get("speed") && SPEED[q.get("speed")]) state.speed = q.get("speed");
+		["live", "imgonly", "labels", "alt", "rm"].forEach(function (k) {
+			if (q.has(k)) state[k] = q.get(k) === "1";
+		});
+	})();
+
+	/* ---- opt:base  the layer stack each tile needs (JS part) ---- */
+	sections.forEach(function (sec, i) {
+		var a = sec.querySelector(".image");
+		var img = a && a.querySelector("img");
+		if (!img) return;
+		var src = img.getAttribute("src");
+		var pos = img.getAttribute("data-position") || "center center";
+		img.style.display = "none";
+		a.insertAdjacentHTML("beforeend",
+			'<span class="pv-clip"><span class="pv-unclip"><span class="pv-par"><span class="pv-zoom">' +
+			'<span class="pv-pic"></span><span class="pv-pic pv-gray"></span>' +
+			'</span></span></span></span><span class="pv-label" aria-hidden="true"></span>');
+		Array.prototype.forEach.call(a.querySelectorAll(".pv-pic"), function (p) {
+			p.style.backgroundImage = 'url("' + src + '")';
+			p.style.backgroundPosition = pos;
+		});
+		// Zoom around the same point the crop is anchored to.
+		a.querySelector(".pv-zoom").style.transformOrigin = pos;
+		a.querySelector(".pv-zoom").style.animationDelay = (-i * 3.7) + "s";
+		sec._pv = { a: a, src: src, file: src.split("/").pop(), nw: 0, nh: 0, par: a.querySelector(".pv-par"), label: a.querySelector(".pv-label") };
+		var probe = new Image();
+		probe.onload = function () { sec._pv.nw = probe.naturalWidth; sec._pv.nh = probe.naturalHeight; updateLabels(); };
+		probe.src = src;
+	});
+	/* ---- /opt:base ---- */
+
+	/* ---- Template behaviour (main.js + scrollex, mode "middle", -10vh):
+	   a tile is "inactive" until its middle band reaches mid-screen, then
+	   stays active. Reproduced here so option A matches the live page. ---- */
+	/* ---- opt:AST  live Asteroids scene (JS part) ---- */
+	var ast = null;
+	(function () {
+		var sec = sections.filter(function (s) { return s._pv && /pic02\.jpg$/.test(s._pv.src); })[0];
+		var tpl = document.getElementById("ast-template");
+		if (!sec || !tpl) return;
+		var zoom = sec._pv.a.querySelector(".pv-zoom");
+		zoom.appendChild(tpl.content.cloneNode(true));
+		var scene = zoom.querySelector(".ast-scene");
+		var scoreEl = scene.querySelector(".ast-score");
+		var master = scene.querySelector(".ast-ship-rot");
+		var score = 90, hovering = false, timers = [];
+		// moments in the cycle (fractions) when a bullet first touches an asteroid; each is +10, as in the game
+		var hits = (tpl.getAttribute("data-hits") || "").split(",").map(parseFloat).filter(function (n) { return n > 0; });
+		function bump() { score += 10; scoreEl.textContent = score; }
+		function play() {
+			if (!state.live || state.rm || scene.classList.contains("ast-play")) return;
+			scene.classList.add("ast-play");
+			var t = parseFloat(getComputedStyle(scene).getPropertyValue("--ast-t")) || 5.5;
+			timers.forEach(clearTimeout);
+			timers = hits.map(function (h) { return setTimeout(bump, t * 1000 * h); });
+		}
+		master.addEventListener("animationend", function (e) {
+			if (e.target !== master) return;
+			scene.classList.remove("ast-play");
+			if (hovering) { void scene.offsetWidth; play(); }
+		});
+		// The entry runs straight into one cycle, so the scene plays once on load
+		// without waiting for a hover.
+		scene.querySelector(".ast-hud").addEventListener("animationend", function (e) {
+			if (e.animationName !== "ast-fade") return;
+			scene.classList.add("ast-ready");
+			setTimeout(play, 250);
+		});
+		if (canHover) {
+			sec.addEventListener("mouseenter", function () { hovering = true; play(); });
+			sec.addEventListener("mouseleave", function () { hovering = false; });
+		}
+		sec.addEventListener("focusin", function () { hovering = true; play(); });
+		sec.addEventListener("focusout", function () { hovering = false; });
+		if (!canHover) {
+			new IntersectionObserver(function (en) { if (en[0].isIntersecting) play(); },
+				{ rootMargin: "-35% 0px -35% 0px" }).observe(sec);
+		}
+		ast = { sec: sec, scene: scene, reset: function () { timers.forEach(clearTimeout); score = 90; scoreEl.textContent = score; scene.classList.remove("ast-play", "ast-ready"); } };
+	})();
+	/* ---- /opt:AST ---- */
+
+	var templateIO = new IntersectionObserver(function (entries) {
+		entries.forEach(function (en) {
+			if (en.isIntersecting) { en.target.classList.remove("inactive"); templateIO.unobserve(en.target); }
+		});
+	}, { rootMargin: "-40% 0px -40% 0px" });
+	function armTemplate() {
+		sections.forEach(function (s) { s.classList.add("inactive"); templateIO.observe(s); });
+	}
+
+	/* ---- opt:D/E/H  entry once (JS part) ---- */
+	var entryIO = new IntersectionObserver(function (entries) {
+		entries.forEach(function (en) {
+			if (en.isIntersecting) { en.target.classList.add("pv-in"); entryIO.unobserve(en.target); }
+		});
+	}, { threshold: 0.2 });
+	function armEntry() {
+		sections.forEach(function (s) { s.classList.remove("pv-in"); entryIO.observe(s); });
+	}
+	/* ---- /opt:D/E/H ---- */
+
+	/* ---- opt:G  touch fallback (JS part) ---- */
+	var centerIO = new IntersectionObserver(function (entries) {
+		entries.forEach(function (en) { en.target.classList.toggle("pv-center", en.isIntersecting); });
+	}, { rootMargin: "-35% 0px -35% 0px" });
+	sections.forEach(function (s) { centerIO.observe(s); });
+	/* ---- /opt:G ---- */
+
+	/* ---- opt:F  parallax (JS part) ---- */
+	var ticking = false;
+	function parallax() {
+		ticking = false;
+		var on = state.mode === "f" && !state.rm;
+		var vh = window.innerHeight;
+		var k = SPEED[state.speed].par;
+		sections.forEach(function (s) {
+			if (!s._pv) return;
+			if (!on) { s._pv.par.style.transform = ""; return; }
+			var r = s._pv.a.getBoundingClientRect();
+			if (r.bottom < 0 || r.top > vh) return;
+			var p = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+			if (p > 1) p = 1; else if (p < -1) p = -1;
+			s._pv.par.style.transform = "translate3d(0," + (-p * k * r.height).toFixed(1) + "px,0)";
+		});
+	}
+	function requestParallax() { if (!ticking) { ticking = true; requestAnimationFrame(parallax); } }
+	window.addEventListener("scroll", requestParallax, { passive: true });
+	/* ---- /opt:F ---- */
+
+	// Corner labels: file, size, visible share, enlargement at the effect's peak.
+	function peakZoom() {
+		if (state.rm) return 1;
+		return { b: 1.14, c: 1.06, h: 1.06 }[state.mode] || 1;
+	}
+	function updateLabels() {
+		var dpr = window.devicePixelRatio || 1;
+		var z = peakZoom();
+		sections.forEach(function (s) {
+			var d = s._pv;
+			if (ast && s === ast.sec && state.live) {
+				d.label.innerHTML = "live vector scene (replaces pic02.jpg)<br><span class=\"pv-ok\">sharp at any size</span>";
+				return;
+			}
+			if (!d || !d.nw) return;
+			var pic = d.a.querySelector(".pv-pic");
+			var w = pic.offsetWidth, h = pic.offsetHeight;
+			if (!w || !h) return;
+			var contain = s.classList.contains("spotlight-power-bi");
+			var sc = contain ? Math.min(w / d.nw, h / d.nh) : Math.max(w / d.nw, h / d.nh);
+			var showW = contain ? 1 : Math.min(1, w / (d.nw * sc));
+			var showH = contain ? 1 : Math.min(1, h / (d.nh * sc));
+			var up = sc * dpr * z;
+			var cls = up <= 1.05 ? "pv-ok" : (up <= 1.5 ? "pv-warn" : "pv-bad");
+			d.label.innerHTML = d.file + " &middot; " + d.nw + "x" + d.nh +
+				"<br>shows " + Math.round(showW * 100) + "% x " + Math.round(showH * 100) + "%" +
+				" &middot; <span class=\"" + cls + "\">" + up.toFixed(2) + "x</span>" +
+				(dpr !== 1 ? " @" + dpr + "dpr" : "");
+		});
+	}
+
+	// Keep the sticky bar below the template's top bar (1280px and under).
+	function placeBar() {
+		var sb = document.getElementById("sidebar");
+		var top = 0;
+		if (sb && getComputedStyle(sb).display !== "none") {
+			var r = sb.getBoundingClientRect();
+			if (r.width > r.height) top = Math.max(0, r.bottom);
+		}
+		bar.style.top = top + "px";
+	}
+
+	function replay() {
+		if (ast) ast.reset();
+		body.classList.add("pv-reset");
+		sections.forEach(function (s) { s.classList.remove("pv-in"); });
+		armTemplate();
+		void body.offsetHeight;
+		requestAnimationFrame(function () {
+			body.classList.remove("pv-reset");
+			armEntry();
+		});
+	}
+
+	function apply(rearm) {
+		body.className = body.className.replace(/\bpv-mode-\w\b/g, "").trim();
+		body.classList.add("pv-mode-" + state.mode);
+		body.classList.toggle("pv-imgonly", state.imgonly);
+		body.classList.toggle("pv-nolabels", !state.labels);
+		body.classList.toggle("pv-alt", state.alt);
+		body.classList.toggle("pv-rm", state.rm);
+		body.classList.toggle("pv-live", state.live);
+		var sp = SPEED[state.speed];
+		body.style.setProperty("--pv-kb", sp.kb);
+		body.style.setProperty("--pv-hover", sp.hover);
+		body.style.setProperty("--pv-entry", sp.entry);
+		body.style.setProperty("--ast-t", sp.ast);
+		body.style.setProperty("--ast-e", sp.aste);
+
+		Array.prototype.forEach.call(bar.querySelectorAll("[data-mode]"), function (b) {
+			b.setAttribute("aria-pressed", b.getAttribute("data-mode") === state.mode ? "true" : "false");
+		});
+		document.getElementById("pv-mode-select").value = state.mode;
+		Array.prototype.forEach.call(bar.querySelectorAll("[data-speed]"), function (b) {
+			b.setAttribute("aria-pressed", b.getAttribute("data-speed") === state.speed ? "true" : "false");
+		});
+		Array.prototype.forEach.call(bar.querySelectorAll("[data-toggle]"), function (b) {
+			b.setAttribute("aria-checked", state[b.getAttribute("data-toggle")] ? "true" : "false");
+		});
+
+		var desc = DESC[state.mode] + (state.live ? DESC.live : "");
+		if (!canHover && /^[cgh]$/.test(state.mode)) desc += " This device reports no hover.";
+		document.getElementById("pv-desc").textContent = desc;
+
+		var n = document.getElementById("pv-rm-notice");
+		var sys = !!(sysRM && sysRM.matches);
+		if (sys || state.rm) {
+			n.hidden = false;
+			n.textContent = sys
+				? (state.rm
+					? "Your system asks for reduced motion, so this is the fallback: nothing moves, entries are a short fade. Turn off \"Simulate reduced motion\" to see the full effect."
+					: "Your system asks for reduced motion, but full motion is shown because the simulate toggle is off. Visitors with this setting would get the fallback.")
+				: "Simulating reduced motion: nothing moves, entries become a short fade, the colour swap in G stays.";
+		} else {
+			n.hidden = true;
+		}
+
+		var q = new URLSearchParams();
+		q.set("mode", state.mode);
+		q.set("speed", state.speed);
+		["live", "imgonly", "labels", "alt", "rm"].forEach(function (k) { q.set(k, state[k] ? "1" : "0"); });
+		try { history.replaceState(null, "", "?" + q.toString()); } catch (e) { /* file:// in some browsers */ }
+
+		updateLabels();
+		parallax();
+		if (rearm) replay();
+	}
+
+	bar.addEventListener("click", function (ev) {
+		var b = ev.target.closest("button");
+		if (!b) return;
+		if (b.hasAttribute("data-mode")) { state.mode = b.getAttribute("data-mode"); apply(true); }
+		else if (b.hasAttribute("data-speed")) { state.speed = b.getAttribute("data-speed"); apply(false); }
+		else if (b.hasAttribute("data-toggle")) {
+			var k = b.getAttribute("data-toggle");
+			state[k] = !state[k];
+			apply(k === "rm" || k === "alt" || k === "live");
+		}
+		else if (b.id === "pv-replay") replay();
+		else if (b.id === "pv-collapse") {
+			var c = bar.classList.toggle("is-collapsed");
+			b.textContent = c ? "More" : "Less";
+			b.setAttribute("aria-expanded", c ? "false" : "true");
+		}
+	});
+	document.getElementById("pv-mode-select").addEventListener("change", function (ev) {
+		state.mode = ev.target.value; apply(true);
+	});
+	if (sysRM && sysRM.addEventListener) sysRM.addEventListener("change", function () { state.rm = sysRM.matches; apply(true); });
+	window.addEventListener("resize", function () { placeBar(); updateLabels(); requestParallax(); });
+
+	// On a phone the full bar takes a quarter of the screen, so start collapsed.
+	if (window.matchMedia && window.matchMedia("(max-width: 736px)").matches) {
+		bar.classList.add("is-collapsed");
+		var cb = document.getElementById("pv-collapse");
+		cb.textContent = "More";
+		cb.setAttribute("aria-expanded", "false");
+	}
+	placeBar();
+	armTemplate();
+	armEntry();
+	apply(false);
+	window.__pv = { state: state, apply: apply, replay: replay, updateLabels: updateLabels };
+})();
+</script>
+</body>
+</html>

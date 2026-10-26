@@ -24,7 +24,7 @@ Markdown text version (for search, diffing and reading anywhere). Gathered here 
 The study pack, the AI Assessment Pathway guide, the GDPR enforcement guide, the fine
 calculator explainer and the three current digests are also kept in Simeon's Obsidian vault
 (`Documents\Obsidian Vault`): the Markdown at the top level, the PDFs in `910_Attachments/`
-(since VAULT-02), byte-identical to the files here since 3 October 2026. The three current digests
+(since VAULT-02), byte-identical to the files here (last synced 24 October 2026: the three 23 October digests and the enforcement guide copied in, the superseded digest versions removed from the vault). The three current digests
 here are the vault's versions (cleaner than a PDF conversion, with `title`, `date`,
 `source` and `tags` front matter; checked against the PDF text: complete, differences are
 letter case of chip labels and running heads). The study pack carries the same front
