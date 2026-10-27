@@ -73,6 +73,6 @@ def build():
 if __name__ == "__main__":
     p = build()
     from weasyprint import HTML
-    out = os.environ.get("PDFOUT", "/mnt/user-data/outputs/cookie-compliance-digest-2026-10-23.pdf")
+    out = os.environ.get("PDFOUT", "/mnt/user-data/outputs/cookie-compliance-digest-2026-10-27.pdf")
     HTML(p).write_pdf(out)
     print("pdf", out, os.path.getsize(out), "em dashes:", open(p, encoding="utf-8").read().count(chr(0x2014)))

@@ -53,6 +53,16 @@ PDFs that Chrome renders with nothing selectable. And a regulator press release 
 decision, so a takeaway detail that is right but absent from the linked page is a link
 problem, not a content error.
 
+Later updates are replayable scripts in this folder, each editing all_merged.json in place and
+refusing to run twice, to be run after the three apply scripts above and in date order:
+`update_2026_10_23.py` (SB 690 signed, the Council Digital Omnibus mandate, GPC draft date; 259
+to 260 entries) and `update_2026_10_27.py` (Article 29 Working Party Opinion 04/2012 on Cookie
+Consent Exemption, WP 194; 260 to 261). Both also move the DATE wording in build_cookie_page.py
+and the PDF name in build_cookie_pdf.py. The live page is updated by splicing the rebuilt body
+in (`../digest-update-<date>/splice.py`), because the live head and header are newer than the
+templates here; `md_from_print.py` makes the study-guide Markdown from
+`cookie_digest_print.html`.
+
 To add or update an item: edit all_merged.json (keep the field set: title, jurisdiction, type,
 date, url, status, takeaway, topics, source), then run the two build scripts. Never edit
 cookie_digest.json: build_cookie_page.py overwrites it on every run, so edits made there vanish.

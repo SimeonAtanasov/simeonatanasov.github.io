@@ -1088,6 +1088,22 @@
   "cluster": "eu"
  },
  {
+  "title": "Article 29 Working Party Opinion 04/2012 on Cookie Consent Exemption (WP 194)",
+  "jurisdiction": "EU",
+  "type": "regulator guidance",
+  "date": "7 June 2012",
+  "url": "https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2012/wp194_en.pdf",
+  "status": "in force",
+  "takeaway": "The Working Party reads the two exemptions in Article 5(3) of the ePrivacy Directive: Criterion A, storage or access for the sole purpose of carrying out the transmission of a communication, and Criterion B, storage or access strictly necessary for an information society service the user has explicitly requested, judged from the user's point of view rather than the provider's. Seven cookie types can qualify, most of them for the session only: user input such as a shopping basket, authentication, user-centric security, multimedia player session, load balancing, UI customisation and social plug-in content sharing for logged-in members. Social plug-in tracking, third-party advertising and first-party analytics cookies do not: first-party analytics limited to aggregated statistics with an opt-out and IP anonymisation are called a low privacy risk, but still need consent, and the opinion asked the legislator for a third exemption to cover them, which the Council's October 2026 Digital Omnibus mandate would now write into Article 5(3). Section 2.4 states the rule for a cookie with several purposes: exempt only if every one of its purposes is exempt on its own. Adopted 7 June 2012 as WP 194; it never bound anyone and the EDPB has not revisited it, but it remains the EU-level reading of the exemptions that national regulators' lists of exempt cookies follow. Classify every storage or access operation by purpose, and treat a cookie serving an exempt and a non-exempt purpose as a consent cookie in every configuration that reads it.",
+  "topics": [
+   "strictly-necessary",
+   "analytics-exemption",
+   "consent"
+  ],
+  "source": "primary",
+  "cluster": "eu"
+ },
+ {
   "title": "EDPB Opinion 08/2024 on valid consent in the context of consent or pay models implemented by large online platforms",
   "jurisdiction": "EU",
   "type": "regulator guidance",

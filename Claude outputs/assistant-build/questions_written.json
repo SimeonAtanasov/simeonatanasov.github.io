@@ -2638,1206 +2638,1213 @@
   "Do server logs with IP addresses need a legal basis and retention period?"
  ],
  "ck-d031": [
+  "What does the Article 29 Working Party say about a cookie used for several purposes?",
+  "Which cookies are exempt from consent under WP29 Opinion 04/2012?",
+  "Are first-party analytics cookies exempt from consent under the ePrivacy Directive?",
+  "What are Criterion A and Criterion B for the cookie consent exemption?",
+  "Can the same cookie be strictly necessary for one purpose and need consent for another?"
+ ],
+ "ck-d032": [
   "What does Article 5(3) of the ePrivacy Directive require for cookies?",
   "What is the soft opt-in under Article 13(2) of the ePrivacy Directive?",
   "Which cookies are exempt from consent under the ePrivacy Directive?",
   "Does the ePrivacy Directive apply to sites based outside the EU?"
  ],
- "ck-d032": [
+ "ck-d033": [
   "What did the EDPB decide about the noyb banner complaint against the Belgian broadcaster?",
   "Can a DPA dismiss an NGO-backed cookie banner complaint as abuse of rights?",
   "What is an Article 65 EDPB binding decision on a cookie banner complaint?"
  ],
- "ck-d033": [
+ "ck-d034": [
   "Must accept and reject buttons have equal prominence in Austria?",
   "What did the Austrian court decide about the public broadcaster banner?",
   "Is a coloured Accept button deceptive design according to Austrian courts?"
  ],
- "ck-d034": [
+ "ck-d035": [
   "Do tracking pixels in emails need consent under the CNIL recommendation?",
   "When are email open-tracking pixels exempt from consent in France?",
   "How must senders let recipients withdraw consent to email pixels?",
   "What is CNIL Deliberation 2026-042?"
  ],
- "ck-d035": [
+ "ck-d036": [
   "Why did the CNIL fine a retailer 3.5 million euros over loyalty member data?",
   "Can I upload customer emails to a social network for ads without a legal basis?",
   "Do customer-matching uploads need a legal basis separate from the banner?"
  ],
- "ck-d036": [
+ "ck-d037": [
   "What was the CNIL 1.5 million euro cookie fine of November 2025?",
   "Can cookies be read after consent has been withdrawn?",
   "Does the CNIL fine subsidiaries and mid-sized companies for cookies?"
  ],
- "ck-d037": [
+ "ck-d038": [
   "What did the Dutch AP do about misleading cookie banners in 2025?",
   "Does a Dutch AP warning come before a formal investigation?",
   "Do I need a cookie banner if my site uses no tracking at all?"
  ],
- "ck-d038": [
+ "ck-d039": [
   "Which was the first consent management service recognised under the EinwV?",
   "What must a German site do when it integrates a recognised consent service?",
   "What must a German site tell users who have no stored consent settings?"
  ],
- "ck-d039": [
+ "ck-d040": [
   "What was the CNIL 325 million euro cookie fine of September 2025?",
   "Do adverts shown between emails in a mailbox need prior consent in France?",
   "Do cookies set during account creation need valid consent?"
  ],
- "ck-d040": [
+ "ck-d041": [
   "What was the CNIL 150 million euro cookie fine of September 2025?",
   "Must withdrawing cookie consent stop reading existing cookies too?",
   "Does a banner have to name the advertising purpose and third parties?"
  ],
- "ck-d041": [
+ "ck-d042": [
   "Is pay or okay valid in Austria if consent is not granular?",
   "Does consent or pay require separate consent per purpose?",
   "Is the Austrian pay or okay ruling under appeal?"
  ],
- "ck-d042": [
+ "ck-d043": [
   "What is the Danish guidance on cookies and similar technologies?",
   "Does the Danish cookie order require consent before placing cookies?",
   "How should Danish sites treat statistics cookies?"
  ],
- "ck-d043": [
+ "ck-d044": [
   "What did the Brussels Market Court decide about the TCF?",
   "Is the TCF operator a controller for OpenRTB processing?",
   "Does the TCF alone make publishers GDPR compliant?",
   "Was the 250,000 euro fine over the TCF upheld?"
  ],
- "ck-d044": [
+ "ck-d045": [
   "What did the Swedish IMY decide about cookie banner withdrawal?",
   "Which Swedish authority supervises cookie rules, IMY or PTS?",
   "Can I rely on legitimate interest for cookie data without a balancing test?"
  ],
- "ck-d045": [
+ "ck-d046": [
   "What does the CNIL recommendation on mobile applications cover?",
   "Who is responsible for consent in a mobile app SDK under CNIL rules?",
   "When was the CNIL mobile applications recommendation amended?"
  ],
- "ck-d046": [
+ "ck-d047": [
   "What did the Dutch DPA find in its five cookie banner investigations?",
   "How many Dutch websites will the AP check systematically?",
   "Will the Dutch AP warn before fining a cookie banner?"
  ],
- "ck-d047": [
+ "ck-d048": [
   "What is the German Einwilligungsverwaltungsverordnung?",
   "Is integrating a recognised consent management service mandatory in Germany?",
   "Who is responsible for GDPR consent validity under the EinwV?"
  ],
- "ck-d048": [
+ "ck-d049": [
   "Is a reject all button mandatory on the first layer in Germany?",
   "What did the Hannover administrative court rule on cookie banners?",
   "Can repeating a cookie banner to pressure users invalidate consent?"
  ],
- "ck-d049": [
+ "ck-d050": [
   "What is the position of the Polish UODO on cookie consent?",
   "Are cookie walls compatible with the GDPR according to the Polish DPA?",
   "What does UODO bulletin 03/2025 say about pre-ticked boxes?"
  ],
- "ck-d050": [
+ "ck-d051": [
   "What does Article 22.2 of the Spanish LSSI say about cookies?",
   "Can browser settings be used to give cookie consent in Spain?",
   "How serious is a cookie infringement under the LSSI?",
   "Does the LSSI apply to non-EU providers targeting Spain?"
  ],
- "ck-d051": [
+ "ck-d052": [
   "What did the CNIL say in its December 2024 formal notices on cookie banners?",
   "Can a smaller or paler refuse button breach cookie rules in France?",
   "How long did publishers have to fix banners after CNIL formal notices?"
  ],
- "ck-d052": [
+ "ck-d053": [
   "What did the Garante find after the Guardia di Finanza cookie inspections?",
   "Does an e-commerce site need a cookie policy listing cookie categories in Italy?",
   "Is a banner with OK and No grazie buttons enough without a cookie policy?"
  ],
- "ck-d053": [
+ "ck-d054": [
   "What does section 25 TDDDG say about cookies?",
   "Was the TTDSG renamed the TDDDG?",
   "Does section 25 TDDDG apply when no personal data is involved?",
   "Which terminal storage is exempt under section 25(2) TDDDG?"
  ],
- "ck-d054": [
+ "ck-d055": [
   "What does the AEPD cookie guide say about reject buttons?",
   "How often must cookie consent be renewed in Spain?",
   "Are cookie walls lawful in Spain?",
   "Does the AEPD guide apply EDPB Opinion 08/2024 on pay or consent?"
  ],
- "ck-d055": [
+ "ck-d056": [
   "What did the BayLDA find in its automated cookie banner checks?",
   "Do German authorities test for a first-layer reject option automatically?",
   "How many Bavarian websites and apps did the BayLDA check?"
  ],
- "ck-d056": [
+ "ck-d057": [
   "Does an X button meaning Accept and close count as a reject option?",
   "What did OLG Koeln decide in 6 U 80/23 on cookie banners?",
   "Can competitors or associations seek injunctions over asymmetric cookie banners?"
  ],
- "ck-d057": [
+ "ck-d058": [
   "Why was a 10 million euro CNIL fine issued for ignoring cookie refusals?",
   "Can I tie withdrawal of cookie consent to loss of email access?",
   "Must cookie refusals be honoured technically and not just displayed?"
  ],
- "ck-d058": [
+ "ck-d059": [
   "What did the AEPD say about the EDPB deceptive design guidelines in 2023?",
   "When did Spanish sites need to comply with the updated AEPD cookie guide?",
   "Can access be conditioned on cookie consent in Spain if another route exists?"
  ],
- "ck-d059": [
+ "ck-d060": [
   "Why did the CNIL fine an adtech vendor 40 million euros for retargeting?",
   "Must an adtech vendor audit partner consent rather than rely on contracts?",
   "Are pseudonymous identifiers tied to browsing data personal data in France?",
   "Does stopping personalised ads satisfy an erasure request?"
  ],
- "ck-d060": [
+ "ck-d061": [
   "When are Pur-Abo consent or pay models accepted in Germany?",
   "What does the DSK decision say about pay or okay models?",
   "Does consent in a Pur-Abo model need to be granular per purpose?"
  ],
- "ck-d061": [
+ "ck-d062": [
   "What are the four Datatilsynet criteria for lawful cookie walls?",
   "Do statistics cookies need separate consent behind a cookie wall in Denmark?",
   "Must the paid alternative to a cookie wall be reasonably priced in Denmark?"
  ],
- "ck-d062": [
+ "ck-d063": [
   "Why was an online shop fined 10,000 euros by the AEPD for cookies?",
   "Can a small shop be fined for _fbp and _gcl_au cookies set before consent?",
   "Is observing third-party cookies before choice enough for a Spanish sanction?"
  ],
- "ck-d063": [
+ "ck-d064": [
   "Why did the CNIL fine a video app 5 million euros over its cookie banner?",
   "Is it allowed to accept cookies in one click but refuse in several?",
   "Do sites with young audiences get leniency on banner symmetry in France?"
  ],
- "ck-d064": [
+ "ck-d065": [
   "Why did the CNIL fine a search engine 60 million euros over cookies?",
   "Does a cookie used for both fraud detection and advertising need consent?",
   "Is a first-layer reject button required on a search engine in France?"
  ],
- "ck-d065": [
+ "ck-d066": [
   "What does the DSK OH Telemedien guidance say about section 25 TTDSG?",
   "Is reach measurement strictly necessary under the German DSK guidance?",
   "Can legitimate interest replace consent under section 25 TDDDG?"
  ],
- "ck-d066": [
+ "ck-d067": [
   "Why did the Belgian DPA fine a media group 50,000 euros over cookies?",
   "What did the Belgian DPA find in its cookie sweep of 20 press sites?",
   "Can statistics cookies be treated as exempt from consent in Belgium?"
  ],
- "ck-d067": [
+ "ck-d068": [
   "What are the CNIL evaluation criteria for cookie walls and paywalls?",
   "How should a publisher justify the price of a paid cookie wall alternative in France?",
   "Can the paid path of a cookie wall carry advertising trackers in France?"
  ],
- "ck-d068": [
+ "ck-d069": [
   "What did the Belgian DPA decide about the TCF in decision 21/2022?",
   "How much was the TCF operator fined by the Belgian DPA?",
   "Was Belgian DPA decision 21/2022 annulled?"
  ],
- "ck-d069": [
+ "ck-d070": [
   "Was the CNIL competent to fine without going through the Irish lead authority?",
   "Does the one-stop-shop apply to ePrivacy cookie enforcement?",
   "Why was a 100 million euro cookie fine held proportionate?"
  ],
- "ck-d070": [
+ "ck-d071": [
   "Is loading Google Fonts from Google servers a GDPR infringement?",
   "What damages did the Munich court award for font loading and IP transfer?",
   "Does a cookie banner cover the IP transfer from embedded fonts or maps?"
  ],
- "ck-d071": [
+ "ck-d072": [
   "What did the Austrian DSB decide on Google Analytics and US transfers?",
   "Why were SCCs not enough for Google Analytics transfers to the US?",
   "Does the EU-US Data Privacy Framework change the Google Analytics analysis?"
  ],
- "ck-d072": [
+ "ck-d073": [
   "Do Czech websites need opt-in consent for cookies since 2022?",
   "Is staying on the site valid cookie consent in the Czech Republic?",
   "Which cookies are exempt from consent under the Czech Electronic Communications Act?"
  ],
- "ck-d073": [
+ "ck-d074": [
   "What was the CNIL 150 million euro cookie fine of December 2021?",
   "Must refusing cookies be as simple as accepting them?",
   "Do I need a reject all button on the first cookie layer in France?",
   "What happened to the CNIL injunction once a reject all button was added?"
  ],
- "ck-d074": [
+ "ck-d075": [
   "What did CNIL deliberation SAN-2021-024 decide about the refusal path?",
   "Can a cookie banner make refusing harder than accepting in France?",
   "What penalty applied if a refusal mechanism was not as simple as acceptance?"
  ],
- "ck-d075": [
+ "ck-d076": [
   "What are the CNPD cookie guidelines in Luxembourg?",
   "Which cookies need no consent under Luxembourg guidance?",
   "Do non-essential cookies need prior informed consent in Luxembourg?"
  ],
- "ck-d076": [
+ "ck-d077": [
   "Who is the competent authority for cookie consent in Finland?",
   "Can cookie consent in Finland be given through browser settings?",
   "Is legitimate interest a valid basis for storing cookies in Finland?",
   "Which cookies are exempt from consent under the Traficom guidance?"
  ],
- "ck-d077": [
+ "ck-d078": [
   "Is scrolling valid consent under the Italian Garante cookie guidelines?",
   "Are cookie walls allowed in Italy?",
   "How often can a cookie banner be shown again in Italy?",
   "What happens when a user closes the banner with the X in Italy?"
  ],
- "ck-d078": [
+ "ck-d079": [
   "What did the AEPD fine Iberia for in PS/00032/2020?",
   "Can a cookie banner without a reject button be fined in Spain?",
   "What is the maximum fine for a leve infringement of article 22.2 LSSI?"
  ],
- "ck-d079": [
+ "ck-d080": [
   "What was the CNIL SAN-2020-012 cookie fine of 100 million euros for?",
   "Can the CNIL act directly against non-French controllers on cookies?",
   "Do cookie rules fall under the GDPR one-stop shop?",
   "Did the Conseil d'Etat uphold CNIL decision SAN-2020-012?"
  ],
- "ck-d080": [
+ "ck-d081": [
   "What was the CNIL SAN-2020-013 fine of 35 million euros for?",
   "Do landing pages reached from ad links need a cookie banner?",
   "Is a banner text such as offer and improve our services enough information?"
  ],
- "ck-d081": [
+ "ck-d082": [
   "What do the CNIL cookie guidelines of 2020 require for consent?",
   "Is continued browsing consent under article 82 of the French Data Protection Act?",
   "Do I need to keep proof of cookie consent in France?",
   "Which trackers are exempt from consent under CNIL deliberation 2020-091?"
  ],
- "ck-d082": [
+ "ck-d083": [
   "What should the first layer of a cookie banner contain according to the CNIL?",
   "How often can a French site re-ask for cookie consent?",
   "Must a refusal be remembered on a cookie banner in France?"
  ],
- "ck-d083": [
+ "ck-d084": [
   "Are cookie walls banned in France?",
   "Why did the Conseil d'Etat annul the CNIL ban on cookie walls?",
   "What did Conseil d'Etat decision 434684 say about cookie walls?",
   "When can I operate a cookie wall in France?"
  ],
- "ck-d084": [
+ "ck-d085": [
   "Is a pre-ticked checkbox valid cookie consent in Germany?",
   "What did the BGH decide in I ZR 7/16?",
   "When was cookie consent codified in section 25 TTDSG?",
   "What ended the German opt-out reading for advertising cookies?"
  ],
- "ck-d085": [
+ "ck-d086": [
   "Are pre-ticked boxes valid cookie consent in Ireland?",
   "How often should cookie consent be re-affirmed in Ireland?",
   "Do analytics cookies need consent under the Irish DPC guidance?",
   "Which cookies are exempt from consent under Regulation 5(3) in Ireland?"
  ],
- "ck-d086": [
+ "ck-d087": [
   "What did the Irish DPC cookie sweep find on websites?",
   "Which sectors did the DPC survey for cookie compliance?",
   "Is the DPC cookie report still the operative standard in Ireland?"
  ],
- "ck-d087": [
+ "ck-d088": [
   "Does refusing cookies need the same number of clicks as accepting in Greece?",
   "Does third-party analytics need prior consent under Greek rules?",
   "How long must a cookie refusal be stored compared to an acceptance in Greece?",
   "What do the Hellenic DPA Recommendations 1/2020 say about trackers?"
  ],
- "ck-d088": [
+ "ck-d089": [
   "Who supervises the Danish cookie order?",
   "Does the Danish cookie order apply if no personal data is processed?",
   "Which storage is exempt from consent under the Danish cookie order?"
  ],
- "ck-d089": [
+ "ck-d090": [
   "What happens to the Information Commissioner on 30 September 2026?",
   "Do privacy notices need updating for the Information Commission?",
   "Does the move to the Information Commission change PECR obligations?"
  ],
- "ck-d090": [
+ "ck-d091": [
   "Could contextual advertising run without consent under PECR in future?",
   "Is the ICO advice on low-risk online advertising already law?",
   "Do I still need consent for behavioural advertising in the UK?"
  ],
- "ck-d091": [
+ "ck-d092": [
   "What does the final ICO guidance on storage and access technologies cover?",
   "How does the statistical exception work under PECR?",
   "Can I rely on legitimate interests for non-exempt cookies in the UK?",
   "Does the ICO guidance cover tracking pixels and device fingerprinting?"
  ],
- "ck-d092": [
+ "ck-d093": [
   "What does PECR regulation 6 prohibit?",
   "Does PECR regulation 6 cover fingerprinting and pixels?",
   "Which exceptions appear in Schedule A1 to PECR?",
   "Does PECR regulation 6 bind only controllers?"
  ],
- "ck-d093": [
+ "ck-d094": [
   "Which paragraph of Schedule A1 covers statistical analytics cookies?",
   "Can browser settings signify consent under Schedule A1 to PECR?",
   "What conditions apply to the PECR statistical and appearance exceptions?",
   "Can statistical data be disclosed to third parties under the PECR exception?"
  ],
- "ck-d094": [
+ "ck-d095": [
   "What is the maximum fine for breaching PECR regulation 6 now?",
   "Does the UK GDPR fine ceiling apply to cookie breaches?",
   "What enforcement powers apply to PECR cookie breaches since February 2026?"
  ],
- "ck-d095": [
+ "ck-d096": [
   "When did the PECR changes in the Data (Use and Access) Act come into force?",
   "From what date can the statistical and appearance exceptions be relied on?",
   "What does SI 2026/82 bring into force?"
  ],
- "ck-d096": [
+ "ck-d097": [
   "What counts as valid consent under PECR in the UK?",
   "Does withdrawing consent have to be as easy as giving it under UK GDPR?",
   "What does Article 7 UK GDPR require on consent records?"
  ],
- "ck-d097": [
+ "ck-d098": [
   "How many of the top 1,000 UK websites passed the ICO cookie checks?",
   "What three checks did the ICO use in its cookie compliance campaign?",
   "Will the ICO re-test websites for cookie compliance?"
  ],
- "ck-d098": [
+ "ck-d099": [
   "Why did the CMA end the Privacy Sandbox commitments in October 2025?",
   "Should I plan for third-party cookies to persist for UK users?",
   "Are Privacy Sandbox APIs a mandatory replacement for third-party cookies?"
  ],
- "ck-d099": [
+ "ck-d100": [
   "What did the ICO consult on for the statistical and appearance exceptions?",
   "When did the ICO consultation on the new storage and access chapter close?",
   "Should I cite the draft ICO chapter or the final guidance?"
  ],
- "ck-d100": [
+ "ck-d101": [
   "What was the ICO draft guidance on storage and access technologies?",
   "Are pixels and fingerprinting in scope of the ICO draft guidance?",
   "Is the strictly necessary exception judged from the user's perspective in the UK?"
  ],
- "ck-d101": [
+ "ck-d102": [
   "Is consent or pay allowed under UK data protection law?",
   "What four factors does the ICO use to assess consent or pay?",
   "Do I need a DPIA before launching a consent or pay model?",
   "What age rules apply to consent or pay for children in the UK?"
  ],
- "ck-d102": [
+ "ck-d103": [
   "What is the ICO 2025 online tracking strategy?",
   "How many top UK websites had the ICO assessed before its 2025 strategy?",
   "What should I audit to meet ICO expectations on cookie banners?"
  ],
- "ck-d103": [
+ "ck-d104": [
   "Why did the ICO reprimand an operator over advertising cookies before consent?",
   "Can ad tech tags fire before a visitor accepts or rejects cookies in the UK?",
   "How should I verify tag sequencing on first page load?"
  ],
- "ck-d104": [
+ "ck-d105": [
   "What did the ICO and CMA say about harmful design in cookie choices?",
   "Can lacking an equal reject all button break UK data protection law?",
   "Which design practices does the ICO and CMA joint paper call harmful?"
  ],
- "ck-d105": [
+ "ck-d106": [
   "What commitments did the CMA accept on the Privacy Sandbox in February 2022?",
   "When did the CMA release the Privacy Sandbox commitments?",
   "Was third-party cookie removal dropped after the CMA commitments?"
  ],
- "ck-d106": [
+ "ck-d107": [
   "What did the 2019 ICO cookies guidance say about analytics cookies?",
   "Is the 2019 ICO cookie guidance still current?",
   "Are cookie walls acceptable under the 2019 ICO guidance?"
  ],
- "ck-d107": [
+ "ck-d108": [
   "What is the noyb complaint against a pay or okay model in Norway?",
   "What consent rate does noyb allege for the pay or okay model?",
   "Has Datatilsynet decided on pay or okay for news sites yet?"
  ],
- "ck-d108": [
+ "ck-d109": [
   "What is the FDPIC factsheet on cookies for internet users?",
   "Does the FDPIC cookie factsheet create obligations for operators?",
   "How should I test the refusal path on Swiss-facing sites?"
  ],
- "ck-d109": [
+ "ck-d110": [
   "When is express consent required for cookies in Switzerland?",
   "Do non-essential cookies need consent or an opt-out in Switzerland?",
   "What fine applies to cookie breaches under Article 45c TCA?",
   "Are cookie paywalls allowed in Switzerland?"
  ],
- "ck-d110": [
+ "ck-d111": [
   "What are the ten Datatilsynet rules for a valid cookie banner?",
   "Can refusing cookies take extra clicks in Norway?",
   "Can other GDPR legal bases replace consent for cookie data in Norway?"
  ],
- "ck-d111": [
+ "ck-d112": [
   "What does section 3-15 of the Norwegian ekomloven require for cookies?",
   "Do browser settings count as cookie consent in Norway?",
   "Who supervises cookies in Norway, Nkom or Datatilsynet?",
   "When did the new Norwegian Electronic Communications Act take effect?"
  ],
- "ck-d112": [
+ "ck-d113": [
   "Which Norwegian provision replaced section 2-7b on browser default settings?",
   "Does the Norwegian cookie rule apply to foreign website operators?",
   "How should I change my banner for Norwegian traffic after 1 January 2025?"
  ],
- "ck-d113": [
+ "ck-d114": [
   "Does Datatilsynet accept browser settings as cookie consent?",
   "Do both ekomloven and the GDPR apply to cookies in Norway?",
   "Is the Datatilsynet cookie page up to date on section 3-15?"
  ],
- "ck-d114": [
+ "ck-d115": [
   "Which cookies need explicit consent under the KVKK cookie guideline?",
   "Can first party analytics cookies be used without consent in Turkey?",
   "What should a cookie banner in Turkey include?",
   "Do cookie-based transfers abroad fall under Article 9 of Law 6698?"
  ],
- "ck-d115": [
+ "ck-d116": [
   "When did the revised Swiss FADP enter into force?",
   "When is express consent needed under the Swiss FADP?",
   "What is the maximum criminal fine under Article 60 of the Swiss FADP?",
   "Does tracking need consent under the Swiss FADP?"
  ],
- "ck-d116": [
+ "ck-d117": [
   "What was Turkish Board decision 2020/173 about?",
   "What fine did the Turkish Board impose for cookies without explicit consent?",
   "Is cookie consent in Turkey an opt-in regime?"
  ],
- "ck-d117": [
+ "ck-d118": [
   "What does Article 45c of the Swiss Telecommunications Act require for cookies?",
   "Is cookie refusal a mandatory opt-out control in Switzerland?",
   "What is the fine under Article 53 TCA for cookie breaches?"
  ],
- "ck-d118": [
+ "ck-d119": [
   "What does California SB 690 change for pen register claims?",
   "When does SB 690 take effect?",
   "Does SB 690 affect wiretap claims under CIPA section 631?",
   "Has California SB 690 been signed into law?"
  ],
- "ck-d119": [
+ "ck-d120": [
   "Does collecting an IP address alone state a pen register claim under CIPA?",
   "Can section 638.51 apply to internet communications?",
   "Is the Court of Appeal opinion on CIPA section 638.51 final?"
  ],
- "ck-d120": [
+ "ck-d121": [
   "What does the California Delete Act require data brokers to do?",
   "How often must data brokers access the deletion mechanism?",
   "What should I do with an unverifiable deletion request under the Delete Act?"
  ],
- "ck-d121": [
+ "ck-d122": [
   "What did the Ninth Circuit decide on the California Age-Appropriate Design Code?",
   "Was the dark patterns prohibition in AB 2273 blocked by the Ninth Circuit?",
   "Does AB 2273 apply to services likely to be accessed by children?"
  ],
- "ck-d122": [
+ "ck-d123": [
   "Can a business require email verification before processing a CCPA opt-out?",
   "What did the CPPA say about friction in the opt-out process?",
   "How much was the CPPA penalty for requiring verification of opt-outs?"
  ],
- "ck-d123": [
+ "ck-d124": [
   "Can a site force users to accept tracking before they use it under the CCPA?",
   "Can I point users to industry opt-out pages instead of my own CCPA opt-out?",
   "What was the CPPA fine over forced tracking and industry opt-out pages?"
  ],
- "ck-d124": [
+ "ck-d125": [
   "Must a CCPA opt-out apply across all linked devices and services?",
   "How much was the largest CCPA settlement over opt-outs and GPC?",
   "Does a Global Privacy Control signal need to apply to a logged-in account?",
   "Do connected TV apps need an in-app opt-out under the CCPA?"
  ],
- "ck-d125": [
+ "ck-d126": [
   "What fines did the CPPA impose for failing to register as a data broker?",
   "Who must register as a data broker under the Delete Act?",
   "Can an audience or identity partner count as a data broker?"
  ],
- "ck-d126": [
+ "ck-d127": [
   "What changed in the CCPA regulations effective 1 January 2026?",
   "Must a banner display opt-out preference signal status under section 7025(c)(6)?",
   "When are CCPA risk assessments due to the agency?",
   "When do ADMT obligations start under the CCPA regulations?"
  ],
- "ck-d127": [
+ "ck-d128": [
   "What is the California DROP platform for data broker deletion?",
   "When do data brokers have to start processing DROP requests?",
   "What is the fine for failing to process a DROP request?",
   "How often must data brokers retrieve DROP deletion requests?"
  ],
- "ck-d128": [
+ "ck-d129": [
   "Does CIPA section 631 apply to session replay and chat tools?",
   "Can later consent cure a CIPA wiretapping claim?",
   "What is a pen register claim under CIPA section 638.51?",
   "Who can sue under section 637.2 of the California Penal Code?"
  ],
- "ck-d129": [
+ "ck-d130": [
   "Do mobile games need an in-app opt-out under the CCPA?",
   "Is opt-in required to sell data of users aged 13 to 15 in California?",
   "How much was the CCPA settlement over a mobile games opt-out failure?"
  ],
- "ck-d130": [
+ "ck-d131": [
   "What does California AB 566 require of browsers?",
   "When does the California Opt Me Out Act become operative?",
   "Does AB 566 apply to website operators?"
  ],
- "ck-d131": [
+ "ck-d132": [
   "Must a Do Not Sell webform stop tracking tags as well as cookies?",
   "What penalties did the CPPA impose over ignored opt-out preference signals?",
   "Do job applicants need a CCPA notice?"
  ],
- "ck-d132": [
+ "ck-d133": [
   "Does CIPA section 631 apply to third-party chat software on a website?",
   "Does a vendor need to actually read messages for a CIPA claim to succeed?",
   "Does the CIPA reference to telephone wires cover internet communications?"
  ],
- "ck-d133": [
+ "ck-d134": [
   "Can article titles that reveal a diagnosis be sent to advertisers?",
   "What was the first CCPA purpose limitation enforcement about?",
   "What happens if a consent banner does not actually disable tracking cookies?"
  ],
- "ck-d134": [
+ "ck-d135": [
   "Is a business responsible for its consent management vendor's failures under the CCPA?",
   "Why did a misconfigured privacy portal lead to a CPPA penalty of $345,178?",
   "How often should I test banner and tag suppression?"
  ],
- "ck-d135": [
+ "ck-d136": [
   "What was the first CPPA enforcement order about?",
   "Does the CCPA require Reject All to be as prominent as Accept All?",
   "Can I require identity verification before honouring an opt-out?",
   "What does regulation section 7004 say about symmetry in choice?"
  ],
- "ck-d136": [
+ "ck-d137": [
   "What link must a business show on its homepage under the CCPA?",
   "Can I omit the Do Not Sell or Share link if I honour opt-out signals?",
   "What are the CCPA fines per violation?",
   "What age requires opt-in consent before selling data under the CCPA?"
  ],
- "ck-d137": [
+ "ck-d138": [
   "What does section 7004 of the CCPA regulations say about dark patterns?",
   "Which CCPA regulation sections govern the Do Not Sell or Share link?",
   "Are the 2023 CCPA regulations still current?"
  ],
- "ck-d138": [
+ "ck-d139": [
   "Must a business process opt-out preference signals under CCPA section 7025?",
   "When can a business drop the Do Not Sell or Share link?",
   "Does a CCPA opt-out signal apply to pseudonymous profiles?",
   "Is displaying opt-out signal status mandatory under section 7025(c)(6)?"
  ],
- "ck-d139": [
+ "ck-d140": [
   "Is allowing third-party tracking software on a site a sale under the CCPA?",
   "What was the first public CCPA settlement about?",
   "Must Global Privacy Control be treated as an opt-out from the first page load?"
  ],
- "ck-d140": [
+ "ck-d141": [
   "Does consent given after session replay starts defeat a CIPA claim?",
   "Does CIPA section 631(a) require the consent of all parties?",
   "When should session replay scripts load relative to consent?"
  ],
- "ck-d141": [
+ "ck-d142": [
   "How does Section 5 of the FTC Act apply to cookie disclosures?",
   "Does the FTC need a state privacy law to act on tracking pixels?",
   "Who is exempt from Section 5 of the FTC Act?"
  ],
- "ck-d142": [
+ "ck-d143": [
   "Can a data broker sell sensitive location data without consent in the US?",
   "What did the FTC order on sale of sensitive location data require?",
   "Is precise location collected through SDKs sensitive data?"
  ],
- "ck-d143": [
+ "ck-d144": [
   "Can I collect personal information to verify age under COPPA?",
   "What conditions apply under the FTC policy statement on age verification?",
   "How long does the FTC COPPA age verification statement remain in effect?"
  ],
- "ck-d144": [
+ "ck-d145": [
   "Who counts as a consumer under the Video Privacy Protection Act?",
   "Is the Supreme Court reviewing the VPPA consumer definition?",
   "Can I send video titles with user identifiers to advertising platforms?"
  ],
- "ck-d145": [
+ "ck-d146": [
   "Do session replay claims have Article III standing in the Ninth Circuit?",
   "Is recording mouse movements and clicks a harm for standing purposes?",
   "Which data should I mask in session replay tools?"
  ],
- "ck-d146": [
+ "ck-d147": [
   "Is a tracking pixel sending a social ID and video title PII under the VPPA?",
   "What is the ordinary person standard under the Video Privacy Protection Act?",
   "Is there a circuit split on what counts as PII under the VPPA?"
  ],
- "ck-d147": [
+ "ck-d148": [
   "What changed in the 2025 COPPA rule amendments?",
   "Do I need separate parental consent for targeted advertising to children?",
   "When is the compliance date for the amended COPPA rule?",
   "Does the amended COPPA rule require age screening on mixed audience sites?"
  ],
- "ck-d148": [
+ "ck-d149": [
   "Do tracking technologies on HIPAA covered entity websites disclose PHI?",
   "Is information entered on an unauthenticated appointment scheduler PHI?",
   "What part of the HHS online tracking bulletin was vacated?"
  ],
- "ck-d149": [
+ "ck-d150": [
   "What changed in the FTC Health Breach Notification Rule in 2024?",
   "Is sharing health data with an advertising pixel a notifiable breach?",
   "When must the FTC be notified of a health data breach?"
  ],
- "ck-d150": [
+ "ck-d151": [
   "Why did the FTC and HHS warn hospitals about tracking technologies?",
   "Which tags should I inventory on health appointment pages?",
   "Which laws did the FTC and HHS cite for tracking pixels on health sites?"
  ],
- "ck-d151": [
+ "ck-d152": [
   "Can a fertility app share health data through advertising SDKs?",
   "What penalty did the FTC impose over a fertility app sharing health data?",
   "Should I audit mobile SDKs as I audit web pixels?"
  ],
- "ck-d152": [
+ "ck-d153": [
   "Can an online counselling platform share intake answers with advertisers?",
   "What did the FTC order require on sharing health data for advertising?",
   "How much did the FTC consent order require in consumer refunds?"
  ],
- "ck-d153": [
+ "ck-d154": [
   "What was the first FTC Health Breach Notification Rule action about?",
   "Is a pixel disclosure of prescription data a reportable breach?",
   "How much was the civil penalty in the first Health Breach Notification Rule case?"
  ],
- "ck-d154": [
+ "ck-d155": [
   "What four categories of dark patterns does the FTC staff report identify?",
   "Can the FTC dark patterns report serve as a banner design checklist?",
   "Does closing a pop-up count as consent under FTC guidance?"
  ],
- "ck-d155": [
+ "ck-d156": [
   "What changed in the Connecticut Data Privacy Act from 1 July 2026?",
   "What is the new applicability threshold under Connecticut SB 1295?",
   "Must Connecticut controllers honour opt-out preference signals?",
   "Can I target ads to teenagers aged 13 to 17 in Connecticut?"
  ],
- "ck-d156": [
+ "ck-d157": [
   "When does the Indiana Consumer Data Protection Act take effect?",
   "Does Indiana require honouring a universal opt-out signal?",
   "What are the cure period and penalties under the Indiana privacy law?",
   "Which businesses are covered by the Indiana Act?"
  ],
- "ck-d157": [
+ "ck-d158": [
   "What rights does the Kentucky Consumer Data Protection Act give consumers?",
   "Does Kentucky require universal opt-out signal support?",
   "What are the applicability thresholds under the Kentucky privacy law?",
   "Who enforces the Kentucky Consumer Data Protection Act?"
  ],
- "ck-d158": [
+ "ck-d159": [
   "Is there a cure period under the Rhode Island privacy law?",
   "Does Rhode Island require a universal opt-out mechanism?",
   "How is an opt-out exercised under Rhode Island chapter 6-48.1?",
   "Can consumers sue under the Rhode Island privacy act?"
  ],
- "ck-d159": [
+ "ck-d160": [
   "Must Maryland controllers honour opt-out preference signals?",
   "Can I sell sensitive data in Maryland?",
   "Can I show targeted ads to teenagers aged 13 to 17 in Maryland?",
   "When did the Maryland Online Data Privacy Act take effect?"
  ],
- "ck-d160": [
+ "ck-d161": [
   "What is the joint investigative sweep on Global Privacy Control?",
   "Which states announced the Global Privacy Control sweep?",
   "How can I check that GPC works across all subdomains?"
  ],
- "ck-d161": [
+ "ck-d162": [
   "When must Minnesota controllers honour opt-out preference signals?",
   "What is the cure period under the Minnesota Consumer Data Privacy Act?",
   "What thresholds apply under the Minnesota data privacy law?",
   "Does Minnesota give a right to question profiling results?"
  ],
- "ck-d162": [
+ "ck-d163": [
   "Does the Tennessee Information Protection Act require honouring universal opt-out signals?",
   "What is the NIST Privacy Framework affirmative defence in Tennessee?",
   "Which businesses are covered by the Tennessee privacy law?",
   "What penalties apply under the Tennessee Information Protection Act?"
  ],
- "ck-d163": [
+ "ck-d164": [
   "Do I have to honour Global Privacy Control for New Jersey visitors?",
   "When did the New Jersey Data Privacy Act universal opt-out duty start?",
   "Is there a cure period under the New Jersey Data Privacy Act?",
   "What are the applicability thresholds under the New Jersey privacy law?"
  ],
- "ck-d164": [
+ "ck-d165": [
   "When must Delaware controllers accept opt-out preference signals?",
   "What are the applicability thresholds in the Delaware Personal Data Privacy Act?",
   "Do the Delaware privacy thresholds change in 2027?"
  ],
- "ck-d165": [
+ "ck-d166": [
   "Do I need to recognise Global Privacy Control in New Hampshire?",
   "Is there a cure period under the New Hampshire privacy law?",
   "Who enforces RSA 507-H in New Hampshire?"
  ],
- "ck-d166": [
+ "ck-d167": [
   "Does the Nebraska Data Privacy Act have a volume threshold?",
   "Must I honour browser opt-out signals for Nebraska visitors?",
   "Does the Nebraska privacy law have a cure period?"
  ],
- "ck-d167": [
+ "ck-d168": [
   "Does Iowa require businesses to honour universal opt-out signals?",
   "Is consent needed for sensitive data under the Iowa privacy law?",
   "How long is the cure period under the Iowa Consumer Data Protection Act?"
  ],
- "ck-d168": [
+ "ck-d169": [
   "When did Montana start requiring opt-out preference signals?",
   "Is there still a cure period under the Montana Consumer Data Privacy Act?",
   "How should GPC be handled for Montana visitors?"
  ],
- "ck-d169": [
+ "ck-d170": [
   "Why did tags keep firing after visitors opted out on New York websites?",
   "What did the New York Attorney General say about Accept All buttons?",
   "What does the New York AG guide on website privacy controls recommend?"
  ],
- "ck-d170": [
+ "ck-d171": [
   "Is Global Privacy Control the only recognised opt-out mechanism in Colorado?",
   "How should GPC be implemented under the Colorado Privacy Act Rules?",
   "What does Rule 5.07 of the Colorado Privacy Act Rules require?",
   "Does a GPC signal apply to a logged-in account in Colorado?"
  ],
- "ck-d171": [
+ "ck-d172": [
   "Does the Texas Data Privacy and Security Act apply regardless of company size?",
   "When must Texas controllers honour browser opt-out signals?",
   "What penalties apply under the Texas Data Privacy and Security Act?"
  ],
- "ck-d172": [
+ "ck-d173": [
   "Is there still a cure period under the Oregon Consumer Privacy Act?",
   "When must I honour opt-out signals in Oregon?",
   "Which businesses does the Oregon Consumer Privacy Act cover?"
  ],
- "ck-d173": [
+ "ck-d174": [
   "Do I need consent for tracking pixels on health pages in Washington?",
   "Can individuals sue under the Washington My Health My Data Act?",
   "Do inferences count as consumer health data under the My Health My Data Act?",
   "Is geofencing around health clinics banned in Washington?"
  ],
- "ck-d174": [
+ "ck-d175": [
   "What does the Washington AG say about the consumer health data policy link?",
   "When do My Health My Data Act duties apply to small businesses?",
   "Is a pregnancy prediction score consumer health data in Washington?"
  ],
- "ck-d175": [
+ "ck-d176": [
   "Does the Utah Consumer Privacy Act require consent for sensitive data?",
   "Do I need to honour universal opt-out signals in Utah?",
   "Which companies are covered by the Utah Consumer Privacy Act?"
  ],
- "ck-d176": [
+ "ck-d177": [
   "When did the Colorado universal opt-out mechanism duty begin?",
   "Does GPC in Colorado cover targeted advertising or only sale?",
   "Is the cure period still available under the Colorado Privacy Act?"
  ],
- "ck-d177": [
+ "ck-d178": [
   "Must Connecticut controllers honour GPC without a confirmation step?",
   "What penalties apply under the Connecticut Data Privacy Act?",
   "When did opt-out preference signals become mandatory in Connecticut?",
   "Was the Connecticut Data Privacy Act amended in 2026?"
  ],
- "ck-d178": [
+ "ck-d179": [
   "Does Virginia require honouring universal opt-out signals?",
   "Is consent needed for sensitive data under the Virginia CDPA?",
   "What are the cure period and penalties under the Virginia privacy law?"
  ],
- "ck-d179": [
+ "ck-d180": [
   "What would Australia's tranche 2 privacy reforms change about consent?",
   "Is the Australian Personal Data Protection Bill 2026 law yet?",
   "Would Australia make precise geolocation tracking data sensitive?",
   "Would consent be needed before trading personal information in Australia?"
  ],
- "ck-d180": [
+ "ck-d181": [
   "What is Canada's Bill C-36 and does it replace PIPEDA?",
   "What penalties would Bill C-36 introduce in Canada?",
   "Should I change my consent flows because of Bill C-36?"
  ],
- "ck-d181": [
+ "ck-d182": [
   "What is personally referable information under the Japanese APPI guidelines?",
   "How do I decide whether a tag recipient needs consent confirmed in Japan?",
   "What do the PPC general guidelines say about Article 31 confirmation?"
  ],
- "ck-d182": [
+ "ck-d183": [
   "What did the Australian Commissioner decide about pixels on health websites?",
   "Which APPs were breached by health providers using tracking pixels?",
   "Is data sent straight to an ad platform treated as collected in Australia?"
  ],
- "ck-d183": [
+ "ck-d184": [
   "Who would the Australian Children's Online Privacy Code apply to?",
   "What would the draft Children's Code say about marketing to children?",
   "When must the Children's Online Privacy Code be registered in Australia?"
  ],
- "ck-d184": [
+ "ck-d185": [
   "Does Vietnam require a do-not-track option on websites?",
   "What fines does the Vietnam Personal Data Protection Law set?",
   "Is silence valid consent in Vietnam?",
   "When did Vietnam's Personal Data Protection Law take effect?"
  ],
- "ck-d185": [
+ "ck-d186": [
   "When do the Indian DPDP Rules on consent notices come into force?",
   "What do the DPDP Rules say about Consent Managers?",
   "When is verifiable parental consent required under the DPDP Rules?"
  ],
- "ck-d186": [
+ "ck-d187": [
   "What does Amendment 13 to the Israeli privacy law change?",
   "Do cookie notices in Israel need the statutory disclosure items?",
   "What powers does the Israeli Privacy Protection Authority have now?"
  ],
- "ck-d187": [
+ "ck-d188": [
   "How does the Japanese PPC Q&A treat cookies and advertising identifiers?",
   "What form must recipient consent take under Article 31 of the APPI?",
   "How can a business confirm and record recipient consent in Japan?"
  ],
- "ck-d188": [
+ "ck-d189": [
   "Which Australian Privacy Principles matter for cookies and pixels?",
   "Do I need express consent to collect sensitive information under APP 3.3?",
   "Which organisations count as APP entities in Australia?"
  ],
- "ck-d189": [
+ "ck-d190": [
   "Is tacit consent allowed under the new Mexican data protection law?",
   "Which authority supervises data protection in Mexico after 2025?",
   "Do I still need to disclose cookies in a Mexican privacy notice?"
  ],
- "ck-d190": [
+ "ck-d191": [
   "Do cookie identifiers count as personal information under PIPEDA?",
   "What does section 6.1 of PIPEDA say about valid consent?",
   "Does PIPEDA apply to foreign websites?"
  ],
- "ck-d191": [
+ "ck-d192": [
   "Can a business repeat a consent request after refusal in China?",
   "What does Article 42 require for personalised recommendation switches in China?",
   "When is separate consent needed for sensitive information in China?",
   "What do the Network Data Security Regulations say about children under 14?"
  ],
- "ck-d192": [
+ "ck-d193": [
   "What did the first tranche of Australian Privacy Act reform introduce?",
   "When must Australian privacy policies disclose automated decision-making?",
   "Is there a statutory tort for serious privacy invasions in Australia?"
  ],
- "ck-d193": [
+ "ck-d194": [
   "What does the OAIC require before deploying a tracking pixel?",
   "Do I need a privacy impact assessment for a third-party pixel in Australia?",
   "Can tracking pixels be placed site-wide under Australian guidance?"
  ],
- "ck-d194": [
+ "ck-d195": [
   "Does Indonesia require explicit consent for advertising cookies?",
   "What fines apply under Indonesia's Personal Data Protection Law?",
   "Has Indonesia's data protection authority been established yet?"
  ],
- "ck-d195": [
+ "ck-d196": [
   "How do I run a legitimate interest balancing test under the LGPD?",
   "Can I use legitimate interest for cookies in Brazil?",
   "Can legitimate interest be used for sensitive data under the LGPD?"
  ],
- "ck-d196": [
+ "ck-d197": [
   "What are the criteria for valid consent in Quebec?",
   "When is consent not free under the Quebec CAI guidelines?",
   "Do the Quebec guidelines require equal accept and refuse paths?"
  ],
- "ck-d197": [
+ "ck-d198": [
   "Must tracking technologies be off by default in Quebec?",
   "What does section 8.1 of the Quebec private sector Act require?",
   "Do cookies fall under the default confidentiality settings rule in Quebec?"
  ],
- "ck-d198": [
+ "ck-d199": [
   "What did the 2023 PIPA amendment change for cookies in South Korea?",
   "How high can a PIPA penalty surcharge go in South Korea?",
   "Do I need separate consent for marketing under the Korean PIPA?"
  ],
- "ck-d199": [
+ "ck-d200": [
   "Does the Saudi PDPL require consent for advertising cookies?",
   "What fines apply under the Saudi Personal Data Protection Law?",
   "What do the Saudi Implementing Regulations say about direct marketing?"
  ],
- "ck-d200": [
+ "ck-d201": [
   "Can I target advertising at children under India's DPDP Act?",
   "What penalties does the DPDP Act set for data fiduciaries?",
   "What makes consent valid under section 6 of the DPDP Act?"
  ],
- "ck-d201": [
+ "ck-d202": [
   "What is the external transmission rule in Japan?",
   "Which websites does the Japanese external transmission rule cover?",
   "What must a Japanese external transmission notice state?"
  ],
- "ck-d202": [
+ "ck-d203": [
   "What are the Nigerian penalties for controllers of major importance?",
   "Who bears the burden of proof for consent in Nigeria?",
   "What does the Nigerian 2025 implementation directive say about cookie notices?"
  ],
- "ck-d203": [
+ "ck-d204": [
   "Can children's data be processed without parental consent in Brazil?",
   "Can I run behavioural advertising cookies on child-directed services in Brazil?",
   "What does ANPD Statement 1 of 2023 say about the best interest of the child?"
  ],
- "ck-d204": [
+ "ck-d205": [
   "What does Article 31 of the Japanese APPI require for cookie identifiers?",
   "Must I verify consent before sending identifiers to an ad platform in Japan?",
   "When did APPI rules on personally referable information take effect?"
  ],
- "ck-d205": [
+ "ck-d206": [
   "Does APP 7 cover targeted online advertising in Australia?",
   "What opt-out must I offer under Australian direct marketing rules?",
   "Are Spam Act communications covered by APP 7?"
  ],
- "ck-d206": [
+ "ck-d207": [
   "Can access to a service be conditioned on advertising consent in South Korea?",
   "What did the Korean PIPC decide about Meta in March 2023?",
   "Are cookie walls allowed in South Korea?"
  ],
- "ck-d207": [
+ "ck-d208": [
   "How does the ANPD calculate sanctions under the LGPD?",
   "What are the aggravating and mitigating factors for LGPD fines?",
   "What is the maximum LGPD fine per infraction?"
  ],
- "ck-d208": [
+ "ck-d209": [
   "What does the ANPD cookies guide say about banners?",
   "Which cookies need consent under the Brazilian ANPD guide?",
   "Is a reject button required on a cookie banner in Brazil?",
   "Can legitimate interest justify advertising cookies in Brazil?"
  ],
- "ck-d209": [
+ "ck-d210": [
   "How much did the Korean PIPC fine Google and Meta in 2022?",
   "What was wrong with the consent screens used by Google and Meta in Korea?",
   "Do I need separate consent for cross-site behavioural data in South Korea?"
  ],
- "ck-d210": [
+ "ck-d211": [
   "What happened to Canada's Bill C-27?",
   "Is the Consumer Privacy Protection Act in force in Canada?",
   "Should I reference the CPPA or Bill C-36 in my privacy programme?"
  ],
- "ck-d211": [
+ "ck-d212": [
   "What did Canadian commissioners find about app location tracking?",
   "Can a tracking statement that differs from the code invalidate consent?",
   "What remedies were ordered in the Canadian location tracking investigation?"
  ],
- "ck-d212": [
+ "ck-d213": [
   "What does section 19 of the Thai PDPA require for consent?",
   "What fines apply under Thailand's Personal Data Protection Act?",
   "Must cookie consent be requested separately from other matters in Thailand?"
  ],
- "ck-d213": [
+ "ck-d214": [
   "Must I offer a switch to turn off personalised recommendations in China?",
   "Can users delete their user tags under Chinese algorithm rules?",
   "What do the Chinese algorithmic recommendation rules say about price differences?"
  ],
- "ck-d214": [
+ "ck-d215": [
   "Does the UAE data protection law apply in the financial free zones?",
   "What consent standard applies under UAE Federal Decree-Law 45 of 2021?",
   "Have UAE executive regulations on data protection been issued?"
  ],
- "ck-d215": [
+ "ck-d216": [
   "Does the Chinese PIPL have a legitimate interest basis?",
   "What is the maximum fine under Article 66 of the PIPL?",
   "What does PIPL Article 24 require for personalised advertising?",
   "When must consent be refreshed under the PIPL?"
  ],
- "ck-d216": [
+ "ck-d217": [
   "What did the ACCC digital advertising services inquiry conclude?",
   "What did the ACCC recommend on ad tech transparency?",
   "Does the ACCC digital advertising report affect consent practices?"
  ],
- "ck-d217": [
+ "ck-d218": [
   "Do I need consent for electronic direct marketing under POPIA?",
   "What is the maximum administrative fine under POPIA?",
   "Can I rely on legitimate interest for analytics cookies in South Africa?"
  ],
- "ck-d218": [
+ "ck-d219": [
   "Can a Chinese app refuse service if users decline non-necessary data?",
   "What is necessary personal information for common mobile apps in China?",
   "How should SDKs be mapped to the necessary information list in China?"
  ],
- "ck-d219": [
+ "ck-d220": [
   "What is deemed consent by notification under the Singapore PDPA?",
   "Can I use legitimate interests for direct marketing in Singapore?",
   "What financial penalties apply under the Singapore PDPA?"
  ],
- "ck-d220": [
+ "ck-d221": [
   "Do cookies need consent under the Singapore PDPC guidelines?",
   "Are IP addresses personal data in Singapore?",
   "Do I need consent for behavioural targeting in Singapore?"
  ],
- "ck-d221": [
+ "ck-d222": [
   "What is GB/T 35273-2020 and who relies on it in China?",
   "Does the Chinese standard require separate consent for each business function?",
   "How does GB/T 35273 treat third-party SDK data collection?"
  ],
- "ck-d222": [
+ "ck-d223": [
   "What counts as illegal collection of personal information by apps in China?",
   "Must a Chinese app privacy policy be reachable within four clicks?",
   "Which Chinese authorities issued the app illegal collection measures?"
  ],
- "ck-d223": [
+ "ck-d224": [
   "Can I send direct marketing in Kenya without consent?",
   "What penalties apply under the Kenya Data Protection Act?",
   "What opt-out route do the Kenyan regulations require for marketing?"
  ],
- "ck-d224": [
+ "ck-d225": [
   "What are the legal bases under Article 7 of the LGPD?",
   "Who has the burden of proof for consent under the LGPD?",
   "What are the maximum fines under the LGPD?"
  ],
- "ck-d225": [
+ "ck-d226": [
   "What are the seven principles of meaningful consent in Canada?",
   "When is express consent required under Canadian consent guidelines?",
   "Do Canadian regulators expect just-in-time consent prompts?"
  ],
- "ck-d226": [
+ "ck-d227": [
   "What do Articles 22 and 41 of the Chinese Cybersecurity Law require?",
   "Does the Chinese Cybersecurity Law require published collection rules?",
   "Who inspects apps for undisclosed data collection in China?"
  ],
- "ck-d227": [
+ "ck-d228": [
   "What does the Korean guideline on online customised advertising require?",
   "Can I collect behavioural information from services for children under 14 in Korea?",
   "Who must disclose behavioural data collection in South Korea?"
  ],
- "ck-d228": [
+ "ck-d229": [
   "Can authorisation by silence be valid under Colombian data protection law?",
   "What fines can the Colombian SIC impose?",
   "What does Law 1581 of 2012 require before collecting data?"
  ],
- "ck-d229": [
+ "ck-d230": [
   "Can cookie consent be bundled under the Philippines Data Privacy Act?",
   "What does the Philippine NPC say about implied consent?",
   "How easy must withdrawal of consent be in the Philippines?"
  ],
- "ck-d230": [
+ "ck-d231": [
   "When is opt-out consent acceptable for behavioural advertising in Canada?",
   "Can I use device fingerprinting for advertising in Canada?",
   "Can children be tracked for behavioural advertising in Canada?"
  ],
- "ck-d231": [
+ "ck-d232": [
   "Is consent required for cookies under Argentine Law 25.326?",
   "Can people ask to be removed from advertising databases in Argentina?",
   "Are fines under the Argentine data protection law high?"
  ],
- "ck-d232": [
+ "ck-d233": [
   "What does California AB 566 require from browser developers?",
   "When does California AB 566 take effect?",
   "Must businesses already honour opt-out preference signals in California?"
  ],
- "ck-d233": [
+ "ck-d234": [
   "What does the W3C Global Privacy Control specification define?",
   "How do I detect a GPC signal on my website?",
   "Is Global Privacy Control legally binding?"
  ],
- "ck-d234": [
+ "ck-d235": [
   "What is the IAB Multi-State Privacy Agreement?",
   "What is the US National Approach in the MSPA?",
   "Is the MSPA a law?"
  ],
- "ck-d235": [
+ "ck-d236": [
   "What obligations do the IAB TCF Policies place on CMPs?",
   "Are the TCF Policies legally binding?",
   "What must publishers do under the TCF Policies?"
  ],
- "ck-d236": [
+ "ck-d237": [
   "What did the Brussels Market Court decide on the TCF in January 2026?",
   "Does the Market Court ruling change TCF v2.2 requirements?",
   "Is IAB Europe a joint controller for OpenRTB processing?"
  ],
- "ck-d237": [
+ "ck-d238": [
   "What did Meta commit to under the DMA on personalised advertising?",
   "Am I still responsible for consent when using the Meta Pixel in the EU?",
   "What happened to Meta's consent-or-pay model under the DMA?"
  ],
- "ck-d238": [
+ "ck-d239": [
   "Which Privacy Sandbox APIs has Google retired?",
   "Should I remove Privacy Sandbox purposes from my consent flow?",
   "What happens to CHIPS and FedCM after the Sandbox retirement?"
  ],
- "ck-d239": [
+ "ck-d240": [
   "How does recognition of consent management services work in Germany?",
   "What is section 26 TDDDG about?",
   "Does BfDI recognition make stored consent valid for my site?"
  ],
- "ck-d240": [
+ "ck-d241": [
   "What is the disclosedVendors segment in TCF v2.3?",
   "What was the TCF v2.3 deadline for CMPs and vendors?",
   "Do old TC Strings stay valid after TCF v2.3?"
  ],
- "ck-d241": [
+ "ck-d242": [
   "Does Microsoft Advertising require consent mode for UET?",
   "How do I map my CMP to ad_storage for Microsoft UET?",
   "When did the Microsoft Advertising consent signal requirement start?"
  ],
- "ck-d242": [
+ "ck-d243": [
   "Will Chrome introduce a prompt for third-party cookies?",
   "Do I still need a consent banner for third-party cookies in Chrome?",
   "What is IP Protection in Chrome Incognito?"
  ],
- "ck-d243": [
+ "ck-d244": [
   "Which browsers support Global Privacy Control?",
   "Which US states treated GPC as a binding opt-out in January 2025?",
   "Is the GPC reference site legally authoritative?"
  ],
- "ck-d244": [
+ "ck-d245": [
   "Does the Connecticut Attorney General treat GPC as a binding opt-out?",
   "Can GPC override loyalty programme membership in Connecticut?",
   "Did Connecticut, California and Colorado announce a joint privacy sweep?"
  ],
- "ck-d245": [
+ "ck-d246": [
   "What does the Google EU user consent policy require?",
   "Which countries does the Google EU user consent policy cover?",
   "Do advertisers with EEA traffic need to send consent signals to Google?"
  ],
- "ck-d246": [
+ "ck-d247": [
   "Did Google abandon third-party cookie deprecation in Chrome?",
   "Is Google's July 2024 cookie reversal still current?",
   "Does Chrome keeping third-party cookies make consent moot?"
  ],
- "ck-d247": [
+ "ck-d248": [
   "What is Google consent mode v2?",
   "What are ad_user_data and ad_personalization in consent mode?",
   "What is the difference between basic and advanced consent mode?",
   "Is advanced consent mode a legal exemption for cookieless pings?"
  ],
- "ck-d248": [
+ "ck-d249": [
   "What is the EDPB Website Auditing Tool?",
   "Is there a free tool to audit cookies and third-party requests on a site?",
   "Does the EDPB website tool represent an official EDPB position?"
  ],
- "ck-d249": [
+ "ck-d250": [
   "Do I need a Google-certified CMP to serve ads in the EEA?",
   "What happens to ad traffic without a Google-certified CMP?",
   "Does Google CMP certification prove TCF compliance?"
  ],
- "ck-d250": [
+ "ck-d251": [
   "Is the IAB US Privacy String still supported for CCPA opt-outs?",
   "What replaces the usprivacy string now that it is deprecated?",
   "Why can the US Privacy String not carry Virginia and Colorado opt-out signals?"
  ],
- "ck-d251": [
+ "ck-d252": [
   "What changed in TCF v2.2 for legitimate interest and advertising purposes?",
   "Must a CMP show the total number of vendors on the first layer under TCF v2.2?",
   "Is TCF v2.2 still current or has v2.3 superseded it?",
   "Is the IAB Europe TCF law or just an industry standard?"
  ],
- "ck-d252": [
+ "ck-d253": [
   "What does a TC String contain and which segments does it have?",
   "How can I test that my CMP exposes the TCF CMP API correctly?",
   "Which version of the Global Vendor List applies since TCF v2.2?"
  ],
- "ck-d253": [
+ "ck-d254": [
   "How does IAB Europe validate a CMP before it gets a CMP ID?",
   "What happens if a CMP tampers with the TC String?",
   "Is there a CMP Validator extension to check my own consent banner?",
   "How long do I have to fix a TCF policy breach before suspension?"
  ],
- "ck-d254": [
+ "ck-d255": [
   "What is the Global Privacy Platform and what does the GPP string carry?",
   "Should I use GPP instead of the deprecated US Privacy String?",
   "Does GPP record whether a Global Privacy Control signal was received?",
   "What is the GPP US National section with section ID 7?"
  ],
- "ck-d255": [
+ "ck-d256": [
   "Does Firefox block third-party cookies by default?",
   "Is Global Privacy Control switched on by default in Firefox?",
   "Must a site treat a Firefox GPC signal as an opt-out?"
  ],
- "ck-d256": [
+ "ck-d257": [
   "Do I need Apple ATT permission before reading the advertising identifier in an iOS app?",
   "What counts as tracking under Apple App Tracking Transparency?",
   "Does ATT permission replace ePrivacy consent for a mobile app?",
   "Can an iOS app block features if the user refuses tracking?"
  ],
- "ck-d257": [
+ "ck-d258": [
   "Does Brave block cookies and trackers by default?",
   "Is Global Privacy Control on by default in Brave?",
   "How must a business treat a Sec-GPC 1 signal from a Brave visitor?"
  ],
- "ck-d258": [
+ "ck-d259": [
   "What is ISO/IEC 29184 on online privacy notices and consent?",
   "Does ISO/IEC 29184 replace the GDPR Article 7 consent conditions?",
   "What consent records should a CMP keep according to ISO/IEC 29184?"
  ],
- "ck-d259": [
+ "ck-d260": [
   "How long does Safari keep script-written cookies and storage under ITP?",
   "Does Safari block third-party cookies by default?",
   "Are server-set first-party cookies capped at seven days in Safari?",
   "Why do returning Safari users vanish from my analytics after seven days?"
  ],
- "ck-d260": [
+ "ck-d261": [
   "Do I have to honour the Do Not Track header on my website?",
   "What happened to the W3C Do Not Track standard?",
   "Is Global Privacy Control the successor to Do Not Track?"

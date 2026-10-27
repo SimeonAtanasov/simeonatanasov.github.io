@@ -1,0 +1,20 @@
+84f4a23c827dc21bc2b06ab2f710e64c  525129  cookie-digest.html
+859810213c148de5cc3dc86f07ae4a15  299684  Claude outputs/cookie-digest-build/all_merged.json
+6e56070093c96d5b82e1462eb02a8beb  308435  Claude outputs/cookie-digest-build/cookie_digest.json
+9e94db14447925de4c44221885c22237  20455  Claude outputs/cookie-digest-build/build_cookie_page.py
+59ab511bcab2d2df5574dab1f259699c  6095  Claude outputs/cookie-digest-build/build_cookie_pdf.py
+a33a678c02e8c7f986753d593423ff05  5352  Claude outputs/cookie-digest-build/README.md
+d67210c218e79259798b3c03cb5f72a0  4469  Claude outputs/cookie-digest-build/update_2026_10_27.py
+6ec349a51c446850916229fcec3bec94  1928  Claude outputs/cookie-digest-build/md_from_print.py
+eeeb934d2ab405adc187c16dd4ae5ff0  560436  Claude outputs/assistant-build/questions_written.json
+28b29ab710e03e95d499ea2f56e4f301  2010732  assets/assistant/index.json
+a69471ab6495ba0a1c9a3b3ae64de4bf  825322  assets/assistant/questions.json
+9ac8fe22fb3367692eac13e3caf5b51f  2903  sitemap.xml
+26fcf73a300c9d1fcd023ff3c7755785  4656  llms.txt
+676179efe6e441f6628a13b98faa57b8  51725  README.md
+8fea49f6429f7ca1d78eb184ae698c84  5863  Claude outputs/study-guides/README.md
+a2b091d77b0156b8fe83cbdb924c5001  487486  Claude outputs/study-guides/cookie-compliance-digest-2026-10-27.pdf
+debb58082e3ecb63f7f3f1cb551fd122  284942  Claude outputs/study-guides/cookie-compliance-digest-2026-10-27.md
+744db9cc36c83d78fb3ac51574121e7b  2303  Claude outputs/digest-update-2026-10-27/splice.py
+15a3c68f478136ddb66fcac18d3afe20  2070  Claude outputs/digest-update-2026-10-27/remap_questions.py
+5e26c05388c1aef1c47e604f5e5da71f  1030  Claude outputs/digest-update-2026-10-27/questions_update.py
