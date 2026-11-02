@@ -9,7 +9,7 @@ sys.path.insert(0, HERE)
 from digest_nav import toc_html, results_html, jump_html, top_button, nav_js, nav_css
 E = json.load(open(os.path.join(HERE, "all_merged.json"), encoding="utf-8"))
 esc = lambda s: html.escape(s, quote=True)
-DATE = "19 September 2026, updated 27 October 2026"
+DATE = "19 September 2026, updated 2 November 2026"
 
 EU_MS = {"France", "Germany", "Spain", "Italy", "Belgium", "Netherlands", "Ireland", "Denmark", "Austria", "Sweden", "Finland", "Poland", "Luxembourg", "Greece", "Czech Republic", "Portugal", "Croatia", "Romania"}
 OTHER_EU = {"Switzerland", "Norway", "Turkey", "Iceland", "Liechtenstein", "Serbia", "Ukraine"}

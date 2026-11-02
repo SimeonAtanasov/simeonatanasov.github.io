@@ -56,12 +56,17 @@ problem, not a content error.
 Later updates are replayable scripts in this folder, each editing all_merged.json in place and
 refusing to run twice, to be run after the three apply scripts above and in date order:
 `update_2026_10_23.py` (SB 690 signed, the Council Digital Omnibus mandate, GPC draft date; 259
-to 260 entries) and `update_2026_10_27.py` (Article 29 Working Party Opinion 04/2012 on Cookie
-Consent Exemption, WP 194; 260 to 261). Both also move the DATE wording in build_cookie_page.py
+to 260 entries), `update_2026_10_27.py` (Article 29 Working Party Opinion 04/2012 on Cookie
+Consent Exemption, WP 194; 260 to 261) and `update_2026_11_02.py` (CNIL consolidated cookie
+recommendation of 16 January 2026 and Deliberation 2025-131 on multi-device consent added,
+recommendation 2020-092 marked superseded; 261 to 263). All three also move the DATE wording in build_cookie_page.py
 and the PDF name in build_cookie_pdf.py. The live page is updated by splicing the rebuilt body
 in (`../digest-update-<date>/splice.py`), because the live head and header are newer than the
 templates here; `md_from_print.py` makes the study-guide Markdown from
-`cookie_digest_print.html`.
+`cookie_digest_print.html`. Build the PDF with WeasyPrint 70.0 and with WenQuanYi Zen Hei as
+the CJK fallback: a sandbox that falls back to Noto CJK instead makes the same PDF a third larger
+(on 2 November 2026 a fontconfig file rejecting `/usr/share/fonts/opentype/noto/Noto*CJK*`, passed
+as FONTCONFIG_FILE, restored the earlier fonts).
 
 To add or update an item: edit all_merged.json (keep the field set: title, jurisdiction, type,
 date, url, status, takeaway, topics, source), then run the two build scripts. Never edit

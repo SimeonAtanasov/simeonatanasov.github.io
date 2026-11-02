@@ -1,0 +1,11 @@
+--- "Claude outputs/tool-baselines/2026-11-02-ENF-02/sitemap.xml"	2026-11-02 21:00:28.388642900 +0000
++++ sitemap.xml	2026-11-02 21:07:03.943453700 +0000
+@@ -12,7 +12,7 @@
+ 	</url>
+ 	<url>
+ 		<loc>https://www.simeonatanasov.com/privacy-enforcement-worldwide.html</loc>
+-		<lastmod>2026-10-23</lastmod>
++		<lastmod>2026-11-02</lastmod>
+ 		<priority>0.8</priority>
+ 	</url>
+ 	<url>

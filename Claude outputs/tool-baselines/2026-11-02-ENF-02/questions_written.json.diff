@@ -1,0 +1,68 @@
+--- "Claude outputs/tool-baselines/2026-11-02-ENF-02/questions_written.json"	2026-11-02 21:00:28.330143000 +0000
++++ "Claude outputs/assistant-build/questions_written.json"	2026-11-02 21:41:56.708807400 +0000
+@@ -10811,21 +10811,37 @@
+   "What is the appeal deadline for a PPA decision in Israel?",
+   "Does an appeal stop payment of a PPA fine in Israel?"
+  ],
+- "world-ge-c-il-cases-worth-knowing": [
++ "world-ge-c-il-cases-worth-knowing-1": [
+   "What was the first financial sanction under Israel's Amendment 13?",
+   "Can an employee be sanctioned for accessing personal data for private reasons in Israel?",
+-  "Which sanctions has the Israeli PPA imposed recently?"
++  "Was the National Insurance employee fine an Amendment 13 sanction?",
++  "Why did the Israeli PPA sanction the Meuhedet Health Fund?",
++  "Was the National Insurance fine in Israel an administrative fine?"
++ ],
++ "world-ge-c-il-cases-worth-knowing-2": [
++  "How did the Israeli PPA calculate the Menora Mivtachim sanction?",
++  "Why was the Beit Shemesh Municipality sanctioned over its vendor?",
++  "Must a serious security event in Israel be reported before the internal investigation ends?",
++  "What happens in Israel when a breach report is late?"
+  ],
+  "world-ge-c-il-complaining": [
+   "How do I file a privacy complaint with the Israeli Privacy Protection Authority?",
+   "Is there a deadline for the PPA to decide a complaint in Israel?",
+   "Is a complainant a party to a PPA investigation in Israel?"
+  ],
+- "world-ge-c-il-fines": [
++ "world-ge-c-il-fines-1": [
+   "How much can the Israeli PPA fine under Amendment 13?",
+   "Can the Israeli PPA impose financial sanctions without going to court?",
+   "Can public bodies in Israel receive privacy fines?",
+-  "What prison terms exist for privacy offences in Israel?"
++  "How does the Israeli PPA set the base amount of a monetary sanction?",
++  "Has the Israeli PPA sanctioned a municipality?",
++  "How is a privacy sanction calculated in Israel?"
++ ],
++ "world-ge-c-il-fines-2": [
++  "What prison terms exist for privacy offences in Israel?",
++  "Does appointing a DPO reduce a privacy sanction in Israel?",
++  "What reductions can the Israeli PPA apply to a monetary sanction?",
++  "Is there a DPO reduction for privacy sanctions in Israel?"
+  ],
+  "world-ge-c-il-plain": [
+   "Can the Israeli Privacy Protection Authority fine companies?",
+@@ -10847,10 +10863,21 @@
+   "Can I get statutory compensation without proving harm in Israel?",
+   "Are class actions available for data breaches in Israel?"
+  ],
+- "world-ge-c-il-worth-knowing": [
++ "world-ge-c-il-worth-knowing-1": [
+   "Does Israel have an EU adequacy decision despite its regulator sitting in a ministry?",
+   "Why are class actions attractive for privacy claims in Israel?",
+-  "How are Israeli privacy sanctions scaled to the size of the database?"
++  "How are Israeli privacy sanctions scaled to the size of the database?",
++  "Which sanctions has the Israeli PPA imposed recently?",
++  "How many monetary sanctions has the Israeli PPA imposed under Amendment 13?",
++  "Does the Israeli PPA publish findings of violation without a sanction?",
++  "Why was a karting company sanctioned in Israel?",
++  "What did the PPA find against the Ministry of Education in Israel?",
++  "Does the PPA in Israel publish findings without a sanction?"
++ ],
++ "world-ge-c-il-worth-knowing-2": [
++  "Where can I read the Israeli PPA's enforcement notices?",
++  "Which sources track Israeli privacy enforcement actions?",
++  "Is the DPOas enforcement tracker a source for Israel?"
+  ],
+  "world-ge-c-in-appeals": [
+   "Where do I appeal a Data Protection Board order in India?",

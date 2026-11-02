@@ -16,13 +16,14 @@ Builds `gdpr-enforcement.html` (GDPR Enforcement in Europe), its companion `priv
 - `build_enforcement_page.py`: writes `out/gdpr-enforcement.html` and `out/pages/gdpr-enforcement/`.
 - `research/GBRIEF.md`, `research/GVERIFY.md`: the research and verification briefs for the worldwide page.
 - `research/graw/`: raw worldwide JSON plus `.verify.json`; `research/gapply_verify.py` applies the 71 corrections and four manual patches (Singapore appeal wording, dropped non-cases for Mexico, the Philippines and Argentina) and writes `gdata/`.
+- `research/apply_2026_10_23.py`, `research/apply_2026_11_02.py`: dated updates applied to `data/` and `gdata/` in place (the 23 October 2026 recheck of pending cases, bills and officeholders; the 2 November 2026 Israel entry rewritten from the PPA's own notices). Each refuses a second run. Rerun them, in date order, after either apply script above regenerates the data.
 - `summary_world.py`: map legends, first court, route, tile grid for the worldwide page; `OVERRIDE` holds map values changed from the JSON with the reason (Israel's maximum shown as not confirmed).
 - `build_world_page.py`: writes `out/privacy-enforcement-worldwide.html`, reusing the European builder's head, header, cards and tile map.
 - `build_study_guide.py`: writes `out/gdpr-enforcement-study-guide.md`, `.html` and `.pdf` (needs pandoc and Playwright Chromium). The published copies of the .md and .pdf live in `../study-guides/`.
 
 ## Rebuild
 
-1. `python3 research/apply_verify.py` and `python3 research/gapply_verify.py` (only if `raw/` or `graw/` changed)
+1. `python3 research/apply_verify.py` and `python3 research/gapply_verify.py` (only if `raw/` or `graw/` changed), then `python3 research/apply_2026_10_23.py` and `python3 research/apply_2026_11_02.py`
 2. `python3 build_enforcement_page.py` and `python3 build_world_page.py`
 3. `python3 build_study_guide.py`
 4. Copy `out/gdpr-enforcement.html` and `out/privacy-enforcement-worldwide.html` to the repo root and `out/pages/gdpr-enforcement/*` to `pages/gdpr-enforcement/`.

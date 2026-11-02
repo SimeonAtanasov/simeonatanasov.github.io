@@ -21,12 +21,43 @@
   "type": "regulator guidance",
   "date": "17 September 2020",
   "url": "https://www.cnil.fr/sites/cnil/files/atoms/files/recommandation-cookies-et-autres-traceurs.pdf",
-  "status": "in force",
-  "takeaway": "The recommendation gives the CNIL's expected banner design: a first layer that names every purpose, gives access to the full list of controllers behind consent-requiring trackers, and offers an accept action and a refuse action of equal effort, with a refusal remembered so that the user is not asked again at each visit. It applies to every organisation using trackers as defined in the 2020 guidelines, web and mobile first, and is the reference the CNIL uses in its cookie fines. Build banners to it, log consent and refusal, and re-ask no more often than the recommended six-month rhythm.",
+  "status": "superseded",
+  "takeaway": "The recommendation gives the CNIL's expected banner design: a first layer that names every purpose, gives access to the full list of controllers behind consent-requiring trackers, and offers an accept action and a refuse action of equal effort, with a refusal remembered so that the user is not asked again at each visit. It applies to every organisation using trackers as defined in the 2020 guidelines, web and mobile first, and is the reference the CNIL uses in its cookie fines. Build banners to it, log consent and refusal, and re-ask no more often than the recommended six-month rhythm. Superseded as a document by the consolidated version published on 16 January 2026, which carries this text together with the multi-device consent section added by Deliberation 2025-131 of 18 December 2025; the 2020 deliberation was amended rather than repealed, so cite the consolidated text.",
   "topics": [
    "consent",
    "reject-button",
    "dark-patterns"
+  ],
+  "source": "primary",
+  "cluster": "eu-national"
+ },
+ {
+  "title": "CNIL, consolidated recommendation on practical arrangements for cookies and other trackers (Deliberation 2020-092 as amended by Deliberation 2025-131)",
+  "jurisdiction": "France",
+  "type": "regulator guidance",
+  "date": "16 January 2026",
+  "url": "https://www.cnil.fr/sites/default/files/2026-01/recommandation_cookies_consolidee.pdf",
+  "status": "in force",
+  "takeaway": "The consolidated version, published by the CNIL on 16 January 2026, combines the 2020 recommendation (Deliberation 2020-092 of 17 September 2020) with the amendments of Deliberation 2025-131 of 18 December 2025, and is now the text to cite for the CNIL's practical expectations under article 82 of the French Data Protection Act. Sections 1 to 6 carry the 2020 content: a first layer that names each purpose and gives access to the list of controllers; refusal as easy as acceptance, strongly recommended on the same screen and in the same format; choices kept so that the user is not asked again on every page, with keeping both consent and refusal for six months described as good practice; withdrawal as easy as consent, for example through a persistent link or icon; proof of consent through versioned code, timestamped screenshots, audits or records of the consent platform's configuration, with a contract clause alone not enough for third-party trackers; and, for audience measurement exempt from consent, a tracker lifetime of thirteen months that is not extended on later visits and data kept for at most twenty-five months. Section 7 is new and covers optional multi-device consent for logged-in users (see the Deliberation 2025-131 entry). It applies to every organisation using trackers subject to article 82 and sets no compliance deadline; it is a recommendation, not binding, but it is the reference the CNIL applies in its cookie enforcement. Cite the consolidated text rather than the 2020 version, and check banners, consent logs and analytics lifetimes against sections 2 to 5.",
+  "topics": [
+   "consent",
+   "reject-button",
+   "analytics-exemption"
+  ],
+  "source": "primary",
+  "cluster": "eu-national"
+ },
+ {
+  "title": "CNIL, Deliberation 2025-131: recommendation on multi-device consent (amending recommendation 2020-092)",
+  "jurisdiction": "France",
+  "type": "regulator guidance",
+  "date": "18 December 2025",
+  "url": "https://www.cnil.fr/fr/cookies-et-autres-traceurs-recommandations-finales-sur-le-consentement-multi-terminaux",
+  "status": "in force",
+  "takeaway": "Adopted on 18 December 2025 after a public consultation and published with the CNIL's final recommendations on 16 January 2026, the deliberation adds a section 7 to the 2020 recommendation on cookies and other trackers for multi-device consent in logged-in environments: choices made once are attached to the user's account and applied on every device, browser and app from which the user logs in. Offering it is optional. Where it is offered, consent, refusal and withdrawal must have the same scope across devices, and the user must be told before choosing, preferably at the first level of the consent interface, that the choice applies to all logged-in devices; after login on a device not yet linked to the account, a short-lived banner should say whether the account choices were recorded or changed and how to change them. When a choice made before login conflicts with the one on the account, the controller either lets the latest choice overwrite the account (modality 1) or keeps the account choice, which requires tracking logged-in and logged-out use separately (modality 2), and the CNIL encourages using one modality throughout. Account choices must not alter choices already stored in logged-out mode, including those of other people on a shared device such as a family computer or a smart TV; the consent platform should receive a technical identifier, never an email address or a name; and switching to multi-device consent needs fresh consent, since consent given on one device was not informed of the wider scope. Letting users set different choices per device is encouraged as good practice. Before syncing consent across devices, decide the conflict modality, build the post-login banner and plan a re-consent campaign.",
+  "topics": [
+   "consent",
+   "other"
   ],
   "source": "primary",
   "cluster": "eu-national"

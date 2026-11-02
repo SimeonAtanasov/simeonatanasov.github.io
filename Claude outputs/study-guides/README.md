@@ -14,7 +14,8 @@ Markdown text version (for search, diffing and reading anywhere). Gathered here 
 | AI Act Digest, 28 September 2026 (superseded) | `ai-act-digest-2026-09-28.pdf` | `ai-act-digest-2026-09-28.md` | Obsidian version with front matter (see below) | `../ai-act-digest-build/build_aia_pdf.py` |
 | EDPB Digest, 23 October 2026 (current) | `edpb-digest-2026-10-23.pdf` | `edpb-digest-2026-10-23.md` | pandoc from the HTML the PDF is printed from, with front matter (see below) | `../edpb-digest-build/build_digest_pdf.py` |
 | EDPB Digest, 28 September 2026 (superseded) | `edpb-digest-2026-09-28.pdf` | `edpb-digest-2026-09-28.md` | Obsidian version with front matter (see below) | `../edpb-digest-build/build_digest_pdf.py` |
-| Cookie Compliance Digest, 27 October 2026 (current) | `cookie-compliance-digest-2026-10-27.pdf` | `cookie-compliance-digest-2026-10-27.md` | `../cookie-digest-build/md_from_print.py` (pandoc from the HTML the PDF is printed from, with front matter, see below) | `../cookie-digest-build/build_cookie_pdf.py` |
+| Cookie Compliance Digest, 2 November 2026 (current) | `cookie-compliance-digest-2026-11-02.pdf` | `cookie-compliance-digest-2026-11-02.md` | `../cookie-digest-build/md_from_print.py` (pandoc from the HTML the PDF is printed from, with front matter, see below) | `../cookie-digest-build/build_cookie_pdf.py` |
+| Cookie Compliance Digest, 27 October 2026 (superseded) | `cookie-compliance-digest-2026-10-27.pdf` | `cookie-compliance-digest-2026-10-27.md` | `../cookie-digest-build/md_from_print.py` (pandoc from the HTML the PDF is printed from, with front matter, see below) | `../cookie-digest-build/build_cookie_pdf.py` |
 | Cookie Compliance Digest, 23 October 2026 (superseded) | `cookie-compliance-digest-2026-10-23.pdf` | `cookie-compliance-digest-2026-10-23.md` | pandoc from the HTML the PDF is printed from, with front matter (see below) | `../cookie-digest-build/build_cookie_pdf.py` |
 | Cookie Compliance Digest, 19 September 2026 (superseded) | `cookie-compliance-digest-2026-09-19.pdf` | `cookie-compliance-digest-2026-09-19.md` | Obsidian version with front matter (see below) | `../cookie-digest-build/build_cookie_pdf.py` |
 | AI Act Digest, 19 September 2026 (superseded) | `../ai-act-digest-2026-09-19-v2.pdf` (could not be moved here: open in another application) | `ai-act-digest-2026-09-19-v2.md` | converted from the PDF | as above |
@@ -29,7 +30,7 @@ calculator explainer and the three current digests are also kept in Simeon's Obs
 here are the vault's versions (cleaner than a PDF conversion, with `title`, `date`,
 `source` and `tags` front matter; checked against the PDF text: complete, differences are
 letter case of chip labels and running heads). The study pack carries the same front
-matter and `build.py` writes it. After any rebuild, copy the changed `.md` and `.pdf` to the vault too. **Not yet in the vault: the 27 October 2026 cookie digest** (the vault folder was not connected when it was built); the vault still holds the 23 October version.
+matter and `build.py` writes it. After any rebuild, copy the changed `.md` and `.pdf` to the vault too. **Not yet in the vault: the 2 November 2026 cookie digest** (the vault folder was not connected when it was built, nor for 27 October); the vault still holds the 23 October version.
 
 ## Converted from the PDF
 
@@ -46,7 +47,7 @@ Markdown files were made instead with `pandoc -f html -t markdown_strict+pipe_ta
 --wrap=none` from the print HTML each PDF builder writes (`digest.html`,
 `cookie_digest_print.html`, `ai_act_digest_print.html`), with the chip spans turned into
 ` · ` separated text, entry headings at `###` and the same front matter as the vault
-versions. Sizes are within 3 percent of the earlier versions. That conversion is now a script, `../cookie-digest-build/md_from_print.py`, which reproduces the 23 October cookie file byte for byte from its print HTML and made the 27 October one.
+versions. Sizes are within 3 percent of the earlier versions. That conversion is now a script, `../cookie-digest-build/md_from_print.py`, which reproduces the 23 October cookie file byte for byte from its print HTML and made the 27 October and 2 November ones.
 
 ## Keeping it current
 

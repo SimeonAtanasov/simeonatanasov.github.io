@@ -1,0 +1,54 @@
+# Study guides
+
+Every study guide and print digest, each as a PDF (the reference for layout) and a
+Markdown text version (for search, diffing and reading anywhere). Gathered here on
+3 October 2026.
+
+| Guide | PDF | Markdown | How the Markdown is made | Built by |
+| --- | --- | --- | --- | --- |
+| Study pack: Practical Privacy, Practical AI Act Advice, the ten assessment tools, the GDPR Readiness model (174 pages, 78 self-test questions) | `privacy-ai-act-assessments-study-pack-v2.pdf` | `privacy-ai-act-assessments-study-pack-v2.md` | pandoc from the HTML the PDF is printed from; `build.py` writes both | `../study-pack-build/` |
+| AI Assessment Pathway study guide (30 pages, 15 practice questions) | `ai-assessment-pathway-guide.pdf` | `ai-assessment-pathway-guide.md` | the Markdown is the source; the PDF is printed from it by the same script | `../ai-pathway-build/build_guide.py` |
+| GDPR and privacy enforcement, Europe and worldwide (study guide; Part 11 covers 23 jurisdictions outside Europe) | `gdpr-enforcement-study-guide.pdf` | `gdpr-enforcement-study-guide.md` | the Markdown is the source; the PDF is printed from it | `../gdpr-enforcement-build/build_study_guide.py` |
+| How the GDPR fine calculator works | none | `gdpr-fine-calculator-explained.md` | written as Markdown | by hand |
+| AI Act Digest, 23 October 2026 (current) | `ai-act-digest-2026-10-23.pdf` | `ai-act-digest-2026-10-23.md` | pandoc from the HTML the PDF is printed from, with front matter (see below) | `../ai-act-digest-build/build_aia_pdf.py` |
+| AI Act Digest, 28 September 2026 (superseded) | `ai-act-digest-2026-09-28.pdf` | `ai-act-digest-2026-09-28.md` | Obsidian version with front matter (see below) | `../ai-act-digest-build/build_aia_pdf.py` |
+| EDPB Digest, 23 October 2026 (current) | `edpb-digest-2026-10-23.pdf` | `edpb-digest-2026-10-23.md` | pandoc from the HTML the PDF is printed from, with front matter (see below) | `../edpb-digest-build/build_digest_pdf.py` |
+| EDPB Digest, 28 September 2026 (superseded) | `edpb-digest-2026-09-28.pdf` | `edpb-digest-2026-09-28.md` | Obsidian version with front matter (see below) | `../edpb-digest-build/build_digest_pdf.py` |
+| Cookie Compliance Digest, 27 October 2026 (current) | `cookie-compliance-digest-2026-10-27.pdf` | `cookie-compliance-digest-2026-10-27.md` | `../cookie-digest-build/md_from_print.py` (pandoc from the HTML the PDF is printed from, with front matter, see below) | `../cookie-digest-build/build_cookie_pdf.py` |
+| Cookie Compliance Digest, 23 October 2026 (superseded) | `cookie-compliance-digest-2026-10-23.pdf` | `cookie-compliance-digest-2026-10-23.md` | pandoc from the HTML the PDF is printed from, with front matter (see below) | `../cookie-digest-build/build_cookie_pdf.py` |
+| Cookie Compliance Digest, 19 September 2026 (superseded) | `cookie-compliance-digest-2026-09-19.pdf` | `cookie-compliance-digest-2026-09-19.md` | Obsidian version with front matter (see below) | `../cookie-digest-build/build_cookie_pdf.py` |
+| AI Act Digest, 19 September 2026 (superseded) | `../ai-act-digest-2026-09-19-v2.pdf` (could not be moved here: open in another application) | `ai-act-digest-2026-09-19-v2.md` | converted from the PDF | as above |
+| EDPB Digest, 19 September 2026 (superseded) | `edpb-digest-2026-09-19.pdf` | `edpb-digest-2026-09-19.md` | converted from the PDF | as above |
+
+## Obsidian copies
+
+The study pack, the AI Assessment Pathway guide, the GDPR enforcement guide, the fine
+calculator explainer and the three current digests are also kept in Simeon's Obsidian vault
+(`Documents\Obsidian Vault`): the Markdown at the top level, the PDFs in `910_Attachments/`
+(since VAULT-02), byte-identical to the files here (last synced 24 October 2026: the three 23 October digests and the enforcement guide copied in, the superseded digest versions removed from the vault). The three current digests
+here are the vault's versions (cleaner than a PDF conversion, with `title`, `date`,
+`source` and `tags` front matter; checked against the PDF text: complete, differences are
+letter case of chip labels and running heads). The study pack carries the same front
+matter and `build.py` writes it. After any rebuild, copy the changed `.md` and `.pdf` to the vault too. **Not yet in the vault: the 27 October 2026 cookie digest** (the vault folder was not connected when it was built); the vault still holds the 23 October version.
+
+## Converted from the PDF
+
+`../study-pack-build/pdf_to_md.py <file.pdf>` writes the `.md` beside the PDF (needs
+pymupdf4llm). It drops running heads, page numbers and soft line-break hyphens and turns
+tables into Markdown tables. Checked on 3 October 2026: about 4.6 percent of the words in
+the PDF text are not in the Markdown, and nearly all of those are the running heads and
+the halves of rejoined hyphenated words. The PDF stays the reference. Rerun the converter
+whenever a digest PDF is rebuilt.
+
+On 23 October 2026 `pdf_to_md.py` was not used: with the pymupdf4llm available in the
+sandbox it dropped most of the cookie digest (51 KB against 281 KB). The three 23 October
+Markdown files were made instead with `pandoc -f html -t markdown_strict+pipe_tables
+--wrap=none` from the print HTML each PDF builder writes (`digest.html`,
+`cookie_digest_print.html`, `ai_act_digest_print.html`), with the chip spans turned into
+` · ` separated text, entry headings at `###` and the same front matter as the vault
+versions. Sizes are within 3 percent of the earlier versions. That conversion is now a script, `../cookie-digest-build/md_from_print.py`, which reproduces the 23 October cookie file byte for byte from its print HTML and made the 27 October one.
+
+## Keeping it current
+
+The build scripts write their output to the sandbox; copy new PDFs here, then make the
+Markdown (the study pack builder writes it for you). No em dashes in anything here.
