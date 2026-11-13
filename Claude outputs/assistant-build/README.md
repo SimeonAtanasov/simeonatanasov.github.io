@@ -37,9 +37,11 @@ What goes in, and where each chunk links:
 | `study-guides/ai-assessment-pathway-guide.md` sections 1 to 8 (not the question list, self-test or sources) | 17 | `privacy-ai-assessment.html#tool-aipath` |
 | `study-guides/gdpr-fine-calculator-explained.md` sections 1 to 7 | 15 | `gdpr-fine-calculator.html#fc-method` |
 | `cookie-notice.html`, `privacy-notice.html` sections | 22 | the page |
-| Tool catalogue and FAQ, hand-written in `build_index.py` (`TOOLS`, `FAQ`) | 24 + 8 | the tool |
+| `notice-generators.html` (SA-09): the lead, how to use them, "Policy or notice" (one chunk per document row, per lead paragraph and for where each document goes), each limit, the review note, and one chunk per law the privacy notice covers, put together from the page by `generators()`: the law's legal anchor from the document table, its sentences in the limits list and its line in the sources | 35 | `notice-generators.html`, `#ng-how`, `#ng-which`, `#ng-limits`; the per-law chunks `#privacy-notice` |
+| Tool catalogue and FAQ, hand-written in `build_index.py` (`TOOLS`, `FAQ`) | 28 + 9 | the tool |
 
-2,100 chunks on 7 October 2026, median 724 characters, longest 1,783 (an advice block
+2,100 chunks on 7 October 2026 and 2,159 on 13 November 2026 (SA-09 added the notice and policy
+generators: 35 page chunks, four catalogue entries, one FAQ), median 724 characters, longest 1,783 (an advice block
 longer than the cap is split at sentence boundaries before grouping, so no piece is split
 twice). The digest entry ids
 are read from the pages, not from the JSON: `ed-dNNN` is positional on the page and does
@@ -50,7 +52,7 @@ true: the FAQ about data staying on the device is checked against `privacy-notic
 
 ## The question bank (suggestions while typing)
 
-`assets/assistant/questions.json` (about 820 KB, 180 KB over the wire) holds 8,523
+`assets/assistant/questions.json` (about 835 KB, 190 KB over the wire) holds 8,681
 questions, each tied to the chunk that answers it, ranked by plausibility. Three layers:
 
 - **Asked** (`questions_asked.json`, empty at launch): questions real visitors asked, in
@@ -156,3 +158,34 @@ only the index.
 - `test_tokenizer.js`, `test_ui.js`, `test_jump.js`, `test_suggest.js`, `test_suggest_ui.js`: the tests.
 - `questions_written.json`, `questions_asked.json`: the written and asked layers of the question bank (see above).
 - `patch_site.py`: the SA-01 edits to `pwa.js`, `sw.js` and the root README, with md5 guards.
+
+## SA-09: the notice and policy generators (13 November 2026)
+
+`generators()` reads `notice-generators.html` and needs no data file: the generators themselves are built by
+script, so only the explanation around them is indexed. The per-law chunks are put together from three places on
+the page by the patterns in `NG_LAWS`; a law whose legal anchor is not found prints a warning, so a reworded
+document table shows up in the build output. When the page gains a law, add a row to `NG_LAWS` and two or three
+questions for its chunk to `questions_written.json`. Four catalogue entries (`pngen`, `ainotice`, `dppolicy`,
+`aipolicy`), the FAQ "Will a generated notice make me compliant?" and seven query synonyms (APPI, PIPA, PIPEDA,
+DPDP, FADP, generator, generators) came with it; 80 written questions point at the 40 new chunks (89 in the bank
+with the nine the templates add). Measured with the shipped ranker on the 50 test questions against a build of the
+old script on the same day: hit@5 0.86 and hit@10 0.88 both before and after; MRR 0.781 to 0.771, because "who
+enforces privacy law in Brazil" now puts the Brazil generator chunk first and the enforcement card second. The
+baseline, the patch script (`patch_sa09.py`) and the check (`sa09_check.js`) are in
+`tool-baselines/2026-11-13-SA-09/`, kept outside the repo since MOVE-02 (13 November 2026).
+
+The 0.86 is the test set, not the ranker, which scored 0.94 on 7 October 2026. Seven of the 50 tests name digest
+entries by position (`ed-dNNN`, `ck-dNNN`); the digest updates since 23 October 2026 moved those numbers, and four
+of the seven now fail although the documents on their subject come first (fifth for "sending personal data to the
+US"). Counted as hits they give 47 and 48 of 50 again. Until the tests match digest entries by title or source,
+compare one build with another, not with the October table.
+
+Side effect, measured in the audit of 13 November 2026 (`sa_audit_check.js` in this folder,
+with the 50 tests in `sa_audit_tests.json`): on 84 enforcement questions (seven phrasings, twelve
+jurisdictions) a per-law generator chunk comes first in 4 and in the top three in 20, with the enforcement card
+second in those 4; on 117 questions meant for the generators the right law chunk comes first in 106. A query rule
+for enforcement questions is in `TODO.md`, section 2.
+
+**On the device, files OneDrive keeps online only cannot be read** (EINVAL, "Invalid argument"):
+`dump_js_data.js`, `pages.json` and the three study guide Markdown files were in that state on 13 November 2026,
+and the build stopped at the first one. Staging a file through the bridge downloads it; then the build runs.

@@ -10,7 +10,8 @@ Two stages, both offline:
 
   1. Chunks. Every digest entry, advice section, assessment tool explanation
      and question step, readiness activity, crosswalk row, enforcement section
-     and country card, calculator section and site notice becomes one record
+     and country card, calculator section, site notice and notice generator
+     passage becomes one record
      with a deep link into the page it lives on. Written to work/chunks.json
      for inspection and to assets/assistant/index.json for the site.
 
@@ -117,6 +118,34 @@ TOOLS = [
         "when": "Use it when you want one assessment that covers an AI system end to end instead of running the AI tools one by one.",
         "returns": "An impact level, the applicable AI Act obligations with links, and a register of findings mapped to the frameworks.",
         "shape": "18 steps, added October 2026.",
+    },
+    {
+        "id": "pngen", "name": "Privacy Notice Generator", "url": "notice-generators.html#privacy-notice",
+        "what": "Builds a privacy notice from your answers: purposes, legal bases, recipients, retention, transfers and rights. It covers the EU GDPR by default and, when ticked, the UK GDPR, the Swiss FADP, Brazil's LGPD, Canada's PIPEDA with the Quebec, Alberta and British Columbia laws, India's DPDP Act, China's PIPL, Japan's APPI, South Korea's PIPA, Singapore's PDPA, Australia's Privacy Act, South Africa's POPIA, the California CCPA and the consumer privacy laws of 22 other US states. One law leads the text and each other law ticked adds its own section.",
+        "when": "Use it to draft or check the notice for one audience at a time: website users, client contacts, applicants or employees.",
+        "returns": "The notice, a completeness check that names the requirement behind each sentence, a delivery checklist, and exports as text, HTML, Markdown or PDF. Answers stay in the browser.",
+        "shape": "One of four generators on one page, added November 2026.",
+    },
+    {
+        "id": "ainotice", "name": "AI Transparency Notice Generator", "url": "notice-generators.html#ai-notice",
+        "what": "Drafts the information people are owed when they deal with an AI system or AI-generated content: the Article 50 AI Act disclosures and, for high-risk systems, the information under Articles 26(7), 26(11) and 86.",
+        "when": "Use it when you provide or deploy an AI system that people interact with or whose output they see. A footer link is not enough: the information has to reach people at the latest at the first interaction or exposure.",
+        "returns": "The notice, the disclosures to place in the product, a completeness check and exports. Answers stay in the browser.",
+        "shape": "One of four generators on one page, added November 2026.",
+    },
+    {
+        "id": "dppolicy", "name": "Data Protection Policy Template", "url": "notice-generators.html#data-protection-policy",
+        "what": "An internal policy for staff and contractors, built from the 71 activities of the GDPR Readiness model, each cited to the Articles it evidences: responsibilities, procedures, security, retention, rights handling and breaches.",
+        "when": "Use it to set the rules staff follow. Article 24(2) GDPR asks for data protection policies only where proportionate and prescribes no content, so the result is a template to adapt.",
+        "returns": "A policy template with a completeness check and exports. Answers stay in the browser.",
+        "shape": "One of four generators on one page, added November 2026.",
+    },
+    {
+        "id": "aipolicy", "name": "AI Policy Template", "url": "notice-generators.html#ai-policy",
+        "what": "An internal AI policy, including acceptable use: approved tools, prohibited uses, data inputs and human oversight. It carries the Article 5 prohibitions in full, the Article 4 AI literacy duty and, where relevant, the Article 26 deployer duties, with an optional responsible AI statement.",
+        "when": "Use it to set the rules for choosing, approving and using AI. No law requires the document; Articles 4 and 5 of the AI Act apply regardless.",
+        "returns": "A policy template, an optional public responsible AI statement, a completeness check and exports. Answers stay in the browser.",
+        "shape": "One of four generators on one page, added November 2026.",
     },
     {
         "id": "readiness", "name": "GDPR Readiness Assessment", "url": "gdpr-readiness.html",
@@ -255,8 +284,13 @@ FAQ = [
         "url": "cookie-notice.html",
     },
     {
+        "id": "faq-generators", "title": "Will a generated notice make me compliant?",
+        "text": "No generator can promise that. The notice and policy generators build each document from a requirements matrix, and the completeness check names the requirement behind each sentence and lists what is still missing. It cannot check that what you typed is true, it does not make the legal calls, such as whether a legal basis holds or a transfer is lawful, and it is not a legal opinion. A document can pass every row and still be wrong about the facts.",
+        "url": "notice-generators.html#ng-limits",
+    },
+    {
         "id": "faq-assistant", "title": "What does this assistant search?",
-        "text": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them; it does not write answers of its own. Nothing you type leaves your browser.",
+        "text": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method, the guidance around the notice and policy generators and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them; it does not write answers of its own. Nothing you type leaves your browser.",
         "url": "index.html",
     },
 ]
@@ -316,6 +350,13 @@ SYNONYMS = {
     "pipl": "china personal information protection law",
     "pdpa": "personal data protection act",
     "popia": "south africa protection of personal information act",
+    "appi": "japan act on the protection of personal information",
+    "pipa": "personal information protection act",
+    "pipeda": "canada personal information protection and electronic documents act",
+    "dpdp": "india digital personal data protection act",
+    "fadp": "switzerland swiss federal act on data protection",
+    "generator": "generators template draft",
+    "generators": "generator template draft",
     "hipaa": "united states health insurance portability act",
     "coppa": "united states children online privacy",
     "tracking": "trackers cookies pixels fingerprinting",
@@ -1029,6 +1070,190 @@ def notices(repo, out):
     return n
 
 
+NG_PAGE = "notice-generators.html"
+NG_LABEL = "Notice & Policy Generators"
+
+# One entry per law the privacy notice generator covers: chunk key, title,
+# short name for template questions, and patterns that find its legal anchor
+# (a "; " fragment of the privacy notice row), the sentences about it in the
+# limits list, and its line in the sources list. Everything printed comes from
+# the page; only the opening sentence of each chunk is written here.
+NG_LAWS = [
+    ("eu", "EU GDPR", "the EU GDPR", r"GDPR and UK GDPR", None, r"^(Regulation \(EU\) 2016/679|Article 29 Working Party)"),
+    ("uk", "UK GDPR and Data Protection Act 2018", "the UK GDPR with the Data Protection Act 2018", r"GDPR and UK GDPR", r"^For the UK", r"^(UK GDPR|Data Protection Act 2018)"),
+    ("ch", "Switzerland (FADP)", "the Swiss FADP", r"FADP in Switzerland", r"^Swiss cantonal", r"^Swiss Federal Act"),
+    ("br", "Brazil (LGPD)", "Brazil's LGPD", r"in Brazil", r"^For Brazil", r"^Brazil's"),
+    ("ca", "Canada (PIPEDA, Quebec, Alberta, British Columbia)", "Canada's PIPEDA with the Quebec, Alberta and British Columbia laws", r"^in Canada", r"^For Canada", r"^Canada's"),
+    ("in", "India (DPDP Act and Rules)", "India's DPDP Act and Rules", r"^in India", r"^For India", r"^India's"),
+    ("cn", "China (PIPL)", "China's PIPL with the Network Data Security Management Regulations", r"^in China", r"^For China", r"^China's"),
+    ("jp", "Japan (APPI)", "Japan's APPI", r"^in Japan", r"^For Japan", r"^Japan's"),
+    ("kr", "South Korea (PIPA)", "South Korea's PIPA", r"^in South Korea", r"^For South Korea", r"^South Korea's"),
+    ("sg", "Singapore (PDPA)", "Singapore's PDPA", r"^in Singapore", r"^For Singapore", r"^Singapore's"),
+    ("au", "Australia (Privacy Act 1988)", "Australia's Privacy Act", r"^in Australia", r"^For Australia", r"^Australia's"),
+    ("za", "South Africa (POPIA)", "South Africa's POPIA", r"^in South Africa", r"^For South Africa", r"^South Africa's"),
+    ("cal", "California (CCPA)", "the California CCPA", r"^in California", None, r"^California Consumer Privacy Act"),
+    ("us", "22 other US states", "the consumer privacy laws of 22 other US states", r"other US states", r"^Some state laws", r"^The consumer privacy laws of 22"),
+]
+
+
+def _ng_text(el):
+    return re.sub(r"\s+([,.;:)])", r"\1", el.get_text(" ", strip=True))
+
+
+def _ng_lead(el):
+    st = el.find(["strong", "b"])
+    return st.get_text(" ", strip=True).rstrip(".") if st else ""
+
+
+def _ng_slug(s, n=40):
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:n].strip("-")
+
+
+def _ng_sentences(text):
+    return [s for s in re.split(r"(?<=[.])\s+(?=[A-Z])", text) if s]
+
+
+def generators(repo, out):
+    """notice-generators.html: the explainer around the four generators, and
+    one chunk per law the privacy notice covers (SA-09, 13 November 2026)."""
+    page = soup(repo, NG_PAGE)
+    app = page.find(id="ng-app")
+    if app is None:
+        raise ValueError("notice-generators.html: no #ng-app")
+    n = 0
+    lead = None
+    for p in (page.find(id="main") or page).find_all("p"):
+        if not p.find_parent(id="ng-app") and len(p.get_text(strip=True)) > 200:
+            lead = _ng_text(p)
+            break
+    if lead:
+        out.add_split("ng-intro", "gen", NG_LABEL, "Notice and policy generators: what they do", NG_PAGE, lead)
+        n += 1
+    blocks = {}
+    for sec in app.select("section.ng-block"):
+        h = sec.find("h2")
+        if h is not None and h.get("id"):
+            blocks[h["id"]] = (sec, h.get_text(" ", strip=True))
+    # how to use
+    sec, head = blocks["ng-how"]
+    text = " ".join(_ng_text(x) for x in sec.find_all(["li", "p"]) if not x.find_parent("li"))
+    out.add_split("ng-how", "gen", NG_LABEL, "Notice and policy generators: how to use them", NG_PAGE + "#ng-how", text)
+    n += 1
+    # policy or notice
+    sec, head = blocks["ng-which"]
+    url = NG_PAGE + "#ng-which"
+    tables = sec.find_all("table")
+    first = sec.find("p")
+    out.add_split("ng-which", "gen", NG_LABEL, head, url, _ng_text(first))
+    n += 1
+    anchors = ""
+    doc_table = tables[0]
+    cols = [_ng_text(th) for th in doc_table.find("tr").find_all(["th", "td"])]
+    for tr in doc_table.find_all("tr")[1:]:
+        cells = [_ng_text(c) for c in tr.find_all(["th", "td"])]
+        if not cells or not cells[0]:
+            continue
+        parts = ["%s: %s" % (cols[i] if i < len(cols) else "", c) for i, c in enumerate(cells) if i > 0 and c]
+        if cells[0] == "Privacy notice" and len(cells) > 3:
+            anchors = tr.find_all(["th", "td"])[3]
+        out.add_split("ng-doc-" + _ng_slug(cells[0]), "gen", NG_LABEL, "%s: what it does, who reads it, legal anchor" % cells[0],
+                      url, cells[0] + ". " + " ".join(p if p.endswith(".") else p + "." for p in parts))
+        n += 1
+    for p in sec.find_all("p")[1:]:
+        ld = _ng_lead(p)
+        if not ld:
+            continue
+        out.add_split("ng-" + _ng_slug(ld), "gen", NG_LABEL, "Policy or notice: " + ld[0].lower() + ld[1:], url, _ng_text(p))
+        n += 1
+    if len(tables) > 1:
+        rows = []
+        for tr in tables[1].find_all("tr")[1:]:
+            cells = [_ng_text(c) for c in tr.find_all(["th", "td"])]
+            if len(cells) >= 2:
+                rows.append("%s: %s" % (cells[0], cells[1]))
+        out.add_split("ng-where", "gen", NG_LABEL, "Policy or notice: where each document goes", url, " ".join(rows))
+        n += 1
+    # limits, templates note, sources, review note
+    sec, head = blocks["ng-limits"]
+    url = NG_PAGE + "#ng-limits"
+    limit_parts = []      # (sentence or clause) from the limits list, in order
+    cover_clauses = []
+    for li in sec.select("ol > li"):
+        ld = _ng_lead(li)
+        text = _ng_text(li)
+        clauses = []
+        for s in _ng_sentences(text):
+            bits = s.split("; ")
+            cur = bits[0]
+            for b in bits[1:]:
+                if any(lk and re.match(lk, b) for _, _, _, _, lk, _ in NG_LAWS):
+                    clauses.append(cur + ("" if cur.endswith(".") else "."))
+                    cur = b[0].upper() + b[1:]
+                else:
+                    cur += "; " + b
+            clauses.append(cur)
+        limit_parts.extend(clauses)
+        if ld == "Cover every regime":
+            cover_clauses = clauses
+        else:
+            out.add_split("ng-limit-" + _ng_slug(ld), "gen", NG_LABEL, "What the generators cannot do: " + ld[0].lower() + ld[1:], url, text)
+            n += 1
+    for p in sec.find_all("p"):
+        if p.find_parent("li"):
+            continue
+        t = _ng_text(p)
+        if t.startswith("The two policies are templates"):
+            out.add_split("ng-templates", "gen", NG_LABEL, "What the generators cannot do: the two policies are templates", url, t)
+            n += 1
+        elif t.startswith("Rules checked against"):
+            out.add_split("ng-review", "gen", NG_LABEL, "Notice and policy generators: how the rules were checked", url, t)
+            n += 1
+    sources = [_ng_text(li) for li in sec.select("ul.ng-sources > li")]
+    # one chunk per law: legal anchor, what the limits list says, sources
+    frags = [f.strip() for f in re.split(r";\s+", _ng_text(anchors))] if anchors else []
+    groups = {}
+    assigned = set()
+    cur = None
+    openers = [(k, lk) for k, _, _, _, lk, _ in NG_LAWS if lk]
+    for i, c in enumerate(limit_parts):
+        hit = next((k for k, lk in openers if re.match(lk, c)), None)
+        if hit:
+            cur = hit
+        elif re.match(r"^(Cover every regime|The privacy notice covers|Other jurisdictions|The other three|Model national law|Employment rules|The employee notice|Check that|A notice is only|Make the legal calls|Whether a|The AI Assessment Pathway|Replace review|The completeness check|A document can)", c):
+            cur = None
+        if cur:
+            groups.setdefault(cur, []).append(c)
+            assigned.add(i)
+    # the "Cover every regime" item without the sentences that belong to one law
+    general = [c for i, c in enumerate(limit_parts) if c in cover_clauses and i not in assigned and not c.startswith("Cover every regime")]
+    if general:
+        out.add_split("ng-limit-cover-every-regime", "gen", NG_LABEL, "What the generators cannot do: cover every regime", url, " ".join(general))
+        n += 1
+    used_src = set()
+    for key, title, short, frag_rx, lim_rx, src_rx in NG_LAWS:
+        frag = next((f for f in frags if re.search(frag_rx, f)), "")
+        frag = re.sub(r"\.?\s*Mandatory, content prescribed\.?$", "", frag)
+        srcs = [s for s in sources if re.match(src_rx, s)]
+        used_src.update(srcs)
+        if not frag:
+            print("WARNING: notice generators: no legal anchor found for " + title)
+        parts = ["The privacy notice generator covers %s." % short]
+        if frag:
+            parts.append("Legal anchor of the notice: %s%s" % (frag.rstrip("."), "."))
+        parts.extend(groups.get(key, []))
+        if srcs:
+            parts.append("Read against: " + " ".join(s if s.endswith(".") else s + "." for s in srcs))
+        out.add_split("ng-law-" + key, "gen", NG_LABEL, "Privacy notice generator: " + title, NG_PAGE + "#privacy-notice",
+                      " ".join(parts), meta="Privacy notice")
+        n += 1
+    rest = [s for s in sources if s not in used_src]
+    if rest:
+        out.add_split("ng-sources", "gen", NG_LABEL, "Notice and policy generators: sources", url,
+                      " ".join(s if s.endswith(".") else s + "." for s in rest))
+        n += 1
+    return n
+
+
 def catalogue(out):
     for t in TOOLS:
         text = "%s %s %s" % (t["what"], t["when"], t["returns"])
@@ -1054,7 +1279,7 @@ def catalogue(out):
 KIND_PRIOR = {
     "faq": 0.9, "page": 0.95, "tool": 0.9, "pp": 0.85, "aiaadv": 0.85, "aia": 0.8, "calc": 0.7,
     "readiness": 0.65, "cookie": 0.65, "aiadoc": 0.6, "enforce": 0.6, "world": 0.5, "crosswalk": 0.5,
-    "notice": 0.5, "toolstep": 0.4, "edpb": 0.6,
+    "notice": 0.5, "toolstep": 0.4, "edpb": 0.6, "gen": 0.8,
 }
 TEMPLATE_WEIGHT = 0.8
 
@@ -1378,6 +1603,7 @@ def main():
                                     "GDPR Fine Calculator", "gdpr-fine-calculator.html#fc-method", "calc",
                                     skip_heads=(r"^Implementation",), title_prefix="Fine calculator: ")
     counts["notices"] = notices(repo, out)
+    counts["generators"] = generators(repo, out)
     catalogue(out)
 
     chunks = out.items

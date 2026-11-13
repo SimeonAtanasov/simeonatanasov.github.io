@@ -11607,5 +11607,165 @@
   "In which countries does the regulator need a court order to impose a fine?",
   "Which jurisdictions have a privacy law but nobody who can penalise yet?",
   "Which countries let the regulator fine by its own decision, as under the GDPR?"
+ ],
+ "ng-intro": [
+  "How do the notice generators work?",
+  "Can I generate a privacy notice on this site?",
+  "Which laws does the privacy notice generator cover?"
+ ],
+ "ng-how": [
+  "How do I use the privacy notice generator?",
+  "Does the notice generator send my answers anywhere?",
+  "Can I write one privacy notice for customers and employees together?"
+ ],
+ "ng-which": [
+  "What is the difference between a privacy policy and a privacy notice?",
+  "Does the law prescribe what a data protection policy must say?"
+ ],
+ "ng-doc-privacy-notice-1": [
+  "What does a privacy notice have to explain?",
+  "Who is a privacy notice written for?"
+ ],
+ "ng-doc-privacy-notice-2": [
+  "Which article requires a privacy notice in each country?",
+  "What is the legal basis for a privacy notice under the LGPD or PIPEDA?"
+ ],
+ "ng-doc-ai-transparency-notice": [
+  "What is an AI transparency notice?",
+  "Which AI Act articles require telling people they are dealing with AI?"
+ ],
+ "ng-doc-data-protection-policy": [
+  "Is a data protection policy mandatory under the GDPR?",
+  "Who reads a data protection policy?"
+ ],
+ "ng-doc-ai-policy-including-acceptable-use": [
+  "Do we need an AI acceptable use policy?",
+  "Does any law require an AI policy document?"
+ ],
+ "ng-doc-responsible-ai-statement": [
+  "What is a responsible AI statement?",
+  "Is a responsible AI statement required by law?"
+ ],
+ "ng-the-name-on-the-page-decides-nothing": [
+  "Can a page called Privacy Policy be the GDPR privacy notice?",
+  "Should I call it a privacy policy or a privacy notice?"
+ ],
+ "ng-employees-need-both-kinds": [
+  "Do employees need a privacy notice as well as a policy?",
+  "What do employees have to be told before high-risk AI is used at work?"
+ ],
+ "ng-a-footer-link-is-not-an-ai-disclosure": [
+  "Is a footer link enough to disclose that we use AI?",
+  "When must people be told they are interacting with an AI system?"
+ ],
+ "ng-where": [
+  "Where should each privacy document be published?",
+  "Which notices do we need for recruitment and HR?"
+ ],
+ "ng-limit-check-that-the-inputs-are-true": [
+  "Can the generator check that my notice is accurate?"
+ ],
+ "ng-limit-model-national-law": [
+  "Does the notice generator cover national employment law?",
+  "Does the generator test UK Schedule 1 conditions?"
+ ],
+ "ng-limit-make-the-legal-calls": [
+  "Does the notice generator decide whether my legal basis holds?",
+  "Can the generator tell me if a transfer is lawful?"
+ ],
+ "ng-limit-cover-every-regime": [
+  "Which privacy laws can the notice generator not handle?",
+  "Do the AI notice and the policies cover laws outside the EU?"
+ ],
+ "ng-limit-replace-review": [
+  "Can a generated notice replace a legal review?"
+ ],
+ "ng-templates": [
+  "What is the data protection policy template built from?",
+  "What does the AI policy template contain?"
+ ],
+ "ng-review": [
+  "How were the notice generator rules checked?",
+  "Were the privacy notice generators reviewed independently?"
+ ],
+ "ng-sources": [
+  "Which AI Act sources do the notice generators use?"
+ ],
+ "ng-law-eu": [
+  "Can I generate a GDPR privacy notice?",
+  "Which GDPR articles does the privacy notice generator follow?"
+ ],
+ "ng-law-uk": [
+  "Can I generate a UK GDPR privacy notice?",
+  "Does the generator cover the Data Protection Act 2018?"
+ ],
+ "ng-law-ch": [
+  "Can I generate a privacy notice for Switzerland?",
+  "Does the notice generator cover the Swiss FADP?"
+ ],
+ "ng-law-br": [
+  "Can I generate an LGPD privacy notice for Brazil?",
+  "Does the generator write the Brazilian notice in Portuguese?"
+ ],
+ "ng-law-ca": [
+  "Can I generate a PIPEDA privacy notice for Canada?",
+  "Does the notice generator cover Quebec's Law 25?",
+  "Is Bill C-36 covered by the privacy notice generator?"
+ ],
+ "ng-law-in": [
+  "Can I generate a DPDP Act privacy notice for India?",
+  "When does the DPDP notice duty apply?"
+ ],
+ "ng-law-cn": [
+  "Can I generate a PIPL privacy notice for China?",
+  "Does the generator decide the China transfer mechanism?"
+ ],
+ "ng-law-jp": [
+  "Can I generate an APPI privacy notice for Japan?",
+  "Does the generator cover the 2026 amendment of Japan's APPI?"
+ ],
+ "ng-law-kr": [
+  "Can I generate a PIPA privacy policy for South Korea?",
+  "Does the generator cover Korea's 2027 PIPA amendments?"
+ ],
+ "ng-law-sg": [
+  "Can I generate a PDPA data protection policy for Singapore?",
+  "Does the generator cover Singapore's breach notification rules?"
+ ],
+ "ng-law-au": [
+  "Can I generate an APP privacy policy for Australia?",
+  "Does the generator cover automated decisions under APP 1.7?"
+ ],
+ "ng-law-za": [
+  "Can I generate a POPIA privacy notice for South Africa?",
+  "Does the generator cover PAIA manuals?"
+ ],
+ "ng-law-cal": [
+  "Can I generate a CCPA privacy policy for California?",
+  "Does the generator produce a notice at collection?"
+ ],
+ "ng-law-us": [
+  "Can I generate a privacy notice for US state privacy laws?",
+  "Which US state laws were read only through secondary sources?"
+ ],
+ "tool-cat-pngen": [
+  "Is there a privacy notice generator?",
+  "Can I build a privacy notice for several countries at once?"
+ ],
+ "tool-cat-ainotice": [
+  "Is there a template for telling users we use AI?",
+  "How do I write an Article 50 AI disclosure?"
+ ],
+ "tool-cat-dppolicy": [
+  "Is there a data protection policy template?",
+  "How do I write a data protection policy for staff?"
+ ],
+ "tool-cat-aipolicy": [
+  "Is there an AI policy template?",
+  "How do I write an acceptable use policy for ChatGPT at work?"
+ ],
+ "faq-generators": [
+  "Will a generated privacy notice make us compliant?",
+  "Is a generated notice a legal opinion?"
  ]
 }

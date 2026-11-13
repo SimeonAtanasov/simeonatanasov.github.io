@@ -18783,6 +18783,321 @@
   "m": ""
  },
  {
+  "id": "ng-intro",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Notice and policy generators: what they do",
+  "u": "notice-generators.html",
+  "x": "Most notice generators produce text and leave you to guess whether it is complete. These work the other way round. Each one is driven by a requirements matrix built from the GDPR, the AI Act, the transparency guidelines endorsed by the EDPB and the Commission's Article 50 guidelines. The privacy notice also covers the UK GDPR with the Data Protection Act 2018, the Swiss Federal Act on Data Protection, Brazil's General Data Protection Law (LGPD), Canada's PIPEDA with the Quebec, Alberta and British Columbia private-sector laws, India's Digital Personal Data Protection Act with its 2025 Rules, China's Personal Information Protection Law with the Network Data Security Management Regulations, Japan's Act on the Protection of Personal Information, South Korea's Personal Information Protection Act, Singapore's Personal Data Protection Act 2012, Australia's Privacy Act 1988, South Africa's Protection of Personal Information Act, the California Consumer Privacy Act and the consumer privacy laws of 22 other US states: tick the laws that apply, and each adds its own rules and checks. Every document comes with a completeness check that names the row behind each sentence. The check tells you what the document covers and what it still lacks. It cannot tell you whether what you typed is true, and it is not a legal opinion.",
+  "m": ""
+ },
+ {
+  "id": "ng-how",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Notice and policy generators: how to use them",
+  "u": "notice-generators.html#ng-how",
+  "x": "Pick the document. One privacy notice per audience: a notice written for website visitors, applicants and employees at once ends up too vague for any of them. Describe the processing you actually do, not the processing you would like to document. A notice that promises a retention period nobody applies is evidence against you. Read the completeness check. Missing is a gap in the document. Review is wording the guidance warns against. Check before publishing is something only you can verify, such as where the notice is placed. Export and adapt. Download HTML or Markdown, or print to PDF, then fit it to your house style. Keep a copy of the completeness check with it: it shows a reviewer where each sentence comes from. Nothing you type is sent anywhere. Everything runs in your browser. Save stores your answers in this browser only (localStorage, key ng-v1). Load restores them, Clear empties the form and keeps the saved copy, and Forget deletes the saved copy.",
+  "m": ""
+ },
+ {
+  "id": "ng-which",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Policy or notice: which document does what",
+  "u": "notice-generators.html#ng-which",
+  "x": "A policy sets rules for the people inside an organisation. A notice tells the people whose data is processed, or who meet an AI system, what happens to them. The law cares far more about the second. Articles 13 and 14 GDPR and Article 50 AI Act prescribe what a notice says and when it is given. No provision prescribes the content of a policy.",
+  "m": ""
+ },
+ {
+  "id": "ng-doc-privacy-notice-1",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice: what it does, who reads it, legal anchor (1/2)",
+  "u": "notice-generators.html#ng-which",
+  "x": "Privacy notice. What it does: Explains how a person's data is processed: purposes, legal bases, recipients, retention, transfers, rights. Who reads it: The people whose data it is: website users, client contacts, applicants, employees, each with a notice written for them.",
+  "m": ""
+ },
+ {
+  "id": "ng-doc-privacy-notice-2",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice: what it does, who reads it, legal anchor (2/2)",
+  "u": "notice-generators.html#ng-which",
+  "x": "Legal anchor: Articles 12 to 14 GDPR and UK GDPR; Article 19 FADP in Switzerland; Article 9 LGPD in Brazil, with Articles 14, 18 to 20 and 41 and, for transfers, Article 17 of the ANPD's International Data Transfer Regulation; in Canada, principle 4.8 of Schedule 1 to PIPEDA with the Privacy Commissioner's consent guidelines, section 8 of Quebec's private-sector Act, section 13 of Alberta's PIPA and section 10 of British Columbia's PIPA; in India, section 5 of the DPDP Act with Rules 3, 9 and 14 of the DPDP Rules, 2025; in China, Articles 17, 23, 30 and 39 of the PIPL with Article 21 of the Network Data Security Management Regulations; in Japan, Articles 21, 27, 28 and 32 of the APPI with Article 10 of its Enforcement Order; in South Korea, the privacy policy under Article 30 of the PIPA and Article 31 of its Enforcement Decree; in Singapore, the notification of purposes under section 20 of the PDPA, with the data protection officer's contact (section 11(5)); in Australia, the APP privacy policy under APP 1.4, with the APP 5 matters and, for decisions from 10 December 2026, automated decisions (APP 1.7 to 1.9); in South Africa, the notification under section 18 of POPIA, with the right to object (regulation 2.4 of its Regulations); in California, a privacy policy and a notice at collection (Civil Code 1798.100 and 1798.130, CCPA regulations 7011 and 7012); in the other US states with a consumer privacy law, a privacy notice (for example Va. Code 59.1-578(C)). Mandatory, content prescribed.",
+  "m": ""
+ },
+ {
+  "id": "ng-doc-ai-transparency-notice",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "AI transparency notice: what it does, who reads it, legal anchor",
+  "u": "notice-generators.html#ng-which",
+  "x": "AI transparency notice. What it does: Tells people they are dealing with an AI system or AI-generated content, at the moment it matters. Who reads it: People interacting with the system or exposed to its output. Legal anchor: Article 50 AI Act, applicable since 2 August 2026. Articles 26(7), 26(11) and 86 for high-risk systems.",
+  "m": ""
+ },
+ {
+  "id": "ng-doc-data-protection-policy",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Data protection policy: what it does, who reads it, legal anchor",
+  "u": "notice-generators.html#ng-which",
+  "x": "Data protection policy. What it does: Sets the rules staff follow: responsibilities, procedures, security, retention, rights handling, breaches. Who reads it: Staff and contractors. Internal. Legal anchor: Article 24(2) GDPR, \"where proportionate\". No content prescribed.",
+  "m": ""
+ },
+ {
+  "id": "ng-doc-ai-policy-including-acceptable-use",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "AI policy, including acceptable use: what it does, who reads it, legal anchor",
+  "u": "notice-generators.html#ng-which",
+  "x": "AI policy, including acceptable use. What it does: Sets the rules for choosing, approving and using AI: approved tools, prohibited uses, data inputs, human oversight. Who reads it: Staff and contractors. Internal. Legal anchor: None requires the document. Article 4 (AI literacy) and Article 5 (prohibited practices) apply regardless. ISO/IEC 42001 clause 5.2 is voluntary.",
+  "m": ""
+ },
+ {
+  "id": "ng-doc-responsible-ai-statement",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Responsible AI statement: what it does, who reads it, legal anchor",
+  "u": "notice-generators.html#ng-which",
+  "x": "Responsible AI statement. What it does: States the organisation's public commitments on AI. Who reads it: The public and clients. Legal anchor: None. Voluntary, and a claim about conduct that has to be true.",
+  "m": ""
+ },
+ {
+  "id": "ng-the-name-on-the-page-decides-nothing",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Policy or notice: the name on the page decides nothing",
+  "u": "notice-generators.html#ng-which",
+  "x": "The name on the page decides nothing. The GDPR does not reserve \"policy\" for internal documents. WP260, the transparency guidelines endorsed by the EDPB, lists data protection notice, privacy notice, privacy policy, privacy statement and fair processing notice as names in common use for the same Article 13 and 14 information (paragraph 24), and gives \"Privacy Policy\" as an acceptable label for the link to it (paragraph 11). A public page called Privacy Policy can therefore be the notice. Calling it a notice is a document governance choice: it keeps rules that bind staff out of the text people are owed, which Article 12 requires to be concise.",
+  "m": ""
+ },
+ {
+  "id": "ng-employees-need-both-kinds",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Policy or notice: employees need both kinds",
+  "u": "notice-generators.html#ng-which",
+  "x": "Employees need both kinds. As people whose data is processed, they are owed an employee privacy notice, including any automated decision-making and, from 2 December 2027, information before a high-risk AI system is used at work (Article 26(7) AI Act). As staff, they are bound by the data protection policy and the AI policy.",
+  "m": ""
+ },
+ {
+  "id": "ng-a-footer-link-is-not-an-ai-disclosure",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Policy or notice: a footer link is not an AI disclosure",
+  "u": "notice-generators.html#ng-which",
+  "x": "A footer link is not an AI disclosure. Article 50 information has to reach people clearly and at the latest at the first interaction or exposure. The Commission's guidelines list terms and conditions, URLs and documentation as insufficient on their own (C(2026) 7702, paragraph 38). A general AI notice page complements the disclosure in the product; it does not replace it. The two documents can meet: a deployer can add the Article 50(3) information on emotion recognition to its privacy notice (paragraph 110), as long as the notification is still in place before exposure.",
+  "m": ""
+ },
+ {
+  "id": "ng-where",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Policy or notice: where each document goes",
+  "u": "notice-generators.html#ng-which",
+  "x": "Public website and products: Privacy notice for users, linked from every page and every form. Article 50 disclosures inside the product, at the point of interaction. Optionally a responsible AI statement. Client onboarding: Privacy notice for client and supplier contacts. Article 14 applies where the client organisation supplies their details. Recruitment and HR: Privacy notices for applicants and for employees, and the Article 26(7) information before high-risk AI is used at work. Internal governance: Data protection policy and AI policy, with the procedures that implement them.",
+  "m": ""
+ },
+ {
+  "id": "ng-limit-check-that-the-inputs-are-true",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "What the generators cannot do: check that the inputs are true",
+  "u": "notice-generators.html#ng-limits",
+  "x": "Check that the inputs are true. A notice is only accurate if the processing it describes is the processing that happens.",
+  "m": ""
+ },
+ {
+  "id": "ng-limit-model-national-law",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "What the generators cannot do: model national law",
+  "u": "notice-generators.html#ng-limits",
+  "x": "Model national law. Employment rules under Article 88 GDPR, national restrictions under Article 23, the Member State laws that Articles 9(2) and 10 point to, and the national rules on informing workers that Article 26(7) AI Act refers to are all outside them. The employee notice says so in its check. For the UK, the generator records the Schedule 1 condition and any exemption you name in the Data Protection Act 2018 but does not test them; Swiss cantonal law is not covered.",
+  "m": ""
+ },
+ {
+  "id": "ng-limit-make-the-legal-calls",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "What the generators cannot do: make the legal calls",
+  "u": "notice-generators.html#ng-limits",
+  "x": "Make the legal calls. Whether a legal basis holds, whether a transfer is lawful, whether a system is high-risk, whether an AI interaction is obvious: the generators record your answer and show the rule it has to meet. The AI Assessment Pathway screens the high-risk question; the Transfer Impact Assessment covers transfers.",
+  "m": ""
+ },
+ {
+  "id": "ng-limit-replace-review",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "What the generators cannot do: replace review",
+  "u": "notice-generators.html#ng-limits",
+  "x": "Replace review. The completeness check says which rows are covered. A document can pass every row and still be wrong about the facts.",
+  "m": ""
+ },
+ {
+  "id": "ng-templates",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "What the generators cannot do: the two policies are templates",
+  "u": "notice-generators.html#ng-limits",
+  "x": "The two policies are templates, and say so. Article 24(2) GDPR asks for data protection policies only where proportionate and lists no content; the data protection policy is built from the 71 activities of the GDPR Readiness model, each cited to the Articles it evidences. No law requires an AI policy document; the template carries the Article 5 prohibitions in full, the Article 4 literacy duty and, where relevant, the Article 26 deployer duties.",
+  "m": ""
+ },
+ {
+  "id": "ng-review",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Notice and policy generators: how the rules were checked",
+  "u": "notice-generators.html#ng-limits",
+  "x": "Rules checked against these texts on 12 and 13 November 2026, then reviewed independently against them: all 37 findings of the first review, all 23 findings of a second review of the UK and Swiss rules, all 25 findings of a third review of the California rules, all 22 findings of a fourth review of the US state rules, all 20 findings of a fifth review of the Brazilian rules, all 19 findings of a sixth review of the Canadian rules, all 22 findings of a seventh review of the Indian rules, all 30 findings of an eighth review of the Chinese rules, all 27 findings of a ninth review of the Japanese rules, all 30 findings of a tenth review of the Korean rules, all 26 findings of an eleventh review of the Singapore rules, all 20 findings of a twelfth review of the Australian rules, and all 18 findings of a thirteenth review of the South African rules, were applied before publication. This is not legal advice.",
+  "m": ""
+ },
+ {
+  "id": "ng-limit-cover-every-regime",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "What the generators cannot do: cover every regime",
+  "u": "notice-generators.html#ng-limits",
+  "x": "The privacy notice covers the EU GDPR, the UK GDPR, the Swiss FADP, Brazil's LGPD, Canada's PIPEDA with the Quebec, Alberta and British Columbia laws, India's DPDP Act and Rules, China's PIPL with the Network Data Security Management Regulations, Japan's APPI, South Korea's PIPA, Singapore's PDPA, Australia's Privacy Act, South Africa's POPIA, the California CCPA and the consumer privacy laws of 22 other US states (18 in force, 4 from 2027 or 2028). Other jurisdictions have their own notice rules and are not covered yet. The other three documents follow EU law.",
+  "m": ""
+ },
+ {
+  "id": "ng-law-eu",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: EU GDPR",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers the EU GDPR. Legal anchor of the notice: Articles 12 to 14 GDPR and UK GDPR. Read against: Regulation (EU) 2016/679 (GDPR), Articles 6, 7, 9, 10, 12 to 22, 24, 26, 27, 37, 77 and 88. Article 29 Working Party, Guidelines on transparency under Regulation 2016/679, WP260 rev.01, 11 April 2018, endorsed by the EDPB.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-uk",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: UK GDPR and Data Protection Act 2018",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers the UK GDPR with the Data Protection Act 2018. Legal anchor of the notice: Articles 12 to 14 GDPR and UK GDPR. For the UK, the generator records the Schedule 1 condition and any exemption you name in the Data Protection Act 2018 but does not test them. Read against: UK GDPR, as amended by the Data (Use and Access) Act 2025, Articles 6, 8A, 9, 10, 12, 12A, 13 to 15, 21, 22A to 22D, 27, 44A, 45A, 46, 47, 49 and Annex 1. Data Protection Act 2018, sections 3(8A), 10, 119A, 164A and 165.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-ch",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: Switzerland (FADP)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers the Swiss FADP. Legal anchor of the notice: Article 19 FADP in Switzerland. Swiss cantonal law is not covered. Read against: Swiss Federal Act on Data Protection (FADP), SR 235.1, version of 7 July 2025, Articles 3, 5, 6, 10, 14 to 21, 25, 28, 30 to 32, 49 and 60, and the Data Protection Ordinance, SR 235.11, Articles 8, 13, 16, 18 and 19. The English text has no legal force; the German, French and Italian texts are authoritative.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-br",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: Brazil (LGPD)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers Brazil's LGPD. Legal anchor of the notice: Article 9 LGPD in Brazil, with Articles 14, 18 to 20 and 41 and, for transfers, Article 17 of the ANPD's International Data Transfer Regulation. For Brazil, the ANPD's regulation on data subject rights was still pending on 12 November 2026, and the ECA Digital (Law 15,211/2025) on digital services used by children is not modelled; the generator writes in English, while the transfer information has to be published in Portuguese. Read against: Brazil's General Data Protection Law (LGPD), Law 13,709/2018, as consolidated after Law 15,352/2026 (read in the Senate's consolidated text on normas.leg.br), Articles 3, 5 to 11, 14, 16, 18 to 20, 23, 33, 39, 41 to 43 and 55-J; the ANPD's Resolution CD/ANPD 2/2022 on small processing agents; Resolution CD/ANPD 18/2024 on the encarregado; the International Data Transfer Regulation (Resolution CD/ANPD 19/2024), Articles 3, 6, 9, 16, 17 and 32; Resolution CD/ANPD 32/2026 recognising the European Union as adequate, with Iceland, Liechtenstein and Norway; and the ECA Digital, Law 15,211/2025, Articles 7, 16, 22 and 26, named in the completeness check.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-ca",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: Canada (PIPEDA, Quebec, Alberta, British Columbia)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers Canada's PIPEDA with the Quebec, Alberta and British Columbia laws. Legal anchor of the notice: in Canada, principle 4.8 of Schedule 1 to PIPEDA with the Privacy Commissioner's consent guidelines, section 8 of Quebec's private-sector Act, section 13 of Alberta's PIPA and section 10 of British Columbia's PIPA. For Canada, Bill C-36, which would replace PIPEDA's privacy rules, was at second reading on 12 November 2026 and is not modelled, nor are the anti-spam law (CASL) and the provincial health information laws; Quebec's Act was read through extracts, because the official site did not answer on the day of the build. The generator writes in English, while Quebec's Charter of the French language calls for French. Read against: Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), current to 19 October 2026, sections 4 to 11 and Schedule 1; the Privacy Commissioner's Guidelines for obtaining meaningful consent and Guidelines for processing personal data across borders; Quebec's Act respecting the protection of personal information in the private sector, as amended by Law 25, current to 15 October 2026, sections 1 to 34, 42, 43 and 81; Alberta's Personal Information Protection Act, current as of 1 September 2025; and British Columbia's Personal Information Protection Act, current to 10 November 2026.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-in",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: India (DPDP Act and Rules)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers India's DPDP Act and Rules. Legal anchor of the notice: in India, section 5 of the DPDP Act with Rules 3, 9 and 14 of the DPDP Rules, 2025. For India, the notice duty applies from 13 May 2027; the Act lets people read the notice in English or any of the 22 languages of the Eighth Schedule to the Constitution, and the generator writes English only; the Data Protection Board had published no complaint link the generator could cite, so it asks you for one. Read against: India's Digital Personal Data Protection Act, 2023, sections 2 to 17, and the Digital Personal Data Protection Rules, 2025 (G.S.R. 846(E), with the corrigenda of 10 December 2025), Rules 1 to 23 and the First, Third, Fourth and Seventh Schedules, both as published in the Gazette of India on MeitY's site; commencement under G.S.R. 843(E) of 13 November 2025.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-cn",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: China (PIPL)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers China's PIPL with the Network Data Security Management Regulations. Legal anchor of the notice: in China, Articles 17, 23, 30 and 39 of the PIPL with Article 21 of the Network Data Security Management Regulations. For China, only the Chinese text of the law is authentic and the generator writes English, so publish a Chinese version; it asks which transfer mechanism covers each overseas recipient but does not decide it, and it does not model State organs, critical information infrastructure operators or the recommended national standards. Read against: China's Personal Information Protection Law (in force 1 November 2021), all 74 articles; the Network Data Security Management Regulations (State Council Decree No. 790, in force 1 January 2025), Articles 2, 21 to 28, 34 to 39 and 42; the Provisions on the Cyber Protection of Children's Personal Information (CAC Order No. 4, 2019), Articles 2 and 8 to 10; the Measures for Personal Information Protection Compliance Audits (CAC Order No. 18, in force 1 May 2025), Article 12; and the Cyberspace Administration's announcement of 18 July 2025 on reporting personal information protection officers; all read in Chinese on the Cyberspace Administration's site.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-jp",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: Japan (APPI)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers Japan's APPI. Legal anchor of the notice: in Japan, Articles 21, 27, 28 and 32 of the APPI with Article 10 of its Enforcement Order. For Japan, the APPI as in force is modelled; its 2026 amendment (children under 16, facial feature data, statistics and AI development) takes effect on a date still to be set and is not, and the generator writes English while people in Japan normally need Japanese. Read against: Japan's Act on the Protection of Personal Information (Act No. 57 of 2003, as in force on 2 November 2026), its Enforcement Order and Enforcement Rules, read in Japanese on e-Gov; the Personal Information Protection Commission's notice designating countries with equivalent protection (No. 1 of 2019) and its general guidelines; and its page on the 2026 amendment.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-kr",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: South Korea (PIPA)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers South Korea's PIPA. Legal anchor of the notice: in South Korea, the privacy policy under Article 30 of the PIPA and Article 31 of its Enforcement Decree. For South Korea, the PIPA as in force since 11 September 2026 is modelled; its amendments on using personal information to develop AI (from 9 March 2027) and on mandatory certification (from 1 July 2027) are not, nor are the extra rules for public institutions, and a policy for people in Korea is normally written in Korean. Read against: South Korea's Personal Information Protection Act (as in force on 11 September 2026, Act No. 21445) and its Enforcement Decree (as in force on 10 November 2026), read in Korean on the National Law Information Center; and the Personal Information Protection Commission's privacy policy drafting guidelines (April 2026), published on its privacy portal.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-sg",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: Singapore (PDPA)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers Singapore's PDPA. Legal anchor of the notice: in Singapore, the notification of purposes under section 20 of the PDPA, with the data protection officer's contact (section 11(5)). For Singapore, the PDPA and its 2021 Regulations as in force on 13 November 2026 are modelled; data breach notification and the Do Not Call rules are left to the checklist, and data portability is not in force. Read against: Singapore's Personal Data Protection Act 2012 and the Personal Data Protection Regulations 2021 (current versions on Singapore Statutes Online, 13 November 2026), with the Personal Data Protection Commission's Advisory Guidelines on Key Concepts (revised 29 April 2026).",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-au",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: Australia (Privacy Act 1988)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers Australia's Privacy Act. Legal anchor of the notice: in Australia, the APP privacy policy under APP 1.4, with the APP 5 matters and, for decisions from 10 December 2026, automated decisions (APP 1.7 to 1.9). For Australia, the Privacy Act 1988 and the Australian Privacy Principles as in force on 13 November 2026 are modelled for organisations, not agencies; a short collection notice at each collection point (APP 5) and the Spam Act and Do Not Call rules are left to the checklist. Read against: Australia's Privacy Act 1988 (Compilation No. 104, 4 June 2026, on the Federal Register of Legislation), with the Australian Privacy Principles in Schedule 1 and APP 1.7 to 1.9 from 10 December 2026, and the OAIC's Australian Privacy Principles guidelines (Chapter 1 updated 30 September 2026).",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-za",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: South Africa (POPIA)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers South Africa's POPIA. Legal anchor of the notice: in South Africa, the notification under section 18 of POPIA, with the right to object (regulation 2.4 of its Regulations). For South Africa, POPIA and its Regulations (2018, as amended in 2025) as in force on 13 November 2026 are modelled for private bodies; public bodies get a warning, and the PAIA manual, breach notification and consent to electronic direct marketing (Form 4) are left to the checklist. Read against: South Africa's Protection of Personal Information Act 4 of 2013 (Government Gazette 37067), with the Regulations relating to the Protection of Personal Information (2018, as amended with effect from 17 April 2025) and the Information Regulator's guidance notes on information officers, direct marketing and children.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-cal",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: California (CCPA)",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers the California CCPA. Legal anchor of the notice: in California, a privacy policy and a notice at collection (Civil Code 1798.100 and 1798.130, CCPA regulations 7011 and 7012). Read against: California Consumer Privacy Act, Civil Code 1798.100 onwards, as in force from 1 January 2026, and the CCPA regulations, Cal. Code Regs. tit. 11, 7000 onwards, effective 1 January 2026, sections 7001 to 7003, 7010 to 7016, 7020, 7021, 7025 to 7027, 7063, 7070, 7071, 7102 and 7200 to 7222.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-law-us",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Privacy notice generator: 22 other US states",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "The privacy notice generator covers the consumer privacy laws of 22 other US states. Legal anchor of the notice: in the other US states with a consumer privacy law, a privacy notice (for example Va. Code 59.1-578(C)). Some state laws were read only through secondary sources; the completeness check names them so you can confirm against the official text. Read against: The consumer privacy laws of 22 other US states, read on the official state code and legislature sites where they could be reached (for example Virginia, Va. Code 59.1-575 onwards, Connecticut, 2026 Supplement, Minnesota, chapter 325M) and the Colorado Privacy Act Rules, 4 CCR 904-3.",
+  "m": "Privacy notice"
+ },
+ {
+  "id": "ng-sources",
+  "k": "gen",
+  "p": "Notice & Policy Generators",
+  "t": "Notice and policy generators: sources",
+  "u": "notice-generators.html#ng-limits",
+  "x": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27 July 2026, including the amendments by Regulation (EU) 2026/1744. European Commission, Guidelines on the transparency obligations under Article 50 AI Act, C(2026) 7702 final, 5 November 2026.",
+  "m": ""
+ },
+ {
   "id": "tool-cat-privacy",
   "k": "page",
   "p": "Tools and pages",
@@ -18870,6 +19185,42 @@
   "t": "AI Assessment Pathway",
   "u": "privacy-ai-assessment.html#tool-aipath",
   "x": "One run for an AI system: a shared intake, an impact level from I to IV that decides how deep the rest goes, generative AI and EU AI Act modules that open only when they apply, and one register mapped to the NIST AI RMF, NIST AI 600-1, ISO/IEC 42001 and the Singapore framework for generative AI. It hands over to the FRIA and the Full DPIA rather than replacing them. Use it when you want one assessment that covers an AI system end to end instead of running the AI tools one by one. An impact level, the applicable AI Act obligations with links, and a register of findings mapped to the frameworks. 18 steps, added October 2026.",
+  "m": ""
+ },
+ {
+  "id": "tool-cat-pngen",
+  "k": "page",
+  "p": "Tools and pages",
+  "t": "Privacy Notice Generator",
+  "u": "notice-generators.html#privacy-notice",
+  "x": "Builds a privacy notice from your answers: purposes, legal bases, recipients, retention, transfers and rights. It covers the EU GDPR by default and, when ticked, the UK GDPR, the Swiss FADP, Brazil's LGPD, Canada's PIPEDA with the Quebec, Alberta and British Columbia laws, India's DPDP Act, China's PIPL, Japan's APPI, South Korea's PIPA, Singapore's PDPA, Australia's Privacy Act, South Africa's POPIA, the California CCPA and the consumer privacy laws of 22 other US states. One law leads the text and each other law ticked adds its own section. Use it to draft or check the notice for one audience at a time: website users, client contacts, applicants or employees. The notice, a completeness check that names the requirement behind each sentence, a delivery checklist, and exports as text, HTML, Markdown or PDF. Answers stay in the browser. One of four generators on one page, added November 2026.",
+  "m": ""
+ },
+ {
+  "id": "tool-cat-ainotice",
+  "k": "page",
+  "p": "Tools and pages",
+  "t": "AI Transparency Notice Generator",
+  "u": "notice-generators.html#ai-notice",
+  "x": "Drafts the information people are owed when they deal with an AI system or AI-generated content: the Article 50 AI Act disclosures and, for high-risk systems, the information under Articles 26(7), 26(11) and 86. Use it when you provide or deploy an AI system that people interact with or whose output they see. A footer link is not enough: the information has to reach people at the latest at the first interaction or exposure. The notice, the disclosures to place in the product, a completeness check and exports. Answers stay in the browser. One of four generators on one page, added November 2026.",
+  "m": ""
+ },
+ {
+  "id": "tool-cat-dppolicy",
+  "k": "page",
+  "p": "Tools and pages",
+  "t": "Data Protection Policy Template",
+  "u": "notice-generators.html#data-protection-policy",
+  "x": "An internal policy for staff and contractors, built from the 71 activities of the GDPR Readiness model, each cited to the Articles it evidences: responsibilities, procedures, security, retention, rights handling and breaches. Use it to set the rules staff follow. Article 24(2) GDPR asks for data protection policies only where proportionate and prescribes no content, so the result is a template to adapt. A policy template with a completeness check and exports. Answers stay in the browser. One of four generators on one page, added November 2026.",
+  "m": ""
+ },
+ {
+  "id": "tool-cat-aipolicy",
+  "k": "page",
+  "p": "Tools and pages",
+  "t": "AI Policy Template",
+  "u": "notice-generators.html#ai-policy",
+  "x": "An internal AI policy, including acceptable use: approved tools, prohibited uses, data inputs and human oversight. It carries the Article 5 prohibitions in full, the Article 4 AI literacy duty and, where relevant, the Article 26 deployer duties, with an optional responsible AI statement. Use it to set the rules for choosing, approving and using AI. No law requires the document; Articles 4 and 5 of the AI Act apply regardless. A policy template, an optional public responsible AI statement, a completeness check and exports. Answers stay in the browser. One of four generators on one page, added November 2026.",
   "m": ""
  },
  {
@@ -19062,12 +19413,21 @@
   "m": ""
  },
  {
+  "id": "faq-generators",
+  "k": "faq",
+  "p": "About this site",
+  "t": "Will a generated notice make me compliant?",
+  "u": "notice-generators.html#ng-limits",
+  "x": "No generator can promise that. The notice and policy generators build each document from a requirements matrix, and the completeness check names the requirement behind each sentence and lists what is still missing. It cannot check that what you typed is true, it does not make the legal calls, such as whether a legal basis holds or a transfer is lawful, and it is not a legal opinion. A document can pass every row and still be wrong about the facts.",
+  "m": ""
+ },
+ {
   "id": "faq-assistant",
   "k": "faq",
   "p": "About this site",
   "t": "What does this assistant search?",
   "u": "index.html",
-  "x": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them; it does not write answers of its own. Nothing you type leaves your browser.",
+  "x": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method, the guidance around the notice and policy generators and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them; it does not write answers of its own. Nothing you type leaves your browser.",
   "m": ""
  }
 ]

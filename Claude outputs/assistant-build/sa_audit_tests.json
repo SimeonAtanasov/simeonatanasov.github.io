@@ -1,0 +1,204 @@
+[
+[
+"when does the fundamental rights impact assessment apply",
+"^aia-art-27|^tool-fria|^cw-r\\d+$"
+],
+[
+"which assessment should I use for a customer chatbot",
+"^tool-cat-(aipath|genai)|^faq-start|^aipath-guide-customer"
+],
+[
+"how long do I have to notify a data breach",
+"^pp-pp-data-breach|^tool-incident"
+],
+[
+"how is the DPIA risk level calculated",
+"^tool-dpia-scoring"
+],
+[
+"legitimate interests balancing test",
+"^tool-lia"
+],
+[
+"cookie consent rules in Germany",
+"^ck-d.*",
+"Germany"
+],
+[
+"CNIL guidelines on cookies",
+"^ck-d.*",
+"France"
+],
+[
+"consent or pay models",
+"^ed-d154|^ck-d001|^ck-d011|^ck-d100|^ck-d008"
+],
+[
+"general purpose AI model with systemic risk",
+"^aia-art-51|^aia-art-55|^aia-annex-13"
+],
+[
+"which AI systems are high risk",
+"^aia-annex-3|^aia-art-6|^aiaadv-aia-high-risk"
+],
+[
+"AI literacy obligation for staff",
+"^aia-art-4$|^cw-r01|^aiaadv-aia-building-ai-literacy"
+],
+[
+"do I have to label deepfakes",
+"^aia-art-50"
+],
+[
+"penalties under the AI Act",
+"^aia-art-99|^aiaadv-aia-governance-enforcement"
+],
+[
+"can my employer read my mailbox",
+"^pp-pp-accessing-another-person-s-mailbox"
+],
+[
+"recording meetings with AI notetakers",
+"^pp-pp-meetings"
+],
+[
+"sending personal data to the US",
+"^tool-tia|^ed-d38[0-4]|^privacy-notice-transfers|^tool-cat-tia"
+],
+[
+"standard contractual clauses",
+"^ed-d366|^ed-d367|^tool-tia|^ed-d503|^tool-cat-tia"
+],
+[
+"how much could my company be fined",
+"^calc-|^tool-cat-calculator"
+],
+[
+"appeal against a fine in Spain",
+"^enforce-ge-c-es"
+],
+[
+"who enforces privacy law in Brazil",
+"^world-ge-c-br"
+],
+[
+"do I need to appoint a DPO",
+"^readiness-act-g2|^readiness-act-g3"
+],
+[
+"records of processing activities",
+"^readiness-act-i1|^readiness-act-i2"
+],
+[
+"right to be forgotten requests",
+"^readiness-act-r6|^pp-pp-handling-requests"
+],
+[
+"ISO 42001 mapped to the AI Act",
+"^cw-|^tool-cat-crosswalk|^aipath-guide-7"
+],
+[
+"NIST AI RMF govern function",
+"^cw-|^aipath-guide-7|^aipath-guide-3"
+],
+[
+"do my answers leave my device",
+"^faq-device"
+],
+[
+"how do I save my assessment and continue later",
+"^faq-save"
+],
+[
+"use the site offline",
+"^faq-install"
+],
+[
+"ENISA severity scale for breaches",
+"^tool-incident"
+],
+[
+"assessing a vendor's security",
+"^tool-tpsa|^tool-cat-tpsa"
+],
+[
+"what are the scope questions in the readiness assessment",
+"^readiness-the-13-scope|^readiness-gdpr-readiness"
+],
+[
+"age of consent for children online",
+"^readiness-act-e5|^pp-pp-consent"
+],
+[
+"dark patterns in cookie banners",
+"^ed-d012|^ck-d018|^ck-d045|^ck-d057|^ck-d007"
+],
+[
+"facial recognition technology",
+"^ed-d008|^ed-d151"
+],
+[
+"emotion recognition of employees",
+"^aipath-guide-emotion|^aia-art-5$|^aia-art-5-|^cw-r0[2-9]"
+],
+[
+"prohibited AI practices",
+"^aia-art-5$|^aia-art-5-|^aiaadv-aia-prohibited"
+],
+[
+"what cookies does this website set",
+"^cookie-notice"
+],
+[
+"DSA and GDPR interplay",
+"^ed-d001"
+],
+[
+"new application dates for high-risk systems after the omnibus",
+"^aia-doc-01|^aia-art-113|omnibus"
+],
+[
+"google analytics without consent",
+"^ck-d070"
+],
+[
+"lead supervisory authority in cross-border cases",
+"^enforce-ge-cross"
+],
+[
+"tracking users without asking them",
+"^ck-d|^pp-pp-website"
+],
+[
+"can I reuse data for a new purpose",
+"^pp-pp-secondary-use"
+],
+[
+"staff monitoring with cameras",
+"^pp-pp-video-surveillance"
+],
+[
+"what is the impact level in the pathway",
+"^aipath-guide-6|^tool-aipath"
+],
+[
+"copyright and training data for generative AI",
+"^aiaadv-aia-copyright|^tool-genai"
+],
+[
+"marketing emails opt out",
+"^pp-pp-marketing"
+],
+[
+"processor contract requirements",
+"^readiness-act-(c|t)\\d|^pp-pp-records"
+],
+[
+"Binding corporate rules approval",
+"^ed-d\\d+"
+],
+[
+"explain the Article 35 triggers",
+"^tool-privacy|^tool-dpia"
+]
+]
