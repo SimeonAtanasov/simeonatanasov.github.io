@@ -132,6 +132,13 @@
 }
 .ng-field textarea { min-height: 0; line-height: 1.5; padding: 0.6em 1em; }
 .ng-hint { font-size: 0.8em; opacity: 0.72; margin: 5px 0 0 0; line-height: 1.45; }
+/* Two fields side by side share their rows (label, control, hint), so the controls line up
+   when one label wraps to more lines than the other. Each label sits just above its control. */
+@supports (grid-template-rows: subgrid) {
+	.ng-grid > .ng-field:not(.ng-wide) { display: grid; grid-row: span 3; grid-template-rows: subgrid; align-content: start; }
+	.ng-grid > .ng-field:not(.ng-wide) > label { align-self: end; }
+	.ng-grid > .ng-field:not(.ng-wide) > .ng-hint { align-self: start; }
+}
 .ng-note { margin: 0 0 12px 0; }
 
 .ng-checks { display: flex; flex-wrap: wrap; gap: 8px 22px; }
