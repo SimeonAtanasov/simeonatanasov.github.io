@@ -84,3 +84,11 @@ high-risk from 2 August 2028, Article 50 grace to 2 December 2026, the two new p
 Article 5(1)(ba) and (bb) from 2 December 2026. British spelling, no em dashes, company-agnostic.
 
 The PDFs are kept in `../study-guides/` since 3 October 2026.
+
+## After a rebuild: rerun the SEO generator
+
+`build_aia_page.py` writes its own page head, so a rebuild puts back its own description and metadata
+block. After the rebuilt page is in the repo and the header swapped, run
+`python3 "Claude outputs/seo-build/apply_seo.py"` from the repo root. It is idempotent, it
+leaves the sitemap dates alone, and it stops without writing anything if a sitemap page is
+missing from its table. Added 16 November 2026 (SEO-01).

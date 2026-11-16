@@ -417,7 +417,7 @@ def main_html():
 CORRECTIONS = int(os.environ.get("GE_CORRECTIONS", "90"))
 
 HEADER = open(os.path.join(HERE, "header.html"), encoding="utf-8").read()
-DESC = "How a GDPR complaint becomes a fine, where the courts come in, and the enforcement route in each of the 30 EEA countries, with the UK and Switzerland for contrast."
+DESC = "How a GDPR complaint becomes a fine, where the courts come in, and the enforcement route in all 30 EEA countries, with the UK and Switzerland for contrast."
 
 
 def page():

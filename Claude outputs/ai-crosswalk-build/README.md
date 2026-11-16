@@ -36,3 +36,11 @@ the page with `ai-governance-crosswalk.html` as the active page).
 - Recheck when: harmonised standards are cited in the Official Journal (EN 18286 and the
   rest of the JTC 21 programme), ISO/IEC 42001 is revised, NIST publishes AI RMF updates,
   or the AI Act Digest is rebuilt.
+
+## After a rebuild: rerun the SEO generator
+
+`build_crosswalk.py` (from `page_template.html`) writes its own page head, so a rebuild puts back its own description and metadata
+block. After the rebuilt page is in the repo, run
+`python3 "Claude outputs/seo-build/apply_seo.py"` from the repo root. It is idempotent, it
+leaves the sitemap dates alone, and it stops without writing anything if a sitemap page is
+missing from its table. Added 16 November 2026 (SEO-01).

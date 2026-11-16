@@ -248,3 +248,16 @@ between its two markers, and the eight module files lie inside it one after the 
 are documentation only, and A11, a check `ng.js` creates inline); an HTML payload added to the
 free-text answers of all 406 scenarios produced no element and ran no script in the form or in any
 output. Record: `tool-baselines/2026-11-13-AUDIT-01/`, kept outside the repo.
+
+## After a rebuild: rerun the SEO generator
+
+`build_page.py` (from `notice-generators.src.html`) writes its own page head, so a rebuild puts back its own description and metadata
+block. After the rebuilt page is in the repo, run
+`python3 "Claude outputs/seo-build/apply_seo.py"` from the repo root. It is idempotent, it
+leaves the sitemap dates alone, and it stops without writing anything if a sitemap page is
+missing from its table. Added 16 November 2026 (SEO-01).
+
+Since 16 November 2026 the source carries the approved description (150 characters) and the block
+exactly as `apply_seo.py` writes it, so `build_page.py` alone gives the live page byte for byte, and so
+does `build_page.py` followed by `apply_seo.py` (both checked by md5 that day). Rerun the generator
+anyway: its table is the source of the description.

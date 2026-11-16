@@ -28,3 +28,14 @@ Builds `gdpr-enforcement.html` (GDPR Enforcement in Europe), its companion `priv
 3. `python3 build_study_guide.py`
 4. Copy `out/gdpr-enforcement.html` and `out/privacy-enforcement-worldwide.html` to the repo root and `out/pages/gdpr-enforcement/*` to `pages/gdpr-enforcement/`.
 5. Check: no em dashes, every `#ge-c-xx` anchor resolves, no horizontal overflow at 390px.
+
+## After a rebuild: rerun the SEO generator
+
+Each of `build_enforcement_page.py` and `build_world_page.py` writes its own page head, so a rebuild puts back its own description and metadata
+block. After the rebuilt page is in the repo (step 4 above), run
+`python3 "Claude outputs/seo-build/apply_seo.py"` from the repo root. It is idempotent, it
+leaves the sitemap dates alone, and it stops without writing anything if a sitemap page is
+missing from its table. Added 16 November 2026 (SEO-01).
+
+`DESC` in `build_enforcement_page.py` is the approved short description since 16 November 2026
+("...in all 30 EEA countries...", 155 characters), the same text as the generator's table.

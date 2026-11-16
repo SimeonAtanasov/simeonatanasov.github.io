@@ -9151,8 +9151,8 @@
   "Do findings from security testing need to be remediated?"
  ],
  "readiness-act-s5": [
-  "Do staff and contractors need to process data only on documented instruction?",
-  "Which Articles does the documented instruction activity evidence?"
+  "Do staff and contractors need to process data only on the controller's instructions?",
+  "Which Articles does processing only on the controller's instructions evidence?"
  ],
  "readiness-act-s6": [
   "How should access to personal data be controlled and reviewed?",

@@ -76,3 +76,11 @@ replace the header block with the current one (Home | Privacy | AI | Cookie Comp
 from another root page, with Cookie Compliance and Cookie Digest marked active. Items marked
 "source": "secondary" rest on a secondary source because the primary page could not be fetched;
 they are marked on the page and are the first to re-verify.
+
+## After a rebuild: rerun the SEO generator
+
+`build_cookie_page.py` writes its own page head, so a rebuild puts back its own description and metadata
+block. After the rebuilt page is in the repo and the header swapped, run
+`python3 "Claude outputs/seo-build/apply_seo.py"` from the repo root. It is idempotent, it
+leaves the sitemap dates alone, and it stops without writing anything if a sitemap page is
+missing from its table. Added 16 November 2026 (SEO-01).

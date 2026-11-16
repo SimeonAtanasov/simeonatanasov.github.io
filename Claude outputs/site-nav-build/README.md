@@ -62,3 +62,11 @@ groups and any extra selector passed to nav_js.
 
 British spelling, no em dashes. Font Awesome glyphs in generated CSS are written as
 \\f107 in Python source so the file carries \f107.
+
+## After a rebuild: rerun the SEO generator
+
+`apply_nav.py` writes its own page head, so a rebuild puts back its own description and metadata
+block. After the rebuilt page is in the repo and the header swapped, run
+`python3 "Claude outputs/seo-build/apply_seo.py"` from the repo root. It is idempotent, it
+leaves the sitemap dates alone, and it stops without writing anything if a sitemap page is
+missing from its table. Added 16 November 2026 (SEO-01).

@@ -479,12 +479,12 @@
   {
    "id": "S5",
    "cat": 5,
-   "activity": "Ensure staff process personal data only on documented instruction",
+   "activity": "Ensure staff process personal data only on instructions from the controller",
    "articles": [
     29,
     32
    ],
-   "po": "Are staff and contractors bound to process personal data only on documented instruction and under a duty of confidence?",
+   "po": "Are staff and contractors bound to process personal data only on instructions from the controller, unless the law requires otherwise, and under a duty of confidence?",
    "ou": "Do people in your area understand they may only use personal data as instructed?",
    "cond": null
   },
@@ -559,7 +559,7 @@
   {
    "id": "V6",
    "cat": 6,
-   "activity": "Define and publish joint controller arrangements",
+   "activity": "Define joint controller arrangements and make their essence available to individuals",
    "articles": [
     26
    ],

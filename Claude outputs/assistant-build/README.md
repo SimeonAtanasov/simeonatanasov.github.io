@@ -189,3 +189,13 @@ for enforcement questions is in `TODO.md`, section 2.
 **On the device, files OneDrive keeps online only cannot be read** (EINVAL, "Invalid argument"):
 `dump_js_data.js`, `pages.json` and the three study guide Markdown files were in that state on 13 November 2026,
 and the build stopped at the first one. Staging a file through the bridge downloads it; then the build runs.
+
+## 16 November 2026 (SA-10)
+
+Rebuilt in the device shell after the study pack rebuild (STUDY-03) and the GDPR Readiness label change
+(TC-10). Two written questions on `readiness-act-s5` reworded ("documented instruction" became "the
+controller's instructions"). Against the SA-09 build: 2,159 chunks, five changed (the two readiness
+activities S5 and V6 and the three tool chunks that printed "Pseudonymisation" twice); 8,680 questions,
+one fewer, because the V6 template question built from the old label is no longer produced; the
+scores of some other questions shifted slightly. md5 `index.json` b29dfd9dd939329dc3f319c35d71cdb7,
+`questions.json` 4763e4062a085f6cb17b8d2d90199169.

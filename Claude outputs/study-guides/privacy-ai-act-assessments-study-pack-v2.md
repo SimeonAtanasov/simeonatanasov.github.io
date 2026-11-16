@@ -1,6 +1,6 @@
 ---
 title: "Privacy, AI Act and Assessments: a study pack"
-date: 2026-10-03
+date: 2026-11-16
 source: "simeonatanasov.github.io/Claude outputs/study-guides/privacy-ai-act-assessments-study-pack-v2.pdf"
 tags: [study-guide]
 ---
@@ -1736,7 +1736,7 @@ step shown when `hasPersonalData === "Yes"`
 
 Which data protection controls are already in place for this processing? choose any
 
-options Data minimisation (unnecessary fields removed) · Purpose limitation (processing scope restricted) · Access rights management and least privilege · Access logging and monitoring · Encryption in transit and at rest · Pseudonymisation · Pseudonymisation · Anonymisation or aggregation for secondary uses · Data masking in non-production environments · Data processing agreement with the supplier · Data protection clauses in third-party contracts · Intra-group data processing agreement · Appropriate safeguards for transfers outside the home region · Legitimate interest balancing test completed · Processing recorded in the RoPA · Retention and deletion rules implemented in the system · Accuracy and data quality checks · Human review of automated or AI-supported outputs · Restrictions on profiling, monitoring or automated decisions · Privacy notice covering this processing · Consent or preference management · Mechanisms for individuals to exercise their rights · Supplier due diligence · Measures tailored to employees or other vulnerable individuals · Backup and tested restore procedure · Security testing or penetration testing · Training for staff handling this data · Incident response and breach notification procedure · DPIA performed · Prior consultation with the supervisory authority
+options Data minimisation (unnecessary fields removed) · Purpose limitation (processing scope restricted) · Access rights management and least privilege · Access logging and monitoring · Encryption in transit and at rest · Pseudonymisation · Anonymisation or aggregation for secondary uses · Data masking in non-production environments · Data processing agreement with the supplier · Data protection clauses in third-party contracts · Intra-group data processing agreement · Appropriate safeguards for transfers outside the home region · Legitimate interest balancing test completed · Processing recorded in the RoPA · Retention and deletion rules implemented in the system · Accuracy and data quality checks · Human review of automated or AI-supported outputs · Restrictions on profiling, monitoring or automated decisions · Privacy notice covering this processing · Consent or preference management · Mechanisms for individuals to exercise their rights · Supplier due diligence · Measures tailored to employees or other vulnerable individuals · Backup and tested restore procedure · Security testing or penetration testing · Training for staff handling this data · Incident response and breach notification procedure · DPIA performed · Prior consultation with the supervisory authority
 
 follow-up Any other control worth recording
 
@@ -2005,13 +2005,13 @@ Record implemented and planned measures separately. A planned measure does not l
 
 Which measures are already implemented and operating? choose any
 
-options Data minimisation (unnecessary fields removed) · Purpose limitation (processing scope restricted) · Access rights management and least privilege · Access logging and monitoring · Encryption in transit and at rest · Pseudonymisation · Pseudonymisation · Anonymisation or aggregation for secondary uses · Data masking in non-production environments · Data processing agreement with the supplier · Data protection clauses in third-party contracts · Intra-group data processing agreement · Appropriate safeguards for transfers outside the home region · Legitimate interest balancing test completed · Processing recorded in the RoPA · Retention and deletion rules implemented in the system · Accuracy and data quality checks · Human review of automated or AI-supported outputs · Restrictions on profiling, monitoring or automated decisions · Privacy notice covering this processing · Consent or preference management · Mechanisms for individuals to exercise their rights · Supplier due diligence · Measures tailored to employees or other vulnerable individuals · Backup and tested restore procedure · Security testing or penetration testing · Training for staff handling this data · Incident response and breach notification procedure · DPIA performed · Prior consultation with the supervisory authority
+options Data minimisation (unnecessary fields removed) · Purpose limitation (processing scope restricted) · Access rights management and least privilege · Access logging and monitoring · Encryption in transit and at rest · Pseudonymisation · Anonymisation or aggregation for secondary uses · Data masking in non-production environments · Data processing agreement with the supplier · Data protection clauses in third-party contracts · Intra-group data processing agreement · Appropriate safeguards for transfers outside the home region · Legitimate interest balancing test completed · Processing recorded in the RoPA · Retention and deletion rules implemented in the system · Accuracy and data quality checks · Human review of automated or AI-supported outputs · Restrictions on profiling, monitoring or automated decisions · Privacy notice covering this processing · Consent or preference management · Mechanisms for individuals to exercise their rights · Supplier due diligence · Measures tailored to employees or other vulnerable individuals · Backup and tested restore procedure · Security testing or penetration testing · Training for staff handling this data · Incident response and breach notification procedure · DPIA performed · Prior consultation with the supervisory authority
 
 follow-up Any other implemented measure worth recording
 
 Which measures are planned but not yet implemented? choose any
 
-options Data minimisation (unnecessary fields removed) · Purpose limitation (processing scope restricted) · Access rights management and least privilege · Access logging and monitoring · Encryption in transit and at rest · Pseudonymisation · Pseudonymisation · Anonymisation or aggregation for secondary uses · Data masking in non-production environments · Data processing agreement with the supplier · Data protection clauses in third-party contracts · Intra-group data processing agreement · Appropriate safeguards for transfers outside the home region · Legitimate interest balancing test completed · Processing recorded in the RoPA · Retention and deletion rules implemented in the system · Accuracy and data quality checks · Human review of automated or AI-supported outputs · Restrictions on profiling, monitoring or automated decisions · Privacy notice covering this processing · Consent or preference management · Mechanisms for individuals to exercise their rights · Supplier due diligence · Measures tailored to employees or other vulnerable individuals · Backup and tested restore procedure · Security testing or penetration testing · Training for staff handling this data · Incident response and breach notification procedure · DPIA performed · Prior consultation with the supervisory authority
+options Data minimisation (unnecessary fields removed) · Purpose limitation (processing scope restricted) · Access rights management and least privilege · Access logging and monitoring · Encryption in transit and at rest · Pseudonymisation · Anonymisation or aggregation for secondary uses · Data masking in non-production environments · Data processing agreement with the supplier · Data protection clauses in third-party contracts · Intra-group data processing agreement · Appropriate safeguards for transfers outside the home region · Legitimate interest balancing test completed · Processing recorded in the RoPA · Retention and deletion rules implemented in the system · Accuracy and data quality checks · Human review of automated or AI-supported outputs · Restrictions on profiling, monitoring or automated decisions · Privacy notice covering this processing · Consent or preference management · Mechanisms for individuals to exercise their rights · Supplier due diligence · Measures tailored to employees or other vulnerable individuals · Backup and tested restore procedure · Security testing or penetration testing · Training for staff handling this data · Incident response and breach notification procedure · DPIA performed · Prior consultation with the supervisory authority
 
 follow-up For each planned measure, who owns it and when will it be in place?
 
@@ -5038,9 +5038,9 @@ OU Are the systems your area relies on included in security testing?
 
 Art. 32
 
-S5 Ensure staff process personal data only on documented instruction
+S5 Ensure staff process personal data only on instructions from the controller
 
-PO Are staff and contractors bound to process personal data only on documented instruction and under a duty of confidence?
+PO Are staff and contractors bound to process personal data only on instructions from the controller, unless the law requires otherwise, and under a duty of confidence?
 
 OU Do people in your area understand they may only use personal data as instructed?
 
@@ -5096,7 +5096,7 @@ OU Does your area rely on one-off exceptions to transfer data abroad?
 
 Art. 49 · scoped on: derogations
 
-V6 Define and publish joint controller arrangements
+V6 Define joint controller arrangements and make their essence available to individuals
 
 PO Is there an arrangement setting out respective responsibilities with each joint controller, the essence of which is available to individuals?
 

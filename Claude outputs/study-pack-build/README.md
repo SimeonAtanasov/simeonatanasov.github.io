@@ -84,3 +84,16 @@ questions, 78 self-test questions, a review card line. Rebuilt from unchanged in
 text identical to the 161-page PDF. After: 174 pages; text removed is only the counts, the
 reflowed suite intro and the table of contents page numbers. Before-images in
 `../tool-baselines/2026-10-03-STUDY-02/`.
+
+## 16 November 2026: readiness labels and the duplicate option (STUDY-03)
+
+Rebuilt after TC-09 (the duplicate "Pseudonymisation" removed from `DPIA_CONTROLS`) and TC-10 (the GDPR
+Readiness S5 and V6 labels and the S5 Privacy Office question). First rebuilt from the unchanged inputs
+with WeasyPrint 70.0, the version that produced the October PDF: text identical to the repo PDF, Markdown
+identical apart from the date line. Then `readiness.json` and `assessment.json` were re-dumped (against
+the previous dumps only the three readiness strings and the four option lists built from `DPIA_CONTROLS`
+differ) and the pack rebuilt: 174 pages as before; the only text changes are the three printed option
+lists, the S5 label and question and the V6 label. `dump_readiness.js` still holds the sandbox paths of
+September 2026; point its two paths at the current files before running it. Before-images in the
+`GitHub-projects-data` folder beside the repo, `tool-baselines/2026-11-16-STUDY-03/`. The Obsidian vault
+copy is one version behind (`TODO.md`, section 5).

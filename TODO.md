@@ -123,11 +123,6 @@ before the click); change log entry SA-02; design record in `claude/site-assista
 - Incident & Breach Severity (ENISA), one change: the malicious intent +0.5 factor; the
   AEPD "volume x type x impact" cross-check needs a traceable source or removal; align the
   intake fields with the EDPB breach notification template when final.
-- Study pack and Ask panel index still show "Pseudonymisation" twice in the DPIA controls
-  list (three places in the study pack Markdown and PDF, three in `assets/assistant/index.json`,
-  which is built from the Markdown). The duplicate itself was removed from `assessment.js` on
-  16 November 2026 (TC-09). Both clear at the next study pack rebuild and index rebuild; a
-  rebuild of the index alone changes nothing.
 - Crosswalk: a harmonised standards column once standards are cited in the Official
   Journal (the monthly check reports this); re-check the NIST texts when the AI RMF
   revision is published.
@@ -146,11 +141,10 @@ before the click); change log entry SA-02; design record in `claude/site-assista
   is left is the Play Console host declaration for the Android app, which no file shows.
 - From the September link audit, still true on 16 November 2026: the home page resume button
   (inside Career & Education) points at the GitHub raw URL, not `resume/resume-simeon-atanasov.pdf`;
-  three pages have a description over 160 characters (`privacy-ai-assessment.html` 240,
-  `gdpr-enforcement.html` 163, `notice-generators.html` 424; see the SEO generator item);
   `images/risk-matrix-desktop.png`, `risk-matrix-phone.png` and `risk-matrix-tile2.png` are
   referenced by no page and served publicly. No longer true: Open Graph tags are on all 21
-  pages, and `Privacy Assessment.txt` and `draft-about.txt` no longer exist.
+  pages, `Privacy Assessment.txt` and `draft-about.txt` no longer exist, and
+  the three descriptions over 160 characters were shortened on 16 November 2026 (SEO-01).
 - Spelling, decided 16 November 2026: nothing is converted. The digests and the tools use
   British spelling, the advice pages American; match the page being edited. Recorded in
   `claude/content-voice.md`.
@@ -160,20 +154,12 @@ before the click); change log entry SA-02; design record in `claude/site-assista
   16 November 2026.
 - Service worker: the digests are not precached; revisit if offline use matters.
 - `images/pic04.jpg` is a banner in a tall slot; it wants a tile made for the slot.
-- SEO generator behind the pages (found 13 November 2026). `Claude outputs/seo-build/apply_seo.py`
-  has not been run since late September 2026. Its `PAGES` table lacks five sitemap pages
-  (`ai-governance-crosswalk.html`, `gdpr-enforcement.html`, `gdpr-fines-analytics.html`,
-  `privacy-enforcement-worldwide.html`, `notice-generators.html`), holds the old digest counts
-  (543 and 259; the pages say 553 and 263) and the September description of the assessments
-  page. `llms.txt` and the counts in the page heads have been edited by hand since. A rerun
-  today would put the old counts and description back, drop the five pages from `llms.txt` and
-  set every sitemap `lastmod` to the file dates: do not rerun it before the table is updated.
-  Decide: update the table (its 160-character limit then needs shorter descriptions for the
-  assessments page, 240 characters, `gdpr-enforcement.html`, 163, and `notice-generators.html`,
-  424, or a higher limit; the two enforcement pages have no seo block and would get one), or
-  retire the script and keep editing by hand. The root README (which now warns),
-  `claude/seo-and-crawlers.md`, `claude/legal-pages.md` and `claude/cookie-consent.md` still
-  describe "edit the table and rerun".
+- Obsidian vault: the vault copy of the study pack is one version behind since the rebuild of
+  16 November 2026 (STUDY-03): `privacy-ai-act-assessments-study-pack-v2.md` at the vault top level
+  and the PDF in `910_Attachments/`. Copy both from `Claude outputs/study-guides/` when the vault is
+  connected, and check the md5 against the repo copies.
+- SEO generator: up to date and run on 16 November 2026 (SEO-01, SEO-02); rerun it after any
+  rebuild of a page that writes its own head. Nothing open.
 
 ## 6. Re-verification when sources land
 
@@ -338,13 +324,10 @@ before the click); change log entry SA-02; design record in `claude/site-assista
   The generators show both. Settle one reading across the site.
 - **2026 coordinated enforcement action on transparency.** Check the requirements matrix against the EDPB
   report when it is published.
-- **GDPR Readiness labels (frozen tool).** The independent review of 12 November 2026 found two
-  activity labels looser than the Articles they cite: S5 "only on documented instruction" (Article 29
-  says instructions; documented instructions are Article 28(3)(a) for processors) and V6 "publish"
-  joint controller arrangements (Article 26(2) asks for the essence to be made available). The
-  data protection policy generator overrides both; fix the labels when the readiness tool is next opened.
-- **`ng.js` header comment.** Line 13 names `test_ng.js`; the test is `test_ng.py`. Correct it with the next
-  change to `ng.js`.
+- **`ng.js` comments.** Line 13 names `test_ng.js`; the test is `test_ng.py`. The comment above
+  `DP_CLAUSE` says `readiness-data.js` is frozen and keeps its label: since TC-10 (16 November 2026) the
+  S5 and V6 labels follow Articles 29 and 26(2), so the comment is out of date (the two overrides still
+  fit and stay). Correct both with the next change to `ng.js`.
 - **Test fixtures.** Done 13 November 2026 (MOVE-02): the invented organisations in `test_ng.py` and the
   scenario files use names under the reserved `.example` domain; 4,322 checks, 0 failures afterwards.
 - **Build leftovers.** Moved out of the repo on 13 November 2026 (MOVE-02), on Simeon's decision: `incoming/`

@@ -3,7 +3,7 @@
 Personal portfolio and privacy reference site, published through GitHub Pages at
 `https://www.simeonatanasov.com`. This file is the map: what each page is, where its
 code lives, what sits in `Claude outputs/`, and how to rebuild the generated pages.
-Last updated 13 November 2026.
+Last updated 16 November 2026.
 
 ## Pages
 
@@ -205,7 +205,7 @@ the rerun order for the apply scripts across all four digest data files is in
 | `ai-act-digest-build/` | Data and scripts that generate `ai-act-digest.html`: five research briefs, the 133 provision entries and 59 corpus entries as JSON, the merged data set, the page and PDF renderers, the link audit and the render test. README inside. | You need to add or correct an AI Act entry (5 corpus entries could not be fetched and are marked). |
 | `study-pack-build/` | Data and scripts that generate `privacy-ai-act-assessments-study-pack-v2.pdf`: `pages.json` (the prose of the two advice pages extracted to markdown), `extract_pages.py` that regenerates it from the HTML, the authored study layer (`study_pp.py`, `study_aia.py`, `study_tools.py`), the front matter, the two tools' content dumped from the live pages, and `build.py`. README inside. Added 20 September 2026; before that the pack could not be rebuilt from the repo. | You edit prose on either advice page, or need to reprint the study pack. Note `pages.json` is a copy of the site text and has to be kept in step. |
 | `site-nav-build/` | `digest_nav.py` (the master copy of the shared side contents, results box, jump bar and Top button; the EDPB and cookie builds carry identical copies), `swap_header.py` (replaces a generated page's header block with the current four-item nav; run it after every page rebuild) and `apply_nav.py` (adds them to the two advice pages without touching their copy; the advice jump bar is Search and All situations only). README inside. | You change the navigation pattern or rebuild an advice page after editing its text. |
-| `seo-build/` | `apply_seo.py`: meta descriptions (160 characters or fewer), Open Graph and Twitter tags, JSON-LD (`Person` and `WebSite` on the home page, `TechArticle`, `CollectionPage`, `WebApplication` or `WebPage` elsewhere), the www host everywhere, `llms.txt` and sitemap `lastmod`. Idempotent. | You add or rename a page, change a description, or rebuild a digest or advice page. |
+| `seo-build/` | `apply_seo.py`: meta descriptions (160 characters or fewer), Open Graph and Twitter tags, JSON-LD (`Person` and `WebSite` on the home page, `TechArticle`, `CollectionPage`, `WebApplication` or `WebPage` elsewhere), the www host everywhere, `llms.txt`. Stops without writing if a sitemap page is missing from its table; leaves sitemap `lastmod` alone unless given `--lastmod`. Idempotent. | You add or rename a page, change a description, or rebuild any page whose builder writes its own head (digests, advice pages, enforcement pages, crosswalk, notice generators). |
 | `home-tile-build/` | Two scripts that draw home page tiles. `make_power_bi_tile.py` rebuilds `images/power-bi-tile.png`: the Power BI wordmark cut from `images/power-bi-dashboard.png` on top, and below it `power-bi-screenshot.png` from this folder, a screenshot of the published report with the viewer's grey footer bar cut off (replaced 27 Sept 2026 after the Power BI date fix, Total Fines EUR 7.16bn; to refresh the tile, overwrite the screenshot and rerun). Trimmed, restacked with a 22px margin and a 44px gap, quantized to 256 colours, about 200KB. The spotlight contains rather than covers that tile and sets no background colour, so the untrimmed white used to paint a slab across the card. `make_regulatory_digests_tile.py` is superseded: it drew the first, flat tile for the Regulatory Digests spotlight, which Simeon replaced with his own artwork on 21 Sept 2026, so it now writes to `regulatory-digests-flat.png` rather than over the artwork. It draws `images/regulatory-digests.png`, the 1000 x 1000 tile behind the Regulatory Digests spotlight on the home page. Flat mock of a digest page in the site navy, drawn at 2x and resized; needs Pillow and the DejaVu fonts. No source pills in the image on purpose: the three tool-chips the spotlight lays over the left half of it already name the three digests. | You want to redraw or restyle the home page digests tile. |
 | `fines-analytics-build/` | `build_analytics_data.py` turns the enforcement tracker's analytics JSON (the `et-analytics` script tag on its Analytics page) into `pages/gdpr-fines-analytics/analytics-data.js`, re-deriving GDPR Articles with the fine calculator's parser. README has the steps and the totals to check against. | You want to refresh the data behind the GDPR Fines Analytics page. |
 | `gdpr-enforcement-build/` | Builds `gdpr-enforcement.html` and its CSS and JS. `data/` holds one verified JSON per country plus `eu.json`; `summary.py` holds the hand classifications behind the map and comparison (keep it in step with the JSON); `header.html` is the site header the builder embeds, so update it with any nav change; `build_enforcement_page.py` writes to `out/`. `research/` keeps the research brief, the verification brief and the raw and verify JSON, `apply_verify.py` replays the corrections; the dated scripts `research/apply_2026_10_23.py` and `apply_2026_11_02.py` replay later updates and must be rerun after `apply_verify.py` or `gapply_verify.py`. `build_study_guide.py` writes the study guide, kept in `Claude outputs/study-guides/` as `gdpr-enforcement-study-guide.md` and `.pdf`. | You want to update a country, refresh the page after the law moves, or rebuild the study guide. |
@@ -273,12 +273,13 @@ order after a rebuild) and, one per pass, `source-verification-2026-09.md`,
   `https://www.simeonatanasov.com/`, matching `CNAME` (switched from the apex on 23 September 2026).
 - Meta descriptions, Open Graph and Twitter tags and JSON-LD structured data are generated by
   `Claude outputs/seo-build/apply_seo.py` from one table, between `<!-- seo:start -->` and
-  `<!-- seo:end -->` in each page head. It also regenerates `llms.txt` and the sitemap
-  `lastmod` dates. Edit the table, not the pages, and rerun it after any digest rebuild or
-  `apply_nav.py` run, since the builders write their own head. It is idempotent. On
-  13 November 2026 the table was behind the pages (five pages missing, two digest counts and one
-  description out of date; `llms.txt` and the head counts have been edited by hand since late
-  September 2026): update the table before any rerun (`TODO.md`, section 5).
+  `<!-- seo:end -->` in each page head. It also regenerates `llms.txt` (a page may carry a longer
+  line there, `LLMS_TEXT`). Edit the table, not the pages, and rerun it after any rebuild of a page
+  whose builder writes its own head: the three digests, `apply_nav.py`, the two enforcement
+  builders, the crosswalk builder and the notice generators' `build_page.py`. It is idempotent,
+  checks before writing that every sitemap page is in its table, and leaves the sitemap `lastmod`
+  dates alone (`--lastmod page.html[=YYYY-MM-DD]` sets one on purpose). Brought up to date on
+  16 November 2026 (SEO-01): 21 pages, as in the sitemap.
 
 ## Homepage portfolio menu: required behaviour
 
