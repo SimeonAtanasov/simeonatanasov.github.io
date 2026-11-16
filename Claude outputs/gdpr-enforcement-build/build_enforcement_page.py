@@ -154,32 +154,32 @@ def country_card(code):
         law_html += " " + link(law["url"], "Text")
     lvl = conf_level(d.get("confidence"))
     body = [
-        '<div class="ge-plain"><h4>In plain words</h4><p>%s</p></div>' % para(d.get("plain")),
-        '<h4>Route of a fine</h4>' + route(code),
+        '<div class="ge-plain"><h4 id="ge-c-%s-plain">In plain words</h4><p>%s</p></div>' % (code, para(d.get("plain"))),
+        '<h4 id="ge-c-%s-route">Route of a fine</h4>' % code + route(code),
         '<div class="ge-chips">%s%s%s</div>' % (
             chip(MODELS, m, CHIP_LABELS[0]), chip(PUBLIC, p, CHIP_LABELS[1], True), chip(SUSP, s_, CHIP_LABELS[2], True)),
         '<div class="ge-grid">',
-        '<section><h4>The authority</h4>' + dl([("Name", authority), ("How it is organised", para(dpa.get("structure"))),
+        '<section><h4 id="ge-c-%s-authority">The authority</h4>' % code + dl([("Name", authority), ("How it is organised", para(dpa.get("structure"))),
                                                 ("Regional authorities", para(dpa.get("regional"))), ("National law", law_html)]) + "</section>",
-        '<section><h4>Complaining</h4>' + dl([("How", para(comp.get("how"))),
+        '<section><h4 id="ge-c-%s-complaining">Complaining</h4>' % code + dl([("How", para(comp.get("how"))),
                                               ("Contact the organisation first?", para(comp.get("contact_controller_first"))),
                                               ("Deadlines", para(comp.get("deadlines"))),
                                               ("The complainant's position", para(comp.get("complainant_status")))]) + "</section>",
-        '<section><h4>Procedure</h4>' + ('<ol class="ge-stages">%s</ol>' % stages if stages else "") +
+        '<section><h4 id="ge-c-%s-procedure">Procedure</h4>' % code + ('<ol class="ge-stages">%s</ol>' % stages if stages else "") +
         dl([("Who decides", para(proc.get("decision_maker"))), ("Limitation", para(proc.get("limitation")))]) + "</section>",
-        '<section><h4>Fines</h4>' + dl([("Who imposes them", para(fines.get("imposed_by"))),
+        '<section><h4 id="ge-c-%s-fines">Fines</h4>' % code + dl([("Who imposes them", para(fines.get("imposed_by"))),
                                         ("Public bodies", para(fines.get("public_bodies"))),
                                         ("National specifics", para(fines.get("quirks")))]) + "</section>",
-        '<section><h4>Appeals</h4>' + dl([("First court", para(app.get("court"))), ("Deadline", para(app.get("deadline"))),
+        '<section><h4 id="ge-c-%s-appeals">Appeals</h4>' % code + dl([("First court", para(app.get("court"))), ("Deadline", para(app.get("deadline"))),
                                           ("Does it hold payment?", para(app.get("suspensive"))),
                                           ("Further appeal", para(app.get("further"))),
                                           ("If the authority does nothing", para(app.get("inaction")))]) + "</section>",
-        '<section><h4>Suing the organisation directly</h4>' + dl([("Courts", para(priv.get("courts"))),
+        '<section><h4 id="ge-c-%s-suing">Suing the organisation directly</h4>' % code + dl([("Courts", para(priv.get("courts"))),
                                                                   ("Compensation", para(priv.get("damages"))),
                                                                   ("Collective actions", para(priv.get("collective")))]) + "</section>",
         "</div>",
-        ('<h4>Cases worth knowing</h4><ul class="ge-cases">%s</ul>' % cases) if cases else "",
-        ('<h4>Worth knowing</h4><ul class="ge-quirks">%s</ul>' % quirks) if quirks else "",
+        ('<h4 id="ge-c-%s-cases">Cases worth knowing</h4><ul class="ge-cases">%s</ul>' % (code, cases)) if cases else "",
+        ('<h4 id="ge-c-%s-worth-knowing">Worth knowing</h4><ul class="ge-quirks">%s</ul>' % (code, quirks)) if quirks else "",
         '<details class="ge-sources"><summary>Sources (%d) <span class="ge-conf ge-conf-%s">research confidence: %s</span></summary><ul>%s</ul></details>'
         % (srcs.count("<li>"), lvl, lvl.replace("-", " "), srcs),
     ]

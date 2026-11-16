@@ -48,40 +48,22 @@ the patch gives both input boxes a readable grey.
 
 ## 2. Assistant follow-ups (small)
 
-- Untrack `Claude outputs/assistant-build/work/` and add it to `.gitignore`: committed by
-  accident on 7 October 2026 (868bde8), harmless, but `chunks.json` adds a 2.5 MB diff on
-  every rebuild.
+- Done 16 November 2026: `.gitignore` now lists `Claude outputs/assistant-build/work/`. Simeon still has to run
+  `git rm -r --cached "Claude outputs/assistant-build/work"` and commit `.gitignore` with it.
 - Rule, not a task: rebuild the index after any content change
   (`python3 "Claude outputs/assistant-build/build_index.py" --repo .`). A freshness check
   could join the rerun order in `claude/verification-method.md`.
-- Retrieval test set out of date (the ranker is not worse): on 13 November 2026 the 50 questions
-  in `eval_retrieval.py` gave hit@5 0.86 and hit@10 0.88 with the shipped ranker, against 0.94
-  and 0.96 on 7 October 2026. The index of 2 November and today's give the same figures, so
-  SA-09 changed no test result. Seven tests name digest entries by position (`ed-dNNN`,
-  `ck-dNNN`) and the digest updates since 23 October moved those numbers: four of the seven now
-  fail although the documents on their subject come first ("consent or pay models", "dark
-  patterns in cookie banners", "google analytics without consent") or fifth ("sending personal
-  data to the US"). Counted as hits they give 47 and 48 of 50, the October figures. The other
-  three misses: "how is the DPIA risk level calculated" (the query rule below), "processor
-  contract requirements" (the pattern expects readiness ids starting c or t; the processor
-  activities are V1 to V3, and V2 comes third) and "do I have to label deepfakes" (Article 50
-  is eighth, behind the labelling code, the Article 50 guidelines and the pathway step). To do:
-  match digest entries by title or source instead of number, correct the readiness pattern,
-  record a new baseline.
-  `node "Claude outputs/assistant-build/sa_audit_check.js"` prints the figures (arguments in
-  the script; the 50 tests are `sa_audit_tests.json` beside it).
-- A query rule for "how is X calculated / scored / worked out" that prefers the
-  `*-scoring` chunks over a tool's overview.
-- A query rule for enforcement questions about a country (found 13 November 2026): the per-law
-  chunks of the notice generators (SA-09) also match a country name next to "privacy law". On 84
-  enforcement questions (seven phrasings, twelve jurisdictions) a generator chunk came first in
-  4 and in the top three in 20; in those 4 the enforcement card had been first and is now second
-  ("who enforces privacy law in" Switzerland, Brazil and Japan, "who can fine for a privacy
-  breach in South Africa"). On 117 questions meant for the generators the right law chunk came
-  first in 106. For "who enforces", "who can fine", "authority", "complain", "appeal" and "sue",
-  prefer the `enforce` and `world` chunks. The same script measures it.
-- Ids on the blocks inside the enforcement country cards, so a result can link to the
-  block rather than the card.
+- Retrieval test set: done 16 November 2026. The tests match digest entries by title and source instead of number and the
+  readiness pattern is corrected. On the new index: hit@5 0.96, hit@10 1.00, MRR 0.841 (old index with the repaired
+  tests: 0.96, 0.98, 0.838). `node "Claude outputs/assistant-build/sa_audit_check.js"` prints the figures; the
+  tests are `sa_audit_tests.json`.
+- Query rules, done on the index side 16 November 2026 (`build_index.py`): a chunk titled "<tool>: how the scoring works and
+  how the result is calculated" and one titled "<country>: who enforces privacy law, in plain words", measured on the
+  test set and the 84 enforcement questions. After SA-02: a true ranker rule for "who can fine ... South Africa" needs
+  `assistant.js`, which is md5-guarded.
+- Ids on the blocks of the enforcement country cards: done 16 November 2026 (`ge-c-<code>-plain|route|authority|
+  complaining|procedure|fines|appeals|suing|cases|worth-knowing`); the index links to them.
+- After SA-02: bump `VERSION` in `sw.js` (the index changed on 16 November 2026 and `sw.js` was not touched).
 - Replace the 50 test questions in `eval_retrieval.py` with real ones as they come up.
 - Written questions for new content: a new digest entry or section gets only template
   suggestions until two or three questions are written for its chunk id in
@@ -141,9 +123,8 @@ its follow-ups are in section 8.
   change logs `claude/tool-change-log-2026-11-16-c.md` and `-d.md` are in
   `claude/tool-change-log.md` (`claude/tool-change-log-2026-11-16.md` had been merged earlier
   that day). Left for Simeon: delete the four side docs.
-- Two stale lines in `claude/notice-generators-matrix.md`: O6 and Part G still call the readiness
-  labels S5 and V6 unfixed; since TC-10 (16 November 2026) they follow Articles 29 and 26(2).
-  Correct both the next time the matrix is edited.
+- Matrix stale lines (O6, Part G): corrected 16 November 2026 in the patched copy `nm3.md` (see the doc updates folder);
+  copy it over `claude/notice-generators-matrix.md` in the project.
 
 ## 6. Re-verification when sources land
 
@@ -300,18 +281,17 @@ its follow-ups are in section 8.
   2026 transfer guidance on whether a controller abroad collecting directly from people in the UK makes a
   restricted transfer (the generator states where the controller processes the data and lists onward
   transfers only).
-- **AI Act Digest doc-19.** It dates the Article 50 guidelines 20 July 2026. The document now on the
-  Commission page is the Communication C(2026) 7702 final of 5 November 2026. Update in the next digest pass.
-- **EDPB Digest entry 520.** Recorded as having no reachable source; the WP260 rev.01 PDF supplied on
-  12 November 2026 is that source. Mark it verified in the next EDPB pass.
-- **Article 86 date.** The AI Act Digest dates it 2 August 2026, crosswalk row r22 with the high-risk rules.
-  The generators show both. Settle one reading across the site.
+- **AI Act Digest doc-19.** Done 16 November 2026: source data, `ai_act_digest.json` and `ai-act-digest.html` say
+  Communication C(2026) 7702 final of 5 November 2026. Still to do: cut a dated AI Act PDF/MD (the 2026-10-23 files carry
+  the old text).
+- **EDPB Digest entry 520.** Done 16 November 2026: takeaway checked against the WP260 rev.01 PDF, recorded as
+  verified in the docs (no data change). 542 of 543 verified; entry 528 still to re-download.
+- **Article 86 date.** Done 16 November 2026 (TC-13), on Simeon's approval: "applies from 2 August 2026 (Article 113);
+  in practice from 2 December 2027, when Annex III systems are classified as high-risk (Article 113(c)(i))" on
+  crosswalk row r22, the pathway's AI Act obligations and the generators' A09 check; the AI Act Digest keeps 2 August 2026.
 - **2026 coordinated enforcement action on transparency.** Check the requirements matrix against the EDPB
   report when it is published.
-- **`ng.js` comments.** Line 13 names `test_ng.js`; the test is `test_ng.py`. The comment above
-  `DP_CLAUSE` says `readiness-data.js` is frozen and keeps its label: since TC-10 (16 November 2026) the
-  S5 and V6 labels follow Articles 29 and 26(2), so the comment is out of date (the two overrides still
-  fit and stay). Correct both with the next change to `ng.js`.
+- **`ng.js` comments.** Done 16 November 2026 (`test_ng.py` named; DP_CLAUSE comment updated); 4,322 checks, 0 failures.
 - **Test fixtures.** Done 13 November 2026 (MOVE-02): the invented organisations in `test_ng.py` and the
   scenario files use names under the reserved `.example` domain; 4,322 checks, 0 failures afterwards.
 - **Build leftovers.** Moved out of the repo on 13 November 2026 (MOVE-02), on Simeon's decision: `incoming/`
@@ -353,6 +333,7 @@ there), project doc `claude/privacy-crosswalk.md`.
   and the page in the "Which assessment do I need?" chooser, beside the AI crosswalk. Both mean
   a change to `assistant.js`, so bump `VERSION` in `sw.js` in the same change and log it as an
   SA entry.
-- **GDPR Readiness article titles.** `readiness-data.js` shortens seven article titles
-  (Articles 8, 10, 12, 13, 14, 17, 19) compared with EUR-Lex. Noticed while reading the titles
-  for the crosswalk; the tool is frozen and nothing was changed.
+- **GDPR Readiness article titles.** Done 16 November 2026 as a one-time exception to the freeze: the seven titles in
+  `readiness-data.js` follow EUR-Lex; study pack PDF and Markdown rebuilt (`privacy-ai-act-assessments-study-pack-v2.*` in
+  `Claude outputs/study-guides/`); Article 17 title in straight quotes so the file stays ASCII (TC-12).
+  The Obsidian vault copy of the study pack is still stale.

@@ -42,7 +42,7 @@ var GENL = ["# privacy notice", "privacy notice under #", "does the generator co
 function isGen(id) { return /^ng-|^tool-cat-(pngen|ainotice|dppolicy|aipolicy)$|^faq-generators$/.test(id); }
 function top(q, n) { return sa.search(q).results.slice(0, n).map(function (r) { return r.doc; }); }
 function tests() {
-  var h3 = 0, h5 = 0, h10 = 0, miss = [];
+  var h3 = 0, h5 = 0, h10 = 0, mrr = 0, miss = [];
   T.forEach(function (t) {
     var rx = new RegExp(t[1]), rxi = new RegExp(t[1], "i"), mrx = t[2] ? new RegExp(t[2], "i") : null;
     var res = top(t[0], 10), hit = -1;
@@ -51,10 +51,10 @@ function tests() {
       if (ok && mrx && !mrx.test((c.m || "") + " " + (c.t || "") + " " + String(c.x || "").slice(0, 120))) ok = false;
       if (ok) { hit = i; break; }
     }
-    if (hit >= 0) { h10++; if (hit < 5) h5++; if (hit < 3) h3++; }
+    if (hit >= 0) { h10++; mrr += 1 / (hit + 1); if (hit < 5) h5++; if (hit < 3) h3++; }
     if (hit < 0 || hit >= 5) miss.push("      " + (hit < 0 ? "no hit in 10" : "hit at " + (hit + 1)) + ": " + t[0] + " -> " + res.slice(0, 3).map(function (d) { return d.id; }).join(", "));
   });
-  return ["50 tests: " + h3 + ", " + h5 + " and " + h10 + " hits in the top 3, 5 and 10 (hit@5 " + (h5 / T.length).toFixed(2) + ", hit@10 " + (h10 / T.length).toFixed(2) + ")", miss];
+  return ["50 tests: " + h3 + ", " + h5 + " and " + h10 + " hits in the top 3, 5 and 10 (hit@5 " + (h5 / T.length).toFixed(2) + ", hit@10 " + (h10 / T.length).toFixed(2) + ", MRR " + (mrr / T.length).toFixed(3) + ")", miss];
 }
 function measure(name, ix, oldTop) {
   sa._build(ix);

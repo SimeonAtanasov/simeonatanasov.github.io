@@ -31,7 +31,7 @@
 ],
 [
 "consent or pay models",
-"^ed-d154|^ck-d001|^ck-d011|^ck-d100|^ck-d008"
+"consent or pay|pay or okay"
 ],
 [
 "general purpose AI model with systemic risk",
@@ -63,11 +63,11 @@
 ],
 [
 "sending personal data to the US",
-"^tool-tia|^ed-d38[0-4]|^privacy-notice-transfers|^tool-cat-tia"
+"^tool-tia|^privacy-notice-transfers|^tool-cat-tia|Data Privacy Framework"
 ],
 [
 "standard contractual clauses",
-"^ed-d366|^ed-d367|^tool-tia|^ed-d503|^tool-cat-tia"
+"^tool-tia|^tool-cat-tia|standard contractual clauses"
 ],
 [
 "how much could my company be fined",
@@ -131,11 +131,11 @@
 ],
 [
 "dark patterns in cookie banners",
-"^ed-d012|^ck-d018|^ck-d045|^ck-d057|^ck-d007"
+"deceptive design|dark patterns"
 ],
 [
 "facial recognition technology",
-"^ed-d008|^ed-d151"
+"facial recognition"
 ],
 [
 "emotion recognition of employees",
@@ -151,7 +151,7 @@
 ],
 [
 "DSA and GDPR interplay",
-"^ed-d001"
+"Digital Services Act and the GDPR"
 ],
 [
 "new application dates for high-risk systems after the omnibus",
@@ -159,7 +159,7 @@
 ],
 [
 "google analytics without consent",
-"^ck-d070"
+"Google Analytics"
 ],
 [
 "lead supervisory authority in cross-border cases",
@@ -191,7 +191,7 @@
 ],
 [
 "processor contract requirements",
-"^readiness-act-(c|t)\\d|^pp-pp-records"
+"^readiness-act-v[1-3]$|^pp-pp-records"
 ],
 [
 "Binding corporate rules approval",

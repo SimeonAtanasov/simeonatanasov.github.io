@@ -10,7 +10,7 @@
  * writes to this browser's localStorage under the key "ng-v1" and nowhere else.
  *
  * Generated wording avoids "may", "might", "some", "often" and "possible"
- * (WP260 para 13). test_ng.js checks every generated document for them.
+ * (WP260 para 13). test_ng.py checks every generated document for them.
  */
 (function () {
 	"use strict";
@@ -8372,7 +8372,7 @@
 				if (aiAnnex3(s)) {
 					checks.push(yes(s, "decisions") ? chk("A08", "check", "Applies from 2 December 2027. Notification text generated." + lg) : chk("A08", "na", "No decisions about people."));
 					if (hr === "annex3crit") checks.push(chk("A09", "na", "Article 86 does not cover Annex III point 2 (critical infrastructure). The generated notice offers explanations without citing it."));
-					else checks.push(yes(s, "decisions") ? (v(s, "explainRoute") ? chk("A09", "ok", "Article 86 sits in Chapter IX, which applies from 2 August 2026 (Article 113), but it covers decisions based on Annex III systems, and Annex III classification applies from 2 December 2027 (Article 113(c)). Build the route now." + lg) :
+					else checks.push(yes(s, "decisions") ? (v(s, "explainRoute") ? chk("A09", "ok", "Article 86 applies from 2 August 2026 (Article 113); in practice from 2 December 2027, when Annex III systems are classified as high-risk (Article 113(c)(i)). Build the route now." + lg) :
 						chk("A09", "missing", "Give the route for asking for an explanation.")) : chk("A09", "na", "No decisions about people."));
 				}
 			} else if (hr === "unsure") {
@@ -8399,7 +8399,8 @@
 	/* ============================================== DATA PROTECTION POLICY === */
 
 	/* Policy wording for readiness activities whose short label is looser than the Article it cites
-	   (independent review of 12 November 2026, F29). readiness-data.js is frozen and keeps its label. */
+	   (independent review of 12 November 2026, F29). Since TC-10 (16 November 2026) the S5 and V6 labels in
+	   readiness-data.js follow Articles 29 and 26(2); the two overrides still fit and stay. */
 	var DP_CLAUSE = {
 		S5: "ensure that staff and anyone acting under the organisation's authority process personal data only on its instructions, unless the law requires otherwise (Articles 29 and 32(4)).",
 		V6: "document joint controller arrangements and make their essence available to the people concerned (Article 26)."

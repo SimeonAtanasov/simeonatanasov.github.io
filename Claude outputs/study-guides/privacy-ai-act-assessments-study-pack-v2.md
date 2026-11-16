@@ -5360,45 +5360,45 @@ Art. 24
 
 The reverse view: which activities evidence each Article. An Article scores the mean of the activities listed against it, so an Article with one activity behind it is fragile and an Article with six is not.
 
-| Art. | Title                                                                              | Evidenced by                                   |
-|------|------------------------------------------------------------------------------------|------------------------------------------------|
-| 5    | Principles relating to processing of personal data                                 | I3, P2, E6, E7, E8, E9, M4                     |
-| 6    | Lawfulness of processing                                                           | I3, E6                                         |
-| 7    | Conditions for consent                                                             | E3, E4                                         |
-| 8    | Conditions applicable to child's consent for information society services          | E5                                             |
-| 9    | Processing of special categories of personal data                                  | I4                                             |
-| 10   | Processing relating to criminal convictions and offences                           | I5                                             |
-| 12   | Transparent information, communication and modalities                              | N3, N4, R1, R2, R3                             |
-| 13   | Information to be provided where data are collected from the data subject          | N1, N4                                         |
-| 14   | Information to be provided where data have not been obtained from the data subject | N2, N4                                         |
-| 15   | Right of access by the data subject                                                | R4                                             |
-| 16   | Right to rectification                                                             | R5                                             |
-| 17   | Right to erasure (right to be forgotten)                                           | R6                                             |
-| 18   | Right to restriction of processing                                                 | R7                                             |
-| 19   | Notification obligation regarding rectification, erasure or restriction            | R6, R7                                         |
-| 20   | Right to data portability                                                          | R8                                             |
-| 21   | Right to object                                                                    | R9                                             |
-| 22   | Automated individual decision-making, including profiling                          | E11, R10                                       |
-| 24   | Responsibility of the controller                                                   | G1, G4, G5, P1, P3, T1, T3, M1, M2, M4, X1, X2 |
-| 25   | Data protection by design and by default                                           | E1, E2                                         |
-| 26   | Joint controllers                                                                  | V6                                             |
-| 27   | Representatives of controllers or processors not established in the Union          | G6                                             |
-| 28   | Processor                                                                          | V1, V2, V3, M3                                 |
-| 29   | Processing under the authority of the controller or processor                      | S5                                             |
-| 30   | Records of processing activities                                                   | I1, I2, I6                                     |
-| 32   | Security of processing                                                             | S1, S2, S3, S4, S5, S6                         |
-| 33   | Notification of a personal data breach to the supervisory authority                | B1, B2, B3, B5                                 |
-| 34   | Communication of a personal data breach to the data subject                        | B4                                             |
-| 35   | Data protection impact assessment                                                  | A1, A2, A3, A5                                 |
-| 36   | Prior consultation                                                                 | A4                                             |
-| 37   | Designation of the data protection officer                                         | G2                                             |
-| 38   | Position of the data protection officer                                            | G3                                             |
-| 39   | Tasks of the data protection officer                                               | G3, T1, T2                                     |
-| 44   | General principle for transfers                                                    | I6, V4                                         |
-| 45   | Transfers on the basis of an adequacy decision                                     | V4                                             |
-| 46   | Transfers subject to appropriate safeguards                                        | V4                                             |
-| 49   | Derogations for specific situations                                                | V5                                             |
-| 89   | Safeguards for archiving, research and statistical purposes                        | E10                                            |
+| Art. | Title                                                                                                    | Evidenced by                                   |
+|------|----------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| 5    | Principles relating to processing of personal data                                                       | I3, P2, E6, E7, E8, E9, M4                     |
+| 6    | Lawfulness of processing                                                                                 | I3, E6                                         |
+| 7    | Conditions for consent                                                                                   | E3, E4                                         |
+| 8    | Conditions applicable to child's consent in relation to information society services                     | E5                                             |
+| 9    | Processing of special categories of personal data                                                        | I4                                             |
+| 10   | Processing of personal data relating to criminal convictions and offences                                | I5                                             |
+| 12   | Transparent information, communication and modalities for the exercise of the rights of the data subject | N3, N4, R1, R2, R3                             |
+| 13   | Information to be provided where personal data are collected from the data subject                       | N1, N4                                         |
+| 14   | Information to be provided where personal data have not been obtained from the data subject              | N2, N4                                         |
+| 15   | Right of access by the data subject                                                                      | R4                                             |
+| 16   | Right to rectification                                                                                   | R5                                             |
+| 17   | Right to erasure ('right to be forgotten')                                                               | R6                                             |
+| 18   | Right to restriction of processing                                                                       | R7                                             |
+| 19   | Notification obligation regarding rectification or erasure of personal data or restriction of processing | R6, R7                                         |
+| 20   | Right to data portability                                                                                | R8                                             |
+| 21   | Right to object                                                                                          | R9                                             |
+| 22   | Automated individual decision-making, including profiling                                                | E11, R10                                       |
+| 24   | Responsibility of the controller                                                                         | G1, G4, G5, P1, P3, T1, T3, M1, M2, M4, X1, X2 |
+| 25   | Data protection by design and by default                                                                 | E1, E2                                         |
+| 26   | Joint controllers                                                                                        | V6                                             |
+| 27   | Representatives of controllers or processors not established in the Union                                | G6                                             |
+| 28   | Processor                                                                                                | V1, V2, V3, M3                                 |
+| 29   | Processing under the authority of the controller or processor                                            | S5                                             |
+| 30   | Records of processing activities                                                                         | I1, I2, I6                                     |
+| 32   | Security of processing                                                                                   | S1, S2, S3, S4, S5, S6                         |
+| 33   | Notification of a personal data breach to the supervisory authority                                      | B1, B2, B3, B5                                 |
+| 34   | Communication of a personal data breach to the data subject                                              | B4                                             |
+| 35   | Data protection impact assessment                                                                        | A1, A2, A3, A5                                 |
+| 36   | Prior consultation                                                                                       | A4                                             |
+| 37   | Designation of the data protection officer                                                               | G2                                             |
+| 38   | Position of the data protection officer                                                                  | G3                                             |
+| 39   | Tasks of the data protection officer                                                                     | G3, T1, T2                                     |
+| 44   | General principle for transfers                                                                          | I6, V4                                         |
+| 45   | Transfers on the basis of an adequacy decision                                                           | V4                                             |
+| 46   | Transfers subject to appropriate safeguards                                                              | V4                                             |
+| 49   | Derogations for specific situations                                                                      | V5                                             |
+| 89   | Safeguards for archiving, research and statistical purposes                                              | E10                                            |
 
 ## Part 4 self-test
 

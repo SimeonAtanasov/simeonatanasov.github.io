@@ -888,7 +888,7 @@ def study_pack_tools(repo, out):
             continue
         url = "privacy-ai-assessment.html#tool-" + anchor
         if head == "How the scoring works":
-            out.add_split("tool-%s-scoring" % anchor, "tool", "Privacy & AI Assessment", tool + ": how the scoring works", url, body_c)
+            out.add_split("tool-%s-scoring" % anchor, "tool", "Privacy & AI Assessment", tool + ": how the scoring works and how the result is calculated", url, body_c)
         elif head == "Where people get it wrong":
             out.add_split("tool-%s-pitfalls" % anchor, "tool", "Privacy & AI Assessment", tool + ": where people get it wrong", url, body_c)
         elif re.match(r"^Step \d+ of \d+", head):
@@ -998,6 +998,11 @@ def privacy_crosswalk(repo, out, work):
     return len(data["rows"])
 
 
+def block_id(h4, fallback):
+    """Anchor of a block inside a country card (ids added by build_enforcement_page.py), else the card id."""
+    return (h4.get("id") if h4 is not None else None) or fallback
+
+
 def enforcement(repo, out, rel, kind, page_label):
     page = soup(repo, rel)
     main = page.find(id="main") or page
@@ -1031,36 +1036,36 @@ def enforcement(repo, out, rel, kind, page_label):
         body = d.select_one(".ge-cbody") or d
         plain = body.select_one(".ge-plain p")
         plain = plain.get_text(" ", strip=True) if plain else ""
-        out.add_split("%s-%s-plain" % (kind, cid), kind, page_label, name + ": enforcement in plain words",
-                      rel + "#" + cid, "%s (%s). %s" % (name, abbr, plain) if abbr else "%s. %s" % (name, plain), meta=mem)
+        out.add_split("%s-%s-plain" % (kind, cid), kind, page_label, name + ": who enforces privacy law, in plain words",
+                      rel + "#" + block_id(body.select_one(".ge-plain h4"), cid), "%s (%s). %s" % (name, abbr, plain) if abbr else "%s. %s" % (name, plain), meta=mem)
         # the rest: one chunk per h4 block, small blocks merged into the next
-        blocks, cur_head, cur = [], "", []
+        blocks, cur_head, cur, cur_id = [], "", [], ""
         for el in body.find_all(["h4", "p", "li", "dt", "dd"]):
             if el.find_parent(class_="ge-plain"):
                 continue
             if el.name == "h4":
                 if cur:
-                    blocks.append((cur_head, " ".join(cur)))
-                cur_head, cur = el.get_text(" ", strip=True), []
+                    blocks.append((cur_head, " ".join(cur), cur_id))
+                cur_head, cur, cur_id = el.get_text(" ", strip=True), [], block_id(el, cid)
             else:
                 t = el.get_text(" ", strip=True)
                 if t:
                     cur.append(t)
         if cur:
-            blocks.append((cur_head, " ".join(cur)))
+            blocks.append((cur_head, " ".join(cur), cur_id))
         merged = []
-        for h, t in blocks:
+        for h, t, i in blocks:
             if merged and len(merged[-1][1]) < 220:
-                ph, pt = merged[-1]
-                merged[-1] = (ph + " and " + h.lower() if h else ph, pt + " " + (h + ": " if h else "") + t)
+                ph, pt, pi = merged[-1]
+                merged[-1] = (ph + " and " + h.lower() if h else ph, pt + " " + (h + ": " if h else "") + t, pi)
             else:
-                merged.append((h, t))
-        for h, t in merged:
+                merged.append((h, t, i))
+        for h, t, bid in merged:
             if len(t) < 60:
                 continue
             hid = re.sub(r"[^a-z0-9]+", "-", h.lower()).strip("-")[:40] or "detail"
             out.add_split("%s-%s-%s" % (kind, cid, hid), kind, page_label, "%s: %s" % (name, h.lower() if h else "details"),
-                          rel + "#" + cid, "%s. %s: %s" % (name, h, t) if h else name + ". " + t, meta=mem, cap=1500)
+                          rel + "#" + (bid or cid), "%s. %s: %s" % (name, h, t) if h else name + ". " + t, meta=mem, cap=1500)
         n += 1
     return n
 
@@ -1400,7 +1405,7 @@ def template_questions(chunks):
             if key in seen_country:
                 continue
             seen_country.add(key)
-            if part == "enforcement in plain words":
+            if part == "who enforces privacy law, in plain words":
                 out.append(("How does privacy enforcement work in %s?" % country, cid))
                 out.append(("Who enforces data protection law in %s?" % country, cid))
             elif part == "appeals":

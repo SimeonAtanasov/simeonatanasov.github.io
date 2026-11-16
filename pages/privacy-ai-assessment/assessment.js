@@ -4259,7 +4259,7 @@
 				if (hrIII) {
 					var fa = friaApplicability(a);
 					if (fa.status === "Required" || fa.status === "Check") add("Fundamental rights impact assessment before first use" + (fa.status === "Check" ? " (check applicability)" : ""), "Deployer", AIP_HR_III, "art-27", "r21", "Not assessed");
-					if (aipDecides(a)) add("Explain the role of the system in individual decisions on request", "Deployer", AIP_HR_III, "art-86", "r22", aipStatus(a.explanationProcess === "Planned" ? "Partially" : a.explanationProcess));
+					if (aipDecides(a)) add("Explain the role of the system in individual decisions on request", "Deployer", "2 August 2026 (Article 113); in practice from 2 December 2027, when Annex III systems are classified as high-risk (Article 113(c)(i))", "art-86", "r22", aipStatus(a.explanationProcess === "Planned" ? "Partially" : a.explanationProcess));
 				}
 				if (a.affectedAware === "No") f.push(aipF("People are not told", "Deployers of Annex III systems that make or assist decisions about people must tell them they are subject to the system (Article 26(11)).", "medium", ["affectedAware"]));
 			}
