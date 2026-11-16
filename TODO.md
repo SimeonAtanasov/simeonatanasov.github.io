@@ -122,19 +122,12 @@ its follow-ups are in section 8.
 - `CNAME` says www. Checked 16 November 2026: the canonical tag and `og:url` of all 21
   pages, `sitemap.xml` (21 URLs), `llms.txt` (20 lines) and `robots.txt` all read www. What
   is left is the Play Console host declaration for the Android app, which no file shows.
-- From the September link audit, still true on 16 November 2026: the home page resume button
-  (inside Career & Education) points at the GitHub raw URL, not `resume/resume-simeon-atanasov.pdf`;
-  `images/risk-matrix-desktop.png`, `risk-matrix-phone.png` and `risk-matrix-tile2.png` are
-  referenced by no page and served publicly. No longer true: Open Graph tags are on all 21
-  pages, `Privacy Assessment.txt` and `draft-about.txt` no longer exist, and
-  the three descriptions over 160 characters were shortened on 16 November 2026 (SEO-01).
 - Spelling, decided 16 November 2026: nothing is converted. The digests and the tools use
   British spelling, the advice pages American; match the page being edited. Recorded in
   `claude/content-voice.md`.
 - Unreferenced files left in `images/`: `power-bi-dashboard.png` (source of the Power BI tile
-  script), `Screenshot 2026-09-21 130030.png`, the three risk matrix PNGs above, and the
-  `.psd`, `.tif`, `.xlsx` and `.pdf` working files. Keep or move. The playbook PNG moved out on
-  16 November 2026.
+  script) and the `.psd`, `.tif`, `.xlsx` and `.pdf` working files. Keep or move. The playbook
+  PNG, the three risk matrix PNGs and the screenshot moved out on 16 November 2026.
 - Service worker: the digests are not precached; revisit if offline use matters.
 - `images/pic04.jpg` is a banner in a tall slot; it wants a tile made for the slot.
 - Obsidian vault: the vault copy of the study pack is one version behind since the rebuild of
@@ -143,6 +136,13 @@ its follow-ups are in section 8.
   connected, and check the md5 against the repo copies.
 - SEO generator: up to date and run on 16 November 2026 (SEO-01, SEO-02); rerun it after any
   rebuild of a page that writes its own head. Nothing open.
+- Merge the two side docs: `claude/site-context-addendum-2026-11-16.md` into
+  `claude/site-context.md`, and the side change logs of 16 November 2026
+  (`claude/tool-change-log-2026-11-16.md`, `-c.md` and `-d.md`) into `claude/tool-change-log.md`.
+  The lines to merge for the housekeeping of the evening of 16 November are in `-d.md`.
+- Two stale lines in `claude/notice-generators-matrix.md`: O6 and Part G still call the readiness
+  labels S5 and V6 unfixed; since TC-10 (16 November 2026) they follow Articles 29 and 26(2).
+  Correct both the next time the matrix is edited.
 
 ## 6. Re-verification when sources land
 
