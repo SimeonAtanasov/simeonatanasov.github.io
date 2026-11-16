@@ -162,6 +162,13 @@ TOOLS = [
         "shape": "Reference page.",
     },
     {
+        "id": "pcrosswalk", "name": "Privacy Crosswalk", "url": "privacy-crosswalk.html",
+        "what": "36 GDPR obligations for controllers and processors, each mapped to NIST Privacy Framework 1.0 subcategories and to ISO/IEC 27701 clauses in the 2019 numbering, with the gaps marked, plus reverse views by clause and by subcategory. The NIST references are the site's own reading.",
+        "when": "Use it when you already run a privacy management system or the NIST Privacy Framework and want to see which GDPR obligations it addresses and which duties exist only in the law.",
+        "returns": "A reference table with deep links per obligation. The ISO numbers are those of the withdrawn 2019 edition, as the public mappings print them. No state is kept.",
+        "shape": "Reference page.",
+    },
+    {
         "id": "calculator", "name": "GDPR Fine Calculator", "url": "gdpr-fine-calculator.html",
         "what": "Estimates the fine exposure of an organisation from its sector, size and turnover, using what supervisory authorities have actually imposed on comparable organisations.",
         "when": "Use it to put a figure on exposure for a risk discussion or a budget, not to predict a specific case.",
@@ -290,7 +297,7 @@ FAQ = [
     },
     {
         "id": "faq-assistant", "title": "What does this assistant search?",
-        "text": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method, the guidance around the notice and policy generators and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them; it does not write answers of its own. Nothing you type leaves your browser.",
+        "text": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the privacy crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method, the guidance around the notice and policy generators and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them; it does not write answers of its own. Nothing you type leaves your browser.",
         "url": "index.html",
     },
 ]
@@ -958,6 +965,39 @@ def crosswalk(repo, out, work):
     return len(data["rows"])
 
 
+def privacy_crosswalk(repo, out, work):
+    """One chunk per row of privacy-crosswalk.html (SA-11, 16 November 2026)."""
+    data = json.load(open(os.path.join(work, "privacy_crosswalk.json"), encoding="utf-8"))
+    roles = data.get("roles", {})
+    themes = {t["id"]: t["label"] for t in data.get("themes", [])}
+    titles = {x["id"]: x["title"] for x in data.get("iso", [])}
+    gaps = {"partial": "The NIST Privacy Framework matches this only in part.", "none": "The NIST Privacy Framework has no equivalent."}
+    for r in data["rows"]:
+        seen = []
+        for a in r.get("gdpr", []):
+            if a.get("title") not in seen:
+                seen.append(a.get("title"))
+        arts = "; ".join(a.get("label", "") for a in r.get("gdpr", [])) + " GDPR (" + " / ".join(seen) + ")"
+        role = roles.get(r.get("role", ""), r.get("role", ""))
+        text = "%s. %s. %s" % (arts, role, r.get("obligation", ""))
+        if r.get("nist"):
+            text += " NIST Privacy Framework: %s." % ", ".join(n["id"] for n in r["nist"])
+        main = [i for i in r.get("iso", []) if not i.startswith("6.")]
+        sec = [i for i in r.get("iso", []) if i.startswith("6.")]
+        if main:
+            text += " ISO/IEC 27701, 2019 numbering: %s." % "; ".join("%s %s" % (i, titles.get(i, "")) for i in main)
+        if sec:
+            text += " Security guidance clauses: %s." % ", ".join(sec)
+        if r.get("note"):
+            text += " " + r["note"]
+        if r.get("gap"):
+            text += " " + gaps[r["gap"]]
+        title = "GDPR obligation %s: %s" % (r["id"][1:].lstrip("0"), r["gdpr"][0]["label"] + " " + r["gdpr"][0]["title"])
+        out.add_split("pc-" + r["id"], "crosswalk", "Privacy Crosswalk", title,
+                      "privacy-crosswalk.html#pc-" + r["id"], text, meta=themes.get(r.get("theme", ""), ""), cap=3000)
+    return len(data["rows"])
+
+
 def enforcement(repo, out, rel, kind, page_label):
     page = soup(repo, rel)
     main = page.find(id="main") or page
@@ -1345,6 +1385,9 @@ def template_questions(chunks):
             m = re.match(r"^AI Act obligation \d+: (Article \S+) ", t)
             if m:
                 out.append(("How does %s map to ISO/IEC 42001 and NIST AI RMF?" % m.group(1), cid))
+            m = re.match(r"^GDPR obligation \d+: (Article \d+)", t)
+            if m:
+                out.append(("How does %s of the GDPR map to ISO/IEC 27701 and the NIST Privacy Framework?" % m.group(1), cid))
         elif k in ("enforce", "world"):
             m = re.match(r"^([^:]+): (.*)$", t)
             if not m:
@@ -1593,6 +1636,7 @@ def main():
     study_pack_readiness(repo, out)
     counts["readiness"] = readiness_activities(repo, out, args.work)
     counts["crosswalk"] = crosswalk(repo, out, args.work)
+    counts["privacy_crosswalk"] = privacy_crosswalk(repo, out, args.work)
     counts["enforcement"] = enforcement(repo, out, "gdpr-enforcement.html", "enforce", "GDPR Enforcement")
     counts["world"] = enforcement(repo, out, "privacy-enforcement-worldwide.html", "world", "Enforcement Worldwide")
     counts["pathway_guide"] = md_guide(repo, out, "Claude outputs/study-guides/ai-assessment-pathway-guide.md", "tool",

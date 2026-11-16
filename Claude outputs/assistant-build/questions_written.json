@@ -11767,5 +11767,155 @@
  "faq-generators": [
   "Will a generated privacy notice make us compliant?",
   "Is a generated notice a legal opinion?"
+ ],
+ "tool-cat-pcrosswalk": [
+  "Is there a crosswalk between the GDPR, ISO 27701 and the NIST Privacy Framework?",
+  "Which GDPR obligations does the NIST Privacy Framework not cover?",
+  "Does the privacy crosswalk use the ISO/IEC 27701:2025 numbering?",
+  "Where do the mappings in the privacy crosswalk come from?",
+  "We run the NIST Privacy Framework, which GDPR duties are left over?"
+ ],
+ "pc-r01": [
+  "Which NIST Privacy Framework subcategories cover the lawful basis under Article 6 GDPR?",
+  "Does ISO 27701 cover identifying a legal basis for processing?",
+  "Do the privacy frameworks tell me which legal basis to use?"
+ ],
+ "pc-r02": [
+  "How does purpose limitation map to ISO 27701 and the NIST Privacy Framework?",
+  "Does any privacy framework cover the compatibility test for a new purpose?"
+ ],
+ "pc-r03": [
+  "Which framework controls support data minimisation and retention?",
+  "How does storage limitation map to the NIST Privacy Framework?"
+ ],
+ "pc-r04": [
+  "Which NIST Privacy Framework subcategories cover the accuracy principle?",
+  "How does data accuracy map to ISO 27701?"
+ ],
+ "pc-r05": [
+  "Which ISO 27701 clauses deal with consent?",
+  "Do the privacy frameworks cover children's consent under Article 8 GDPR?",
+  "How does withdrawal of consent map to the NIST Privacy Framework?"
+ ],
+ "pc-r06": [
+  "Do ISO 27701 or the NIST Privacy Framework cover special category data?",
+  "How is Article 9 GDPR reflected in the privacy frameworks?"
+ ],
+ "pc-r07": [
+  "How does accountability under Article 5(2) map to a privacy management framework?",
+  "Which NIST Privacy Framework subcategories support Article 24 GDPR?"
+ ],
+ "pc-r08": [
+  "Do the privacy frameworks set the one month deadline for data subject requests?",
+  "Which NIST subcategories cover handling requests from individuals?"
+ ],
+ "pc-r09": [
+  "Which framework controls cover privacy notices under Articles 13 and 14?",
+  "Does the NIST Privacy Framework say what a privacy notice must contain?"
+ ],
+ "pc-r10": [
+  "How does the right of access map to ISO 27701 and the NIST Privacy Framework?",
+  "Which NIST subcategories help answer a subject access request?"
+ ],
+ "pc-r11": [
+  "Which controls support the right to rectification?",
+  "How do I map the duty to tell recipients about a correction?"
+ ],
+ "pc-r12": [
+  "How does the right to erasure map to the NIST Privacy Framework?",
+  "Which ISO 27701 clauses relate to deletion requests?"
+ ],
+ "pc-r13": [
+  "Is the right to restriction of processing covered by the NIST Privacy Framework?",
+  "How do I implement restriction of processing with framework controls?"
+ ],
+ "pc-r14": [
+  "Which controls support data portability under Article 20?",
+  "How does data portability map to ISO 27701?"
+ ],
+ "pc-r15": [
+  "How does the right to object map to the privacy frameworks?",
+  "Which controls cover objections to direct marketing?"
+ ],
+ "pc-r16": [
+  "Do the privacy frameworks cover automated decision-making under Article 22 GDPR?",
+  "Is human intervention in automated decisions covered by the NIST Privacy Framework?"
+ ],
+ "pc-r17": [
+  "How does data protection by design and by default map to NIST and ISO 27701?",
+  "Which NIST Privacy Framework subcategories support privacy by design?"
+ ],
+ "pc-r18": [
+  "Which NIST subcategories correspond to the record of processing activities?",
+  "Does a NIST data inventory cover what Article 30 GDPR asks for?",
+  "Is the Article 30(5) exemption for small organisations changing?"
+ ],
+ "pc-r19": [
+  "How does a DPIA map to the NIST Privacy Framework risk assessment?",
+  "Which ISO 27701 clause covers privacy impact assessment?"
+ ],
+ "pc-r20": [
+  "Do the privacy frameworks cover prior consultation with the supervisory authority?",
+  "Is there a NIST equivalent of Article 36 GDPR?"
+ ],
+ "pc-r21": [
+  "Do ISO 27701 or the NIST Privacy Framework cover the data protection officer?",
+  "Does any privacy framework address the independence of the DPO?"
+ ],
+ "pc-r22": [
+  "Is the EU representative under Article 27 GDPR covered by any framework?",
+  "Which controls map to appointing an EU representative?"
+ ],
+ "pc-r23": [
+  "Is cooperation with the supervisory authority covered by the privacy frameworks?"
+ ],
+ "pc-r24": [
+  "How do joint controller arrangements map to ISO 27701 and NIST?",
+  "Which ISO 27701 clause covers joint controllers?"
+ ],
+ "pc-r25": [
+  "Which controls support choosing a processor with sufficient guarantees?",
+  "How does vendor due diligence under Article 28(1) map to the NIST Privacy Framework?"
+ ],
+ "pc-r26": [
+  "Do the privacy frameworks list the terms a processor contract must contain?",
+  "Which ISO 27701 clauses cover contracts between controller and processor?"
+ ],
+ "pc-r27": [
+  "Which ISO 27701 clauses cover sub-processors?",
+  "Does the NIST Privacy Framework cover authorisation of sub-processors?"
+ ],
+ "pc-r28": [
+  "How does processing only on the controller's instructions map to the frameworks?",
+  "What must a processor do with an instruction it considers unlawful?"
+ ],
+ "pc-r29": [
+  "Which controls cover returning or deleting data at the end of a processing contract?",
+  "How does a processor's audit duty map to the privacy frameworks?"
+ ],
+ "pc-r30": [
+  "How does Article 32 security of processing map to ISO 27701 and NIST Protect-P?",
+  "Which NIST Privacy Framework subcategories cover encryption and resilience?",
+  "Do the frameworks decide what security is appropriate to the risk?"
+ ],
+ "pc-r31": [
+  "Do the privacy frameworks contain the 72 hour breach notification deadline?",
+  "Which controls support notifying a breach to the supervisory authority?"
+ ],
+ "pc-r32": [
+  "Which controls cover a processor telling the controller about a breach?"
+ ],
+ "pc-r33": [
+  "How does telling individuals about a data breach map to the NIST Privacy Framework?"
+ ],
+ "pc-r34": [
+  "Do ISO 27701 or the NIST Privacy Framework cover international data transfers under Chapter V?",
+  "Which framework controls relate to standard contractual clauses and adequacy decisions?"
+ ],
+ "pc-r35": [
+  "Are the Article 49 derogations covered by any privacy framework?"
+ ],
+ "pc-r36": [
+  "Which controls cover disclosure demands from foreign authorities under Article 48 GDPR?"
  ]
 }

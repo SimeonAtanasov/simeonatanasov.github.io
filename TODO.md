@@ -4,65 +4,47 @@ Future work on simeonatanasov.com that is not started. Each item says what it is
 needs and what has to be decided before work begins. Finished work is recorded in the
 `Claude outputs/` READMEs and in the project's change log, not here. Updated 16 November 2026.
 
-## 1. AI answers in the Ask panel (SA-02): to be decided
+## 1. AI answers in the Ask panel (SA-02): built, waiting for the Cloudflare set-up
 
-**What it adds.** The Ask panel keeps today's search. Under the results an "Ask AI" button
-appears; nothing is sent until it is clicked. On click the page sends the question plus the
-top five or six passages (about 4,000 tokens) to a Cloudflare Worker that holds the API
-key, checks the caps and calls Claude with a system prompt that allows answering only from
-those passages, with a link per claim, or says "the site does not cover this". The answer
-streams into the panel, labelled as AI-generated. One follow-up at most; no long chats.
+**Status, 16 November 2026.** Decided, built and tested; not live. Nothing on the site has
+changed yet. Everything is in `Claude outputs/assistant-ai-build/` (README there: files,
+protections, steps, the drafts for the notices). Design record: `claude/sa-02-ai-answers.md`
+(project doc).
 
-**What the visitor gains.** An answer in sentences; two passages combined into one answer;
-questions in words the site never uses; comparisons and plain-language explanations of a
-scoring rule. **What stays impossible by design**: inventing, because the model only sees
-the retrieved passages; reading a visitor's saved assessment answers automatically.
+**Decisions taken (12 and 16 November 2026).** Build it. Free tier only: an open model on
+Cloudflare Workers AI inside the daily free allowance of the existing Cloudflare account
+(Workers Free, where use above the allowance fails and is never charged), not a paid API.
+One follow-up question. Cloudflare Turnstile as the robot check, loaded only on the press.
+The button is shown to every visitor whenever a search has results. Host: a Cloudflare
+Worker. All protections built in (list in the build README).
 
-**Cost.** Claude Haiku 4.5 is USD 1 per million input tokens and USD 5 per million output
-tokens (platform.claude.com pricing, read 7 October 2026). One answer is about 4,500 input
-and 300 output tokens, roughly 0.6 cents; USD 5 covers about 800 answers. Caching the fixed
-system prompt cuts the input part further. Sonnet 5.5 is double (USD 2 and USD 10).
+**Next step, Simeon (about ten minutes, "Step 1" of the build README).** In Cloudflare: a KV
+namespace, a Turnstile widget for `simeonatanasov.com`, a Worker with the content of
+`worker.js`, its two bindings (`KV`, `AI`) and two secrets (`TURNSTILE_SECRET`,
+`SIGNING_SECRET`). Then give Claude the Worker's address and the Turnstile site key (never
+the secret key).
 
-**Caps, in order of importance.**
-1. Prepaid credits with auto-reload off, in a workspace of their own with a monthly limit.
-   Worst case the button stops working; search keeps working.
-2. In the Worker: a daily total (for example 30 answers) and a per-visitor limit by hashed
-   IP (for example 5), both falling back to search with a short note.
-3. Cloudflare Turnstile on the AI button only (bots are what drain budgets); requests
-   accepted from the site's origin only; questions capped at 500 characters.
-4. A cache keyed by the normalised question, so a repeat is served free.
+**Then, Claude ("Step 2" of the build README).** Baselines to the outside folder; run
+`apply_sa02.py` (patches `assistant.js`, `assistant.css`, `sw.js` to `v13`); the privacy
+notice section and the cookie notice entry from the drafts, after Simeon's review; the FAQ
+line of the Ask panel index that says nothing leaves the browser, and an index rebuild;
+both test files again; one real question on the live site; a comparison of two or three
+models on real questions; the Worker's CPU time against the 10 ms of the free plan; change
+log entry SA-02; a site scan for the Turnstile row of the cookie notice.
 
-**Legal checklist before it goes live.**
-- Article 50(1) AI Act (applies since 2 August 2026; the site is the provider): the panel
-  says at the first interaction that the answer comes from an AI system. Today's search
-  needs no such notice.
-- `privacy-notice.html`: a section for the AI part. The question goes to Cloudflare and
-  Anthropic; legal basis Article 6(1)(f); Anthropic's API retention period, checked and
-  stated; the transfer mechanism named.
-- "Not legal advice" and "do not paste confidential information" next to the button.
-- Turnstile is a third-party service: load it only on use, add it to `cookie-notice.html`
-  and to the `items` arrays in `cookie-consent.js` after the next scan.
-- Never read saved assessment answers automatically. An "explain my result" feature, if
-  ever, is a deliberate click that shows exactly what will be sent.
+**Standing rule from this.** Do not move the Cloudflare account to Workers Paid without
+first setting a spend limit for Workers: on the paid plan, AI use above the free allowance
+is billed.
 
-**Needs from Simeon.** A Cloudflare account (free tier is enough), an Anthropic API key
-with prepaid credit, and the key pasted into the Worker's settings. Claude writes the
-Worker and the panel changes; the two accounts are the only steps it cannot do.
+**To check before it goes live.** Cloudflare's certification under the EU-US Data Privacy
+Framework; Cloudflare's role for Turnstile data (its Turnstile privacy addendum); whether
+Article 50(2) AI Act (marking of generated text) reaches a short answer on this site, against
+the AI Act Digest and the Commission guidelines of November 2026. Article 50(1) is covered:
+the button, the note under it and the answer label all say AI.
 
-**Decisions to take first.**
-1. Do it at all, and when.
-2. Monthly budget, and from it the daily and per-visitor caps.
-3. Model: Haiku 4.5 (cheaper, fine for summarising retrieved text) or Sonnet 5.5.
-4. One follow-up question allowed, or none.
-5. Turnstile yes or no (a third party in the cookie notice, against bot drain).
-6. Show the AI button to every visitor, or only once search has returned results.
-7. Cloudflare Worker, or another host for the key.
-
-**Build steps, once decided.** Worker (key, caps, origin check, cache, Turnstile check,
-streaming); panel changes (button, answer area, disclosure, follow-up limit); notice
-updates; tests (caps hit, origin refused, no passages means "not covered", no request
-before the click); change log entry SA-02; design record in `claude/site-assistant.md`
-(project doc), which already holds the full design.
+**Also fixed by the same patch.** The hint text in the Ask panel's search box has been
+invisible since launch (the template colours every placeholder white with `!important`);
+the patch gives both input boxes a readable grey.
 
 ## 2. Assistant follow-ups (small)
 
@@ -111,10 +93,11 @@ before the click); change log entry SA-02; design record in `claude/site-assista
 
 ## 3. Roadmap from 2 October 2026, not started
 
+The privacy crosswalk from this list was built on 16 November 2026 (`privacy-crosswalk.html`);
+its follow-ups are in section 8.
+
 - AI Readiness Assessment: a copy of the readiness engine in its own folder; GDPR
   Readiness stays frozen and untouched.
-- GDPR to ISO/IEC 27701 to NIST Privacy Framework crosswalk page, on the pattern of the AI
-  governance crosswalk.
 
 ## 4. Deferred tool changes
 
@@ -335,3 +318,40 @@ before the click); change log entry SA-02; design record in `claude/site-assista
   `au/pre-au/`, `za/pre-za/`, the thirteen `review-*` folders and the NAV-04, HOME-02, SA-09 and AUDIT-01
   baselines, 1,072 files, 52.7 MB, each checked by md5. They are in the `GitHub-projects-data` folder beside
   the repo, under `simeonatanasov.com/` with the same paths. New baselines and build leftovers go there too.
+
+## 8. Privacy crosswalk, follow-ups (16 November 2026)
+
+Page `privacy-crosswalk.html`, build folder `Claude outputs/privacy-crosswalk-build/` (README
+there), project doc `claude/privacy-crosswalk.md`.
+
+- **Next step: move to the 2025 numbering.** The ISO column and the ISO tab use the numbering
+  of ISO/IEC 27701:2019, which is withdrawn, because the free public mappings use it.
+  ISO/IEC 27701:2025 is restructured (management system in clauses 4 to 10, controls in
+  Annex A), so a 2019 number cannot be assumed to carry over. The page moves only from a
+  checked source: the standard itself (Annex D maps to the GDPR, Annex F to the 2019 edition),
+  or a correspondence published free of charge by ISO or a national standards body, shown to
+  Simeon before use. No table from a certification body. Decided on 16 November 2026: the BSI
+  webinar deck of November 2025 (a 2025 to 2019 table for all 78 controls, from BSI's
+  certification side) is not used. When a source is accepted: the steps are in the build README.
+- **Recheck when** (no scheduled task of its own; add the four lines to the monthly
+  "site-ai-act-standards-check", see the project doc for the wording):
+  1. NIST publishes Privacy Framework 1.1 final (draft only on 16 November 2026).
+  2. ISO amends ISO/IEC 27701:2025, or ISO or a national standards body publishes a free
+     2019 to 2025 correspondence.
+  3. The Digital Omnibus (COM(2025) 837) or the Article 30(5) proposal (COM(2025) 501) is
+     adopted; both were ongoing on EUR-Lex on 16 November 2026. Rows r18 and r31 name them.
+  4. The NIST repository changes either crosswalk (pinned at commit `4b9d9b7`), or the Data
+     Protection Mapping Project changes its data (pinned at `2ff78ec`).
+- **Licences.** The two NIST-hosted crosswalks state no licence, so the page links them and
+  does not reproduce them. The GDPR crosswalk is used as a cross-check only: the NIST column is
+  the site's own reading, and a reference is marked where that crosswalk agrees. If either
+  author publishes a licence that allows reuse, tab 4 can show the crosswalk itself.
+- **Ask panel: example questions and chooser entry (not started; Simeon, 16 November 2026: not
+  now).** The index has the 36 rows (SA-11), so the page is found by search. Still to add in
+  `assets/js/assistant.js`: example questions for `privacy-crosswalk` in the per-page examples,
+  and the page in the "Which assessment do I need?" chooser, beside the AI crosswalk. Both mean
+  a change to `assistant.js`, so bump `VERSION` in `sw.js` in the same change and log it as an
+  SA entry.
+- **GDPR Readiness article titles.** `readiness-data.js` shortens seven article titles
+  (Articles 8, 10, 12, 13, 14, 17, 19) compared with EUR-Lex. Noticed while reading the titles
+  for the crosswalk; the tool is frozen and nothing was changed.

@@ -1,0 +1,193 @@
+{
+ "source": "Identifier pairs read from the two crosswalks in usnistgov/PrivacyFrmwkResources, commit 4b9d9b7 (4 February 2026). The workbooks carry no licence and are not in this repository.",
+ "rows": {
+  "r01": [
+   "CT.PO-P1"
+  ],
+  "r02": [
+   "ID.IM-P5",
+   "CT.PO-P1",
+   "GV.PO-P1"
+  ],
+  "r03": [
+   "CT.DP-P4",
+   "CT.DM-P5",
+   "CT.DP-P2"
+  ],
+  "r04": [
+   "CT.PO-P2",
+   "CT.DM-P3",
+   "CT.DM-P4"
+  ],
+  "r05": [
+   "CT.PO-P1",
+   "CT.PO-P3",
+   "CM.AW-P1"
+  ],
+  "r06": [
+   "CT.PO-P1"
+  ],
+  "r07": [
+   "GV.PO-P1",
+   "GV.PO-P6",
+   "GV.PO-P5"
+  ],
+  "r08": [
+   "CT.PO-P3",
+   "CM.PO-P1",
+   "CM.AW-P1",
+   "GV.MT-P7"
+  ],
+  "r09": [
+   "CM.AW-P1",
+   "CM.PO-P1",
+   "CM.AW-P3"
+  ],
+  "r10": [
+   "CT.DM-P1",
+   "CT.DM-P2",
+   "CT.PO-P3",
+   "CT.PO-P2"
+  ],
+  "r11": [
+   "CT.DM-P3",
+   "CT.PO-P2",
+   "CT.PO-P3",
+   "CM.AW-P5"
+  ],
+  "r12": [
+   "CT.DM-P4",
+   "CT.PO-P2",
+   "CT.PO-P3",
+   "CM.AW-P5"
+  ],
+  "r13": [
+   "CT.PO-P3"
+  ],
+  "r14": [
+   "CT.DM-P2",
+   "CT.DM-P6",
+   "CT.PO-P3"
+  ],
+  "r15": [
+   "CT.PO-P3",
+   "CM.AW-P1"
+  ],
+  "r16": [
+   "CT.PO-P3"
+  ],
+  "r17": [
+   "GV.PO-P2",
+   "CT.PO-P4",
+   "CT.DP-P2",
+   "CT.DP-P4"
+  ],
+  "r18": [
+   "ID.IM-P1",
+   "ID.IM-P2",
+   "ID.IM-P3",
+   "ID.IM-P4",
+   "ID.IM-P5",
+   "ID.IM-P6",
+   "ID.IM-P7",
+   "ID.IM-P8",
+   "CM.AW-P4"
+  ],
+  "r19": [
+   "ID.IM-P8",
+   "ID.RA-P1",
+   "ID.RA-P4",
+   "ID.RA-P5",
+   "GV.MT-P1",
+   "CM.AW-P2"
+  ],
+  "r20": [],
+  "r21": [
+   "GV.PO-P3"
+  ],
+  "r22": [],
+  "r23": [],
+  "r24": [
+   "ID.DE-P3"
+  ],
+  "r25": [
+   "ID.DE-P2",
+   "ID.DE-P5"
+  ],
+  "r26": [
+   "ID.DE-P3",
+   "GV.PO-P4"
+  ],
+  "r27": [
+   "ID.DE-P3"
+  ],
+  "r28": [
+   "CT.PO-P1"
+  ],
+  "r29": [
+   "CT.PO-P3",
+   "CT.DM-P5",
+   "PR.DS-P3"
+  ],
+  "r30": [
+   "ID.RA-P4",
+   "PR.DS-P1",
+   "PR.DS-P2",
+   "PR.DS-P6",
+   "PR.AC-P4",
+   "PR.PO-P3",
+   "PR.PO-P7",
+   "PR.PO-P8",
+   "PR.PT-P4",
+   "CT.DM-P9",
+   "PR.PO-P10",
+   "ID.DE-P3"
+  ],
+  "r31": [
+   "PR.PO-P7"
+  ],
+  "r32": [
+   "CM.AW-P7"
+  ],
+  "r33": [
+   "CM.AW-P7",
+   "PR.PO-P7"
+  ],
+  "r34": [
+   "CT.PO-P2"
+  ],
+  "r35": [
+   "CT.PO-P2"
+  ],
+  "r36": [
+   "CT.PO-P2"
+  ]
+ },
+ "gdpr": {
+  "mapped": 95,
+  "unmapped": [
+   "GV.MT-P5",
+   "GV.MT-P6",
+   "PR.PO-P2",
+   "PR.PO-P4",
+   "PR.DS-P4"
+  ],
+  "articles": "5 to 42 and 44 to 49",
+  "url": "https://www.nist.gov/privacy-framework/resource-repository/browse/crosswalks/gdpr-crosswalk-enterprivacy-consulting-group"
+ },
+ "ms": {
+  "subs": 100,
+  "clauses": 98,
+  "same": 95,
+  "differ": [
+   "CT.DM-P5",
+   "PR.DS-P5"
+  ],
+  "absent": [
+   "GV.PO-P1",
+   "CT.DM-P9",
+   "CT.DM-P10"
+  ],
+  "url": "https://www.nist.gov/privacy-framework/resource-repository/browse/crosswalks/isoiec-27701-crosswalk-microsoft"
+ }
+}

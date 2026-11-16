@@ -76,6 +76,10 @@ PAGES = {
         "Crosswalk of EU AI Act obligations for providers and deployers to ISO/IEC 42001 "
         "clauses and Annex A controls and NIST AI RMF subcategories, with gaps marked.",
         "images/avatar.png", "AI Act, ISO/IEC 42001 and NIST AI RMF Crosswalk", "Digests"),
+    "privacy-crosswalk.html": ("page",
+        "GDPR obligations for controllers and processors mapped to NIST Privacy Framework 1.0 "
+        "subcategories and ISO/IEC 27701 clauses in the 2019 numbering, gaps marked.",
+        "images/avatar.png", "GDPR, ISO/IEC 27701:2019 and NIST Privacy Framework Crosswalk", "Digests"),
     "edpb-digest.html": ("collection",
         "Every European Data Protection Board document, 553 in all, with one takeaway "
         "each: what it establishes, who it binds and what to do.",
@@ -140,6 +144,11 @@ LLMS_TEXT = {
         "EU AI Act obligations for providers, deployers and GPAI model providers mapped to "
         "ISO/IEC 42001 clauses and Annex A controls and NIST AI RMF subcategories, with gaps "
         "marked, plus the NIST-hosted AI RMF to ISO/IEC 42001 crosswalk.",
+    "privacy-crosswalk.html":
+        "36 GDPR obligations for controllers and processors mapped to NIST Privacy Framework 1.0 "
+        "subcategories on the site's own reading, and to ISO/IEC 27701 clauses in the "
+        "2019 numbering as published in the Data Protection Mapping Project, with gaps marked and "
+        "reverse views by clause and by subcategory.",
     "privacy-ai-assessment.html":
         "Free privacy and AI governance assessments: privacy check, full DPIA, legitimate "
         "interest test, AI Act risk, breach severity, third-party security, fundamental "

@@ -13221,6 +13221,330 @@
   "m": "General-purpose AI models"
  },
  {
+  "id": "pc-r01",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 1: Article 5(1)(a) Principles relating to processing of personal data",
+  "u": "privacy-crosswalk.html#pc-r01",
+  "x": "Article 5(1)(a); Article 6(1) to (3) GDPR (Principles relating to processing of personal data / Lawfulness of processing). Controller. Process personal data lawfully, fairly and transparently, and only where one of the six legal bases in Article 6(1) applies. A basis in a legal obligation or a public task has to be laid down by Union law or by Member State law to which the controller is subject. The legal basis is part of the information due under Articles 13 and 14, which are a separate row. NIST Privacy Framework: CT.PO-P1. ISO/IEC 27701, 2019 numbering: 7.2.2 Identify lawful basis; 8.2.2 Organization’s purposes. The published mapping lists the clauses titled \"Identify lawful basis\" (7.2.2) and \"Organization’s purposes\" (8.2.2). The Privacy Framework asks for processing to be authorised, with consent as one example; it sets out no list of legal bases. Which basis fits a purpose is a question of Article 6, not of the Framework. Transparency is worked out in the rows on Articles 12 to 14. The NIST Privacy Framework matches this only in part.",
+  "m": "Principles and lawfulness"
+ },
+ {
+  "id": "pc-r02",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 2: Article 5(1)(b) Principles relating to processing of personal data",
+  "u": "privacy-crosswalk.html#pc-r02",
+  "x": "Article 5(1)(b); Article 6(4) GDPR (Principles relating to processing of personal data / Lawfulness of processing). Controller. Collect personal data for specified, explicit and legitimate purposes and do not process them further in a way that is incompatible with those purposes. Further processing for archiving in the public interest, scientific or historical research or statistics in accordance with Article 89(1) is not considered incompatible. Where a new purpose rests neither on consent nor on a Union or Member State law that is a necessary and proportionate measure to safeguard an objective listed in Article 23(1), assess compatibility taking into account, among other things, the factors in Article 6(4): the link between the purposes, the context of collection, the nature of the data, the possible consequences for individuals and the existence of appropriate safeguards. NIST Privacy Framework: ID.IM-P5, CT.PO-P1, GV.PO-P1. ISO/IEC 27701, 2019 numbering: 7.2.1 Identify and document purpose; 7.2.2 Identify lawful basis; 7.4.1 Limit collection; 7.4.5 PII de-identification and deletion at the end of processing; 8.2.2 Organization’s purposes. The published mapping lists among others the clauses titled \"Identify and document purpose\" (7.2.1) and \"Organization’s purposes\" (8.2.2). The Privacy Framework asks for purposes to be inventoried; it does not set out the compatibility test of Article 6(4), so a recorded purpose shows what the purpose was, not that a new use is compatible with it. The NIST Privacy Framework matches this only in part.",
+  "m": "Principles and lawfulness"
+ },
+ {
+  "id": "pc-r03",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 3: Article 5(1)(c) and (e) Principles relating to processing of personal data",
+  "u": "privacy-crosswalk.html#pc-r03",
+  "x": "Article 5(1)(c) and (e) GDPR (Principles relating to processing of personal data). Controller. Keep personal data adequate, relevant and limited to what the purposes need, and keep them in a form that permits identification for no longer than those purposes require. Longer storage is allowed only for archiving in the public interest, research or statistics, with the safeguards of Article 89(1). NIST Privacy Framework: CT.DP-P4, CT.DM-P5, CT.DP-P2, CT.PO-P2, GV.PO-P1. ISO/IEC 27701, 2019 numbering: 7.4.1 Limit collection; 7.4.4 PII minimization objectives; 7.4.5 PII de-identification and deletion at the end of processing; 7.4.6 Temporary files; 8.4.1 Temporary files. The published mapping lists the clauses titled \"Limit collection\", \"PII minimization objectives\", \"PII de-identification and deletion at the end of processing\" and \"Temporary files\". The Privacy Framework addresses minimisation and storage limitation through disassociated processing and destruction according to policy. The retention period itself comes from the purpose and from sector law.",
+  "m": "Principles and lawfulness"
+ },
+ {
+  "id": "pc-r04",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 4: Article 5(1)(d) Principles relating to processing of personal data",
+  "u": "privacy-crosswalk.html#pc-r04",
+  "x": "Article 5(1)(d) GDPR (Principles relating to processing of personal data). Controller. Keep personal data accurate and, where necessary, up to date. Take every reasonable step to erase or rectify without delay data that are inaccurate for the purposes they are processed for. NIST Privacy Framework: CT.PO-P2, CT.DM-P3, CT.DM-P4. ISO/IEC 27701, 2019 numbering: 7.3.6 Access, correction and/or erasure; 7.4.3 Accuracy and quality. Accuracy as a principle applies whether or not anyone asks for a correction; the right to rectification is a separate row.",
+  "m": "Principles and lawfulness"
+ },
+ {
+  "id": "pc-r05",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 5: Article 7 Conditions for consent",
+  "u": "privacy-crosswalk.html#pc-r05",
+  "x": "Article 7; Article 8 GDPR (Conditions for consent / Conditions applicable to child's consent in relation to information society services). Controller. Where processing relies on consent, be able to demonstrate it. Where consent is given in a written declaration that also concerns other matters, present the request for consent so that it is clearly distinguishable from them, in an intelligible and easily accessible form and in clear and plain language. Tell individuals before they consent that they can withdraw at any time, and make withdrawal as easy as giving consent. When judging whether consent is freely given, take utmost account of whether the performance of a contract, including the provision of a service, is made conditional on consent to processing that the contract does not need. Where consent is the basis for an information society service offered directly to a child who is below the age of 16, or below the lower age a Member State sets, which may not be under 13, the consent has to be given or authorised by the holder of parental responsibility, and the controller makes reasonable efforts to verify this, taking into consideration available technology. NIST Privacy Framework: CT.PO-P1, CT.PO-P3, CM.AW-P1. ISO/IEC 27701, 2019 numbering: 7.2.2 Identify lawful basis; 7.2.3 Determine when and how consent is to be obtained; 7.2.4 Obtain and record consent; 7.3.4 Provide mechanism to modify or withdraw consent; 8.2.3 Marketing and advertising use. The Privacy Framework covers obtaining, maintaining and revoking authorisations. It has no outcome on children's consent, on verifying parental authorisation or on consent bundled with a contract. The NIST Privacy Framework matches this only in part.",
+  "m": "Principles and lawfulness"
+ },
+ {
+  "id": "pc-r06",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 6: Article 9 Processing of special categories of personal data",
+  "u": "privacy-crosswalk.html#pc-r06",
+  "x": "Article 9; Article 10 GDPR (Processing of special categories of personal data / Processing of personal data relating to criminal convictions and offences). Controller. Do not process special categories of personal data unless one of the conditions in Article 9(2) applies, in addition to a legal basis under Article 6. Process data on criminal convictions and offences only under the control of official authority or where Union or Member State law authorises it with appropriate safeguards. NIST Privacy Framework: CT.PO-P1. ISO/IEC 27701, 2019 numbering: 7.2.2 Identify lawful basis; 7.2.4 Obtain and record consent. The published mapping lists only the clauses titled \"Identify lawful basis\" (7.2.2) and \"Obtain and record consent\" (7.2.4). The Privacy Framework treats data sensitivity as a contextual factor in risk assessment; it defines no special categories and no conditions for processing them. Recital 51 says that the conditions for lawful processing apply in addition to the specific requirements for special categories. The NIST Privacy Framework matches this only in part.",
+  "m": "Principles and lawfulness"
+ },
+ {
+  "id": "pc-r07",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 7: Article 5(2) Principles relating to processing of personal data",
+  "u": "privacy-crosswalk.html#pc-r07",
+  "x": "Article 5(2); Article 24 GDPR (Principles relating to processing of personal data / Responsibility of the controller). Controller. Be responsible for compliance with the principles and be able to demonstrate it. Implement appropriate technical and organisational measures, taking into account the nature, scope, context, purposes and risks of the processing, to ensure and to be able to demonstrate that processing complies with the Regulation; review and update them where necessary, and adopt data protection policies where that is proportionate. NIST Privacy Framework: GV.PO-P1, GV.PO-P6, GV.MT-P3, GV.PO-P5, GV.MT-P1, GV.MT-P2. ISO/IEC 27701, 2019 numbering: 5.2.1 Understanding the organization and its context; 7.2.6 Contracts with PII processors; 7.2.8 Records related to processing PII. Security guidance clauses: 6.2.1.1, 6.15.1.3. This is the obligation closest to what a management framework is for. Records produced under the Privacy Framework can support a demonstration of accountability under Article 5(2); they do not replace the measures each of the other rows requires. The published mapping lists among others the clauses titled \"Policies for information security\" (6.2.1.1) and \"Records related to processing PII\" (7.2.8).",
+  "m": "Principles and lawfulness"
+ },
+ {
+  "id": "pc-r08",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 8: Article 12 Transparent information, communication and modalities for the exercise of the rights of the data subject",
+  "u": "privacy-crosswalk.html#pc-r08",
+  "x": "Article 12; Article 11 GDPR (Transparent information, communication and modalities for the exercise of the rights of the data subject / Processing which does not require identification). Controller. Give information and communications to individuals in a concise, transparent, intelligible and easily accessible form, in clear and plain language, and make it easy for them to exercise their rights. Tell the individual what was done about a request without undue delay and within one month of receiving it; the period can be extended by two further months where the complexity and number of requests make that necessary, and the individual has to be told of the extension and its reasons within the first month. If no action is taken, say why within one month and point to the right to complain and to go to court. Requests are handled free of charge unless manifestly unfounded or excessive, which the controller has to show; then a reasonable fee or a refusal is allowed. Where there are reasonable doubts about identity, the controller may ask for the information needed to confirm it. Where the purposes do not require identifying individuals and the controller can show that it cannot identify the person, it says so if possible, and Articles 15 to 20 do not apply unless the individual supplies information that enables identification. NIST Privacy Framework: CT.PO-P3, CM.PO-P1, CM.AW-P1, GV.MT-P7. ISO/IEC 27701, 2019 numbering: 7.3.1 Determining and fulfilling obligations to PII principals; 7.3.2 Determining information for PII principals; 7.3.3 Providing information to PII principals; 7.3.9 Handling requests; 7.4.5 PII de-identification and deletion at the end of processing. The Privacy Framework asks for policies and mechanisms for requests and communication. It sets no time limit, no rule on fees and no standard of plain language; those come from Article 12. The NIST Privacy Framework matches this only in part.",
+  "m": "Transparency"
+ },
+ {
+  "id": "pc-r09",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 9: Article 13 Information to be provided where personal data are collected from the data subject",
+  "u": "privacy-crosswalk.html#pc-r09",
+  "x": "Article 13; Article 14 GDPR (Information to be provided where personal data are collected from the data subject / Information to be provided where personal data have not been obtained from the data subject). Controller. Tell individuals who the controller is and how to reach it and the data protection officer, the purposes and legal basis, the legitimate interests relied on, the recipients, any transfers and their safeguards, the retention period, their rights including withdrawal of consent, the right to complain, and whether automated decision-making takes place, with meaningful information about its logic and consequences. Do this at collection when the data come from the individual; otherwise within a reasonable period and at most one month, and no later than the first communication with the individual or the first disclosure to another recipient. Say whether providing the data is required when collecting directly, and name the source and the categories of data when collecting from elsewhere. Inform individuals again before processing for a new purpose. No information is due where the individual already has it; Article 14(5) lists further exceptions for data obtained from elsewhere. NIST Privacy Framework: CM.AW-P1, CM.PO-P1, CM.AW-P3. ISO/IEC 27701, 2019 numbering: 7.3.2 Determining information for PII principals; 7.3.3 Providing information to PII principals; 7.3.4 Provide mechanism to modify or withdraw consent; 7.3.5 Provide mechanism to object to PII processing; 7.3.6 Access, correction and/or erasure; 7.3.10 Automated decision making; 7.4.7 Retention. The published mapping lists the clauses titled \"Determining information for PII principals\" and \"Providing information to PII principals\" among others. The Privacy Framework asks for notices and transparency policies on purposes, practices and risks; the detailed list of items is in Articles 13 and 14. The NIST Privacy Framework matches this only in part.",
+  "m": "Transparency"
+ },
+ {
+  "id": "pc-r10",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 10: Article 15 Right of access by the data subject",
+  "u": "privacy-crosswalk.html#pc-r10",
+  "x": "Article 15 GDPR (Right of access by the data subject). Controller. Confirm on request whether personal data are being processed and give access to them, with the purposes, the categories of data, the recipients, the retention period, the source, the individual's rights and information on automated decision-making and on transfer safeguards. Provide a copy of the data, the first one free of charge and further copies for a reasonable fee at most, in a commonly used electronic form when the request is made electronically unless the individual asks otherwise, without adversely affecting the rights and freedoms of others. NIST Privacy Framework: CT.DM-P1, CT.DM-P2, CT.PO-P3, CT.PO-P2, CM.AW-P4, CM.AW-P6. ISO/IEC 27701, 2019 numbering: 7.3.2 Determining information for PII principals; 7.3.8 Providing copy of PII processed; 7.3.9 Handling requests; 7.5.1 Identify basis for PII transfer between jurisdictions; 7.5.2 Countries and international organizations to which PII might be transferred; 8.3.1 Obligations to PII principals. The published mapping lists among others the clauses titled \"Providing copy of PII processed\" (7.3.8) and \"Handling requests\" (7.3.9). The Privacy Framework supports the mechanics: finding the data, the recipients and the source. The list of information to give with the copy comes from Article 15(1) and (2), and the time limit is in the row on Article 12. The NIST Privacy Framework matches this only in part.",
+  "m": "Rights of individuals"
+ },
+ {
+  "id": "pc-r11",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 11: Article 16 Right to rectification",
+  "u": "privacy-crosswalk.html#pc-r11",
+  "x": "Article 16; Article 19 GDPR (Right to rectification / Notification obligation regarding rectification or erasure of personal data or restriction of processing). Controller. Rectify inaccurate personal data and complete incomplete data without undue delay when the individual asks. Tell each recipient the data were disclosed to, unless that is impossible or involves disproportionate effort, and tell the individual who those recipients are on request. NIST Privacy Framework: CT.DM-P3, CT.PO-P2, CT.PO-P3, CM.AW-P5, CM.AW-P4. ISO/IEC 27701, 2019 numbering: 7.3.6 Access, correction and/or erasure; 7.3.7 PII controllers' obligations to inform third parties.",
+  "m": "Rights of individuals"
+ },
+ {
+  "id": "pc-r12",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 12: Article 17 Right to erasure (‘right to be forgotten’)",
+  "u": "privacy-crosswalk.html#pc-r12",
+  "x": "Article 17; Article 19 GDPR (Right to erasure (‘right to be forgotten’) / Notification obligation regarding rectification or erasure of personal data or restriction of processing). Controller. Erase personal data without undue delay where a ground in Article 17(1) applies, for example the data are no longer necessary, consent is withdrawn and no other legal ground remains, an objection succeeds or the data were processed unlawfully. Article 17(1) states this both as a right of the individual and as an obligation of the controller. The duty does not apply to the extent that an exception in Article 17(3) applies. Where the controller has made the data public, take reasonable steps, taking account of available technology and cost, to inform other controllers processing them that the individual has requested erasure of links and copies. Notify recipients under Article 19 and tell the individual who those recipients are on request. NIST Privacy Framework: CT.DM-P4, CT.DM-P5, CT.PO-P2, CT.PO-P3, CM.AW-P5, CM.AW-P4. ISO/IEC 27701, 2019 numbering: 7.2.2 Identify lawful basis; 7.3.6 Access, correction and/or erasure; 7.3.7 PII controllers' obligations to inform third parties; 8.3.1 Obligations to PII principals. The published mapping lists among others the clauses titled \"Access, correction and/or erasure\" (7.3.6) and \"PII controllers' obligations to inform third parties\" (7.3.7). The Privacy Framework gives the ability to delete and to pass the deletion on. Whether a ground or an exception applies is a legal assessment each time.",
+  "m": "Rights of individuals"
+ },
+ {
+  "id": "pc-r13",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 13: Article 18 Right to restriction of processing",
+  "u": "privacy-crosswalk.html#pc-r13",
+  "x": "Article 18; Article 19 GDPR (Right to restriction of processing / Notification obligation regarding rectification or erasure of personal data or restriction of processing). Controller. Restrict processing on request while accuracy or an objection is being verified, where the processing is unlawful and the individual prefers restriction to erasure, or where the controller no longer needs the data but the individual needs them for legal claims. Restricted data may be stored but otherwise processed only with consent or on the limited grounds in Article 18(2). Tell the individual before the restriction is lifted, notify recipients under Article 19 and tell the individual who those recipients are on request. NIST Privacy Framework: CT.PO-P3, CT.DM-P7, CM.AW-P4. ISO/IEC 27701, 2019 numbering: 7.2.2 Identify lawful basis; 7.3.2 Determining information for PII principals; 7.3.4 Provide mechanism to modify or withdraw consent; 7.3.7 PII controllers' obligations to inform third parties. No subcategory describes restriction as a state of the data. The nearest is carrying processing permissions with the data elements, which is one way to implement it. The subcategory on passing corrections and deletions on to recipients (CM.AW-P5) does not mention restrictions, so notifying the recipients under Article 19 has no counterpart here; the record of disclosures supports telling the individual who the recipients are. The NIST Privacy Framework matches this only in part.",
+  "m": "Rights of individuals"
+ },
+ {
+  "id": "pc-r14",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 14: Article 20 Right to data portability",
+  "u": "privacy-crosswalk.html#pc-r14",
+  "x": "Article 20 GDPR (Right to data portability). Controller. Where processing is automated and rests on consent or on a contract, give individuals the personal data they provided in a structured, commonly used and machine-readable format, and transmit the data directly to another controller where that is technically feasible. The right must not adversely affect the rights and freedoms of others. NIST Privacy Framework: CT.DM-P2, CT.DM-P6, CT.PO-P3. ISO/IEC 27701, 2019 numbering: 7.3.8 Providing copy of PII processed. The published mapping lists one clause, titled \"Providing copy of PII processed\" (7.3.8).",
+  "m": "Rights of individuals"
+ },
+ {
+  "id": "pc-r15",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 15: Article 21 Right to object",
+  "u": "privacy-crosswalk.html#pc-r15",
+  "x": "Article 21 GDPR (Right to object). Controller. Stop processing that is based on a public task or on legitimate interests when the individual objects on grounds relating to their particular situation, unless the controller demonstrates compelling legitimate grounds that override the individual's interests, rights and freedoms, or the data are needed for legal claims. Stop direct marketing, and profiling for it, whenever the individual objects. Bring the right to the individual's attention explicitly and separately from other information, at the latest at the first communication. NIST Privacy Framework: CT.PO-P3, CM.AW-P1. ISO/IEC 27701, 2019 numbering: 7.3.2 Determining information for PII principals; 7.3.3 Providing information to PII principals; 7.3.5 Provide mechanism to object to PII processing. The published mapping lists among others the clause titled \"Provide mechanism to object to PII processing\" (7.3.5). The Privacy Framework handles the request and the notice; the weighing of compelling grounds against the individual's interests is a legal test with no counterpart in it, and it has no outcome on presenting the right separately from other information. The NIST Privacy Framework matches this only in part.",
+  "m": "Rights of individuals"
+ },
+ {
+  "id": "pc-r16",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 16: Article 22 Automated individual decision-making, including profiling",
+  "u": "privacy-crosswalk.html#pc-r16",
+  "x": "Article 22 GDPR (Automated individual decision-making, including profiling). Controller. Do not subject individuals to a decision based solely on automated processing, including profiling, that produces legal effects or similarly significant effects on them, unless it is necessary for a contract, authorised by law with safeguards, or based on explicit consent. In the contract and consent cases, provide at least human intervention and the means to express a view and to contest the decision. Such decisions may rest on special categories of data only under Article 9(2)(a) or (g), with suitable measures. NIST Privacy Framework: CT.PO-P3. ISO/IEC 27701, 2019 numbering: 7.2.2 Identify lawful basis; 7.3.10 Automated decision making. The published mapping lists the clauses titled \"Identify lawful basis\" (7.2.2) and \"Automated decision making\" (7.3.10). The Privacy Framework has an outcome on evaluating analytic inputs and outputs for bias (ID.RA-P2). It is not cited, because Article 22 does not name such a measure. The Framework has no outcome on human intervention, on expressing a point of view or on contesting a decision. The NIST Privacy Framework matches this only in part.",
+  "m": "Rights of individuals"
+ },
+ {
+  "id": "pc-r17",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 17: Article 25 Data protection by design and by default",
+  "u": "privacy-crosswalk.html#pc-r17",
+  "x": "Article 25 GDPR (Data protection by design and by default). Controller. Build data protection into processing from the design stage and throughout, with measures such as pseudonymisation that implement the principles and integrate the necessary safeguards, taking account of the state of the art, the cost, the nature of the processing and the risks. By default, process only the personal data necessary for each purpose, in amount, extent of processing, storage period and accessibility, so that data are not made accessible to an indefinite number of people without the individual's intervention. NIST Privacy Framework: GV.PO-P2, CT.PO-P4, CT.DP-P1, CT.DP-P2, CT.DP-P4. ISO/IEC 27701, 2019 numbering: 5.2.1 Understanding the organization and its context; 7.4.2 Limit processing. Security guidance clauses: 6.11.2.1, 6.11.2.5.",
+  "m": "Governance and accountability"
+ },
+ {
+  "id": "pc-r18",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 18: Article 30 Records of processing activities",
+  "u": "privacy-crosswalk.html#pc-r18",
+  "x": "Article 30 GDPR (Records of processing activities). Controller and processor. Controllers keep a written record of processing activities with the name and contact details of the controller and, where applicable, of the joint controller, the representative and the data protection officer, the purposes, the categories of individuals, data and recipients, transfers and, where possible, retention periods and a general description of the security measures; processors keep a record of the categories of processing carried out for each controller. Make the record available to the supervisory authority on request. An organisation with fewer than 250 employees is exempt only if its processing is occasional, is not likely to result in a risk and includes no special category or criminal conviction data. NIST Privacy Framework: ID.IM-P1, ID.IM-P2, ID.IM-P3, ID.IM-P4, ID.IM-P5, ID.IM-P6, ID.IM-P7, ID.IM-P8, CM.AW-P4. ISO/IEC 27701, 2019 numbering: 7.2.8 Records related to processing PII; 7.5.1 Identify basis for PII transfer between jurisdictions; 7.5.2 Countries and international organizations to which PII might be transferred; 7.5.3 Records of transfer of PII; 7.5.4 Records of PII disclosure to third parties; 8.2.6 Records related to processing PII; 8.4.2 Return, transfer or disposal of PII; 8.5.2 Countries and organizations to which PII might be transferred; 8.5.3 Records of PII disclosure to third parties. Security guidance clauses: 6.12.1.2, 6.15.1.1. The inventory subcategories of the Privacy Framework ask for more detail than Article 30 in some respects, for example data actions and data elements per system, and for less in others: none asks for erasure time limits, contact details or a description of security measures in the inventory. The Privacy Framework also has no outcome on making the record available to a supervisory authority. A Commission proposal to amend the exemption in Article 30(5), COM(2025) 501, was still in procedure on 16 November 2026; the row states the law in force. The NIST Privacy Framework matches this only in part.",
+  "m": "Governance and accountability"
+ },
+ {
+  "id": "pc-r19",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 19: Article 35 Data protection impact assessment",
+  "u": "privacy-crosswalk.html#pc-r19",
+  "x": "Article 35 GDPR (Data protection impact assessment). Controller. Before processing that is likely to result in a high risk to individuals, in particular with new technologies, assess its impact: describe the processing and its purposes, assess necessity and proportionality, assess the risks to individuals and set out the measures that address them. The assessment is required in particular in the three cases of Article 35(3) and for processing on the supervisory authority's list. Seek the advice of the data protection officer, where one is designated, and, where appropriate, the views of individuals. Where necessary, and at least when the risk changes, review whether the processing still matches the assessment. NIST Privacy Framework: ID.IM-P8, ID.RA-P1, ID.RA-P3, ID.RA-P4, ID.RA-P5, GV.MT-P1, CM.AW-P2. ISO/IEC 27701, 2019 numbering: 5.2.2 Understanding the needs and expectations of interested parties; 7.2.5 Privacy impact assessment; 8.2.1 Customer agreement. The published mapping lists among others the clause titled \"Privacy impact assessment\" (7.2.5). The Privacy Framework runs risk assessment as a standing activity for all processing; Article 35 adds a trigger and required contents, and Article 36 ties the result to prior consultation. The NIST Privacy Framework matches this only in part.",
+  "m": "Governance and accountability"
+ },
+ {
+  "id": "pc-r20",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 20: Article 36 Prior consultation",
+  "u": "privacy-crosswalk.html#pc-r20",
+  "x": "Article 36 GDPR (Prior consultation). Controller. Consult the supervisory authority before processing where the impact assessment indicates that the processing would result in a high risk in the absence of measures taken by the controller to mitigate it. Give the authority the information listed in Article 36(3), including the assessment and the contact details of the data protection officer. Where the authority considers that the processing would infringe the GDPR, it gives written advice within eight weeks, extendable by six. ISO/IEC 27701, 2019 numbering: 5.2.2 Understanding the needs and expectations of interested parties; 7.2.5 Privacy impact assessment. The Privacy Framework has no outcome about consulting a regulator before processing starts. The NIST-hosted GDPR crosswalk pairs this article with four inventory subcategories and with the one on feedback from individuals; this site reads none of them as addressing the duty to consult. The NIST Privacy Framework has no equivalent.",
+  "m": "Governance and accountability"
+ },
+ {
+  "id": "pc-r21",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 21: Article 37 Designation of the data protection officer",
+  "u": "privacy-crosswalk.html#pc-r21",
+  "x": "Article 37; Article 38; Article 39 GDPR (Designation of the data protection officer / Position of the data protection officer / Tasks of the data protection officer). Controller and processor. Designate a data protection officer where a public authority or body carries out the processing (courts acting in their judicial capacity excepted), where core activities consist of regular and systematic monitoring of individuals on a large scale or of large-scale processing of special category or criminal conviction data, or where Union or Member State law requires it. Choose the officer for professional qualities, in particular expert knowledge of data protection law and practice, publish the contact details and give them to the supervisory authority, involve the officer properly and in good time in all data protection matters, and provide resources. Give no instructions on the tasks, do not dismiss or penalise the officer for performing them, have the officer report to the highest management level, and make sure other duties cause no conflict of interests. The officer's tasks are at least to inform and advise, to monitor compliance, to advise on impact assessments, and to cooperate with the supervisory authority and act as its contact point. NIST Privacy Framework: GV.PO-P3. Security guidance clauses: 6.3.1.1, 6.4.2.2, 6.10.2.4. The published mapping lists three clauses, all under clause 6, which the mapping project labels \"Guidance related to ISO/IEC 27002\": \"Information security roles and responsibilities\", \"Information security awareness, education and training\" and \"Confidentiality or non-disclosure agreements\". The Privacy Framework asks for privacy roles and responsibilities to be established for the workforce; it says nothing on independence, protection from dismissal or the reporting line. The NIST Privacy Framework matches this only in part.",
+  "m": "Governance and accountability"
+ },
+ {
+  "id": "pc-r22",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 22: Article 27 Representatives of controllers or processors not established in the Union",
+  "u": "privacy-crosswalk.html#pc-r22",
+  "x": "Article 27 GDPR (Representatives of controllers or processors not established in the Union). Controller and processor. A controller or processor that is not established in the Union but is subject to the GDPR under Article 3(2) designates in writing a representative in a Member State where the individuals concerned are. No representative is needed where the processing is occasional, includes no large-scale special category or criminal conviction data and is unlikely to result in a risk, or for a public authority or body. Supervisory authorities and individuals can address the representative in addition to or instead of the organisation. Security guidance clauses: 6.3.1.1. The published mapping lists one clause, \"Information security roles and responsibilities\" (6.3.1.1). The Privacy Framework has no outcome about a representative in another jurisdiction. The NIST-hosted GDPR crosswalk pairs this article with six subcategories on workforce and communication roles, training and policy review; this site reads none of them as addressing the designation of a representative. The NIST Privacy Framework has no equivalent.",
+  "m": "Governance and accountability"
+ },
+ {
+  "id": "pc-r23",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 23: Article 31 Cooperation with the supervisory authority",
+  "u": "privacy-crosswalk.html#pc-r23",
+  "x": "Article 31 GDPR (Cooperation with the supervisory authority). Controller and processor. Cooperate with the supervisory authority, on request, in the performance of its tasks. The duty applies to controllers, processors and their representatives. ISO/IEC 27701, 2019 numbering: 5.2.2 Understanding the needs and expectations of interested parties. The published mapping lists the clause titled \"Understanding the needs and expectations of interested parties\" (5.2.2). The Privacy Framework has no outcome about dealing with a regulator. The NIST-hosted GDPR crosswalk pairs this article with one subcategory, on feedback from individuals; this site does not read it as addressing cooperation with a supervisory authority. The NIST Privacy Framework has no equivalent.",
+  "m": "Governance and accountability"
+ },
+ {
+  "id": "pc-r24",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 24: Article 26 Joint controllers",
+  "u": "privacy-crosswalk.html#pc-r24",
+  "x": "Article 26 GDPR (Joint controllers). Controller. Where two or more controllers jointly determine the purposes and means of processing, set out in a transparent arrangement who does what, in particular for the rights of individuals and the information duties, unless the law already allocates the responsibilities. Make the essence of the arrangement available to individuals, who can exercise their rights against each of the controllers. NIST Privacy Framework: GV.PO-P4, ID.DE-P3. ISO/IEC 27701, 2019 numbering: 7.2.7 Joint PII controller. The published mapping lists the clause titled \"Joint PII controller\" (7.2.7). The Privacy Framework has roles identified and aligned with third parties, by contract where needed; it has no outcome on making the arrangement available to individuals. The NIST Privacy Framework matches this only in part.",
+  "m": "Controllers, joint controllers and processors"
+ },
+ {
+  "id": "pc-r25",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 25: Article 28(1) Processor",
+  "u": "privacy-crosswalk.html#pc-r25",
+  "x": "Article 28(1) GDPR (Processor). Controller. Use only processors that provide sufficient guarantees to implement appropriate technical and organisational measures, so that the processing meets the requirements of the GDPR and protects the rights of individuals. NIST Privacy Framework: ID.DE-P2, ID.DE-P5, ID.DE-P1. Security guidance clauses: 6.12.1.2, 6.15.1.1. The published mapping lists two clauses under clause 6, which the mapping project labels \"Guidance related to ISO/IEC 27002\": \"Addressing security within supplier agreements\" (6.12.1.2) and \"Identification of applicable legislation and contractual requirements\" (6.15.1.1).",
+  "m": "Controllers, joint controllers and processors"
+ },
+ {
+  "id": "pc-r26",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 26: Article 28(3) and (9) Processor",
+  "u": "privacy-crosswalk.html#pc-r26",
+  "x": "Article 28(3) and (9) GDPR (Processor). Controller and processor. Govern processing by a processor through a contract or other legal act, in writing including in electronic form, that binds the processor and sets out the subject matter and duration of the processing, its nature and purpose, the type of personal data, the categories of individuals and the obligations and rights of the controller. The contract has to contain the terms in Article 28(3)(a) to (h). NIST Privacy Framework: ID.DE-P3, GV.PO-P4. ISO/IEC 27701, 2019 numbering: 7.2.6 Contracts with PII processors; 8.2.1 Customer agreement. The published mapping lists the clauses titled \"Contracts with PII processors\" (7.2.6) and \"Customer agreement\" (8.2.1) against Article 28(9); the clauses it lists for the individual terms of Article 28(3) are on the rows for those terms, including the security row. The Privacy Framework asks for contracts that implement the privacy programme; the list of required terms is in Article 28(3). The NIST Privacy Framework matches this only in part.",
+  "m": "Controllers, joint controllers and processors"
+ },
+ {
+  "id": "pc-r27",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 27: Article 28(2), (3)(d) and (4) Processor",
+  "u": "privacy-crosswalk.html#pc-r27",
+  "x": "Article 28(2), (3)(d) and (4) GDPR (Processor). Processor. A processor engages another processor only with the controller's prior specific or general written authorisation and, under a general authorisation, informs the controller of intended changes so that the controller can object. It imposes the same data protection obligations on the other processor by contract and stays fully liable to the controller for that processor's performance. NIST Privacy Framework: ID.DE-P2, ID.DE-P3. ISO/IEC 27701, 2019 numbering: 8.5.6 Disclosure of subcontractors used to process PII; 8.5.7 Engagement of a subcontractor to process PII; 8.5.8 Change of subcontractor to process PII. Security guidance clauses: 6.12.1.2, 6.15.1.1. The published mapping lists among others the clauses titled \"Disclosure of subcontractors used to process PII\", \"Engagement of a subcontractor to process PII\" and \"Change of subcontractor to process PII\" (8.5.6 to 8.5.8). The Privacy Framework has third parties identified, assessed and bound by contract; it has no outcome on asking the customer before engaging one. The NIST Privacy Framework matches this only in part.",
+  "m": "Controllers, joint controllers and processors"
+ },
+ {
+  "id": "pc-r28",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 28: Article 28(3)(a) Processor",
+  "u": "privacy-crosswalk.html#pc-r28",
+  "x": "Article 28(3)(a); Article 29; Article 32(4) GDPR (Processor / Processing under the authority of the controller or processor / Security of processing). Controller and processor. A processor processes personal data only on documented instructions from the controller, including for transfers to a third country or an international organisation, unless Union or Member State law to which it is subject requires the processing; in that case it informs the controller of the legal requirement before processing, unless that law prohibits the information on important grounds of public interest. Controller and processor each take steps to ensure that anyone acting under their authority who has access to personal data processes them only on instructions from the controller, unless Union or Member State law requires otherwise. NIST Privacy Framework: CT.PO-P1, GV.AT-P1. ISO/IEC 27701, 2019 numbering: 7.2.1 Identify and document purpose; 8.2.2 Organization’s purposes; 8.5.4 Notification of PII disclosure requests. Security guidance clauses: 6.12.1.2, 6.15.1.1. The Privacy Framework covers authorising processing and the workforce knowing its role. It has no outcome on processing only on the instructions of the organisation the data are processed for. The NIST Privacy Framework matches this only in part.",
+  "m": "Controllers, joint controllers and processors"
+ },
+ {
+  "id": "pc-r29",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 29: Article 28(3)(e) to (h) Processor",
+  "u": "privacy-crosswalk.html#pc-r29",
+  "x": "Article 28(3)(e) to (h) GDPR (Processor). Processor. Under the terms that Article 28(3)(e) to (h) requires in the contract, the processor assists the controller, as far as possible, with requests from individuals, and with security, breach notification, impact assessments and prior consultation. After the end of the service it deletes or returns all personal data, at the controller's choice, and deletes existing copies unless Union or Member State law requires storage. It makes available the information needed to demonstrate compliance with Article 28 and allows for and contributes to audits and inspections. It tells the controller immediately if it considers that an instruction infringes the GDPR or other Union or Member State data protection provisions. NIST Privacy Framework: CT.PO-P3, CT.DM-P5, PR.DS-P3. ISO/IEC 27701, 2019 numbering: 7.2.6 Contracts with PII processors; 8.2.1 Customer agreement; 8.2.4 Infringing instruction; 8.2.5 Customer obligations; 8.3.1 Obligations to PII principals; 8.4.2 Return, transfer or disposal of PII. Security guidance clauses: 6.12.1.2, 6.15.1.1. The published mapping lists among others the clauses titled \"Obligations to PII principals\" (8.3.1), \"Return, transfer or disposal of PII\" (8.4.2) and \"Infringing instruction\" (8.2.4). The Privacy Framework has no outcome on flagging an unlawful instruction. Its outcomes on auditing third parties are written for the organisation that instructs, and are cited on the row on choosing processors; it has none on submitting to an audit. The NIST Privacy Framework matches this only in part.",
+  "m": "Controllers, joint controllers and processors"
+ },
+ {
+  "id": "pc-r30",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 30: Article 32(1) and (2) Security of processing",
+  "u": "privacy-crosswalk.html#pc-r30",
+  "x": "Article 32(1) and (2); Article 5(1)(f); Article 28(3)(b) and (c) GDPR (Security of processing / Principles relating to processing of personal data / Processor). Controller and processor. Implement technical and organisational measures that give a level of security appropriate to the risk, including as appropriate pseudonymisation and encryption, the ongoing confidentiality, integrity, availability and resilience of systems, the ability to restore access to data in good time after an incident, and regular testing and evaluation of the measures. In assessing the appropriate level of security, take account in particular of the risks of accidental or unlawful destruction, loss or alteration of the data and of unauthorised disclosure of or access to them. The contract with a processor has to require that the people authorised to process the data are bound to confidentiality, by commitment or by statute, and that the processor takes the measures Article 32 requires. NIST Privacy Framework: ID.RA-P4, PR.DS-P1, PR.DS-P2, PR.DS-P4, PR.DS-P6, PR.AC-P4, PR.PO-P3, PR.PO-P7, PR.PO-P8, PR.PT-P4, CT.DM-P9, PR.PO-P10, CT.DP-P2, ID.DE-P3. ISO/IEC 27701, 2019 numbering: 5.2.3 Determining the scope of the information security management system; 5.2.4 Information security management system; 5.4.1.2 Information security risk assessment; 5.4.1.3 Information security risk treatment; 7.4.5 PII de-identification and deletion at the end of processing; 7.4.8 Disposal; 7.4.9 PII transmission controls; 8.4.3 PII transmission controls. Security guidance clauses: 6.3.2.1, 6.5.2.1, 6.5.2.2, 6.5.3.1, 6.5.3.2, 6.5.3.3, 6.6.2.1, 6.6.2.2, 6.6.4.2, 6.7.1.1, 6.8.2.7, 6.8.2.9, 6.9.3.1, 6.9.4.1, 6.9.4.2, 6.10.2.1, 6.10.2.4, 6.11.1.2, 6.11.3.1, 6.12.1.2, 6.13.1.1, 6.15.1.1, 6.15.2.1, 6.15.2.3. This is the row with the most references on both sides: the published mapping lists more clauses for the provisions of this row than for any other row, most of them under clause 6, which the mapping project labels \"Guidance related to ISO/IEC 27002\", and all 30 subcategories of Protect-P bear on it. The row cites the subcategories nearest to the measures the article names. What is appropriate to the risk in a given case is for the controller or processor to assess under Article 32(1) and (2); the Privacy Framework does not decide it.",
+  "m": "Security and personal data breaches"
+ },
+ {
+  "id": "pc-r31",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 31: Article 33(1) and (3) to (5) Notification of a personal data breach to the supervisory authority",
+  "u": "privacy-crosswalk.html#pc-r31",
+  "x": "Article 33(1) and (3) to (5) GDPR (Notification of a personal data breach to the supervisory authority). Controller. Notify the competent supervisory authority of a personal data breach without undue delay and, where feasible, within 72 hours of becoming aware of it, unless the breach is unlikely to result in a risk to individuals; give reasons for any delay. Describe the breach, its likely consequences and the measures taken, give a contact point, and document every breach, its effects and the remedial action so that the authority can verify compliance. NIST Privacy Framework: PR.PO-P7. Security guidance clauses: 6.13.1.1, 6.13.1.5. The published mapping lists the clauses titled \"Responsibilities and procedures\" (6.13.1.1) and \"Response to information security incidents\" (6.13.1.5). The Privacy Framework has response plans established and managed. Its notification outcome (CM.AW-P7) names impacted individuals and organisations, which this site reads as not covering the supervisory authority; the 72 hours, the risk threshold and the breach register come from Article 33. The Digital Omnibus proposal, COM(2025) 837, would amend Article 33; it was still in procedure on 16 November 2026 and the row states the law in force. The NIST Privacy Framework matches this only in part.",
+  "m": "Security and personal data breaches"
+ },
+ {
+  "id": "pc-r32",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 32: Article 33(2) Notification of a personal data breach to the supervisory authority",
+  "u": "privacy-crosswalk.html#pc-r32",
+  "x": "Article 33(2) GDPR (Notification of a personal data breach to the supervisory authority). Processor. The processor notifies the controller without undue delay after becoming aware of a personal data breach. NIST Privacy Framework: CM.AW-P7. Security guidance clauses: 6.13.1.5. The duty has no risk threshold: the processor reports every personal data breach and the controller assesses it. The Privacy Framework sets no time for the notification. The NIST Privacy Framework matches this only in part.",
+  "m": "Security and personal data breaches"
+ },
+ {
+  "id": "pc-r33",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 33: Article 34 Communication of a personal data breach to the data subject",
+  "u": "privacy-crosswalk.html#pc-r33",
+  "x": "Article 34 GDPR (Communication of a personal data breach to the data subject). Controller. Where a breach is likely to result in a high risk to individuals, tell them without undue delay, in clear and plain language, what happened, the likely consequences, the measures taken and whom to contact. No communication is needed where appropriate protection measures had been applied to the data, in particular measures that make them unintelligible to unauthorised persons, such as encryption, or where later measures mean the high risk is no longer likely to materialise; where it would take disproportionate effort, a public communication is made instead. The supervisory authority can require the communication. NIST Privacy Framework: CM.AW-P7, PR.PO-P7. Security guidance clauses: 6.13.1.1, 6.13.1.5. The Privacy Framework has affected individuals notified and response plans in place; the high-risk threshold, the content of the communication and the exemptions come from Article 34. The NIST Privacy Framework matches this only in part.",
+  "m": "Security and personal data breaches"
+ },
+ {
+  "id": "pc-r34",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 34: Article 44 General principle for transfers",
+  "u": "privacy-crosswalk.html#pc-r34",
+  "x": "Article 44; Article 45; Article 46; Article 47 GDPR (General principle for transfers / Transfers on the basis of an adequacy decision / Transfers subject to appropriate safeguards / Binding corporate rules). Controller and processor. Transfer personal data to a third country or an international organisation only if the conditions of Chapter V are met, so that the level of protection is not undermined, including for onward transfers. That means an adequacy decision or, failing that, appropriate safeguards such as standard data protection clauses, approved binding corporate rules, or an approved code of conduct or certification with binding commitments, on condition that enforceable rights and effective legal remedies are available to individuals. Failing both, only the derogations of Article 49 remain, which are a separate row. NIST Privacy Framework: CT.PO-P2, ID.DE-P3. ISO/IEC 27701, 2019 numbering: 7.5.1 Identify basis for PII transfer between jurisdictions; 8.5.1 Basis for PII transfer between jurisdictions. The published mapping lists two clauses, \"Identify basis for PII transfer between jurisdictions\" (7.5.1, for controllers) and \"Basis for PII transfer between jurisdictions\" (8.5.1, for processors). The Privacy Framework governs disclosure by policy and third parties by contract; it has no outcome on the conditions for sending data abroad. The derogations of Article 49 are a separate row. The NIST Privacy Framework matches this only in part.",
+  "m": "International transfers"
+ },
+ {
+  "id": "pc-r35",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 35: Article 49 Derogations for specific situations",
+  "u": "privacy-crosswalk.html#pc-r35",
+  "x": "Article 49 GDPR (Derogations for specific situations). Controller and processor. Without an adequacy decision or appropriate safeguards, transfer only under a derogation in Article 49(1), such as explicit consent after being informed of the risks, necessity for a contract with or in the interest of the individual, important reasons of public interest, or legal claims. The last-resort ground of compelling legitimate interests that the individual's interests and rights do not override covers only a transfer that is not repetitive and concerns a limited number of individuals, after an assessment and with suitable safeguards; the controller informs the supervisory authority and the individuals, and the controller or processor documents the assessment and the safeguards in the Article 30 record. NIST Privacy Framework: CT.PO-P1, CT.PO-P2. ISO/IEC 27701, 2019 numbering: 7.5.1 Identify basis for PII transfer between jurisdictions; 8.5.1 Basis for PII transfer between jurisdictions. The published mapping lists the same two clauses as for Articles 44 to 47, \"Identify basis for PII transfer between jurisdictions\" (7.5.1) and \"Basis for PII transfer between jurisdictions\" (8.5.1). The Privacy Framework has no counterpart to the derogations; the two references show only where a decision to transfer is authorised and governed by procedure. The NIST Privacy Framework matches this only in part.",
+  "m": "International transfers"
+ },
+ {
+  "id": "pc-r36",
+  "k": "crosswalk",
+  "p": "Privacy Crosswalk",
+  "t": "GDPR obligation 36: Article 48 Transfers or disclosures not authorised by Union law",
+  "u": "privacy-crosswalk.html#pc-r36",
+  "x": "Article 48 GDPR (Transfers or disclosures not authorised by Union law). Controller and processor. A judgment of a court or a decision of an administrative authority of a third country that requires a controller or processor to transfer or disclose personal data is recognised or enforceable only if it is based on an international agreement, such as a mutual legal assistance treaty, in force between that country and the Union or a Member State. The other grounds for transfer in Chapter V are not affected. NIST Privacy Framework: CT.PO-P2. ISO/IEC 27701, 2019 numbering: 7.5.1 Identify basis for PII transfer between jurisdictions; 8.5.1 Basis for PII transfer between jurisdictions; 8.5.5 Legally binding PII disclosures. The published mapping adds the clause titled \"Legally binding PII disclosures\" (8.5.5) to the two transfer clauses. The Privacy Framework has disclosures governed by policy; the test for a foreign demand is in Article 48. The NIST Privacy Framework matches this only in part.",
+  "m": "International transfers"
+ },
+ {
   "id": "enforce-ge-short-1",
   "k": "enforce",
   "p": "GDPR Enforcement",
@@ -19242,6 +19566,15 @@
   "m": ""
  },
  {
+  "id": "tool-cat-pcrosswalk",
+  "k": "page",
+  "p": "Tools and pages",
+  "t": "Privacy Crosswalk",
+  "u": "privacy-crosswalk.html",
+  "x": "36 GDPR obligations for controllers and processors, each mapped to NIST Privacy Framework 1.0 subcategories and to ISO/IEC 27701 clauses in the 2019 numbering, with the gaps marked, plus reverse views by clause and by subcategory. The NIST references are the site's own reading. Use it when you already run a privacy management system or the NIST Privacy Framework and want to see which GDPR obligations it addresses and which duties exist only in the law. A reference table with deep links per obligation. The ISO numbers are those of the withdrawn 2019 edition, as the public mappings print them. No state is kept. Reference page.",
+  "m": ""
+ },
+ {
   "id": "tool-cat-calculator",
   "k": "page",
   "p": "Tools and pages",
@@ -19427,7 +19760,7 @@
   "p": "About this site",
   "t": "What does this assistant search?",
   "u": "index.html",
-  "x": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method, the guidance around the notice and policy generators and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them; it does not write answers of its own. Nothing you type leaves your browser.",
+  "x": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the privacy crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method, the guidance around the notice and policy generators and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them; it does not write answers of its own. Nothing you type leaves your browser.",
   "m": ""
  }
 ]
