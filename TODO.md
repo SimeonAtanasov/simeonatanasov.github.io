@@ -136,10 +136,11 @@ its follow-ups are in section 8.
   connected, and check the md5 against the repo copies.
 - SEO generator: up to date and run on 16 November 2026 (SEO-01, SEO-02); rerun it after any
   rebuild of a page that writes its own head. Nothing open.
-- Merge the two side docs: `claude/site-context-addendum-2026-11-16.md` into
-  `claude/site-context.md`, and the side change logs of 16 November 2026
-  (`claude/tool-change-log-2026-11-16.md`, `-c.md` and `-d.md`) into `claude/tool-change-log.md`.
-  The lines to merge for the housekeeping of the evening of 16 November are in `-d.md`.
+- Side docs merged: done on 16 November 2026 (DOCS-03).
+  `claude/site-context-addendum-2026-11-16.md` is in `claude/site-context.md`, and the side
+  change logs `claude/tool-change-log-2026-11-16-c.md` and `-d.md` are in
+  `claude/tool-change-log.md` (`claude/tool-change-log-2026-11-16.md` had been merged earlier
+  that day). Left for Simeon: delete the four side docs.
 - Two stale lines in `claude/notice-generators-matrix.md`: O6 and Part G still call the readiness
   labels S5 and V6 unfixed; since TC-10 (16 November 2026) they follow Articles 29 and 26(2).
   Correct both the next time the matrix is edited.
