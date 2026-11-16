@@ -81,9 +81,7 @@ not in the `sw.js` precache (deliberately, given their size).
 | `terms.html` | Terms of use. Governing law is Bulgaria as of 24 September 2026 (it said Spain, which did not match where the author is established), and the intro now names `simeonatanasov.com` rather than the old `github.io` host. |
 | `offline.html` | Offline fallback served by the service worker. |
 | `404.html` | Custom not-found page in the same style as `offline.html`, served by GitHub Pages for any missing URL. Added 20 September 2026. |
-| `draft.html`, `elements.html`, `test-page.html` | Template leftovers, noindexed, kept rather than deleted. |
 | `pages/cookie-notice/draft-*.html` | Three unlinked cookie banner drafts, noindexed 20 September 2026. Delete when no longer needed. |
-| `onetrust-cookie-banner/` | A downloaded OneTrust CDN bundle (production and test, script templates, en/de/es consent JSON, May 2025). Unlinked, never loaded by any page, and superseded by the site's own consent layer. Delete it or keep it deliberately, but it is not live. |
 
 ### PWA layer
 

@@ -62,7 +62,6 @@
 		"Access logging and monitoring",
 		"Encryption in transit and at rest",
 		"Pseudonymisation",
-		"Pseudonymisation",
 		"Anonymisation or aggregation for secondary uses",
 		"Data masking in non-production environments",
 		"Data processing agreement with the supplier",

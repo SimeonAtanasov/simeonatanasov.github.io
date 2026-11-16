@@ -2,7 +2,7 @@
 
 Future work on simeonatanasov.com that is not started. Each item says what it is, what it
 needs and what has to be decided before work begins. Finished work is recorded in the
-`Claude outputs/` READMEs and in the project's change log, not here. Updated 13 November 2026.
+`Claude outputs/` READMEs and in the project's change log, not here. Updated 16 November 2026.
 
 ## 1. AI answers in the Ask panel (SA-02): to be decided
 
@@ -123,29 +123,43 @@ before the click); change log entry SA-02; design record in `claude/site-assista
 - Incident & Breach Severity (ENISA), one change: the malicious intent +0.5 factor; the
   AEPD "volume x type x impact" cross-check needs a traceable source or removal; align the
   intake fields with the EDPB breach notification template when final.
-- "Pseudonymisation" listed twice in `DPIA_CONTROLS` (a modifying change to verified tools;
-  log it when done).
+- Study pack and Ask panel index still show "Pseudonymisation" twice in the DPIA controls
+  list (three places in the study pack Markdown and PDF, three in `assets/assistant/index.json`,
+  which is built from the Markdown). The duplicate itself was removed from `assessment.js` on
+  16 November 2026 (TC-09). Both clear at the next study pack rebuild and index rebuild; a
+  rebuild of the index alone changes nothing.
 - Crosswalk: a harmonised standards column once standards are cited in the Official
   Journal (the monthly check reports this); re-check the NIST texts when the AI RMF
   revision is published.
 
 ## 5. Site housekeeping, decisions pending
 
-- Home page third-party logos are not consent gated. They sit inside the Career & Education
-  section, which is off limits without an explicit go-ahead. Self-hosting the five images
-  is the better fix; gating in place is five attribute swaps.
-- `CNAME` says www; check that every canonical tag, `og:url`, `sitemap.xml` and
-  `robots.txt` now agree (they read www on 3 October 2026).
-- From the September link audit: meta descriptions over 160 characters on 15 pages; Open
-  Graph tags only on the home page; the resume button pointing at the GitHub raw URL;
-  `Privacy Assessment.txt`, `draft-about.txt` and unused risk matrix images served publicly.
-- British spelling in the digests, American in the advice pages: qualify the rule or
-  convert the advice pages (which means regenerating `pages.json` and the study pack).
-- `onetrust-cookie-banner/`, `draft.html`, `elements.html`, `test-page.html`: delete or keep.
-- Four unreferenced source PNGs in `images/`, about 7 MB: keep as sources or remove.
+- Home page third-party logos (HOME-03). Decided 16 November 2026: self-host the five
+  images, and the edit of their five addresses inside Career & Education is allowed (nothing
+  else in that section). Not done: the network refused the download from the device shell
+  (proxy 403 on all five hosts). Save the five files into `images/` by hand (hosts:
+  `images.credential.net`, `api.accredible.com`, `upload.wikimedia.org`, `softacademy.bg`,
+  `softuni.bg`), then ask for the swap. Afterwards confirm the home page loads no third-party
+  image; `sw.js` needs no bump (new image URLs, never cached before, page is network first).
+- `CNAME` says www. Checked 16 November 2026: the canonical tag and `og:url` of all 21
+  pages, `sitemap.xml` (21 URLs), `llms.txt` (20 lines) and `robots.txt` all read www. What
+  is left is the Play Console host declaration for the Android app, which no file shows.
+- From the September link audit, still true on 16 November 2026: the home page resume button
+  (inside Career & Education) points at the GitHub raw URL, not `resume/resume-simeon-atanasov.pdf`;
+  three pages have a description over 160 characters (`privacy-ai-assessment.html` 240,
+  `gdpr-enforcement.html` 163, `notice-generators.html` 424; see the SEO generator item);
+  `images/risk-matrix-desktop.png`, `risk-matrix-phone.png` and `risk-matrix-tile2.png` are
+  referenced by no page and served publicly. No longer true: Open Graph tags are on all 21
+  pages, and `Privacy Assessment.txt` and `draft-about.txt` no longer exist.
+- Spelling, decided 16 November 2026: nothing is converted. The digests and the tools use
+  British spelling, the advice pages American; match the page being edited. Recorded in
+  `claude/content-voice.md`.
+- Unreferenced files left in `images/`: `power-bi-dashboard.png` (source of the Power BI tile
+  script), `Screenshot 2026-09-21 130030.png`, the three risk matrix PNGs above, and the
+  `.psd`, `.tif`, `.xlsx` and `.pdf` working files. Keep or move. The playbook PNG moved out on
+  16 November 2026.
 - Service worker: the digests are not precached; revisit if offline use matters.
 - `images/pic04.jpg` is a banner in a tall slot; it wants a tile made for the slot.
-- Search Console is not set up, so index coverage and backlinks are unknown.
 - SEO generator behind the pages (found 13 November 2026). `Claude outputs/seo-build/apply_seo.py`
   has not been run since late September 2026. Its `PAGES` table lacks five sitemap pages
   (`ai-governance-crosswalk.html`, `gdpr-enforcement.html`, `gdpr-fines-analytics.html`,
