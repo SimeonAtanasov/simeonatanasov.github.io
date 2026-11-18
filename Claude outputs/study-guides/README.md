@@ -10,7 +10,8 @@ Markdown text version (for search, diffing and reading anywhere). Gathered here 
 | AI Assessment Pathway study guide (30 pages, 15 practice questions) | `ai-assessment-pathway-guide.pdf` | `ai-assessment-pathway-guide.md` | the Markdown is the source; the PDF is printed from it by the same script | `../ai-pathway-build/build_guide.py` |
 | GDPR and privacy enforcement, Europe and worldwide (study guide; Part 11 covers 23 jurisdictions outside Europe) | `gdpr-enforcement-study-guide.pdf` | `gdpr-enforcement-study-guide.md` | the Markdown is the source; the PDF is printed from it | `../gdpr-enforcement-build/build_study_guide.py` |
 | How the GDPR fine calculator works | none | `gdpr-fine-calculator-explained.md` | written as Markdown | by hand |
-| AI Act Digest, 23 October 2026 (current) | `ai-act-digest-2026-10-23.pdf` | `ai-act-digest-2026-10-23.md` | pandoc from the HTML the PDF is printed from, with front matter (see below) | `../ai-act-digest-build/build_aia_pdf.py` |
+| AI Act Digest, 18 November 2026 (current; doc-19 is Communication C(2026) 7702 final of 5 November 2026, nothing else changed) | `ai-act-digest-2026-11-18.pdf` | `ai-act-digest-2026-11-18.md` | `../cookie-digest-build/md_from_print.py` (pandoc from the HTML the PDF is printed from, with front matter, see below) | `../ai-act-digest-build/build_aia_pdf.py` |
+| AI Act Digest, 23 October 2026 (superseded) | `ai-act-digest-2026-10-23.pdf` | `ai-act-digest-2026-10-23.md` | pandoc from the HTML the PDF is printed from, with front matter (see below) | `../ai-act-digest-build/build_aia_pdf.py` |
 | AI Act Digest, 28 September 2026 (superseded) | `ai-act-digest-2026-09-28.pdf` | `ai-act-digest-2026-09-28.md` | Obsidian version with front matter (see below) | `../ai-act-digest-build/build_aia_pdf.py` |
 | EDPB Digest, 23 October 2026 (current) | `edpb-digest-2026-10-23.pdf` | `edpb-digest-2026-10-23.md` | pandoc from the HTML the PDF is printed from, with front matter (see below) | `../edpb-digest-build/build_digest_pdf.py` |
 | EDPB Digest, 28 September 2026 (superseded) | `edpb-digest-2026-09-28.pdf` | `edpb-digest-2026-09-28.md` | Obsidian version with front matter (see below) | `../edpb-digest-build/build_digest_pdf.py` |
@@ -30,7 +31,7 @@ calculator explainer and the three current digests are also kept in Simeon's Obs
 here are the vault's versions (cleaner than a PDF conversion, with `title`, `date`,
 `source` and `tags` front matter; checked against the PDF text: complete, differences are
 letter case of chip labels and running heads). The study pack carries the same front
-matter and `build.py` writes it. After any rebuild, copy the changed `.md` and `.pdf` to the vault too. **Not yet in the vault: the 2 November 2026 cookie digest** (the vault folder was not connected when it was built, nor for 27 October); the vault still holds the 23 October version.
+matter and `build.py` writes it. After any rebuild, copy the changed `.md` and `.pdf` to the vault too. The 2 November 2026 cookie digest is in the vault (found identical on 17 November 2026), and the 18 November 2026 AI Act digest was copied in on 18 November 2026 (md5 checked on both sides).
 
 ## Converted from the PDF
 

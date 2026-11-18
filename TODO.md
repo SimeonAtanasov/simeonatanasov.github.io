@@ -2,7 +2,7 @@
 
 Future work on simeonatanasov.com that is not started. Each item says what it is, what it
 needs and what has to be decided before work begins. Finished work is recorded in the
-`Claude outputs/` READMEs and in the project's change log, not here. Updated 16 November 2026.
+`Claude outputs/` READMEs and in the project's change log, not here. Updated 18 November 2026.
 
 ## 1. AI answers in the Ask panel (SA-02): built, waiting for the Cloudflare set-up
 
@@ -282,10 +282,11 @@ its follow-ups are in section 8.
   restricted transfer (the generator states where the controller processes the data and lists onward
   transfers only).
 - **AI Act Digest doc-19.** Done 16 November 2026: source data, `ai_act_digest.json` and `ai-act-digest.html` say
-  Communication C(2026) 7702 final of 5 November 2026. Still to do: cut a dated AI Act PDF/MD (the 2026-10-23 files carry
-  the old text).
+  Communication C(2026) 7702 final of 5 November 2026. The dated PDF and Markdown were cut on 18 November 2026
+  (`study-guides/ai-act-digest-2026-11-18.*`, STUDY-04); the 2026-10-23 files stay as the superseded edition.
 - **EDPB Digest entry 520.** Done 16 November 2026: takeaway checked against the WP260 rev.01 PDF, recorded as
-  verified in the docs (no data change). 542 of 543 verified; entry 528 still to re-download.
+  verified in the docs (no data change). Entry 528 done 18 November 2026 (DIG-03): checked claim by claim against
+  WP242 rev.01 from the Article 29 Working Party archive, no change needed. 543 of 543 verified.
 - **Article 86 date.** Done 16 November 2026 (TC-13), on Simeon's approval: "applies from 2 August 2026 (Article 113);
   in practice from 2 December 2027, when Annex III systems are classified as high-risk (Article 113(c)(i))" on
   crosswalk row r22, the pathway's AI Act obligations and the generators' A09 check; the AI Act Digest keeps 2 August 2026.
