@@ -94,13 +94,12 @@ its follow-ups are in section 8.
 
 ## 5. Site housekeeping, decisions pending
 
-- Home page third-party logos (HOME-03). Decided 16 November 2026: self-host the five
-  images, and the edit of their five addresses inside Career & Education is allowed (nothing
-  else in that section). Not done: the network refused the download from the device shell
-  (proxy 403 on all five hosts). Save the five files into `images/` by hand (hosts:
-  `images.credential.net`, `api.accredible.com`, `upload.wikimedia.org`, `softacademy.bg`,
-  `softuni.bg`), then ask for the swap. Afterwards confirm the home page loads no third-party
-  image; `sw.js` needs no bump (new image URLs, never cached before, page is network first).
+- Home page third-party logos (HOME-03): done 17 November 2026. The five Career & Education logos load
+  from `images/`; the home page no longer requests the five hosts. Left: `cookie-notice.html` and the
+  `items` arrays in `assets/js/cookie-consent.js` still list `WMF-Uniq` (upload.wikimedia.org) and
+  `_session_id` (api.accredible.com), which the home page no longer causes. Rescan the site, then update
+  both in one pass with the SA-02 `sw.js` bump (a change to `cookie-consent.js` needs a bump, and
+  `apply_sa02.py` is md5-guarded against `sw.js`).
 - `CNAME` says www. Checked 16 November 2026: the canonical tag and `og:url` of all 21
   pages, `sitemap.xml` (21 URLs), `llms.txt` (20 lines) and `robots.txt` all read www. What
   is left is the Play Console host declaration for the Android app, which no file shows.
@@ -112,10 +111,11 @@ its follow-ups are in section 8.
   PNG, the three risk matrix PNGs and the screenshot moved out on 16 November 2026.
 - Service worker: the digests are not precached; revisit if offline use matters.
 - `images/pic04.jpg` is a banner in a tall slot; it wants a tile made for the slot.
-- Obsidian vault: the vault copy of the study pack is one version behind since the rebuild of
-  16 November 2026 (STUDY-03): `privacy-ai-act-assessments-study-pack-v2.md` at the vault top level
-  and the PDF in `910_Attachments/`. Copy both from `Claude outputs/study-guides/` when the vault is
-  connected, and check the md5 against the repo copies.
+- Obsidian vault: done 17 November 2026. The study pack and the GDPR enforcement study guide
+  (`.md` at the vault top level, `.pdf` in `910_Attachments/`) were copied from
+  `Claude outputs/study-guides/`; md5 matches the repo for all four. The digests dated 23 October
+  and 2 November, the pathway guide and the fine calculator note were already identical. The older
+  September digests and the 27 October cookie digest are not in the vault (superseded versions).
 - SEO generator: up to date and run on 16 November 2026 (SEO-01, SEO-02); rerun it after any
   rebuild of a page that writes its own head. Nothing open.
 - Side docs merged: done on 16 November 2026 (DOCS-03).
@@ -336,4 +336,4 @@ there), project doc `claude/privacy-crosswalk.md`.
 - **GDPR Readiness article titles.** Done 16 November 2026 as a one-time exception to the freeze: the seven titles in
   `readiness-data.js` follow EUR-Lex; study pack PDF and Markdown rebuilt (`privacy-ai-act-assessments-study-pack-v2.*` in
   `Claude outputs/study-guides/`); Article 17 title in straight quotes so the file stays ASCII (TC-12).
-  The Obsidian vault copy of the study pack is still stale.
+  The Obsidian vault copy of the study pack was brought up to date on 17 November 2026.
