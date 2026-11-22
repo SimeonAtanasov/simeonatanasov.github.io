@@ -2,14 +2,32 @@
 
 Future work on simeonatanasov.com that is not started. Each item says what it is, what it
 needs and what has to be decided before work begins. Finished work is recorded in the
-`Claude outputs/` READMEs and in the project's change log, not here. Updated 18 November 2026.
+`Claude outputs/` READMEs and in the project's change log, not here. Updated 22 November 2026.
 
-## 1. AI answers in the Ask panel (SA-02): built, waiting for the Cloudflare set-up
+## 1. AI answers in the Ask panel (SA-02): activated on disk, waiting for the push
 
-**Status, 16 November 2026.** Decided, built and tested; not live. Nothing on the site has
-changed yet. Everything is in `Claude outputs/assistant-ai-build/` (README there: files,
-protections, steps, the drafts for the notices). Design record: `claude/sa-02-ai-answers.md`
+**Status, 22 November 2026.** The Cloudflare side is live: Worker `site-assistant-ai`, KV in
+the EU jurisdiction, Turnstile widget, both secrets, Worker logs off; three real questions
+answered on 22 November 2026, CPU time 614 microseconds against the 10 ms of the free plan.
+The site files are changed on disk and not pushed: `assistant.js`, `assistant.css`, `sw.js`
+(`v13`), the privacy notice (block "Asking for an AI answer in the Ask panel", `#ai-answers`),
+the cookie notice and `cookie-consent.js` (the robot check's local storage entry
+`cf.turnstile.u`, Strictly necessary), the two FAQ entries of the Ask panel index that said
+nothing leaves the browser, and the index. Change log entry SA-02; build folder
+`Claude outputs/assistant-ai-build/` (README there); set-up record `claude/sa-02-ai-answers.md`
 (project doc).
+
+**Next, Simeon.** (1) Paste the new `worker.js` into the Worker (Edit code, select all, paste,
+Deploy): a prompt rule that keeps limits such as "at most" as the passage states them, and the
+prompt as part of the stored-answer key. (2) Review the diff, above all the privacy notice
+block, and push. (3) Ask one question in the live panel in Chrome (the built-in browser cannot
+pass Turnstile); while the robot check shows, open DevTools, Application, Cookies,
+`https://challenges.cloudflare.com` and tell Claude whether a cookie is listed. If one is, it
+goes into the cookie notice and C0001 of `cookie-consent.js` (another `sw.js` bump).
+
+**Still open.** A comparison of two or three models on real questions (only the default,
+`@cf/meta/llama-3.3-70b-instruct-fp8-fast`, has been tried). A full reading of the section on
+marking text in the Commission's Article 50 guidelines, C(2026) 7702 (see below).
 
 **Decisions taken (12 and 16 November 2026).** Build it. Free tier only: an open model on
 Cloudflare Workers AI inside the daily free allowance of the existing Cloudflare account
@@ -18,29 +36,17 @@ One follow-up question. Cloudflare Turnstile as the robot check, loaded only on 
 The button is shown to every visitor whenever a search has results. Host: a Cloudflare
 Worker. All protections built in (list in the build README).
 
-**Next step, Simeon (about ten minutes, "Step 1" of the build README).** In Cloudflare: a KV
-namespace, a Turnstile widget for `simeonatanasov.com`, a Worker with the content of
-`worker.js`, its two bindings (`KV`, `AI`) and two secrets (`TURNSTILE_SECRET`,
-`SIGNING_SECRET`). Then give Claude the Worker's address and the Turnstile site key (never
-the secret key).
-
-**Then, Claude ("Step 2" of the build README).** Baselines to the outside folder; run
-`apply_sa02.py` (patches `assistant.js`, `assistant.css`, `sw.js` to `v13`); the privacy
-notice section and the cookie notice entry from the drafts, after Simeon's review; the FAQ
-line of the Ask panel index that says nothing leaves the browser, and an index rebuild;
-both test files again; one real question on the live site; a comparison of two or three
-models on real questions; the Worker's CPU time against the 10 ms of the free plan; change
-log entry SA-02; a site scan for the Turnstile row of the cookie notice.
-
 **Standing rule from this.** Do not move the Cloudflare account to Workers Paid without
 first setting a spend limit for Workers: on the paid plan, AI use above the free allowance
 is billed.
 
-**To check before it goes live.** Cloudflare's certification under the EU-US Data Privacy
-Framework; Cloudflare's role for Turnstile data (its Turnstile privacy addendum); whether
-Article 50(2) AI Act (marking of generated text) reaches a short answer on this site, against
-the AI Act Digest and the Commission guidelines of November 2026. Article 50(1) is covered:
-the button, the note under it and the answer label all say AI.
+**Checked on 22 November 2026.** Cloudflare is certified under the EU-US Data Privacy
+Framework, so the notice's transfers section covers it as written. For Turnstile, Cloudflare
+is processor for running the check and controller for using its signals to improve its bot
+detection (Turnstile privacy addendum, 18 June 2025); the notice says so. Workers AI keeps no
+inputs or outputs once they are no longer needed and does not train on them. Article 50(1)
+AI Act is met by the button, the note under it and the answer label; for Article 50(2) the
+answer carries `data-ai-generated="true"`, a machine-readable mark in the page.
 
 **Also fixed by the same patch.** The hint text in the Ask panel's search box has been
 invisible since launch (the template colours every placeholder white with `!important`);
@@ -63,7 +69,7 @@ the patch gives both input boxes a readable grey.
   `assistant.js`, which is md5-guarded.
 - Ids on the blocks of the enforcement country cards: done 16 November 2026 (`ge-c-<code>-plain|route|authority|
   complaining|procedure|fines|appeals|suing|cases|worth-knowing`); the index links to them.
-- After SA-02: bump `VERSION` in `sw.js` (the index changed on 16 November 2026 and `sw.js` was not touched).
+- Bump `VERSION` in `sw.js` for the index change of 16 November 2026: done on disk with SA-02 (22 November 2026), `v13`.
 - Replace the 50 test questions in `eval_retrieval.py` with real ones as they come up.
 - Written questions for new content: a new digest entry or section gets only template
   suggestions until two or three questions are written for its chunk id in
@@ -97,9 +103,10 @@ its follow-ups are in section 8.
 - Home page third-party logos (HOME-03): done 17 November 2026. The five Career & Education logos load
   from `images/`; the home page no longer requests the five hosts. Left: `cookie-notice.html` and the
   `items` arrays in `assets/js/cookie-consent.js` still list `WMF-Uniq` (upload.wikimedia.org) and
-  `_session_id` (api.accredible.com), which the home page no longer causes. Rescan the site, then update
-  both in one pass with the SA-02 `sw.js` bump (a change to `cookie-consent.js` needs a bump, and
-  `apply_sa02.py` is md5-guarded against `sw.js`).
+  `_session_id` (api.accredible.com), which the home page no longer causes. Not done with the SA-02
+  `sw.js` bump after all: the two are the only items of the Functional category (C0003), so removing
+  them leaves an empty category in the banner, and whether to drop C0003 is Simeon's decision. Rescan
+  the site, decide, then change both in one pass with a `sw.js` bump to `v14`.
 - `CNAME` says www. Checked 16 November 2026: the canonical tag and `og:url` of all 21
   pages, `sitemap.xml` (21 URLs), `llms.txt` (20 lines) and `robots.txt` all read www. What
   is left is the Play Console host declaration for the Android app, which no file shows.

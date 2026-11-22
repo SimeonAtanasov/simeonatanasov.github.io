@@ -19,7 +19,10 @@
 	the SA icons for the S-only set, v6 added the Install app menu item to
 	pwa.js, v7 its slide-in on the home page sidebar, v8 the site assistant
 	(assistant.css and assistant.js, loaded by pwa.js), v9 its question bank and
-	live suggestions (assistant.js changed). The reason
+	live suggestions (assistant.js changed), v10 to v12 the SA-04 to SA-07
+	fixes of the panel, v13 its optional AI answers (SA-02; assistant.js and
+	assistant.css, and the robot check added to the list in cookie-consent.js).
+	The reason
 	the bump is not optional: pwa.js is a .js asset, so it is served stale while
 	revalidate, and a returning visitor would otherwise have run the previous
 	copy for one more visit. That copy does not load the consent script, and
@@ -27,7 +30,7 @@
 	gap rather than a placeholder. Retiring the caches avoids that one visit.
 */
 
-var VERSION = 'v12';
+var VERSION = 'v13';
 var PAGE_CACHE = 'pages-' + VERSION;
 var ASSET_CACHE = 'assets-' + VERSION;
 var OFFLINE_URL = '/offline.html';

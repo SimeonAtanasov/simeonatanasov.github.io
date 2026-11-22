@@ -1,8 +1,8 @@
 # AI answers in the Ask panel (SA-02): build folder
 
-Built and tested 16 November 2026. **Not live.** Nothing on the site has changed yet: the
-panel change is applied by `apply_sa02.py` once the Worker exists, because it needs the
-Worker's address and the Turnstile site key.
+Built and tested 16 November 2026. Cloudflare set up and tested on 22 November 2026, and the
+site files changed on disk the same day (Step 2 below); live once Simeon has pasted the new
+`worker.js` into the Worker and pushed.
 
 ## What it is
 
@@ -33,7 +33,8 @@ follow-up question is allowed. It runs on the free allowance of the Cloudflare a
 | `worker.js` | The Worker. One file, no dependencies, pasted into Cloudflare as it is |
 | `panel_ai.js`, `panel_ai.css` | The code and the styles added to the Ask panel |
 | `apply_sa02.py` | Applies the panel change to `assistant.js`, `assistant.css` and `sw.js`, with guards |
-| `test_worker.mjs` | 93 checks on the Worker, run in Node with stand-ins. No network |
+| `apply_sa02_notices.py` | The notices and the index text, with guards: the privacy notice block, the robot check in the cookie notice and in `cookie-consent.js`, the two FAQ entries of `build_index.py` |
+| `test_worker.mjs` | 97 checks on the Worker, run in Node with stand-ins. No network |
 | `test_stack.mjs`, `test_panel.mjs` | 47 Playwright checks on the patched panel against the real Worker code |
 
 ## Protections, and where each one lives
@@ -57,7 +58,9 @@ minute can overshoot the two caps by a few answers (an in-memory count narrows t
 hard stop is Cloudflare's own daily allowance. The allowance is shared by everything on the
 account that uses Workers AI.
 
-## Step 1: Cloudflare (about ten minutes, Simeon)
+## Step 1: Cloudflare (Simeon, done 22 November 2026)
+
+What was set, and the traps met on the way, are in `claude/sa-02-ai-answers.md` (project doc).
 
 Menu names are as of late 2026 and may differ slightly.
 
@@ -77,32 +80,58 @@ Menu names are as of late 2026 and may differ slightly.
 7. Give Claude two things: the Worker's address and the Turnstile **site key**. Never the
    secret key.
 
-## Step 2: activation (Claude, same session)
+## Step 2: activation (done 22 November 2026)
 
-1. Baselines of `assistant.js`, `assistant.css`, `sw.js`, `privacy-notice.html`,
-   `cookie-notice.html`, `cookie-consent.js` and `build_index.py` to the outside folder,
-   `tool-baselines/<date>-SA-02/`.
-2. `python3 "Claude outputs/assistant-ai-build/apply_sa02.py" --repo . --endpoint https://<worker>/ask --sitekey <site key>`.
-   Expected: `assistant.css` 15,028 to 19,395 bytes (md5 `e9686c42073890ccd548ee6358985907`),
-   `sw.js` 5,094 to 5,223 bytes (md5 `766e1bbce9eddfabe8c8e2cfa5664ecf`), `VERSION` v13;
-   `assistant.js` grows by about 11,160 bytes (its md5 depends on the two values).
-3. The notices (drafts below), the FAQ line of the Ask panel index that says nothing leaves
-   the browser (`FAQ` in `assistant-build/build_index.py`), then an index rebuild.
-4. Rerun both test files; then one real question end to end in the built-in browser on the
-   live site after the push.
-5. Compare models on ten real questions (`MODEL` variable: `@cf/google/gemma-4-26b-a4b-it`,
-   `@cf/qwen/qwen3.8-27b`, `@cf/openai/gpt-oss-120b` are the candidates beside the default)
-   and check the Worker's CPU time in its Metrics tab: the free plan allows 10 ms per
-   request, and the passage check on the 2 MB index is the heavy part (about 6 ms measured
-   in Node). If it sits near the limit, replace the check by a hash list built with the index.
-6. Change log entry SA-02, `site-context.md`, root `README.md`, `TODO.md`.
-7. After the push: a site scan, then the Turnstile row of the cookie notice from what the
-   scan finds.
+1. Baselines of every file changed in the outside folder, `tool-baselines/2026-11-22-SA-02/`,
+   with `patch_build.py` (the build changes of point 2) and `patch_docs.py` (TODO and READMEs).
+2. Build changes first: `worker.js` gained prompt rule 3 (keep every number, limit and
+   condition as the passage states it; "lifetime of thirteen months" had lost its "at most" in
+   the live test) and puts the prompt into the stored-answer key, so a changed prompt never
+   serves an old answer; `panel_ai.js` sets Turnstile's `retry`, `refresh-expired` and
+   `refresh-timeout` to `never`, so the check runs only on a press; `test_worker.mjs` has four
+   checks for this.
+3. `python3 "Claude outputs/assistant-ai-build/apply_sa02.py" --repo . --endpoint https://site-assistant-ai.sim-atanasov.workers.dev/ask --sitekey 0x4AAAAAAGMdJuOMqnbTYc_u`
+4. `python3 "Claude outputs/assistant-ai-build/apply_sa02_notices.py" --repo .`
+5. `assistant-build/questions_written.json`: seven questions for each of the two new privacy
+   notice chunks and one more for `faq-assistant`; then the index rebuild (2,198 chunks, 8,800
+   questions, every chunk with written questions).
+6. Tests: `test_worker.mjs` 97 of 97 in the sandbox and in the device shell on the rebuilt
+   index; `test_panel.mjs` 47 of 47 on a patched copy with the rebuilt index and the new notices.
+
+| File | Before (bytes, md5) | After (bytes, md5) |
+|---|---|---|
+| `assets/js/assistant.js` | 48,420, 8d68385d1f737ab9ec696a0f8c65e290 | 59,969, f5d87f5cd0e7c7b61c967dd7e6051cda |
+| `assets/css/assistant.css` | 15,028, c5ed593732b11b28baef15184ff329f5 | 19,395, e9686c42073890ccd548ee6358985907 |
+| `sw.js` | 5,094, db087ccd4e2ef9742d219052bec43995 | 5,276, 15677339c5013a1a892afe14589442af (`v13`) |
+| `privacy-notice.html` | 19,738, dfb2fcc066c8a57c57bde7f079d3d34d | 23,238, 74710e14d3969ea22c98b2308b9ad525 |
+| `cookie-notice.html` | 17,883, 3f48f3a018fcf7c8a384e42dfcde0ab9 | 19,202, d13e616111181513fb8447c7b6613341 |
+| `assets/js/cookie-consent.js` | 26,281, 519dcacdfeaca64ac1afff1437f973fd | 26,759, 3ed4309963d75d60428dfc495d0d9859 |
+| `assistant-build/build_index.py` | 91,701, faae94c63a5f01d04e93de954f75e7af | 92,121, 54656d0b96f8d4b441b099525b977048 |
+| `assistant-build/questions_written.json` | 574,814, fa506792353c233941b5f17aacf93b07 | 575,723, 1e2892e215ea414ddb5e8e62f1903698 |
+| `assets/assistant/index.json` | 2,115,395, b646b7d27f747289949faf7f41446582 | 2,120,192, 303eb1986d07cad9ce261766a6b368e5 |
+| `assets/assistant/questions.json` | 845,399, 61cfe44556b14f252ba426f6ad5285fe | 847,095, 3519649a72cb54b01117cb77835b9808 |
+| `worker.js` (this folder) | 21,050, d78d94b219fbbc23b9e5a6b13f9c7447 | 21,334, 80075eddb822849dcb3178fbb5bce67d |
+| `panel_ai.js` | 10,107, 9379a9884fbfb0eca3ed0121a9dc4f0c | 10,426, ede88c1753b49ff9f8389503ee400bfa |
+| `apply_sa02.py` | 7,803, 1d0bba059935eadbc07e18b16b6aaeee | 7,873, bf212c4363bdfc1e7d9b1d10aef354e6 |
+| `test_worker.mjs` | 21,466, be8bdabf3f1549527cd0e6db6acde095 | 22,561, c7fe2d136ce3cda661e2b1672ba8a8b0 |
+
+Left:
+
+- Simeon pastes `worker.js` (md5 80075eddb822849dcb3178fbb5bce67d) into the Worker: Edit code,
+  select all, paste, Deploy. Until then the Worker runs the earlier prompt, which works with the
+  new panel; answers it stored stay under the old keys and expire within 30 days.
+- After the push: one real question in the live panel, in Chrome (the built-in browser cannot
+  pass Turnstile, error 600010). While the robot check shows: DevTools, Application, Cookies,
+  `https://challenges.cloudflare.com`. A cookie listed there goes into the cookie notice and C0001.
+- Compare models on ten real questions (`MODEL` variable: `@cf/google/gemma-4-26b-a4b-it`,
+  `@cf/qwen/qwen3.8-27b`, `@cf/openai/gpt-oss-120b` were the candidates beside the default).
+- The Worker's CPU time was checked on 22 November 2026: 614 microseconds (Metrics tab), far
+  under the 10 ms of the free plan, so the passage check stays as it is.
 
 ## Tests
 
 ```
-node test_worker.mjs ../../assets/assistant/index.json          # 93 checks
+node test_worker.mjs ../../assets/assistant/index.json          # 97 checks
 
 # panel: a patched copy on 8765, an unpatched copy on 8766, the stand on 8788
 python3 apply_sa02.py --repo <copy> --endpoint http://localhost:8788/ask --sitekey test-site-key-000 \
@@ -114,74 +143,39 @@ node test_panel.mjs                                              # 47 checks
 ```
 
 Both ran clean on 16 November 2026 against the index of that day (2,196 entries, every
-one recognised by the passage check).
+one recognised by the passage check), and again on 22 November 2026 against the rebuilt
+index (2,198 entries, every one recognised).
 
-## Drafts for the notices (for Simeon's review; applied at activation)
+## The notices as shipped (22 November 2026)
 
-### privacy-notice.html
+- `privacy-notice.html`: dated 22 November 2026. The short version names four places where data
+  moves. A block "Asking for an AI answer in the Ask panel" (`id="ai-answers"`, the target of
+  the panel's link, with a scroll margin for the sticky header) after the scanner block: data,
+  purpose, legal basis (Article 6(1)(f)), who else sees it (Cloudflare as processor; Workers AI
+  with Llama 3.3 on Cloudflare's servers, no training, no retention; Turnstile, where Cloudflare
+  is also controller for improving its bot detection), how long (the question is not stored; the
+  answer up to 30 days under a code and able to repeat words of the question; the counter until
+  two days after the last request of the day; both in the EU, with short-lived copies possibly
+  elsewhere; Cloudflare's request log, seven days), worth knowing. The strictly necessary line
+  of "Your cookie choice" now names the robot check. The draft's "I do not see your question:
+  it is not written to any log" was not used: the request itself is logged.
+- `cookie-notice.html`: a line in the short version; `cf.turnstile.u` (local storage of
+  challenges.cloudflare.com, seen in Chrome on 22 November 2026, no expiry, content not
+  documented by Cloudflare) under "Storage that is not a cookie"; Cloudflare's Turnstile privacy
+  addendum among the providers' documents. The "last verified against a full site scan" date
+  stays 21 September 2026; the new entry says it comes from a browser check.
+- `cookie-consent.js`: the same entry in the Strictly necessary group (C0001), whose description
+  names it. `sw.js` `v13` covers this file too.
+- `build_index.py`: `faq-assistant` and `faq-device` no longer say that nothing typed leaves the
+  browser; both name the button.
 
-"The short version", third paragraph, to read:
+## AI Act
 
-> There are four places where data does move: the contact form, the cookie banner scanner,
-> content embedded from other organisations, and the optional AI answer in the Ask panel.
-> Each is set out below with its legal basis and how long anything is kept.
-
-New block after "Using the cookie banner scanner", with the id `ai-answers`:
-
-> ### Asking the AI in the Ask panel
->
-> - **What it is** The Ask panel searches this site inside your browser, and nothing you type
->   leaves it. Under the results there is an optional button, "Ask AI to answer from these
->   results". Only if you press it does the following happen.
-> - **Data** Your question, the passages of this site that the search found for it, and the
->   technical connection data any server receives: your IP address and the time of the
->   request. Before the question is sent, Cloudflare Turnstile checks that the request comes
->   from a person and not a script; for that it reads technical signals from your browser.
-> - **Purpose** Writing the answer you asked for, and keeping the service from being used up
->   by automated requests.
-> - **Legal basis** Article 6(1)(f), legitimate interests: providing the answer you chose to
->   ask for and protecting a free service from abuse.
-> - **Who else sees it** Cloudflare, which runs the robot check, the small service of mine
->   that receives the question, and the AI model that writes the answer. The model is an
->   open model run on Cloudflare's own systems. Cloudflare states that it does not use
->   this content to train AI models. I do not see your question: it is not written to any
->   log and not stored.
-> - **How long** The question is used to write the answer and is not kept. The answer is
->   kept for up to 30 days under a code that cannot be turned back into the question, so
->   that the same question is not computed twice. To limit use to a few answers per visitor
->   per day, a counter is kept under a keyed code derived from your IP address; it is deleted
->   within two days and I cannot turn it back into the address.
-> - **Worth knowing** The answer is written by an AI system. It is built only from passages
->   of this site, which are listed under it, and it can still be wrong or incomplete. It is
->   not legal advice. Do not put personal or confidential information in a question.
-
-"Last updated" to the activation date.
-
-Points to confirm before this goes live: Cloudflare's current certification under the EU-US
-Data Privacy Framework (the "Transfers outside the EEA" section already covers both routes);
-the role Cloudflare takes for Turnstile data in its Turnstile privacy addendum; the Workers
-AI data usage page, read on 16 November 2026 (no retention of inputs or outputs once no
-longer needed, no training on customer content).
-
-### cookie-notice.html
-
-New entry under "Every other page" or as its own heading, wording to be completed from the
-scan after activation:
-
-> **The robot check of the Ask panel (Cloudflare Turnstile).** Loaded from
-> challenges.cloudflare.com only when you press "Ask AI" in the Ask panel, never before. It
-> exists to confirm that a request comes from a person. Strictly necessary for that feature,
-> which you start yourself, so it is not behind the banner. [What it stores, if anything:
-> from the scan.]
-
-The `items` arrays in `cookie-consent.js` follow the same scan.
-
-### AI Act
-
-The button and the answer both say "AI": the button is labelled "Ask AI", the answer
-carries the label "AI-generated answer" and `data-ai-generated="true"` in the markup, and
-the note under the button says so before anything is sent (Article 50(1), information at
-the first interaction). Whether the marking duty of Article 50(2) reaches a short text
-answer on a site like this is worth one check against the site's own AI Act Digest and the
-Commission guidelines of November 2026 before activation; the markup attribute is there
-either way.
+Article 50(1): the button reads "Ask AI to answer from these results", the note under it says
+before anything is sent that the question goes to an AI model, and the answer carries the label
+"AI-generated answer" and the line "Written by an AI model". Under the Commission's Article 50
+guidelines an organisation that builds a chatbot and puts it into service under its own name is
+its provider (`claude/notice-generators-matrix.md`, row A01), so the duty is Simeon's, and it is
+met. Article 50(2): the answer element carries `data-ai-generated="true"`, a machine-readable
+mark in the page; metadata is among the marking techniques the guidelines accept. Not done: a
+reading in full of the guidelines' section on marking text (C(2026) 7702).

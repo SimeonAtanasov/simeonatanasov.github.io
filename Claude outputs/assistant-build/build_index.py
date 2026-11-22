@@ -257,7 +257,7 @@ TOOLS = [
 FAQ = [
     {
         "id": "faq-device", "title": "Do my answers leave my device?",
-        "text": "No. The assessment tools keep your answers, scores and exports in your browser's local storage and never send them to a server. This assistant also runs entirely in your browser: what you type is matched against an index downloaded with the page and is not transmitted anywhere. The only pages that contact another service are the Cookie Banner Scanner, which sends the URL you ask it to scan to the scanner service, and the GDPR Fines Dashboard, which loads from Microsoft only after you allow it in the cookie banner.",
+        "text": "No. The assessment tools keep your answers, scores and exports in your browser's local storage and never send them to a server. This assistant's search also runs entirely in your browser: what you type is matched against an index downloaded with the page and is not transmitted anywhere, unless you press its optional button that asks an AI to answer from the results, which sends your question and those results to Cloudflare. Otherwise the only pages that contact another service are the Cookie Banner Scanner, which sends the URL you ask it to scan to the scanner service, and the GDPR Fines Dashboard, which loads from Microsoft only after you allow it in the cookie banner.",
         "url": "privacy-notice.html",
     },
     {
@@ -297,7 +297,7 @@ FAQ = [
     },
     {
         "id": "faq-assistant", "title": "What does this assistant search?",
-        "text": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the privacy crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method, the guidance around the notice and policy generators and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them; it does not write answers of its own. Nothing you type leaves your browser.",
+        "text": "The three digests (EDPB, cookie compliance and AI Act), the two advice pages, the explanation and question bank of each assessment tool, the GDPR readiness activities, the AI governance crosswalk, the privacy crosswalk, the enforcement pages for Europe and the rest of the world, the fine calculator method, the guidance around the notice and policy generators and the site's own notices. It finds the passages that match your question by keyword and by meaning and links you to them. The search runs in your browser and nothing you type leaves it, unless you press the optional button that asks an AI to answer from the top results. That sends your question and those results to an AI model hosted by Cloudflare, after a check that you are not a robot, and the answer cites the passages it uses (see the privacy notice).",
         "url": "index.html",
     },
 ]

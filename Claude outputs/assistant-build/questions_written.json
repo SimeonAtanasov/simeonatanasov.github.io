@@ -8185,7 +8185,8 @@
   "Can the assistant answer questions about the fine calculator?",
   "Does the assistant understand questions in my own words?",
   "Will the assistant give me a legal answer for my case?",
-  "Does the assistant cover the AI governance crosswalk?"
+  "Does the assistant cover the AI governance crosswalk?",
+  "Can the assistant write an answer with AI?"
  ],
  "faq-cookies": [
   "Where do I find the cookie settings?",
@@ -8847,6 +8848,24 @@
   "Where does the cookie banner scanner actually run?",
   "Is my IP address visible to the scanner service?",
   "What does the scanner's host do with its request logs?"
+ ],
+ "privacy-notice-asking-for-an-ai-answer-in-the-ask-panel-1": [
+  "What happens to my question when I ask the AI in the Ask panel?",
+  "What is sent when I press the button to ask the AI?",
+  "Is anything sent before I press the AI button?",
+  "What is the legal basis for the AI answers in the Ask panel?",
+  "Which AI model writes the answers in the Ask panel?",
+  "Is my question used to train AI models?",
+  "Does Meta receive my question?"
+ ],
+ "privacy-notice-asking-for-an-ai-answer-in-the-ask-panel-2": [
+  "Is my question stored when I use the AI answers?",
+  "How long are the AI answers kept?",
+  "Where are the AI answers stored?",
+  "Does Cloudflare keep a log of my requests to the AI?",
+  "What does Cloudflare do with the robot check data?",
+  "Is the AI answer legal advice?",
+  "Should I put personal information in a question to the AI?"
  ],
  "privacy-notice-what-does-not-happen": [
   "Does the site use automated decision-making or profiling under Article 22?",

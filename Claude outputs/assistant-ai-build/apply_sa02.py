@@ -99,7 +99,8 @@ def patch_sw(src):
     old = b"live suggestions (assistant.js changed). The reason"
     new = (b"live suggestions (assistant.js changed), v10 to v12 the SA-04 to SA-07\n"
            b"\tfixes of the panel, v13 its optional AI answers (SA-02; assistant.js and\n"
-           b"\tassistant.css changed). The reason")
+           b"\tassistant.css, and the robot check added to the list in cookie-consent.js).\n"
+           b"\tThe reason")
     return once(b, old, new, 'sw comment')
 
 

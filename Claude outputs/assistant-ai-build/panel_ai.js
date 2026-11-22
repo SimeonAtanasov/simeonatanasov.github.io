@@ -59,6 +59,12 @@
 							action: 'ask-ai',
 							appearance: 'interaction-only',
 							size: 'flexible',
+							/* No retries or refreshes on Turnstile's own initiative: each press
+							   resets the widget for a fresh token, and a failure waits for the
+							   next press rather than running more checks in the background. */
+							retry: 'never',
+							'refresh-expired': 'never',
+							'refresh-timeout': 'never',
 							callback: function (token) { tsSettle(token, false); },
 							'error-callback': function () { tsSettle('', true); return true; },
 							'timeout-callback': function () { tsSettle('', true); }

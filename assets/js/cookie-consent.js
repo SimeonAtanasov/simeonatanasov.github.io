@@ -40,7 +40,7 @@
 			id: 'C0001',
 			name: 'Strictly necessary',
 			locked: true,
-			description: 'Needed for the site to work. At present this covers only the record of the choice you make here, which is kept in your browser and is not a cookie and is not sent anywhere.',
+			description: 'Needed for the site to work, or for something you ask for. It covers the record of the choice you make here, which is kept in your browser, is not a cookie and is not sent anywhere, and the robot check that runs only when you ask the Ask panel for an AI answer.',
 			items: [
 				{
 					name: 'cc-consent',
@@ -48,6 +48,13 @@
 					host: 'This site',
 					duration: 'One year, then you are asked again',
 					purpose: 'Remembers which categories you allowed, so you are not asked on every page. It stays on your device, is never transmitted, and is cleared when you clear site data.'
+				},
+				{
+					name: 'cf.turnstile.u',
+					kind: 'Local storage, not a cookie',
+					host: 'challenges.cloudflare.com',
+					duration: 'No expiry date; it goes when you clear site data',
+					purpose: 'Kept by Cloudflare’s Turnstile robot check, which loads only when you press the AI button in the Ask panel. Cloudflare does not document its content, and this site cannot read it.'
 				}
 			]
 		},

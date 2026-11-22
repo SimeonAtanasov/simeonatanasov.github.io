@@ -83,6 +83,10 @@
 			padding: 1.25rem 0 0.5rem 0;
 		}
 
+		.pn-activity[id] {
+			scroll-margin-top: 6rem;
+		}
+
 		.pn-activity h3 {
 			margin: 0 0 0.6rem 0;
 			font-size: 1rem;
@@ -148,7 +152,7 @@
 						<div class="inner">
 							<h1 class="major">Privacy Notice</h1>
 
-							<p class="pn-meta">Last updated 24 September 2026</p>
+							<p class="pn-meta">Last updated 22 November 2026</p>
 
 							<section>
 								<h2>The short version</h2>
@@ -165,9 +169,10 @@
 										internal material without that material going anywhere.
 									</p>
 									<p>
-										There are three places where data does move: the contact form, the cookie
-										banner scanner, and content embedded from other organisations. Each is set out
-										below with its legal basis and how long anything is kept.
+										There are four places where data does move: the contact form, the cookie
+										banner scanner, the optional AI answers in the Ask panel, and content embedded
+										from other organisations. Each is set out below with its legal basis and how
+										long anything is kept.
 									</p>
 								</div>
 							</section>
@@ -223,6 +228,17 @@
 									<li><strong>Worth knowing</strong>If you scan an address that is itself sensitive, such as an internal or staging URL, you are sending it to that service. Scan something you are comfortable sending.</li>
 								</ul>
 							</div>
+							<div class="pn-activity" id="ai-answers">
+								<h3>Asking for an AI answer in the Ask panel</h3>
+								<ul class="pn-facts">
+									<li><strong>Data</strong>Nothing, until you press the button that asks an AI to answer from your search results. Then your question, the text of the top results (passages from this site, five at most) and a one-time code from the robot check are sent to a small service of mine, with the technical connection data any server receives: your IP address, the time of the request and your browser's user agent string. A follow-up question also sends the first question and its answer.</li>
+									<li><strong>Purpose</strong>Writing a short answer from those passages that cites the passages it rests on, and keeping the service from being used up by robots or by any one visitor, which is why requests are checked and counted.</li>
+									<li><strong>Legal basis</strong>Article 6(1)(f), legitimate interests: giving you the answer you asked for, and protecting the service from abuse. The robot check also keeps an entry in your browser's storage. That happens only after you press the button and is part of the service you asked for, so it needs no separate consent; the <a href="cookie-notice.html">cookie notice</a> lists it.</li>
+									<li><strong>Who else sees it</strong>The service runs on Cloudflare, as my processor. Cloudflare Workers runs it, and Workers AI writes the answer with Meta's openly published Llama 3.3 model on Cloudflare's own servers, so nothing is sent to Meta. Cloudflare states that it does not keep what is sent to Workers AI once it is no longer needed to return the answer, and does not use it to train models. The robot check is Cloudflare Turnstile: Cloudflare runs it for me as processor, and also uses its signals (your IP address and details of your browser and connection) as a controller in its own right to improve its bot detection, under its <a href="https://www.cloudflare.com/turnstile-privacy-policy/" target="_blank" rel="noopener noreferrer">Turnstile privacy addendum</a>, which says they are not used to identify, profile or target anyone. Cloudflare is established in the United States; see transfers, below.</li>
+									<li><strong>How long</strong>Your question is not stored. The answer is, for up to 30 days, filed under a code worked out from the question and the passages, so that the same question is answered again without running the model; an answer can repeat words from your question. A count of your requests for the day, filed under a keyed code made from your network address rather than the address itself, is deleted two days after your last request that day. Both are stored in the EU, although Cloudflare can hold short-lived copies elsewhere on its network. Separately, Cloudflare's request log for my account records each request to the service (the time, your IP address, your browser and the address requested, not your question) and keeps it for seven days. I look at it only to deal with abuse or a fault.</li>
+									<li><strong>Worth knowing</strong>The answer is written by an AI system and labelled as AI-generated. It can be wrong or incomplete, so check it against the passages it cites, which link to the full text. It is not legal advice. Do not put personal or confidential information in a question.</li>
+								</ul>
+							</div>
 							<div class="pn-activity">
 								<h3>Simply visiting a page</h3>
 								<ul class="pn-facts">
@@ -248,7 +264,7 @@
 								<ul class="pn-facts">
 									<li><strong>Data</strong>Your consent choice, and any answers you save in the assessment tools.</li>
 									<li><strong>Purpose</strong>Not asking you the same question on every page, and letting a long assessment survive a reload.</li>
-									<li><strong>Legal basis</strong>Strictly necessary for a service you asked for, so no consent is needed for these two. That is also why they are the only things in the strictly necessary category.</li>
+									<li><strong>Legal basis</strong>Strictly necessary for a service you asked for, so no consent is needed for these two. The only other entry in the strictly necessary category is the robot check of the AI answers, above.</li>
 									<li><strong>Who else sees it</strong>Nobody. This is your browser's local storage. It stays on your device, is never transmitted to this site or anywhere else, and I cannot read it.</li>
 									<li><strong>How long</strong>The consent record expires after a year. Tool answers stay until you clear them, and the readiness tool has its own Save, Load, Clear and Forget controls.</li>
 								</ul>
