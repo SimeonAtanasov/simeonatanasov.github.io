@@ -47,3 +47,8 @@ Claude outputs/tool-baselines/2026-10-07-PII-01/
 # SA-12: the Ask panel index build regenerates these four files (dump_js_data.js and
 # build_index.py write them again on every run), so they are not kept in git.
 Claude outputs/assistant-build/work/
+
+# MOVE-05 (22 Nov 2026): the build material and the to-do list are a separate private
+# repository nested here, with its own .gitignore, so this repository neither tracks nor
+# publishes them. The two entries above stay as a record.
+Claude outputs/

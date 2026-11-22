@@ -12,7 +12,7 @@
 	group it belongs to.
 
 	  <iframe data-cc-src="https://..." data-cc-group="C0002"></iframe>
-	  <img    data-cc-src="https://..." data-cc-group="C0003" alt="...">
+	  <img    data-cc-src="https://..." data-cc-group="C0002" alt="...">
 
 	Add data-cc-placeholder to an iframe and a click to load card is drawn in
 	its place, so the visitor can allow that one group without opening the
@@ -106,28 +106,6 @@
 					host: 'app.powerbi.com',
 					duration: 'Until you clear site data for powerbi.com',
 					purpose: 'Report configuration and theme data, a service access token for Microsoft’s own API, and a buffer of Application Insights telemetry waiting to be sent. None of it is readable by this site.'
-				}
-			]
-		},
-		{
-			id: 'C0003',
-			name: 'Functional',
-			locked: false,
-			description: 'Certificate badges and institution logos loaded from the organisations that issued them. Allowing this lets those providers set short-lived session cookies when the images are fetched.',
-			items: [
-				{
-					name: 'WMF-Uniq',
-					kind: 'Third party cookie',
-					host: 'upload.wikimedia.org',
-					duration: 'One year',
-					purpose: 'Set by the Wikimedia Foundation because one university logo is loaded from Wikimedia Commons rather than from this site. It is a unique visitor identifier used for their own traffic measurement, and it is the longest lived cookie reached from this site.'
-				},
-				{
-					name: '_session_id',
-					kind: 'Third party cookie',
-					host: 'api.accredible.com',
-					duration: 'Session, until you close the browser',
-					purpose: 'Set by the certification provider when a credential badge image is fetched from its API. It holds a session reference for their service. Nobody signs in on this site, so it identifies nothing about you here.'
 				}
 			]
 		}
