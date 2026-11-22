@@ -4,30 +4,21 @@ Future work on simeonatanasov.com that is not started. Each item says what it is
 needs and what has to be decided before work begins. Finished work is recorded in the
 `Claude outputs/` READMEs and in the project's change log, not here. Updated 22 November 2026.
 
-## 1. AI answers in the Ask panel (SA-02): activated on disk, waiting for the push
+## 1. AI answers in the Ask panel (SA-02): live since 22 November 2026
 
-**Status, 22 November 2026.** The Cloudflare side is live: Worker `site-assistant-ai`, KV in
-the EU jurisdiction, Turnstile widget, both secrets, Worker logs off; three real questions
-answered on 22 November 2026, CPU time 614 microseconds against the 10 ms of the free plan.
-The site files are changed on disk and not pushed: `assistant.js`, `assistant.css`, `sw.js`
-(`v13`), the privacy notice (block "Asking for an AI answer in the Ask panel", `#ai-answers`),
-the cookie notice and `cookie-consent.js` (the robot check's local storage entry
-`cf.turnstile.u`, Strictly necessary), the two FAQ entries of the Ask panel index that said
-nothing leaves the browser, and the index. Change log entry SA-02; build folder
-`Claude outputs/assistant-ai-build/` (README there); set-up record `claude/sa-02-ai-answers.md`
-(project doc).
-
-**Next, Simeon.** (1) Paste the new `worker.js` into the Worker (Edit code, select all, paste,
-Deploy): a prompt rule that keeps limits such as "at most" as the passage states them, and the
-prompt as part of the stored-answer key. (2) Review the diff, above all the privacy notice
-block, and push. (3) Ask one question in the live panel in Chrome (the built-in browser cannot
-pass Turnstile); while the robot check shows, open DevTools, Application, Cookies,
-`https://challenges.cloudflare.com` and tell Claude whether a cookie is listed. If one is, it
-goes into the cookie notice and C0001 of `cookie-consent.js` (another `sw.js` bump).
+**Status, 22 November 2026.** Live. Simeon deployed the new `worker.js` to the Worker and
+pushed the site on the morning of 22 November 2026. First answer in the live panel, in Chrome
+on the privacy notice page: "Do I need consent for analytics cookies in France?", answered from
+two Cookie Digest passages with citations and the AI label; the robot check passed without a
+tick and set no cookie (it keeps `cf.turnstile.u` in local storage, which the cookie notice and
+C0001 list). Change log entries SA-02 and SA-02b; build folder `Claude outputs/assistant-ai-build/`
+(README there); set-up record `claude/sa-02-ai-answers.md` (project doc).
 
 **Still open.** A comparison of two or three models on real questions (only the default,
 `@cf/meta/llama-3.3-70b-instruct-fp8-fast`, has been tried). A full reading of the section on
-marking text in the Commission's Article 50 guidelines, C(2026) 7702 (see below).
+marking text in the Commission's Article 50 guidelines, C(2026) 7702 (see below). Now and then:
+the Turnstile widget's analytics in Cloudflare (how often real visitors are asked to tick) and
+the Worker's metrics (errors, CPU time).
 
 **Decisions taken (12 and 16 November 2026).** Build it. Free tier only: an open model on
 Cloudflare Workers AI inside the daily free allowance of the existing Cloudflare account

@@ -1,8 +1,8 @@
 # AI answers in the Ask panel (SA-02): build folder
 
-Built and tested 16 November 2026. Cloudflare set up and tested on 22 November 2026, and the
-site files changed on disk the same day (Step 2 below); live once Simeon has pasted the new
-`worker.js` into the Worker and pushed.
+Built and tested 16 November 2026. Cloudflare set up and tested on 22 November 2026, the
+site files changed the same night (Step 2 below), and live since the morning of 22 November
+2026, when Simeon deployed the new `worker.js` and pushed.
 
 ## What it is
 
@@ -117,12 +117,12 @@ Menu names are as of late 2026 and may differ slightly.
 
 Left:
 
-- Simeon pastes `worker.js` (md5 80075eddb822849dcb3178fbb5bce67d) into the Worker: Edit code,
-  select all, paste, Deploy. Until then the Worker runs the earlier prompt, which works with the
-  new panel; answers it stored stay under the old keys and expire within 30 days.
-- After the push: one real question in the live panel, in Chrome (the built-in browser cannot
-  pass Turnstile, error 600010). While the robot check shows: DevTools, Application, Cookies,
-  `https://challenges.cloudflare.com`. A cookie listed there goes into the cookie notice and C0001.
+- Done the same morning: `worker.js` (md5 80075eddb822849dcb3178fbb5bce67d) deployed to the
+  Worker; the site pushed; one real question in the live panel in Chrome (answered with
+  citations, no tick needed). DevTools, Application, Cookies, `https://challenges.cloudflare.com`
+  showed only `.cloudflare.com` cookies from Simeon's own visits to Cloudflare's dashboard and
+  website (`__cf_logged_in`, `CF_VERIFIED_DEVICE_*`, `OptanonAlertBoxClosed`, `OptanonConsent`),
+  none partitioned: the robot check set no cookie. The cookie notice says so since SA-02b.
 - Compare models on ten real questions (`MODEL` variable: `@cf/google/gemma-4-26b-a4b-it`,
   `@cf/qwen/qwen3.8-27b`, `@cf/openai/gpt-oss-120b` were the candidates beside the default).
 - The Worker's CPU time was checked on 22 November 2026: 614 microseconds (Metrics tab), far

@@ -3906,7 +3906,7 @@
   "Why can't this site delete another organisation's cookies for me?",
   "Where can I read how Microsoft handles its cookies on this site?"
  ],
- "cookie-notice-storage-that-is-not-a-cookie": [
+ "cookie-notice-storage-that-is-not-a-cookie-1": [
   "Does local storage need consent in the same way as cookies?",
   "What does the embedded dashboard store in local and session storage?",
   "Does the readiness assessment keep my answers in local storage?",
@@ -3914,7 +3914,14 @@
   "Does this site store anything on my device besides cookies?",
   "Can this site read what Power BI keeps in my browser storage?",
   "How do I delete my saved assessment answers?",
-  "Is anything I type into the readiness assessment sent anywhere?"
+  "Is anything I type into the readiness assessment sent anywhere?",
+  "What does the robot check of the AI answers store in my browser?",
+  "What is cf.turnstile.u?"
+ ],
+ "cookie-notice-storage-that-is-not-a-cookie-2": [
+  "Does the robot check of the AI answers set a cookie?",
+  "Why do I see cloudflare.com cookies in developer tools?",
+  "Where do __cf_logged_in and OptanonConsent come from?"
  ],
  "cookie-notice-the-gdpr-fines-dashboard-page-1": [
   "How many cookies does the embedded fines dashboard set?",
