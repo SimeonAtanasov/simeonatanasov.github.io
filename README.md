@@ -174,8 +174,9 @@ or tool change**, or the assistant keeps showing the old text. Both files are in
 to answer from them. Only that press sends anything: the robot check (Cloudflare Turnstile)
 runs, and the question, up to five of the passages found and the check's one-time code go
 to a Cloudflare Worker, where Workers AI writes a short answer with Llama 3.3 that cites the
-passages it rests on and is labelled as AI-generated (`data-ai-generated="true"`). Five
-answers a day per visitor and 30 a day across the site; the same question with the same
+passages it rests on and is labelled as AI-generated (`data-ai-generated="true"`). Ten
+answers a day per visitor and 50 a day across the site (the Worker variables `VISITOR_CAP` and
+`DAILY_CAP`, raised from 5 and 30 on 22 November 2026); the same question with the same
 passages is answered from a store for up to 30 days instead of running the model again. The
 Worker, its tests and the list of protections are in `Claude outputs/assistant-ai-build/`
 (README there). The privacy notice covers it in its `#ai-answers` block, and the cookie
