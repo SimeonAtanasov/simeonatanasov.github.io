@@ -22,7 +22,8 @@
 	live suggestions (assistant.js changed), v10 to v12 the SA-04 to SA-07
 	fixes of the panel, v13 its optional AI answers (SA-02; assistant.js and
 	assistant.css, and the robot check added to the list in cookie-consent.js), v14 the
-	Functional category removed from cookie-consent.js (CONSENT-01).
+	Functional category removed from cookie-consent.js (CONSENT-01), v15 the
+	Spain football-block note in assistant.js (SA-02d).
 	The reason
 	the bump is not optional: pwa.js is a .js asset, so it is served stale while
 	revalidate, and a returning visitor would otherwise have run the previous
@@ -31,7 +32,7 @@
 	gap rather than a placeholder. Retiring the caches avoids that one visit.
 */
 
-var VERSION = 'v14';
+var VERSION = 'v15';
 var PAGE_CACHE = 'pages-' + VERSION;
 var ASSET_CACHE = 'assets-' + VERSION;
 var OFFLINE_URL = '/offline.html';

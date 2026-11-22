@@ -1059,9 +1059,16 @@
 		robot_check: 'The check that you are not a robot did not pass. Try again.',
 		stale: 'The site was updated a moment ago. Reload the page and ask again.',
 		bad_followup: 'The follow-up could not be linked to the first answer. Ask it as a new question in the search box.',
-		unavailable: 'The AI service could not be reached. Try again in a moment; the search results below still work.'
+		unavailable: 'The AI service could not be reached. Try again in a moment; the search results below still work.',
+		blocked_es: 'The AI service could not be reached. In Spain this often happens during football matches, when internet providers block parts of Cloudflare, which hosts the AI. Try again after the match; the search results below still work.'
 	};
-	var AI_RETRY = { robot_check: true, unavailable: true };
+	var AI_RETRY = { robot_check: true, unavailable: true, blocked_es: true };
+	/* Visitors whose device clock is set to a Spanish time zone get the
+	   football-block note when the request never reached the Worker. Read
+	   from the device only; nothing is sent or stored. */
+	function aiInSpain() {
+		try { return /^(Europe\/Madrid|Atlantic\/Canary|Africa\/Ceuta)$/.test(Intl.DateTimeFormat().resolvedOptions().timeZone); } catch (e) { return false; }
+	}
 	var aiRun = 0, tsLoading = null, tsWidget = null, tsBox = null, tsWaiting = null, tsTimer = null;
 
 	function tsSettle(token, failed) {
@@ -1158,7 +1165,7 @@
 		}).catch(function (e) {
 			if (mine !== aiRun || (e && e.message === 'gone')) return;
 			wait.remove();
-			done(e && e.message === 'robot_check' ? 'robot_check' : 'unavailable', {});
+			done(e && e.message === 'robot_check' ? 'robot_check' : (aiInSpain() ? 'blocked_es' : 'unavailable'), {});
 		});
 	}
 
